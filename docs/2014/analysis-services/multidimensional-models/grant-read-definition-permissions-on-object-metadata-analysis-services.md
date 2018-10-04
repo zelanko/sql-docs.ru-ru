@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Analysis Services]
 - permissions [Analysis Services], read metadata
 - read metadata permissions
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f87b088072350e58aa00d7c0063a2aa2378346cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c517445eaf8fd82e42ffa6250b9958ef3afdc40
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241734"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087704"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Предоставление разрешений на чтение описания метаданным объекта (службы Analysis Services)
   Разрешение на чтение описания объекта или метаданных на выбранных объектах позволяет администратору предоставлять разрешение на просмотр информации об объекте без дополнительного предоставления разрешения на изменение описания объекта, изменение структуры объекта или просмотр фактических данных объекта. `Read Definition` разрешения могут быть предоставлены на базы данных, источник данных, измерения, структуры интеллектуального анализа данных и уровни модели интеллектуального анализа данных. Если вам требуется `Read Definition` разрешения для куба, необходимо включить `Read Definition` для базы данных. Помните, что разрешения являются аддитивными. Например, одна роль предоставляет разрешение кубу на чтение метаданных, в то время как вторая роль предоставляет этому же пользователю разрешение измерению на чтение метаданных. Разрешения от двух разных ролей соединяются для предоставления пользователю разрешения как на чтение метаданных для куба, так и метаданных для измерения в рамках этой базы данных.  

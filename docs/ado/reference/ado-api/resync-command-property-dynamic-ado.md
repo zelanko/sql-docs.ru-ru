@@ -1,41 +1,38 @@
 ---
-title: Повторная синхронизация команды свойство динамические (ADO) | Документы Microsoft
+title: Повторная синхронизация команды свойство (динамическое) (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37896464c8c9387cb0d68da8bf9bc561e29602d0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5567bf3cc460aac6abfc2979a14e124bfd9d4cac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281379"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789292"
 ---
-# <a name="resync-command-property-dynamic-ado"></a>Повторная синхронизация команды свойство динамические (ADO)
-Указывает команду, предоставленные пользователем строкой, которую [Resync](../../../ado/reference/ado-api/resync-method.md) проблем метода для обновления данных в таблице, указанной в [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) динамических свойств.  
+# <a name="resync-command-property-dynamic-ado"></a>Свойство Resync Command (динамическое) (ADO)
+Указывает пользовательские команды-строка, [Resync](../../../ado/reference/ado-api/resync-method.md) проблем метода для обновления данных в таблице, указанной в [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) динамических свойств.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **строка** равное командной строки.  
+ Возвращает или задает **строка** значение, которое является командной строкой.  
   
 ## <a name="remarks"></a>Примечания  
- [Записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект является результат операции СОЕДИНЕНИЯ, выполняется на нескольких базовых таблицах. Зависит от строк, затронутых *AffectRecords* параметр [Resync](../../../ado/reference/ado-api/resync-method.md) метод. Стандартные **Resync** метод выполняется в том случае, если [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) и **Resync команда** свойства не установлены.  
+ [Записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта является результатом операции СОЕДИНЕНИЯ выполняются на несколько базовых таблиц. Зависят от строк, затронутых *AffectRecords* параметр [Resync](../../../ado/reference/ado-api/resync-method.md) метод. Стандартный **Resync** метод выполняется в том случае, если [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) и **Resync команда** свойства не заданы.  
   
- Строка команды **Resync команда** свойство параметризированную команду или хранимую процедуру, которая однозначно определяет строку, на время обновления и возвращает одну строку, содержащую одно и то же количество и порядок столбцов в виде строки таблицы, обновляются. Командная строка содержит параметр для каждого столбца первичного ключа в **уникальной таблицы**; в противном случае возвращается ошибка во время выполнения. Параметры автоматически заполняется значений первичного ключа из строки для обновления.  
+ Строка команды **Resync команда** свойство параметризованную команду или хранимую процедуру, которая однозначно определяет строку к обновлению и возвращает одну строку, содержащую разное число и порядок столбцов в виде строки таблицы, обновляются. Строка команды содержит параметр для каждого столбца первичного ключа в **уникальной таблицы**; в противном случае возвращается ошибка времени выполнения. Параметры заполняются автоматически значений первичного ключа из строки для обновления.  
   
- Ниже приведены два примера, в зависимости от SQL.  
+ Ниже приведены два примера, на основе SQL.  
   
  1\) **записей** определяется с помощью команды:  
   
@@ -46,7 +43,7 @@ SELECT * FROM Customers JOIN Orders ON
    ORDER BY CustomerID  
 ```  
   
- **Resync команда** свойству:  
+ **Resync команда** свойство имеет значение:  
   
 ```  
 "SELECT * FROM   
@@ -56,7 +53,7 @@ SELECT * FROM Customers JOIN Orders ON
 WHERE Orders.OrderID = ?"  
 ```  
   
- **Уникальной таблицы** — *заказов* и ее первичный ключ *OrderID*, является параметризованным. Подзапрос select предоставляет простой способ программными средствами убедитесь, что одно и то же количество и порядок столбцов возвращаются как командой исходного.  
+ **Уникальной таблицы** — *заказы* и ее первичный ключ *OrderID*, является параметризованным. Подзапрос select предоставляет простой способ программным образом обеспечить разное число и порядок столбцов возвращаются как и в случае с помощью исходной команды.  
   
  2\) **записей** определяется с помощью хранимой процедуры:  
   
@@ -76,15 +73,15 @@ Customers.CustomerID = Orders.CustomerID
 WHERE Orders.ordid  = @ordid  
 ```  
   
- **Resync команда** свойству:  
+ **Resync команда** свойство имеет значение:  
   
 ```  
 "{call CustordersResync (?)}"  
 ```  
   
- Опять же **уникальной таблицы** — *заказов* и ее первичный ключ *OrderID*, является параметризованным.  
+ Опять же **уникальной таблицы** — *заказы* и ее первичный ключ *OrderID*, является параметризованным.  
   
- **Команда синхронизации** динамическое свойство добавляется к **записей** объекта [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции при [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойству **adUseClient**.  
+ **Команда синхронизации** динамическое свойство добавляется к **записей** объект [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции при [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойству **adUseClient**.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

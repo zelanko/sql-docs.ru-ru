@@ -1,17 +1,12 @@
 ---
-title: sys.fn_cdc_map_lsn_to_time (Transact-SQL) | Документы Microsoft
+title: sys.fn_cdc_map_lsn_to_time (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_map_lsn_to_time_TSQL
 - sys.fn_cdc_map_lsn_to_time
@@ -23,20 +18,20 @@ helpviewer_keywords:
 - sys.fn_cdc_map_lsn_to_time
 - fn_cdc_map_lsn_to_time
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2352312d37f65dece606616734423ba609c8d923
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 64f5763284ec35caee46565ec596e72870b5631f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756792"
 ---
 # <a name="sysfncdcmaplsntotime-transact-sql"></a>sys.fn_cdc_map_lsn_to_time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает значение даты и времени из **tran_end_time** столбца в [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) системную таблицу порядковый номер транзакции в указанном журнале (LSN). Эту функцию можно использовать для систематического сопоставления диапазонов LSN с диапазонами дат в таблице изменений.  
+  Возвращает значение даты и времени из **tran_end_time** столбца в [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) системная таблица для указанного регистрационном номере (LSN). Эту функцию можно использовать для систематического сопоставления диапазонов LSN с диапазонами дат в таблице изменений.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,8 +49,8 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **datetime**  
   
-## <a name="remarks"></a>Замечания  
- Эта функция может использоваться для определения, изменения были зафиксированы на основе времени **__ $start_lsn** возвращаемое значение в строке данных изменений.  
+## <a name="remarks"></a>Примечания  
+ Эта функция может использоваться для определения, изменения были зафиксированы в зависимости от времени **__ $start_lsn** возвращаемое значение в строке данных изменений.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**.  

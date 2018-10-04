@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 416df50128170da643f3a6c3e4fabf8cfe9d3b42
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085056"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142094"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Подготовка данных с помощью PowerShell (Пошаговое руководство)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -265,9 +265,9 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 Данные представляют собой представительную выборку из набора данных по работе такси в Нью-Йорке, который содержит записи о более чем 173 миллионах отдельных поездок в 2013 году, включая сведения о размере оплаты и чаевых за каждую поездку. Чтобы с этими данными было проще работать, команда Майкрософт по обработке и анализу данных произвела выборку приблизительно 1 % из всего набора.  Эти данные были помещены в общедоступный контейнер хранилища BLOB-объектов в Azure в формате CSV. Исходные данные представляют собой несжатый файл, немного менее 350 МБ.
 
-+ Открытый набор данных: [такси Нью-ЙОРКА и Лимузинов комиссии] ()http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Открытый набор данных: [такси Нью-ЙОРКА и Лимузины комиссии](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [Создание моделей машинного Обучения Azure на основе набора данных такси Нью-ЙОРКА] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
++ [Создание моделей машинного Обучения Azure на основе набора данных такси Нью-ЙОРКА](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/).
 
 ### <a name="powershell-and-r-script-files"></a>Файлы скриптов PowerShell и R
 

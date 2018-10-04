@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4672647d8e9caae94e3b64fc43c3b687aa010920
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56e290ef8bf680f44ee11ec2e8d918b7b1d22c76
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185807"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091404"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>Примеры топологий и стоимости лицензирования для самостоятельной бизнес-аналитики SQL Server 2014
   В этом разделе описаны рекомендации по выбору [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence edition или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. В данный раздел включено несколько примеров локальных топологий самостоятельной бизнес-аналитики (BI) Майкрософт. Примеры содержат выпуски и лицензии, которые можно использовать для оптимизации баланса между производительностью и ценой. Топологии, количество серверов и стоимость лицензирования приведены **только в качестве примеров**. В Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и Microsoft SharePoint 2013 внесены несколько изменений лицензирования, которые предоставляют дополнительные возможности для лицензирования серверов, пользователей и устройств. Лицензии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживают те же сценарии использования, связанные с бизнес-аналитикой.  

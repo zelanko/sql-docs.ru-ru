@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b9e50bda2a6168d54be78fd178d3d1d9161eff2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8175fee7c1bf1f6472c8e302cf13c418295b9380
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200364"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052084"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>Занятие 13. Анализ в Excel
   В этом занятии описан порядок использования функции «Анализ в Excel» в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] для открытия Excel, автоматического создания соединения с источником данных, которым служит рабочая область модели, и автоматического добавления сводной таблицы на рабочий лист. Функция анализа в Excel предназначена для обеспечения быстрого и легкого способа проверки эффективности модели до ее развертывания. На этом занятии вы не будете заниматься анализом данных. Цель этого занятия — ознакомить создателя модели со средствами проверки архитектуры разрабатываемых моделей. В отличие от компонента «Анализ в Excel», предназначенного для разработчиков моделей, конечные пользователи будут использовать клиентские приложения для работы с отчетами, например Excel или [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] для подключения и просмотра данных в развернутых моделях.  

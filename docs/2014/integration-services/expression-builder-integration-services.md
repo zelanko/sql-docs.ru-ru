@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Expression Builder [Integration Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SSIS, expressions
 - tools [Integration Services], Expression Builder
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2410b6c9cb601b47f1a55f9601a2bb7afe0cc593
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce809b13c9f9d1efdedea43d097c38ea955076f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193594"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189794"
 ---
 # <a name="expression-builder-integration-services"></a>Построитель выражений (службы Integration Services)
   Диалоговое окно **Построитель выражений** обеспечивает графический пользовательский интерфейс для построения выражений, используемых выражениями свойства. Можно открыть диалоговое окно **Построитель выражений** из диалоговых окон отдельных задач конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , а также из окна **Свойства** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.finish.f1
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 729d594d2ab714770ec168a347e044aa968d9865
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 99cc8b42d30bd19e878283d0641d23c894d1abb8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278430"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202574"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Завершение работы мастера (мастер интеллектуального анализа данных)
   Используйте страницу **Завершение работы мастера** , чтобы проверить созданную структуру интеллектуального анализа данных после окончания работы с мастером. Можно также задать имя структуры интеллектуального анализа данных.  

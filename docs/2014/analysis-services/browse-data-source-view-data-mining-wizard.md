@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.browsedatasourceview.f1
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24348462faa76777b279576c105c312b333b83f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f42b418a2cc40b3e805e0129dc3414c3db5bbdc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155655"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187290"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>Обзор представления источников данных (мастер интеллектуального анализа данных)
   Диалоговое окно **Обзор представления источников данных** используется для просмотра представления источников данных, выбранного пользователем на странице мастера **Выбор представления источников данных** .  

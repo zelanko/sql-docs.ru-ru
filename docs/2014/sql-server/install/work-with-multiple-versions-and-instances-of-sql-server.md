@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - concurrent installations [SQL Server]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - 32-bit edition [SQL Server]
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-caps.latest.revision: 63
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 920e7295d56f3b7bfadf91a9532f638911535d44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 080a6c5f9608d71ec0cc6870c1b6af95388cbc52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246374"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154054"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Работа с несколькими версиями и экземплярами SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает на одном компьютере несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Кроме того, можно обновить уже установленные на компьютере предыдущие версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]либо установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этот же компьютер с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поддерживаемые сценарии обновления см. в разделе [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  

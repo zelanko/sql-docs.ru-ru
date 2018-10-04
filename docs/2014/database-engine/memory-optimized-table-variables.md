@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7f86328234ab251c50ab4ac68b02bd039b653da
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3c2035a5fba0d5ab37f0a545701551d5e7dfe80d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392405"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065794"
 ---
 # <a name="memory-optimized-table-variables"></a>Переменные оптимизированной для памяти таблицы
   В дополнение к оптимизированной для памяти таблиц (эффективный доступ к данным) и изначально компиляции хранимых процедур (которые повышают эффективность обработки запросов и выполнения бизнес-логики) [!INCLUDE[hek_2](../includes/hek-2-md.md)] также вводит третий тип объекта: оптимизированный для памяти табличного типа. Табличная переменная, созданная с использованием оптимизированного для памяти табличного типа, является оптимизированной для памяти табличной переменной.  

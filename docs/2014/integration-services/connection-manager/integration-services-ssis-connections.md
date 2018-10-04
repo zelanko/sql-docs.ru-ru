@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, connections
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 90
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 30a226221234b6668a50f6feef2e61e3b5a38f6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7497a48d8bfd4c7af0174a51869211a266800150
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273290"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186234"
 ---
 # <a name="integration-services-ssis-connections"></a>Соединения в службах Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используют соединения для выполнения различных задач и реализации функций служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -107,7 +104,7 @@ ms.locfileid: "37273290"
 ### <a name="custom-connection-managers"></a>Пользовательские диспетчеры соединений  
  Кроме того, можно создавать пользовательские диспетчеры соединений. Дополнительные сведения см. в разделе [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о добавлении или удалении диспетчера соединений в пакете см. в разделе [Добавление, удаление или совместное использование диспетчера соединений в пакете](../add-delete-or-share-a-connection-manager-in-a-package.md).  
   
  Подробные сведения о задании свойств диспетчера соединений в пакете см. в разделе [Задание свойств диспетчера соединений](../set-the-properties-of-a-connection-manager.md).  

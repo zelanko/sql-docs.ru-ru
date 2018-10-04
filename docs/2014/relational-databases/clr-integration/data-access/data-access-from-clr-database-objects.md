@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], data access
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - SqlClient provider
 - in-process data access providers [CLR integration]
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
-caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c49134c931bc9f27e7c4856ce23ccde70364000
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351146"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168554"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Доступ к данным из объектов среды CLR для работы с базами данных
   Общие процедуры среды выполнения (CLR) языка может легко получить доступ к данных, хранящихся в экземпляре [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] в котором она выполняется, а также данные, хранящиеся на удаленных экземплярах. Какие именно это данные — определяет контекст пользователя, в котором выполняется код. Доступ к данным из объекта базы данных среды CLR, используя поставщик данных .NET Framework для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] данных из управляемого клиента и приложений среднего уровня. Это позволяет эффективно использовать опыт работы с ADO.NET и `SqlClient` как в клиентских приложениях, так и в приложениях среднего уровня.  

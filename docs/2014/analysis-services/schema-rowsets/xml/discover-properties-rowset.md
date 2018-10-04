@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DISCOVER_PROPERTIES
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DISCOVER_PROPERTIES rowset
 ms.assetid: 3e2b50e2-3855-4091-8b02-4968e8e57d4c
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc02dd29ee02ad4d1730a6af72c5df3c3fee1c55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: facf15dea30e4628b52584141c67528fa73d2adb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271840"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095544"
 ---
 # <a name="discoverproperties-rowset"></a>Набор строк DISCOVER_PROPERTIES
   Возвращает список сведений и значений для стандартных свойств и определяемых поставщиком свойств, которые поддерживаются поставщиком [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) для указанного источника данных. Неподдерживаемые свойства в возвращаемом результирующем наборе не указываются.  

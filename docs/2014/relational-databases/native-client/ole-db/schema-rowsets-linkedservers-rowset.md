@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - LINKEDSERVERS rowset
 - enumerating data sources [OLE DB]
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60930ce7a43066c9041dfdaa92e0c4be254d78ae
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422403"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159094"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>Набор строк LINKEDSERVERS (OLE DB)
-  **LINKEDSERVERS** набор строк перечисляет источники данных организации, которые могут участвовать в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] распределенных запросов.  
+  Набор строк **LINKEDSERVERS** перечисляет источники данных организации, которые могут применяться в распределенных запросах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Набор строк **LINKEDSERVERS** содержит следующие столбцы.  
   
@@ -40,6 +37,6 @@ ms.locfileid: "37422403"
  Набор строк сортируется по столбцу SRV_NAME, и единственное ограничение поддерживается для столбца SRV_NAME.  
   
 ## <a name="see-also"></a>См. также  
- [Поддержка набора строк схемы &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+ [Поддержка набора строк схемы &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
   

@@ -1,35 +1,32 @@
 ---
-title: Примеры кода ADOX в Microsoft Visual C++ | Документы Microsoft
+title: Примеры кода ADOX в Microsoft Visual C++ | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADOX code examples, Visual C++
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5be9e4e686ad1203675ea42d3bcf8291a863ae48
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e72c7714ad5aae30deace933a35f42002ecd3d26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284883"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709272"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Примеры кода ADOX в Microsoft Visual C++
-В этих разделах содержатся примеров кода, которые помогут понять, как использовать ADOX. Все примеры кода представлены с помощью Microsoft Visual C++.  
+В этих разделах обсуждаются образцы кода помогут вам понять, как использовать ADOX. Все примеры кода написаны с помощью Microsoft Visual C++.  
   
 > [!NOTE]
->  Вставьте полный пример кода, от начала до конца, в редакторе кода. Пример может работать неправильно, если используется частичное примеры или при потере форматирования абзаца.  
+>  Вставьте пример весь код, от начала до конца, в редакторе кода. Пример могут выполняться неправильно при использовании частичной примеры или утери форматирование абзацев.  
   
 ## <a name="methods"></a>Методы  
   
@@ -47,7 +44,7 @@ ms.locfileid: "35284883"
   
 -   [Пример метода Append коллекции (Visual C++)](../../../ado/reference/adox-api/indexes-append-method-example-vc.md)  
   
--   [Ключи добавить метод, тип ключа, RelatedColumn, RelatedTable и пример использования свойств UpdateRule (VC ++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [Append коллекции Keys метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule пример свойства (Visual C++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
 ## <a name="properties"></a>Свойства  
   
@@ -59,7 +56,7 @@ ms.locfileid: "35284883"
   
 -   [Примеры свойств Command и CommandText (Visual C++)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vc.md)  
   
--   [Свойства команды, пример коллекцию параметров (VC ++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
+-   [Свойство Command, пример коллекции параметров (Visual C++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
   
 -   [Примеры свойств DateCreated и DateModified (Visual C++)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vc.md)  
   
@@ -69,9 +66,9 @@ ms.locfileid: "35284883"
   
 -   [Пример свойства IndexNulls (Visual C++)](../../../ado/reference/adox-api/indexnulls-property-example-vc.md)  
   
--   [Тип ключа, RelatedColumn, RelatedTable, UpdateRule свойства, ключи Append пример метода (VC ++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [Тип ключа, RelatedColumn, RelatedTable, UpdateRule свойства, ключи добавьте пример метода (Visual C++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
--   [Свойство имени, столбцов и таблиц Append примере методы (VC ++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
+-   [Свойство Name, столбцы и таблицы Append пример метода (Visual C++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
   
 -   [Примеры свойств NumericScale и Precision (Visual C++)](../../../ado/reference/adox-api/numericscale-and-precision-properties-of-the-column-object-example-vc.md)  
   
@@ -79,7 +76,7 @@ ms.locfileid: "35284883"
   
 -   [Примеры свойств PrimaryKey и Unique (Visual C++)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md)  
   
--   [Свойство типа таблицы, соединения закрыть пример метода (VC ++)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
+-   [Свойство типа таблицы, соединения закрыть пример метода (Visual C++)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
   
 ## <a name="collections"></a>Коллекции  
   

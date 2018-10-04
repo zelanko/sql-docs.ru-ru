@@ -1,33 +1,30 @@
 ---
-title: Основные сведения о курсорах и блокировки | Документы Microsoft
+title: Основные сведения о курсорах и блокировок | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdbbaa5d57bdaa1bf3d9d784f3bb378a833db9cc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a5c5a0d7d51acfd2ecf6d0ffda945a6223c7e04f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273043"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696963"
 ---
 # <a name="understanding-cursors-and-locks"></a>Основные сведения о курсорах и блокировок
-Важно понять принципы работы курсоров, чтобы вы могли выбрать тип курсора лучшим и наиболее эффективным для доступа к данным требованиям приложения. Меньше чем оптимальной конфигурации курсора можно сделать траты медленных операций доступа к данным.  
+Важно понимать принципы работы курсоров, чтобы вы могли выбрать тип курсора лучшим и наиболее эффективным для доступа к данным требованиям приложения. Менее чем оптимальной конфигурации курсора можно сделать еще медленных операций доступа к данным.  
   
- Многие возможности ADO **записей** объекту, определяются тип и расположение курсора, а также тип блокировки.  
+ Многие возможности ADO **записей** объекта определяются тип и расположение курсора, а также тип блокировки.  
   
  Этот раздел содержит следующие подразделы.  
   

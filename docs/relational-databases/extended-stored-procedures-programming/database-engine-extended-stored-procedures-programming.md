@@ -1,14 +1,11 @@
 ---
-title: Программирование расширенных хранимых процедур | Документы Microsoft
+title: Программирование расширенных хранимых процедур | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - gateway applications [SQL Server]
@@ -16,18 +13,17 @@ helpviewer_keywords:
 - Open Data Services [SQL Server]
 - ODS [SQL Server]
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
-caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c80abd97dc5a371f6df37c3df1a474998b080493
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a2f25356cfc035fa2185fabe4dae4d9a6d3443f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935439"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688572"
 ---
-# <a name="database-engine-extended-stored-procedures---programming"></a>Компонент Database Engine расширенные хранимые процедуры - программирование
+# <a name="database-engine-extended-stored-procedures---programming"></a>Программирование расширенных хранимых процедур ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -44,7 +40,7 @@ ms.locfileid: "32935439"
  В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] расширенные хранимые процедуры представляли собой единственный доступный механизм, позволяющий разработчикам баз данных создавать логику на стороне сервера, которую трудно или невозможно написать с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Интеграция со средой CLR более надежна, чем использование таких хранимых процедур. Более того, благодаря интеграции со средой CLR, логика, ранее создаваемая в виде хранимых процедур, зачастую лучше выражается возвращающими табличные значения функциями, что позволяет выполнять к результатам такой функции запросы в виде инструкций SELECT, внедряя их в предложение FROM.  
   
 ## <a name="see-also"></a>См. также  
- [Общеязыковая среда выполнения &#40;CLR&#41; интеграции](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)   
- [Возвращающие табличные значения функции CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
+ [Среда CLR &#40;CLR&#41; Общие сведения об интеграции](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)   
+ [Функции среды CLR, возвращающие табличное значение](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
   
   

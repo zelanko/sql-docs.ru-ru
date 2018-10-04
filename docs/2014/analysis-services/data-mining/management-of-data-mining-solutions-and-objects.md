@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9f20cc2fe28f5d798f3521a36aebcfe346aa643d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad59ce6f605c913e621d4d377ec3d48e8cbf2b7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218304"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164294"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Управление решениями и объектами интеллектуального анализа данных
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержит клиентские средства, предназначенные для управления структурами и моделями интеллектуального анализа данных. В этом разделе описаны операции управления, которые могут выполняться с помощью каждой из сред.  

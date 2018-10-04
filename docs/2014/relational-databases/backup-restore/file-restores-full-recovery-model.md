@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - file restores [SQL Server]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Transact-SQL restore sequence
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
-caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2542aa44ca71f063c43ecb732ede49c74ebd674c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191874"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141254"
 ---
 # <a name="file-restores-full-recovery-model"></a>Файлы из резервных копий (модель полного восстановления)
   Сведения этого раздела относятся только к тем базам данных, которые содержат несколько файловых групп в модели полного восстановления или модели восстановления с неполным протоколированием.  

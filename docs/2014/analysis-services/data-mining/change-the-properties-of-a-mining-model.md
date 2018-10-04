@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed77c0d87fc6fb62497cc68c52dd3fabeb50d2ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2533de57dd2baee8297cd0f277c4538d16fbc16a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279819"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172774"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Изменение свойств модели интеллектуального анализа данных
   Некоторые свойства моделей интеллектуального анализа данных могут применяться ко всей модели, другие действуют только на отдельные столбцы. Примеры свойств, которые применяются ко всей модели `Drillthrough` свойство, которое указывает, должны ли быть доступны для запросов данных варианта, и `Description` свойство. Свойства, действующие только на определенные столбцы: `Usage` и `ModelingFlags`, управляющие использованием данных в столбце внутри модели.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.create.ucp.progress.F1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Create UCP
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f6b326cf19dde95a0b942a85c1d25bd6ac4a9456
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 753866ef0ddb01b42bbe6c5f03e007075568d53e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816980"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189274"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>создать точку управления служебной программы SQL Server (служебная программа SQL Server)
   На предприятии может работать несколько служебных программ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , при этом каждая служебная программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может управлять несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и приложениями уровня данных. У каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеется одна и только одна точка управления служебной программой (UCP). Для каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо создать точку управления служебной программой. Каждый управляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и каждый компонент приложения уровня данных относится только к одной служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управляется одной точкой управления служебной программой.  

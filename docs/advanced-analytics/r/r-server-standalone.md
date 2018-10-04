@@ -3,17 +3,17 @@ title: Установка изолированного сервера R Server �
 description: Общие сведения о введение изолированного сервера R Server и Machine Learning Server в программе установки SQL Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2018
+ms.date: 10/01/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: a821706126519e5d48026eae834e320f706d2e4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240032"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176434"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (изолированный) и сервер машинного обучения (автономный) в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ SQL Server обеспечивает поддержку установки изо
 В SQL Server 2016 эта функция называется **R Server (изолированный)** и является доступным только для R. В SQL Server 2017, он называется **сервера машинного обучения (изолированного)** и включает в себя R и Python.  
 
 > [!Note]
-> Установлены программой установки SQL Server, автономный сервер является функциональным эквивалентом версии без SQL-фирменной символики [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), которые поддерживают такие же сценарии пользователя, включая удаленное выполнение Ввод в эксплуатацию и веб-службы и полный список функций RevoScaleR и revoscalepy.
+> Установлены программой установки SQL Server, автономный сервер является функциональным эквивалентом версии без SQL-фирменной символики [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), которые поддерживают такие же сценарии пользователя, включая удаленное выполнение Ввод в эксплуатацию и веб-службы и полный список библиотек R и Python.
 
 ## <a name="components"></a>Components
 

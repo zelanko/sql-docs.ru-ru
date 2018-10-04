@@ -4,13 +4,8 @@ ms.custom: ''
 ms.date: 09/22/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server 2014
 f1_keywords:
 - sql12.swb.roleproperties.database.f1
 - sql12.swb.roleproperties.general.f1
@@ -42,12 +37,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 814b585d1ac15af1b083a3191ca44c32fe29e15e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027687"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104124"
 ---
 # <a name="database-level-roles"></a>Роли уровня базы данных
   Для удобства управления разрешениями в базах данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет несколько *ролей* , которые являются субъектами безопасности, группирующими других участников. Они подобны ***группам*** в операционной системе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Разрешения ролей уровня базы данных распространяются на всю базу данных.  

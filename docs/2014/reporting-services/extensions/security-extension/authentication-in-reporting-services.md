@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], authentication
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 18ea77b885dd7aed809eb1ebda04bbfddad11137
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5088cabad39f75fb1becd65a21c84133608e9a2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093324"
 ---
 # <a name="authentication-in-reporting-services"></a>Проверка подлинности в службах Reporting Services
   Проверка подлинности — это процесс определения прав пользователя на удостоверение. Чтобы проверить подлинность, можно использовать много методов. Самым распространенным является использование паролей. Например, если разрабатывается проверка подлинности с помощью форм, необходима реализация, которая запрашивает у пользователей учетные данные (обычно с помощью интерфейса, который запрашивает имя и пароль), а затем проверяет пользователей по хранилищу данных, которым может быть таблица, база данных или файл конфигурации. Если не удается проверить учетные данные, то процесс проверки подлинности завершается неуспешно и для пользователя принимается анонимное удостоверение.  
