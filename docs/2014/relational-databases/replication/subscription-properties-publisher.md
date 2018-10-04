@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.subproperties.publisher.f1
 helpviewer_keywords:
 - Subscription Properties dialog box
 ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 33bf497f637c85730c4a9276b728b17c115f75ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b3d6b8de35ff65d0ea715ecaa9940e3f75ee42f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081444"
 ---
 # <a name="subscription-properties---publisher"></a>Свойства подписки — издатель
   С помощью диалогового окна **Свойства подписки** на издателе можно просмотреть и установить свойства принудительных подписок. Можно также просматривать некоторые свойства подписок по запросу, но в диалоговом окне **Свойства подписки** на подписчике отображаются дополнительные свойства и их можно изменять.  

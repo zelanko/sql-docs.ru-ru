@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DMSCHEMA_MINING_STRUCTURE_COLUMNS
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset
 ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3c98da6f1e843b08fac4b91baabec79ab0d9c341
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c012515df76b1f19712c5bf1ba828dafdc787ef7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171585"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088374"
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>Набор строк DMSCHEMA_MINING_STRUCTURE_COLUMNS
   Описывает отдельные столбцы всех структур интеллектуального анализа данных, развернутых на сервере, на котором выполняется [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -47,7 +44,7 @@ ms.locfileid: "37171585"
 |`COLUMN_DEFAULT`|`DBTYPE_WSTR`||Значение по умолчанию для столбца. Поставщик может предоставить доступ к `DBCOLUMN_DEFAULTVALUE`, но не к `DBCOLUMN_HASDEFAULT` (для таблиц ISO) в наборе строк, возвращенном `IColumnsRowset::GetColumnsRowset`.<br /><br /> Если значением по умолчанию является `NULL`, параметр `COLUMN_HASDEFAULT` равен `TRUE`, а столбец `COLUMN_DEFAULT` имеет значение `NULL`.|  
 |`COLUMN_FLAGS`|`DBTYPE_UI4`||-Битовая маска, которая описывает характеристики столбца. Перечислимый тип `DBCOLUMNFLAGS` задает биты в битовой маске. Этот столбец не может содержать значение `NULL`. Допустимы следующие значения.<br />-   **DBCOLUMNFLAGS_ISNULLABLE** (`0x20`)<br />-   **DBCOLUMNFLAGS_MAYBENULL** (`0x40`)<br />-   **DBCOLUMNFLAGS_ISLONG** (`0x80`)|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||Логическое значение, показывающее, имеет ли этот столбец значение по умолчанию.<br /><br /> Значение `TRUE`, если столбец может содержать значение `NULL`; `FALSE` в противном случае.|  
-|`DATA_TYPE`|`DBTYPE_UI2`||Признак типа данных столбца. Например:<br /><br /> -   "`TABLE`" = `DBTYPE_HCHAPTER`<br />-   "`TEXT`" = `DBTYPE_WCHAR`<br />-   "`LONG`" = `DBTYPE_I8`<br />-   "`DOUBLE`" = `DBTYPE_R8`<br />-   "`DATE`" = `DBTYPE_DATE`|  
+|`DATA_TYPE`|`DBTYPE_UI2`||Признак типа данных столбца. Пример:<br /><br /> -   "`TABLE`" = `DBTYPE_HCHAPTER`<br />-   "`TEXT`" = `DBTYPE_WCHAR`<br />-   "`LONG`" = `DBTYPE_I8`<br />-   "`DOUBLE`" = `DBTYPE_R8`<br />-   "`DATE`" = `DBTYPE_DATE`|  
 |`TYPE_GUID`|`DBTYPE_GUID`||Идентификатор GUID для типа данных столбца. Поставщики, которые не используют идентификаторы GUID для идентификации типов данных, должны возвращать значение `NULL` в этом столбце.|  
 |`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||Максимально допустимая длина значения данного столбца. Для символьных, двоичных и битовых столбцов это одно из следующих значений.<br /><br /> -Максимальную длину столбца в символы, байтах или битах, соответственно, если длина определена. Например, столбец `CHAR(5)` в таблице SQL Server имеет максимальную длину в 5 символов.<br />-Максимальная длина данных, типа в символах, байтах или битах соответственно, если столбец не имеет определенной длины.<br />— Нуль (0), если определена максимальная длина столбца, ни тип данных.<br />-   `NULL` для всех других типов столбцов.|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||Максимальная длина столбца в октетах (байтах), если столбец имеет символьный или двоичный тип. Нулевое значение (0) означает, что для столбца не задана максимальная длина. Значение `NULL` для всех других типов столбцов.|  
