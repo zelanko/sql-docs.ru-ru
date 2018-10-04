@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5efe857321a5cbfc20612950227d70d7fe0b6815
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2c0ed3a548ffb67557a9ffb7bdbe932c2187ebc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275350"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205784"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Совместимость FileTable с другими компонентами SQL Server
   Описывает, как FileTable работает с другими функциями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -90,7 +87,7 @@ ms.locfileid: "37275350"
   
 -   Представление может обновляться в соответствии с семантикой «обновляемого представления», но ограничения базовой таблицы могут не позволить обновить это представление, так же как и саму таблицу.  
   
--   Путь к файлу в представлении можно представить, добавив его в качестве явного столбца в представлении. Например:  
+-   Путь к файлу в представлении можно представить, добавив его в качестве явного столбца в представлении. Пример:  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
   

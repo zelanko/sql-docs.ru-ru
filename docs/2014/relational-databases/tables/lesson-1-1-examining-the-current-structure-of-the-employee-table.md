@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - examining the current structure of the employee
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16f66dceaa4ff44658d86319d28a7bf068a2ff64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38c16d837dd886785479e1e2994b5b0f19372cfe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227170"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211434"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Изучение текущей структуры таблицы сотрудников
   Образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] содержит таблицу **Employee** в схеме **HumanResources** . Чтобы не изменять исходную таблицу, на этом шаге создается копия таблицы **Employee** , называющаяся **EmployeeDemo**. Для упрощения этого примера копируется только пять столбцов из исходной таблицы. Затем выполняется запрос **HumanResources.EmployeeDemo** таблицы в структуру данных в таблице без использования `hierarchyid` тип данных.  

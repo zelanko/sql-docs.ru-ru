@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.CheckinWindow
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - modified files list [SQL Server]
 - checking in files
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f26b11bb7822262cb9b240bfe0d8c318d2011d1
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811330"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225063"
 ---
 # <a name="view-a-list-of-modified-files"></a>Просмотр списка измененных файлов
   Можно использовать **Отложенные возвраты** вообще отображаемый интервал времени список извлеченных файлов в текущем решении, а для возврата выберите эти файлы нажатием одной кнопки.  
