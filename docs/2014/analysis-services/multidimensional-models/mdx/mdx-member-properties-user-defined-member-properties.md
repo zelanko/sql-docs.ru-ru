@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - custom member properties [MDX]
 ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50af6373446859ac0bf98a7170504b9d58c4a5f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97f7a61772b93c78173f3eca8ad38fca1ade671a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321284"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114314"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Пользовательские свойства элементов (многомерные выражения)
   Определяемые пользователем свойства элементов можно добавить к конкретному именованному уровню измерения в виде связей атрибутов. Определяемые пользователем свойства элементов нельзя добавить `(All)` уровня иерархии, или в саму иерархию.  

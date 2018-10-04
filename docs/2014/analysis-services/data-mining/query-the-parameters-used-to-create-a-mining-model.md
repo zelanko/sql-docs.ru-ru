@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: ce7719e0-6127-4d9c-a753-0e0a3db065e1
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee19f34f99c51bd1747718e5d34fd6ab12fe3e49
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b10717491672e0323afb39ada55aafff5c056caf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288350"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094034"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>запросить параметры, используемые для создания модели интеллектуального анализа данных
   На составление модели интеллектуального анализа данных влияют не только обучающие варианты, но и параметры, заданные при создании модели. Поэтому может быть полезно извлечь значения параметров существующей модели, чтобы лучше разобраться в ее поведении. Получение параметров также может быть полезным при создании документации по конкретной версии модели.  

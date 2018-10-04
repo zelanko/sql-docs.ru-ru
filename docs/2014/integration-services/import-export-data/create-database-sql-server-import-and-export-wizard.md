@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 472daf928c92c69ab330ae1d77e6a6021c96e04f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3720e3301eeffc73c8d89c901f2a4a337e1094d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250494"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099634"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Создание базы данных (мастер импорта и экспорта SQL Server)
   Используйте страницу **Создание базы данных** , чтобы определить новую базу данных для целевого файла.  

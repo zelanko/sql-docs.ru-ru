@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1dcdbebf197c15eb091a7d982ce0e4e17b4f1a24
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9c5505aaed0fba7ff5097c059f11cd0af8f50f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290206"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117494"
 ---
 # <a name="report-builder-ssrs"></a>Построитель отчетов (SSRS)
   Построитель отчетов — это среда создания отчетов для бизнес-пользователей, предпочитающих работать в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office. При создании отчета задается, откуда брать данные, какие данные брать и как их отображать. При запуске отчета обработчик получает все указанные сведения, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет.  

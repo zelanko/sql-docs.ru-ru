@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
-caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 007728b4f429cd0857a2131fb25c9de53b2258db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177751"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101164"
 ---
 # <a name="indexes"></a>Индексы
   В следующей таблице приведен список типов индексов, доступных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также указаны ссылки на дополнительные сведения.  
@@ -40,7 +37,7 @@ ms.locfileid: "37177751"
 |XML|Вырезанное материализованное, представлением большим двоичным объектам XML (BLOB) в `xml` столбце с типом данных.|[XML-индексы (SQL Server)](../xml/xml-indexes-sql-server.md)|  
 |Полнотекстовый|Специальный тип функционального индекса, основанный на токене, построенный и поддерживаемый средством полнотекстового поиска (Майкрософт) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он обеспечивает эффективную поддержку сложных операций поиска слов в символьных строковых данных.|[Заполнение полнотекстовых индексов](../search/populate-full-text-indexes.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 ## <a name="related-content"></a>См. также  
  [Параметр SORT_IN_TEMPDB для индексов](sort-in-tempdb-option-for-indexes.md)  

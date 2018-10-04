@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Add Member to DB Role event class
 ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ddf09bab1a3875af23107e9ff94147d562d6bc7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26cc46200af29737909240b52a8d9197cd46a26c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329804"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138239"
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role, класс событий
   События класса **Audit Add Member to DB Role** возникают при любом добавлении или удалении имени входа к роли базы данных. Этот класс событий используется с хранимыми процедурами **sp_addrolemember**, **sp_changegroup**и **sp_droprolemember** .  

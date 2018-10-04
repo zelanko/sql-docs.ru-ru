@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DDL triggers, about DDL triggers
@@ -14,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b65cc412f2e9cb1ea2058a52ae8336c7827b9ca3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d9f3033aefbb01787fe0001a860a870960d98f15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412743"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141575"
 ---
 # <a name="ddl-triggers"></a>Триггеры DDL
   Триггеры DDL активируются в ответ на различные события языка DDL. Эти события в основном соответствуют инструкциям [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые начинаются с ключевых слов CREATE, ALTER, DROP, GRANT, DENY, REVOKE или UPDATE STATISTICS. Системные хранимые процедуры, выполняющие операции, подобные операциям DDL, также могут запускать триггеры DDL.  
@@ -110,7 +108,7 @@ GO
   
  Список стандартных групп инструкций DDL для триггеров DDL, инструкции, входящие в эти группы событий, а также области, где можно программировать эти группы событий, приводятся в разделе [DDL Event Groups](ddl-event-groups.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Задача|Раздел|  
 |----------|-----------|  

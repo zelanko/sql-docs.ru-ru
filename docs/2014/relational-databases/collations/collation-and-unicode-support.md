@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0547ac482e5dc56ec3b5e207b5776f5c8fbdab4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f313854119094b4407dc8bf4f6e62fdf7a31677
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287340"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126534"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   Параметры сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляют свойства, управляющие правилами сортировки, учета регистра и диакритических знаков в данных. Параметры сортировки, используемые с символьными типами данных, такими как `char` и `varchar` определяют кодовую страницу и соответствующие символы, которые могут использоваться для этого типа данных. Независимо от того, устанавливается ли новый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], восстанавливается ли база данных из копии, или сервер соединяется с клиентскими базами данных, важно понимать требования в отношении локали, знать порядок сортировки и необходимость учета регистра или диакритических знаков в данных, с которыми предстоит работать. Описание того, как сформировать список доступных параметров сортировки в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  

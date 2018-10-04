@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - heaps
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: abcd7a3ba58bd80c8fb14605d76764a7357f960c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: de71808c54264639aea82fe66cf23a7bfd6bd0ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279200"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098684"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Кучи (таблицы без кластеризованных индексов)
   Кучей является таблица без кластеризованного индекса. Для таблиц, сохраненных как куча, может быть создан один или несколько некластеризованных индексов. Данные хранятся в куче без указания порядка. Обычно данные первоначально сохраняются в порядке, в котором строки вставлены в таблицу, но компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] может перемещать данные в куче для более эффективного хранения строк. Поэтому порядок данных нельзя прогнозировать. Чтобы гарантировать порядок строк, возвращаемых из кучи, необходимо использовать `ORDER BY` предложение. Чтобы указать порядок хранения строк, подготовьте кластеризованный индекс для таблицы, чтобы таблица не была кучей.  

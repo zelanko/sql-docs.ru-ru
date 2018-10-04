@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data modeling [data mining]
 - classification [data mining]
 ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec1741a66564a9243e06e53c77aa0473dec1b040
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae0e86016d21e33507544747a44e5fc48b273ae2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159565"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094124"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Мастер классификации (надстройки интеллектуального анализа данных для Excel)
   ![Мастера классификации на ленте «Интеллектуальный анализ данных»](media/dmc-classify.gif "мастера классификации на ленте «Интеллектуальный анализ данных»")  

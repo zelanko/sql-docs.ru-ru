@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 97b618470bbf5fb95ed4817f17f48890a70a5990
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269590"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112114"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Зеркальное отображение баз данных и доставка журналов (SQL Server)
   Для каждой базы данных может быть создано зеркальное отображение и доставка журналов; они также могут существовать одновременно. При выборе подхода примите во внимание следующее.  
@@ -68,7 +65,7 @@ ms.locfileid: "37269590"
   
  ![Доставка журналов и зеркальное отображение баз данных](../media/logshipping-and-dbm-automatic-failover.gif "Доставка журналов и зеркальное отображение баз данных")  
   
- После отработки отказа с переходом на зеркальный сервер имя сервера-источника, определенное на серверах-получателях, не меняется. , и делает это по-другому.  
+ После отработки отказа с переходом на зеркальный сервер имя сервера-источника, определенное на серверах-получателях, не меняется. .  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>Влияние зеркального отображения базы данных на удаленный экземпляр сервера мониторинга  
  При использовании удаленного экземпляра сервера мониторинга сочетание доставки журналов и зеркального отображения баз данных влияет на информацию, хранящуюся в таблицах монитора. Информация о сервере-источнике представляет собой комбинацию данных об основном сервере-источнике и мониторах, настроенных на каждом сервере-получателе.  

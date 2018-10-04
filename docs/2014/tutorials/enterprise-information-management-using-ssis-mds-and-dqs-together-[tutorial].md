@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-caps.latest.revision: 11
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2a31abaefd1fe55e3df24fab24a35ed4af336ac
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9d03470d21532ce097ba753fb8073a5685ccb9f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392606"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122634"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Информационный менеджмент предприятия совместным использованием SSIS, MDS и DQS [учебник]
   Для управления информацией на предприятии, как правило, требуется интеграция данных со всего предприятия и из-за его пределов, очистка данных, проверка данных на наличие повторений, стандартизация данных, обогащение данных, согласование данных с юридическими и нормативными требованиями и последующее сохранение данных в централизованном расположении со всеми необходимыми параметрами безопасности.  

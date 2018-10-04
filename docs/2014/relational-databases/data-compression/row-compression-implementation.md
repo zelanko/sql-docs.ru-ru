@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cddc9636612e5e96c067f4c1c0d87b46976372ba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2fd9a15e4848cc9116d4a9ce3f19e006933291ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160475"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102854"
 ---
 # <a name="row-compression-implementation"></a>Row Compression Implementation
   Этот раздел содержит описание того, как компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] реализует сжатие строки. В этой сводке представлены основные сведения, которые помогут при планировании объема хранения.  

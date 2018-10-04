@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services configuration
 - account provisioning
 ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
-caps.latest.revision: 28
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: f3ab054dad44d7e7c6f43604f21ec771279eb050
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e18073ff783ae8925424551dd62f570e9b2eea6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151895"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105824"
 ---
 # <a name="analysis-services-configuration---account-provisioning"></a>Настройка служб Analysis Services — провизионирование учетных записей
   На этой странице можно выбрать режим сервера и предоставить административные разрешения пользователям или службам, которым требуется неограниченный доступ к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Программа установки не добавляет автоматически локальную группу Windows BUILTIN\Администраторы в роль администратора сервера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] устанавливаемого экземпляра. Если к роли администратора сервера требуется добавить локальную группу администраторов, необходимо явно указать эту группу.  

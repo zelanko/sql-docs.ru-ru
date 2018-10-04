@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorOpen event class
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34e17451a11446f484705b11aaeab984eb5678e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7acffbda62069f25a6bdb37f399679fad4a16bdf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221474"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115914"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen, класс событий
   Класс событий **CursorOpen** описывает события открытия курсора, которые происходят в курсорах API-интерфейса. События открытия курсора происходят, когда [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] определяет инструкцию SQL, которая должна быть связана с курсором или параметрами курсора, и заполняет курсор.  

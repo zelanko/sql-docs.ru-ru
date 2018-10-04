@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9b3675473d52edb767c0aa96fa73e8775430d97e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ed705d084bc1c6e5b8d06e4a68e4dbe77f67a2b7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115654"
 ---
 # <a name="array-parameter-sample"></a>Образец параметра массива
   Иногда бывает необходимо создавать, обновлять или удалять набор строк в базе данных. Существует несколько подходов, которые можно использовать для достижения этой цели. Один из них — передавать массив данных от клиента в хранимую процедуру среды CLR на сервере через определяемый пользователем тип данных интеграции со средой CLR. Природа таких пользовательских типов данных ограничивает данные, передаваемые серверу, размером 8 000 байт. По этой причине такое решение не подходит для больших или сложных данных. Если обрабатываемые данные имеют простую структуру и небольшой объем, этот подход может оказаться более эффективным, чем вызов хранимой процедуры для каждой строки. При передаче массива порядок данных сохраняется для тех приложений, в которых этот порядок является важным. Этот образец содержит следующее.  
@@ -34,7 +31,7 @@ ms.locfileid: "37328194"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](http://go.microsoft.com/fwlink/?linkid=62796).  
   

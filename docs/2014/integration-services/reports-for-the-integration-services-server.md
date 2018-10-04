@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-caps.latest.revision: 14
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c035c2d8dacf29f8ca4d81b13c0ace5500a2dbb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 224345a2dc32f12e925a6f97299c91a5e2f7e9b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180301"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096174"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Отчеты для сервера служб Integration Services
   В текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], стандартные отчеты, доступные в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для наблюдения за [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проекты, которые были развернуты [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] сервера. Эти отчеты позволяют просмотреть состояние пакета и журнал, а также, если необходимо, определить причину сбоев при выполнении пакетов.  
@@ -82,7 +79,7 @@ ms.locfileid: "37180301"
   
  Инструкции по созданию и добавлению пользовательского отчета см. в разделе [Add a Custom Report to Management Studio](../ssms/object/add-a-custom-report-to-management-studio.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Просмотр отчетов для сервера служб Integration Services](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  
   
 ## <a name="related-content"></a>См. также  

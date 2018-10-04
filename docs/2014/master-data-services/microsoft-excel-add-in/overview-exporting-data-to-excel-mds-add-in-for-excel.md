@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad7d9de63907fb8156631880bb1af8a336412fd0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d2e97c16773cd83d208faf711e7c0bebe8282a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290890"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107924"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Загрузка данных (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], необходимо загрузить данные из репозитория MDS в активный лист Excel перед началом работы с ним. Завершив работу с данными, опубликуйте их в репозитории MDS, чтобы они стали доступны другим пользователям.  
@@ -40,7 +37,7 @@ ms.locfileid: "37290890"
 ## <a name="refreshing-data"></a>Обновление данных  
  Данные в репозитории MDS могут быть обновлены другими пользователями после того, как вы их загрузили. Эти данные можно загрузить, не отменяя изменения, внесенные в данные, не относящиеся к MDS. Дополнительные сведения см. в разделе [Обновление данных (надстройка MDS для Excel)](refreshing-data-mds-add-in-for-excel.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65541
 - vdt.dlgbox.save
 ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f61636f76642d495c6b9d1321008a5c56361febd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a1e69d1bd526b9971037a35049e9c34d349ce72d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810660"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089874"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Диалоговое окно «Сохранить» (визуальные инструменты для баз данных)
   Отображается, если сохранить изменения в конструкторе таблиц, касающиеся других таблиц. Это диалоговое окно позволяет подтвердить то, какие таблицы будут сохранены.  

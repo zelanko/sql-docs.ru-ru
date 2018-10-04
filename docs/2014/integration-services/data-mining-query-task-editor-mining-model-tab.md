@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.miningmodel.f1
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
-caps.latest.revision: 24
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9069acf132c048f07f8e27cb956032100f53a9eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7cb49325f8ead610840b8d14213ccbf630813daf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261500"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114394"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Редактор задачи «Запрос интеллектуального анализа данных» (вкладка «Модель интеллектуального анализа данных»)
   Вкладка **Модель интеллектуального анализа данных** диалогового окна **Задача «Запрос интеллектуального анализа данных»** позволяет выбрать используемые структуру и модель интеллектуального анализа данных.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 34b1e95a-a80e-4aca-9201-abde47f2ca74
-caps.latest.revision: 4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54be2f1352a6b4c17aeccb623dfddf1fd648f547
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da5cd273a0bfc00e86a6290777376fb6d1d30c6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277540"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107674"
 ---
 # <a name="create-an-extended-events-session"></a>Создание сеанса расширенных событий
   Сеанс расширенных событий можно создать с помощью редактора запросов или в обозревателе объектов. В обозревателе объектов предусмотрена расширенная подсистема событий, включающая два пользовательских интерфейса, которые могут быть использованы для создания, изменения и просмотра данных сеанса события. К ним относится мастер, который служит для создания сеанса события, а также новый пользовательский интерфейс сеанса, который представляет более сложные параметры конфигурации. Сеанс расширенных событий можно создать для диагностики трассировок SQL Server, что дает возможность решать, например, следующие проблемы.  

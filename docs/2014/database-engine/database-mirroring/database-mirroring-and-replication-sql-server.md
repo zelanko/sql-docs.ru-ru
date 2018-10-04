@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - replication [SQL Server], database mirroring and
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da5968f28c8e5e37934ac0a77f8609a847542e7e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e3df0527e02bd69bfbb198888e82045d067a61a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285810"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091624"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Зеркальное отображение и репликация баз данных (SQL Server)
   Зеркальное отображение базы данных может использоваться совместно с репликацией для повышения доступности базы данных публикации. В зеркальном отображении базы данных участвуют две копии одной базы данных, которые обычно расположены на разных компьютерах. В любой момент только одна копия базы данных доступна клиентам. Эта копия называется основной базой данных. Обновления, вносимые клиентами в основную базу данных, применяются к другой копии базы данных, называемой зеркальной базой данных. Зеркальное отображение включает применение к зеркальной базе данных журнала транзакций всех вставок, обновлений или удалений, выполненных в основной базе данных.  

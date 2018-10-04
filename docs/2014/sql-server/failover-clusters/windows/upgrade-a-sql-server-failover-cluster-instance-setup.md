@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading clusters
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - failover clustering [SQL Server], upgrading
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
-caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be393e7f9dd4eef29a26aa4d4e46c77f4ff76d9e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d10eb18560574e647c443caf4887b8e893d7501
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161875"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132114"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Обновление экземпляра отказоустойчивого кластера SQL Server (программа установки)
   Отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно обновить до отказоустойчивого кластера [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] с помощью мастера установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или из командной строки.  

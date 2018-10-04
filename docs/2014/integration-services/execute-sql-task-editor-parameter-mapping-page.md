@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.parametermapping.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
-caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c35360c4cddebecf7f6237071bc430b74f726cb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 867ecaedcdcbafb972ccd289b5257fc73b353a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092374"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Редактор задачи «Выполнение SQL» (страница «Сопоставление параметров»)
   Используйте страницу **Сопоставление параметров** диалогового окна **Редактор задачи «Выполнение SQL»** для сопоставления переменных с параметрами в инструкции SQL.  
@@ -45,7 +42,7 @@ ms.locfileid: "39082956"
  **Имя параметра**  
  Введите имя параметра.  
   
- В зависимости от типа диспетчера соединений, используемого задачей, необходимо использовать числа или имена параметра. Некоторые типы диспетчеров соединений требуют, что первый символ имени параметра — \@ подписать, как и с определенными именами \@Param1 или столбец имена в качестве имен параметров.  
+ В зависимости от типа диспетчера соединений, используемого задачей, необходимо использовать числа или имена параметра. Для некоторых типов диспетчеров соединений требуется, чтобы в качестве первого символа имени параметра использовался символ \@, а в качестве имен параметров использовались определенные имена, например \@Param1, или имена столбцов.  
   
  **См. также:** [Параметры и коды возврата в задаче "Выполнение SQL"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)  
   

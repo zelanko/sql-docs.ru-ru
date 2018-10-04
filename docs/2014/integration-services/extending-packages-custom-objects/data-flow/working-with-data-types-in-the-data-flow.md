@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom data flow components [Integration Services], mapping data types
 - data flow components [Integration Services], mapping data types
 - data types [Integration Services], converting
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ec97729e8e1cdeefa2851cca00075dff0566901
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d018f8a82aeaabd0a0a3e325daf9fea771cb7c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195684"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122527"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Работа с типами данных в потоке данных
   При разработке пользовательского компонента потока данных в службах Integration Services постоянно идет работа с типами данных: копирование данных в буферы потока и из буферов потока, а также преобразование значений. Сведения, представленные в этом разделе, помогут выбрать нужные типы данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] и использовать правильные методы работы с ними.  

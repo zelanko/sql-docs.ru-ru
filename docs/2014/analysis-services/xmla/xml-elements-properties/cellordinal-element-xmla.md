@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CellOrdinal Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - CellOrdinal element
 ms.assetid: 1808c498-e3b4-4e5c-9e22-7f8662d32874
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0e8e0413afb58ae448a053e9eab20d77a1b36096
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c1c46936acfe909f3655b09737bb595bebb6b22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245374"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133480"
 ---
 # <a name="cellordinal-element-xmla"></a>Элемент CellOrdinal (XML для аналитики)
   Содержит порядковый номер в кубе той ячейки должны обновляться с [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) команды.  

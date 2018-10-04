@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.send.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
-caps.latest.revision: 37
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc35be8153ec5ebbaa5da4ebe5004deb360f9766
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97abb785026fa4709e08526e8fb033e97120c97f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095944"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Редактор задачи «Очередь сообщений» (страница «Отправка»)
   Используйте страницу **Отправить** диалогового окна **Редактор задачи «Очередь сообщений»** , чтобы настроить задачу «Очередь сообщений» для отправки сообщений от пакета служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -32,7 +29,7 @@ ms.locfileid: "37250404"
   
 ## <a name="options"></a>Параметры  
  **UseEncryption**  
- Укажите, необходимо ли шифровать сообщение. Значение по умолчанию — `False`.  
+ Укажите, необходимо ли шифровать сообщение. Значение по умолчанию — `False`.  
   
  **EncryptionAlgorithm**  
  При выборе шифрования задайте имя алгоритма шифрования для использования. Задача «Очередь сообщений» поддерживает алгоритмы RC2 и RC4. По умолчанию, используется алгоритм **RC2**.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adf1b80d91e44aec066584ed81ebe2df66575ad3
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: cc56a469d6fb75f3d5a70fc323788ff726519474
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083076"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112022"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Создание файлов дампа для выполнения пакетов
   Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]позволяют создавать отладочные файлы дампа с информацией о выполнении пакета. Данные, содержащиеся в этих файлах, могут помочь при устранении неполадок при выполнении пакетов.  
@@ -54,7 +51,7 @@ ms.locfileid: "39083076"
 |-------------------------|-----------------|-------------|  
 |Среда|Версия операционной системы, данные об использовании памяти, идентификатор и имя образа процесса. В начале TMP-файла содержатся сведения о среде.|# SSIS текстовый дамп выполнен в 13.9.2007 13:50:34<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # ОС основная=6 дополнительная=0 сборка=6000<br /><br /> # Работает на 2 процессорах AMD64 на подсистеме WOW64<br /><br /> # Память: занято 58 %. Физическая: 845 MБ/2044 MБ Подкачка: 2404 MБ/4095 MБ (доступно/всего)|  
 |Путь и номер версии DLL-библиотеки|Путь и номер версии каждой из DLL-библиотек, загруженных системой при обработке пакета.|# Загружен модуль: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Загружен модуль: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Загружен модуль: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|Последние сообщения|Последние сообщения, выданные системой. Содержат время, тип, описание и идентификатор потока для каждого сообщения.|[M:1]   Элемент кольцевого буфера:              (*pRecord)<br /><br /> [D:2] <<\<CRingBufferLogging::RingBufferLoggingRecord >>> ( \@ 0282F1A8)<br /><br /> [E:3]         Временная метка: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Идентификатор потока: 2368           (ThreadID)<br /><br /> [E:3]         Имя события: OnError                        (EventName)<br /><br /> [E:3]         Имя источника:                (SourceName)<br /><br /> [E:3]         Идентификатор источника:                        (SourceID)<br /><br /> [E:3]         Идентификатор выполнения:                 (ExecutionGUID)<br /><br /> [E:3]         Код данных: -1073446879              (DataCode)<br /><br /> [E:3]         Описание: компонент не обнаружен, не зарегистрирован, не может быть обновлен, или в нем отсутствуют необходимые интерфейсы. Контактная информация для этого компонента: "".|  
+|Последние сообщения|Последние сообщения, выданные системой. Содержат время, тип, описание и идентификатор потока для каждого сообщения.|[M:1]   Элемент кольцевого буфера:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Временная метка: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Идентификатор потока: 2368           (ThreadID)<br /><br /> [E:3]         Имя события: OnError                        (EventName)<br /><br /> [E:3]         Имя источника:                (SourceName)<br /><br /> [E:3]         Идентификатор источника:                        (SourceID)<br /><br /> [E:3]         Идентификатор выполнения:                 (ExecutionGUID)<br /><br /> [E:3]         Код данных: -1073446879              (DataCode)<br /><br /> [E:3]         Описание: компонент не обнаружен, не зарегистрирован, не может быть обновлен, или в нем отсутствуют необходимые интерфейсы. Контактная информация для этого компонента: "".|  
   
 ## <a name="related-content"></a>См. также  
  [Диалоговое окно "Выполнение пакета"](../execute-package-dialog-box.md)  

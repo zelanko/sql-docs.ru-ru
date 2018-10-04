@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - SSVARIANT
 helpviewer_keywords:
 - SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52ea23ff970d094330aaf046f9ebdd843c8b4956
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0af799acbf0c498797564f2c057532a4964db0ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101324"
 ---
 # <a name="ssvariant-structure"></a>Структура SSVARIANT
   Структура `SSVARIANT`, определяемая в файле sqlncli.h, соответствует значению DBTYPE_SQLVARIANT в поставщике OLEDB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- `SSVARIANT` представляет собой избирательное соединение. В зависимости от значения элемента vt потребитель может определить, какой элемент следует считывать. значения VT соответствуют [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных. Таким образом, структура `SSVARIANT` может содержать любой тип SQL Server. Дополнительные сведения о структуре данных для стандартных типов OLE DB, см. в разделе [индикаторов типа](http://go.microsoft.com/fwlink/?LinkId=122171).  
+ `SSVARIANT` представляет собой избирательное соединение. В зависимости от значения элемента vt объект-получатель может определить, какой элемент следует считывать. Значения vt соответствуют типам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Таким образом, структура `SSVARIANT` может содержать любой тип SQL Server. Дополнительные сведения о структуре данных для стандартных типов OLE DB, см. в разделе [индикаторов типа](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
 ## <a name="remarks"></a>Примечания  
  Если DataTypeCompat==80, несколько подтипов `SSVARIANT` становятся строками. Например, следующие значения vt будут представлены в `SSVARIANT` в виде VT_SS_WVARSTRING:  

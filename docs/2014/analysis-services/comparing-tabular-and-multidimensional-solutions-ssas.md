@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbd022ac0771fd862909761b1d4f1abd6e0acf90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36238b6cc481e58161b67442d8f5fdbf0e663e52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181061"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138484"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Сравнение табличных и многомерных решений (службы SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] предоставляет два различных подхода для моделирования данных: табличный и многомерный. Несмотря на значительные сходства, между ними существуют важные различия, которые помогают принимать решения по выполнению дальнейших действий. В этом разделе вы сможете сравнить два подхода и узнать, каким образом каждый из них обеспечивает соответствие общим требованиям проекта. Например, если основным фактором является поддержка конкретного источника данных, при выборе подхода для моделирования будет полезна информация из раздела об источниках данных.  

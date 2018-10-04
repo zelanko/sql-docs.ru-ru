@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], SQLdiag
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-caps.latest.revision: 56
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fa5904d3244cbd19642ce84bebce414f4c7f0c30
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 475c77650179648642aead8275040b894ccc4b40
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272430"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125324"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag, программа
   Программа **SQLdiag** — это универсальная диагностическая программа для сбора сведений, которая может выполняться как консольное приложение или как служба. Программа **SQLdiag** позволяет выполнять сбор журналов и файлов данных с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и других типов серверов, а также мониторинг серверов и устранение определенных неполадок на серверах. Программа**SQLdiag** предназначена для ускорения и упрощения сбора диагностических сведений, необходимых для службы поддержки пользователей [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -162,11 +159,11 @@ ms.locfileid: "37272430"
   
  Параметр*SQLdiag_application_name* может использоваться для запуска или остановки указанного экземпляра службы **SQLdiag** .  
   
- Например:  
+ Пример:  
   
  **SQLDIAG START /A**  *SQLdiag_application_name*  
   
- Кроме того, он может использоваться с параметром **/R** для регистрации указанного экземпляра **SQLdiag** в качестве службы. Например:  
+ Кроме того, он может использоваться с параметром **/R** для регистрации указанного экземпляра **SQLdiag** в качестве службы. Пример:  
   
  **SQLDIAG /R /A** *SQLdiag_application_name*  
   
@@ -225,11 +222,11 @@ ms.locfileid: "37272430"
  **START** | **STOP** | **STOP_ABORT**  
  Запускает или останавливает службу **SQLdiag** . Параметр**STOP_ABORT** вызывает максимально быстрое завершение работы службы, не дожидаясь окончания выполняемого в настоящий момент сбора диагностических сведений.  
   
- Если используются эти аргументы управления службой, они должны быть первыми аргументами в командной строке. Например:  
+ Если используются эти аргументы управления службой, они должны быть первыми аргументами в командной строке. Пример:  
   
  **SQLDIAG START**  
   
- Только аргумент **/A** , указывающий именованный экземпляр **SQLdiag**, может быть использован вместе со **START**, **STOP**или **STOP_ABORT** для управления определенным экземпляром службы **SQLdiag** . Например:  
+ Только аргумент **/A** , указывающий именованный экземпляр **SQLdiag**, может быть использован вместе со **START**, **STOP**или **STOP_ABORT** для управления определенным экземпляром службы **SQLdiag** . Пример:  
   
  **SQLDIAG START /A** *имя_приложения_SQLdiag*  
   

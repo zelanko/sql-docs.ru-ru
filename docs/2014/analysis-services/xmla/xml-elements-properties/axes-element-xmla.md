@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Axes Element
@@ -24,16 +22,15 @@ f1_keywords:
 helpviewer_keywords:
 - Axes element
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8ac4baded4dd516e12c31ffd701e1c4668d769e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bdb5aa48dd3a65f99b424274fdb89b3aee8c9591
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094914"
 ---
 # <a name="axes-element-xmla"></a>Элемент Axes (XML для аналитики)
   Содержит коллекцию [оси](axis-element-xmla.md) элементов, представляющих данные оси, содержащиеся в [корневой](root-element-xmla.md) элемент, использующий [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) тип данных.  
@@ -63,7 +60,7 @@ ms.locfileid: "37237404"
   
 |Связь|Элемент|  
 |------------------|-------------|  
-|Родительские элементы|[корневой](root-element-xmla.md)|  
+|Родительские элементы|[Корневой](root-element-xmla.md)|  
 |Дочерние элементы|[Axis](axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  

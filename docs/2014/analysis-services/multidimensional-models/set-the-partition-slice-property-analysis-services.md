@@ -4,27 +4,22 @@ ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 helpviewer_keywords:
 - partitions [Analysis Services], data slices
 - data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 539cef78d7c9f9333688f4db1e5fbf35461479ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7049cce942cb593df74255a1459e07a6fa894c51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230084"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090514"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Определение свойства среза секции (службы Analysis Services)
   Срез данных является важной функцией оптимизации, которая помогает направить запросы к данным соответствующих секций. Прямое указание свойства Slice позволяет повысить производительность запросов, переписав стандартные срезы, сформированные для секций MOLAP и HOLAP. Также свойство Slice обеспечивает дополнительную проверку при обработке секции.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 669b5d6a8514dce55a2f5fadc0d1c239b5b3ab61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 272aba58ecd342bd1bf0040a9b14beca15e4d160
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268590"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110861"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Выражения (построитель отчетов и службы SSRS)
   Выражения часто используются в отчетах для получения, вычисления, отображения, группирования, сортировки, параметризации и форматирования данных. Многие свойства элементов отчета могут быть заданы в виде выражений. С помощью выражений можно управлять содержимым, внешним видом и интерактивными возможностями отчета. Выражения записываются на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], сохраняются в определении отчета и вычисляются обработчиком отчетов при запуске отчета.  
@@ -74,7 +71,7 @@ ms.locfileid: "37268590"
   
  ![rs_ExpressionSampleValuesFormat](../media/rs-expressionsamplevaluesformat.gif "rs_ExpressionSampleValuesFormat")  
   
- Дополнительные сведения см. в разделе [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [Форматирование текста и заполнителей &#40;построитель отчетов и службы SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
 
   
@@ -118,7 +115,7 @@ ms.locfileid: "37268590"
 
   
 ##  <a name="Valid"></a> Проверка выражений  
- При создании выражения для определенного свойства элемента отчета типы ссылок, которые могут быть включены в выражение, зависят от значений, которые может принимать свойство элемента отчета, и от области, в которой это свойство вычисляется. Например:  
+ При создании выражения для определенного свойства элемента отчета типы ссылок, которые могут быть включены в выражение, зависят от значений, которые может принимать свойство элемента отчета, и от области, в которой это свойство вычисляется. Пример:  
   
 -   По умолчанию выражение [Sum] вычисляет сумму данных, находящихся в области в момент вычисления выражения. Для табличной ячейки область зависит от членства групп строк и столбцов. Дополнительные сведения см. в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   

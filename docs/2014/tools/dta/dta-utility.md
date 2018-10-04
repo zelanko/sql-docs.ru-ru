@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 174343d5c937c8c58277579192a9deb968355a0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091741"
 ---
 # <a name="dta-utility"></a>dta
   Программа **dta** — это версия помощника по настройке ядра СУБД для командной строки. Программа **dta** предназначена для использования функций помощника по настройке ядра СУБД в приложениях и скриптах.  
@@ -130,7 +127,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** *database_name*  
- Задает первую базу данных, к которой программа **dta** подключается при настройке рабочей нагрузки. Для этого аргумента может быть задана только одна база данных. Например:  
+ Задает первую базу данных, к которой программа **dta** подключается при настройке рабочей нагрузки. Для этого аргумента может быть задана только одна база данных. Пример:  
   
 ```  
 dta -d AdventureWorks2012 ...  
