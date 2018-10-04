@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 387d1752c2e2e2a8f6bdc6e48b2d9b9e7952419f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4860230697f5a65ada594060b738793ebea6202
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153375"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143804"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет набор шаблонов, которые помогают быстро создавать скрипты XML для аналитики, многомерные или DMX-запросы, ключевые показатели эффективности в кубе или табличной модели, формировать скрипты для резервного копирования и восстановления, а также выполнять много других задач. Шаблоны расположены в **обозревателе шаблонов** в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -219,8 +216,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Синхронизировать|Демонстрирует использование XML для Аналитики `Synchronize` команду, чтобы синхронизировать другой [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных с текущим [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных с использованием параметра SkipMembership для тега SynchronizeSecurity.|  
 |XML для аналитики или Наборы строк схемы|Выявление наборов строк схемы|Демонстрирует использование метода `Discover` XML для аналитики для получения содержимого набора строк схемы DISCOVER_SCHEMA_ROWSETS.|  
 |XML для аналитики или Состояние сервера|Соединения|Демонстрирует использование XML для Аналитики `Discover` метод для получения содержимого набора строк схемы DISCOVER_CONNECTIONS.|  
-||Задания
-|Демонстрирует использование XML для Аналитики `Discover` метод для получения содержимого набора строк схемы DISCOVER_JOBS.|  
+||Задания|Демонстрирует использование XML для Аналитики `Discover` метод для получения содержимого набора строк схемы DISCOVER_JOBS.|  
 ||Расположение|Демонстрирует использование XML для Аналитики `Discover` метод для получения содержимого набора строк схемы DISCOVER_LOCATIONS с указанием пути расположения файлов резервной копии.|  
 ||Блокировки|Демонстрирует использование метода `Discover` XML для аналитики для получения содержимого набора строк схемы DISCOVER_LOCKS.|  
 ||Предоставление памяти|Демонстрирует использование метода `Discover` XML для аналитики для получения содержимого набора строк схемы DISCOVER_MEMORYGRANT.|  

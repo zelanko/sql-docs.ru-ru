@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - input properties [Integration Services]
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-caps.latest.revision: 45
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5bc0d0f75f911c27ec8b117653aef978a615f3e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d9d641ccb2a0e261ea899f4fc086d4ad8de0643
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169348"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160652"
 ---
 # <a name="common-properties"></a>Общие свойства
   Объекты потока данных в объектной модели служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] имеют общие свойства и пользовательские свойства на уровне компонента, входы и выходы, а также входные и выходные столбцы. Многие свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
@@ -119,7 +116,7 @@ ms.locfileid: "37169348"
 |IsSorted|Логическое значение|Указывает, сортируются ли данные на входе.|  
 |Имя|String|Имя входа.|  
 |SourceLocale|Целочисленный|Идентификатор локали данных входа.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. , и делает это по-другому. Допустимые значения — `Fail component`, `Ignore failure`, и `Redirect row`.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. . Допустимые значения — `Fail component`, `Ignore failure`, и `Redirect row`.|  
   
  Назначения и некоторые преобразования не поддерживают вывод ошибок на выходе, а свойства ErrorRowDisposition и TruncationRowDisposition этих компонентов доступны только для чтения.  
   

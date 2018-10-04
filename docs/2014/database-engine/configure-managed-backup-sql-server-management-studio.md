@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managedbackup.configure.f1
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
-caps.latest.revision: 9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d09c001bc7c267b2235377a1312609ee8b7b3fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0403d34b48b74d0517aaf3cb31ea520dbc436f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165604"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Настройка управляемого резервного копирования (SQL Server Management Studio)
   **Управляемое резервное копирование** диалоговое окно позволяет настроить [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] значения по умолчанию для экземпляра. В этом разделе описывается, как использовать это диалоговое окно для настройки [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] настройки по умолчанию для экземпляра и параметры, при этом необходимо учитывать. Когда [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] настроен для экземпляра, параметры будут применены к любой новой базы данных, создаваемой в дальнейшем.  

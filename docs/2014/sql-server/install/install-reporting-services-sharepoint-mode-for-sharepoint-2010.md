@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 624f7347d4fdcbdf617e314ba398455b3f4b8126
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc61d95716eabf90f22e76fa43dc1ea7f93a0c81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313174"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159454"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>Установка служб Reporting Services в режиме SharePoint для SharePoint 2010
   Процедуры, описанные в данном разделе, позволят установить сервер отчетов служб Reporting Services на одиночный сервер в режиме SharePoint. Эти шаги включают запуск мастера установки SQL Server, а также дополнительные задачи по настройке с использованием центра администрирования SharePoint 2010. В этом разделе также можно ознакомиться с отдельными процедурами для существующей установки, например созданием приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения о добавлении дополнительных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] серверы в существующую ферму, см. в разделе [Добавление дополнительного сервера отчетов в ферму &#40;горизонтально масштабируемые службы SSRS&#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) и [Добавление дополнительных веб-служб отчетов Переднего плана к ферме](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md).  

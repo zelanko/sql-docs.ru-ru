@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c7b0056def4b62d7305fe5ac78db93ba15fb22a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8214e3da53bf87ea96edcf5fb77d9bc774f65aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254636"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155064"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Загрузка выхода локального пакета
   Клиентские приложения могут считывать значения на выходе пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], если этот выход сохранен в назначения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием [!INCLUDE[vstecado](../../includes/vstecado-md.md)], либо если выход сохранен в назначение "Неструктурированный файл" с использованием классов в пространстве имен **System.IO**. Кроме того, клиентское приложение может считывать выход пакета непосредственно из памяти, без необходимости промежуточного шага для сохранения данных. Это решение лежат `Microsoft.SqlServer.Dts.DtsClient` пространства имен, содержащего специализированные реализации `IDbConnection`, `IDbCommand`, и **IDbDataParameter** интерфейсы из **System.Data** пространства имен. По умолчанию сборка Microsoft.SqlServer.Dts.DtsClient.dll устанавливается в каталог **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
@@ -50,7 +47,7 @@ ms.locfileid: "37254636"
   
 4.  Создайте объект типа `DtsClient.DtsCommand`, использующий ранее созданный объект `DtsConnection`, и присвойте его свойству `CommandText` в качестве значения имя назначения DataReader в пакете. Затем вызовите метод `ExecuteReader` командного объекта, чтобы загрузить результаты пакета в новое назначение DataReader.  
   
-5.  При необходимости можно косвенно параметризовать выход пакета с использованием коллекции объектов `DtsDataParameter` для объекта `DtsCommand`, чтобы передать значения переменным, определенным в пакете. В рамках пакета можно использовать эти переменные в качестве параметров запроса или в выражениях для воздействия на результаты, возвращаемые в назначение DataReader. Необходимо определить эти переменные в пакете в **DtsClient** пространства имен, чтобы вы могли использовать их с `DtsDataParameter` объекта из клиентского приложения. (Может понадобиться нажать кнопку панели инструментов **Выбор столбцов переменных** в окне **Переменные**, чтобы отобразить столбец **Namespace**.) В клиентском коде при добавлении параметра `DtsDataParameter` в коллекцию `Parameters` объекта `DtsCommand` опустите ссылку на пространство имен DtsClient в имени переменной. Например:  
+5.  При необходимости можно косвенно параметризовать выход пакета с использованием коллекции объектов `DtsDataParameter` для объекта `DtsCommand`, чтобы передать значения переменным, определенным в пакете. В рамках пакета можно использовать эти переменные в качестве параметров запроса или в выражениях для воздействия на результаты, возвращаемые в назначение DataReader. Необходимо определить эти переменные в пакете в **DtsClient** пространства имен, чтобы вы могли использовать их с `DtsDataParameter` объекта из клиентского приложения. (Может понадобиться нажать кнопку панели инструментов **Выбор столбцов переменных** в окне **Переменные**, чтобы отобразить столбец **Namespace**.) В клиентском коде при добавлении параметра `DtsDataParameter` в коллекцию `Parameters` объекта `DtsCommand` опустите ссылку на пространство имен DtsClient в имени переменной. Пример:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -298,7 +295,7 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services  **<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Основные сведения об отличиях между локальным и удаленным выполнением](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

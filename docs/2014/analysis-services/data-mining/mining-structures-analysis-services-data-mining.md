@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: 76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c51246efc1e93c596ad18aec7ba4e72e1399e2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b370c8f3fb3c8a672f832c13ba89381f475733f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288500"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172524"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   Структура интеллектуального анализа данных определяет данные, на основе которых строятся модели интеллектуального анализа данных: она задает представление источника данных, количество и тип столбцов, а также необязательное секционирование на обучающий и проверочный наборы. Одна структура интеллектуального анализа может поддерживать несколько моделей интеллектуального анализа данных, совместно использующих один домен. На следующей диаграмме показана связь структуры интеллектуального анализа данных с источником данных и моделями интеллектуального анализа данных, основанных на этой структуре.  
@@ -113,7 +110,7 @@ ms.locfileid: "37288500"
   
  Дополнительные сведения об архитектуре моделей интеллектуального анализа данных см. в разделе [Mining Models &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Используйте указанные здесь ссылки, чтобы больше узнать об определении, управлении и использовании структур интеллектуального анализа данных.  
   
 |Задания|Ссылки|  

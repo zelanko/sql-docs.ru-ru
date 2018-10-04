@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 65ca9a01ebcf2289c8f40fc5afdc2d5e918df413
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9dd4bbcb2c2b610cfa91eea160f4194fa9df9e82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169525"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174494"
 ---
 # <a name="managing-a-composite-domain"></a>Управление составным доменом
   В этом разделе описывается использование составных доменов в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Иногда один домен не позволяет удовлетворительно представить данные в поле. Чтобы представить данные, необходимо группировать отдельные домены. Для этого создается составной домен. Составной домен состоит из нескольких отдельных доменов и сопоставляется с полем данных, включающим несколько связанных терминов, которые не обработаны с помощью анализа, а включены в одно составное значение. Каждый термин в значении представляется другим, отдельным доменом. Только после включения отдельных доменов в составные домены и последующего сопоставления составного домена с полем данных вы можете создать набор знаний в базе знаний о данных в этом поле с помощью создания набора знаний в отдельных доменах. Составной домен, как и отдельный домен, — это семантическое представление данных в одном поле данных.  
@@ -39,7 +36,7 @@ ms.locfileid: "37169525"
 |Создание междоменного правила, если значение одного домена в составном домене влияет на значение в другом домене.|[Создание междоменного правила](../../2014/data-quality-services/create-a-cross-domain-rule.md)|  
 |Определение сочетания значений, чтобы с помощью DQS создать отчет об их частоте.|[Использование связей значений в составном домене](../../2014/data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

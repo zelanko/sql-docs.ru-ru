@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-caps.latest.revision: 18
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 7a7e5c9979dfe42b956a90eb61d1a03a9ef65181
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e214a46adece1bcee940f57805db897d1c8c76db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234894"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160704"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Ключи шифрования базы данных и SQL Server (компонент Database Engine)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используются ключи шифрования для защиты данных, информации об учетных данных и соединениях, которые хранятся в серверной базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] существует два вида ключей: *симметричный* и *aсимметричный*. В симметричных ключах для шифрования и расшифровки данных используется одинаковый пароль. При использовании асимметричных ключей один пароль применяется для шифрования данных ( *открытый* ключ), а другой для расшифровки данных ( *закрытый* ключ).  
@@ -70,7 +67,7 @@ ms.locfileid: "37234894"
  [Расширенное управление ключами (EKM)](extensible-key-management-ekm.md)  
  Объясняется, как использовать сторонние системы управления ключами с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  [Создание резервной копии главного ключа службы](back-up-the-service-master-key.md)  
   
  [Восстановление главного ключа службы](restore-the-service-master-key.md)  

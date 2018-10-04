@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1ce2b3e3-108a-4f7e-985f-a20b816d0da7
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: df76b7ac5b50f5dfa9206b0352de4443bfd07a19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d40d378a7b8d9d491b53e4a12d5d64bca36848e9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255226"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173394"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Основные сведения о требованиях для модели временных рядов (учебник по интеллектуальному анализу данных — средний уровень)
   Данные для модели прогнозирования при подготовке должны содержать один столбец, который может быть использован для идентификации этапов временных рядов. Этот столбец будет обозначаться `Key Time`. Этот столбец является ключом и должен содержать уникальные числовые значения.  
