@@ -1,13 +1,11 @@
 ---
-title: Размер свойств (поток ADO) | Документы Microsoft
+title: Свойство (ADO Stream) Size | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - Size property [ADO Stream]
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6d39bb563acfde83a08f08c00fee66cc9b81967
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d35af0315460af8b110c7af38934e5d196a5c895
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281889"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696322"
 ---
-# <a name="size-property-ado-stream"></a>Свойство Size (поток ADO)
+# <a name="size-property-ado-stream"></a>Свойство Size (объект Stream ADO)
 Указывает размер потока в байтах.  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Возвращает **длинные** значение, указывающее размер потока в байтах. Значение по умолчанию — размер потока или значение -1, если известен размер потока.  
+ Возвращает **Long** значение, указывающее размер потока в байтах. Значение по умолчанию — размер потока, или значение -1, если известен размер потока.  
   
 ## <a name="remarks"></a>Примечания  
- **Размер** может использоваться только с открытым [поток](../../../ado/reference/ado-api/stream-object-ado.md) объектов.  
+ **Размер** может использоваться только с открытым [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объектов.  
   
 > [!NOTE]
->  Любое количество битов, которые могут храниться в **поток** объекта, ограничиваемое только системными ресурсами. Если **поток** содержит дополнительные биты не могут быть представлены **длинные** значение, **размер** усекается и поэтому неточно представлять длину **Поток**.  
+>  Любое количество битов, которые могут храниться в **Stream** объекта, ограничивается только системные ресурсы. Если **Stream** содержит дополнительные биты не может быть представлена **Long** значение, **размер** усекается и поэтому неточно представлять длину **Stream**.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

@@ -1,32 +1,29 @@
 ---
-title: Пример свойства DefinedSize (VC ++) | Документы Microsoft
+title: Пример свойства DefinedSize (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - DefinedSize property [ADOX], VC++ example
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2492568dc6e9e62dc3db2ffb914495015e714880
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5c16f76e086dfc78ffed967ef33300a09630a798
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285583"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616602"
 ---
-# <a name="definedsize-property-example-vc"></a>Пример свойства DefinedSize (VC ++)
-В этом примере демонстрируется [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md). Код будет переопределить размер столбца FirstName **сотрудников** таблицу *Northwind* базы данных. После этого изменения в значениях FirstName [поле](../../../ado/reference/ado-api/field-object.md) из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе **сотрудников** таблица будет отображена. Обратите внимание, что по умолчанию, поле «имя» становится дополняются пробелами после его переопределить **DefinedSize** свойство.  
+# <a name="definedsize-property-example-vc"></a>Пример свойства DefinedSize (Visual C++)
+В этом примере показано [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md). Код будет переопределить размер столбца FirstName **сотрудников** таблицы *Northwind* базы данных. Затем изменения в значениях FirstName [поле](../../../ado/reference/ado-api/field-object.md) из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе **сотрудников** отображается таблица. Обратите внимание, что по умолчанию для поля FirstName становится дополняются пробелами после переопределении **DefinedSize** свойство.  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -167,5 +164,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Свойство DefinedSize (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

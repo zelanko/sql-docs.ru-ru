@@ -1,13 +1,11 @@
 ---
-title: Метод UpdateBatch | Документы Microsoft
+title: Метод UpdateBatch | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c7b25df0679596485586393993ba718f08542bf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e39b7094b4b4543b60431f847ed792f18ace31f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282813"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683622"
 ---
 # <a name="updatebatch-method"></a>Метод UpdateBatch
 Записывает все ожидающие пакетных обновлений на диск.  
@@ -42,30 +39,30 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  Необязательный параметр. [AffectEnum](../../../ado/reference/ado-api/affectenum.md) значение, указывающее, сколько записей **UpdateBatch** повлияет на метод.  
   
  *PreserveStatus*  
- Необязательный параметр. Объект **логическое** значение, указывающее ли изменения, как указано в [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство, должна быть зафиксирована. Если это значение равно **True**, **состояние** свойства каждой записи остается неизменным после завершения обновления.  
+ Необязательный параметр. Объект **логическое** значение, указывающее ли изменения, как указано в [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство, должен быть зафиксирован. Если это значение **True**, **состояние** свойство каждой записи остается неизменным после завершения обновления.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте **UpdateBatch** метод при изменении **записей** объекта в пакетный режим обновления для передачи все изменения, внесенные в **записей** объекта в основной базе данных.  
+ Используйте **UpdateBatch** метод при изменении **записей** объекта в пакетный режим обновления для передачи все изменения, внесенные в **записей** объекта в основную базу данных.  
   
- Если **записей** объект поддерживает обновление пакета, можно кэшировать внесение нескольких изменений в одну или несколько записей локально до вызова **UpdateBatch** метод. При изменении текущей записи или добавления новой записи, при вызове **UpdateBatch** метода ADO будет автоматически вызывать [обновление](../../../ado/reference/ado-api/update-method.md) метод, чтобы сохранить все ожидающие изменения для текущей записи, прежде чем передает пакет изменений к поставщику. Следует использовать пакетного обновления с набором ключей или статическом курсоре только.  
+ Если **записей** объект поддерживает обновление пакета, внесение нескольких изменений в одну или несколько записей можно кэшировать локально до вызова метода **UpdateBatch** метод. При изменении текущей записи или добавления новой записи, при вызове **UpdateBatch** метод, автоматически вызывает ADO [обновления](../../../ado/reference/ado-api/update-method.md) метод для сохранения любых ожидающих изменений в текущую запись, прежде чем передает пакет изменений к поставщику. Следует использовать пакетного обновления с набором ключей или только для статического курсора.  
   
 > [!NOTE]
->  Указание **adAffectGroup** как значение для этого параметра приведет к произошла ошибка при записи не видны в текущем **записей** (например, фильтр, для которого нет записей, соответствующих).  
+>  Указание **adAffectGroup** так как значение для этого параметра вызовет ошибку при записи не отображается в текущем **записей** (например, для которого нет записей, соответствующих фильтра).  
   
- Если произошел сбой попытки передачи изменений для нескольких или всех записей из-за конфликта с базовыми данными (например, запись уже был удален другим пользователем), поставщик возвращает предупреждения, чтобы [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции и возникает ошибка во время выполнения. Используйте [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство (**adFilterAffectedRecords**) и [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство для поиска записей с конфликтами.  
+ Если произошел сбой попытки передачи изменений для любого или всех записей из-за конфликта с базовыми данными (например, запись уже был удален другим пользователем), поставщик возвращает предупреждения, чтобы [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции и возникает ошибка времени выполнения. Используйте [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство (**adFilterAffectedRecords**) и [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойства для поиска записей с конфликтами.  
   
  Чтобы отменить все ожидающие пакетные обновления, используйте [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) метод.  
   
- Если [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) и [Resync обновление](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) динамических свойств и **набора записей** является результатом выполнения операции СОЕДИНЕНИЯ на несколько таблиц, то выполнение **UpdateBatch** метод неявно следуют [Resync](../../../ado/reference/ado-api/resync-method.md) метод в зависимости от параметров [обновление Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) свойство.  
+ Если [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) и [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) динамические свойства заданы и **записей** является результатом выполнения операции СОЕДИНЕНИЯ на несколько таблиц, то выполнение **UpdateBatch** метод неявно следуют [Resync](../../../ado/reference/ado-api/resync-method.md) метод, в зависимости от параметров [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) свойство.  
   
- Порядок выполнения отдельных обновлений пакета в источнике данных не обязательно является таким же, как порядок, в котором они были выполнены на локальном **записей**. Порядок обновления зависит от поставщика. Это учитывать при программировании обновлений, которые связаны друг с другом, например ограничения внешнего ключа для вставки или обновления.  
+ Порядок выполнения отдельных обновлений пакета в источнике данных не обязательно так же, как порядок, в котором они были выполнены на локальном **записей**. Порядок обновления зависит от поставщика. Это учитывать при написании кода обновления, которые связаны друг с другом, например ограничения внешнего ключа в инструкции insert или update.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также  
- [UpdateBatch и пример CancelBatch методы (Visual Basic)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
- [UpdateBatch и CancelBatch примере методы (VC ++)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
+ [Примеры методов UpdateBatch и Cancelbatch по методы (Visual Basic)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
+ [UpdateBatch и Cancelbatch методы (Visual C++)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Свойство LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   

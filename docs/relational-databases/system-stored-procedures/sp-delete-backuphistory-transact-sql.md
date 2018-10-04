@@ -1,14 +1,11 @@
 ---
-title: sp_delete_backuphistory (Transact-SQL) | Документы Microsoft
+title: sp_delete_backuphistory (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_backuphistory
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_backuphistory
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71328851b00cff137f909ae9eb7854f0762b8d19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fc910b5ca726e50596dc17612b19f4851a51b48c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243178"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636662"
 ---
 # <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Уменьшает размер таблиц журнала резервного копирования и восстановления, удаляя записи для резервных наборов данных, которые старше указанной даты. Дополнительные строки добавляются резервного копирования и восстановления таблицы журнала после создания каждой резервной копии или выполнении операции восстановления; Поэтому рекомендуется периодически выполнять **sp_delete_backuphistory**.  
+  Уменьшает размер таблиц журнала резервного копирования и восстановления, удаляя записи для резервных наборов данных, которые старше указанной даты. Дополнительные строки добавляются в резервную копию таблицы журнала и восстановления после каждой резервной копии или выполнении операции восстановления; Поэтому рекомендуется периодически выполнять **sp_delete_backuphistory**.  
   
 > [!NOTE]  
 >  Таблицы журнала резервного копирования и восстановления находятся в **msdb** базы данных.  
@@ -54,9 +50,9 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  **sp_delete_backuphistory** должна запускаться из **msdb** базы данных и влияет на следующие таблицы:  
   
 -   [backupfile;](../../relational-databases/system-tables/backupfile-transact-sql.md)  

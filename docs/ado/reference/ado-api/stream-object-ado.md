@@ -1,13 +1,11 @@
 ---
-title: Поток объекта (ADO) | Документы Microsoft
+title: Stream объект (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,70 +13,69 @@ f1_keywords:
 helpviewer_keywords:
 - Stream object [ADO]
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 591bf956cea85979f72bb513cb08c48f86883aa3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 976e822482efc530e3b055f61c242ee03a30e012
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282603"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613862"
 ---
-# <a name="stream-object-ado"></a>Объект потока (ADO)
+# <a name="stream-object-ado"></a>Объект Stream (ADO)
 Представляет поток двоичных данных или текста.  
   
- В древовидной структурой иерархии файловой системы или системы электронной почты [записи](../../../ado/reference/ado-api/record-object-ado.md) , возможно, по умолчанию двоичного потока битов, связанные с ним, содержащий содержимое файла или сообщения электронной почты. Объект **поток** объект может использоваться для обработки поля или записи, содержащие эти потоки данных. Объект **поток** объекта можно получить следующими способами:  
+ В древовидной иерархии файловой системы или системы электронной почты [записи](../../../ado/reference/ado-api/record-object-ado.md) возможно, по умолчанию двоичный поток битов, связанные с ней, содержащий содержимое файла или сообщения электронной почты. Объект **Stream** объект может использоваться для обработки поля или записи, содержащие эти потоки данных. Объект **Stream** может быть получен следующими способами:  
   
--   Из URL-адрес, указывающий объект (как правило, файл), содержащий двоичные или текстовые данные. Этот объект может быть простой документ **записи** объект, представляющий структурированный документ или папку.  
+-   Из URL-адрес, указывающий на объект (как правило, файл), содержащий двоичные или текстовые данные. Этот объект может быть простой документ, **записи** объект, представляющий структурированного документа или папки.  
   
--   Значение по умолчанию, открыв **поток** объекта, связанного с **записи** объекта. Вы можете получить поток по умолчанию, связанные с **запись** объекта при **записи** открыт, чтобы исключить приема-передачи, чтобы открыть поток.  
+-   Значение по умолчанию, открыв **Stream** объект, связанный с **записи** объекта. Вы можете получить поток по умолчанию, связанные с **записи** объекта при **записи** открыт, чтобы исключить передача просто открыть поток.  
   
--   Путем создания экземпляра **поток** объекта. Эти **поток** объекты могут использоваться для хранения данных в рамках приложения. В отличие от **поток** связанные с URL-адрес или значение по умолчанию **поток** из **запись**, созданный экземпляр **поток** не связан с основной источник по умолчанию.  
+-   Путем создания экземпляра **Stream** объекта. Эти **Stream** объекты могут использоваться для хранения данных в рамках приложения. В отличие от **Stream** связанный с URL-адрес, или значение по умолчанию **Stream** из **записи**, которого создан экземпляр **Stream** не связан ни с базового источника по умолчанию.  
   
- В случае методов и свойств **поток** объекта, можно сделать следующее:  
+ С помощью методов и свойств **Stream** объекта, можно сделать следующее:  
   
--   Откройте **поток** объекта из **запись** или URL-адрес с [откройте](../../../ado/reference/ado-api/open-method-ado-stream.md) метод.  
+-   Откройте **Stream** объекта из **записи** или URL-адрес с [откройте](../../../ado/reference/ado-api/open-method-ado-stream.md) метод.  
   
--   Закрыть **поток** с [закрыть](../../../ado/reference/ado-api/close-method-ado.md) метод.  
+-   Закрыть **Stream** с [закрыть](../../../ado/reference/ado-api/close-method-ado.md) метод.  
   
--   Входные байт или текст, **поток** с [записи](../../../ado/reference/ado-api/write-method.md) и [WriteText](../../../ado/reference/ado-api/writetext-method.md) методы.  
+-   Входные данные байт или текст, **Stream** с [записи](../../../ado/reference/ado-api/write-method.md) и [WriteText](../../../ado/reference/ado-api/writetext-method.md) методы.  
   
--   Считывает байты из **поток** с [чтения](../../../ado/reference/ado-api/read-method.md) и [ReadText](../../../ado/reference/ado-api/readtext-method.md) методы.  
+-   Считывает байты из **Stream** с [чтения](../../../ado/reference/ado-api/read-method.md) и [ReadText](../../../ado/reference/ado-api/readtext-method.md) методы.  
   
--   Писать **поток** буфера данных по-прежнему в ADO к базовому объекту с [Flush](../../../ado/reference/ado-api/flush-method-ado.md) метод.  
+-   Напишите **Stream** буфера данных по-прежнему в ADO к базовому объекту с [Flush](../../../ado/reference/ado-api/flush-method-ado.md) метод.  
   
--   Скопируйте содержимое **поток** в другой **поток** с [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) метод.  
+-   Скопируйте содержимое **Stream** в другой **Stream** с [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) метод.  
   
--   Контролировать порядок считывания строк из исходного файла с [SkipLine](../../../ado/reference/ado-api/skipline-method.md)метод и [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) свойство.  
+-   Контролировать, каким образом строки считываются из исходного файла с [SkipLine](../../../ado/reference/ado-api/skipline-method.md)метод и [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) свойство.  
   
--   Определить конец позицию в потоке [электрической ПЕРЕГРУЗКИ](../../../ado/reference/ado-api/eos-property.md)свойство и [SetEOS](../../../ado/reference/ado-api/seteos-method.md) метод.  
+-   Определить конец позицию в потоке [EOS](../../../ado/reference/ado-api/eos-property.md)свойство и [SetEOS](../../../ado/reference/ado-api/seteos-method.md) метод.  
   
--   Сохранение и восстановление данных в файлах с [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)и [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md) методы.  
+-   Сохранять и восстанавливать данные в файлах с [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)и [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md) методы.  
   
--   Укажите набор знаков, используемый для хранения **поток** с [Charset](../../../ado/reference/ado-api/charset-property-ado.md) свойство.  
+-   Укажите набор символов, используемый для хранения **Stream** с [Charset](../../../ado/reference/ado-api/charset-property-ado.md) свойство.  
   
--   Остановка асинхронных **поток** операции с [отменить](../../../ado/reference/ado-api/cancel-method-ado.md) метод.  
+-   Halt асинхронную **Stream** операцию с [отменить](../../../ado/reference/ado-api/cancel-method-ado.md) метод.  
   
--   Определить размер в байтах **поток** с [размер](../../../ado/reference/ado-api/size-property-ado-stream.md) свойство.  
+-   Определить количество байтов в **Stream** с [размер](../../../ado/reference/ado-api/size-property-ado-stream.md) свойство.  
   
--   Управлять текущую позицию внутри **поток** с [позиции](../../../ado/reference/ado-api/position-property-ado.md) свойство.  
+-   Управлять текущую позицию внутри **Stream** с [позиции](../../../ado/reference/ado-api/position-property-ado.md) свойство.  
   
--   Определить тип данных в **поток** с [тип](../../../ado/reference/ado-api/type-property-ado-stream.md) свойства.  
+-   Определить тип данных в **Stream** с [тип](../../../ado/reference/ado-api/type-property-ado-stream.md) свойства.  
   
--   Определить текущее состояние **поток** (закрыт, откройте или выполнении) с [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство.  
+-   Определить текущее состояние **Stream** (закрыто, откройте или выполнение) с [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство.  
   
--   Укажите режим доступа для **поток** с [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойство.  
+-   Укажите режим доступа для **Stream** с [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойство.  
   
 > [!NOTE]
->  URL-адреса, с помощью схемы http автоматически вызывает [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URL-адреса, с использованием схемы http, автоматически вызывает метод [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
- **Поток** объекта безопасные для использования.  
+ **Stream** объект безопасен для скриптов.  
   
  Этот раздел содержит следующие подразделы.  
   
--   [Свойства объекта потока, методы и события](../../../ado/reference/ado-api/stream-object-properties-methods-and-events.md)  
+-   [Свойства объекта Stream, методы и события](../../../ado/reference/ado-api/stream-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>См. также  
  [Записи и потоки](../../../ado/guide/data/records-and-streams.md)

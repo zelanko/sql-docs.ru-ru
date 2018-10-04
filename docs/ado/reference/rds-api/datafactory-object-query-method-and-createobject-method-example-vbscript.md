@@ -1,13 +1,11 @@
 ---
-title: Создать объект RDSServer.DataFactory, с помощью CreateObject (VBScript) | Документы Microsoft
+title: Создание объекта RDSServer.DataFactory, с помощью CreateObject (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - CreateObject method [ADO], VBScript example
 - Query method [ADO], VBScript example
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f48cf01641920635f9c7cfa020b118462832dae
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 878ffce8b18205dfcd99ec7e374a9eb4609d6f38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287633"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735942"
 ---
-# <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>Объект DataFactory, метод запроса и пример метода CreateObject (VBScript)
+# <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>Примеры объекта DataFactory, а также методов Query и CreateObject (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом примере создается [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) с помощью [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) метод [RDS. Пространство данных](../../../ado/reference/rds-api/dataspace-object-rds.md) объекта. Чтобы протестировать этот пример, вырежьте и вставьте следующий код между \<Body > и \</Body > тегов в обычный HTML документа и назовите его **DataFactoryVBS.asp**. Сценарий ASP будет идентификации сервера.  
+ В этом примере создается [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) с помощью [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) метод [RDS. Пространство данных](../../../ado/reference/rds-api/dataspace-object-rds.md) объекта. Чтобы протестировать этот пример, вырезать и вставить этот код между \<текст > и \</Body > теги в обычном HTML документа и назовите его **DataFactoryVBS.asp**. Сценарий ASP будет идентификации сервера.  
   
 ```  
 <!-- BeginDataFactoryVBS -->  
@@ -141,9 +138,9 @@ to bring back a Recordset. </H4>
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Метод CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
+ [Метод CreateObject (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Объект пространства данных (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [Объект DataSpace (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [Метод Query (служба удаленных рабочих столов)](../../../ado/reference/rds-api/query-method-rds.md)
 
 

@@ -1,13 +1,11 @@
 ---
-title: Интерфейс ADORecordConstruction | Документы Microsoft
+title: Интерфейс ADORecordConstruction | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cadacd2dae2b21ea03187721eaee79aac848432f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275633"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686872"
 ---
 # <a name="adorecordconstruction-interface"></a>Интерфейс ADORecordConstruction
-**ADORecordConstruction**интерфейса используется для создания объекта ADO **запись** объектов из поставщика OLE DB **строки** объекта в приложении C/C++.  
+**ADORecordConstruction**интерфейс используется для создания ADO **записи** объект из OLE DB **строки** объекта в приложении C/C++.  
   
  Этот интерфейс поддерживает следующие свойства:  
   
@@ -35,8 +32,8 @@ ms.locfileid: "35275633"
   
 |||  
 |-|-|  
-|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Доступный только на запись.<br />Задает контейнер OLE DB **строки** объект на этом ADO **записи** объекта.|  
-|[Строки](../../../ado/reference/ado-api/row-property-ado.md)|Чтение и запись.<br />Получает или задает поставщика OLE DB **строки** объекта из/в этом ADO **записи** объекта.|  
+|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Доступный только на запись.<br />Задает контейнер объекта OLE DB **строки** объект на этом ADO **записи** объекта.|  
+|[строки](../../../ado/reference/ado-api/row-property-ado.md)|Чтение и запись.<br />Получает или задает поставщика OLE DB **строки** объект на этом ADO или из **записи** объекта.|  
   
 ## <a name="methods"></a>Методы  
  Нет.  
@@ -45,9 +42,9 @@ ms.locfileid: "35275633"
  Нет.  
   
 ## <a name="remarks"></a>Примечания  
- Получает OLE DB **строки** объекта (`pRow`), построении ADO **записи** объекта (`adoR`), сумм следующие три основные операции:  
+ Учитывая OLE DB **строки** объекта (`pRow`), конструирование объекта ADO **записи** объекта (`adoR`), равносильно следующие три основные операции:  
   
-1.  Создание объекта ADO **записи** объекта:  
+1.  Создайте объект ADO **записи** объекта:  
   
     ```  
     _RecordPtr adoR;  
@@ -62,7 +59,7 @@ ms.locfileid: "35275633"
                         (void**)&adoRConstruct);  
     ```  
   
-3.  Вызовите **IADORecordConstruction::put_Row** метод свойство, чтобы задать OLE DB **строки** объекта ADO **записи** объекта:  
+3.  Вызовите **IADORecordConstruction::put_Row** метод свойство для задания OLE DB **строки** объекта ADO **записи** объекта:  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -70,12 +67,12 @@ ms.locfileid: "35275633"
     adoRConstruct->put_Row(pUnk);  
     ```  
   
- Итоговые **adoR** теперь представляет объект ADO **запись** объекта, построенным на основе OLE DB **строки** объекта.  
+ Полученный **adoR** теперь представляет объект ADO **записи** объект, созданный из OLE DB **строки** объекта.  
   
- ADO **запись** объект также может быть создан из контейнера OLE DB **строки** объекта.  
+ ADO **записи** объект также может быть создан из контейнера OLE DB **строки** объекта.  
   
 ## <a name="requirements"></a>Требования  
- **Версия:** ADO 2.0 и более поздних версий  
+ **Версия:** ADO 2.0 и более поздние версии  
   
  **Библиотека:** msado15.dll  
   

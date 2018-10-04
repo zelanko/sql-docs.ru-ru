@@ -1,13 +1,11 @@
 ---
-title: GetRowsOptionEnum | Документы Microsoft
+title: GetRowsOptionEnum | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,25 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - GetRowsOptionEnum enumeration [ADO]
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3008d37e09a35966764f0d5803090c790aeffdc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 20c2f0027d82f55d1a8fc9bc58cf3331b92da116
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278813"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617322"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 Указывает, сколько записей следует извлечь из [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**adGetRowsRest**|-1|Извлекает все записи в **записей**, начиная с текущей позиции или закладки, определяемое *запустить* параметр [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) метод.|  
+|**adGetRowsRest**|-1|Извлекает остальная часть записи в **записей**, из текущей позиции или закладки, определяемое *запустить* параметр [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) метод.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
  Пакет: **com.ms.wfc.data**  
   
 |Константа|  

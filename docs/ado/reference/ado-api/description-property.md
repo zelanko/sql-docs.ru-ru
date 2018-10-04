@@ -1,13 +1,11 @@
 ---
-title: Свойство Description | Документы Microsoft
+title: Свойство Description | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - Description property
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2aaa6bb9f548c4b5719e597d7e20f341b029d0ca
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b9a97e1e63e3896cd451c68d6198baa991945e7a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277663"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704534"
 ---
 # <a name="description-property"></a>Свойство Description
 Описывает [ошибка](../../../ado/reference/ado-api/error-object.md) объекта.  
@@ -35,16 +32,16 @@ ms.locfileid: "35277663"
  Возвращает **строка** значение, содержащее описание ошибки.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте **описание** , чтобы получить краткое описание ошибки. Отображать это свойство, чтобы предупредить пользователя об ошибке, не может или не требуется обработать. Строка будет получен из ADO или поставщика.  
+ Используйте **описание** свойство, чтобы получить краткое описание ошибки. Отображать это свойство, чтобы предупредить пользователя об ошибке, который нельзя или нежелательно для обработки. Строки будут поступать из ADO или поставщика.  
   
- Поставщики отвечают передачи конкретного текста ошибки для ADO. Добавляет ADO [ошибка](../../../ado/reference/ado-api/error-object.md) объект **ошибки** коллекции для каждого поставщика ошибка или предупреждение, он получает. Перечисление **ошибки** коллекции для трассировки ошибок, которые этот поставщик передает.  
+ Поставщики отвечают за передачей конкретного текста ошибки ADO. Добавляет ADO [ошибка](../../../ado/reference/ado-api/error-object.md) объект **ошибки** коллекции для каждого поставщика ошибка или предупреждение, он получает. Перечислить **ошибки** коллекции для трассировки ошибок, которые поставщик передает.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Error](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>См. также  
- [Описание, HelpContext, файл справки, NativeError, номер, источника и пример свойства SQLState (Visual Basic)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Описание, HelpContext, файл справки, NativeError, номер, источник и пример свойства SQLState (VC ++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [HelpContext HelpFile свойства](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [Свойство номера (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
+ [Description, HelpContext, HelpFile, NativeError, номер, источника и SQLState свойства пример (Visual Basic)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Описание, HelpContext, HelpFile, NativeError, номер, источника и пример свойства SQLState (Visual C++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Свойства HelpContext и HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
+ [Свойство Number (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Свойство Source (объект Error ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)
