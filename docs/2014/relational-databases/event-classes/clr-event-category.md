@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server event classes, CLR event category
 - CLR event category [SQL Server]
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3c421419405926eab41d886ca3628d0f3c89f3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 83e8c1bdbfca318ab0f0caec00faa3830a141700
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229510"
 ---
 # <a name="clr-event-category"></a>Категория событий CLR
   Категория событий среды **CLR** включает классы событий, возникающих при выполнении объектов среды CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

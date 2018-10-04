@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -32,16 +30,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], registering
 - ADD FILE clause
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1307f5b351ab77e9fb61160f4a0ad73a5eb06eb6
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 158f71abbe82a3b15b497ea8cbd6e74aec2ed6ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351536"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216194"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Регистрация определяемых пользователем типов в SQL Server
   Для использования определяемого пользователем типа (UDT) в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо зарегистрировать его. Регистрация определяемого пользователем типа включает регистрацию сборки и создание типа в базе данных, в которой его нужно использовать. Определяемые пользователем типы находятся в одной базе данных и не могут использоваться в нескольких базах данных, пока идентичная сборка и определяемый пользователем тип не будут зарегистрированы в каждой базе данных. После регистрации сборки определяемого пользователем типа и создания типа этот тип можно использовать в [!INCLUDE[tsql](../../includes/tsql-md.md)] и клиентском коде. Дополнительные сведения об определяемых пользователем типах данных CLR см. в разделе [Определяемые пользователем типы данных CLR](clr-user-defined-types.md).  
@@ -180,7 +177,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  Число, определяющее каждого объекта, первый объект, связанный с данной **assembly_id** присваивается значение 1. Если существует несколько объектов, связанных с тем же **assembly_id**, то каждое последующее **file_id** значение увеличивается на 1.  
   
- **содержимое**  
+ **Содержимое**  
  Шестнадцатеричное представление сборки или файла.  
   
  Можно использовать функции CAST или CONVERT для преобразования содержимого **содержимого** столбца для чтения текст. Следующий запрос преобразует содержимое файла Point.cs в доступный для чтения текст, используя для ограничения результирующего набора до одной строки имя в предложении WHERE.  

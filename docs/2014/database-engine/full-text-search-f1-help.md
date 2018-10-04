@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7f041821-6a12-4ab5-bb3a-a8345a9bc00b
-caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 59663c31be7d28e899ca4299500e0b6225ace419
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323204"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211624"
 ---
 # <a name="full-text-search-f1-help"></a>Справка F1 по полнотекстовому поиску
   Этот раздел содержит разделы о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Full-Text Search диалоговых окон в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Чтобы получить доступ к разделу о пользовательском интерфейсе, нажмите клавишу F1 или кнопку **Справка** в открытом диалоговом окне.  

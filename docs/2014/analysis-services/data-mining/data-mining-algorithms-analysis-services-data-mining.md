@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], algorithms
 - machine learning algorithms [Analysis Services]
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
-caps.latest.revision: 72
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bba1521f808be45dabb89f1fe025ae1b9aa461bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 490857f9a8c95853d3f89bc8b0cfb85a165f1fd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243754"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218574"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   Объект *алгоритм интеллектуального анализа данных* — это набор эвристики и вычислений, создающий модель интеллектуального анализа данных на основе данных. Чтобы создать модель, алгоритм сначала анализирует предоставленные данные, осуществляя поиск определенных закономерностей и тенденций. Алгоритм использует результаты этого анализа для выбора оптимальных параметров создания модели интеллектуального анализа данных. Затем эти параметры применяются ко всему набору данных, чтобы выявить пригодные к использованию закономерности и получить подробную статистику.  
@@ -92,7 +89,7 @@ ms.locfileid: "37243754"
 |**Запросы интеллектуального анализа данных**|Содержит примеры запросов, которые могут быть использованы с моделями каждого типа. Содержит описание запросов содержимого, позволяющих получить подробные сведения о закономерностях в модели, а также прогнозирующих запросов, позволяющих строить прогнозы на основе этих закономерностей.|  
 ||[Примеры запросов моделей взаимосвязей](association-model-query-examples.md)<br /><br /> [Примеры запросов к модели кластеризации](clustering-model-query-examples.md)<br /><br /> [Примеры запросов к модели дерева принятия решений](decision-trees-model-query-examples.md)<br /><br /> [Примеры запросов модели линейной регрессии](linear-regression-model-query-examples.md)<br /><br /> [Примеры запросов модели логистической регрессии](logistic-regression-model-query-examples.md)<br /><br /> [Примеры запросов к упрощенной модели Байеса](naive-bayes-model-query-examples.md)<br /><br /> [Примеры запросов к модели нейронной сети](neural-network-model-query-examples.md)<br /><br /> [Примеры запросов к модели кластеризации последовательностей](sequence-clustering-model-query-examples.md)<br /><br /> [Примеры запросов моделей временных рядов](time-series-model-query-examples.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |**Раздел**|**Описание**|  
 |---------------|---------------------|  

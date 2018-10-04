@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 055450b7461accaa62b1c9bafe4273f6fc3f9dd7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c4191d74e2c9a9e4e84bf87bfd0137a241407d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149555"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222614"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Занятие 2: Добавление моделей интеллектуального анализа данных для структуры интеллектуального анализа данных для покупателя велосипеда
+# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Урок 2. Добавление моделей интеллектуального анализа к структуре интеллектуального анализа "Покупатель велосипеда"
   На этом занятии будет добавлено две модели интеллектуального анализа данных к структуре интеллектуального анализа «Покупатель велосипеда», который вы создали [занятии 1: Создание структуры интеллектуального анализа данных для покупателя велосипеда](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Эти модели интеллектуального анализа позволяют просматривать данные, используя одну модель, и создавать прогнозы с помощью другой модели.  
   
  Чтобы изучить как потенциальные клиенты могут быть сгруппированы в соответствии со своими характеристиками, вы создадите модель интеллектуального анализа данных, на основе [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md). На одном из следующих занятий будет изучено, каким образом этот алгоритм находит кластеры заказчиков с похожими характеристиками. Например, может оказаться, что некоторые заказчики живут близко друг от друга, ездят на велосипеде и имеют примерно равный уровень образования. Можно использовать данные кластеры, чтобы лучше понять, каким образом различные заказчики связаны между собой, и использовать эти сведения для создания маркетинговой стратегии, рассчитанной на конкретных заказчиков.  

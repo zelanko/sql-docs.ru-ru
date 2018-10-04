@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10440"
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 435709e17b917c1b741e1bc619bb1dca106dbd4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a1e17c424e4447e64d48bebbe25960aec165e5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244384"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225034"
 ---
 # <a name="report-design-view-report-builder"></a>Представление конструктора отчетов (построитель отчетов)
   Окно построителя отчетов предназначено для упрощения организации ресурсов отчета и быстрого построения нужных отчетов. В центре окна расположена область конструктора, в верхней части — лента, а слева, внизу и справа находятся панели «Данные отчета», «Группирование» и «Свойства», а также галерея элементов отчетов. В области конструктора добавляются и организовываются элементы отчета. Лента распределяет традиционные элементы меню по категории, что упрощает их поиск и использование. Панели позволяют добавлять, выбирать и организовать ресурсы отчета и изменить свойства элементов отчета.  

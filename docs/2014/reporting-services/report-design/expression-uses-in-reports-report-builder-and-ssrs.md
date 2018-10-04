@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ecdadef4e49f3630c78fc33c1c6f490deda26b5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27a94ac8af2a770d1e76c8e7c46966809c011f85
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274750"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224674"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Использование выражений в отчетах (построитель отчетов и службы SSRS)
   Выражения используются по всему определению отчета для указания или вычисления значений параметров, запросов, свойств элементов отчета, определений группирований и сортировки, свойств текстовых полей, закладок, схем документов, динамического содержимого заголовков и нижних колонтитулов страниц, изображений и динамических определений источников данных. В данном разделе приводится множество примеров использования выражений для внесения разнообразия в содержимое или внешний вид отчета. Этот список не является исчерпывающим. Выражение для любого свойства можно задать в диалоговом окне, содержащем кнопку выражения (**fx**), или в раскрывающемся списке, содержащем **\<выражение...>**.  
