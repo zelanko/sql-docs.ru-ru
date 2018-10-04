@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic page repair
@@ -14,18 +12,17 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91d4d9a3c2efa2bfcb8e3b1db44f43d525f0b067
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257940"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070592"
 ---
-# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Автоматическое восстановление страниц (для групп доступности и зеркального отображения базы данных)
+# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Автоматическое восстановление страниц (для групп доступности и зеркального отображения баз данных)
   Автоматическое восстановление страниц поддерживается за счет зеркального отображения баз данных и с помощью [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. После повреждения страниц вследствие ошибок определенных типов, после чего страницы становятся нечитаемыми, база данных, участвующая в зеркальном отображении (главная или зеркало), либо реплика доступности (основная или вторичная) выполняет попытку автоматического восстановления страницы. Участник или реплика, для которой считывание страницы невозможно, запрашивает новую копию у другого участника или реплики. Если этот запрос завершается успешно, нечитаемая страница заменяется читаемой копией, что обычно устраняет ошибку.  
   
  В целом зеркальное отображение базы данных и [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] обрабатывают ошибки ввода-вывода сходным образом. В этом разделе описываются немногие из отличий.  

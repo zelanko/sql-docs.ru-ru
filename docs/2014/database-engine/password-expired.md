@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.passwordexpired.f1
 helpviewer_keywords:
 - Password Expired dialog box
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 982795a23e2fc45a3c15feaa2d81a433f0c281bd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819100"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068941"
 ---
 # <a name="password-expired"></a>Срок действия пароля истек
   Появляется при соединении с сервером, на котором установлена среда [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и который использует проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , если введен верный пароль, срок действия которого истек. Также появляется при соединении с сервером с применением новой учетной записи, созданной при помощи параметра **Пользователь должен сменить пароль при следующем входе в систему** . Используйте диалоговое окно **Срок действия пароля истек** , чтобы сменить пароль для этого имени входа с проверкой подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

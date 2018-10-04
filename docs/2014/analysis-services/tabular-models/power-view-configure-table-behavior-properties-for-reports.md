@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6ca5036b2e3355ba4866096206296538f07bbae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a4d0b4c7bcb7867eb58618c3860d2e50ddfeccc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267206"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219244"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Настройка свойств работы таблицы для отчетов Power View (табличные службы SSAS)
   Если для [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] в качестве модели интеллектуального анализа данных используется табличная модель, то можно настроить свойства поведения таблицы, содержащие строки более гранулярного уровня. Задание свойств поведения таблицы изменяет групповую обработку строк и обеспечивает более эффективное размещение идентификационной информации (имен, фотографий, логотипов и т. д.) в мозаичном, карточном или диаграммном виде.  

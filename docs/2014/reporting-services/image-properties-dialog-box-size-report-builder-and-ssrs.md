@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10054"
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20e2ee2d9669202a946fb0711b17c5f5f27cf492
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97dce14bed313a8044486f4e7609557e2ad13057
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179591"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112686"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Диалоговое окно «Свойства изображения» — «Размер» (построитель отчетов и SSRS)
   Выберите вкладку **Размер** в диалоговом окне **Свойства изображения** , чтобы отформатировать размер изображений, отображаемых в поле или в области конструирования, либо откорректировать величину дополнительного пространства между границей ячейки или текстового поля и рисунком или значением, содержащимися в ячейке или текстовом поле.  
@@ -49,7 +46,7 @@ ms.locfileid: "37179591"
  **Top**  
  Укажите размер внутреннего отступа (промежутка) между значением, отображаемым в ячейке, и ее правым краем.  
   
- **Снизу**  
+ **снизу**  
  Укажите размер внутреннего отступа (промежутка) между значением, отображаемым в ячейке, и ее правым краем.  
   
 ## <a name="see-also"></a>См. также  

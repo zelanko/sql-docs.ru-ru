@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 598491865120b2d401b0ca2447701cbebc12ce8d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d3ca1e013ede0e8bd40c1ce5af36d44ea45122d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278510"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164084"
 ---
 # <a name="lesson-12-create-roles"></a>Занятие 12. Создание ролей
   На этом занятии мы создадим роли. Роли обеспечивают безопасность данных и объектов базы данных модели, разрешая доступ только тем пользователям Windows, которые являются членами роли. Каждая роль определяется с помощью одного разрешения: нет, чтение, чтение и обработка, обработка или администратор. Роли могут определяться во время разработки моделей с помощью диалогового окна «Диспетчер ролей» в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. После развертывания модели ролями можно управлять с помощью среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Роли (табличные службы SSAS)](tabular-models/roles-ssas-tabular.md).  

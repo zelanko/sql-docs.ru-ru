@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdest.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a518189d9ee14da620689cd3ebaff8b4982d590f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ad8750547ff9744b525d8d6d234f02f0bb78375
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159894"
 ---
 # <a name="sql-server-destination"></a>назначение «SQL Server»
   Назначение «SQL Server» подключается к локальной базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и производит массовую загрузку данных в таблицы и представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Нельзя использовать назначение «SQL Server» в пакетах, получающих доступ к базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном сервере. Вместо этого пакеты должны использовать назначение «OLE DB». Дополнительные сведения см. в разделе [OLE DB Destination](ole-db-destination.md).  
@@ -85,7 +82,7 @@ ms.locfileid: "37312044"
   
 -   Укажите время ожидания для операции массовой загрузки.  
   
- Это назначение использует диспетчер соединений OLE DB для подключения к источнику данных, и диспетчер соединений определяет используемый поставщик OLE DB. Дополнительные сведения см. в разделе [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
+ Это назначение использует диспетчер соединений OLE DB для подключения к источнику данных, и диспетчер соединений определяет используемый поставщик OLE DB. Дополнительные сведения см. в разделе [Диспетчер соединений OLE DB](../connection-manager/ole-db-connection-manager.md).  
   
  Проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] также предоставляет объект источника данных, из которого можно создать диспетчер соединений OLE DB. Это предоставляет назначению «SQL Server» доступ к источникам данных и представлениям источника данных.  
   
@@ -113,7 +110,7 @@ ms.locfileid: "37312044"
   
 -   [Установление свойств компонента потока данных](set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 -   [Выполнение массовой загрузки данных с помощью назначения «SQL Server»](sql-server-destination.md)  
   

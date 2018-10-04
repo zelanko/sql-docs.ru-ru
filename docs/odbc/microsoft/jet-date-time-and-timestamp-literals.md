@@ -1,13 +1,11 @@
 ---
-title: 'Jet: Даты, времени и отметок времени литералы | Документы Microsoft'
+title: 'Jet: Дата, время и литералы Timestamp | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - literals [ODBC], SQL grammar
@@ -16,21 +14,21 @@ helpviewer_keywords:
 - timestamp literals [ODBC]
 - time literals [ODBC]
 ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25064ec8edc48f99c1e68cd7df7a728ffa7673de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2325cd7e4a10e91f351aa2107c64c0978b843fa6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825842"
 ---
-# <a name="jet-date-time-and-timestamp-literals"></a>Jet: Даты, времени и отметок времени литералы
-Для максимальной совместимости приложений следует передавать литералы даты в каноническом формате ODBC, с помощью предложения escape-синтаксис:  
+# <a name="jet-date-time-and-timestamp-literals"></a>Jet: литералы даты, времени и отметок времени
+Для максимальной совместимости приложений следует передавать литералы даты в канонический формат ODBC с использованием синтаксиса escape-предложении:  
   
--   Для date литералов {d '*значение*"}, где *значений*e указывается в формате «гггг мм дд»  
+-   Для литералов даты {d '*значение*"}, где *значени*e указывается в формате «гггг мм дд»  
   
--   Литералы времени {t '*значение*"}, где *значений*e находится в форме «чч»  
+-   Для литералов времени {t '*значение*"}, где *значени*e указывается в формате «чч: мм:»  
   
- Для отметки времени литералов {ts*значение*"}, где *значений*e — в виде «гггг мм дд чч [. f...]».
+ Для отметки времени литералов {ts'*значение*"}, где *значени*e указывается в формате «гггг мм дд чч: мм: [. f...]».

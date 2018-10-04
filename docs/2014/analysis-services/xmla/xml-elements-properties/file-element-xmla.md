@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - File Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - File element
 ms.assetid: 3dfd0e9b-746b-4ce5-8a95-610d2e573739
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b75a261f4a86d5a227e1018ad96a40d91db7b6c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5ae3390405bc7a722934f3b3fb3652825b2ea03
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319224"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125454"
 ---
 # <a name="file-element-xmla"></a>Элемент File (XML для аналитики)
   Определяет файл для использования в родительском [резервного копирования](../xml-elements-commands/backup-element-xmla.md) или [восстановить](../xml-elements-commands/restore-element-xmla.md) команду, либо в родительском [расположение](location-element-xmla.md) элемент.  

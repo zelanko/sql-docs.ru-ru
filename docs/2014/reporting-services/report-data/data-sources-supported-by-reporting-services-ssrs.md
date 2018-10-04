@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server data processing extension [Reporting Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ODBC data processing extension
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-caps.latest.revision: 92
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 41c5bf1d39603f1fb0de8dfe6133258f312eab02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 037ab45c3d9afdb9f76f4c4988c2d2657e01b844
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266300"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112202"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] получают через модульный и расширяемый уровень данных, где работают модули обработки данных. Для получения данных отчета из источника данных необходимо выбрать модуль обработки данных, поддерживающий как тип источника данных, так и версию программного обеспечения источника данных и его платформу (32-разрядная или 64-разрядная [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -164,7 +161,7 @@ ms.locfileid: "37266300"
   
  В среде [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] графическим конструктором запросов, связанным с этим модулем обработки данных, является [пользовательский интерфейс конструктора реляционных запросов](../relational-query-designer-user-interface.md), а не [конструктор визуальных инструментов для баз данных](../../ssms/visual-db-tools/visual-database-tool-designers.md), который используется с типом источника данных **Microsoft SQL Server**.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] автоматически распознает ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** и **Microsoft SQL Server** источника данных и открывает графический конструктор, связанный с этим типом источника данных.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] автоматически распознает **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** и **Microsoft SQL Server** источника данных и открывает графический конструктор, связанный с этим типом источника данных.  
   
  Если конструктор запросов используется в графическом режиме, запрос анализируется и, возможно, переписывается. Текстовый конструктор запросов также доступен для написания запросов. Текстовый конструктор запросов можно использовать при необходимости четкого управления синтаксисом [!INCLUDE[tsql](../../includes/tsql-md.md)] в запросе. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](../text-based-query-designer-user-interface.md).  
   

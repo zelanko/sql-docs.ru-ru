@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - charts [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - scatter charts
 - regression algorithms [Analysis Services]
 ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6ae52af8c9449b5636d799d306e3ab317cea9d6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5135fa8ed6565096e8e2cf5ff851c3c0c2aced72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251556"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179174"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>Точечная диаграмма (службы Analysis Services — интеллектуальный анализ данных)
   На *точечной диаграмме* реальные значения пользовательских данных графически сравниваются с прогнозируемыми значениями в модели. Реальные значения отображаются на оси Х точечной диаграммы; прогнозируемые значения — на оси Y. На ней также отображается линия, отображающая идеальный прогноз, на которой прогнозируемое значение точно совпадает с реальным значением. Расстояние от точки на линии идеальных прогнозов, расположенной под углом в 45 градусов, показывает, насколько хорошо или плохо был выполнен прогноз.  

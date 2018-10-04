@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Showplan Text (Unencoded) event class
 ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb98cabb07407dfb3ab28e926503db2c6a0b967d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5862e1c52b186a034ebce4955f70ddf9baca9342
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180061"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188144"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded), класс событий
   Класс событий Showplan Text (Unencoded) происходит, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкцию SQL. Этот класс событий во всем совпадает с классом событий Showplan Text, за исключением того, что сведения о событии форматируются в виде строки, а не в двоичных данных.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Distributors [SQL Server replication], distribution retention period
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], deactivation
 - deactivating subscriptions
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8ffb9785ae609d72e49fed4c91e7c983bbff35d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d4841078f3b32c2fb3303cc7922eb01a2e4030d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227204"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079584"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Окончание срока действия и отключение подписки
   Подписки могут быть деактивированы или могут закончиться сроки их действия, если они не будут синхронизированы в течение определенного *срока хранения*. Выполняемое действие зависит от типа репликации и от превышенного срока хранения.  
@@ -46,7 +43,7 @@ ms.locfileid: "37227204"
      Если истекает срок действия принудительной подписки, она полностью удаляется, а подписки по запросу не удаляются. Подписки по запросу должны удаляться на подписчике. Дополнительные сведения см. в статье [Delete a Pull Subscription](delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Репликация слиянием  
- Репликация слиянием использует срок хранения публикации (параметры **@retention** и **@retention_period_unit** процедуры [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)). Когда срок действия подписки истекает, ее необходимо повторно инициализировать, потому что метаданные для этой подписки удаляются. Не инициализированные повторно подписки удаляются заданием **Очистка истекшей подписки** , выполняемым на издателе. По умолчанию это задание запускается ежедневно; оно удаляет все принудительные подписки, которые не синхронизированы для удвоения срока хранения публикации. Например:  
+ Репликация слиянием использует срок хранения публикации (параметры **@retention** и **@retention_period_unit** процедуры [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)). Когда срок действия подписки истекает, ее необходимо повторно инициализировать, потому что метаданные для этой подписки удаляются. Не инициализированные повторно подписки удаляются заданием **Очистка истекшей подписки** , выполняемым на издателе. По умолчанию это задание запускается ежедневно; оно удаляет все принудительные подписки, которые не синхронизированы для удвоения срока хранения публикации. Пример:  
   
 -   Допустим, срок хранения публикации равен 14 дням, тогда действие подписки может истечь, если она не будет синхронизирована в течение 14 дней.  
   

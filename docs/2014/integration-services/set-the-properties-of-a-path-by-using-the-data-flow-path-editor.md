@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 08d774cb9163f7c047a7333f4ff04e06939e2cf2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f428caba9622ce3ec1c153fa8764a975d6ddefc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322634"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111264"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Задание свойств пути с помощью редактора пути потока данных
   Пути соединяют два компонента потока данных. Перед тем как установить свойства пути, необходимо, чтобы поток данных содержал как минимум два подключенных компонента потока данных. Дополнительные сведения см. в разделах [Добавление или удаление компонента в потоке данных](data-flow/add-or-delete-a-component-in-a-data-flow.md) и [Соединение компонентов в потоке данных](data-flow/connect-components-in-a-data-flow.md).  

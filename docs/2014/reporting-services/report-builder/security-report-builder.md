@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b2f11120fcc98bde39800ad75f94499b0b5f5081
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19d471febe43640325ae4f218dc1d0e66c3e0c9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309376"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074660"
 ---
 # <a name="security-report-builder"></a>Безопасность (построитель отчетов)
   Построитель отчетов — это клиентское приложение для создания отчетов, предназначенное для работы с сервером отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Сервер отчетов может быть настроен для работы в собственном режиме как автономный сервер или для работы в режиме интеграции с SharePoint для поддержки отчетов на сайте SharePoint.  

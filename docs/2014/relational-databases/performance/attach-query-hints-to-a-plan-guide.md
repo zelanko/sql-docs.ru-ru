@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
-caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f0306c668a71d918e8f41130f237ac99a00f43f3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 89af21c2c591db2dff678be7aaf8c064e728b9ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070964"
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>Присоединение указаний запросов к структуре плана
   Любые сочетания действительных указаний запроса могут быть использованы в руководстве плана. Когда структура плана совпадает с запросом, предложение OPTION, указанное в предложении указания структуры плана, добавляется к запросу, прежде чем запрос подвергается компиляции и оптимизации. Если в запросе, совпавшем со структурой плана, уже присутствует предложение OPTION, указания запроса, заданные в структуре плана, заменяют рекомендации в запросе. Чтобы структура плана совпала с запросом, уже содержащим предложение OPTION, предложение OPTION запроса необходимо включить при указании текста запроса для сопоставления в инструкции sp_create_plan_guide. Если необходимо, чтобы подсказки, указанные в руководстве плана, были добавлены к подсказкам, которые уже существуют в запросе, вместо того, чтобы заменить их, следует указать и исходные, и дополнительные подсказки в предложении OPTION структуры плана.  

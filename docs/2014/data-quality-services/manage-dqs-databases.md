@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c7738ca9001ef1c3942dbea1fe7bb9dbae683757
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0dc4324a9c0f50ed55131e41b5e767e1ce90232c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059674"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   В этом разделе приведены сведения о действиях по управлению базами данных, которые можно выполнять с базами данных DQS, например резервное копирование и восстановление или отсоединение и присоединение.  
@@ -51,7 +48,7 @@ ms.locfileid: "37323154"
   
  Подробные сведения о том, что следует учитывать при отсоединении и присоединении баз данных в SQL Server, см. в разделе [Присоединение и отсоединение баз данных &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

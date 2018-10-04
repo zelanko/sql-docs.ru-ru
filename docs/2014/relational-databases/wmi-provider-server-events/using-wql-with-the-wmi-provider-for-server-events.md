@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [WMI]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5e71a51917f770ba91f0708f7bad4e2e4ecf9b40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16bf7df8d4c20db8f2598259af296824df3eeade
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294244"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182084"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Использование WQL с поставщиком WMI для событий сервера
   Приложения управления могут получать доступ к событиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью поставщика WMI для событий сервера путем выполнения инструкций WMI Query Language (WQL). WQL является упрощенным подмножеством языка SQL с некоторыми расширениями, специфичными для WMI. При использовании WQL приложение извлекает тип события из определенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базы данных или объекта базы данных (в настоящее время поддерживаются только объекты очереди). Поставщик WMI для событий сервера преобразует запрос в уведомление о событии, созданный в целевую базу данных для уведомлений о событиях уровня базы данных или уровня объекта, или в **master** событиях уровня сервера базы данных уведомления.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81f9d8c849622a622631bc8153dc7d4cffc7d258
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 393c4f88f9ab60f3a25ddaab5bb091fb298e1e02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251886"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200614"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Оценка количества элементов (SQL Server)
   Логика оценки количества элементов, вызывается механизмом оценки количества элементов, переработана в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] для повышения качества планов запросов и, следовательно, чтобы повысить производительность запросов. Новый механизм оценки количества элементов состоит из предположений и алгоритмов, которые отлично подходят для современных рабочих нагрузок OLTP и хранилища данных. Он основан на глубоком исследовании оценки количества элементов для современных рабочих нагрузок и нашем опыте усовершенствования этого механизма, накопленном за последние 15 лет. Отзывы от клиентов свидетельствуют, что эти изменения положительно сказываются на большинстве запросов либо все остается по прежнему, хотя производительность небольшого числа запросов может снизиться по сравнению с использованием предыдущего механизма оценки количества элементов.  

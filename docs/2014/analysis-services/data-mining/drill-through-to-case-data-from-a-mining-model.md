@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - drillthrough [Analysis Services]
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a3ce4a5aea740048a53ab40db8b40d0a83d40e19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ed7750ac0f09fd90ffd846fa4257eb5aae25546
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272170"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062630"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>выполнить детализацию до данных вариантов из модели интеллектуального анализа данных
   Если модель интеллектуального анализа данных была настроена для выполнения детализации до вариантов модели, при ее просмотре можно получить подробные сведения о вариантах, которые были использованы для постройки модели. Более того, если базовая структура интеллектуального анализа данных была настроена для детализации до вариантов структуры, при наличии необходимых разрешений можно возвращать информацию из структуры интеллектуального анализа данных. Сюда могут входить столбцы, не включенные в модель интеллектуального анализа данных.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.General
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
-caps.latest.revision: 20
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7a6a5f53bbccbd0d30aaada30366d01af23a3a5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 37c85ef93f04dd16d8ea3e00fa9ec99f40d2e1cc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322784"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157816"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
   Используйте это диалоговое окно для изменения общего режима правок в редакторе XML, который используется для изменения XML-документов. Чтобы открыть эту страницу, выберите пункт **Параметры** в меню **Сервис** , откройте вложенную папку **XML** , а затем откройте страницу **Общие**.  

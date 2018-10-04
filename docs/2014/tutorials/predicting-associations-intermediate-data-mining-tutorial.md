@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79555990296cc3ecd0b30bb2cd3de92b6adabb50
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09084760637464c5e985eeb17762959c8576c5ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187711"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222810"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Прогноз взаимосвязей (учебник по интеллектуальному анализу данных — средний уровень)
   После обработки моделей для создания прогнозов можно использовать сведения о взаимосвязях, хранящиеся в модели. В последней задаче этого занятия предстоит изучить, как создавать прогнозирующие запросы к созданным моделям взаимосвязей. В этом занятии предполагается, что вы знакомы с работой построителя прогнозирующих запросов и хотите научиться создавать прогнозирующие запросы к моделям взаимосвязей. Дополнительные сведения том, как использовать построитель прогнозирующих запросов, см. в разделе [интерфейсы запросов данных для интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  

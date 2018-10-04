@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbmatchingresults.f1
 - sql12.dqs.kb.kbmatchingmap.f1
 - sql12.dqs.kb.kbmatchingpolicy.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f78681d2fd7e46b4f6307a2bf5573cf1121cdea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2313708f4669b9cde09233d6a87d66eaf5662fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090954"
 ---
 # <a name="create-a-matching-policy"></a>Создание политики сопоставления
   В этом разделе описывается создание политики сопоставления в базе знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Подготовка процесса сопоставления в DQS с помощью выполнения операции политики сопоставления на образце данных. В данной операции создается и проверяется одно или несколько правил сопоставления в политике, затем публикуется база знаний, что делает правила сопоставления доступными для общего пользования. В базе знаний может быть только одна политика сопоставления, но эта политика может содержать несколько правил сопоставления.  
