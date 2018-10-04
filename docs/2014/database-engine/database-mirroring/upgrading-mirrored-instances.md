@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0ac6ea9d3437e22a1493c9888ccb75e7996f1c5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219864"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Снижение времени простоя зеркальных баз данных при обновлении экземпляров сервера
   При обновлении экземпляров сервера для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], можно сократить время простоя каждой зеркальной базы данных только один другой ресурс вручную, выполнив метод обновления, известный как *последовательное обновление*. Последовательное обновление является многоэтапным процессом, который в самом простом случае заключается в обновлении экземпляра сервера, который выступает в роли зеркального сервера в сеансе зеркального отображения, и последующего перехода на зеркальную базу данных вручную, обновления сервера, бывшего основным, и возобновления зеркального отображения. Набор операций, фактически применяемый на практике, будет зависеть от режима работы, а также от количества и структуры сеансов зеркального отображения, активных в обновляемых экземплярах сервера.  

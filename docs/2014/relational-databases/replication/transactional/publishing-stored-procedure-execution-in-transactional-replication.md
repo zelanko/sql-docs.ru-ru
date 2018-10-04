@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
 - articles [SQL Server replication], stored procedures and
 - transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0217a945e7197f44869c74b381eb61c75d6bf9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8dcdd88d8ce974acda7363ba0a7b2199ca2dd2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212724"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195660"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Публикация выполнения хранимых процедур в репликации транзакций
   Если существует одна или несколько хранимых процедур, выполняемых на издателе и влияющих на опубликованные таблицы, рассмотрите возможность включения в публикацию этих хранимых процедур в виде статей выполнения хранимых процедур. Определение процедуры (инструкция CREATE PROCEDURE) реплицируется на подписчик при инициализации подписки. Когда процедура выполняется на издателе, репликация выполняет соответствующую процедуру на подписчике. Это может обеспечить значительное повышение производительности в случаях, когда выполняются крупные пакетные операции, поскольку реплицируется только выполнение процедуры и исключается необходимость репликации отдельных изменений для каждой строки. Например, предположим, что создана следующая хранимая процедура в базе данных публикации:  

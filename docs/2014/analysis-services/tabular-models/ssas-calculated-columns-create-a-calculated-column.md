@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.as.daxref.CreataCalculatedColumn.f1
 ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b88ac967733abd8cb8c29089435552039f1c55d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca7b73e08941d42ceccd1ff3dab04a686b120d98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201404"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>Создание вычисляемого столбца (табличные службы SSAS)
   Вычисляемые столбцы позволяют добавлять новые данные в модель. Вместо вставки или импорта значений в столбец создается формула DAX, которая определяет значения уровня строк для столбца. Значения для каждой из строк вычисляемого столбца вычисляются и распространяются после создания допустимой формулы и нажатия клавиши ВВОД. После этого можно добавлять вычисляемый столбец в аналитическое приложение или приложение для создания отчетов, как и любой другой столбец данных. В этом разделе показано, как создать вычисляемый столбец с помощью строки формул DAX в конструкторе моделей.  

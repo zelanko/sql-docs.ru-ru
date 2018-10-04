@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de15e64423c373f794bd7e5ee4a71454c955cca2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 557820cc0e1832a5e80f3a66a4a4f67859f2a8d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294634"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107694"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Указание способа распространения изменений для статей транзакций
   Репликация транзакций позволяет указывать, как изменения данных распространяются от издателя к подписчикам. Для каждой опубликованной таблицы можно указать один из четырех способов, которым каждая операция (INSERT, UPDATE или DELETE) должна распространяться на подписчик:  
@@ -64,7 +61,7 @@ ms.locfileid: "37294634"
   
 -   При внесении изменений схемы в опубликованную таблицу пользовательские процедуры должны быть созданы заново. Дополнительные сведения см. в статье [Повторное создание пользовательских процедур транзакций с учетом изменений в схеме](transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   При использовании значений больше 1 для параметра **-SubscriptionStreams** агента распространителя убедитесь, что обновления первичных ключевых столбцов выполнены успешно. Например:  
+-   При использовании значений больше 1 для параметра **-SubscriptionStreams** агента распространителя убедитесь, что обновления первичных ключевых столбцов выполнены успешно. Пример:  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  

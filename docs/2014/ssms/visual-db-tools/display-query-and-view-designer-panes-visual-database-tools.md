@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], panes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - displaying View Designer panes
 - displaying Query Designer panes
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36fa7ef7bbc75c916f72d71894ad4f0bc2efefb0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: aedc73a4cb3ffa14e5f701dee54788783690bb59
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820930"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198101"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Отображение панелей конструкторов запросов и представлений (визуальные инструменты для баз данных)
   Конструктор запросов и представлений содержит четыре отдельные панели: панель диаграмм, панель критериев, панель «SQL» и панель результатов. Обычно при открытии представления или создании нового запроса открыты все четыре области, но при необходимости любую из них можно открыть из конструктора запросов и представлений.  

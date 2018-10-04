@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8657428ef8a31829fffb77ccf9ceb997fa34e74a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39c6316a6e256cf7dab161d57a032b777dfac09a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277270"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163634"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Контроль доступа для конфиденциальных данных в пакетах
   Для защиты данных в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно задать уровень защиты, способствующий защите или только конфиденциальных данных, или всех данных в пакете. Более того, эти данные можно зашифровать с паролем или ключом пользователя или возложить задачу шифрования данных на базу данных. Кроме того, используемый уровень защиты пакета не обязательно является статическим и изменяется в течение жизненного цикла пакета. Часто один уровень защиты устанавливается во время развертывания, а другой — сразу после развертывания пакета.  
@@ -81,7 +78,7 @@ ms.locfileid: "37277270"
   
 3.  После развертывания пакетов в рабочей среде рабочая группа может повторно зашифровать развернутые пакеты, назначив известный им надежный пароль. Другой вариант: они могут зашифровать развернутые пакеты, выбрав `EncryptSensitiveWithUserKey` или `EncryptAllWithUserKey` и используя локальные данные учетной записи, с которой выполняются пакеты.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 -   [Установка и изменение уровня защиты пакетов](../set-or-change-the-protection-level-of-packages.md)  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa43bd29d20b7ddedd7c5968f5b4341e11713541
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 009c83975aa730626858c793b53c51c309c218b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810560"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222794"
 ---
 # <a name="use-tokens-in-job-steps"></a>Использование токенов в шагах задания
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент позволяет применять токены в скриптах шагов заданий на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] . Применение токенов при написании шагов заданий обеспечивают такую же гибкость, какую дают переменные при написании программ. После добавления токена в скрипт шага задания агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] замещает токен во время выполнения, до того как шаг задания выполняется подсистемой [!INCLUDE[tsql](../../includes/tsql-md.md)]  

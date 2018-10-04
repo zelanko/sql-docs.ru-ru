@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - SetParameterProperties method
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dafc28244a94a3738b91c454f75bc8bb26d0b391
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096985"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
   Задает свойства каждого параметра по порядковому номеру или задает массовые свойства параметра, указывая массив структур SSPARAMPROPS.  
@@ -40,7 +37,7 @@ SSPARAMPROPS rgParamProperties[]);
   
 ## <a name="arguments"></a>Аргументы  
  *cParams*[in]  
- Количество структур SSPARAMPROPS в *rgParamProperties* массива. Если это число равно нулю, `ISSCommandWithParameters::SetParameterProperties` приведет к удалению всех свойств, которые могли быть указаны для любых параметров в команде.  
+ Количество структур SSPARAMPROPS в массиве *rgParamProperties*. Если это число равно нулю, `ISSCommandWithParameters::SetParameterProperties` приведет к удалению всех свойств, которые могли быть указаны для любых параметров в команде.  
   
  *rgParamProperties*[in]  
  Массив задаваемых структур SSPARAMPROPS.  
@@ -73,7 +70,7 @@ SSPARAMPROPS rgParamProperties[]);
   
  `};`  
   
- Улучшения в ядро базы данных, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] разрешить ISSCommandWithParameters::SetParameterProperties получать более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значения, возвращаемые методом ISSCommandWithParameters::SetParameterProperties в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [обнаружение метаданных](../native-client/features/metadata-discovery.md).  
+ Улучшения в ядро базы данных, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] разрешить ISSCommandWithParameters::SetParameterProperties получать более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значения, возвращаемые методом ISSCommandWithParameters::SetParameterProperties в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Обнаружение метаданных](../native-client/features/metadata-discovery.md).  
   
 |Член|Описание|  
 |------------|-----------------|  

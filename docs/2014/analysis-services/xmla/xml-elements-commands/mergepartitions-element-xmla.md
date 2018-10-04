@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MergePartitions Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - MergePartitions command
 ms.assetid: cf538189-0629-49b3-8e01-32afba7b020d
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 64d6352cd0c5a0cb7a408722b501dd62a0d47e55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fbae4ca1baa8908f172e385d3bb44e7b6b2b3281
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226384"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156463"
 ---
 # <a name="mergepartitions-element-xmla"></a>Элемент MergePartitions (XML для аналитики)
   Выполняет слияние данных из одной или нескольких исходных секций в целевую секцию, а затем удаляет исходные секции.  

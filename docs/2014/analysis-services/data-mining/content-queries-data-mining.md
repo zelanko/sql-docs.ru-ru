@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 441ad05289df13e34954553db27810406341d77d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc6f7db4783f1fc828c183c76563a6fed42ab2ee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222604"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209814"
 ---
 # <a name="content-queries-data-mining"></a>Запросы содержимого (интеллектуальный анализ данных)
   Запрос содержимого позволяет извлечь сведения о внутренней статистике и структуре модели интеллектуального анализа данных. Иногда запрос содержимого может предоставить информацию, которую не удается получить с помощью средства просмотра. Результаты запроса содержимого можно также использовать для извлечения информации программным образом с целью ее последующего использования.  

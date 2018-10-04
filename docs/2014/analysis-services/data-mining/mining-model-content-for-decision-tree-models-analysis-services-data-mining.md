@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae76bbfc4e85e0f01e384849bf6b67e52f4c574f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dbd89984e64ac3ca37c3ac9ec31e19191606dc9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161665"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217574"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей дерева принятия решений (службы Analysis Services — интеллектуальный анализ данных)
   В этой статье описано содержимое модели интеллектуального анализа данных, характерное для моделей, в которых используется алгоритм дерева принятия решений ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Общее описание содержимого модели интеллектуального анализа данных для всех типов моделей см. в разделе [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). Важно помнить, что алгоритм дерева принятия решений (Майкрософт) является гибридным и может создавать модели с самыми разными функциями: дерево принятия решений может представлять взаимосвязи, правила и даже линейную регрессию. Структура дерева остается в целом неизменной, но способ интерпретации данных будет зависеть от задачи, для которой создавалась модель.  

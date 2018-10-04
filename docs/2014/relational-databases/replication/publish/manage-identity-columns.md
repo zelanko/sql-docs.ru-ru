@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - identity values [SQL Server replication]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - transactional replication, identity range management
 - identity columns [SQL Server], replication
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 190f9c32cea30f4b91af207a88f4c0195c6fccdd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a05cbb061c2f0df716458de35b3a1bad9fbae7e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236764"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198264"
 ---
 # <a name="manage-identity-columns"></a>Управление столбцами идентификаторов
   В этом разделе описывается управление столбцами идентификаторов в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Если операции вставки с подписчика реплицируются обратно на издатель, необходимо управлять столбцами идентификаторов, чтобы избежать присваивания одинаковых значений идентификаторов на подписчике и издателе. Репликация может управлять диапазонами идентификаторов автоматически, или можно управлять диапазонами идентификаторов вручную.  Сведения о параметрах управления диапазонами идентификаторов, предоставляемых репликацией, см. в статье [Replicate Identity Columns](replicate-identity-columns.md) (Репликация столбцов идентификаторов).  

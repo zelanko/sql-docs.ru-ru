@@ -4,26 +4,21 @@ ms.custom: ''
 ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4cf9c51abaaadff50a0dcc9b856eea0f6e76a57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ff62ed93210521c9bc5499c5518edae7cf7d2ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147173"
 ---
 # <a name="control-transaction-durability"></a>Управление устойчивостью транзакций
   Фиксации транзакций[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть либо полностью устойчивыми, служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию, либо отложенными устойчивыми (также известные как отложенная запись).  

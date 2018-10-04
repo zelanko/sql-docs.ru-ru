@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
-caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 532f764aea94c63b9ad4638eb7e80734c69f79c0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9560249e07cbd360914b5dab21eb68dc8e7f013f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392839"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208954"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Восстановление оптимизированных для памяти таблиц
   Базовый механизм восстановления баз данных с таблицами, оптимизированными для памяти, аналогичен методу для баз данных, содержащих только таблицы на диске. Но в отличие от метода для таблиц на диске оптимизированные для памяти таблицы должны быть загружены в память до того, как база данных будет доступна для доступа пользователей. При этом добавляется новый этап восстановления базы данных. Измененные этапы восстановления баз данных изменяются следующим образом.  

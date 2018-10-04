@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10428"
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-caps.latest.revision: 29
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 911b88bc7b707e837bbd042814a2f8e84a61daa0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7df0a7c71dbc0298b2f9448f19287f83d34a8617
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261930"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209544"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Построитель отчетов в SQL Server 2014
   Построитель отчетов — это среда создания отчетов для бизнес-пользователей, предпочитающих работать в среде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. При создании отчета задается, откуда брать данные, какие данные брать и как их отображать. При запуске отчета обработчик получает все указанные сведения, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Отчеты можно просмотреть из построителя отчетов, опубликовать на сервере отчетов или опубликовать в режиме интеграции с SharePoint на сервере отчетов, где его смогут запустить другие пользователи.  

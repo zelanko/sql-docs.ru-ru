@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createrelationship.f1
 helpviewer_keywords:
 - Create Relationship dialog box
 ms.assetid: da3c7074-623e-4ddf-a707-d3276a47cf1c
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 152f9cb38adcad9a90a393150216fea0f10ecd55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abcfea8c23806de0e784b8784064d77195ad5cf1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167645"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197684"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>диалоговое окно "Создание/Изменение связи" (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Создание связи/изменение связи** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для определения или редактирования связи в представлении источника данных. Диалоговое окно **Создание связи/изменение связи** можно вызвать следующими способами:  
@@ -50,7 +47,7 @@ ms.locfileid: "37167645"
  **Целевые столбцы**  
  Выберите столбцы, на которые ссылаются столбцы исходной таблицы.  
   
- **Обратный**  
+ **обратный**  
  Щелкните для изменения направления связи.  
   
  **Описание**  

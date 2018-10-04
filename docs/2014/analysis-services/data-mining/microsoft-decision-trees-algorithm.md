@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], discrete attributes
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - continuous columns
 - regression algorithms [Analysis Services]
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
-caps.latest.revision: 70
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ff4f1b4bb2311231e09e6e150592c6a2dabb3d19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e68a857a928cbc737a647d0b497366c1148d948
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310784"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198184"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Алгоритм дерева принятия решений (Майкрософт)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм дерева принятия решений — это алгоритм классификации и регрессии, предоставляемые [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозирующем моделировании дискретных и непрерывных атрибутов.  

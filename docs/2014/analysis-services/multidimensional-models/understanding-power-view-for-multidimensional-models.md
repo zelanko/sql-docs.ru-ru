@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: df50d1ac785e58bf3136f6d8777a01c98a81d568
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 10d93a9894fe9d325f20303ecad4b4a8415e1c61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288060"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169014"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Основные сведения о Power View для многомерных моделей
   В этой статье рассматривается функция Power View для многомерных моделей в Microsoft SQL Server 2014 и предоставлены важные сведения для специалистов по бизнес-аналитике и администраторов, которые намереваются внедрить Power View для многомерных моделей в своей организации.  

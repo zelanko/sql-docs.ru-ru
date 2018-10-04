@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - mining model content, linear regression models
 - regression algorithms [Analysis Services]
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 289c9a68e6abce019324945cafd9baed544802a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4dcf25989915a7fc9c10b63b3521d7c0eb31a68c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200984"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)
   В этом разделе описано содержимое модели интеллектуального анализа данных, характерное для моделей, в которых используется алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Общее описание содержимого модели интеллектуального анализа данных для всех типов моделей см. в разделе [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  

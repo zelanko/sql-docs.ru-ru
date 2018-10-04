@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc9e292b67bd282351bdea60068a58a39ecb0aad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7138207d6f612fa8ee9075b9994e9d8f4f63e552
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287610"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158864"
 ---
 # <a name="execution-of-projects-and-packages"></a>Запуск проектов и пакетов
   Чтобы запустить пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , можно воспользоваться одним из предостовляемых средств. Выбор средства зависит от места хранения пакета. Эти средства приведены в следующей таблице.  
@@ -53,7 +50,7 @@ ms.locfileid: "37287610"
   
  С помощью отчетов о выполнении можно отслеживать пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , развернутые и выполняемые на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Отчеты доступны в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в статье [Reports for the Integration Services Server](../reports-for-the-integration-services-server.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 -   [Планирование пакета с помощью агента SQL Server](../schedule-a-package-by-using-sql-server-agent.md)  
   

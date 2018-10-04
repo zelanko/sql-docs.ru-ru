@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 41a75e8559738294986bc5fb203b1b0469305f57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222914"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217504"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Функция подстановки (построитель отчетов и службы SSRS)
   Возвращает первое совпадающее значение для заданного имени из набора данных, содержащего пары «имя-значение».  

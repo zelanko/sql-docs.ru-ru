@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - rebuilding databases, master
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d9fa625bbd9ebb661fb0ebad8b191b6075e8397
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 9cca83a20c7559a8b7192fd345b559226c9c7d57
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40395742"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135504"
 ---
 # <a name="rebuild-system-databases"></a>Перестроение системных баз данных
   Системные базы данных необходимо перестроить, чтобы устранить повреждения данных в системных базах данных [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)и [resource](resource-database.md) или изменить параметры сортировки по умолчанию на уровне сервера. В этом разделе приводятся пошаговые инструкции по перестроению системных баз данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 095a043f-cf6f-45bb-a021-ae4e1b535c65
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d14fe6f8cbfae7370c0b02626f54758d4159d83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 979738186c9af128087049e71fa248d41fd27b50
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297584"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192254"
 ---
-# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Занятие 3: Обработка структуры интеллектуального анализа данных потребительской корзины
+# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Урок 3. Обработка структуры интеллектуального анализа "Потребительская корзина"
   На этом занятии вы воспользуетесь [INSERT INTO &#40;расширений интеллектуального анализа данных&#41; ](/sql/dmx/insert-into-dmx) инструкции и представлений vAssocSeqLineItems и vAssocSeqOrders из [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] образца базы данных для обработки структур интеллектуального анализа данных и интеллектуального анализа данных модели, которые созданные в [занятии 1: Создание структуры интеллектуального анализа данных потребительской корзины](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) и [занятии 2: Добавление модели интеллектуального анализа данных к структуре интеллектуального анализа данных потребительской корзины](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
  При обработке структуры интеллектуального анализа данных службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] считывают исходные данные и создают структуры, поддерживающие модели интеллектуального анализа данных. При обработке модели интеллектуального анализа данных, данные, определенные структурой интеллектуального анализа данных, обрабатываются выбранным алгоритмом интеллектуального анализа данных. Алгоритм находит тренды и шаблоны и сохраняет эти данные в модели интеллектуального анализа данных. Поэтому в модели интеллектуального анализа данных содержатся не фактические исходные данные, а данные, выявленные алгоритмом. Дополнительные сведения об обработке моделей интеллектуального анализа данных см. в разделе [обработки требования и соображения &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 243524a0f073ab1950398eff715bd1f1420144a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0035994dbcc1e0f4aebf01b6dbc4b69dcb7bfb6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291350"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157954"
 ---
 # <a name="database-engine-instances-sql-server"></a>Экземпляры компонента Database Engine (SQL Server)
   Экземпляр [!INCLUDE[ssDE](../../includes/ssde-md.md)] — это копия `sqlservr.exe` исполняемый файл, который запускается как служба операционной системы. Каждый экземпляр управляет несколькими системными базами данных, а также одной или несколькими пользовательскими базами данных. На каждом компьютере могут работать несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Приложения подключаются к экземпляру для выполнения работы в базе данных, которой управляет экземпляр.  
@@ -29,7 +26,7 @@ ms.locfileid: "37291350"
   
  На каждом компьютере могут работать несколько экземпляров компонентов [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Один экземпляр может быть экземпляром по умолчанию. Экземпляр по умолчанию не имеет имени. Если в запросе на подключение указано только имя компьютера, соединение устанавливается с экземпляром по умолчанию. Экземпляр, которому при установке было задано имя, называется именованным экземпляром. Для подключения к такому экземпляру необходимо указать в запросе на подключение имя компьютера и имя экземпляра. Устанавливать экземпляр по умолчанию необязательно; все экземпляры, работающие на компьютере, могут быть именованными экземплярами.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

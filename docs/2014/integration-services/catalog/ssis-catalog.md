@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084086"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201344"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
   `SSISDB` Каталога служит центральным пунктом для работы с [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проектов (SSIS), которые вы развернули в [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервера. Например, можно задавать параметры проектов и пакетов, настраивать среды для указания значений времени выполнения для пакетов, выполнять пакеты и проводить устранение неполадок, а также управлять операциями на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -64,7 +61,7 @@ ms.locfileid: "39084086"
   
 -   Имя не должно содержать начальных и конечных пробелов.  
   
--   \@ не допускается в качестве первого символа, но в последующих символах может использоваться \@.  
+-   \@ нельзя использовать в качестве первого символа. \@ может использоваться в качестве последующих символов.  
   
 -   Длина имени должна быть больше 0 и меньше или равна 128.  
   
@@ -82,7 +79,7 @@ ms.locfileid: "39084086"
   
 -   Имя не должно содержать начальных и конечных пробелов.  
   
--   \@ не допускается в качестве первого символа, но в последующих символах может использоваться \@.  
+-   \@ нельзя использовать в качестве первого символа. \@ может использоваться в качестве последующих символов.  
   
 -   Длина имени должна быть больше 0 и меньше или равна 128.  
   

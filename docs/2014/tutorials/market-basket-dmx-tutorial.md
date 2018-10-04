@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - tutorials [Data Mining]
 - tutorials [DMX]
 ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b73a618c5318d88ec6ee09751e09327687d865f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc99cd89dc1eeced81d3b199c745df93544ec0a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220584"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210934"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Учебник по расширениям интеллектуального анализа данных потребительской корзины
   С помощью данного учебника вы научитесь создавать, обучать и исследовать модели интеллектуального анализа данных при помощи языка запросов расширения интеллектуального анализа данных (DMX). После этого вы будете использовать модели интеллектуального анализа данных для создания прогнозов, описывающих, какие продукты будут покупаться с наибольшей вероятностью.  

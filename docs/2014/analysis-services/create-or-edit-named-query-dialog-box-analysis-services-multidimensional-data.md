@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createnamedquery.f1
 helpviewer_keywords:
 - Create Named Query dialog box
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fe4ebd6e0ecaff7d6aed1aecef906bb1a8519e98
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cc03192d0deae00b9ace6f70e72ced4883d26b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149625"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224694"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно "Создание именованного запроса" или "Изменение именованного запроса" (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Создание именованного запроса/изменение именованного запроса** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для создания или изменения именованных запросов в **конструкторе представлений источника данных**. Именованный запрос может использоваться как таблица, на основе которой могут создаваться другие объекты служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Диалоговое окно **Создание именованного запроса/изменение именованного запроса** можно вызвать следующими способами:  

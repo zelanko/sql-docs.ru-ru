@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Data Mining Wizard
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: 56
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 837acee30eb9aa6f6bf2a89c61d598abf52f972b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f30b9bbc04e7008a6d5be33e364ef6de7e91edf8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288420"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223844"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   Мастер интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускается каждый раз, когда к проекту интеллектуального анализа данных добавляется новая структура интеллектуального анализа данных. Мастер помогает выбрать источник данных и создать представление источника данных, которое определяет данные, используемые для анализа, а также создать начальную модель.  

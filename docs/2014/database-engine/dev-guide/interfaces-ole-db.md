@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - interfaces [OLE DB]
 - SQL Server Native Client OLE DB provider, interfaces
 - OLE DB, interfaces
 ms.assetid: 34c33364-8538-45db-ae41-5654481cda93
-caps.latest.revision: 39
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62b26f5cd5d07c8623bf5e318b38b6631ef7588d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb0ec7cd01f38f2279a1885d890ae47738b01080
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250614"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225174"
 ---
 # <a name="interfaces-ole-db"></a>Интерфейсы (OLE DB)
   Помимо базовых интерфейсов OLE DB, предоставляемые по Microsoft данных Access Components (MDAC) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента реализует следующие дополнительные интерфейсы OLE DB:  

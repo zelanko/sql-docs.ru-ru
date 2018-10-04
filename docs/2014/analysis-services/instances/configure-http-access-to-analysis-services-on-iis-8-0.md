@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2494008022e095cebe40c0436d47a5e933bbde62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eded16b19f9645444c8161e04c63c8a283673b26
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204474"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108196"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0
   В этой статье объясняется, как настроить конечную точку HTTP для доступа к экземпляру служб Analysis Services. Доступ по протоколу HTTP к службам Analysis Services можно включить путем настройки MSMDPUMP.dll — расширения ISAPI, которое работает на сервере IIS и переносит данные между клиентским приложением и сервером служб Analysis Services. Такой подход предоставляет альтернативные способы подключения к службам Analysis Services, если применяемое решение бизнес-аналитики требует получения следующих возможностей.  

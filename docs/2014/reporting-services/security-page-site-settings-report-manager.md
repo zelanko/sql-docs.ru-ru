@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a613f3d2cadae9913f14759ca3c59252d62cd14f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a64dd80608d7b1d60718e5753d77fb37687234a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294104"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183114"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Страница «Безопасность» (Настройки сайта. Диспетчер отчетов)
   Страница «Безопасность» позволяет просматривать назначения системных ролей, предназначенных для управления доступом к сайту сервера отчетов. Назначения системных ролей существуют вне области пространства имен сервера отчетов или иерархии папок. Назначения системных ролей являются глобальными и не могут изменяться для отдельных элементов. К операциям, которые поддерживаются с помощью назначений системных ролей, относятся создание и использование общих расписаний, применение построителя отчетов, а также задание значений по умолчанию для параметров определенных компонентов сервера.  

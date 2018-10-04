@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.percentagesamplingtrans.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fcd0b5154175ec74f86ecaea4ad96439b7ea8b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58d94751d4be5349cc1d904493d46e1a4f135dbd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296914"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172496"
 ---
 # <a name="percentage-sampling-transformation"></a>преобразование «Процентная выборка»
   Преобразование «Процентная выборка» создает образец набора данных извлечением некоторого процента входных строк преобразования. Данные выборки извлекаются случайным образом из входа преобразования. За счет этого достигается репрезентативность выборки.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/19/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8f10f53f09848971eee5773d2875d238b0033c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7816d4cebb8ad8344c240a7c5a32229e0b07105f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253016"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191594"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>Соединение семантической модели бизнес-аналитики PowerPivot (BISM)
   Соединение семантической модели бизнес-Аналитики (bism) — это переносимое соединение, которое подключается Excel или [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] сообщает [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных табличной модели или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра в многомерном режиме. Определение и использование BISM-файлов в определенной степени аналогично файлам подключения к данным Оffice (ODC).  
