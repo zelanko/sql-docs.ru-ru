@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ff05cc362f5be17df9b5ae0b282d55db4d030ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e107acad4bfd844478c47cfc5c19aa947c74bd9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217844"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104118"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Репликация и доставка журналов (SQL Server)
   Доставка журналов использует две копии одной базы данных, которые обычно хранится на разных компьютерах. В любой момент только одна копия базы данных доступна клиентам. Эта копия известна как база данных-источник. Обновления, вносимые клиентами в базу данных-источник, распространяются при помощи доставки журналов в другую копию базы данных, которая называется база данных-получатель. Доставка журналов включает применение каждой вставки, обновления или удаления, сделанных в базе данных-источнике, к базе данных-получателю с помощью журнала транзакций.  

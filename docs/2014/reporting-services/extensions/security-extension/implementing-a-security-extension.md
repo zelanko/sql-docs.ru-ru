@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], extensions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - custom authentication [Reporting Services]
 - extensions [Reporting Services], custom security
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
-caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27707a7736c10794aec6c80679728988528665ba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d97b570ca00251e7beaf39b104d254bf3363e8ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216774"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119336"
 ---
 # <a name="implementing-a-security-extension"></a>Реализация модуля безопасности
   Проверка подлинности [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows является основной системой защиты отчетов в службах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Однако в определенных случаях может понадобиться расширить систему безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], чтобы обеспечить соответствие требованиям системы безопасности предприятия. Для этого используется платформа разработки, предоставляемая API служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. В этом разделе представлены общие сведения о модулях безопасности в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

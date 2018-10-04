@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.welcome.f1
 helpviewer_keywords:
 - Mining Model Wizard
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6782013eab9b190efe2f6756c1ee409598eb1619
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d90f2a1504daecf80901157b34dcaffa4220261b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291681"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087764"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Справка F1 мастера интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   Чтобы создать новую структуру интеллектуального анализа данных и при необходимости связанную с ней модель интеллектуального анализа данных, используется **Мастер интеллектуального анализа данных** .  
@@ -34,7 +31,7 @@ ms.locfileid: "37291681"
   
  Дополнительные сведения см. в разделе [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md).  
   
-  **Мастер интеллектуального анализа данных** содержит следующие этапы.  
+ **Мастер интеллектуального анализа данных** содержит следующие этапы.  
   
 -   Выберите тип источника данных, на базе которого будет создаваться модель интеллектуального анализа данных.  
   

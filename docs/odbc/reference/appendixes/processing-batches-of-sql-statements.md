@@ -1,13 +1,11 @@
 ---
-title: Обработки пакетов инструкций SQL | Документы Microsoft
+title: Обработка пакетов инструкций SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], batches
@@ -18,19 +16,18 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - batches [ODBC], processing batches of SQL statements
 ms.assetid: 04b93ef9-11de-47a3-8bd8-ba963c42f182
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04f90e8a2da0b19c57b4de7a665c6907356f788c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c77d60ea3ef1412e66c8bf40937b45647e776e98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906659"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769362"
 ---
-# <a name="processing-batches-of-sql-statements"></a>Обработки пакетов инструкций SQL
+# <a name="processing-batches-of-sql-statements"></a>Обработка пакетов инструкций SQL
 > [!IMPORTANT]  
->  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этой возможности в новых разработках и запланируйте изменение приложений, которые сейчас ее используют. Корпорация Майкрософт рекомендует использовать функциональность курсора драйвера.  
+>  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые сейчас ее используют. Корпорация Майкрософт рекомендует использовать функциональные возможности драйвера курсора.  
   
- Библиотека курсоров не поддерживает пакеты инструкций SQL, включая инструкции SQL, для которых атрибут инструкции SQL_ATTR_PARAMSET_SIZE больше 1. Если приложение отправляет пакет инструкций SQL для библиотеки курсоров, результаты не определены.
+ Библиотека курсоров не поддерживает пакеты инструкций SQL, включая инструкции SQL, для которых атрибут инструкции SQL_ATTR_PARAMSET_SIZE больше 1. Если приложение отправляет пакет инструкций SQL в библиотеку курсоров, результаты будут неопределенными.

@@ -1,13 +1,11 @@
 ---
-title: ActualSize и пример свойства DefinedSize (VC ++) | Документы Microsoft
+title: Примеры ActualSize и Definedsize свойства (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - ActualSize property [ADO], VC++ example
 - DefinedSize property [ADO], VC++ example
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54bb6f590da02e26adb3b617de49c5f4a1de5a82
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275063"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789282"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize и пример свойства DefinedSize (VC ++)
-В этом примере используется [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) свойства для отображения определенный размер и фактический размер поля.  
+# <a name="actualsize-and-definedsize-properties-example-vc"></a>Примеры ActualSize и Definedsize свойства (Visual C++)
+В этом примере используется [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) свойства для отображения определенного размера, а фактический размер поля.  
   
 ## <a name="example"></a>Пример  
   
@@ -132,22 +129,22 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **Имя хранилища: Eric чтения книг**  
+ **Имя Store: Эрик чтения книги**  
 **Размер: 40**  
 **Фактический размер: 19**  
-**Название магазина: Barnum**  
+**Имя Store: Barnum**  
 **Размер: 40**  
 **Фактический размер: 8**  
-**Название магазина: Новости и Brews**  
+**Имя Store: Новости и Brews**  
 **Размер: 40**  
 **Фактический размер: 12**  
-**Имя хранилища: Doc-U-коврик: Белье качества и книги**  
+**Имя Store: Doc-U-Mat: стирки качества и книги**  
 **Размер: 40**  
 **Фактический размер: 36**  
-**Название магазина: Fricative Bookshop**  
+**Имя Store: Fricative Bookshop**  
 **Размер: 40**  
 **Фактический размер: 18**  
-**Название магазина: Bookbeat**  
+**Store Name: Bookbeat**  
 **Размер: 40**  
 **Фактический размер: 8**   
 ## <a name="see-also"></a>См. также  

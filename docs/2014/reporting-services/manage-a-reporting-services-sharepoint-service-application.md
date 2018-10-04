@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6539627f9b1fc5fc41b9cc535efd5cb4c5949ecc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b11c64fe270eeff5fad8631d8d75dfd3bd9c60b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153875"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135159"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Управление Служебным приложением SharePoint службы Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Управление приложениями службы из центра администрирования SharePoint. Страницы управления и свойств позволяют обновлять конфигурацию приложения службы, а также выполнять типовые административные задачи.  
@@ -94,7 +91,7 @@ ms.locfileid: "37153875"
   
 |Настройка|Комментарии|  
 |-------------|--------------|  
-|Включение ведения журнала выполнения|Значение по умолчанию — TRUE.<br /><br /> задать, должны ли сервером отчетов создаваться журналы трассировки, а также задать число дней для хранения журнала. , и делает это по-другому. Журналы сохраняются на компьютере сервера отчетов в папке \Microsoft SQL Server\MSSQL.n\ReportServer\Log. При каждом перезапуске службы начинается запись нового файла журнала. Дополнительные сведения о файлах журналов см. в разделе [журнал трассировки службы сервера отчетов](report-server/report-server-service-trace-log.md)|  
+|Включение ведения журнала выполнения|Значение по умолчанию — TRUE.<br /><br /> задать, должны ли сервером отчетов создаваться журналы трассировки, а также задать число дней для хранения журнала. . Журналы сохраняются на компьютере сервера отчетов в папке \Microsoft SQL Server\MSSQL.n\ReportServer\Log. При каждом перезапуске службы начинается запись нового файла журнала. Дополнительные сведения о файлах журналов см. в разделе [журнал трассировки службы сервера отчетов](report-server/report-server-service-trace-log.md)|  
 |Дни хранения журнала выполнения|Значение по умолчанию — 60 суток.|  
   
  Все [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживают ведение журнала SharePoint ULS.  Дополнительные сведения см. в разделе [Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  

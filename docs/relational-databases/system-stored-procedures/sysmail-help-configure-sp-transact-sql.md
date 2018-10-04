@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_configure_sp (Transact-SQL) | Документы Microsoft
+title: sysmail_help_configure_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_configure_sp
@@ -18,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d000f176194551f844485bcab04bfd0e085d702
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1ef80206f9ff82cf1ab2917e90f61432be15c190
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838432"
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +41,13 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ## <a name="arguments"></a>Аргументы  
  [**@parameter_name** =] **"***parameter_name***"**  
- Имя параметра конфигурации, значение которого нужно получить. Если указано, значение параметра конфигурации возвращается в **@parameter_value** ВЫХОДНОЙ параметр. Если аргумент **@parameter_name** указан, эта хранимая процедура возвращает результирующий набор, содержащий все параметры конфигурации компонента Database Mail в экземпляре.  
+ Имя параметра конфигурации, значение которого нужно получить. Если он указан, значение параметра конфигурации возвращается в **@parameter_value** ВЫХОДНОЙ параметр. Если аргумент **@parameter_name** указан, эта хранимая процедура возвращает результирующий набор, содержащий все параметры конфигурации компонента Database Mail в экземпляре.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Если аргумент **@parameter_name** указан, то возвращает результирующий набор со следующими столбцами.  
+ Если аргумент **@parameter_name** указан, возвращает результирующий набор со следующими столбцами.  
   
 ||||  
 |-|-|-|  
@@ -59,15 +56,15 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |**ParamValue**|**nvarchar(256)**|Значение параметра конфигурации.|  
 |**Описание**|**nvarchar(256)**|Описание параметра конфигурации.|  
   
-## <a name="remarks"></a>Замечания  
- Хранимая процедура **sysmail_help_configure_sp** перечислены текущие параметры конфигурации компонента Database Mail для экземпляра.  
+## <a name="remarks"></a>Примечания  
+ Хранимая процедура **sysmail_help_configure_sp** отображает список текущих параметров конфигурации компонента Database Mail для экземпляра.  
   
- Когда **@parameter_name** указан, но указан без выходного параметра, для **@parameter_value**, эта хранимая процедура не возвращает результат.  
+ Когда **@parameter_name** указано, но без выходного параметра предоставляется для **@parameter_value**, эта хранимая процедура не возвращает выходные данные.  
   
- Хранимая процедура **sysmail_help_configure_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедура должна вызываться с трехкомпонентным именем, если текущая база данных не **msdb**.  
+ Хранимая процедура **sysmail_help_configure_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедура должен вызываться с трехкомпонентным именем, если текущая база данных не **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для этой процедуры по умолчанию членам выполнение **sysadmin** предопределенной роли сервера.  
+ Разрешения для этой процедуры по умолчанию члены выполнение **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере процедура отображает список параметров конфигурации компонента Database Mail для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

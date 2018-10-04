@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 078ed4d8a791aba089255c725ddbedaa313920ba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 47efdd38b14a22f28026f98d2289c1c67fc65b9a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171675"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117564"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Многомерное моделирование (службы SSAS)
   Многомерное решение служб Analysis Services использует структуры кубов для анализа бизнес-данных по нескольким измерениям. Многомерный режим является режимом сервера по умолчанию для служб Analysis Services. Он включает подсистему запросов и вычислений для данных OLAP с режимами хранения HOLAP, MOLAP и ROLAP, сочетающий производительность с требованиями к масштабируемости данных. Ядро OLAP служб Analysis Services является лучшим в отрасли сервером OLAP, хорошо работающим с широким диапазоном средств бизнес-аналитики. В большинстве случаев службы Analysis Services устанавливаются как обычные серверы OLAP.  

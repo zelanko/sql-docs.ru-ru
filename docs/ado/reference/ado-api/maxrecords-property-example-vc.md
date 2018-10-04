@@ -1,32 +1,29 @@
 ---
-title: Пример свойства MaxRecords (VC ++) | Документы Microsoft
+title: Пример свойства MaxRecords (Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91c3a9d2016b0ec99ee4deee8ebcac16c9befa83
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636912"
 ---
-# <a name="maxrecords-property-example-vc"></a>Пример свойства MaxRecords (VC ++)
-В этом примере используется [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) свойства, чтобы открыть [записей](../../../ado/reference/ado-api/recordset-object-ado.md) содержащего 10 самых дорогих заголовки в ***заголовки*** таблицы.  
+# <a name="maxrecords-property-example-vc"></a>Пример свойства MaxRecords (Visual C++)
+В этом примере используется [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) свойства, чтобы открыть [записей](../../../ado/reference/ado-api/recordset-object-ado.md) содержащий 10 самые дорогостоящие книги в ***заголовки*** таблицы.  
   
 ## <a name="example"></a>Пример  
   
@@ -169,17 +166,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Первые десять наименования, Цена:**  
-**Но это понятного имени пользователя? ---22.95**  
-**Компьютера Phobic и не Phobic частных лиц: Изменений поведения---21,59**  
-**Onions, Ликс и чесночный: кулинарии секреты морская---20.95**  
+ **Верхние 10 заголовки по цене:**  
+**Но это понятное для пользователя? ---22.95**  
+**Компьютера Phobic и не боятся частных лиц: Изменений поведения---21,59**  
+**Луковиц Ликс и чесночный: кулинарные секреты морская---20.95**  
 **Секреты Силиконовой долине---20,00**  
-**Руководство по базе данных занят руководителю---19,99**  
-**Прямые поговорим о компьютерах---19,99**  
-**Силиконовая Долина Gastronomic рассматривает---19,99**  
-**Deprivation длительного данных: Четыре практические примеры---19,99**  
+**Руководство по базе данных занят руководителя---19,99**  
+**Рассказывают о компьютерах---19,99**  
+**Обрабатывает в Силиконовой долине Gastronomic---19,99**  
+**Deprivation длительного данных: Четыре примеры внедрения---19,99**  
 **Суши, любой пользователь? ---14.99**  
-**50 лет на машины Buckingham Palace---11.95**   
+**50 лет в машины Buckingham Palace---11.95**   
 ## <a name="see-also"></a>См. также  
  [Свойство MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

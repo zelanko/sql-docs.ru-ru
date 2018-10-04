@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_upload_collection_set (Transact-SQL) | Документы Microsoft
+title: sp_syscollector_upload_collection_set (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_upload_collection_set
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_upload_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 081a5eccfdec4ea8582efb00f6c5f2e74e7f510e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9017209ef2e4b500ee6a90e14830b520ed2a588d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249656"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780905"
 ---
 # <a name="spsyscollectoruploadcollectionset-transact-sql"></a>sp_syscollector_upload_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +45,17 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@collection_set_id =** ] *collection_set_id, чтобы выделить*  
- Уникальный локальный идентификатор набора элементов сбора. *collection_set_id, чтобы выделить* — **int** и должен иметь значение, если *имя* имеет значение NULL.  
+ [  **@collection_set_id =** ] *collection_set_id*  
+ Уникальный локальный идентификатор набора элементов сбора. *collection_set_id* — **int** и должен иметь значение, если *имя* имеет значение NULL.  
   
  [  **@name =** ] **"***имя***"**  
- Имя набора элементов сбора. *имя* — **sysname** и должен иметь значение, если *collection_set_id, чтобы выделить* имеет значение NULL.  
+ Имя набора элементов сбора. *имя* — **sysname** и должен иметь значение, если *collection_set_id* имеет значение NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
- Либо *collection_set_id, чтобы выделить* или *имя* должен иметь значение, и не может иметь значение NULL.  
+## <a name="remarks"></a>Примечания  
+ Либо *collection_set_id* или *имя* должен иметь значение; оба не может иметь значение NULL.  
   
  Данная процедура может использоваться для начала передачи работающего набора сбора по требованию. Она может использоваться только для наборов сбора, настроенных для сбора и передачи данных в режиме с кэшированием. Это позволяет пользователю получить данные для анализа, не ожидая запланированной передачи.  
   
