@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Server Properties dialog box
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e3dfe081a2400c795b8c0bd08a5667eaa996268
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: afa6c20ccf591b4cea6917cd11817cb24c786abd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260038"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078064"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Диалоговое окно «Свойства сервера анализа данных» (службы Analysis Services)
   Используйте диалоговое окно **Свойства сервера анализа данных** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для задания общих свойств, языка или параметров сортировки и безопасности экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Чтобы открыть диалоговое окно **Свойства сервера анализа данных**, щелкните правой кнопкой мыши экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в **обозревателе объектов** и выберите в контекстном меню пункт **Свойства**. Диалоговое окно **Свойства сервера анализа данных** содержит следующие свойства.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], managing
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-caps.latest.revision: 69
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fc0febe87f937e8ad301bb070e22dcd44b788c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3a102af211ccaa8fad3d7792cf868653ca4797d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327074"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176944"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Диспетчер отчетов (службы SSRS в основном режиме)
   Диспетчер отчетов представляет собой веб-средство, предназначенное для доступа к отчетам и управления ими, которое применяется для администрирования экземпляра одного удаленного сервера отчетов через HTTP-соединение. Кроме того, диспетчер отчетов предоставляет средство просмотра отчетов и функции навигации. В этом разделе:  
@@ -72,7 +69,7 @@ ms.locfileid: "37327074"
   
  Некоторые компоненты диспетчера отчетов доступны только в определенных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- При новой установке только у локальных администраторов есть достаточные разрешения для работы с содержимым и параметрами. Для предоставления разрешений другим пользователям локальный администратор должен создать назначения ролей, которые обеспечат доступ к серверу отчетов. Страницы приложения и задачи, к которым пользователь впоследствии сможет получить доступ, зависят от назначений ролей этому пользователю. Дополнительные сведения смдолжно быть включено весьма небольшое число пользователей. в разделе Grant User Access to a Report Server &#40;Report Manager&#41;должно быть включено весьма небольшое число пользователей.  
+ При новой установке только у локальных администраторов есть достаточные разрешения для работы с содержимым и параметрами. Для предоставления разрешений другим пользователям локальный администратор должен создать назначения ролей, которые обеспечат доступ к серверу отчетов. Страницы приложения и задачи, к которым пользователь впоследствии сможет получить доступ, зависят от назначений ролей этому пользователю. Дополнительные сведения смдолжно быть включено весьма небольшое число пользователей. в разделе [Grant User Access to a Report Server &#40;Report Manager&#41;](security/grant-user-access-to-a-report-server.md)должно быть включено весьма небольшое число пользователей.  
   
  В [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] или Windows Server 2008 необходимо настроить диспетчер отчетов для локального администрирования. Дополнительные сведения см. в статье [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   

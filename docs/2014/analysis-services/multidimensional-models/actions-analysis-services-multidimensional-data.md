@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d77c8d49f052d11de98747ff9deee0c61e0070c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 08f820ec9fd9dd38a578c9f71502dc469b476f0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319454"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193664"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Действия (службы Analysis Services — многомерные данные)
   Действия могут быть разных типов, поэтому их создание должно осуществляться соответствующим образом. Действия могут представлять собой следующее.  

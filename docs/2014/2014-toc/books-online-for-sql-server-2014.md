@@ -4,8 +4,6 @@ ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 f1_keywords:
 - sql12.portal.f1
@@ -21,20 +19,20 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310201"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161764"
 ---
-# Электронная документация по SQL Server 2014
+# <a name="books-online-for-sql-server-2014"></a>Электронная документация по SQL Server 2014
   Добро пожаловать на страницу электронной документации [!INCLUDE[msCoName](../includes/msconame-md.md)]® для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Электронная документация содержит описание задач, а также справочная документация, в которых описывается выполнение рабочих данных и бизнес-аналитики с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Попробуйте продукт:**  
  ![Маленький значок виртуальной машины Azure](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Есть ли учетная запись Azure?  Затем перейдите **[здесь](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** запустить виртуальную машину с SQL Server 2014 с пакетом обновления 1 (SP1) уже установлен. Дополнительные сведения о SQL Server 2014 (SP1), см. в разделе [сведения о выпуске пакета обновления 1 для SQL Server 2014 ](https://support.microsoft.com/en-us/kb/3058865). 
   
-## Технологии SQL Server  
+## <a name="sql-server-technologies"></a>Технологии SQL Server  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] включает несколько технологий управления данными и анализа данных. В следующей таблице приведены ссылки на компоненты, задачи и справочную документацию по каждой технологии.  
   
 |||  
@@ -47,7 +45,7 @@ ms.locfileid: "39310201"
 |![Значок репликации](media/replication.gif "значок репликации")|[Репликация](../relational-databases/replication/sql-server-replication.md)<br /><br /> Репликация представляет собой набор технологий копирования и распространения данных и объектов баз данных между базами данных, а также синхронизации баз данных для поддержания согласованности. Благодаря репликации данные можно размещать в различных местах, обеспечивая возможность доступа к ним удаленных и мобильных пользователей по локальным или глобальным сетям, посредством коммутируемых и беспроводных соединений, а также через Интернет.|  
 |![Значок служб отчетов](media/reportingservices.gif "значок служб Reporting Services")|[службы Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Службы Reporting Services предлагают средства создания корпоративных отчетов с поддержкой веб-интерфейса, которые позволяют включать в отчеты данные из различных источников, публиковать отчеты в разнообразных форматах, а также централизованно управлять безопасностью и подписками.|  
   
-## Сведения о SQL Server в Интернете  
+## <a name="sql-server-information-on-the-web"></a>Сведения о SQL Server в Интернете  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] публикует Дополнительные сведения о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в нескольких веб-сайтах.  
   
  **Веб-сайты SQL Server**  
@@ -64,7 +62,7 @@ ms.locfileid: "39310201"
   
 -   [Центр разработчиков XML](http://go.microsoft.com/fwlink/?LinkId=42458)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справка диспетчера конфигурации SQL Server](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

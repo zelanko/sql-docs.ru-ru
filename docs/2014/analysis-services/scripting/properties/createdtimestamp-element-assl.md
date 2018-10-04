@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CreatedTimestamp Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CreatedTimestamp element
 ms.assetid: 35f5dd33-ea82-4be3-a117-69136aa9d1a4
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1bab2bbc51422d6062b5f7df97fd3ff7b17e40c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e13b032b34ee63a7c7a939d7ad17b8ceb1786739
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235624"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191024"
 ---
 # <a name="createdtimestamp-element-assl"></a>Элемент CreatedTimestamp (ASSL)
   Содержит отметку времени только для чтения с временем создания родительского элемента.  

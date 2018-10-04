@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f27dbcf0375f7acc1e478cce2cd148b5efc03ec9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 682b3db94bbac8e3d77b30fed90fb33885cca465
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183881"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183494"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Подключения к данным, источники данных и строки подключения в построителе отчетов
   Чтобы включить в отчет данные, необходимо создать подключения к данным и наборы данных. Подключение к данным содержит сведения о получении доступа к внешнему источнику данных. Набор данных содержит команду запроса, определяющую данные, которые необходимо выбрать из подключения к данным.  

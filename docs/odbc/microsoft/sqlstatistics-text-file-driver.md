@@ -1,38 +1,35 @@
 ---
-title: SQLStatistics (драйвера текстового файла) | Документы Microsoft
+title: SQLStatistics (драйвер для текстовых файлов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - text file driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Text File Driver
 ms.assetid: 311afc01-d656-425f-be43-4a8e7cbc9a97
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2e53ce34c9095f28ee80ca7eeaa5f1f09b0a3eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 783b036d37e63d33f9aa89cad4eb3bb4bfb2d30a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903229"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680652"
 ---
-# <a name="sqlstatistics-text-file-driver"></a>SQLStatistics (драйвера текстового файла)
+# <a name="sqlstatistics-text-file-driver"></a>SQLStatistics (драйвер для текстовых файлов)
 > [!NOTE]  
->  В этом разделе сведения текстовый файл драйвера. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе сведения конкретного драйвера текстовый файл. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |Столбец|Комментарии|  
 |------------|--------------|  
-|TABLE_QUALIFIER|Путь к каталогу.<br /><br /> Соответствие шаблону не поддерживается в *szTableQualifier* аргумент.|  
+|TABLE_QUALIFIER|Путь к каталогу.<br /><br /> Сопоставление шаблонов не поддерживается в *szTableQualifier* аргумент.|  
 |TABLE_OWNER|В этом столбце возвращается значение NULL, так как имя владельца не поддерживается.|  
-|TABLE_NAME|Имя таблицы без разделителей.<br /><br /> Соответствие шаблону не поддерживается в *szTableName* аргумент.|  
+|TABLE_NAME|Имя неразделенный таблицы.<br /><br /> Сопоставление шаблонов не поддерживается в *szTableName* аргумент.|  
 |INDEX_QUALIFIER|Всегда возвращается значение NULL.|  
 |INDEX_NAME|Зависящих от индекса.|  
 |TYPE|Для ТИПА будет возвращаться только SQL_TABLE_STAT или SQL_INDEX_OTHER.|  

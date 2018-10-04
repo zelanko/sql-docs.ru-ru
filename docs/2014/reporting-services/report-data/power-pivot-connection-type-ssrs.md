@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234754"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166104"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Тип соединения PowerPivot (службы SSRS)
   Для извлечения данных из книги PowerPivot, опубликованной в галерее PowerPivot на сайте SharePoint, можно использовать модуль обработки данных служб SQL Server Analysis Services.  
   
  Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Источник данных PowerPivot должен быть опубликован в галерее PowerPivot на сайте SharePoint.  
   
  Для подключения к книге PowerPivot из построителя отчетов необходимо установить на рабочей станции библиотеку SQL Server 2008 R2 ADOMD.NET. Эта клиентская библиотека устанавливается вместе с PowerPivot для Excel, но, если используется компьютер, на котором нет этого приложения, необходимо загрузить и установить ADOMD.NET со страницы [Пакет дополнительных компонентов SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=192565).  

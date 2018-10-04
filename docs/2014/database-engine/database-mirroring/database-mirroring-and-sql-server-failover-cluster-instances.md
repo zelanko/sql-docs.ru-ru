@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - failover clustering [SQL Server], database mirroring
 - database mirroring [SQL Server], failover
 - high-availability mode [SQL Server]
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
-caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7a39a20d2d39e0a056d40ede36c8bf3fb85bfc29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151190"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Экземпляры зеркального отображения баз данных и отказоустойчивых кластеров (SQL Server)
   Отказоустойчивый кластер представляет собой сочетание одного или нескольких физических дисков в группе кластеров службы кластеров [!INCLUDE[msCoName](../../includes/msconame-md.md)] , называемой группой ресурсов, которые являются узлами-участниками кластера. Группа ресурсов настраивается как экземпляр кластера отработки отказа, на котором запускается экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Экземпляр кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируется в сети как одиночный компьютер, при этом он обладает функциональными возможностями, обеспечивающими отработку отказа с одного узла на другой, если один из узлов становится недоступным. Дополнительные сведения см. в статье [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  

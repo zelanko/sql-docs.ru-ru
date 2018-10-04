@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68ec0250382ad6ec865ff37adcb847ba6afec978
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3fcd41e9fafe72e0d7d87378f7cc8746a51ad28f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257550"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199582"
 ---
 # <a name="use-aggregate-functions"></a>Использование агрегатных функций
   Если измерение используется для создания среза меры, то производится суммирование меры по иерархиям, содержащимся в этом измерении. Характер суммирования зависит от агрегатной функции, заданной для меры. Для большинства мер, содержащих числовые данные, агрегатная функция — `Sum`. Значение меры будет равно различным суммам в зависимости от того, какой уровень иерархии является активным.  

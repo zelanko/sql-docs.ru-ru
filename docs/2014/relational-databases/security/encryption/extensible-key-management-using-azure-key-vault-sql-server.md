@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EKM, with key vault
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Key Management with key vault
 - Transparent Data Encryption, using EKM and key vault
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
-caps.latest.revision: 37
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: ecd049528577ff5da601bf37fda3e8b356acb0e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 677da53a1bc27c4e64a91f04d242635fe2df4471
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305434"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192164"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Соединитель для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] шифрования для использования службы Azure Key Vault в качестве [расширенного управления ключами &#40;расширенного управления Ключами&#41; ](extensible-key-management-ekm.md) поставщика для защиты его ключи шифрования.  
@@ -162,7 +159,7 @@ ms.locfileid: "37305434"
 2.  Программа установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] учетных данных для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имя входа администратора, чтобы использовать хранилище ключей, для настройки и управления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сценарии шифрования.  
   
     > [!IMPORTANT]  
-    >  **УДОСТОВЕРЕНИЙ** аргумент `CREATE CREDENTIAL` необходимо указать имя хранилища ключей. **СЕКРЕТ** аргумент `CREATE CREDENTIAL` требует * \<идентификатор клиента >* (без дефисов) и * \<секрет >* для передачи друг с другом без пробела между ними.  
+    >  **УДОСТОВЕРЕНИЙ** аргумент `CREATE CREDENTIAL` необходимо указать имя хранилища ключей. **СЕКРЕТ** аргумент `CREATE CREDENTIAL` требует  *\<идентификатор клиента >* (без дефисов) и  *\<секрет >* для передачи друг с другом без пробела между ними.  
   
      В следующем примере из **идентификатора клиента** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) удаляются дефисы. Идентификатор клиента вводится как строка `EF5C8E094D2A4A769998D93440D8115D` , а **секрет** представляется строкой *SECRET_sysadmin_login*.  
   
@@ -227,7 +224,7 @@ ms.locfileid: "37305434"
 1.  Создайте учетные данные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для [!INCLUDE[ssDE](../../../includes/ssde-md.md)], которые будут использоваться при доступе к EKM хранилища ключей во время загрузки базы данных.  
   
     > [!IMPORTANT]  
-    >  **УДОСТОВЕРЕНИЙ** аргумент `CREATE CREDENTIAL` необходимо указать имя хранилища ключей. **СЕКРЕТ** аргумент `CREATE CREDENTIAL` требует * \<идентификатор клиента >* (без дефисов) и * \<секрет >* для передачи друг с другом без пробела между ними.  
+    >  **УДОСТОВЕРЕНИЙ** аргумент `CREATE CREDENTIAL` необходимо указать имя хранилища ключей. **СЕКРЕТ** аргумент `CREATE CREDENTIAL` требует  *\<идентификатор клиента >* (без дефисов) и  *\<секрет >* для передачи друг с другом без пробела между ними.  
   
      В следующем примере из **идентификатора клиента** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) удаляются дефисы. Идентификатор клиента вводится как строка `EF5C8E094D2A4A769998D93440D8115D` , а **секрет** представляется строкой *SECRET_DBEngine*.  
   

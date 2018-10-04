@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10040"
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expression dialog box [Reporting Services]
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
-caps.latest.revision: 63
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 747943591907b1025250e3554270e9dda14d3e51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b2ec18b03081d3469e9187db6043ba27406389b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325644"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207684"
 ---
 # <a name="expression-dialog-box"></a>Диалоговое окно «Выражение»
   Используйте **выражение** диалоговое окно, чтобы написать [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] свойств элемента выражения для отчетов. Выражения можно использовать для задания многих свойств, в том числе цвета, шрифта, границ. Во время выполнения обработчик отчета вычисляет выражения и заменяет их результатами значения свойств.  
@@ -40,7 +37,7 @@ ms.locfileid: "37325644"
 ## <a name="expression-constructs"></a>Конструкции выражения  
  Выражения начинаются со знака равенства (=) и могут содержать константы, литералы, операторы и ссылки на встроенные поля, встроенные коллекции, встроенные функции, функции библиотеки времени выполнения [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], классы среды CLR платформы [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] и пользовательские функции. В следующем списке перечислены категории и значения, которые можно добавить в выражение.  
   
- **Задать выражение для:***\<Имя_свойства >  *  
+ **Задать выражение для:***\<Имя_свойства >*   
  Имя свойства, для которого задается выражение. Кроме того, это свойство можно установить в панели свойств по его имени.  
   
  **Константы**  
@@ -54,7 +51,7 @@ ms.locfileid: "37325644"
  **Параметры**  
  Содержит список параметров отчета.  
   
- **Поля (** * \<выбранный набор данных >* **)**  
+ **Поля (**  *\<выбранный набор данных >* **)**  
  Отображает список полей для набора данных, выбранного в категории «Наборы данных». Дважды щелкните поле, чтобы скопировать его в окно **Выражение** .  
   
  **Наборы данных**  

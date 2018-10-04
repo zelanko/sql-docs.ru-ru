@@ -1,13 +1,11 @@
 ---
-title: Имя свойства (ADO) | Документы Microsoft
+title: Имя свойства (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO]
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 834a04e01587be21938d461ac1645802bad624d0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3717aa3ec95c92500d66c968446f7711a6cd4e74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279583"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828652"
 ---
 # <a name="name-property-ado"></a>Свойство Name (ADO)
 Указывает имя объекта.  
@@ -34,15 +31,15 @@ ms.locfileid: "35279583"
  Возвращает или задает **строка** значение, указывающее имя объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте **имя** назначить имя, или получить имя свойства **команда**, **свойство**, **поле**, или **параметра**  объекта.  
+ Используйте **имя** присвоить имя или извлечения имени свойства **команда**, **свойство**, **поле**, или **параметр**  объекта.  
   
- Значение — чтение и запись на **команда** объекта и только для чтения на **свойство** объекта.  
+ Значение доступно для чтения/записи на **команда** объект и только для чтения на **свойство** объекта.  
   
- Для **поле** объекта, **имя** обычно доступны только для чтения. Однако для новых **поле** объектов, добавленных в [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [записи](../../../ado/reference/ado-api/record-object-ado.md), **имя** чтение и запись только в конце [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство **поле** был указан и поставщик данных успешно добавлен новый **поле** путем вызова [ Обновление](../../../ado/reference/ado-api/update-method.md) метод **поля** коллекции.  
+ Для **поле** объекта, **имя** обычно предназначены только для чтения. Тем не менее, для новых **поле** объекты, добавленные [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [записи](../../../ado/reference/ado-api/record-object-ado.md), **имя** чтение и запись только после того, как [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство для **поле** была определена и успешно добавил новый поставщик данных **поле** путем вызова [ Обновление](../../../ado/reference/ado-api/update-method.md) метод **поля** коллекции.  
   
- Для **параметр** объектов еще не добавлены [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции, **имя** свойство доступно для чтения/записи. Для добавлены **параметр** объекты и все другие объекты **имя** свойство доступно только для чтения. Имена не обязательно должны быть уникальными в пределах коллекции.  
+ Для **параметр** объекты еще не добавляются к [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции, **имя** свойство доступно для чтения/записи. Для добавляется **параметр** объекты и все другие объекты **имя** свойство доступно только для чтения. Имена не обязательно должны быть уникальными в пределах коллекции.  
   
- Вы можете получить **имя** свойство объекта по порядковому номеру, после чего можно ссылаться на объект напрямую по имени. Например если `rstMain.Properties(20).Name` дает `Updatability`, впоследствии можно ссылаться на это свойство как `rstMain.Properties("Updatability")`.  
+ Вы можете получить **имя** свойства объекта с порядковым номером, после чего можно ссылаться на объект непосредственно по имени. Например если `rstMain.Properties(20).Name` дает `Updatability`, впоследствии можно ссылаться на это свойство как `rstMain.Properties("Updatability")`.  
   
 ## <a name="applies-to"></a>Объект применения  
   
@@ -52,5 +49,5 @@ ms.locfileid: "35279583"
 |[Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Атрибуты и примере имя свойства (Visual Basic)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Атрибуты и свойства пример имени (VC ++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+ [Примеры Attributes и Name свойства (Visual Basic)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
+ [Примеры Attributes и Name свойства (Visual C++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system functions [SQL Server]
 - user-defined functions [SQL Server], system
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fa21b6f50aaa5bd9d428f3397978fa951925dedf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7ce5bc22f1cf7dd8794aaa8d65e23d0324a204d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179151"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172134"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>В схеме system_function_schema запрещены определяемые пользователем функции
   Помощник по обновлению обнаружил определяемые пользователем функции, принадлежащие недокументированному пользователю **system_function_schema**. Нельзя создать определяемую пользователем системную функцию с указанием пользователя. **System_function_schema** имя пользователя не существует, и идентификатор пользователя, связанный с ним (UID = 4) зарезервирован для **sys** схемы и предназначен только для внутреннего использования.  

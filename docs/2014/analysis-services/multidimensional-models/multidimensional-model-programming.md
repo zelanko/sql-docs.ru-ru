@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a31015e4103f480899bfb423d506b38ef5b7f140
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d09ea9167e26c61c5c78671da5dcf782a9cfa86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245636"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200564"
 ---
 # <a name="multidimensional-model-programming"></a>Программирование многомерной модели
   Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют несколько API-интерфейсов, которые используются для программирования экземпляра служб Analysis Services и многомерных баз данных, к которым он предоставляет доступ. В этом разделе описаны подходы, доступные разработчикам, создающим пользовательские приложения, в которых используются многомерные решения служб Analysis Services. Эти сведения помогут выбрать интерфейс программирования, лучше всего подходящий для конкретного проекта. Проекты разработки для служб Analysis Services могут быть основаны на управляемом или неуправляемом коде, запускаемом на платформе Windows или других платформах с поддержкой доступа по протоколу HTTP.  

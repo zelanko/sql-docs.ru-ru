@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Rowset Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c4ce1858e8274e5ae964c497972b4f2b082a712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279450"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170124"
 ---
 # <a name="rowset-data-type-xmla"></a>Тип данных Rowset (XML для аналитики)
   Определяет производный тип данных, представляющий [корневой](../xml-elements-properties/root-element-xmla.md) элемент, который возвращает табличные данные из [Discover](../xml-elements-methods-discover.md) или [Execute](../xml-elements-methods-execute.md) вызова метода.  
@@ -63,7 +60,7 @@ ms.locfileid: "37279450"
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|[строки](../xml-elements-properties/row-element-xmla.md)|  
-|Производные элементы|[корневой](../xml-elements-properties/root-element-xmla.md)|  
+|Производные элементы|[Корневой](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Примечания  
  В XML нельзя использовать определенные символы в качестве имен элементов и атрибутов. Чтобы устранить это ограничение по именованию, XML для аналитики (XMLA) поддерживает кодировку в соответствии с определением [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Для имен столбцов, содержащих XML-символы, недопустимые в соответствии со спецификацией XML 1.0 XML для Аналитики используются соответствующие шестнадцатеричные значения для кодирования символов Юникода, которые не являются допустимыми. Шестнадцатеричные значения экранируются как _x*HHHH*\_, где *HHHH* расшифровывается из четырех цифр шестнадцатеричный код UCS-2 для символа, в порядке старшинства наиболее значимый бит. Например, в XML для аналитики имя «Order Details» будет закодировано как Order_x0020_Details, где символ пробела заменен на соответствующий шестнадцатеричный код.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - mining structures [DMX], exporting
 - mining models [Analysis Services], migration
 ms.assetid: 10a83b13-2640-4ff5-80c8-a35e1d692908
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4145ca6834a27b1159a0d2311f620085491343cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9621a7ed2f7e1dcc26a46a71d59e4febac974d38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173605"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165654"
 ---
 # <a name="export-and-import-data-mining-objects"></a>Экспорт и импорт объектов интеллектуального анализа данных
   В дополнение к функциям, реализованным в решениях резервного копирования, восстановления из копии и миграции служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , интеллектуальный анализ данных SQL Server обеспечивает возможность быстрой передачи структур и моделей интеллектуального анализа данных с одного сервера на другой с помощью расширений интеллектуального анализа данных.  

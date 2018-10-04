@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8993c4033112dd81be611bc3e2d36bfb1f30243
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304694"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187484"
 ---
 # <a name="powerpivot-usage-data-collection"></a>Сбор данных об использовании PowerPivot
   Сбор данных об использовании — это функция SharePoint на уровне фермы. PowerPivot для SharePoint использует и дополняет эту систему для создания встроенных отчетов на панели мониторинга PowerPivot, которые показывают, как используются данные и службы PowerPivot. В зависимости от способа установки SharePoint сбор данных об использовании для фермы может быть отключен. Администратор фермы должен включить ведение журнала использования для создания данных об использовании, которые будут отображаться на панели мониторинга PowerPivot. Дополнительные сведения о том, как включить и настроить сбор данных об использовании для PowerPivot событий см. в разделе [Настройка сбора данных об использовании &#40;PowerPivot для SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -43,7 +40,7 @@ ms.locfileid: "37304694"
   
  **Важно:** убедитесь, что сбор данных об использовании включен. Для этого перейдите в раздел **Наблюдение** в центре администрирования SharePoint. Дополнительные сведения см. в разделе [Настройка сбора данных об использовании &#40;PowerPivot для SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- ![Компоненты и процессы сбора данных об использовании. ] (../media/gmni-usagedata.gif "Компоненты и процессы сбора данных об использовании.")  
+ ![Компоненты и процессы сбора данных об использовании. ](../media/gmni-usagedata.gif "Компоненты и процессы сбора данных об использовании.")  
   
 |Стадия|Описание|  
 |-----------|-----------------|  

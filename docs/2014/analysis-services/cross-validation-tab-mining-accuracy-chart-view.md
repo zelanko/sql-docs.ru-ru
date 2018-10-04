@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a30cf9ce920f7e0416e46dd87044ef7e3d52318c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169825"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188214"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Вкладка «Перекрестная проверка» (просмотр диаграммы точности интеллектуального анализа данных)
   Перекрестная проверка позволяет секционировать структуру интеллектуального анализа данных на разрезы, после чего — выполнить итеративное обучение и проверку моделей по каждому разрезу. Необходимо указать количество сверток, на которые разделяются данные, и каждая свертка, в свою очередь, играет роль проверочных данных, тогда как остальные данные используются для обучения новой модели. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Создает набор стандартных показателей точности для каждой модели. Сравнивая показатели моделей, созданных для каждого разреза, можно получить хорошее представление о том, насколько верна модель интеллектуального анализа для всего набора данных.  

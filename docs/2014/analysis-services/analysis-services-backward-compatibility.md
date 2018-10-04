@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Analysis Services, backward compatibility
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed422c1db365ffecbdd405e400c521605d1cf9cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 633bc51ed0ce4c25e30c2fd78ee7845c075cd094
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261950"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177034"
 ---
 # <a name="analysis-services-backward-compatibility"></a>Analysis Services Backward Compatibility
   Материалы в этом разделе описывают изменения функциональности версий служб  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -39,7 +36,7 @@ ms.locfileid: "37261950"
 |[Нерекомендуемые служб Analysis Services в SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md)|Описание функций, сохраненных в текущей версии для обеспечения совместимости с предыдущими версиями; эти функции будут удалены в следующей версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |[Функции служб неподдерживаемые Analysis Services в SQL Server 2014](discontinued-analysis-services-functionality-in-sql-server-2014.md)|Описание функций, существовавших в более ранних версиях служб  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и удаленных в позднейших версиях.|  
 |[Критические изменения служб Analysis Services в SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)|Описание изменений кода, представленных в этом выпуске [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , которые потенциально могут приводить к сбоям в работе модели, пользовательских приложений или сценария, созданных в предыдущих версиях программного обеспечения.|  
-|[Изменения в работе служб Analysis Services в SQL Server 2014](behavior-changes-to-analysis-services-features-in-sql-server-2014.md)|Описание существующих компонентов, которые функционируют иным образом в рамках данного выпуска [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Распространенные примеры включают изменение значений по умолчанию и присвоение параметрам новых или других значений, которые делают невозможным выполнение ранее допустимых операций или конфигураций, или возникновение необходимости вручную изменять параметр или конфигурацию, которые могли быть удалены во время обновления.<br /> , и делает это по-другому.|  
+|[Изменения в работе служб Analysis Services в SQL Server 2014](behavior-changes-to-analysis-services-features-in-sql-server-2014.md)|Описание существующих компонентов, которые функционируют иным образом в рамках данного выпуска [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Распространенные примеры включают изменение значений по умолчанию и присвоение параметрам новых или других значений, которые делают невозможным выполнение ранее допустимых операций или конфигураций, или возникновение необходимости вручную изменять параметр или конфигурацию, которые могли быть удалены во время обновления.<br /> .|  
   
 ## <a name="see-also"></a>См. также  
  [Новые возможности служб Analysis Services и бизнес-аналитики](what-s-new-in-analysis-services.md)   

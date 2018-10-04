@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb84b8ffc9f3dfbb5b1e89a50b0d57b2dafa9111
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64e7e0fe7a8f68ce9248c02e3a59f34e1b7f65bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121054"
 ---
 # <a name="data-mining-architecture"></a>Архитектора интеллектуального анализа данных
   В этом разделе описывается архитектура решений интеллектуального анализа данных, размещаемых на экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. В подразделах этого раздела описывается логическая и физическая архитектура экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , который поддерживает интеллектуальный анализ данных, а также приводятся сведения о клиентах, поставщиках и протоколах, которые используются для связи с серверами интеллектуального анализа данных и работы с объектами интеллектуального анализа как локально, так и удаленно.  
