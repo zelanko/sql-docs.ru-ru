@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - create extended events session
 - extended events [SQL Server], create session
 ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8524274c0fe1f79bb0f62008ba0caf6ad115004b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e0c243dcacf653167477137e26f0767985f6fa3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207704"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150874"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Создание сеанса расширенных событий с помощью редактора запросов
   Сеанс расширенных событий можно создать с помощью редактора запросов или в обозревателе объектов. В обозревателе объектов предусмотрена расширенная подсистема событий, включающая два пользовательских интерфейса, которые могут быть использованы для создания, изменения и просмотра данных сеанса события. К ним относится мастер, который служит для создания сеанса события, а также новый пользовательский интерфейс сеанса, который представляет более сложные параметры конфигурации. Сеанс расширенных событий можно создать для диагностики трассировок SQL Server, что дает возможность решать, например, следующие проблемы.  
@@ -96,7 +93,7 @@ ms.locfileid: "37207704"
     ADD EVENT package_name.event_name  
     ```  
   
-     Например:  
+     Пример:  
   
     ```  
     ADD EVENT sqlserver.file_read_completed,  
@@ -133,7 +130,7 @@ ms.locfileid: "37207704"
         AND column_type = 'data'  
         ```  
   
-         Например:  
+         Пример:  
   
         ```  
         SELECT *   

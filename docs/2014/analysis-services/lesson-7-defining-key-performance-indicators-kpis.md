@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 36d53770-294f-43ab-8850-15d5351ff60c
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 23f76cbefd4bd9c944928e2875dc59fe6f177955
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5236962c79175c67eabc854652394e73128bf834
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185371"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148834"
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Занятие 7. Определение ключевых показателей эффективности
   На этом занятии обсуждается определение ключевых показателей эффективности в проекте служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Ключевые показатели эффективности предоставляют среду для определения вычислений по мерам деятельности организации на стороне сервера, а также приводят к единому виду отображения результатов. Ключевые показатели эффективности могут отображаться в отчетах, на порталах и инструментальных панелях, через API-интерфейсы доступа к данным, а также с использованием средств [!INCLUDE[msCoName](../includes/msconame-md.md)] и средств сторонних производителей. Ключевые показатели эффективности представляют собой упакованные в метаданные обычные меры и иные многомерные выражения. Дополнительные сведения см. в разделе [Ключевые показатели эффективности в многомерных моделях](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  

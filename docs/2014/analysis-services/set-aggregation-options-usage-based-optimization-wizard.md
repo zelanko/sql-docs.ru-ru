@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.setaggregateoptions.f1
 ms.assetid: 5e5c59f3-5a2d-44de-b1ba-2c56b76d3c8d
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 288ba907435b9600e685be9912095f39889cfa21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: becc1bb290d37eec7e717d9400dc0f694188eeeb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228284"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164104"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>Параметры статистической обработки (мастер оптимизации с учетом использования)
   Используйте страницу **Параметры статистической обработки**, чтобы начать процесс создания статистической схемы и указать ограничения объема хранилища или производительности для статистических схем, создаваемых мастером оптимизации с учетом применения.  

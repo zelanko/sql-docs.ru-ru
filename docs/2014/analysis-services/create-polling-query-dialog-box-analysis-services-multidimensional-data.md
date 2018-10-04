@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createpollingquerydialog.f1
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1c7ca8d5c2594668283887c23f7d976a1fc3359
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b58e73b7757e8288ff90f462be1868cb60e3af5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181471"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Создание опрашивающего запроса» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Создание опрашивающего запроса** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для создания опрашивающего запроса на вкладке **Уведомления** диалогового окна **Параметры хранилища** . Опрашивающий запрос — это, как правило, одноэлементный запрос, возвращающий значение, по которому службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут определить, произошли ли изменения с таблицей или другим реляционным объектом. Открыть окно **Создание опрашивающего запроса** можно, нажав кнопку с многоточием (**...**) на столбце **Опрашивающий запрос** сетки для параметра **Плановый опрос** на вкладке **Уведомления** диалогового окна **Параметры хранилища**. Дополнительные сведения о вкладке **Уведомления** диалогового окна **Параметры хранилища** см. в разделе [Уведомления (диалоговое окно "Параметры хранилища") (службы Analysis Services — многомерные данные)](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  

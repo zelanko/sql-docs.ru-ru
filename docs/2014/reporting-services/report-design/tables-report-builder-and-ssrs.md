@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 18815fb99232048f0d914283b15855f5525ef65c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb940edad51f7d05effc7ba35534a25edddaf441
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198344"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180674"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Таблицы (построитель отчетов и службы SSRS)
   Таблица служит для отображения подробных или сгруппированных данных либо их сочетания. Данные можно сгруппировать по одному полю, по нескольким полям или написать свое собственное выражение. Можно создать вложенные группы или независимые смежные группы. Можно отображать статистические значения для сгруппированных данных, добавлять к группам значения «Итого». Можно отформатировать строки и столбцы,чтобы выделить данные, к которым необходимо привлечь внимание. Можно первоначально скрыть подробные или сгруппированные данные и включить в отчет переключатели углубленной детализации, позволяющие пользователям в интерактивном режиме выбирать, какие данные нужно показать.  

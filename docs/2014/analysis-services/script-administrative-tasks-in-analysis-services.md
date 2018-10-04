@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic Analysis Services administration
 - administering Analysis Services
 ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d3d928ceb2fc390ee65ed413b6199965e1684823
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11385dd002acd7b0181422aaa571fe8fe46f188c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186074"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>Создание скриптов для административных задач в службах Analysis Services
   Административные задачи служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] вы можете автоматизировать, написав или создав скрипты, которые можно выполнять вручную или планировать в агенте SQL Server. В следующей таблице описаны доступные параметры скриптов и даны ссылки на дополнительные сведения.  
@@ -36,7 +33,7 @@ ms.locfileid: "37300954"
 |||Для создания скрипта XMLA можно использовать генератор скриптов в среде Management Studio. На уровне объектов щелкните правой кнопкой мыши объект, чтобы создать скрипт, который создает, изменяет или удаляет объект. На уровне команд, например для обработки, резервного копирования или восстановления, создания агрегата или другой команды, можно создать скрипт с помощью функции «Скрипт» в диалоговом окне. Для этого выберите варианты, помещающие скрипт в новое окно, в файл или в буфер обмена. Также можно написать скрипт XMLA вручную в текстовом редакторе или редакторе кода или использовать шаблон в обозревателе шаблонов. Для выполнения скрипта используется один из следующих способов.<br /><br /> Используйте среду Management Studio для непосредственного создания или изменения объектов в экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> Используйте агент SQL Server, чтобы запланировать задание, которое содержит задачу команды служб Analysis Services.<br /><br /> Используйте командлет Invoke-ASCmd для выполнения скрипта в сеансе PowerShell.||  
 |MDX-скрипт|MDX|Язык многомерных выражений является отраслевым стандартом для запросов к аналитическим источникам данных, который также входит в спецификацию XMLA.<br /><br /> Вы можете создать изолированный файл скрипта многомерных выражений, который запрашивает данные или системные сведения. Например, динамическое административное представление, предоставляющее сведения об операциях локального сервера и исправности сервера, доступно посредством инструкции многомерных выражений SELECT.<br /><br /> Скрипт многомерных выражений работает на серверах в многомерном и табличном режиме. Скрипт вы можете выполнять в интерактивном режиме из среды SQL Server Management Studio или из сеанса PowerShell с помощью командлета `Invoke-ASCmd`.|[Основные принципы создания скриптов многомерных Выражений &#40;служб Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)<br /><br /> [Используйте динамические административные представления &#40;динамические административные представления&#41; мониторинг Analysis Services](instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)<br /><br /> [Использование шаблонов служб Analysis Services в среде SQL Server Management Studio](instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |DMX-скрипт|DMX|Расширения интеллектуального анализа данных — это язык описания данных, обработки данных и запросов к данным для моделей интеллектуального анализа данных. Начать работу вы можете с шаблона.|[Создание запроса расширений интеллектуального анализа данных в SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Использование шаблонов служб Analysis Services в среде SQL Server Management Studio](instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
-|[!INCLUDE[ssIS](../includes/ssis-md.md)] пакеты|DTSX|[!INCLUDE[ssIS](../includes/ssis-md.md)] предоставляют задачи и потоки данных, создание, изменение, удаление и обрабатывают объекты служб Analysis Services, в том числе моделей интеллектуального анализа данных. Вы можете запланировать выполнение пакета с помощью агента SQL Server.|[Задача «Выполнение инструкции DDL служб Analysis Services»](../integration-services/control-flow/analysis-services-execute-ddl-task.md)<br /><br /> [Задача «Обработка средствами Analysis Services»](../integration-services/control-flow/analysis-services-processing-task.md)<br /><br /> [Задача «Запрос интеллектуального анализа данных»](../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Назначение «Обучение модели интеллектуального анализа данных»](../integration-services/data-flow/data-mining-model-training-destination.md)<br /><br /> [Назначение «Обработка измерений»](../integration-services/data-flow/dimension-processing-destination.md)<br /><br /> [Назначение «Обработка секций»](../integration-services/data-flow/partition-processing-destination.md)|  
+|[!INCLUDE[ssIS](../includes/ssis-md.md)] Пакеты|DTSX|[!INCLUDE[ssIS](../includes/ssis-md.md)] предоставляют задачи и потоки данных, создание, изменение, удаление и обрабатывают объекты служб Analysis Services, в том числе моделей интеллектуального анализа данных. Вы можете запланировать выполнение пакета с помощью агента SQL Server.|[Задача «Выполнение инструкции DDL служб Analysis Services»](../integration-services/control-flow/analysis-services-execute-ddl-task.md)<br /><br /> [Задача «Обработка средствами Analysis Services»](../integration-services/control-flow/analysis-services-processing-task.md)<br /><br /> [Задача «Запрос интеллектуального анализа данных»](../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Назначение «Обучение модели интеллектуального анализа данных»](../integration-services/data-flow/data-mining-model-training-destination.md)<br /><br /> [Назначение «Обработка измерений»](../integration-services/data-flow/dimension-processing-destination.md)<br /><br /> [Назначение «Обработка секций»](../integration-services/data-flow/partition-processing-destination.md)|  
 |AMO||Объекты AMO — это управляемый интерфейс, с помощью которого программисты могут разрабатывать пользовательские приложения, автоматизирующие административные операции. С помощью объектов AMO вы можете разработать пользовательское приложение, выполняющее предоставляемые скрипты XML для аналитики, многомерных выражений и расширений интеллектуального анализа данных.|[Программирование административных задач с помощью объектов AMO](multidimensional-models/analysis-management-objects/programming-administrative-tasks-with-amo.md)|  
   
 ## <a name="see-also"></a>См. также  

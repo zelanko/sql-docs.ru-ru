@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], about witness
 - witness [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
-caps.latest.revision: 71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e8d91cd6ff4cd5b96ec95218686101e4427e75c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 682a3692414f89beb0c5e0f0204bc1a69b532e64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218124"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183834"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
   Для поддержки автоматической отработки отказа сеанс зеркального отображения базы данных должен быть настроен на использование режима высокой безопасности, а также должен присутствовать третий экземпляр, называемый *следящим сервером*. Следящий сервер это дополнительный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , позволяющий зеркальному серверу в сеансе режима высокой безопасности определить, следует ли начать процедуру автоматической отработки отказа. В отличие от двух участников зеркального отображения, следящий сервер не обслуживает базу данных. Его единственная функция заключается в поддержке автоматического перехода на другой ресурс.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a91ef7af12ec523c9c97ffb09690134069a4d6d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ab1c8c07ed176632f98ed19251d616633480436
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240364"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179034"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Использование папки «Мои отчеты» (построитель отчетов и службы SSRS)
   На сервере отчетов, настроенном в собственном режиме, папка «Мои отчеты» представляет личную рабочую область, которую можно использовать для хранения и использования собственных отчетов. Другие папки сервера отчетов являются общедоступными, и пользователи обычно должны иметь дополнительные разрешения, чтобы добавлять или изменять содержимое. В отличие от этого папка «Мои отчеты» является рабочим пространством, которое управляется пользователем. Можно удалять и добавлять отчеты и папки и сохранять связанные отчеты с персонифицированными настройками.  
