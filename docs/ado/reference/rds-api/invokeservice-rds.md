@@ -1,34 +1,31 @@
 ---
-title: InvokeService (RDS) | Документы Microsoft
+title: InvokeService (служба удаленных рабочих СТОЛОВ) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - InvokeService [RDS]
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92927a240c0501196c1b9bf0c1643f6cb0f708d4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c7affc174f6d369f4527dd145538627e1a78c02f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288294"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836062"
 ---
-# <a name="invokeservice-rds"></a>InvokeService (RDS)
-Возвращает указатель на запрошенный интерфейс на более производительные версию объекта.  
+# <a name="invokeservice-rds"></a>InvokeService (служба удаленных рабочих столов)
+Возвращает указатель на запрошенный интерфейс на более мощным версии объекта.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,17 +41,17 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
   
  *punkNotSoFunctionalInterface*  
   
- [in] Исходный объект меньшими возможностями.  
+ [in] Меньшими возможностями исходный объект.  
   
  *ppunkMoreFunctionalInterface*  
   
- [out] Адрес переменной указателя, получающей указатель интерфейса, запрашиваемый в *riid*. После успешного возврата *ppunkMoreFunctionalInterface* параметр содержит указатель на объект запрошенный интерфейс. Если объект не поддерживает интерфейс, заданный в *riid*, *ppunkMoreFunctionalInterface* имеет значение NULL.  
+ [out] Адрес переменной указателя, получающей указатель интерфейса, запрашиваемый в *riid*. При успешном возвращении *ppunkMoreFunctionalInterface* параметр содержит запрошенный указатель интерфейса на объект. Если объект не поддерживает интерфейс, указанный в *riid*, *ppunkMoreFunctionalInterface* имеет значение NULL.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение HRESULT, указывающее, если вызов **InvokeService** метод выполнен успешно.  
+ Значение HRESULT, указывающее, если вызов **InvokeService** метод был выполнен успешно.  
   
 ## <a name="remarks"></a>Примечания  
- Реализация ядра курсора служб удаленных рабочих СТОЛОВ **InvokeService** принимает входной набор строк (или несколько объектов результатов), заполняет ядро курсора из входного набора строк и затем возвращает указатель на себя.  
+ Реализация ядра курсора RDS **InvokeService** принимает входной набор строк (или несколько объектов результатов), заполняет в ядре курсора из входного набора строк и затем возвращает указатель на себя.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Интерфейс IRDSService (служба удаленных рабочих столов)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  

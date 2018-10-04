@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.perfprofileagentname.f1
 helpviewer_keywords:
 - Agent Profile dialog box
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 33d8a5564d6153a48da93da9b9a89ec3892a25a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c95d4a8d47c65493fcb2e618a194f37fec9125e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284960"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070941"
 ---
 # <a name="agent-profiles-single-agent"></a>Профили агента (один агент)
   Диалоговое окно **Профили агентов** служит для управления профилями агента. Профили агентов предоставляют удобный способ управления параметрами среды выполнения для каждого агента. Каждый агент имеет профиль по умолчанию, а некоторые агенты имеют и дополнительные предопределенные профили. Например, агент слияния имеет профиль «медленной связи», предназначенный для соединений с низкой пропускной способностью. Предопределенных профилей достаточно для создания большинства приложений, однако существует возможность создания пользовательских профилей, позволяющих настроить поведение агента.  

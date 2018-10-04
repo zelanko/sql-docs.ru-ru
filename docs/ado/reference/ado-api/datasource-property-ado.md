@@ -1,13 +1,11 @@
 ---
-title: Свойства источника данных (ADO) | Документы Microsoft
+title: Свойство DataSource (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - DataSource property [ADO]
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fa4df4252d9970d4ec8ec36500dc5782466c675
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ad42ea14e58e28bf5eee0e5aac66c5a8fc309f2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277473"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801282"
 ---
-# <a name="datasource-property-ado"></a>Свойства источника данных (ADO)
+# <a name="datasource-property-ado"></a>Свойство DataSource (ADO)
 Указывает объект, содержащий данные для представления в виде [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Это свойство используется для создания элементов управления с привязкой к данным со средой данных. Среде данных поддерживает наборами данных (источники данных), содержащий именованные объекты (элементы данных), будут представлены в виде **записей** объекта *.*  
+ Это свойство используется для создания элементов управления с привязкой данных в среде данных. Поддерживает среду данных наборами данных (источники данных), содержащий именованные объекты (члены данных), на которые будет представлена в виде **записей** объект *.*  
   
  [DataMember](../../../ado/reference/ado-api/datamember-property.md) и **DataSource** свойства должен использоваться совместно.  
   
- Ссылка на объект должен реализовать **IDataSource** интерфейса и должен содержать **IRowset** интерфейса.  
+ Ссылка на объект должен реализовывать **IDataSource** интерфейс и может содержать **IRowset** интерфейс.  
   
 ## <a name="usage"></a>Использование  
   

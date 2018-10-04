@@ -1,32 +1,29 @@
 ---
-title: Пример метода (Visual Basic) удаления | Документы Microsoft
+title: Метод пример DELETE (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADO], Visual Basic example
 ms.assetid: 0c80e71b-9e3f-4d05-ab2a-9e78798dad88
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee42e1717c9a142c5da551b89b3c3b8fe79d86d9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 32548ce458d84e234907efadb3694ae587c2b526
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277603"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601402"
 ---
-# <a name="delete-method-example-vb"></a>Удаление примера метод (Visual Basic)
-В этом примере используется [удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md) метод для удаления указанной записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+# <a name="delete-method-example-vb"></a>Пример метода Delete (Visual Basic)
+В этом примере используется [удалить](../../../ado/reference/ado-api/delete-method-ado-recordset.md) способ удаления указанной записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ```  
 'BeginDeleteVB  
@@ -133,5 +130,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Удаление метода (набора записей ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Удаление метода (объект Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

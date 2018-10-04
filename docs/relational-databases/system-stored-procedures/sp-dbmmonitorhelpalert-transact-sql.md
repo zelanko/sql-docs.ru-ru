@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitorhelpalert (Transact-SQL) | Документы Microsoft
+title: sp_dbmmonitorhelpalert (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorhelpalert_TSQL
@@ -19,15 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b05d7449322bd35bf924a5fb12b0cf72ff383d28
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4639f548ec75844e72c19cb34ec29fc21933e31a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851612"
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,19 +58,19 @@ sp_dbmmonitorhelpalert database_name
 |4|Затраты на фиксирование изменений на зеркальном сервере|Указывает количество миллисекунд средней задержки транзакции, которая допустима перед формированием предупреждения на основном сервере. Задержка — это объем дополнительной нагрузки во время ожидания экземпляром основного сервера экземпляра зеркального сервера для добавления записи журнала транзакции в очередь повтора. Это значение уместно только в режиме высокой безопасности.|  
 |5|Срок хранения|Метаданные, управляющие длительностью хранения строк в таблице состояния зеркального отображения базы данных.|  
   
- Сведения об идентификаторах событий, соответствующих предупреждениям см. в разделе [пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Сведения об идентификаторах событий, соответствующих предупреждениям, см. в разделе [использование пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Для каждого возвращаемого предупреждения возвращает строку, содержащую следующие столбцы:  
   
 |Столбец|Data type|Описание|  
 |------------|---------------|-----------------|  
-|**alert_id**|**int**|В таблице ниже перечислены **alert_id** значение для каждой метрики производительности и единицы измерения метрики, отображаемые в **sp_dbmmonitorresults** результирующего набора:|  
-|**Пороговое значение**|**int**|Пороговое значение для предупреждения. Если при обновлении состояния зеркального отображения возвращено значение выше данного порога, в журнал событий Windows будет внесена запись. Это значение измеряется в килобайтах, минутах или миллисекундах, в зависимости от типа предупреждения. Если порог в данный момент не установлен, значение принимается равным NULL.<br /><br /> **Примечание:** для просмотра текущих значений, запустите [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) хранимой процедуры.|  
-|**Включен**|**бит**|0 = событие отключено.<br /><br /> 1 = событие включено.<br /><br /> **Примечание:** срок хранения всегда включен.|  
+|**alert_id**|**int**|В таблице ниже перечислены **alert_id** значение для каждой метрики производительности и единицы измерения метрики, отображаемые в **sp_dbmmonitorresults** сам себя результирующий набор:|  
+|**Пороговое значение**|**int**|Пороговое значение для предупреждения. Если при обновлении состояния зеркального отображения возвращено значение выше данного порога, в журнал событий Windows будет внесена запись. Это значение измеряется в килобайтах, минутах или миллисекундах, в зависимости от типа предупреждения. Если порог в данный момент не установлен, значение принимается равным NULL.<br /><br /> **Примечание:** Чтобы просмотреть текущие значения, выполните [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) хранимой процедуры.|  
+|**включен**|**bit**|0 = событие отключено.<br /><br /> 1 = событие включено.<br /><br /> **Примечание:** срок хранения всегда включен.|  
   
 |Значение|Метрика производительности|Единицы|  
 |-----------|------------------------|----------|  
@@ -100,7 +97,7 @@ EXEC sp_dbmmonitorhelpalert AdventureWorks2012;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Мониторинг зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [Наблюдение за зеркальным отображением базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   

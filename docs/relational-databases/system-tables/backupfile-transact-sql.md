@@ -1,14 +1,11 @@
 ---
-title: backupfile (Transact-SQL) | Документы Microsoft
+title: backupfile (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupfile
@@ -19,20 +16,20 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a667986dbf546672c368179a1e23e6b82b7373c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842982"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Содержит по одной строке для всех данных или файла журнала базы данных. Столбцы описывают конфигурацию файла, существовавшую во время создания резервной копии. Включен ли файл резервной копии определяется **is_present** столбца. Эта таблица хранится в **msdb** базы данных.  
+  Содержит по одной строке для всех данных или файла журнала базы данных. Столбцы описывают конфигурацию файла, существовавшую во время создания резервной копии. Определяется ли файл включен в резервную копию **is_present** столбца. Эта таблица хранится в **msdb** базы данных.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -50,26 +47,26 @@ ms.lasthandoff: 05/04/2018
 |**physical_drive**|**nvarchar(260)**|Имя физического диска или секции. Может иметь значение NULL.|  
 |**physical_name**|**nvarchar(260)**|Остаток имени физического файла (операционная система). Может иметь значение NULL.|  
 |**state**|**tinyint**|Одно из следующих состояний файла.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = УДАЛЕНЫ<br /><br /> Примечание: Значение 5 пропущено, так что эти значения соответствуют значениям для состояний базы данных.|  
-|**state_desc**|**nvarchar(64)**|Одно из следующих описаний состояния файла.<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
+|**state_desc**|**Nvarchar(64)**|Одно из следующих описаний состояния файла.<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|Регистрационный номер в журнале, под которым был создан файл.|  
 |**drop_lsn**|**numeric(25,0)**|Регистрационный номер в журнале, под которым файл был удален. Может иметь значение NULL.<br /><br /> Если файл не удален, установлено значение NULL.|  
 |**file_guid**|**uniqueidentifier**|Уникальный идентификатор файла.|  
 |**read_only_lsn**|**numeric(25,0)**|Регистрационный номер в журнале, под которым файловая группа, содержащая файл, изменила тип доступа с «для чтения и записи» на «только для чтения» (самое последнее изменение). Может иметь значение NULL.|  
 |**read_write_lsn**|**numeric(25,0)**|Регистрационный номер транзакции в журнале, под которым файловая группа, содержащая файл, изменила тип с «только для чтения» на «для чтения и записи» (самое последнее изменение). Может иметь значение NULL.|  
-|**differential_base_lsn**|**numeric(25,0)**|Основной регистрационный номер транзакции в журнале для разностного резервного копирования. Разностная резервная копия включает только те экстенты данных, имеющих последовательности журнала число равно или больше, чем **differential_base_lsn**.<br /><br /> Для других типов резервных копий установлено значение NULL.|  
+|**differential_base_lsn**|**numeric(25,0)**|Основной регистрационный номер транзакции в журнале для разностного резервного копирования. Разностная резервная копия содержит только те экстенты данных, наличие последовательности журнала номер равным или больше, чем **differential_base_lsn**.<br /><br /> Для других типов резервных копий установлено значение NULL.|  
 |**differential_base_guid**|**uniqueidentifier**|Для разностных резервных копий уникальный идентификатор самой последней резервной копии формирует базовую копию файлов для разностного копирования; если установлено значение NULL, то файл был включен в разностные резервные копии, но добавлен после создания базы.<br /><br /> Для других типов резервных копий установлено значение NULL.|  
 |**backup_size**|**numeric(20,0)**|Размер резервной копии этого файла в байтах.|  
 |**filegroup_guid**|**uniqueidentifier**|Идентификатор файловой группы. Чтобы найти информацию о файловой группе в таблице backupfilegroup, используйте **filegroup_guid** с **backup_set_id**.|  
-|**is_readonly**|**бит**|1 = файл только для чтения.|  
-|**is_present**|**бит**|1 = файл содержится в резервном наборе данных.|  
+|**is_readonly**|**bit**|1 = файл только для чтения.|  
+|**is_present**|**bit**|1 = файл содержится в резервном наборе данных.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Инструкция RESTORE VERIFYONLY FROM *устройство_резервного_копирования* WITH LOADHISTORY заполняет столбцы **backupmediaset** таблицу с соответствующими значениями из заголовка набора носителей.  
   
- Чтобы уменьшить число строк в данной таблице, а также в других таблицах резервной копии и журнал, выполните [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) хранимой процедуры.  
+ Чтобы уменьшить число строк в данной таблице, а также в других резервных и таблицах журнала, выполните [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) хранимой процедуры.  
   
 ## <a name="see-also"></a>См. также  
- [Резервное копирование и восстановление таблицы &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Резервное копирование и восстановление таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset (Transact-SQL)](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   

@@ -4,27 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 08744f04acbc5ad066be78b90f8880459ce74629
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 2827824224488cbaad99df0784159a5231a7eade
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394720"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773942"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Подключение к SQL Server (MySQLToSQL)
 Чтобы перенести базы данных MySQL в SQL Server, необходимо подключиться к целевому экземпляру SQL Server. При подключении, SSMA получает метаданные обо всех базах данных в экземпляре SQL Server и отображает метаданные базы данных в обозревателе метаданных SQL Server. SSMA хранят сведения о экземпляра SQL Server, вы подключены, но не хранит пароли.  

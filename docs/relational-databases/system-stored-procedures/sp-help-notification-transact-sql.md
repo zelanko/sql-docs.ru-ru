@@ -1,14 +1,11 @@
 ---
-title: sp_help_notification (Transact-SQL) | Документы Microsoft
+title: sp_help_notification (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6499d3830859063af74417c84c7fe9e1855b3313
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833582"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +52,11 @@ sp_help_notification
  Имя оператора (если *object_type* имеет значение OPERATORS) или имя предупреждения (если *object_type* имеет значение ALERTS). *имя* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@enum_type =**] **"***enum_type***"**  
- *Object_type*сведений, возвращаемых. *enum_type* — ФАКТИЧЕСКИ в большинстве случаев. *enum_type*— **char(10)**, без значения по умолчанию и может принимать одно из следующих значений.  
+ *Object_type*сведений, возвращаемых. *enum_type* в большинстве случаев имеет значение ACTUAL. *enum_type*— **char(10)**, по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|ACTUAL|Перечисляет только *object_types* связанных с *имя*.|  
+|ACTUAL|Перечисляет только *object_types* связанные с *имя*.|  
 |ALL|Перечисляет все*object_types* включая те, которые не связаны с *имя*.|  
 |TARGET|Перечисляет только *object_types* совпадающие с предоставленным *target_name*, независимо от ассоциации с*имя*.|  
   
@@ -92,14 +88,14 @@ sp_help_notification
 |**use_netsend**|**int**|Уведомление оператора происходит с помощью сетевого всплывающего окна.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
 |**has_email**|**int**|Количество уведомлений, отправленных для данного предупреждения по электронной почте.|  
 |**has_pager**|**int**|Количество уведомлений, отправленных для данного предупреждения по пейджеру.|  
-|**has_netsend**|**int**|Число **net send** уведомлений, отправленных для данного предупреждения.|  
+|**has_netsend**|**int**|Число **команды net send** уведомлений, отправленных для данного предупреждения.|  
   
  Если **object_type** — **ОПЕРАТОРЫ**, в результирующем наборе перечислены все операторы для данного предупреждения.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Идентификационный номер оператора.|  
-|**operator_name**|**sysname**|Имя оператора.|  
+|**имя_оператора**|**sysname**|Имя оператора.|  
 |**use_email**|**int**|Уведомление оператора происходит по электронной почте.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
 |**use_pager**|**int**|Уведомление оператора происходит по пейджеру.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
 |**use_netsend**|**int**|Для уведомления оператора используется всплывающее сетевое сообщение.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
@@ -107,7 +103,7 @@ sp_help_notification
 |**has_pager**|**int**|У оператора есть адрес пейджера.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
 |**has_netsend**|**int**|Оператор имеет настроенное уведомление net send.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Эта хранимая процедура должна запускаться из **msdb** базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
