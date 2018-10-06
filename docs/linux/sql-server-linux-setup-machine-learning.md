@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b61eb365cc818bafc3e0b584f91dd9e85b09cc24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 150f459a7ab98f39057f9a981ce0c2db50d8d00d
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770942"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782363"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Установка SQL Server 2019 службы машинного обучения (R, Python, Java) на платформе Linux
 
@@ -273,13 +273,19 @@ GO
 
 Можно установить и настроить компонент database engine и служб машинного обучения в одну процедуру путем добавления пакетов R, Python или Java и параметров в команду, которая устанавливает ядро СУБД. 
 
-Следующий пример — является «template» иллюстрацией того, как с помощью диспетчера пакетов Yum выглядит объединенный пакет установки:
+Ниже приведен является «template» иллюстрацией того, как с помощью диспетчера пакетов Yum выглядит объединенный пакет установки. Он устанавливает ядро СУБД и добавляет расширения языка Java, запрашивающий extensibility framework пакет как зависимость.
 
 ```bash
-sudo yum install -y mssql-sqlserver mssql-server-extensibility-java 
+sudo yum install -y mssql-server mssql-server-extensibility-java 
 ```
 
-В примере устанавливает ядро СУБД и добавляет расширения языка Java, запрашивающий extensibility framework пакет как зависимость. Все пакеты, используемые в этом примере находятся по тому же пути. Если вы добавили пакеты R, регистрация для репозитория пакетов microsoft r open — не требуются.
+Расширенный пример со всеми расширениями (Java, R, Python) выглядит следующим образом:
+
+```bash
+sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.5* mssql-mlservices-packages-py-9.4.5*
+```
+
+За исключением необходимые компоненты R все пакеты, используемые в этом примере находятся по тому же пути. Добавление R необходимо, вы [зарегистрировать репозиторий пакетов microsoft r-open](#mro) как дополнительный шаг, чтобы получить MRO. MRO является необходимым условием для расширения R. На компьютере, подключенном к Интернету MRO извлекается и автоматически установить в ходе установки модуля R, при условии, что вы настроили оба репозитория.
 
 После установки, не забудьте использовать средство mssql-conf для настройки установки в целом и принять лицензионные соглашения. Неподдерживаемого лицензионные соглашения для компонентов R и Python с открытым кодом, определяются автоматически, и вам будет предложено согласны с ними, а также условия лицензионного соглашения для SQL Server.
 

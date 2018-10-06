@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 814e94b955776f1a9c6c0648b0d47b53fa9cabf3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724348"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798592"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Занятие 3: Анализ и визуализация данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "44724348"
     GO
     ```
 
-Хранимая процедура **PlotHistogram2** идентична существующей хранимой процедуры **PlotHistogram** созданные `RunSQL_SQL_Walkthrough.ps1` скрипта. 
+Хранимая процедура **PlotHistogram2** идентична существующей хранимой процедуры **PlotHistogram** найден в базе данных NYCTaxi_sample. 
   
 + Переменная `@query` определяет текст запроса (`'SELECT tipped FROM nyctaxi_sample'`), который передается в скрипт R в качестве аргумента входной переменной `@input_data_1`.
   
@@ -164,7 +164,7 @@ ms.locfileid: "44724348"
 
 Как правило обработке и анализу данных создает несколько визуализаций для получения представления о данных с различных точек зрения. В этом примере хранимая процедура использует функцию Hist для создания гистограммы, экспорта двоичные данные в популярных форматах, таких как. JPG. PDF-ФАЙЛ, и. PNG. 
 
-1. Использовать существующую хранимую процедуру, **PlotInOutputFiles**, написать гистограмм, точечных и других графических средств R для. JPG и. Формат PDF. `RunSQL_SQL_Walkthrough.ps1` Создает **PlotInOutputFiles** и добавляет его в базе данных. Щелкните правой кнопкой мыши использовать **изменить** для просмотра исходного кода.
+1. Использовать существующую хранимую процедуру, **PlotInOutputFiles**, написать гистограмм, точечных и других графических средств R для. JPG и. Формат PDF. Щелкните правой кнопкой мыши использовать **изменить** для просмотра исходного кода.
 
 2. При необходимости в качестве упражнения для обучения, создайте собственную копию в процедуру в качестве **PlotInOutputFiles2**, с уникальным именем, чтобы избежать конфликта имен.
 

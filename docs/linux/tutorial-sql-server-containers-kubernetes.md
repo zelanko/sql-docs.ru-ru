@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 44f81a23d341e549243b8e99366fef435be04ffa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: dedd8b0c51176d64f4f65b27bd90f747f8690859
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808632"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252012"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Развертывание контейнера SQL Server в Kubernetes с помощью службы Azure Kubernetes (AKS)
 
@@ -22,7 +22,7 @@ ms.locfileid: "47808632"
 
 Узнайте, как настроить экземпляр SQL Server на платформе Kubernetes в службе Kubernetes Azure (AKS) в постоянное хранилище для обеспечения высокой доступности (HA). Решение обеспечивает устойчивость. Экземпляр SQL Server в случае сбоя Kubernetes автоматически повторно создает ее в новый модуль. Kubernetes предоставляет также устойчивость к сбоям узла.
 
-Этот учебник демонстрирует настройку высокой доступности экземпляра SQL Server в контейнере в AKS. Вы также можете [создайте группу доступности SQL Server на платформе Kubernetes](tutorial-sql-server-ag-kubernetes.md). Чтобы сравнить две различные решения Kubernetes, см. в разделе [высокий уровень доступности для SQL Server контейнеров](sql-server-linux-container-ha-overview.md).
+Этот учебник демонстрирует настройку высокой доступности экземпляра SQL Server в контейнере в AKS. Вы также можете создать [группы доступности AlwaysOn для SQL Server контейнеров](sql-server-ag-kubernetes.md). Чтобы сравнить две различные решения Kubernetes, см. в разделе [высокий уровень доступности для SQL Server контейнеров](sql-server-linux-container-ha-overview.md).
 
 > [!div class="checklist"]
 > * Создать пароль SA

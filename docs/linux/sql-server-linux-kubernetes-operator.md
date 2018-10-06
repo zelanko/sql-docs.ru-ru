@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f8667c74843ab26b251c5a23a1e93f7f26e72fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 187517c79f14ddcbf08ffa644e65558fa0a85b38
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759362"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252002"
 ---
 # <a name="sql-server-always-on-availability-group-kubernetes-operator-parameters"></a>SQL Server Always On доступности Kubernetes оператор параметры группы
 
-Группы доступности AlwaysOn, в Kubernetes требуется оператор. Оператор описан в yaml-файл.  Пример спецификации в [учебником](tutorial-sql-server-ag-kubernetes.md).
+Группы доступности AlwaysOn, в Kubernetes требуется оператор. Манифест описывает оператор. Манифест `.yaml` файл. Пример спецификации в [группы доступности AlwaysOn для SQL Server контейнеров](sql-server-ag-kubernetes.md).
 
 В этой статье объясняется переменных глобальной среды оператор.
 
@@ -35,11 +35,11 @@ ms.locfileid: "47759362"
 
 * `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`
   * Необязательно
-  * **Описание**: продолжительность внешних sql server запись аренды для поддержания sql server для записи и предотвратить разделенной сценариев. Вторичные реплики дождитесь этого срока действия, после выбора нового лидера.
+  * **Описание**: продолжительность записи аренды сервера sql. Использовать sql server для записи и предотвратить разделенной сценариев. Это число секунд после выбора нового лидера ожидания вторичных реплик.
 
 * `MSSQL_K8S_MONITOR_PERIOD_SECONDS`
   * Необязательно
-  * **Описание**: период для наблюдения, если состояние группы доступности. Определяет, насколько быстро реплики являются добавлены и удалены. Должно быть меньше, чем `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`.
+  * **Описание**: период, чтобы отслеживать состояние группы доступности. Определяет, насколько быстро реплики являются добавлены и удалены. Должно быть меньше, чем `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`.
   * **По умолчанию**: 1
 
 * `MSSQL_K8S_LEASE_DURATION_SECONDS`

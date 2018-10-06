@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 6c1a6a7ef05a10662a878c9b0e86d336835af4a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55375101434b719cfd785a6ddab2b6ec3e779927
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775792"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782373"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Краткое руководство: Образы контейнеров запуск SQL Server с помощью Docker
 
@@ -54,7 +54,7 @@ any changes to one section should be duplicated in the other-->
 
 ## <a id="pullandrun2017"></a> Извлечение и запуск образа контейнера
 
-1. Извлеките образ контейнера Linux с SQL Server 2017 из центра Docker.
+1. Получите образ контейнера SQL Server 2017 Linux из реестра контейнеров Microsoft.
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
@@ -67,7 +67,7 @@ any changes to one section should be duplicated in the other-->
    > [!TIP]
    > Если вы хотите попробовать SQL Server 2019 изображение для предварительного просмотра, см. в разделе [предварительной версии SQL Server 2019 в этой статье](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
 
-   Предыдущая команда извлекает последнюю версию образа контейнера с SQL Server 2017. Если вы хотите извлечь конкретный образ, добавьте метку после двоеточия (например, `mcr.microsoft.com/mssql/server:2017-GA`). Список всех доступных образов см. на странице [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/) центра Docker.
+   Предыдущая команда извлекает последнюю версию образа контейнера с SQL Server 2017. Если вы хотите извлечь конкретный образ, добавьте метку после двоеточия (например, `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`). Для просмотра всех доступных образов, см. в разделе [странице mssql-server, Docker hub](https://hub.docker.com/r/microsoft/mssql-server).
 
    Для команд bash в этой статье `sudo` используется. В Mac OS `sudo` может не потребоваться. В Linux, если вы не хотите использовать `sudo` для запуска Docker, можно настроить **docker** группы и добавление пользователей в эту группу. Дополнительные сведения см. в разделе [действия после установки для Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
@@ -99,7 +99,7 @@ any changes to one section should be duplicated in the other-->
    | **-e "SA_PASSWORD =\<YourStrong! Passw0rd\>"** | Укажите свой надежный пароль длиной не меньше восьми символов, соответствующий [требованиям к паролям в SQL Server](../relational-databases/security/password-policy.md). Обязательный параметр для образа SQL Server. |
    | **-p 1433:1433** | Сопоставление TCP-порта среды узла (первое значение) с TCP-портом в контейнере (второе значение). В этом примере SQL Server прослушивает TCP 1433 в контейнере, и он предоставляется к порту 1433 на узле. |
    | **--name sql1** | Укажите свое имя для контейнера вместо сгенерированного случайным образом. При запуске нескольких контейнеров использовать одинаковые имена запрещено. |
-   | **microsoft/mssql-server-linux:2017-latest** | Контейнер образа Linux с SQL Server 2017. |
+   | **mcr.Microsoft.com/MSSQL/Server:2017-Latest** | Контейнер образа Linux с SQL Server 2017. |
 
 3. Для просмотра ваших контейнеров Docker используйте команду `docker ps`.
 
@@ -181,7 +181,7 @@ SELECT @@SERVERNAME,
    | **-e "SA_PASSWORD =\<YourStrong! Passw0rd\>"** | Укажите свой надежный пароль длиной не меньше восьми символов, соответствующий [требованиям к паролям в SQL Server](../relational-databases/security/password-policy.md). Обязательный параметр для образа SQL Server. |
    | **-p 1433:1433** | Сопоставление TCP-порта среды узла (первое значение) с TCP-портом в контейнере (второе значение). В этом примере SQL Server прослушивает TCP 1433 в контейнере, и он предоставляется к порту 1433 на узле. |
    | **--name sql1** | Укажите свое имя для контейнера вместо сгенерированного случайным образом. При запуске нескольких контейнеров использовать одинаковые имена запрещено. |
-   | **Microsoft/mssql-server-linux:vNext-CTP2.0** | Образ контейнера SQL Server 2019 CTP-версии 2.0 Linux. |
+   | **mcr.Microsoft.com/MSSQL/Server:vNext-CTP2.0-Ubuntu** | Образ контейнера SQL Server 2019 CTP-версии 2.0 Linux. |
 
 3. Для просмотра ваших контейнеров Docker используйте команду `docker ps`.
 
