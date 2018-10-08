@@ -56,7 +56,7 @@ ms.locfileid: "48181944"
   
 ## <a name="how-to-initialize-a-report-server"></a>Как инициализировать сервер отчетов  
   
--   Чтобы инициализировать сервер отчетов, используйте программу настройки служб Reporting Services. Инициализация происходит автоматически, когда создается и настраивается база данных сервера отчетов. Дополнительные сведения см. в разделе [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+-   Чтобы инициализировать сервер отчетов, используйте программу настройки служб Reporting Services. Инициализация происходит автоматически, когда создается и настраивается база данных сервера отчетов. Дополнительные сведения см. в разделе [Настройка подключения к базе данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 -   Чтобы инициализировать сервер отчетов для масштабного развертывания, можно использовать страницу "Инициализация" в программе настройки служб Reporting Services или программу **RSKeymgmt** . Дополнительные сведения и пошаговые инструкции см. в разделе [Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)](configure-a-native-mode-report-server-scale-out-deployment.md).  
   

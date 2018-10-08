@@ -187,7 +187,7 @@ ms.locfileid: "48171524"
 30. Повторите для таблицы sysjobs. Роли RSExecRole должны быть предоставлены разрешения SELECT для обеих таблиц.  
   
 ## <a name="move-the-report-server-database"></a>Перемещение базы данных сервера отчетов  
- После создания ролей можно переместить базу данных сервера отчетов на новый экземпляр SQL Server. Дополнительные сведения см. в разделе [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+ После создания ролей можно переместить базу данных сервера отчетов на новый экземпляр SQL Server. Дополнительные сведения см. в разделе [перемещение баз данных сервера отчетов на другой компьютер &#40;собственный режим служб SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
  Если компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)] обновляется до [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], можно обновить его до или после перемещения базы данных.  
   

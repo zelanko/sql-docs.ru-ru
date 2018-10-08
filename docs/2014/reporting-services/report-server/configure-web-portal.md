@@ -72,7 +72,7 @@ ms.locfileid: "48184954"
   
 4.  Нажмите кнопку **Применить**.  
   
-5.  Если используется ОС [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] или Windows Server 2008, для запуска диспетчера отчетов могут потребоваться дополнительные шаги. Дополнительные сведения см. в статье [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+5.  Если используется ОС [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] или Windows Server 2008, для запуска диспетчера отчетов могут потребоваться дополнительные шаги. Дополнительные сведения см. в разделе [настроить сервер отчетов в собственном режиме для локального администрирования &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="ConfigureSpecificURL"></a> Настройка диспетчера отчетов на использование определенного URL-адреса сервера отчетов  
  При настройке URL-адресов в программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] диспетчер отчетов автоматически обнаруживает и использует все новые и обновленные URL-адреса для сервера отчетов, который работает на том же экземпляре сервера. Если развертывание требует использования одного статического URL-адреса для всех запросов сервера отчетов, этот URL-адрес можно указать в файле RSReportServer.config.  
