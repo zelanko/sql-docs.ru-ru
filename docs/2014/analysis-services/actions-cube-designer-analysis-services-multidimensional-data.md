@@ -37,10 +37,10 @@ ms.locfileid: "48067584"
  Используйте панель **Редактор форм действий** в представлении формы для редактирования стандартных действий, содержащихся в кубе. Дополнительные сведения об этой панели см. в разделе [Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Редактор форм действий детализации**  
- Используйте панель **Редактор форм действий детализации** для редактирования действий детализации, содержащихся в кубе. Дополнительные сведения об этой панели см. в разделе [Drillthrough Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Используйте панель **Редактор форм действий детализации** для редактирования действий детализации, содержащихся в кубе. Дополнительные сведения об этой панели см. в разделе [Редактор форм действий детализации &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Редактор форм действий отчетов**  
- Используйте панель **Редактор форм действий отчетов** в виде формы для редактирования действий с отчетами, содержащимися в кубе. Дополнительные сведения об этой панели см. в разделе [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Используйте панель **Редактор форм действий отчетов** в виде формы для редактирования действий с отчетами, содержащимися в кубе. Дополнительные сведения об этой панели см. в разделе [Редактор форм действий отчетов &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="see-also"></a>См. также  
  [Действия &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

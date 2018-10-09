@@ -45,7 +45,7 @@ ms.locfileid: "48194124"
   
 -   [Тестирование области](#TestingforScope)  
   
- Чтобы определить допустимые области для функции, см. раздел справки по конкретной функции. Дополнительные сведения и примеры см. в разделе [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Чтобы определить допустимые области для функции, см. раздел справки по конкретной функции. Дополнительные сведения и примеры см. в разделе [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
