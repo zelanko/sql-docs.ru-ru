@@ -90,7 +90,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myValue;  
+    AND RV = myRv;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -100,7 +100,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myValue` является значением столбца **rowversion** для строки, которое указывает время последнего считывания строки. Это значение должно заменяться фактическим значением **rowversion**. Примером фактического значения **rowversion** является 0x00000000000007D3.
+`myRv` является значением столбца **rowversion** для строки, которое указывает время последнего считывания строки. Это значение должно заменяться фактическим значением **rowversion**. Примером фактического значения **rowversion** является 0x00000000000007D3.
   
 В транзакцию можно также ввести эти образцы инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. При запросе переменной `@t` в области действия транзакции можно получить обновленный столбец `myKey` таблицы без отправки повторного запроса в таблицу `MyTes`.
   
@@ -119,7 +119,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myValue;  
+    AND TS = myTS;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
