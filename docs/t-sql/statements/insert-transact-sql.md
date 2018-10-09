@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1ba74df9a4218424e7ed25a40bb6fc8e17b3d25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb27c4ca77382887acdbfec788df40e5cbfd76c7
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816964"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798622"
 ---
 # <a name="insert-transact-sql"></a>Инструкция INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -362,7 +362,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
 -   Предоставление значения типа системных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] происходит, если определяемый пользователем тип поддерживает явное или неявное преобразование из этого типа. В следующем примере показано, как вставляются значения из столбца определяемого пользователем типа `Point` путем явного преобразования из строки.  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( CONVERT(Point, '12.3:46.2') );  
     ```  
@@ -371,7 +371,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
 -   Вызов определяемой пользователем функции, которая возвращает значение определяемого пользователем типа. В следующих примерах используется определяемая пользователем функция `CreateNewPoint()` для создания новых значений определяемого пользователем типа `Point` и вставки значения в таблицу `Cities`.  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( dbo.CreateNewPoint(x, y) );  
     ```  
@@ -431,7 +431,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
 #### <a name="a-inserting-a-single-row-of-data"></a>A. Вставка одной строки данных  
  В следующем примере показана вставка одной строки в таблицу `Production.UnitMeasure` базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. В этой таблице содержатся столбцы `UnitMeasureCode`, `Name` и `ModifiedDate`. Так как значения для всех столбцов предоставлены и перечислены в том же порядке, что и столбцы в таблице, то не нужно указывать имена столбцов в списке столбцов *.*  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
@@ -439,7 +439,7 @@ VALUES (N'FT', N'Feet', '20080414');
 #### <a name="b-inserting-multiple-rows-of-data"></a>Б. Вставка нескольких строк данных  
  В следующем примере используется [конструктор значений таблицы](../../t-sql/queries/table-value-constructor-transact-sql.md) для вставки трех строк в таблицу `Production.UnitMeasure` базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] в единственной инструкции INSERT. Так как значения для всех столбцов предоставлены и перечислены в том же порядке, что и столбцы в таблице, то не нужно в параметре указывать имена столбцов.  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
     , (N'Y3', N'Cubic Yards', '20080923');  
@@ -448,7 +448,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>В. Вставка данных в порядке, отличном от порядка столбцов таблицы  
  В следующем примере используется список столбцов для явного указания значений, которые будут вставляться в каждый столбец. Порядок следования столбцов в таблице `Production.UnitMeasure` базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] является следующим: `UnitMeasureCode`, `Name`, `ModifiedDate`. Но в *column_list* столбцы перечислены в ином порядке.  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
     ModifiedDate)  
 VALUES (N'Square Yards', N'Y2', GETDATE());  
@@ -460,7 +460,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>Г. Вставка данных в таблицу со столбцами, имеющими значение по умолчанию  
  В следующем примере показана вставка строк в таблицу со столбцами, для которых автоматически создается значение или которые имеют значение по умолчанию. `Column_1` — это вычисляемый столбец, который автоматически создает значение, объединяя строку со значением, вставленным в столбец `column_2`. Столбец `Column_2` определен с ограничением по умолчанию. Если для этого столбца не указано значение, используется значение по умолчанию. Столбец `Column_3` имеет тип данных **rowversion**, который автоматически создает уникальное, последовательно увеличиваемое двоичное число. Столбец `Column_4` не формирует значения автоматически. Если значение для этого столбца отсутствует, то вставляется значение NULL. Инструкция INSERT вставляет строки, которые содержат значения для некоторых столбцов, но не для всех. В последней инструкции INSERT столбцы не указаны, и поэтому вставляются только значения по умолчанию с помощью предложения DEFAULT VALUES.  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 AS 'Computed column ' + column_2,   
@@ -486,7 +486,7 @@ GO
 #### <a name="e-inserting-data-into-a-table-with-an-identity-column"></a>Д. Вставка данных в таблицу со столбцом идентификаторов  
  В следующем примере показаны различные методы вставки данных в столбец идентификаторов. Первые две инструкции INSERT позволяют формировать значения идентификаторов для новых строк. Третья инструкция INSERT переопределяет свойство IDENTITY столбца с помощью инструкции SET IDENTITY_INSERT и вставляет явно заданное значение в столбец идентификаторов.  
   
-```  
+```sql
 CREATE TABLE dbo.T1 ( column_1 int IDENTITY, column_2 VARCHAR(30));  
 GO  
 INSERT T1 VALUES ('Row #1');  
@@ -505,7 +505,7 @@ GO
 #### <a name="f-inserting-data-into-a-uniqueidentifier-column-by-using-newid"></a>Е. Вставка данных в столбец типа uniqueidentifier с помощью функции NEWID()  
  В следующем примере функция [NEWID](../../t-sql/functions/newid-transact-sql.md)() вызывается для вставки идентификатора GUID в столбец `column_2`. В отличие от столбцов идентификаторов, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не создает автоматически значения для столбцов с типом данных [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md), как показано во второй инструкции `INSERT`.  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 int IDENTITY,   
@@ -524,7 +524,7 @@ FROM dbo.T1;
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>Ж. Вставка данных в столбцы определяемого пользователем типа  
  Следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] вставляют три строки в столбец  `PointValue` таблицы `Points`. Этот столбец имеет [определяемый пользователем тип данных CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md). Тип данных `Point` состоит из целочисленных значений X и Y, которые представлены как свойства определяемого пользователем типа. Необходимо привести разделяемые запятой значения X и Y к типу `Point` с помощью функции CAST или CONVERT. Первые две инструкции используют функцию CONVERT для преобразования строкового значения в тип `Point`, а третья инструкция использует функцию CAST. Дополнительные сведения см. в разделе [Работа с данными определяемого пользователем типа](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md).  
   
-```  
+```sql
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
@@ -538,7 +538,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
   
  В первой инструкции INSERT используется инструкция SELECT для получения данных из исходных таблиц (`Employee`, `SalesPerson` и `Person`) в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] и сохранения результирующего набора в таблице `EmployeeSales`. Вторая инструкция INSERT с помощью предложения EXECUTE вызывает хранимую процедуру, содержащую инструкцию SELECT, а третья инструкция INSERT с помощью предложения EXECUTE ссылается на инструкцию SELECT как на символьную строку.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( DataSource   varchar(20) NOT NULL,  
   BusinessEntityID   varchar(11) NOT NULL,  
@@ -591,7 +591,7 @@ FROM dbo.EmployeeSales;
 #### <a name="i-using-with-common-table-expression-to-define-the-data-inserted"></a>И. Использование обобщенного табличного выражения WITH для определения вставляемых данных  
  В следующем примере создается таблица `NewEmployee` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Обобщенное табличное выражение (`EmployeeTemp`) определяет строки из одной или нескольких таблиц, которые вставляются в таблицу `NewEmployee`. Инструкция INSERT ссылается на столбцы в обобщенном табличном выражении.  
   
-```  
+```sql
 CREATE TABLE HumanResources.NewEmployee  
 (  
     EmployeeID int NOT NULL,  
@@ -634,7 +634,7 @@ GO
 #### <a name="j-using-top-to-limit-the-data-inserted-from-the-source-table"></a>К. Использование TOP для ограничения данных, вставляемых из исходной таблицы  
  В следующем примере создается таблица `EmployeeSales` и выполняется вставка данных о продажах за текущий год для пяти первых случайно выбранных сотрудников из таблицы `HumanResources.Employee` в базу данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Инструкция INSERT выбирает любые пять строк из строк, возвращенных инструкцией `SELECT`. Предложение OUTPUT отображает строки, вставляемые в таблицу `EmployeeSales`. Обратите внимание, что предложение ORDER BY в инструкции SELECT не используется для определения 5 наиболее успешных сотрудников.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   nvarchar(11) NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -655,7 +655,7 @@ INSERT TOP(5)INTO dbo.EmployeeSales
   
  Если для вставки строк в значимом хронологическом порядке решено использовать предложение TOP, вместе с ним в инструкции подзапроса выборки следует использовать предложение ORDER BY, как показано в следующем примере. Предложение OUTPUT отображает строки, вставляемые в таблицу `EmployeeSales`. Обратите внимание, что вставка данных 5 наиболее успешных сотрудников выполняется на основе результатов предложения ORDER BY, а не случайных строк.  
   
-```  
+```sql
 INSERT INTO dbo.EmployeeSales  
     OUTPUT inserted.EmployeeID, inserted.FirstName, 
         inserted.LastName, inserted.YearlySales  
@@ -673,7 +673,7 @@ INSERT INTO dbo.EmployeeSales
 #### <a name="k-inserting-data-by-specifying-a-view"></a>Л. Вставка данных с указанием представления  
  В следующем примере в качестве целевого объекта указано имя представления; новая строка вставляется в базовую таблицу. Порядок следования значений в инструкции `INSERT` должен совпадать с порядком следования столбцов в представлении. Дополнительные сведения см. в разделе [Изменение данных через представление](../../relational-databases/views/modify-data-through-a-view.md).  
   
-```  
+```sql
 CREATE TABLE T1 ( column_1 int, column_2 varchar(30));  
 GO  
 CREATE VIEW V1 AS   
@@ -694,7 +694,7 @@ GO
 #### <a name="l-inserting-data-into-a-table-variable"></a>М. Вставка данных в табличную переменную  
  В следующем примере задается переменная таблицы в качестве целевого объекта в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql
 -- Create the table variable.  
 DECLARE @MyTableVar table(  
     LocationID int NOT NULL,  
@@ -721,7 +721,7 @@ GO
   
 **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -736,7 +736,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source in the FROM clause using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -750,7 +750,7 @@ GO
   
 **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 INSERT OPENQUERY (MyLinkServer, 
     'SELECT Name, GroupName 
      FROM AdventureWorks2012.HumanResources.Department')  
@@ -763,7 +763,7 @@ GO
   
 **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
 -- Specify a valid server name for Data Source using the format 
 -- server_name or server_nameinstance_name.  
@@ -780,7 +780,7 @@ GO
   
 **Применимо к**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 -- Create an external table.   
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] (  
         [FirstName] char(25) NOT NULL,   
@@ -811,7 +811,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>У. Вставка данных в кучу с минимальным протоколированием  
  В следующем примере создается новая таблица (куча), в которую вставляются данные из другой таблицы с минимальным протоколированием. В примере предполагается, что для базы данных `AdventureWorks2012` выбрана модель восстановления FULL. Чтобы убедиться, что применяется минимальное протоколирование, модель восстановления базы данных `AdventureWorks2012` перед вставкой строк устанавливается в значение BULK_LOGGED, а после выполнения инструкции INSERT INTO… SELECT возвращается в значение FULL. Кроме того, для целевой таблицы `Sales.SalesHistory` указывается подсказка TABLOCK. Это обеспечивает минимальное использование журнала транзакций инструкцией и ее эффективное выполнение.  
   
-```  
+```sql
 -- Create the target heap.  
 CREATE TABLE Sales.SalesHistory(  
     SalesOrderID int NOT NULL,  
@@ -856,7 +856,7 @@ GO
   
 **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
 SELECT b.Name, b.GroupName   
 FROM OPENROWSET (  
@@ -876,7 +876,7 @@ FROM OPENROWSET (
   
 **Применимо к**: [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].  
   
-```  
+```sql
 INSERT INTO Production.Location WITH (XLOCK)  
 (Name, CostRate, Availability)  
 VALUES ( N'Final Inventory', 15.00, 80.00);  
@@ -888,7 +888,7 @@ VALUES ( N'Final Inventory', 15.00, 80.00);
 #### <a name="t-using-output-with-an-insert-statement"></a>T. Использование предложения OUTPUT с инструкцией INSERT  
  В следующем примере производится вставка строки в таблицу `ScrapReason`, а затем при помощи предложения `OUTPUT` результаты выполнения инструкции возвращаются в табличную переменную `@MyTableVar`. Так как столбец `ScrapReasonID` определен с помощью свойства `IDENTITY`, то значение для этого столбца не указано в инструкции `INSERT`. Однако следует заметить, что значение, созданное компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] для этого столбца, возвращается в предложении `OUTPUT` в столбец `INSERTED.ScrapReasonID`.  
   
-```  
+```sql
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
                            Name varchar(50),  
                            ModifiedDate datetime);  
@@ -907,7 +907,7 @@ FROM Production.ScrapReason;
 #### <a name="u-using-output-with-identity-and-computed-columns"></a>Ф. Применение предложения OUTPUT со столбцами идентификаторов и вычисляемыми столбцами  
  В следующем примере создается таблица `EmployeeSales`, а затем в нее с помощью инструкции INSERT вставляется несколько строк, получаемых инструкцией SELECT из исходных таблиц. Таблица `EmployeeSales` содержит столбец идентификаторов (`EmployeeID`) и вычисляемый столбец (`ProjectedSales`). Поскольку значения создаются компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] при вставке, ни один из этих столбцов не может быть определен в `@MyTableVar`.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   int IDENTITY (1,5)NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -944,7 +944,7 @@ FROM dbo.EmployeeSales;
 #### <a name="v-inserting-data-returned-from-an-output-clause"></a>Х. Вставка данных, возвращенных предложением OUTPUT  
  В следующем примере производится отслеживание данных, возвращаемых предложением OUTPUT инструкции MERGE, а затем производится вставка этих данных в другую таблицу. В инструкции MERGE ежедневно обновляется столбец `Quantity` таблицы `ProductInventory` на основе заказов, обработанных в таблице `SalesOrderDetail` базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Инструкция также удаляет строки с продуктами, запас которых сократился до 0. В примере собираются удаленные строки и вставляются в другую таблицу, `ZeroInventory`, в которой ведется учет закончившихся продуктов.  
   
-```  
+```sql
 --Create ZeroInventory table.  
 CREATE TABLE Production.ZeroInventory (DeletedProductID int, RemovedOnDate DateTime);  
 GO  
@@ -974,7 +974,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
 #### <a name="w-inserting-data-using-the-select-option"></a>Ц. Вставка данных с помощью параметра SELECT  
  В следующем примере показано, как вставить несколько строк данных с помощью инструкции INSERT с параметром SELECT. Первая инструкция `INSERT` напрямую использует инструкцию `SELECT` для получения данных из исходной таблицы и сохранения результирующего набора в таблице `EmployeeTitles`.  
   
-```  
+```sql
 CREATE TABLE EmployeeTitles  
 ( EmployeeKey   INT NOT NULL,  
   LastName     varchar(40) NOT NULL,  
@@ -989,7 +989,7 @@ INSERT INTO EmployeeTitles
 #### <a name="x-specifying-a-label-with-the-insert-statement"></a>X. Указание метки с инструкцией INSERT  
  В следующем примере показано использование метки с инструкцией INSERT.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCurrency   
@@ -1000,7 +1000,7 @@ OPTION ( LABEL = N'label1' );
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Ш. Использование метки и указания запроса с инструкцией INSERT  
  Этот запрос показывает базовый синтаксис для использования метки и указания на соединение с запросом с инструкцией INSERT. После отправки запроса к узлу управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполняющемуся на вычислительных узлах, будет применена стратегия хэш-соединения при создании плана запроса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об указаниях по соединению и использованию предложения OPTION см. в разделе [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCustomer (CustomerKey, CustomerAlternateKey, 

@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 782b254eca5a0fb60ab354e35b40eae5d5fd2640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810812"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851979"
 ---
 # <a name="understanding-xa-transactions"></a>Основные сведения о транзакциях XA
 
@@ -59,7 +59,16 @@ ms.locfileid: "47810812"
 
 > [!NOTE]  
 > Компоненты распределенных транзакций JDBC находятся в каталоге XA в каталоге установки драйвера JDBC. К этим компонентам относятся файлы xa_install.sql и sqljdbc_xa.dll.  
-  
+
+> [!NOTE]  
+> Начиная с общедоступной предварительной версии SQL Server 2019 CTP 2.0, JDBC XA, компоненты распределенных транзакций помещаются подсистемы SQL Server, которые можно включить или отключить с помощью системы хранимой процедуры. Чтобы включить необходимые компоненты для выполнения распределенных транзакциях XA, с помощью драйвера JDBC, выполните следующие хранимые процедуры.
+>
+> EXEC sp_sqljdbc_xa_install
+>
+> Чтобы отключить ранее установленных компонентов, выполните следующие хранимые процедуры. 
+>
+> EXEC sp_sqljdbc_xa_uninstall
+
 ### <a name="running-the-ms-dtc-service"></a>Запуск службы MS DTC
 
 Для службы MS DTC следует указать в диспетчере служб тип запуска **Авто**, чтобы обеспечить ее запуск во время запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы включить MS DTC для транзакций XA, необходимо выполнить следующие действия.  

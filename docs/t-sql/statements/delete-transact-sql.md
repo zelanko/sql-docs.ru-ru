@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91da8325f2917605cf508f1e279ae829d525e658
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cfd9c9d9a1e309cae28abfa7674d021405f6d02
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838622"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798603"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -232,7 +232,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 #### <a name="a-using-delete-with-no-where-clause"></a>А. Использование инструкции DELETE без предложения WHERE  
  Следующий пример удаляет все строки из таблицы `SalesPersonQuotaHistory` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], поскольку не указано предложение WHERE, ограничивающее количество удаляемых строк.  
   
-```  
+```sql
 DELETE FROM Sales.SalesPersonQuotaHistory;  
 GO  
 ```  
@@ -243,7 +243,7 @@ GO
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>Б. Использование предложения WHERE для удаления набора строк  
  Следующий пример удаляет все строки таблицы `ProductCostHistory` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], у которых значение в столбце `StandardCost` больше `1000.00`.  
   
-```    
+```sql
 DELETE FROM Production.ProductCostHistory  
 WHERE StandardCost > 1000.00;  
 GO  
@@ -251,7 +251,7 @@ GO
   
  В следующем примере показано использование более сложного предложения WHERE. Предложение WHERE определяет два условия, которые должны быть выполнены для определения удаляемых строк. Значение в столбце `StandardCost` должно быть в диапазоне от `12.00` до `14.00` , а значение в столбце `SellEndDate` должно быть равно NULL. В данном примере также выводится значение из функции **@@ROWCOUNT**, которое показывает количество удаленных строк.  
   
-```  
+```sql
 DELETE Production.ProductCostHistory  
 WHERE StandardCost BETWEEN 12.00 AND 14.00  
       AND EndDate IS NULL;  
@@ -261,7 +261,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>В. Использование курсора для определения удаляемой строки  
  Следующий пример удаляет одну строку из таблицы `EmployeePayHistory` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] с помощью курсора `my_cursor`. Операция удаления затрагивает только одну строку, выбранную в данный момент курсором.  
   
-```  
+```sql
 DECLARE complex_cursor CURSOR FOR  
     SELECT a.BusinessEntityID  
     FROM HumanResources.EmployeePayHistory AS a  
@@ -281,7 +281,7 @@ GO
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>Г. Использование операторов объединения и вложенных запросов к данным в одной таблице для удаления строк в другой таблице  
  В следующих примерах показано два способа удаления строк в одной таблице на основании данных в другой таблице. В обоих примерах из таблицы `SalesPersonQuotaHistory` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] будут удалены строки на основании сведений о продажах за текущий год, хранящихся в таблице `SalesPerson`. В первой инструкции `DELETE` показано основанное на вложенных запросах и совместимое с ISO решение, а во второй инструкции `DELETE` используется оператор FROM языка [!INCLUDE[tsql](../../includes/tsql-md.md)] для объединения двух таблиц.  
   
-```  
+```sql
 -- SQL-2003 Standard subquery  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -292,7 +292,7 @@ WHERE BusinessEntityID IN
 GO  
 ```  
   
-```  
+```sql
 -- Transact-SQL extension  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -303,7 +303,7 @@ WHERE sp.SalesYTD > 2500000.00;
 GO  
 ```  
   
-```  
+```sql
 -- No need to mention target table more than once.  
   
 DELETE spqh  
@@ -317,7 +317,7 @@ DELETE spqh
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>Д. Ограничение числа удаляемых строк с помощью ключевого слова TOP  
  Если с инструкцией DELETE применяется предложение TOP (*n*), то операция удаления производится над *n* случайно выбранными строками. Следующий пример удаляет `20` случайных строк из таблицы `PurchaseOrderDetail` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], имеющих дату ранее 1 июля 2006 г.  
   
-```  
+```sql
 DELETE TOP (20)   
 FROM Purchasing.PurchaseOrderDetail  
 WHERE DueDate < '20020701';  
@@ -326,7 +326,7 @@ GO
   
  Если необходимо с помощью предложения TOP удалять строки в значимом хронологическом порядке, то вместе с ним в инструкции вложенного запроса выборки следует использовать ORDER BY. Следующий запрос удаляет из таблицы `PurchaseOrderDetail` 10 строк, имеющих самую раннюю дату. Чтобы гарантировать удаление только 10 строк, столбец, указанный в инструкции подзапроса выборки (`PurchaseOrderID`) должен являться первичным ключом таблицы. Использование неключевого столбца в инструкции подзапроса выборки может привести к удалению более чем 10 строк, если указанный столбец содержит повторяющиеся значения.  
   
-```  
+```sql
 DELETE FROM Purchasing.PurchaseOrderDetail  
 WHERE PurchaseOrderDetailID IN  
    (SELECT TOP 10 PurchaseOrderDetailID   
@@ -343,7 +343,7 @@ GO
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>Е. Удаление данных из удаленной таблицы с помощью связанного сервера  
  В следующем примере будет удалена строка из удаленной таблицы. Этот пример начинается с создания ссылки на удаленный источник данных с помощью хранимой процедуры [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Имя связанного сервера, `MyLinkServer`, затем определяется как часть четырехчастного имени объекта в форме *server.catalog.schema.object*.  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -357,7 +357,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -369,7 +369,7 @@ GO
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>Ж. Удаление данных из удаленной таблицы с помощью функции OPENQUERY  
  В следующем примере выполняется удаление строк из удаленной таблицы с помощью вызова функции [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md), возвращающей набор строк. В этом примере используется имя связанного сервера, созданного в предыдущем примере.  
   
-```  
+```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
 FROM AdventureWorks2012.HumanResources.Department  
 WHERE DepartmentID = 18');  
@@ -379,7 +379,7 @@ GO
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>З. Удаление данных из удаленной таблицы с помощью функции OPENDATASOURCE  
  В следующем примере выполняется удаление строк из удаленной таблицы с помощью вызова функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), возвращающей набор строк. Определите допустимое имя сервера для источника данных, используя формат *server_name* или *server_name\instance_name*.  
   
-```  
+```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
@@ -391,7 +391,7 @@ WHERE DepartmentID = 17;'
 #### <a name="i-using-delete-with-the-output-clause"></a>И. Использование инструкции DELETE с предложением OUTPUT  
  Следующий пример демонстрирует способы сохранения результатов инструкции `DELETE` в табличную переменную в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql
 DELETE Sales.ShoppingCartItem  
 OUTPUT DELETED.*   
 WHERE ShoppingCartID = 20621;  
@@ -406,7 +406,7 @@ GO
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>К. Использование предложения OUTPUT с аргументом <from_table_name> в инструкции DELETE  
  Следующий пример удаляет строки в таблице `ProductProductPhoto` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] на основе критерия поиска, указанного в предложении `FROM` инструкции `DELETE`. Предложение `OUTPUT` возвращает столбцы из таблицы, в которой проводится удаление, `DELETED.ProductID`, `DELETED.ProductPhotoID`и столбцы из таблицы `Product` . Оно используется в предложении `FROM` для указания удаляемых строк.  
   
-```  
+```sql
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -436,14 +436,14 @@ GO
 ### <a name="k-delete-all-rows-from-a-table"></a>Л. Удаление всех строк из таблицы  
  Следующий пример удаляет все строки из таблицы `Table1`, поскольку не указано предложение WHERE, ограничивающее количество удаляемых строк.  
   
-```  
+```sql
 DELETE FROM Table1;  
 ```  
   
 ### <a name="l-delete-a-set-of-rows-from-a-table"></a>М. Инструкция DELETE для удаления набора строк из таблицы  
  Следующий пример удаляет все строки таблицы `Table1`, у которых значение в столбце `StandardCost` больше 1000,00.  
   
-```  
+```sql
 DELETE FROM Table1  
 WHERE StandardCost > 1000.00;  
 ```  
@@ -451,7 +451,7 @@ WHERE StandardCost > 1000.00;
 ### <a name="m-using-label-with-a-delete-statement"></a>Н. Использование предложения LABEL с инструкцией DELETE  
  В следующем примере используется метка с инструкцией DELETE.  
   
-```  
+```sql
 DELETE FROM Table1  
 OPTION ( LABEL = N'label1' );  
   
@@ -460,7 +460,7 @@ OPTION ( LABEL = N'label1' );
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>О. Использование метки и указания запроса с инструкцией DELETE  
  Этот запрос показывает базовый синтаксис для использования указания на соединение с запросом с инструкцией INSERT. Дополнительные сведения об указаниях по соединению и использованию предложения OPTION см. в разделе [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DELETE FROM dbo.FactInternetSales  
