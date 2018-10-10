@@ -66,6 +66,6 @@ ms.locfileid: "48049425"
 >  База данных куба, которая будет создана в этом учебнике, представляет собой упрощенную версию проекта многомерной модели служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , который входит в состав образцов баз данных Adventure Works, доступных для загрузки на сайте CodePlex. Учебная версия многомерной базы данных Adventure Works была упрощена с целью обеспечить ускоренное овладение рядом основных навыков. После завершения работы с учебником попробуйте поработать с проектом многомерной модели самостоятельно, чтобы более детально ознакомиться с многомерным моделированием в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="next-step"></a>Следующий шаг  
- Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Lesson 1: Defining a Data Source View within an Analysis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
+ Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Определение представления источников данных в проекте служб Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
   
   
