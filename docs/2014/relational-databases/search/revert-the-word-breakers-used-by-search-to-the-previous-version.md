@@ -22,7 +22,7 @@ ms.locfileid: "48186454"
   
  В этом разделе не обсуждаются следующие языки.  
   
--   **Английский**. Способ возврата к использованию или восстановления компонентов английского языка см. в разделе [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+-   **Английский**. Способ возврата к использованию или восстановления компонентов английского языка см. в разделе [Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)](change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 -   **Датский, польский и турецкий**. Средства разбиения по словам сторонних поставщиков для датского, польского и турецкого языков, входившие в предыдущие выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , заменены компонентами [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -377,7 +377,7 @@ ms.locfileid: "48186454"
 |Текущее имя файла|MsWb70804.dll|  
   
 ## <a name="see-also"></a>См. также  
- [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Изменения в функциях полнотекстового поиска](../../database-engine/behavior-changes-to-full-text-search.md)  
   
   
