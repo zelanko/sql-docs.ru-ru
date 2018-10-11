@@ -34,14 +34,14 @@ ms.locfileid: "48080264"
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
- Для импорта доменов из файла Excel необходимо установить Microsoft Excel на компьютер, на котором установлено приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , чтобы импортировать значения домена или домен целиком. Необходимо создать файл Excel со значениями домена (см. раздел [How the import works](#How)). Также необходимо создать и открыть базу знаний, в которую будет импортироваться домен.  
+ Для импорта доменов из файла Excel, Excel должен быть установлен на компьютере, [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] приложение установлено на, чтобы импортировать значения домена или домен целиком; вам необходимо создать файл Excel со значениями домена (см. в разделе [как Импорт works](#How)); и вам необходимо создать и открыть базу знаний для импорта импортироваться домен.  
   
 ###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Для импорта значений доменов из файла Excel необходимо иметь роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Import"></a> Import values from an Excel file into a domain  
+##  <a name="Import"></a> Импорт значений из файла Excel в домен  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48080264"
   
 -   Если по какой-либо причине невозможно подсоединить вручную значения в приложении, эти значения в операции импорта не используются.  
   
-##  <a name="How"></a> How the import works  
+##  <a name="How"></a> Как работает Импорт  
  При выполнении этой операции импортируются следующие значения.  
   
  В ходе операции импорта DQS выполняет импорт из файла Excel следующим образом:  

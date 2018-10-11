@@ -90,7 +90,7 @@ ms.locfileid: "48142464"
   
 -   Можно удалить значки из набора индикаторов, чтобы упростить отображение данных за счет использования небольшого количества значков.  
   
- Дополнительные сведения см. в разделе [Change Indicator Icons and Indicator Sets &#40;Report Builder and SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [изменение значков индикаторов и наборов индикаторов &#40;построитель отчетов и службы SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).  
   
   
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> Использование индикаторов в таблицах и матрицах  
@@ -110,7 +110,7 @@ ms.locfileid: "48142464"
   
  Общие сведения о работе и определении областей действия в отчетах см. в разделе [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Индикаторы используют только одно значение. Если необходимо показать несколько значений данных, используйте вместо индикатора спарклайн или гистограмму. Они могут представлять несколько значений данных, но также просты для понимания в маленьких размерах и хорошо работают в таблицах и матрицах. Дополнительные сведения см. в разделе [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
+ Индикаторы используют только одно значение. Если необходимо показать несколько значений данных, используйте вместо индикатора спарклайн или гистограмму. Они могут представлять несколько значений данных, но также просты для понимания в маленьких размерах и хорошо работают в таблицах и матрицах. Дополнительные сведения см. в разделе [спарклайны и гистограммы &#40;построитель отчетов и службы SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
   
 ##  <a name="SizingIndicatators"></a> Изменение размера индикаторов для улучшения визуального восприятия  
@@ -128,7 +128,7 @@ ms.locfileid: "48142464"
   
  ![rs_GaugePanelWithIndicatorAndGauge](../media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
- Дополнительные сведения см. в разделе [Include Indicators and Gauges in a Gauge Panel &#40;Report Builder and SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [Добавление индикаторов и датчиков на панель датчиков &#40;построитель отчетов и службы SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
   
  Дополнительные сведения об использовании датчиков см. в разделе [Gauges &#40;Report Builder and SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   

@@ -25,7 +25,7 @@ ms.locfileid: "48134144"
   
  Сервисный документ Atom содержит для каждого потока данных уникальный идентификатор, который упоминается в URL-адресе для доступа к содержимому потока данных.  
   
- Дополнительные сведения см. в разделе [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [формирование потоков данных из отчетов &#40;построитель отчетов и службы SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
