@@ -21,25 +21,25 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 06/11/2018
 ms.locfileid: "35288903"
 ---
-# <a name="step-1-configure-development-environment-for-adonet-development"></a>Шаг 1: Настройка среды разработки для ADO.NET
+# <a name="step-1-configure-development-environment-for-adonet-development"></a>Шаг 1. Настройка среды разработки для ADO.NET
 
 - Далее статьи:&nbsp;&nbsp;&nbsp;[шаг 2: Создание базы данных SQL для разработки приложений ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
 
 ## <a name="download-a-net-sql-driver"></a>Загрузка драйвера .NET SQL
 
-Наш текущий пример кода использует ADO.NET платформы .NET Framework для Windows. .NET Core также доступен для Linux и MacOS (в дополнение к Windows).
+Наш текущий пример кода использует ADO.NET платформы .NET Framework для Windows. Платформа .NET Core также доступна для Linux и MacOS (в дополнение к Windows).
 
 ### <a name="adonet-for-windows"></a>ADO.NET для Windows
 
 1. ![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[Загрузка и установка .NET Framework, включая ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-2. Установите Visual Studio Community или аналогичую интегрированную среду разработки (IDE) для написания и компиляции исходного кода C#. Корпорация Майкрософт теперь предоставляет Visual Studio Community *бесплатно*.  
+2. Установите Visual Studio Community или аналогичую интегрированную среду разработки (IDE) для написания и компиляции исходного кода C#. Корпорация Майкрософт теперь предоставляет Visual Studio Community *бесплатно*. 
     - [Загрузить Visual Studio Community](http://www.visualstudio.com/products/visual-studio-community-vs)  
-    - [Дополнительные параметры для бесплатной Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+    - [Дополнительные возможности для бесплатной версии Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx) 
 
 
 ### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET core для Linux Ubuntu и MacOS
 
 Ссылки для загрузки .NET Core для различных операционных систем доступны здесь:
 
-- ![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[Для загрузки и установки .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Стрелка скачивания в круге](../../ssdt/media/download.png)[Скачать и установить .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
