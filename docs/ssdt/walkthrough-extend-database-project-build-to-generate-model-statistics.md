@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4938666c0a8a23aca2760b55d94bc3d7e03947f3
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e3501dc7245d583c0fa30e6c50aabcdd9e2e5e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086286"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669882"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели
 Можно создать участников сборки для выполнения специализированных действий при сборке проекта базы данных. В ходе выполнения данного пошагового руководства будет создан участник сборки ModelStatistics, который будет выводить статистику из базы данных SQL при сборке проекта базы данных. Поскольку данный участник сборки при запуске принимает параметры, необходимо выполнить некоторые дополнительные действия.  
@@ -59,12 +56,12 @@ ms.locfileid: "39086286"
   
 |**Class**|**Метод или свойство**|**Описание**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Запрашивает в модели объекты и является главной точкой входа для API модели. Можно запрашивать только типы верхнего уровня, например Table или View. Такие типы, как Columns, можно находить только по мере прохождения модели. Если не указаны фильтры ModelTypeClass, то будут возвращены все типы верхнего уровня.|  
-|[TSqlObject](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Находит связи с элементом, на который ссылается текущий TSqlObject. Например, для таблицы будут возвращены объекты, представляющие столбцы Table. В данном случае можно использовать фильтр ModelRelationshipClass, чтобы указать, какие связи следует запрашивать (например, применение фильтра Table.Columns гарантирует получение только столбцов).<br /><br />Имеется целый ряд аналогичных методов, таких как GetReferencingRelationshipInstances, GetChildren и GetParent. Дополнительные сведения см. в документации к API.|  
+|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Запрашивает в модели объекты и является главной точкой входа для API модели. Можно запрашивать только типы верхнего уровня, например Table или View. Такие типы, как Columns, можно находить только по мере прохождения модели. Если не указаны фильтры ModelTypeClass, то будут возвращены все типы верхнего уровня.|  
+|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Находит связи с элементом, на который ссылается текущий TSqlObject. Например, для таблицы будут возвращены объекты, представляющие столбцы Table. В данном случае можно использовать фильтр ModelRelationshipClass, чтобы указать, какие связи следует запрашивать (например, применение фильтра Table.Columns гарантирует получение только столбцов).<br /><br />Имеется целый ряд аналогичных методов, таких как GetReferencingRelationshipInstances, GetChildren и GetParent. Дополнительные сведения см. в документации к API.|  
   
 **Уникальное определение участника**  
   
-В ходе процесса сборки пользовательские участники загружаются из каталога стандартных расширений. Участники сборки обозначаются атрибутом [ExportBuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) . Этот атрибут требуется для обнаружения участников. Атрибут должен выглядеть примерно так:  
+В ходе процесса сборки пользовательские участники загружаются из каталога стандартных расширений. Участники сборки обозначаются атрибутом [ExportBuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx). Этот атрибут требуется для обнаружения участников. Атрибут должен выглядеть примерно так:  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -78,7 +75,7 @@ ms.locfileid: "39086286"
   
 -   Создать проект библиотеки классов и добавить необходимые ссылки.  
   
--   Определите класс с именем ModelStatistics, который наследует от [BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
+-   Определите класс с именем ModelStatistics, который наследует от [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
   
 -   Переопределить метод OnExecute.  
   

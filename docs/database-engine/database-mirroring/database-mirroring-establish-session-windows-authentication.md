@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
-caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2d3c44a31a25379e142b87428ad8ef3f2e60b8b8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fd3762adabe4098d48bfd5352a0a159672b76ecd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599102"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Установка сеанса зеркального отображения базы данных с использованием проверки подлинности Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,15 +65,15 @@ ms.locfileid: "38020807"
   
 4.  Для установка основного сервера в качестве участника на зеркальной базе данных, подключитесь к зеркальному серверу и выполните следующую инструкцию:  
   
-     ALTER DATABASE *<имя_базы_данных>* SET PARTNER **=***<сетевой_адрес_сервера>*  
+     ALTER DATABASE *\<database_name\>* SET PARTNER **=**_\<server\_network\_address\>_  
   
-     здесь *<имя_базы_данных>*  — имя базы данных, подлежащей зеркальному отображению (это имя является одинаковым на обоих участниках), а *<сетевой_адрес_сервера>*  — сетевой адрес основного сервера.  
+     здесь _\<database\_name\>_ — имя базы данных, подлежащей зеркальному отображению (это имя является одинаковым на обоих участниках), а _\<server\_network\_address\>_ — сетевой адрес основного сервера.  
   
      Чтобы указать сетевой адрес сервера, используйте следующий синтаксис:  
   
-     TCP **://**\<*системный_адрес>***:**\<* порт>*  
+     TCP<b>\://</b>_\<system-address\>_<b>\:</b>_\<port\>_  
   
-     Здесь \<*системный_адрес>*  — строка, однозначно идентифицирующая целевой компьютер, а \<*порт>*  — номер порта, используемого конечной точкой зеркального отображения экземпляра сервера-партнера. Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
+     Здесь _\<системный_адрес>_  — строка, однозначно идентифицирующая целевой компьютер, а _\<порт>_  — номер порта, используемого конечной точкой зеркального отображения экземпляра сервера-партнера. Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
      Например, на экземпляре зеркального сервера следующая инструкция ALTER DATABASE устанавливает участника в качестве исходного экземпляра основного сервера: Имя базы данных — **AdventureWorks**, системный адрес — DBSERVER1 — имя системы участника, а 7022 — порт, используемый конечной точкой зеркального отображения базы данных участника:  
   
@@ -89,7 +86,7 @@ ms.locfileid: "38020807"
   
 5.  Для установки зеркального сервера в качестве участника на основной базе данных, подключитесь к основному серверу и выполните следующую инструкцию:  
   
-     ALTER DATABASE *<имя_базы_данных>* SET PARTNER **=***<сетевой_адрес_сервера>*  
+     ALTER DATABASE _\<database\_name\>_ SET PARTNER **=**_\<server\_network\_address\>_  
   
      Дополнительные сведения см. в шаге 4.  
   

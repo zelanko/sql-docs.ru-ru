@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: f5443268f025b5bb30f673993819ab584230b676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749503"
+ms.locfileid: "47864392"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Учебник: дополнительные советы и рекомендации по использованию SSMS
 В этом учебнике приводятся некоторые дополнительные советы по использованию SQL Server Management Studio (SSMS). В этой статье показано, как выполнить следующие действия: 
@@ -82,12 +82,19 @@ ms.locfileid: "47749503"
 7. Выделите все, за исключением **инструкции Alter Database**, а затем нажмите кнопку **Закомментировать**:
 
     ![Комментирование всего текста](media/ssms-tricks/commenteverything.png)
+    
+    > [!NOTE]
+    > Текст можно комментировать с помощью сочетания клавиш **CTRL+K, CTRL+C**. 
 
 8. Выделите часть текста с инструкцией **Alter Database** и нажмите кнопку **Раскомментировать** на панели инструментов:
 
     ![Кнопка "Раскомментировать"](media/ssms-tricks/uncomment.png)
     
+    > [!NOTE]
+    > Чтобы раскомментировать текст, используйте сочетания клавиш **CTRL+K, CTRL+U**. 
+    
 9. Нажмите кнопку **Выполнить**, чтобы выполнить раскомментированную часть текста. 
+
 
 ## <a name="indent-your-text"></a>Задание отступов в тексте
 Кнопки отступов на панели инструментов позволяют увеличивать и уменьшать отступы в тексте. 

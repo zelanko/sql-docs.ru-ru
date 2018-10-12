@@ -5,9 +5,7 @@ ms.date: 01/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - search
@@ -36,17 +34,16 @@ helpviewer_keywords:
 - logical operators [SQL Server], precedence
 - LIKE comparisons
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 574fcfc180cb3f179d5f870051295328bcaa8e9f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4d57063ee518574adbb5faf2070ef2cfd203885b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073345"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745332"
 ---
 # <a name="search-condition-transact-sql"></a>Условие поиска (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,9 +57,12 @@ ms.locfileid: "43073345"
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
   
-<search_condition> ::=   
-    { [ NOT ] <predicate> | ( <search_condition> ) }   
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition> ) } ]   
+<search_condition> ::=  
+    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
+
+<search_condition_without_match> ::= 
+    { [ NOT ] <predicate> | ( <search_condition_without_match> ) }   
+    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]   
 [ ,...n ]   
   
 <predicate> ::=   
@@ -78,6 +78,20 @@ ms.locfileid: "43073345"
     | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
   { ALL | SOME | ANY} ( subquery )   
     | EXISTS ( subquery )     }   
+    
+<graph_search_pattern> ::=
+    { <node_alias> { 
+                      { <-( <edge_alias> )- } 
+                    | { -( <edge_alias> )-> }
+                    <node_alias> 
+                   } 
+    }
+  
+<node_alias> ::=
+    node_table_name | node_table_alias 
+
+<edge_alias> ::=
+    edge_table_name | edge_table_alias
 ```  
   
 ```  
@@ -101,6 +115,9 @@ ms.locfileid: "43073345"
  \<search_condition>  
  Задает условия для строк, возвращаемых в результирующем наборе инструкции SELECT, выражения запроса или вложенного запроса. Задает обновляемые строки для инструкции UPDATE. Задает удаляемые строки для инструкции DELETE. Количество предикатов, которое может содержаться в условии поиска для инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], не ограничено.  
   
+ \<graph_search_pattern>  
+ Определяет шаблон сопоставления графов. Дополнительные сведения об аргументах этого предложения см. в статье [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md).
+ 
  NOT  
  Инвертирует логическое выражение, задаваемое предикатом. Дополнительные сведения см. в разделе [NOT (Transact-SQL)](../../t-sql/language-elements/not-transact-sql.md).  
   

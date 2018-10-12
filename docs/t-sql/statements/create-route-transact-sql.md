@@ -5,9 +5,7 @@ ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_ROUTE_TSQL
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0046c563fdf979b3d2ce00f1e4ccac74eb133507
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: a24090fdcb1bd8b8576f545dfef11764f22a192f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452328"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595692"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -70,10 +67,10 @@ WITH
  на  
  Представляет предложения, которые определяют создаваемый маршрут.  
   
- SERVICE_NAME = **'***service_name***'**  
+ SERVICE_NAME = **'**_service\_name_**'**  
  Указывает имя удаленной службы, находящейся по этому маршруту. Значение *service_name* должно точно совпадать с именем, используемым удаленной службой. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия значению *service_name*. Другими словами, при сравнении учитывается регистр и не применяются текущие параметры сортировки. Если аргумент SERVICE_NAME опущен, этот маршрут соответствует любому имени службы, но имеет более низкий приоритет, чем маршрут с аргументом SERVICE_NAME. Маршрут с именем службы **'SQL/ServiceBroker/BrokerConfiguration'**  — это маршрут к службе уведомления конфигурации брокера. В маршруте к этой службе может не указываться экземпляр компонента Service Broker.  
   
- BROKER_INSTANCE = **'***broker_instance_identifier***'**  
+ BROKER_INSTANCE = **'**_broker\_instance\_identifier_**'**  
  Указывает базу данных, в которой расположена целевая служба. Параметр *broker_instance_identifier* должен являться идентификатором экземпляра брокера для удаленной базы данных. Этот идентификатор можно получить, выполнив следующий запрос в выбранной базе данных:  
   
 ```  
@@ -84,15 +81,15 @@ WHERE database_id = DB_ID()
   
  Если предложение BROKER_INSTANCE опущено, то маршрут соответствует любому экземпляру брокера. Маршрут, соответствующий любому экземпляру брокера, имеет более высокий приоритет соответствия, чем маршрут с явным экземпляром брокера, когда диалог не указывает экземпляр брокера. Для диалогов, указывающих экземпляр брокера, маршрут с экземпляром брокера имеет более высокий приоритет, чем маршрут, соответствующий любому экземпляру брокера.  
   
- LIFETIME **=***route_lifetime*  
+ LIFETIME **=**_route\_lifetime_  
  Время в секундах, в течение которого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит маршрут в таблице маршрутизации. По истечении этого времени действие маршрута истекает, и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при выборе маршрута для новых диалогов далее его не рассматривает. Если предложение опущено, то аргумент *route_lifetime* имеет значение NULL, и срок маршрута никогда не истекает.  
   
- ADDRESS **='***next_hop_address***'**  
+ ADDRESS **='**_next\_hop\_address_**'**  
 Для управляемого экземпляра базы данных SQL аргумент `ADDRESS` должен задавать локальный адрес. 
 
 Указывает сетевой адрес для данного маршрута. Аргумент *next_hop_address* задает адрес TCP/IP в следующем формате:  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:**_port\_number_  
   
  Указанный аргумент *port_number* должен соответствовать номеру порта конечной точки компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на указанном компьютере. Его можно получить, выполнив к выбранной базе данных следующий запрос:  
   
@@ -110,7 +107,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Если в аргументе *next_hop_address* указывается значение **'TRANSPORT'**, сетевой адрес определяется на основе сетевого адреса, указанного в имени службы. Маршрут со значением **'TRANSPORT'** может не указывать имя службы или экземпляр брокера.  
   
- MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
+ MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
  Указывает сетевой адрес зеркальной базы данных, если одна зеркальная база данных находится по адресу *next_hop_address*. Аргумент *next_hop_mirror_address* задает адрес TCP/IP в следующем формате:  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  

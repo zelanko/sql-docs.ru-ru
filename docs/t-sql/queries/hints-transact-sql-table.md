@@ -5,9 +5,7 @@ ms.date: 08/31/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
@@ -36,16 +34,15 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb4aadeab22932e1d50792cd2f812b7368f488cb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8bbde02754a5cfe9d1a164f025b7442e12167802
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064390"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713372"
 ---
 # <a name="hints-transact-sql---table"></a>Табличные указания (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -152,7 +149,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 NOEXPAND  
 Указывает, что при обработке запроса оптимизатором запросов никакие индексированные представления не расширяются для доступа к базовым таблицам. Оптимизатор запросов обрабатывает представление так же, как и таблицу с кластеризованным индексом. Аргумент NOEXPAND применяется только для индексированных представлений. Дополнительные сведения см. в подразделе "Примечания".  
   
-INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
+INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
 Синтаксис INDEX() указывает имя или идентификатор одного или более индексов, используемых при обработке инструкции оптимизатором запросов. Альтернативный синтаксис «INDEX =» позволяет задать отдельное значение индекса. Для каждой таблицы можно задать только одно указание индекса.  
   
 Если имеется кластеризованный индекс, аргумент INDEX(0) приводит к просмотру кластеризованного индекса, а INDEX(1) — к просмотру или поиску по кластеризованному индексу. Если кластеризованного индекса нет, аргумент INDEX(0) приводит к просмотру таблицы, а INDEX(1) интерпретируется как ошибка.  
@@ -183,7 +180,7 @@ KEEPDEFAULTS
   
 Пример использования данного указания в инструкции INSERT… Дополнительные сведения об инструкции SELECT * FROM OPENROWSET(BULK...) см. в разделе [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
-FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
+FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
 Указывает, что в качестве пути доступа к данным таблиц или представлений оптимизатор запросов использует только операцию поиска в индексе. 
 
 > [!NOTE]

@@ -5,9 +5,7 @@ ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OUTPUT_TSQL
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e433b736a9c129eb5a43ebf8bf1ffb7d653527d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088366"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629252"
 ---
 # <a name="output-clause-transact-sql"></a>Предложение OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,13 +134,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Явное указание столбца. Любое указание столбцов в изменяемой таблице должно предваряться соответствующим префиксом INSERTED или DELETED, например: INSERTED**.***имя_столбца*.  
+ Явное указание столбца. Любое указание столбцов в изменяемой таблице должно предваряться соответствующим префиксом INSERTED или DELETED, например: INSERTED **.**_column\_name_.  
   
  $action  
  Доступен только для инструкции MERGE. Указывает столбец типа **nvarchar(10)** в предложении OUTPUT инструкции MERGE, которая возвращает одно из трех значений для каждой строки — INSERT, UPDATE или DELETE — в зависимости от действия, выполненного с этой строкой.  
   
 ## <a name="remarks"></a>Remarks  
- Предложения OUTPUT \<dml_select_list> и OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* } можно определить в одной инструкции INSERT, UPDATE, DELETE или MERGE.  
+ Предложения OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } можно определить в одной инструкции INSERT, UPDATE, DELETE или MERGE.  
   
 > [!NOTE]  
 >  Если не указано иное, ссылки на предложение OUTPUT относятся как к предложению OUTPUT, так и к предложению OUTPUT INTO.  

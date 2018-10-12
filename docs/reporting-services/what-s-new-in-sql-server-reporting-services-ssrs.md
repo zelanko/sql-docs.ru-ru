@@ -1,19 +1,18 @@
 ---
 title: Новые возможности служб Reporting Services (SSRS) | Документы Майкрософт
-ms.date: 05/24/2018
+ms.date: 09/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e427312fcc73596c709d54252b27286d09372ce
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268092"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639782"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Новые возможности служб SQL Server Reporting Services (SSRS)
 
@@ -21,17 +20,22 @@ ms.locfileid: "43268092"
 
 Сведения о новых возможностях SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Охватывает основные функциональные аспекты и обновляется по мере выпуска новых элементов.
 
-  Сведения о новых возможностях в других разделах SQL Server см. в статье [Что нового в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) или [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
-
- **Загрузка** ![download](../analysis-services/media/download.png "download")
-
-- Чтобы скачать службы SQL Server 2017 Reporting Services, перейдите в **[Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55252)**.
-
 Заметки о текущем выпуске см. в разделе [Заметки о выпуске SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). 
 
 Сведения о сервере отчетов Power BI см. в статье [Что такое сервер отчетов Power BI?](https://docs.microsoft.com/power-bi/report-server/get-started)
 
-## <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
+**Загрузка** ![download](../analysis-services/media/download.png "download")
+
+Чтобы скачать службы SQL Server 2017 Reporting Services, перейдите в **[Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55252)**.
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+## <a name="sql-server-2019-ctp-20-reporting-services"></a>Службы SQL Server 2019 CTP 2.0 Reporting Services
+
+Службы SQL Server vNext CTP 2.0 Reporting Services недоступны в виде предварительной версии. Установите текущую версию [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md). 
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+## <a name="ssrs-2017"></a>SSRS 2017
 
 ### <a name="comments-on-reports"></a>Комментарии к отчетам
 
@@ -49,9 +53,9 @@ ms.locfileid: "43268092"
 
 В целях разработки и настройки современных приложений службы SQL Server Reporting Services теперь поддерживают интерфейс API RESTful, полностью совместимый с OpenAPI. Полная спецификация и документация по API теперь находится на сайте [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Поддержка конструктора запросов для DAX в построителе отчетов и SQL Server Data Tools
+### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Поддержка конструктора запросов для DAX в построителе отчетов и SQL Server Data Tools
 
-В последних выпусках построителя отчетов и релизе-кандидате SQL Server Data Tools вы можете создавать собственные запросы DAX для поддерживаемых табличных моделей данных SQL Server Analysis Services. В обоих средствах вы можете перетаскивать нужные поля в конструкторе запросов. Запросы DAX могут создаваться автоматически, так что вам не придется их писать.  
+В построителе отчетов и SQL Server Data Tools вы можете создавать собственные запросы DAX для поддерживаемых табличных моделей данных SQL Server Analysis Services. В обоих средствах вы можете перетаскивать нужные поля в конструкторе запросов. Запросы DAX могут создаваться автоматически, так что вам не придется их писать.  
  
 Подробнее см. в [блоге по службам Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
@@ -59,8 +63,9 @@ ms.locfileid: "43268092"
 * Скачайте [SQL Server Data Tools — релиз-кандидат](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
 > **Примечание**. Конструктор запросов для DAX можно использовать только с табличными источниками данных SSAS, встроенными в SQL Server 2016 и более поздних версий.
+::: moniker-end
  
-## <a name="whats-new-in-sql-server-2016"></a>Что нового в SQL Server 2016
+## <a name="ssrs-2016"></a>SSRS 2016
   
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Службы Reporting Services: [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
  Доступен новый [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] . Это обновленный, современный портал, который содержит отчеты о ключевых показателях эффективности, мобильные отчеты, отчеты с разбиением на страницы, а также файлы Excel и Power BI Desktop. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] заменяет диспетчер отчетов, который использовался в предыдущих версиях. Кроме того, [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] позволяет загрузить издатель мобильных отчетов и построитель отчетов, не прибегая к технологии ClickOnce.
@@ -186,7 +191,6 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 ## <a name="next-steps"></a>Следующие шаги
 
 [Новые возможности в службах Analysis Services](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)   
 [Обратная совместимость](reporting-services-backward-compatibility.md)   
 [Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server 2016](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Обновление и перенос служб Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

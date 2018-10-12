@@ -3,10 +3,8 @@ title: Документация по SQL Server | Документы Майкр�
 ms.date: 08/10/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.portal.f1
@@ -23,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f199e904967d5a0420baed584ec73c5b2fd5b933
-ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
+ms.openlocfilehash: 17598c6692ccb2b90a45fbee3d8cf5bae5245fe8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42775851"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857313"
 ---
 # <a name="sql-server-documentation"></a>Документация по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +46,26 @@ SQL Server является центральной частью платформ
 ::: moniker range="= sqlallproducts-allversions"
 |новые возможности  | Заметки о выпуске  |
 |---------|---------|
+|[Новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [Заметки о выпуске SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)        |
 |[Новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Заметки о выпуске SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
 |[Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 
 ![info_tip](../sql-server/media/info-tip.png) Документация по SQL Server **2014** доступна [здесь](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014).
 ::: moniker-end
 
+::: moniker range="= sql-server-ver15"
+|новые возможности  | Заметки о выпуске  |
+|---------|---------|
+|[Новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [Заметки о выпуске SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)        |
+::: moniker-end
+
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 |новые возможности  | Заметки о выпуске  |
 |---------|---------|
 |[Новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Заметки о выпуске SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
+
+> [!NOTE]
+> Предварительная версия SQL Server 2019 теперь доступна. Дополнительные сведения см. в статье [Новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"

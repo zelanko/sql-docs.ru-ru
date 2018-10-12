@@ -3,21 +3,19 @@ title: Приложение к конфиденциальности в SQL Serv
 ms.date: 4/24/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40c6bfb24ea3e711ca6b14509921d5599b316ebf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1cfb5ce2ed20788eead43c6b90a9d64378e58740
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975291"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785662"
 ---
 # <a name="sql-server-privacy-supplement"></a>Приложение к конфиденциальности в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +25,7 @@ ms.locfileid: "37975291"
 - База данных SQL Azure
 - SQL Server Management Studio (SSMS)
 - SQL Server Data Tools (SSDT)
-- SQL Operations Studio
+- Azure Data Studio
 - Помощник по миграции баз данных
 - Помощник миграции SQL Server
 - Расширение MS-SQL

@@ -5,9 +5,7 @@ ms.date: 11/30/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECOMPRESS
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - DECOMPRESS function
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c2eb8c020127211b25b762d96e6e376be7e234c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d51a76161d9a2ad667773a947dd67efe5080c3f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002696"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749282"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>Аргументы  
  *expression*  
-Значение **varbinary(***n***)**, **varbinary(max)** или **binary(***n***)**. Дополнительные сведения см. в статье [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
+Значение **varbinary(**_n_**)**, **varbinary(max)** или **binary(**_n_**)**. Дополнительные сведения см. в статье [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
 Значение типа данных **varbinary(max)**. Для распаковки входного аргумента `DECOMPRESS` использует алгоритм ZIP. При необходимости пользователю следует явно привести результат к требуемому конечному типу.  

@@ -5,8 +5,6 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f24da5fda563f447540f1c122265369557965c2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5ec665895be835848ab3b1ed8b8d90583aa31576
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078627"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643432"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd — использование с переменными скрипта
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,9 +112,9 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
   
 |        Переменная         | Связанный параметр | Чтение-запись |         По умолчанию         |
 | ----------------------- | -------------- | --- | ----------------------- |
-| SQLCMDUSER*             | -U             | Чтение   | ""                      |
-| SQLCMDPASSWORD*         | -P             | --  | ""                      |
-| SQLCMDSERVER*           | -S             | Чтение   | "DefaultLocalInstance"  |
+| SQLCMDUSER\*             | -U             | Чтение   | ""                      |
+| SQLCMDPASSWORD\*         | -P             | --  | ""                      |
+| SQLCMDSERVER\*           | -S             | Чтение   | "DefaultLocalInstance"  |
 | SQLCMDWORKSTATION       | -H             | Чтение   | "ComputerName"          |
 | SQLCMDDBNAME            | -d             | Чтение   | ""                      |
 | SQLCMDLOGINTIMEOUT      | -l             | Чтение-запись | "8" (секунд)           |

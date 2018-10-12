@@ -5,9 +5,7 @@ ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -37,17 +35,16 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cf48e61dd83eb7d0bc802a8b176c2bd91679336
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2730d1bfc6418a9cc92dd8bea2e87541c6665e51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776972"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,7 +121,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  Обобщенные табличные выражения могут также использоваться с инструкциями SELECT, INSERT, DELETE и CREATE VIEW. Дополнительные сведения см. в разделе [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(** *expression***)** [ PERCENT ]  
+ TOP **(** _expression_**)** [ PERCENT ]  
  Задает число или процент обновляемых строк. *expression* может быть либо числом, либо процентом от числа строк.  
   
  Строки, на которые ссылается выражение TOP, используемое с инструкциями INSERT, UPDATE и DELETE, не упорядочиваются.  
@@ -190,7 +187,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *method_name* **(** *argument* [ **,**... *n*] **)**  
  Не статичный метод общего мутатора *udt_column_name*, принимающий один или несколько аргументов.  
   
- **.** WRITE **(***expression***,***@Offset***,***@Length***)**  
+ **.** WRITE **(**_expression_**,**_@Offset_**,**_@Length_**)**  
  Указывает, что часть значения *column_name* будет изменена. *expression* заменяет единицы *@Length* начиная с *@Offset* в *column_name*. В этом предложении можно указать только столбцы типа **varchar(max)**, **nvarchar(max)** или **varbinary(max)**. Аргумент *column_name* не может иметь значение NULL и не может быть задан именем или псевдонимом таблицы.  
   
  *expression* является значением, которое копируется в *column_name*. Аргумент *expression* должен преобразовываться или поддерживать неявное преобразование к типу *column_name*. Если для *expression* установлено значение NULL, *@Length* не учитывается, а значение в *column_name* усекается с позиции, на которую указывает аргумент *@Offset*.  
@@ -204,7 +201,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  **@** *variable*  
  Объявленная переменная, которой присваивается значение, возвращенное *expression*.  
   
- SET **@***variable* = *column* = *expression* присваивает переменной то же значение, что и столбцу. Это отличается от предложения SET **@***variable* = *column*, *column* = *expression*, присваивающего переменной значение столбца до обновления.  
+ Предложение SET **@**_variable_ = *column* = *expression* присваивает переменной то же значение, что и столбцу. Это отличается от предложения SET **@**_variable_ = _column_, _column_ = _expression_, присваивающего переменной значение столбца до обновления.  
   
  \<OUTPUT_Clause>  
  Возвращает обновленные данные или основанные на них выражения в рамках выполнения операции UPDATE. Предложение OUTPUT не поддерживается ни в одной инструкции DML, целью которой являются удаленные таблицы или представления. Дополнительные сведения см. в статье [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).  
@@ -334,7 +331,7 @@ GO
 >  Типы данных **ntext**, **text** и **image** будут исключены в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Вместо них следует использовать типы данных [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)и [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Обновление типов данных большого объема  
- Используйте предложение **.** WRITE (*expression***,** *@Offset ***,***@Length*) для выполнения частичного или полного обновления типа данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)**. Например, частичное обновление столбца с типом **varchar(max)** может удалить или изменить только первые 200 символов, тогда как полное обновление удалит или изменит все данные в столбце. **.** Обновления WRITE, вставляющие или добавляющие новые данные, имеют минимальное протоколирование, если установлена простая модель восстановления базы данных или модель восстановления с неполным протоколированием. Если обновляются существующие значения, ведение журнала не сокращается до минимума. Дополнительные сведения см. в статье [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Используйте предложение **\.** WRITE (_expression_**,** _@Offset_**,**_@Length_) для выполнения частичного или полного обновления типов данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)**. Например, частичное обновление столбца с типом **varchar(max)** может удалить или изменить только первые 200 символов, тогда как полное обновление удалит или изменит все данные в столбце. **.** Обновления WRITE, вставляющие или добавляющие новые данные, имеют минимальное протоколирование, если установлена простая модель восстановления базы данных или модель восстановления с неполным протоколированием. Если обновляются существующие значения, ведение журнала не сокращается до минимума. Дополнительные сведения см. в статье [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] преобразует частичное обновление в полное, если инструкция UPDATE приводит к одному из следующих действий.  
 -   Изменения ключевого столбца секционированного представления или таблицы.  
@@ -346,7 +343,7 @@ GO
   
 В целях увеличения производительности рекомендуется вставлять или обновлять данные фрагментами, кратными 8040 байтам.  
   
-Если на столбец, измененный предложением **.** WRITE, ссылается предложение OUTPUT, полное значение столбца, либо исходный образ в **deleted.***column_name*, либо преобразованный образ в **inserted.***column_name*, возвращается определенному столбцу в табличной переменной. См. пример Т ниже.  
+Если на столбец, измененный предложением **.** WRITE, ссылается предложение OUTPUT, полное значение столбца либо исходный образ в **deleted.**_column\_name_, либо преобразованный образ в **inserted.**_column\_name_ возвращается определенному столбцу в табличной переменной. См. пример Т ниже.  
   
 Чтобы добиться функциональности предложения **.** WRITE при обработке других символьных или двоичных типов данных, используется [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md).  
   

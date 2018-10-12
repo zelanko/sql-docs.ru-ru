@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e75e0f70138c2ef6d783e72e80cfd0544f1bfa5e
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 1373f5f90ae5e5cf147951b3462f0ca6b9e51b42
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40415844"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864312"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)
 
@@ -37,13 +34,6 @@ ms.locfileid: "40415844"
 > [!NOTE]  
 >  Сведения о концепциях [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
- **В этом разделе:**  
-  
--   [Кластер WSFC](#WSFC)  
-  
--   [Отказоустойчивая кластеризация SQL Server](#SQLServerFC)  
-  
--   [Ограничения на использование диспетчера отказоустойчивости кластеров WSFC с группами доступности](#FCMrestrictions)  
   
 ##  <a name="WSFC"></a> Кластер WSFC и группы доступности  
  Для развертывания [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] требуется WSFC-кластер. Чтобы экземпляр [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]можно было использовать в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо, чтобы он размещался на узле WSFC, а кластер и узел WSFC находились в режиме «в сети». Также все реплики доступности в заданной группе доступности должны располагаться на разных узлах одного кластера WSFC. Единственное исключение состоит в том, что при переносе в другой кластер WSFC группа доступности может временно находится в двух кластерах.  
@@ -114,7 +104,10 @@ ms.locfileid: "40415844"
   
 -   Не изменяйте свойства групп доступности, такие как возможные владельцы и предпочтительные владельцы. Эти свойства устанавливаются автоматически группой доступности.  
   
--   Не используйте диспетчер отказоустойчивого кластера для перемещения групп доступности на другие узлы или резервные группы доступности. Диспетчер отказоустойчивого кластера не имеет сведений о состоянии синхронизации реплик доступности, и это может привести к длительному простою. Необходимо использовать [!INCLUDE[tsql](../../../includes/tsql-md.md)] или среду [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+-   **Не используйте диспетчер отказоустойчивого кластеров для перемещения групп доступности на другие узлы или резервные группы доступности.** Диспетчер отказоустойчивого кластера не имеет сведений о состоянии синхронизации реплик доступности, и это может привести к длительному простою. Необходимо использовать [!INCLUDE[tsql](../../../includes/tsql-md.md)] или среду [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+
+  >[!WARNING]
+  > Если с помощью диспетчера отказоустойчивости кластеров переместить *экземпляр отказоустойчивого кластера* с группой доступности на узел, который *уже* содержит реплику той же группы доступности, это может привести к потере этой реплики. Таким образом, эта реплика не будет включена на целевом узле. Один узел отказоустойчивого кластера не может содержать более одной реплики той же группы доступности. Дополнительные сведения о том, как это происходит, и шаги восстановления см. в записи блога [Issue: Replica Unexpectedly Dropped in Availability Group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Проблема: неожиданное удаление реплики в группе доступности). 
   
 ##  <a name="RelatedContent"></a> См. также  
   

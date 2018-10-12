@@ -23,7 +23,7 @@ ms.locfileid: "48154254"
 # <a name="select-script-component-type"></a>Выбор типа компонента скрипта
   Используйте диалоговое окно **Выбор типа компонента скрипта** , чтобы указать, следует ли создавать преобразование «Скрипт», которое заранее настроено как источник, преобразование или назначение.  
   
- Дополнительные сведения о компоненте скрипта см. в разделах [Script Component](data-flow/transformations/script-component.md) и [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Дополнительные сведения о компоненте скрипта см. в разделе [компонента скрипта](data-flow/transformations/script-component.md) и [Настройка компонента скрипта в редакторе компонента скрипта](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта, см. в разделе [расширение потока данных в компоненте скрипта](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Параметры  
  Выбор пункта **Источник**, **Назначение**или **Преобразование** влияет на конфигурацию преобразования «Скрипт» и страницы редактора преобразования «Скрипт».  

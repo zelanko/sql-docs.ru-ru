@@ -5,9 +5,7 @@ ms.date: 02/28/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE SCOPED CREDENTIAL
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0e356fc4e62fb07cff0f08c375488a759d01712
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 2220349cf0ab3db2a31e2c520fc8ef92acb48eb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564000"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762422"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,10 +51,10 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Указывает имя создаваемых учетных данных для базы данных. Аргумент *credential_name* не может начинаться с символа номера (#). Системные учетные данные начинаются с символов ##.  
   
- IDENTITY **='***identity_name***'**  
+ IDENTITY **='**_identity\_name_**'**  
  Указывает имя учетной записи для использования при подключении за пределами сервера. Чтобы импортировать файл из хранилища BLOB-объектов Azure с использованием общего ключа, необходимо имя удостоверения `SHARED ACCESS SIGNATURE`. Для загрузки данных в хранилище данных SQL в качестве удостоверения можно использовать любое допустимое значение. Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
   
- SECRET **='***secret***'**  
+ SECRET **='**_secret_**'**  
  Указывает секретный код, необходимый для исходящей проверки подлинности. `SECRET` требуется для импорта файла из хранилища больших двоичных объектов Azure. Для загрузки из хранилища BLOB-объектов Azure в хранилище данных SQL или Parallel Data Warehouse в качестве секретного ключа необходимо использовать ключ хранилища Azure.  
 >  [!WARNING]
 >  Значение ключа SAS может начинаться с '?' (вопросительный знак). При использовании ключа SAS необходимо удалить начальный символ '?'. В противном случае действия могут быть заблокированы.  

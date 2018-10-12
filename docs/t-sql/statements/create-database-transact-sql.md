@@ -2,13 +2,11 @@
 title: CREATE DATABASE (Transact-SQL) | Документация Майкрософт
 description: Создание синтаксиса базы данных для SQL Server, Базы данных SQL Azure, Хранилища данных SQL Azure и Parallel Data Warehouse
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE_TSQL
@@ -36,17 +34,16 @@ helpviewer_keywords:
 - moving databases
 - attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
-caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a7e684df914684b48f9742aee5d67d6769973cb3
-ms.sourcegitcommit: aac654706b21f70962c7311f3b193000113d00d7
+ms.openlocfilehash: 2842601d89be8efcd3851fd34610ee8ed5981c0e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43321254"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675992"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -65,7 +62,7 @@ ms.locfileid: "43321254"
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [База данных SQL<br /> — логический сервер](create-database-transact-sql.md?view=azuresqldb-current) | [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [SQL Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) | 
+> |**_\* SQL Server \*_** | [База данных SQL<br /> — логический сервер](create-database-transact-sql.md?view=azuresqldb-current) | [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) | 
 
 
 # <a name="sql-server"></a>SQL Server
@@ -359,7 +356,7 @@ CREATE DATABASE database_snapshot_name
  *logical_file_name*  
  Логическое имя, используемое в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при обращении к файлу. Аргумент *logical_file_name* должен быть уникальным в базе данных и соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Имя может быть символом или константой Юникода, а также обычным идентификатором или идентификатором с разделителями.  
   
- FILENAME { **'***os_file_name***'** | **'***filestream_path***'** }  
+ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }  
  Задает имя файла в операционной системе (физическое имя).  
   
  **'** *os_file_name* **'**  
@@ -444,7 +441,7 @@ CREATE DATABASE database_snapshot_name
  *database_snapshot_name*  
  Имя нового моментального снимка базы данных. Имена моментальных снимков баз данных должны быть уникальны внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и соответствовать правилам для идентификаторов. *database_snapshot_name* не может превышать 128 символов.  
   
- ON **(** NAME **=***logical_file_name***,** FILENAME **='***os_file_name***')** [ **,**... *n* ]  
+ ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ]  
  При создании моментального снимка базы данных указывает список файлов в базе данных-источнике. Для работы моментального снимка все файлы данных должны задаваться отдельно. Однако не разрешается указывать файлы журналов для моментальных снимков базы данных. В моментальных снимках базы данных не поддерживаются файловые группы FILESTREAM. Если файл данных FILESTREAM задействован в предложении CREATE DATABASE ON, выполнение этой инструкции завершится сбоем и приведет к возникновению ошибки.  
   
  Описания параметров NAME и FILENAME и их значений см. в описаниях соответствующих значений \<filespec>.  
@@ -887,7 +884,7 @@ GO
 >   <th><strong><em>* База данных SQL<br />Базы данных SQL*</em></strong></th>
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -914,14 +911,16 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {  
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
-  | ( EDITION = {  'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' } 
+  | ( EDITION = {  'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' } 
   | SERVICE_OBJECTIVE = 
     {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'  
       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
       | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
       | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
       | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
       | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }
 ```  
@@ -935,8 +934,10 @@ CREATE DATABASE database_name
       {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |  
       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
       | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
       | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
       | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
         | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
    ]  
 [;] 
@@ -964,14 +965,16 @@ EDITION
  
 Указывает уровень службы базы данных. 
 
-- Отдельная или включенная в пул база данных на логическом сервере. Доступные значения: "basic", "standard", "premium", "GeneralPurpose" и "BusinessCritical". Поддержка "premiumrs" была упразднена. При возникновении вопросов пишите на следующий адрес premium-rs@microsoft.com.
-- Базы данных в Управляемом экземпляре: доступное значение — GeneralPurpose.
+Отдельная или включенная в пул база данных на логическом сервере. Доступные значения: "basic", "standard", "premium", "GeneralPurpose", "BusinessCritical" и "Hyperscale". 
   
 Если параметр EDITION задан, а MAXSIZE нет, то параметру MAXSIZE задается самое ограничивающее значение, поддерживаемое этим выпуском.  
   
 MAXSIZE
 
 Указывает максимальный размер базы данных. Значение параметра MAXSIZE должно быть допустимо для указанного значения параметра EDITION (уровень службы). Далее приведены поддерживаемые значения MAXSIZE и значения по умолчанию (D) для уровней службы.
+
+> [!NOTE]
+> Аргумент **MAXSIZE** не применяется к отдельным базам данных на уровне служб "Гипермасштабирование". Базы данных уровня "Гипермасштабирование" увеличиваются по мере необходимости до 100 ТБ. Служба "База данных SQL" автоматически добавляет объем хранилища. Задавать максимальный размер не нужно.
 
 **Модель на основе DTU для отдельных или включенных в пул баз данных на логическом сервере**
 
@@ -1025,8 +1028,8 @@ MAXSIZE
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |Максимальный размер данных (ГБ)|1024|1024|1024|1024|2048|4096|4096|4096|
 
-Если при использовании модели виртуальных ядер значение `MAXSIZE` не задано, используется значение по умолчанию, равное 32 ГБ. Дополнительные сведения об ограничениях по ресурсам для модели на основе виртуальных ядер см. в разделе [Пределы для ресурсов на основе виртуальных ядер](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
-  
+Если при использовании модели виртуальных ядер значение `MAXSIZE` не задано, используется значение по умолчанию, равное 32 ГБ. Дополнительные сведения об ограничениях ресурсов в модели с виртуальными ядрами: [Ограничения ресурсов на основе виртуальных ядер](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+
 **Модель на основе виртуальных ядер для баз данных в Управляемом экземпляре**
 
 **Уровень обслуживания общего назначения — вычислительная платформа поколения 4**
@@ -1047,8 +1050,9 @@ SERVICE_OBJECTIVE
 
 - **Для отдельных или включенных в пул баз данных на логическом сервере**
 
-  Определяет уровень производительности. Доступные значения для целевого уровня обслуживания: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48` и `BC_Gen5_80`. 
-
+  - Определяет уровень производительности. Доступные значения для целевого уровня обслуживания: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`. 
+ - **Для отдельных баз данных логического сервера на уровне служб "Гипермасштабирование"** определяет уровень производительности. Доступные значения для целевого уровня обслуживания: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,    `HS_Gen5_4`,    `HS_Gen5_8`,    `HS_Gen5_16`,   `HS_Gen5_24`,   `HS_Gen5_32`,   `HS_Gen5_48`,   `HS_Gen5_80`. 
+ 
 - **Для баз данных в Управляемом экземпляре**
 
   Определяет уровень производительности. Доступные значения для целевого уровня обслуживания: `GP_GEN4_8`, `GP_GEN4_16`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32` и `GP_Gen5_40`. 
@@ -1057,9 +1061,9 @@ SERVICE_OBJECTIVE
   
 ELASTIC_POOL (name = \<имя_эластичного_пула>)
  
-**Применимо к:** только отдельная или включенная в пул база данных.
+**Применимо к:** только отдельная или включенная в пул база данных. Не применяется к базам данных на уровне служб "Гипермасштабирование".
 
-Чтобы создать базу данных в эластичном пуле, задайте для параметра SERVICE_OBJECTIVE базы данных значение ELASTIC_POOL и укажите имя пула. Дополнительные сведения: [Управление несколькими базами данных SQL Azure и их масштабирование с помощью эластичных пулов](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/).  
+Чтобы создать базу данных в эластичном пуле, задайте для параметра SERVICE_OBJECTIVE базы данных значение ELASTIC_POOL и укажите имя пула. Дополнительные сведения см. в разделе [Создание эластичного пула баз данных SQL и управление им](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/).  
   
 AS COPY OF [имя_исходного_сервера.]имя_исходной_базы
 
@@ -1221,7 +1225,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
 >   <th><strong><em>* База данных SQL<br />Управляемый экземпляр *</em></strong></th>
 >   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -1305,7 +1309,7 @@ CREATE DATABASE TestDB1;
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
 >   <th><strong><em>* Хранилище данных<br />SQL*</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -1413,7 +1417,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 [DROP DATABASE &#40;Transact-SQL&#40;](../../t-sql/statements/drop-database-transact-sql.md) 
   
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -1429,13 +1433,13 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
+>   <th><strong><em>*Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL Parallel Data Warehouse
+# <a name="parallel-data-warehouse"></a>Параллельное хранилище данных
 
 ## <a name="overview"></a>Обзор
 

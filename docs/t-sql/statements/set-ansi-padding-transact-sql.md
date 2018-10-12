@@ -5,9 +5,7 @@ ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ANSI_PADDING_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - SET ANSI_PADDING statement
 - trailing blanks
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a03b86fcd019a1e53d592acc5a23a352ab12d3a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fd1a43b50d0d36efacfe3c5a93a9bf0a169c4ede
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106253"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760342"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +65,7 @@ SET ANSI_PADDING ON
   
 |Настройка|char(*n*) NOT NULL или binary(*n*) NOT NULL|char(*n*) NULL или binary(*n*) NULL|varchar(*n*) или varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Заполнение исходного значения (с замыкающими пробелами для столбцов **char** и с замыкающими нулями для столбцов **binary**) до длины столбца.|Следует тем же правилам, что и для **char(***n***)** или **binary(***n***)** NOT NULL, когда для параметра SET ANSI_PADDING установлено значение ON.|Замыкающие пробелы в символьных значениях, вставляемых в столбцы **varchar**, не усекаются. Замыкающие нули в двоичных значениях, вставляемых в столбцы **varbinary**, не усекаются. Значения не подгоняются под длину столбца.|  
+|ON|Заполнение исходного значения (с замыкающими пробелами для столбцов **char** и с замыкающими нулями для столбцов **binary**) до длины столбца.|Следует тем же правилам, что и для **char(**_n_**)** или **binary(**_n_**)** NOT NULL, когда для параметра SET ANSI_PADDING установлено значение ON.|Замыкающие пробелы в символьных значениях, вставляемых в столбцы **varchar**, не усекаются. Замыкающие нули в двоичных значениях, вставляемых в столбцы **varbinary**, не усекаются. Значения не подгоняются под длину столбца.|  
 |OFF|Заполнение исходного значения (с замыкающими пробелами для столбцов **char** и с замыкающими нулями для столбцов **binary**) до длины столбца.|Следует тем же правилам, что и для **varchar** или **varbinary**, когда для параметра SET ANSI_PADDING установлено значение OFF.|Замыкающие пробелы в символьных значениях, вставляемых в столбец **varchar**, усекаются. Замыкающие нули в двоичных значениях, вставляемых в столбец **varbinary**, усекаются.|  
   
 > [!NOTE]  

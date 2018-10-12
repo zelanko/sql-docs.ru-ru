@@ -5,9 +5,7 @@ ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - startup service states [SQL Server]
@@ -50,16 +48,15 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2794fb22369bc00f8758778ea6952bea7e94ebd6
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: e8f10e1a42df80b66754bd8544fc560713cb90d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348575"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695000"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Настройка учетных записей службы Windows и разрешений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -306,7 +303,8 @@ ms.locfileid: "43348575"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :**|**Вход в систему в качестве службы** (SeServiceLogonRight)|  
 |**Ядро PolyBase и DMS**| **Вход в систему в качестве службы** (SeServiceLogonRight)  |   
 |**Панель запуска:**|**Вход в систему в качестве службы** (SeServiceLogonRight) <br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br />**Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br />**Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)|     
-|**Службы R:** **SQLRUserGroup**  |**Локальный вход в систему** |   
+|**Службы R:** **SQLRUserGroup** (SQL 2016 и 2017)  |**Локальный вход в систему** |   
+|**Машинное обучение**: **все пакеты приложений [AppContainer]** (SQL 2019)  |**Разрешения READ и EXECUTE** для каталогов Binn, R_Services и PYTHON_Services SQL Server |   
 
  \* Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена на экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   

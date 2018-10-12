@@ -29,17 +29,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9748fcba84e037a58007c4a50ce218291cb098d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 8252d8eca6a9196630bc224a39324989c4388a6a
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796632"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252121"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > SQL Server 2014 и ниже, см. в разделе [служебная программа sqlcmd](sqlcmd-utility.md).
+ > SQL Server 2014 и ниже, см. в разделе [служебная программа sqlcmd](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-2014
+).
 
  > Использование программы sqlcmd в Linux, см. в разделе [Установка sqlcmd и bcp в Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -706,7 +707,7 @@ sqlcmd
  Если файл содержит инструкции Transact-SQL, за которыми не следует ключевое слово **GO**, необходимо ввести **GO** в строку, следующую за **:r**.  
   
 > [!NOTE]  
->  Файл **\<** *имя_файла* **>** считывается относительно стартового каталога, в котором была запущена программа **sqlcmd**.  
+>  **\<** *имя_файла* **>** считывается относительно стартового каталога, в котором была запущена программа **sqlcmd** .  
   
  Файл будет считан и выполнен после обнаружения признака конца пакета. Можно указывать несколько команд **:r** . В файле могут содержаться любые команды программы **sqlcmd** , в том числе признак конца пакета **GO**.  
   
@@ -864,7 +865,7 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyA
  [Подключение к компоненту Database Engine при помощи программы sqlcmd](~/relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)   
  [Изменение скриптов SQLCMD при помощи редактора запросов](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
  [Управление шагами задания](~/ssms/agent/manage-job-steps.md)   
- [Создание шага задания «CmdExec»](~/ssms/agent/create-a-cmdexec-job-step.md)  
+ [Create a CmdExec Job Step](~/ssms/agent/create-a-cmdexec-job-step.md)  
   
   
 

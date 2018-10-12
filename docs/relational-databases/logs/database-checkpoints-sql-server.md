@@ -4,10 +4,8 @@ ms.date: 09/23/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic checkpoints
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - flushing pages
 - active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
-caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9acf52409d656c7b1acdb37011427288c451aae
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fd42cf79d99566f6d3d356d8b96bdb5415dc258c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096786"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673391"
 ---
 # <a name="database-checkpoints-sql-server"></a>Контрольные точки базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,8 +47,8 @@ ms.locfileid: "43096786"
   
 |Имя|[!INCLUDE[tsql](../../includes/tsql-md.md)] Интерфейс|Описание|  
 |----------|----------------------------------|-----------------|  
-|Автоматически|EXEC sp_configure **'** recovery interval **','***seconds***'**|Выдаются автоматически в фоновом режиме для обеспечения соответствия верхнему пределу времени, предлагаемому параметром конфигурации сервера **recovery interval** . Автоматические контрольные точки выполняются до их завершения.  Автоматические контрольные точки регулируются в зависимости от числа необработанных операций записи и от того, обнаруживает ли [!INCLUDE[ssDE](../../includes/ssde-md.md)] увеличение задержки при записи более чем на 50 миллисекунд.<br /><br /> Дополнительные сведения см. в статье [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Косвенные|ALTER DATABASE… SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Выдаются в фоновом режиме для обеспечения соответствия пользовательскому целевому времени восстановления для конкретной базы данных. Начиная с версии [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], значение по умолчанию равно 1 минуте. Для более старых версий по умолчанию установлено значение 0, при котором базой данных используются автоматические контрольные точки, а их частота зависит от параметра для интервала восстановления экземпляра сервера.<br /><br /> Дополнительные сведения см. в статье [Изменение целевого времени восстановления базы данных (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Автоматически|EXEC sp_configure **'** recovery interval **','**_seconds_**'**|Выдаются автоматически в фоновом режиме для обеспечения соответствия верхнему пределу времени, предлагаемому параметром конфигурации сервера **recovery interval** . Автоматические контрольные точки выполняются до их завершения.  Автоматические контрольные точки регулируются в зависимости от числа необработанных операций записи и от того, обнаруживает ли [!INCLUDE[ssDE](../../includes/ssde-md.md)] увеличение задержки при записи более чем на 50 миллисекунд.<br /><br /> Дополнительные сведения см. в статье [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
+|Косвенные|ALTER DATABASE… SET TARGET_RECOVERY_TIME **=**_target\_recovery\_time_ { SECONDS &#124; MINUTES }|Выдаются в фоновом режиме для обеспечения соответствия пользовательскому целевому времени восстановления для конкретной базы данных. Начиная с версии [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], значение по умолчанию равно 1 минуте. Для более старых версий по умолчанию установлено значение 0, при котором базой данных используются автоматические контрольные точки, а их частота зависит от параметра для интервала восстановления экземпляра сервера.<br /><br /> Дополнительные сведения см. в статье [Изменение целевого времени восстановления базы данных (SQL Server)](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Вручную|CHECKPOINT [*checkpoint_duration*]|Выдаются при выполнении команды [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT. Ручная контрольная точка срабатывает в текущей базе данных для конкретного соединения. По умолчанию ручная контрольная точка выполняется до ее завершения. Регулирование работает так же, как и для автоматической контрольной точки.  При необходимости параметр *checkpoint_duration* указывает требуемое время в секундах для завершения контрольной точки.<br /><br /> Дополнительные сведения см. в статье [CHECKPOINT (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md).|  
 |Внутренние|Нет.|Выдаются различными операциями сервера, такими как резервное копирование и создание моментального снимка базы данных, для обеспечения соответствия образа диска текущему состоянию журнала.|  
   

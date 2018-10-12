@@ -5,9 +5,7 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WITHOUT_LOGIN_TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 111
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5e044f1555019aca5f50694f1367ee79b6237cc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 533622016967deef4f1fbcb4ead0c17975910899
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43094858"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618092"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +162,7 @@ CREATE USER user_name
  Указывает имя, по которому пользователь идентифицируется в этой базе данных. *user_name* — это **sysname**. Он может иметь длину до 128 символов. Когда создается пользователь, соответствующий участнику Windows, именем пользователя становится имя участника Windows, если не указано другое имя.  
   
  LOGIN *login_name*  
- Указывает имя входа, для которого создается пользователь базы данных. *login_name* должен быть допустимым именем входа на сервере. Может быть именем входа, соответствующим участнику Windows (пользователю или группе) или именем входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда это имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входит в базу данных, оно получает имя и идентификатор создаваемого пользователя базы данных. При создании имени входа, сопоставленного с субъектом Windows, используйте формат **[***\<domainName>***\\***\<loginName>***]**. Примеры см. в разделе [Сводка синтаксиса](#SyntaxSummary).  
+ Указывает имя входа, для которого создается пользователь базы данных. *login_name* должен быть допустимым именем входа на сервере. Может быть именем входа, соответствующим участнику Windows (пользователю или группе) или именем входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда это имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входит в базу данных, оно получает имя и идентификатор создаваемого пользователя базы данных. При создании имени входа, сопоставленного с субъектом Windows, используйте формат **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Примеры см. в разделе [Сводка синтаксиса](#SyntaxSummary).  
   
  Если инструкция CREATE USER — единственная инструкция в пакете SQL, то база данных SQL Windows Azure поддерживает предложение WITH LOGIN. Если инструкция CREATE USER не единственная в пакете SQL или выполняется в динамическом коде SQL, предложение WITH LOGIN не поддерживается.  
   
@@ -173,7 +170,7 @@ CREATE USER user_name
  Указывает первую схему, которую найдет сервер, после того, как он получит имена объектов для пользователя данной базы данных.  
   
  '*windows_principal*'  
- Указывает участника Windows, для которого создается пользователь базы данных. *windows_principal* может быть пользователем Windows или группой Windows. Пользователь будет создаваться даже в случае, если для *windows_principal* отсутствует имя входа. Если при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для *windows_principal* отсутствует имя входа,то субъект Windows должен пройти проверку подлинности в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)] за счет членства в группе Windows, имеющей имя входа, либо в строке подключения в качестве исходного каталога должна указываться автономная база данных. При создании пользователя из субъекта Windows используйте формат **[***\<domainName>***\\***\<loginName>***]**. Примеры см. в разделе [Сводка синтаксиса](#SyntaxSummary). Имя пользователя, основанного на пользователях Active Directory, может иметь не более 21 символа в длину.    
+ Указывает участника Windows, для которого создается пользователь базы данных. *windows_principal* может быть пользователем Windows или группой Windows. Пользователь будет создаваться даже в случае, если для *windows_principal* отсутствует имя входа. Если при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для *windows_principal* отсутствует имя входа,то субъект Windows должен пройти проверку подлинности в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)] за счет членства в группе Windows, имеющей имя входа, либо в строке подключения в качестве исходного каталога должна указываться автономная база данных. При создании пользователя из субъекта Windows используйте формат **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Примеры см. в разделе [Сводка синтаксиса](#SyntaxSummary). Имя пользователя, основанного на пользователях Active Directory, может иметь не более 21 символа в длину.    
   
  '*Azure_Active_Directory_principal*'  
  **Применимо к**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  

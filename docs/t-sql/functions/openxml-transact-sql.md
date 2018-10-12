@@ -5,9 +5,7 @@ ms.date: 03/20/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENXML_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18e266b37d0fd7b96f2d54f2eb25a94b5a53e25f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a9aa7006233437922fc15ac4fe811cbde75dff59
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086746"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618592"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,10 +59,10 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**2**|Использовать сопоставление **с использованием элементов**. Может быть совмещено с XML_ATTRIBUTES. В этом случае **атрибутивная модель** сопоставления применяется в первую очередь, а потом сопоставление **с использованием элементов** применяется для всех столбцов, которые еще не были обработаны.|  
 |**8**|Может быть совмещено (логическое OR) с XML_ATTRIBUTES или XML_ELEMENTS. В контексте получения этот флаг указывает, что используемые данные не должны копироваться в свойство переполнения **\@mp:xmltext**.|  
   
- *SchemaDeclaration*  
- Определение схемы в следующем формате: *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...]  
+ _SchemaDeclaration_  
+ Определение схемы в следующем формате: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
- *ColName*  
+ _ColName_  
  Название столбца в наборе строк.  
   
  *ColType*  

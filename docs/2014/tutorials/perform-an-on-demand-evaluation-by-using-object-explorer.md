@@ -22,13 +22,13 @@ ms.locfileid: "48098114"
   В этой задаче для выполнения по запросу рекомендуемых политик для компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] на единственном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] используется обозреватель объектов.  
   
 > [!NOTE]  
->  Выполнение политик может также производиться на единственном экземпляре через окно «Зарегистрированные серверы». Дополнительные сведения см. в разделе [Perform an On-Demand Evaluation by Using Registered Servers](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
+>  Выполнение политик может также производиться на единственном экземпляре через окно «Зарегистрированные серверы». Дополнительные сведения см. в разделе [выполнить политику по запросу с помощью зарегистрированных серверов](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
   
 ## <a name="prerequisites"></a>предварительные требования  
  На этом занятие используется версия [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] из [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Чтобы выполнить оценку по требованию рекомендуемых политик для экземпляров, работающих под управлением [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], необходимо использовать процедуру в разделе [Perform an On-Demand Evaluation by Using Registered Servers](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
+>  Чтобы выполнить оценку по требованию рекомендуемых политик для экземпляров, работающих под управлением [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], необходимо использовать процедуру в разделе [выполнить политику по запросу с помощью зарегистрированных серверов](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
   
 ### <a name="to-perform-an-on-demand-evaluation-by-using-object-explorer"></a>Выполнение политики по запросу с помощью обозревателя объектов  
   

@@ -1,11 +1,10 @@
 ---
 title: Рекомендации по операциям с индексами | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustered indexes, online operations
@@ -15,19 +14,17 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b37a9c192d17275deb4d37ac244f45ad402f8b4b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8b2947f9e9d3a6ba075bfe1a87d5f76cdbcb84c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059676"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731012"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Рекомендации по операциям с индексами в режиме "в сети"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "43059676"
 -   Неуникальные некластеризованные индексы могут создаваться в режиме в сети, если таблица содержит типы данных больших объектов (LOB), но при этом, ни один из этих столбцов не участвует в определении индекса, ни в качестве ключевого, ни в качестве неключевого столбца.  
   
 -   Индексы локальных временных таблиц не могут создаваться, перестраиваться и удаляться в режиме в сети. Это ограничение не относится к индексам глобальных временных таблиц.
-- Индексы можно возобновить с места остановки после непредвиденного сбоя, отработки отказа базы данных или команды **PAUSE**. См. раздел [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
+- Индексы можно возобновить с места остановки после непредвиденного сбоя, отработки отказа базы данных или команды **PAUSE**. Ознакомьтесь со сведениями об инструкциях [Create Index](../../t-sql/statements/create-index-transact-sql.md) и [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 > [!NOTE]  
 >  Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в [этой статье](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -94,7 +91,7 @@ ms.locfileid: "43059676"
 ## <a name="resumable-index-considerations"></a>Рекомендации по возобновляемому индексу
 
 > [!NOTE]
-> Возобновляемый индекс применяется к SQL Server начиная с SQL Server 2017 (только для перестроения индекса) и Базе данных SQL (для создания некластеризованного индекса и перестроения индекса). См. статьи [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md) (сейчас реализована общедоступная предварительная версия только для Базы данных SQL) и [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md). 
+> Возобновляемый индекс применяется к SQL Server, начиная с версии 2017 (только для перестроения индекса), и службе "База данных SQL" (для создания и перестроения индекса). Ознакомьтесь со сведениями об инструкциях [Create Index](../../t-sql/statements/create-index-transact-sql.md) (сейчас реализована общедоступная предварительная версия для службы "База данных SQL" и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]) и [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 При создании или перестроении возобновляемого индекса в режиме "в сети" следует учитывать следующие рекомендации:
 -   Управление, планирование и разворачивание окна обслуживания индексов. Операцию создания и перестроения индексов в периоды обслуживания можно многократно приостанавливать и запускать повторно.
@@ -118,7 +115,7 @@ ms.locfileid: "43059676"
 ## <a name="online-default-options"></a>Параметры режима "в сети" по умолчанию 
 
 > [!IMPORTANT]
-> Эти параметры находятся на этапе общедоступной предварительной версии.
+> Эти параметры находятся на этапе общедоступной предварительной версии для службы "База данных SQL" и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)].
 
 Задать настройки по умолчанию для режима "в сети" или возобновляемых операций на уровне базы данных можно с помощью параметров конфигурации ELEVATE_ONLINE или ELEVATE_RESUMABLE, областью действия которых является база данных. Параметры по умолчанию позволяют избежать случайного выполнения операций, из-за которых таблица базы данных может стать недоступна. Оба параметра предписывают ядру автоматически перевести определенные операции в режим выполнения "в сети" или режим возобновляемого выполнения.  
 Вы можете задать значение параметра FAIL_UNSUPPORTED, WHEN_SUPPORTED или OFF с помощью команды [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Для режима "в сети" и возобновляемого выполнения можно настроить разные значения. 
@@ -129,12 +126,9 @@ ms.locfileid: "43059676"
 > Параметры ELEVATE_ONLINE и ELEVATE_RESUMABLE не применяются к операциям с XML-индексом. 
  
 ## <a name="related-content"></a>См. также  
- [Об операциях с индексами в сети](../../relational-databases/indexes/how-online-index-operations-work.md)  
-  
- [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md)  
-  
- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
-  
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+- [Об операциях с индексами в сети](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   

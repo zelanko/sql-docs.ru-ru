@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.SERVERROLE.GENERAL.F1
@@ -16,17 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 13
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d99c22f795ff37487a220851b0828e952b192cd
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 8eb7fad6678fba7e5e6b036166c53e8115a89a61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118452"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659781"
 ---
 # <a name="create-a-server-role"></a>Создание роли сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -75,7 +72,7 @@ ms.locfileid: "43118452"
   
 3.  Щелкните правой кнопкой мыши папку **Роли сервера** и выберите **Создать роль сервера…**  
   
-4.  В диалоговом окне **Новая роль сервера —***server_role_name* на странице **Общие** введите имя новой роли сервера в поле **Имя роли сервера**.  
+4.  В диалоговом окне **Новая роль сервера —** _имя\_роли\_сервера_ на странице **Общие** введите имя новой роли сервера в поле **Имя роли сервера**.  
   
 5.  В поле **Владелец** введите имя участника на уровне сервера, которому будет принадлежать новая роль. Также можно нажать кнопку с многоточием **(...)** , чтобы открыть диалоговое окно **Выбор имени входа или роли сервера** .  
   

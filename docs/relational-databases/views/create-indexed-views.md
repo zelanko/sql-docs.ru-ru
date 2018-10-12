@@ -5,9 +5,7 @@ ms.date: 01/22/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 79
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2983be97fa3d0f3ab33ed00fc98e48d155396912
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c37482e2adb298af1c2d650c5a6c0e5d06ece2b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43097307"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650972"
 ---
 # <a name="create-indexed-views"></a>Создание индексированных представлений
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,11 +89,11 @@ ms.locfileid: "43097307"
   
 -   При создании индекса параметр `IGNORE_DUP_KEY` должен быть установлен в OFF (значение по умолчанию).    
   
--   Имя таблицы в определении представления должно быть двухкомпонентным: *схема ***.*** имя_таблицы*.    
+-   Имя таблицы в определении представления должно быть двухкомпонентным: _схема_**.**_имя_таблицы_ .    
   
 -   Определяемые пользователем функции, на которые ссылается представление, должны быть созданы с параметром `WITH SCHEMABINDING`.    
   
--   Все определяемые пользователем функции, на которые ссылается представление, должны иметь двухкомпонентные имена: *\<схема>***.***\<функция>*.   
+-   Все определяемые пользователем функции, на которые ссылается представление, должны иметь двухкомпонентные имена: _\<schema\>_**.**_\<function\>_.   
   
 -   Свойство доступа к данным пользовательской функции должно быть установлено в значение `NO SQL`, а свойство внешнего доступа — в `NO`.   
   

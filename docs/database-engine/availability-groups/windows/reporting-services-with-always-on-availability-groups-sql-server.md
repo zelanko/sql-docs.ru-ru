@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 52e7bd927c8b3df503b335b522ca8b3444f5f5fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40405553"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830912"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.locfileid: "40405553"
     -   [Работа сервера отчетов при выполнении отработки отказа](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> Требования, которые необходимо выполнить для использования служб Reporting Services и групп доступности AlwaysOn  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] использует .Net framework 4.0 и поддерживает свойства строки соединения для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] при работе с источниками данных.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и Сервер отчетов Microsoft Power BI использует .NET Framework 4.0 и поддерживает свойства строки соединения для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] при работе с источниками данных.  
   
  Чтобы использовать [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в связке с  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 или более ранней версии, следует загрузить и установить исправление для .Net 3.5 SP1. Это исправление добавляет в клиент SQL Server поддержку компонентов групп доступности, а также поддержку свойств строки подключения **ApplicationIntent** и **MultiSubnetFailover**. Если не установить это исправление на все компьютеры, на которых размещен сервер отчетов, то пользователи, пытающиеся просмотреть отчеты, будут видеть сообщение об ошибке примерно следующего содержания, которое также будет записываться в журнал трассировки сервера отчетов.  
   
@@ -121,7 +118,7 @@ ms.locfileid: "40405553"
 > **Сообщение об ошибке.** «Ключевое слово "applicationintent" не поддерживается»  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Базы данных сервера отчетов и группы доступности  
- Службы Reporting Services имеют ограниченную поддержку использования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с базами данных сервера отчетов. В группе доступности базы данных сервера отчетов можно настроить так, чтобы они были частью реплики. Однако при отработке отказа службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] не будут автоматически использовать другую реплику баз данных сервера отчетов. Использование MultiSubnetFailover не поддерживается для баз данных сервера отчетов.  
+ Службы Reporting Services и Сервер отчетов Power BI имеют ограниченную поддержку использования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с базами данных сервера отчетов. В группе доступности базы данных сервера отчетов можно настроить так, чтобы они были частью реплики. Однако при отработке отказа службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] не будут автоматически использовать другую реплику баз данных сервера отчетов. Использование MultiSubnetFailover не поддерживается для баз данных сервера отчетов.  
   
  Чтобы выполнить отработку отказа или восстановление, необходимо произвести определенные действия вручную или воспользоваться пользовательскими скриптами автоматизации. ПЕРЕД выполнением этих действий некоторые функции сервера отчетов могут работать неправильно после отработки отказа [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   

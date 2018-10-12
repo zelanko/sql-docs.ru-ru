@@ -5,9 +5,7 @@ ms.date: 05/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_INDEX_TSQL
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: 99
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b9796266ff1c5ff8d7e42ffbc3a94e44fd4b142
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3b84acd01f7291ad420cf2a643ffb9bc350e0a6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072654"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777972"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -183,7 +180,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *partition_scheme_name ***(*** column_name***)** | *filegroup_name* | **"** default **"**  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_**)** | _filegroup\_name_ | **"** default **"**  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] поддерживает "default" в качестве имени файловой группы.  
   
  Определяет размещение, куда будут перемещаться строки данных, находящиеся на конечном уровне кластеризованного индекса. Данные перемещаются в новое расположение со структурой типа куча. В качестве нового расположения можно указать файловую группу или схему секционирования, но они должны уже существовать. Параметр MOVE TO недопустим для индексированных представлений и некластеризованных индексов. Если ни схема секционирования, ни файловая группа не указаны, результирующая таблица помещается в схему секционирования или файловую группу, которая определена для кластеризованного индекса.  
@@ -234,7 +231,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Если удален кластеризованный индекс индексированного представления, то все некластеризованные индексы и автоматически создаваемые статистики в этом представлении автоматически удаляются. Статистики, созданные вручную, не удаляются.  
   
- Синтаксис *table_or_view_name ***.*** index_name* сохраняется для обратной совместимости. Пространственный или XML-индекс нельзя удалить с использованием синтаксиса обратной совместимости.  
+ Синтаксис _table\_or\_view\_name_**.**_index\_name_ сохраняется для обратной совместимости. Пространственный или XML-индекс нельзя удалить с использованием синтаксиса обратной совместимости.  
   
  Если удаляемый индекс содержит 128 и более экстентов, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] откладывает действительное освобождение страниц и связанных с ними блокировок до фиксации транзакции.  
   
@@ -264,10 +261,10 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 При удалении кластеризованного индекса в режиме не в сети удаляются только верхние уровни кластеризованных индексов, следовательно, операция выполняется довольно быстро. При удалении кластеризованного индекса в режиме ONLINE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перестраивает кучу два раза: один для первого шага, один для второго. Дополнительную информацию о сжатии данных см. в разделе [Сжатие данных](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="xml-indexes"></a>XML-индексы  
- При удалении XML-индекса нельзя указывать параметры. Кроме того, нельзя использовать синтаксис *table_or_view_name ***.*** index_name*. При удалении первичного XML-индекса все связанные вторичные XML-индексы удаляются автоматически. Дополнительные сведения см в разделе [XML-индексы (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ При удалении XML-индекса нельзя указывать параметры. Кроме того, нельзя использовать синтаксис _table\_or\_view\_name_**.**_index\_name_. При удалении первичного XML-индекса все связанные вторичные XML-индексы удаляются автоматически. Дополнительные сведения см в разделе [XML-индексы (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="spatial-indexes"></a>Пространственные индексы  
- Пространственные индексы поддерживаются только для таблиц. При удалении пространственного индекса нельзя указывать любые параметры или использовать **.***index_name*. Правильный синтаксис:  
+ Пространственные индексы поддерживаются только для таблиц. При удалении пространственного индекса нельзя указывать любые параметры или использовать **.**_index\_name_. Правильный синтаксис:  
   
  DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   

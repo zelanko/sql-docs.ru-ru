@@ -5,9 +5,7 @@ ms.date: 6/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f30febe9ab31ac58bbdd993a3e5034e5abcb427c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0dc1fdb499855be399f0d2dc77b44eae452615b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077308"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649384"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -147,37 +144,8 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE допускает одно или несколько определений столбцов. CREATE EXTERNAL TABLE и CREATE TABLE используют одинаковый синтаксис для определения столбца. Исключение — параметр DEFAULT CONSTRAINT, который нельзя использовать с внешними таблицами. Подробную информацию об определениях столбцов и их типах данных см. в разделах [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) и [CREATE TABLE в базе данных SQL Azure](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
- Определения столбцов, включая типы данных и количество столбцов, должны соответствовать данным во внешних файлах. В случае несоответствия при запросе данных строки файла будут отклонены.  
+ Определения столбцов, включая типы данных и количество столбцов, должны соответствовать данным во внешних файлах. В случае несоответствия при запросе данных строки файла будут отклонены. Дополнительные сведения о сопоставлении типов данных различных источников внешних данных см. в статье [Сопоставление типов с помощью PolyBase](../../relational-databases/polybase/polybase-type-mapping.md).  
   
- Во внешних таблицах, которые ссылаются на файлы во внешних источниках данных, определения столбцов и типов должны точно соответствовать схеме внешнего файла. При определении типов данных, которые ссылаются на данные, хранящиеся в Hadoop или Hive, используйте следующие сопоставления типов данных SQL и Hive и приведите тип к типу данных SQL при выборе. Типы включают все версии Hive, если не указано иное.
-
-> [!NOTE]  
->  SQL Server не поддерживает тип данных Hive _infinity_ в любых преобразованиях. PolyBase будет завершаться ошибкой преобразования типов данных.
-
-
-|Тип данных SQL|Тип данных .NET|Тип данных Hive|Тип данных Hadoop/Java|Комментарии|  
-|-------------------|--------------------|--------------------|----------------------------|--------------|  
-|TINYINT|Byte|TINYINT|ByteWritable|Только для чисел без знака.|  
-|SMALLINT|Int16|SMALLINT|ShortWritable||  
-|ssNoversion|Int32|ssNoversion|IntWritable||  
-|BIGINT|Int64|BIGINT|LongWritable||  
-|bit|Логическое значение|boolean|BooleanWritable||  
-|FLOAT|Double|double|DoubleWritable||  
-|REAL|Один|FLOAT|FloatWritable||  
-|money|Decimal|double|DoubleWritable||  
-|SMALLMONEY|Decimal|double|DoubleWritable||  
-|NCHAR|String<br /><br /> Char[]|строка|text||  
-|NVARCHAR|String<br /><br /> Char[]|строка|Текст||  
-|char;|String<br /><br /> Char[]|строка|Текст||  
-|varchar|String<br /><br /> Char[]|строка|Текст||  
-|BINARY|Byte[]|BINARY|BytesWritable|Применяется к Hive 0.8 и более поздней версии.|  
-|varbinary|Byte[]|BINARY|BytesWritable|Применяется к Hive 0.8 и более поздней версии.|  
-|Дата|DateTime|TIMESTAMP|TimestampWritable||  
-|smalldatetime|DateTime|TIMESTAMP|TimestampWritable||  
-|datetime2|DateTime|TIMESTAMP|TimestampWritable||  
-|DATETIME|DateTime|TIMESTAMP|TimestampWritable||  
-|time|TimeSpan|TIMESTAMP|TimestampWritable||  
-|Decimal|Decimal|Decimal|BigDecimalWritable|Применяется к Hive 0.11 и более поздней версии.|  
   
  LOCATION =  '*folder_or_filepath*'  
  Указывает путь к папке или файлу и имя файла для фактических данных в хранилище больших двоичных объектов Azure или Hadoop. Расположение начинается с корневой папки. Корневая папка — это расположение данных, указанное во внешнем источнике данных.  

@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4624b3444c41fee413429ebd729d7f05512a02f8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 380a73ff26d48abf90e5068395a2defc29d28746
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808510"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47441758"
 ---
 # <a name="export-a-data-tier-application"></a>Экспорт приложения уровня данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,10 @@ ms.locfileid: "43808510"
  Если база данных содержит объекты, не поддерживаемые в приложениях уровня данных, или автономных пользователей, то экспортировать такую базу данных будет невозможно. Дополнительные сведения о типах объектов, поддерживаемых в DAC, см. в разделе [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
 ###  <a name="Permissions"></a> Permissions  
- Для экспорта приложения уровня данных необходимы по крайней мере разрешения ALTER ANY LOGIN и VIEW DEFINITION на уровне базы данных, а также разрешение SELECT на представление каталога **sys.sql_expression_dependencies**. Экспорт приложения уровня данных может выполняться членами предопределенной роли сервера securityadmin, которые также входят в предопределенную роль базы данных database_owner для базы данных, из которой экспортируется приложение уровня данных. Экспортировать приложение уровня данных могут также члены предопределенной роли сервера sysadmin или встроенной роли системного администратора SQL Server с названием **sa** .  
+ Для экспорта приложения уровня данных необходимы по крайней мере разрешения ALTER ANY LOGIN и VIEW DEFINITION на уровне базы данных, а также разрешение SELECT на представление каталога **sys.sql_expression_dependencies**. Экспорт приложения уровня данных может выполняться членами предопределенной роли сервера securityadmin, которые также входят в предопределенную роль базы данных database_owner для базы данных, из которой экспортируется приложение уровня данных. Экспортировать приложение уровня данных могут также члены предопределенной роли сервера sysadmin или встроенной роли системного администратора SQL Server с названием **sa** .
+ 
+В службе "База данных SQL Azure" **каждой базе данных** необходимо предоставить привилегии VIEW DEFINITION и SELECT во всех или отдельных таблицах.
+
   
 ##  <a name="UsingDeployDACWizard"></a> Использование мастера экспорта приложения уровня данных  
  **Экспорт приложения уровня данных с помощью мастера**  

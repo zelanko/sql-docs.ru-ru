@@ -5,9 +5,7 @@ ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JSON_VALUE
@@ -20,12 +18,12 @@ ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 8a688156d1d31a7f3b0dfaa90390dc091eeea950
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b311660253d893673927966ffe6309d2f3530d79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023024"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687309"
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +44,7 @@ JSON_VALUE ( expression , path )
  *expression*  
  Выражение. Обычно имя переменной или столбца, содержащего текст JSON.  
  
- Если функция **JSON_VALUE** находит код JSON, который не является допустимым в *expression* перед тем, как она найдет значение, определяемое аргументом *path*, функция возвращает ошибку. Если функция **JSON_VALUE* не находит значение, определяемое аргументом *path*, она просматривает весь текст и возвращает ошибку, если найдет недопустимый код JSON в любом месте аргумента *expression*.
+ Если функция **JSON_VALUE** находит код JSON, который не является допустимым в *expression* перед тем, как она найдет значение, определяемое аргументом *path*, функция возвращает ошибку. Если функция **JSON_VALUE** не находит значение, определяемое аргументом *path*, она просматривает весь текст и возвращает ошибку, если найдет недопустимый код JSON в любом месте аргумента *expression*.
   
  *путь*  
  Путь JSON, указывающий на извлекаемое свойство. Дополнительные сведения см. в статье [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).  

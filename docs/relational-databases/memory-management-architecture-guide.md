@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f056477d1de9ad2d73240f12e033e1022c44979e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073063"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623832"
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +94,7 @@ ms.locfileid: "43073063"
 |Память стеков потоков|нет|нет|
 |Прямые выделения из Windows|нет|нет|
 
-Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может выделять больше памяти, чем указано в значении "Макс. памяти сервера". Это поведение может возникать, если значение ***Общая память сервера (КБ)*** уже достигло параметра ***Целевая память сервера (КБ)*** (как указано в параметре "Макс. памяти сервера"). Если из-за фрагментации памяти недостаточно смежных областей свободной памяти для соответствия требованиям многостраничных запросов памяти (больше 8 КБ), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может превысить объем вместо отклонения запроса памяти. 
+Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может выделять больше памяти, чем указано в значении "Макс. памяти сервера". Это поведение может возникать, если значение **_Общая память сервера (КБ)_** уже достигло параметра **_Целевая память сервера (КБ)_** (как указано в параметре "Макс. память сервера"). Если из-за фрагментации памяти недостаточно смежных областей свободной памяти для соответствия требованиям многостраничных запросов памяти (больше 8 КБ), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может превысить объем вместо отклонения запроса памяти. 
 
 Сразу после выделения фоновая задача *Монитор ресурсов* даст сигнал всем потребителям памяти освободить выделенную память и попытается снизить значение *Общая память сервера (КБ)* до параметра *Целевая память сервера (КБ)*. Следовательно, использование памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может ненадолго превысить параметр "Макс. памяти сервера". В этом случае число запросов на чтение счетчика производительности *Общая память сервера (КБ)* превысит параметры "Макс. памяти сервера" и *Целевая память сервера (КБ)*.
 
@@ -111,7 +107,7 @@ ms.locfileid: "43073063"
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Изменения memory_to_reserve, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 В более ранних версиях SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) диспетчер памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отводил часть виртуального адресного пространства процесса для использования **многостраничным распределителем (MPA)**, **распределителем CLR**, выделением памяти для **стеков потоков** в процессе SQL Server и **прямым выделением Windows (DWA)**. Эта часть виртуального адресного пространства также называется регионом оставляемой памяти или буферным пулом.
 
-Виртуальное адресное пространство, зарезервированное для этих выделений, определяется параметром конфигурации ***memory_to_reserve***. Значение по умолчанию, которое использует [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], — 256 МБ. Чтобы переопределить значение по умолчанию, используйте параметр запуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Сведения о параметре запуска *-g* см. на странице документации [Параметры запуска службы ядра СУБД](../database-engine/configure-windows/database-engine-service-startup-options.md).
+Виртуальное адресное пространство, зарезервированное для этих выделений, определяется параметром конфигурации _**memory\_to\_reserve**_. Значение по умолчанию, которое использует [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], — 256 МБ. Чтобы переопределить значение по умолчанию, используйте параметр запуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Сведения о параметре запуска *-g* см. на странице документации [Параметры запуска службы ядра СУБД](../database-engine/configure-windows/database-engine-service-startup-options.md).
 
 Так как, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], новый распределитель страниц "Любой размер" также обрабатывает выделения размером больше 8 КБ, значение *memory_to_reserve* не включает многостраничные выделения. Все остальное в отношении этого параметра конфигурации остается без изменений.
 

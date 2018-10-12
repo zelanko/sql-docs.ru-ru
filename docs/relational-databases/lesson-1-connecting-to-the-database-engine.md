@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 02/05/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: tutorial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f22fc4b12c38b751eb3559d3a94071d0692d6531
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3a28a9a1670f4d6b8ca64d9ed2aaf683b1af0636
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43019763"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850092"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +80,7 @@ ms.locfileid: "43019763"
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  В поле **Имя сервера** введите имя экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. В экземпляре SQL Server по умолчанию имя сервера совпадает с именем компьютера. Для именованного экземпляра SQL Server имя сервера имеет вид *<имя_компьютера>***\\***<имя_экземпляра>*, например **ACCTG_SRVR\SQLEXPRESS**. На снимке экрана ниже показано подключение к экземпляру [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] по умолчанию (неименованному) на компьютере с именем PracticeComputer. В Windows вошел пользователь Mary из домена Contoso. При использовании проверки подлинности Windows нельзя изменить имя пользователя. 
+3.  В поле **Имя сервера** введите имя экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. В экземпляре SQL Server по умолчанию имя сервера совпадает с именем компьютера. Для именованного экземпляра SQL Server имя сервера имеет вид _\<имя_компьютера\>_**\\**_\<имя_экземпляра\>_, например **ACCTG_SRVR\SQLEXPRESS**. На снимке экрана ниже показано подключение к экземпляру [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] по умолчанию (неименованному) на компьютере с именем PracticeComputer. В Windows вошел пользователь Mary из домена Contoso. При использовании проверки подлинности Windows нельзя изменить имя пользователя. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 

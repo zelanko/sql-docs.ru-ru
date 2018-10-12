@@ -6,12 +6,12 @@ description: Сведения о создании и администриров�
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 80a2d50537aeb133aa6489786924b5bf11d95cd3
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 59e087c88ca3addf6afc3425770de77c2a851f5e
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797867"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878007"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -81,182 +81,7 @@ ms.locfileid: "48797867"
                     <li class="panelItem" data-index="0">
                         <a class="singlePanelNavItem selected" href="#products1" data-linktype="self-bookmark"></a>
                         <ul class="cardsD panelContent singlePanelContent" id="products1" style="margin-top: 0px; display: flex;">
-                            <li class="fullSpan">
-                                <div class="container intro">
-                                <h2>Руководства по внутренним компонентам SQL</h2>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/ghost-record-cleanup-process-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/ghost-record.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Процесс очистки фантомных записей</h3>
-                                                    <p> В этом руководстве предоставлен обзор процесса очистки фантомных записей, который представляет собой однопоточный фоновый процесс, удаляющий записи со страниц, которые были помечены для удаления. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/sql-server-index-design-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/index-arch-design.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Архитектура и проектирование индексов</h3>
-                                                    <p>Это руководство содержит сведения об архитектуре индексов и рекомендации, руководствуясь которыми, вы сможете создавать эффективные индексы, соответствующие потребностям ваших приложений. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/memory-management-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/memory-mgmt-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Архитектура управления памятью</h3>
-                                                    <p> В этом руководстве объясняется, как SQL Server управляет памятью, а также использованием памяти во время чтения и записи страниц. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/pages-and-extents-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/pages-extents-architecture.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Архитектура страниц и экстентов</h3>
-                                                    <p>В этом руководстве описаны структуры данных, используемые для управления страницами и экстентами во всех версиях SQL Server. Понимание архитектуры страниц и экстентов важно для проектирования и разработки эффективных баз данных.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/post-migration-validation-and-optimization-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/post-migration-validation.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Руководство по оптимизации и проверке после миграции</h3>
-                                                    <p>Обзор некоторых типичных сценариев производительности, которые встречаются после миграции на SQL Server, а также способов устранения связанных с ними проблем. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/query-processing-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/query-process-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Архитектура обработчика запросов</h3>
-                                                    <p>Ядро СУБД SQL Server обрабатывает запросы к различным архитектурам хранения данных, таким как локальные таблицы, секционированные таблицы и таблицы, распределенные по нескольким серверам. В этом руководстве описано, как SQL Server обрабатывает запросы и оптимизирует повторное использование запроса через кэширование плана выполнения. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Архитектура журнала транзакций и управление им</h3>
-                                                    <p> В этом руководстве приводятся сведения о физической и логической архитектуре журнала транзакций. Понимание архитектуры может помочь в повышении эффективности работы с журналами транзакций. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/thread-and-task-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/thread-task-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Архитектура задач и потоков</h3>
-                                                    <p>Потоки — это возможность операционной системы, позволяющая разделить логику приложений на несколько одновременных путей выполнения. В этом руководстве объясняется, как SQL управляет потоками и задачами. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Блокировка версий строк транзакций и управление ими</h3>
-                                                    <p> В этом руководстве описываются механизмы блокировки и управления версиями строк, используемые ядром СУБД SQL Server для обеспечения физической целостности каждой транзакции, а также представлены сведения о том, как приложения могут эффективно управлять транзакциями. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="fullSpan">
+                           <li class="fullSpan">
                                 <div class="container intro">
                                 <h2>Учебники</h2>
                             </li>
@@ -449,7 +274,182 @@ ms.locfileid: "48797867"
                                         </div>
                                     </div>
                                 </a>
+                            </li>  
+                            <li class="fullSpan">
+                                <div class="container intro">
+                                <h2>Руководства по внутренним компонентам SQL</h2>
                             </li>
+                            <li>
+                                <a href="/sql/relational-databases/ghost-record-cleanup-process-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/ghost-record.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Процесс очистки фантомных записей</h3>
+                                                    <p> В этом руководстве предоставлен обзор процесса очистки фантомных записей, который представляет собой однопоточный фоновый процесс, удаляющий записи со страниц, которые были помечены для удаления. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/sql-server-index-design-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/index-arch-design.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Архитектура и проектирование индексов</h3>
+                                                    <p>Это руководство содержит сведения об архитектуре индексов и рекомендации, руководствуясь которыми, вы сможете создавать эффективные индексы, соответствующие потребностям ваших приложений. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/memory-management-architecture-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/memory-mgmt-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Архитектура управления памятью</h3>
+                                                    <p> В этом руководстве объясняется, как SQL Server управляет памятью, а также использованием памяти во время чтения и записи страниц. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/pages-and-extents-architecture-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/pages-extents-architecture.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Архитектура страниц и экстентов</h3>
+                                                    <p>В этом руководстве описаны структуры данных, используемые для управления страницами и экстентами во всех версиях SQL Server. Понимание архитектуры страниц и экстентов важно для проектирования и разработки эффективных баз данных.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/post-migration-validation-and-optimization-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/post-migration-validation.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Руководство по оптимизации и проверке после миграции</h3>
+                                                    <p>Обзор некоторых типичных сценариев производительности, которые встречаются после миграции на SQL Server, а также способов устранения связанных с ними проблем. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/query-processing-architecture-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/query-process-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Архитектура обработчика запросов</h3>
+                                                    <p>Ядро СУБД SQL Server обрабатывает запросы к различным архитектурам хранения данных, таким как локальные таблицы, секционированные таблицы и таблицы, распределенные по нескольким серверам. В этом руководстве описано, как SQL Server обрабатывает запросы и оптимизирует повторное использование запроса через кэширование плана выполнения. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Архитектура журнала транзакций и управление им</h3>
+                                                    <p> В этом руководстве приводятся сведения о физической и логической архитектуре журнала транзакций. Понимание архитектуры может помочь в повышении эффективности работы с журналами транзакций. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/thread-and-task-architecture-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/thread-task-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Архитектура задач и потоков</h3>
+                                                    <p>Потоки — это возможность операционной системы, позволяющая разделить логику приложений на несколько одновременных путей выполнения. В этом руководстве объясняется, как SQL управляет потоками и задачами. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Блокировка версий строк транзакций и управление ими</h3>
+                                                    <p> В этом руководстве описываются механизмы блокировки и управления версиями строк, используемые ядром СУБД SQL Server для обеспечения физической целостности каждой транзакции, а также представлены сведения о том, как приложения могут эффективно управлять транзакциями. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>                            
                         </ul>
                     </li>
                 </ul>

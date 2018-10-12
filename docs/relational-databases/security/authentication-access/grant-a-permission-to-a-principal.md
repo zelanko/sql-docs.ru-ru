@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
-caps.latest.revision: 12
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c62a0eb58db1a57d68ca1e43980f23a799fe277f
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: a22a07d05fa6286eb88089393d563e746ee9def5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118091"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787182"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Предоставление разрешения для участника
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +68,7 @@ ms.locfileid: "43118091"
   
 4.  Щелкните правой кнопкой мыши хранимую процедуру и выберите **Свойства**.  
   
-5.  В разделе выбора страницы диалогового окна **Свойства хранимой процедуры —***stored_procedure_name* щелкните **Разрешения**. Данная страница используется для добавления пользователей или ролей к хранимым процедурам и для назначения разрешений этим пользователям и ролям.  
+5.  В разделе выбора страницы диалогового окна **Свойства хранимой процедуры —**_имя\_хранимой\_процедуры_ щелкните **Разрешения**. Данная страница используется для добавления пользователей или ролей к хранимым процедурам и для назначения разрешений этим пользователям и ролям.  
   
 6.  После завершения нажмите кнопку **ОК**.  
   
