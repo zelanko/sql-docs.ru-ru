@@ -1,13 +1,11 @@
 ---
-title: Метод getTimestamp (java.lang.String, java.util.Calendar) | Документы Microsoft
+title: Метод getTimestamp (java.lang.String, java.util.Calendar) | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getTimestamp (java.lang.String,java.util.Calendar)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 770668d9-2e52-4ff0-be2f-ebf78fd41644
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d9ddd1eb04d53db86d882c4b09659ff9cb8ae27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 27ee52e2dd8acb976d732baa76d32a0401ba445d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666092"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar"></a>Метод getTimestamp (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Получает значение указанного параметра в виде объекта java.sql.Timestamp на языке программирования, заданному имени параметра, используя объект календаря Java.  
+  Возвращает значение заданного параметра в виде объекта java.sql.Timestamp на языке программирования Java по имени параметра, используя указанный объект Calendar.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,26 +39,26 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
 #### <a name="parameters"></a>Параметры  
  *name*  
   
- Объект **строка** , содержащее имя параметра.  
+ Значение типа **String**, содержащее имя параметра.  
   
  *Клиентская лицензия*  
   
  Объект календаря.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект отметки времени.  
+ Объект метки времени.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод getTimestamp указывается с помощью метода getTimestamp в интерфейсе java.sql.CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Этот метод getTimestamp определен с помощью метода getTimestamp в интерфейсе java.sql.CallableStatement.  
   
- Этот метод возвращает значения только из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime** и **smalldatetime** столбцов.  
+ Этот метод возвращает значения только из столбцов **datetime** и **smalldatetime** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
- [Метод getTimestamp &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод getTimestamp (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

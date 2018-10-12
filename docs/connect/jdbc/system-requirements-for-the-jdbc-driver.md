@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
-caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 377afbebe029add867a2d02cb02a38421dc8d1f2
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a2ddf8f5c03d6f4c6724075e7209d800e10f7e39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786182"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724302"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Требования к системе для драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +41,7 @@ ms.locfileid: "42786182"
   
 **Microsoft JDBC Driver 7.0 для SQL Server**  
 
-  Драйвер JDBC 7.0 содержит две библиотеки классов JAR: **mssql-jdbc-7.0.0.jre8.jar** и **mssql-jdbc-7.0.0.jre10.jar**.
+  Драйвер JDBC 7.0 содержит две библиотеки классов JAR в каждом пакете установки: **mssql-jdbc-7.0.0.jre8.jar** и **mssql-jdbc-7.0.0.jre10.jar**.
 
   JDBC Driver 7.0 рассчитан на совместимость и корректную работу со всеми основными эквивалентами виртуальных машин Java от Sun, но протестирован только в Sun JRE 8.0 и 10.0.
   
@@ -68,7 +65,7 @@ ms.locfileid: "42786182"
   
 **Microsoft JDBC Driver 6.4 для SQL Server**  
 
-  Драйвер JDBC 6.4 содержит две библиотеки классов JAR: **mssql-jdbc-6.4.0.jre7.jar** и **mssql-jdbc-6.4.0.jre8.jar**.
+  Драйвер JDBC 6.4 содержит три библиотеки классов JAR в каждом пакете установки: **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** и **mssql-jdbc-6.4.0.jre9.jar**.
 
   JDBC Driver 6.4 рассчитан на поддержку всеми основными эквивалентами виртуальных машин Java Sun, однако протестирован только в Sun JRE 7.0, 8.0 и 9.0.
   

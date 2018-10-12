@@ -1,33 +1,30 @@
 ---
-title: Конструктор SQLServerException (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean) | Документы Microsoft
+title: Конструктор SQLServerException (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8c2f8664e7d97c7bc197b3053e515a6fb121ebd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 89d156ca5024ed49cbc3b5256266c393c897ae12
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845759"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756392"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>Конструктор SQLServerException (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Инициализирует новый экземпляр [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) класса для заданного **объекта**, **строка** объекта, **строка** объект,  **StreamError** объекта и **логическое**.
+  Инициализирует новый экземпляр класса [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) Получив **объект**, **строка** объекта, **строка** объект,  **StreamError** объекта и **логическое**.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,7 +40,7 @@ public SQLServerException(java.lang.Object obj,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *OBJ*  
+ *obj*  
   
  Буфер ввода-ВЫВОДА, сформировавшего исключение.
 
@@ -53,7 +50,7 @@ public SQLServerException(java.lang.Object obj,
   
  *sqlState*  
   
- Объект перечисления, который содержит сведения о состоянии SQL.
+ Объект перечисления, содержащий сведения о состоянии SQL.
  
  *streamError*  
   
@@ -61,9 +58,9 @@ public SQLServerException(java.lang.Object obj,
  
  *bStack*  
   
- Логическое значение, указывающее, если следует создавать трассировки стека.
+ Логическое значение, указывающее следует ли формировать трассировку стека.
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструкторы SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   
  [Элементы SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md)   
  [Класс SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

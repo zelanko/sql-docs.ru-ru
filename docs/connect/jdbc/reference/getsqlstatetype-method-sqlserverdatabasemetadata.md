@@ -1,13 +1,11 @@
 ---
-title: Метод getSQLStateType (SQLServerDatabaseMetaData) | Документы Microsoft
+title: Метод getSQLStateType (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getSQLStateType
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d5778b2b42af466ced101633a38ac9d0db83791
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a4a01e2bb8ef76af91c4dede71ae7457351d430b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838259"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733202"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>Метод getSQLStateType (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,19 +36,19 @@ public int getSQLStateType()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Int** , указывающее тип SQLSTATE, который может принимать одно из следующих значений:  
+ Значение **int**, указывающее тип SQLSTATE. Может принимать одно из следующих значений.  
   
--   Для Java Runtime Environment верси 5.0: Если **xopenStates** соединения свойству **true**, этот метод возвращает DatabaseMetaData.sqlStateXOpen. В противном случае DatabaseMetaData.sqlStateSQL99.  
+-   Для Java Runtime Environment верси 5.0: Если **xopenStates** свойство подключения имеет значение **true**, этот метод возвращает DatabaseMetaData.sqlStateXOpen. В противном случае DatabaseMetaData.sqlStateSQL99.  
   
--   Для Java Runtime Environment версии 6.0: Если **xopenStates** соединения свойству **true**, этот метод возвращает DatabaseMetaData.sqlStateXOpen. В противном случае DatabaseMetaData.sqlStateSQL.  
+-   Для Java Runtime Environment версии 6.0: Если **xopenStates** свойство подключения имеет значение **true**, этот метод возвращает DatabaseMetaData.sqlStateXOpen. В противном случае DatabaseMetaData.sqlStateSQL.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод getSQLStateType указывается с помощью метода getSQLStateType в интерфейсе java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

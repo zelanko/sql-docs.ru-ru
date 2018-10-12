@@ -1,31 +1,28 @@
 ---
-title: Microsoft ADO.NET для SQL Server | Документы Microsoft
+title: Microsoft ADO.NET для SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11b52720be2b22b3bef6839623e960f205fe509f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: a237531d89aee072c234f57024a09fd1774f99f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288883"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765534"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET для SQL Server
 
-![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[для загрузки ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[загрузить ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-ADO.NET — это базовая технология доступа к данным для языков .NET. Для доступа к SQL Server используется пространство имен System.Data.SqlClient, а для доступа к хранилищам других производителей — соответствующие поставщики. Для доступа к данным из языков .NET с помощью других технологий доступа к данным используется System.Data.Odbc или System.Data.Oledb. Если в клиентских приложениях нужен автономный кэш данных, используется System.Data.Dataset. Кроме того, данная технология позволяет сохранять данные локально, а также предоставляет возможности по работе с XML, которые можно использовать в веб-службах.  
+ADO.NET — это базовая технология доступа к данным для языков .NET. Для доступа к SQL Server используется пространство имен System.Data.SqlClient, а для доступа к хранилищам других производителей — соответствующие поставщики. Для доступа к данным из языков .NET с помощью других технологий доступа к данным используется System.Data.Odbc или System.Data.Oledb. Если в клиентских приложениях нужен автономный кэш данных, используется System.Data.Dataset. Кроме того, данная технология позволяет сохранять данные локально, а также предоставляет возможности по работе с XML, которые можно использовать в веб-службах.  
   
 ## <a name="getting-started"></a>Приступая к работе  
 * [Шаг 1. Настройка среды разработки для разработки в ADO.NET](step-1-configure-development-environment-for-ado-net-development.md)  
@@ -44,8 +41,8 @@ ADO.NET — это базовая технология доступа к дан�
   
 ## <a name="more-samples"></a>Дополнительные примеры  
 * [Примеры кода ADO.NET](https://msdn.microsoft.com/library/dw70f090.aspx)  
-* [Начало работы с .NET Framework в Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [Начало работы с .NET Core на macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
-* [Начало работы с .NET Core на Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
-* [Начало работы с .NET Core в Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
+* [Приступая к работе с .NET Framework в Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
+* [Начало работы с .NET Core в macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
+* [Приступая к работе с .NET Core в Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
+* [Приступая к работе с .NET Core в Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

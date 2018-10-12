@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 319ada38e07a30fa936608adce4e5c091ba098ec
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e7459e99e64bddaa0e971666edb8bb9c7c67c009
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727492"
 ---
 # <a name="connection-options"></a>Параметры соединения
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +49,7 @@ ms.locfileid: "42787080"
 |QuotedId|1 или **true** для использования правил SQL-92.<br /><br />0 или **false** для использования устаревших правил.|Указывает, следует ли использовать правила SQL-92 для нестандартных идентификаторов (1 или **true**) или устаревшие правила Transact-SQL (0 или **false**).|**true** (1)|  
 |ReturnDatesAsStrings<br /><br />(не поддерживается в драйвере PDO_SQLSRV)|1 или **true** для возврата типов даты и времени в виде строк.<br /><br />0 или **false** для возврата типов даты и времени в виде типов **DateTime** PHP.|Извлекает типы даты и времени (datetime, date, time, datetime2 и datetimeoffset) в виде строк или типов PHP. При использовании драйвера PDO_SQLSRV даты возвращается в виде строк. Драйвер PDO_SQLSRV не включает тип **datetime**.<br /><br />Дополнительные сведения см. в статье [Практическое руководство. Получение типа даты и времени в виде строк с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).|**false**|  
 |Прокручиваемые курсоры|String|"Буферизовано" означает, что требуется клиентский (буферизированный) курсор, который позволяет кэшировать весь результирующий набор в памяти. Дополнительные сведения см. в статье [Типы курсоров &#40;драйвер SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).|Курсор последовательного доступа|  
-|Сервер<br /><br />(не поддерживается в драйвере SQLSRV)|String|Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для соединения.<br /><br />Вы также можете указать имя виртуальной сети для подключения к группе доступности AlwaysOn. Дополнительные сведения о [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддержка [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], см. в разделе [Поддержка высокой доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|Server является обязательным ключевым словом (хотя оно не обязательно должно стоять на первом месте в строке подключения). Если имя сервера не передается в ключевое слово, предпринимается попытка подключиться к локальному экземпляру.<br /><br />Значением, передаваемым в ключевое слово Server, может быть имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или IP-адрес экземпляра. Вы можете дополнительно указать номер порта (например, `sqlsrv:server=(local),1033`).<br /><br />Начиная с версии 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] , можно также указать экземпляр LocalDB с `server=(localdb)\instancename`. Дополнительные сведения см. в разделе [поддержка LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).|  
+|Сервер<br /><br />(не поддерживается в драйвере SQLSRV)|String|Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для соединения.<br /><br />Вы также можете указать имя виртуальной сети для подключения к группе доступности AlwaysOn. Дополнительные сведения о [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддержка [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], см. в разделе [Поддержка высокой доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|Server является обязательным ключевым словом (хотя оно не обязательно должно стоять на первом месте в строке подключения). Если имя сервера не передается в ключевое слово, предпринимается попытка подключиться к локальному экземпляру.<br /><br />Значением, передаваемым в Server, может быть имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или IP-адрес экземпляра. Вы можете дополнительно указать номер порта (например, `sqlsrv:server=(local),1033`).<br /><br />Начиная с версии 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] , можно также указать экземпляр LocalDB с `server=(localdb)\instancename`. Дополнительные сведения см. в разделе [поддержка LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).|  
 |TraceFile|String|Указывает путь для файла, используемый для трассировки данных.|Значение не задано.|  
 |TraceOn|1 или **true** для включения трассировки.<br /><br />0 или **false** для отключения трассировки.|Указывает, включена (1 или **true**) или отключена (0 или **false**) трассировка ODBC для устанавливаемого соединения.|**false** (0)|  
 |TransactionIsolation|Драйвер SQLSRV использует следующие значения:<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />Драйвер PDO_SQLSRV использует следующие значения:<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Указывает уровень изоляции транзакции.<br /><br />Дополнительные сведения об изоляции транзакций см. в статье [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) в документации по SQL Server.|SQLSRV_TXN_READ_COMMITTED<br /><br />или диспетчер конфигурации служб<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
@@ -67,7 +64,7 @@ ms.locfileid: "42787080"
 
 3. Включение *Encryption* может негативно повлиять на производительность некоторых приложений из-за необходимости выполнять дополнительные вычисления для шифрования данных.  
 
-4. Экземпляр *UID* и *PWD* должны быть заданы при соединении с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+4. Атрибуты *UID* и *PWD* должны быть заданы при соединении с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 Многие поддерживаемые ключи являются атрибутами строк подключения ODBC. Дополнительные сведения о строках подключения ODBC см. в статье [Использование ключевых слов строки подключения с SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 

@@ -1,13 +1,11 @@
 ---
-title: Метод getObject (int, java.util.Map) | Документы Microsoft
+title: Метод getObject (int, java.util.Map) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getObject (int, java.util.Map)
@@ -15,24 +13,23 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 164532be-7ed6-40fa-a273-dece4c8d72c4
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edaea99a49f6c6230cd03a8060c02140ae036475
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e86cadfbb230255fc3512768ef0886409267923d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667505"
 ---
 # <a name="getobject-method-int-javautilmap"></a>Метод getObject (int, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Получает значение указанного параметра в виде объекта на Java по заданному индексу параметра языка программирования с помощью заданного объекта карты.  
+  Возвращает значение заданного параметра в виде объекта на языке программирования Java по индексу параметра, используя указанный объект Map.  
   
 > [!NOTE]  
->  Этот метод не поддерживается в настоящее время [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Этот метод всегда возвращает сопоставление по умолчанию.  
+>  Сейчас этот метод не поддерживается [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Этот метод всегда возвращает сопоставление по умолчанию.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,26 +42,26 @@ public java.lang.Object getObject(int index,
 #### <a name="parameters"></a>Параметры  
  *index*  
   
- **Int** , указывающее индекс параметра.  
+ Значение типа **int**, указывающее индекс параметра.  
   
- *карты*  
+ *map*  
   
- Объект схемы.  
+ Объект карты.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Объекта** значение.  
+ Значение **Object**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод getObject указывается с помощью метода getObject в интерфейсе java.sql.CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Этот метод getObject определен с помощью метода getObject в интерфейсе java.sql.CallableStatement.  
   
  Этот метод вернет значение данного столбца в виде объекта Java. Объект Java будет иметь заданный по умолчанию тип, соответствующий типу SQL Server столбца и сопоставленный встроенным типам, указанным в спецификации JDBC. Если значение SQL NULL, то драйвер вернет значение Java NULL.  
   
- Этот метод также может быть использован для чтения абстрактных типов данных, относящихся к базе данных. В JDBC 2.0 API возможности метода getObject расширены и поддерживают материализацию данных определяемых пользователем типов SQL. Если столбец содержит структурированное или уникальное значение, поведение данного метода является, как если бы он был вызов `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
+ Этот метод также может быть использован для чтения абстрактных типов данных, относящихся к базе данных. В API JDBC 2.0 возможности метода getObject расширены и поддерживают материализацию данных определяемых пользователем типов SQL. Если в столбце содержится структурированное или уникальное значение, то выполнение этого метода будет аналогично вызову `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
   
- Начиная с версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] драйвера JDBC 3.0:  
+ Начиная с версии 3.0 драйвера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC действуют следующие правила:  
   
 -   Значение типа date будет возвращаться в виде объекта java.sql.Date.  
   
@@ -74,9 +71,9 @@ public java.lang.Object getObject(int index,
   
 -   Значение типа datetimeoffset будет возвращаться в виде объекта microsoft.sql.DateTimeOffset.  
   
-## <a name="see-also"></a>См. также  
- [Метод getObject &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод getObject (SQLServerCallableStatement)](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

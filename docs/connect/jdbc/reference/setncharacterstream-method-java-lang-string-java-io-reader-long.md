@@ -1,30 +1,27 @@
 ---
-title: Метод setNCharacterStream объект чтения - long | Документы Microsoft
+title: Метод setNCharacterStream объект чтения - long | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: af9a1ba8-7980-43fa-88e5-14f6cc5e897c
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c3cae5b4e79d1ae63cb9cf64eacabb9fa16e922
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: feab619432b05f5f8588af804309d231d9893794
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843039"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806702"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader-long"></a>Метод setNCharacterStream (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Присваивает указанному параметру указанный объект чтения, равен указанному числу символов.  
+  Задает назначенному параметру значение указанного объекта Reader, имеющего указанную длину в символах.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,32 +33,32 @@ public final void setNCharacterStream(java.lang.String parameterName,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Имя_параметра*  
+ *parameterName*  
   
- Объект **строка** , указывающее имя параметра.  
+ Значение **String**, которое указывает имя параметра.  
   
  *value*  
   
- Объект модуля чтения.  
+ Объект средства чтения.  
   
- *длина*  
+ *length*  
   
- Объект **длинные** указывает число символов в поток.  
+ Значение **long**, которое указывает количество символов в потоке.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод setNCharacterStream указывается с помощью метода setNCharacterStream в интерфейсе java.sql.CallableStatement.  
   
  Этот метод следует использовать для **NCHAR**, **NVARCHAR**, **NTEXT**, и **XML** типов данных.  
   
- Если длина потока отличается тем, что указывается в *длина* параметра, драйвер JDBC вызовет исключение при обновлении или вставке строки.  
+ Если длина потока отличается от указанной в параметре *length*, драйвер JDBC выдаст исключение при обновлении или вставке строки.  
   
- Если длина потока неизвестна, *длина* параметра может быть задано значение -1, чтобы указать, что драйвер будет принимать потоки независимо от их длины. Для sqljdbc4.jar рекомендуется использовать метод JDBC 4.0 [метод setNCharacterStream &#40;java.lang.String, java.io.Reader&#41; ](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md) Если приложению нужно обновлять столбец из потока, длина которого совпадает с Неизвестный.  
+ Если длина потока неизвестна, параметр *length* может иметь значение "–1", показывающее, что драйвер должен принимать поток любой длины. При использовании sqljdbc4.jar, если приложению нужно обновить столбец из потока, длина которого неизвестна, рекомендуется применять метод JDBC 4.0 [setNCharacterStream (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md).  
   
-## <a name="see-also"></a>См. также  
- [Метод setNCharacterStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод setNCharacterStream (SQLServerCallableStatement)](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   
  [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

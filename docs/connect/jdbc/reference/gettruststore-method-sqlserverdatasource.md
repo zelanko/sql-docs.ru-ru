@@ -1,13 +1,11 @@
 ---
-title: Метод getTrustStore (SQLServerDataSource) | Документы Microsoft
+title: Метод getTrustStore (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - getTrustStore Method (SQLServerDataSource)
@@ -15,16 +13,15 @@ apilocation:
 - getTrustStore Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 523ae02799c14c2b55d1bd6144758952930cf190
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 561148cb1492457c4528bd1fdbf60e66233c6b6e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838119"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708872"
 ---
 # <a name="gettruststore-method-sqlserverdatasource"></a>Метод getTrustStore (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +36,12 @@ public java.lang.String getTrustStore()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект **строка** , содержащий путь (включая имя файла) к файлу сертификата trustStore, или значение null, если значение не задано.  
+ Значение типа **String**, содержащее путь к файлу сертификата trustStore (включая имя файла), или значение NULL, если значение не задано.  
   
-## <a name="remarks"></a>Замечания  
- Если свойство trustStore не задано, [getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md) метод возвращает значение null.  
+## <a name="remarks"></a>Remarks  
+ Если свойство trustStore не задано, то метод [getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md) возвращает значение NULL.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Класс SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

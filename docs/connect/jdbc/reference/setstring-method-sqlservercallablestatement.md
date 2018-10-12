@@ -1,13 +1,11 @@
 ---
-title: Метод setString (SQLServerCallableStatement) | Документы Microsoft
+title: Метод setString (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setString
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f38b97b5-d4f0-4f74-a33d-740241a85842
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a2fa007aa6edfc764534f745029ae6107edd6d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b36100c0a2b87abad223c47fc4c81dd802c16cc7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682612"
 ---
 # <a name="setstring-method-sqlservercallablestatement"></a>Метод setString (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Устанавливает указанный параметр для заданного Java **строка** значение.  
+  Задает назначенному параметру указанное значение **String** Java.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,22 +39,22 @@ public void setString(java.lang.String sCol,
 #### <a name="parameters"></a>Параметры  
  *sCol*  
   
- Объект **строка** , содержащее имя параметра.  
+ Значение типа **String**, содержащее имя параметра.  
   
- *S*  
+ *s*  
   
- Объект **строка** значение.  
+ Значение типа **String**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод setString задается с помощью метода setString в интерфейсе java.sql.CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Этот метод setString указывается методом setString в интерфейсе java.sql.CallableStatement.  
   
- Двоичный преобразования строковых значений в выполняются только если [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] знает объект назначения имеет двоичный тип. В случаях, когда драйвер JDBC неизвестен базовый тип, то он передает **строка** литерал и возвращать ошибку сервера, если сервер не может выполнить преобразование.  
+ Преобразования строкового типа данных в двоичный тип выполняются только в том случае, когда драйверу [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] известно, что целевой объект имеет двоичный тип. В случаях, когда драйверу JDBC неизвестен базовый тип, он будет передавать литерал **String** и возвращать ошибку сервера, если сервер не может выполнить преобразование.  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

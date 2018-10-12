@@ -1,30 +1,27 @@
 ---
-title: Элементы DateTimeOffset | Документы Microsoft
+title: Элементы DateTimeOffset | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1167a063aa942deb1fb8ecbde8bc36165b8c336
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: be2a66c779714902ae33ef25dcdf23b8797ee274
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829699"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669442"
 ---
 # <a name="datetimeoffset-members"></a>Элементы DateTimeOffset
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  В следующих таблицах перечислены члены, предоставляемые [класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) класса.  
+  В следующих таблицах перечислены доступные члены класса [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 ## <a name="constructors"></a>Конструкторы  
  Нет.  
@@ -34,15 +31,15 @@ ms.locfileid: "32829699"
   
 ## <a name="methods"></a>Методы  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[CompareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|Сравнивает этот **DateTimeOffset** объекта в другой **DateTimeOffset** в соответствии с их время по Гринвичу.|  
-|[Равно](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|Сравнивает этот **DateTimeOffset** объекта в другой **объекта**.|  
-|[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|Возвращает смещение в минутах от среднего времени по Гринвичу этого **DateTimeOffset** объекта.|  
-|[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|Возвращает точку временем, представленными этим экземпляром **DateTimeOffset** объект как java.sql.Timestamp.|  
-|[хэш-код](../../../connect/jdbc/reference/hashcode-method-datetimeoffset.md)|Возвращает значение хэш-кода для объекта.|  
-|[ToString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|Возвращает строковое представление **DateTimeOffset** объекта.|  
-|[valueOf](../../../connect/jdbc/reference/valueof-method-datetimeoffset.md)|Создает **DateTimeOffset** объект, представляющий точку во времени с определенным смещением от времени GMT.|  
+|[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|Сравнивает этот **DateTimeOffset** объект с другим объектом **DateTimeOffset** объекта на основе их времени по Гринвичу.|  
+|[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|Сравнивает этот **DateTimeOffset** объект с другим объектом **объект**.|  
+|[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|Возвращает смещение в минутах относительно GMT, это **DateTimeOffset** объекта.|  
+|[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|Возвращает точку во времени, представленного данным **DateTimeOffset** объект в качестве java.sql.Timestamp.|  
+|[hashCode](../../../connect/jdbc/reference/hashcode-method-datetimeoffset.md)|Возвращает значение хэш-кода для объекта.|  
+|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|Возвращает строковое представление **DateTimeOffset** объекта.|  
+|[valueOf](../../../connect/jdbc/reference/valueof-method-datetimeoffset.md)|Создает объект **DateTimeOffset**, представляющий точку во времени с указанным смещением относительно времени по Гринвичу (GMT).|  
   
 ## <a name="inherited-methods"></a>Наследуемые методы  
   
@@ -50,7 +47,7 @@ ms.locfileid: "32829699"
 |---------------------------|-------------|  
 |class java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait,|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)  
   
   

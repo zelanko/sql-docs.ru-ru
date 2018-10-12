@@ -1,13 +1,11 @@
 ---
-title: Close-метод (SQLServerStatement) | Документы Microsoft
+title: Метод Close (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.close
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 84a25d64-dd3e-4696-bb5f-4eaf391fab7e
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 296b4551251913b9a8c8d2961bbf65d833390bb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 813ae2fdd58c8a89da6f97903c8bf70628a8b855
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827129"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798462"
 ---
-# <a name="close-method-sqlserverstatement"></a>Close-метод (SQLServerStatement)
+# <a name="close-method-sqlserverstatement"></a>Метод close (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Это освобождает [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) базы данных и ресурсы JDBC вместо ожидания их автоматического освобождения объекта.  
+  Немедленно освобождает базу данных и ресурсы JDBC данного объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), не дожидаясь их автоматического освобождения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,11 +38,11 @@ public void close()
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод close определяется close-метод в интерфейсе java.sql.Statement.  
+## <a name="remarks"></a>Remarks  
+ Этот метод close определен с помощью метода close в интерфейсе java.sql.Statement.  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Класс SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

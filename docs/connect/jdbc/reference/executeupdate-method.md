@@ -1,13 +1,11 @@
 ---
-title: Метод executeUpdate () | Документы Microsoft
+title: Метод executeUpdate () | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.executeUpdate ()
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ca534c6b-ef4d-4ae8-8cc3-514728623cff
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a4d3caaa9cad0b1e9c47edece18015e6d270f1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0839ad771e067552b6c19d3d44c5893189a2c52d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829501"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782934"
 ---
 # <a name="executeupdate-method-"></a>Метод executeUpdate ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Выполняет инструкцию SQL в этом [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) объекта, который должен быть SQL INSERT, инструкция UPDATE, MERGE или DELETE; или инструкция SQL, не возвращает ничего, например инструкция DDL.  
+  Выполняет в этом объекте [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) инструкцию SQL. Это должна быть инструкция SQL INSERT, UPDATE, MERGE или DELETE, либо инструкция SQL, не возвращающая значения, например инструкция DDL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,17 +36,17 @@ public int executeUpdate()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Int** указывает число обработанных строк, либо значение 0 для инструкций DDL.  
+ Значение типа **int**, указывающее либо число обработанных строк, либо значение 0 для инструкций языка DDL.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод executeUpdate указывается с помощью метода executeUpdate в интерфейсе java.sql.PreparedStatement.  
   
-## <a name="see-also"></a>См. также  
- [Метод executeUpdate &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)   
- [Члены SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод executeUpdate (SQLServerPreparedStatement)](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)   
+ [Элементы SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [Класс SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   

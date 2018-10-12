@@ -1,13 +1,11 @@
 ---
-title: Метод getURL (int) | Документы Microsoft
+title: Метод getURL (int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getURL Ijnt)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 75d03ced-3614-4997-9abd-24642b1d1aae
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f75029b525123e93011b29403a4b70e6533dd834
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e6e9fa2476ac61f5f5de026aa9d629518e9041e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843559"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837772"
 ---
 # <a name="geturl-method-int"></a>Метод getURL (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Получает значение указанного параметра в виде URL-адрес объекта в языке программирования Java по заданному индексу параметра.  
+  Извлекает значение назначенного параметра в виде URL-объекта на языке программирования Java по заданному индексу параметра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +38,7 @@ public java.net.URL getURL(int n)
 #### <a name="parameters"></a>Параметры  
  *n*  
   
- **Int** , указывающее индекс параметра.  
+ Значение типа **int**, указывающее индекс параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект URL-адрес.  
@@ -49,12 +46,12 @@ public java.net.URL getURL(int n)
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод getURL указывается с помощью метода getURL в интерфейсе java.sql.CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Этот метод getURL указывается методом getURL в интерфейсе java.sql.CallableStatement.  
   
-## <a name="see-also"></a>См. также  
- [Метод getURL &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/geturl-method-sqlservercallablestatement.md)   
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод getURL (SQLServerCallableStatement)](../../../connect/jdbc/reference/geturl-method-sqlservercallablestatement.md)   
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

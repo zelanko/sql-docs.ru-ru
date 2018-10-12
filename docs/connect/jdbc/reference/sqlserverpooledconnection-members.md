@@ -1,30 +1,27 @@
 ---
-title: Элементы SQLServerPooledConnection | Документы Microsoft
+title: Элементы SQLServerPooledConnection | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f1d3d24d71f8764274de465d55ebae950a5f9d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ad4ee3752b321803b4d2c3e05bbf317775e859e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847079"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695852"
 ---
 # <a name="sqlserverpooledconnection-members"></a>Элементы SQLServerPooledConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  В следующих таблицах перечислены члены, предоставляемые [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) класса.  
+  В следующих таблицах перечислены доступные элементы класса [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).  
   
 ## <a name="constructors"></a>Конструкторы  
  Нет.  
@@ -37,11 +34,11 @@ ms.locfileid: "32847079"
   
 ## <a name="methods"></a>Методы  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|Регистрирует заданный прослушиватель событий будет получать уведомления при возникновении события на этом [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) объекта.|  
-|[Закрыть](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|Закрывает физическое соединение, это [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) представляет.|  
-|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|Создает дескриптор объекта для физического соединения, это [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) представляет.|  
+|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|Регистрирует заданный прослушиватель событий для получения уведомлений о событии в этом объекте [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|Закрывает физическое соединение, представляемое этим объектом [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).|  
+|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|Создает дескриптор объекта для физического соединения, представляемого этим объектом [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).|  
 |[removeConnectionEventListener](../../../connect/jdbc/reference/removeconnectioneventlistener-method-sqlserverpooledconnection.md)|Удаляет заданный прослушиватель событий.|  
   
 ## <a name="inherited-methods"></a>Наследуемые методы  
@@ -50,7 +47,7 @@ ms.locfileid: "32847079"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Класс SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
   
   

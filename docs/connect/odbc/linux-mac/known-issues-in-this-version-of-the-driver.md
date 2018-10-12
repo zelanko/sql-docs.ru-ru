@@ -5,22 +5,19 @@ ms.date: 02/14/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - known issues
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4a07cb8f8c5c3043ee307b7b7653846cc2d4e6e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 25ebc4837eb37604a45e98112fa5fc24bdb3e69b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42785559"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743002"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>Известные проблемы в данной версии драйвера
 
@@ -30,7 +27,7 @@ ms.locfileid: "42785559"
 
 Дополнительные проблемы будут публиковаться в [блоге группы разработчиков драйвера Microsoft ODBC](http://blogs.msdn.com/b/sqlnativeclient/).  
 
-- В Windows, Linux и macOS символы из кодировки области личных символов (PUA) или символов, определяемых конечными пользователями (EUDC), могут преобразовываться по-разному. Преобразования, выполняемые на сервере в пределах [!INCLUDE[tsql](../../../includes/tsql-md.md)], используют библиотеку функций преобразования Windows. Преобразования в драйвере с помощью преобразования библиотек Windows, Linux или macOS. Каждая из библиотек может давать разные результаты при выполнении преобразований. Дополнительные сведения см. в статье [Символы, определяемые конечными пользователями, и символы области личных символов](/windows/desktop/Intl/end-user-defined-characters).
+- В Windows, Linux и macOS символы из кодировки области личных символов (PUA) или символов, определяемых конечными пользователями (EUDC), могут преобразовываться по-разному. Преобразования, выполняемые на сервере в пределах [!INCLUDE[tsql](../../../includes/tsql-md.md)], используют библиотеку функций преобразования Windows. Преобразования в драйвере с помощью преобразования библиотек Windows, Linux или macOS. Каждая из библиотек может давать разные результаты при выполнении преобразований. Дополнительные сведения см. в статье [End-User-Defined and Private Use Area Characters](/windows/desktop/Intl/end-user-defined-characters) (Символы, определяемые конечными пользователями, и символы области личных символов).
 
 - Если клиент кодировку UTF-8, диспетчер драйверов не преобразует всегда правильно из UTF-8 в UTF-16. В настоящее время повреждение данных происходит, когда один или несколько символов в строке не являются допустимыми символами UTF-8. Символы ASCII сопоставляются правильно. Диспетчер драйверов пытается выполнить такое преобразование при вызове SQLCHAR-версий интерфейса API ODBC (например, SQLDriverConnectA). Диспетчер драйверов не пытается выполнить такое преобразование при вызове SQLWCHAR-версий ODBC API (например, SQLDriverConnectW).  
 

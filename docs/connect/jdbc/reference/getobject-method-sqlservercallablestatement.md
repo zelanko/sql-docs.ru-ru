@@ -1,13 +1,11 @@
 ---
-title: Метод getObject (SQLServerCallableStatement) | Документы Microsoft
+title: Метод getObject (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getObject
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c5cc562f-2c5a-4fdb-a552-dfb08c2bf0ad
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57e42561a86dae246580542075c85648e4724c14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f5184b8711f5ddd91bdef37479df6b18e13626ab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836419"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729892"
 ---
 # <a name="getobject-method-sqlservercallablestatement"></a>Метод getObject (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,15 +30,15 @@ ms.locfileid: "32836419"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[функция getObject (int)](../../../connect/jdbc/reference/getobject-method-int.md)|Получает значение заданного параметра в виде объекта на языке программирования Java по заданному индексу параметра.|  
-|[функция getObject (int, java.util.Map)](../../../connect/jdbc/reference/getobject-method-int-java-util-map.md)|Получает значение указанного параметра в виде объекта на Java по заданному индексу параметра языка программирования с помощью заданного объекта карты.|  
-|[функция getObject (java.lang.String)](../../../connect/jdbc/reference/getobject-method-java-lang-string.md)|Получает значение заданного параметра в виде объекта на языке программирования Java по заданному имени параметра.|  
-|[функция getObject (java.lang.String, java.util.Map)](../../../connect/jdbc/reference/getobject-method-java-lang-string-java-util-map.md)|Получает значение указанного параметра в виде объекта в имени параметра, языке программирования Java с помощью заданного объекта карты.|  
+|[getObject (int)](../../../connect/jdbc/reference/getobject-method-int.md)|Получает значение заданного параметра в виде объекта на языке программирования Java по заданному индексу параметра.|  
+|[getObject (int, java.util.Map)](../../../connect/jdbc/reference/getobject-method-int-java-util-map.md)|Возвращает значение заданного параметра в виде объекта на языке программирования Java по индексу параметра, используя указанный объект Map.|  
+|[getObject (java.lang.String)](../../../connect/jdbc/reference/getobject-method-java-lang-string.md)|Получает значение заданного параметра в виде объекта на языке программирования Java по заданному имени параметра.|  
+|[getObject (java.lang.String, java.util.Map)](../../../connect/jdbc/reference/getobject-method-java-lang-string-java-util-map.md)|Извлекает значение указанного параметра в виде объекта на языке программирования Java по имени параметра, используя указанный объект Map.|  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

@@ -1,30 +1,27 @@
 ---
-title: Справочник по API для драйвера SQLSRV | Документы Microsoft
+title: Справочник по API для драйвера SQLSRV | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6722c709e016ab0a78b682a022575bbee9b89018
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b1b1b94952006e338b324e7ca1da1d3bcbf8c2a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309003"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756592"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>Справочник по API для драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-API для драйвера SQLSRV в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] имеет имя **sqlsrv**. Все **sqlsrv** функции начинаются с **sqlsrv_** после которого следует глагол или существительное. Функции с глаголом выполняют определенное действие, а функции с существительным возвращают определенные виды метаданных.  
+API для драйвера SQLSRV в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] имеет имя **sqlsrv**. Все функции **sqlsrv** начинаются с элемента **sqlsrv_**, после которого следует глагол или существительное. Функции с глаголом выполняют определенное действие, а функции с существительным возвращают определенные виды метаданных.  
   
 ## <a name="in-this-section"></a>в этом разделе  
 Драйвер SQLSRV содержит следующие функции:  
@@ -61,12 +58,12 @@ API для драйвера SQLSRV в [!INCLUDE[ssDriverPHP](../../includes/ssdr
 ## <a name="reference"></a>Справочник  
 [Руководство по PHP](http://php.net/manual)  
   
-## <a name="see-also"></a>См. также  
-[Общие сведения о драйверы Майкрософт для PHP для SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+## <a name="see-also"></a>См. также:  
+[Обзор драйверов Майкрософт для PHP для SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[Начало работы с драйверы Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Приступая к работе с драйверами Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
   

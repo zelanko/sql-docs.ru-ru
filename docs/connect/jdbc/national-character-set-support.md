@@ -1,30 +1,27 @@
 ---
-title: Поддержка национального набора символов | Документы Microsoft
+title: Поддержка национального набора символов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0dcdb844c017a708d607570263717f2eaa56a39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0767cdbd57a481ebe82993f3be4ae3e8e1738c31
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833669"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683202"
 ---
 # <a name="national-character-set-support"></a>Поддержка национального набора символов
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Драйвер JDBC реализует поддержку API JDBC 4.0, которая включает новые методы API преобразования национальных наборов символов. Эта поддержка включает в себя новые методы задания, считывания и обновления для **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, и **NCLOB** типов JDBC.  
+  Драйвер JDBC реализует поддержку API JDBC 4.0, которая включает новые методы API преобразования национальных наборов символов. Эта поддержка включает новые методы задания, считывания и обновления для **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, и **NCLOB** типы JDBC.  
   
  Далее приведен список новых методов считывания, задания и обновления для поддержки преобразования национальной кодировки.  
   
@@ -37,9 +34,9 @@ ms.locfileid: "32833669"
 > [!NOTE]  
 >  Для использования этих методов в приложении необходимо задать путь к классу, включающий файл sqljdbc4.jar.  
   
- Для отправки строковых параметров на сервер в Юникоде, приложения должны использовать новые методы национальных кодировок JDBC 4.0; или задайте **sendStringParametersAsUnicode** свойства соединения»**true**» при использовании методов ненациональных символов. Рекомендуется по возможности использовать новые методы национальных кодировок JDBC 4.0. Дополнительные сведения о **sendStringParametersAsUnicode** свойства соединения в разделе [задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
+ Для отправки строковых параметров на сервер в формате Юникода приложения должны использовать новые методы национальных кодировок JDBC 4.0 или установить свойство соединения **sendStringParametersAsUnicode** в значение **true** при использовании других методов. Рекомендуется по возможности использовать новые методы национальных кодировок JDBC 4.0. Дополнительные сведения о **sendStringParametersAsUnicode** свойство подключения, см. в разделе [заданию свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

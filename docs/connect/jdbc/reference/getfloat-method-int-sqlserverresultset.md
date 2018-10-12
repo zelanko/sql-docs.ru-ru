@@ -1,13 +1,11 @@
 ---
-title: Метод getFloat (int) (SQLServerResultSet) | Документы Microsoft
+title: Метод getFloat (int) (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getFloat (int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 30863ef5-7a7c-440e-8fbb-426a99266ee1
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08ab7c1d0431c6bb3af9ade14041982d1ada9fad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f50325b245a821b114e7f8d9ca3898f195eae7cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834999"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810662"
 ---
 # <a name="getfloat-method-int-sqlserverresultset"></a>Метод getFloat (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Получает значение индекса заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде **float** языке программирования Java.  
+  Извлекает значение индекса заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде значения **float** на языке программирования Java.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +38,7 @@ public float getFloat(int columnIndex)
 #### <a name="parameters"></a>Параметры  
  *columnIndex*  
   
- **Int** , указывающее индекс столбца.  
+ Значение типа **int**, указывающее индекс столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект **float** значение.  
@@ -49,12 +46,12 @@ public float getFloat(int columnIndex)
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод getFloat указывается с помощью метода getFloat в интерфейсе java.sql.ResultSet.  
   
- Этот метод возвращает все числовые типы с помощью Java **float** точность.  
+ Этот метод возвращает все числовые типы с точностью Java **float**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод getFloat &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

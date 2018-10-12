@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aec0aabb38edc0446728569648dde0a4f4bafedc
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: bcf632e4953232144b82ba9701c62eb1d226d127
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785384"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697422"
 ---
 # <a name="understanding-ssl-support"></a>Основные сведения о поддержке SSL
 
@@ -82,7 +79,7 @@ ms.locfileid: "42785384"
   
 - Общее имя (CN) в субъекте или DNS-имя в альтернативном имени субъекта (SAN) сертификата точно соответствует значению **serverName**, указанному в строке подключения, или значению свойства **hostNameInCertificate**, если оно задано.  
   
-- DNS-имя может содержать символы шаблонов. Однако [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не поддерживает сопоставление с подстановочными знаками. Это значит, что abc.com не будет соответствовать *.com, но \*.com будет соответствовать \*.com.  
+- DNS-имя может содержать символы шаблонов. Однако [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не поддерживает сопоставление с подстановочными знаками. Это значит, что abc.com не будет соответствовать \*.com, но \*.com будет соответствовать \*.com.  
   
 ## <a name="see-also"></a>См. также:
 

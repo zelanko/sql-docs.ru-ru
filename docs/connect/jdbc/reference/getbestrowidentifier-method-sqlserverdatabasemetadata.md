@@ -1,13 +1,11 @@
 ---
-title: Метод getBestRowIdentifier (SQLServerDatabaseMetaData) | Документы Microsoft
+title: Метод getBestRowIdentifier (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getBestRowIdentifier
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c36b69543f5253a4d62c1d4b149933febcf0b4b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 462de181aca55cce38d1e26f7932fe0003a0c323
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730328"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>Метод getBestRowIdentifier (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,19 +42,19 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 #### <a name="parameters"></a>Параметры  
  *catalog*  
   
- Объект **строка** , содержащее имя каталога.  
+ Значение типа **String**, содержащее имя каталога.  
   
  *schema*  
   
- Объект **строка** , содержащее имя схемы.  
+ Значение типа **String**, содержащее имя схемы.  
   
  *table*  
   
- Объект **строка** , содержащее имя таблицы.  
+ Значение типа **String**, содержащее имя таблицы.  
   
  *область*  
   
- **Int** указывает область действия. Возможны следующие значения:  
+ Значение **int**, указывающее область действия. Возможны следующие значения:  
   
  bestRowTemporary (0)  
   
@@ -65,34 +62,34 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  bestRowSession (2)  
   
- *Допускающие значения NULL*  
+ *nullable*  
   
- **значение true,** включаются столбцы, допускающие значение NULL. В противном случае — **false**.  
+ Значение **true**, если включаются столбцы, допускающие значение NULL. В противном случае — **false**.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+ Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод getBestRowIdentifier указывается с помощью метода getBestRowIdentifier в интерфейсе java.sql.DatabaseMetaData.  
   
- Метод getBestRowIdentifier возвращает результирующий набор будет содержать следующие сведения:  
+ Результирующий набор, возвращаемый методом getTablePrivileges, включает следующие данные.  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |SCOPE|short|Область возвращаемых результатов. Может иметь одно из следующих значений.<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
-|COLUMN_NAME|Строковые значения|Имя столбца.|  
+|COLUMN_NAME|String|Имя столбца.|  
 |DATA_TYPE|short|Тип данных SQL из java.sql.Types.|  
-|TYPE_NAME|Строковые значения|Имя типа данных.|  
-|COLUMN_SIZE|int|Точность столбца.|  
-|BUFFER_LENGTH|int|Длина буфера.|  
+|TYPE_NAME|String|Имя типа данных.|  
+|COLUMN_SIZE|ssNoversion|Точность столбца.|  
+|BUFFER_LENGTH|ssNoversion|Длина буфера.|  
 |DECIMAL_DIGITS|short|Масштаб столбца.|  
 |PSEUDO_COLUMN|short|Указывает, является ли столбец псевдостолбцом. Может иметь одно из следующих значений.<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример, как использовать метод getBestRowIdentifier для возврата сведений об оптимальном идентификаторе строк для таблицы Person.Contact в [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] образца базы данных.  
+ Следующий пример показывает использование метода getBestRowIdentifier для возврата сведений об оптимальном идентификаторе строки для таблицы Person.Contact в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetBestRowIdentifier(Connection con) {  
@@ -117,7 +114,7 @@ public static void executeGetBestRowIdentifier(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

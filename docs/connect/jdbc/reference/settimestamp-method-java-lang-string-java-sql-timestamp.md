@@ -1,13 +1,11 @@
 ---
-title: Метод setTimestamp значение отметки времени | Документы Microsoft
+title: Метод setTimestamp значение отметки времени | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setTimestamp (java.lang.String, java.sql.Timestamp)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: dc45b126-3196-47ff-956b-cbc897980ff8
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d17eae741a4f442df3987b1ceb7f4f20d3f4372d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 876b9a4392e675abd48931e4c398455c5e060188
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853399"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660472"
 ---
 # <a name="settimestamp-method-javalangstring-javasqltimestamp"></a>Метод setTimestamp (java.lang.String, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,21 +39,21 @@ public void setTimestamp(java.lang.String sCol,
 #### <a name="parameters"></a>Параметры  
  *sCol*  
   
- Объект **строка** , содержащее имя параметра.  
+ Значение типа **String**, содержащее имя параметра.  
   
  *t*  
   
- Объект отметки времени.  
+ Объект метки времени.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод setTimestamp указывается с помощью метода setTimestamp в интерфейсе java.sql.CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Этот метод setTimestamp определен с помощью метода setTimestamp в интерфейсе java.sql.CallableStatement.  
   
-## <a name="see-also"></a>См. также  
- [Метод setTimestamp &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод setTimestamp (SQLServerCallableStatement)](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

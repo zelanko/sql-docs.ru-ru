@@ -1,25 +1,22 @@
 ---
-title: Метод (java.lang.String, java.lang.String) setClientInfo | Документы Microsoft
+title: Метод setClientInfo (java.lang.String, java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8d050831-8305-48a8-bd22-207932111040
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 054a29d5f4bbc2916b2b06778222e1ee53d66c56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6ad28a2c578a4026d4152bb7056b00e8d3a05afd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843399"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667328"
 ---
 # <a name="setclientinfo-method-javalangstring-javalangstring"></a>Метод setClientInfo (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,22 +34,22 @@ public void setClientInfo (java.lang.String name,
 #### <a name="parameters"></a>Параметры  
  *name*  
   
- Строка, содержащая имя задаваемого свойства сведения клиента.  
+ Строка, содержащая имя свойства сведений о клиенте, которое необходимо задать.  
   
  *value*  
   
- Строка, содержащая значение, задаваемое для свойства сведений о клиенте.  
+ Строка, содержащая значение, которое необходимо задать свойству сведений о клиенте.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод setClientInfo указывается с помощью метода setClientInfo в интерфейсе java.sql.Connection.  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] Не поддерживает свойства сведений о клиенте. В драйвере JDBC 2.0 этот метод формирует предупреждение для свойства. Приложения должны использовать [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) метод [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) класс для извлечения предупреждения.  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] не поддерживает свойства сведений о клиенте. В драйвере JDBC 2.0 этот метод формирует предупреждение для свойства. Приложения должны использовать метод [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) класса [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) для извлечения предупреждения.  
   
-## <a name="see-also"></a>См. также  
- [Метод setClientInfo &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод setClientInfo (SQLServerConnection)](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)   
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Класс SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

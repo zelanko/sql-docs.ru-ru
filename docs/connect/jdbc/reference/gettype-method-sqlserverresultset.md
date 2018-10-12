@@ -1,13 +1,11 @@
 ---
-title: getType метод (SQLServerResultSet) | Документы Microsoft
+title: Метод getType (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getType
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ffbc4a02-e851-431c-bc1a-7ab381d982bb
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6582489996f67ea97b94165a88757d13bde31b67
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d9beb1e335faa29dc83e727e2366208172713909
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839917"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726802"
 ---
-# <a name="gettype-method-sqlserverresultset"></a>getType метод (SQLServerResultSet)
+# <a name="gettype-method-sqlserverresultset"></a>Метод getType (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Извлекает тип курсора этого [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+  Извлекает тип курсора этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,7 +36,7 @@ public int getType()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Int** указывает текущий тип курсора, который может быть одним из следующих значений:  
+ Значение **int**, которое указывает текущий тип курсора. Возможны следующие значения:  
   
  ResultSet.TYPE_FORWARD_ONLY  
   
@@ -50,12 +47,12 @@ public int getType()
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод getType указывается с помощью метода getType в интерфейсе java.sql.ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Этот метод getType указывается в методе getType в интерфейсе java.sql.ResultSet.  
   
  Этот метод позволяет определить фактический тип курсора. Если в приложении выбран тип TYPE_FORWARD_ONLY или используется тип курсора по умолчанию, то возвращается значение TYPE_FORWARD_ONLY.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

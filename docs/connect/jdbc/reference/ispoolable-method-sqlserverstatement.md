@@ -1,27 +1,24 @@
 ---
-title: isPoolable метод (SQLServerStatement) | Документы Microsoft
+title: Метод isPoolable (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b8a12ac5-57cb-4288-9973-c7d5cebd197c
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 593edaa8718e66afa7b748f2b07cfade4531be62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 015b20b1610bb8612ffd83030bac99c553349872
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839549"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762122"
 ---
-# <a name="ispoolable-method-sqlserverstatement"></a>isPoolable метод (SQLServerStatement)
+# <a name="ispoolable-method-sqlserverstatement"></a>Метод isPoolable (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Возвращает значение, показывающее, можно ли добавить инструкцию в предоставляемый пользователем пул инструкций.  
@@ -34,16 +31,16 @@ public boolean isPoolable() throws SQLException
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если инструкцию можно добавить в пул инструкции, предоставленные пользователем; **false** в противном случае.  
+ Значение **true**, если инструкцию можно добавить в предоставляемый пользователем пул инструкций. В противном случае значение — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- [setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md) изменяет объекта.  
+## <a name="remarks"></a>Remarks  
+ [setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md) изменяет объединенное поведение объекта.  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Класс SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

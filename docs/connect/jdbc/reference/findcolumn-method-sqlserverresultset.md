@@ -1,13 +1,11 @@
 ---
-title: Метод (SQLServerResultSet) findColumn | Документы Microsoft
+title: Метод findColumn (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.findColumn
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45462709c0a5201cbbf484dfe1caf8bd83394d83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a5ff2173990dabafab5297dd195e617825768aef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829219"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837732"
 ---
-# <a name="findcolumn-method-sqlserverresultset"></a>findColumn метод (SQLServerResultSet)
+# <a name="findcolumn-method-sqlserverresultset"></a>Метод findColumn (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Возвращает индекс первого соответствующего столбца имя заданного столбца в этом [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+  Возвращает индекс первого столбца, имя которого совпадает с заданным именем в этом объекте [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,20 +38,20 @@ public int findColumn(java.lang.String columnName)
 #### <a name="parameters"></a>Параметры  
  *columnName*  
   
- Объект **строка** , содержащее имя столбца.  
+ Значение **String**, содержащее имя столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Int** , указывающее индекс столбца.  
+ Значение типа **int**, указывающее индекс столбца.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод findColumn указывается с помощью метода findColumn в интерфейсе java.sql.ResultSet.  
   
- Если существует несколько столбцов с тем же именем, метод findColumn возвращает первое совпадение с учетом регистра. Если отсутствуют совпадения с учетом регистра, то этот метод возвращает первое совпадение без учета регистра.  
+ Если имеется несколько столбцов с одинаковым именем, то метод findColumn возвращает первое совпадение с учетом регистра. Если отсутствуют совпадения с учетом регистра, то этот метод возвращает первое совпадение без учета регистра.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

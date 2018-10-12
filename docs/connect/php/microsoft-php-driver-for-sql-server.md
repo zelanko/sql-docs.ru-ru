@@ -1,35 +1,32 @@
 ---
-title: Драйверы Майкрософт для PHP для SQL Server | Документы Microsoft
+title: Драйверы Майкрософт для PHP для SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b97944a4756600d62cc770e337c5477b1ee748e6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 3da1afcd34e530b96a9be091c3f5ffe3aa247f48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307983"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783182"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Драйверы Microsoft SQL Server для PHP
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Драйверы Майкрософт для PHP для SQL Server включить интеграцию с SQL Server для приложений PHP. Драйверы, расширения PHP, которые позволяют считывать и записывать данные SQL Server из скриптов PHP. Драйверы предоставляют интерфейсы для доступа к данным в базах данных SQL Azure и во всех выпусках SQL Server 2005 и более поздней версии (включая выпуски Express). Драйверы сделать функции PHP, включая потоки PHP для считывания и записи больших объектов.  
+Драйверы Майкрософт для PHP для SQL Server включить интеграцию с SQL Server для приложений PHP. Драйверы представляют собой расширения PHP, которые позволяют считывать и записывать данные SQL Server из скриптов PHP. Драйверы предоставляют интерфейсы для доступа к данным в базах данных SQL Azure, а также во всех выпусках SQL Server 2005 и более поздней версии (включая выпуски Express). Драйверы сделать функции PHP, включая потоки PHP для считывания и записи больших объектов.  
   
 ## <a name="getting-started"></a>Приступая к работе  
 * [Шаг 1. Настройка среды разработки для разработки на PHP](step-1-configure-development-environment-for-php-development.md)  
-* [Шаг 2: Создание базы данных для разработки PHP](step-2-create-a-sql-database-for-php-development.md)  
+* [Шаг 2. Создание базы данных SQL для разработки на PHP](step-2-create-a-sql-database-for-php-development.md)  
 * [Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [Шаг 4. Выполнение устойчивого подключения к SQL с помощью PHP](step-4-connect-resiliently-to-sql-with-php.md)  
   
@@ -40,15 +37,15 @@ ms.locfileid: "35307983"
 * [Вопросы безопасности](security-considerations-for-php-sql-driver.md)
   
 ## <a name="community"></a>Сообщество  
-* [Ресурсы поддержки драйверы Майкрософт для PHP для SQL Server](support-resources-for-the-php-sql-driver.md)
+* [Ресурсы поддержки по драйверам Майкрософт для PHP для SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>Загрузить  
-* ![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[выполнять загрузку драйверов для PHP для SQL](download-drivers-php-sql-server.md)
+* ![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[выполнять загрузку драйверов для PHP для SQL](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>Примеры  
 * [Примеры кода для драйверов Майкрософт для PHP для SQL Server](code-samples-for-php-sql-driver.md)
-* [Приступая к работе с PHP в Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
-* [Приступая к работе с PHP macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
-* [Приступая к работе с PHP в Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
+* [Приступая к работе с PHP на Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
+* [Начало работы с PHP на macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
+* [Приступая к работе с PHP на Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
 * [Приступая к работе с PHP в Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
-* [Приступая к работе с PHP в SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)
+* [Приступая к работе с PHP на SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)

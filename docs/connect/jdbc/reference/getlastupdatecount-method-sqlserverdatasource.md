@@ -1,13 +1,11 @@
 ---
-title: Метод getLastUpdateCount (SQLServerDataSource) | Документы Microsoft
+title: Метод getLastUpdateCount (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getLastUpdateCount
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4c4fbb24-0b02-42da-928c-a903bb591cc7
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2582e7764231ef3d12a07d2490643d5c71d07dbc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b3e15720ad49cd90af30235a7c7a7d92ca104c78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835659"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733332"
 ---
 # <a name="getlastupdatecount-method-sqlserverdatasource"></a>Метод getLastUpdateCount (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Возвращает **логическое** значение, указывающее, включено ли свойство lastUpdateCount.  
+  Возвращение значения **Boolean**, определяющее, включено ли свойство lastUpdateCount.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,12 +36,12 @@ public boolean getLastUpdateCount()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если включено свойство lastUpdateCount. В противном случае — **false**.  
+ Значение **true**, если включено свойство lastUpdateCount. В противном случае — **false**.  
   
-## <a name="remarks"></a>Замечания  
- Если свойство lastUpdateCount имеет значение **true**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] вернет только последний счетчик обновления из инструкции SQL, переданной серверу. Если свойство lastUpdateCount имеет значение **false**, драйвер вернет все счетчики обновлений, в том числе те, которые возвращены всеми сработавшими триггерами. Если свойство lastUpdateCount не задано, то метод getLastUpdateCount возвращает значение по умолчанию **true**.  
+## <a name="remarks"></a>Remarks  
+ Если для свойства lastUpdateCount задано значение **true**, то драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] вернет только последний счетчик обновления из инструкции SQL, переданной серверу. Если свойство lastUpdateCount имеет значение **false**, то драйвер вернет все счетчики обновлений, в том числе и те, которые возвращены всеми сработавшими триггерами. Если свойство lastUpdateCount не задано, то метод getLastUpdateCount возвращает значение по умолчанию **true**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Класс SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

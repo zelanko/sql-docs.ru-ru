@@ -1,48 +1,45 @@
 ---
-title: Драйвер Python для SQL Server | Документы Microsoft
+title: Драйвер Python для SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd2c3a6c3913cb712a441e400fc0a14b2688bb59
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 280667787916beade901c704c4679a14f689db6b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309573"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784802"
 ---
-# <a name="python-sql-driver"></a>Драйвер Python SQL
+# <a name="python-sql-driver"></a>Драйвер SQL Python
 
-![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[для установки драйвера SQL для Python](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[для установки драйвера SQL для Python](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Можно подключиться к базе данных SQL с помощью Python для Windows, Linux или Mac.   
+Можно подключиться к базе данных SQL с помощью Python в Windows, Linux или Mac.   
   
 ## <a name="getting-started"></a>Приступая к работе  
-Существует несколько драйверы SQL python. Тем не менее, корпорация Майкрософт размещает его работами по тестированию и его достоверность в **pyodbc** драйвера. Выберите драйвер и соответствующим образом настроить среду разработки:
-* [Драйвер Python SQL - pyodbc](pyodbc/python-sql-driver-pyodbc.md)
-* [Драйвер Python SQL - pymssql](pymssql/python-sql-driver-pymssql.md)
+Есть несколько драйверов SQL python. Однако Microsoft помещает его по тестированию и его достоверность в **pyodbc** драйвера. Выберите драйвер и соответствующим образом настроить среду разработки:
+* [Драйвер SQL Python — pyodbc](pyodbc/python-sql-driver-pyodbc.md)
+* [Драйвер SQL Python — pymssql](pymssql/python-sql-driver-pymssql.md)
   
 ## <a name="documentation"></a>Документация  
-* [Документация по Python на Python.org](https://www.python.org/doc/)  
+* [Python документации на сайте Python.org](https://www.python.org/doc/)  
   
 ## <a name="community"></a>Сообщество  
-* [Центр разработчиков Python в Azure](https://azure.microsoft.com/develop/python/)  
+* [Центр разработчиков для Python](https://azure.microsoft.com/develop/python/)  
 * [Python.org сообщества](https://www.python.org/community/)  
   
 ## <a name="more-samples"></a>Дополнительные примеры  
-* [Создать веб-приложение Python, с помощью DJango и базы данных SQL Azure веб-сайте](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
-* [Начало работы с Python для Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
-* [Начало работы с Python macOS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
-* [Начало работы с Python для Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)
-* [Начало работы с Python в Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/python/rhel/)
-* [Начало работы с Python в SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/python/sles/)
+* [Создание веб-приложения Python, с помощью DJango и базы данных SQL в веб-сайта Azure](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
+* [Приступая к работе с Python в Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
+* [Начало работы с Python в Mac OS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
+* [Приступая к работе с Python в Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)
+* [Приступая к работе с Python в Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/python/rhel/)
+* [Приступая к работе с Python на базе SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/python/sles/)
