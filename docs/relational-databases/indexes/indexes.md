@@ -5,24 +5,21 @@ ms.date: 12/21/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e30951b56cc0296b8028ab2c49463db9ef822a10
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e0211b346906daaa6d32e9dd3824d0f40dd2f008
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43060377"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770362"
 ---
 # <a name="indexes"></a>Индексы
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,14 +43,15 @@ ms.locfileid: "43060377"
 |Полнотекстовый|Специальный тип функционального индекса, основанный на токене, построенный и поддерживаемый средством полнотекстового поиска (Майкрософт) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он обеспечивает эффективную поддержку сложных операций поиска слов в символьных строковых данных.|[Заполнение полнотекстовых индексов](../../relational-databases/search/populate-full-text-indexes.md)|  
   
 ## <a name="related-content"></a>См. также  
- [Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md) [Параметр SORT_IN_TEMPDB для индексов](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)  
- [Отключение индексов и ограничений](../../relational-databases/indexes/disable-indexes-and-constraints.md)  
- [Включение индексов и ограничений](../../relational-databases/indexes/enable-indexes-and-constraints.md)  
- [Переименование индексов](../../relational-databases/indexes/rename-indexes.md)  
- [Установка параметров индекса](../../relational-databases/indexes/set-index-options.md)  
- [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
- [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
- [Указание коэффициента заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
- [Руководство по архитектуре страниц и экстентов](../../relational-databases/pages-and-extents-architecture-guide.md) [Описания кластеризованных и некластеризованных индексов](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
-  
+ [Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md)      
+ [Параметр SORT_IN_TEMPDB для индексов](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)     
+ [Отключение индексов и ограничений](../../relational-databases/indexes/disable-indexes-and-constraints.md)     
+ [Включение индексов и ограничений](../../relational-databases/indexes/enable-indexes-and-constraints.md)    
+ [Переименование индексов](../../relational-databases/indexes/rename-indexes.md)     
+ [Установка параметров индекса](../../relational-databases/indexes/set-index-options.md)     
+ [Требования к месту на диске для DDL-операций индекса](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)     
+ [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)     
+ [Указание коэффициента заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)     
+ [Руководство по архитектуре страниц и экстентов](../../relational-databases/pages-and-extents-architecture-guide.md)     
+ [Описание кластеризованных и некластеризованных индексов](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)     
   

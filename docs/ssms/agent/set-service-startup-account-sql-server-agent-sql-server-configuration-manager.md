@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, service accounts
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 041143d7b55876386e3384060e0da2b340646b76
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1acdb92933bfaaf73b68fa4101dd882d14f0dca1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42776284"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764432"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,9 +78,9 @@ ms.locfileid: "42776284"
   
 5.  В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на панели консоли выберите **Службы SQL Server**.  
   
-6.  В области сведений щелкните правой кнопкой *Агент SQL Server***(имя_сервера)*, где *имя_сервера* — это имя экземпляра агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого нужно изменить стартовую учетную запись службы, и выберите пункт **Свойства**.  
+6.  В области сведений щелкните правой кнопкой **Агент SQL Server**_(имя\_сервера)_, где *имя_сервера* — это имя экземпляра агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого нужно изменить стартовую учетную запись службы, и выберите пункт **Свойства**.  
   
-7.  В диалоговом окне **Свойства агента SQL Server***(имя_сервера)* **выберите** на вкладке **Вход в систему** один из следующих параметров в разделе **Использовать для входа**:  
+7.  В диалоговом окне **Свойства агента SQL Server**_(имя\_сервера)_ **выберите** на вкладке **Вход в систему** один из следующих параметров в разделе **Использовать для входа**:  
   
     -   **Встроенная учетная запись**. Выберите этот параметр, если заданиям требуются ресурсы только с локального сервера. Дополнительные сведения о выборе типа встроенной учетной записи Windows см. в разделе [Выбор учетной записи для службы агента SQL Server.](http://msdn.microsoft.com/library/ms191543.aspx)  
   

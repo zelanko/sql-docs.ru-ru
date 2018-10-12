@@ -1,25 +1,22 @@
 ---
-title: Класс SQLServerStatement | Документы Microsoft
+title: Класс SQLServerStatement | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14add0b451947092946129c9388366eb10186dce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7488efcb3392623e6f54cff440a16494c10e0a69
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846279"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705352"
 ---
 # <a name="sqlserverstatement-class"></a>Класс SQLServerStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +34,13 @@ ms.locfileid: "32846279"
 public class SQLServerStatement  
 ```  
   
-## <a name="remarks"></a>Замечания  
- Класс SQLServerStatement также предоставляет набор реализаций методов базового класса для подготовленных и вызываемых инструкций JDBC. Основной класс SQLServerStatement является выполнение инструкций SQL и дальнейшей передачей количества обновлений и результирующих наборов в приложение пользователя.  
+## <a name="remarks"></a>Remarks  
+ Класс SQLServerStatement также предоставляет набор реализаций методов базового класса для подготовленных и вызываемых инструкций JDBC. Основной задачей класса SQLServerStatement является выполнение инструкций SQL с дальнейшей передачей количества обновлений и результирующих наборов в приложение пользователя.  
   
  Этот класс поддерживает развертывание в класс SQLServerStatement, интерфейс ISQLServerStatement и интерфейсе java.sql.Statement. Дополнительные сведения см. в разделе [оболочки и интерфейсы](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
- [Справочник по API для драйвера JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+ [Справка по API драйвера JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

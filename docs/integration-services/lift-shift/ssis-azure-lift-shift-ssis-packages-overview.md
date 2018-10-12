@@ -1,26 +1,25 @@
 ---
 title: Развертывание и выполнение пакетов служб SSIS в Azure | Документы Майкрософт
 description: Узнайте, как перенести проекты, пакеты и рабочие нагрузки служб SQL Server Integration Services (SSIS) в облако Microsoft Azure.
-ms.date: 07/01/2018
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 95705c0ac220ce4e7c0752785cba46d36dd1d984
-ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
+ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39482665"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829681"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Перенос рабочих нагрузок SQL Server Integration Services в облако
-Проекты, пакеты и рабочие нагрузки служб SQL Server Integration Services (SSIS) теперь можно переносить в облако Azure. Для управления, развертывания и выполнения проектов и пакетов SSI и в каталоге SSI (SSISDB), размещенном в Базе данных SQL Azure или Управляемом экземпляре базы данных SQL (предварительная версия) вы можете использовать привычные вам инструменты, например SQL Server Management Studio (SSMS).
+Проекты, пакеты и рабочие нагрузки служб SQL Server Integration Services (SSIS) теперь можно переносить в облако Azure. Для управления, развертывания и выполнения проектов и пакетов SSI и в каталоге SSI (SSISDB), размещенном в службе "База данных SQL Azure" или Управляемом экземпляре базы данных SQL, вы можете использовать привычные вам инструменты, например SQL Server Management Studio (SSMS).
 
 ## <a name="benefits"></a>Преимущества
 Перенос локальных рабочих нагрузок служб SSIS в Azure имеет следующие потенциальные преимущества:
@@ -36,7 +35,7 @@ ms.locfileid: "39482665"
 | Местоположение | Память | Параметры выполнения | Масштабируемость |
 |---|---|---|---|
 | В локальной среде | SQL Server | Среда выполнения служб SSIS размещается в SQL Server | SSIS Scale Out (в SQL Server 2017 и более поздних версиях)<br/><br/>Пользовательские решения (в предыдущих версиях SQL Server) |
-| В Azure | База данных SQL или Управляемый экземпляр базы данных SQL (предварительная версия) | Azure-SSIS Integration Runtime, компонент фабрики данных Azure | Параметры масштабирования для Azure-SSIS Integration Runtime |
+| В Azure | Служба "База данных SQL" или Управляемый экземпляр базы данных SQL | Azure-SSIS Integration Runtime, компонент фабрики данных Azure | Параметры масштабирования для Azure-SSIS Integration Runtime |
 | | | | |
 
 ## <a name="provision-ssis-on-azure"></a>Подготовка служб SSIS к работе в Azure

@@ -1,36 +1,33 @@
 ---
-title: Элементы SQLServerSavepoint | Документы Microsoft
+title: Элементы SQLServerSavepoint | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d347f887ff171553f519a08753470c59c12ebde7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f2cd95f2747f60a1a4377ab799e29961f94eae5f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848799"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632762"
 ---
 # <a name="sqlserversavepoint-members"></a>Элементы SQLServerSavepoint
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  В следующих таблицах перечислены члены, предоставляемые [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) класса.  
+  В следующих таблицах перечислены доступные члены объекта [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md).  
   
 ## <a name="constructors"></a>Конструкторы  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[SQLServerSavepoint (SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|Инициализирует новый экземпляр [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) класс на основе данного соединения и имя.|  
+|[Конструктор SQLServerSavepoint (SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|Инициализирует новый экземпляр [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) на основе заданного соединения и имени.|  
   
 ## <a name="fields"></a>Поля  
  Нет.  
@@ -40,7 +37,7 @@ ms.locfileid: "32848799"
   
 ## <a name="methods"></a>Методы  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[getLabel](../../../connect/jdbc/reference/getlabel-method-sqlserversavepoint.md)|Возвращает имя метки точки сохранения.|  
 |[getSavepointId](../../../connect/jdbc/reference/getsavepointid-method-sqlserversavepoint.md)|Возвращает идентификатор точки сохранения.|  
@@ -53,7 +50,7 @@ ms.locfileid: "32848799"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Класс SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
   
   

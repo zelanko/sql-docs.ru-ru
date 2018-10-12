@@ -1,13 +1,11 @@
 ---
-title: Метод getWorkstationID (SQLServerDataSource) | Документы Microsoft
+title: Метод getWorkstationID (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getWorkstationID
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f6a701de-a8fa-4668-9310-99a8c6e32c88
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4466d3bfe0a088f4694eb01bef74e8ac34c4f8b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ece266f25a57c2a99e8acb0b308f7bd918189057
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838769"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673632"
 ---
 # <a name="getworkstationid-method-sqlserverdatasource"></a>Метод getWorkstationID (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +36,12 @@ public java.lang.String getWorkstationID()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект **строка** , содержащее имя клиентского компьютера.  
+ Значение **String**, содержащее имя клиентского компьютера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Идентификатор workstationID — это имя клиентского компьютера или рабочей станции. Если свойство workstationID не задано, значение по умолчанию создается путем вызова метода InetAddress.getLocalHost().getHostName(). Если getHostName возвращает пустое значение, вызывается метод getHostAddress().toString().  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Класс SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

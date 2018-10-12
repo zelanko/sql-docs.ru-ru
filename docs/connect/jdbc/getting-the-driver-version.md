@@ -1,36 +1,33 @@
 ---
-title: Получение версии драйвера | Документы Microsoft
+title: Получение версии драйвера | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 786b1db3787ff2945cae29980b8ab593032737f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7abc69edd0d49264a62ea0c3f65a60b58549d105
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827929"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774222"
 ---
 # <a name="getting-the-driver-version"></a>Получение версии драйвера
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Версию установленного драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] можно найти одним из следующих способов:  
+  Версию установленного драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] можно получить следующими способами:  
   
--   Вызовите [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) методы [getDriverMajorVersion](../../connect/jdbc/reference/getdrivermajorversion-method-sqlserverdatabasemetadata.md), [getDriverMinorVersion](../../connect/jdbc/reference/getdriverminorversion-method-sqlserverdatabasemetadata.md), или [getDriverVersion](../../connect/jdbc/reference/getdriverversion-method-sqlserverdatabasemetadata.md).  
+-   Вызовите методы [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) [getDriverMajorVersion](../../connect/jdbc/reference/getdrivermajorversion-method-sqlserverdatabasemetadata.md), [getDriverMinorVersion](../../connect/jdbc/reference/getdriverminorversion-method-sqlserverdatabasemetadata.md) или [getDriverVersion](../../connect/jdbc/reference/getdriverversion-method-sqlserverdatabasemetadata.md).  
   
 -   Версия указана в файле readme.txt, распространяемом вместе с продуктом.  
   
- Кроме того, имя драйвера JDBC могут быть возвращены из [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md) вызова метода в классе SQLServerDatabaseMetaData. Возвращается, например, «Microsoft JDBC Driver 6.4 для SQL Server».  
+ Кроме того, имя драйвера JDBC возвращается методом [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md) в классе SQLServerDatabaseMetaData. Он, например, возвращает строку "Microsoft JDBC Driver 6.4 for SQL Server".  
   
  Ниже приведен пример выходных данных из вызовов методов класса SQLServerDatabaseMetaData:  
   
@@ -44,7 +41,7 @@ ms.locfileid: "32827929"
   
  Здесь «xxx.x» представляет номер окончательной версии.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диагностика проблем с драйвером JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

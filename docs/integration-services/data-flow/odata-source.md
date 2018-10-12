@@ -1,13 +1,11 @@
 ---
 title: Источник OData | Документы Майкрософт
-ms.date: 03/01/2017
+ms.date: 09/17/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.DTS.DESIGNER.ODATASOURCE.F1
@@ -15,29 +13,40 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d00e25ec5c03101ea71d6d45063d2248a0c3404
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401436"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692132"
 ---
 # <a name="odata-source"></a>Источник OData
-Компонент источника OData используется в пакете служб SSIS для получения данных от служб OData. Этот компонент поддерживает протоколы OData версии 3 и 4.  
+Компонент источника OData используется в пакете служб SSIS для получения данных от служб OData.
+
+## <a name="supported-protocols-and-data-formats"></a>Поддерживаемые протоколы и форматы данных
+
+Этот компонент поддерживает протоколы OData версии 3 и 4.  
   
 -   Для протокола OData версии 3 компонент поддерживает форматы данных ATOM и JSON.  
   
 -   Для протокола OData версии 4 компонент поддерживает формат данных JSON.  
 
+## <a name="supported-data-sources"></a>Поддерживаемые источники данных
+
 Источник OData поддерживает следующие источники данных:
 -   Microsoft Dynamics AX Online и Microsoft Dynamics CRM Online.
 -   Списки SharePoint. Просмотреть все списки на сервере SharePoint можно по следующему URL-адресу: http://\<сервер>/_vti_bin/ListData.svc. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
 
-> [!NOTE]
+## <a name="supported-data-types"></a>Поддерживаемые типы данных
+
+Источник OData поддерживает следующие простые типы данных: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string и TimeSpan.
+
+Чтобы просмотреть типы данных столбцов в источнике данных, проверьте страницу `http://<OData feed endpoint>/$metadata`.
+
+> [!IMPORTANT]
 > Компонент источника OData не поддерживает сложные типы в списках SharePoint, такие как элементы множественного выбора.
 
 ## <a name="odata-format-and-performance"></a>Формат OData и производительность

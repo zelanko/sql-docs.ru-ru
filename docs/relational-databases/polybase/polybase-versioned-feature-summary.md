@@ -1,31 +1,32 @@
 ---
-title: Сводка по функциям разных версий PolyBase | Документация Майкрософт
+title: Возможности и ограничения PolyBase | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/29/2017
+ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc95156f93b6b87d317348f56e1b06f57439ada2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 766d1ec31dda38993a4d5a66a70d56a132c4667c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102112"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848282"
 ---
-# <a name="polybase-versioned-feature-summary"></a>Сводка функций PolyBase по версиям
+# <a name="polybase-features-and-limitations"></a>Возможности и ограничения PolyBase
+
 [!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
 Сводка функций PolyBase, доступных для продуктов и служб SQL Server.  
   
-## <a name="feature-summary-for-product-releases"></a>Сводка функций по выпускам  
- В приведенной ниже таблице перечислены основные функции PolyBase и продукты, в которых они доступны.  
+## <a name="feature-summary-for-product-releases"></a>Сводка функций по выпускам
+
+В приведенной ниже таблице перечислены основные функции PolyBase и продукты, в которых они доступны.  
   
 ||||||
 |-|-|-|-|-|   
@@ -41,8 +42,8 @@ ms.locfileid: "43102112"
 |Экспорт данных из хранилища Azure Data Lake Store|нет|нет|да|нет|
 |Выполнение запросов PolyBase из средств бизнес-аналитики Майкрософт|да|нет|да|да|   
 
-
 ## <a name="pushdown-computation-supported-t-sql-operators"></a>Передача операторов T-SQL, поддерживаемых вычислением
+
 В SQL Server и APS передачу в кластер Hadoop поддерживают лишь некоторые операторы. В следующей таблице перечислены все поддерживаемые операторы и приводится ряд неподдерживаемых операторов. 
 
 ||||
@@ -56,7 +57,38 @@ ms.locfileid: "43102112"
 |Сортировки|нет|нет|
 
 Частичная статистическая обработка означает, что окончательная статистическая обработка должна выполняться после достижения данными SQL Server, но часть статистической обработки происходит в Hadoop. Это общий метод вычисления статистических схем в системах с массивно-параллельной обработкой данных.  
+
+## <a name="known-limitations"></a>Известные ограничения
+
+PolyBase имеет следующие ограничения.
+
+- Максимальный размер строки, включая полную длину столбцов переменной длины, не может превышать 32 МБ в SQL Server или 1 МБ в хранилище данных Azure SQL.
+
+- PolyBase не поддерживает типы данных Hive 0.12+ (например, Char(), VarChar()).
+
+- При экспорте данных в формате файлов ORC из SQL Server или хранилища данных SQL Azure столбцы с большим объемом текста могут ограничиваться всего 50 столбцами из-за ошибок нехватки памяти в Java. Чтобы обойти эту проблему, экспортируйте подмножество столбцов.
+
+- Не удается прочесть или записать данные, зашифрованные в местах хранения в Hadoop. Сюда входят зашифрованные зоны HDFS или прозрачное шифрование.
+
+- PolyBase не может подключиться к экземпляру Hortonworks, если включена поддержка KNOX.
+
+- Если вы используете таблицы Hive с параметром transactional, равным true, PolyBase не имеет доступа к данным в каталоге таблицы Hive.
+
+<!--SQL Server 2016-->
+::: moniker range="= sql-server-2016 || =sqlallproducts-allversions"
+
+- [PolyBase не устанавливается при добавлении узла в отказоустойчивый кластер SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+
+::: moniker-end
+
+- TBD: ширина строки
+- TBD: сопоставление типов
+- TBD: аутентификация
+- TBD: параметры сортировки 
+- TBD: передача  
+
+## <a name="security-and-authentication"></a>Безопасность и аутентификация 
+
 ## <a name="see-also"></a>См. также:  
- [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md)  
-  
-  
+
+[Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md)  

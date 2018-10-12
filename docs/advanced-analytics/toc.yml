@@ -1,5 +1,7 @@
 items:
-- name: Службы машинного обучения SQL Server
+- name: Документация по программным расширениям и Службе машинного обучения SQL Server
+  href: index.md
+- name: Расширения Службы машинного обучения (R, Python)
   items:
   - name: Службы машинного обучения — (R, Python)
     href: what-is-sql-server-machine-learning.md
@@ -9,8 +11,20 @@ items:
     href: r/r-server-standalone.md
   - name: What's New
     href: what-s-new-in-sql-server-machine-learning-services.md
+- name: Расширение Java
+  items:
+  - name: Выполнение примера кода Java в SQL
+    href: java/extension-java.md
+  - name: Как вызвать Java из SQL
+    href: java/howto-call-java-from-sql.md
+  - name: Пример Java
+    href: java/java-first-sample.md
+  - name: Типы данных Java и SQL
+    href: java/java-sql-datatypes.md
 - name: Установить
   items:
+  - name: Различия в SQL Server 2019
+    href: install/sql-machine-learning-services-ver15.md
   - name: Службы машинного обучения — (R, Python)
     href: install/sql-machine-learning-services-windows-install.md
   - name: Службы R
@@ -24,7 +38,7 @@ items:
     items:
     - name: Загрузка файлов CAB (автономная установка)
       href: install/sql-ml-cab-downloads.md
-  - name: Установка из командной строки
+  - name: Настройка командной строки
     href: install/sql-ml-component-commandline-install.md
   - name: Обновление R и Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
@@ -54,6 +68,8 @@ items:
   - name: Чтение
     href: tutorials/sql-server-r-tutorials.md
     items:
+    - name: Создание моделей на основе секций
+      href: tutorials/r-tutorial-create-models-per-partition.md
     - name: Изучение аналитики в базе данных
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
@@ -156,35 +172,37 @@ items:
     href: concepts/extension-r.md
   - name: Расширение Python
     href: concepts/extension-python.md
-- name: Инструкции
+- name: Практические руководства
   href: r/sql-server-machine-learning-tasks.md
   items:
   - name: Управление пакетами
     items:
-    - name: Пакеты по умолчанию
-      href: r/installing-and-managing-r-packages.md
-    - name: Получение сведений о пакете
-      href: r/determine-which-packages-are-installed-on-sql-server.md
-    - name: Установка новых пакетов Python
-      href: python/install-additional-python-packages-on-sql-server.md
-    - name: Установка новых пакетов R
-      href: r/install-additional-r-packages-on-sql-server.md
+    - name: Управление пакетами
       items:
-      - name: Использование диспетчеров пакетов R
-        href: r/use-r-package-managers-on-sql-server.md
-      - name: Использование T-SQL
-        href: r/install-r-packages-tsql.md
-      - name: Использование RevoScaleR
-        href: r/use-revoscaler-to-manage-r-packages.md
+      - name: Пакеты по умолчанию
+        href: r/installing-and-managing-r-packages.md
+      - name: Получение сведений о пакете
+        href: r/determine-which-packages-are-installed-on-sql-server.md
+      - name: Установка новых пакетов Python
+        href: python/install-additional-python-packages-on-sql-server.md
+      - name: Установка новых пакетов R
+        href: r/install-additional-r-packages-on-sql-server.md
         items:
-        - name: Включение удаленного управления пакетами R
-          href: r/r-package-how-to-enable-or-disable.md
-        - name: Синхронизация пакетов R
-          href: r/package-install-uninstall-and-sync.md
-      - name: Создание репозитория miniCRAN
-        href: r/create-a-local-package-repository-using-minicran.md
-      - name: Советы по использованию пакетов R
-        href: r/packages-installed-in-user-libraries.md
+        - name: Использование диспетчеров пакетов R
+          href: r/use-r-package-managers-on-sql-server.md
+        - name: Использование T-SQL
+          href: r/install-r-packages-tsql.md
+        - name: Использование RevoScaleR
+          href: r/use-revoscaler-to-manage-r-packages.md
+          items:
+          - name: Включение удаленного управления пакетами R
+            href: r/r-package-how-to-enable-or-disable.md
+          - name: Синхронизация пакетов R
+            href: r/package-install-uninstall-and-sync.md
+        - name: Создание репозитория miniCRAN
+          href: r/create-a-local-package-repository-using-minicran.md
+        - name: Советы по использованию пакетов R
+          href: r/packages-installed-in-user-libraries.md
   - name: Изучение данных и моделирование
     items:
     - name: Библиотеки и типы данных R
@@ -195,7 +213,7 @@ items:
       href: r/data-exploration-and-predictive-modeling-with-r.md
     - name: Загрузка объектов R с помощью ODBC
       href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
-    - name: Преобразование кода на языке R для использования в службах машинного обучения
+    - name: Преобразование кода на языке R для использования в Службах машинного обучения
       href: r/converting-r-code-for-use-in-sql-server.md
     - name: Создание нескольких моделей с помощью rxExecBy
       href: r/creating-multiple-models-using-rxexecby.md
@@ -213,25 +231,25 @@ items:
       href: sql-native-scoring.md
   - name: Производительность
     items:
-    - name: Настройка производительности для R — обзор
+    - name: Общие сведения о настройке производительности для R
       href: r/sql-server-r-services-performance-tuning.md
-    - name: Настройка производительности для R — конфигурация SQL Server
+    - name: Настройка производительности — конфигурация сервера
       href: r/sql-server-configuration-r-services.md
-    - name: Настройка производительности для R — R и оптимизация данных
+    - name: Настройка производительности — оптимизация данных для R
       href: r/r-and-data-optimization-r-services.md
-    - name: Настройка производительности для R — результаты
+    - name: Настройка производительности результатов для R
       href: r/performance-case-study-r-services.md
     - name: Использование функций профилирования кода R
       href: r/using-r-code-profiling-functions.md
   - name: безопасность
     items:
-    - name: Вопросы безопасности для среды выполнения R в SQL Server
+    - name: Вопросы безопасности
       href: r/security-considerations-for-the-r-runtime-in-sql-server.md
     - name: Безопасность R
       href: r/security-overview-sql-server-r.md
-    - name: Безопасность Python
+    - name: Безопасность для Python
       href: python/security-overview-sql-server-python-services.md
-    - name: Учетная запись службы панели запуска SQL Server
+    - name: Учетная запись панели запуска SQL Server
       href: general/sql-server-launchpad-service-account.md
     - name: Изменение SQLRUserGroup
       href: r/modify-the-user-account-pool-for-sql-server-r-services.md
@@ -257,25 +275,32 @@ items:
       href: xe-event-predict-tsql.md
     - name: Представления DMV для служб машинного обучения
       href: r/dmvs-for-sql-server-r-services.md
+    - name: Динамические административные представления для Python
+      href: python/dmvs-for-python.md
     - name: Использование функций профилирования кода R
       href: r/using-r-code-profiling-functions.md
     - name: Мониторинг служб машинного обучения с помощью настраиваемых отчетов в Management Studio
       href: r/monitor-r-services-using-custom-reports-in-management-studio.md
-- name: Справочник по пакетам
+- name: Справочник
   href: r/machine-learning-services-r-reference.md
   items:
-  - name: MicrosoftML в SQL
-    href: using-the-microsoftml-package.md
-  - name: RevoScaleR в SQL
-    href: r/revoscaler-overview.md
-  - name: Список функций RevoScaleR для данных SQL Server
-    href: r/scaler-functions-for-working-with-sql-server-data.md
-  - name: Пакет sqlrutils в SQL
-    href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
-  - name: Пакет olapR в SQL
-    href: r/how-to-create-mdx-queries-using-olapr.md
-  - name: Пакет revoscalepy в SQL
-    href: python/what-is-revoscalepy.md
+  - name: Пакеты R
+    href: r/machine-learning-services-r-reference.md
+    items:
+    - name: Пакет olapR в SQL
+      href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: MicrosoftML в SQL
+      href: using-the-microsoftml-package.md
+    - name: RevoScaleR в SQL
+      href: r/revoscaler-overview.md
+    - name: Список функций RevoScaleR для данных SQL Server
+      href: r/scaler-functions-for-working-with-sql-server-data.md
+    - name: Пакет sqlrutils в SQL
+      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+  - name: Пакеты Python
+    items:
+    - name: Пакет revoscalepy в SQL
+      href: python/what-is-revoscalepy.md
 - name: Ресурсы
   items:
   - name: Известные проблемы
@@ -307,9 +332,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 586fef64334a24e58825de6f3dd9e3073541dd7c
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: a260cd92015fbbf8864f24ee1091fff86e892a00
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888870"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713706"

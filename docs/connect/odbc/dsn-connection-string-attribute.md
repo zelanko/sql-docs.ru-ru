@@ -5,19 +5,17 @@ ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.openlocfilehash: 8924fa356b10264bb3116bd1eb40e8fdc94d7334
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: 034efe241bb948c1e5739247e481a4057b0d7219
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020698"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838182"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Ключевые слова и атрибуты строки подключения и имени DSN
 
@@ -178,7 +176,7 @@ ms.locfileid: "40020698"
 
 | Значение ключевого слова | Значение атрибута| Описание |
 |-|-|-|
-|Да|SQL_IS_ON|(По умолчанию) Обеспечивает разрешение IP-адресов прозрачной сети.|
+|Да|SQL_IS_ON|(По умолчанию). Включает разрешения IP-адресов прозрачной сети.|
 |нет|SQL_IS_OFF|Отключает разрешения IP-адресов прозрачной сети.|
 
 ### <a name="usefmtonly"></a>UseFMTONLY

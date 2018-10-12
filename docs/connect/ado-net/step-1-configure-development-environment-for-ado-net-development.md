@@ -1,45 +1,42 @@
 ---
-title: 'Шаг 1: Настройка среды разработки для разработки приложений ADO.NET | Документы Microsoft'
+title: Шаг 1. Настройка среды разработки для разработки в ADO.NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a7163a7cd0062313d1e0dbdf23cd96c7b61d5f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: f4c78d9001a802b60963f9c02ad03b84b431a025
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288903"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617002"
 ---
-# <a name="step-1-configure-development-environment-for-adonet-development"></a>Шаг 1: Настройка среда разработки для ADO.NET
+# <a name="step-1-configure-development-environment-for-adonet-development"></a>Шаг 1. Настройка среды разработки для разработки в ADO.NET
 
-- Далее статьи:&nbsp;&nbsp;&nbsp;[шаг 2: Создание базы данных SQL для разработки приложений ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
+- Следующая статья. &nbsp;&nbsp;&nbsp;[Шаг 2. Создание базы данных SQL для разработки в ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
 
-## <a name="download-a-net-sql-driver"></a>Загрузка драйвера .NET SQL
+## <a name="download-a-net-sql-driver"></a>Скачать драйвер .NET SQL
 
-Нашей текущей примере кода ADO.NET платформы .NET Framework для Windows. .NET Core для Linux и MacOS (в дополнение к Windows).
+Примере кода используется ADO.NET платформы .NET Framework для Windows. .NET Core для Linux и MacOS (в дополнение к Windows).
 
-### <a name="adonet-for-windows"></a>ADO.NET для Windows
+### <a name="adonet-for-windows"></a>ADO.NET, для Windows
 
-1. ![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[Загрузка и установка .NET Framework, включая ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+1. ![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[загрузить и установить .NET Framework, включая ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-2. Установка Visual Studio Community или аналогичный интегрированной среды разработки (IDE) для записи и компиляция исходного кода C#. Корпорация Майкрософт предоставляет теперь Visual Studio Community для *свободного*.  
-    - [Загрузить Visual Studio Community](http://www.visualstudio.com/products/visual-studio-community-vs)  
-    - [Дополнительные параметры для освобождения Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+2. Установка Visual Studio Community или аналогичное интегрированной среды разработки (IDE) для написания и компиляция исходного кода C#. Корпорация Microsoft предлагает Visual Studio Community для *бесплатный*.  
+    - [Скачать Visual Studio Community](http://www.visualstudio.com/products/visual-studio-community-vs)  
+    - [Дополнительные варианты бесплатного использования Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
 ### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET core для Linux Ubuntu и MacOS
 
-Ссылки для загрузки .NET Core для различных операционных систем, можно просмотреть в:
+Ссылки для скачивания .NET Core, для различных операционных систем, можно просмотреть в:
 
-- ![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[для загрузки и установки .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[загрузить и установить .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

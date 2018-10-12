@@ -1,36 +1,36 @@
 ---
 title: Сбор данных в элементе управления ReportViewer 2016 | Документы Майкрософт
-ms.date: 09/06/2016
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
 ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 782888c9946fd09d9c711a6eda2a8f77fd18c3ba
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 68e5a4c9789a6c0485433a3199d8d6a03c2a90d5
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267409"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864342"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>Интеграция служб Reporting Services с помощью элементов управления ReportViewer — сбор данных
-По умолчанию элемент управления ReportViewer собирает анонимные сведения об использовании, на основании которых корпорация Майкрософт может лучше понять, каким образом клиенты используют элемент управления. Нужные сведения о развертывании и использовании элемента управления просмотра помогут сконцентрироваться на внесении улучшений для повышения эффективности работы пользователей.
 
-Описание методик сбора и использования данных в выпусках Microsoft SQL Server 2016, а также в других продуктах и службах см. в [заявлении о конфиденциальности]((http://go.microsoft.com/fwlink/?LinkID=868444)).
+Элемент управления собирает анонимные данные, которые позволяют лучше понять, как клиенты используют продукт. Данные об использовании позволяют улучшать продукт в будущем.
 
-## <a name="opting-out-of-telemetry"></a>Отказ от телеметрии
+Описание методик сбора и использования данных Microsoft SQL Server и средства просмотра отчетов приведено в [заявлении о конфиденциальности](http://go.microsoft.com/fwlink/?LinkID=868444).
 
-Телеметрию можно отключить программным способом с помощью "EnableTelemetry". Это можно сделать, изменив страницу ASPX, где находится элемент управления.
+## <a name="opting-out-of-data-collection"></a>Отказ от сбора данных
+
+Сбор данных об использовании можно отключить с помощью свойства ```EnableTelemetry```.
 
 ```
-\<rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
-\</rsweb:ReportViewer>
+<rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
+</rsweb:ReportViewer>
 ```
 
-Или можно воспользоваться программным способом до отрисовки элемента управления, например при вызове Page_Load страницы размещения.
+Кроме того, это можно сделать программным способом перед настройкой элемента управления.
     
 ```
 protected void Page_Load(object sender, EventArgs e)
@@ -40,8 +40,8 @@ protected void Page_Load(object sender, EventArgs e)
 ```
 ## <a name="see-also"></a>См. также раздел
 
-[Использование элемента управления WebForms ReportViewer](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
-[Интеграция служб Reporting Services с помощью элементов управления ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
+[Using the WebForms ReportViewer Control](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md) (Использование элемента управления средства просмотра отчетов WebForms)  
+[Интеграция служб Reporting Services с помощью элементов управления средства просмотра отчетов](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
 
 
 

@@ -5,30 +5,27 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlcmd
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
-caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c330fd329f28fa7d89b62b9af6bb8d4bb67c2bc4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 424d15af41db2980b62c8ab8af6311889c67fb78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015808"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672578"
 ---
 # <a name="connecting-with-sqlcmd"></a>Соединение с помощью sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Служебная программа [sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) доступна в [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] на Linux и macOS.
+Служебная программа [sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) доступна в [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на Linux и macOS.
   
-Следующие команды демонстрируют использование проверки подлинности Windows (Kerberos) и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] проверки подлинности, соответственно:
+Следующие команды демонстрируют использование проверки подлинности Windows (Kerberos) и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверки подлинности, соответственно:
   
 ```  
 sqlcmd –E –Sxxx.xxx.xxx.xxx  
@@ -67,18 +64,18 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -k — удалить или заменить символы управления.  
   
-- **-K *** application_intent*  
+- **-K**_приложения\_намерение_  
 Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным поддерживаемым в данное время значением является **ReadOnly**. Если параметр **-K** не указан, `sqlcmd` не поддерживает подключение ко вторичной реплике в группе доступности AlwaysOn. Дополнительные сведения см. в разделе [драйвер ODBC для Linux и macOS — высокий уровень доступности и аварийного восстановления](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > Параметр **-K** не поддерживается в CTP-версии для SUSE Linux. Однако вы можете указать ключевое слово **ApplicationIntent=ReadOnly** в файле DSN, передаваемом в `sqlcmd`. Дополнительные сведения см. в разделе "Поддержка имени DSN в `sqlcmd` и `bcp`" в конце этой статьи.  
   
-- -l *время ожидания* укажите количество секунд до `sqlcmd` время ожидания входа, при попытке подключиться к серверу.
+- Параметр -l *timeout* задает время ожидания (в секундах) для входа в `sqlcmd` при попытке соединения с сервером.
 
 - -m *уровень_ошибки* — выбрать сообщения об ошибках, отправляемые на stdout.  
   
-- **-M *** multisubnet_failover*  
-Всегда указывайте параметр **-M** при соединении с прослушивателем группы доступности [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] или экземпляром отказоустойчивого кластера [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **-M** позволяет ускорить обнаружение обработок отказа и подключение к активному (в данный момент) серверу. Если параметр **-M** не указан, значит **-M** отключен. Дополнительные сведения о [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], см. в разделе [драйвер ODBC для Linux и macOS — высокий уровень доступности и аварийного восстановления](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+- **-M**_нескольким подсетям\_отработки отказа_  
+Всегда указывайте параметр **-M** при соединении с прослушивателем группы доступности [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] или экземпляром отказоустойчивого кластера [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** позволяет ускорить обнаружение обработок отказа и подключение к активному (в данный момент) серверу. Если параметр **-M** не указан, значит **-M** отключен. Дополнительные сведения о [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], см. в разделе [драйвер ODBC для Linux и macOS — высокий уровень доступности и аварийного восстановления](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > Параметр **-M** не поддерживается в CTP-версии для SUSE Linux. Однако вы можете указать ключевое слово **MultiSubnetFailover=Yes** в файле DSN, передаваемом в `sqlcmd`. Дополнительные сведения см. в разделе "Поддержка имени DSN в `sqlcmd` и `bcp`" в конце этой статьи.  
@@ -101,8 +98,8 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -s *column_separator_char* укажите знак-разделитель столбцов.  
 
-- -S [*протокол*:] *server*[**,***порт*]  
-Укажите экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] подключения, либо если -D используется, имя источника данных. Драйвер ODBC для Linux и macOS требует -S. Обратите внимание, что **tcp** является единственным допустимым протоколом.  
+- -S [*протокол*:] *сервер*[**,**_порт_]  
+Укажите экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] подключения, либо если -D используется, имя источника данных. Драйвер ODBC для Linux и macOS требует -S. Обратите внимание, что **tcp** является единственным допустимым протоколом.  
   
 - -t *время_ожидания_запроса* — указать время ожидания команды (или инструкции SQL) в секундах.  
   
@@ -162,7 +159,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 ## <a name="unavailable-options"></a>Недоступные параметры
 В текущем выпуске следующие параметры недоступны:  
 
-- -A — войти в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] с выделенным административным соединением. Сведения об использовании выделенного административного соединения см. в разделе [Указания по программированию](../../../connect/odbc/linux-mac/programming-guidelines.md).  
+- -A — войти в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с выделенным административным соединением. Сведения об использовании выделенного административного соединения см. в разделе [Указания по программированию](../../../connect/odbc/linux-mac/programming-guidelines.md).  
   
 - -f *кодовая_страница* — задать кодовые страницы ввода и вывода.  
   
@@ -213,13 +210,13 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Базы данных = *** имя_базы_данных*  
+-   **Базы данных =**_базы данных\_имя_  
   
 -   **Драйвер = ODBC Driver 11 для SQL Server** или **драйвер = драйвер ODBC 13 для SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server = *** server_name_or_IP_address*  
+-   **Server =**_server\_имя\_или\_IP-адрес\_адрес_  
   
 -   **Trusted_Connection=yes**|**no**  
   

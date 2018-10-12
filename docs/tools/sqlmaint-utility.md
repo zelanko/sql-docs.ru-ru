@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlmaint
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 12be5a2f822fb2b49100103032e7268f9f35b1cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997146"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625192"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint, программа
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,8 +82,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Указывает, что должна быть возвращена диаграмма синтаксиса **sqlmaint** . При использовании этого параметра использование других параметров не допускается.  
   
- **-S** *имя_сервера*[ **\\***имя_экземпляра*]  
- Указывает целевой экземпляр [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Укажите значение *server_name* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] по умолчанию на этом сервере. Укажите *имя_сервера***\\***имя_экземпляра*, чтобы подключиться к именованному экземпляру компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] на этом сервере. Если сервер не указан, **sqlmaint** подключается к экземпляру [!INCLUDE[ssDE](../includes/ssde-md.md)] по умолчанию на локальном компьютере.  
+ **-S** *имя_сервера*[ **\\**_имя\_экземпляра_]  
+ Указывает целевой экземпляр [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Укажите значение _имя\_сервера_, чтобы по умолчанию подключиться к экземпляру [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] на этом сервере. Укажите _имя\_сервера_**\\**_имя\_экземпляра_, чтобы подключиться к именованному экземпляру [!INCLUDE[ssDE](../includes/ssde-md.md)] на этом сервере. Если сервер не указан, **sqlmaint** подключается к экземпляру [!INCLUDE[ssDE](../includes/ssde-md.md)] по умолчанию на локальном компьютере.  
   
  **-U** *login_id*  
  Указывает используемый идентификатор входа при соединении с сервером. Если этот параметр не указан, **sqlmaint** пытается использовать проверку подлинности [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Если аргумент *login_ID* содержит специальные символы, он должен быть заключен в двойные кавычки ("). В противном случае использование двойных кавычек необязательно.  

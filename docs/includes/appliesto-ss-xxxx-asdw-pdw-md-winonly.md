@@ -1,0 +1,1 @@
+<Token>**ОБЛАСТЬ ПРИМЕНЕНИЯ:** ![да](media/yes.png)SQL Server (только Windows) ![нет](media/no.png)База данных SQL Azure![да](media/yes.png)Хранилище данных SQL Azure![да](media/yes.png)Parallel Data Warehouse</Token>

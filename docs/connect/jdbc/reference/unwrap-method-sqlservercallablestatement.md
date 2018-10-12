@@ -1,30 +1,27 @@
 ---
-title: Метод unwrap (SQLServerCallableStatement) | Документы Microsoft
+title: Метод unwrap (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85f1e7364f5037817b4b49b31c387d3be83f7c43
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 40a1072776d2f926d353012656c921f217528d92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850889"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666792"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>Метод unwrap (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Возвращает объект, реализующий указанный интерфейс для доступа к [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-определенных методов.  
+  Возвращает объект, реализующий указанный интерфейс для доступа к методам, относящимся к драйверу [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +33,7 @@ public <T> T unwrap(Class<T> iface)
 #### <a name="parameters"></a>Параметры  
  *iface*  
   
- Класс типа **T** определение интерфейса.  
+ Класс типа **T**, определяющий интерфейс.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект, реализующий указанный интерфейс.  
@@ -44,16 +41,16 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- [Unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) метод определен интерфейсом java.sql.Wrapper, который появился в спецификации JDBC 4.0.  
+## <a name="remarks"></a>Remarks  
+ Метод [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) определен интерфейсом java.sql.Wrapper, который появился в спецификации JDBC 4.0.  
   
- Приложению может потребоваться доступа к расширениям API-интерфейса JDBC, относящиеся к [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Метод unwrap поддерживает развертывание в открытые классы, предоставляемые этим объектом, если эти классы реализуют расширения поставщиков.  
+ Приложению может потребоваться доступ к расширениям интерфейса API JDBC, предоставляемым драйвером [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Метод unwrap поддерживает развертывание в открытые классы, предоставляемые этим объектом, если эти классы реализуют расширения поставщиков.  
   
- [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) реализует [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), который является расширенным [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). При вызове этого метода объект развертывается в следующие классы: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), и [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
+ [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) реализует интерфейс [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), расширяющий интерфейс [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). При вызове этого метода объект развертывается в следующие объекты: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
  Дополнительные сведения см. в разделе [оболочки и интерфейсы](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
- В следующем примере кода показано, как использовать isWrapperFor и unwrap методы для проверки расширений драйвера и вызова методов поставщика, таких как [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) и [ getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md).  
+ В следующем примере кода показано, как использовать методы isWrapperFor и unwrap для проверки расширений драйвера и вызова методов, предоставленных поставщиками, например [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) и [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md).  
   
 ```  
 public static void executeStoredProcedure(Connection con) {  
@@ -109,9 +106,9 @@ public static void executeStoredProcedure(Connection con) {
 }   
 ```  
   
-## <a name="see-also"></a>См. также  
- [Метод isWrapperFor &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)   
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод isWrapperFor (SQLServerCallableStatement)](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)   
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

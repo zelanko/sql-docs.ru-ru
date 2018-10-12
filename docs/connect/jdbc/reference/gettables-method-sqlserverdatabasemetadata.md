@@ -1,13 +1,11 @@
 ---
-title: Метод getTables (SQLServerDatabaseMetaData) | Документы Microsoft
+title: Метод getTables (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getTables
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64b6559137dca42bf2602b19aaa92c754dc255be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: caabbe281791120a4f3b162029cb86dd340ffc28
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840809"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730472"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>Метод getTables (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,38 +41,38 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 #### <a name="parameters"></a>Параметры  
  *catalog*  
   
- Объект **строка** , содержащее имя каталога. Задание значения NULL для этого параметра указывает на то, что имя каталога использовать не нужно.  
+ Значение типа **String**, содержащее имя каталога. Задание значения NULL для этого параметра указывает на то, что имя каталога использовать не нужно.  
   
  *schema*  
   
- Объект **строка** , содержащее шаблон имени схемы. Задание значения NULL для этого параметра указывает на то, что имя схемы использовать не нужно.  
+ Значение типа **String**, содержащее шаблон имени схемы. Задание значения NULL для этого параметра указывает на то, что имя схемы использовать не нужно.  
   
- *имя_таблицы*  
+ *tableName*  
   
- Объект **строка** , содержащее шаблон имени таблицы.  
+ Значение типа **String**, содержащее шаблон имени таблицы.  
   
- *Типы*  
+ *types*  
   
  Массив строковых значений, содержащий включаемые типы таблиц. Значение NULL показывает, что нужно включать все типы таблиц.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+ Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод getTables задается методом gettables в интерфейсе java.sql.DatabaseMetaData.  
+## <a name="remarks"></a>Remarks  
+ Этот метод getTables определен с помощью метода getTables в интерфейсе java.sql.DatabaseMetaData.  
   
- Результирующий набор, возвращаемый методом gettables будет содержать следующие сведения:  
+ Результирующий набор, возвращаемый методом getTables, включает следующие данные:  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Имя базы данных, в которой расположена указанная таблица.|  
 |TABLE_SCHEM|**String**|Имя схемы для таблицы.|  
 |TABLE_NAME|**String**|Имя таблицы.|  
 |TABLE_TYPE|**String**|Табличный тип.|  
-|REMARKS|**String**|Описание таблицы.<br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] не возвращает значения для этого столбца.  |  
+|REMARKS|**String**|Описание таблицы.<br /><br /> **Примечание**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
 |TYPE_CAT|**String**|Не поддерживается драйвером JDBC.|  
 |TYPE_SCHEM|**String**|Не поддерживается драйвером JDBC.|  
 |TYPE_NAME|**String**|Не поддерживается драйвером JDBC.|  
@@ -83,10 +80,10 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |REF_GENERATION|**String**|Не поддерживается драйвером JDBC.|  
   
 > [!NOTE]  
->  Дополнительные сведения о данных, возвращаемых методом gettables см. в разделе «sp_tables (Transact-SQL)» в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] электронной документации.  
+>  Дополнительные сведения о данных, возвращаемых методом getTables, см. в разделе "sp_tables (Transact-SQL)" электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример, как использовать метод getTables для возврата сведений о описание таблицы для таблицы Person.Contact в [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] образца базы данных.  
+ Следующий пример показывает использование метода getTables для возврата описания таблицы Person.Contact в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetTables(Connection con) {  
@@ -111,7 +108,7 @@ public static void executeGetTables(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

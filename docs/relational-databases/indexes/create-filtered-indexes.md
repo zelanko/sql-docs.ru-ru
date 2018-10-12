@@ -5,9 +5,7 @@ ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtered indexes [SQL Server], about filtered indexes
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], filtered
 - indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36ce8bf525cb02a2ddee85e02fba8947bc6d1e95
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d5dadd6da3f1f39060f8ec0f96e1034f42670300
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065471"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603252"
 ---
 # <a name="create-filtered-indexes"></a>Создание отфильтрованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +70,9 @@ ms.locfileid: "43065471"
   
 ###  <a name="Restrictions"></a> Ограничения  
   
--   Невозможно создать отфильтрованный индекс для представления. Однако оптимизатор запросов может извлечь выгоду из отфильтрованного индекса, определенного в таблице, на которую имеется ссылка в представлении. Оптимизатор запросов рассматривает отфильтрованный индекс для запроса, выбирающего данные из представления, если результат запроса будет корректен.  
+-   Невозможно создать отфильтрованный индекс для представления. Однако оптимизатор запросов может извлечь выгоду из отфильтрованного индекса, определенного в таблице, на которую имеется ссылка в представлении. Оптимизатор запросов рассматривает отфильтрованный индекс для запроса, выбирающего данные из представления, если результат запроса будет корректен.
+
+-   В таблице нельзя создать фильтруемый индекс, если столбец в критерии фильтра имеет тип данных CLR.
   
 -   Отфильтрованные индексы имеют следующие преимущества по сравнению с индексированными представлениями.  
   
@@ -120,7 +119,7 @@ ms.locfileid: "43065471"
   
 6.  В разделе **Ключевые столбцы индекса**щелкните **Добавить…**  
   
-7.  В диалоговом окне **Выбор столбцов из***имя_таблицы* установите флажки для столбцов таблицы, добавляемых к уникальному индексу.  
+7.  В диалоговом окне **Выбор столбцов из**_имя\_таблицы_ установите флажки для столбцов таблицы, добавляемых к уникальному индексу.  
   
 8.  Нажмите кнопку **ОК**.  
   

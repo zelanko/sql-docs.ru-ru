@@ -1,13 +1,11 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/142018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - ALTER_DATABASE_SCOPED_CONFIGURATION
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1e4dab492102f4505c22dd5b415a590372855294
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 92b43f2ac4f8accd68266c5535578ff6e39f5978
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40409421"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741232"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -187,7 +184,7 @@ WHEN_SUPPORTED
  
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+***Область применения**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] в общедоступной предварительной версии.
 
 Позволяет выбирать параметры, предписывающие ядру автоматически переводить поддерживаемые операции в возобновляемый режим. Значение по умолчанию — OFF. Оно означает, что операции не будут переводиться в возобновляемый режим, если это явно не указано в инструкции. В представлении [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) указывается текущее значение ELEVATE_RESUMABLE. Эти параметры применяются только к операциям, которые поддерживают возобновляемый режим. 
 
@@ -242,7 +239,7 @@ WHEN_SUPPORTED
   
 **DacFx**  
   
- Так как инструкция ALTER DATABASE SCOPED CONFIGURATION — это новая функция в базе данных SQL Azure и SQL Server, начиная с SQL Server 2016, которая влияет на схему базы данных, экспорты схемы (с данными или без них) невозможно импортировать в более старую версию SQL Server, например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Например, экспорт в [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) или [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], использовавшей эту новую функцию, невозможно будет импортировать на сервер нижнего уровня.  
+ Так как инструкция ALTER DATABASE SCOPED CONFIGURATION — это новая функция в [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] и SQL Server, начиная с SQL Server 2016, которая влияет на схему базы данных, экспорты схемы (с данными или без них) невозможно импортировать в более старую версию SQL Server, например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Например, экспорт в [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) или [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], использовавшей эту новую функцию, невозможно будет импортировать на сервер нижнего уровня.  
 
 **ELEVATE_ONLINE** 
 
@@ -250,8 +247,7 @@ WHEN_SUPPORTED
 
 **ELEVATE_RESUMABLE**
 
-Этот параметр применяется только к инструкциям DDL, поддерживающим синтаксис WITH(ONLINE=). XML-индексы не затрагиваются. 
-
+Этот параметр применяется только к инструкциям DDL, поддерживающим синтаксис WITH(RESUMABLE= syntax). XML-индексы не затрагиваются. 
   
 ## <a name="metadata"></a>Метаданные  
 
@@ -356,7 +352,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### <a name="i--set-elevateonline"></a>И.  Задание ELEVATE_ONLINE 
 
-**Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] в общедоступной предварительной версии.
  
 В этом примере параметру ELEVATE_ONLINE присваивается значение FAIL_UNSUPPORTED.  tsqlCopy 
 
@@ -366,7 +362,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 
 ### <a name="j-set-elevateresumable"></a>К. Задание ELEVATE_RESUMABLE 
 
-**Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] в общедоступной предварительной версии.
 
 В этом примере параметру ELEVEATE_RESUMABLE присваивается значение WHEN_SUPPORTED.  tsqlCopy 
 
@@ -401,8 +397,13 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 - [Рекомендации по операциям с индексами в оперативном режиме](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
  
 ## <a name="more-information"></a>Дополнительные сведения  
- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [Представления каталога баз данных и файлов](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Параметры конфигурации сервера](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+- [Представления каталога баз данных и файлов](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+- [Параметры конфигурации сервера](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 
+- [Об операциях с индексами в сети](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+  
  

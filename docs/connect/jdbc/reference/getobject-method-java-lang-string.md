@@ -1,13 +1,11 @@
 ---
-title: Метод getObject (java.lang.String) | Документы Microsoft
+title: Метод getObject (java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getObject (java.lang.String)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a1e955ce-13db-4828-ad59-d9b6a8b2c6cc
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82618a47bc45d9d204e7c37305289796e77e5a60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 26c09cca4f63f80cdbbb80386304ed7c4cdceda9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724402"
 ---
 # <a name="getobject-method-javalangstring"></a>Метод getObject (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,34 +38,34 @@ public java.lang.Object getObject(java.lang.String sCol)
 #### <a name="parameters"></a>Параметры  
  *sCol*  
   
- Объект **строка** , содержащее имя параметра.  
+ Значение типа **String**, содержащее имя параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Объекта** значение.  
+ Значение **Object**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод getObject указывается с помощью метода getObject в интерфейсе java.sql.CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Этот метод getObject определен с помощью метода getObject в интерфейсе java.sql.CallableStatement.  
   
  Этот метод вернет значение данного столбца в виде объекта Java. Объект Java будет иметь заданный по умолчанию тип, соответствующий типу SQL Server столбца и сопоставленный встроенным типам, указанным в спецификации JDBC. Если значение SQL NULL, то драйвер вернет значение Java NULL.  
   
- Этот метод также может быть использован для чтения абстрактных типов данных, относящихся к базе данных. В JDBC 2.0 API возможности метода getObject расширены и поддерживают материализацию данных определяемых пользователем типов SQL. Если столбец содержит структурированное или уникальное значение, поведение данного метода является, как если бы он был вызов `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
+ Этот метод также может быть использован для чтения абстрактных типов данных, относящихся к базе данных. В API JDBC 2.0 возможности метода getObject расширены и поддерживают материализацию данных определяемых пользователем типов SQL. Если в столбце содержится структурированное или уникальное значение, то выполнение этого метода будет аналогично вызову `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
   
- Начиная с версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] драйвера JDBC 3.0:  
+ Начиная с версии 3.0 драйвера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC действуют следующие правила:  
   
--   Значение типа **даты** будет возвращаться в виде объекта java.sql.Date.  
+-   Значение типа **date** будет возвращаться в виде объекта java.sql.Date.  
   
--   Значение типа **время** будет возвращаться в виде объекта java.sql.Time.  
+-   Значение типа **time** будет возвращаться в виде объекта java.sql.Time.  
   
 -   Значение типа **datetime2** будет возвращаться в виде объекта java.sql.Timestamp.  
   
 -   Значение типа **datetimeoffset** будет возвращаться в виде объекта microsoft.sql.DateTimeOffset.  
   
-## <a name="see-also"></a>См. также  
- [Метод getObject &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод getObject (SQLServerCallableStatement)](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

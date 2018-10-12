@@ -5,30 +5,27 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b2339270e54cd05209e4843c66e3339b9aae270f
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 625b8c6503378341596523d7f1887129c38d6a19
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028033"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827032"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Преобразования, выполняемые при передаче от клиента к серверу
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Описывает преобразования даты и времени, проводимые между клиентским приложением, написанным с помощью драйвера OLE DB для SQL Server, и [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версией).  
+  В этой статье описаны преобразования даты и времени, проводимые между клиентским приложением, написанным с помощью драйвера OLE DB для SQL Server, и [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версией).  
   
 ## <a name="conversions"></a>Преобразования  
  В этом разделе описываются преобразования, выполняемые на клиенте. Если клиент задает точность в долях секунд для параметра, отличающуюся от определенной на сервере, клиентское преобразование может вызвать сбой, в то время как сервер завершит операцию успешно. А именно, клиент рассматривает любое усечение долей секунды как ошибку, в то время как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] округляет значения времени до ближайшей целой секунды.  

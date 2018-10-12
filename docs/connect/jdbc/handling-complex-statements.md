@@ -1,40 +1,37 @@
 ---
-title: Обработка сложных инструкций | Документы Microsoft
+title: Обработка сложных инструкций | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d97ab51a98204d76b8a4f765103f0b4b096894
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d44f2c229755c742d5481f3ca427f11fb5586c2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828649"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623932"
 ---
 # <a name="handling-complex-statements"></a>Обработка сложных инструкций
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  При использовании [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], может потребоваться обработка сложных инструкций, включая инструкции, которые динамически создаются во время выполнения. Сложные инструкции часто выполняют разнообразные задачи, включая обновление, вставку и удаление. Такие типы инструкций также могут возвращать несколько результирующих наборов и выходных параметров. В подобных ситуациях в коде Java, выполняющем инструкции, типы и количество возвращаемых объектов и данных могут быть не известны заранее.  
+  При использовании драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] может потребоваться обработка сложных инструкций, включая инструкции, которые динамически создаются во время выполнения. Сложные инструкции часто выполняют разнообразные задачи, включая обновление, вставку и удаление. Такие типы инструкций также могут возвращать несколько результирующих наборов и выходных параметров. В подобных ситуациях в коде Java, выполняющем инструкции, типы и количество возвращаемых объектов и данных могут быть не известны заранее.  
   
- Для эффективной обработки сложных инструкций драйвер JDBC предоставляет многочисленные методы запроса возвращаемых объектов и данных, что позволяет приложению правильно их обрабатывать. Ключевым моментом в обработки сложных инструкций является [выполнение](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) метод [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) класса. Этот метод возвращает **логическое** значение. Значение true показывает, что первым из инструкции возвращается результирующий набор. Значение false показывает, что первым возвращается количество операций обновления.  
+ Для эффективной обработки сложных инструкций драйвер JDBC предоставляет многочисленные методы запроса возвращаемых объектов и данных, что позволяет приложению правильно их обрабатывать. Ключевым моментом обработки сложных инструкций является вызов метода [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) класса [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Этот метод возвращает **логическое** значение. Значение true показывает, что первым из инструкции возвращается результирующий набор. Значение false показывает, что первым возвращается количество операций обновления.  
   
- Если известен тип возвращаемого объекта или данных, который был возвращен, можно использовать либо [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) или [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) метод для обработки этих данных. Чтобы перейти на следующий объект или набор данных, возвращаемый сложной инструкцией, можно вызвать [getMoreResults](../../connect/jdbc/reference/getmoreresults-method.md) метод.  
+ Если известен тип возвращаемого объекта или данных, то для обработки этих данных можно использовать метод [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) или [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md). Чтобы обработать следующий объект или набор данных, возвращаемый сложной инструкцией, можно вызвать метод [getMoreResults](../../connect/jdbc/reference/getmoreresults-method.md).  
   
- В следующем примере открытое соединение с [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] образца базы данных передается в функцию, создается сложная инструкция, сочетающая вызов хранимой процедуры с инструкцией SQL, инструкции выполняются, а затем `do` цикл используется для обработки всех результирующие наборы и обновленные значения возвращаются.  
+ В следующем примере в функцию передается открытое соединение с образцом базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], составляется сложная инструкция, сочетающая вызов хранимой процедуры и инструкцию SQL, инструкции выполняются, а затем в цикле `do` обрабатываются все возвращенные результирующие наборы и обновленные значения.  
   
  [!code[JDBC#HandlingComplexStatements1](../../connect/jdbc/codesnippet/Java/handling-complex-statements_1.java)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование инструкций с драйвером JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

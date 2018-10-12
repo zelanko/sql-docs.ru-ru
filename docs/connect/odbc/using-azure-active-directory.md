@@ -5,21 +5,18 @@ ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b1e12a4586cc063f6f4e556894b5da1e7f99eff
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7486e97fb0efe9fffa9fe6eb49ee75cc6d75bfce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983680"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635012"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Использование Azure Active Directory с драйвером ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,6 +24,9 @@ ms.locfileid: "38983680"
 ## <a name="purpose"></a>Назначение
 
 Драйвер Microsoft ODBC для SQL Server с версии 13.1 или более поздней позволяет приложениям ODBC для подключения к экземпляру SQL Azure, федеративного удостоверения в Azure Active Directory с помощью имени пользователя и пароля, маркер доступа Azure Active Directory или Windows Встроенная проверка подлинности (_только драйвер Windows_). Для драйвера ODBC версии 13.1, доступа Azure Active Directory, маркер проверки подлинности является _Windows только_. Драйвер ODBC версии 17 и выше поддерживает этой проверки подлинности на всех платформах (Windows, Linux и Mac). Новый интерактивный аутентификации Azure Active Directory с Идентификатором входа впервые появился в версии 17.1 драйвера ODBC для Windows. Все они выполняются при помощи нового источника данных и ключевых слов строки подключения и атрибуты соединения.
+
+> [!NOTE]
+> Драйвер ODBC для Linux и macOS не поддерживает службы федерации Active Directory. Если используется проверка подлинности имени пользователя и пароля Azure Active Directory из Linux или macOS клиента и конфигурации Active Directory включает службы федерации, возможен сбой проверки подлинности.
 
 ## <a name="new-andor-modified-dsn-and-connection-string-keywords"></a>Новых или измененных DSN и ключевых слов строки подключения
 
@@ -65,7 +65,7 @@ ms.locfileid: "38983680"
 
 ![CreateNewDSN_ADPassword.png](windows/CreateNewDSN_ADPassword.png)
 
-`Authentication=ActiveDirectoryInteractive` для использования интерактивной аутентификации Azure Active Directory для SQL Azure
+`Authentication=ActiveDirectoryInteractive` для интерактивной проверки подлинности Azure Active Directory в SQL Azure
 
 ![CreateNewDSN_ADInteractive.png](windows/CreateNewDSN_ADInteractive.png)
 

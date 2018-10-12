@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - totals [SQL Server], row counts
@@ -18,16 +15,15 @@ helpviewer_keywords:
 - number of values
 - counting rows
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 829b3dc894e3976aef20a239f30ed33af9ac27fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0c049d11cf1e7a7a1d3fa4654756652b242183f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048811"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759982"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>подсчитать строки в таблице (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +45,7 @@ ms.locfileid: "33048811"
   
 2.  Щелкните правой кнопкой мыши фон панели диаграммы и выберите из контекстного меню пункт **Добавить Group By** . [Конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) добавляет столбец **Группировать** в сетку на панели критериев.  
   
-3.  В прямоугольнике, представляющем таблицу или возвращающий табличное значение объект, выберите **\&#42; (все столбцы)** .  
+3.  В прямоугольнике, представляющем таблицу или возвращающем табличное значение объект, выберите **&#42; (все столбцы)**.  
   
     Конструктор запросов и представлений автоматически заносит значение **Подсчет** в столбец **Group By** на панели критериев и присваивает столбцу, по которому подводится итог, псевдоним столбца. Псевдоним, созданный автоматически, можно заменить более содержательным псевдонимом. Дополнительные сведения см. в разделе [Создание псевдонимов столбцов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
@@ -61,7 +57,7 @@ ms.locfileid: "33048811"
   
 2.  Щелкните правой кнопкой мыши фон панели диаграммы и выберите из контекстного меню пункт **Добавить Group By** . Конструктор запросов и представлений добавляет столбец **Группировать** в сетку на панели критериев.  
   
-3.  В прямоугольнике, представляющем таблицу или возвращающий табличное значение объект, выберите **\&#42;(все столбцы)** .  
+3.  В прямоугольнике, представляющем таблицу или возвращающем табличное значение объект, выберите **&#42(все столбцы)**.  
   
     Конструктор запросов и представлений автоматически заносит значение **Подсчет** в столбец **Group By** на панели критериев и присваивает столбцу, по которому подводится итог, псевдоним столбца. О создании более содержательного заголовка столбца в выводе запроса см. в разделе [Создание псевдонимов столбцов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   

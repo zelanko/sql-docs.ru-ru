@@ -5,9 +5,7 @@ ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_BIG
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b309bb7411d3c75aa1c98a219123efffc5dbca3e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4516965f66256e21e5e68310f7668770e17cabb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063622"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644852"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 + **smalldatetime**
 + **time**
 
-Для *date* `DATEDIFF_BIG` будет принимать столбец выражения, выражение, строковый литерал или определяемую пользователем переменную. Значение строкового литерала должно разрешаться в **datetime**. Во избежание неоднозначности используйте четырехзначную запись года. `DATEDIFF_BIG` вычитает *enddate* из *startdate*. Во избежание неоднозначности используйте четырехзначную запись года. Сведения о двузначном обозначении года см. в статье [Настройка параметра конфигурации сервера two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+Для *date* `DATEDIFF_BIG` будет принимать столбец выражения, выражение, строковый литерал или определяемую пользователем переменную. Значение строкового литерала должно разрешаться в **datetime**. Во избежание неоднозначности используйте четырехзначную запись года. `DATEDIFF_BIG` вычитает *startdate* из *enddate*. Во избежание неоднозначности используйте четырехзначную запись года. Сведения о двузначном обозначении года см. в статье [Настройка параметра конфигурации сервера two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 *enddate*  
 См. описание аргумента *startdate*.
@@ -92,7 +89,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 Возвращает количество пересеченных границ (целое число со знаком), указанных в аргументе datepart, за период времени, указанный в аргументах startdate и enddate.
 -   Каждый конкретный аргумент *datepart* и сокращения для этого аргумента *datepart* будут возвращать одно и то же значение.  
   
-В качестве возвращаемого значения вне диапазона для **bigint** (от –9 223 372 036 854 775 808 до 9 223 372 036 854 775 807) `DATEDIFF_BIG` возвращает сообщение об ошибке. Для **миллисекунды** максимальная разница между *startdate* и *enddate* составляет 24 дня 20 часов 31 минута и 23 647 секунд. Для **секунды** максимальная разница составляет 68 лет.
+В качестве возвращаемого значения вне диапазона для **bigint** (от –9 223 372 036 854 775 808 до 9 223 372 036 854 775 807) `DATEDIFF_BIG` возвращает сообщение об ошибке. Для **миллисекунды** максимальная разница между *enddate* и *startdate* составляет 24 дня 20 часов 31 минута и 23 647 секунд. Для **секунды** максимальная разница составляет 68 лет.
   
 Если обоим аргументам, *startdate* и *enddate*, присвоено только значение времени, а аргумент *datepart* не содержит значения времени *datepart*, то `DATEDIFF_BIG` возвращает значение 0.
   
@@ -121,7 +118,7 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 ```
   
 ## <a name="remarks"></a>Remarks  
-Функция `DATEDIFF_BIG` может использоваться в предложениях SELECT <list>, WHERE, HAVING, GROUP BY и ORDER BY.
+Функция `DATEDIFF_BIG` может использоваться в предложениях SELECT, <list>WHERE, HAVING, GROUP BY и ORDER BY.
   
 Функция `DATEDIFF_BIG` неявно приводит строковые литералы к типу **datetime2**. Это означает, что `DATEDIFF_BIG` не поддерживает формат ГЧМ (год, число, месяц) при передаче даты в виде строки. Для использования формата ГЧМ (год, число, месяц) необходимо явно привести строку к типу **datetime** или **smalldatetime**.
   

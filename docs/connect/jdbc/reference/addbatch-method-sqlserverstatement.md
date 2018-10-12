@@ -1,13 +1,11 @@
 ---
-title: Метод (SQLServerStatement) addBatch | Документы Microsoft
+title: Метод addBatch (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.addBatch
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 95924a8b-a43c-4133-aff6-1d712e60e234
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f89b6642b8ce53358c1480bc68f617f9ba5af7e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6448931a922fbf32cec94a24731da5bd4d8c88b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828479"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598682"
 ---
-# <a name="addbatch-method-sqlserverstatement"></a>addBatch метод (SQLServerStatement)
+# <a name="addbatch-method-sqlserverstatement"></a>Метод addBatch (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Добавляет заданную команду SQL в текущий список команд для данного [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта.  
+  Добавляет заданную команду SQL в текущий список команд для этого объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,16 +38,16 @@ public void addBatch(java.lang.String sql)
 #### <a name="parameters"></a>Параметры  
  *sql*  
   
- Объект **строка** , содержащий инструкции SQL.  
+ Значение типа **String**, содержащее инструкцию SQL.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод addBatch указывается с помощью метода addBatch в интерфейсе java.sql.Statement.  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Класс SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

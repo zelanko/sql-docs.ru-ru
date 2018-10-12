@@ -1,13 +1,11 @@
 ---
-title: Метод executeQuery (java.lang.String) | Документы Microsoft
+title: Метод executeQuery (java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.executeQuery (java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c336fa7b11186dfbc94f35daef99853175ffc86
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4d266af1e09c457db4742d6aca06df65acfd505a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831509"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774379"
 ---
 # <a name="executequery-method-javalangstring"></a>Метод executeQuery (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Выполняет заданную инструкцию SQL и возвращает один [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+  Выполняет заданную инструкцию SQL и возвращает один объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +38,7 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
 #### <a name="parameters"></a>Параметры  
  *sql*  
   
- Объект **строка** , содержащий инструкции SQL.  
+ Значение типа **String**, содержащее инструкцию SQL.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект SQLServerResultSet.  
@@ -49,18 +46,18 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод executeQuery указывается с помощью метода executeQuery в интерфейсе java.sql.Statement.  
+## <a name="remarks"></a>Remarks  
+ Этот метод executeQuery указывается с помощью метода executeQuery, в интерфейсе java.sql.Statement.  
   
- Этот метод переопределяет [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) метод, который находится в [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) класса.  
+ Этот метод переопределяет метод [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md), содержащийся в классе [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
- Вызов этого метода будет приведет к исключению, поскольку задан в инструкции SQL для объекта SQLServerPreparedStatement при создании объекта.  
+ Вызов этого метода приводит к исключению, поскольку инструкция SQL для объекта SQLServerPreparedStatement определена при создании объекта.  
   
- [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) создается, если выводит заданную инструкцию SQL, отличное от одной [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+ [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) вызывается, если заданная инструкция SQL дает любой результат, кроме одиночного объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
-## <a name="see-also"></a>См. также  
- [Метод executeQuery &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   
- [Члены SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод executeQuery (SQLServerPreparedStatement)](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   
+ [Элементы SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [Класс SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   

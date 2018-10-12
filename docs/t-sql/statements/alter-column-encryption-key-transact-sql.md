@@ -1,13 +1,11 @@
 ---
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 10/28/2015
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER COLUMN ENCRYPTION
@@ -20,21 +18,20 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: af850156a7600acde614849c897bbb69df0dfa1b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8f76bfc903eaf18978c2c77803cdd7054d384ace
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016114"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839532"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Изменяет ключ шифрования столбца в базе данных, добавляя или удаляя зашифрованное значение. Ключ CEK может иметь до двух значений, что позволяет менять соответствующий главный ключ столбца. Ключ CEK используется при шифровании столбцов с помощью функции [Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Перед добавлением значения ключа CEK необходимо определить главный ключ столбца, который использовался для шифрования значения, с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или инструкции [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
+  Изменяет ключ шифрования столбца в базе данных, добавляя или удаляя зашифрованное значение. У ключа CEK может быть до двух значений, что позволяет менять соответствующий главный ключ столбца. Ключ CEK используется при шифровании столбцов с помощью функции [Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Перед добавлением значения ключа CEK необходимо определить главный ключ столбца, который использовался для шифрования значения, с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или инструкции [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,15 +57,21 @@ ALTER COLUMN ENCRYPTION KEY key_name
  Имя алгоритма шифрования значения. Для системных поставщиков это должен быть алгоритм **RSA_OAEP**. Этот аргумент является недопустимым при удалении значения ключа шифрования столбца.  
   
  *varbinary_literal*  
- Большой двоичный объект ключа CEK, зашифрованный с помощью указанного главного ключа шифрования. , и делает это по-другому. Этот аргумент является недопустимым при удалении значения ключа шифрования столбца.  
+ Большой двоичный объект ключа CEK, зашифрованный с помощью указанного главного ключа шифрования. Этот аргумент является недопустимым при удалении значения ключа шифрования столбца.  
   
 > [!WARNING]  
 >  Никогда не передавайте значения ключа шифрования столбца в виде открытого текста в этой инструкции. Это является преимуществом этой функции.  
   
 ## <a name="remarks"></a>Remarks  
- Как правило, ключ шифрования столбца создается со всего одним зашифрованным значением. Когда требуется сменить главный ключ столбца (заменить текущий главный ключ столбца новым), можно добавить новое значение ключа шифрования столбца, зашифрованное с помощью нового главного ключа столбца. В этом случае клиентские приложения смогут обращаться к данным, зашифрованным с помощью ключа шифрования, тогда как новый главный ключ столбца будет доступен для клиентских приложений. Драйвер с поддержкой Always Encrypted в клиентском приложении, не имеющем доступа к новому главному ключу, сможет использовать значение ключа шифрования столбца, зашифрованное с помощью старого главного ключа столбца, для доступа к конфиденциальным данным. Для алгоритмов шифрования, поддерживаемых функцией Always Encrypted, требуется значение открытого текста размером 256 бит. Зашифрованное значение должно быть создано с помощью поставщика хранилища ключей, который инкапсулирует хранилище ключей, содержащее главный ключ столбца.  
-  
- Сведения о ключах шифрования столбцов см. в разделах [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) и [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md).  
+ Как правило, ключ шифрования столбца создается со всего одним зашифрованным значением. Когда требуется сменить главный ключ столбца (заменить текущий главный ключ столбца новым), можно добавить новое значение ключа шифрования столбца, зашифрованное с помощью нового главного ключа столбца. Этот рабочий процесс позволяет удостовериться, что клиентские приложения смогут обращаться к данным, зашифрованным с помощью ключа шифрования, тогда как новый главный ключ столбца будет доступен для клиентских приложений. Драйвер с поддержкой Always Encrypted в клиентском приложении, не имеющем доступа к новому главному ключу, сможет использовать значение ключа шифрования столбца, зашифрованное с помощью старого главного ключа столбца, для доступа к конфиденциальным данным. Для алгоритмов шифрования, поддерживаемых функцией Always Encrypted, требуется значение открытого текста размером 256 бит. Зашифрованное значение должно быть создано с помощью поставщика хранилища ключей, который инкапсулирует хранилище ключей, содержащее главный ключ столбца.  
+
+ Главные ключи столбцов меняются по следующим причинам.
+- Нормативные правила могут требовать периодической смены ключей.
+- Главный ключ столбца скомпрометирован, и его нужно заменить по соображениям безопасности.
+- Включение или отключение совместного использования ключей шифрования столбцов с безопасным анклавом на стороне сервера. Например, если текущий главный ключ столбца не поддерживает вычисления в анклаве (не определено со свойством ENCLAVE_COMPUTATIONS), а вы хотите включить вычисления в анклаве для столбцов, защищенных с помощью ключа шифрования столбца (который, в свою очередь, шифруется главным ключом), то вам необходимо поменять ключ шифрования столбца на новый со свойством ENCLAVE_COMPUTATIONS. Дополнительные сведения см. в статье [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
+
+Сведения о ключах шифрования столбцов см. в разделах [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) и [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение **ALTER ANY SYMMETRIC KEY** для базы данных.  

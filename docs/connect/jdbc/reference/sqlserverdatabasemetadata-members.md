@@ -1,30 +1,27 @@
 ---
-title: Элементы SQLServerDatabaseMetaData | Документы Microsoft
+title: Элементы SQLServerDatabaseMetaData | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99e11d827cfc8e81f00a471b06521f33e872d64e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 95948680f7bd7bb1766207fa8894d274b5e09daf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853249"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788084"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>Элементы SQLServerDatabaseMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  В следующих таблицах перечислены члены, предоставляемые [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) класса.  
+  В следующих таблицах перечислены элементы, предоставляемые классом [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md).  
   
 ## <a name="constructors"></a>Конструкторы  
  Нет.  
@@ -34,25 +31,25 @@ ms.locfileid: "32853249"
   
 ## <a name="inherited-fields"></a>Наследуемые поля  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |java.sql.DatabaseMetaData|attributeNoNulls, attributeNullable, attributeNullableUnknown, bestRowNotPseudo, bestRowPseudo, bestRowSession, bestRowTemporary, bestRowTransaction, bestRowUnknown, columnNoNulls, columnNullable, columnNullableUnknown, importedKeyCascade, importedKeyInitiallyDeferred, importedKeyInitiallyImmediate, importedKeyNoAction, importedKeyNotDeferrable, importedKeyRestrict, importedKeySetDefault, importedKeySetNull, procedureColumnIn, procedureColumnInOut, procedureColumnOut, procedureColumnResult, procedureColumnReturn, procedureColumnUnknown, procedureNoNulls, procedureNoResult, procedureNullable, procedureNullableUnknown, procedureResultUnknown, procedureReturnsResult, sqlStateSQL, sqlStateSQL99, sqlStateXOpen, tableIndexClustered, tableIndexHashed, tableIndexOther, tableIndexStatistic, typeNoNulls, typeNullable, typeNullableUnknown, typePredBasic, typePredChar, typePredNone, typeSearchable, versionColumnNotPseudo, versionColumnPseudo, versionColumnUnknown|  
   
 ## <a name="methods"></a>Методы  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|Сообщает, является ли текущий пользователь имеет разрешения на вызов всех процедур, возвращаемых методом [getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md) метод.|  
-|[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|Сообщает, является ли текущий пользователь имеет разрешения на использование всех таблиц, возвращаемых функцией [getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) метод в инструкции SELECT.|  
+|[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|Извлекает значение, определяющее, имеет ли текущий пользователь разрешения на вызов любых процедур, возвращаемых методом [getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md).|  
+|[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|Извлекает значение, определяющее, имеет ли текущий пользователь разрешения на использование любых таблиц, возвращаемых методом [getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) в инструкции SELECT.|  
 |[autoCommitFailureClosesAllResultSets](../../../connect/jdbc/reference/autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata.md)|Указывает, закрывает ли драйвер JDBC все открытые результирующие наборы, включая те, которые допускают удержание, когда при включенном режиме автоматической фиксации возникает исключение.|  
 |[dataDefinitionCausesTransactionCommit](../../../connect/jdbc/reference/datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, приводит ли выполнение инструкции определения базы данных в транзакции к фиксации транзакции.|  
 |[dataDefinitionIgnoredInTransactions](../../../connect/jdbc/reference/datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, учитывает ли эта база данных инструкции определения данных в пределах транзакции.|  
-|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|Извлекает ли удаление видимой строки могут быть обнаружены путем вызова [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) метод [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) класса.|  
-|[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|Извлекает ли возвращаемое значение для [getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) метод включает типы данных SQL LONGVARCHAR и LONGVARBINARY.|  
-|[GetAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|Получает описание заданного атрибута заданного типа для определяемого пользователем типа, находящегося в заданной схеме и заданном каталоге.|  
+|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, обнаруживается ли удаление видимой строки вызовом метода [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) класса [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
+|[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|Извлекает значение, определяющее, включает ли возвращаемое значение метода [getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) типы данных SQL LONGVARCHAR и LONGVARBINARY.|  
+|[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|Получает описание заданного атрибута заданного типа для определяемого пользователем типа, находящегося в заданной схеме и заданном каталоге.|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|Возвращает описание оптимального набора столбцов таблицы, который уникальным образом идентифицирует строку.|  
 |[getCatalogs](../../../connect/jdbc/reference/getcatalogs-method-sqlserverdatabasemetadata.md)|Возвращает имена каталогов, доступных на подключенном сервере.|  
-|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|Извлекает **строка** , эта база данных используется в качестве разделителя между каталогом и именем таблицы.|  
+|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|Получает значение типа **String**, используемое базой данных в качестве разделителя между каталогом и именем таблицы.|  
 |[getCatalogTerm](../../../connect/jdbc/reference/getcatalogterm-method-sqlserverdatabasemetadata.md)|Получает эквивалент каталога в терминологии поставщика баз данных.|  
 |[getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md)|Извлекает список свойств данных клиентов, поддерживаемых драйвером.|  
 |[getColumnPrivileges](../../../connect/jdbc/reference/getcolumnprivileges-method-sqlserverdatabasemetadata.md)|Возвращает описание прав доступа для столбцов в таблице.|  
@@ -72,7 +69,7 @@ ms.locfileid: "32853249"
 |[getExtraNameCharacters](../../../connect/jdbc/reference/getextranamecharacters-method-sqlserverdatabasemetadata.md)|Возвращает все дополнительные символы (например, символы a–z, A–Z, 0–9 и _), которые могут использоваться в именах идентификаторов без кавычек.|  
 |[getFunctions](../../../connect/jdbc/reference/getfunctions-method-sqlserverdatabasemetadata.md)|Возвращает описание системных и пользовательских функций.|  
 |[getFunctionColumns](../../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md)|Возвращает описание параметров и возвращаемого типа системной или пользовательской функции указанного каталога.|  
-|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|Извлекает **строка** , используемый для заключения в кавычки идентификаторов SQL.|  
+|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|Получает значение типа **String**, используемое для заключения в кавычки идентификаторов SQL.|  
 |[getImportedKeys](../../../connect/jdbc/reference/getimportedkeys-method-sqlserverdatabasemetadata.md)|Возвращает описание столбцов первичного ключа, на которые ссылаются столбцы внешнего ключа таблицы.|  
 |[getIndexInfo](../../../connect/jdbc/reference/getindexinfo-method-sqlserverdatabasemetadata.md)|Возвращает описание индексов и статистик заданной таблицы.|  
 |[getJDBCMajorVersion](../../../connect/jdbc/reference/getjdbcmajorversion-method-sqlserverdatabasemetadata.md)|Возвращает основной номер версии JDBC для этого драйвера.|  
@@ -106,10 +103,10 @@ ms.locfileid: "32853249"
 |[getRowIdLifetime](../../../connect/jdbc/reference/getrowidlifetime-method-sqlserverdatabasemetadata.md)|Возвращает состояние, указывающее, поддерживается ли тип данных SQL RowId. Если он поддерживается, то возвращает время существования объекта RowId.|  
 |[getSchemas](../../../connect/jdbc/reference/getschemas-method.md)|Возвращает имена схем, доступных в текущей базе данных.|  
 |[getSchemaTerm](../../../connect/jdbc/reference/getschematerm-method-sqlserverdatabasemetadata.md)|Получает предпочтительный термин для схемы в этой базе данных.|  
-|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|Извлекает **строка** , может использоваться для экранирования символов-шаблонов.|  
+|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|Извлекает значение **String**, которое можно использовать для избежания подстановочных знаков.|  
 |[getSQLKeywords](../../../connect/jdbc/reference/getsqlkeywords-method-sqlserverdatabasemetadata.md)|Возвращает список с разделителями-запятыми всех ключевых слов SQL этой базы данных, не входящих в перечень ключевых слов SQL92.|  
 |[getSQLStateType](../../../connect/jdbc/reference/getsqlstatetype-method-sqlserverdatabasemetadata.md)|Указывает, равно ли состояние SQLSTATE, возвращенное методом SQLException.getSQLState, X/Open (теперь называется Open Group), SQL CLI, SQL99 (JDBC 3.0) или SQL:2003 (JDBC 4.0).|  
-|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|Получает список разделенных запятыми **строка** функции, доступные с этой базой данных.|  
+|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|Возвращает список функций **строки** (разделенных запятыми), доступных в этой базе данных.|  
 |[getSuperTables](../../../connect/jdbc/reference/getsupertables-method-sqlserverdatabasemetadata.md)|Получает описания иерархий таблиц, определенных в конкретной схеме этой базы данных.|  
 |[getSuperTypes](../../../connect/jdbc/reference/getsupertypes-method-sqlserverdatabasemetadata.md)|Получает описание иерархий определяемых пользователем типов, определенных в заданной схеме этой базы данных.|  
 |[getSystemFunctions](../../../connect/jdbc/reference/getsystemfunctions-method-sqlserverdatabasemetadata.md)|Возвращает список с разделителями-запятыми системных функций, доступных в этой базе данных.|  
@@ -117,14 +114,14 @@ ms.locfileid: "32853249"
 |[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md)|Возвращает описание таблиц, доступных в заданном каталоге, схеме или по шаблону имени таблицы.|  
 |[getTableTypes](../../../connect/jdbc/reference/gettabletypes-method-sqlserverdatabasemetadata.md)|Возвращает табличные типы, доступные в текущей базе данных.|  
 |[getTimeDateFunctions](../../../connect/jdbc/reference/gettimedatefunctions-method-sqlserverdatabasemetadata.md)|Возвращает список с разделителями-запятыми функций даты и времени, доступных для этой базы данных.|  
-|[GetTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|Извлекает описание всех стандартных типов SQL, которые поддерживаются в текущей базе данных.|  
+|[getTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|Извлекает описание всех стандартных типов SQL, которые поддерживаются в текущей базе данных.|  
 |[getUDTs](../../../connect/jdbc/reference/getudts-method-sqlserverdatabasemetadata.md)|Возвращает описание определяемых пользователем типов, определенных в конкретной схеме.|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|Возвращает URL-адрес для этой базы данных.|  
-|[GetUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|Возвращает имя пользователя, как оно известно в базе данных.|  
+|[getUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|Возвращает имя пользователя, как оно известно в базе данных.|  
 |[getVersionColumns](../../../connect/jdbc/reference/getversioncolumns-method-sqlserverdatabasemetadata.md)|Возвращает описание столбцов таблицы, которые автоматически обновляются при обновлении любого значения в строке.|  
-|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|Извлекает ли вставка видимой строки могут быть обнаружены путем вызова метода [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) метод [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) класса.|  
+|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, обнаруживается ли вставка видимой строки вызовом метода [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) класса [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[isCatalogAtStart](../../../connect/jdbc/reference/iscatalogatstart-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, находится ли каталог в начале полного имени таблицы.|  
-|[IsReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, находится ли эта база данных в режиме только для чтения.|  
+|[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, находится ли эта база данных в режиме только для чтения.|  
 |[locatorsUpdateCopy](../../../connect/jdbc/reference/locatorsupdatecopy-method-sqlserverdatabasemetadata.md)|Указывает, будут ли обновления в LOB производиться над этим объектом LOB напрямую, либо над его копией.|  
 |[nullPlusNonNullIsNull](../../../connect/jdbc/reference/nullplusnonnullisnull-method-sqlserverdatabasemetadata.md)|Указывает, поддерживает ли эта база данных получение значений NULL в результате объединения значений NULL и значений, отличных от NULL.|  
 |[nullsAreSortedAtEnd](../../../connect/jdbc/reference/nullsaresortedatend-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, размещаются ли значения NULL в конце независимо от порядка сортировки.|  
@@ -174,8 +171,8 @@ ms.locfileid: "32853249"
 |[supportsMinimumSQLGrammar](../../../connect/jdbc/reference/supportsminimumsqlgrammar-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, поддерживает ли эта база данных минимальную SQL-грамматику ODBC.|  
 |[supportsMixedCaseIdentifiers](../../../connect/jdbc/reference/supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, учитывает ли база данных регистр символов для идентификаторов SQL в смешанном регистре, не заключенных в кавычки, и сохраняет их в смешанном регистре.|  
 |[supportsMixedCaseQuotedIdentifiers](../../../connect/jdbc/reference/supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, учитывает ли база данных регистр символов для идентификаторов SQL в смешанном регистре, заключенных в кавычки, и сохраняет их в смешанном регистре.|  
-|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|Сообщает, является ли можно иметь несколько [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объектами, возвращаемыми [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) объекта одновременно.|  
-|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|Сообщает, является ли эта база данных поддерживает несколько [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объектов из одного вызова [выполнение](../../../connect/jdbc/reference/execute-method.md) метод [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)класса.|  
+|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|Извлекает значение, определяющее, возможен ли одновременный возврат сразу нескольких объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) из объекта [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).|  
+|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|Извлекает значение, определяющее, поддерживает ли эта база данных получение нескольких объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в единственном вызове метода [execute](../../../connect/jdbc/reference/execute-method.md) класса [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).|  
 |[supportsMultipleTransactions](../../../connect/jdbc/reference/supportsmultipletransactions-method-sqlserverdatabasemetadata.md)|Извлекает значение, указывающее, поддерживается ли в этой базе данных одновременное открытие нескольких транзакций в различных соединениях.|  
 |[supportsNamedParameters](../../../connect/jdbc/reference/supportsnamedparameters-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, поддерживает ли эта база данных именованные параметры в вызываемых инструкциях.|  
 |[supportsNonNullableColumns](../../../connect/jdbc/reference/supportsnonnullablecolumns-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, могут ли столбцы в этой базе данных быть определены как не допускающие значения NULL.|  
@@ -209,7 +206,7 @@ ms.locfileid: "32853249"
 |[supportsTransactions](../../../connect/jdbc/reference/supportstransactions-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, поддерживает ли эта база данных транзакции.|  
 |[supportsUnion](../../../connect/jdbc/reference/supportsunion-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, поддерживает ли эта база данных SQL UNION.|  
 |[supportsUnionAll](../../../connect/jdbc/reference/supportsunionall-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, поддерживает ли эта база данных SQL UNION ALL.|  
-|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|Извлекает ли обновление видимой строки могут быть обнаружены путем вызова [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) метод [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) класса.|  
+|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|Узнает, можно ли обнаружить видимые обновления строки вызовом метода [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) класса [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[usesLocalFilePerTable](../../../connect/jdbc/reference/useslocalfilepertable-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, хранит ли база данных каждую таблицу в отдельном файле.|  
 |[usesLocalFiles](../../../connect/jdbc/reference/useslocalfiles-method-sqlserverdatabasemetadata.md)|Возвращает значение, определяющее, хранит ли база данных таблицы в локальном файле.|  
   
@@ -220,7 +217,7 @@ ms.locfileid: "32853249"
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

@@ -1,30 +1,27 @@
 ---
-title: Метод setNCharacterStream для чтения объект - int | Документы Microsoft
+title: Метод setNCharacterStream объект чтения - int | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7732746b-eda5-469e-8567-e8546c4d81cd
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 875fc460dfb3d3c70978bd7897762b309e932d3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cc209770285226beb45342223c1e46ff3a2fec3f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843339"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771322"
 ---
 # <a name="setncharacterstream-method-int-javaioreader"></a>Метод setNCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Присваивает указанному параметру указанный объект модуля чтения.  
+  Задает указанному параметру заданный объект Reader.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +34,22 @@ public final void setNCharacterStream(int parameterIndex,
 #### <a name="parameters"></a>Параметры  
  *parameterIndex*  
   
- **Int** , указывающее индекс параметра.  
+ Значение типа **int**, указывающее индекс параметра.  
   
  *value*  
   
- Объект средства чтения, который содержит значение параметра.  
+ Объект Reader, содержащий значение параметра.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод setNCharacterStream указывается с помощью метода setNCharacterStream в интерфейсе java.sql.PreparedStatement.  
   
  Этот метод следует использовать для **NCHAR**, **NVARCHAR**, **NTEXT**, и **XML** типов данных.  
   
-## <a name="see-also"></a>См. также  
- [Метод setNCharacterStream &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод setNCharacterStream (SQLServerPreparedStatement)](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
  [Элементы SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

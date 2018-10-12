@@ -1,41 +1,39 @@
 ---
-title: Библиотеки подключения для баз данных SQL Microsoft | Документы Microsoft
-description: Предоставляет ссылки для загрузки модулей, которые обеспечивают подключение к Microsoft SQL Server и базы данных SQL Azure из различных языков программирования клиента.
+title: Библиотеки подключений для базы данных SQL Microsoft | Документация Майкрософт
+description: Ссылки для скачивания модулей, которые обеспечивают подключение к Microsoft SQL Server и базы данных SQL Azure, с разных языков программирования клиента.
 author: MightyPen
-ms.suite: sql
 ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: dbe-data-tier-apps
+ms.technology: ''
 ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: b7d00ed25392e979cc0d5037bef6b7d8eccc66bf
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
-ms.translationtype: MT
+ms.openlocfilehash: fa070ecfed9d962dc2716e5b72eaf690eff0fe7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36246846"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806096"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Модули подключения для базы данных Microsoft SQL
 
-Также приводятся ссылки для загрузки модули подключения или *драйверы* , его можно использовать для взаимодействия с [Microsoft SQL Server](../relational-databases/database-features.md)и с его двойных в облаке [Azure База данных SQL](http://docs.microsoft.com/azure/sql-database/). Драйверы предоставляются для различных языков программирования, в следующих операционных системах:
+В этой статье ссылками на загрузку модулей подключения или *драйверы* , клиентские программы можно использовать для взаимодействия с [Microsoft SQL Server](../relational-databases/database-features.md)и с его двойником в облаке [Azure База данных SQL](http://docs.microsoft.com/azure/sql-database/). Драйверы доступны для различных языков программирования, работающих под управлением следующих ОС:
 
 - Linux (Ubuntu)
-- macOS
+- MacOS
 - Windows
 
 #### <a name="oop-to-relational-mismatch"></a>Объектно реляционные несоответствие
 
-*Реляционные*: клиентские программы, записанные в объектно ориентированный язык программирования (OOP) часто использовать драйверы SQL, которые возвращают запрашиваемые данные в формате, несколько реляционных, чем объектно-ориентированной. С помощью ADO.NET в C# является одним из примеров. Объектно реляционного несоответствие формата иногда делает труднее писать и понимать код объектно-ориентированное Программирование.
+*Реляционные*: клиентские программы, написанные в языках объектно ориентированного программирования (OOP), часто использовать драйверы SQL, которые возвращают запрашиваемые данные в формате, который является более реляционной, чем объектно-ориентированного программирования. С помощью ADO.NET в C# — один из примеров. Объектно реляционного несоответствие формата иногда делает труднее писать и понимать код ООП.
 
-*Объектно-реляционные Преобразователи*: других драйверов или платформы возврата запрошенных данных в формате объектно-ориентированное Программирование, как избежать несоответствия. Эти драйверы работать, ожидается, что классы были определены для сопоставления столбцов данных из отдельных таблиц SQL. Драйвер выполняет *объектно реляционное сопоставление* (ORM) для возврата результатов запроса в виде экземпляра класса. Корпорации Майкрософт Entity Framework (EF) для C# и режима гибернации для Java, приведены два примера.
+*ORM*: другие драйверы или платформ возврата запрошенных данных в формате ООП, как избежать несоответствия. Эти драйверы работают, ожидается, что классы были определены для сопоставления столбцы данных отдельные таблицы SQL. Драйвер выполняет *объектно реляционного сопоставления* (ORM) для возврата запрошенных данных в виде экземпляра класса. Microsoft Entity Framework (EF) для C#, а также спящий режим для Java, приведены два примера.
 
-Этой статье использует отдельные разделы для помещения в эти два вида драйверы соединения.
+Этой статье использует отдельными разделами для помещения в эти два типа драйверов подключения.
 
 <a name="anchor-20-drivers-relational-access" />
 
-## <a name="drivers-for-relational-access"></a>Драйверы для реляционный доступ
+## <a name="drivers-for-relational-access"></a>Драйверы на доступ к реляционным
 
 
 <!--
@@ -49,57 +47,57 @@ PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/
 although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
-| Язык | Загрузка драйвера SQL |
+| Язык | Скачайте драйвер Microsoft SQL |
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core для Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core для MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core для Windows](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Драйвер node.js, инструкции по установке](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
-| Python | [pyodbc инструкции по установке](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Загрузите ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
+| Python | [pyodbc, инструкции по установке](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Скачайте ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Драйвер Ruby, инструкции по установке](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Страница загрузки Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
 
 <a name="anchor-40-drivers-orm-access" />
 
-## <a name="drivers-for-orm-access"></a>Драйверы для ORM доступа
+## <a name="drivers-for-orm-access"></a>Драйверы для доступа к ORM
 
 
-Ниже перечислены примеры объекта реляционного сопоставления (ORM) платформ, которые клиентские приложения используют для подключения к базам данных Microsoft SQL.
+Ниже перечислены примеры платформ объектно-реляционного сопоставления (ORM), которые клиентские приложения используют для подключения к базам данных Microsoft SQL.
 
 
 | Язык | Загрузка драйвера ORM |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Платформа Entity Framework (версии 6.x или более поздней версии)](http://docs.microsoft.com/ef/) |
+| C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Платформа Entity Framework (6.x или более поздней версии)](http://docs.microsoft.com/ef/) |
 | Java | [Режим гибернации ORM](http://hibernate.org/orm)|
-| PHP | [Eloquent ORM, входит в Laravel установки](http://laravel.com/docs/) |
+| PHP | [Милнером ORM, входит в состав установки Laravel](http://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
 | Python | [Django](http://www.djangoproject.com/) |
-| Ruby | [Ruby на направляющие](http://rubyonrails.org/) |
+| Ruby | [Ruby on Rails](http://rubyonrails.org/) |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Сборки в приложение веб-страниц
-[http://aka.ms/sqldev](http://aka.ms/sqldev) Вы перейдете на набор *сборки в приложении* веб-страниц. Веб-страниц содержат сведения о многочисленные сочетания программирования языка, операционной системы и драйвера подключения SQL. Помимо сведений, предоставляемых сборки в приложение веб-страниц являются следующие элементы:
+[http://aka.ms/sqldev](http://aka.ms/sqldev) Вы перейдете к набору *-an app* веб-страниц. Веб-страниц содержат сведения о многочисленных комбинации языка программирования, операционной системы и драйвер подключения SQL. Сведения, предоставляемые веб-страниц-an app относятся следующие элементы:
 
-- Сведения о том, как приступить к работе с самого начала, для каждого сочетания языка + операционной системы и драйвера.
-    - Инструкции по установке последние версии драйверов подключения SQL.
+- Сведения о том, как приступить к работе с самого начала, для каждой комбинации языка + операционной системы и драйвера.
+    - Инструкции по установке последних версий драйверов подключения SQL.
 - Примеры кода для каждого из следующих элементов:
     - Примеры объектно реляционного кода.
     - Примеры кода ORM.
-    - Демонстрации индекс ColumnStore для значительно повысить производительность.
+    - Демонстрации индекса ColumnStore значительно повысить производительность.
 
-#### <a name="first-page-of-build-an-app-webpages"></a>Первая страница сборки в приложение веб-страниц
-![Сборки в приложение веб-страниц, первая страница экрана][image-ref-163-buildanapp-webpages-first-page]
+#### <a name="first-page-of-build-an-app-webpages"></a>Первая страница, сборки приложение веб-страниц
+![Сборки в приложение веб-страниц, первый снимок экрана страницы][image-ref-163-buildanapp-webpages-first-page]
 
-#### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Меню для Java - Ubuntu сборки в приложение веб-страниц
+#### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Меню для Java - Ubuntu — это приложение веб-страниц
 ![Сборки в приложение веб-страниц, меню Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
 
 &nbsp;
 
 ## <a name="related-links"></a>Связанные ссылки
-- [Примеры для подключения к базе данных SQL Azure в облаке, с использованием Java и других языков кода](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
+- [Примеры кода для подключения к базе данных SQL Azure в облаке, с помощью Java и других языках](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
 <!-- Image references -->
 

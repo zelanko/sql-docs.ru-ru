@@ -1,28 +1,25 @@
 ---
-title: 'Как: Указание типов данных PHP | Документы Microsoft'
+title: 'Практическое: Указание типов данных PHP | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d41612ee46f791ef5a130e82d7f75b7afecea3a9
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 50c03fb857a2c136748a5f9c5c4630bff29b49c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307603"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691822"
 ---
 # <a name="how-to-specify-php-data-types"></a>Практическое руководство. Указание типов данных PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,18 +28,18 @@ ms.locfileid: "35307603"
   
 Ниже представлена обобщенная процедура указания типов данных PHP при извлечении данных с сервера с помощью драйвера SQLSRV  
   
-1.  Настройка и выполнение запроса Transact-SQL с [sqlsrv_query](../../connect/php/sqlsrv-query.md) или сочетание [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
+1.  Установка и выполнение запроса Transact-SQL с помощью [sqlsrv_query](../../connect/php/sqlsrv-query.md) или сочетания [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
 2.  Сделайте следующую строку данных доступной для чтения с помощью [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md).  
   
 3.  Извлеките данные поля из возвращенной строки с помощью [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) с требуемым типом данных PHP, указанным в качестве необязательного третьего параметра. Если необязательный третий параметр не указан, данные возвращаются в соответствии с типами PHP по умолчанию. Дополнительные сведения о типах возвращаемых данных PHP по умолчанию см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-    Сведения о константах, используемых для указания типа данных PHP см. в разделе о PHPTYPE статьи [константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    Дополнительные сведения о константах, используемых для указания типа данных PHP, см. в разделе о PHPTYPE статьи [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## <a name="example"></a>Пример  
-Следующий пример извлекает строки из таблицы *Production.ProductReview* базы данных AdventureWorks. В каждой возвращаемой строке *ReviewDate* извлекается в виде строки и *комментарии* извлекается в виде потока. Потоковые данные отображаются с помощью функции [fpassthru](http://php.net/manual/en/function.fpassthru.php) PHP.  
+Следующий пример извлекает строки из таблицы *Production.ProductReview* базы данных AdventureWorks. В каждой возвращаемой строке поле *ReviewDate* извлекается в виде строки, а поле *Comments* —в виде потока. Потоковые данные отображаются с помощью функции [fpassthru](http://php.net/manual/en/function.fpassthru.php) PHP.  
   
-Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -101,14 +98,14 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-В этом примере извлечение второго поля (*ReviewDate*) в виде строки сохраняет тип данных SQL Server DATETIME с точностью до миллисекунды. По умолчанию тип данных DATETIME SQL Server извлекается в виде объекта DateTime PHP, в котором точность до миллисекунды теряется.  
+В этом примере при извлечении второго поля *ReviewDate* в виде строки сохраняется значение типа данных DATETIME SQL Server с точностью до миллисекунды. По умолчанию тип данных DATETIME SQL Server извлекается в виде объекта DateTime PHP, в котором точность до миллисекунды теряется.  
   
-Извлечение четвертого поля (*комментарии*) в виде потока осуществляется для демонстрационных целей. По умолчанию тип данных nvarchar(3850) SQL Server извлекается в виде строки, что вполне приемлемо в большинстве ситуаций.  
+Извлечение четвертого поля (*Comments*) в виде потока осуществляется для демонстрационных целей. По умолчанию тип данных nvarchar(3850) SQL Server извлекается в виде строки, что вполне приемлемо в большинстве ситуаций.  
   
 > [!NOTE]  
 > Функция [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) предоставляет способ получения сведений о поле, включая информацию о типе, перед выполнением запроса.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Извлечение данных](../../connect/php/retrieving-data.md)
 
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)

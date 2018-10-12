@@ -1,13 +1,11 @@
 ---
-title: Метод executeUpdate (java.lang.String, int) | Документы Microsoft
+title: Метод executeUpdate (java.lang.String, int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.executeUpdate (java.lang.String, int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c173fa5ed1c2d431038cb6ffd8b917d1d521e27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8d7baa2edfdc1d8583dbea5bf16ea05db2e3afad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831289"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611352"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>Метод executeUpdate (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Выполняет заданную инструкцию SQL и сигналы [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] с помощью определенного флага о ли автоматически созданные ключи, созданные этим [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта должны быть доступны для загрузки.  
+  Выполняет заданную инструкцию SQL и с помощью определенного флага уведомляет драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] о том, что автоматически сформированные ключи, созданные этим объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), должны быть доступны для получения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,30 +39,30 @@ public final int executeUpdate(java.lang.String sql,
 #### <a name="parameters"></a>Параметры  
  *sql*  
   
- Объект **строка** , содержащий инструкции SQL.  
+ Значение типа **String**, содержащее инструкцию SQL.  
   
  *flag*  
   
- **Int** значение, указывающее, если автоматически сформированные ключи должны быть доступными. Это должна быть одна из следующих констант:  
+ Значение типа **int**, которое указывает, нужно ли обеспечить доступ к автоматически формируемым ключам. Это должна быть одна из следующих констант:  
   
  RETURN_GENERATED_KEYS  
   
  NO_GENERATED_KEYS  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Int** указывает число обработанных строк, либо значение 0 для инструкций DDL.  
+ Значение типа **int**, указывающее либо число обработанных строк, либо значение 0 для инструкций языка DDL.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод executeUpdate указывается с помощью метода executeUpdate в интерфейсе java.sql.Statement.  
   
- Если выполнение хранимой процедуры приведет к счетчика обновлений, больше единицы либо сформировано более одного результирующего набора, используйте [выполнение](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) метод для выполнения хранимой процедуры.  
+ Если в результате выполнения хранимой процедуры счетчик обновлений больше единицы либо сформировано больше одного результирующего набора, используйте для выполнения хранимой процедуры метод [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод executeUpdate &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
- [Члены SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+ [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Класс SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

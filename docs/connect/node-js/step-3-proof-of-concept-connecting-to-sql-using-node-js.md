@@ -1,31 +1,28 @@
 ---
-title: 'Шаг 3: Эксперимент подключение к SQL с помощью Node.js | Документы Microsoft'
+title: Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Node.js | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6d9e49b709396519a3eb08ce37fb802c66aa283
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 4ffefc34eed32a27b29f40836762a16fd69cdd4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288924"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834143"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Шаг 3: Эксперимент подключение к SQL с помощью Node.js
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Node.js
 
-![Круг_со_стрелкой_загрузки](../../ssdt/media/download.png)[Скачать драйвер Node.js для SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[загрузить драйвер Node.js SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-В этом примере следует рассматривать эксперимента только.  В образце кода упрощен для ясности и не представляет рекомендации рекомендуется корпорацией Майкрософт. Другие примеры, которые используют те же важные функции доступны на сайте Github.
+В этом примере следует рассматривать подтверждение концепции только.  Пример кода упрощен для ясности и не всегда представляет рекомендации, рекомендуемые корпорацией Майкрософт. Другие примеры, которые используют те же важные функции доступны на сайте Github:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
@@ -49,10 +46,10 @@ ms.locfileid: "35288924"
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>Шаг 2: Выполнение запроса  
+## <a name="step-2--execute-a-query"></a>Шаг 2. Выполнение запроса  
   
   
-Все инструкции SQL выполняются с помощью **новый запроса()** функции. Если инструкция возвращает строки, например инструкцию select, их можно получить с помощью **request.on()** функции. Если нет ни одной строки, функция request.on() возвращает пустые списки.  
+Все инструкции SQL выполняются с помощью **new Request()** функции. Если инструкция возвращает строки, например инструкцию select, их можно получить с помощью **request.on()** функции. Если нет ни одной строки, функция request.on() возвращает пустые списки.  
   
   
 ```javascript  
@@ -99,9 +96,9 @@ ms.locfileid: "35288924"
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>Шаг 3: Вставьте строку  
+## <a name="step-3-insert-a-row"></a>Шаг 3: Вставка строки  
   
-В этом примере показано, как выполнить [вставить](../../t-sql/statements/insert-transact-sql.md) инструкции безопасно, передавать параметры, которые защитить приложения от [атаки SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) значение.    
+В этом примере показано, как выполнить [вставить](../../t-sql/statements/insert-transact-sql.md) инструкции безопасно, передать параметры для защиты от атак [путем внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) значение.    
   
   
 ```javascript  

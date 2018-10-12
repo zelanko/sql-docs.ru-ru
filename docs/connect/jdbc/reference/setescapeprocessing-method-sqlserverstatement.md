@@ -1,13 +1,11 @@
 ---
-title: Метод setEscapeProcessing (SQLServerStatement) | Документы Microsoft
+title: Метод setEscapeProcessing (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.setEscapeProcessing
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6ac0682e-e04c-4fdb-893b-92408d42051e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31dfb36860f325f326e80ddeee986975f2934665
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 52a7931ffe5ffb80f0ca376318e8b50a8e21e6d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841669"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745602"
 ---
 # <a name="setescapeprocessing-method-sqlserverstatement"></a>Метод setEscapeProcessing (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +29,7 @@ ms.locfileid: "32841669"
   Задается режим обработки escape-последовательностей.  
   
 > [!NOTE]  
->  Обработка escape [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] всегда включена. Если установить значение false в этом методе, обработка останется включенной.  
+>  Для [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] обработка escape-последовательностей всегда включена. Если установить значение false в этом методе, обработка останется включенной.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,18 +39,18 @@ public final void setEscapeProcessing(boolean enable)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Включить*  
+ *enable*  
   
- **значение true,** Чтобы включить обработку escape-последовательностей. В противном случае — **false**.  
+ Значение **true**, чтобы включить обработку escape-последовательностей. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод setEscapeProcessing указывается с помощью метода setEscapeProcessing в интерфейсе java.sql.Statement.  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Класс SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

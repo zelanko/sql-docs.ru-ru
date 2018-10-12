@@ -1,53 +1,50 @@
 ---
-title: Разработчик данных SQL | Документы Microsoft
+title: Разработчик данных SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 609604e890052d742c99d8e12604abe7ce9e5259
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 181039ae52fc20c4b453d268b81cf4029cf6c473
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309743"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615502"
 ---
 # <a name="sql-data-developer"></a>Разработчик данных SQL
-Используйте Microsoft платформы данных SQL для создания решений, основанных на данных через мобильных устройств и настольных компьютеров, для веб-серверы, серверы предприятия и облаком.  
+Используйте платформы данных Microsoft SQL для создания решений для обработки данных на мобильных устройствах и настольных компьютеров для веб-серверы, серверы предприятия и облака.  
 
-## <a name="sql-data-storage"></a>Хранилище данных SQL
+## <a name="sql-data-storage"></a>Хранение данных SQL
 * [SQL Server Database Engine](../database-engine/configure-windows/sql-server-database-engine.md): использовать SQL Server Database Engine для создания реляционных баз данных для оперативной обработки транзакций или интерактивной аналитической обработки данных. 
-* [SQL Azure](https://docs.microsoft.com/azure/sql-database/): использование SQL Azure для перемещения базы данных в облако 
-* [SQL Compact](https://www.microsoft.com/en-us/download/details.aspx?id=17876): SQL Server Compact для построения автономных, так и приложения с периодическим соединением для мобильных устройств, настольных компьютеров и веб-клиентами.
-* [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): используйте LocalDB во время разработки, чтобы писать и тестировать код Transact-SQL без необходимости управления полным экземпляром сервера SQL Server.
+* [SQL Azure](https://docs.microsoft.com/azure/sql-database/): использование SQL Azure, перенос базы данных в облако 
+* [SQL Compact](https://www.microsoft.com/en-us/download/details.aspx?id=17876): SQL Server Compact, для создания автономного и временно подключаемых приложений для мобильных устройств, настольных компьютеров, а веб-клиентов.
+* [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): использование LocalDB во время разработки в написании и тестировании кода Transact-SQL без необходимости управления полным экземпляром сервера SQL Server.
 
 ## <a name="sql-data-tools"></a>SQL Data tools
-* [SQL Server Data Tools ](../ssdt/download-sql-server-data-tools-ssdt.md) : использование SSDT для сборки реляционных баз данных, баз данных Azure SQL, пакетов служб Integration Services, моделей данных служб Analysis Services и служб Reporting Services отчеты.
-* [Средства управления SQL Server](../ssms/download-sql-server-management-studio-ssms.md): используйте SSMS настройки, наблюдения и администрирования экземпляров SQL Server.
+* [SQL Server Data Tools ](../ssdt/download-sql-server-data-tools-ssdt.md) : использование SSDT для сборки реляционных баз данных, баз данных Azure SQL, пакетов служб Integration Services, моделей данных служб Analysis Services и Reporting Services отчеты.
+* [Средства управления SQL Server](../ssms/download-sql-server-management-studio-ssms.md): SSMS используйте настройки, наблюдения и администрирования экземпляров SQL Server.
 
 ## <a name="sql-data-access"></a>Доступ к данным SQL
-* [Драйверы клиента SQL](sql-connection-libraries.md): драйверы SQL используется для подключения, запрос, обновления, вставки или удаления данных из базы данных SQL.
-* [Платформа Entity Framework](https://msdn.microsoft.com/library/gg696172.aspx): использования платформы Entity Framework для упрощения доступа к базам данных с помощью LINQ, прямой доступ к SQL Server и параметр для управления сопоставлениями между модель данных сущности (EDM) и необработанные реляционными структурами. 
-* [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/dd456779.aspx): использование служб данных для решения рядом под ключ легко создавать и использовать службы OData в Интернете и интрасети
-* [Синхронизировать Framework](https://msdn.microsoft.com/library/jj839436.aspx): используйте Sync Framework, чтобы включить автономный доступ к любой тип данных, любое хранилище данных, любой протокол передачи и любой топологии сети.
-* [Реактивные расширения](https://msdn.microsoft.com/library/hh242985.aspx): использовать реактивные расширения (Rx) для выполнения программирования потока событий и упрощения использования наблюдаемых последовательностей и операторов запросов LINQ стиль асинхронного программирования.  Для упрощения асинхронного программирования на основе обратного вызова и событийно управляемыми в Интернете, используя наблюдаемых последовательностей, используют реактивные расширения JavaScript (RxJS).
-* [Интеграция со средой CLR](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md): использование интеграции со средой CLR для записи хранимые процедуры, триггеры, определяемые пользователем типы, определяемые пользователем функции, определяемые пользователем статистические функции и потоковые функции, возвращающие табличные значения, с помощью любого языка .NET Framework, включая Microsoft Visual Basic .NET и Microsoft Visual C#. 
-* [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): использование SQLXML 4.0 экспорте реляционных данных в формат XML.
+* [Драйверы клиента SQL](sql-connection-libraries.md): драйверы SQL используется для подключения, запроса, обновления, вставки или удаления данных из базы данных SQL.
+* [Платформа Entity Framework](https://msdn.microsoft.com/library/gg696172.aspx): использовать Entity Framework получать доступ к базам данных с помощью LINQ, прямой доступ к SQL Server, а также возможность управлять сопоставлением Entity Data Model (EDM) и необработанные реляционными структурами. 
+* [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/dd456779.aspx): использование служб данных для практически готового решения легко создавать и использовать службы OData в Интернете и интрасети
+* [Синхронизировать Framework](https://msdn.microsoft.com/library/jj839436.aspx): использовать Sync Framework для включения автономного доступа для любого типа данных, любое хранилище данных, любой протокол передачи и любой топологии сети.
+* [Реактивные расширения](https://msdn.microsoft.com/library/hh242985.aspx): использовать реактивные расширения (Rx) для операций программирования потока событий и упрощение асинхронного программирования, использования наблюдаемых последовательностей и операторов запросов в стиле LINQ.  Реактивные расширения для JavaScript (RxJS) можно используйте для упрощения асинхронного программирования основанную на обратных вызовах и событиями в Интернете с помощью наблюдаемых последовательностей.
+* [Интеграция CLR](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md). Используйте интеграцию CLR, чтобы разрабатывать хранимые процедуры, триггеры, определяемые пользователем типы, функции и агрегатные функции, а также потоковые функции с табличным значением, используя любой язык .NET Framework, включая Microsoft Visual Basic .NET и Microsoft Visual C#. 
+* [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): используйте SQLXML 4.0, чтобы экспортировать реляционные данные в XML.
 
 ## <a name="data-collection-processing-and-visualization"></a>Сбор данных, обработки и визуализации
 * [службы Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
 * [Службы интеграции](../integration-services/integration-services-developer-documentation.md)  
 * [Службы Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
-* [Службы репликации](../relational-databases/replication/concepts/replication-developer-documentation.md)
+* [Службы Replication Services](../relational-databases/replication/concepts/replication-developer-documentation.md)
 * [службы Reporting Services](../reporting-services/reporting-services-developer-documentation.md)
 * [Компонент Service Broker](../database-engine/configure-windows/sql-server-service-broker.md)
 

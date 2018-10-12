@@ -1,30 +1,27 @@
 ---
-title: Метод setClob (int, java.io.Reader) | Документы Microsoft
+title: Метод setClob (int, java.io.Reader) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2b3727da-0480-4cea-b8b1-abda90699b84
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a299425c27b49798a15b5abb9db58d9545906cb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ad07fbd53d2e3004ea96572d1c4d28f83e92a509
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842449"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604402"
 ---
 # <a name="setclob-method-int-javaioreader"></a>Метод setClob (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Присваивает указанному параметру указанный объект модуля чтения.  
+  Задает указанному параметру заданный объект Reader.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,20 +34,20 @@ public final void setClob(int parameterIndex,
 #### <a name="parameters"></a>Параметры  
  *parameterIndex*  
   
- **Int** , указывающее индекс параметра.  
+ Значение типа **int**, указывающее индекс параметра.  
   
- *Модуль чтения*  
+ *reader*  
   
- Объект модуля чтения.  
+ Объект средства чтения.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод setClob указывается с помощью метода setClob в интерфейсе java.sql.PreparedStatement.  
+## <a name="remarks"></a>Remarks  
+ Метод setClob определен с помощью метода setClob в интерфейсе java.sql.PreparedStatement.  
   
-## <a name="see-also"></a>См. также  
- [Метод setClob &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод setClob (SQLServerPreparedStatement)](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
  [Элементы SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

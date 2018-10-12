@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE_REWINDONLY_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 486715799d2fee564c51336bd958eb603cd1b490
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0ba43b04bc5c77d060fd2f8edda25d8a925a2856
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038662"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602292"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Инструкции RESTORE — REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +61,11 @@ FROM <backup_device> [ ,...n ]
   
  Логическое или физическое устройство резервного копирования.  
   
- { *logical_backup_device_name* | **@***logical_backup_device_name_var* } Логическое имя устройства резервного копирования, из которого восстанавливается база данных. Это имя создается с помощью процедуры **sp_addumpdevice** и должно соответствовать правилам наименования идентификаторов. Если аргумент задается в виде переменной (**@***logical_backup_device_name_var*), имя устройства резервного копирования можно указать как строковую константу (**@***logical_backup_device_name_var* = *logical_backup_device_name*) или как переменную любого строкового типа данных, за исключением типов данных **ntext** или **text**.  
+ { *logical_backup_device_name* | **@**_logical\_backup\_device\_name\_var_ }  
+ Логическое имя устройства резервного копирования, из которого восстанавливается база данных. Это имя создается с помощью процедуры **sp_addumpdevice** и должно соответствовать правилам наименования идентификаторов. Если аргумент задается в виде переменной (**@**_logical\_backup\_device\_name\_var_), имя устройства резервного копирования можно указать как строковую константу (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) или как переменную любого строкового типа данных, за исключением типов данных **ntext** или **text**.  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Разрешает восстановление резервных копий с именованного диска или ленточного устройства. Типы дисковых и ленточных устройств должны быть заданы с реальным именем устройства (например, полный путь и имя файла): DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' или TAPE = '\\\\.\TAPE0'. Если аргумент задается в виде переменной (**@***physical_backup_device_name_var*), имя устройства можно указать как строковую константу (**@***physical_backup_device_name_var* = '* physcial_backup_device_name*') или как другую переменную любого строкового типа данных, за исключением типов данных **ntext** или **text**.  
+ {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
+ Разрешает сохранение резервных копий с названного диска или ленточного устройства хранения данных. Типы дисковых и ленточных устройств должны быть заданы с реальным именем устройства (например, полный путь и имя файла): DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' или TAPE = '\\\\.\TAPE0'. Если аргумент задается в виде переменной (**@**_physical\_backup\_device\_name\_var_), имя устройства можно указать как строковую константу (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') или как другую переменную любого строкового типа данных, за исключением типов данных **ntext** или **text**.  
   
  Укажите тип дискового устройства с помощью сетевого сервера с именем UNC (которое должно содержать имя компьютера). Дополнительные сведения об именах UNC см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   

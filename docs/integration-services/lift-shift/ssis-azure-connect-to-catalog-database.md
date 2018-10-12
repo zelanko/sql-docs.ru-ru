@@ -1,23 +1,22 @@
 ---
 title: Подключение к каталогу SSIS (SSISDB) в Azure | Документы Майкрософт
 description: Получите сведения, необходимые для подключения к каталогу SSIS (SSISDB), размещенному на сервере базы данных SQL Azure.
-ms.date: 09/25/2017
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 571fe7755803dcb3ef76a678969295864436f16a
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: c498f71be24d3f9e26aa1f6854dc048e0c9d6b89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36798269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698122"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Подключение к каталогу SSIS (SSISDB) в Azure
 
@@ -30,7 +29,7 @@ ms.locfileid: "36798269"
 > Сейчас невозможно создать базу данных каталога SSISDB в базе данных SQL Azure независимо от создания среды выполнения интеграции Azure-SSI в Фабрике данных Azure. Среда Azure-SSIS IR — это среда выполнения, в которой выполняются пакеты SSIS в Azure. Пошаговые инструкции см. в статье [Развертывание и запуск пакета служб SSIS в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>предварительные требования
-Прежде чем начать, убедитесь в наличии SQL Server Management Studio (SSMS) версии 17.2 или более поздней. Если база данных каталога SSISDB размещается в управляемом экземпляре базы данных SQL (предварительная версия), убедитесь в наличии SSMS версии 17.6 или более поздней. Чтобы скачать последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Прежде чем начать, убедитесь в наличии SQL Server Management Studio (SSMS) версии 17.2 или более поздней. Если база данных каталога SSISDB размещается в Управляемом экземпляре Базы данных SQL, убедитесь в наличии SSMS версии 17.6 или более поздней. Чтобы скачать последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Получение сведений о подключении с портала Azure
 1. Войдите на [портал Azure](https://portal.azure.com/).

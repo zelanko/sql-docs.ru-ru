@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: osql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -25,17 +22,16 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 683bffc470aba863d25b252c7e7d305976631da8
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: b2f6a7406fb500f3e909761c4c632587748c1df8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452638"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847480"
 ---
 # <a name="osql-utility"></a>Программа osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,8 +97,8 @@ C:\>osql
  **-E**  
  Использует доверительное соединение вместо запроса пароля.  
   
- **-S** *имя_сервера*[ **\\***имя_экземпляра*]  
- Указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для подключения. Укажите значение *имя_сервера* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Укажите *имя_сервера***\\***имя_экземпляра*, чтобы подключиться к именованному экземпляру компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на этом сервере. Если сервер не указан, программа **osql** устанавливает подключение к используемому по умолчанию экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на локальном компьютере. Этот параметр необходим при выполнении программы **osql** с удаленного компьютера в сети.  
+ **-S** _server\_имя_[ **\\** _экземпляр\_имя_]  
+ Указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для подключения. Укажите значение *имя_сервера* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Укажите _имя\_сервера_**\\**_имя\_экземпляра_, чтобы подключиться к именованному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на этом сервере. Если сервер не указан, программа **osql** устанавливает подключение к используемому по умолчанию экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на локальном компьютере. Этот параметр необходим при выполнении программы **osql** с удаленного компьютера в сети.  
   
  **-H** *имя_рабочей_станции*  
  Имя рабочей станции. Имя рабочей станции хранится в **sysprocesses.hostname** и выводится процедурой **sp_who**. Если этот параметр не указан, используется текущее имя компьютера.  
@@ -202,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>Remarks  
  Программа **osql** запускается непосредственно из операционной системы с перечисленными ниже параметрами, в которых учитывается регистр символов. После запуска программа **osql**принимает инструкции SQL и интерактивно передает их [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Результаты форматируются и выводятся на экране (**stdout**). Для выхода из программы **osql**используются команды QUIT или EXIT.  
   
- Если при запуске программы **osql** имя пользователя не указано, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] проверяет переменные среды и использует их, например переменную **osqluser=(***пользователь***)** или **osqlserver=(***сервер***)**. Если переменные среды не установлены, используется имя пользователя рабочей станции. Если не указан сервер, используется имя рабочей станции.  
+ Если при запуске программы **osql**имя пользователя не указано, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] проверяет переменные среды и использует их, например переменную **osqluser=(**_пользователь_**)** или **osqlserver=(**_сервер_**)**. Если переменные среды не установлены, используется имя пользователя рабочей станции. Если не указан сервер, используется имя рабочей станции.  
   
  Если параметры **-U** и **-P** не используются, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пытается установить подключение с помощью режима проверки подлинности [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Проверка подлинности основана на учетной записи пользователя [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows, запустившего программу **osql**.  
   
@@ -261,7 +257,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  По возможности используйте параметр **-E**(доверительное соединение).  
   
- При использовании программы **osql** в интерактивном режиме файл операционной системы можно считать в буфер команд с помощью команды **:r***имя_файла*. Это приведет к отправке скрипта SQL в файле с именем *имя_файла* непосредственно на сервер в виде единого пакета.  
+ При использовании программы **osql** в интерактивном режиме файл операционной системы можно считать в буфер команд с помощью команды **:r**_имя\_файла_. Это приведет к отправке скрипта SQL в файле с именем *имя_файла* непосредственно на сервер в виде единого пакета.  
   
 > [!NOTE]  
 >  Если при использовании программы **osql**в файле скрипта SQL содержится разделитель пакетов GO, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] воспринимает его как синтаксическую ошибку.  
@@ -302,7 +298,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Выполняет пакет, завершает выполнение и не возвращает значения.  
   
--   EXIT **(***query***)**  
+-   EXIT **(**_запрос_**)**  
   
 > [!NOTE]  
 >  Выполняет пакет, включая запрос, затем возвращает результаты запроса и завершает работу.  

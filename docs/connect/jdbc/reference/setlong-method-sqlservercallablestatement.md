@@ -1,13 +1,11 @@
 ---
-title: Метод setLong (SQLServerCallableStatement) | Документы Microsoft
+title: Метод setLong (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setLong
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 137416fe-a580-424e-be79-fe946eba9e6e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9539da05e55056aaa10d9fd6378977336d7d79c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9fb6172a5ce5601a7af547771850424a74d1bfc0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843149"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846912"
 ---
 # <a name="setlong-method-sqlservercallablestatement"></a>Метод setLong (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Устанавливает указанный параметр заданного **длинные** значение.  
+  Задает указанному параметру заданное значение **long**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,20 +39,20 @@ public void setLong(java.lang.String sCol,
 #### <a name="parameters"></a>Параметры  
  *sCol*  
   
- Объект **строка** , содержащее имя параметра.  
+ Значение типа **String**, содержащее имя параметра.  
   
- *L*  
+ *l*  
   
- Объект **длинные** значение.  
+ Объект **long** значение.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод setLong указывается с помощью метода setLong в интерфейсе java.sql.CallableStatement.  
+## <a name="remarks"></a>Remarks  
+ Этот метод setLong определен с помощью метода setLong в интерфейсе java.sql.CallableStatement.  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

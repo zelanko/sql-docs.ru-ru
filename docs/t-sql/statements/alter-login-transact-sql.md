@@ -5,9 +5,7 @@ ms.date: 04/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_LOGIN_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-caps.latest.revision: 68
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9faa9de82ed9b5db0ba2ccac071d038fb430f096
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c0097d1b2b6accad7283a1f97d4f28f9ec289c0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43061577"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749092"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -133,12 +130,12 @@ ALTER LOGIN login_name
  ENABLE | DISABLE  
  Включает или отключает данное имя входа. Отключение входа не влияет на поведение имен входа, которые уже подключены. (Чтобы завершить существующие подключения, используйте инструкцию `KILL`.) Отключенные имена входа сохраняют свои разрешения и все еще могут быть олицетворены.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает пароль для имени входа, которое необходимо изменить. В паролях учитывается регистр символов.  
   
  Для поддержания подключений к базе данных SQL в активном состоянии требуется повторная авторизация (выполняемая ядром СУБД) по крайней мере каждые 10 часов. Ядро СУБД пытается выполнить повторную авторизацию с использованием первоначального пароля. Пользователю не нужно вводить никаких данных. В целях повышения производительности при сбросе пароля в базе данных SQL повторная проверка подлинности подключения не проводится, даже если подключение сбрасывается из-за создания пула подключений. В локальном развертывании SQL Server поведение иное. Если пароль изменился с момента первоначальной авторизации подключения, подключение должно быть завершено и должно быть установлено новое подключение с использованием нового пароля. Пользователь с разрешением KILL DATABASE CONNECTION может явным образом завершить подключение к базе данных SQL с помощью команды KILL. Дополнительные сведения см. в разделе [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md).  
   
- PASSWORD **=***hashed_password*  
+ PASSWORD **=**_hashed\_password_  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Применимо только к ключевому слову HASHED. Указывает хэшированное значение пароля для создаваемого имени входа.  
@@ -152,7 +149,7 @@ ALTER LOGIN login_name
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указывает, что пароль, введенный после аргумента PASSWORD, уже хэширован. Если этот параметр не выбран, то пароль хэшируется перед сохранением в базе данных. Этот параметр следует использовать только для синхронизации имен входа между двумя серверами. Не используйте параметр HASHED для плановой смены паролей.  
   
- OLD_PASSWORD **='***oldpassword***'**  
+ OLD_PASSWORD **='**_oldpassword_**'**  
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Текущий пароль имени входа, которому будет присвоен новый пароль. В паролях учитывается регистр символов.  
   
  MUST_CHANGE  
@@ -160,12 +157,12 @@ ALTER LOGIN login_name
   
  Применяется только к именам входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если данный параметр включен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потребует ввести новый пароль при первом использовании измененного имени входа.  
   
- DEFAULT_DATABASE **=***database*  
+ DEFAULT_DATABASE **=**_database_  
 **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает базу данных по умолчанию, назначенную имени входа.  
   
- DEFAULT_LANGUAGE **=***language*  
+ DEFAULT_LANGUAGE **=**_language_  
  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -300,7 +297,7 @@ GO
 ```  
   
 ### <a name="f-unlocking-a-login"></a>Е. Разблокирование имени входа  
- Чтобы разблокировать имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните следующую инструкцию, заменив **** нужным паролем учетной записи.  
+ Чтобы разблокировать имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните следующую инструкцию, заменив \*\*\*\* нужным паролем учетной записи.  
   
   
 ```sql  

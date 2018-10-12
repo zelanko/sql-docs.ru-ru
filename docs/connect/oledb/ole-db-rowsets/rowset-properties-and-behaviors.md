@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], properties
@@ -19,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7c98299d1dc55a19d2199222ea3e639ae1e5d4bb
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8c78c56d08535b5d9947b5bd215afaf2f8e23e44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754832"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Свойства и поведение наборов строк
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "43037437"
 |DBPROP_ACCESSORDER|И запись: чтение и запись<br /><br /> По умолчанию: DBPROPVAL_AO_RANDOM<br /><br /> Описание: Порядок доступа. Порядок, в котором должен осуществляться доступ к столбцам в наборе строк.<br /><br /> DBPROPVAL_AO_RANDOM: Столбец может осуществляться в любом порядке.<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS: Столбцы привязаны как хранилище объектов можно получить только в последовательном порядке, по порядковому номеру столбца.<br /><br /> DBPROPVAL_AO_SEQUENTIAL: доступ ко всем столбцам должен осуществляться последовательно по порядковому номеру столбца.|  
 |DBPROP_APPENDONLY|Это свойство набора строк не реализуется драйвером OLE DB для SQL Server. При попытке считать или записать значение свойства возникает ошибка.|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|И запись: только для чтения<br /><br /> По умолчанию: значение VARIANT_TRUE<br /><br /> Описание: Драйвер OLE DB для SQL Server хранилища объектов блока, с помощью других методов набора строк.|  
-|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|И запись: чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: драйвер OLE DB для SQL Server поддерживает закладки для определения строки набора строк, если свойство DBPROP_BOOKMARKS или DBPROP_LITERALBOOKMARKS имеет значение VARIANT_TRUE.<br /><br /> Присвоение любому из этих свойств значения VARIANT_TRUE не включает позиционирование набора строк по закладке. Чтобы создать набор строк, поддерживающий позиционирование по закладке, присвойте свойству DBPROP_IRowsetLocate или DBPROP_IRowsetScroll значение VARIANT_TRUE.<br /><br /> Драйвер OLE DB для SQL Server использует [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] курсора для поддержки набора строк, который содержит закладки. Дополнительные сведения см. в статье [Наборы строк и курсоры SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> При указании для этих свойств таких значений, которые конфликтуют с другими свойствами драйвера OLE DB для SQL Server, определяющими курсоры, возникает ошибка. Например, при попытке потребителя открыть набор строк, свойства DBPROP_BOOKMARKS и DBPROP_OTHERINSERT которого имеют значение VARIANT_TRUE, будет выдана ошибка.|  
+|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|И запись: чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: драйвер OLE DB для SQL Server поддерживает закладки для определения строки набора строк, если свойство DBPROP_BOOKMARKS или DBPROP_LITERALBOOKMARKS имеет значение VARIANT_TRUE.<br /><br /> Присвоение любому из этих свойств значения VARIANT_TRUE не включает позиционирование набора строк по закладке. Чтобы создать набор строк, поддерживающий позиционирование по закладке, присвойте свойству DBPROP_IRowsetLocate или DBPROP_IRowsetScroll значение VARIANT_TRUE.<br /><br /> Драйвер OLE DB для SQL Server использует [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] курсора для поддержки набора строк, который содержит закладки. Дополнительные сведения см. в статье [Наборы строк и курсоры SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> Примечание. При указании для этих свойств таких значений, которые конфликтуют с другими свойствами драйвера OLE DB для SQL Server, определяющими курсоры, возникает ошибка. Например, при попытке потребителя открыть набор строк, свойства DBPROP_BOOKMARKS и DBPROP_OTHERINSERT которого имеют значение VARIANT_TRUE, будет выдана ошибка.|  
 |DBPROP_BOOKMARKSKIPPED|И запись: только для чтения<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: драйвер OLE DB для SQL Server вернет значение DB_E_BADBOOKMARK, если потребитель указал недопустимую закладку при позиционировании или поиске набора строк с закладками.|  
 |DBPROP_BOOKMARKTYPE|И запись: только для чтения<br /><br /> По умолчанию: DBPROPVAL_BMK_NUMERIC<br /><br /> Описание: Драйвер OLE DB для SQL Server реализует только числовые закладки. Драйвер OLE DB для SQL Server закладки является 32-разрядного целого числа без знака, имеющее тип DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Это свойство набора строк не реализуется драйвером OLE DB для SQL Server. При попытке считать или записать значение свойства возникает ошибка.|  

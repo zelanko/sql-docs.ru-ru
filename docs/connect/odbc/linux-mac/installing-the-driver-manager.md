@@ -5,23 +5,20 @@ ms.date: 02/14/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 517ebaea849cad131742211f68dc1ac9fe0f9731
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 78eaf77064fb96c024c548c320ca9feeec10ce02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784641"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597989"
 ---
 # <a name="installing-the-driver-manager"></a>Установка диспетчера драйверов
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +46,7 @@ ms.locfileid: "42784641"
   
 2.  Перейдите в каталог, куда программа скачивания драйвера ODBC Driver [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поместила файл с именем `msodbcsql-11.0.2270.0.tar.gz`. Убедитесь в наличии файла \*.TAR.GZ, который соответствует вашей версии Linux. Чтобы извлечь файлы, выполните следующую команду: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
 
-3.  Перейдите в каталог `msodbcsql-11.0.2270.0`, где должен находиться файл `build_dm.sh`install.sh. Можно запустить `build_dm.sh` для установки диспетчера драйверов unixODBC.
+3.  Перейдите в каталог `msodbcsql-11.0.2270.0`, где должен находиться файл `build_dm.sh`. Можно запустить `build_dm.sh` для установки диспетчера драйверов unixODBC.
 
 4.  Чтобы просмотреть список доступных параметров, выполните следующую команду: **./build_dm.sh --help**.  
   

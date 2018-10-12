@@ -1,27 +1,24 @@
 ---
-title: 'Как: подключение с использованием проверки подлинности SQL Server | Документы Microsoft'
+title: Практическое руководство. Подключение с использованием проверки подлинности SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2eca3084ccdabf2ecd0f5be9ca707fb5f5f3387f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 9d2188b99a43dbf26d97871535204f3da69c23af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307303"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731802"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>How to: Connect Using SQL Server Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +31,7 @@ ms.locfileid: "35307303"
   
 -   На сервере должен быть включен смешанный режим проверки подлинности SQL Server.  
   
--   Идентификатор пользователя и пароль (*UID* и *PWD* атрибуты соединения в драйвере SQLSRV) должны быть установлены при попытке установить соединение. Идентификатор пользователя и пароль необходимо сопоставить с допустимым пользователем и паролем SQL Server.  
+-   Идентификатор пользователя и пароль (атрибуты подключения *UID* и *PWD* в драйвере SQLSRV) должны быть установлены, когда предпринимается попытка соединения. Идентификатор пользователя и пароль необходимо сопоставить с допустимым пользователем и паролем SQL Server.  
   
 > [!NOTE]  
 > Пароли, которые содержат закрывающую фигурную скобку (}), необходимо экранировать с помощью второй закрывающей фигурной скобки. Например, если пароль SQL Server имеет значение "па}роль", для атрибута соединения *PWD* следует задать значение "па}}роль".  
@@ -54,9 +51,9 @@ ms.locfileid: "35307303"
 > Атрибуты соединения, кроме идентификатора пользователя и пароля, можно задать при установке соединения. Полный список поддерживаемых атрибутов соединения см. в статье [Connection Options](../../connect/php/connection-options.md).  
   
 ## <a name="example"></a>Пример  
-Следующий пример использует драйвер SQLSRV с проверкой подлинности SQL Server для подключения к локальному экземпляру SQL Server. Значения для необходимых *UID* и *PWD* атрибуты соединения, взяты из конкретного приложения текстовые файлы, *uid.txt* и *pwd.txt*в *C:\AppData* каталога. После установки соединения на сервер отправляется запрос для проверки имени входа пользователя.  
+Следующий пример использует драйвер SQLSRV с проверкой подлинности SQL Server для подключения к локальному экземпляру SQL Server. Значения для необходимых атрибутов подключения *UID* и *PWD* берутся из текстовых файлов для конкретного приложения (*uid.txt* и *pwd.txt*), находящихся в каталоге *C:\AppData*. После установки соединения на сервер отправляется запрос для проверки имени входа пользователя.  
   
-Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
+В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
   
 ```  
 <?php  
@@ -133,7 +130,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Практическое руководство. Подключение с использованием проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
 [Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
@@ -142,13 +139,13 @@ sqlsrv_close( $conn);
 
 [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
 
-[Как: создать имя входа SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
+[Практическое руководство. Создание имени входа SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Как: Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Практическое руководство. Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Управление пользователями, ролями и именами входа](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
 [Отделение пользователей от схем](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
-[Разрешения объекта GRANT (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+[Предоставление разрешений для объекта (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

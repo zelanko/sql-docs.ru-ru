@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f354c557aaa44633f15640458138678ee18dfab
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 3b05ad276374427e13fcbca2cca2bd577d582451
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459478"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710562"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Скачивание драйвера Microsoft JDBC Driver for SQL Server
 
@@ -43,6 +40,6 @@ ms.locfileid: "39459478"
  * [Microsoft JDBC Driver 4.1 для SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 
   
 ## <a name="unsupported-drivers"></a>Неподдерживаемые драйверы  
-Скачивание неподдерживаемых версий драйверов здесь недоступно. Мы постоянно работаем над улучшением поддержки возможностей подключения Java. Таким образом мы настоятельно рекомендуем работать с последней версией драйвера Microsoft JDBC.  
+Скачивание неподдерживаемых версий драйверов здесь недоступно. Мы постоянно работаем над улучшением поддержки возможностей подключения Java. Настоятельно рекомендуем использовать последнюю версию драйвера Microsoft JDBC.  
   
   

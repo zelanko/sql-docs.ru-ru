@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTVALID_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: faccfb4456001f6a807e69cc69c89f31e8320955
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 01e165cf75dbb411507ead1bab3728cf4e142df9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982306"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799732"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Функции для работы с изображениями и текстом — TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +67,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |Функция или инструкция|Описание|  
 |---------------------------|-----------------|  
-|PATINDEX **(**'*%pattern%**'***,** *expression***)**|Возвращает позицию символа указанной символьной строки в столбцах **text** и **ntext**.|  
-|DATALENGTH **(***expression***)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  
+|PATINDEX **(**'_%pattern%_'**,** _expression_**)**|Возвращает позицию символа указанной символьной строки в столбцах **text** и **ntext**.|  
+|DATALENGTH **(**_expression_**)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  
 |SET TEXTSIZE|Возвращает предельный размер (в байтах) для данных типа **text**, **ntext** или **image**, возвращаемых инструкцией SELECT.|  
   
 ## <a name="examples"></a>Примеры  

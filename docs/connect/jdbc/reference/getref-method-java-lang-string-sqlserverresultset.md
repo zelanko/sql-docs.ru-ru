@@ -1,13 +1,11 @@
 ---
-title: Метод getRef (java.lang.String) (SQLServerResultSet) | Документы Microsoft
+title: Метод getRef (java.lang.String) (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getRef (java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 83c60c5d-7a69-498b-be9c-bbdbfafec157
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba30f06f2d0adad601c791830fd6fc12a0361a46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 410fcbfabe0710ce6922c292565db6c6e8bff3f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743092"
 ---
 # <a name="getref-method-javalangstring-sqlserverresultset"></a>Метод getRef (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Получает значение имени заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде ссылки объекта на языке программирования Java.  
+  Извлекает значение имя заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде объекта Ref на языке программирования Java.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,20 +36,20 @@ public java.sql.Ref getRef(java.lang.String colName)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ColName*  
+ *colName*  
   
- Объект **строка** , содержащее имя столбца.  
+ Значение типа **String**, содержащее имя столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект ссылки.  
+ Ссылочный объект.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод getRef указывается с помощью метода getRef в интерфейсе java.sql.ResultSet.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод getRef &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

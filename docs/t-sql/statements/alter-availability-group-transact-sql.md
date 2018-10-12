@@ -5,9 +5,7 @@ ms.date: 01/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_AVAILABILITY_GROUP_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cb006fec0248d22f5ec49e166e767787044a345
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 02ba00fe35a31237ddf86f0782f63f822a0f5935
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776962"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -276,7 +273,7 @@ ALTER AVAILABILITY GROUP group_name
   
  ENDPOINT_URL обязательно требуется в предложении ADD REPLICA ON и является необязательным в предложении MODIFY REPLICA ON.  Дополнительные сведения см. в разделе [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  Задает URL-адрес для конечной точки или URL-адрес маршрутизации, доступный только для чтения. Параметры URL-адреса:  
   
  *system-address*  
@@ -331,7 +328,7 @@ ALTER AVAILABILITY GROUP group_name
  MANUAL  
  Указывает на присвоение начальных значений вручную (по умолчанию). В этом методе вы создаете резервную копию базы данных на первичной реплике и вручную восстанавливаете эту резервную копию на вторичной реплике.  
   
- BACKUP_PRIORITY **=***n*  
+ BACKUP_PRIORITY **=**_n_  
  Указывает приоритет выполнения резервного копирования на данной реплике по отношению к другим репликам из той же группы доступности. Значение представляет собой целое число в диапазоне от 0 до 100. Данные величины имеют следующие значения:  
   
 -   1..100 показывает, что реплику доступности можно выбрать для выполнения резервного копирования. 1 указывает минимальный приоритет, 100 — наивысший приоритет. При BACKUP_PRIORITY = 1 реплика доступности будет выбрана для создания резервных копий только в том случае, если реплики доступности с более высоким приоритетом отсутствуют.  
@@ -359,7 +356,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  Указывает URL-адрес, используемый для маршрутизации запросов на соединение с намерением чтения к этой реплике доступности. Этот URL-адрес прослушивается компонентом ядра СУБД SQL Server. Обычно экземпляр по умолчанию компонента ядра СУБД SQL Server прослушивает TCP-порт 1433.  
   
  Номер порта для именованного экземпляра вы можете получить, запросив столбцы **port** и **type_desc** динамического административного представления [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). Экземпляр сервера использует прослушиватель Transact-SQL (**type_desc='TSQL'**).  
@@ -402,7 +399,7 @@ ALTER AVAILABILITY GROUP group_name
  None  
  Указывает, что, когда эта реплика доступности является первичной, маршрутизация только для чтения не поддерживается. Это поведение по умолчанию. При использовании с параметром MODIFY REPLICA ON это значение отключает существующий список (если он есть).  
   
- SESSION_TIMEOUT **=***seconds*  
+ SESSION_TIMEOUT **=**_seconds_  
  Указывает интервал времени ожидания сеанса в секундах. Если этот параметр не определить, интервал времени по умолчанию — 10 секунд. Минимальное значение составляет 5 секунд.  
   
 > [!IMPORTANT]  
@@ -453,7 +450,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Дополнительные сведения об ограничениях, обязательных условиях и рекомендациях для принудительной отработки отказа, а также о влиянии принудительной отработки отказа на прежние базы данных-источники в группе доступности см. в разделе [Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server)](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **‘***dns_name***’(** \<add_listener_option> **)**  
+ ADD LISTENER **‘**_dns\_name_**’(** \<add_listener_option> **)**  
  Определяет новый прослушиватель группы доступности. Поддерживается только в первичной реплике.  
   
 > [!IMPORTANT]  
@@ -480,12 +477,12 @@ ALTER AVAILABILITY GROUP group_name
  \<ag_name>  
  Указывает имя группы доступности, составляющей половину распределенной группы доступности.  
   
- LISTENER **='** TCP **://***system-address***:***port***'**  
+ LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
  Указывает URL-адрес пути для прослушивателя, связанного с группой доступности.  
   
  Требуется предложение LISTENER.  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  Указывает URL-адрес для прослушивателя, связанного с группой доступности. Параметры URL-адреса:  
   
  *system-address*  
@@ -537,7 +534,7 @@ ALTER AVAILABILITY GROUP group_name
  \<add_listener_option>  
  ADD LISTENER принимает один из следующих параметров.  
   
- WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
+ WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
  Указывает, что прослушиватель группы доступности будет использовать протокол DHCP.  Дополнительно можно использовать предложение ON, чтобы определить сеть, для которой будет создан прослушиватель. Протокол DHCP имеет ограничение на работу только с одной подсетью для каждого экземпляра сервера, на котором размещается реплика доступности в группе доступности.  
   
 > [!IMPORTANT]  
@@ -547,7 +544,7 @@ ALTER AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
+ WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
  Указывает, что вместо использования протокола DHCP прослушиватель группы доступности будет использовать один или несколько статических IP-адресов. Чтобы создать группу доступности, охватывающую несколько подсетей, в конфигурации прослушивателя должен присутствовать один статический IP-адрес для каждой подсети. Для конкретной подсети статический IP-адрес может иметь формат IPv4 или IPv6. Свяжитесь с администратором сети, чтобы получить статический IP-адрес для каждой подсети, в которой будет размещена реплика доступности для новой группы доступности.  
   
  Пример:  
@@ -570,22 +567,22 @@ ALTER AVAILABILITY GROUP group_name
   
  Например: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`.  
   
- MODIFY LISTENER **‘***dns_name***’(** \<modify_listener_option> **)**  
+ MODIFY LISTENER **‘**_dns\_name_**’(** \<modify\_listener\_option\> **)**  
  Изменяет существующий прослушиватель для данной группы доступности. Поддерживается только в первичной реплике.  
   
- \<modify_listener_option>  
+ \<modify\_listener\_option\>  
  MODIFY LISTENER принимает один из следующих параметров:  
   
- ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘** dns_name*ipv6_address***’)** }  
- Добавляет указанный IP-адрес к прослушивателю группы доступности, который задан с помощью *dns_name*.  
+ ADD IP { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4_mask_**’)** \| <b>(‘</b>dns\_name*ipv6\_address*__’)__ }  
+ Добавляет указанный IP-адрес к прослушивателю группы доступности, который задан с помощью *dns\_name*.  
   
  PORT **=** *listener_port*  
  См. описание этого аргумента ранее в этом разделе.  
   
- RESTART LISTENER **‘***dns_name***’**  
+ RESTART LISTENER **‘**_dns\_name_**’**  
  Перезапускает прослушиватель, который связан с указанным именем DNS. Поддерживается только в первичной реплике.  
   
- REMOVE LISTENER **‘***dns_name***’**  
+ REMOVE LISTENER **‘**_dns\_name_**’**  
  Удаляет прослушиватель, который связан с указанным именем DNS. Поддерживается только в первичной реплике.  
   
  OFFLINE  

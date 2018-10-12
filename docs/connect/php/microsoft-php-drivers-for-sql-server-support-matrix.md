@@ -5,20 +5,17 @@ ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.openlocfilehash: 3ee34b40af4f72b32286067e5853c673f62ad240
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: 82a8576365889d02381e3b18b622fd541b5b9235
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268772"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728702"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Драйверы Microsoft PHP для SQL Server Support Matrix
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +23,7 @@ ms.locfileid: "39268772"
   В этой статье приведены матрица и политика жизненного цикла поддержки для драйвера Microsoft PHP Driver for SQL Server.
 
 ## <a name="microsoft-php-drivers-support-lifecycle-matrix-and-policy"></a>Таблица жизненного цикла поддержки драйверы Microsoft PHP и политика
- Политика жизненного цикла поддержки Майкрософт (MSL) предоставляет понятную и предсказуемую информацию о жизненном цикле поддержки продуктов Майкрософт. Драйверы PHP версии 3.x, 4.x и 5.x имеют пять лет основной фазы поддержки с даты выпуска драйвера. Основная фаза поддержки определена на [веб-сайте жизненного цикла поддержки Майкрософт](https://support.microsoft.com/lifecycle).
+ Политика жизненного цикла поддержки Майкрософт (MSL) предоставляет понятную и предсказуемую информацию о жизненном цикле поддержки продуктов Майкрософт. Основная фаза поддержки драйверов PHP версий 3.x, 4.x и 5.x длится пять лет с даты выпуска соответствующей версии. Основная фаза поддержки определена на [веб-сайте жизненного цикла поддержки Майкрософт](https://support.microsoft.com/lifecycle).
 
  Возможность расширенной или настраиваемой поддержки драйвера PHP не предусмотрена.
 

@@ -5,9 +5,7 @@ ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c316c7a1e2e2913c5f0b4ce2e2bb4f63a2f5246
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084312"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719262"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -303,7 +300,7 @@ PolyBase использует пользовательский формат да
 ## <a name="performance"></a>Производительность
  При использовании сжатых файлов всегда приходится идти на компромисс: перенести меньше данных между внешним источником данных и SQL Server, но увеличить использование ресурсов ЦП для сжатия и распаковывания данных.
   
- Сжатые текстовые файлы Gzip разделить невозможно. Чтобы повысить производительность сжатых текстовых файлов Gzip, рекомендуется создать несколько хранимых в одном каталоге файлов во внешнем источнике данных. Такая файловая структура позволяет PolyBase читать и распаковывать данные быстрее, используя несколько процессов чтения и распаковывания. Оптимальное количество сжатых файлов — максимальное число процессов чтения данных на вычислительном узле. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] максимальное число процессов чтения данных составляет 8 для каждого узла в текущем выпуске. В [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] максимальное число процессов чтения данных на узел варьируется в зависимости от SLO. См. подробные сведения в разделе [Стратегии и шаблоны загрузки хранилища данных SQL Azure](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/).  
+ Сжатые текстовые файлы Gzip разделить невозможно. Чтобы повысить производительность сжатых текстовых файлов Gzip, рекомендуется создать несколько хранимых в одном каталоге файлов во внешнем источнике данных. Такая файловая структура позволяет PolyBase читать и распаковывать данные быстрее, используя несколько процессов чтения и распаковывания. Оптимальное количество сжатых файлов — максимальное число процессов чтения данных на вычислительном узле. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] максимальное число процессов чтения данных на узел составляет 8 для каждого узла. В хранилище данных SQL Azure 2-го поколения это число составляет 20. В [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] максимальное число процессов чтения данных на узел варьируется в зависимости от SLO. См. подробные сведения в разделе [Стратегии и шаблоны загрузки хранилища данных SQL Azure](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/).  
   
 ## <a name="examples"></a>Примеры  
   

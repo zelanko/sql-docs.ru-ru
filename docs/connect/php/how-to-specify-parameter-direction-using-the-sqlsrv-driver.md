@@ -1,32 +1,29 @@
 ---
-title: 'Как: Указание направления параметров с помощью драйвера SQLSRV | Документы Microsoft'
+title: Практическое руководство. Указание направления параметров с помощью драйвера SQLSRV | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4738ce4f8071c5fc1485fad608e00f5e47d9abb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 64c73b14f0195441979891f626976648b56d583d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642372"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Практическое руководство. Указание направления параметров с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Эта статья описывает использование драйвера SQLSRV для указания направления параметров при вызове хранимой процедуры. Направление параметра указывается при построении массив параметров (шаг 3), который передается [sqlsrv_query](../../connect/php/sqlsrv-query.md) или [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
+Эта статья описывает использование драйвера SQLSRV для указания направления параметров при вызове хранимой процедуры. Направление параметров указывается при создании массива параметров (шаг 3), который передается [sqlsrv_query](../../connect/php/sqlsrv-query.md) или [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
   
 ### <a name="to-specify-parameter-direction"></a>Порядок указания направления параметров  
   
@@ -37,7 +34,7 @@ ms.locfileid: "35307843"
     ```  
   
     > [!NOTE]  
-    > Рекомендуется вызывать хранимые процедуры с использованием канонического синтаксиса. Дополнительные сведения о каноническом синтаксисе см. в разделе [вызов хранимой процедуры](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+    > Рекомендуется вызывать хранимые процедуры с использованием канонического синтаксиса. Дополнительные сведения о каноническом синтаксисе см. в статье [Вызов хранимой процедуры](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
 2.  Инициализируйте или обновите переменные PHP, которые соответствуют заполнителям в запросе Transact-SQL. Например, следующий код инициализирует два параметра для хранимой процедуры UpdateVacationHours:  
   
@@ -49,7 +46,7 @@ ms.locfileid: "35307843"
     > [!NOTE]  
     > Переменные, которые инициализируются или обновляются с использованием **null**, **DateTime**или типов потоков, нельзя использовать в качестве параметров вывода.  
   
-3.  Используйте переменные PHP из шага 2, чтобы создать или обновить массив значений параметров, порядок которых соответствует заполнителям параметров в строке Transact-SQL. Укажите направление для каждого параметра в массиве. Направление каждого параметра определяется одним из двух способов: по умолчанию (для входных параметров) или с помощью **SQLSRV_PARAM_\***  константы (для вывода и двунаправленных параметров). Например, следующий код задает параметр *$employeeId* в качестве параметра ввода и параметр *$usedVacationHours* в качестве двунаправленного параметра:  
+3.  Используйте переменные PHP из шага 2, чтобы создать или обновить массив значений параметров, порядок которых соответствует заполнителям параметров в строке Transact-SQL. Укажите направление для каждого параметра в массиве. Направление каждого параметра определяется одним из двух способов: по умолчанию (для параметров ввода) или с помощью констант **SQLSRV_PARAM_*\*** (для параметров вывода и двунаправленных параметров). Например, следующий код задает параметр *$employeeId* в качестве параметра ввода и параметр *$usedVacationHours* в качестве двунаправленного параметра:  
   
     ```  
     $params = array(  
@@ -60,7 +57,7 @@ ms.locfileid: "35307843"
   
     Чтобы лучше понять синтаксис для указания направления параметра, предположим, что *$var1*, *$var2*и *$var3* соответствуют параметру ввода, параметру вывода и двунаправленному параметру. Направление параметров можно указать любым из следующих способов:  
   
-    -   Неявно задания входных параметров и явно задайте параметр вывода явным образом указать двунаправленный параметр:  
+    -   Укажите параметр ввода неявным образом, параметр вывода явным образом и двунаправленный параметр явным образом:  
   
         ```  
         array(   
@@ -70,7 +67,7 @@ ms.locfileid: "35307843"
                );  
         ```  
   
-    -   Явно указывать входной параметр и явно задайте параметр вывода явным образом указать двунаправленный параметр:  
+    -   Укажите параметр ввода явным образом, параметр вывода явным образом и двунаправленный параметр явным образом:  
   
         ```  
         array(   
@@ -80,13 +77,13 @@ ms.locfileid: "35307843"
                );  
         ```  
   
-4.  Выполнение запроса с [sqlsrv_query](../../connect/php/sqlsrv-query.md) или [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) и [sqlsrv_execute](../../connect/php/sqlsrv-execute.md). Например, следующий код использует соединение *$conn* для выполнения запроса *$tsql* со значениями параметров, указанными в *$params*:  
+4.  Выполните запрос с использованием [sqlsrv_query](../../connect/php/sqlsrv-query.md) или [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) и [sqlsrv_execute](../../connect/php/sqlsrv-execute.md). Например, следующий код использует соединение *$conn* для выполнения запроса *$tsql* со значениями параметров, указанными в *$params*:  
   
     ```  
     sqlsrv_query($conn, $tsql, $params);  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  

@@ -5,28 +5,25 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 1cfbd5bce17c658a7dff33bc7a590a22d525c193
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: e6f0dedf8847488187755985beab0049b2930719
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43018193"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772608"
 ---
 # <a name="sparse-columns-support-ole-db"></a>Поддержка разреженных столбцов (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Этот раздел содержит сведения о драйвере OLE DB для SQL Server Поддержка разреженных столбцов. Дополнительные сведения о разреженных столбцах см. в разделе [Поддержка разреженных столбцов в драйвер OLE DB для SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md). [Отображение метаданных столбца и каталога для разреженных столбцов &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
+  Этот раздел содержит сведения о драйвере OLE DB для SQL Server Поддержка разреженных столбцов. Дополнительные сведения о разреженных столбцах см. в разделе [Поддержка разреженных столбцов в драйвер OLE DB для SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md). Например, [отображение метаданных столбца и каталога для разреженных столбцов (OLE DB)](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
 ## <a name="ole-db-statement-metadata"></a>Метаданные инструкции OLE DB  
  В версии [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] появилось новое значение DBCOLUMNFLAGS_SS_ISCOLUMNSET флага DBCOLUMNFLAGS. Это значение должно задаваться для столбцов со значениями **column_set**. Флаг DBCOLUMNFLAGS можно извлечь с помощью *dwFlags* параметр IColumnsInfo::GetColumnsInfo и из набора строк, возвращенных IColumnsRowset::GetColumnsRowset столбца DBCOLUMN_FLAGS.  

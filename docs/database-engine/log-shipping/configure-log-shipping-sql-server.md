@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], enabling
 - log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66debf981b1a55dab1fb3b1b864782145d0c1f7f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405848"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703812"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Настройка доставки журналов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,6 +99,8 @@ ms.locfileid: "40405848"
 16. Обратите внимание на расписание копирования в поле **Расписание** в разделе **Задание копирования**. Если необходимо изменить расписание, нажмите кнопку **Расписание** и задайте расписание для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по своему усмотрению. Это расписание должно быть максимально приближено к расписанию резервного копирования.  
   
 17. На вкладке **Восстановление журнала транзакций** в разделе **Состояние базы данных во время восстановления резервных копий**выберите пункт **Без режима восстановления** или **Режим ожидания** .  
+    > [!IMPORTANT]  
+    > **Режим ожидания** доступен, только если версии сервера-источника и сервера-получателя совпадают. Если основной номер версии сервера-получателя выше, чем сервера-источника, разрешен только **режим без восстановления**.
   
 18. Если выбран параметр **Режим ожидания** , то нужно указать, следует ли отключать пользователей от базы данных-получателя, пока идет процесс восстановления.  
   

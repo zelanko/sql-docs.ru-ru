@@ -1,25 +1,22 @@
 ---
-title: Метод setNClob (SQLServerCallableStatement) | Документы Microsoft
+title: Метод setNClob (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fd972acc-57e5-4971-9744-0e8fca5f05a6
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f96cfac153820263eedf2739eda2274ea898e99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 03bd1bab1fc2cc380c35dbc8e138b9a40ae7bdad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679772"
 ---
 # <a name="setnclob-method-sqlservercallablestatement"></a>Метод setNClob (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,14 +25,14 @@ ms.locfileid: "32845469"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[Метод setNClob &#40;java.lang.String, java.sql.NClob&#41;](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-sql-nclob.md)|Присваивает указанному параметру указанный объект NClob.|  
-|[Метод setNClob &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader.md)|Присваивает указанному параметру указанный объект модуля чтения.|  
-|[Метод setNClob &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader-long.md)|Присваивает указанному параметру указанный объект чтения, равен указанному числу символов.|  
+|[Метод setNClob (java.lang.String, java.sql.NClob)](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-sql-nclob.md)|Задает назначенному параметру значение указанного объекта NClob.|  
+|[Метод setNClob (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader.md)|Задает указанному параметру заданный объект Reader.|  
+|[Метод setNClob (java.lang.String, java.io.Reader, long)](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader-long.md)|Задает назначенному параметру значение указанного объекта Reader, имеющего указанную длину в символах.|  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_send_stream_data | Документы Microsoft
+title: sqlsrv_send_stream_data | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_send_stream_data
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_send_stream_data
 - streaming data
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99be2cc8d56cde6ce960b5fc8d6caa2fab156a74
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c1ce0db099046fb243151a7977823ab0fcf458ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309493"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790612"
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Отправляет данные из потоков параметров на сервер. С каждым вызовом отправляется до 8 килобайт (8 КБ) данных **sqlsrv_send_stream_data**.  
+Отправляет данные из потоков параметров на сервер. С каждым вызовом **sqlsrv_send_stream_data** отправляется до 8 килобайт (8 КБ) данных.  
   
 > [!NOTE]  
 > По умолчанию все потоковые данные передаются на сервер при выполнении запроса. Если это поведение по умолчанию не изменялось, использовать **sqlsrv_send_stream_data** для отправки потоковых данных на сервер не нужно. Сведения об изменении такого поведения по умолчанию см. разделе "Параметры" статьи [sqlsrv_query](../../connect/php/sqlsrv-query.md) или [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
@@ -50,7 +47,7 @@ sqlsrv_send_stream_data( resource $stmt)
 Логическое значение: **true** при наличии дополнительных данных для отправки. В противном случае — **false**.  
   
 ## <a name="example"></a>Пример  
-Следующий пример открывает обзор продукта в качестве потока и отправляет его на сервер. Поведение по умолчанию, заключающееся в отправке всех потоковых данных во время выполнения, отключено. Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Следующий пример открывает обзор продукта в качестве потока и отправляет его на сервер. Поведение по умолчанию, заключающееся в отправке всех потоковых данных во время выполнения, отключено. В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -98,7 +95,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

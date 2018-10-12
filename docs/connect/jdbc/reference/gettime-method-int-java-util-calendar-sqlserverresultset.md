@@ -1,13 +1,11 @@
 ---
-title: Метод getTime (int, java.util.Calendar) (SQLServerResultSet) | Документы Microsoft
+title: Метод getTime (int, java.util.Calendar) (SQLServerResultSet) | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getTime (int, java.util.Calendar)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: d21e0c1d-9d6e-468f-8b11-cc7209b2c2e5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97ca0625b77bf8172a81a71cc3f8a5338c552af5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0f81fb4bc93fe7166deaf6a9bac5eaf3ef717280
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652242"
 ---
 # <a name="gettime-method-int-javautilcalendar-sqlserverresultset"></a>Метод getTime (int, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Получает значение индекса заданного столбца в текущей строке [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта в виде объекта java.sql.Time на языке Java, языке программирования, используя указанный объект календаря.  
+  Получает значение индекса заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде объекта java.sql.Time на языке программирования Java с помощью заданного объекта Calendar.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +39,7 @@ public java.sql.Time getTime(int columnIndex,
 #### <a name="parameters"></a>Параметры  
  *columnIndex*  
   
- **Int** , указывающее индекс столбца.  
+ Значение типа **int**, указывающее индекс столбца.  
   
  *Клиентская лицензия*  
   
@@ -54,12 +51,12 @@ public java.sql.Time getTime(int columnIndex,
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод getTime указывается с помощью getTime метода в интерфейсе java.sql.ResultSet.  
+## <a name="remarks"></a>Remarks  
+ Этот метод getTime определен с помощью метода getTime в интерфейсе java.sql.ResultSet.  
   
- Этот метод возвращает допустимое время часть [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] типа данных datetime или smalldatetime, с частью даты, установленной в опорную дату Java 1970/01/01 в часовом поясе указанного календаря.  
+ Этот метод возвращает допустимую часть времени для типа данных datetime или smalldatetime [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а часть даты имеет начальное значение даты Java — 1 января 1970 г. в часовом поясе указанного календаря.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод getTime &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

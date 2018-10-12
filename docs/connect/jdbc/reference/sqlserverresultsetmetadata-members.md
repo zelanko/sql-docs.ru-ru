@@ -1,30 +1,27 @@
 ---
-title: Элементы SQLServerResultSetMetaData | Документы Microsoft
+title: Элементы SQLServerResultSetMetaData | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03374d523c0dda429b7193404cefddbb9b5711ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 912bd276e9b80911e7dec71d7edbb68cd30676af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852659"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818604"
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>Элементы SQLServerResultSetMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  В следующих таблицах перечислены члены, предоставляемые [SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) класса.  
+  В следующих таблицах перечислены элементы, предоставляемые классом [SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md).  
   
 ## <a name="constructors"></a>Конструкторы  
  Нет.  
@@ -34,16 +31,16 @@ ms.locfileid: "32852659"
   
 ## <a name="inherited-fields"></a>Наследуемые поля  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |java.sql.ResultSetMetaData|columnNoNulls, columnNullable, columnNullableUnknown|  
   
 ## <a name="methods"></a>Методы  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|Возвращает имя каталога для таблицы, содержащей указанный столбец.|  
-|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|Возвращает полное имя класса Java, экземпляры которого создаются в том случае, если [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) метод [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) класс называется для извлечения значения из столбца.|  
+|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|Возвращает полное имя Java-класса, экземпляры которого создаются при вызове метода [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) класса [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) для получения значения столбца.|  
 |[getColumnCount](../../../connect/jdbc/reference/getcolumncount-method-sqlserverresultsetmetadata.md)|Возвращает число столбцов в результирующем наборе.|  
 |[getColumnDisplaySize](../../../connect/jdbc/reference/getcolumndisplaysize-method-sqlserverresultsetmetadata.md)|Возвращает стандартную максимальную ширину заданного столбца в символах.|  
 |[getColumnLabel](../../../connect/jdbc/reference/getcolumnlabel-method-sqlserverresultsetmetadata.md)|Возвращает название, предполагаемое для использования в распечатках, и отображает заданный столбец.|  
@@ -55,7 +52,7 @@ ms.locfileid: "32852659"
 |[getSchemaName](../../../connect/jdbc/reference/getschemaname-method-sqlserverresultsetmetadata.md)|Возвращает имя схемы для таблицы, содержащей указанный столбец.|  
 |[getTableName](../../../connect/jdbc/reference/gettablename-method-sqlserverresultsetmetadata.md)|Возвращает имя таблицы для указанного столбца.|  
 |[IsAutoIncrement](../../../connect/jdbc/reference/isautoincrement-method-sqlserverresultsetmetadata.md)|Указывает, производится ли автоматическая нумерация указанного столбца, что делает его доступным только для чтения.|  
-|[isCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|Указывает, учитывается ли регистр символов для столбца.|  
+|[IsCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|Указывает, учитывается ли регистр символов для столбца.|  
 |[isCurrency](../../../connect/jdbc/reference/iscurrency-method-sqlserverresultsetmetadata.md)|Указывает, содержит ли указанный столбец значения денежных сумм.|  
 |[isDefinitelyWritable](../../../connect/jdbc/reference/isdefinitelywritable-method-sqlserverresultsetmetadata.md)|Указывает, будет ли запись в указанный столбец наверняка успешной.|  
 |[IsNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverresultsetmetadata.md)|Указывает допустимость значений NULL для указанного столбца.|  
@@ -72,7 +69,7 @@ ms.locfileid: "32852659"
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Класс SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: Метод (SQLServerStatement) getMaxRows | Документы Microsoft
+title: Метод getMaxRows (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.getMaxRows
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d619f9505d9f6f5e9c2c6db7751ecb224fa2f5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8cb1c317930d97263038d09bd84e8836d5f6f4ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835639"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773642"
 ---
-# <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows метод (SQLServerStatement)
+# <a name="getmaxrows-method-sqlserverstatement"></a>Метод getMaxRows (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Возвращает максимальное число строк, [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта, созданного этим [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) может содержаться в объекте.  
+  Извлекает максимальное количество строк, которое может содержаться в объекте [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданном объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,18 +36,18 @@ public final int getMaxRows()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Int** , указывающее максимальное число строк, либо значение 0, если не ограничено.  
+ Значение типа **int**, указывающее максимальное число строк. Если ограничения нет, то значение равно 0.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод getMaxRows указывается с помощью метода getMaxRows в интерфейсе java.sql.Statement.  
   
- Этот метод getMaxRows всегда возвращает значение 0 для динамических прокручиваемых курсоров.  
+ Метод getMaxRows всегда возвращает значение 0 для динамических прокручиваемых курсоров.  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Класс SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

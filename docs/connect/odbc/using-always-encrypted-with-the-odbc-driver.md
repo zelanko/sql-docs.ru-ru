@@ -1,25 +1,20 @@
 ---
 title: Использование функции Always Encrypted с драйвером ODBC для SQL Server | Документы Майкрософт
 ms.custom: ''
-ms.date: 10/01/2018
+ms.date: 09/01/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: 3
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: b32be273b26a163263798c3b6a5312432cc54eb6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: dfe1777044234ec43c13f738fa1b0de896f96616
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980686"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828272"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Использование функции Always Encrypted с драйвером ODBC для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -99,7 +94,7 @@ CREATE TABLE [dbo].[Patients](
 
 - В образце кода нет ничего, связанного с шифрованием. Драйвер автоматически обнаруживает и шифрует значения параметров SSN и даты, которые предназначенные для зашифрованных столбцов. В этом случае шифрование является прозрачным для приложения.
 
-- Значениях, вставляемых в столбцы базы данных, включая зашифрованные столбцы, передаются как связанные параметры (см. в разделе [функция SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Несмотря на то, что при отправке значений в незашифрованные столбцы использовать параметры необязательно (но настоятельно рекомендуется, так как это помогает предотвратить внедрение кода SQL), они требуются для значений, предназначенных для зашифрованных столбцов. Если значения, вставленные в столбцы SSN или BirthDate были переданы в качестве литералов, внедренных в инструкции запроса, выполнение запроса завершится ошибкой, так как драйвер не будет пытаться шифрования или другим образом обработать литералы в запросах. В результате сервер отклонит их как несовместимые с зашифрованными столбцами.
+- Данные, вставленные в столбцы базы данных (в том числе в зашифрованные) передаются в качестве привязанных параметров (см. [Функция SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Несмотря на то, что при отправке значений в незашифрованные столбцы использовать параметры необязательно (но настоятельно рекомендуется, так как это помогает предотвратить внедрение кода SQL), они требуются для значений, предназначенных для зашифрованных столбцов. Если значения, вставленные в столбцы SSN или BirthDate были переданы в качестве литералов, внедренных в инструкции запроса, выполнение запроса завершится ошибкой, так как драйвер не будет пытаться шифрования или другим образом обработать литералы в запросах. В результате сервер отклонит их как несовместимые с зашифрованными столбцами.
 
 - Тип параметра, вставляемого в столбец SSN SQL присваивается SQL_CHAR, который сопоставляет **char** тип данных SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Если тип параметра было присвоено SQL_WCHAR, который сопоставляет **nchar**, выполнение запроса завершится ошибкой, так как постоянное шифрование не поддерживает преобразование на стороне сервера с nchar зашифрованные значения в зашифрованный char. См. в разделе [Справочник по программированию ODBC — типы данных приложение D:](https://msdn.microsoft.com/library/ms713607.aspx) сведения о сопоставлении типов данных.
 
@@ -144,9 +139,9 @@ CREATE TABLE [dbo].[Patients](
 
 В следующем примере показана фильтрация данных на основе зашифрованных значений и получение данных в виде открытого текста из зашифрованных столбцов. Следует отметить следующее.
 
-- Значение, используемое в предложении WHERE для фильтрации по столбцу SSN должен передать с помощью SQLBindParameter, таким образом, чтобы драйвер мог его прозрачно зашифровать перед их отправкой на сервер.
+- Значение, используемое в предложении WHERE для фильтрации по столбцу SSN, необходимо передавать, используя SQLBindParameter, чтобы перед отправкой на сервер драйвер мог его прозрачно зашифровать.
 
-- Все значения, выводимые программой будет в виде обычного текста, поскольку драйвер прозрачно расшифровывает данные, полученные из столбцов SSN и BirthDate.
+- Все значения, выводимые программой, будут представлены в виде обычного текста, так как драйвер прозрачно расшифрует данные, полученные из столбцов SSN и BirthDate.
 
 > [!NOTE]
 > Запросы могут выполнять сравнения на равенство по зашифрованным столбцам, только в том случае, если шифрование является детерминированным. Дополнительные сведения см. в разделе [Выбор детерминированного или случайного шифрования](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
@@ -399,7 +394,7 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 
 Другие изменения приложения ODBC необходимы для использования хранилищем ключей AZURE для хранения CMK.
 
-### <a name="using-the-windows-certificate-store-provider"></a>С помощью Windows Certificate Store поставщика
+### <a name="using-the-windows-certificate-store-provider"></a>Использование поставщика хранилища сертификатов Windows
 
 Драйвер ODBC для SQL Server в Windows включает в себя встроенный столбец поставщика хранилища главного ключа для сертификата Windows Store, с именем `MSSQL_CERTIFICATE_STORE`. (Этот поставщик доступен не в macOS или Linux.) С этим поставщиком CMK хранится локально на клиентском компьютере, и никаких дополнительных настроек для приложения необходима для использования его с помощью драйвера. Тем не менее в приложении необходим доступ к сертификат и его закрытый ключ в хранилище. Дополнительные сведения см. в статье [Создание и хранение главных ключей столбцов (постоянное шифрование)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted).
 
@@ -574,7 +569,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 |Имя|Описание|  
 |----------|-----------------|  
-|`ColumnEncryption`|Принимаются значения `Enabled` / `Disabled`.<br>`Enabled` — включает функцию Always Encrypted для подключения.<br>`Disabled` --отключить функцию Always Encrypted для подключения. <br><br>Значение по умолчанию — `Disabled`.|  
+|`ColumnEncryption`|Принимаются значения `Enabled` / `Disabled`.<br>`Enabled` — включает функцию Always Encrypted для подключения.<br>`Disabled` — отключает для подключения функцию Always Encrypted. <br><br>Значение по умолчанию — `Disabled`.|  
 |`KeyStoreAuthentication` | Допустимые значения: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Когда `KeyStoreAuthentication`  =  `KeyVaultPassword`, это значение на допустимое имя участника-пользователя Active Directory Azure. <br>Когда `KeyStoreAuthetication`  =  `KeyVaultClientSecret` это значение равно допустимый Azure Active Directory приложения идентификатор клиента |
 |`KeyStoreSecret` | Когда `KeyStoreAuthentication`  =  `KeyVaultPassword` это значение равно пароль, соответствующий имени пользователя. <br>Когда `KeyStoreAuthentication`  =  `KeyVaultClientSecret` это значение равно секрет приложения, связанный с допустимым Azure Active Directory идентификатор клиента приложения|

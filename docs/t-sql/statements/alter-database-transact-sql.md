@@ -1,12 +1,10 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/07/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_DATABASE_TSQL
@@ -29,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1256884f13a576580588e877dd490f0757bfba9e
-ms.sourcegitcommit: aac654706b21f70962c7311f3b193000113d00d7
+ms.openlocfilehash: 2bb68aae23e0d36ff09ff673eae3d45f1082fec5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "42802573"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825382"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL) 
 
@@ -53,7 +51,7 @@ ms.locfileid: "42802573"
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[База данных SQL<br /> — логический сервер](alter-database-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|[SQL Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[База данных SQL<br /> — логический сервер](alter-database-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -290,7 +288,7 @@ GO
 >   <th><strong><em>* База данных SQL<br />Базы данных SQL*</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -335,7 +333,7 @@ ALTER DATABASE { database_name | CURRENT }
 {  
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical'} 
+  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'} 
   | SERVICE_OBJECTIVE = 
        {  <service-objective>
        | { ELASTIC_POOL (name = <elastic_pool_name>) } 
@@ -355,8 +353,10 @@ ALTER DATABASE { database_name | CURRENT }
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'
       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
       | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
       | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
       | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
       }
 
 <option_spec> ::= 
@@ -397,7 +397,7 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical'])    
+MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])    
 
 Изменяет уровень службы базы данных. 
 
@@ -412,8 +412,11 @@ ALTER DATABASE current
 
 MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
 
-Указывает максимальный размер базы данных. Максимальный размер должен соответствовать допустимому набору значений для свойства EDITION базы данных. Смена максимального размера базы данных может потребовать также смены значения EDITION базы данных. В следующей таблице приведены поддерживаемые значения MAXSIZE и значения, заданные по умолчанию (D) для уровней служб [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
-  
+Указывает максимальный размер базы данных. Максимальный размер должен соответствовать допустимому набору значений для свойства EDITION базы данных. Смена максимального размера базы данных может потребовать также смены значения EDITION базы данных. 
+
+> [!NOTE]
+> Аргумент **MAXSIZE** не применяется к отдельным базам данных на уровне служб "Гипермасштабирование". Базы данных уровня "Гипермасштабирование" увеличиваются по мере необходимости до 100 ТБ. Служба "База данных SQL" автоматически добавляет объем хранилища. Задавать максимальный размер не нужно.
+
 **Модель на основе DTU**
 
 |**MAXSIZE**|**Basic**|**S0–S2**|**S3–S12**|**P1–P6**|**P11–P15**|  
@@ -484,7 +487,7 @@ ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
 
-Определяет уровень производительности. Доступные значения для целевого уровня обслуживания: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`.  
+Определяет уровень производительности. Доступные значения для целевого уровня cлужб:  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`,    `GP_Gen5_8`,    `GP_Gen5_16`,   `GP_Gen5_24`,   `GP_Gen5_32`,   `GP_Gen5_48`,   `GP_Gen5_80`, `BC_Gen5_2`,  `BC_Gen5_4`,    `BC_Gen5_8`,    `BC_Gen5_16`,   `BC_Gen5_24`,   `BC_Gen5_32`,   `BC_Gen5_48`,   `BC_Gen5_80`, `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,  `HS_Gen5_4`,    `HS_Gen5_8`,    `HS_Gen5_16`,   `HS_Gen5_24`,   `HS_Gen5_32`,   `HS_Gen5_48`,   `HS_Gen5_80`.  
 
 Описания целей служб и дополнительные сведения о сочетаниях размеров, выпусков и целей служб см. в разделах [Уровни служб и уровни производительности баз данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [Пределы для ресурсов на основе DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) и [Пределы для ресурсов на основе виртуальных ядер](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Поддержка целей служб PRS была удалена. При возникновении вопросов пишите на следующий адрес premium-rs@microsoft.com. 
   
@@ -492,9 +495,15 @@ MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)
 
 Чтобы добавить существующую базу данных в эластичный пул, задайте параметру SERVICE_OBJECTIVE базы данных значение ELASTIC_POOL и укажите имя эластичного пула. Этот параметр также служит для изменения базы данных в другом эластичном пуле на том же сервере. Дополнительные сведения см. в разделе [Создание эластичного пула баз данных SQL и управление им](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Чтобы удалить базу данных из эластичного пула, используйте инструкцию ALTER DATABASE, чтобы задать в качестве значения SERVICE_OBJECTIVE один уровень производительности базы данных.  
 
+> [!NOTE]
+> Базы данных уровня служб "Гипермасштабирование" невозможно добавить в эластичный пул.
+
 ADD SECONDARY ON SERVER \<partner_server_name>  
 
 Создает базу данных-получатель с географической репликаций с тем же именем на сервере-участнике, преобразуя локальную базу данных в базу данных-источник с георепликацией, и начинает асинхронную репликацию данных с источника в новую базу данных-получатель. Команда завершается ошибкой, если на сервере-получателе уже существует база данных с таким именем. Команда выполняется в базе данных master на сервере с локальной базой данных, которая становится базой данных-источником.  
+
+> [!IMPORTANT]
+> Сейчас уровень служб "Гипермасштабирование" не поддерживает георепликацию.
   
 WITH ALLOW_CONNECTIONS { **ALL** | NO }  
 
@@ -654,7 +663,7 @@ ALTER DATABASE db1 FAILOVER
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
 >   <th><strong><em>* База данных SQL<br />Управляемый экземпляр *</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -790,7 +799,7 @@ ALTER DATABASE WideWorldImporters
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
 >   <th><strong><em>* Хранилище данных<br />SQL*</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -903,7 +912,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 [Список справочных статей по Хранилищу данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -919,13 +928,13 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
+>   <th><strong><em>* Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL Parallel Data Warehouse
+# <a name="parallel-data-warehouse"></a>Параллельное хранилище данных
 
 ## <a name="overview"></a>Обзор
 

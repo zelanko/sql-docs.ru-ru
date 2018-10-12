@@ -1,13 +1,11 @@
 ---
-title: Метод (long, byte) setBytes | Документы Microsoft
+title: Метод setBytes (long, byte) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerBlob.setBytes (long.byte[])
@@ -15,18 +13,17 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ffb8f107-0f9d-4410-957f-62b718e1e872
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f164a93981bb45d5d3cb5fdba973de4790ca7db5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0a75b93fd423c2a664df71f437fcd3e54f8115fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841509"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851592"
 ---
-# <a name="setbytes-method-long-byte"></a>setBytes метод (long, byte)
+# <a name="setbytes-method-long-byte"></a>Метод setBytes (long, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Записывает указанный массив байтов в большой двоичный объект, начиная с указанной позиции, а затем возвращает число записанных байтов.  
@@ -40,26 +37,26 @@ public int setBytes(long pos,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *POS*  
+ *Торговых терминалов*  
   
  Позиция (считая с 1) в большом двоичном объекте, с которой начинается запись данных.  
   
- *Байт*  
+ *bytes*  
   
  Массив байтов для записи в большой двоичный объект.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект **длинные** значение, указывающее число записанных байтов.  
+ Значение **long**, указывающее число записанных байтов.  
   
 ## <a name="exceptions"></a>Исключения  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Замечания  
- Этот метод setBytes указывается с помощью метода setBytes в интерфейсе java.sql.Blob.  
+## <a name="remarks"></a>Remarks  
+ Метод setBytes определен с помощью метода setBytes в интерфейсе java.sql.Blob.  
   
- Данные перезаписываются, начиная с указанной позиции, и могут превысить исходную длину большого двоичного объекта. Если указать значение позиции+1, будут добавлены байты. Если передается значение позиции+2 и более (либо нулевое или отрицательное значение), то создается ошибка позиции. Передача нулевой длины **байтов** массив будет возвращено нулевое значение, так как байты не были записаны.  
+ Данные перезаписываются, начиная с указанной позиции, и могут превысить исходную длину большого двоичного объекта. Если указать значение позиции+1, будут добавлены байты. Если передается значение позиции+2 и более (либо нулевое или отрицательное значение), то создается ошибка позиции. Если передается массив **byte** нулевой длины, то будет возвращено нулевое значение, поскольку не записан ни один байт.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод setBytes &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [Методы SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [Элементы SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   

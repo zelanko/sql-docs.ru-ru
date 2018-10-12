@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - categories [SQL Server Agent jobs]
 - removing job category
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e0ec3e7ae9771d4cb3f63e3f2bc9f670a47ac3b2
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 77bb74d2337864e5a7542e3c9b1da44f5885380c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42776517"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705164"
 ---
 # <a name="delete-a-job-category"></a>Удаление категории заданий
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,13 +69,13 @@ ms.locfileid: "42776517"
   
 3.  Щелкните правой кнопкой мыши папку **Задания** и выберите пункт **Управление категориями заданий**.  
   
-4.  В диалоговом окне **Управление категориями заданий***имя_сервера* выберите нужную категорию.  
+4.  В диалоговом окне **Управление категориями заданий**_имя\_сервера_ выберите нужную категорию.  
   
 5.  Щелкните **Удалить**.  
   
 6.  В диалоговом окне **Управление категориями заданий** щелкните **Да**.  
   
-7.  Закройте диалоговое окно **Управление категориями заданий***имя_сервера*.  
+7.  Закройте диалоговое окно **Управление категориями заданий**_имя\_сервера_.  
   
 ## <a name="TSQL"></a>Использование Transact-SQL  
   

@@ -1,13 +1,11 @@
 ---
-title: Метод getByte (SQLServerCallableStatement) | Документы Microsoft
+title: Метод getByte (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getByte
@@ -15,31 +13,30 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4454c22a-5e6d-4edb-9ead-d623a174ce59
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c59a352d1682722e3c647d4737a6de7bebc31c36
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84c29250a0af0bfca4d6ced43a5a38126d4efb16
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830789"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776384"
 ---
 # <a name="getbyte-method-sqlservercallablestatement"></a>Метод getByte (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Получает значение указанного параметра в виде **байтов** значение.  
+  Извлекает значение указанного параметра в виде значения **byte**.  
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[getByte (int)](../../../connect/jdbc/reference/getbyte-method-int.md)|Получает значение указанного параметра в виде **байтов** значение заданному индексу параметра.|  
-|[getByte (java.lang.String)](../../../connect/jdbc/reference/getbyte-method-java-lang-string.md)|Получает значение указанного параметра в виде **байтов** значение имени параметра.|  
+|[getByte (int)](../../../connect/jdbc/reference/getbyte-method-int.md)|Извлекает значение указанного параметра в виде значения **byte** по заданному индексу параметра.|  
+|[getByte (java.lang.String)](../../../connect/jdbc/reference/getbyte-method-java-lang-string.md)|Извлекает значение указанного параметра в виде значения **byte** по заданному имени параметра.|  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

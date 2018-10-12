@@ -1,26 +1,23 @@
 ---
 title: Импорт данных из Excel в SQL | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/29/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: import-export
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8613f9fc6a92519f2ffaf584919ab3d65c88f3de
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5d2947097545c2ddcd53dd9e5dda75dcd98c3769
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083337"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826458"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Импорт данных из Excel в SQL Server или базу данных Azure
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +68,7 @@ ms.locfileid: "43083337"
 ## <a name="openrowset"></a> OPENROWSET и связанные серверы
 
 > [!NOTE]
-> В Azure функции OPENROWSET и OPENDATASOURCE доступны только в управляемом экземпляре базы данных SQL (предварительная версия).
+> В Azure функции OPENROWSET и OPENDATASOURCE доступны только в Управляемом экземпляре Базы данных SQL.
 
 > [!NOTE]
 > Поставщик ACE (прежнее название — поставщик Jet), который подключается к источникам данных Excel, предназначен для интерактивного клиентского использования. Если поставщик ACE используется на сервере, особенно в автоматизированных процессах или процессах, выполняющихся параллельно, вы можете получить непредвиденные результаты.

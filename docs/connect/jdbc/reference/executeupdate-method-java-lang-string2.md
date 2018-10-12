@@ -1,13 +1,11 @@
 ---
-title: Метод executeUpdate (java.lang.String) | Документы Microsoft
+title: Метод executeUpdate (java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.executeUpdate (java.lang.String)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a48df94bb417825aba64699443de6e43fced0d12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d3a976f9e953729be7b9f993139a7603fe8444cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828999"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804860"
 ---
 # <a name="executeupdate-method-javalangstring"></a>Метод executeUpdate (java.lang.String)
 
@@ -39,22 +36,22 @@ public final int executeUpdate(java.lang.String sql)
 #### <a name="parameters"></a>Параметры
 *sql*
 
-Объект **строка** , содержащий инструкции SQL.
+Значение типа **String**, содержащее инструкцию SQL.
 
 ## <a name="return-value"></a>Возвращаемое значение
-**Int** указывает число обработанных строк, либо значение 0 для инструкций DDL.
+Значение типа **int**, указывающее либо число обработанных строк, либо значение 0 для инструкций языка DDL.
 
 ## <a name="exceptions"></a>Исключения
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 Этот метод executeUpdate указывается с помощью метода executeUpdate в интерфейсе java.sql.PreparedStatement.
 
-Вызов этого метода будет приведет к исключению, поскольку задан в инструкции SQL для объекта SQLServerPreparedStatement при создании объекта.
+Вызов этого метода приводит к исключению, поскольку инструкция SQL для объекта SQLServerPreparedStatement определена при создании объекта.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Метод executeUpdate &#40;SQLServerPreparedStatement&#41;](./executeupdate-method-sqlserverpreparedstatement.md)
+[Метод executeUpdate (SQLServerPreparedStatement)](./executeupdate-method-sqlserverpreparedstatement.md)
 
 [Элементы SQLServerPreparedStatement](./sqlserverpreparedstatement-members.md)
 

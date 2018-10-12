@@ -1,13 +1,11 @@
 ---
-title: Метод (SQLServerStatement) getResultSetConcurrency | Документы Microsoft
+title: Метод getResultSetConcurrency (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.getResultSetConcurrency
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 47ef6547-5ec7-4cf5-a4d4-e34cbeec72eb
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06f0348d631bcfaad6fb712ac51c1ec6ac84f73e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: fc98782eb27e34e6a9029c17c63af9e92169819e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839489"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848222"
 ---
-# <a name="getresultsetconcurrency-method-sqlserverstatement"></a>getResultSetConcurrency метод (SQLServerStatement)
+# <a name="getresultsetconcurrency-method-sqlserverstatement"></a>Метод getResultSetConcurrency (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Получает результирующий набор с параллелизмом для [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекты, созданные этим [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта.  
+  Возвращает параллелизм результирующего набора для объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданных этим объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,16 +36,16 @@ public final int getResultSetConcurrency()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Int** , указывающее тип параллелизма результирующего набора.  
+ Значение **int**, указывающее тип параллелизма результирующего набора.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод getResultSetConcurrency указывается с помощью метода getResultSetConcurrency в интерфейсе java.sql.Statement.  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Класс SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

@@ -1,30 +1,27 @@
 ---
-title: Элементы SQLServerXAConnection | Документы Microsoft
+title: Элементы SQLServerXAConnection | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4b61dabd-369b-460c-8450-9fe424f76541
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 188140965c0040f8454156555b71adbd2fe89ce9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0b9dad3c76b8ffec130e41ab147a81439167de86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851069"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699899"
 ---
 # <a name="sqlserverxaconnection-members"></a>Элементы SQLServerXAConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  В следующих таблицах перечислены члены, предоставляемые [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) класса.  
+  В следующих таблицах перечислены доступные элементы класса [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md).  
   
 ## <a name="constructors"></a>Конструкторы  
  Нет.  
@@ -37,13 +34,13 @@ ms.locfileid: "32851069"
   
 ## <a name="methods"></a>Методы  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|(Наследуется от [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) регистрирует заданный прослушиватель событий будет получать уведомления при возникновении события для этого объекта соединения.|  
-|[Закрыть](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|(Наследуется от [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) закрывает физическое соединение, представляемое этим объектом соединения.|  
-|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|(Наследуется от [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) создает дескриптор объекта для физического соединения, представляемого данным объектом соединения.|  
-|[getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md)|Извлекает [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) , диспетчер транзакций будет использовать для управления участием этого [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) объекта распределенной транзакции.|  
-|[removeConnectionEventListener](../../../connect/jdbc/reference/removeconnectioneventlistener-method-sqlserverpooledconnection.md)|(Наследуется от [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) Удаляет заданный прослушиватель событий.|  
+|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|(Наследуется от [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)). Регистрирует заданный прослушиватель событий для получения уведомлений о событии в этом объекте Connection.|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|(Наследуется от [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)). Закрывает физическое соединение, представляемое этим объектом Connection.|  
+|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|(Наследуется от [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)). Создает дескриптор объекта для физического соединения, представляемого этим объектом Connection.|  
+|[getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md)|Возвращает объект [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md), который будет использоваться диспетчером транзакций для управления участием этого объекта [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) в распределенной транзакции.|  
+|[removeConnectionEventListener](../../../connect/jdbc/reference/removeconnectioneventlistener-method-sqlserverpooledconnection.md)|(Наследуется от [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)). Удаляет заданный прослушиватель событий.|  
   
 ## <a name="inherited-methods"></a>Наследуемые методы  
   
@@ -53,7 +50,7 @@ ms.locfileid: "32851069"
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |javax.sql.PooledConnection|addConnectionEventListener, close, getConnection, removeConnectionEventListener|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Класс SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)  
   
   

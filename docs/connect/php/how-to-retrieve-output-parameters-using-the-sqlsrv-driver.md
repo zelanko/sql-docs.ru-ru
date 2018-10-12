@@ -1,31 +1,28 @@
 ---
-title: 'Как: извлечение параметров вывода с помощью драйвера SQLSRV | Документы Microsoft'
+title: Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.openlocfilehash: 969de4ba4e28398c540636e8f3c6f6649c0dcb30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563892"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700462"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Эта статья описывает, как вызвать хранимую процедуру, в которой один параметр определен как параметр вывода. При извлечении параметра ввода вывода, должны быть использованы все результаты, возвращаемые хранимой процедурой перед становится доступно значение возвращаемого параметра.  
+Эта статья описывает, как вызвать хранимую процедуру, в которой один параметр определен как параметр вывода. При извлечении параметра ввода или вывода все результаты, возвращаемые хранимой процедурой, должны быть использованы до того, как становится доступно значение возвращаемого параметра.  
   
 > [!NOTE]  
 > Переменные, которые инициализируются или обновляются с использованием **null**, **DateTime**или типов потоков, нельзя использовать в качестве параметров вывода.  
@@ -41,9 +38,9 @@ ms.locfileid: "34563892"
 Поскольку хранимая процедура возвращает только один результат, *$salesYTD* содержит возвращаемое значение параметра вывода сразу после выполнения хранимой процедуры.  
   
 > [!NOTE]  
-> Рекомендуется вызывать хранимые процедуры с использованием канонического синтаксиса. Дополнительные сведения о каноническом синтаксисе см. в разделе [вызов хранимой процедуры](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+> Рекомендуется вызывать хранимые процедуры с использованием канонического синтаксиса. Дополнительные сведения о каноническом синтаксисе см. в статье [Вызов хранимой процедуры](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-Предполагается, что SQL Server и [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) базы данных установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  
@@ -124,10 +121,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> При привязке выходной параметр типа bigint, если значение может оказаться за пределами диапазона [целое](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), необходимо указать его тип SQL в качестве SQLSRV_SQLTYPE_BIGINT. В противном случае это может привести к исключению «значение вне допустимого диапазона».
+> При привязке выходной параметр с типом bigint, если значение может оказаться вне диапазона [целое число](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), необходимо указать его тип SQL в качестве SQLSRV_SQLTYPE_BIGINT. В противном случае он может привести к исключению «значение вне допустимого диапазона».
 
 ## <a name="example-2"></a>Пример 2
-В этом примере кода демонстрируется привязка значения больших bigint в качестве выходного параметра.  
+В этом примере кода показано, как привязать значение больших bigint в качестве выходного параметра.  
 
 ```
 <?php
@@ -153,7 +150,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Практическое руководство. Указание направления параметров с помощью драйвера SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [Практическое руководство. Извлечение параметров ввода и вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)

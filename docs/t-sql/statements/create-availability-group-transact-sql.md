@@ -5,9 +5,7 @@ ms.date: 10/16/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AVAILABILITY GROUP
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 196
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e0fc36645020d8dd349ad4239f4ed811eca4bfe
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 4099355964a7b778073493f943ff9962bc24e149
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713846"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662942"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -231,12 +228,12 @@ CREATE AVAILABILITY GROUP group_name
   
  Дополнительные сведения о предварительных требованиях для узлов WSFC и экземпляров серверов см. в статье [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL **='** TCP **://***system-address***:***port***'**  
+ ENDPOINT_URL **='** TCP **://**_system-address_**:**_port_**'**  
  Указывает путь URL для [конечной точки зеркального отображения базы данных](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором размещается реплика доступности, заданная в текущем предложении REPLICA ON.  
   
  Предложение ENDPOINT_URL является обязательным. Дополнительные сведения см. в разделе [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  Задает URL-адрес для конечной точки или URL-адрес маршрутизации, доступный только для чтения. Параметры URL-адреса:  
   
  *system-address*  
@@ -319,7 +316,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  Указывает URL-адрес, используемый для маршрутизации запросов на соединение с намерением чтения к этой реплике доступности. Этот URL-адрес прослушивается компонентом ядра СУБД SQL Server. Обычно экземпляр по умолчанию компонента ядра СУБД SQL Server прослушивает TCP-порт 1433.  
   
  Номер порта для именованного экземпляра вы можете получить, запросив столбцы **port** и **type_desc** динамического административного представления [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). Экземпляр сервера использует прослушиватель Transact-SQL (**type_desc='TSQL'**).  
@@ -375,12 +372,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name> Указывает имя группы доступности, составляющей половину распределенной группы доступности.  
   
- LISTENER **='** TCP **://***system-address***:***port***'**  
+ LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
  Указывает URL-адрес пути для прослушивателя, связанного с группой доступности.  
   
  Требуется предложение LISTENER.  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  Указывает URL-адрес для прослушивателя, связанного с группой доступности. Параметры URL-адреса:  
   
  *system-address*  
@@ -417,7 +414,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  Указывает на присвоение начальных значений вручную (по умолчанию). В этом методе вы создаете резервную копию базы данных на первичной реплике и вручную восстанавливаете эту резервную копию на репликах вторичной группы доступности.  
   
- LISTENER **‘***dns_name***’(** \<listener_option> **)** Определяет новый прослушиватель для этой группы доступности. Аргумент LISTENER является необязательным.  
+ LISTENER **‘**_dns\_name_**’(** \<listener_option\> **)** Определяет новый прослушиватель для этой группы доступности. Аргумент LISTENER является необязательным.  
   
 > [!IMPORTANT]  
 >  Перед созданием первого прослушивателя настоятельно рекомендуется ознакомиться со статьей [Создание или настройка прослушивателя группы доступности (SQL Server)](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -439,7 +436,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option> Аргумент LISTENER принимает один из следующих параметров \<listener_option>: 
   
- WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
+ WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
  Указывает, что прослушиватель группы доступности использует протокол DHCP.  Дополнительно можно использовать предложение ON, чтобы определить сеть, для которой создается прослушиватель. Протокол DHCP имеет ограничение на работу только с одной подсетью для каждого экземпляра сервера, на котором размещается реплика в группе доступности.  
   
 > [!IMPORTANT]  
@@ -449,7 +446,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
+ WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
  Указывает, что вместо использования протокола DHCP прослушиватель группы доступности использует один или несколько статических IP-адресов. Чтобы создать группу доступности, охватывающую несколько подсетей, в конфигурации прослушивателя должен присутствовать один статический IP-адрес для каждой подсети. Для конкретной подсети статический IP-адрес может иметь формат IPv4 или IPv6. Свяжитесь с администратором сети, чтобы получить статический IP-адрес для каждой подсети, в которой будет размещена реплика для новой группы доступности.  
   
  Пример:  

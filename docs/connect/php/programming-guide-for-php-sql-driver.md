@@ -5,21 +5,18 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a02f2b890e25a332a6d0ed228a20d78035a7dedc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 48a4a3f288af63788af84e8f64f2af91138c9ff1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992796"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776502"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Руководство по программированию для драйвера Microsoft для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +35,7 @@ ms.locfileid: "37992796"
 |[Преобразование типов данных](../../connect/php/converting-data-types.md)|Описывает указание типов данных и предоставление сведений о типах данных по умолчанию.|  
 |[Обработка ошибок и предупреждений](../../connect/php/handling-errors-and-warnings.md)|Описывает обработку ошибок и предупреждений.|  
 |[Ведение журнала](../../connect/php/logging-activity.md)|Содержит сведения о ведении журналов ошибок и предупреждений.|  
-|[Использование функции Always Encrypted с драйверами Майкрософт для PHP для SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Предоставляет сведения об использовании функции Always Encrypted с драйверами PHP.|  
+|[Использование функции Always Encrypted с драйверами PHP для SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Предоставляет сведения об использовании функции Always Encrypted с драйверами PHP.|  
 |[Вопросы безопасности для драйверов Майкрософт для PHP для SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|Описывает аспекты безопасности, связанные с разработкой, развертыванием и запуском приложений.|  
   
 ## <a name="see-also"></a>См. также:  

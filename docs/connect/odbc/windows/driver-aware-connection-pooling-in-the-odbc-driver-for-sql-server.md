@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b5bbe5489392ec9fbce5e55e1ad72d90416b5242
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 5f8557d34acd3de425f4d6932eca95fbe6e2d334
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784128"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784942"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Организация пулов соединений с учетом драйвера в ODBC Driver для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -27,7 +24,7 @@ ms.locfileid: "42784128"
   Драйвер ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает [организацию пулов соединений с учетом драйвера](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). В этой статье описываются усовершенствования, внесенные в пул соединений с учетом драйвера в Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на платформе Windows:  
   
 -   Независимо от свойств соединения, использующие `SQLDriverConnect`, помещаются в пул, отличный от пула соединений, использующих `SQLConnect`.
-- При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и организации пулов соединений с учетом драйвера драйвер не использует контекст безопасности пользователя Windows для текущего потока, чтобы разделить соединения в пуле. Таким образом, если по своим параметрам соединения эквивалентны сценариям олицетворения Windows с проверкой подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и используют те же учетные данные проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для подключения к серверной части, а другие пользователи Windows потенциально могут использовать же пул соединений. При использовании проверки подлинности Windows и организации пулов соединений с учетом драйвера драйвер использует текущий контекст безопасности пользователя Windows, чтобы разделить соединения в пуле. Таким образом, для сценариев олицетворения Windows различные пользователи Windows не используют совместно одни и те же соединения, даже если эти соединения используют одинаковые параметры.
+- При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и организации пулов соединений с учетом драйвера драйвер не использует контекст безопасности пользователя Windows для текущего потока, чтобы разделить соединения в пуле. Таким образом, если по своим параметрам соединения эквивалентны сценариям олицетворения Windows с проверкой подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и используют те же учетные данные проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для подключения к серверной части, другие пользователи Windows потенциально могут использовать тот же пул подключений. При использовании проверки подлинности Windows и организации пулов соединений с учетом драйвера драйвер использует текущий контекст безопасности пользователя Windows, чтобы разделить соединения в пуле. Таким образом, для сценариев олицетворения Windows различные пользователи Windows не используют совместно одни и те же соединения, даже если эти соединения используют одинаковые параметры.
 - При использовании Azure Active Directory и использование пулов соединений с учетом драйвера, драйвер также использует значение проверки подлинности для определения членства в пуле соединений.
   
 -   Организация пулов соединений с учетом драйвера предотвращает возвращение плохого соединения из пула.  
