@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,19 +30,17 @@ caps.latest.revision: 153
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 83bf4405abdb8f245332a75cd731503cf07f7ce5
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782675"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171696"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Выполняет импорт файла данных в таблицу или представление базы данных в формате, указанном пользователем, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -101,6 +99,10 @@ BULK INSERT
  Аргумент *data_file* должен указывать действительный путь с того сервера, на котором запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент *data_file* является удаленным файлом, указывайте имя в формате UNC. Имя в формате UNC имеет форму \\\\*Имя_системы*\\*Имя_общего_ресурса*\\*Путь*\\*Имя_файла*. Например, `\\SystemX\DiskZ\Sales\update.txt`.   
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP-версии 1.1, аргумент data_file может находиться в хранилище больших двоичных объектов Azure.
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
+
 
 **'** *data_source_name* **'**   
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
@@ -293,7 +295,11 @@ BULK INSERT bulktest..t_float
 FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');  
 GO  
 ```  
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
   
+
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>Типы данных для массового экспорта или импорта документов SQLXML  
  Для массового экспорта или импорта данных SQLXML используется один из следующих типов данных в файле форматирования.  
   
@@ -367,6 +373,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
          ROWTERMINATOR =' |\n'  
       );  
 ```  
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
   
 ### <a name="b-using-the-firetriggers-argument"></a>Б. Применение аргумента FIRE_TRIGGERS  
  В следующем примере указывается аргумент `FIRE_TRIGGERS`.  
@@ -381,6 +390,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
         FIRE_TRIGGERS  
       );  
 ```  
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
   
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>В. Применение символа перевода строки в качестве признака конца строки  
  В следующем примере производится импорт файла, в котором в качестве признака конца строки используется символ перевода строки, как в файлах UNIX.  
@@ -395,6 +407,9 @@ EXEC(@bulk_cmd);
   
 > [!NOTE]  
 >  В соответствии с тем, как в Microsoft Windows обрабатываются текстовые файлы, **(\n** автоматически заменяется на **\r\n)**.  
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
   
 ### <a name="d-specifying-a-code-page"></a>Г. Указание кодовой страницы  
  В следующем примере показано указание кодовой страницы.  
@@ -408,6 +423,10 @@ WITH
     FIELDTERMINATOR = ','  
 );  
 ```  
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
+
 ### <a name="e-importing-data-from-a-csv-file"></a>Д. Импорт данных из CSV-файла   
 В следующем примере показано указание CSV-файла.   
 ```
@@ -415,6 +434,10 @@ BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
 WITH (FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
+
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>Е. Импорт данных из файла в хранилище BLOB-объектов Azure   
 В следующем примере показано, как загрузить данные из CSV-файла в расположение хранилища BLOB-объектов Azure, которое была настроено в качестве внешнего источника данных. Для этого требуются учетные данные для базы с подписанным URL-адресом.    
@@ -425,6 +448,9 @@ FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>Ж. Импорт данных из файла в хранилище BLOB-объектов Azure и определение файла с ошибкой   
 В следующем примере показано, как загрузить данные из CSV-файла в расположение хранилища BLOB-объектов Azure, которое была настроено в качестве внешнего источника данных, и определить файл с ошибкой. Для этого требуются учетные данные для базы с подписанным URL-адресом. Обратите внимание: при выполнении базы данных SQL Azure параметр ERRORFILE должен использоваться вместе с ERRORFILE_DATA_SOURCE. В противном случае импорт может завершиться с ошибкой разрешения. Файл, указанный в ERRORFILE, не должен существовать в контейнере.

@@ -1,7 +1,7 @@
 ---
 title: OPENROWSET (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -29,12 +29,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 72b83f3f127aa4d63e9e39b2c828ad604a0b483d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 2ff620929c51cde29b82096c6437f7a6bfeefa50
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454178"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171826"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "39454178"
   Содержит все необходимые сведения о соединении, которые требуются для доступа к удаленным данным источника данных OLE DB. Это альтернативный метод для доступа к таблицам на связанном сервере и является однократным нерегламентированным методом соединения и удаленного доступа к данным с помощью OLE DB. Вместо этого для более частых ссылок на источники данных OLE DB используйте связанные серверы. Дополнительные сведения см. в разделе [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md). Из предложения FROM запроса можно ссылаться на функцию `OPENROWSET` как на имя таблицы. Функция `OPENROWSET` также может использоваться как целевая таблица в инструкции `INSERT`, `UPDATE` или `DELETE`. Это зависит от возможностей поставщика OLE DB. Несмотря на то, что запрос может возвратить несколько результирующих наборов, функция `OPENROWSET` возвращает только первый из них.  
   
  Функция `OPENROWSET` также поддерживает массовые операции с помощью встроенного поставщика BULK, позволяющего считывать данные из файла и возвращать их в виде набора строк.  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -110,6 +108,9 @@ OPENROWSET
   
  BULK  
  Использует поставщик больших наборов строк для функции OPENROWSET, чтобы читать данные из файла. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функция OPENROWSET может считывать данные из файла без их загрузки в целевую таблицу. Это позволяет использовать функцию OPENROWSET совместно с обычной инструкцией SELECT.  
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
   
  Аргументы параметра BULK позволяют полностью управлять началом и концом считывания данных, отладку ошибок и способ обработки полученных данных. Например, можно указать, что файл с данными будет считан как набор строк типа **varbinary**, **varchar** или **nvarchar** из одной строки и одного столбца. Поведение по умолчанию описано в следующем далее описании аргументов.  
   
@@ -123,7 +124,10 @@ OPENROWSET
  '*data_file*'  
  Полный путь к файлу данных, данные из которого копируются в целевую таблицу.   
  **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 аргумент data_file может находиться в хранилище BLOB-объектов Azure. Примеры см. в статье [Примеры массового доступа к данным в хранилище BLOB-объектов Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 аргумент data_file может находиться в хранилище BLOB-объектов Azure. Примеры см. в статье [Примеры массового доступа к данным в хранилище BLOB-объектов Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
   
  \<bulk_options>  
  Указывает один или более аргументов для параметра BULK.  
@@ -149,7 +153,7 @@ OPENROWSET
   
  Файл ошибок создается в начале выполнения команды. Если он уже существует, возникнет ошибка. Дополнительно создается управляющий файл с расширением ERROR.txt. Этот файл ссылается на каждую строку в файле ошибок и позволяет провести их диагностику. После исправления ошибок данные могут быть загружены.  
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] аргумент `error_file_path` может находиться в хранилище BLOB-объектов Azure. 
+Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], аргумент `error_file_path`может находиться в хранилище больших двоичных объектов Azure. 
 
 'errorfile_data_source_name'   
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
@@ -219,7 +223,7 @@ FORMAT **=** 'CSV'
  Сведения о файлах форматирования см. в разделе [Использование файла форматирования для массового импорта данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
 
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 аргумент format_file_path может находиться в хранилище BLOB-объектов Azure. Примеры см. в статье [Примеры массового доступа к данным в хранилище BLOB-объектов Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+Начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP-версии 1.1, аргумент format_file_path может находиться в хранилище больших двоичных объектов Azure. Примеры см. в статье [Примеры массового доступа к данным в хранилище BLOB-объектов Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 FIELDQUOTE **=** 'field_quote'   
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
@@ -307,6 +311,8 @@ SELECT CustomerID, CompanyName
       'admin';'',Customers);  
 GO  
 ```  
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
   
 ### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>В. Использование функции OPENROWSET и другой таблицы в предложении INNER JOIN  
  В приведенном ниже примере производится выборка всех данных из таблицы `Customers` в локальном экземпляре базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` и из таблицы `Orders` в базе данных Access `Northwind`, хранящейся на том же компьютере.  
@@ -325,6 +331,10 @@ FROM Northwind.dbo.Customers AS c
    ON c.CustomerID = o.CustomerID ;  
 GO  
 ```  
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
+
   
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>Г. Использование функции OPENROWSET для массовой вставки данных из файла в столбец типа varbinary(max)  
  В следующем примере создается небольшая таблица для демонстрационных целей и вставляются данные из файла с именем `Text1.txt`, расположенного в корневом каталоге диска `C:`, в столбец `varbinary(max)`.  
@@ -342,7 +352,11 @@ INSERT INTO myTable(FileName, FileType, Document)
       * FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_BLOB) AS Document;  
 GO  
 ```  
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
   
+
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>Д. Использование поставщика OPENROWSET BULK с файлом форматирования для получения строк из текстового файла  
  В следующем примере используется файл форматирования для получения строк, разделенных символами табуляции, из файла `values.txt`, который содержит следующие данные:  
   
@@ -367,7 +381,11 @@ GO
 SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',   
    FORMATFILE = 'c:\test\values.fmt') AS a;  
 ```  
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
   
+
 ### <a name="f-specifying-a-format-file-and-code-page"></a>Е. Указание файла форматирования и кодовой страницы  
  В приведенном ниже примере показано, как одновременно использовать параметры файла форматирования и кодовой страницы.  
   
@@ -386,6 +404,10 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMAT='CSV') AS cars;  
 ```
 
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
+
+
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>З. Доступ к данным из CSV-файла без использования файла форматирования
 
 ```sql
@@ -393,6 +415,10 @@ SELECT * FROM OPENROWSET(
    BULK 'C:\Program Files\Microsoft SQL Server\MSSQL14.CTP1_1\MSSQL\DATA\inv-2017-01-19.csv',
    SINGLE_CLOB) AS DATA;
 ```
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает чтение данных из файлов Windows.
+
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>И. Доступ к данным из файла, который находится в хранилище BLOB-объектов Azure   
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   

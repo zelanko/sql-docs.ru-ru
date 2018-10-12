@@ -1,7 +1,7 @@
 ---
 title: Журнал изменений для SQL Server Data Tools (SSDT) | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 09/05/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,18 +16,41 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cf2952b907da3dc44046e57796de761e62336de
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3e0a3d3cdd9904634e415d025c0866bff8140431
+ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096123"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743507"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Журнал изменений для SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Это журнал изменений для [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Подробные сведения о новых и измененных возможностях см. в [блоге группы разработчиков SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT для Visual Studio 2017 (15.8)
+Номер сборки: 14.0.16174.0.  
+Дата выпуска: 5 сентября 2018 г.  
+
+### <a name="whats-new"></a>Новые возможности
+
+**SSIS**
+
+1. Исправлена регрессия в VS 15.8, из-за которой при сохранении компонента или задачи скрипта происходила ошибка компиляции.
+1. Исправлена регрессия в VS 15.8, из-за которой не работал мастер развертывания.
+1. Устранена проблема, из-за которой диспетчер подключений ADO.NET не поддерживал сторонний поставщик ADO.NET.
+
+**Установщик:**
+
+- Реализована перезагрузка в процессе установки SSDT в Windows 10.
+
+
+### <a name="known-issues"></a>Известные проблемы:
+
+- Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS.
+
+
 
 
 ## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT для Visual Studio 2017 (15.7.1)

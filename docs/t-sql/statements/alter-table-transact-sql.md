@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 06/01/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -63,19 +63,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a471595321fba0e33f5ea37ea7bff68b528dafe5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 483d22cd721166f3d62c3100524c9850a28bacc2
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083938"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171876"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Изменяет определение таблицы путем изменения, добавления или удаления столбцов и ограничений, переназначения и перестраивания секций, а также отключения или включения ограничений и триггеров.  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -244,7 +242,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 ```  
   
 ```  
--- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database
+-- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database. Azure SQL Database Managed Instance does not support memory optiimized tables.
   
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 {   
@@ -785,7 +783,7 @@ COLUMN *column_name*
  Некластеризованные индексы columnstore, созданные для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 и для базы данных SQL до версии V12, поддерживали формат только для чтения. Перед выполнением операций PARTITION некластеризованные индексы columnstore необходимо перестроить в текущий формат (который поддерживает обновление).  
   
  SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"** default **"** | **"** NULL **"** }**)**  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. База данных SQL Azure не поддерживает `FILESTREAM`.  
   
  Указывает местоположения хранения данных FILESTREAM.  
   
@@ -892,7 +890,7 @@ TABLE
  Включает или выключает ограничения для таблицы FileTable, заданные системой. Может использоваться только для таблицы FileTable.  
   
  SET ( FILETABLE_DIRECTORY = *directory_name* )  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  База данных SQL Azure не поддерживает `FILETABLE`.  
   
  Указывает имя каталога таблицы FileTable, совместимое с Windows. Это имя должно быть уникальным среди всех имен каталогов FileTable в базе данных. Проверка уникальности не учитывает регистр символов независимо от параметров сортировки SQL. Может использоваться только для таблицы FileTable.  
 ```    

@@ -1,13 +1,11 @@
 ---
-title: Метод getSchemas () | Документы Microsoft
+title: Метод getSchemas () | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getSchemas
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04066c42fabfd81d5579e4900bd6072c7f767747
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 72ff77a7284368f901667febfd8853fb2bb7f873
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839419"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612009"
 ---
 # <a name="getschemas-method-"></a>Метод getSchemas ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,17 +36,17 @@ public java.sql.ResultSet getSchemas()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.  
+ Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
- Этот метод getSchemas указывается с помощью метода getSchemas в интерфейсе java.sql.DatabaseMetaData.  
+## <a name="remarks"></a>Remarks  
+ Этот метод getSchemas определен с помощью метода getSchemas в интерфейсе java.sql.DatabaseMetaData.  
   
- Результирующий набор, возвращенный методом getSchemas содержит следующие сведения:  
+ Результирующий набор, возвращаемый методом getSchemas, содержит следующие данные:  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|Имя схемы.|  
 |TABLE_CATALOG|**String**|Имя каталога для схемы.|  
@@ -57,10 +54,10 @@ public java.sql.ResultSet getSchemas()
  Результаты упорядочиваются по значениям TABLE_CATALOG, затем по значениям TABLE_SCHEM. Каждая строка первым столбцом содержит TABLE_SCHEM, а вторым — TABLE_CATALOG.  
   
 > [!NOTE]  
->  Дополнительные сведения о данных, возвращаемых методом getSchemas см. в разделе «sys.schemas (Transact-SQL)» в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] электронной документации.  
+>  Дополнительные сведения о данных, возвращаемых методом getSchemas, см. в разделе "sys.schemas (Transact-SQL)" электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример, как использовать метод getSchemas для возврата сведений о каталоге и его имен связанную схему, в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] при аргумент соединения указывает базу данных для использования.  
+ В следующем примере показано использование метода getSchemas для получения информации о каталоге и связанных с ним именах схемы в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], если аргумент подключения указывает используемую базу данных.  
   
 ```  
 public static void executeGetSchemas(Connection con) {  
@@ -85,7 +82,7 @@ public static void executeGetSchemas(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

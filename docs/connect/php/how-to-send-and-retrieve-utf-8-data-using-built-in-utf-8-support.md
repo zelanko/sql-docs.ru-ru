@@ -1,29 +1,26 @@
 ---
-title: Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8
+title: Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data, UTF-8 encoded data
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfeb770ad5151216fecbf796851f7eb06da8545f
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: db9f2758c2df5585a4d9034df7b309ae4547e52c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787455"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633942"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,10 +37,10 @@ ms.locfileid: "42787455"
   
     При указании кодировки в составе параметров соединения драйвер предполагает, что другие строки параметров соединения используют ту же кодировку. Для строк имени сервера и запроса также предполагается использование той же кодировки.  
   
-Обратите внимание, что можно передать UTF-8 или SQLSRV_ENC_CHAR в CharacterSet** (передавать SQLSRV_ENC_BINARY нельзя). Кодировка по умолчанию — SQLSRV_ENC_CHAR.  
+Можно передавать UTF-8 или SQLSRV_ENC_CHAR в **CharacterSet**, но SQLSRV_ENC_BINARY передавать нельзя. Кодировка по умолчанию — SQLSRV_ENC_CHAR.  
   
 ## <a name="example"></a>Пример  
-Следующий пример демонстрирует, как отправлять и получать данные в кодировке UTF-8 путем указания кодировки UTF-8 при установке соединения. Пример обновляет столбец Comments таблицы Production.ProductReview для определенного кода обзора. Кроме того, пример извлекает обновленные данные и отображает их. Обратите внимание, что столбец Comments имеет тип nvarcahr(3850).** Обратите внимание и на то, что перед отправкой данных на сервер они преобразуются в кодировку UTF-8 с помощью функции utf8_encode** PHP. Это осуществляется исключительно для демонстрационных целей. В реальном приложении вы сразу начинаете работать с данными в кодировке UTF-8.  
+Следующий пример демонстрирует, как отправлять и получать данные в кодировке UTF-8 путем указания кодировки UTF-8 при установке соединения. Пример обновляет столбец Comments таблицы Production.ProductReview для определенного кода обзора. Кроме того, пример извлекает обновленные данные и отображает их. Обратите внимание, что столбец Comments имеет тип **nvarchar(3850)**. Обратите внимание и на то, что перед отправкой на сервер данные преобразуются в кодировку UTF-8 с помощью функции **utf8_encode** PHP. Это осуществляется исключительно для демонстрационных целей. В реальном приложении вы сразу начинаете работать с данными в кодировке UTF-8.  
   
 В примере предполагается, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и база данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
   

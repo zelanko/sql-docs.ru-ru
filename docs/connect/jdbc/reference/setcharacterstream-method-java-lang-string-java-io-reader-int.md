@@ -1,13 +1,11 @@
 ---
-title: Метод setCharacterStream (java.lang.String, java.io.Reader, int) | Документы Microsoft
+title: Метод setCharacterStream (java.lang.String, java.io.Reader) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setCharacterStream
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 88a8e89e-8817-4161-85b1-9a9a2fd01cdb
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fed8100ff45c9440fede1b73fec4a41a045347ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1705a738f327ec07641d6d6dbf960ab37c30b9f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842579"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639672"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-int"></a>Метод setCharacterStream (java.lang.String, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Присваивает указанному параметру specifiedReader объекта, имеющего указанную длину в символах.  
+  Устанавливает для параметра значение заданного объекта specifiedReader, имеющего указанную длину в символах.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,30 +38,30 @@ public final void setCharacterStream(java.lang.String parameterName,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Имя_параметра*  
+ *parameterName*  
   
- Объект **строка** , содержащее имя параметра.  
+ Значение типа **String**, содержащее имя параметра.  
   
  *value*  
   
- Объект чтения, содержащего данные Юникода.  
+ Объект Reader, содержащий данные в Юникоде.  
   
- *длина*  
+ *length*  
   
- **Int** , определяющее длину в символах.  
+ Значение **int**, определяющее длину в символах.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод setCharacterStream указывается с помощью метода setCharacterStream в интерфейсе java.sql.CallableStatement.  
   
- Если длина потока отличается от указанной в *длина* параметра, драйвер JDBC вызовет исключение при обновлении или вставке строки.  
+ Если длина потока отличается от указанной в параметре *length*, драйвер JDBC выдаст исключение при обновлении или вставке строки.  
   
- Если длина потока неизвестна, *длина* параметра может быть задано значение -1, чтобы указать, что драйвер будет принимать потоки независимо от их длины. Для sqljdbc4.jar рекомендуется использовать метод JDBC 4.0 [метод setCharacterStream (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md) Если приложению нужно обновлять столбец из потока, длина которого неизвестна.  
+ Если длина потока неизвестна, параметр *length* может иметь значение "–1", показывающее, что драйвер должен принимать поток любой длины. Если при использовании sqljdbc4.jar приложению нужно обновить столбец из потока, длина которого неизвестна, рекомендуется использовать метод JDBC 4.0 [Метод setCharacterStream (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md).  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: Метод (SQLServerConnection) setHoldability | Документы Microsoft
+title: Метод setHoldability (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.setHoldability
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9002320c0c275965c654c08a5febceefb53e832
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 37181dfc2a2fa7b3e166d00e83130c2758e28533
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842509"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638652"
 ---
-# <a name="setholdability-method-sqlserverconnection"></a>setHoldability метод (SQLServerConnection)
+# <a name="setholdability-method-sqlserverconnection"></a>Метод setHoldability (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Изменяет возможность сохранения из [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекты, созданные с помощью этого [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) объект в заданное значение.  
+  Изменяет возможность ожидания объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданных с помощью этого объекта [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) с заданной возможностью ожидания.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +38,7 @@ public void setHoldability(int nNewHold)
 #### <a name="parameters"></a>Параметры  
  *nNewHold*  
   
- **Int** значение, которое содержит один из следующих уровней удержания:  
+ Значение **int**, содержащее один из следующих уровней возможности ожидания.  
   
  HOLD_CURSORS_OVER_COMMIT  
   
@@ -50,10 +47,10 @@ public void setHoldability(int nNewHold)
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод setHoldability указывается с помощью метода setHoldability в интерфейсе java.sql.Connection.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Класс SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: Целевые объекты для расширенных событий в SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: df5fc32aa7a6d42077e93d6b1dd4ca163404dc16
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d8a163b14cd44aab21a294fedee918b34fd95b0
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533824"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171786"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Целевые объекты для расширенных событий в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "39533824"
 Этот целевой объект трассировки событий Windows обрабатывает получаемые данные *синхронно* , тогда как большинство целевых объектов делают это *асинхронно*.
 
 > [!NOTE]
-> База данных SQL Azure не поддерживает назначение ETW. Также его не поддерживает управляемый экземпляр базы данных SQL Azure.
+> База данных SQL Azure не поддерживает `etw_classic_sync_target target`.
 
 <!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
@@ -157,7 +157,7 @@ CREATE EVENT SESSION [event_counter_1]
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
 
 > [!NOTE]
-> База данных SQL Azure поддерживает назначение **event_file**, однако только в том случае, если для вывода в хранилище Azure используется большой двоичный объект. База данных SQL не может сохранять выходные данные событий в файле на локальном жестком диске.
+> База данных SQL Azure поддерживает хранение файлов `xel` только в хранилище BLOB-объектов Azure. 
 >
 > Пример кода **event_file** для базы данных SQL (и управляемого экземпляра базы данных SQL) см. в разделе [Код назначения файла событий для расширенных событий в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 

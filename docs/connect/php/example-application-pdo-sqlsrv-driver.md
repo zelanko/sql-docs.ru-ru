@@ -1,44 +1,41 @@
 ---
-title: Пример приложения (драйвер PDO_SQLSRV) | Документы Microsoft
+title: Пример приложения (драйвер PDO_SQLSRV) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a75fd91a8ac3be76198e545a6d73237e976161b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: f0c3f2bd194d211ef3c48aa0fe9e37b09f44bf11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307633"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651982"
 ---
 # <a name="example-application-pdosqlsrv-driver"></a>Пример приложения (драйвер PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Пример приложения обзоров продуктов AdventureWorks является веб-приложение, использующее драйвер PDO_SQLSRV из [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Это приложение позволяет пользователю выполнять поиск продуктов по ключевому слову, просматривать обзоры для выбранного продукта, создать обзор для выбранного продукта и передать изображение для выбранного продукта.  
+Пример приложения обзоров продуктов AdventureWorks представляет собой веб-приложение, использующее драйвер PDO_SQLSRV из [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Это приложение позволяет пользователю выполнять поиск продуктов по ключевому слову, просматривать обзоры для выбранного продукта, создать обзор для выбранного продукта и передать изображение для выбранного продукта.  
   
 ### <a name="running-the-example-application"></a>Выполнение примера приложения  
   
-1.  Установите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Дополнительные сведения см. в разделе [Приступая к работе с драйверы Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+1.  Установите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Подробные сведения см. в разделе [Приступая к работе с драйверами Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  Скопируйте код, приведенный ниже в этом документе, в два файла: adventureworks_demo.php и photo.php.  
 3.  Поместите файлы adventureworks_demo.php и photo.php в корневой каталог веб-сервера.  
-4.  Запустите приложение, запуск http://localhost/adventureworks_demo.php из браузера.  
+4.  Запустите приложение, запустив http://localhost/adventureworks_demo.php из браузера.  
   
 ## <a name="requirements"></a>Требования  
 Для запуска примера приложения обзоров продуктов AdventureWorks на компьютере должны выполняться следующие условия:  
   
--   система удовлетворяет требованиям для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Дополнительные сведения см. в разделе [требования к системе для драйвера Microsoft SQL Server для PHP](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+-   система удовлетворяет требованиям для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Подробные сведения см. в разделе [требования к системе для драйверов Майкрософт для PHP для SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
  -   Файлы adventureworks_demo.php и photo.php находятся в корневом каталоге веб-сервера. Эти файлы должны содержать код, приведенный ниже в этом документе.  
--   SQL Server 2005 или SQL Server 2008 с [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) подключенной базой данных устанавливается на локальном компьютере.  
+-   На локальном компьютере установлен SQL Server 2005 или SQL Server 2008 с подключенной базой данных [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).  
 -   Установлен веб-браузер.  
   
 ## <a name="demonstrates"></a>Демонстрации  
@@ -46,13 +43,13 @@ ms.locfileid: "35307633"
   
 -   открытие соединения с SQL Server с использованием проверки подлинности Windows;  
 -   Как подготовить и выполнение параметризованного запроса.  
--   Демонстрируется извлечение данных.  
+-   Как извлекать данные.  
 -   проверка на наличие ошибок.  
   
 ## <a name="example"></a>Пример  
 Пример приложения обзоров продуктов AdventureWorks возвращает из базы данных сведения о тех продуктах, имена которых содержат введенную пользователем строку. В списке возвращенных продуктов пользователь может просмотреть обзоры, изображение, отправить изображение и создать обзор для выбранного продукта.  
   
-Поместите следующий код в файл с именем adventureworks_demo_pdo.php:  
+Поместите следующий код в файл с именем adventureworks_demo_pdo.php.  
   
 ```  
 <!--=============  
@@ -458,7 +455,7 @@ function PopulateProductsTable( $values )
 ## <a name="example"></a>Пример  
 Скрипт photo.php возвращает фотографию продукта для указанного **ProductID**. Этот скрипт вызывается из скрипта adventureworks_demo.php.  
   
-Поместите следующий код в файл с именем photo_pdo.php:  
+Поместите следующий код в файл с именем photo_pdo.php.  
   
 ```  
 <?php  
@@ -507,7 +504,7 @@ die( print_r( $e->getMessage() ) );
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Подключение к серверу](../../connect/php/connecting-to-the-server.md)
 
 [Сравнение функций выполнения](../../connect/php/comparing-execution-functions.md)

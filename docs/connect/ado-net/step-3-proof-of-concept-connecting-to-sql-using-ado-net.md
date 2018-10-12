@@ -1,33 +1,30 @@
 ---
-title: 'Шаг 3: Эксперимент подключение к SQL с помощью ADO.NET | Документы Microsoft'
+title: Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью ADO.NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6933fb1690b11d373974892672b43fe8df218860
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 3f38de8f15e6e14d3822254812f98364104ea603
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288893"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603972"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Шаг 3: Эксперимент подключение к SQL с помощью ADO.NET
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью ADO.NET
 
-- Предыдущей статьи:&nbsp;&nbsp;&nbsp;[шаг 2: Создание базы данных SQL для разработки приложений ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
-- Далее статьи:&nbsp;&nbsp;&nbsp;[шаг 4: выполнение устойчивого подключения к SQL с помощью ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
+- Предыдущую статью:&nbsp;&nbsp;&nbsp;[шаг 2: Создание базы данных SQL для разработки в ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
+- Следующая статья:&nbsp;&nbsp;&nbsp;[Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
-Данный пример кода C# следует рассматривать эксперимента только. В образце кода упрощен для ясности и не представляет рекомендации рекомендуется корпорацией Майкрософт.  
+В этом примере кода C# следует рассматривать подтверждение концепции только. Пример кода упрощен для ясности и не всегда представляет рекомендации, рекомендуемые корпорацией Майкрософт.  
   
 ## <a name="step-1-connect"></a>Шаг 1: подключение
   
@@ -68,12 +65,12 @@ ms.locfileid: "35288893"
 ```  
 
 
-## <a name="step-2--execute-a-query"></a>Шаг 2: Выполнение запроса  
+## <a name="step-2--execute-a-query"></a>Шаг 2. Выполнение запроса  
   
 Метод SqlCommand.ExecuteReader:  
   
 - Выполняет инструкцию SQL SELECT в системе SQL.  
-- Возвращает экземпляр класса SqlDataReader для предоставления доступа к строки результата.  
+- Возвращает экземпляр SqlDataReader для предоставления доступа к строкам результат.  
   
   
   
@@ -154,10 +151,10 @@ ms.locfileid: "35288893"
   
   
   
-## <a name="step-3-insert-a-row"></a>Шаг 3: Вставьте строку  
+## <a name="step-3-insert-a-row"></a>Шаг 3: Вставка строки  
   
   
-В этом примере показано, как:  
+В этом примере показано следующее.  
   
 - Безопасно выполните инструкцию SQL INSERT путем передачи параметров.  
   - Использование параметров обеспечивает защиту от атак путем внедрения кода SQL.  

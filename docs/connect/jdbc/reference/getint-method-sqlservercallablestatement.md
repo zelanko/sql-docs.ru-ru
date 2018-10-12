@@ -1,13 +1,11 @@
 ---
-title: Метод getInt (SQLServerCallableStatement) | Документы Microsoft
+title: Метод getInt (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getInt
@@ -15,31 +13,30 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 19d60b8b-7e01-4d7b-afa9-f0705d634cf9
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c581ad829c33f331d25f56bb945b6c8fb1e88538
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5a56af7a2fec9c785a86bbf3cc55a7a3da4474c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834869"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613656"
 ---
 # <a name="getint-method-sqlservercallablestatement"></a>Метод getInt (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Получает значение указанного параметра в виде **int** языке программирования Java.  
+  Извлекает значение указанного параметра в виде значения **int** на языке программирования Java.  
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[getInt (int)](../../../connect/jdbc/reference/getint-method-int.md)|Получает значение указанного параметра в виде **int** на Java по заданному индексу параметра языка программирования.|  
-|[getInt (java.lang.String)](../../../connect/jdbc/reference/getint-method-java-lang-string.md)|Получает значение указанного параметра в виде **int** на Java по заданному имени параметра языка программирования.|  
+|[getInt (int)](../../../connect/jdbc/reference/getint-method-int.md)|Получает значение заданного параметра в виде значения типа **int** на языке программирования Java по заданному индексу параметра.|  
+|[getInt (java.lang.String)](../../../connect/jdbc/reference/getint-method-java-lang-string.md)|Получает значение заданного параметра в виде значения типа **int** на языке программирования Java по заданному имени параметра.|  
   
-## <a name="see-also"></a>См. также  
- [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>См. также:  
+ [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

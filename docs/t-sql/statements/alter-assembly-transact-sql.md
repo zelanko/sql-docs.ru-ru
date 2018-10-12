@@ -1,7 +1,7 @@
 ---
 title: ALTER ASSEMBLY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/19/2017
+ms.date: 09/07/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,15 +27,15 @@ caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 10e01507c7c33f272872ecf5022ad287ccaeafa6
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 32f8f0b6aaaa44dc42a52babae398845779961d3
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942930"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171806"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Изменяет сборку, изменяя при этом свойства каталога [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сборки. Инструкция ALTER ASSEMBLY обновляет ее до последней копии модулей [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], содержащих ее реализацию, и добавляет или удаляет связанные с ней файлы. Сборки создаются при помощи инструкции [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
@@ -79,6 +79,9 @@ ALTER ASSEMBLY assembly_name
  Обновляет сборку до последней копии модулей платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], содержащих ее реализацию. Этот параметр может использоваться при условии, что файлы, связанные с указанной сборкой, отсутствуют.  
   
  Аргумент \<client_assembly_specifier> указывает сетевое или локальное расположение, в котором находится обновляемая сборка. Сетевое расположение содержит имя компьютера, имя общей папки и путь внутри этой папки. Аргумент *manifest_file_name* указывает имя файла, содержащего манифест сборки.  
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает добавление ссылок на файлы.
   
  Аргумент \<assembly_bits> является двоичным значением для сборки.  
   
@@ -118,13 +121,13 @@ ALTER ASSEMBLY assembly_name
  Удаляет из базы данных файл, связанный со сборкой, или все файлы, связанные со сборкой. Если следующей является инструкция ADD FILE, инструкция DROP FILE выполняется в первую очередь. Это позволяет заменить файл другим файлом с тем же именем.  
   
 > [!NOTE]  
->  Этот параметр недоступен в автономной базе данных.  
+>  Этот параметр недоступен в автономной базе данных или Базе данных SQL Azure.  
   
  [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
  Передает на сервер файлы для связывания со сборкой (например, исходный код, файлы отладки или другие сведения) и делает их видимыми в представлении каталога **sys.assembly_files**. *client_file_specifier* указывает расположение, откуда передаются файлы. Вместо этого можно указать список двоичных значений, составляющих файл, с помощью *file_bits*. *file_name* указывает имя, под которым файл должен храниться на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *file_name* обязателен, если указан аргумент *file_bits*, и необязателен, если указан аргумент *client_file_specifier*. Если аргумент *file_name* не указан, часть file_name в аргументе *client_file_specifier* указывается как *file_name*.  
   
 > [!NOTE]  
->  Этот параметр недоступен в автономной базе данных.  
+>  Этот параметр недоступен в автономной базе данных или Базе данных SQL Azure.  
   
 ## <a name="remarks"></a>Remarks  
  Инструкция ALTER ASSEMBLY не нарушает сеансы, в которых в настоящий момент работает код изменяемой сборки. Текущие сеансы завершают выполнение с неизмененной сборкой.  
@@ -205,6 +208,10 @@ ALTER ASSEMBLY assembly_name
  ALTER ASSEMBLY ComplexNumber 
  FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
   ```
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает добавление ссылок на файлы.
+
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>Б. Добавление файла, связанного со сборкой  
  На следующем примере показано, как производится передача файла с исходным кодом `Class1.cs`, связанного со сборкой `MyClass`. При этом предполагается, что сборка `MyClass` уже создана в базе данных.  
   
@@ -212,7 +219,10 @@ ALTER ASSEMBLY assembly_name
 ALTER ASSEMBLY MyClass   
 ADD FILE FROM 'C:\MyClassProject\Class1.cs';  
 ```  
-  
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает добавление ссылок на файлы.
+
 ### <a name="c-changing-the-permissions-of-an-assembly"></a>В. Изменение разрешений сборки  
  На следующем примере показано, как набор разрешений сборки `ComplexNumber` меняется с SAFE на `EXTERNAL ACCESS`.  
   

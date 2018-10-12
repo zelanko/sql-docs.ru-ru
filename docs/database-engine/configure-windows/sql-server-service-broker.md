@@ -1,7 +1,7 @@
 ---
 title: SQL Server Service Broker | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/30/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6b637e685063d8b1ca81aebc0d020824df22b766
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: 757ee407d0831734b7c55b9e1b8b5a20e91d042a
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509163"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171816"
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,8 +40,6 @@ ms.locfileid: "39509163"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] обеспечивает собственную поддержку приложений обмена сообщениями и приложений с очередями сообщений в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Это облегчает разработчикам создание сложных приложений, использующих компоненты [!INCLUDE[ssDE](../../includes/ssde-md.md)] для связи между разнородными базами данных. Разработчики могут использовать компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] для облегчения создания распределенных и надежных приложений.  
   
  Разработчики приложений, использующие компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] , могут распределять рабочую нагрузку между несколькими базами данных без программирования сложного взаимодействия и создания внутреннего обмена сообщениями. Это сокращает разработку и проверочную работу, потому что компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] обеспечивает взаимодействие в контексте диалога. Кроме того, это повышает производительность. Например, сервер, обслуживающий клиентские запросы базы данных, поддерживающие веб-сайты, может записывать информацию и отправлять ресурсоемкие задачи в очереди серверных баз данных. [!INCLUDE[ssSB](../../includes/sssb-md.md)] гарантирует, что управление всеми задачами ведется в контексте транзакций, чтобы обеспечить надежность и техническое единообразие.  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 ## <a name="where-is-the-documentation-for-service-broker"></a>Где найти документацию по компоненту Service Broker?  
  Справочная документация по компоненту [!INCLUDE[ssSB](../../includes/sssb-md.md)] входит в документацию по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . В эту справочную документацию входят следующие разделы:  
@@ -60,6 +58,13 @@ ms.locfileid: "39509163"
   
 ## <a name="whats-new-in-service-broker"></a>Новые возможности (компонент Service Broker)  
  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]не были внесены значимые изменения.  В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]появились следующие изменения.  
+
+### <a name="service-broker-and-azure-sql-database-managed-instance"></a>Service Broker и Управляемый экземпляр Базы данных SQL Azure
+
+- Service Broker не поддерживается в нескольких экземплярах. 
+ - `sys.routes` — предварительные требование: выберите адрес из sys.routes. Адрес должен иметь значение LOCAL для каждого маршрута. См. статью о [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).
+ - `CREATE ROUTE` — нельзя использовать `CREATE ROUTE` с параметром `ADDRESS`, значение которого отличается от `LOCAL`. См. статью о [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+ - `ALTER ROUTE` — нельзя использовать `ALTER ROUTE` с параметром `ADDRESS`, значение которого отличается от `LOCAL`. См. статью об [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>Сообщения могут отправляться в несколько целевых служб (многоадресная рассылка)  
  Синтаксис инструкции [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md) расширен для включения многоадресной рассылки благодаря поддержке нескольких дескрипторов диалога.  

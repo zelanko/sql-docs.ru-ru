@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 450812006d18f143ec2b6083bf2bd0701ea4c252
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 0e0840861f98a9d178bbee29d9c6b7e82433dd97
+ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240292"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44089994"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,6 @@ ms.locfileid: "43240292"
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
-  
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -280,13 +278,13 @@ ms.locfileid: "43240292"
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  Заставляет оптимизатор запросов использовать модель [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md), которая соответствует текущему уровню совместимости базы данных. Используйте это указание для переопределения параметра [Конфигурация области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON или [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
 *  "DISABLE_INTERLEAVED_EXECUTION_TVF"   
- Отключает выполнение с чередованием для функций с табличным значением с несколькими инструкциями. Дополнительные сведения см. в разделе [Выполнение с чередованием для функций с табличным значением с несколькими инструкциями](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+ Отключает выполнение с чередованием для функций с табличным значением с несколькими инструкциями. Дополнительные сведения см. в разделе о [выполнении с чередованием для функций с табличным значением с несколькими инструкциями](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
 *  "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK"     
  Отключает обратную связь по временно предоставляемому буферу памяти в пакетном режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в пакетном режиме](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
 *  "DISABLE_BATCH_MODE_ADAPTIVE_JOINS"     
  Отключает адаптивные соединения в пакетном режиме. Дополнительные сведения см. в разделе [Адаптивные соединения в пакетном режиме](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
- Принудительно применяет поведение оптимизатора запросов на уровне запроса, как если бы запрос был скомпилирован с уровнем совместимости базы данных *n*, где *n* — это поддерживаемый уровень совместимости базы данных. Список значений, поддерживаемых сейчас для *n*, см. здесь: [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 10 (CU10)) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].   
+ Принудительно применяет поведение оптимизатора запросов на уровне запроса, как если бы запрос был скомпилирован с уровнем совместимости базы данных *n*, где *n* — это поддерживаемый уровень совместимости базы данных. Список значений, поддерживаемых сейчас для *n*, см. здесь: [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md). **Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления CU10).   
  
     > [!NOTE]
     > Указание QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n не переопределяет значение по умолчанию или параметр оценки унаследованной кратности, если оно применяется с использованием конфигурации области баз данных, флага трассировки или другого указания запроса, например QUERYTRACEON.   
@@ -564,6 +562,6 @@ GO
  [Указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_control_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
- [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-  
+ [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
+ [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
   

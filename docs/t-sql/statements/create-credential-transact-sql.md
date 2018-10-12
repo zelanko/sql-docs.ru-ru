@@ -1,7 +1,7 @@
 ---
 title: CREATE CREDENTIAL (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/09/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,19 +28,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 87759a536e979600e7ff12d8ad932c4fcf4cd248
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 58250bd30559b497d6e2ab841086f9e5bbb26ffd
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458078"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171616"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Создает учетные данные на уровне сервера. Учетные данные являются записью, которая содержит сведения для проверки подлинности, необходимые для подключения к ресурсу извне SQL Server. Большинство учетных данных включают имя пользователя и пароль Windows. Например, при сохранении резервной копии базы данных в определенном расположении серверу SQL Server может потребоваться предоставить специальные учетные данные для доступа к этому расположению. Дополнительные сведения см. в статье [Учетные данные (компонент Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
 > [!NOTE]  
 >  Чтобы создать учетные данные на уровне базы данных, используйте инструкцию [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Учетные данные на уровне сервера следует применять тогда, когда для доступа к нескольким базам данных на сервере необходимо использовать одни и те же учетные данные. Учетные данные на уровне базы данных повышают ее переносимость. При переносе базы данных на новый сервер учетные данные на уровне базе данных переносятся вместе с ней. Используйте учетные данные на уровне базы данных в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -63,7 +61,10 @@ WITH IDENTITY = 'identity_name'
   
  IDENTITY **='***identity_name***'**  
  Указывает имя учетной записи для использования при подключении за пределами сервера. При использовании учетных данных для доступа к хранилищу Azure Key Vault **IDENTITY** — это имя хранилища ключей. См. пример В далее. Если в учетных данных используется подписанный URL-адрес (SAS), **IDENTITY** имеет значение *SHARED ACCESS SIGNATURE*. См. пример Г ниже.  
-  
+ 
+> [!IMPORTANT]
+> База данных SQL Azure поддерживает только удостоверения Azure Key Vault и удостоверения на основе подписанного URL-адреса. Удостоверения пользователей Windows не поддерживаются.
+ 
  SECRET **='***secret***'**  
  Указывает секретный код, необходимый для исходящей проверки подлинности.  
   

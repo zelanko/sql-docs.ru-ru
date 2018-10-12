@@ -1,7 +1,7 @@
 ---
 title: CREATE ASSEMBLY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/30/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,20 +27,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 99d7e5d69e560fd5d94c38bdab1d29f6d5e0860e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 44c9ba8b3514c1a28ef2bbe800e0bec0c41b1bba
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456758"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171570"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Создает управляемый модуль приложений, содержащий метаданные класса и управляемый код, например объект в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ссылаясь на этот модуль, в базе данных можно создать функции среды CLR, хранимые процедуры CLR, триггеры CLR, определяемые пользователем статистические вычисления и типы.  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 >  [!WARNING]
 >  Среда CLR использует управление доступом для кода (CAS) в .NET Framework, которое больше не поддерживается в качестве границы безопасности. Сборки среды CLR, созданные с помощью `PERMISSION_SET = SAFE`, могут получать доступ к внешним системным ресурсам, вызывать неуправляемый код и получать права системного администратора. Начиная с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], появился параметр `sp_configure`, называемый `clr strict security`, для повышения безопасности сборок среды CLR. `clr strict security` включен по умолчанию и рассматривает сборки `SAFE` и `EXTERNAL_ACCESS`, как если бы они были помечены `UNSAFE`. Параметр `clr strict security` можно отключить для обеспечения обратной совместимости, но это делать не рекомендуется. Корпорация Майкрософт рекомендует подписывать все сборки с помощью сертификата или асимметричного ключа с соответствующим именем входа, которому предоставлено разрешение `UNSAFE ASSEMBLY` в базе данных master. Дополнительные сведения см. в статье о параметре [clr strict security](../../database-engine/configure-windows/clr-strict-security.md).  
   
@@ -71,6 +69,9 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  \<client_assembly_specifier>  
 Задает локальный путь или местоположение в сети, где расположена передаваемая сборка, а также имя файла манифеста, соответствующее сборке.  Аргумент \<client_assembly_specifier> можно задать в виде фиксированной строки или выражения с переменными, в результате подстановки значений которых получается фиксированная строка. Инструкция CREATE ASSEMBLY не поддерживает загрузку многомодульных сборок. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также ищет любые зависимые сборки данной сборки в том же месте и передает их с тем же владельцем в качестве сборки корневого уровня. Если зависимые сборки не найдены и если они уже не загружены в текущую базу данных, CREATE ASSEMBLY завершается неудачно. Если зависимые сборки уже загружены в текущую базу данных, владелец этих сборок должен быть тот же, что и у только что созданной сборки.
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает создание сборки на основе файла.
   
  \<client_assembly_specifier> не может быть задано, если у пользователя, совершившего вход, заимствуются права.  
   
@@ -181,6 +182,9 @@ CREATE ASSEMBLY HelloWorld
 FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
 WITH PERMISSION_SET = SAFE;  
 ```  
+
+> [!IMPORTANT]
+> База данных SQL Azure не поддерживает создание сборки на основе файла.
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Пример Б. Создание сборки из битов сборки  
   

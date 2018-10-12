@@ -19,12 +19,12 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43117124b43bf234f8d72c9e2974d6e42631d06c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d73bd46a4bf3073a84c600457df535ecd1a1307d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772470"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819420"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Отказоустойчивая кластеризация Windows Server с SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ ms.locfileid: "34772470"
  Метаданные и состояние конфигурации WSFC для всех узлов сохраняются на каждом узле. Каждый сервер может предоставлять тома асимметричного хранения или общего хранения (SAN) для пользовательских и системных баз данных. Каждый сервер имеет по крайней мере один физический сетевой интерфейс в одной или нескольких IP-подсетях.  
   
  Кластер WSFC контролирует работоспособность группы серверов и управляет их конфигурацией.  
- Механизмы WSFC распространяют изменения в метаданных и состоянии конфигурации WSFC во всех узлах кластера WSFC. Если используется диск-свидетель, метаданные также хранятся на нем. По умолчанию каждый узел кластера WSFC имеет голос в кворуме, а ресурс свидетель используется, если он необходим и настроен.
+ Механизмы WSFC распространяют изменения в метаданных и состоянии конфигурации WSFC во всех узлах кластера WSFC. Если используется диск-свидетель, метаданные также хранятся на нем. По умолчанию каждый узел кластера WSFC имеет голос в кворуме, а ресурс-свидетель используется, если он необходим и настроен.
  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — это подразделы кластера WSFC.  
  При удалении и повторном создании кластера WSFC необходимо отключить и повторно включить функцию [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] на каждом экземпляре сервера, на котором была включена функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в исходном кластере WSFC. Дополнительные сведения см. в разделе [Включение и отключение групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  

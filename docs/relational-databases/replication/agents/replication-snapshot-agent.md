@@ -1,7 +1,7 @@
 ---
 title: Агент моментальных снимков репликации | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: replication
@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 45976c2d0e99303c9aba9aa3251a1ea65f610901
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e2839e7dfa8c0dd32eb4904f4dde43e5ce992e6e
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349996"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311664"
 ---
 # <a name="replication-snapshot-agent"></a>Агент моментальных снимков репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,6 +65,7 @@ snapshot [ -?]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
 [-PacketSize packet_size]  
+[-PrefetchTables [0|1] ]  
 [-ProfileName profile_name]  
 [-PublisherDB publisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -114,7 +115,7 @@ snapshot [ -?]
  Имя входа, используемое при соединении с распространителем с проверкой подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **-DistributorPassword** *distributor_password*  
- Пароль, используемый при соединении с распространителем с проверкой подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . , и делает это по-другому.  
+ Пароль, используемый при соединении с распространителем с проверкой подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  Указывает режим безопасности распространителя. Значение **0** означает проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (по умолчанию), а значение **1** — проверку подлинности Windows.  
@@ -202,7 +203,15 @@ snapshot [ -?]
   
 > [!NOTE]  
 >  Не изменяйте размер пакета, если нет уверенности в том, что это повысит производительность. Для большинства приложений оптимальным является размер пакета, установленный по умолчанию.  
+
+**-PrefetchTables** [ **0**| **1**]  
+ Необязательный параметр, который указывает, нужно ли выполнять упреждающую выборку и кэширование объектов таблицы.  По умолчанию упреждающая выборка выполняется для некоторых свойств таблицы с помощью компонента SMO на основе внутренних вычислений.  Этот параметр будет полезен в сценариях, где для операции предварительной выборки SMO потребуется много времени. Если этот параметр не используется, решение принимается во время выполнения. При этом учитывается процент таблиц, которые добавляются в публикацию в качестве статей.  
   
+|Значение OutputVerboseLevel|Описание|  
+|------------------------------|-----------------|  
+|**0**|Вызовы к методу Prefetch компонента SMO запрещены.|  
+|**1**|Агент моментальных снимков может вызывать метод Prefetch, чтобы кэшировать некоторые свойства таблицы с помощью объектов SMO.|  
+
  **-ProfileName** *имя_профиля*  
  Указывает профиль агента, из которого берутся параметры агента. Если **ProfileName** имеет значение NULL, профиль агента отключен. Если значение **ProfileName** не указано, используется профиль по умолчанию для агентов этого типа. Дополнительные сведения см. в статье [Профили агента репликации](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -225,7 +234,7 @@ snapshot [ -?]
  Имя входа при соединении с издателем с проверкой подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **-PublisherPassword**  *пароль_на_издателе*  
- Пароль, используемый при соединении с издателем с проверкой подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . , и делает это по-другому.  
+ Пароль, используемый при соединении с издателем с проверкой подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  Указывает режим безопасности издателя. Значение **0** означает проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (по умолчанию), а значение **1** — проверку подлинности Windows.  

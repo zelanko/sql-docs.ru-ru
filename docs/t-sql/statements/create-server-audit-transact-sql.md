@@ -1,7 +1,7 @@
 ---
 title: CREATE SERVER AUDIT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,19 +26,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7d16529308dc45fd64f6b16d7dec92f1fe8be8cc
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 85ee3b6a5f674a9d4ee63cb54ffca867abca1f04
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452118"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171746"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Создает объект аудита сервера с помощью компонента аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +45,7 @@ ms.locfileid: "39452118"
 ```  
 CREATE SERVER AUDIT audit_name  
 {  
-    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG }  
+    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG | URL}  
     [ WITH ( <audit_options> [ , ...n ] ) ]   
     [ WHERE <predicate_expression> ]  
 }  
@@ -80,8 +78,11 @@ CREATE SERVER AUDIT audit_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- TO { FILE | APPLICATION_LOG | SECURITY_LOG }  
+ TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL  
  Определяет расположение целевого объекта аудита. Возможными параметрами являются двоичный файл, журнал приложений Windows или журнал безопасности Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может выполнить запись в журнал безопасности Windows без настройки дополнительных параметров Windows. Дополнительные сведения см. в статье [Запись событий подсистемы аудита SQL Server в журнал безопасности](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
+
+> [!IMPORTANT]
+> В Управляемом экземпляре Базы данных SQL Azure компонент аудита SQL выполняется на уровне сервера и сохраняет файлы `.xel` в хранилище BLOB-объектов Azure.
   
  FILEPATH ='*os_file_path*'  
  Путь к журналу аудита. Имя файла формируется на основе имени аудита и его идентификатора GUID.  

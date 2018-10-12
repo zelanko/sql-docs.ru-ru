@@ -1,13 +1,9 @@
 ---
 title: ALTER CREDENTIAL (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/19/2015
+ms.date: 09/07/2018
 ms.prod: sql
-ms.prod_service: sql-database
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER CREDENTIAL
@@ -21,26 +17,24 @@ helpviewer_keywords:
 - authentication [SQL Server], credentials
 - ALTER CREDENTIAL statement
 ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
-caps.latest.revision: 27
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7b86aef0e9dd9395f1c803cc3dd2b9e14866b25d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 6939de7db25f8f0e572cebef2181551f5190922b
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451910"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171886"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Изменяет свойства учетных данных.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+> [!IMPORTANT]
+> Соглашения из статьи о ![значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [синтаксических обозначениях в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) можно использовать как рекомендации или как инструкции для задачи.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,7 +52,10 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  Указывает имя учетной записи для использования при подключении за пределами сервера.  
   
  SECRET **='***secret***'**  
- Указывает секретный код, необходимый для исходящей проверки подлинности. Аргумент *secret* является необязательным.  
+ Указывает секретный код, необходимый для исходящей проверки подлинности. Аргумент *secret* является необязательным.
+  
+> [!IMPORTANT]
+> База данных SQL Azure поддерживает только удостоверения Azure Key Vault и удостоверения на основе подписанного URL-адреса. Удостоверения пользователей Windows не поддерживаются.
   
 ## <a name="remarks"></a>Remarks  
  При изменении учетных данных значения *identity_name* и *secret* сбрасываются. Если необязательный аргумент SECRET не указан, значение хранимого секретного кода устанавливается в NULL.  

@@ -1,13 +1,11 @@
 ---
-title: Метод othersUpdatesAreVisible (SQLServerDatabaseMetaData) | Документы Microsoft
+title: Метод othersUpdatesAreVisible (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.othersUpdatesAreVisible
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3615c01f-ae0b-42a7-92b5-e8770d841c45
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38c52f7f0297c6d565abcf4f7bf14caa884dc58a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1c8c4388d7615c286395d67c0b5f7a9d9ae958bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842019"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635092"
 ---
 # <a name="othersupdatesarevisible-method-sqlserverdatabasemetadata"></a>Метод othersUpdatesAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +38,7 @@ public boolean othersUpdatesAreVisible(int type)
 #### <a name="parameters"></a>Параметры  
  *type*  
   
- **Int** , указывающее тип результирующего набора, которое может быть одним из следующих значений, определенных в java.sql.ResultSet или SQLServerResultSet:  
+ Значение типа **int**, указывающее тип результирующего набора. Оно может быть равно следующим значениям, определенным в java.sql.ResultSet или SQLServerResultSet:  
   
 ## <a name="javasqlresultset-types"></a>Типы java.sql.ResultSet  
  TYPE_FORWARD_ONLY  
@@ -62,15 +59,15 @@ public boolean othersUpdatesAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** при операции обновления видимы. В противном случае — **false**.  
+ Значение **true**, если операции обновления видимы. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод othersUpdatesAreVisible указывается с помощью метода othersUpdatesAreVisible в интерфейсе java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

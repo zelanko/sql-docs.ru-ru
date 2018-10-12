@@ -1,7 +1,7 @@
 ---
 title: OPENDATASOURCE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,21 +27,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 63619b21a6e82458a64128a4f892cac6c6220420
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 58b37be191f9b3ce95d7442a4ba9d68f9fdc2339
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457968"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171576"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Передает сведения о нерегламентированном соединении в виде одной из четырех частей имени объекта, без имени связанного сервера.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -75,7 +73,7 @@ OPENDATASOURCE ( provider_name, init_string )
   
  Функция OPENDATASOURCE может применяться в тех же местах в коде [!INCLUDE[tsql](../../includes/tsql-md.md)], где и имя связанного сервера. Следовательно, функцию OPENDATASOURCE можно использовать в качестве первой из четырех частей имени, которое ссылается на таблицу или представление в инструкциях SELECT, INSERT, UPDATE, DELETE или в удаленной хранимой процедуре в инструкции EXECUTE. При запуске удаленных хранимых процедур функция OPENDATASOURCE должна ссылаться на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Функция OPENDATASOURCE не может принимать переменные в качестве аргументов.  
   
- Функции OPENROWSET и OPENDATASOURCE должны использоваться только для ссылки на источники данных OLE DB, обращения к которым происходят нечасто. Задайте связанный сервер для любых источников данных, доступ к которым производится достаточно часто. Ни функция OPENDATASOURCE, ни функция OPENROWSET не обеспечивают полную поддержку для определения связанных серверов. Например, отсутствует управление безопасностью и возможность запросить данные каталога. Вся информация о соединении, включая пароли, должна предоставляться каждый раз при вызове OPENDATASOURCE.  
+ Функции OPENROWSET и OPENDATASOURCE должны использоваться только для ссылки на источники данных OLE DB, обращения к которым происходят нечасто. Задайте связанный сервер для любых источников данных, доступ к которым производится достаточно часто. Функции OPENDATASOURCE и OPENROWSET не обеспечивают полную поддержку для определения связанных серверов. Например, отсутствует функция управления безопасностью и возможность запросить данные каталога. Вся информация о соединении, включая пароли, должна предоставляться каждый раз при вызове OPENDATASOURCE.  
   
 > [!IMPORTANT]  
 >  Проверка подлинности Windows намного надежнее, чем проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Везде, где возможно, следует применять проверку подлинности Windows. Не рекомендуется использовать функцию OPENDATASOURCE с паролями, явно присутствующими в строке соединения.  

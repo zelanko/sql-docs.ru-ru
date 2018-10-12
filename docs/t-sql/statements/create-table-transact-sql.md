@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -50,20 +50,18 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d70a8a17b0a168787da8f0894e2a8c681bd40b8d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a9a443f1cb6d951a486a1bf58ad2c96a2b47195c
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40411024"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171896"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает новую таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 > [!NOTE]   
 >  Синтаксис [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] см. в статье [CREATE TABLE (хранилище данных SQL Azure)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
@@ -412,7 +410,7 @@ column_name <data_type>
   
  FILESTREAM_ON { *имя_схемы_секции* | filegroup | **"** default **"** } 
  
- **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. База данных SQL Azure не поддерживает `FILESTREAM`.
  
  Задает файловую группу для данных FILESTREAM.  
   
@@ -852,7 +850,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }  
    
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. База данных SQL Azure не поддерживает `FILETABLE`. 
   
  Указывает имя параметров сортировки, применяемых к столбцу **Name** в таблице FileTable. Для соответствия семантике именования файлов Windows параметры сортировки не должны учитывать регистр. Если это значение не задано, то используются параметры сортировки по умолчанию базы данных. Если в параметрах сортировки по умолчанию базы данных учитывается регистр, то выдается ошибка и операция CREATE TABLE оканчивается неуспешно.  
   
@@ -927,7 +925,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Управляемый экземпляр Базы данных SQL не поддерживает оптимизированные для памяти таблицы. 
   
  Значение ON указывает, что таблица оптимизирована для памяти. Таблицы, оптимизированные для памяти, входят в функцию выполняющейся в памяти OLTP, которая используется для оптимизации производительности обработки транзакций. Дополнительные сведения о выполняющейся в памяти OLTP см. в разделе [Краткое руководство 1. Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Дополнительные сведения об оптимизированных для памяти таблицах см. в разделе [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
