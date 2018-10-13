@@ -18,12 +18,12 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a845e4b4ce7cfa17a3f618501e2f270ca63dfea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10102e3c726a3703a3a9f3aa953171fb4a5dd79b
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641492"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119282"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Сравнение операторов XQuery с XML-данными
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47641492"
   
  В запросе используется **=** оператор сравнения. Каждый узел последовательности справа от **=** оператор сравнивается с каждым узлом последовательности слева. При совпадении узлов сравнение узлов получает **TRUE**. Затем оно конвертируется в тип данных int и сравнивается с 1, а запрос возвращает идентификатор заказчика.  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS ACI,  
 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
@@ -62,7 +62,7 @@ WHERE  AdditionalContactInfo.value('
 ### <a name="b-using-a-numeric-operator"></a>Б. Использование числового оператора  
  Оператор + в данном запросе является оператором значения, так как он применяется к одному объекту. К примеру, значение 1 добавляется к размеру лота, возвращаемому этим запросом.  
   
-```  
+```sql
 SELECT ProductModelID, Instructions.query('  
      declare namespace   
  AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
@@ -82,7 +82,7 @@ where ProductModelID=7
 ### <a name="c-using-a-value-operator"></a>В. Использование оператора значения  
  Следующий запрос считывает элементы <`Picture`> для модели продукта, размер картинки которой равен «small».  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      for $P in /PD:ProductDescription/PD:Picture[PD:Size eq "small"]  

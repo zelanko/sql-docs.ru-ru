@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 989ee419406d0f69cd7bda26485d3d44cbf56550
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 137da00959f6f8d3498bb3d063ceb21337266aef
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827335"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878017"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Как использовать записные книжки в предварительной версии SQL Server 2019
 
@@ -23,7 +23,7 @@ ms.locfileid: "48827335"
 Использовать записные книжки, необходимо установить следующие компоненты:
 
 - [Кластер SQL Server 2019 больших данных](deployment-guidance.md)
-- [Studio данных Azure](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [Расширение SQL Server 2019 (Предварительная версия)](../azure-data-studio/sql-server-2019-extension.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
@@ -76,6 +76,9 @@ ms.locfileid: "48827335"
 Выбор для присоединения предоставляет контекст для ядра для присоединения. При подключении к конечной точке кластера SQL Server больших данных, выбор по умолчанию для присоединения будет этой конечной точке кластера.
 
 ![image7](media/notebooks-guidance/image7.png)
+
+> [!NOTE]
+> По умолчанию приложения Spark настраивается с помощью драйвера 1 и 3 исполнителей, которые будут выполнены около 8,5 ГБ памяти. Рекомендуемая конфигурация для запуска нескольких сеансов spark — для каждого сервера в кластере, чтобы иметь по крайней мере 32 ГБ памяти (например, в среде AKS использовать **Standard_D8_v3** размеры виртуальных Машин, которые имеют 32 ГБ памяти).
 
 ## <a name="hello-world-in-the-different-contexts"></a>Hello world в различных контекстах
 

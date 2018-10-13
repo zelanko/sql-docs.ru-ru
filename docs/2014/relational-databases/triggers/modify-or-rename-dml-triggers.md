@@ -14,12 +14,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: deda1f440b12fc46b4d3e3e9e6fe5731995273a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3eced987f2f19e5379ab14ebc88eca37b8e19d8a
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200884"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084973"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Изменение или переименование триггеров DML
   В этом разделе описывается процедура изменения или переименования триггера DML в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "48200884"
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Не рекомендуется использовать для переименования триггера хранимую процедуру [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) . Изменение любой части имени объекта может разрушить скрипты и хранимые процедуры. При переименовании триггера не изменяется имя соответствующего объекта в определении столбца представления каталога [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) . Вместо этого рекомендуется удалить триггер и снова создать его.  
+-   Не рекомендуется использовать для переименования триггера хранимую процедуру [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) . Изменение любой части имени объекта может разрушить скрипты и хранимые процедуры. При переименовании триггера не изменяется имя соответствующего объекта в определении столбца представления каталога [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) . Рекомендуется удалить и повторно создайте триггер, вместо этого.  
   
 -   Если изменилось имя объекта, на который ссылается триггер, текст триггера необходимо соответствующим образом изменить. Поэтому перед переименованием объекта вначале отобразите зависимости объекта, чтобы определить, не повлияет ли предлагаемое изменение на работу каких-либо триггеров.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48200884"
   
 -   Для просмотра зависимостей триггера можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или следующую функцию и представления каталога:  
   
-    -   [sys.sql_expression_dependencies (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
+    -   [Представление каталога sys.sql_expression_dependencies (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
   
     -   [Функция динамического управления sys.dm_sql_referenced_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)  
   

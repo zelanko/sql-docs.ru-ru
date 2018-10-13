@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dce3ca08855925e9ef4825cc9f5017b99722ed6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6abc8e9e025bc24b4f456b58e0e9625e66b4b71
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215554"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072028"
 ---
 # <a name="upgrade-integration-services"></a>Обновление служб Integration Services
   Если на компьютере установлены службы [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], их вы можете обновить до [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "48215554"
  Рекомендуется перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]запустить помощник по обновлению. Помощник по обновлению сообщит о проблемах, которые могут возникнуть при обновлении существующих пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] до нового формата [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Дополнительные сведения см. в разделе [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 > [!NOTE]  
->  В текущей версии служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]не поддерживается миграция или запуск пакетов служб Data Transformation Services (DTS). Следующие функциональные возможности служб DTS более не поддерживаются.  
+>  Миграция или запуск пакетов служб DTS не поддерживается в текущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Следующие функциональные возможности служб DTS более не поддерживаются.  
 >   
 >  -   Среда выполнения DTS  
 > -   API-интерфейс служб DTS  

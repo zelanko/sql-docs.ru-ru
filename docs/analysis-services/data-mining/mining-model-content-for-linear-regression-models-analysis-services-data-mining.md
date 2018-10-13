@@ -1,5 +1,5 @@
 ---
-title: Модель интеллектуального анализа данных для моделей линейной регрессии | Документы Microsoft
+title: Модель интеллектуального анализа данных для моделей линейной регрессии | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8d1bfeedf1bcd394970b4c6f3e907926f53c54e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c016d54d9272409e3edc3d6fc379980b952dd917
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019401"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120184"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   В этом разделе описано содержимое модели интеллектуального анализа данных, характерное для моделей, в которых используется алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Общее описание содержимого модели интеллектуального анализа данных для всех типов моделей см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>Основные сведения о структуре модели линейной регрессии  
- Модель линейной регрессии имеет чрезвычайно простую структуру. Каждая модель имеет единственный родительский узел, который представляет модель и ее метаданные, и узел дерева регрессии (NODE_TYPE = 25), который содержит формулу регрессии для каждого прогнозируемого атрибута.  
+ Модель линейной регрессии имеет чрезвычайно простую структуру. Каждая модель имеет единственный родительский узел, представляющий модель и ее метаданные, а узел дерева регрессии (NODE_TYPE = 25), содержащий формулу регрессии для каждого прогнозируемого атрибута.  
   
- ![Структура модели для линейной регрессии](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "структуры модели для линейной регрессии")  
+ ![Структура модели для линейной регрессии](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "структура модели для линейной регрессии")  
   
  Модели линейной регрессии используют тот же алгоритм, что и деревья принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] , но для определения границ дерева используются другие параметры, а в качестве входных данных принимаются только непрерывные атрибуты. Однако модели линейной регрессии основаны на алгоритме дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] , и поэтому модели линейной регрессии отображаются с помощью средства просмотра для деревьев принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения см. в разделе [Просмотр модели с помощью средства просмотра деревьев (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  
   
@@ -170,7 +170,7 @@ ms.locfileid: "34019401"
 #### <a name="score-gain"></a>Рост оценки  
  Рост оценки (VALUETYPE = 8) для каждого регрессора представляет оценку интересности атрибута. Это значение можно использовать, чтобы оценить полезность нескольких регрессоров.  
   
-#### <a name="statistics"></a>Statistics  
+#### <a name="statistics"></a>Статистика  
  Статистика регрессора (VALUETYPE = 9) является средним значением атрибута среди вариантов, имеющих значение. Столбец ATTRIBUTE_VALUE содержит собственно среднее значение, а столбец VARIANCE содержит сумму отклонений от среднего значения.  
   
 #### <a name="intercept"></a>Intercept  
@@ -183,9 +183,9 @@ ms.locfileid: "34019401"
  Тогда, полагая средний возраст около 45, получим, что отсекаемый отрезок (VALUETYPE = 11) формулы регрессии показывает средний доход.  
   
 ## <a name="see-also"></a>См. также  
- [Содержимое модели интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Алгоритм линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
- [Технический справочник по алгоритму линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Алгоритм линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
+ [Технический справочник по алгоритму линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [Примеры запросов модели линейной регрессии](../../analysis-services/data-mining/linear-regression-model-query-examples.md)  
   
   

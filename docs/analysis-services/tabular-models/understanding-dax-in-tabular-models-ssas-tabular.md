@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: af0bb90170445cbfb073adeb8bfc8f8e4e478efe
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 959189dbc1bae49c15fd23e49b5cdef98973a559
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984496"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906504"
 ---
 # <a name="dax-in-tabular-models"></a>DAX в табличных моделях 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "38984496"
 |Whole Number|64-разрядное (8-байтовое) целочисленное значение <sup>1, 2</sup>|Числа без десятичных разрядов. Целые числа могут быть положительными или отрицательными, но не могут содержать дробную часть в диапазоне -9,223,372,036,854,775,808 (-2^63) и 9,223,372,036,854,775,807 (2^63-1).|  
 |Десятичное число|64-разрядное (8 байтовое) вещественное число <sup>1, 2</sup>|Вещественные числа — это числа, которые могут иметь знаки после запятой. Вещественные числа включают широкий диапазон значений.<br /><br /> Отрицательные числа от -1.79E +308 до -2.23E -308<br /><br /> Zero<br /><br /> Положительные числа от 2.23E -308 до 1.79E + 308<br /><br /> Однако количество значащих цифр ограничено 17 знаками после запятой.|  
 |Boolean|Логическое значение|Значение True или False.|  
-|Текст|String|Строка символьных данных в Юникоде. Могут быть строками, числами или датами, представленными в текстовом формате.|  
+|Текста|String|Строка символьных данных в Юникоде. Могут быть строками, числами или датами, представленными в текстовом формате.|  
 |Дата|Дата/время|Значения даты и времени в принятом представлении даты-времени.<br /><br /> Допустимый диапазон дат включает значения после 1 марта 1900г.|  
 |CURRENCY|CURRENCY|Тип данных "Валюта" включает значения в диапазоне от -922,337,203,685,477.5808 до 922,337,203,685,477.5807 с четырьмя десятичными знаками заданной точности.|  
 |Недоступно|Пусто|Тип данных с пустыми значениями в DAX представляет и заменяет пустые значения NULL в SQL. Пустое значение создается с помощью функции BLANK, а проверяется с помощью логической функции ISBLANK.|  
@@ -389,8 +389,8 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Центр ресурсов DAX](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) содержит внутреннюю и внешнюю информацию по DAX, включая многочисленные решения на языке DAX, предоставленные ведущими специалистами в области бизнес-аналитики.  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по выражениям (DAX) анализа данных](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)   
- [Меры](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [Справочник по выражениям анализа данных (DAX)](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)   
+ [меры](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Вычисляемые столбцы](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [Роли](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Ключевые показатели эффективности](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   

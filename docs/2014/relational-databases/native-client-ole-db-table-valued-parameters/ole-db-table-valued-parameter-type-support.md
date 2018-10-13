@@ -12,12 +12,12 @@ ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ef0667c28d87deb6c714a91bbe3605792c51c1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27ae90e05784c18d85f84daa9955818d3133ad07
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133154"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085270"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Поддержка типа возвращающего табличное значение параметра OLE DB
   Этот раздел содержит описание поддержки типа параметра OLE DB для параметров, возвращающих табличное значение.  
@@ -57,7 +57,7 @@ CoType RowsetTVP
  Сведения о методах OLE DB, которые поддерживают возвращающие табличные значения параметры, см. в разделе [OLE DB Table-Valued параметр типа поддержки &#40;методы&#41;](ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Свойства  
- Infornation о свойствах OLE DB, которые поддерживают возвращающие табличные значения параметры, см. в разделе [OLE DB Table-Valued параметр типа поддержки &#40;свойства&#41;](ole-db-table-valued-parameter-type-support-properties.md).  
+ Сведения о свойствах OLE DB, которые поддерживают возвращающие табличные значения параметры, см. в разделе [OLE DB Table-Valued параметр типа поддержки &#40;свойства&#41;](ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>См. также  
  [Возвращающие табличные значения параметры &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   

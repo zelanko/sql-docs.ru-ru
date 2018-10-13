@@ -18,12 +18,12 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4371609b9d0c72d9d589d37f0edacc4d37a2996c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd6986a245d960a96592c8c63c9744b741fa5ff
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651562"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119691"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,27 +61,27 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Идентификатор обновляемого задания. *job_id*— **uniqueidentifier**.  
   
  [  **@job_name =**] **"***имя_задания***"**  
- Имя задания. *имя_задания*— **nvarchar(128)**.  
+ Имя задания. *имя_задания* — **nvarchar(128)**.  
   
 > **Примечание:** либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
  [  **@new_name =**] **"***новое_имя***"**  
- Новое имя задания. *новое_имя*— **nvarchar(128)**.  
+ Новое имя задания. *новое_имя* — **nvarchar(128)**.  
   
  [  **@enabled =**] *включена*  
- Указывает, включено ли задание (**1**) или не включено (**0**). *включить*— **tinyint**.  
+ Указывает, включено ли задание (**1**) или не включено (**0**). *включить* — **tinyint**.  
   
  [  **@description =**] **"***описание***"**  
  Описание задания. *Описание* — **nvarchar(512)**.  
   
  [  **@start_step_id =**] *step_id*  
- Идентификатор первого этапа, выполняемого в ходе задания. *step_id*— **int**.  
+ Идентификатор первого этапа, выполняемого в ходе задания. *step_id* — **int**.  
   
  [  **@category_name =**] **"***категории***"**  
- Категория задания. *Категория*— **nvarchar(128)**.  
+ Категория задания. *Категория* — **nvarchar(128)**.  
   
  [  **@owner_login_name =**] **"***входа***"**  
- Имя входа, которое владеет заданием. *Имя входа*— **nvarchar(128)** только членами **sysadmin** предопределенной роли сервера можно изменить владельца задания.  
+ Имя входа, которое владеет заданием. *Имя входа* — **nvarchar(128)** только членами **sysadmin** предопределенной роли сервера можно изменить владельца задания.  
   
  [ **@notify_level_eventlog =**] *eventlog_level*  
  Указывает, следует ли помещать запись в журнал приложений Microsoft Windows для данного задания. *eventlog_level*— **int**, и может принимать одно из следующих значений.  
@@ -100,7 +100,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Указывает, нужно ли отправить сетевое сообщение по завершении этого задания. *netsend_level*— **int**. *netsend_level*использует те же значения, что *eventlog_level*.  
   
  [ **@notify_level_page =**] *page_level*  
- Указывает, необходимо ли отправить страницу по завершении этого задания. *page_level*— **int**. *page_level*использует те же значения, что *eventlog_level*.  
+ Указывает, необходимо ли отправить страницу по завершении этого задания. *page_level* — **int**. *page_level*использует те же значения, что *eventlog_level*.  
   
  [  **@notify_email_operator_name =**] **"***имя_оператора***"**  
  Имя оператора, которому отправляется сообщение электронной почты при *email_level* достижения. *имя_электронной_почты* — **nvarchar(128)**.  

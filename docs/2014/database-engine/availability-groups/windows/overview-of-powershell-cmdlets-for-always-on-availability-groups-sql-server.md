@@ -14,12 +14,12 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db840abbf4caed344a1be055afd6432b4d2b18e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209484"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169204"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell ― это оболочка командной строки для задач и язык скриптов, разработанный специально для администрирования систем. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] содержит набор командлетов PowerShell для [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , которые позволяют развертывать, управлять и отслеживать группы доступности, реплики доступности и базы данных доступности.  
@@ -59,8 +59,8 @@ ms.locfileid: "48209484"
   
 |Командлеты|Описание|Поддерживается на|  
 |-------------|-----------------|------------------|  
-|`Backup-SqlDatabase`|Создает резервную копию данных или журнала.|Любая база данных, находящаяся в режиме «в сети» (для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]база данных на том экземпляре сервера, на котором размещена первичная реплика)|  
-|`Restore-SqlDatabase`|Восстанавливает резервную копию.|Любой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]экземпляр сервера, на котором размещена вторичная реплика)<br /><br /> **\*\* Важные \* \***  при подготовке базы данных-получателя, необходимо использовать `-NoRecovery` параметр в каждом `Restore-SqlDatabase` команды.|  
+|`Backup-SqlDatabase`|Создает резервную копию данных или журнала.|Любая база данных, находящаяся в режиме «в сети» (для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] база данных на том экземпляре сервера, на котором размещена первичная реплика)|  
+|`Restore-SqlDatabase`|Восстанавливает резервную копию.|Любой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]экземпляр сервера, на котором размещена вторичная реплика)<br /><br /> **&#42;&#42;Важные &#42; &#42;**  при подготовке базы данных-получателя, необходимо использовать `-NoRecovery` параметр в каждом `Restore-SqlDatabase` команды.|  
   
  Дополнительные сведения об использовании этих командлетов для подготовки базы данных-получателя см. в разделе [Подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48209484"
   
 |Командлеты|Описание|Поддерживается на|  
 |-------------|-----------------|------------------|  
-|**New-SqlAvailabilityReplica**|Создает новую реплику доступности. Можно использовать `-AsTemplate` параметр для создания объекта реплики доступности в памяти для каждой новой реплики доступности.|Экземпляр сервера, в котором размещена первичная реплика|  
+|**New-SqlAvailabilityReplica**|Создает новую реплику доступности. Вы можете использовать параметр `-AsTemplate` для создания в памяти объекта реплики доступности для каждой новой реплики доступности.|Экземпляр сервера, в котором размещена первичная реплика|  
 |`Join-SqlAvailabilityGroup`|Присоединяет вторичную реплику к группе доступности.|Экземпляр сервера, в котором размещена вторичная реплика|  
 |**Remove-SqlAvailabilityReplica**|Удаляет реплику доступности.|Экземпляр сервера, в котором размещена первичная реплика|  
 |`Set-SqlAvailabilityReplica`|Устанавливает свойства реплики доступности.|Экземпляр сервера, в котором размещена первичная реплика|  

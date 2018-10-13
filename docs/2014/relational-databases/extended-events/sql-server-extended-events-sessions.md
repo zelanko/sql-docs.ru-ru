@@ -15,12 +15,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5fc2c924249518ecc40d363722ba6a6b1e882d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17062493d2c07e7dfbf1625aad584823953f043d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051364"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120261"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   Сеанс расширенных событий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] создается в процессе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , в котором выполняется подсистема расширенных событий. Следующие аспекты сеанса расширенных событий предоставляют контекст, необходимый для понимания инфраструктуры и принципов работы расширенных событий.  
@@ -55,7 +55,7 @@ ms.locfileid: "48051364"
   
  Обратите внимание, что на предыдущем рисунке:  
   
--   Между пакетами и сеансом существует связь типа «многие ко многим», которая означает, что объект может появляться в нескольких сеансах, а сеанс может содержать несколько объектов.  
+-   Сопоставление между пакетами и сеансом многие ко многим, означающее, что объект может появляться в нескольких сеансах, а сеанс может содержать несколько объектов.  
   
 -   Одно и то же событие (событие 1) или одну и ту же цель (цель 1) можно включить в нескольких сеансах.  
   

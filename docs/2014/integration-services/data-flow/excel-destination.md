@@ -16,12 +16,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd9ed39459d5302fa721c2e0eab176768bb66bc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130684"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905248"
 ---
 # <a name="excel-destination"></a>Назначение Excel
   Назначение «Excel» загружает данные в листы или диапазоны в книгах [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -49,7 +49,7 @@ ms.locfileid: "48130684"
   
      Сведения о том, как избежать включения символа одинарной кавычки, см. в записи блога [Single quote is appended to all strings when data is transformed to excel when using Excel destination data flow component in SSIS package](http://go.microsoft.com/fwlink/?LinkId=400876)на веб-сайте msdn.com.  
   
--   **Сохранение данных типа memo (ntext)**. Чтобы успешно сохранять в столбцы Excel строки, имеющие длину более 255 символов, драйвер должен распознать тип данных целевого столбца как **memo** , а не как **string**. Если в целевой таблице уже содержатся строки данных, то в столбце типа memo в первых нескольких строках, которые проверит драйвер, должен содержаться, по крайней мере, один экземпляр значения, имеющего длину более 255 символов. Если целевая таблица создается во время проектирования пакета или во время выполнения, в инструкции CREATE TABLE необходимо использовать LONGTEXT (или один из его синонимов) в качестве типа данных для столбца типа memo.  
+-   **Сохранение данных типа memo (ntext)**. Чтобы успешно сохранять в столбцы Excel строки, имеющие длину более 255 символов, драйвер должен распознать тип данных целевого столбца как **memo** , а не как **string**. Если в целевой таблице уже содержатся строки данных, то в столбце типа memo в первых нескольких строках, которые проверит драйвер, должен содержаться, по крайней мере, один экземпляр значения, имеющего длину более 255 символов. Если целевая таблица создается во время проектирования пакета или во время выполнения, инструкции CREATE TABLE необходимо использовать LONGTEXT (или один из его синонимов) как тип данных столбца типа memo.  
   
 -   **Типы данных**. Драйвер Excel распознает только ограниченный набор типов данных. Например, все числовые столбцы воспринимаются как тип double (DT_R8), а все строковые столбцы (кроме столбцов типа memo) воспринимаются как строки в Юникоде длиной 255 символов (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сопоставляют типы данных Excel следующим образом.  
   
@@ -82,11 +82,11 @@ ms.locfileid: "48130684"
   
  Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор назначения «Excel»** , см. в одном из следующих разделов:  
   
--   [Редактор назначения Excel &#40;страницы диспетчера соединений&#41;](../excel-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения "Excel" (страница "Диспетчер соединений")](../excel-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначения Excel &#40;страница «сопоставления»&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Редактор назначения "Excel" (страница "Сопоставления")](../excel-destination-editor-mappings-page.md)  
   
--   [Редактор назначения Excel &#40;странице вывода ошибок&#41;](../excel-destination-editor-error-output-page.md)  
+-   [Редактор назначения "Excel" (страница "Вывод ошибок")](../excel-destination-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит все свойства, которые могут устанавливаться программными средствами. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48130684"
   
 ## <a name="see-also"></a>См. также  
  [Источник Excel](excel-source.md)   
- [Службы Integration Services &#40;SSIS&#41; переменных](../integration-services-ssis-variables.md)   
+ [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md)   
  [Поток данных](data-flow.md)   
  [Работа с файлами Excel в задаче «Скрипт»](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

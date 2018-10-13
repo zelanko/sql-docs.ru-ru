@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44138cf39e7ed07120b85da6dfd708dee3e90182
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 657f808d28c8b3a6a1c8964dccb5959a67c9cb47
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222594"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120221"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
   В этом разделе содержатся сведения о настройке компонента [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] для работы с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (группами доступности) в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Существует три варианта использования служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] : базы данных для источников данных отчетов, базы данных сервера отчетов и конструирование отчетов. Поддерживаемые функции и необходимая конфигурация для разных вариантов использования будут различными.  
@@ -127,7 +127,7 @@ ms.locfileid: "48222594"
 > [!NOTE]  
 >  Серверы отчетов, работающие в режиме интеграции с SharePoint, используют процесс синхронизации между базами данных приложения служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и базами данных содержимого SharePoint. Важно поддерживать работу баз данных сервера отчетов и баз данных содержимого вместе. Следует рассмотреть возможность включения этих баз данных в одну группу доступности, чтобы отработка отказа и восстановление для них выполнялось одновременно. Рассмотрим следующий сценарий.  
 >   
->  -   Выполняется восстановление или отработка отказа копии базы данных содержимого, которая не получила такие же обновления данных, какие получила база данных сервера отчетов.  
+>  -   Восстановления или отработки отказа в копию базы данных содержимого, которая не получила такие же обновления, получила база данных сервера отчетов.  
 > -   Процесс синхронизации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] обнаружит различия между списками элементов из базы данных содержимого и из баз данных сервера отчетов.  
 > -   Процесс синхронизации удалит или обновит элементы в базе данных содержимого.  
   

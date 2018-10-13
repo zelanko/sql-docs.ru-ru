@@ -18,12 +18,12 @@ ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 514b713b8970ecf38536da7e00b791dcef8a059a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f41f7b31f928a60342deefcc85a8f71bc707dba
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761972"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168864"
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  [ **@message_id =** ] *message_number*  
  Номер ошибки сообщения из **sys.messages**. *message_number* — **int** без значения по умолчанию.  
   
- [  **@parameter =** ] **"*** write_to_log*"  
+ [  **@parameter =** ] **"**_записи\_для\_журнала_"  
  Используется с **@parameter_value** для указания того, что сообщение для записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows. *write_to_log* — **sysname** без значения по умолчанию. *write_to_log* должно быть присвоено WITH_LOG или значение NULL. Если *write_to_log* имеет значение WITH_LOG или значение NULL, и значение для **@parameter_value** — **true**, сообщение записывается в журнал приложений Windows. Если *write_to_log* имеет значение WITH_LOG или значение NULL, а также значение **@parameter_value** — **false**, сообщение не всегда записывается в журнал приложений Windows, но может быть записи в зависимости от того, как произошла ошибка. Если *write_to_log* указан, значение **@parameter_value** также должен быть указан.  
   
 > [!NOTE]  
 >  Если сообщение заносится в журнал приложений Windows, оно также заносится и в журнал ошибок компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- [  **@parameter_value =** ] **"*** значение*"  
+ [  **@parameter_value =** ]**"**_значение_"  
  Используется с **@parameter** для указания того, что ошибка для записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows. *значение* — **varchar(5)**, не имеет значения по умолчанию. Если **true**, ошибка всегда записывается в журнал приложений Windows. Если **false**, ошибка не всегда записывается в журнал приложений Windows, но может записываться в зависимости от того, как произошла ошибка. Если *значение* указано, *write_to_log* для **@parameter** также должен быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

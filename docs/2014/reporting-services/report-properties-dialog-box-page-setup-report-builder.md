@@ -13,15 +13,15 @@ ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4e7fa108ffbfc083b84460795e17515ae300302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 496b94444e79666c0ce57904f5ef6d7da81ed26f
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207384"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905084"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Диалоговое окно «Свойства отчета» — «Параметры страницы» (построитель отчетов)
-  Выберите вкладку **Параметры страницы** в диалоговом окне **Свойства отчета**, чтобы настроить параметры страницы для всего отчета.  
+  Выберите **параметры страницы** на **свойства отчета**, диалоговое окно, чтобы настроить параметры страницы для всего отчета.  
   
 ## <a name="options"></a>Параметры  
  **Дюймов**  

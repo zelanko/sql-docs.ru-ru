@@ -13,12 +13,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4851fd039e73ce81602f17fd35af2f725b775d74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fecf123299d81f1d1b39c62c7ab1ecb2368f98dd
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125074"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072098"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Подключение к другому компьютеру (диспетчер конфигурации SQL Server)
   В этом разделе описывается подключение к другому компьютеру в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Выполните первую процедуру, чтобы открыть консоль управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] «Управление компьютером», подключитесь к компьютеру и разверните дерево «Службы и приложения». Выполните вторую процедуру для создания файла с ссылкой на диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном компьютере.  
@@ -64,7 +64,7 @@ ms.locfileid: "48125074"
   
 10. Щелкните правой кнопкой мыши **Диспетчер конфигурации SQL Server**, затем щелкните **Новое окно отсюда**.  
   
-11. В меню **Окно** выберите **Корень консоли**, чтобы вернуться в первое окно, и удалите его.  
+11. На **окно** меню, щелкните **корень консоли**, чтобы вернуться к первое окно, окно и удалите его.  
   
 12. На **файл** меню, щелкните **Сохранить как**и сохраните файл в нужной папке с соответствующим именем, с `.msc` расширение файла. Закройте консоль управления (MMC) [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

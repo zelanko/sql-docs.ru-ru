@@ -12,12 +12,12 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fe3e08d1d423afd6f54310dd3ba349c10534cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 864859365dac094377ab00cb6848f3fb7c3a81f7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217884"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906224"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>Оповещения свойства — новое предупреждение (страница "ответ")
   Используйте эту страницу для указания задания, которое необходимо выполнить, и для получения списка операторов, которые должны получать уведомления в ответ на предупреждение агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -51,7 +51,7 @@ ms.locfileid: "48217884"
  Отображает диалоговое окно **Создать оператора** , которое используется для создания новых операторов.  
   
  **Просмотр оператора**  
- Отображается диалоговое окно **Свойства** для текущего выбранного оператора. Свойства операторов можно просматривать и изменять в диалоговом окне **Свойства оператора** .  
+ Отображается диалоговое окно **Свойства** для текущего выбранного оператора. Вы можете просматривать и изменять свойства оператора в **свойства оператора** диалоговое окно.  
   
 ## <a name="see-also"></a>См. также  
  [Alerts](alerts.md)   

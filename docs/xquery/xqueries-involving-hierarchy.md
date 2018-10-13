@@ -17,12 +17,12 @@ ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3296807e7470c84a4df2f3960ea01185c5915048
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 469b4dece1dca9aca2aa584e60bd502034fc8645
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597063"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119091"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Запросы XQuery, использующие иерархию
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47597063"
   
  Каждый элемент <`Location`> имеет свой собственный набор атрибутов и один дочерний элемент <`step`>. Этот дочерний элемент <`step`> соответствует первому этапу производства в данном цехе:  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    \<ManuInstr  ProdModelID = "{sql:column("Production.ProductModel.ProductModelID") }"   
@@ -69,7 +69,7 @@ WHERE ProductModelID=7
   
  Частичный результат:  
   
-```  
+```xml
 <ManuInstr ProdModelID="7" ProductModelName="HL Touring Frame">  
    <Location LocationID="10" SetupHours="0.5"   
             MachineHours="3" LaborHours="2.5" LotSize="100">  
@@ -88,7 +88,7 @@ WHERE ProductModelID=7
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>Б. Поиск всех телефонных номеров в столбце AdditionalContactInfo  
  Следующий запрос возвращает дополнительные телефонные номера заказчиков поиском по всей иерархии элемента <`telephoneNumber`>. Поскольку элемент <`telephoneNumber`> может находиться в любом месте иерархии, запрос использует нисходящий поиск от корня иерархии (//):  
   
-```  
+```sql
 SELECT AdditionalContactInfo.query('  
  declare namespace ci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
  declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
@@ -102,7 +102,7 @@ WHERE ContactID = 1
   
  Результат:  
   
-```  
+```xml
 \<act:number   
   xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   111-111-1111  

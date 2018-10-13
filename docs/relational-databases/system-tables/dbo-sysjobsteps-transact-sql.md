@@ -20,12 +20,12 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91973f7c98409df52afa18db09dfbdac689a34d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842682"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169358"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47842682"
 |**retry_attempts**|**int**|Число попыток повтора при неуспешном завершении шага.|  
 |**retry_interval**|**int**|Время ожидания между попытками повтора.|  
 |**os_run_priority**|**int**|Зарезервировано.|  
-|**output_file_name**|**Nvarchar(200)**|Имя файла, в котором выходные данные этапа, сохраняется **подсистемы** является TSQL, PowerShell, или **CmdExec ***.*|  
+|**output_file_name**|**Nvarchar(200)**|Имя файла, в котором выходные данные этапа, сохраняется **подсистемы** является TSQL, PowerShell, или **CmdExec**_._|  
 |**last_run_outcome**|**int**|Результат предыдущего выполнения шага задания.<br /><br /> **0** = ошибка<br /><br /> **1** = выполнено успешно<br /><br /> **2** = повторение<br /><br /> **3** = отменено<br /><br /> **5** = неизвестно|  
 |**last_run_duration**|**int**|Продолжительность (ччммсс) шага в секундах при последнем запуске.|  
 |**last_run_retries**|**int**|Число попыток повтора в ходе последнего выполнения шага задания.|  

@@ -18,12 +18,12 @@ ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50294b936f211b3a841deb57e55b53f0994517a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63407f75c5bee03d24b5b3f69c2ef94cb38e177e
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611592"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168724"
 ---
 # <a name="source-property-ado-error"></a>Свойство Source (объект Error ADO)
 Указывает имя объекта или приложения, вызвавшего ошибку.  
@@ -32,7 +32,7 @@ ms.locfileid: "47611592"
  Возвращает **строка** значение, указывающее имя объекта или приложения.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте **источника** свойство [ошибка](../../../ado/reference/ado-api/error-object.md) объектом, чтобы определить имя объекта или приложения, вызвавшего ошибку. Это может быть имя класса объекта или программный код. Наличие ошибок в ADO, значение свойства будет **ADODB. *** ObjectName*, где *ObjectName* является имя объекта, который вызвал ошибку. Для ADOX и ADO MD, значение будет **ADOX. *** ObjectName* и **ADOMD. *** ObjectName,* соответственно.  
+ Используйте **источника** свойство [ошибка](../../../ado/reference/ado-api/error-object.md) объектом, чтобы определить имя объекта или приложения, вызвавшего ошибку. Это может быть имя класса объекта или программный код. Для ошибок в ADO, будет значение свойства **ADODB.** _ObjectName_, где *ObjectName* является имя объекта, который вызвал ошибку. Для ADOX и ADO MD, значение будет **ADOX.** _ObjectName_ и **ADOMD.** _ObjectName_, соответственно.  
   
  Исходя из документации по ошибок из **источника**, [номер](../../../ado/reference/ado-api/number-property-ado.md), и [описание](../../../ado/reference/ado-api/description-property.md) свойства **ошибка** объектов, можно написать код который будет соответствующим образом обработать ошибку.  
   

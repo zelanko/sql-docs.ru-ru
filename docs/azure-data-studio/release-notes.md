@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6b1328b1d0a0832e9d412d1fcd908f3cdb0d349
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94a271991314225a80850ee2156a37b6134e10a7
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039034"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072308"
 ---
 # <a name="azure-data-studio-release-notes"></a>Заметки о выпуске Azure Data Studio
 
@@ -61,7 +61,7 @@ ms.locfileid: "48039034"
 
 *0.32.8 содержит исправления для несколько регрессии в 0.32.7 ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372)*)
 
-*Общедоступной предварительной версии августа* посвящена на исправления ошибок, стабилизации продукта и заполнения пропусков в существующие сценарии.  
+*Общедоступной предварительной версии августа* исправления ошибок, стабилизации продукта и заполнения пропусков в существующие сценарии.  
 
 - Объявление о расширении импорта SQL Server
 - SQL Server Profiler сеанса управления

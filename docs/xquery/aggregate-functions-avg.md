@@ -17,12 +17,12 @@ ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b9a8ef18dca7bf61907219d4a09882c62deb2712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a80c7f690a4b24ef82cb3da34dea50c98cf836f4
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833362"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119661"
 ---
 # <a name="aggregate-functions---avg"></a>Агрегатные функции — avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="remarks"></a>Примечания  
  Все типы атомарных значений, которые передаются **avg()** должны быть подтипами только одного из трех встроенных базовых числовых типов или типа xdt: untypedAtomic. Они не могут быть смешанными. Значения типа xdt:untypedAtomic приводятся к типу xs:double. Результат **avg()** Получает базовый тип переданных типов, например xs: double в случае xdt: untypedAtomic.  
   
- Если входное значение статически пусто, подразумевается пустое значение и возвращается статическая ошибка.  
+ Если вход статически пуст, подразумевается пустое значение, и формируется статическая ошибка.  
   
  **Avg()** функция возвращает среднее значение вычисляется чисел. Пример:  
   

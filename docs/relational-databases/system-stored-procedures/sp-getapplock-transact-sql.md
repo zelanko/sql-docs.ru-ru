@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 147276d31ee08a0dc5908a49cd65925e62c3bae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796212"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851889"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. Аргумент *lock_owner* имеет тип **nvarchar(32)**. Значением может быть **Transaction** (по умолчанию) или **Session**. Когда *lock_owner* значение **транзакции**, по по умолчанию или явно указан, процедура sp_getapplock должна выполняться из транзакции.  
   
  [ @LockTimeout=] '*значение*"  
- Значение времени ожидания блокировки (в миллисекундах). Значение по умолчанию является таким же, как значение, возвращенное@LOCK_TIMEOUT. Значение 0 следует указывать, чтобы при отсутствии немедленного ответа на запрос он возвращал ошибку, а не дожидался блокировки.  
+ Значение времени ожидания блокировки (в миллисекундах). Значение по умолчанию является таким же, как значение, возвращенное@LOCK_TIMEOUT. Чтобы указать, что запрос должен возвращать код возврата,-1, а не дожидался блокировки, когда запрос не может быть выполнен немедленно, укажите значение 0.  
   
  [ @DbPrincipal=] '*database_principal*"  
  Пользователь, роль или роль приложения, которые имеют разрешения на объект базы данных. Вызывающий эту функцию участник должен быть членом *database_principal*, dbo или db_owner предопределенной роли базы данных, для успешного вызова этой функции. Значение по умолчанию: public.  

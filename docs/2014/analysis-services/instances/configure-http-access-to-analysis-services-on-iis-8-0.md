@@ -11,12 +11,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eded16b19f9645444c8161e04c63c8a283673b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3282f801e8ced6ab51d0188e74eb854631c399c1
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108196"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120231"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0
   В этой статье объясняется, как настроить конечную точку HTTP для доступа к экземпляру служб Analysis Services. Доступ по протоколу HTTP к службам Analysis Services можно включить путем настройки MSMDPUMP.dll — расширения ISAPI, которое работает на сервере IIS и переносит данные между клиентским приложением и сервером служб Analysis Services. Такой подход предоставляет альтернативные способы подключения к службам Analysis Services, если применяемое решение бизнес-аналитики требует получения следующих возможностей.  
@@ -130,7 +130,7 @@ ms.locfileid: "48108196"
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> Шаг 2. Создание пула приложений и виртуального каталога на сервере IIS  
- Затем создайте пул приложений и конечную точку для передачи.  
+ Затем создайте пул приложений и конечную точку для средства переноса.  
   
 #### <a name="create-an-application-pool"></a>Создание пула приложений  
   
@@ -300,9 +300,9 @@ ms.locfileid: "48108196"
   
 ## <a name="see-also"></a>См. также  
  [Сообщение на форуме (HTTP-доступ с использованием msmdpump и обычной проверки подлинности)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
- [Настройка брандмауэра Windows для разрешения доступа к службам Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Авторизация доступа к объектам и операциям &#40;служб Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
+ [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [Предоставление доступа к объектам и операциям (службы Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
  [Методы проверки подлинности IIS](http://go.microsoft.com/fwlink/?LinkdID=208461)   
- [Настройка SSL в IIS 7](http://go.microsoft.com/fwlink/?LinkId=207562)  
+ [Как выполнить настройку SSL для работы с IIS 7](http://go.microsoft.com/fwlink/?LinkId=207562)  
   
   

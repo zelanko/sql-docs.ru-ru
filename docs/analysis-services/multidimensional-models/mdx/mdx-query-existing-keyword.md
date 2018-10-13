@@ -1,5 +1,5 @@
 ---
-title: Ключевое слово EXISTING (многомерные Выражения) | Документы Microsoft
+title: Ключевое слово EXISTING (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 08cdfd62f25ec42195418938da37c502f221120d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d41b49e4585d2a256250a009b09ffa9ed94ea925
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023561"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906200"
 ---
-# <a name="mdx-query---existing-keyword"></a>Запрос многомерных Выражений - ключевое слово EXISTING
+# <a name="mdx-query---existing-keyword"></a>Запрос многомерных выражений — ключевое слово Existing
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Указывает, что заданный набор должен вычисляться принудительно в текущем контексте.  
   
@@ -31,11 +31,11 @@ Existing Set_Expression
  *Set_Expression*  
  Допустимое многомерное выражение набора.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  По умолчанию наборы вычисляются в контексте куба, который содержит их элементы. Ключевое слово **Existing** указывает на то, что заданный набор должен вычисляться в текущем контексте.  
   
 ## <a name="example"></a>Пример  
- В следующем примере возвращается количество посредников, продажи которых снизились по сравнению с предыдущим периодом, на основании выбранных пользователем значений элемента State-Province, вычисленных с помощью функции **Aggregate** . Ключевое слово [Hierarchize (многомерные выражения)](../../../mdx/hierarchize-mdx.md) и [DrilldownLevel (многомерные выражения)](../../../mdx/drilldownlevel-mdx.md) используются для возвращения показателей падения продаж для категорий продуктов в измерении Product. Ключевое слово **Existing** заставляет функцию **Filter** вычислять набор в текущем контексте, то есть для элементов "Вашингтон" и "Орегон" в иерархии атрибутов State-Province.  
+ В следующем примере возвращается количество посредников, продажи которых снизились по сравнению с предыдущим периодом, на основании выбранных пользователем значений элемента State-Province, вычисленных с помощью функции **Aggregate** . Ключевое слово [Hierarchize (многомерные выражения)](../../../mdx/hierarchize-mdx.md) и [DrilldownLevel (многомерные выражения)](../../../mdx/drilldownlevel-mdx.md) используются для возвращения показателей падения продаж для категорий продуктов в измерении Product. **Существующие** ключевое слово указывает на набор в **фильтра** функции, который будет вычисляться в текущем контексте, то есть для Вашингтона и Орегона элементы иерархии атрибута State-Province.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -73,13 +73,13 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Число & #40; Выбрать & #41; & #40; Многомерные Выражения & #41;](../../../mdx/count-set-mdx.md)   
- [AddCalculatedMembers & #40; Многомерные Выражения & #41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [Статистическая функция & #40; Многомерные Выражения & #41;](../../../mdx/aggregate-mdx.md)   
- [Фильтр & #40; Многомерные Выражения & #41;](../../../mdx/filter-mdx.md)   
- [Свойства & #40; Многомерные Выражения & #41;](../../../mdx/properties-mdx.md)   
- [DrilldownLevel & #40; Многомерные Выражения & #41;](../../../mdx/drilldownlevel-mdx.md)   
- [Hierarchize & #40; Многомерные Выражения & #41;](../../../mdx/hierarchize-mdx.md)   
- [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [Count (наборы) (многомерные выражения)](../../../mdx/count-set-mdx.md)   
+ [AddCalculatedMembers (многомерные выражения)](../../../mdx/addcalculatedmembers-mdx.md)   
+ [Aggregate (многомерные выражения)](../../../mdx/aggregate-mdx.md)   
+ [Filter (многомерные выражения)](../../../mdx/filter-mdx.md)   
+ [Properties (многомерные выражения)](../../../mdx/properties-mdx.md)   
+ [DrilldownLevel (многомерные выражения)](../../../mdx/drilldownlevel-mdx.md)   
+ [Hierarchize (многомерные выражения)](../../../mdx/hierarchize-mdx.md)   
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../../../mdx/mdx-function-reference-mdx.md)  
   
   

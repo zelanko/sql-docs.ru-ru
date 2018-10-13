@@ -18,12 +18,12 @@ ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc732205a726af76da07f92e6a2d29558ebfb816
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4daab0b36ff21fea956c1c5b0db27588cc5acee
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743372"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168704"
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@plan_id =**] **"***plan_id***"**  
+ [  **@plan_id =**] **"**_план\_идентификатор_**"**  
  Указывает идентификатор плана обслуживания. *plan_id* — **uniqueidentifier**, и должен быть допустимым идентификатором.  
   
- [ **@job_id =**] **'***job_id***'**  
+ [  **@job_id =**] **"**_задания\_идентификатор_**"**  
  Указывает идентификатор задания, с которым связан план обслуживания. *job_id* — **uniqueidentifier**, и должен быть допустимым идентификатором.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

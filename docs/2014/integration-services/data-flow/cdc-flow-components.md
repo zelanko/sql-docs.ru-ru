@@ -11,12 +11,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47eb98f064cfecf7cf18ddf0ba20023eda320346
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df2aac01300c006858a84097bf346875f175c82
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195634"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120142"
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
   Компоненты отслеживания измененных данных Attunity для служб Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] позволяют разработчикам служб SSIS работать с CDC и уменьшают сложность пакетов CDC.  
@@ -58,7 +58,7 @@ ms.locfileid: "48195634"
 -   Windows Server 2008 R2, 64-разрядная версия (x64)  
   
 ### <a name="running-the-installation-program"></a>Запуск программы установки  
- Перед запуском мастера установки, убедитесь, что [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] закрыт. Затем выполните указания мастера установки.  
+ Перед запуском мастера установки убедитесь, что среда [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] закрыта. Затем выполните указания мастера установки.  
   
 ### <a name="restart-ssis"></a>Перезапуск служб SSIS  
  После установки компонентов CDC необходимо перезапустить службу SSIS, чтобы обеспечить правильную работу компонентов в среде SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)].  
@@ -68,10 +68,10 @@ ms.locfileid: "48195634"
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>Удаление компонентов Microsoft CDC  
  Источник CDC, разделитель CDC и задача «Управление CDC» удаляются с помощью мастера удаления. Перед удалением компонентов необходимо проверить следующие условия.  
   
- Если вы используете [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] для разработки пакетов, убедитесь, что [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] закрыта перед запуском мастера удаления.  
+ Если для разработки пакетов используется среда [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] , убедитесь, что среда [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] закрыта перед запуском мастера удаления.  
   
 ## <a name="benefits"></a>Преимущества  
- Компоненты CDC для [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] компоненты позволяют разработчикам служб SSIS с легкостью создавать пакеты служб SSIS, обрабатывающие информации об изменениях. Эти компоненты расширяют возможности разработчиков служб SSIS по работе с CDC и уменьшают сложность пакетов CDC.  
+ Компоненты CDC для компонентов служб [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] позволяют разработчикам служб SSIS с легкостью создавать пакеты служб SSIS, обрабатывающие информацию об изменениях. Эти компоненты расширяют возможности разработчиков служб SSIS по работе с CDC и уменьшают сложность пакетов CDC.  
   
  Компоненты CDC служб SSIS предоставляют информацию об изменениях в виде, удобном для дальнейшей обработки с целью репликации, загрузки хранилища данных, обновления медленно изменяющихся измерений для OLAP, аудита изменений и других сценариев применения. Тип дальнейшей обработки определяется разработчиком служб SSIS.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48195634"
   
  ![Поток управления пакета для обработки тонкого канала](../media/tricklefeedprocessing.gif "Поток управления пакета для обработки тонкого канала")  
   
- Это [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] содержит две задачи управления CDC и задачу потока данных. Первая задача, которая называется **Получить диапазон обработки CDC** , устанавливает диапазон номеров LSN для изменений, которые обрабатываются в задаче потока данных, которая называется **Обработка изменений**. Этот диапазон определяется на основании данных, обработанных при последнем выполнении пакета и сохраненных в постоянном хранилище.  
+ Этот поток данных служб [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] содержит две задачи "Управление CDC" и задачу потока данных. Первая задача, которая называется **Получить диапазон обработки CDC** , устанавливает диапазон номеров LSN для изменений, которые обрабатываются в задаче потока данных, которая называется **Обработка изменений**. Этот диапазон определяется на основании данных, обработанных при последнем выполнении пакета и сохраненных в постоянном хранилище.  
   
  Дополнительные сведения об использовании задачи «Управление CDC» см. в разделах [CDC Control Task](../control-flow/cdc-control-task.md) и [CDC Control Task Editor](../cdc-control-task-editor.md).  
   
@@ -100,13 +100,13 @@ ms.locfileid: "48195634"
   
  Дополнительные сведения об источнике CDC см. в разделе  
   
- [Источник «CDC»](cdc-source.md)  
+ [CDC-источник](cdc-source.md)  
   
- [Редактор источника CDC &#40;страницы диспетчера соединений&#41;](../cdc-source-editor-connection-manager-page.md)  
+ [Редактор источника "CDC" (страница "Диспетчер соединений")](../cdc-source-editor-connection-manager-page.md)  
   
- [Редактор источника CDC &#40;страница "столбцы"&#41;](../cdc-source-editor-columns-page.md)  
+ [Редактор источника "CDC" (страница "Столбцы")](../cdc-source-editor-columns-page.md)  
   
- [Редактор источника CDC &#40;странице вывода ошибок&#41;](../cdc-source-editor-error-output-page.md)  
+ [Редактор источника "CDC" (страница "Вывод ошибок")](../cdc-source-editor-error-output-page.md)  
   
  Дополнительные сведения о разделителе CDC см. в разделе  
   

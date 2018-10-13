@@ -1,26 +1,31 @@
 ---
 title: Краткое руководство для выполнения кода «Hello, World!» основные R в T-SQL (машинного обучения SQL Server) | Документация Майкрософт
-description: В этом кратком руководстве для скрипта R в SQL Server ознакомиться с основами системной хранимой процедуры sp_execute_external_script с упражнения hello world.
+description: Краткое руководство по R-скриптов SQL Server. Ознакомиться с основами вызов сценария R в упражнении Здравствуй, мир при помощи системной хранимой процедуры sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/15/2018
+ms.date: 10/08/2018
 ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e738289b39f6d390bc4d6196606d242fa4803865
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1a51fcb9e67bef48346ff74ebfb1e911a6ee3365
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086887"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878087"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Краткое руководство: «Hello world» R-скриптов SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server включает в себя поддержка функций языка R для анализа в базе данных в резидентных данных SQL Server. Функции R открытым исходным кодом, сторонних пакетов и встроенные пакеты Microsoft R можно использовать для прогнозной аналитики в нужном масштабе.
+SQL Server включает в себя поддержка языка R для аналитики обработки и анализа данных в резидентных данных SQL Server. R-скриптов может состоять из функций R открытым исходным кодом, сторонние библиотеки R или встроенных библиотек Microsoft R, такие как [RevoScaleR](../r/revoscaler-overview.md) для прогнозной аналитики в нужном масштабе. 
 
-В этом кратком руководстве вы узнаете основные понятия, выполнив «Hello World» R скрипт inT-SQL, представив Введение **sp_execute_external_script** системной хранимой процедуры. Выполнение скрипта R — посредством хранимых процедур. Вы можете использовать [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) хранимую процедуру и передайте R сценария в качестве входного параметра, как показано в этом кратком руководстве, или перенос R-скриптов [пользовательская хранимая процедура](sqldev-in-database-r-for-sql-developers.md). 
+Выполнение скрипта является посредством хранимых процедур, используя один из следующих методов:
+
++ Встроенные [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) хранимую процедуру, передавая скрипт R в качестве входного параметра.
++ Wrap R-скриптов [пользовательская хранимая процедура](sqldev-in-database-r-for-sql-developers.md) , созданный.
+
+В этом кратком руководстве вы узнаете основные понятия, выполнив «Hello World» R скрипт inT-SQL, представив Введение **sp_execute_external_script** системной хранимой процедуры. 
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -33,7 +38,7 @@ SQL Server включает в себя поддержка функций язы
 
 + Средство для выполнения запросов SQL. Можно использовать любое приложение, которое может подключаться к базе данных SQL Server и выполнять код T-SQL. Специалистов по SQL можно использовать Visual Studio или SQL Server Management Studio (SSMS).
 
-Для этого учебника, чтобы показать, насколько это просто для запуска R внутри SQL Server, мы использовали новый **расширение mssql для Visual Studio Code**. Visual STUDIO Code — это бесплатная среда разработки, можно запустить на Linux, macOS или Windows. **Mssql** расширения — это упрощенный расширение для запуска запросов T-SQL. Чтобы скачать и установить Visual Studio Code, перейдите на [эту страницу](https://code.visualstudio.com/Download). Чтобы добавить **mssql** расширения, см. в статье: [с помощью расширения mssql для Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+В этом кратком руководстве, чтобы показать, насколько это просто для запуска R внутри SQL Server, мы использовали новый **расширение mssql для Visual Studio Code**. Visual STUDIO Code — это бесплатная среда разработки, можно запустить на Linux, macOS или Windows. **Mssql** расширения — это упрощенный расширение для запуска запросов T-SQL. Чтобы скачать и установить Visual Studio Code, перейдите на [эту страницу](https://code.visualstudio.com/Download). Чтобы добавить **mssql** расширения, см. в статье: [с помощью расширения mssql для Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Подключение к базе данных и выполнение тестового скрипта Hello World
 

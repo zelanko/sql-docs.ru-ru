@@ -18,12 +18,12 @@ ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b0b66722189a42b4bd5f157900815a96a716f49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6125bdcff27bc79d8eb850e7baafdd872342adf6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840698"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119532"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Справочник по языку XQuery (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47840698"
   
  Для запроса к экземпляру XML, хранящемуся в переменной или столбце типа **xml** используется тип, [методы типа данных xml](../t-sql/xml/xml-data-type-methods.md). Например, можно объявить переменную **xml** и выполнить запрос к его с помощью **query()** метод **xml** тип данных.  
   
-```  
+```sql
 DECLARE @x xml  
 SET @x = '<ROOT><a>111</a></ROOT>'  
 SELECT @x.query('/ROOT/a')  
@@ -46,7 +46,7 @@ SELECT @x.query('/ROOT/a')
   
  В следующем примере запрос задается для столбца Instructions **xml** типа в таблице ProductModel базы данных AdventureWorks.  
   
-```  
+```sql
 SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') as Result   

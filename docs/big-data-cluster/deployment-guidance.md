@@ -4,15 +4,15 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 4db726ac3ceab7649b0a3c04b2c4647b83c7e660
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 02a1aa7299173315e4f4d6a60eae5f166e8fcdfe
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818072"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877897"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Развертывание кластера больших данных в SQL Server в Kubernetes
 
@@ -24,11 +24,12 @@ ms.locfileid: "48818072"
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="kubernetes-prerequisistes"></a>Kubernetes prerequisistes
+## <a id="prereqs"></a> Необходимые условия для кластера Kubernetes
 
 Кластера больших данных в SQL Server требуется версия минимальное v1.10 для Kubernetes, но для сервера и клиента. Чтобы установить определенную версию на клиент kubectl, см. в разделе [установки kubectl двоичных с помощью curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl).  Последние версии minikube и AKS, по крайней мере 1.10. Для AKS необходимо использовать `--kubernetes-version` параметр для указания версии отличается от по умолчанию.
 
-Кроме того Обратите внимание, что версия клиента и сервера Kubernetes наклонить, т. е поддерживается +/-1 дополнительный номер версии. В документации по Kubernetes состояния «клиент должен быть неравномерно распределенных не более чем один дополнительный номер версии с главного сервера, что может привести образце, на один дополнительный номер версии. Например, версия 1.3 главной должны работать с версии 1.1, версия 1.2 и версия 1.3 узлов и должны работать с версии 1.2, версия 1.3 и клиентов версии 1.4.» Дополнительные сведения см. в разделе [Kubernetes поддерживаемые выпуски и наклона компонент](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+> [!NOTE]
+> Обратите внимание на то, что Kubernetes версии клиента и сервера должны быть + 1 или -1, дополнительный номер версии. Дополнительные сведения см. в разделе [Kubernetes поддерживаемые выпуски и наклона компонент](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
 ## <a id="kubernetes"></a> Настройка кластера Kubernetes
 
@@ -49,11 +50,11 @@ ms.locfileid: "48818072"
 
 ## <a id="deploy"></a> Развертывание кластера больших данных в SQL Server
 
-После настройки кластера Kubernetes, вы можно приступить к развертыванию для кластера SQL Server больших данных. Чтобы развернуть кластер Aris всех конфигурациях по умолчанию для среды разработки и тестирования, следуйте инструкциям в этой статье:
+После настройки кластера Kubernetes, вы можно приступить к развертыванию для кластера SQL Server больших данных. Чтобы развернуть кластер больших данных с помощью всех конфигураций по умолчанию для среды разработки и тестирования, следуйте инструкциям в этой статье:
 
-[Краткое руководство по Развертыванию Aris SQL Server в Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Краткое руководство по Развертыванию SQL Server, большие данные кластера в Kubernetes](quickstart-big-data-cluster-deploy.md)
 
-Если вы хотите настроить конфигурацию Aris в соответствии с потребностями рабочей нагрузки, выполните следующий набор инструкций.
+Если вы хотите настроить конфигурацию кластера больших данных в соответствии с потребностями рабочей нагрузки, выполните следующий набор инструкций.
 
 ## <a name="verify-kubernetes-configuration"></a>Проверка конфигурации kubernetes
 

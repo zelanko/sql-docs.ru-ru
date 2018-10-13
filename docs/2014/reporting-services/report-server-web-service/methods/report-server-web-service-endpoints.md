@@ -18,18 +18,18 @@ ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d658c424acd5491acbd86cdcdd01905f12a6479a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fae03147c4e5364ae7c41590c88c9b6791a6370c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085544"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119991"
 ---
 # <a name="report-server-web-service-endpoints"></a>Конечные точки веб-службы сервера отчетов
   Веб-служба сервера отчетов предоставляет несколько конечных точек для управления сервером отчетов, а также для выполнения отчетов и перемещения по ним.  
   
 ## <a name="the-management-endpoints"></a>Конечные точки управления  
- Для управления объектами на сервере отчетов доступны три конечные точки — <xref:ReportService2005>, <xref:ReportService2006> и <xref:ReportService2010>. Конечная точка <xref:ReportService2005> используется для управления объектами на сервере отчетов, настроенном для работы в собственном режиме. Конечная точка <xref:ReportService2006> используется для управления объектами на сервере отчетов, настроенном для работы в режиме интеграции с SharePoint. Конечная точка <xref:ReportService2010> объединяет функциональные возможности конечных точек <xref:ReportService2005> и <xref:ReportService2006> и может управлять объектами на сервере отчетов, настроенном для работы в собственном режиме или режиме интеграции с SharePoint.  
+ Для управления объектами на сервере отчетов доступны три конечные точки — <xref:ReportService2005>, <xref:ReportService2006> и <xref:ReportService2010>. Конечная точка <xref:ReportService2005> используется для управления объектами на сервере отчетов, настроенном для работы в собственном режиме. Конечная точка <xref:ReportService2006> используется для управления объектами на сервере отчетов, настроенном для работы в режиме интеграции с SharePoint. <xref:ReportService2010> Конечная точка объединяет функции <xref:ReportService2005> и <xref:ReportService2006> и может управлять объектами на сервере отчетов, для которых настроено собственном режиме или режиме интеграции с SharePoint.  
   
 > [!IMPORTANT]  
 >  Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, API из пространства имен <xref:ReportService2005> будут возвращать ошибку `rsOperationNotSupportedSharePointMode`. Если сервер отчетов настроен для работы в собственном режиме, API из пространства имен <xref:ReportService2006> будут возвращать ошибку `rsOperationNotSupportedNativeMode`. Аналогично, если зависящие от режима API-интерфейсы в <xref:ReportService2010> используются в непредусмотренных режимах, они вернут соответствующие ошибки.  

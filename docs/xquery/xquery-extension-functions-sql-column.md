@@ -17,12 +17,12 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75980cf457d1422bba783c02f9978bdd9263f220
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17703c8a4c4839b977da9f4583a90ea3c3583b52
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627712"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119891"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Функции расширения XQuery — sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sql:column("columnName")
   
  Запрос формирует XML следующей структуры:  
   
-```  
+```xml
 <Product ProductID="771" ProductName="Mountain-100 Silver, 38" ProductPrice="3399.99" ProductModelID="19"   
   ProductModelName="Mountain 100" />  
 ```  
@@ -67,7 +67,7 @@ sql:column("columnName")
   
 -   Чтобы сделать запрос более интересным, **ProductModelName** атрибута значение получается из **CatalogDescription** столбец **тип xml**. Поскольку данные каталога модели продукта XML хранятся не для всех моделей продуктов, с помощью инструкции `if` получаются только существующие значения.  
   
-    ```  
+    ```sql
     SELECT P.ProductID, CatalogDescription.query('  
     declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
            <Product   
@@ -109,7 +109,7 @@ ProductID               Result
   
  Следующий запрос создает XML, содержащий сведения о продукте. К этим сведениям относятся ProductID, ProductName, ProductPrice и (если значение доступно) ProductModelName для всех продуктов, относящихся к конкретной модели, ProductModelID=19. Затем присваивается XML @x переменной **xml** типа.  
   
-```  
+```sql
 declare @x xml  
 SELECT @x = CatalogDescription.query('  
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

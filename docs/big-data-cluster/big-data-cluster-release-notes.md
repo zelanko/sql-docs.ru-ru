@@ -1,0 +1,96 @@
+---
+title: Заметки о выпуске для кластеров SQL Server 2019 больших данных | Документация Майкрософт
+description: В этой статье описываются последние обновления и известные проблемы для больших данных кластеров 2019 SQL Server (Предварительная версия).
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.date: 10/04/2018
+ms.topic: conceptual
+ms.prod: sql
+ms.openlocfilehash: 13d5cfa95b9a37ecf26658ee255f93c8099faa8f
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085557"
+---
+# <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Заметки о выпуске для кластеров SQL Server 2019 больших данных
+
+В этой статье предоставляет последние обновления и известные проблемы для последней версии кластеров больших данных в SQL Server.
+
+[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a name="ctp-20-october-2018"></a>CTP-версии 2.0 (октября 2018 г.)
+
+Новые возможности и известные проблемы с кластерами больших данных в SQL Server 2019 CTP 2.0 в следующих разделах.
+
+### <a name="whats-in-the-ctp-20-release"></a>Новые возможности в выпуске CTP 2.0
+
+- Простое развертывание качества с помощью средства управления mssqlctl
+- Собственный записная книжка студии данных Azure
+- Файлы запросов HDFS с помощью хранилища экземпляра SQL Server
+- Виртуализации данных через master для SQL Server, Oracle, MongoDB и HDFS
+- Мастер виртуализации данных для SQL Server и Oracle в Azure Data Studio
+- Службы машинного Обучения на хозяине
+- Портал администрирования кластера, который можно использовать для мониторинга и устранения неполадок
+- Отправка задания Spark в Azure Data Studio 
+- Пользовательский Интерфейс Spark на портале администрирования кластера
+- Тома, подключении к классы хранения
+- Запросов за пулы данных с основного сервера
+- Показать план для распределенных запросов в среде SSMS
+- Пакет PIP для средства управления mssqlctl
+- Модуль встроенных развертывания с помощью службы контроллера
+
+### <a name="known-issues"></a>Известные проблемы
+
+Следующие разделы содержат известные проблемы для больших данных кластеров SQL Server в CTP 2.0.
+
+#### <a name="deployment"></a>Развертывание
+
+- Если вы используете службы Azure Kubernetes (AKS), рекомендуется версию Kubernetes является 1.10. *, который не поддерживает изменение размера диска. Следует убедиться в том, соответствующим образом размеры хранилища во время развертывания. Дополнительные сведения о том, как настроить размеры хранилища, см. в разделе [постоянного хранения](concept-data-persistence.md) статьи. Для Kubernetes, развернутом на виртуальных машинах рекомендуемая версия — 1.11.
+
+- После развертывания в AKS, могут появиться следующие два события-предупреждения из развертывания. Оба эти события перечислены известные проблемы, но они не препятствуют успешному развертыванию кластера больших данных в AKS.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- Если происходит сбой развертывания кластера больших данных, связанное пространство имен не удаляется. В итоге потерянные пространством имен в кластере. Обойти это можно вручную удалить пространство имен перед развертыванием кластера с тем же именем.
+
+#### <a name="external-tables"></a>Внешние таблицы
+
+- Это позволяет создать внешнюю таблицу пула данных для таблицы, которая имеет неподдерживаемые типы столбцов. При выполнении запроса внешней таблицы, вы получите сообщение следующего вида:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- Если базовый файл копируется в HDFS в то же время при выполнении запроса внешней таблицы пула хранения, может появиться ошибка.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+#### <a name="spark-and-notebooks"></a>Spark и записные книжки
+
+- IP-адресом МОДУЛЯ адреса могут измениться в среде Kubernetes, время перезагрузки модулей POD. В сценарии, где перезапускает master-pod, сеанс Spark может произойти сбой с `NoRoteToHostException`. Это связано с виртуальной машины Java кэшей, не обновляется с помощью нового IP-адреса адреса.
+
+- Если у вас есть Jupyter уже установлен и отдельные Python в Windows, записные книжки Spark может завершиться ошибкой. Чтобы обойти эту проблему, обновите Jupyter до последней версии.
+
+- В записной книжке, если щелкнуть **добавить текст** команды ячейку текст добавляется в режиме предварительного просмотра, а не в режиме редактирования. Можно щелкнуть значок предварительного просмотра, чтобы переключиться в режим правки и изменять ячейки.
+
+#### <a name="hdfs"></a>HDFS
+
+- Если щелкнуть правой кнопкой мыши файл в файловой системе HDFS, чтобы сделать это, может появиться следующая ошибка:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   В настоящее время нет способа для предварительного просмотра файлов, размер которых превышает 30 МБ студии данных Azure.
+
+- Изменения конфигурации HDFS, влечет за собой изменения hdfs-site.xml не поддерживаются.
+
+#### <a name="security"></a>безопасность
+
+- SA_PASSWORD является частью среды и доступными (например, в файл дампа кабель). После развертывания, необходимо сбросить SA_PASSWORD на основной экземпляр. Это не ошибка, но шаг по обеспечению безопасности. Дополнительные сведения о способах изменения SA_PASSWORD в контейнере Linux, см. в разделе [Смена пароля Администратора](../linux/quickstart-install-connect-docker.md#sapassword).
+
+- AKS журналы могут содержать пароль системного Администратора для развертывания кластера больших данных.
+
+## <a name="next-steps"></a>Следующие шаги
+
+Дополнительные сведения о больших данных кластеров SQL Server, см. в разделе [Каковы кластеров SQL Server 2019 больших данных?](big-data-cluster-overview.md).

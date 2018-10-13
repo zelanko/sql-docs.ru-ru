@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 6725f986a66020d0560c4e3f17be5da12a2cd3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745752"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851849"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server в Linux, часто задаваемые вопросы (FAQ)
 
@@ -103,7 +103,7 @@ ms.locfileid: "47745752"
 
 1. **Поддерживает ли SQL Server в Linux нескольких экземпляров на одном узле?**
 
-   Мы рекомендуем выполнять несколько контейнеров на узле несколько отдельных экземпляров. Каждый контейнер необходимо прослушивать другой порт. Дополнительные сведения см. в разделе [запуск нескольких контейнеров SQL Server](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
+   Мы рекомендуем выполнять несколько контейнеров на узле несколько отдельных экземпляров. Это легко сделать с помощью docker, но каждый контейнер необходимо прослушивать другой порт. Дополнительные сведения см. в разделе [запуск нескольких контейнеров SQL Server](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
 
 1. **Проверка подлинности Active Directory поддерживается на платформе Linux?**
 

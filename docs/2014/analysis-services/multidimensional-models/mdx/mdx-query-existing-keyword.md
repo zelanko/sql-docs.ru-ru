@@ -15,12 +15,12 @@ ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8431c4b29f20b3c87e3b944736612d009426900a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ceaeac711ed30028dab3bc09827df9b6ae1f0e0a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106554"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905974"
 ---
 # <a name="existing-keyword-mdx"></a>Ключевое слово EXISTING (многомерные выражения)
   Указывает, что заданный набор должен вычисляться принудительно в текущем контексте.  
@@ -37,10 +37,10 @@ Existing Set_Expression
  Допустимое многомерное выражение набора.  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию наборы вычисляются в контексте куба, который содержит их элементы. `Existing` Ключевое слово принудительно заданный набор должен вычисляться в текущем контексте.  
+ По умолчанию наборы вычисляются в контексте куба, который содержит их элементы. Ключевое слово `Existing` указывает на то, что заданный набор должен вычисляться в текущем контексте.  
   
 ## <a name="example"></a>Пример  
- В следующем примере возвращается количество посредников, продажи которых снизились по сравнению с предыдущим периодом, на основании выбранных пользователем значений элемента State-Province, вычисленных с помощью функции `Aggregate`. Ключевое слово [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) и [DrilldownLevel (многомерные выражения)](/sql/mdx/drilldownlevel-mdx) используются для возвращения показателей падения продаж для категорий продуктов в измерении Product. `Existing` Силы ключевое слово set в `Filter` функции, который будет вычисляться в текущем контексте, то есть для Вашингтона и Орегона элементы иерархии атрибута State-Province.  
+ В следующем примере возвращается количество посредников, продажи которых снизились по сравнению с предыдущим периодом, на основании выбранных пользователем значений элемента State-Province, вычисленных с помощью функции `Aggregate`. Ключевое слово [Hierarchize (многомерные выражения)](/sql/mdx/hierarchize-mdx) и [DrilldownLevel (многомерные выражения)](/sql/mdx/drilldownlevel-mdx) используются для возвращения показателей падения продаж для категорий продуктов в измерении Product. `Existing` Ключевое слово указывает на набор в `Filter` функции, который будет вычисляться в текущем контексте, то есть для Вашингтона и Орегона элементы иерархии атрибута State-Province.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -78,13 +78,13 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Число &#40;задать&#41; &#40;многомерных Выражений&#41;](/sql/mdx/count-set-mdx)   
- [AddCalculatedMembers &#40;многомерных Выражений&#41;](/sql/mdx/addcalculatedmembers-mdx)   
- [Агрегатные &#40;многомерных Выражений&#41;](/sql/mdx/aggregate-mdx)   
- [Фильтр &#40;многомерных Выражений&#41;](/sql/mdx/filter-mdx)   
- [Свойства &#40;многомерных Выражений&#41;](/sql/mdx/properties-mdx)   
- [DrilldownLevel &#40;многомерных Выражений&#41;](/sql/mdx/drilldownlevel-mdx)   
- [Hierarchize &#40;многомерных Выражений&#41;](/sql/mdx/hierarchize-mdx)   
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [Count (наборы) (многомерные выражения)](/sql/mdx/count-set-mdx)   
+ [AddCalculatedMembers (многомерные выражения)](/sql/mdx/addcalculatedmembers-mdx)   
+ [Aggregate (многомерные выражения)](/sql/mdx/aggregate-mdx)   
+ [Filter (многомерные выражения)](/sql/mdx/filter-mdx)   
+ [Properties (многомерные выражения)](/sql/mdx/properties-mdx)   
+ [DrilldownLevel (многомерные выражения)](/sql/mdx/drilldownlevel-mdx)   
+ [Hierarchize (многомерные выражения)](/sql/mdx/hierarchize-mdx)   
+ [Справочник по функциям многомерных выражений (многомерные выражения)](/sql/mdx/mdx-function-reference-mdx)  
   
   

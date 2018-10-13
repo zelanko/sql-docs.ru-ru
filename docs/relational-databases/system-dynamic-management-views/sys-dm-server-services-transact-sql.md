@@ -19,12 +19,12 @@ ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee801da96f6281e5bf1775df1233ee85712ff74a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856972"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072139"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47856972"
 |filename|**nvarchar(256)**|Полный путь и имя исполняемого файла службы. Не может иметь значение null.|  
 |is_clustered|**nvarchar(1)**|Указывает, установлена ли служба в качестве ресурса кластеризованного сервера. Не может иметь значение null.|  
 |cluster_nodename|**nvarchar(256)**|Имя узла кластера, на котором установлена служба. Допускает значение NULL.|
-|instant_file_initialization_enabled|**nvarchar(1)**|Указывает, включена ли Мгновенная инициализация файлов для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] службы.<br /><br />Y = Мгновенная инициализация файлов включено для службы.<br /><br />N = Мгновенная инициализация файлов отключена для службы.<br /><br /> Допускает значение NULL.<br /><br /> **Примечание:** не применяется к другим службам, например агент SQL Server.<br /><br /> **Применяется к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 через через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
+|instant_file_initialization_enabled|**nvarchar(1)**|Указывает, включена ли Мгновенная инициализация файлов для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] службы.<br /><br />Y = Мгновенная инициализация файлов включено для службы.<br /><br />N = Мгновенная инициализация файлов отключена для службы.<br /><br /> Допускает значение NULL.<br /><br /> **Примечание:** не применяется к другим службам, например агент SQL Server.<br /><br /> **Применяется к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
 
 ## <a name="security"></a>безопасность  
   

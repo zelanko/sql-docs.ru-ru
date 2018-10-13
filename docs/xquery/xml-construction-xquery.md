@@ -23,12 +23,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8043e2187ccb1eca7dea58507451113da45429a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5861d48490df31e731113b673972a7768867a5ab
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814382"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119902"
 ---
 # <a name="xml-construction-xquery"></a>Построение XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47814382"
   
     -   \<Функции > элемент имеет три элементные узлы-потомки, \<цвет >, \<вес >, и \<гарантии >. Каждый из этих узлов имеет по одному текстовому дочернему элементу и значения «Red», «25» и «2 years parts and labor» соответственно.  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -68,7 +68,7 @@ This is product model catalog description.
   
  Результирующий XML-документ:  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -82,7 +82,7 @@ This is product model catalog description.
   
  Хотя показанное в данном примере построение элементов из неизменных выражений полезно само по себе, настоящая мощь этой функции языка XQuery раскрывается при построении XML-документов с динамическим извлечением данных из базы данных. Для указания выражений запроса можно использовать фигурные скобки. В результирующем XML-документе выражение заменяется своим значением. Например, следующий запрос строит элемент <`NewRoot`> с одним дочерним элементом (<`e`>). Значение элемента <`e`> вычисляется с помощью указания выражения пути внутри фигурных скобок («{...} }").  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');  
@@ -92,7 +92,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  Результат:  
   
-```  
+```xml
 <NewRoot>  
   <e>  
     <root>5</root>  
@@ -102,7 +102,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  Следующий запрос похож на предыдущий. Тем не менее, это выражение в фигурных скобках указывает **data()** функции для получения элементарного значения элемента <`root`> элемент и присваивает его построенному элементу <`e`>.  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -115,7 +115,7 @@ SELECT @y;
   
  Результат:  
   
-```  
+```xml
 <NewRoot>  
   <e>5</e>  
 </NewRoot>  
@@ -123,7 +123,7 @@ SELECT @y;
   
  Если в качестве части текста желательно использовать фигурные скобки вместо токенов переключения контекста, то последние можно изолировать с помощью фигурных скобок «}}» или «{{», как показано в следующем примере:  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -134,13 +134,13 @@ SELECT @y;
   
  Результат:  
   
-```  
+```xml
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
  Следующий запрос — еще один пример построения элементов с помощью прямого конструктора элементов. Значение элемента <`FirstLocation`> также вычисляется с помощью выполнения выражения в фигурных скобках. Выражение запроса возвращает шаги изготовления к первому цеху из столбца Instructions таблицы Production.ProductModel.  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation>  
@@ -153,7 +153,7 @@ WHERE ProductModelID=7;
   
  Результат:  
   
-```  
+```xml
 <FirstLocation>  
   <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
       Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
@@ -168,7 +168,7 @@ WHERE ProductModelID=7;
 #### <a name="element-content-in-xml-construction"></a>Содержимое элемента в конструкции XML  
  В следующем примере показано использование выражений при построении содержимого элемента с помощью прямого конструктора элементов. В этом примере прямой конструктор элементов указывает одно выражение. Для этого выражения в результирующем XML-документе создается один текстовый узел.  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -187,13 +187,13 @@ select @x.query('
   
  Последовательность элементарного значения, рассчитанная при оценке выражения, добавляется в текстовый узел с пробелом между соседними элементарными значениями, как это показано в результате. Построенный элемент содержит один дочерний элемент. Это текстовый узел, который хранит значение, показанное в результате.  
   
-```  
+```xml
 <result>This is step 1 This is step 2 This is step 3</result>  
 ```  
   
  Если вместо одного выражения задать три отдельных выражения, формирующих три текстовых узла, в результирующем XML-документе происходит объединение соседних текстовых узлов в один узел методом сцепления.  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -211,14 +211,14 @@ select @x.query('
   
  Построенный узел элементов содержит один дочерний элемент. Это текстовый узел, который хранит значение, показанное в результате.  
   
-```  
+```xml
 <result>This is step 1This is step 2This is step 3</result>  
 ```  
   
 ### <a name="constructing-attributes"></a>Построение атрибутов  
  При построении элемента с использованием прямого конструктора элементов можно также задать атрибуты элемента с помощью синтаксиса, подобного XML, как показано в этом примере:  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -229,7 +229,7 @@ This is product model catalog description.
   
  Результирующий XML-документ:  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -246,7 +246,7 @@ This is product model catalog description.
   
  В следующем примере **data()** функция не является обязательным. Так как атрибут, присваиваются значения выражения **data()** неявно применяется для извлечения типизированного значения указанного выражения.  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -256,13 +256,13 @@ SELECT @y;
   
  Результат:  
   
-```  
+```xml
 <NewRoot attr="5" />  
 ```  
   
  Ниже приведен еще один пример, в котором указаны выражения для построения атрибутов LocationID и SetupHrs. Оценка этих выражений производится по XML-документу, содержащемуся в столбце Instruction. Типизированное значение выражения присваивается атрибутам.  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation   
@@ -277,7 +277,7 @@ where ProductModelID=7;
   
  Частичный результат:  
   
-```  
+```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
   <AWMI:step …   
   </AWMI:step>  
@@ -290,13 +290,13 @@ where ProductModelID=7;
   
 -   Не поддерживается использование выражений с несколькими атрибутами или смешанными атрибутами (строка и выражение языка XQuery). Например, как показано в следующем запросе, создается XML-документ, в котором `Item` является константой, а значение `5` получено при оценке выражения запроса:  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
      Следующий запрос возвращает ошибку, потому что в нем строка константы смешана с выражением ({/x}), а это не поддерживается:  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="Item {/x}"/>' )   
@@ -306,19 +306,19 @@ where ProductModelID=7;
   
     -   Сформировать значение атрибута путем объединения двух элементарных значений. Эти элементарные значения включены последовательно в значение атрибута с пробелом между элементарными значениями:  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
         ```  
   
          Результат:  
   
-        ```  
+        ```xml
         <a attr="Item 5" />  
         ```  
   
     -   Используйте [concat, функция](../xquery/functions-on-string-values-concat.md) для объединения двух строковых аргументов в результирующее значение атрибута:  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
         ```  
   
@@ -326,13 +326,13 @@ where ProductModelID=7;
   
          Результат:  
   
-        ```  
+        ```xml
         <a attr="Item5" />  
         ```  
   
 -   Не поддерживается использование нескольких выражений в качестве значения атрибута. Например, следующий запрос возвращает ошибку:  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
@@ -340,7 +340,7 @@ where ProductModelID=7;
   
 -   Не поддерживаются разнородные последовательности. При попытке присвоения значению атрибута разнородной последовательности произойдет ошибка, как показано в следующем примере. В этом примере в качестве значения атрибута указана разнородная последовательность из строки «Item» и элемента <`x`>:  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     select @x.query( '<a attr="{''Item'', /x }" />')  
@@ -348,19 +348,19 @@ where ProductModelID=7;
   
      Если применить **data()** запрос работает функция, так как он получает атомарное значение выражения, `/x`, который объединяется со строкой. Ниже приведена последовательность элементарных значений:  
   
-    ```  
+    ```sql
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
     ```  
   
      Результат:  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
 -   Узел атрибутов принудительно упорядочивается во время сериализации, а не при статической проверке типов. Например, следующий запрос завершится ошибкой, потому что запрос пытается добавить атрибут после узла без атрибутов.  
   
-    ```  
+    ```sql
     select convert(xml, '').query('  
     element x { attribute att { "pass" }, element y { "Element text" }, attribute att2 { "fail" } }  
     ')  
@@ -385,7 +385,7 @@ where ProductModelID=7;
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>Добавление пространств имен с помощью атрибута объявления пространства имен  
  В следующем примере при построении элемента <`a`> объявление пространства имен для использования по умолчанию производится с помощью атрибута объявления пространства имен. Построение дочернего элемента <`b`> отменяет объявление пространства имен по умолчанию, заданное в родительском элементе.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -396,7 +396,7 @@ select @x.query( '
   
  Результат:  
   
-```  
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -404,7 +404,7 @@ select @x.query( '
   
  Пространству имен можно назначить префикс. Префикс указывается в конструкции элемента <`a`>.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -415,7 +415,7 @@ select @x.query( '
   
  Результат:  
   
-```  
+```xml
 <x:a xmlns:x="a">  
   <b />  
 </x:a>  
@@ -423,7 +423,7 @@ select @x.query( '
   
  Можно отменить объявление пространства имен, используемого по умолчанию в конструкции XML, однако нельзя отменить объявление префикса пространства имен. Следующий запрос возвращает ошибку, потому что нельзя отменить объявление префикса, указанное в конструкции элемента <`b`>.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -434,7 +434,7 @@ select @x.query( '
   
  Новое построенное пространство имен доступно для использования внутри запроса. Например, в следующем запросе объявляется пространство имен при построении элемента <`FirstLocation`> и указывается префикс в выражениях для значений атрибутов LocationID и SetupHrs.  
   
-```  
+```sql
 SELECT Instructions.query('  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
          LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
@@ -448,7 +448,7 @@ where ProductModelID=7
   
  Обратите внимание, что при создании префикса пространства имен этим способом произойдет замена любых ранее существовавших объявлений пространства имен для этого префикса. Например, объявление пространства имен `AWMI="http://someURI"` в прологе запроса будет заменено объявлением пространства имен в элементе <`FirstLocation`>.  
   
-```  
+```sql
 SELECT Instructions.query('  
 declare namespace AWMI="http://someURI";  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
@@ -464,7 +464,7 @@ where ProductModelID=7
 #### <a name="using-a-prolog-to-add-namespaces"></a>Использование пролога для добавления пространств имен  
  В следующем примере показан порядок добавления пространств имен в построенный XML-документ. Пространство имен по умолчанию объявляется в прологе запроса.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -474,8 +474,10 @@ select @x.query( '
   
  Обратите внимание на то, что в конструкции элемента <`b`> атрибут объявления пространства имен указан с пустой строкой в качестве значения. Это отменяет объявление пространства имен, произведенное по умолчанию в родительском элементе.  
   
-```  
-This is the result:  
+
+Результат:  
+
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -496,7 +498,7 @@ This is the result:
   
  В следующем примере показана обработка пробельных символов в конструкции XML:  
   
-```  
+```sql
 -- line feed is repaced by space.  
 declare @x xml  
 set @x=''  
@@ -525,7 +527,7 @@ test
   
  Результат:  
   
-```  
+```xml
 -- result  
 <test attr="<test attr="    my test   attr  value    "><a>  
   
@@ -550,7 +552,7 @@ test
   
  В следующем запросе созданный XML-документ содержит элемент, два атрибута, комментарий и инструкцию по обработке. Обратите внимание на запятую перед <`FirstLocation`>, которая используется из-за построения последовательности.  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <?myProcessingInstr abc="value" ?>,   
@@ -569,7 +571,7 @@ where ProductModelID=7;
   
  Частичный результат:  
   
-```  
+```xml
 <?myProcessingInstr abc="value" ?>  
 <FirstLocation WorkCtrID="10" SetupHrs="0.5">  
   <!-- some comment -->  
@@ -578,7 +580,7 @@ where ProductModelID=7;
   nsert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
   </AWMI:step>  
     ...  
-/FirstLocation>  
+</FirstLocation>  
   
 ```  
   
@@ -593,7 +595,7 @@ where ProductModelID=7;
   
  В узлах элементов и атрибутов эти ключевые слова используются перед именем узла и перед заключенным в фигурные скобки выражением, которое формирует содержимое этого узла. В приведенном ниже примере создается этот XML-документ:  
   
-```  
+```xml
 <root>  
   <ProductModel PID="5">Some text <summary>Some Summary</summary></ProductModel>  
 </root>  
@@ -601,7 +603,7 @@ where ProductModelID=7;
   
  Этот запрос использует вычисляемые конструкторы для формирования XML-документа:  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 select @x.query('element root   
@@ -618,7 +620,7 @@ text{"Some text "},
   
  Выражение запроса может быть задано выражением, формирующим содержимое узла.  
   
-```  
+```sql
 declare @x xml  
 set @x='<a attr="5"><b>some summary</b></a>'  
 select @x.query('element root   
@@ -636,7 +638,7 @@ text{"Some text "},
   
  В следующем примере содержимое конструируемых узлов извлекается из XML производственные инструкции хранятся в столбце Instructions **xml** тип данных в таблице ProductModel.  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    element FirstLocation   
@@ -651,7 +653,7 @@ where ProductModelID=7
   
  Частичный результат:  
   
-```  
+```xml
 <FirstLocation LocationID="10">  
   <AllTheSteps>  
     <AWMI:step> ... </AWMI:step>  

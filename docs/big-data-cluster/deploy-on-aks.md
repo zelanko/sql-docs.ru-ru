@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ea1ab30f9b3b8ef77834a56b059b2a56de4467b5
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48796970"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877937"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Настройка службы Azure Kubernetes для SQL Server 2019 CTP 2.0
 
@@ -24,7 +24,10 @@ ms.locfileid: "48796970"
 
 ## <a name="prerequisites"></a>предварительные требования
 
-- Для среды AKS минимальным требованием для виртуальной Машины — по крайней мере два агента виртуальных машин (в дополнение к основной) минимальный размер Standard_DS3_V2. Минимальные ресурсы, необходимые каждой виртуальной Машины: 4 ЦП и 14 ГБ памяти.
+- Для среды AKS минимальное требование виртуальной Машины — по крайней мере два агента виртуальных машин (в дополнение к главному узлу) минимального размера [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Минимальные ресурсы, необходимые каждой виртуальной Машины: 4 ЦП и 14 ГБ памяти.
+  
+   > [!NOTE]
+   > Если вы планируете запускать задания с большими данными или нескольких приложений Spark, минимальный размер — [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), и минимальные ресурсы, необходимые каждой виртуальной Машины — 8 процессоров и 32 ГБ памяти.
 
 - В этом разделе необходимо иметь Azure CLI версии 2.0.4 или более поздней версии. Если требуется выполнить установку или обновление, см. в разделе [Установка Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Запустите `az --version` чтобы узнать версию, при необходимости.
 
@@ -80,7 +83,7 @@ ms.locfileid: "48796970"
     --kubernetes-version 1.10.7
     ```
 
-    Можно увеличить или уменьшить количество агентов по умолчанию, добавив `--node-count <n>` для az aks create где `<n>` — количество узлов агентов, которые вы хотите иметь.
+    Можно увеличить или уменьшить количество агентов по умолчанию, изменив `--node-count <n>` где `<n>` — количество узлов агентов, которые вы хотите иметь.
 
     Через несколько минут команда завершается и возвращает информацию о кластере в формате JSON.
 

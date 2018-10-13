@@ -10,12 +10,12 @@ ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f1dde13356f684d7fa6d7273156485bd6b5d07fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe71e5b301c016e25bb179e0104831285dab3ce1
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780732"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071788"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Параметры проекта (синхронизация) (OracleToSQL)
 На странице синхронизации **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA загружает и обновления объектов, таких как таблицы и хранимые процедуры базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -57,7 +57,7 @@ ms.locfileid: "47780732"
 **Действие при отсутствии локального объекта метаданных**  
 Указывает значение по умолчанию в диалоговом окне синхронизации, при отсутствии локальных метаданных. Значение по умолчанию является **обновление из базы данных**.  
   
--   При выборе **обновление из базы данных**, SSMA SSMA будет загружать определения базы данных в метаданные, при выполнении условия.  
+-   При выборе **обновление из базы данных**, SSMA будет загружать определения базы данных в метаданные, при выполнении условия.  
   
 -   При выборе **Skip**, SSMA не будет выполнять какие-либо действия обновления.  
   

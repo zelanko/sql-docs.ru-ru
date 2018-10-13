@@ -11,12 +11,12 @@ ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82646e7dd6b51df00083e7eb175ab0dd99349173
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aacaab21574c3cf70e1c3ee358094dd212462441
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101464"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119211"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Резервное копирование и восстановление баз данных DQS
   В этом разделе описывается, как проводить резервное копирование и восстановление баз данных DQS.  
@@ -25,9 +25,9 @@ ms.locfileid: "48101464"
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
   
--   Необходимо знать пароль для главного ключа базы данных, указанный во время установки сервера DQS.  
+-   Необходимо знать или запомните пароль для главного ключа базы данных, который использовался во время установки сервера DQS.  
   
--   Убедитесь, что не существует текущих операций или процессов в DQS. Это можно проверить с помощью экрана **Мониторинг активности** . Подробные сведения о работе с этим экраном см. в разделе [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
+-   Убедитесь, что не существует текущих операций или процессов в DQS. Это можно проверить с помощью экрана **Мониторинг активности** . Дополнительные сведения о работе с этим экраном см. в разделе [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   
 -   Убедитесь, что на сервере DQS нет подключенных пользователей.  
   

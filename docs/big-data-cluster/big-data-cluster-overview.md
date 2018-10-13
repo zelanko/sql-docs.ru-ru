@@ -7,14 +7,14 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: cf13ea198a5a40a5d67d41fea2f8f9b9b3b5434d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a18eeca5bd6af2fb0bb9562f126351ac4d3f1c9
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796414"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085060"
 ---
-# <a name="what-is-sql-server-2019-big-data-clusters"></a>Что такое кластеры SQL Server 2019 больших данных?
+# <a name="what-are-sql-server-2019-big-data-clusters"></a>Что такое кластеры SQL Server 2019 больших данных?
 
 Начиная с [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], кластеры SQL Server больших данных позволяют развертывать масштабируемые кластеры контейнеров HDFS Docker, Spark и SQL Server, работающих на платформе Kubernetes. Эти компоненты работают параллельно для чтения, записи и обработки больших данных из Transact-SQL или Spark. Кластеры SQL Server больших данных позволяют легко объединять и анализировать реляционных данных высокой ценности с большими данными большого объема.
 

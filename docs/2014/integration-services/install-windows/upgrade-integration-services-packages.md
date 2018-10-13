@@ -14,12 +14,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 002ef268bbb858db961862c1a30479a3e8462237
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22744898dcc45ac213436afcdf25359ba24adec
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136064"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072208"
 ---
 # <a name="upgrade-integration-services-packages"></a>Обновление пакетов служб Integration Services
   При обновлении экземпляра [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] для текущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], существующие [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] пакеты не будут автоматически обновлены до формата пакетов, используемого в текущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] использует. Необходимо будет выбрать метод обновления и обновить эти пакеты вручную.  
@@ -29,7 +29,7 @@ ms.locfileid: "48136064"
  Сведения об обновлении пакетов при преобразовании проекта в модель развертывания проекта см. в разделе [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md).  
   
 ## <a name="sql-server-2000-data-transformation-services-packages"></a>Пакеты служб DTS в SQL Server 2000  
- В текущей версии служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]не поддерживается миграция или запуск пакетов служб Data Transformation Services (DTS). Следующие функциональные возможности служб DTS более не поддерживаются.  
+ Миграция или запуск пакетов служб DTS не поддерживается в текущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Следующие функциональные возможности служб DTS более не поддерживаются.  
   
 -   Среда выполнения DTS  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48136064"
 ## <a name="custom-applications-and-custom-components"></a>Пользовательские приложения и компоненты  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] не будут работать с текущим выпуском [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- Можно использовать последнюю версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] средства для запуска и управления пакетами, которые включают [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] пользовательские компоненты. Были добавлены 4 правила перенаправления привязки к следующим файлам, чтобы помочь перенаправлять сборки среды выполнения от версии 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) до версии 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ Текущий выпуск средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяет запускать пакеты, содержащие пользовательские компоненты [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и службы [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)], и управлять ими. Были добавлены 4 правила перенаправления привязки к следующим файлам, чтобы помочь перенаправлять сборки среды выполнения от версии 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) до версии 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 -   DTExec.exe.config  
   
@@ -99,8 +99,8 @@ ms.locfileid: "48136064"
   
 |Компонент или функция|Результаты обновления|  
 |--------------------------|---------------------|  
-|Строки подключения|Для пакетов [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] изменились имена некоторых поставщиков, из-за чего в строках подключения требуется указывать другие значения. Чтобы обновить строки подключения, выполните одну из следующих процедур.<br /><br /> — Используйте мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], чтобы обновить пакет, и выберите параметр **Обновить строки соединения для использования новых имен поставщиков**.<br /><br /> — В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] на странице "Общие" диалогового окна "Параметры" выберите параметр **Обновить строки соединения для использования новых имен поставщиков**. Дополнительные сведения об этом параметре см. в разделе [General Page](../general-page-of-integration-services-designers-options.md).<br /><br /> — В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] откройте пакет и вручную измените текст свойства ConnectionString.<br /><br /> Примечание: Нельзя применять предыдущие процедуры для обновления строки подключения, если строка подключения хранится в файле конфигурации или файле источника данных, либо в том случае, если выражение устанавливает `ConnectionString` свойство. В таком случае, чтобы обновить строки соединения, необходимо вручную обновить файл конфигурации или выражение.<br /><br /> Дополнительные сведения о доступных источниках данных см. в разделе [Источники данных](../connection-manager/data-sources.md).|  
-|Преобразование «Уточняющий запрос»|Для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] пакетов, в процессе обновления автоматически обновляется «Уточняющий запрос» для текущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Однако у текущего выпуска этого компонента есть некоторые дополнительные возможности.<br /><br /> Дополнительные сведения см. в статье [Lookup Transformation](../data-flow/transformations/lookup-transformation.md).|  
+|Строки подключения|Для пакетов [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] изменились имена некоторых поставщиков, из-за чего в строках подключения требуется указывать другие значения. Чтобы обновить строки подключения, выполните одну из следующих процедур.<br /><br /> — Используйте мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], чтобы обновить пакет, и выберите параметр **Обновить строки соединения для использования новых имен поставщиков**.<br /><br /> — В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] на странице "Общие" диалогового окна "Параметры" выберите параметр **Обновить строки соединения для использования новых имен поставщиков**. Дополнительные сведения об этом параметре см. в разделе [General Page](../general-page-of-integration-services-designers-options.md).<br /><br /> — В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] откройте пакет и вручную измените текст свойства ConnectionString.<br /><br /> Примечание. Нельзя применять предыдущие процедуры для обновления строки подключения, если она хранится в файле конфигурации или файле источника данных либо если выражение устанавливает свойство `ConnectionString`. В таком случае, чтобы обновить строки соединения, необходимо вручную обновить файл конфигурации или выражение.<br /><br /> Дополнительные сведения о доступных источниках данных см. в разделе [Источники данных](../connection-manager/data-sources.md).|  
+|Преобразование «Уточняющий запрос»|При обновлении пакетов [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] преобразование "Уточняющий запрос" автоматически обновляется до текущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Однако у текущего выпуска этого компонента есть некоторые дополнительные возможности.<br /><br /> Дополнительные сведения см. в разделе [Lookup Transformation](../data-flow/transformations/lookup-transformation.md).|  
 |Задача «Скрипт» и компонент скрипта|Для пакетов [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] в процессе обновления пакета скрипты из задачи и компонента скрипта автоматически переносятся из VSA в VSTA.<br /><br /> Дополнительные сведения об изменениях, которые может потребоваться внести в скрипт перед выполнением миграции, а также об ошибках их преобразования см. в разделе [Миграция скриптов в VSTA](../../sql-server/install/migrate-scripts-to-vsta.md).|  
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>Скрипты, зависящие от ADODB.dll  

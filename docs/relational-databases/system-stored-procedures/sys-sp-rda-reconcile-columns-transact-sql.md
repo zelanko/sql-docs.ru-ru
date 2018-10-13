@@ -17,12 +17,12 @@ ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d077da2847a430b2a225ea896b1eafd289218a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4d2a8377466876270bcedd07138cf9cf30ef211
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603962"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906324"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_rda_reconcile_columns @objname = '@objname'
  Если в удаленной таблице Azure есть столбцы, больше не существующие в таблице SQL Server с поддержкой Stretch, они не мешают нормальной работе Stretch Database. При желании вы можете удалить такие столбцы вручную.  
   
 ## <a name="example"></a>Пример  
- Для согласования столбцов в удаленной таблице Azure, выполните следующую инструкцию.  
+ Чтобы согласовать столбцы в удаленной таблице Azure, выполните следующую инструкцию.  
   
 ```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  

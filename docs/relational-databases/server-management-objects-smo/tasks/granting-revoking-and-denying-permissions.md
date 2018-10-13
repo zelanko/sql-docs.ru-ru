@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03157c206368bcb66afc7848dce74f9eb504e424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4368a362b3644ea15313698ed54578ff7bb62da4
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648662"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852019"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Предоставление, отмена и запрет разрешений
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47648662"
 ## <a name="granting-server-permissions-in-visual-basic"></a>Предоставление разрешений уровня сервера на языке Visual Basic  
  В этом примере кода указанному имени входа предоставляются разрешения на создание конечной точки и изменение любой конечной точки, а затем перечисляются и отображаются все разрешения. Одно из разрешений отменяется, затем эти разрешения перечисляются снова. В этом примере предполагается, что заданное имя входа обладает указанными разрешениями, с которых можно начать работу.  
   
-```  
+```VBNET  
 ' compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 ' /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -116,7 +116,7 @@ End Class
 ## <a name="granting-server-permissions-in-visual-c"></a>Предоставление разрешений уровня сервера на языке Visual C#  
  В этом примере кода указанному имени входа предоставляются разрешения на создание конечной точки и изменение любой конечной точки, а затем перечисляются и отображаются все разрешения. Одно из разрешений отменяется, затем эти разрешения перечисляются снова. В этом примере предполагается, что заданное имя входа обладает указанными разрешениями, с которых можно начать работу.  
   
-```  
+```csharp  
 // compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 // /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 using System;  
@@ -196,7 +196,7 @@ public class A {
 ## <a name="granting-server-permissions-in-powershell"></a>Предоставление разрешений уровня сервера в PowerShell  
  В этом примере кода указанному имени входа предоставляются разрешения на создание конечной точки и изменение любой конечной точки, а затем перечисляются и отображаются все разрешения. Одно из разрешений отменяется, затем эти разрешения перечисляются снова. В этом примере предполагается, что заданное имя входа обладает указанными разрешениями, с которых можно начать работу.  
   
-```  
+```powershell  
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
 $srv = get-item default  

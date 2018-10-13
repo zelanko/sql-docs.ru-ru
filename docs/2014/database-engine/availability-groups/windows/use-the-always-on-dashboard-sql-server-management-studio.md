@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40f53007ac70cce216e0dc30c9d72ce830050504
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123754"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120371"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)
   Администраторы баз данных используют панель мониторинга AlwaysOn, чтобы быстро определять исправность группы доступности AlwaysOn, а также ее реплик доступности и баз данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Далее приведены некоторые стандартные варианты использования панели мониторинга AlwaysOn.  
@@ -151,7 +151,7 @@ ms.locfileid: "48123754"
  Содержит имя проблемы. Это значение отображается по умолчанию. Список всех проблем с политикой AlwaysOn, см. в разделе [политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Режим доступности**  
- Указывает свойство реплики, установленное пользователем отдельно для каждой реплики доступности. Это значение по умолчанию скрыто. Возможные значения:  
+ Указывает свойство реплики, устанавливаемое отдельно для каждой реплики доступности. Это значение по умолчанию скрыто. Возможные значения:  
   
 -   **Асинхронная**. Вторичная реплика никогда не синхронизируется с первичной репликой.  
   

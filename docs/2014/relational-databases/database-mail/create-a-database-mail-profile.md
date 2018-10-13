@@ -15,12 +15,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b8d8daec2367212b405f2cf39b8f4229cc7dace
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 667dbd4e0b323f50721af716a30709ba9ea6d5c8
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144244"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071818"
 ---
 # <a name="create-a-database-mail-profile"></a>Создание профиля компонента Database Mail
   Открытые и закрытые профили компонента Database Mail можно создать с помощью **мастера настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -191,7 +191,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*Статус профиля по умолчанию* '  
   
-     где *@profile_name* — имя профиля, а *@principal_name* указывает, что этот профиль является общим, а *@is_default* определяет, является ли этот профиль профилем по умолчанию для пользователя или роли базы данных.  
+     где *@profile_name* — имя профиля, и *@principal_name* чтобы указать это открытый профиль, *@is_default* определяет, является ли это профиль по умолчанию для пользователя или роли.  
   
  В следующем примере создается учетная запись компонента Database Mail, создается закрытый профиль компонента Database Mail, затем учетная запись добавляется к профилю и предоставляется общий доступ к профилю.  
   

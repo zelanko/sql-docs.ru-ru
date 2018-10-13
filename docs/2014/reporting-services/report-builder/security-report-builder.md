@@ -11,12 +11,12 @@ ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 19d471febe43640325ae4f218dc1d0e66c3e0c9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c33524c5b526a0523fe866b6307e00cd52cf8003
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074660"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905818"
 ---
 # <a name="security-report-builder"></a>Безопасность (построитель отчетов)
   Построитель отчетов — это клиентское приложение для создания отчетов, предназначенное для работы с сервером отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Сервер отчетов может быть настроен для работы в собственном режиме как автономный сервер или для работы в режиме интеграции с SharePoint для поддержки отчетов на сайте SharePoint.  
@@ -115,7 +115,7 @@ ms.locfileid: "48074660"
   
 -   Не используйте параметры, основанные на параметрах запроса и имеющие тип **Text** , кроме случаев, когда предоставляются допустимые значения. Список доступных значений позволяет пользователю выбрать только допустимые значения. Без списка доступных значений невозможно контролировать, какие значения пользователь сможет ввести.  
   
--   Не используйте глобальный идентификатор [&UserID] для обеспечения безопасности личных данных. Как параметр отчета данное значение может быть задано в URL-адресе отчета с использованием синтаксиса URL-адреса. Если данное значение используется в выражении в общем наборе данных, то это препятствует кэшированию набора данных. Дополнительные сведения см. в разделе [Ссылка на параметр доступа по URL-адресу](../url-access-parameter-reference.md) документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   Не используйте глобальный [& UserID] для обеспечения безопасности личных данных. Как параметр отчета данное значение может быть задано в URL-адресе отчета с использованием синтаксиса URL-адреса. Если данное значение используется в выражении в общем наборе данных, то это препятствует кэшированию набора данных. Дополнительные сведения см. в разделе [Ссылка на параметр доступа по URL-адресу](../url-access-parameter-reference.md) документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
  После публикации элементов на сервере отчетов администратор сервера отчетов может помочь настроить для них безопасность, установив безопасность на основе ролей или безопасность на уровне папок и элементов. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../security/secure-reports-and-resources.md) документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
