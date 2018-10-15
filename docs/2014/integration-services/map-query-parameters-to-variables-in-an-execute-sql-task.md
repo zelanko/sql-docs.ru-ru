@@ -70,7 +70,7 @@ ms.locfileid: "48070936"
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|`SELECT* FROM Production.Product WHERE ProductId > @parmMinProductID AND ProductID < @parmMaxProductID`|  
   
-     Примеры использования параметров с хранимыми процедурами см. в разделе [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+     Примеры использования параметров с хранимыми процедурами, см. в разделе [параметры и коды возврата в задаче «Выполнение SQL»](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 7.  Щелкните **Сопоставление параметров**.  
   
