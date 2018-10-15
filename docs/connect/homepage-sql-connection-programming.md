@@ -5,18 +5,17 @@ author: MightyPen
 ms.date: 04/16/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.openlocfilehash: 6269a92ea3ad33ed4501856cc7745ac4f9fad4df
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e2c3da2ba71661602f69f85f5eb79ba6d550be9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087076"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633802"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Домашняя страница для клиента, программирование для Microsoft SQL Server
 
@@ -270,7 +269,7 @@ Ruby можно использовать для взаимодействия с 
 
 |||
 | :-- | :-- |
-| [Подтверждение концепции путем подключения к SQL с помощью Ruby](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | Пример небольшого кода уделено подключение и запросы к SQL Server. |
+| [Эксперимент, подразумевающий подключение к SQL с помощью Ruby](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | Пример небольшого кода уделено подключение и запросы к SQL Server. |
 | [База данных SQL Azure: запрос с помощью Ruby](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Пример базы данных SQL Azure. |
 | [Создание приложения Ruby использовать SQL Server в Mac OS](http://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | Сведения о конфигурации, а также примеры кода. |
 | &nbsp; | <br /> |

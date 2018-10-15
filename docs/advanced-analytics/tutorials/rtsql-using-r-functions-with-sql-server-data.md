@@ -3,17 +3,17 @@ title: Краткое R работает с данными SQL Server (маши�
 description: В этом кратком руководстве вы научитесь напишите функцию R, использующей данные SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/15/2018
+ms.date: 10/08/2018
 ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5785b8b8162fdde25dea13eb3aead55c10dbfc3b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 877c7ffd5cb67479eed0e2239cbe90d366934515
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086676"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878167"
 ---
 # <a name="quickstart-using-r-functions-with-sql-server-data"></a>Краткое руководство: Использование функций R с данными SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

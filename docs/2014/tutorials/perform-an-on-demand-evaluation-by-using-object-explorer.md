@@ -18,7 +18,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48098114"
 ---
-# <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Perform an On-Demand Evaluation by Using Object Explorer
+# <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Выполнение политики по запросу с помощью обозревателя объектов
   В этой задаче для выполнения по запросу рекомендуемых политик для компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] на единственном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] используется обозреватель объектов.  
   
 > [!NOTE]  
