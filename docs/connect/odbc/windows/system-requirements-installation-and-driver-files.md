@@ -11,19 +11,19 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d0b1b34105df8568e12be170b0ab9afa8fdad88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: d5e8a3234c7da4d350014463c3d1f96f417fa0b6
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716572"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084932"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Системные требования, установка и файлы драйвера
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает подключения к SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]и [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
-ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows можно установить на компьютере, где также имеется одна или несколько версий Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows можно установить на компьютере, где также имеется одна или несколько версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ODBC Driver 13 и 13.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], в дополнение к вышесказанному поддерживает SQL Server 2016. 
 
@@ -53,8 +53,8 @@ ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 - [Скачать Microsoft ODBC Driver 13 for SQL Server для Windows](https://www.microsoft.com/download/details.aspx?id=50420)
 - [Скачать Microsoft ODBC Driver 11 for SQL Server для Windows](https://www.microsoft.com/download/details.aspx?id=36434). 
 
-[!NOTE]
-Для тех, кто установить драйвер 17.1.0.1 или ниже рекомендуется, что его нужно удалить вручную перед установкой новой версии драйвера
+> [!NOTE]
+> Для тех, кто установить драйвер 17.1.0.1 или ниже рекомендуется, что его нужно удалить вручную перед установкой новой версии драйвера
 
 Его можно установить параллельно с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
 

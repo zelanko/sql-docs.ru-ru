@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: 842a7377bcd6bdcb649a78b2f31eb66de95bc5a3
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854396"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072338"
 ---
 ## <a name="specifying-application-intent"></a>Задание намерения приложения
 

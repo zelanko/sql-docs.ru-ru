@@ -13,12 +13,12 @@ ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ce412af15a39d00b488a5646f83c5c8e2a08bef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee0b1c221c3bdb18ec9b79339e9dd55cb4eed93e
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804342"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071808"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Урок 1. Основы перемещения в помощнике по настройке ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47804342"
 ![Окно помощника по настройке ядра СУБД по умолчанию](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> **Монитор сеансов** вкладка отображает имя сеанса, представляющее собой имя подключенного пользователя и текущие данные. 
+> **Монитор сеансов** вкладке отображаются имя сеанса, представляющее собой имя подключенного пользователя и текущие данные. 
   
 При первом запуске помощника в его графическом интерфейсе пользователя отображаются две основные панели.  
   

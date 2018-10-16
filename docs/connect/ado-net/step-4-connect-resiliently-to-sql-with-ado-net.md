@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a812aacbbbd87ba8fc38479be7d62a0fc9401b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75c6f352a962232b2109861b2a264d458af05e70
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731372"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119811"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET
 
@@ -39,7 +39,7 @@ ms.locfileid: "47731372"
   
 Программа должна отличать временные ошибки от постоянных. Временные ошибки приведены неправильные условия, которые может очистить за короткий промежуток времени, например временные сетевые проблемы.  Пример устойчивая ошибка бы, если программа содержит опечатку в имени целевой базы данных — в этом случае ошибка «База данных не найден» сохранится и очистки в течение короткого периода времени не может.  
   
-Список кодов ошибок, которые считаются временными сбоями предоставляется в [сообщения об ошибках для клиентских приложений базы данных SQL](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+Список кодов ошибок, которые считаются временными сбоями доступен в [сообщения об ошибках для клиентских приложений базы данных SQL](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Шаг 2: Создание и запуск примера приложения  
   
