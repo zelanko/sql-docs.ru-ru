@@ -1,4 +1,4 @@
-﻿---
+---
 title: Шаг 1. Настройка среды разработки для разработки в ADO.NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/08/2017
@@ -30,13 +30,13 @@ ms.locfileid: "47617002"
 
 1. ![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[загрузить и установить .NET Framework, включая ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-2. Установка Visual Studio Community или аналогичное интегрированной среды разработки (IDE) для написания и компиляция исходного кода C#. Корпорация Microsoft предлагает Visual Studio Community для *бесплатный*.  
+2. Установите Visual Studio Community или аналогичую интегрированную среду разработки (IDE) для написания и компиляция исходного кода C#. Корпорация Майкрософт теперь предоставляет Visual Studio Community *бесплатный*.  
     - [Скачать Visual Studio Community](http://www.visualstudio.com/products/visual-studio-community-vs)  
-    - [Дополнительные варианты бесплатного использования Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+    - [Дополнительные параметры для бесплатной Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
 ### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET core для Linux Ubuntu и MacOS
 
-Ссылки для скачивания .NET Core, для различных операционных систем, можно просмотреть в:
+Ссылки для загрузки .NET Core для различных операционных систем доступны здесь:
 
-- ![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[загрузить и установить .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Стрелка скачивания в круге](../../ssdt/media/download.png)[Скачать и установить .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
