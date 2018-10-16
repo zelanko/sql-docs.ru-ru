@@ -23,12 +23,12 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a61cfca736629d3f8ffb7b1240f85a0aa9edb45a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749500"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169214"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Необязательное скалярное выражение типа **sysname**, представляющее имя защищаемой вложенной сущности, у которой проверяется разрешение. Значение по умолчанию — NULL.  
   
 > [!NOTE]  
->  В версиях от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] во вложенных защищаемых объектах не могут использоваться скобки в форме **'[***вложенное имя***]'**. Используйте вместо этого форму **'***вложенное имя***'**.  
+>  В версиях от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] во вложенных защищаемых объектах не могут использоваться скобки в форме **'[**_вложенное имя_**]'**. Используйте вместо этого форму **'**_вложенное имя_**'**.  
   
  *sub-securable_class*  
  Необязательное скалярное выражение типа **nvarchar(60)**, представляющее класс защищаемой вложенной сущности, для которой проверяется разрешение. Значение по умолчанию — NULL.  

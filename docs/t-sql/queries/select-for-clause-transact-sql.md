@@ -22,12 +22,12 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cec143edb47f54e63d18a07991cb3b1d3c9ab7a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0db7176da41eec27cfffc4db5a9cbcc0835196a9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817082"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906274"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR, предложение (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ JSON
   
 -   Необходимо выполнить следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)], чтобы включить режим просмотра с параметром **NO_BROWSETABLE**:  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON  
     ```  
   
@@ -123,7 +123,7 @@ JSON
   
 2.  В базе данных SampleDB создайте таблицы tleft и tright так, чтобы каждая содержала один столбец с именем c1. Определите уникальный индекс на столбце c1 в таблице tleft и предусмотрите, чтобы этот столбец принимал значения NULL. Чтобы это сделать, выполните в соответствующем окне запроса следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-    ```  
+    ```sql
     CREATE TABLE tleft(c1 INT NULL UNIQUE) ;  
     GO   
     CREATE TABLE tright(c1 INT NULL) ;  
@@ -132,7 +132,7 @@ JSON
   
 3.  Вставьте несколько значений в таблицу tleft и таблицу tright. Обязательно вставьте значение NULL в таблицу tleft. Чтобы это сделать, выполните в окне запроса следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-    ```  
+    ```sql
     INSERT INTO tleft VALUES(2) ;  
     INSERT INTO tleft VALUES(NULL) ;  
     INSERT INTO tright VALUES(1) ;  
@@ -143,14 +143,14 @@ JSON
   
 4.  Включите параметр **NO_BROWSETABLE**. Чтобы это сделать, выполните в окне запроса следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON ;  
     GO  
     ```  
   
 5.  Получите доступ к данным в таблице tleft и таблице tright с помощью инструкции внешнего соединения в запросе SELECT. Убедитесь, что таблица tleft находится во внутренней части инструкции внешнего соединения. Чтобы это сделать, выполните в окне запроса следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-    ```  
+    ```sql
     SELECT tleft.c1   
     FROM tleft   
     RIGHT JOIN tright   
@@ -223,7 +223,7 @@ JSON
   
  В данном примере задается параметр `FOR XML AUTO` с параметрами `TYPE` и `XMLSCHEMA`. Благодаря параметру `TYPE` результирующий набор возвращается клиенту в формате **xml**. Параметр `XMLSCHEMA` определяет встроенную XSD-схему, включаемую в возвращаемые XML-данные, а параметр `ELEMENTS` указывает, что результаты в формате XML основываются на элементах.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.BusinessEntityID, FirstName, LastName, PhoneNumber AS Phone  

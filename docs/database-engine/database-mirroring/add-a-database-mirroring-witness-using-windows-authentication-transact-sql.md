@@ -15,12 +15,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0569a8f94232ec31e96024e798da6027e0c695a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca1ecc06039f8bdfbf4516778a04f9c191544e45
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742322"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168906"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (язык Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,17 +50,17 @@ ms.locfileid: "47742322"
   
      Если конечная точка на следящем сервере отсутствует, см. раздел [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
-2.  Если экземпляры участников запущены от имени пользователей других доменов, создайте имя входа для разных учетных записей в базе данных master каждого экземпляра. Дополнительные сведения см. в разделе [Разрешение сетевого доступа к конечной точке зеркального отображения базы данных с использованием проверки подлинности Windows (SQL Server)](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
+2.  Если экземпляры участников запущены от имени пользователей других доменов, создайте имя входа для разных учетных записей в базе данных master каждого экземпляра. Дополнительные сведения см. в разделе [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
 3.  Подключите следящий сервер к основному, выполнив следующую инструкцию:  
   
-     ALTER DATABASE *<имя_базы_данных>* SET WITNESS **=***<сетевой_адрес_сервера>*  
+     ALTER DATABASE *<имя_базы_данных>* SET WITNESS **=**_<сетевой_адрес_сервера>_  
   
      Здесь *<имя_базы_данных>*  — имя базы данных, подлежащей зеркальному отображению (это имя является одинаковым в обоих партнерах), а *<сетевой_адрес_сервера>*  — сетевой адрес экземпляра следящего сервера.  
   
      Чтобы указать сетевой адрес сервера, используйте следующий синтаксис:  
   
-     TCP **://**\<*системный_адрес>***:**\<* порт>*  
+     TCP<b>://</b>_\<системный_адрес>_<b>:</b>_\<порт>_  
   
      Здесь \<*системный_адрес>*  — строка, однозначно идентифицирующая целевой компьютер, а \<*порт>*  — номер порта, используемого конечной точкой зеркального отображения экземпляра сервера-партнера. Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   

@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cbe41975f57e0294d936e0b8554b5d936f1474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0c960d3c0477420868e0d1cfaee50ee51252ef9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840002"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906521"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT — предложение ORDER BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,7 +208,7 @@ ORDER BY order_by_expression
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. Указание единственного столбца, определенного в списке выбора  
  В следующем примере производится упорядочение результирующего набора по числовому столбцу `ProductID`. Поскольку конкретный порядок сортировки не указан, используется порядок по умолчанию (по возрастанию).  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -219,7 +219,7 @@ ORDER BY ProductID;
 #### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>Б. Указание столбца, не определенного в списке выбора  
  В следующем примере результирующий набор упорядочивается по столбцу, не включенному в список выбора, но определенному в таблице, указанной в предложении FROM.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name, Color  
@@ -231,7 +231,7 @@ ORDER BY ListPrice;
 #### <a name="c-specifying-an-alias-as-the-sort-column"></a>В. Указание псевдонима в качестве столбца сортировки  
  В следующем примере в качестве столбца сортировки указывается псевдоним столбца `SchemaName`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT name, SCHEMA_NAME(schema_id) AS SchemaName  
@@ -244,7 +244,7 @@ ORDER BY SchemaName;
 #### <a name="d-specifying-an-expression-as-the-sort-column"></a>Г. Указание выражения в качестве столбца сортировки  
  В следующем примере в качестве столбца сортировки используется выражение. Выражение определено с использованием функции DATEPART, чтобы сортировать результирующий набор по году поступления сотрудника на работу.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, JobTitle, HireDate  
@@ -258,7 +258,7 @@ ORDER BY DATEPART(year, HireDate);
 #### <a name="a-specifying-a-descending-order"></a>A. Указание порядка по убыванию  
  В следующем примере производится упорядочение результирующего набора по числовому столбцу `ProductID` в убывающем порядке.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -270,7 +270,7 @@ ORDER BY ProductID DESC;
 #### <a name="b-specifying-an-ascending-order"></a>Б. Указание порядка по возрастанию  
  В следующем примере производится упорядочение результирующего набора по столбцу `Name` в возрастающем порядке. Символьные значения сортируются в алфавитном порядке, а не в числовом. Иными словами, отсортированное значение 10 находится перед 2.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -282,7 +282,7 @@ ORDER BY Name ASC ;
 #### <a name="c-specifying-both-ascending-and-descending-order"></a>В. Указание порядка и по возрастанию, и по убыванию  
  В следующем примере производится упорядочение результирующего набора по двум столбцам. Результирующий набор запроса сначала сортируется по возрастанию по столбцу `FirstName`, а затем в убывающем порядке по столбцу `LastName`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT LastName, FirstName FROM Person.Person  
@@ -294,7 +294,7 @@ ORDER BY FirstName ASC, LastName DESC ;
 ###  <a name="Collation"></a> Указание параметров сортировки  
  Следующий пример показывает, как задание параметров сортировки в предложении ORDER BY может изменить порядок, в котором возвращаются результаты запроса. Созданная таблица содержит столбец, определенный без учета регистра и параметров сортировки диакритических знаков. Вставленные значения имеют различные сочетания регистра и диакритических знаков. Поскольку параметры сортировки в предложении ORDER BY не заданы, первый запрос при упорядочении значений использует порядок сортировки столбца. Во втором запросе в предложении ORDER BY указаны параметры сортировки без учета регистра символов и диакритических знаков, поэтому строки возвращаются в другом порядке.  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TABLE #t1 (name nvarchar(15) COLLATE Latin1_General_CI_AI)  
@@ -315,7 +315,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ###  <a name="Case"></a> Указание условного порядка  
  В следующем примере выражение CASE используется в предложении ORDER BY, чтобы условно определить порядок сортировки строк на основе значения заданного столбца таблицы. В первом примере вычисляется значение столбца `SalariedFlag` таблицы `HumanResources.Employee`. Сотрудники, для которых столбец `SalariedFlag` имеет значение 1, возвращаются в порядке `BusinessEntityID` (по убыванию). Сотрудники, для которых столбец `SalariedFlag` имеет значение 0, возвращаются в порядке `BusinessEntityID` (по возрастанию). Во втором примере результирующий набор упорядочивается по столбцу `TerritoryName`, если столбец `CountryRegionName` содержит значение «United States», и по столбцу `CountryRegionName` в остальных строках.  
   
-```  
+```sql
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
@@ -324,7 +324,7 @@ GO
   
 ```  
   
-```  
+```sql
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
@@ -336,7 +336,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
 ###  <a name="Rank"></a> Использование ORDER BY в ранжирующей функции  
  В следующем примере предложение ORDER BY используется в ранжирующих функциях ROW_NUMBER, RANK, DENSE_RANK и NTILE.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -362,7 +362,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Указание целочисленных констант в качестве значений OFFSET и FETCH  
  В следующем примере в качестве значений предложений OFFSET и FETCH указана целочисленная константа. Первый запрос возвращает все строки, отсортированные по столбцу `DepartmentID`. Сравните результаты, возвращенные этим запросом, с результатами двух следующих запросов. В следующем запросе предложение `OFFSET 5 ROWS` используется для пропуска первых 5 строк и возврата оставшихся. Конечный запрос содержит предложение `OFFSET 0 ROWS`, чтобы начать с первой строки, а затем предложение `FETCH NEXT 10 ROWS ONLY`, ограничивающее число возвращаемых строк до 10 из сортированного результирующего набора.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Return all rows sorted by the column DepartmentID.  
@@ -387,7 +387,7 @@ ORDER BY DepartmentID
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>Б. Указание переменных в качестве значений OFFSET и FETCH  
  В следующем примере объявлены переменные `@StartingRowNumber` и `@FetchRows`. Затем эти переменные указаны в предложениях OFFSET и FETCH.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
@@ -404,7 +404,7 @@ ORDER BY DepartmentID ASC
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>В. Указание выражений в качестве значений OFFSET и FETCH  
  В следующем примере выражение `@StartingRowNumber - 1` определяет значение OFFSET, а выражение `@EndingRowNumber - @StartingRowNumber + 1` — значение FETCH. Кроме этого, приведено указание запроса OPTIMIZE FOR. Это указание можно использовать, чтобы предоставить конкретное значение для локальной переменной при компиляции и оптимизации запросов. Значение используется только в процессе оптимизации запроса, но не в процессе выполнения. Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -423,7 +423,7 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
 #### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>Г. Указание вложенного запроса, возвращающего скалярную константу, в качестве значений OFFSET и FETCH  
  В следующем примере вложенный запрос, возвращающий скалярную константу, используется для определения значения для предложения FETCH. Вложенный запрос возвращает единственное значение из столбца `PageSize` в таблице `dbo.AppSettings`.  
   
-```  
+```sql
 -- Specifying a constant scalar subquery  
 USE AdventureWorks2012;  
 GO  
@@ -443,7 +443,7 @@ ORDER BY DepartmentID ASC
 #### <a name="e-running-multiple-queries-in-a-single-transaction"></a>Д. Выполнение нескольких запросов в одной транзакции  
  В следующем примере показан один из методов реализации решения разбиения на страницы, который обеспечивает стабильные результаты, возвращаемые во всех запросах. Этот запрос выполняется в одной транзакции уровня изоляции моментального снимка, а столбец, указанный в предложении ORDER BY, гарантирует уникальность столбца.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -487,7 +487,7 @@ GO
 ###  <a name="Union"></a> Использование ORDER BY с UNION, EXCEPT и INTERSECT  
  Если запрос содержит оператор UNION, EXCEPT или INTERSECT, предложение ORDER BY должно быть указано в конце инструкции, а результаты объединенного запроса должны быть отсортированы. В следующем примере возвращаются все продукты желтого или красного цвета, отсортированные в общем списке по столбцу `ListPrice`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Color, ListPrice  
@@ -505,7 +505,7 @@ ORDER BY ListPrice ASC;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере демонстрируется упорядочение результирующего набора по числовому столбцу `EmployeeKey` в возрастающем порядке.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -515,7 +515,7 @@ ORDER BY EmployeeKey;
   
  В следующем примере производится упорядочение результирующего набора по числовому столбцу `EmployeeKey` в убывающем порядке.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -525,7 +525,7 @@ ORDER BY EmployeeKey DESC;
   
  В следующем примере производится упорядочение результирующего набора по столбцу `LastName`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -535,7 +535,7 @@ ORDER BY LastName;
   
  В следующем примере производится упорядочение по двум столбцам. Этот запрос сначала сортирует в возрастающем порядке по столбцу `FirstName`, а затем сортирует общие значения `FirstName` в убывающем порядке по столбцу `LastName`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  

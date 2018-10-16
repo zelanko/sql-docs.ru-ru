@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0640a41beedbd7752a7b12a356e0d12314493d58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30c20b9232725ec41d8d6438c82ce18820181fee
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711742"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085050"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Открытие и закрытие отчетов (диспетчер отчетов)
   Диспетчер отчетов можно использовать для просмотра отчетов, опубликованных на сервере отчетов. По умолчанию все отчеты открываются в формате HTML. После открытия отчета, его можно экспортировать для просмотра в формате других приложений. Если отчет содержит интерактивные функции, либо разработан в построителе отчетов и содержит интерактивные данные, можно щелкать ссылки для просмотра дополнительных отчетов или данных.  
@@ -39,7 +39,6 @@ ms.locfileid: "47711742"
      Закрываемый отчет не удаляется из кэша браузера. Для отключения от отчета необходимо закрыть браузер.  
   
 ## <a name="see-also"></a>См. также:  
- [Поиск отчетов и других элементов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Страница "Содержимое" (диспетчер отчетов)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  

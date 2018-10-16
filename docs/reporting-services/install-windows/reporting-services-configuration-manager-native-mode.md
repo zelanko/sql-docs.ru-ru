@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 77d4433bee0e96b8baaa67c211040729b5d00f0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dbb43ba4b8595a02e2132bf1670bbe06884aee5
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743811"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085410"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Использование диспетчера конфигурации служб Reporting Services (собственный режим)
 
@@ -68,7 +68,7 @@ ms.locfileid: "47743811"
 
 1.  Следующий шаг должен соответствовать версии ОС Microsoft Windows.
 
-    - На начальном экране Windows введите **Отчеты** и в результатах поиска выберите **Диспетчер конфигурации служб Reporting Services**.
+    - На стартовом экране Windows введите **Отчеты** и в результатах поиска выберите **Диспетчер конфигурации служб Reporting Services** .
 
     - Нажмите кнопку **Пуск**и последовательно наведите указатель на пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]и **Средства настройки**.
 

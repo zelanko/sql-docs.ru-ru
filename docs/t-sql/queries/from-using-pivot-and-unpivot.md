@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28967819353769601e5ba8e760435f6d43aac3a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07dc597f293414c2c4fae2704085ac4449038cf
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818503"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905775"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM — использование PIVOT и UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ FOR
 ## <a name="basic-pivot-example"></a>Базовый пример PIVOT  
  В следующем примере кода создается таблица, включающая два столбца и четыре строки.  
   
-```  
+```sql
 USE AdventureWorks2014 ;  
 GO  
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
@@ -93,7 +93,7 @@ GROUP BY DaysToManufacture;
   
  Следующий код отображает тот же самый результат, сведенный так, что значения `DaysToManufacture` становятся заголовками. Для значения трех `[3]` дней приводится столбец, даже если результат равен `NULL`.  
   
-```  
+```sql
 -- Pivot table with one row and five columns  
 SELECT 'AverageCost' AS Cost_Sorted_By_Production_Days,   
 [0], [1], [2], [3], [4]  
@@ -119,7 +119,7 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ## <a name="complex-pivot-example"></a>Сложный пример PIVOT  
  Обычно оператор `PIVOT` может быть полезен при создании отчетов с перекрестными ссылками для сведения данных. Например, пусть необходимо обратиться к таблице `PurchaseOrderHeader` образца базы данных `AdventureWorks2014` для определения количества заказов на покупку, размещенных некоторым сотрудником. Требуемые данные, отсортированные по поставщикам, можно извлечь при выполнении следующего запроса.  
   
-```  
+```sql
 USE AdventureWorks2014;  
 GO  
 SELECT VendorID, [250] AS Emp1, [251] AS Emp2, [256] AS Emp3, [257] AS Emp4, [260] AS Emp5  
@@ -149,7 +149,7 @@ VendorID    Emp1        Emp2        Emp3        Emp4        Emp5
   
  Данные, возвращаемые в результате выполнения указанного подзапроса выборки, сводятся в столбец `EmployeeID`.  
   
-```  
+```sql
 SELECT PurchaseOrderID, EmployeeID, VendorID  
 FROM PurchaseOrderHeader;  
 ```  
@@ -161,7 +161,7 @@ FROM PurchaseOrderHeader;
   
  Оператор `UNPIVOT` выполняет действия, обратные оператору `PIVOT`, преобразуя столбцы данных в строки. Допустим, что таблица, созданная в ходе выполнения предыдущего примера, хранится в базе данных и имеет идентификатор `pvt`. Пусть необходимо преобразовать идентификаторы столбцов `Emp1`, `Emp2`, `Emp3`, `Emp4` и `Emp5` в строки данных, сгруппированные по поставщикам. В этом случае необходимо определить два дополнительных столбца. Столбец, содержащий значения поворачиваемых столбцов (`Emp1`, `Emp2`...), будет называться `Employee`, а столбец, который будет содержать значения, в данный момент расположенные в поворачиваемых столбцах, будет называться `Orders`. Указанные столбцы связаны соответственно с такими параметрами в определении на языке [!INCLUDE[tsql](../../includes/tsql-md.md)], как *pivot_column* и *value_column*. Вот запрос.  
   
-```  
+```sql
 -- Create the table and insert values as portrayed in the previous example.  
 CREATE TABLE pvt (VendorID int, Emp1 int, Emp2 int,  
     Emp3 int, Emp4 int, Emp5 int);  
