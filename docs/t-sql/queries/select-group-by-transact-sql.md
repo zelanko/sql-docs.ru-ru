@@ -5,9 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUP
@@ -35,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d96d23761ecaa1a31bdf9530b1d4277adc4182b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: cf4f93dfb52177e59e1a283b13236a6a029725c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105915"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654204"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT — GROUP BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -346,7 +344,7 @@ GROUP BY ALL
 |Компонент|Службы SQL Server Integration Services|Уровень совместимости SQL Server — 100 или более|Уровень совместимости SQL Server 2008 или более поздней версии — 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Статистические функции DISTINCT|Не поддерживаются для конструкций WITH CUBE или WITH ROLLUP.|Поддерживаются для конструкций WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE или ROLLUP.|Аналогично уровню совместимости 100.|  
-|Определяемая пользователем функция с именем CUBE или ROLLUP в предложении GROUP BY|Определяемая пользователем функция **dbo.cube(***arg1***,***...argN***)** or **dbo.rollup(***arg1***,**...*argN***)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`.|Определяемая пользователем функция **dbo.cube (***arg1***,**...argN **)** or **dbo.rollup(** arg1 **,***...argN***)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`.<br /><br /> Возвращается сообщение об ошибке: "Неправильный синтаксис рядом с ключевым словом "cube"&#124;"rollup"".<br /><br /> Чтобы избежать этой проблемы, замените конструкцию `dbo.cube` на `[dbo].[cube]` или конструкцию `dbo.rollup` на `[dbo].[rollup]`.<br /><br /> Следующий пример является допустимым: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Определяемая пользователем функция **dbo.cube (***arg1***,***...argN*) or **dbo.rollup(***arg1***,***...argN***)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`.|  
+|Определяемая пользователем функция с именем CUBE или ROLLUP в предложении GROUP BY|Определяемая пользователем функция **dbo.cube(**_arg1_**,**_...argN_**)** or **dbo.rollup(**_arg1_**,**..._argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`.|Определяемая пользователем функция **dbo.cube (**_arg1_**,**...argN **)** or **dbo.rollup(** arg1 **,**_...argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`.<br /><br /> Возвращается сообщение об ошибке: "Неправильный синтаксис рядом с ключевым словом "cube"&#124;"rollup"".<br /><br /> Чтобы избежать этой проблемы, замените конструкцию `dbo.cube` на `[dbo].[cube]` или конструкцию `dbo.rollup` на `[dbo].[rollup]`.<br /><br /> Следующий пример является допустимым: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Определяемая пользователем функция **dbo.cube (**_arg1_**,**_...argN_) or **dbo.rollup(**_arg1_**,**_...argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`.|  
 |GROUPING SETS|Не поддерживается|Поддерживается|Поддерживается|  
 |CUBE|Не поддерживается|Поддерживается|Не поддерживается|  
 |ROLLUP|Не поддерживается|Поддерживается|Не поддерживается|  
