@@ -1,29 +1,25 @@
 ---
 title: Загрузка SQL Server Data Tools (SSDT) | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssdt
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssdt
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - установка SSDT, скачивание SSDT, последняя версия SSDT
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
-caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 907b8a7d11bbd7889f3796d3f56633caec22a529
-ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
+ms.openlocfilehash: 703990d0484240d602c34ca24262df38e7aadc5b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743487"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736612"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачивание и установка SQL Server Data Tools (SSDT) для Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,18 +44,20 @@ ms.locfileid: "43743487"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT для VS 2017 (автономный установщик)
 
-[![Скачать](../ssdt/media/download.png) Скачайте SSDT для Visual Studio 2017 (15.8) ](https://go.microsoft.com/fwlink/?linkid=2014060) 
+[![Скачать](../ssdt/media/download.png) Скачайте SSDT для Visual Studio 2017 (15.8.1) ](https://go.microsoft.com/fwlink/?linkid=2024393) 
 
 > [!IMPORTANT]
-> - Перед установкой SSDT для Visual Studio 2017 (15.8) удалите расширения *Проекты Analysis Services* и *Проекты Reporting Services*, если они уже установлены, а затем закройте все экземпляры Visual Studio.
+> - Перед установкой SSDT для Visual Studio 2017 (15.8.1) удалите расширения *Проекты Analysis Services* и *Проекты Reporting Services*, если они уже установлены, а затем закройте все экземпляры Visual Studio.
+> - При выборе SSIS во время установки SSDT в Windows 10 версии 1803 может произойти непредвиденная перезагрузка. Вы можете повторно запустить установщик и продолжить установку после перезагрузки.
+> - SSDT 15.8.1 сейчас не поддерживает Windows 7 с пакетом обновления 1 (SP1). Если у вас установлена эта операционная система, используйте версию 15.8.0.
 
 
 
 **Сведения о версии**  
   
-Номер выпуска: 15.8.  
-Номер сборки: 14.0.16174.0.  
-Дата выпуска: 5 сентября 2018 г.  
+Номер выпуска: 15.8.1  
+Номер сборки: 14.0.16179.0  
+Дата выпуска: 27 сентября 2018 г.  
 
 Полный список изменений доступен в [журнале изменений](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -69,21 +67,41 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 Этот выпуск **SSDT для Visual Studio 2017** можно установить на следующих языках:  
 
-[Китайский (упрощенное письмо)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x804) | 
-[китайский (традиционное письмо)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x404) | 
-[Английский (США)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x409) | 
-[Французский]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x40c)  
-[Немецкий]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x407) | 
-[Итальянский]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x410) | 
-[Японский]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x411) | 
-[Корейский]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x412) | 
-[Португальский (Бразилия)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x416) | 
-[Русский]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x419) | 
-[Испанский]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x40a)  
+[Китайский (упрощенное письмо)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x804) | 
+[китайский (традиционное письмо)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x404) | 
+[Английский (США)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x409) | 
+[Французский]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x40c)  
+[Немецкий]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x407) | 
+[Итальянский]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x410) | 
+[Японский]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x411) | 
+[Корейский]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x412) | 
+[Португальский (Бразилия)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x416) | 
+[Русский]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x419) | 
+[Испанский]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x40a)  
 
 
+## <a name="offline-install"></a>Автономная установка
 
+Если вы не подключены к Интернету, следуйте инструкциям в этом разделе, чтобы установить SSDT. Дополнительные сведения см. в разделе [Создание сетевого подключения в Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/create-a-network-installation-of-visual-studio).
 
+После подключения к Интернету первым делом выполните следующие действия.
+
+1. [Скачайте автономный установщик SSDT](#ssdt-for-vs-2017-standalone-installer).
+2. [Скачайте vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe).
+3. Не отключаясь от Интернета, выполните одну из следующих команд, чтобы скачать все файлы, необходимые для автономной установки. Следует использовать параметр `--layout`. Замените <filepath> на фактический путь, чтобы сохранить файлы.
+
+   A.   Для установки конкретного языка передайте локаль: `vs_sql.exe --layout c:\<filepath> --lang en-us` (размер версии с одним языком — примерно 1 ГБ)  
+   Б. Для установки всех языков пропустите аргумент `--lang`: `vs_sql.exe --layout c:\<filepath>` (размер версии со всеми языками — примерно 3,9 ГБ).
+
+Дальнейшие действия можно выполнить в автономном режиме.
+
+1. Скопируйте полезные данные VS2017 в папку полезных данных SSDT. Убедитесь, что все файлы находятся в одной папке layouts.
+2. Запустите `vs_setup.exe --NoWeb`, чтобы установить оболочку VS2017 Shell и SQL Server Data Project.
+3. Запустите `SSDT-Setup-ENU.exe /install` и выберите SSIS/SSRS/SSAS.
+
+   - Для автоматической установки запустите `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
+
+Для отображения доступных параметров запустите `SSDT-Setup-ENU.exe /help`
 
 ## <a name="supported-sql-versions"></a>Поддерживаемые версии SQL
   

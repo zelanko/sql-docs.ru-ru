@@ -26,7 +26,7 @@ ms.locfileid: "48074814"
   
  ![rs_SparklineExample](../media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Чтобы начать работу со спарклайнами, см. раздел [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md) и видеоролики [Инструкции. Создание спарклайна в таблице](http://go.microsoft.com/fwlink/?LinkId=197092) и [Sparklines, Bar Charts, и Indicators in Report Builder](http://technet.microsoft.com/bi/video/ff877165) .  
+ Чтобы быстро начать работу со спарклайнами, см. в разделе [руководство: добавление спарклайна в отчет &#40;построитель отчетов&#41; ](../tutorial-add-a-sparkline-to-your-report-report-builder.md) и видеоролики [как: создать спарклайн в таблице](http://go.microsoft.com/fwlink/?LinkId=197092) и [ Спарклайны, линейчатые диаграммы и индикаторы в построителе отчетов](http://technet.microsoft.com/bi/video/ff877165) .  
   
 > [!NOTE]  
 >  Спарклайны и гистограммы можно опубликовать вместе с родительской таблицей, матрицей или списком, а также отдельно как элемент отчета. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
