@@ -1,31 +1,28 @@
 ---
-title: Члены SQLServerCallableStatement | Документы Microsoft
+title: Члены SQLServerCallableStatement | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: Assembly
 ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
-caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4efa8910cb11b6cada26afa4ebd034db8aac242c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6dc7a5a5e19f7baa335055d1f6c2038b4660f721
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852989"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642812"
 ---
 # <a name="sqlservercallablestatement-members"></a>Члены SQLServerCallableStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  В следующих таблицах перечислены члены, предоставляемые [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) класса.  
+  В следующих таблицах перечислены элементы, предоставляемые классом [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
 ## <a name="constructors"></a>Конструкторы  
  Нет.  
@@ -41,106 +38,106 @@ ms.locfileid: "32852989"
   
 ## <a name="methods"></a>Методы  
   
-|Название|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Добавляет набор параметров в пакет команд для данного объекта CallableStatement.|  
-|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Отменяет инструкцию SQL, выполняемую в данный момент этот объект CallableStatement.|  
-|[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Очищает текущий список команд SQL для данного объекта CallableStatement.|  
+|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Наследуется от SQLServerPreparedStatement.) Добавляет набор параметров в пакет команд для данного объекта CallableStatement.|  
+|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Отменяет инструкцию SQL, выполняемую в настоящее время объектом CallableStatement.|  
+|[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Обнуляет текущий список команд SQL для данного объекта CallableStatement.|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Немедленно удаляет текущие значения параметров.|  
-|[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Удаляет все предупреждения, выданные для данного объекта CallableStatement.|  
-|[Закрыть](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Освобождает базы данных и ресурсы JDBC этого объекта CallableStatement немедленно, не дожидаясь их автоматического освобождения.|  
-|[execute](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Выполняет инструкцию SQL в этом объекте CallableStatement может быть любой тип инструкции SQL.|  
+|[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Очищает все предупреждения, выданные для данного объекта CallableStatement.|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Немедленно высвобождает ресурсы базы данных и JDBC этого объекта CallableStatement вместо ожидания их автоматического освобождения.|  
+|[execute](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Выполняет в этом объекте CallableStatement инструкцию SQL любого типа.|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Отправляет пакет команд базе данных для выполнения. В случае успешного выполнения всех команд возвращает массив из количества операций обновления, выполненных той или иной командой.|  
-|[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Выполняет SQL-запрос в этом объекте CallableStatement и возвращает [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта, созданного запросом.|  
-|[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Выполняет инструкцию SQL в этом объекте CallableStatement, который должен быть SQL INSERT, UPDATE, MERGE или DELETE инструкции. или инструкция SQL, которая не возвращает ничего, например инструкция DDL.|  
-|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объект, который был создан этот объект CallableStatement.|  
+|[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Выполняет SQL-запрос в этом объекте CallableStatement и возвращает созданный запросом объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
+|[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Выполняет инструкцию SQL в этом объекте CallableStatement. Это должна быть инструкция SQL INSERT, UPDATE, MERGE или DELETE либо инструкция SQL, не возвращающая значения, например инструкция DDL.|  
+|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает объект [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md), создавший данный объект CallableStatement.|  
 |[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Получает значение указанного столбца в виде [класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) объекта.|  
-|[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает направление выборки строк из таблиц базы данных, значение по умолчанию для результирующих наборов, созданных на основе этого объекта CallableStatement.|  
-|[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Возвращает число строк результирующего набора, равное размеру выборки по умолчанию для результирующих наборов объектов, созданных на основе этого объекта CallableStatement.|  
+|[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает направление выборки строк из таблиц базы данных, заданное по умолчанию для результирующих наборов, созданных на основе этого объекта CallableStatement.|  
+|[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает число строк результирующего набора, равное размеру выборки по умолчанию для объектов результирующих наборов, созданных на основе этого объекта CallableStatement.|  
 |[getGeneratedKeys](../../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает все автоматически сформированные ключи, созданные в результате выполнения этого объекта CallableStatement.|  
-|[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Возвращает максимальное число байтов, которые могут возвращаться для значений символьных и двоичных столбцов в [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта, созданном этим объектом CallableStatement.|  
-|[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Возвращает максимальное число строк, [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) может содержаться в объекте, созданном этим объектом CallableStatement.|  
-|[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Извлекает [класс SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) , содержащий сведения о столбцах [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объект, который будет возвращен при запуске данного объекта CallableStatement.|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Переходит к следующему результату этого объекта CallableStatement.|  
-|[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Извлекает количество, типы и свойства параметров для этого объекта CallableStatement.|  
-|[getArray](../../../connect/jdbc/reference/getarray-method-sqlservercallablestatement.md)|Получает значение указанного параметра в виде объекта Array.|  
-|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)|Получает значение указанного параметра в виде потока из **ASCII** символов.|  
+|[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает максимальное число байтов, которое может возвращаться для значений символьных и двоичных столбцов в объекте [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданном этим объектом CallableStatement.|  
+|[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает максимальное количество строк, которое может содержаться в объекте [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданном этим объектом CallableStatement.|  
+|[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Извлекает объект [класса SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md), содержащий сведения о столбцах объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), который возвращается при выполнении этого объекта CallableStatement.|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(Наследуется от SQLServerStatement.) Переходит к следующему результату этого объекта CallableStatement.|  
+|[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Извлекает количество, типы и свойства параметров этого объекта CallableStatement.|  
+|[getArray](../../../connect/jdbc/reference/getarray-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде объекта Array.|  
+|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде потока символов **ASCII**.|  
 |[getBigDecimal](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде значения java.math.BigDecimal.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде двоичного непрерывного потока байтов.|  
-|[GetBlob](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)|Получает значение указанного параметра JDBC Blob в виде большого двоичного объекта на языке программирования Java.|  
-|[getboolean](../../../connect/jdbc/reference/getboolean-method-sqlservercallablestatement.md)|Получает значение указанного параметра в виде **логическое** значение.|  
-|[GetByte](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)|Получает значение указанного параметра в виде **байтов** значение.|  
-|[Метод GetBytes](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде массива байтов.|  
+|[getBlob](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра большого двоичного объекта JDBC в виде BLOB-объекта на языке программирования Java.|  
+|[getboolean](../../../connect/jdbc/reference/getboolean-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **Boolean**.|  
+|[getByte](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **byte**.|  
+|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде массива байтов.|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде объекта java.io.Reader.|  
-|[getClob](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)|Получает значение указанного параметра JDBC Blob в виде объекта Clob в языке программирования Java.|  
-|[функция getDate](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде объекта java.sql.Date на языке программирования Java.|  
+|[getClob](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра большого двоичного объекта JDBC в виде объекта Clob на языке программирования Java.|  
+|[getDate](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде объекта java.sql.Date на языке программирования Java.|  
 |[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Получает значение указанного столбца в виде[класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) объекта.|  
-|[GetDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|Получает значение указанного параметра в виде **двойные** языке программирования Java.|  
-|[GetFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|Получает значение указанного параметра в виде **float** языке программирования Java.|  
-|[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|Получает значение указанного параметра в виде **int** языке программирования Java.|  
-|[getLong](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)|Получает значение указанного параметра в виде **длинные** языке программирования Java.|  
-|[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)|Получает значение указанного параметра в виде объекта модуля чтения.|  
-|[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)|Получает значение указанного JDBC **NCLOB** параметр как **NClob** объекта на языке программирования Java.|  
-|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|Извлекает значение указанного **NCHAR**, **NVARCHAR** или **LONGNVARCHAR** параметра в виде строки на Java языка программирования.|  
-|[Функция GetObject](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде объекта на языке программирования Java.|  
-|[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает количество секунд [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] будет ожидать выполнения этого объекта CallableStatement.|  
-|[getRef](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)|Получает значение указанного параметра в виде ссылки объекта на языке программирования Java.|  
-|[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает режим буферизации для этого ответов [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта.|  
-|[getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает текущий результат в виде [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта.|  
-|[getResultSetConcurrency](../../../connect/jdbc/reference/getresultsetconcurrency-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Получает результирующий набор с параллелизмом для [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объектов, созданных этим объектом CallableStatement.|  
-|[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Получает результирующий набор удержания для [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объектов, созданных этим объектом CallableStatement.|  
-|[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Получает тип для результирующего набора [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объектов, созданных этим объектом CallableStatement.|  
-|[getShort](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)|Получает значение указанного параметра в виде **короткие** языке программирования Java.|  
-|[GetString](../../../connect/jdbc/reference/getstring-method-sqlservercallablestatement.md)|Получает значение указанного параметра в виде **строка** языке программирования Java.|  
+|[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде **double** на языке программирования Java.|  
+|[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **float** на языке программирования Java.|  
+|[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **int** на языке программирования Java.|  
+|[getLong](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **long** на языке программирования Java.|  
+|[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде объекта Reader.|  
+|[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра JDBC **NCLOB** в виде объекта **NClob** на языке программирования Java.|  
+|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|Получает значение заданного **NCHAR**, **NVARCHAR** или **LONGNVARCHAR** параметра в виде строки на Java языка программирования.|  
+|[getObject](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде объекта на языке программирования Java.|  
+|[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает время в секундах, в течение которого [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] будет ожидать выполнения этого объекта CallableStatement.|  
+|[getRef](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде объекта Ref на языке программирования Java.|  
+|[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает режим буферизации ответов для этого объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
+|[getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает текущий результат как объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
+|[getResultSetConcurrency](../../../connect/jdbc/reference/getresultsetconcurrency-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает параллелизм результирующего набора для объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданных этим объектом CallableStatement.|  
+|[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает возможность ожидания результирующего набора для объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданных этим объектом CallableStatement.|  
+|[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает тип результирующего набора для объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданных этим объектом CallableStatement.|  
+|[getShort](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **short** на языке программирования Java.|  
+|[getString](../../../connect/jdbc/reference/getstring-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **String** на языке программирования Java.|  
 |[getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде объекта java.sql.SQLXML.|  
 |[getTime](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде объекта java.sql.Time на языке программирования Java.|  
 |[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде объекта java.sql.Timestamp на языке программирования Java.|  
 |[getUpdateCount](../../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Возвращает текущий результат в виде счетчика обновлений.|  
-|[getURL](../../../connect/jdbc/reference/geturl-method-sqlservercallablestatement.md)|Получает значение указанного параметра в виде URL-адрес объекта на языке программирования Java.|  
-|[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Возвращает первое предупреждение, полученных от вызовов в этом объекте CallableStatement.|  
-|[IsClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Указывает, был ли закрыт этот объект инструкции.|  
+|[getURL](../../../connect/jdbc/reference/geturl-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде объекта URL на языке программирования Java.|  
+|[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает первое предупреждение, указанное в отчетах для вызовов этого объекта CallableStatement.|  
+|[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Указывает, был ли закрыт этот объект Statement.|  
 |[isPoolable](../../../connect/jdbc/reference/ispoolable-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Возвращает значение, показывающее, можно ли добавить инструкцию в предоставляемый пользователем пул инструкций.|  
 |[isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)|Указывает, является ли этот объект инструкции оболочкой указанного интерфейса.|  
 |[registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)|Регистрирует параметр OUT.|  
-|[setArray](../../../connect/jdbc/reference/setarray-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Задает номер указанного параметра для заданного объекта массива.|  
+|[setArray](../../../connect/jdbc/reference/setarray-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Задает номер назначенного параметра для указанного объекта Array.|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)|Устанавливает для указанного параметра заданное значение входного потока.|  
-|[setBigDecimal](../../../connect/jdbc/reference/setbigdecimal-method-sqlservercallablestatement.md)|Задает номер указанного параметра для заданного объекта BigDecimal.|  
+|[setBigDecimal](../../../connect/jdbc/reference/setbigdecimal-method-sqlservercallablestatement.md)|Задает номер назначенного параметра для указанного объекта BigDecimal.|  
 |[setBinaryStream](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)|Устанавливает для указанного параметра указанное значение входного потока.|  
-|[setBlob](../../../connect/jdbc/reference/setblob-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Присваивает указанному параметру для заданного объекта BLOB-объектов.|  
-|[setboolean](../../../connect/jdbc/reference/setboolean-method-sqlservercallablestatement.md)|Устанавливает указанный параметр заданного **логическое** значение.|  
-|[setByte](../../../connect/jdbc/reference/setbyte-method-sqlservercallablestatement.md)|Устанавливает указанный параметр заданного **байтов** значение.|  
-|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlservercallablestatement.md)|Присваивает указанному параметру заданный массив **байтов** значения.|  
-|[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservercallablestatement.md)|Присваивает указанному параметру для заданного объекта модуля чтения.|  
+|[setBlob](../../../connect/jdbc/reference/setblob-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Задает указанный параметр для заданного BLOB-объекта.|  
+|[setboolean](../../../connect/jdbc/reference/setboolean-method-sqlservercallablestatement.md)|Задает указанному параметру заданное значение **Boolean**.|  
+|[setByte](../../../connect/jdbc/reference/setbyte-method-sqlservercallablestatement.md)|Задает указанному параметру заданное значение **byte**.|  
+|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlservercallablestatement.md)|Присваивает указанному параметру заданный массив значений **byte**.|  
+|[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservercallablestatement.md)|Задает указанный параметр для заданного объекта Reader.|  
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Присваивает указанному параметру значение заданного объекта.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Присваивает имени курсора SQL значение заданной строки. Это значение будет использоваться при дальнейших вызовах метода execute.|  
-|[setDate](../../../connect/jdbc/reference/setdate-method-sqlservercallablestatement.md)|Присваивает указанному параметру заданное значение даты.|  
+|[SetDate](../../../connect/jdbc/reference/setdate-method-sqlservercallablestatement.md)|Присваивает указанному параметру заданное значение даты.|  
 |[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|Задает значение указанного столбца [класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) значение.|  
-|[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlservercallablestatement.md)|Устанавливает указанный параметр заданного **двойные** значение.|  
+|[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlservercallablestatement.md)|Задает указанному параметру заданное значение **double**.|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Задается режим обработки escape-последовательностей.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Определяет указание для драйвера JDBC относительно направления, в котором будут обрабатываться строки результирующего набора.|  
 |[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Определяет указание для драйвера JDBC относительно числа строк, которые должны быть извлечены из базы данных при необходимости в дополнительных строках.|  
-|[setFloat](../../../connect/jdbc/reference/setfloat-method-sqlservercallablestatement.md)|Присваивает указанному параметру указанное **float** значение.|  
-|[setInt](../../../connect/jdbc/reference/setint-method-sqlservercallablestatement.md)|Присваивает указанному параметру указанное **int** значение.|  
-|[setLong](../../../connect/jdbc/reference/setlong-method-sqlservercallablestatement.md)|Присваивает указанному параметру указанное **длинные** значение.|  
-|[setMaxFieldSize](../../../connect/jdbc/reference/setmaxfieldsize-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Задает ограничение на максимальное число байтов в [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) столбца хранятся символьные или двоичные значения указанное число байтов.|  
-|[setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Задает ограничение на максимальное число строк, чтобы любое [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) может содержать объект указанному числу.|  
-|[setNCharacterStream](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)|Присваивает указанному параметру указанный объект модуля чтения.|  
+|[setFloat](../../../connect/jdbc/reference/setfloat-method-sqlservercallablestatement.md)|Задает назначенному параметру указанное значение **float**.|  
+|[setInt](../../../connect/jdbc/reference/setint-method-sqlservercallablestatement.md)|Задает назначенному параметру указанное значение **int**.|  
+|[setLong](../../../connect/jdbc/reference/setlong-method-sqlservercallablestatement.md)|Задает назначенному параметру указанное значение **long**.|  
+|[setMaxFieldSize](../../../connect/jdbc/reference/setmaxfieldsize-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Устанавливает заданное количество байтов в качестве ограничения на максимальное число байтов для столбца [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), в котором хранятся символьные или двоичные значения.|  
+|[setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Устанавливает равное заданному числу ограничение для максимального количества строк, которое может содержаться в объекте [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
+|[setNCharacterStream](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)|Задает указанному параметру заданный объект Reader.|  
 |[setNClob](../../../connect/jdbc/reference/setnclob-method-sqlservercallablestatement.md)|Присваивает указанному параметру значение заданного объекта.|  
-|[setNString](../../../connect/jdbc/reference/setnstring-method-sqlservercallablestatement.md)|Присваивает указанному параметру для указанного объекта String.|  
+|[setNString](../../../connect/jdbc/reference/setnstring-method-sqlservercallablestatement.md)|Задает назначенному параметру значение указанного объекта String.|  
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)|Устанавливает значение NULL для параметра, определяемого по заданному типу.|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)|Устанавливает значение указанного параметра с помощью заданного объекта.|  
 |[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Запрашивает поддержку пулов или запрет пулов в инструкции. По умолчанию объект SQLServerCallableStatement поддерживают.|  
-|[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Задает количество секунд, в которых драйвер будет ожидать выполнения указанного количества секунд объекта CallableStatement.|  
-|[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Присваивает указанному параметру указанный объект Ref.|  
-|[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Задает режим буферизации для этого ответов [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) объекта без учета регистра **полная строка** или **адаптивной**.|  
-|[setShort](../../../connect/jdbc/reference/setshort-method-sqlservercallablestatement.md)|Присваивает указанному параметру указанное **короткие** значение.|  
-|[setString](../../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md)|Присваивает указанному параметру указанный Java **строка** значение.|  
-|[setSQLXML](../../../connect/jdbc/reference/setsqlxml-method-sqlservercallablestatement.md)|Присваивает указанному параметру указанное **SQLXML** объекта.|  
+|[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Задает указанное количество секунд, в течение которых драйвер будет ожидать выполнения объекта CallableStatement.|  
+|[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Задает назначенному параметру значение указанного объекта Ref.|  
+|[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Задает режиму буферизации ответов для этого объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) значение **String full** или **adaptive** без учета регистра.|  
+|[setShort](../../../connect/jdbc/reference/setshort-method-sqlservercallablestatement.md)|Задает указанному параметру заданное значение **short**.|  
+|[setString](../../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md)|Задает назначенному параметру заданное значение Java **String**.|  
+|[setSQLXML](../../../connect/jdbc/reference/setsqlxml-method-sqlservercallablestatement.md)|Задает указанному параметру значение заданного объекта **SQLXML**.|  
 |[setTime](../../../connect/jdbc/reference/settime-method-sqlservercallablestatement.md)|Устанавливает для указанного параметра указанное значение времени.|  
 |[setTimestamp](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)|Присваивает указанному параметру заданное значение отметки времени.|  
 |[setUnicodeStream](../../../connect/jdbc/reference/setunicodestream-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Присваивает указанный номер параметра заданному входному потоку, который будет содержать указанное число байтов.|  
 |[setURL](../../../connect/jdbc/reference/seturl-method-sqlservercallablestatement.md)|Устанавливает для указанного параметра указанное значение URL-адреса.|  
-|[Извлечение из оболочки](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)|Возвращает объект, реализующий указанный интерфейс для доступа к [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-определенных методов.|  
+|[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)|Возвращает объект, реализующий указанный интерфейс для доступа к методам, относящимся к драйверу [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].|  
 |[wasNull](../../../connect/jdbc/reference/wasnull-method-sqlservercallablestatement.md)|Получает значение, определяющее, имел ли последний считанный параметр OUT значение SQL NULL.|  
   
 ## <a name="inherited-methods"></a>Наследуемые методы  
@@ -154,7 +151,7 @@ ms.locfileid: "32852989"
 |java.sql.Statement|addBatch, cancel, clearBatch, clearWarnings, close, execute, executeBatch, executeQuery, executeUpdate, getConnection, getFetchDirection, getFetchSize, getGeneratedKeys, getMaxFieldSize, getMaxRows, getMoreResults, getQueryTimeout, getResultSet, getResultSetConcurrency, getResultSetHoldability, getResultSetType, getUpdateCount, getWarnings, setCursorName, setEscapeProcessing, setFetchDirection, setFetchSize, setMaxFieldSize, setMaxRows, setQueryTimeout|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
