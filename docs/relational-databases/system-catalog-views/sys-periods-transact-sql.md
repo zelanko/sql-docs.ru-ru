@@ -13,12 +13,12 @@ ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58ee2ac11e86481c57da79d84bc75507c273b829
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e018e33ffa76fb162fd2020ba8ff043f295aa16
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702526"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461930"
 ---
 # <a name="sysperiods-transact-sql"></a>sys.Periods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "47702526"
   
 |Заголовок столбца|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
-|period_type|**sysname**|Название периода|  
-|period_type_desc|**tinyint**|Числовое значение, представляющее тип периода:<br /><br /> 1 = период системного времени|  
-|object_id|**nvarchar(60)**|Текстовое описание типа столбца:<br /><br /> SYSTEM_TIME_PERIOD|  
+|name|**sysname**|Название периода|  
+|period_type|**tinyint**|Числовое значение, представляющее тип периода:<br /><br /> 1 = период системного времени|  
+|period_type_desc|**nvarchar(60)**|Текстовое описание типа столбца:<br /><br /> SYSTEM_TIME_PERIOD|  
 |object_id|**int**|Идентификатор таблицы, содержащей столбец period_type|  
 |start_column_id|**int**|Идентификатор столбца, который определяет нижнюю границу периода|  
 |end_column_id|**int**|Идентификатор столбца, который определяет верхнюю границу периода|  

@@ -1,21 +1,21 @@
 ---
-title: Занятие 3 изучение и визуализация данных с помощью R и T-SQL (машинного обучения SQL Server) | Документация Майкрософт
+title: Урок 1 изучение и визуализация данных с помощью R и T-SQL (машинного обучения SQL Server) | Документация Майкрософт
 description: Учебник, в котором показано, как внедрить R в SQL Server хранимых процедур и функций T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: e3e32fef767193f8cf9a33553163f301da3cfa4d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798592"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461990"
 ---
-# <a name="lesson-3-explore-and-visualize-the-data"></a>Занятие 3: Анализ и визуализация данных
+# <a name="lesson-1-explore-and-visualize-the-data"></a>Занятие 1: Анализ и визуализация данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Эта статья входит руководства для разработчиков SQL по использованию R в SQL Server.
@@ -279,8 +279,8 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>Следующее занятие
 
-[Занятие 3: Создание функций данных с помощью T-SQL](sqldev-create-data-features-using-t-sql.md)
+[Занятие 2: Создание функций данных с помощью T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
-[Занятие 1: Настройка демонстрационных данных о такси Нью-ЙОРКА](sqldev-download-the-sample-data.md)
+[Настроить демонстрационные данные о такси Нью-ЙОРКА](demo-data-nyctaxi-in-sql.md)

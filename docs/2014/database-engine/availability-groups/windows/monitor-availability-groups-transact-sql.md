@@ -17,12 +17,12 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b85c611b01727c21059d43d04cb65134c7f2fc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190184"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460981"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Отслеживание групп доступности (Transact-SQL)
   Для мониторинга групп доступности и реплик доступности, а также связанных баз данных с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)]в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] предусмотрен набор представлений каталога, динамических административных представлений и свойств сервера. С помощью инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT можно использовать представления для отслеживания групп доступности, их реплик и баз данных. Сведения, возвращаемые по данной группе доступности, зависят от наличия подключения к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена первичная или вторичная реплика.  
@@ -80,7 +80,7 @@ ms.locfileid: "48190184"
 > [!NOTE]  
 >  См. также описание команд **sys.dm_hadr_availability_replica_cluster_nodes** и **sys.dm_hadr_availability_replica_cluster_states** в разделе [Мониторинг реплик доступности](#AvReplicas) и описание команд **sys.availability_databases_cluster** и **sys.dm_hadr_database_replica_cluster_states** в разделе [Мониторинг баз данных доступности](#AvDbs) далее в этой статье.  
   
- Для сведения о кластерах WSFC и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], см. в разделе [отказоустойчивой кластеризации Windows Server &#40;WSFC&#41; с SQL Server] ((.. /.. /.. / sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) и [отказоустойчивая кластеризация и группы доступности AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md).  
+ Для сведения о кластерах WSFC и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], см. в разделе [отказоустойчивой кластеризации Windows Server &#40;WSFC&#41; с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) и [отказоустойчивая кластеризация и группы доступности AlwaysOn &#40;SQL Сервер&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="AvGroups"></a> Мониторинг групп доступности  
  Для мониторинга групп доступности, для которых на экземпляре сервера размещена реплика доступности, используются следующие представления.  

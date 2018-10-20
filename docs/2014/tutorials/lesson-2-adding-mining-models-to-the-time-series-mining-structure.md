@@ -11,18 +11,18 @@ ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8efde3304c2aa0ff51936754e6cba255d3dce4de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b58723b20802619baf9489f6dd0c6302805301b
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158434"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461950"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Урок 2. Добавление моделей интеллектуального анализа данных в структуру интеллектуального анализа временных рядов
   На этом занятии вы добавите новую модель интеллектуального анализа данных к структуре интеллектуального анализа данных, которую вы только что создали в [занятии 1: Создание модели интеллектуального анализа данных временных рядов и структуры интеллектуального анализа данных](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>Инструкция ALTER MINING STRUCTURE  
- Используется для добавления новой модели интеллектуального анализа данных к существующей структуре интеллектуального анализа данных, [ALTER MINING STRUCTURE &#40;расширений интеллектуального анализа данных&#41;] (инструкция (~/dmx/alter-mining-structure-dmx.md). Код инструкции можно разбить на следующие части:  
+ Используется для добавления новой модели интеллектуального анализа данных к существующей структуре интеллектуального анализа данных, [ALTER MINING STRUCTURE &#40;расширений интеллектуального анализа данных&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) инструкции. Код инструкции можно разбить на следующие части:  
   
 -   Определение структуры интеллектуального анализа данных  
   
@@ -222,7 +222,7 @@ WITH DRILLTHROUGH
  [Урок 3. Обработка структуры и моделей временных рядов](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм временных рядов](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Алгоритм временных рядов (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Технический справочник по алгоритму временных рядов (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

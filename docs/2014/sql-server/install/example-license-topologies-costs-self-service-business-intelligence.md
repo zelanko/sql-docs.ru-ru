@@ -11,15 +11,15 @@ ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 56e290ef8bf680f44ee11ec2e8d918b7b1d22c76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e08f483f1f56dcab49391190fd1c6edc11f6db
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091404"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462060"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>Примеры топологий и стоимости лицензирования для самостоятельной бизнес-аналитики SQL Server 2014
-  В этом разделе описаны рекомендации по выбору [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence edition или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. В данный раздел включено несколько примеров локальных топологий самостоятельной бизнес-аналитики (BI) Майкрософт. Примеры содержат выпуски и лицензии, которые можно использовать для оптимизации баланса между производительностью и ценой. Топологии, количество серверов и стоимость лицензирования приведены **только в качестве примеров**. В Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и Microsoft SharePoint 2013 внесены несколько изменений лицензирования, которые предоставляют дополнительные возможности для лицензирования серверов, пользователей и устройств. Лицензии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживают те же сценарии использования, связанные с бизнес-аналитикой.  
+  В этом подразделе описаны рекомендации по выбору выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition. В данный раздел включено несколько примеров локальных топологий самостоятельной бизнес-аналитики (BI) Майкрософт. Примеры содержат выпуски и лицензии, которые можно использовать для оптимизации баланса между производительностью и ценой. Топологии, количество серверов и стоимость лицензирования приведены **только в качестве примеров**. В Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и Microsoft SharePoint 2013 внесены несколько изменений лицензирования, которые предоставляют дополнительные возможности для лицензирования серверов, пользователей и устройств. Лицензии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживают те же сценарии использования, связанные с бизнес-аналитикой.  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] доступен в выпуске Business Intelligence и предлагает лицензирование «на ядро» для некоторых выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48091404"
   
 -   интерактивные книги PowerPivot в браузере;  
   
--   Интерактивные [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] отчетов в SharePoint.  
+-   Интерактивные отчеты [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] в SharePoint.  
   
 -   Коллекция [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], обновление данных по расписанию, панель управления.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48091404"
 |Business Intelligence|**(Да)** $8592 + $199 на CAL|Неприменимо|  
 |Standard|**(Да)**|**(Да)**|  
   
- Дополнительные сведения об образце [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] цен лицензий, см. в разделе:  
+ Дополнительные сведения о примерах цен лицензий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе:  
   
 -   [Лицензирование для виртуальных сред](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx) (http://www.microsoft.com/licensing/about-licensing/virtualization.aspx).  
   
@@ -124,9 +124,9 @@ ms.locfileid: "48091404"
   
  В примерах развертывания используются среды интрасети, поэтому необходимы клиентские лицензии SharePoint.  
   
--   [Полный список лицензий SharePoint](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise).  
+-   [Полный список лицензий SharePoint](http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise).  
   
--   [Инструкции по покупке SharePoint](http://sharepoint.microsoft.com/en-in/Pages/buy.aspx) (http://sharepoint.microsoft.com/en-in/Pages/buy.aspx).  
+-   [Инструкции по покупке SharePoint](http://sharepoint.microsoft.com/Pages/buy.aspx) (http://sharepoint.microsoft.com/Pages/buy.aspx).  
   
 ##  <a name="bkmk_3tier_powerpivot"></a> Трехуровневая топология с отдельными [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] серверов  
  В этом примере показано, что при наличии 800 или меньшего числа пользователей наиболее экономичный вариант — использовать выпуск SQL Server BI для серверов приложений SharePoint и [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для серверов SharePoint. Однако, если число пользователей равно 800 или больше, выпуск SQL Server Enterprise Edition будет более экономичным. Лицензирование «на ядро» не зависит от числа пользователей, поэтому существует пороговое значение стоимости при сравнении лицензий «на ядро» и клиентских лицензий и увеличении числа пользователей. После превышения порогового значения Enterprise Edition становится наиболее экономичным решением. Чтобы определить пороговое значение, сравните затраты на основе количества лицензируемых ядер и число клиентских лицензий для конечных пользователей и устройств.  
@@ -139,7 +139,7 @@ ms.locfileid: "48091404"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint выполняется на отдельных серверах (3). [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013 работает за пределами фермы SharePoint и может устанавливаться на серверах, которые не включают установку SharePoint, повышая производительность.  
   
--   Роль базы данных (4) использует SQL Server Enterprise, поэтому группы доступности AlwaysOn, компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], доступны.  
+-   Роль базы данных (4) использует SQL Server Enterprise, поэтому группы доступности AlwaysOn, компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , доступны.  
   
  ![bi_license_3tiers_and_ASseparate](../../../2014/sql-server/install/media/bi-license-3tiers-and-asseparate.gif "bi_license_3tiers_and_ASseparate")  
   
@@ -158,7 +158,7 @@ ms.locfileid: "48091404"
   
 -   Службы Analysis Services в режиме PowerPivot (2) работают за пределами фермы, но PowerPivot работает **на тех же физических** серверах в другой роли приложения.  
   
--   Роль базы данных (3) использует SQL Server Enterprise, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функция групп доступности AlwaysOn доступна.  
+-   Роль базы данных (3) использует SQL Server Enterprise, поэтому группы доступности AlwaysOn, компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , доступны.  
   
  ![bi_license_3tiers](../../../2014/sql-server/install/media/bi-license-3tiers.gif "bi_license_3tiers")  
   

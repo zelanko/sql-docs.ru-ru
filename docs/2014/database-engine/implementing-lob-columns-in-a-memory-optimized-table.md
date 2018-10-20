@@ -10,15 +10,15 @@ ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 511e74f40931a22ac56bb27bde0c3fd87eec942b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2adbcc07134b80e78dbc73691e275d56b6f90c6
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166369"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356575"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Реализация LOB Columns в таблице, оптимизированной для памяти
-  Оптимизированные для памяти таблицы не содержат внестрочное или LOB-хранилище, максимальный размер строки равен 8060 байтам. Хранить большие двоичные значения (LOB) и символьные строки можно двумя способами.  
+  Оптимизированные для памяти таблицы не имеют хранилище вне строки или больших объектов (LOB) (это ограничение было снято в SQL Server 2016 и более поздних версий — см. в разделе [поддерживаемые типы данных для выполняющейся в памяти OLTP](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), а максимальный размер строки составляет 8060 байт. Хранить большие двоичные значения (LOB) и символьные строки можно двумя способами.  
   
 -   Разбить LOB-значения на несколько строк.  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 09bac30e30a6549dd572b8594e5efeec6473ef2a
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450366"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460638"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Настраивать PolyBase для доступа к внешним данным в хранилище BLOB-объектов Azure
 
@@ -32,7 +32,7 @@ ms.locfileid: "47450366"
 
 Во-первых настройте APS использование хранилища BLOB-объектов Azure.
 
-1. Запустите [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) с 'hadoop connectivity' присвоено с поставщиком хранилища больших двоичных объектов Azure. Чтобы найти значение для поставщиков, см. в разделе [конфигурация PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Запустите [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) с 'hadoop connectivity' присвоено с поставщиком хранилища больших двоичных объектов Azure. Значение для поставщика см. в статье [Конфигурация подключения к PolyBase (Transact-SQL)](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
@@ -49,9 +49,9 @@ ms.locfileid: "47450366"
   
 ## <a name="configure-an-external-table"></a>Настройка внешней таблицы
 
-Чтобы запросить данные в хранилище больших двоичных объектов Azure, необходимо определить внешнюю таблицу для использования в запросах Transact-SQL. Следующие шаги описывают способы настройки внешней таблицы.
+Чтобы запросить данные в хранилище больших двоичных объектов Azure, необходимо определить внешнюю таблицу для использования в запросах Transact-SQL. Далее указаны шаги по настройке внешней таблицы.
 
-1. Создайте главный ключ базы данных. Он необходим для шифрования секрета учетных данных.
+1. Создайте главный ключ в базе данных. Он необходим для шифрования секрета учетных данных.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -66,7 +66,7 @@ ms.locfileid: "47450366"
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Создание внешнего источника данных с помощью [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)...
+1. Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -78,7 +78,7 @@ ms.locfileid: "47450366"
    );  
    ```
 
-1. Создание формата внешнего файла с [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
+1. Создайте формат внешнего файла с помощью инструкции [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
 
    ```sql
    -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -89,7 +89,7 @@ ms.locfileid: "47450366"
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. Создайте внешнюю таблицу, указывающую на данные, хранящиеся в службе хранилища Azure с [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). В этом примере внешние данные содержат данные датчиков автомобиля.
+1. Создайте внешнюю таблицу, указывающую на данные, хранящиеся в службе хранилища Azure, с помощью инструкции [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). В этом примере внешние данные содержат данные датчиков автомобиля.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -106,7 +106,7 @@ ms.locfileid: "47450366"
    );  
    ```
 
-1. Создание статистики для внешней таблицы.
+1. Создайте статистику внешней таблицы.
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -117,10 +117,10 @@ ms.locfileid: "47450366"
 Есть три функции, которые выполняет PolyBase:  
   
 - Нерегламентированные запросы к внешним таблицам.  
-- Импорт данных.  
-- Экспорт данных.  
+- импорт данных;  
+- экспорт данных.  
 
-Следующие запросы приводится пример с вымышленной автомобиль датчиков.
+Следующие запросы предоставляют пример с вымышленными данными датчика автомобиля.
 
 ### <a name="ad-hoc-queries"></a>Нерегламентированные запросы  
 
@@ -179,7 +179,5 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Изучите Дополнительные способы использования и наблюдении за PolyBase в следующих статьях:
-
-[Сопоставление типов с помощью PolyBase](../relational-databases/polybase/polybase-type-mapping.md).  
+Дополнительные сведения о PolyBase см. в разделе [что такое PolyBase?](../relational-databases/polybase/polybase-guide.md). 
 

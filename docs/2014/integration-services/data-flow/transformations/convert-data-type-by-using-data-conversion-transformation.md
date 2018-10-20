@@ -15,12 +15,12 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa23f7b520fd224323122f7f3674bbafd25eb53c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f120b4c582be95662a889ab1ee003faae37cdafb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069164"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460637"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>Преобразование данных в другой тип данных с помощью преобразования «Конвертация данных»
   Чтобы добавить и настроить преобразование «Конвертация данных», пакет должен обладать как минимум одной задачей потока данных и одним источником.  
@@ -55,10 +55,10 @@ ms.locfileid: "48069164"
 12. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
 ## <a name="see-also"></a>См. также  
- [Преобразование «Конвертация данных»](data-conversion-transformation.md)   
+ [Data Conversion Transformation](data-conversion-transformation.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)   
  [Пути служб Integration Services](../integration-services-paths.md)   
  [Типы данных служб Integration Services](../integration-services-data-types.md)   
- [Задача потока данных] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Задача потока данных](../../control-flow/data-flow-task.md)  
   
   

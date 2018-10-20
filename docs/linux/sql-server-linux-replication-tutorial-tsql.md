@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3569b1026ab8eded80164610ab8581209de7e9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13359f151ef1453a7bc8b2020dc4cd8db9a13b80
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669312"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390836"
 ---
 # <a name="configure-replication-with-t-sql"></a>Настройка репликации с помощью T-SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-В этом руководстве вы настроите репликации моментальных снимков SQL Server в Linux с использованием 2 экземпляра SQL Server с помощью Transact-SQL. Издатель и распространитель будет являться одним экземпляром, и подписчик будет находиться на отдельном экземпляре.
+В этом руководстве вы настроите репликации моментальных снимков SQL Server в Linux с двумя экземплярами SQL Server с помощью Transact-SQL. Издатель и распространитель будет являться одним экземпляром, и подписчик будет находиться на отдельном экземпляре.
 
 > [!div class="checklist"]
 > * Включение агентов репликации SQL Server в Linux
@@ -38,7 +38,7 @@ ms.locfileid: "47669312"
 ## <a name="prerequisites"></a>предварительные требования  
 Для работы с этим руководством вам потребуется:
 
-- два экземпляра SQL Server с помощью последней версии SQL Server в Linux
+- Два экземпляра SQL Server с помощью последней версии SQL Server в Linux
 - Это средство, чтобы отправлять T-SQL-запросы для настройки репликации, например SQLCMD или SSMS
 
   См. в разделе [управления SQL Server в Linux с помощью среды SSMS](./sql-server-linux-manage-ssms.md).
@@ -50,15 +50,6 @@ ms.locfileid: "47669312"
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
-  ```
-
-1. Настройка экземпляра SQL Server для репликации выполните следующую хранимую процедуру в базе данных msdb для каждого экземпляра CTP1.5, участвующих в репликации SQL Server.
-
-  ```sql
-  USE msdb
-  GO
-  exec sys.sp_MSrepl_createdatatypemappings;
-  GO
   ```
 
 1. Создание образца базы данных и таблицы на издатель Создание образца базы данных и таблицу, которая будет выступать в качестве статьи для публикации.
@@ -282,7 +273,7 @@ ms.locfileid: "47669312"
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-В этом руководстве вы настроили репликации моментальных снимков SQL Server в Linux с использованием 2 экземпляра SQL Server с помощью Transact-SQL.
+В этом руководстве вы настроили репликации моментальных снимков SQL Server в Linux с двумя экземплярами SQL Server с помощью Transact-SQL.
 
 > [!div class="checklist"]
 > * Включение агентов репликации SQL Server в Linux

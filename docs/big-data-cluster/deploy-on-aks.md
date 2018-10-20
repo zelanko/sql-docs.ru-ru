@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: ee1faae6d43cbf2cc6c8a23086600241ad15e061
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877937"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460899"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Настройка службы Azure Kubernetes для SQL Server 2019 CTP 2.0
 
@@ -22,6 +22,9 @@ ms.locfileid: "48877937"
 
 В этой статье описаны шаги по развертыванию Kubernetes в AKS с помощью Azure CLI. Если у вас нет подписки Azure, создайте бесплатную учетную запись перед началом работы.
 
+> [!TIP] 
+> Пример скрипта python, выполняющий развертывание больших данных кластера AKS и SQL Server, см. в разделе [развертывание SQL Server, большие данные кластера в службе Azure Kubernetes (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+
 ## <a name="prerequisites"></a>предварительные требования
 
 - Для среды AKS минимальное требование виртуальной Машины — по крайней мере два агента виртуальных машин (в дополнение к главному узлу) минимального размера [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Минимальные ресурсы, необходимые каждой виртуальной Машины: 4 ЦП и 14 ГБ памяти.
@@ -29,7 +32,7 @@ ms.locfileid: "48877937"
    > [!NOTE]
    > Если вы планируете запускать задания с большими данными или нескольких приложений Spark, минимальный размер — [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), и минимальные ресурсы, необходимые каждой виртуальной Машины — 8 процессоров и 32 ГБ памяти.
 
-- В этом разделе необходимо иметь Azure CLI версии 2.0.4 или более поздней версии. Если требуется выполнить установку или обновление, см. в разделе [Установка Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Запустите `az --version` чтобы узнать версию, при необходимости.
+- В этом разделе необходимо иметь Azure CLI версии 2.0.4 или более поздней версии. Если требуется выполнить установку или обновление, см. в разделе [Установка Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Запустите `az --version` чтобы узнать версию, при необходимости.
 
 - Установка [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Кластера больших данных в SQL Server требуется любой дополнительный номер версии в рамках диапазона 1,10 версий, для Kubernetes, но для сервера и клиента. Чтобы установить определенную версию на клиент kubectl, см. в разделе [установки kubectl двоичных с помощью curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Для AKS необходимо использовать `--kubernetes-version` параметр для указания версии отличается от по умолчанию. Обратите внимание на то, что в выпуском CTP2.0 AKS поддерживает только 1.10.7 и 1.10.8 версии. 
 
@@ -91,7 +94,7 @@ ms.locfileid: "48877937"
 
 ## <a name="connect-to-the-cluster"></a>Подключитесь к кластеру
 
-1. Чтобы настроить kubectl для подключения к кластеру Kubernetes, выполните [az aks get-credentials](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) команды. Этот шаг скачиваются учетные данные и настройка интерфейса командной строки, чтобы их использовать kubectl.
+1. Чтобы настроить kubectl для подключения к кластеру Kubernetes, выполните [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) команды. Этот шаг скачиваются учетные данные и настройка интерфейса командной строки, чтобы их использовать kubectl.
 
    ```bash
    az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster

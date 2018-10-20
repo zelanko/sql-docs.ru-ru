@@ -15,12 +15,12 @@ ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 64c8fc3b51cbf6c96b25218a3ea53be4eac12f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122404"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460699"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Критические изменения в полнотекстовом поиске
   В этом разделе описываются критические изменения полнотекстового поиска. Эти изменения могут нарушать работу приложений, скриптов или механизмов, основанных на более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При обновлении могут возникнуть следующие проблемы. Дополнительные сведения см. в разделе [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -59,6 +59,6 @@ ms.locfileid: "48122404"
   
 ## <a name="see-also"></a>См. также  
  [Изменения в поведении полнотекстового поиска](../relational-databases/search/full-text-search.md)   
- [Full-Text Search] ((.. / relational-databases/search/full-text-search.md)  
+ [Полнотекстовый поиск](../relational-databases/search/full-text-search.md)  
   
   

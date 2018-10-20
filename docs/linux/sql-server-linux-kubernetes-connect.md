@@ -10,33 +10,32 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6092f15fe64c96ed004d352408ae6cdac034def9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fcad17522f4372e696a26a99d4ce1a4af92ea15
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852162"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356105"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>Подключение к SQL Server Always On Availability Group в Kubernetes
 
-Чтобы подключиться к экземплярам SQL Server в контейнеры в кластере Kubernetes, создайте [служба балансировки нагрузки](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). Подсистема балансировки нагрузки переадресовывает запросы для IP-адреса к pod, на котором запущен экземпляр SQL Server.
+Чтобы подключиться к экземплярам SQL Server в контейнеры в кластере Kubernetes, создайте [служба балансировки нагрузки](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). Подсистема балансировки нагрузки — это конечная точка. Он содержит IP-адресом и перенаправляет запросы для IP-адреса к pod, на котором запущен экземпляр SQL Server.
 
-Чтобы подключиться к реплике группы доступности, создайте службу для типов другую реплику. Вы можете ознакомиться с примерами служб для различных типов реплик в [sql-server-samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml).
+Чтобы подключиться к реплике группы доступности, создайте службу для типов другую реплику. Вы можете ознакомиться с примерами служб для различных типов реплик в [sql-server примеры/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 
 * `ag1-primary` Указывает на первичной реплике.
-* `ag1-secondary-sync` Указывает синхронная вторичная реплика.
-* `ag1-secondary-async` Указывает асинхронной вторичной реплики.
+* `ag1-secondary` Указывает на любой из вторичных реплик.
 
-Если существует более одного вторичной реплики того же типа, Kubernetes направляет подключение к разные реплики в циклического перебора.
+Если более чем одного вторичной реплики, Kubernetes направляет подключение к разные реплики в циклического перебора.
 
 ## <a name="create-a-load-balancer-service"></a>Создание службы балансировки нагрузки
 
-Чтобы создать службу балансировки нагрузки для первичной реплики, скопируйте `ag1-primary.yaml` из [sql-server-samples]()и обновить его для своей группы доступности.
+Чтобы создать службы подсистемы балансировки нагрузки для основного корпуса и реплик, скопируйте [ `ag1-services.yaml` ](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml) из [sql-server-samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-file) и обновить его для своей группы доступности.
 
-Следующая команда применяет yaml-файл в кластере:
+Следующая команда применяет конфигурацию из `.yaml` файла к кластеру:
 
 ```kubectl
-kubectl apply -f ag1-primary.yaml
+kubectl apply -f ag1-services.yaml --namespace ag1
 ```
 
 ## <a name="get-the-ip-address-for-your-load-balancer-service"></a>Получить IP-адрес для службы балансировки нагрузки

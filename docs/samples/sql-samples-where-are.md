@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3167bff4f976cbf23c955eea40f63c4a51bc1b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d071a1d56808f7c634070e19707daf125d589396
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802598"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390866"
 ---
 # <a name="sql-samples"></a>Образцы SQL
 
@@ -51,3 +51,13 @@ WideWorldImporters (WWI) является образец базы данных, 
 - [Загружает AdventureWorks для SQL Server 2014 и более поздних версиях](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Включает в себя BAK-файлы для выпусков 2012.
 - [Загружаемые файлы AdventureWorks для SQL Server 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012).
 - [Загружаемые файлы AdventureWorks для SQL Server 2008 R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2).
+
+## <a name="azure-samples-and-templates"></a>Примеры для Azure и шаблоны
+Существует ряд примеров кода Microsoft Azure и примеры доступны на сайте Github в .NET, Java, Python, Node.js, PHP и Ruby. Кроме того Azure Resource Manager позволяет предоставлять ваши приложения, используя декларативный шаблон. В одном шаблоне можно развернуть несколько служб, а также их зависимости. Используйте тот же шаблон для развертывания приложения на каждом этапе жизненного цикла приложения.
+
+- [Примеры Azure](https://github.com/Azure-Samples)
+- [Шаблоны быстрого запуска Azure](https://azure.microsoft.com/resources/templates/)
+
+
+
+

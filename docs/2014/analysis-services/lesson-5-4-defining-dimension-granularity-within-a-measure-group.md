@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 59a10da991e4a6e029d3a108a8bf7aaa744a4972
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083884"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460929"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Определение степени гранулярности измерения в группе мер
   Для разных целей пользователям может понадобиться измерять данные фактов с разной степенью гранулярности или точности. Например, сведения о продажах через посредников или о продажах через Интернет могут записываться каждый день, в то время как данные о квотах продаж могут существовать только для уровня месяца или квартала. В таких случаях пользователям требуется, чтобы измерение времени обладало разной степенью гранулярности для каждой из этих разных таблиц фактов. Определить новое измерение базы данных как измерение времени с другой степенью гранулярности проще всего с помощью служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -221,11 +221,11 @@ ms.locfileid: "48083884"
      ![Группе Sales Quota правильно распределена элементам](../../2014/tutorials/media/l5-granularity-7.gif "группа мер Sales quota правильно распределена по измерениям")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 6: определение вычислений] ((занятие-6-определение calculations.md)  
+ [Занятие 6. Определение вычислений](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>См. также  
  [Связи измерений](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Определение обычной связи и ее свойств](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [Работа с диаграммами в конструкторе представлений источников данных &#40;служб Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Работа с диаграммами в конструкторе представлений источника данных (службы Analysis Services)](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

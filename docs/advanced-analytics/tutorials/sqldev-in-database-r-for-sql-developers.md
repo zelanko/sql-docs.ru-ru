@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7adfda1c31bd1fc32dc4149a568cfdd2149ab0b3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 651e529bf0aa4cd4b4fab7e292e570dbb78e89d5
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724308"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461890"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>Учебник: Дополнительные аналитические функции в базе данных с помощью языка R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "44724308"
 
 Однако после создания решения его можно легко развернуть в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] в знакомой среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-- [Занятие 1: Настройка демонстрационных данных о такси Нью-ЙОРКА](../tutorials/sqldev-download-the-sample-data.md)
+- [Настройка базы данных о такси Нью-ЙОРКА](demo-data-nyctaxi-in-sql.md)
 
-- [Занятие 2., Анализ и визуализация данных фигуры и распространения посредством вызова функций R в хранимые процедуры](../tutorials/sqldev-explore-and-visualize-the-data.md)
+- [Занятие 1., Анализ и визуализация данных фигуры и распространения посредством вызова функций R в хранимые процедуры](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [Занятие 3: Создание функций данных с помощью R в T-SQL функции](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [Занятие 2: Создание функций данных с помощью R в T-SQL функции](sqldev-create-data-features-using-t-sql.md)
   
-- [Занятие 4: Обучение и сохранение модели R с помощью функций и хранимых процедур](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+- [Занятие 3: Обучение и сохранение модели R с помощью функций и хранимых процедур](sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [Занятие 5: Код Wrap R в хранимой процедуре для ввода в эксплуатацию](../tutorials/sqldev-operationalize-the-model.md). 
+- [Занятие 4: Код Wrap R в хранимой процедуре для ввода в эксплуатацию](../tutorials/sqldev-operationalize-the-model.md). 
   Сохранив модель в базе данных, вызовите ее для прогнозирования из [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью хранимых процедур.
 
 ## <a name="prerequisites"></a>предварительные требования
@@ -60,4 +60,4 @@ ms.locfileid: "44724308"
 ## <a name="next-steps"></a>Следующие шаги
 
 > [!div class="nextstepaction"]
-> [Занятие 1: Скачивание образца данных](../tutorials/sqldev-download-the-sample-data.md)
+> [Настройка базы данных о такси Нью-ЙОРКА](demo-data-nyctaxi-in-sql.md)

@@ -4,22 +4,36 @@ description: Заметки о выпуске Azure Data Studio
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94a271991314225a80850ee2156a37b6134e10a7
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072308"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411201"
 ---
 # <a name="azure-data-studio-release-notes"></a>Заметки о выпуске Azure Data Studio
 
-**[Скачайте сентября *общедоступной версии* (GA) выпуск!](download.md)**
+**[Скачайте Октябрьский выпуск!](download.md)**
+
+## <a name="october-2018-october-release"></a>Октября 2018 г. (Октябрьский выпуск)
+
+Дата выпуска: 18 октября 2018 г.  
+версия: 1.1.3
+
+- Представляем обозреватель ресурсов Azure для просмотра баз данных SQL Azure
+- Повысить устойчивость подключения обозревателя объектов и редактора запросов
+- Усовершенствования расширения агента SQL Server
+- Обновление до [расширение предварительной версии SQL Server 2019 г.](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+
+### <a name="bug-fixes"></a>Исправления ошибок
+
+Подробные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), и [выпуски](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="september-2018-september-ga-release"></a>Сентября 2018 г. (выпуск сентября общедоступной версии)
 

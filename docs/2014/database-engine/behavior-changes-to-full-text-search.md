@@ -14,24 +14,24 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ff65938770d14d5f1084b33421f89bf8744031ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198694"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461019"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Изменения в функциях полнотекстового поиска
   В этом разделе описаны изменения поведения полнотекстового поиска. Изменения в работе оказывают влияние на способ выполнения функций или взаимодействие между ними в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>Изменения в поведении полнотекстового поиска в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>Изменения в работе полнотекстового поиска в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Сведения будут доступны позже.  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Изменения в поведении полнотекстового поиска в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Изменения в работе полнотекстового поиска в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  В [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] устанавливается новая версия средств разбиения по словам и парадигматических модулей для языков «Английский (США)» (код 1033) и «Английский (Соединённое Королевство)» (код 2057). Однако можно переключиться на предыдущую версию этих компонентов, если требуется сохранить предыдущий режим работы. Дополнительные сведения см. в статье [Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Установлены новые средства разбиения по словам и парадигматические модули  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] обновляет все средства разбиения по словам и парадигматические модули, используемые Full-Text Search и семантический поиск. Для обеспечения согласованности между содержимым индексов и результатами запросов рекомендуется выполнить повторное заполнение существующих полнотекстовых индексов.  
+ В выпуске [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] обновлены все средства разбиения по словам и парадигматические модули, используемые при полнотекстовом и семантическом поиске. Для обеспечения согласованности между содержимым индексов и результатами запросов рекомендуется выполнить повторное заполнение существующих полнотекстовых индексов.  
   
 1.  Для английского языка добавлены новые средства разбиения по словам. Если необходимо сохранить поведение, существовавшее в предыдущем выпуске, см. раздел [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48198694"
      Полнотекстовый поиск индексирует содержимое блоков больших двоичных объектов (BLOB) FILESTREAM. Индексирование таких файлов, как изображения, может оказаться нецелесообразным. При обновлении блоков больших двоичных объектов (BLOB) FILESTREAM выполняется их повторное индексирование.  
   
 ## <a name="see-also"></a>См. также  
- [Full-Text Search] ((.. / relational-databases/search/full-text-search.md)   
+ [Компонент Full-text Search](../relational-databases/search/full-text-search.md)   
  [Обратная совместимость Full-Text Search](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [Обновление полнотекстового поиска](../relational-databases/search/upgrade-full-text-search.md)   
  [Начало работы с компонентом Full-Text Search](../relational-databases/search/get-started-with-full-text-search.md)  

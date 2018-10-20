@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 629d7fd887e96013b17a5686ce82eb966044f240
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796914"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460579"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Сохранение данных с кластером больших данных SQL Server в Kubernetes
 
@@ -23,6 +23,7 @@ ms.locfileid: "48796914"
 — Способ работы с большими данными кластера SQL Server использует эти постоянные тома с помощью [классы хранения](https://kubernetes.io/docs/concepts/storage/storage-classes/). Можно создать классы хранения для разных видов хранилища и указать их во время развертывания кластера больших данных. Вы можете настроить какой класс хранилища должен использоваться для какой цели (пул). Кластер SQL Server больших данных создает [утверждения постоянного тома](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) с именем класса указанное хранилище для каждого pod, требующий постоянные тома. Затем он подключает соответствующие постоянные тома в pod.
 
 > [!NOTE]
+
 > Для CTP-версии 2.0, только `ReadWriteOnce` поддерживается режим доступа для всего кластера.
 
 ## <a name="deployment-settings"></a>Параметры развертывания
@@ -36,11 +37,20 @@ ms.locfileid: "48796914"
 
 ## <a name="aks-storage-classes"></a>Классы хранения в AKS
 
-AKS поставляется с [два класса встроенного хранилища](https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv) **по умолчанию** и **хранилище класса premium** вместе с динамическое средство подготовки для их. Можно указать одним из них или создать свой собственный класс хранения для развертывания кластера больших данных с помощью включено постоянное хранилище.
+AKS поставляется с [два класса встроенного хранилища](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **по умолчанию** и **управляемых premium** вместе с динамическое средство подготовки для их. Можно указать одним из них или создать свой собственный класс хранения для развертывания кластера больших данных с помощью включено постоянное хранилище.
 
 ## <a name="minikube-storage-class"></a>Класс хранения Minikube
 
-Minikube поставляется с встроенного хранилища класс с именем **стандартный** вместе с динамической подготовки для него.
+Minikube поставляется с встроенного хранилища класс с именем **стандартный** вместе с динамической подготовки для него. Обратите внимание, что на Minikube, если USE_PERSISTENT_VOLUME = true (по умолчанию), необходимо также переопределить значение по умолчанию для переменной среды STORAGE_CLASS_NAME, так как значение по умолчанию отличается. Задайте значение `standard`: 
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Кроме того можно отключить использование постоянных томов на Minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
+
 
 ## <a name="kubeadm"></a>Kubeadm
 
@@ -61,7 +71,7 @@ export STORAGE_SIZE=10Gi
 
 ```bash
 export STORAGE_POOL_USE_PERSISTENT_VOLUME=true
-export STORAGE_POOL_STORAGE_CLASS_NAME=premium-storage
+export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 

@@ -16,12 +16,12 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07ac40b76f19fd8da7fcb4de6425365fe471471d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1809f90f170c0305713d4d054a48bd4a8b0b7048
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054321"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460299"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Получение значений столбцов с помощью преобразования «Производный столбец»
   Чтобы добавить и настроить преобразование «Производный столбец», пакет уже должен содержать по крайней мере одну задачу потока данных и один источник.  
@@ -60,11 +60,11 @@ ms.locfileid: "48054321"
 12. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
 ## <a name="see-also"></a>См. также  
- [Преобразование «Производный столбец»](derived-column-transformation.md)   
+ [Derived Column Transformation](derived-column-transformation.md)   
  [Типы данных служб Integration Services](../integration-services-data-types.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)   
  [Пути служб Integration Services](../integration-services-paths.md)   
- [Задача потока данных] ((.. /.. /Control-Flow/Data-Flow-Task.MD)   
+ [Задача потока данных](../../control-flow/data-flow-task.md)   
  [Выражения служб Integration Services (SSIS)](../../expressions/integration-services-ssis-expressions.md)  
   
   

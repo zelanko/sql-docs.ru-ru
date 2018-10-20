@@ -16,12 +16,12 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3e1f202305cf540043a4af51af5f0618c80916f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 855278c35de37f2b02e1bb7b194e174c66c643d2
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076024"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460669"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Основные сведения о модели объектов компонента скрипта
   Как описано в [кодирование и отладка компонента скрипта] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, проект компонента скрипта содержит три элемента проекта:  
@@ -137,7 +137,7 @@ public override void PreExecute()
   
 -   Переопределите метод **\<входной_буфер>_ProcessInputRow** для обработки данных в каждой входной строке по мере ее прохождения.  
   
--   Переопределите метод **\<входной_буфер>_ProcessInput**, только если необходимо выполнять дополнительные действия по мере перебора входных строк. (Например, если необходимо проверять условие `EndOfRowset`, чтобы предпринять какое-либо иное действие после обработки всех строк.) Вызовите метод **\<входной_буфер>_ProcessInputRow** для обработки строк.  
+-   Переопределите метод **\<входной_буфер>_ProcessInput**, только если необходимо выполнять дополнительные действия по мере перебора входных строк. (Например, если необходимо проверять условие `EndOfRowset`, чтобы предпринять какое-либо иное действие после обработки всех строк.) Вызовите метод \<** входной_буфер>_ProcessInputRow для обработки строк.  
   
 -   Переопределите метод `FinishOutputs`, если нужно выполнять действия с выходами перед их закрытием.  
   
@@ -203,10 +203,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка компонента скрипта в редакторе компонента скрипта] ((configuring-the-script-component-in-the-script-component-editor.md)   
+ [Настройка компонента скрипта в редакторе компонента скрипта](configuring-the-script-component-in-the-script-component-editor.md)   
  [Кодирование и отладка компонента скрипта] (.. /Extending-Packages-Scripting/Data-Flow-Script-Component/Coding-and-Debugging-the-Script-Component.md  
   
   

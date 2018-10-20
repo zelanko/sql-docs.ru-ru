@@ -19,12 +19,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 433354cb123e8240bac47dcbb2e7dce82c4a0d64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2b36eef7c358fde58316bafc06697c992f3918b
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116694"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461035"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Настройка компонента скрипта в редакторе компонента скрипта
   Прежде чем приступать к написанию пользовательского кода в компоненте скрипта, необходимо выбрать тип компонента потока данных, который должен быть создан (источник, преобразование или назначение), а затем настроить метаданные и свойства компонента в окне **Редактор преобразования "скрипт"**.  
@@ -105,7 +105,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  Логическое значение свойства `ValidateExternalMetadata` указывает, должна ли в компоненте выполняться проверка по отношению к внешним источникам данных во время разработки или эту проверку следует отложить до времени выполнения. По умолчанию это свойство имеет значение `True`; иными словами, внешние метаданные проверяются и во время разработки, и во время выполнения. Вы можете задать значение этого свойства равным `False` когда внешний источник данных доступен не во время разработки: например, когда пакет загружается источник или создается назначение только во время выполнения.  
   
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>Свойства ReadOnlyVariables и ReadWriteVariables  
- Можно вводить разделенные запятыми списки существующих переменных в качестве значений этих свойств, чтобы обеспечить доступ к переменным только для чтения или для чтения и записи в коде компонента скрипта. Доступ к переменным в коде осуществляется с помощью свойств <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> автоматически сформированного базового класса. Дополнительные сведения см. в разделе [использование переменных в Component]((using-variables-in-the-script-component.md) скрипта.  
+ Можно вводить разделенные запятыми списки существующих переменных в качестве значений этих свойств, чтобы обеспечить доступ к переменным только для чтения или для чтения и записи в коде компонента скрипта. Доступ к переменным в коде осуществляется с помощью свойств <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> автоматически сформированного базового класса. Дополнительные сведения см. в разделе [Использование переменных в компоненте скрипта](using-variables-in-the-script-component.md).  
   
 > [!NOTE]  
 >  В именах переменных учитывается регистр букв.  
@@ -114,7 +114,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  В качестве языка программирования для компонента «Скрипт» можно выбрать [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 #### <a name="edit-script-button"></a>Кнопка «Изменить скрипт»  
- После нажатия кнопки **Изменить скрипт** открывается интегрированная среда разработки средств [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для приложений (VSTA), в которой вы создаете пользовательский скрипт. Дополнительные сведения см. в разделе [кодирование и отладка Component]((coding-and-debugging-the-script-component.md) скрипта.  
+ После нажатия кнопки **Изменить скрипт** открывается интегрированная среда разработки средств [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для приложений (VSTA), в которой вы создаете пользовательский скрипт. Дополнительные сведения см. в разделе [Кодирование и отладка компонента скрипта](coding-and-debugging-the-script-component.md).  
   
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>Страница «Диспетчеры соединений» окна «Редактор преобразования "Скрипт"»  
  На странице **Диспетчеры соединений** окна **Редактор преобразования "скрипт"** можно добавлять и удалять диспетчеры соединений, предназначенные для применения в пользовательском скрипте. Обычно необходимость ссылаться на диспетчеры соединений возникает при создании компонента источника или назначения.  
@@ -126,11 +126,11 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
     Me.Connections.MyADONETConnection  
 ```  
   
- Дополнительные сведения см. в разделе [подключения к источникам данных в Component]((connecting-to-data-sources-in-the-script-component.md) скрипта.  
+ Дополнительные сведения см. в разделе [Соединение с источниками данных в компоненте скрипта](connecting-to-data-sources-in-the-script-component.md).  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
- [Кодирование и отладка компонента скрипта] ((coding-and-debugging-the-script-component.md)  
+ [Кодирование и отладка компонента скрипта](coding-and-debugging-the-script-component.md)  
   
   

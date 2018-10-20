@@ -1,5 +1,5 @@
 ---
-title: Настраивать PolyBase для доступа к внешним данным в Hadoop | Документация Майкрософт
+title: Настройка PolyBase для доступа к внешним данным в Hadoop | Документация Майкрософт
 description: В этой статье описывается настройка PolyBase в Parallel Data Warehouse для подключения к внешней Hadoop.
 author: mzaman1
 manager: craigg
@@ -9,31 +9,31 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d87ba02342948d140afb68c2d9d13a2aef9464eb
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: 89ce9402540c21a9f9eedbba4f488ea1c3350956
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450371"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460885"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Настраивать PolyBase для доступа к внешним данным в Hadoop
+# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Настройка PolyBase для доступа к внешним данным в Hadoop
 
 Объясняется, как использовать PolyBase на устройство APS для запроса внешних данных в Hadoop.
 
 ## <a name="prerequisites"></a>предварительные требования
 
-PolyBase поддерживает два поставщика Hadoop — Hortonworks Data Platform (HDP) и Cloudera Distributed Hadoop (CDH). Hadoop соблюдается шаблон «Основной.дополнительный.версия» в новых выпусках и поддерживаются все версии в рамках поддерживаемых основного и дополнительного выпусков. Поддерживаются следующие поставщики Hadoop:
+PolyBase поддерживает два поставщика Hadoop — Hortonworks Data Platform (HDP) и Cloudera Distributed Hadoop (CDH). В новых выпусках Hadoop соблюдается шаблон "Основной номер версии.дополнительный номер версии.версия". Также поддерживаются все версии в рамках поддерживаемых основного и дополнительного выпусков. Поддерживаются следующие поставщики Hadoop:
  - Hortonworks HDP 1.3 в ОС Linux или Windows Server;  
  - Hortonworks HDP 2.1–2.6 в Linux
  - Hortonworks HDP 2.1–2.3 в ОС Windows Server;  
  - Cloudera CDH 4.3 в Linux;  
  - Cloudera CDH 5.1–5.5, 5.9–5.13 в Linux;
 
-### <a name="configure-hadoop-connectivity"></a>Настроить подключение Hadoop
+### <a name="configure-hadoop-connectivity"></a>Настройка подключения к Hadoop
 
 Во-первых настройте APS для использования конкретного поставщика Hadoop.
 
-1. Запустите [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) с 'hadoop connectivity' и задайте соответствующее значение, для поставщика. Чтобы найти значение для поставщика, см. в разделе [конфигурация PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). 
+1. Запустите [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) с hadoop connectivity и задайте соответствующее значение для поставщика. Значение для поставщика см. в статье [Конфигурация подключения к PolyBase (Transact-SQL)](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). 
 
    ```sql  
    -- Values map to various external data sources.  
@@ -48,9 +48,9 @@ PolyBase поддерживает два поставщика Hadoop — Horton
 
 2. Перезапустите APS области, расположенные на странице состояния службы [устройства Configuration Manager](launch-the-configuration-manager.md).
   
-## <a id="pushdown"></a> Активируйте вычисление pushdown  
+## <a id="pushdown"></a> Активация вычислений pushdown  
 
-Чтобы повысить производительность запросов, активируйте вычисление pushdown для кластера Hadoop:  
+Чтобы улучшить производительность при выполнении запроса, активируйте вычисление pushdown для кластера Hadoop.  
   
 1. Откройте удаленный рабочий стол для узла управления PDW.
 
@@ -68,15 +68,15 @@ PolyBase поддерживает два поставщика Hadoop — Horton
 
 ## <a name="configure-an-external-table"></a>Настройка внешней таблицы
 
-Чтобы запросить данные в источнике данных Hadoop, необходимо определить внешнюю таблицу для использования в запросах Transact-SQL. Следующие шаги описывают способы настройки внешней таблицы.
+Чтобы запросить данные из источника данных Hadoop, необходимо определить внешнюю таблицу для использования в запросах Transact-SQL. Далее указаны шаги по настройке внешней таблицы.
 
-1. Создайте главный ключ базы данных. Он необходим для шифрования секрета учетных данных.
+1. Создайте главный ключ в базе данных. Он необходим для шифрования секрета учетных данных.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-2. Создайте учетные данные уровня базы данных для кластеров Hadoop с защитой Kerberos.
+2. Создайте учетные данные на уровне базы данных для кластеров Hadoop, защищенных с помощью Kerberos.
 
    ```sql
    -- IDENTITY: the Kerberos user name.  
@@ -85,7 +85,7 @@ PolyBase поддерживает два поставщика Hadoop — Horton
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. Создание внешнего источника данных с помощью [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
+3. Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -99,7 +99,7 @@ PolyBase поддерживает два поставщика Hadoop — Horton
    );  
    ```
 
-4. Создание формата внешнего файла с [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
+4. Создайте формат внешнего файла с помощью инструкции [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
 
    ```sql
    -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -109,7 +109,7 @@ PolyBase поддерживает два поставщика Hadoop — Horton
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-5. Создайте внешнюю таблицу, указывающую на данные, хранящиеся в Hadoop с помощью [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). В этом примере внешние данные содержат данные датчиков автомобиля.
+5. Создайте внешнюю таблицу, указывающую на данные, хранящиеся в Hadoop, с помощью инструкции [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). В этом примере внешние данные содержат данные датчиков автомобиля.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -126,7 +126,7 @@ PolyBase поддерживает два поставщика Hadoop — Horton
    );  
    ```
 
-6. Создание статистики для внешней таблицы.
+6. Создайте статистику внешней таблицы.
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -137,10 +137,10 @@ PolyBase поддерживает два поставщика Hadoop — Horton
 Есть три функции, которые выполняет PolyBase:  
   
 - Нерегламентированные запросы к внешним таблицам.  
-- Импорт данных.  
-- Экспорт данных.  
+- импорт данных;  
+- экспорт данных.  
 
-Следующие запросы приводится пример с вымышленной автомобиль датчиков.
+Следующие запросы предоставляют пример с вымышленными данными датчика автомобиля.
 
 ### <a name="ad-hoc-queries"></a>Нерегламентированные запросы  
 
@@ -200,7 +200,5 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Изучите Дополнительные способы настройки PolyBase в следующих статьях:
-
-[PolyBase конфигурации и безопасности для Hadoop ](../relational-databases/polybase/polybase-configuration.md).  
+Дополнительные сведения о PoliyBase, см. в разделе [что такое PolyBase?](../relational-databases/polybase/polybase-guide.md). 
  

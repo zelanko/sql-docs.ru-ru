@@ -7,16 +7,16 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 5781b3acfd2262b3a3be540abb331839dfcc56c6
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 839823f9336a09b0790ee41b74793e548742c1d5
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120461"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384109"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Краткое руководство по Развертыванию кластера больших данных SQL Server в службе Azure Kubernetes (AKS)
 
-В этом кратком руководстве кластер больших данных в SQL Server установит на AKS в конфигурации по умолчанию подходит для сред разработки и тестирования. Помимо экземпляров SQL Master кластер будет включать один вычислительный экземпляр пула, экземпляр пула данных и два экземпляра пула хранения. Данные будут сохранены с помощью постоянных томах Kubernetes, которые были подготовлены на основе классы хранения по умолчанию AKS. В [руководство по развертыванию](deployment-guidance.md) разделе вы найдете набор переменных среды, которые можно использовать для дальнейшей настройки конфигурации.
+Установка кластера больших данных в SQL Server в AKS в конфигурации по умолчанию подходит для сред разработки и тестирования. Помимо экземпляр SQL Master кластера включает один вычислительный экземпляр пула, один экземпляр пула данных и два экземпляра пула хранения. Данные сохраняются с помощью постоянных томах Kubernetes, использующих классы хранения по умолчанию AKS. Для дальнейшей настройки конфигурации, см. в разделе переменных среды в [руководство по развертыванию](deployment-guidance.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -24,11 +24,11 @@ ms.locfileid: "49120461"
 
 В этом кратком руководстве требует, что вы уже настроили кластер AKS с минимальной версии v1.10. Дополнительные сведения см. в разделе [развертывание в AKS](deploy-on-aks.md) руководства.
 
-На компьютере, вы используете для выполнения команд для установки кластера больших данных SQL Server, необходимо установить [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Большие данные кластера SQL Server требуется 1,10 ОС, Kubernetes, для сервера и клиента (kubectl). Чтобы установить kubectl, см. в разделе [установки kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
+На компьютере, вы используете для выполнения команд для установки кластера больших данных SQL Server, установите [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Большие данные кластера SQL Server требуется 1,10 ОС, Kubernetes, для сервера и клиента (kubectl). Чтобы установить kubectl, см. в разделе [установки kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
 
-Чтобы установить `mssqlctl` кластера инструмента интерфейса командной строки для управления больших данных SQL Server на клиентском компьютере, необходимо сначала установить [Python](https://www.python.org/downloads/) версии не ниже версии 3.0 и [pip3](https://pip.pypa.io/en/stable/installing/). Обратите внимание на то, что он уже установлен, если вы используете версию Python по крайней мере 3.4, загруженные из [python.org](https://www.python.org/).
+Чтобы установить `mssqlctl` кластера инструмента интерфейса командной строки для управления больших данных SQL Server на клиентском компьютере, необходимо сначала установить [Python](https://www.python.org/downloads/) версии не ниже версии 3.0 и [pip3](https://pip.pypa.io/en/stable/installing/). `pip` уже установлен, если вы используете версию Python по крайней мере 3.4, загруженные из [python.org](https://www.python.org/).
 
-Если отсутствует установку Python `requests` пакета, необходимо установить `requests` с помощью `python -m pip install requests`. Если у вас уже есть `requests` пакет обновить его до последней версии с помощью `python -m pip install requests --upgrade`.
+Если отсутствует установку Python `requests` пакета, необходимо установить `requests` с помощью `python -m pip install requests`. Если у вас уже есть `requests` пакета, обновите ее до последней версии с помощью `python -m pip install requests --upgrade`.
 
 ## <a name="verify-aks-configuration"></a>Проверка конфигурации AKS
 
@@ -40,7 +40,7 @@ kubectl config view
 
 ## <a name="install-mssqlctl-cli-management-tool"></a>Установка средства управления mssqlctl интерфейса командной строки
 
-Выполните следующую команду, чтобы установить `mssqlctl` средство на клиентском компьютере. Так же команда работает с клиента Linux и Windows, но убедитесь, что вы используете его из окна командной строки, который выполняется с помощью прав администратора на Windows или перед ними `sudo` в Linux:
+Выполните следующую команду, чтобы установить `mssqlctl` средство на клиентском компьютере. Команда выполняется из Windows и клиента Linux, но убедитесь, что вы используете его из окна командной строки, под управлением Windows с правами администратора или перед ними `sudo` в Linux:
 
 ```
 pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
@@ -52,16 +52,17 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 
 Прежде чем продолжить, обратите внимание, следующие важные моменты:
 
-- Убедитесь, что перенос паролей в двойные кавычки, если он содержит специальные символы. Обратите внимание, что двойные кавычки-разделители работают только в команды bash.
-- Пароль можно задать переменные среды на любое другое, но убедитесь, что они достаточно сложны и не используйте `!`, `&`, или `‘` символов.
+- В [командное окно](http://docs.microsoft.com/visualstudio/ide/reference/command-window), кавычки включаются в переменных среды. Если используются кавычки программы-оболочки для пароля, кавычки будут включены в пароль.
+- В bash кавычки не включаются в переменной. Наши примеры используйте двойные кавычки `"`.
+- Пароль можно задать переменные среды на любое другое, но убедитесь, что они достаточно сложны и не используйте `!`, `&`, или `'` символов.
 - Для выпуска CTP 2.0 не изменить порты по умолчанию.
-- **SA** учетная запись является администратором системы на экземпляре SQL Server Master, которая создается во время установки. После создания контейнера SQL Server, переменную среды MSSQL_SA_PASSWORD, которое вы указали будет обнаружить, выполнив вывод на экран MSSQL_SA_PASSWORD $ в контейнере. В целях безопасности смените пароль SA в соответствии с практическими рекомендациями, описанными [здесь](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+- `sa` Учетная запись является администратором системы на экземпляре SQL Server Master, которая создается во время установки. После создания контейнера SQL Server указанную вами переменную среды `MSSQL_SA_PASSWORD` можно обнаружить, запустив `echo $MSSQL_SA_PASSWORD` в контейнере. В целях безопасности измените вашей `sa` пароля в соответствии с практическими рекомендациями, описанными [здесь](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Инициализируйте следующие переменные среды.  Они необходимы для развертывания кластера больших данных:
 
 ### <a name="windows"></a>Windows
 
-С помощью окна командной строки (не PowerShell), настройте следующие переменные среды:
+Используя окно командной строки (не PowerShell), настройте следующие переменные среды:
 
 ```cmd
 SET ACCEPT_EULA=Y
@@ -85,19 +86,19 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 Инициализируйте следующие переменные среды:
 
 ```bash
-export ACCEPT_EULA=Y
-export CLUSTER_PLATFORM=aks
+export ACCEPT_EULA="Y"
+export CLUSTER_PLATFORM="aks"
 
-export CONTROLLER_USERNAME=<controller_admin_name – can be anything>
-export CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
-export KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
-export MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
+export CONTROLLER_USERNAME="<controller_admin_name – can be anything>"
+export CONTROLLER_PASSWORD="<controller_admin_password – can be anything, password complexity compliant>"
+export KNOX_PASSWORD="<knox_password – can be anything, password complexity compliant>"
+export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
-export DOCKER_REGISTRY=private-repo.microsoft.com
-export DOCKER_REPOSITORY=mssql-private-preview
-export DOCKER_USERNAME=<your username, credentials provided by Microsoft>
-export DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-export DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
+export DOCKER_REGISTRY="private-repo.microsoft.com"
+export DOCKER_REPOSITORY="mssql-private-preview"
+export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
+export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
+export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -116,7 +117,7 @@ mssqlctl create cluster <name of your cluster>
 > Имя кластера должно быть только буквенно цифровые символы в нижнем регистре, не должно быть пробелов. Все артефакты Kubernetes для кластера больших данных создается в пространстве имен с тем же именем, что и кластер указанное имя.
 
 
-Командное окно будет выводить состояние развертывания. Можно также проверить состояние развертывания, выполнив следующие команды в окне командной строки различные:
+Окно командной строки или оболочки возвращает состояние развертывания. Можно также проверить состояние развертывания, выполнив следующие команды в окне командной строки различные:
 
 ```bash
 kubectl get all -n <name of your cluster>
@@ -153,6 +154,10 @@ kubectl get svc service-security-lb -n <name of your cluster>
 ```
 
 Найдите **External-IP** значение, присвоенное к службам. Подключиться к основной экземпляр SQL Server с помощью IP-адрес для `service-master-pool-lb` на порте 31433 (например:  **\<ip адрес\>, 31433**) и конечную точку кластера больших данных SQL Server, используя external-IP для `service-security-lb` службы.   Что больших данных кластера конечной точки — где можно взаимодействовать с HDFS и отправка заданий Spark через Knox.
+
+## <a name="sample-deployment-script"></a>Пример сценария развертывания
+
+Пример скрипта python, выполняющий развертывание больших данных кластера AKS и SQL Server, см. в разделе [развертывание SQL Server, большие данные кластера в службе Azure Kubernetes (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
 
 ## <a name="next-steps"></a>Следующие шаги
 

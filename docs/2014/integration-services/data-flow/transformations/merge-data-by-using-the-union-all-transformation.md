@@ -17,12 +17,12 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a2225e9d504cd019016c1ff8cffb742112aeecc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76245adffaf5dfdacaf2ee8c234b81cfbaae9523
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134734"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460369"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Выполнение слияния данных с помощью преобразования «Объединить все»
   Чтобы добавить и настроить преобразование «Объединить все», в пакет уже должны быть включены хотя бы одна задача потока данных и два источника данных.  
@@ -56,9 +56,9 @@ ms.locfileid: "48134734"
 9. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
 ## <a name="see-also"></a>См. также  
- [UNION All Transformation](union-all-transformation.md)   
+ [Union All Transformation](union-all-transformation.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)   
  [Пути служб Integration Services](../integration-services-paths.md)   
- [Задача потока данных] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Задача потока данных](../../control-flow/data-flow-task.md)  
   
   

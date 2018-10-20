@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/08/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 02a1aa7299173315e4f4d6a60eae5f166e8fcdfe
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: f998c9f9df91f08d3a4e1877942b901ae5d96aeb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877897"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460659"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Развертывание кластера больших данных в SQL Server в Kubernetes
 
@@ -47,6 +47,9 @@ ms.locfileid: "48877897"
 
    - [Настройка Minikube](deploy-on-minikube.md)
    - [Настройка Kubernetes в службе Azure Kubernetes](deploy-on-aks.md)
+   
+> [!TIP]
+> Пример скрипта python, выполняющий развертывание больших данных кластера AKS и SQL Server, см. в разделе [развертывание SQL Server, большие данные кластера в службе Azure Kubernetes (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
 
 ## <a id="deploy"></a> Развертывание кластера больших данных в SQL Server
 
@@ -108,8 +111,8 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 | **CONTROLLER_PASSWORD** | Да | Недоступно | Пароль администратора кластера. |
 | **KNOX_PASSWORD** | Да | Недоступно | Пароль для пользователя Knox. |
 | **MSSQL_SA_PASSWORD** | Да | Недоступно | Пароль для пользователя SA для главного экземпляра SQL. |
-| **USE_PERSISTENT_VOLUME** | Нет | true | `true` для использования утверждения постоянного тома Kubernetes для хранения pod.  `false` Использование временных узлов хранилища для хранения pod. См. в разделе [постоянного хранения](concept-data-persistence.md) Дополнительные сведения. |
-| **STORAGE_CLASS_NAME** | Нет | значение по умолчанию | Если `USE_PERSISTENT_VOLUME` является `true` это указывает на имя класса хранения Kubernetes для использования. См. в разделе [постоянного хранения](concept-data-persistence.md) Дополнительные сведения. |
+| **USE_PERSISTENT_VOLUME** | Нет | true | `true` для использования утверждения постоянного тома Kubernetes для хранения pod.  `false` Использование временных узлов хранилища для хранения pod. См. в разделе [постоянного хранения](concept-data-persistence.md) Дополнительные сведения. При развертывании SQL Server, большие данные кластера в minikube и USE_PERSISTENT_VOLUME = true, необходимо задать значение для `STORAGE_CLASS_NAME=standard`. |
+| **STORAGE_CLASS_NAME** | Нет | значение по умолчанию | Если `USE_PERSISTENT_VOLUME` является `true` это указывает на имя класса хранения Kubernetes для использования. См. в разделе [постоянного хранения](concept-data-persistence.md) Дополнительные сведения. Учтите, что при развертывании SQL Server, большие данные кластера в minikube, имя класса для хранения по умолчанию отличается, и его необходимо переопределить, задав `STORAGE_CLASS_NAME=standard`. |
 | **MASTER_SQL_PORT** | Нет | 31433 | Порт TCP/IP, который ожидает передачи данных master экземпляра SQL в общедоступной сети. |
 | **KNOX_PORT** | Нет | 30443 | Порт TCP/IP, который ожидает передачи данных Apache Knox в общедоступной сети. |
 | **GRAFANA_PORT** | Нет | 30888 | Порт TCP/IP, который ожидает передачи данных Grafana, наблюдение за приложением в общедоступной сети. |
@@ -122,7 +125,7 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 >1. Для локального кластера, созданного с помощью kubeadm, значение для переменной среды `CLUSTER_PLATFORM` является `kubernetes`. Кроме того, если USE_PERSISTENT_STORAGE = true, необходимо предварительно подготовить класс хранения Kubernetes и передать его с помощью STORAGE_CLASS_NAME.
 >1. Убедитесь, что перенос паролей в двойные кавычки, если он содержит специальные символы. Можно присвоить любое MSSQL_SA_PASSWORD, но убедитесь, что они достаточно сложны и не используйте `!`, `&` или `‘` символов. Обратите внимание, что двойные кавычки-разделители работают только в команды bash.
 >1. Имя кластера должно быть только буквенно цифровые символы в нижнем регистре, не должно быть пробелов. Все артефакты Kubernetes (контейнеры, модулей, вертикальное наборов, службы) для кластера будет создан в пространство имен с тем же именем, что и кластер указанное имя.
->1. **SA** учетная запись является администратором системы на экземпляре SQL Server Master, которая создается во время установки. После создания контейнера SQL Server, переменную среды MSSQL_SA_PASSWORD, которое вы указали будет обнаружить, выполнив вывод на экран MSSQL_SA_PASSWORD $ в контейнере. В целях безопасности смените пароль SA в соответствии с практическими рекомендациями, описанными [здесь](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+>1. **SA** учетная запись является администратором системы на экземпляре SQL Server Master, которая создается во время установки. После создания контейнера SQL Server, переменную среды MSSQL_SA_PASSWORD, которое вы указали будет обнаружить, выполнив вывод на экран MSSQL_SA_PASSWORD $ в контейнере. В целях безопасности смените пароль SA в соответствии с практическими рекомендациями, описанными [здесь](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Задание переменных среды, необходимые для развертывания Aris кластера отличается в зависимости от того, используете ли вы клиент Windows или Linux.  Выберите следующие действия, в зависимости от того, какая операционная система используется.
 
@@ -149,6 +152,15 @@ SET DOCKER_EMAIL=<your Docker email, use same as username provided>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+На minikube Если USE_PERSISTENT_VOLUME = true (по умолчанию), необходимо также переопределить значение по умолчанию для переменной среды STORAGE_CLASS_NAME:
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Кроме того можно подавить, использование постоянных томов на minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ### <a name="linux"></a>Linux
 
 Инициализируйте следующие переменные среды:
@@ -170,6 +182,15 @@ export DOCKER_EMAIL=<your Docker email, use same as username provided>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+На minikube Если USE_PERSISTENT_VOLUME = true (по умолчанию), необходимо также переопределить значение по умолчанию для переменной среды STORAGE_CLASS_NAME:
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Кроме того можно подавить, использование постоянных томов на minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ## <a name="deploy-sql-server-big-data-cluster"></a>Развертывание кластера больших данных в SQL Server
 
 API создания кластера используется для инициализации пространств имен Kubernetes и развернуть всех модулях приложения в пространстве имен. Для развертывания кластера больших данных в SQL Server в кластере Kubernetes, выполните следующую команду:

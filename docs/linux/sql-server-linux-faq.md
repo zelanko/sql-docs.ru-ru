@@ -4,17 +4,17 @@ description: В этой статье содержатся ответы на ч�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/24/2018
+ms.date: 07/25/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: c45203e8524fe2df9301250afd1bef40df37bc3d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851849"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419359"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server в Linux, часто задаваемые вопросы (FAQ)
 
@@ -69,6 +69,22 @@ ms.locfileid: "48851849"
 1. **Можно выполнять автоматической установки SQL Server в Linux?**
 
    Да. Сведения по автоматической установке, см. в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md#unattended). См. в разделе Примеры сценариев для [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), и [Ubuntu](sample-unattended-install-ubuntu.md). Вы также можете просмотреть [этот пример сценария](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) созданные группы консультирования клиентов SQL Server.
+
+1. **Выпуск SQL Server следует использовать, когда уже приобрели?**
+
+   При запуске программы установки mssql-conf вам предлагаются следующие параметры:  
+   `Choose an edition of SQL Server:` <br>
+`     1. Evaluation (free, no production use rights, 180-day limit)` <br>
+`     2. Developer (free, no production use rights)` <br>
+`     3. Express (free)` <br>
+`     4. Web (PAID)` <br>
+`     5. Standard (PAID)` <br>
+`     6. Enterprise (PAID)` <br>
+`     7. Enterprise Core (PAID)` <br>
+`     8. I bought a license through a retail sales channel and have a product key to enter.`
+     
+   Если вы получили лицензию по программе корпоративного лицензирования как часть соглашения Enterprise или по подписке MSDN, необходимо выбрать 4 – 7. Если вы приобрели Standard edition в розницу, необходимо выбрать 8. 
+
 
 ## <a name="tools"></a>Инструменты
 

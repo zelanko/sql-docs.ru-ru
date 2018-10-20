@@ -4,18 +4,18 @@ description: Часто задаваемые вопросы (FAQ) для Azure D
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8e1178ba2b28ddf2e7db3fc381b15f01ecd428b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039138"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356355"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] ВОПРОСЫ И ОТВЕТЫ
 
@@ -80,7 +80,7 @@ Azure Data Studio обеспечивает согласованную работ
 
 ### <a name="shell-features"></a>Возможности оболочки
 
-|Компонент|Studio данных Azure|SSMS|
+|Компонент|Azure Data Studio.|SSMS|
 |:---|:---|:---|
 |Вход в Azure|Да|Да|
 |Панель мониторинга|Да| |
@@ -102,7 +102,7 @@ Azure Data Studio обеспечивает согласованную работ
 
 ### <a name="query-editor"></a>Редактор запросов
 
-|Компонент|Studio данных Azure|SSMS|
+|Компонент|Azure Data Studio.|SSMS|
 |:---|:---|:---|
 |Средства просмотра диаграмм|Да||
 |Экспортировать результаты в CSV, JSON, XLSX|Да||
@@ -120,7 +120,7 @@ Azure Data Studio обеспечивает согласованную работ
 
 ### <a name="operating-system-support"></a>Поддержка операционных систем
 
-|Компонент|Studio данных Azure|SSMS|
+|Компонент|Azure Data Studio.|SSMS|
 |:---|:---|:---|
 |Windows|Да|Да|
 |macOS|Да||
@@ -128,7 +128,7 @@ Azure Data Studio обеспечивает согласованную работ
 
 ### <a name="data-engineering"></a>Проектирование данных
 
-|Компонент|Studio данных Azure|SSMS|
+|Компонент|Azure Data Studio.|SSMS|
 |:---|:---|:---|
 |Мастер внешних данных|Предварительный просмотр||
 |Интеграция HDFS|Предварительный просмотр||
@@ -136,7 +136,7 @@ Azure Data Studio обеспечивает согласованную работ
 
 ### <a name="database-administration"></a>Администрирование базы данных
 
-|Компонент|Studio данных Azure|SSMS|
+|Компонент|Azure Data Studio.|SSMS|
 |:---|:---|:---|
 |Резервное копирование и восстановление|Да|Да|
 |Импорт неструктурированного файла|Предварительный просмотр|Да|

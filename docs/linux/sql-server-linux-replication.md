@@ -4,7 +4,7 @@ description: В этой статье описывается репликаци�
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.technology: database-engine
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c4bad8947944d59208a0516e5950d36f64a84e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bef97eb018e35179f0f9288f18bf170b04ae630
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734132"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390846"
 ---
 # <a name="sql-server-replication-on-linux"></a>Репликация SQL Server в Linux
 
@@ -34,7 +34,7 @@ ms.locfileid: "47734132"
 * Распространитель
 * Подписчик
 
-Схема репликации можно комбинировать и сопоставлять платформ операционных систем. Например схема репликации можно использовать экземпляры SQL Server в Linux для издателя и распространителя и подписчиков можно включить экземпляров SQL Server в Windows.
+Схема репликации можно комбинировать и сопоставлять платформ операционных систем. Например схема репликации может включать экземпляра SQL Server в Linux для издателя и распространителя и подписчиков включают экземпляров SQL Server на Windows, а также для Linux.
 
 Экземпляры SQL Server в Linux может участвовать в любой тип репликации.
 
@@ -62,6 +62,7 @@ ms.locfileid: "47734132"
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] не поддерживает следующие функции:
 
 * Немедленное обновление подписчиков
+* публикация Oracle
 
 ## <a name="next-steps"></a>Следующие шаги
 
