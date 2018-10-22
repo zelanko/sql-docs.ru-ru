@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
-ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
+ms.openlocfilehash: bc9b0e8b89fb7fd6e507e9e615190fef21a94466
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289315"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461109"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Новые возможности в Analytics Platform System, хранилища данных MPP горизонтального масштабирования
 См. в разделе, новые возможности в последние обновления устройства для Microsoft® Analytics Platform System (APS). APS является горизонтальное масштабирование локальное устройство, на котором размещена MPP SQL Server Parallel Data Warehouse. 
@@ -25,7 +25,7 @@ ms.locfileid: "46289315"
 Дата выпуска - июля 2018 г.
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>Команды DBCC не используют слоты выдачи (изменение поведения)
-APS поддерживает подмножество T-SQL, [команды DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) например [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Ранее, будет использовать эти команды [слот выдачи](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) уменьшению числа пользователь загружает и запросы, которые могут выполняться. `DBCC` Команды теперь выполняются в локальной очереди, которое использует пользователь слот выдачи, повышая общую производительность выполнения запросов.
+APS поддерживает подмножество T-SQL, [команды DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) например [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Ранее, будет использовать эти команды [слот выдачи](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) уменьшению числа пользователь загружает и запросы, которые могут выполняться. `DBCC` Команды теперь выполняются в локальной очереди, которое использует пользователь слот выдачи, повышая общую производительность выполнения запросов.
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Заменяет некоторые вызовы метаданных объектов каталога
 Использование объектов каталога для вызовов метаданных вместо использования SMO показали повышение производительности в APS. Начиная с CU7.1, некоторые из этих вызовов метаданных теперь используют объекты каталога по умолчанию. Это поведение можно отключить, [переключатель](appliance-feature-switch.md) Если клиенты, использующие запросы метаданных столкнетесь с проблемами.
