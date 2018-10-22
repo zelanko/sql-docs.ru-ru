@@ -1,6 +1,6 @@
 ---
 title: Документация по SQL Server | Документы Майкрософт
-ms.date: 08/10/2018
+ms.date: 08/11/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -21,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 17598c6692ccb2b90a45fbee3d8cf5bae5245fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b078cde18c41a67b4866297c2edd19b30f959d08
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857313"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419249"
 ---
 # <a name="sql-server-documentation"></a>Документация по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
