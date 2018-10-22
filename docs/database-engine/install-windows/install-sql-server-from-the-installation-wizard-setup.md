@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 75ca694832c0509a4db5d422bbed79b2bef0f83b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a982b90e9bbbb919e78d77e071ea13a6cff1bd3
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731492"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460689"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Установка SQL Server с помощью мастера установки (программа установки)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-Эта статья описывает установку SQL Server с помощью мастера установки. Она относится к [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] и [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. Материалы по предыдущим версиям SQL Server см. в статье [Установка SQL Server 2014 с помощью мастера установки (программа установки)](install-sql-server-from-the-installation-wizard-setup.md).
+Эта статья описывает установку SQL Server с помощью мастера установки. Она относится к [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] и [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 
 В этой статье приведена пошаговая процедура установки нового экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В мастере установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступно единое дерево для установки всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поэтому их не требуется устанавливать по отдельности. Дополнительные сведения об установке отдельных компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Установка SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
 
@@ -69,7 +69,7 @@ ms.locfileid: "47731492"
 4.  На странице «Условия лицензии» просмотрите лицензионное соглашение. Если вы с ним согласны, установите флажок **Я принимаю условия лицензионного соглашения** и нажмите кнопку **Далее**.  
 
   >[!NOTE]
-  > SQL Server передает сведения об установке, а также другие данные об использовании и производительности в Майкрософт, чтобы помочь улучшить продукт. Дополнительные сведения об обработке данных SQL Server и элементах управления конфиденциальностью, см. в [заявлении о конфиденциальности](https://privacy.microsoft.com/en-us/privacystatement) и руководстве по [настройке SQL Server для отправки отзывов в корпорацию Майкрософт](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
+  > SQL Server передает сведения об установке, а также другие данные об использовании и производительности в Майкрософт, чтобы помочь улучшить продукт. Дополнительные сведения об обработке данных SQL Server и элементах управления конфиденциальностью, см. в [заявлении о конфиденциальности](https://privacy.microsoft.com/en-us/privacystatement) и руководстве по [настройке SQL Server для отправки отзывов в корпорацию Майкрософт](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
   
 5.  В окне «Глобальные правила» процедура установки автоматически перейдет к окну «Обновления продукта», если ошибок правил нет.  
   

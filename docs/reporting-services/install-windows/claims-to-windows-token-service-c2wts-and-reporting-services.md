@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: d201fb9d134f4066e0504056c208d2c1c0507fa3
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: f677d955541d32614dcfc60cebb0be1d1c438571
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782293"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460989"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Служба Claims to Windows Token Service (C2WTS) и службы Reporting Services
 
@@ -29,9 +29,9 @@ ms.locfileid: "48782293"
 
 Веб-часть средства просмотра отчетов можно использовать для внедрения отчетов служб SQL Server Reporting Services в собственном режиме на сайте SharePoint. Эта веб-часть доступна для SharePoint 2013 и SharePoint 2016. В SharePoint 2013 и SharePoint 2016 действует проверка подлинности на основе утверждений. В результате этого C2WTS необходимо настроить соответствующим образом, а в Reporting Services нужно настроить проверку подлинности Kerberos для правильного отображения отчетов.
 
-1. Настройте экземпляр Reporting Services (собственный режим) для проверки подлинности Kerberos, определив учетную запись службы SSRS, настроив имя субъекта-службы и обновив файл rsreportserver.config, чтобы использовать тип проверки подлинности RSWindowsNegotiate. [Регистрация имени субъекта-службы для сервера отчетов](https://docs.microsoft.com/en-us/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
+1. Настройте экземпляр Reporting Services (собственный режим) для проверки подлинности Kerberos, определив учетную запись службы SSRS, настроив имя субъекта-службы и обновив файл rsreportserver.config, чтобы использовать тип проверки подлинности RSWindowsNegotiate. [Регистрация имени субъекта-службы для сервера отчетов](https://docs.microsoft.com/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
 
-2. Выполните шаги из раздела, посвященного [настройке службы c2WTS](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts).
+2. Выполните шаги из раздела, посвященного [настройке службы c2WTS](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts).
  
 
 ## <a name="sharepoint-mode-integration"></a>Интеграция с режимом SharePoint
@@ -84,7 +84,7 @@ ms.locfileid: "48782293"
     * Выберите **Пользователи или компьютеры...** и введите учетную запись, в которой размещена служба. Например, если SQL Server выполняется под учетной записью с именем *sqlservice*, введите `sqlservice`. 
       Для **веб-части средства просмотра отчетов** это будет учетная запись службы для экземпляра Reporting Services (собственный режим).
 
-    * Выберите список служб. Отобразятся имена участников-служб, которые доступны в этой учетной записи. Если вы не видите в списке службу для соответствующей учетной записи, возможно, она отсутствует или размещена в другой учетной записи. Для настройки имен SPN можно использовать служебную программу SetSPN. Для **веб-части средства просмотра отчетов** отобразится имя участника-службы HTTP, настроенное в разделе [Настройка веб-части средства просмотра отчетов](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
+    * Выберите список служб. Отобразятся имена участников-служб, которые доступны в этой учетной записи. Если вы не видите в списке службу для соответствующей учетной записи, возможно, она отсутствует или размещена в другой учетной записи. Для настройки имен SPN можно использовать служебную программу SetSPN. Для **веб-части средства просмотра отчетов** отобразится имя участника-службы HTTP, настроенное в разделе [Настройка веб-части средства просмотра отчетов](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
 
     * Нажмите кнопку ОК, чтобы закрыть все диалоговые окна.
 

@@ -14,18 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70d74cb0b231128dff96ff50bcf9a8a2959c62ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 978997ac3048bffb2e8f475d2c728a38b7a27283
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668922"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383589"
 ---
 # <a name="create-foreign-key-relationships"></a>Создание связей по внешнему ключу
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
-
- > Материалы по предыдущим версиям SQL Server см. в разделе [Создание связей по внешнему ключу](create-foreign-key-relationships.md).
-
 
   В данном разделе описывается создание связей внешнего ключа в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Связь создается между двумя таблицами, чтобы связать строки одной таблицы со строками другой.    
      
@@ -93,7 +90,7 @@ ms.locfileid: "47668922"
 ## <a name="create-a-foreign-key-in-a-new-table"></a>Создание внешнего ключа в новой таблице  
 ####  <a name="using-transact-sql"></a>Использование Transact-SQL   
     
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].    
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].    
     
 2.  На стандартной панели выберите пункт **Создать запрос**.    
     
@@ -115,7 +112,7 @@ ms.locfileid: "47668922"
 ## <a name="create-a-foreign-key-in-an-existing-table"></a>Создание внешнего ключа в существующей таблице 
 #### <a name="using-transact-sql"></a>Использование Transact-SQL   
     
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].    
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].    
     
 2.  На стандартной панели выберите пункт **Создать запрос**.    
     

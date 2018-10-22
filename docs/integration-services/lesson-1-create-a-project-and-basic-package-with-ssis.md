@@ -11,16 +11,14 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3626fb6bb6c3ef42d465aa21e8eed9086c161d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98f2039da862c64e8f223afdedba7889627a5116
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608452"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384079"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Занятие 1. Создание проекта и основного пакета с помощью служб SSIS
-
- > Содержимое, связанное с предыдущими версиями SQL Server, см. в разделе [Занятие 1. Создание проекта и основного пакета](lesson-1-create-a-project-and-basic-package-with-ssis.md).
 
 На этом занятии будет рассмотрено создание простого ETL-пакета, который будет извлекать данные из отдельного источника неструктурированных файлов, преобразовывать полученные данные при помощи двух компонентов преобразования «Уточняющий запрос», а затем записывать эти данные в таблицу фактов **FactCurrency** , находящуюся в базе данных **AdventureWorksDW2012**. На этом занятии предстоит узнать, как создавать новые пакеты, добавлять и настраивать соединения с источниками данных и назначениями, а также работать с новыми компонентами потока управления и потока данных.  
   
@@ -30,7 +28,7 @@ ms.locfileid: "47608452"
 ## <a name="understanding-the-package-requirements"></a>Основные сведения о требованиях пакета  
 Для выполнения упражнений этого учебника требуется Microsoft SQL Server Data Tools.  
   
-Дополнительные сведения об установке SQL Server Data Tools см. в разделе [Загрузка SQL Server Data Tools](http://msdn.microsoft.com/data/hh297027).  
+Дополнительные сведения об установке SQL Server Data Tools см. в разделе [Скачать SQL Server Data Tools](http://msdn.microsoft.com/data/hh297027).  
   
 Перед созданием пакета необходимо знать о форматировании в источнике данных и в назначении. Если эти форматы данных известны, можно определить преобразования, необходимые для сопоставления формата данных источника формату назначения.  
   

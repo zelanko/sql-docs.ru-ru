@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc1fdb499855be399f0d2dc77b44eae452615b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 803b1a72edb5a6c0a951eb9d199a4d7ff27526fe
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649384"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460949"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -144,8 +144,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE допускает одно или несколько определений столбцов. CREATE EXTERNAL TABLE и CREATE TABLE используют одинаковый синтаксис для определения столбца. Исключение — параметр DEFAULT CONSTRAINT, который нельзя использовать с внешними таблицами. Подробную информацию об определениях столбцов и их типах данных см. в разделах [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) и [CREATE TABLE в базе данных SQL Azure](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
- Определения столбцов, включая типы данных и количество столбцов, должны соответствовать данным во внешних файлах. В случае несоответствия при запросе данных строки файла будут отклонены. Дополнительные сведения о сопоставлении типов данных различных источников внешних данных см. в статье [Сопоставление типов с помощью PolyBase](../../relational-databases/polybase/polybase-type-mapping.md).  
-  
+ Определения столбцов, включая типы данных и количество столбцов, должны соответствовать данным во внешних файлах. В случае несоответствия при запросе данных строки файла будут отклонены.  
   
  LOCATION =  '*folder_or_filepath*'  
  Указывает путь к папке или файлу и имя файла для фактических данных в хранилище больших двоичных объектов Azure или Hadoop. Расположение начинается с корневой папки. Корневая папка — это расположение данных, указанное во внешнем источнике данных.  
