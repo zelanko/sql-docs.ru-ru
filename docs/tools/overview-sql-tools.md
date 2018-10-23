@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1ff16d7a8b2253fc793db00cb46282539415ff86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 359144187de1b1a780ba3d866f4a4881c2444442
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767372"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643942"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Средства и программы для SQL Server, база данных Azure SQL и хранилище данных Azure SQL SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47767372"
 | Инструмент | Описание | Работает на |
 |:--|:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] — это бесплатные, облегченные средство для управления базами данных везде, где они выполняются. Эта предварительная версия предоставляет возможности управления базы данных, включая расширенного редактора Transact-SQL и настраиваемые ценные сведения о работоспособности баз данных. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] работает в Windows, macOS и Linux**.|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Используйте SQL Server Management Studio (SSMS) для запроса, проектирования и управления SQL Server, базы данных SQL Azure и хранилище данных SQL Azure. | **Среда SSMS запущена на Windows**.|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Используйте SQL Server Management Studio (SSMS) для запроса, проектирования и управления SQL Server, базы данных SQL Azure и хранилище данных SQL Azure. | **SSMS работает на ОС Windows**.|
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Visual Studio можно Превратите в мощную среду разработки для SQL Server, базы данных SQL Azure и хранилище данных SQL Azure.| **Набор SSDT работает на Windows**.|
 | [Visual Studio Code](https://code.visualstudio.com/);| После установки Visual Studio Code, установить [расширение mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) по разработке Microsoft SQL Server, базы данных SQL Azure и хранилище данных SQL.| **Запускает Visual Studio Code в Windows, macOS и Linux**.|
 
@@ -72,6 +72,7 @@ ms.locfileid: "47767372"
 |:--|:--|
 | [Диспетчер конфигураций](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Используйте диспетчер конфигурации SQL Server для настройки служб SQL Server и настройках сетевого взаимодействия. Configuration Manager работает на Windows|
 | [Помощник по миграции SQL Server](../ssma/sql-server-migration-assistant.md) | Помощник по миграции SQL Server используется для автоматизации миграции баз данных в SQL Server из Microsoft Access, DB2, MySQL, Oracle и Sybase.|
+| [Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md) | Используйте помощник базы данных службы "Экспериментирование" для оценки целевую версию SQL для заданной рабочей нагрузки. |
 | [Распределенное воспроизведение](../tools/distributed-replay/install-distributed-replay-overview.md) | Используйте компонента распределенного воспроизведения, которые помогут оценить влияние будущих обновлений SQL Server. Также можно используйте распределенного воспроизведения для оценки влияния оборудования и обновления операционной системы и настройке SQL Server. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Программа ssbdiagnose сообщает о проблемах в диалогах компонента Service Broker или в конфигурации служб компонента Service Broker. |
 

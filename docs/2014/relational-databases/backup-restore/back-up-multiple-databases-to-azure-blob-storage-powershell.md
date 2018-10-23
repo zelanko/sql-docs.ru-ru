@@ -30,7 +30,7 @@ ms.locfileid: "48064294"
  Используется для восстановления базы данных.  
   
  New-SqlCredential  
- Этот командлет используется для создания учетных данных SQL, которые будут использоваться для резервного копирования SQL Server в хранилище Windows Azure. Дополнительные сведения об учетных данных и их использовании в операциях резервного копирования и восстановления SQL Server см. в разделе [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Этот командлет используется для создания учетных данных SQL, которые будут использоваться для резервного копирования SQL Server в хранилище Windows Azure. Дополнительные сведения об учетных данных и их использовании в операциях резервного копирования и восстановления SQL Server см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилищ больших двоичных объектов Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  Get-SqlCredential  
  Этот командлет используется для получения объекта учетных данных и его свойств.  
@@ -265,7 +265,7 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
 ```  
   
 ## <a name="see-also"></a>См. также  
- [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [Архивация в SQL Server по URL-адресу — рекомендации и устранение неполадок](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   
