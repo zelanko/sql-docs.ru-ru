@@ -29,17 +29,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8252d8eca6a9196630bc224a39324989c4388a6a
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1b62fe2d79dfa947cb9c8f0f6ebbd0c484960e26
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252121"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461169"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > SQL Server 2014 и ниже, см. в разделе [служебная программа sqlcmd](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-2014
+ > SQL Server 2014 и ниже, см. в разделе [служебная программа sqlcmd](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
 ).
 
  > Использование программы sqlcmd в Linux, см. в разделе [Установка sqlcmd и bcp в Linux](../linux/sql-server-linux-setup-tools.md).

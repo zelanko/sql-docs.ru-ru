@@ -30,17 +30,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 94a3adf850c633f3ba825da86a70ff560fb1edf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8455d2c3681b78fe892e91d20857ee2ad7a7dfb2
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600532"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383849"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > Материалы по предыдущим версиям SQL Server см. в статье [Программа bcp](bcp-utility.md).
 
  > Последнюю версию служебной программы bcp, см. в разделе [14.0 служебные программы командной строки Microsoft для SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
@@ -133,7 +131,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-b** _**размер\_пакета**_<a name="b"></a>  
  Указывает количество строк в каждом пакете импортированных данных. Каждый пакет импортируется и регистрируется как отдельная транзакция, которая фиксируется после выполнения импорта всего пакета. По умолчанию импорт всех строк в файле данных выполняется в одном пакете. Чтобы распределить строки между несколькими пакетами, укажите значение *batch_size* меньшее, чем количество строк в файле данных. Если транзакция пакета завершится неудачно, то будет выполнен откат только операций вставки в текущем пакете. Произошедшая ошибка не затрагивает пакеты, импорт которых уже выполнен зафиксированными транзакциями.  
   
- Не применяйте этот параметр вместе с параметром **-h "** ROWS_PER_BATCH **=**_bb_**"**.  
+ Не применяйте этот параметр вместе с параметром **-h "** ROWS_PER_BATCH **=**_bb_**"** .  
  
  **-c**<a name="c"></a>  
  Выполняет операцию, используя символьный тип данных. При использовании этого параметра не запрашивается тип данных каждого поля. Для хранения данных используется тип **char** , префиксы отсутствуют, в качестве разделителя полей используется символ табуляции **\t** , а в качестве признака конца строки — символ новой строки **\r\n** . **-c** не совместим с **-w**.  
@@ -323,7 +321,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Дополнительные сведения см. в подразделе " [Примечания](#remarks)" ниже.  
   
  **-r**  _**строки\_термин**_<a name="r"></a>  
- Указывает признак конца строки. Значением по умолчанию является **\n** (символ перевода строки). Используйте этот параметр, чтобы переопределить признак конца строки по умолчанию. Дополнительные сведения см. в разделе [Specify Field and Row Terminators &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
+ Указывает признак конца строки. Значением по умолчанию является **\n** (символ перевода строки). Используйте этот параметр, чтобы переопределить признак конца строки по умолчанию. Дополнительные сведения см. в разделе [Определение признаков конца поля и строки (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Если в команде bcp.exe указан признак конца строки в шестнадцатеричном виде, то значение будет усечено до 0x00. Например, если указать значение 0x410041, то будет использовано значение 0x41.  
   
@@ -335,7 +333,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-S** _**имя\_сервера**_ [\\_**имя\_экземпляра**_]<a name="S"></a> — указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], к которому выполняется подключение. Если сервер не указан, программа **bcp** выполняет подключение к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию на локальном компьютере. Этот параметр необходим, если команда **bcp** выполняется с удаленного компьютера в сети или с локального именованного экземпляра. Чтобы подключиться к экземпляру по умолчанию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на сервере, укажите только *server_name*. Чтобы подключиться к именованному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], укажите _имя\_сервера_**\\**_имя\_экземпляра_.  
   
  **-t**  _**поле\_термин**_<a name="t"></a>  
- Указывает признак конца поля. Значением по умолчанию является **\t** (символ табуляции). Используйте этот параметр, чтобы переопределить признак конца поля по умолчанию. Дополнительные сведения см. в разделе [Specify Field and Row Terminators &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
+ Указывает признак конца поля. Значением по умолчанию является **\t** (символ табуляции). Используйте этот параметр, чтобы переопределить признак конца поля по умолчанию. Дополнительные сведения см. в разделе [Определение признаков конца поля и строки (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Если в команде bcp.exe указан признак конца поля в шестнадцатеричном виде, то значение будет усечено до 0x00. Например, если указать значение 0x410041, то будет использовано значение 0x41.  
   
@@ -528,7 +526,7 @@ bcp -v
 ```
   
 ### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>Б. Копирование строк из таблицы в файл данных (с помощью доверительного соединения)  
-В следующих примерах показано применение параметра **out** к таблице `WideWorldImporters.Warehouse.StockItemTransactions`.
+В следующих примерах показано применение параметра **out** к таблице `WideWorldImporters.Warehouse.StockItemTransactions` .
 
 - **Basic**  
 В этом примере создается файл данных с именем `StockItemTransactions_character.bcp` , и в него копируются данные таблицы в **символьном** формате.
@@ -659,7 +657,7 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
  [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../t-sql/functions/openrowset-transact-sql.md)   
  [SET QUOTED_IDENTIFIER (Transact-SQL)](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [sp_configure (Transact-SQL)](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
