@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2b5d840a5b6073a7026806ee084dffc0ca51af7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 387aaeb28e0dfc976bce72c33dd50d8b865bb432
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801702"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874372"
 ---
 # <a name="system-settings-master-data-services"></a>Системные параметры (службы Master Data Services)
 
@@ -101,7 +101,8 @@ ms.locfileid: "47801702"
 |Параметр диспетчера конфигурации|Системный параметр|Описание|  
 |-----------------------------------|--------------------|-----------------|  
 |**Шаг приращения для новых бизнес-правил**|**BusinessRuleDefaultPriorityIncrement**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **System Administration** functional area, the number the priority of each new business rule is incremented by. Значение по умолчанию ― **10**.|  
-|**Количество элементов, к которым применяются бизнес-правила**|**BusinessRuleRealtimeMemberCount**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members in the grid to apply business rules to. В [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]— максимальное число элементов на активном листе, к которым применяется бизнес-правило. Значение по умолчанию — **10000**.|  
+|**Количество элементов, к которым применяются бизнес-правила**|**BusinessRuleRealtimeMemberCount**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members in the grid to apply business rules to. В [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]— максимальное число элементов на активном листе, к которым применяется бизнес-правило. Значение по умолчанию — **10000**.|  
+|**Сначала пользовательский скрипт действий для бизнес-правила**|**BusinessRuleUserScriptExecuteFirst**|Обычно действие бизнес-правила выполняется в последовательности "Значение по умолчанию", "Изменение значения", "Проверка", "Внешнее действие", "Пользовательский скрипт действий". Если этот параметр изменяется на **1**, то при выполнении действия бизнес-правила первым шагом будет "Пользовательский скрипт действий". Этот параметр является скрытым. Значение по умолчанию — **0**.|  
   
  Дополнительные сведения см. в статье [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md).  
   

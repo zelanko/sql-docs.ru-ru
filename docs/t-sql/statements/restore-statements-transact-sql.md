@@ -1,7 +1,7 @@
 ---
 title: RESTORE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/08/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b16e9925a2c7af141db9ea6e4e160081f2e63e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce8d405d4ae630f7166389d98086237270333e51
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677938"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252161"
 ---
 # <a name="restore-statements-transact-sql"></a>Инструкции RESTORE (Transact-SQL)
 Восстанавливает резервные копии баз данных SQL, созданные с помощью команды BACKUP. 
@@ -62,22 +62,13 @@ ms.locfileid: "47677938"
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |**_\* SQL Server \*_**|[База данных SQL<br /> — управляемый экземпляр](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 Эта команда позволяет выполнить следующие сценарии восстановления.  
   
@@ -714,22 +705,13 @@ RESTORE DATABASE Sales
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* База данных SQL<br />Управляемый экземпляр *</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\*База данных SQL<br /> — управляемый экземпляр \*_**|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
 Эта команда позволяет восстановить всю базу данных из полной резервной копии (полное восстановление) в учетной записи хранилища BLOB-объектов Azure.
 
@@ -855,22 +837,13 @@ WHERE r.command = 'RESTORE DATABASE'
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><strong><em>* Parallel<br />Data Warehouse *</em></strong></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — управляемый экземпляр](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 
-# <a name="parallel-data-warehouse"></a>Параллельное хранилище данных
+## <a name="parallel-data-warehouse"></a>Параллельное хранилище данных
 
 
 Восстанавливает пользовательскую базу данных [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] из резервной копии базы данных на устройство [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. База данных восстанавливается из резервной копии, созданной ранее с помощью команды [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE (Parallel Data Warehouse)](../../t-sql/statements/backup-transact-sql.md). Используйте команды резервного копирования и восстановления для создания плана аварийного восстановления или для перемещения баз данных с одного устройства на другое.  

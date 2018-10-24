@@ -1,0 +1,83 @@
+items:
+- name: Обзор
+  items:
+  - name: Что представляет собой кластер больших данных SQL Server?
+    href: big-data-cluster-overview.md
+  - name: Заметки о выпуске
+    href: big-data-cluster-release-notes.md
+- name: Краткие руководства
+  items:
+  - name: Развертывание кластера больших данных SQL Server
+    href: quickstart-big-data-cluster-deploy.md
+- name: Основные понятия
+  items:
+  - name: Контроллер
+    href: concept-controller.md
+  - name: Главный экземпляр
+    href: concept-master-instance.md
+  - name: Пул данных
+    href: concept-data-pool.md
+  - name: Пул носителей
+    href: concept-storage-pool.md
+  - name: Вычислительный пул
+    href: concept-compute-pool.md
+  - name: Сохраняемость данных
+    href: concept-data-persistence.md
+  - name: безопасность
+    href: concept-security.md
+- name: Практические руководства
+  items:
+  - name: Установить
+    items:
+    - name: Руководства по развертыванию
+      href: deployment-guidance.md
+    - name: Развертывание в Minikube
+      href: deploy-on-minikube.md
+    - name: Развертывание в AKS
+      href: deploy-on-aks.md
+    - name: Подключение к Azure Data Studio
+      href: deploy-big-data-tools.md
+  - name: Виртуализация данных
+    items:
+    - name: Виртуализация внешних данных
+      href: ../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+  - name: Прием данных
+    items:
+    - name: Загрузка данных с помощью cURL
+      href: data-ingestion-curl.md
+    - name: Восстановление базы данных
+      href: data-ingestion-restore-databse.md
+  - name: Большие данные и машинное обучение
+    items:
+    - name: Первичная обработка данных с помощью ускорителя кода PROSE
+      href: use-prose-for-big-data-automation.md
+  - name: Управление кластером больших данных SQL Server
+    items:
+    - name: Портал администрирования кластера
+      href: cluster-admin-portal.md
+  - name: Записные книжки
+    items:
+    - name: Общие сведения о записных книжках
+      href: notebooks-guidance.md
+    - name: Управление существующими записными книжками
+      href: notebooks-how-to-manage.md
+  - name: Задания Spark
+    items:
+    - name: Отправка заданий Spark
+      href: spark-submit-job.md
+    - name: Использование расширенного сервера журнала Spark
+      href: spark-history-server.md
+- name: Ресурсы
+  items:
+  - name: Предварительная версия SQL Server 2019
+    href: ../sql-server/what-s-new-in-sql-server-ver15.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+  - name: Документация по PolyBase
+    href: ../relational-databases/polybase/polybase-guide.md
+  - name: Запрос доступа к кластерам больших данных
+    href: https://aka.ms/eapsignup
+ms.openlocfilehash: c8a685c849acf82b9fdfa078093528e9c0972964
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085311"

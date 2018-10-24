@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,20 +27,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2bb68aae23e0d36ff09ff673eae3d45f1082fec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ece0ca36756e233412d2befcc7246504d1c2aa23
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825382"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252141"
 ---
-# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL) 
+# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
 Изменяет определенные параметры конфигурации базы данных. 
 
 Эта статья приводит синтаксис, аргументы, комментарии, разрешения и примеры для любых выбранных продуктов SQL.
 
-Дополнительные сведения о соглашениях о синтаксисе см. в статье [Соглашения о синтаксисе в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+Дополнительные сведения о соглашениях о синтаксисе см. в статье [Соглашения о синтаксисе в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="click-a-product"></a>Выберите продукт!
 
@@ -55,12 +55,12 @@ ms.locfileid: "47825382"
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="overview"></a>Обзор
 
 В SQL Server эта инструкция изменяет базу данных или файлы и файловые группы, связанные с базой данных. Добавляет или удаляет файлы и файловые группы из базы данных, изменяет атрибуты базы данных или ее файлов и файловых групп, изменяет параметры сортировки базы данных и устанавливает параметры базы данных. Моментальные снимки базы данных изменить нельзя. Чтобы изменить параметры базы данных, связанные с репликацией, используйте процедуру [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
-   
+
 Так как синтаксис ALTER DATABASE имеет значительную длину, мы разделили его описание на несколько статей.  
 
 ALTER DATABASE  
@@ -83,7 +83,7 @@ ALTER DATABASE
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```
 -- SQL Server Syntax  
 ALTER DATABASE { database_name  | CURRENT }  
 {  
@@ -103,20 +103,20 @@ ALTER DATABASE { database_name  | CURRENT }
   <filegroup_updatability_option>::=  
   
 <option_spec>::=  
-  <auto_option> ::=   
+  <auto_option> ::=
   <change_tracking_option> ::=  
-  <cursor_option> ::=   
-  <database_mirroring_option> ::=   
+  <cursor_option> ::=
+  <database_mirroring_option> ::=
   <date_correlation_optimization_option> ::=  
   <db_encryption_option> ::=  
   <db_state_option> ::=  
   <db_update_option> ::=  
   <db_user_access_option> ::=  <delayed_durability_option> ::=  <external_access_option> ::=  
   <FILESTREAM_options> ::=  
-  <HADR_options> ::=    
+  <HADR_options> ::=
   <parameterization_option> ::=  
   <query_store_options> ::=  
-  <recovery_option> ::=   
+  <recovery_option> ::=
   <service_broker_option> ::=  
   <snapshot_option> ::=  
   <sql_option> ::=   
@@ -274,27 +274,14 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* База данных SQL<br />Базы данных SQL*</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\* Логический сервер<br />базы данных SQL \*_** &nbsp;|[База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Логический сервер Базы данных SQL Azure
+## <a name="azure-sql-database-logical-server"></a>Логический сервер Базы данных SQL Azure
 
 ## <a name="overview"></a>Обзор
 
@@ -649,27 +636,14 @@ ALTER DATABASE db1 FAILOVER
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><strong><em>* База данных SQL<br />Управляемый экземпляр *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* Управляемый экземпляр<br />базы данных SQL \*_** &nbsp;|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
 ## <a name="overview"></a>Обзор
 
@@ -785,27 +759,14 @@ ALTER DATABASE WideWorldImporters
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><strong><em>* Хранилище данных<br />SQL*</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](alter-database-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* Хранилище данных<br />SQL \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-data-warehouse"></a>Хранилище данных SQL Azure
+## <a name="azure-sql-data-warehouse"></a>Хранилище данных SQL Azure
 
 ## <a name="overview"></a>Обзор
 
@@ -914,27 +875,14 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><strong><em>* Parallel<br />Data Warehouse *</em></strong></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](alter-database-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
 
 &nbsp;
 
-# <a name="parallel-data-warehouse"></a>Параллельное хранилище данных
+## <a name="parallel-data-warehouse"></a>Параллельное хранилище данных
 
 ## <a name="overview"></a>Обзор
 

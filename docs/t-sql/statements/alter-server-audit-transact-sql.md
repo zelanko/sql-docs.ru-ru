@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVER_AUDIT_TSQL
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 314e7c2c454c7ef885b66340c9a609cd1ab15125
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 5f5eea2555792f5c25338407144df53d5784ed39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171846"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756570"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,13 +82,13 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > В Управляемом экземпляре Базы данных SQL Azure компонент аудита SQL выполняется на уровне сервера и сохраняет файлы `.xel` в хранилище BLOB-объектов Azure.
   
- FILEPATH **= '***os_file_path***'**  
+ FILEPATH **= '**_os\_file\_path_**'**  
  Путь следа аудита. Имя файла формируется на основе имени аудита и его идентификатора GUID.  
   
- MAXSIZE **=***max_size*  
+ MAXSIZE **=**_max\_size_  
  Задает максимальный размер, до которого может увеличиваться файл аудита. Значение *max_size* должно быть целым числом, за которым следует **MB**, **GB**, **TB** или **UNLIMITED**. Минимальный размер для *max_size* составляет 2 **МБ**, а максимальный — 2 147 483 647 **ТБ**. Если указано значение **UNLIMITED**, увеличение размера файла будет происходить до заполнения диска. Если указано значение менее 2 МБ, возникает ошибка MSG_MAXSIZE_TOO_SMALL. Значение по умолчанию — **UNLIMITED**.  
   
- MAX_ROLLOVER_FILES **=***integer* | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
  Задает максимальное число файлов, которые хранятся в файловой системе. Если установлено значение MAX_ROLLOVER_FILES=0, отсутствует ограничение на число создаваемых файлов продолжения. Значение по умолчанию — 0. Максимальное число файлов, которое можно указать, составляет 2 147 483 647.  
   
  MAX_FILES =*integer*  
@@ -101,7 +98,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  Этот параметр заранее размещает на диске файл в соответствии со значением MAXSIZE. Применяется, только если значение MAXSIZE не равно UNLIMITED. Значение по умолчанию — OFF.  
   
- QUEUE_DELAY **=***integer*  
+ QUEUE_DELAY **=**_integer_  
  Определяет задержку в миллисекундах, после которой продолжается выполнение действий аудита. Значение 0 соответствует синхронной доставке. Минимальное значение задаваемой задержки запроса составляет 1000 (1 секунда), и это значение используется по умолчанию. Максимальное значение составляет 2 147 483 647 (2 147 483,647 секунд или 24 дня, 20 часов, 31 минута и 23,647 секунд). Если указано недопустимое значение, происходит ошибка MSG_INVALID_QUEUE_DELAY.  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  

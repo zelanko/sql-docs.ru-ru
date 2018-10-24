@@ -1,13 +1,11 @@
 ---
 title: Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ADD FILE
@@ -41,17 +39,16 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2cc06595f2827704009f96b4a7f7c047e5c27c28
-ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
+ms.openlocfilehash: 9a07b7c9536f3d1f98293317f56e4c10dbae25e0
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44090004"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252151"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL) 
 
@@ -69,6 +66,8 @@ ms.locfileid: "44090004"
 > |||
 > |-|-|-|
 > |**_\* SQL Server \*_**<br />&nbsp;|[База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+
+&nbsp;
 
 # <a name="sql-server"></a>SQL Server
 
@@ -190,7 +189,7 @@ NEWNAME *new_logical_file_name*
 *new_logical_file_name*  
 Имя, которым будет заменено текущее логическое имя файла. Имя должно быть уникальным в базе данных и соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Имя может быть символьной константой или константой Юникода, обычным идентификатором или идентификатором с разделителем.  
   
-FILENAME { **'***os_file_name***'** | **'***filestream_path***'** | **'***memory_optimized_data_path***'**}  
+FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_memory\_optimized\_data\_path_**'**}  
 Задает имя файла в операционной системе (физическое имя).  
   
 ' *os_file_name* '  
@@ -295,7 +294,7 @@ REMOVE FILEGROUP *filegroup_name*
 > [!NOTE]  
 > Если сборщик мусора FILESTREAM не удалил все файлы из контейнера FILESTREAM, операция ALTER DATABASE REMOVE FILE по удалению контейнера FILESTREAM завершится неудачей и возвратит ошибку. См. подраздел «Удаление контейнера FILESTREAM» в разделе «Примечания» далее в этом разделе.  
   
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* } Изменяет файловую группу, меняя ее состояние на READ_ONLY или READ_WRITE, делая ее файловой группой по умолчанию для базы данных или изменяя имя файловой группы.  
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Изменяет файловую группу, меняя ее состояние на READ_ONLY или READ_WRITE, делая ее файловой группой по умолчанию для базы данных или изменяя имя файловой группы.  
   
 \<filegroup_updatability_option>  
 Устанавливает свойство «только для чтения» или «чтение и запись» для файловой группы.  
@@ -674,20 +673,13 @@ GO
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* База данных SQL<br />Управляемый экземпляр *</em></strong></th>
-> </tr>
-> </table>
+> |||
+> |-|-|-|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\*База данных SQL<br /> — управляемый экземпляр \*_**<br />&nbsp;|
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
 Используйте эту инструкцию с базой данных в Управляемом экземпляре Базы данных SQL Azure.
 
@@ -829,7 +821,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 REMOVE FILEGROUP *filegroup_name*  
 Удаляет файловую группу из базы данных. Файловая группа не может быть удалена, пока она не пустая. Вначале удалите из файловой группы все файлы. Дополнительные сведения см. выше в разделе "REMOVE FILE *logical_file_name*".  
   
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* } Изменяет файловую группу, меняя ее состояние на READ_ONLY или READ_WRITE, делая ее файловой группой по умолчанию для базы данных или изменяя имя файловой группы.  
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Изменяет файловую группу, меняя ее состояние на READ_ONLY или READ_WRITE, делая ее файловой группой по умолчанию для базы данных или изменяя имя файловой группы.  
   
 \<filegroup_updatability_option>  
 Устанавливает свойство «только для чтения» или «чтение и запись» для файловой группы.  

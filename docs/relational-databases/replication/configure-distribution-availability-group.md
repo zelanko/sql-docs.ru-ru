@@ -1,7 +1,7 @@
 ---
 title: Настройка базы данных распространителя SQL Server в группе доступности | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/23/2018
+ms.date: 10/04/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,18 +20,18 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1af1ffe2423fad7e8b9b2b07f2085bdf0efed1f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
+ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615383"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48818002"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Настройка базы данных распространителя репликации в группе доступности AlwaysOn
 
 В этой статье описывается настройка баз данных распространителя репликации SQL Server в группе доступности AlwaysOn.
 
-В SQL Server 2017 с накопительным обновлением 6 реализована поддержка базы данных распространителя репликации в группе доступности с применением следующих механизмов:
+В SQL Server 2017 CU6 и SQL Server 2016 SP2-CU3 реализована поддержка базы данных распространителя репликации в группе доступности с применением следующих механизмов.
 
 - Группа доступности для базы данных распространителя должна иметь прослушиватель. При добавлении распространителя издатель использует в качестве имени распространителя имя прослушивателя.
 - При создании заданий репликации имя прослушивателя также используется в качестве имени распространителя.
@@ -190,13 +190,15 @@ ms.locfileid: "47615383"
    sp_adddistributiondb 'distribution'
    ```
 
-1. На сервере DIST3 выполните команду: 
+4. На сервере DIST3 выполните команду: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
    Значение `@working_directory` должно совпадать с указанным для серверов DIST1 и DIST2.
+
+4. На сервере DIST3 необходимо повторно создать связанные серверы для подписчиков.
 
 ## <a name="remove-a-replica-from-distribution-database-ag"></a>Удаление реплики из группы доступности базы данных распространителя
 

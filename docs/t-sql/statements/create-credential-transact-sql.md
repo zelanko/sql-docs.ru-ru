@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREDENTIAL_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-caps.latest.revision: 51
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 58250bd30559b497d6e2ab841086f9e5bbb26ffd
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: fb335a8be8f5006421c98ac98ac6974a1603f640
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171616"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608846"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -59,13 +56,13 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Указывает имя создаваемых учетных данных. Аргумент *credential_name* не может начинаться с символа номера (#). Системные учетные данные начинаются с символов ##.  При использовании подписанного URL-адреса (SAS) это имя должно соответствовать пути к контейнеру, начинаться с префикса https и не должно содержать косой черты. См. пример Г ниже.  
   
- IDENTITY **='***identity_name***'**  
+ IDENTITY **='**_identity\_name_**'**  
  Указывает имя учетной записи для использования при подключении за пределами сервера. При использовании учетных данных для доступа к хранилищу Azure Key Vault **IDENTITY** — это имя хранилища ключей. См. пример В далее. Если в учетных данных используется подписанный URL-адрес (SAS), **IDENTITY** имеет значение *SHARED ACCESS SIGNATURE*. См. пример Г ниже.  
  
 > [!IMPORTANT]
 > База данных SQL Azure поддерживает только удостоверения Azure Key Vault и удостоверения на основе подписанного URL-адреса. Удостоверения пользователей Windows не поддерживаются.
  
- SECRET **='***secret***'**  
+ SECRET **='**_secret_**'**  
  Указывает секретный код, необходимый для исходящей проверки подлинности.  
   
  При использовании учетных данных для доступа к хранилищу Azure Key Vault в аргументе **SECRET** инструкции **CREATE CREDENTIAL** требуется указать *\<идентификатор клиента>* (без дефисов) и *\<секрет>* **субъекта-службы** в Azure Active Directory без пробела между ними. См. пример В далее. Если в учетных данных используется подписанный URL-адрес, **SECRET** — это токен подписанного URL-адреса. См. пример Г ниже.  Сведения о создании хранимой политики доступа и подписанного URL-адреса в контейнере Azure см. в разделе [Занятие 1. Создание хранимой политики доступа и подписанного URL-адреса для контейнера Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  

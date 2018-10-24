@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01182a581f231ffed82be26698e8e50bf82df9e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94334d025645ec13e6f046800de49eeb902401f4
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842552"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874362"
 ---
 # <a name="install-polybase-on-windows"></a>Установка PolyBase на компьютере по управлением Windows
 
@@ -68,6 +68,8 @@ PolyBase можно установить только на одном экзем
 2. Щелкните **Установка**, затем **Новая установка автономного SQL Server или добавление компонентов**.  
    
 3. На странице выбора компонентов выберите пункт **Служба запросов PolyBase для внешних данных**.  
+
+ ![Службы PolyBase](../../relational-databases/polybase/media/install-wizard.png "Службы PolyBase")  
    
 4. На странице "Конфигурация сервера" настройте **службу SQL Server PolyBase Engine** и службу перемещения данных SQL Server PolyBase для запуска под одной учетной записью.  
    
@@ -89,7 +91,9 @@ PolyBase можно установить только на одном экзем
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
-После установки необходимо [включить компонент PolyBase](#enable).
+  > **ВАЖНО!**
+  >
+  > После установки необходимо [включить компонент PolyBase](#enable).
 
 ::: moniker-end
 
@@ -156,11 +160,16 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> Включение PolyBase
 
-Начиная с SQL Server 2019 CTP 2.0 PolyBase необходимо включить после установки, используя следующую команду Transact-SQL:
+
+Завершив установку, включите компонент Polybase для доступа к его функциям. После подключения к SQL Server 2019 CTP 2.0 PolyBase необходимо включить после установки, используя следующую команду Transact-SQL:
+
 
 ```sql
-sp_configure @configname = 'polybase enabled', @configvalue = 1;
+exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
+RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
+Затем этот экземпляр следует **перезапустить**. 
+
 
 ::: moniker-end
 

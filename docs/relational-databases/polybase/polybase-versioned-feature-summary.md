@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 766d1ec31dda38993a4d5a66a70d56a132c4667c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2052b098f0be7ab377cf38a36b896794d3caa07a
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848282"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874352"
 ---
 # <a name="polybase-features-and-limitations"></a>Возможности и ограничения PolyBase
 
@@ -80,12 +80,10 @@ PolyBase имеет следующие ограничения.
 - [PolyBase не устанавливается при добавлении узла в отказоустойчивый кластер SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
+- Встроенная проверка подлинности не поддерживается. Сейчас поддерживаются только имя пользователя и пароль.  
+- Шифрование включено по умолчанию. Чтобы отключить шифрование, необходимо... (обратитесь к...)
+- [Ограничения сопоставления типов](polybase-type-mapping.md)
 
-- TBD: ширина строки
-- TBD: сопоставление типов
-- TBD: аутентификация
-- TBD: параметры сортировки 
-- TBD: передача  
 
 ## <a name="security-and-authentication"></a>Безопасность и аутентификация 
 

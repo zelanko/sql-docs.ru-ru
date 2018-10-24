@@ -1,33 +1,47 @@
 ---
 title: Журнал изменений для SQL Server Data Tools (SSDT) | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssdt
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssdt
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e0a3d3cdd9904634e415d025c0866bff8140431
-ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
+ms.openlocfilehash: 57e4a453952dc67bdb572697b0d20de2c15fa034
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743507"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072178"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Журнал изменений для SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Это журнал изменений для [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Подробные сведения о новых и измененных возможностях см. в [блоге группы разработчиков SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+
+## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT для Visual Studio 2017 (15.8.1)
+Номер сборки: 14.0.16179.0  
+Дата выпуска: 27 сентября 2018 г.  
+
+### <a name="whats-new"></a>Новые возможности
+
+**SSIS**
+
+1. Добавлена поддержка [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+2. Удалена поддержка SQL Server 2012.
+
+### <a name="known-issues"></a>Известные проблемы:
+
+- Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS.
+- SSDT 15.8.1 сейчас не поддерживает Windows 7 с пакетом обновления 1 (SP1). Если у вас установлена эта операционная система, используйте версию 15.8.0
+
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT для Visual Studio 2017 (15.8)
 Номер сборки: 14.0.16174.0.  
@@ -487,7 +501,7 @@ ms.locfileid: "43743507"
         - Json 
         - Папка 
         - База данных Access 
-        - хранилище BLOB-объектов Azure. 
+        - хранилище BLOB-объектов Azure 
     - Локализованный пользовательский интерфейс PowerQuery
 - Окно инструментов редактора DAX
     - Улучшен интерфейс редактирования DAX для мер, вычисляемых столбцов и выражений строк, доступный в представлении в меню "Другие окна" в SSDT.

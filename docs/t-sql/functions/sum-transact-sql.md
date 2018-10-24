@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d90d71770a25c95f2f1e845556997fe817f889d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a91969bcde67d7f316281c12ab80c85393ed06e3
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833792"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232598"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,16 +43,11 @@ ms.locfileid: "47833792"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SUM ( [ ALL | DISTINCT ] expression )
-   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+-- Aggregate Function Syntax    
 SUM ( [ ALL | DISTINCT ] expression )  
+
+-- Analytic Function Syntax   
+SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -60,7 +55,7 @@ SUM ( [ ALL | DISTINCT ] expression )
  Применяет агрегатную функцию ко всем значениям. ALL является параметром по умолчанию.  
   
  DISTINCT  
- Указывает, что функция SUM возвращает сумму только уникальных значений.  
+ Указывает, что функция SUM возвращает сумму уникальных значений.  
   
  *expression*  
  Может быть константой, столбцом или функцией, а также любым сочетанием арифметических, побитовых и строковых операторов. *expression* — выражение категории точного числового или приблизительного числового типа данных, за исключением типа данных **bit**. Агрегатные функции и вложенные запросы не допускаются. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
@@ -87,7 +82,7 @@ SUM ( [ ALL | DISTINCT ] expression )
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-sum-to-return-summary-data"></a>A. Использование SUM для возвращения сводных данных  
- В следующих примерах показано использование функции SUM для возвращения данных в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+ В следующих примерах показано использование функции SUM для возвращения сводных данных в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
 SELECT Color, SUM(ListPrice), SUM(StandardCost)  
@@ -113,7 +108,7 @@ White           19.00                 6.7926
  ```  
   
 ### <a name="b-using-the-over-clause"></a>Б. Использование предложения OVER  
- В следующем примере показано использование функции SUM с предложением OVER для представления суммарного объема годовых продаж на каждой территории в таблице `Sales.SalesPerson` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Данные секционируются по `TerritoryID` и логически сортируются по `SalesYTD`. Это означает, что функция SUM вычисляется для каждой территории на основании продаж за год. Обратите внимание, что в `TerritoryID` 1 для продаж за 2005 год используются две строки, в которых представлены два менеджера по продажам с показателями за этот год. После расчета суммарного значения продаж для двух данных строк в вычисление включается третья строка, представляющая продажи за 2006 год.  
+ В следующем примере показано использование функции SUM с предложением OVER для представления суммарного объема годовых продаж на каждой территории в таблице `Sales.SalesPerson` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Данные секционируются по `TerritoryID` и логически сортируются по `SalesYTD`. Это означает, что функция SUM вычисляется для каждой территории на основании продаж за год. Обратите внимание, что в `TerritoryID` 1 для продаж за 2005 год используются две строки, в которых представлены два менеджера по продажам с показателями за этот год. После расчета суммарного значения итога для двух данных строк в вычисление включается третья строка, представляющая продажи за 2006 год.  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   

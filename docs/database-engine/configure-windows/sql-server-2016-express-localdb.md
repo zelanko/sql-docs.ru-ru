@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c4d4378091a58ac3f67704c4acff30196963b5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 723d35453dcc01fb333a8c3a212a6a1b288cce8b
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608612"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851789"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,10 @@ ms.locfileid: "47608612"
  
  ## <a name="try-it-out"></a>Попробуйте! 
   
--   Чтобы скачать и установить SQL Server 2016 Express, перейдите на страницу **[загрузок SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB — это компонент, выбираемый и доступный только при скачивании мультимедиа. Если вы скачиваете носитель, выберите **Express Advanced** или пакет **LocalDB** . 
+-   Чтобы скачать и установить SQL Server 2016 Express, перейдите на страницу **[загрузок SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB — это компонент, выбираемый и доступный только при скачивании мультимедиа. Если вы скачиваете носитель, выберите **Express Advanced** или пакет **LocalDB** через **Visual Studio Installer**. В **Visual Studio Installer** можно установить SQL Server Express LocalDB как часть рабочей нагрузки **Разработка классических приложений .NET** или в качестве отдельного компонента.
+
+   > [!TIP]
+   > LocalDB можно также установить как часть Visual Studio 2017. Во время установки Visual Studio выберите рабочую нагрузку **Разработка классических приложений .NET**, которая включает SQL Server Express LocalDB.
   
 -   Есть учетная запись Azure?  Затем перейдите **[сюда](https://azure.microsoft.com/services/virtual-machines/sql-server/)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  
   
@@ -129,6 +132,5 @@ REM Gather information about the instance of LocalDB
 >  **LocalDB** всегда запускается в контексте безопасности пользователя. Это означает, что **LocalDB** никогда не будет запускаться с учетными данными группы локальных администраторов. Это означает, что все файлы базы данных, используемые экземпляром **LocalDB** , должны быть доступны учетной записи пользователя Windows их владельца, что не подразумевает членства в локальной группе администраторов.  
   
 ## <a name="see-also"></a>См. также:  
- [Программа SqlLocalDB](../../tools/sqllocaldb-utility.md)  
-  
-  
+
+[Программа SqlLocalDB](../../tools/sqllocaldb-utility.md)

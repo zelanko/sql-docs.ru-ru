@@ -1,13 +1,11 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/10/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_LOGIN_TSQL
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: 101
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a5f2edc15c171a80c16ccc77f11bf7673571d53
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5e7b598d4fe860c0d0eb1cb95730bb483be5470a
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074477"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252111"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -53,11 +50,11 @@ ms.locfileid: "43074477"
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[SQL Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>Синтаксис 
   
@@ -91,27 +88,27 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 *login_name*  
 Указывает имя пользователя для создаваемого имени входа. Существует четыре типа имен входа: имена входа SQL Server, имена входа Windows, имена входа, сопоставленные с помощью сертификата, а также имена входа, сопоставленные с помощью асимметричного ключа. При создании имен входа, сопоставленных с учетной записью домена Windows, необходимо использовать имя входа версии, более ранней, чем Windows 2000, с форматом [\<domainName>\\<login_name>]. Нельзя использовать имя участника-пользователя в формате login_name@DomainName. См. приведенный ниже пример Г. Имена входа проверки подлинности имеют тип **sysname**, должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md) и не могут содержать символ "**\\**". Имена входа Windows могут содержать символы «**\\**». Имена входа, основанные на пользователях Active Directory, могут иметь не более 21 символа в длину. 
 
-PASSWORD **='***password***'* Применяется только к именам входа SQL Server. Задает пароль для создаваемого имени входа. Следует использовать надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с SQL Server 2012 (11.x) сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
+PASSWORD **='**_password_**'* Применяется только к именам входа SQL Server. Задает пароль для создаваемого имени входа. Следует использовать надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с SQL Server 2012 (11.x) сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
   
 В паролях учитывается регистр символов. Пароли всегда должны содержать не менее 8 символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*. 
   
-PASSWORD **=***hashed_password*  
+PASSWORD **=**_hashed\_password_  
 Применимо только к ключевому слову HASHED. Указывает хэшированное значение пароля для создаваемого имени входа. 
   
 HASHED Применяется только к именам входа SQL Server. Указывает, что пароль, введенный после аргумента PASSWORD, уже хэширован. Если этот параметр не выбран, то строка, введенная в качестве пароля, хэшируется перед сохранением в базе данных. Данный параметр может быть применен только для миграции баз данных с одного сервера на другой. Не используйте параметр HASHED для создания новых имен входа. Параметр HASHED нельзя использовать с хэшами, созданными в SQL 7 или более ранних версиях.
 
 MUST_CHANGE применяется только к именам входа SQL Server. Если этот параметр задан, то при первом использовании нового имени входа SQL Server запрашивает новый пароль. 
   
-CREDENTIAL **=***credential_name*  
+CREDENTIAL **=**_credential\_name_  
 Имя учетных данных для сопоставления с новым именем входа SQL Server. Учетные данные уже должны существовать на сервере. В настоящее время этот параметр только связывает учетные данные с именем входа. Учетные данные не могут быть сопоставлены с именем входа системного администратора (sa). 
   
 SID = *sid*  
 Используется для повторного создания имени входа. Применяется только к именам входа проверки подлинности SQL Server, но не относится к именам входа проверки подлинности Windows. Указывает идентификатор SID нового имени входа проверки подлинности SQL Server. Если этот параметр не используется, SQL Server назначает идентификатор SID автоматически. Структура идентификатора SID зависит от версии SQL Server. Идентификатор SID имени входа SQL Server: 16-байтовое (**binary(16)**) литеральное значение, основанное на GUID. Например, `SID = 0x14585E90117152449347750164BA00A7`. 
   
-DEFAULT_DATABASE **=***database*  
+DEFAULT_DATABASE **=**_database_  
 База данных по умолчанию, связываемая с именем входа. Если этот параметр не задан, то базой данных по умолчанию становится master. 
   
-DEFAULT_LANGUAGE **=***language*  
+DEFAULT_LANGUAGE **=**_language_  
 Язык по умолчанию, назначаемый имени входа. Если этот параметр не задан, то в качестве языка по умолчанию выбирается текущий язык по умолчанию для сервера. При смене языка по умолчанию для сервера язык по умолчанию имени входа не меняется. 
   
 CHECK_EXPIRATION **=** { ON | **OFF** }  
@@ -263,26 +260,13 @@ GO
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* База данных SQL<br />Базы данных SQL*</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* База данных SQL<br /> —логический сервер \*_**|[База данных SQL<br /> — управляемый экземпляр](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Логический сервер Базы данных SQL Azure
+## <a name="azure-sql-database-logical-server"></a>Логический сервер Базы данных SQL Azure
   
 ## <a name="syntax"></a>Синтаксис 
   
@@ -392,26 +376,13 @@ GO
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><strong><em>* База данных SQL<br />Управляемый экземпляр *</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|**_\*База данных SQL<br /> — управляемый экземпляр \*_**|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
 ## <a name="overview"></a>Обзор
 
@@ -525,23 +496,13 @@ GO
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>>   <th><strong><em>* Хранилище данных<br />SQL*</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр]()|**_\* Хранилище данных<br />SQL\*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-data-warehouse"></a>Хранилище данных SQL Azure
+## <a name="azure-sql-data-warehouse"></a>Хранилище данных SQL Azure
   
 ## <a name="syntax"></a>Синтаксис 
   
@@ -644,27 +605,16 @@ GO
  [Создание имени для входа](../../relational-databases/security/authentication-access/create-a-login.md)  
   
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр]()|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL Parallel Data Warehouse
+## <a name="parallel-data-warehouse"></a>Параллельное хранилище данных
 
   
 ## <a name="syntax"></a>Синтаксис 
@@ -686,7 +636,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 *login_name*  
 Указывает имя пользователя для создаваемого имени входа. Существует четыре типа имен входа: имена входа SQL Server, имена входа Windows, имена входа, сопоставленные с помощью сертификата, а также имена входа, сопоставленные с помощью асимметричного ключа. При создании имен входа, сопоставленных с учетной записью домена Windows, необходимо использовать имя входа версии, более ранней, чем Windows 2000, с форматом [\<domainName>\\<login_name>]. Нельзя использовать имя участника-пользователя в формате login_name@DomainName. См. приведенный ниже пример Г. Имена входа проверки подлинности имеют тип **sysname**, должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md) и не могут содержать символ "**\\**". Имена входа Windows могут содержать символы «**\\**». Имена входа, основанные на пользователях Active Directory, могут иметь не более 21 символа в длину. 
 
-PASSWORD **='***password***'* Применяется только к именам входа SQL Server. Задает пароль для создаваемого имени входа. Следует использовать надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с SQL Server 2012 (11.x) сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
+PASSWORD **='**_password_**'* Применяется только к именам входа SQL Server. Задает пароль для создаваемого имени входа. Следует использовать надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с SQL Server 2012 (11.x) сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
   
 В паролях учитывается регистр символов. Пароли всегда должны содержать не менее 8 символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*. 
   

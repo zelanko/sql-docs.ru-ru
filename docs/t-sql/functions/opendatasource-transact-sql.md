@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENDATASOURCE
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 58b37be191f9b3ce95d7442a4ba9d68f9fdc2339
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 8764d1e8b8ae4facebf49fa746740f69fb8148e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752762"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  Имя, зарегистрированное как PROGID имя поставщика OLE DB, используемое для доступа к источнику данных. Аргумент *provider_name* имеет тип данных **char** и не имеет значения по умолчанию.  
   
  *init_string*  
- Строка подключения, передаваемая в интерфейс IDataInitialize поставщика назначения. Синтаксис строки поставщика основан на парах "ключевое_слово-значение", разделенных точкой с запятой, например: **'***ключевое_слово1*=* значение***;***ключевое_слово2*=* значение***'**.  
+ Строка подключения, передаваемая в интерфейс IDataInitialize поставщика назначения. Синтаксис строки поставщика основан на парах "ключевое_слово-значение", разделенных точкой с запятой, например:  **'**_ключевое_слово1_=_значение_**;***ключевое_слово2*=* значение***'**.  
   
  Описание конкретных пар «ключевое_слово-значение», поддерживаемых поставщиком, см. в пакете [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK. Данная документация определяет основной синтаксис. В приведенной ниже таблице представлены наиболее часто используемые ключевые слова в аргументе *init_string*.  
   

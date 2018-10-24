@@ -10,12 +10,12 @@ helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1cfb5ce2ed20788eead43c6b90a9d64378e58740
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d0db88d84effcc76c97addeeab6e9d6c104aa5f
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785662"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878117"
 ---
 # <a name="sql-server-privacy-supplement"></a>Приложение к конфиденциальности в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47785662"
 - База данных SQL Azure
 - SQL Server Management Studio (SSMS)
 - SQL Server Data Tools (SSDT)
-- Azure Data Studio
+- Azure Data Studio.
 - Помощник по миграции баз данных
 - Помощник миграции SQL Server
 - Расширение MS-SQL
@@ -128,6 +128,7 @@ ms.locfileid: "47785662"
 - данные конфигурации сервера, например параметры sp_configure;
 - данные конфигурации компонентов;
 - имена событий и коды ошибок.
+- Параметры оборудования и идентификации, например производитель оборудования
 
 Майкрософт просматривает значения имен приложений, задаваемые другими использующими SQL Server программами (например, Sharepoint или сторонние пакеты программ). Эти сведения отправляются в Майкрософт в составе системных метаданных, если включены данные об использовании. Клиентам не следует помещать личные данные, например персональные данные конечных пользователей, в поля системных метаданных или создавать приложения, сохраняющие личные данные в этих полях. 
 

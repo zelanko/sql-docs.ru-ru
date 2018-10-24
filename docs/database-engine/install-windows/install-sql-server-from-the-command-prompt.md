@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 172c7c1bfd6cf312ddf47d8d6e6eb8b34052a67f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d50985338f6ac0e3cabdebf53b289e77716e39
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784452"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852099"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
 
@@ -274,7 +274,7 @@ ms.locfileid: "47784452"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Указывает пароль стартовой учетной записи для службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Необязательно**|Указывает режим [запуска](#Accounts) для службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |Python или службы машинного обучения (в базе данных)|MPYCACHEDIRECTORY|Используйте этот параметр, чтобы указать каталог кэша для поддержки компонентов Python в службах машинного обучения или на сервере машинного обучения (изолированного) SQL Server 2017. Этот параметр обычно используется при установке компонентов Python из [командной строки на компьютере без доступа к Интернету](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
-|R или службы машинного обучения (в базе данных)|MRCACHEDIRECTORY|Используйте этот параметр, чтобы указать каталог кэша для поддержки Microsoft R Open, служб R в SQL Server 2016, SQL Server 2016 R Server (изолированного) или для компонентов R в службах машинного обучения и на сервере машинного обучения (изолированном) SQL Server 2017. Этот параметр обычно используется при установке компонентов R из [командной строки на компьютере без доступа к Интернету](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
+|R или службы машинного обучения (в базе данных)|MRCACHEDIRECTORY|Используйте этот параметр, чтобы указать каталог кэша для поддержки Microsoft R Open, служб R в SQL Server 2016, SQL Server 2016 R Server (изолированного) или для компонентов R в службах машинного обучения и на сервере Machine Learning Server (изолированном) SQL Server 2017. Этот параметр обычно используется при установке компонентов R из [командной строки на компьютере без доступа к Интернету](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
   
 ###### <a name="sample-syntax"></a>Образец синтаксиса  
  Установка нового изолированного экземпляра с компонентами [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Full-Text Search и поддержкой репликации и включение мгновенной инициализации файлов для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 

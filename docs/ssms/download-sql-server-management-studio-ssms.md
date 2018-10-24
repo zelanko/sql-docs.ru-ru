@@ -1,14 +1,11 @@
 ---
 title: Загрузка SQL Server Management Studio (SSMS) | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/04/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - установить SSMS, скачать SSMS, последняя версия SSMS
@@ -24,103 +21,95 @@ keywords:
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c226957b2bd8c0a66bda053795fa1bbe96ba042f
-ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
+ms.openlocfilehash: 3d22c89d40c423449af8fe1803ceea3a586f5b45
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43694737"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906344"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-SQL Server Management Studio (SSMS) — это интегрированная среда для управления любой инфраструктурой SQL: от SQL Server до Базы данных SQL. SSMS предоставляет средства для настройки, наблюдения и администрирования экземпляров SQL. С помощью SSMS можно развертывать, отслеживать и обновлять компоненты уровня данных, используемые вашими приложениями, а также создавать запросы и скрипты.
+SQL Server Management Studio (SSMS) — это интегрированная среда для управления любой инфраструктурой SQL: от SQL Server до базы данных SQL Azure. SSMS предоставляет средства для настройки, наблюдения и администрирования экземпляров SQL. С помощью SSMS можно развертывать, отслеживать и обновлять компоненты уровня данных, используемые вашими приложениями, а также создавать запросы и скрипты.
 
 Используйте SQL Server Management Studio (SSMS) для создания запросов к базам данных и хранилищам данных, их проектирования и управления ими, где бы они ни находились: на локальном компьютере или в облаке.
 
 **SSMS распространяется бесплатно!**
 
-SSMS 17.x — последняя версия *SQL Server Management Studio*, которая поддерживает SQL Server 2017.
+## <a name="ssms-179-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9 является текущей общедоступной версией SSMS
 
-**[![Скачать](../ssdt/media/download.png) Скачайте SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014306) (более ранняя версия SSMS 17.x на компьютере не требуется)**
+**[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014306)**
+<br>**[![скачать](../ssdt/media/download.png) Скачать пакет обновления SQL Server Management Studio 17.9 (обновление с версии 17.x до 17.9)](https://go.microsoft.com/fwlink/?linkid=2014215)**
 
-**[![Скачать](../ssdt/media/download.png) Скачайте пакет обновления SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014215) (обновление с 17.x до 17.9; на компьютере должна быть более ранняя версия SSMS 17.x)**
+Дополнительные сведения о SSMS 17.9 см. в разделе [Журнал изменений SSMS 17.9](sql-server-management-studio-changelog-ssms.md#ssms-179-latest-ga-release).
 
+## <a name="ssms-180-preview"></a>SSMS 18.0 (предварительная версия)
+
+**Доступна общедоступная предварительная версия 4 SSMS 18.0. Это последнее поколение *SQL Server Management Studio* с поддержкой [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]!**
+
+**[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 18.0 (предварительная версия 4)](https://go.microsoft.com/fwlink/?linkid=2014662)**
+
+Предварительная версия 4 — это первая общедоступная предварительная версия SSMS 18.0.
 
 **Сведения о версии**
 
-Номер выпуска: 17.9.<br>
-Номер сборки: 14.0.17285.0.<br>
-Дата выпуска: 4 сентября 2018 г.
+- Номер выпуска: 18.0 (предварительная версия 4)<br>
+- Номер сборки: 15.0.18040.0<br>
+- Дата выпуска: 24 сентября 2018 г
 
-При установке SSMS 17.x не обновляются и не заменяются версии SSMS 16.x или более ранние. Среда SSMS 17.x устанавливается параллельно с предыдущими версиями, и обе версии остаются доступными для использования.
-Если на компьютере есть несколько параллельных установок SSMS, всегда проверяйте, правильную ли версию вы запускаете. Последняя версия называется *Microsoft SQL Server Management Studio 17* и имеет новый значок: 
+Если у вас есть замечания или предложения или вы хотите сообщить о проблеме, обратитесь к группе SSMS на [UserVoice](https://aka.ms/sqlfeedback).
+
+При установке SSMS 18.x не обновляются и не заменяются версии SSMS 17.x или более ранние. Среда SSMS 18.x устанавливается параллельно с предыдущими версиями, и обе версии остаются доступными для использования.
+
+Если на компьютере есть несколько параллельных установок SSMS, всегда проверяйте, правильную ли версию вы запускаете. Последняя версия называется *Microsoft SQL Server Management Studio 18*:
  
-   ![SSMS 17.x](media/download-sql-server-management-studio-ssms/version-icons.png)
 
-
-## <a name="available-languages"></a>Доступные языки
-
-> [!NOTE]
-> При установке на следующие платформы для использования неанглоязычных локализованных выпусков SSMS требуется [пакет обновления безопасности KB 2862966](https://support.microsoft.com/en-us/kb/2862966) : Windows 8, Windows 7, Windows Server 2012 и Windows Server 2008 R2.
-
+## <a name="available-languages-ssms-180-preview"></a>Доступные языки (предварительная версия SSMS 18.0)
 
 Этот выпуск SSMS можно установить на следующих языках.
 
-SQL Server Management Studio 17.9:<br>
-[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
+SQL Server Management Studio 18.0 (предварительная версия 4):<br>
+[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x40a)
 
-Пакет обновления SQL Server Management Studio 17.9 (обновление с версии 17.x до 17.9):<br>
-[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x40a)
+Пакет обновления SQL Server Management Studio 18.0 (обновление до версии 18.0):<br>
+В настоящее время варианты обновления недоступны.
 
 > [!NOTE]
-> Модуль PowerShell для SQL Server теперь устанавливается отдельно, из коллекции PowerShell. Дополнительные сведения см. в статье [Загрузка модуля PowerShell (SQL Server)](download-sql-server-ps-module.md).
-
-## <a name="sql-server-management-studio"></a>SQL Server Management Studio
+> Модуль SQL Server PowerShell устанавливается отдельно из коллекции PowerShell. Дополнительные сведения см. в статье [Загрузка модуля PowerShell (SQL Server)](download-sql-server-ps-module.md).
 
 
-## <a name="new-in-this-release"></a>Новое в данном выпуске
+## <a name="new-in-this-release-ssms-180-preview"></a>Новые возможности в этом выпуске (SSMS 18.0, предварительная версия)
 
-SSMS 17.9 — это новейшая версия SQL Server Management Studio. Поколение 17.x среды SSMS поддерживает почти все функциональные возможности выпусков SQL Server 2008 — SQL Server 2017. Версия 17.x также поддерживает SQL Analysis Services в режиме PaaS.
+SSMS 18.0 (предварительная версия) — это новейшая версия SQL Server Management Studio. Поколение 18.x среды SSMS поддерживает почти все функциональные возможности выпусков SQL Server 2008–SQL Server 2019 (предварительная версия).
 
-Версия 17.9 включает перечисленные ниже возможности.
-
-**Общие ошибки SSMS**
-
-Showplan:
-
-- При активации функции для определенного плана в графическом отображении инструкции Showplan теперь появляются новые атрибуты обратной связи по временно предоставляемому буферу памяти в строковом режиме: IsMemoryGrantFeedbackAdjusted и LastRequestedMemory. Они добавлены в XML-элемент плана запроса MemoryGrantInfo. Дополнительные сведения об обратной связи с временно предоставляемым буфером памяти в строковом режиме см. в статье [Адаптивная обработка запросов в базах данных SQL](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing).
-
-Azure SQL: 
-
-- Добавлена поддержка номеров SKU виртуальных ядер при создании базы данных Azure. Дополнительные сведения см. в разделе [Модель покупки на основе числа виртуальных ядер](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model).
+Дополнительные сведения о новых возможностях в этом выпуске см. в разделе [Журнал изменений SSMS](sql-server-management-studio-changelog-ssms.md).
 
 
-## <a name="supported-sql-offerings"></a>Поддерживаемые предложения SQL
+## <a name="supported-sql-offerings-ssms-180-preview"></a>Поддерживаемые предложения SQL (SSMS 18.0, предварительная версия)
 
-* Эта версия SSMS работает со всеми [поддерживаемыми версиями SQL Server (SQL Server 2008 — SQL Server 2017)](https://support.microsoft.com/lifecycle?C2=1044) и предоставляет превосходную поддержку новейших облачных функций базы данных SQL Azure и хранилища данных SQL Azure.
-* Используйте SSMS 17.x для подключения к [SQL Server на Linux](../linux/sql-server-linux-overview.md).
-* Кроме того, SSMS 17.X можно установить одновременно с SSMS 16.X или SQL Server 2014 SSMS и более ранними версиями.
-* Службы SQL Server Integration Services (SSIS) — среда SSMS версии 17.x не поддерживает подключение к устаревшим службам SQL Server Integration Services. Для подключения к более ранней версии служб Integration Services используйте соответствующую версию SSMS. Например, используйте SSMS 16.x для подключения к службам SQL Server 2016 Integration Services. Версии SSMS 17.x и SSMS 16.x можно установить параллельно на одном компьютере. Начиная с выпуска SQL Server 2012 база данных каталога SSIS (SSISDB) является рекомендуемым средством для хранения, выполнения и мониторинга пакетов служб Integration Services, а также управления ими. Дополнительные сведения см. в разделе [Каталог служб SSIS](../integration-services/catalog/ssis-catalog.md).
+* Эта версия SSMS работает со всеми [поддерживаемыми версиями SQL Server 2008–[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) и предоставляет превосходную поддержку новейших облачных функций базы данных SQL Azure и хранилища данных SQL Azure.
+* Кроме того, SSMS 18.x можно установить одновременно с SSMS 17.x, SSMS 16.x или SQL Server 2014 и более ранними версиями.
+* Службы SQL Server Integration Services (SSIS) — среда SSMS версии 17.x и более поздней не поддерживает подключение к устаревшим службам SQL Server Integration Services. Для подключения к более ранней версии служб Integration Services используйте соответствующую версию SSMS. Например, используйте SSMS 16.x для подключения к службам SQL Server 2016 Integration Services. Версии SSMS 17.x и SSMS 16.x можно установить параллельно на одном компьютере. Начиная с выпуска SQL Server 2012 база данных каталога SSIS (SSISDB) является рекомендуемым средством для хранения, выполнения и мониторинга пакетов служб Integration Services, а также управления ими. Дополнительные сведения см. в разделе [Каталог служб SSIS](../integration-services/catalog/ssis-catalog.md).
 
-## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
-  
+## <a name="supported-operating-systems-ssms-180-preview"></a>Поддерживаемые операционные системы (SSMS 18.0, предварительная версия)
+
 При использовании последнего пакета обновления этот выпуск SSMS поддерживает следующие 64-разрядные платформы:
-- Windows 10 (64-разрядная)
-- Windows 8.1 (64-разрядная)
-- Windows 8 (64-разрядная)
-- Windows 7 с пакетом обновления 1 (64-разрядная)
+
+- Windows 10 (64-разрядная) *
 - Windows Server 2016 *
 - Windows Server 2012 R2 (64-разрядная версия)
 - Windows Server 2012 (64-разрядная версия)
 - Windows Server 2008 R2 (64-разрядная версия)
 
-\* Среда SSMS 17.X основана на изолированной оболочке Visual Studio 2015, которая была выпущена до Windows Server 2016. Корпорация Майкрософт уделяет большое внимание совместимости приложений и гарантирует, что уже выпущенные приложения продолжат работать в последних выпусках Windows. Чтобы минимизировать проблемы с запуском SSMS в Windows Server 2016, убедитесь, что для SSMS установлены все последние обновления. При возникновении каких-либо проблем с SSMS в Windows Server 2016, обратитесь в службу поддержки. Служба поддержки определит, связана ли проблема с SSMS, с Visual Studio или с совместимостью SSMS и Windows. Затем ваш запрос будет перенаправлен соответствующей группе для дальнейшего изучения.
+\* Требуется версия 1607 (10.0.14939) или более поздняя
 
-## <a name="ssms-installation-tips-and-issues"></a>Советы по установке SSMS и связанные с ней проблемы
+> [!NOTE]
+> SSMS работает только на Windows. Если вам требуется средство, которое работает на платформах, отличных от Windows, рассмотрите Azure Data Studio. Azure Data Studio — это новое кроссплатформенное средство для macOS, Linux, а также Windows. Дополнительные сведения см. в разделе [Azure Data Studio](../azure-data-studio/what-is.md).
+  
+## <a name="ssms-installation-tips-and-issues-ssms-180-preview"></a>Советы по установке SSMS и связанные с ней проблемы (SSMS 18.0, предварительная версия)
 
 ### <a name="minimize-installation-reboots"></a>Минимизация перезагрузок при установке
 
@@ -132,37 +121,22 @@ Azure SQL:
   * Указанные действия обычно требуется выполнить всего один раз. В некоторых ситуациях перезагрузка необходима для дополнительных обновлений до того же основного номера версии SSMS. Все необходимые компоненты SSMS для промежуточных обновлений уже установлены на компьютере.
 
 
-## <a name="release-notes"></a>Заметки о выпуске
+## <a name="release-notes-ssms-180-preview"></a>Заметки о выпуске (SSMS 18.0, предварительная версия)
 
-Сейчас известных проблем в этом выпуске нет.
+Ниже представлены известные проблемы в текущем выпуске.
 
+> [!IMPORTANT]
+> При использовании проверки подлинности *Active Directory — Universal с поддержкой MFA* в редакторе SQL-запросов пользователи могут заметить, что подключение закрывается и снова открывается с каждым вызовом запроса. Побочные эффекты такого закрытия включают неожиданное удаление глобальных временных таблиц и иногда присвоение нового идентификатора SPID для соединения. Закрытие не будет происходить при открытой транзакции в соединении. Чтобы обойти эту проблему, пользователи могут указать `persist security info=true` в параметрах подключения.
 
+SSMS
 
-## <a name="uninstall-and-reinstall-ssms"></a>Удаление и повторная установка SSMS
+- При двойном щелчке на SQL-файле запускается SSMS, но не открывается скрипт.
+  - Обходное решение: перетащите SQL-файл в редактор SSMS.
 
-Если в SSMS возникают проблемы, которые не удается устранить посредством удаления и повторной установки, попробуйте [восстановить](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) Visual Studio 2015 IsoShell. Если восстановление Visual Studio 2015 IsoShell не помогло решить проблему, выполните следующие действия, которые помогут устранить ряд различных проблем:
+Службы SSIS
 
-1.  Удалите SSMS так же, как обычное приложение (в разделе *Приложения и компоненты*, *Программы и компоненты* и т. п. в зависимости от вашей версии Windows).
-
-2.  Удалите Visual Studio 2015 IsoShell **из командной строки с повышенными привилегиями**:
-   
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
-
-    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
-
-3.  Удалите распространяемый пакет Microsoft Visual C++ 2015 так же, как обычное приложение. Если на вашем компьютере есть обе версии x86 и x64, удалите их.
-
-4.  Повторно установите Visual Studio 2015 IsoShell **из командной строки с повышенными привилегиями**:  
-
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
- 
-    ```vs_isoshell.exe /PromptRestart```
-
-5.  Повторно установите SSMS.
-
-6.  [Обновите распространяемый пакет Visual C++ 2015 до последней версии](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads), если он не обновлен.
-
-
+- Не удается успешно развернуть или выполнить пакет, если он предназначен для SQL Server старой версии и одновременно содержит задачу скрипта и компонент скрипта.
+- SSMS не удается подключиться к удаленной службе Integration Services.
 
 
 ## <a name="previous-releases"></a>Предыдущие выпуски
@@ -183,3 +157,6 @@ Azure SQL:
 - [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
+
+Если у вас есть замечания или предложения или вы хотите сообщить о проблеме, обратитесь к группе SSMS на [UserVoice](https://aka.ms/sqlfeedback).

@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 130
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2ff620929c51cde29b82096c6437f7a6bfeefa50
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171826"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838502"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -146,7 +143,7 @@ OPENROWSET
 |ACP|Столбцы типа **char**, **varchar** или **text** преобразуются из кодовой страницы ANSI или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |OEM (по умолчанию)|Столбцы типа **char**, **varchar** или **text** преобразуются из системной кодовой страницы OEM в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |RAW|Преобразование из одной кодовой страницы в другую не выполняется. Это наиболее быстрый параметр.|  
-|*code_page*|Показывает исходную кодовую страницу, в которой представлены символы в файле данных, например 850.<br /><br /> **\*\* Важно! \*\*** Версии до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживают кодовую страницу 65001 (кодировка UTF-8).|  
+|*code_page*|Показывает исходную кодовую страницу, в которой представлены символы в файле данных, например 850.<br /><br /> ****Важно! **** Версии до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживают кодовую страницу 65001 (кодировка UTF-8).|  
   
  ERRORFILE ='*file_name*'  
  Указывает файл, используемый для сбора строк, которые имеют ошибки форматирования и не могут быть преобразованы в набор строк OLE DB. Эти строки без изменений копируются из файла данных в файл ошибок.  
@@ -235,7 +232,7 @@ FIELDQUOTE **=** 'field_quote'
   
  При удаленном доступе к источнику данных OLE DB автоматическое делегирование идентификатора имени входа доверительных соединений с сервера, к которому подключен клиент, на запрашиваемый сервер не выполняется. Делегирование проверки подлинности должно быть настроено.  
   
- Имена каталога или схемы необходимы, если поставщик OLE DB поддерживает несколько каталогов и схем для указанного источника данных. Значения аргументов *catalog* и *schema* можно не указывать, если поставщик OLE DB их не поддерживает. Если поставщик поддерживает только имена схем, необходимо указать двухкомпонентное имя в формате *схема ***.*** объект*. Если поставщик поддерживает только имена каталогов, необходимо указать трехкомпонентное имя в формате *каталог ***.*** схема ***.*** объект*. Для передаваемых запросов, использующих поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо указать трехкомпонентное имя. Дополнительные сведения см. в статье [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ Имена каталога или схемы необходимы, если поставщик OLE DB поддерживает несколько каталогов и схем для указанного источника данных. Значения аргументов _catalog_ и _schema_ можно не указывать, если поставщик OLE DB их не поддерживает. Если поставщик поддерживает только имена схем, необходимо указать двухкомпонентное имя в формате _схема_**.**_объект_. Если поставщик поддерживает только имена каталогов, необходимо указать трехкомпонентное имя в формате _каталог_**.**_схема_**.**_объект_. Для передаваемых запросов, использующих поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо указать трехкомпонентное имя. Дополнительные сведения см. в статье [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  В качестве аргументов в функции `OPENROWSET` нельзя использовать переменные.  
   
