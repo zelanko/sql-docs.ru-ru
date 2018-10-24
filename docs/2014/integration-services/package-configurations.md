@@ -154,10 +154,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [Understanding Integration Services Package Configurations](http://go.microsoft.com/fwlink/?LinkId=165643)(Основные сведения о конфигурации пакетов служб Integration Services) на сайте msdn.microsoft.com.  
+-   Техническая статья [Основные сведения о конфигурации пакетов служб Integration Services](http://go.microsoft.com/fwlink/?LinkId=165643) на сайте msdn.microsoft.com.  
   
--   Запись в блоге [Creating packages in code – Package Configurations](http://go.microsoft.com/fwlink/?LinkId=217663)(Создание пакетов в коде — конфигурации пакетов) на сайте www.sqlis.com.  
+-   Запись в блоге [Создание пакетов в коде — конфигурации пакетов](http://go.microsoft.com/fwlink/?LinkId=217663) на сайте www.sqlis.com.  
   
--   Запись в блоге [API Sample – Programmatically add a configuration file to a package](http://go.microsoft.com/fwlink/?LinkId=217664)(Пример API — программное добавление файла конфигурации в пакет) на сайте blogs.msdn.com.  
+-   Запись в блоге [Пример API — программное добавление файла конфигурации в пакет](http://go.microsoft.com/fwlink/?LinkId=217664) на сайте blogs.msdn.com.  
   
   
