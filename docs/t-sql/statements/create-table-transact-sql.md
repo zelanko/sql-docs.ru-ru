@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5cb959e6d82a5b16b4affc8b0de3256f4d1af8a9
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 2d503a4c136bbdae2142f232cf96e2e83067c945
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906474"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461159"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -1055,7 +1055,7 @@ GO
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Устранение неполадок с глобальными временными таблицами в Базе данных SQL Azure 
 
-Сведения об устранении неполадок в базе данных tempdb см. в разделе [Устранение неполадок, связанных с нехваткой места на диске для базы данных tempdb](http://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
+Сведения об устранении неполадок в базе данных tempdb см. в разделе [Устранение неполадок, связанных с нехваткой места на диске для базы данных tempdb](http://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
 
 > [!NOTE]
 > Только администратор сервера может получить доступ к динамическим административным представлениям для устранения неполадок в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
