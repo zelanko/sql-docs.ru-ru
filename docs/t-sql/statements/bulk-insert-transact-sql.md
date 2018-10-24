@@ -27,12 +27,12 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7409eb0c6c26b03309fbdbdd37b8d2255cfa5b75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa8fce2f2579f792abc78b8837e4a33e090f806e
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620432"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100485"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,9 +93,15 @@ BULK INSERT
  **'** *data_file* **'**  
  Полный путь и имя файла данных, который содержит импортируемые в указанную таблицу или представление данные. Инструкция BULK INSERT может импортировать данные с диска (сетевого, гибкого, жесткого и т. д.).   
  
- Аргумент *data_file* должен указывать действительный путь с того сервера, на котором запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент *data_file* является удаленным файлом, указывайте имя в формате UNC. Имя в формате UNC имеет форму \\\\*Имя_системы*\\*Имя_общего_ресурса*\\*Путь*\\*Имя_файла*. Например, `\\SystemX\DiskZ\Sales\update.txt`.   
+ Аргумент *data_file* должен указывать действительный путь с того сервера, на котором запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент *data_file* является удаленным файлом, указывайте имя в формате UNC. Имя в формате UNC имеет форму \\\\*Имя_системы*\\*Имя_общего_ресурса*\\*Путь*\\*Имя_файла*. Пример:   
+
+```sql
+BULK INSERT Sales.Orders
+FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
+```
+
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-Начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP-версии 1.1, аргумент data_file может находиться в хранилище больших двоичных объектов Azure.
+Начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP-версии 1.1, аргумент data_file может находиться в хранилище больших двоичных объектов Azure. В этом случае необходимо указать параметр **data_source_name**.
 
 > [!IMPORTANT]
 > База данных SQL Azure не поддерживает чтение данных из файлов Windows.
@@ -104,7 +110,13 @@ BULK INSERT
 **'** *data_source_name* **'**   
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Именованный внешний источник данных, указывающий на расположение импортируемого файла в хранилище больших двоичных объектов Azure. Внешний источник данных должен быть создан с помощью параметра `TYPE = BLOB_STORAGE`, который доступен в [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP-версии 1.1. Дополнительные сведения см. в разделе [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).    
-  
+ 
+```sql
+BULK INSERT Sales.Orders
+FROM 'data/orders.dat'
+WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
+```
+
  BATCHSIZE **=***batch_size*  
  Указывает число строк в одном пакете. Каждый пакет копируется на сервер за одну транзакцию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] фиксирует или откатывает транзакцию для каждого из пакетов. По умолчанию, все данные, содержащиеся в файле, передаются одним пакетом. Дополнительные сведения о вопросах производительности см. в подразделе «Замечания» далее в этом разделе.  
   
@@ -123,6 +135,12 @@ BULK INSERT
   
  CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'***code_page***'** }  
  Указывает кодовую страницу данных в файле данных. Аргумент CODEPAGE имеет смысл только в том случае, если данные содержат столбцы типа **char**, **varchar** или **text** с символьными значениями, коды которых больше **127** или меньше **32**.  
+
+```sql
+BULK INSERT Sales.Orders
+FROM '\\SystemX\DiskZ\Sales\data\orders.dat'
+WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
+```
 
 > [!IMPORTANT]
 > Параметр CODEPAGE не поддерживается в Linux.
@@ -215,6 +233,12 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
 FORMAT **=** 'CSV'   
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Указывает файл данных с разделителями-запятыми, соответствующий стандарту [RFC 4180](https://tools.ietf.org/html/rfc4180).
+
+```sql
+BULK INSERT Sales.Orders
+FROM '\\SystemX\DiskZ\Sales\data\orders.csv'
+WITH ( FORMAT='CSV');
+```
 
 FIELDQUOTE **=** 'field_quote'   
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
@@ -425,11 +449,15 @@ WITH
 > База данных SQL Azure не поддерживает чтение данных из файлов Windows.
 
 ### <a name="e-importing-data-from-a-csv-file"></a>Д. Импорт данных из CSV-файла   
-В следующем примере показано указание CSV-файла.   
-```
+В следующем примере показано, как указать CSV-файл без заголовка (первая строка), используя `;` в качестве признака конца поля и `0x0a` в качестве признака конца строки. 
+```sql
 BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
-WITH (FORMAT = 'CSV'); 
+WITH (FORMAT = 'CSV',
+      FIRSTROW=2,
+      FIELDQUOTE = '\',
+      FIELDTERMINATOR = ';', 
+      ROWTERMINATOR = '0x0a'); 
 ```
 
 > [!IMPORTANT]
@@ -440,10 +468,23 @@ WITH (FORMAT = 'CSV');
 В следующем примере показано, как загрузить данные из CSV-файла в расположение хранилища BLOB-объектов Azure, которое была настроено в качестве внешнего источника данных. Для этого требуются учетные данные для базы с подписанным URL-адресом.    
 
 ```sql
+CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+ 
+ -- NOTE: Make sure that you don't have a leading ? in SAS token, and
+ -- that you have at least read permission on the object that should be loaded srt=o&sp=r, and
+ -- that expiration period is valid (all dates are in UTC time)
+
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH (  TYPE = BLOB_STORAGE, 
+        LOCATION = 'https://****************.blob.core.windows.net/invoices', 
+        CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
+);
+
 BULK INSERT Sales.Invoices
-FROM 'inv-2017-01-19.csv'
-WITH (DATA_SOURCE = 'MyAzureInvoices',
-     FORMAT = 'CSV'); 
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage'); 
 ```
 
 > [!IMPORTANT]
@@ -454,7 +495,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 
 ```sql
 BULK INSERT Sales.Invoices
-FROM 'inv-2017-01-19.csv'
+FROM 'inv-2017-12-08.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV',
      ERRORFILE = 'MyErrorFile',

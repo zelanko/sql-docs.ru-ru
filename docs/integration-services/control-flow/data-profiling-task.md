@@ -17,12 +17,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ac981cca7d12705589f0e913656a5149cd3a3ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ac2b973c867e8c5edc4cd8b7eb42ecfee6b3fe0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652452"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906294"
 ---
 # <a name="data-profiling-task"></a>Задача «Профилирование данных»
   Задача «Профилирование данных» вычисляет различные профили, помогающие ознакомиться с источниками данных и определить ошибки в данных, требующие исправления.  
@@ -30,7 +30,7 @@ ms.locfileid: "47652452"
  Задачу «Профилирование данных» можно использовать внутри пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для профилирования данных, которые хранятся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также для выявления потенциальных ошибок, связанных с качеством данных.  
   
 > [!NOTE]  
->  В этом разделе описаны только функции и требования задачи «Профилирование данных». Пошаговое руководство по использованию задачи "Профилирование данных" см. в разделе [Задачи профилирования и просмотра данных](../../integration-services/control-flow/data-profiling-task-and-viewer.md).  
+>  В этом разделе описаны только возможности и требования задачи "Профилирование данных". Пошаговое руководство по использованию задачи "Профилирование данных" см. в разделе [Задачи профилирования и просмотра данных](../../integration-services/control-flow/data-profiling-task-and-viewer.md).  
   
 ## <a name="requirements-and-limitations"></a>Требования и ограничения  
  Задача «Профилирование данных» работает только с данными, хранящимися в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта задача не работает со сторонними источниками данных, а также с источниками данных на основе файлов.  

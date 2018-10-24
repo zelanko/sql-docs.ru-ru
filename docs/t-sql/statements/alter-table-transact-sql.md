@@ -1,13 +1,11 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
@@ -58,17 +56,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 483d22cd721166f3d62c3100524c9850a28bacc2
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 7c57a37be0666669911cfc955bbf25b0fa34187e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171876"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085540"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -465,12 +462,14 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
 >  
 > Столбцы, включенные в ограничение первичного ключа, нельзя изменить с **NOT NULL** на **NULL**.  
   
-Если изменяемый столбец зашифрован с помощью `ENCRYPTED WITH`, можно изменить тип данных на совместимый тип данных (например, INT на BIGINT), но невозможно изменить параметры шифрования.  
+Если при использовании Always Encrypted (без безопасных анклавов) изменяемый столбец зашифрован с помощью ENCRYPTED WITH, тип данных можно изменить на совместимый (например, INT на BIGINT), но невозможно изменить параметры шифрования.  
+
+При использовании Always Encrypted с безопасными анклавами любой параметр шифрования можно изменять до тех пор, пока используемый для защиты столбца ключ шифрования (и новый ключ шифрования столбца, если вы изменяете его) поддерживает анклавные вычисления (то есть зашифрован главными ключами столбца с поддержкой анклава). Дополнительные сведения см. в статье [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md).  
   
  *column_name*  
  Имя столбца, который требуется изменить, добавить или удалить. Длина *column_name* не может превышать 128 символов. Для новых столбцов, созданных с типом данных **timestamp**, аргумент *column_name* можно пропустить. Если для столбца типа *timestamp* не указан аргумент **column_name**, используется имя **timestamp**.  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] _type\_name_  
  Новый тип данных для изменяемого столбца либо тип данных для добавляемого столбца. Значение *type_name* нельзя задать для существующих столбцов секционированных таблиц. *type_name* может быть любым из следующих значений:  
   
 -   Системным типом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -634,7 +633,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
   
  Используйте этот аргумент вместе с аргументом SYSTEM_VERSIONING для включения системного управления версиями в существующей таблице. Дополнительные сведения см. в разделах [Темпоральные таблицы](../../relational-databases/tables/temporal-tables.md) и [Приступая к работе с темпоральными таблицами в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
- В [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] пользователи смогут пометить один или оба столбца периода флагом **HIDDEN**, чтобы эти столбцы были неявно скрыты и инструкция **SELECT \* FROM***\<table>* не возвращала значения этих столбцов. По умолчанию столбцы периода не скрыты. Чтобы использовать скрытые столбцы, их необходимо явно указывать во всех запросах, обращающихся к темпоральной таблице.  
+ В [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] пользователи смогут пометить один или оба столбца периода флагом **HIDDEN**, чтобы эти столбцы были неявно скрыты. Например, инструкция **SELECT \* FROM**_\<таблица/>_ не будет возвращать значения этих столбцов. По умолчанию столбцы периода не скрыты. Чтобы использовать скрытые столбцы, их необходимо явно указывать во всех запросах, обращающихся к темпоральной таблице.  
   
 DROP  
 Указывает, что удаляется одно или несколько определений столбца, определений вычисляемого столбца или ограничений таблиц либо удаляется спецификация столбцов, которые будут использоваться для системного управления версиями.  
@@ -716,7 +715,7 @@ COLUMN *column_name*
 > [!NOTE]  
 > Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ...*n*] **)** | *filegroup* | **"** default **"** }  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Указывает местоположение для перемещения строк данных, находящихся в настоящее время на конечном уровне кластеризованного индекса. Таблица перемещается на новое место. Этот параметр применяется только ограничениям, образующим кластеризованный индекс.  
@@ -753,7 +752,7 @@ COLUMN *column_name*
   
  Указывает, производит ли компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] отслеживание обновлений столбцов. Значение по умолчанию — OFF.  
   
- SWITCH [ PARTITION *source_partition_number_expression* ] TO [ *schema_name***.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
+ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Переключает блок данных одним из следующих способов.  
@@ -1446,6 +1445,33 @@ ALTER TABLE T3
 ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;  
 GO  
 ```  
+#### <a name="d-encrypting-a-column"></a>Г. Шифрование столбца  
+ В следующем примере показано, как зашифровать столбец с помощью [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md). 
+
+Первым делом создается таблица без зашифрованных столбцов.  
+  
+```sql  
+CREATE TABLE T3  
+(C1 int PRIMARY KEY,  
+C2 varchar(50) NULL,  
+C3 int NULL,  
+C4 int ) ;  
+GO  
+```  
+  
+ После этого столбец C2 шифруется с помощью ключа шифрования CEK1 методом случайного шифрования. Обратите внимание, что для успешного выполнения инструкции ниже нужно выполнить несколько условий:
+- Ключ шифрования столбца должен поддерживать анклав, то есть должен быть зашифрован главным ключом столбца, который допускает анклавные вычисления.
+- Целевой экземпляр SQL Server должен поддерживать Always Encrypted с безопасными анклавами.
+- Оператор следует передавать через подключение, настроенное для Always Encrypted с безопасными анклавами и применяемое поддерживаемый драйвер клиента.
+- Вызывающему приложению нужен доступ к главному ключу столбца, который защищает ключ CEK1.
+
+```sql  
+ALTER TABLE T3  
+ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;  
+GO  
+```  
+
+
   
 ###  <a name="alter_table"></a> Изменение определения таблицы  
  В приведенных в этом разделе примерах показано, как изменить определение таблицы.  

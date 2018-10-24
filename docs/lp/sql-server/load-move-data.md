@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Документация Microsoft Azure
-description: Сведения о создании и администрировании полнофункциональных приложений с использованием облачных служб Microsoft Azure. Получение документации, примеров кода, руководств и многого другого.
+title: 'SQL Server: загрузка и перемещение данных'
+description: Ознакомьтесь с функциями, с помощью которых можно перемещать, загружать данные и управлять ими в SQL Server.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: e217fb5094b4b277fd791053cc7eec1d211d23a8
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 069e58327e32484d4ae1718130b469af1a0e51af
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797870"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336163"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -252,10 +252,16 @@ ms.locfileid: "48797870"
         <h2>Оставайтесь с нами</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">Принять участие в разработке документации по SQL</a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external">Принять участие</a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">Оставить отзыв о документации SQL</a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">Получить справку</a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">Оставить отзыв</a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">Пройти опрос</a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">Блог</a>

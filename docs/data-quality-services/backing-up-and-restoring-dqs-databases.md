@@ -12,12 +12,12 @@ ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86e7ba74fa6b5a3cfc1a551edf16ad91c1f2e5af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2ff315ef171a93a00c3e251b60ceb147e6637aa
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672652"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119821"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Резервное копирование и восстановление баз данных DQS
 
@@ -29,7 +29,7 @@ ms.locfileid: "47672652"
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
   
--   Необходимо знать пароль для главного ключа базы данных, указанный во время установки сервера DQS.  
+-   Необходимо знать пароль для главного ключа базы данных, который вы указывали при установке сервера DQS.  
   
 -   Убедитесь, что не существует текущих операций или процессов в DQS. Это можно проверить с помощью экрана **Мониторинг активности** . Дополнительные сведения о работе с этим экраном см. в разделе [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   

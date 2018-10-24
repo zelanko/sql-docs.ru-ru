@@ -19,12 +19,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c8caee5d7de5b348d6673636ac5cfc4704c3c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c77e1d69a80e1c9d161adcf80f20f23b69b0261
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625522"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120011"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Создание связанных серверов (компонент SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47625522"
     > [!NOTE]  
     >  Если экземпляр **SQL Server** является экземпляром по умолчанию, то введите имя компьютера, на котором размещается экземпляр **SQL Server**. Если экземпляр **SQL Server** является именованным, введите имя компьютера и имя экземпляра, например **Accounting\SQLExpress**.  
   
-3.  В области **Тип сервера** выберите **SQL Server** , чтобы показать, что связанные сервер является другим экземпляром **SQL Server**.  
+3.  В области **Тип сервера** выберите **SQL Server**, чтобы показать, что связанный сервер является экземпляром **SQL Server**.  
   
 4.  На странице **Безопасность** укажите контекст безопасности, который будет использоваться при подключении исходного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к связанному серверу. В среде с доменами, где пользователи соединяются с именами входа домена, лучшим вариантом часто оказывается **Выполнять с использованием текущего контекста безопасности имени входа** . Если пользователи соединяются с исходным экземпляром **SQL Server** по имени входа **SQL Server** , то лучшим вариантом часто оказывается **С использованием этого контекста безопасности**с последующим указанием необходимых учетных данных для проверки подлинности на связанном сервере.  
   

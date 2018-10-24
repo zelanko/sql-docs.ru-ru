@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39756ee24011373c30ec23cd4c0caab2eb813338
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6553c3531545a17b6a47ad88cb2fbeace845a1b6
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756788"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169388"
 ---
 # <a name="replication-snapshot-agent"></a>Агент моментальных снимков репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ snapshot [ -?]
  **-?**  
  Выводит список всех доступных параметров.  
   
- **-Publisher** *имя_сервера*[**\\***имя_экземпляра*]  
- Имя издателя. Укажите имя сервера (server_name) для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
+ **-Publisher** *server_name*[**\\**_instance\_name_]  
+ Имя издателя. Укажите имя сервера (server_name) для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере. Укажите _server\_name_**\\**_instance\_name_, чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
  **-Publication** *публикация*  
  Имя публикации. Этот параметр допустим только в том случае, если в данной публикации моментальный снимок всегда доступен для новых или повторно инициализированных подписок.  
@@ -95,8 +95,8 @@ snapshot [ -?]
  **-DefinitionFile** *def_path_and_file_name*  
  Путь к файлу определения агента. Файл определения агента содержит параметры командной строки для данного агента. Содержимое файла анализируется как для исполняемого файла. Для указания значений параметров, содержащих произвольные символы, используются двойные кавычки (").  
   
- **-Distributor** *имя_сервера*[**\\***имя_экземпляра*]  
- Имя распространителя. Укажите *имя_сервера* для экземпляра служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
+ **-Distributor** *server_name*[**\\**_instance\_name_]  
+ Имя распространителя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _server\_name_**\\**_instance\_name_, чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  Приоритет соединения агента моментальных снимков с распространителем при возникновении взаимоблокировки. Этот параметр указывается для разрешения взаимоблокировок, которые могут возникать между агентом моментальных снимков и пользовательскими приложениями при создании моментальных снимков.  
@@ -155,7 +155,7 @@ snapshot [ -?]
 > [!NOTE]  
 >  Этот параметр используется для настройки производительности операции **bcp** из издателя Oracle.  
   
- -**HRBcpBlockSize***block_size*  
+ -**HRBcpBlockSize**_block\_size_  
  Размер каждого блока данных программы **bcp** (в килобайтах). Значение по умолчанию — 64 КБ. Параметр**HRBcpBlocks** используется только с публикациями Oracle.  
   
 > [!NOTE]  
@@ -223,7 +223,7 @@ snapshot [ -?]
 |**0** (по умолчанию)|Приоритет не назначается.|  
 |**1**|При возникновении взаимоблокировки на издателе агент моментальных снимков имеет больший приоритет.|  
   
- **-PublisherFailoverPartner** *имя_сервера*[**\\***имя_экземпляра*]  
+ **-PublisherFailoverPartner** *server_name*[**\\**_instance\_name_]  
  Указывает партнера по обеспечению отработки отказа служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участвующего в сеансе зеркального отображения базы данных с базой данных публикации. Дополнительные сведения см. в статье [Зеркальное отображение и репликация баз данных (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *имя_входа_на_издателе*  

@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a4e526fb8b2bb72bd670b1c21d6734b23ad601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704531"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120201"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Использование панели мониторинга групп доступности AlwaysOn (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -324,6 +324,10 @@ ms.locfileid: "47704531"
  **Время последней повторной обработки**  
  Указывает время, когда последняя запись журнала была повторно обработана в базе данных-получателе. Это значение по умолчанию скрыто.  
  
+
+   > [!NOTE]  
+   >  Большинство данных размещается в sys.dm_hadr_database_replica_states, поэтому могут применяться некоторые ограничения. Дополнительные сведения см. в статье о [sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).
+
 
 ## <a name="always-on-availability-group-latency-reports"></a>Отчет о задержке группы доступности AlwaysOn
 Отчет о задержке группы доступности — это средство отчетов, встроенное в панель мониторинга групп доступности и доступное в выпуске [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md). Эта функция предоставляет простой для понимания отчет с подробным описанием времени, затраченного на различных этапах процесса транспорта журналов. Это позволяет сузить спектр возможных причин возникновения задержек во время синхронизации. 

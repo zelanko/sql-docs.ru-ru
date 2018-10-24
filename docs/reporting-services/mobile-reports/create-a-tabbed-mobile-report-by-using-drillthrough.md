@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bcc78ff386997d445d4bc23bb452179853565686
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d01f9f1bef4d13cbce3f3e736cbef2f838c680ef
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645235"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906180"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Создание мобильного отчета со вкладками с помощью детализации
 Вы можете научиться создавать мобильных отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , который выглядит и работает как отчет с вкладками, с помощью детализации и параметров.
@@ -38,7 +38,7 @@ ms.locfileid: "47645235"
 
    ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
-2. Для датчика "Продажи" присвойте свойству **Цвет элементов** значение **Вкл**, чтобы он контрастировал с остальным отчетом. В этом случае это будет белый датчик на белом фоне.
+2. Для датчика "Продажи" присвойте свойству **Цвет элементов** значение **Вкл.**, чтобы он контрастировал с остальным отчетом. В этом случае это будет белый датчик на черном фоне.
 
     ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
@@ -81,7 +81,7 @@ ms.locfileid: "47645235"
 
 1.  Откройте отчет "Транспорт", задайте датчик продаж как детализацию к отчету о продажах и остальные датчики как детализацию к соответствующим отчетам.
 
-2. Не закрывая отчет "Транспорт", установите свойство **Цвет элементов** датчика транспортировки в значение **Вкл**, чтобы он отличался от остальной части отчета.
+2. Не закрывая отчет "Транспорт", установите свойство **Цвет элементов** датчика транспортировки в значение **Вкл.**, чтобы он отличался от остальной части отчета.
 
 3. Повторите эти действия для отчетов по топливу, складу и прочим расходам. 
 

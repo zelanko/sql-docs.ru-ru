@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 566b8c860f097ae46de84076b0f355f8115bde6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cd9678c06e69b185c75b95d6095e238df8d0937
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769012"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085180"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Развертывание веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на сайте SharePoint
 
@@ -27,7 +27,8 @@ ms.locfileid: "47769012"
 ## <a name="requirements"></a>Требования
 
 > [!IMPORTANT]
-> На данный момент установка этой веб-части невозможна, если у вас уже настроены службы Reporting Services в режиме интеграции с SharePoint.
+> Начиная с версии 15.X.X.X, установить ReportViewerWebPart можно параллельно с существующими приложениями для устройств, совместно используемых в интегрированном режиме SharePoint в Reporting Services.
+> В этом обновлении решения .wsp мы добавили новые файлы. Предыдущее решение должно быть отозвано, а новое — повторно развернуто с помощью командлета Uninstall-SPSolution и Install-SPSolution, соответственно.
 >
 
 **Поддерживаемые версии SharePoint Server:**
@@ -150,7 +151,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 * Ошибка при удалении служб SSRS в том случае, если настроен режим интеграции с SharePoint:
 
-    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService нельзя привести к [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. Тип A происходит из "Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" в контексте "Default" в расположении "C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll". Тип B происходит из "Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" в контексте "Default" в расположении "C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll".
+    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService cannot be cast to [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. Тип A происходит из "Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" в контексте "Default" в расположении "C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll". Тип B происходит из "Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" в контексте "Default" в расположении "C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll".
     
     Решение.
     1. Удаление веб-части средства просмотра отчетов

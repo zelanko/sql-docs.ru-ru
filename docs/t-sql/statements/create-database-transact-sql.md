@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Документация Майкрософт
 description: Создание синтаксиса базы данных для SQL Server, Базы данных SQL Azure, Хранилища данных SQL Azure и Parallel Data Warehouse
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2842601d89be8efcd3851fd34610ee8ed5981c0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5263a785fff56a2f1c375c7615a725f931582cfe
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675992"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100525"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -62,10 +62,11 @@ ms.locfileid: "47675992"
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [База данных SQL<br /> — логический сервер](create-database-transact-sql.md?view=azuresqldb-current) | [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) | 
+> |**_\* SQL Server \*_** | [База данных SQL<br /> — логический сервер](create-database-transact-sql.md?view=azuresqldb-current) | [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
+&nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="overview"></a>Обзор
 
@@ -871,26 +872,13 @@ GO
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* База данных SQL<br />Базы данных SQL*</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* База данных SQL<br />логический сервер \*_**  | [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Логический сервер Базы данных SQL Azure
+## <a name="azure-sql-database-logical-server"></a>Логический сервер Базы данных SQL Azure
 
 ## <a name="overview"></a>Обзор
 
@@ -1212,26 +1200,13 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><strong><em>* База данных SQL<br />Управляемый экземпляр *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [База данных SQL<br /> — логический сервер](create-database-transact-sql.md?view=azuresqldb-current)| **_\* База данных SQL<br />Управляемый экземпляр \*_**   | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
 ## <a name="overview"></a>Обзор
 
@@ -1296,26 +1271,13 @@ CREATE DATABASE TestDB1;
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><strong><em>* Хранилище данных<br />SQL*</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [База данных SQL<br /> — логический сервер](create-database-transact-sql.md?view=azuresqldb-current)| [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* Хранилище данных<br />SQL \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# <a name="azure-sql-data-warehouse"></a>Хранилище данных SQL Azure
+## <a name="azure-sql-data-warehouse"></a>Хранилище данных SQL Azure
 
 ## <a name="overview"></a>Обзор
 
@@ -1404,7 +1366,7 @@ CREATE DATABASE TestDW
 ```  
   
 ### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>Б. Создание базы данных хранилища данных со всеми параметрами  
-Пример создания хранилища данных объемом 10 ТБ с использованием всех параметров.  
+Пример создания хранилища данных объемом 10 ТБ с использованием всех параметров.  
   
 ```  
 CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS  
@@ -1420,32 +1382,19 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">База данных SQL<br />Базы данных SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">Хранилище данных<br />SQL</a></th>
->   <th><strong><em>*Parallel<br />Data Warehouse *</em></strong></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [База данных SQL<br /> — логический сервер](create-database-transact-sql.md?view=azuresqldb-current)| [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Параллельное<br />хранилище данных \*_** |
 
 &nbsp;
 
-# <a name="parallel-data-warehouse"></a>Параллельное хранилище данных
+## <a name="parallel-data-warehouse"></a>Параллельное хранилище данных
 
 ## <a name="overview"></a>Обзор
 
 В параллельном хранилище данных этот оператор используется для создания базы данных на устройстве с Parallel Data Warehouse. Используйте эту инструкцию, чтобы создать все файлы, связанные с базой данных устройства, и задать максимальный размер и параметры автоматического увеличения для таблицы базы данных и журнала транзакций.
 
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Синтаксис
   
 ```  
 CREATE DATABASE database_name   
@@ -1457,7 +1406,8 @@ WITH (
 [;]  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a>Аргументы
+  
  *database_name*  
  Имя новой базы данных. Дополнительные сведения о допустимых именах баз данных см. в разделе "Правила именования объектов" и "Зарезервированные имена базы данных" в статье [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   

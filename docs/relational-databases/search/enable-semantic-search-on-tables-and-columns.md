@@ -13,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 00b487d0828d13d4905f609b2631b45b8c61802f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c046bbc7ac0b1da4c4e3be7c1eef0d7d47ccf9ec
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630502"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169344"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Включение семантического поиска на таблицы и столбцы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ GO
 Для удаления семантического индексирования при изменении существующего полнотекстового индекса используется инструкция **ALTER FULLTEXT INDEX** . Также можно удалить семантическое индексирование с помощью различных диалоговых окон в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Удалите семантический индекс с помощью Transact-SQL  
-Для удаления семантического индексирования только из столбца или столбцов вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN***имя_столбца***DROP STATISTICAL_SEMANTICS**. С помощью одной инструкции **ALTER** можно удалить индексирование из нескольких столбцов.  
+Чтобы удалить семантическое индексирование только из столбца или столбцов, вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN**_имя\_столбца_**DROP STATISTICAL_SEMANTICS**. С помощью одной инструкции **ALTER** можно удалить индексирование из нескольких столбцов.  
   
 ```sql  
 USE database_name  
@@ -171,7 +171,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-Для удаления семантического и полнотекстового индексирования из столбца вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN***имя_столбца***DROP**.  
+Чтобы удалить семантическое и полнотекстовое индексирование из столбца, вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN**_имя\_столбца_**DROP**.  
   
 ```sql  
 USE database_name  

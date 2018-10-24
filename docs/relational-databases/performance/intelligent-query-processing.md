@@ -2,7 +2,7 @@
 title: Интеллектуальная обработка запросов в базах данных Microsoft SQL | Документы Майкрософт
 description: Функции интеллектуальной обработки запросов для повышения производительности запросов в SQL Server и базе данных SQL Azure.
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35306ebbde5586401f78f368334634f0fadfe7a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c6d89b3ec3d01792578210caef8018d15b2d175
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753972"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072254"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Интеллектуальная обработка запросов в базах данных SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -87,6 +87,9 @@ ms.locfileid: "47753972"
 1.  Значительная часть рабочей нагрузки состоит из аналитических запросов (как правило, запросов с операторами, например соединениями или статистическими выражениями, обрабатывающих сотни тысяч строк или более). (**И следующее**.)
 2.  Рабочая нагрузка связана с ЦП (если узким местом являются операции ввода-вывода, по-прежнему рекомендуется рассмотреть индекс columnstore, если это возможно). (**И следующее**.)
 3.  Если создание индекса columnstore добавляет слишком большие издержки в транзакционную часть рабочей нагрузки **либо** создание индекса columnstore не представляется возможным из-за того, что приложение зависит от функции, которая еще не поддерживается индексами columnstore.
+
+> [!NOTE]
+> Сократить потребление ресурсов ЦП может только использование пакетного режима для данных rowstore. Если же проблема связана с операциями ввода-вывода, а данные не кэшируются ("холодный" кэш), использование пакетного режима rowstore не сэкономит время. Аналогичным образом, если на компьютере не хватает памяти для кэширования всех данных, повышение производительности маловероятно.
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>Что изменяется при использовании пакетного режима для данных rowstore
 Помимо перехода на уровень совместимости 150, чтобы включить пакетный режим для данных rowstore для рабочих нагрузок-кандидатов, не нужно ничего менять на своей стороне.

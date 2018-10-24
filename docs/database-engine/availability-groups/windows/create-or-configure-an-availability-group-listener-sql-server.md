@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 84a52fb481fce992d9b51bdb6e566f305dc174b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a96ca9534f35ba36e3d61f492b5dcaa8c1cdce8
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821992"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120241"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Создание или настройка прослушивателя группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -303,7 +303,7 @@ ms.locfileid: "47821992"
   
 -   Строки подключения, не устанавливающие значение true для **MultiSubnetFailover** .  
   
-     Если выполняется условие `RegisterAllProvidersIP = 1`, то у любых клиентов, у которых строка подключения не содержит `MultiSubnetFailover = True`, будет возникать большая задержка в соединениях. Это происходит потому, что эти клиенты пытаются соединиться со всеми IP-адресами последовательно. Напротив, если свойство **RegisterAllProvidersIP** изменено на 0, то IP-адрес включается в список клиентской точки доступа в кластере WSFC и уменьшает задержку для клиентов устаревших версий. Таким образом, если есть клиенты устаревших версий, которым требуется подключение к прослушивателю групп доступности, но нельзя использовать свойство **MultiSubnetFailover** , рекомендуется изменить значение свойства **RegisterAllProvidersIP** на 0.  
+     Если выполняется условие `RegisterAllProvidersIP = 1`, то у любых клиентов, у которых строка подключения не содержит `MultiSubnetFailover = True`, будет возникать большая задержка в соединениях. Это происходит потому, что эти клиенты пытаются соединиться со всеми IP-адресами последовательно. Напротив, если свойство **RegisterAllProvidersIP** изменено на 0, то IP-адрес включается в список клиентской точки доступа в кластере WSFC и уменьшает задержку для клиентов устаревших версий. Таким образом, если есть клиенты устаревших версий, которым требуется подключение к прослушивателю групп доступности, но нельзя использовать свойство **MultiSubnetFailover**, рекомендуется изменить значение свойства **RegisterAllProvidersIP** на 0.  
   
     > [!IMPORTANT]  
     >  При создании прослушивателя группы доступности через кластер WSFC (графический интерфейс диспетчера отказоустойчивого кластера) свойство **RegisterAllProvidersIP** будет иметь значение 0 (false) по умолчанию.  

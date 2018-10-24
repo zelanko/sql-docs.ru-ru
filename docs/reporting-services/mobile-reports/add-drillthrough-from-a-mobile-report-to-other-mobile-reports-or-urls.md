@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 775880471620acaac5c46bf1efd04d961f60ce6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608662"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085420"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Добавление детализации из мобильного отчета в другие мобильные отчеты или URL-адреса
 Детализацию по любому датчику, графику или сетке данных в мобильном отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] можно добавить в любой другой мобильный отчет или пользовательский URL-адрес. 
@@ -52,7 +52,7 @@ ms.locfileid: "47608662"
 1. В режиме макета в [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]выберите визуализацию, которая поддерживает объекты детализации.    
 2. На панели **Свойства визуальных элементов** выберите меню **Объект детализации** > **Пользовательский URL-адрес**.  Откроется диалоговое окно настройки детализации.  
   
-3. В поле **Укажите URL-адрес детализации**введите конечный URL-адрес для перехода при щелчке по визуализации и выберите один из **доступных параметров** , указанных справа. В поле внизу отображается предварительный просмотр пользовательского URL-адреса в сочетании с примерами разрешенных параметров (если они включены).  
+3. В поле **Указание URL-адреса детализации** введите URL-адрес назначения для перехода при щелчке по визуализации и выберите один из **доступных параметров**, указанных справа. В поле внизу отображается предварительный просмотр пользовательского URL-адреса в сочетании с примерами разрешенных параметров (если они включены).  
   
    ![mobile-report-drillthrough-url](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
   

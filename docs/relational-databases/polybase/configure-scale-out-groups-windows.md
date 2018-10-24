@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c8fbf783d52f301de73c294a3d68965dece7ffa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821189"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905138"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Улучшение масштабируемых групп PolyBase в Windows
 

@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ccc1b9d142bb88af046415f76d91073c539d1f17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19b533df8417345796f76f4e365d633e5b707eda
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697982"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169033"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ WITH
  на  
  Представляет предложения, определяющие изменяемый маршрут.  
   
- SERVICE_NAME **='***service_name***'**  
+ SERVICE_NAME **='**_service\_name_**'**  
  Указывает имя удаленной службы, находящейся по этому маршруту. Значение *service_name* должно точно совпадать с именем, используемым удаленной службой. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия значению *service_name*. Другими словами, при сравнении учитывается регистр и не применяются текущие параметры сортировки. Маршрут с именем службы **'SQL/ServiceBroker/BrokerConfiguration'**  — это маршрут к службе уведомления конфигурации брокера. В маршруте к этой службе может не указываться экземпляр компонента Service Broker.  
   
  Если опущено предложение SERVICE_NAME, имя службы для маршрута не меняется.  
   
- BROKER_INSTANCE **='***broker_instance***'**  
+ BROKER_INSTANCE **='**_broker\_instance_**'**  
  Указывает базу данных, в которой расположена целевая служба. Параметр *broker_instance* должен являться идентификатором экземпляра брокера для удаленной базы данных. Этот идентификатор можно получить, выполнив следующий запрос в выбранной базе данных:  
   
 ```  
@@ -79,10 +79,10 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
- LIFETIME **=***route_lifetime*  
+ LIFETIME **=**_route\_lifetime_  
  Время в секундах, в течение которого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит маршрут в таблице маршрутизации. По истечении этого времени действие маршрута истекает, и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при выборе маршрута для новых диалогов далее его не рассматривает. Если данное предложение опущено, срок жизни маршрута не меняется.  
   
- ADDRESS **='***next_hop_address'*  
+ ADDRESS **='**_next\_hop\_address_'  
 
  Для управляемого экземпляра Базы данных SQL аргумент `ADDRESS` должен задавать локальный адрес.
 
@@ -109,7 +109,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
- MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
+ MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
  Указывает сетевой адрес для зеркального сервера зеркальной пары, чей основной сервер находится по адресу *next_hop_address*. Аргумент *next_hop_mirror_address* задает адрес TCP/IP в следующем формате:  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  

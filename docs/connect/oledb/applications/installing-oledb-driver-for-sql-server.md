@@ -22,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f47573e6ecc1e7aa4770c8d1ae34768e09720d25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: aaace65e30e145e701d05039e4bd11bdb337c392
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800662"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071670"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Установка драйвера OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47800662"
   
 X64 msoledbsql.msi также устанавливается 32-разрядной версии драйвера OLE DB для SQL Server. Если приложение предназначено для платформы, отличном от того, в которой оно было разработано на, можете скачать версии msoledbsql.msi x64 и x86.
 
-При вызове msoledbsql.msi по умолчанию устанавливаются только компоненты клиентской части. Этими компонентами служат файлы, поддерживающие работу приложения, разработанного с помощью драйвера OLE DB для SQL Server. Чтобы установить также компоненты пакета SDK, укажите в командной строке `ADDLOCAL=All`. Пример:  
+При вызове msoledbsql.msi по умолчанию устанавливаются только компоненты клиентской части. Этими компонентами служат файлы, поддерживающие работу приложения, разработанного с помощью драйвера OLE DB для SQL Server. Чтобы установить также компоненты пакета SDK, укажите в командной строке `ADDLOCAL=All`. Пример:  
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 

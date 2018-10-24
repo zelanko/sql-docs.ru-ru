@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6fdf62f6fca674d6c4b3753e92e99f2e4f2cd67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d0aca5eaf6f0e56eab3b991611199334d003c4a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609742"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906004"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Службы Reporting Services в SQL Server Data Tools (SSDT)
 
@@ -43,7 +43,7 @@ ms.locfileid: "47609742"
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Окна и панели конструктора отчетов  
- Конструктор отчетов поддерживает два представления: **Конструктор** , в котором задаются данные и макет отчета, и **Предварительный просмотр** , позволяющее просмотреть подготовленный отчет. В каждом представлении можно вывести несколько окон для удобства конструирования или просмотра отчета.  
+ Конструктор отчетов поддерживает два представления: **Конструктор**, в котором задаются данные и макет отчета, и **Предварительный просмотр**, позволяющее просмотреть подготовленный отчет. В каждом представлении можно вывести несколько окон для удобства конструирования или просмотра отчета.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Область данных отчета  
  В области данных отчета отображаются встроенные поля, источники данных, наборы данных, коллекции полей, параметры отчетов и изображения.  

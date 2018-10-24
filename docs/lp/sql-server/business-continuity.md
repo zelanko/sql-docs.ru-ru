@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Документация Microsoft Azure
-description: Сведения о создании и администрировании полнофункциональных приложений с использованием облачных служб Microsoft Azure. Получение документации, примеров кода, руководств и многого другого.
+title: 'SQL Server: непрерывность бизнес-процессов'
+description: Ознакомьтесь с различными функциями SQL Server для обеспечения высокого уровня доступности, аварийного восстановления и непрерывности бизнес-процессов независимо от условий.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 673c50c9c37a8dbe061e9695b8529e720b94217d
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 72f1eecdbf419685a747489a3eca95e8a386cf31
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797850"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336193"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -205,10 +205,16 @@ ms.locfileid: "48797850"
         <h2>Оставайтесь с нами</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">Принять участие в разработке документации по SQL</a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external">Принять участие</a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">Оставить отзыв о документации SQL</a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">Получить справку</a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">Оставить отзыв</a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">Пройти опрос</a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">Блог</a>

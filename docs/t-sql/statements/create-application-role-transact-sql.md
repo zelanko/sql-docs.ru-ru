@@ -24,12 +24,12 @@ ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b880607c133225a3dd85dc2f4abd6fc051ef931a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f434bd06f06071b61d037ce68f8a69edbb8c2977
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753382"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168939"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  Указывает имя роли приложения. Это имя не должно быть уже занято для обращения к любому из участников базы данных.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Указывает пароль для включения роли приложения пользователями базы данных. Всегда используйте надежные пароли. *password* должен соответствовать требованиям политики паролей Windows применительно к компьютеру, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- DEFAULT_SCHEMA **=***schema_name*  
+ DEFAULT_SCHEMA **=**_schema\_name_  
  Указывает первую схему, в которой сервер будет производить поиск при распознавании имен объектов для этой роли. Если значение DEFAULT_SCHEMA не заполнено, роль приложения будет использовать в качестве схемы по умолчанию DBO. Аргумент *schema_name* может быть схемой, которой нет в базе данных.  
   
 ## <a name="remarks"></a>Примечания  

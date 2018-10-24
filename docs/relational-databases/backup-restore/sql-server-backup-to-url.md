@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07a0f669f9142f7b58d29089852d13f1cbd61a17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71766cb569c2a9f6302783472f564636368e1bae
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614905"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072228"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -403,7 +403,7 @@ Write-Host $tSql
   
   
 ###  <a name="PITR"></a> Восстановление состояния на определенный момент времени с помощью STOPAT  
- В следующем примере производится восстановление базы данных AdventureWorks2016 до ее состояния на определенный момент времени и демонстрируется операция восстановления.  
+ В следующем примере восстанавливается база данных AdventureWorks2016 до ее состояния на определенный момент времени и демонстрируется операция восстановления.  
   
 1.  **С URL-адреса с использованием подписанного URL-адреса**  
   

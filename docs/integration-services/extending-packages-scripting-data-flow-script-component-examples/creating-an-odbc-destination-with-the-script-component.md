@@ -1,7 +1,7 @@
 ---
 title: Создание назначения ODBC с помощью компонента скрипта | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20cef2b6e736a54d92d18e2a63cf0db9be294b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4678c0230a58f53bd56aa973db94fb97f753dbd1
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816269"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100445"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Создание назначения ODBC с помощью компонента скрипта
   В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], как правило, сохранение данных в назначение ODBC осуществляется с использованием назначения [!INCLUDE[vstecado](../../includes/vstecado-md.md)] и поставщика данных платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для ODBC. Однако можно также создать нерегламентированное назначение ODBC для использования в отдельном пакете. Для создания такого нерегламентированного назначения ODBC используется компонент скрипта, показанный в следующем примере.  
@@ -38,7 +38,7 @@ ms.locfileid: "47816269"
   
 -   Команда **OdbcCommand** ожидает позиционные параметры. Позиции параметров отмечаются вопросительными знаками (?) в тексте команды. (Команда **SqlCommand**, напротив, ожидает именованные параметры.)  
   
- В этом примере используется таблица **Person.Address** из образца базы данных **AdventureWorks**. В примере первый и четвертый столбцы этой таблицы, **int*AddressID*** и **nvarchar(30)City**, передаются через поток данных. Эти же данные используются в образцах источника, преобразования и назначения в разделе [Разработка определенных типов компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ В этом примере используется таблица **Person.Address** из образца базы данных **AdventureWorks**. В примере первый и четвертый столбцы этой таблицы, **int _AddressID_** и **nvarchar(30) _City_**, передаются через поток данных. Эти же данные используются в образцах источника, преобразования и назначения в разделе [Разработка определенных типов компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Настройка этого примера компонента скрипта  
   
@@ -167,6 +167,6 @@ ms.locfileid: "47816269"
     ```  
   
 ## <a name="see-also"></a>См. также:  
- [Создание назначения с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+ [Создание назначения с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

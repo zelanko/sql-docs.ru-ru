@@ -22,12 +22,12 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be0c968c387a4228b7c774a1b2308d7f9ea6bac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 986d68540f75852061982ae159a903fc2ab1b518
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670280"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169294"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ CREATE FULLTEXT INDEX ON table_name
   
  Если аргумент *language_term* указан, то соответствующий язык будет использоваться для индексации данных, хранящихся в столбцах **char**, **nchar**, **varchar**, **nvarchar**, **text** и **ntext**. Этот язык используется в запросах по умолчанию, если аргумент *language_term* не задан как часть полнотекстового предиката, характеризующего столбец.  
   
- Если аргумент *language_term* задан в виде строки, то он соответствует значению столбца alias системной таблицы syslanguages. Строка должна быть заключена в одиночные кавычки: **'***language_term***'**. Если значением аргумента *language_term* является целое число, оно представляет собой действительный код языка. Если значение *language_term* задано в шестнадцатеричной форме, то после символов "0x" должна следовать шестнадцатеричная запись кода языка. Длина шестнадцатеричного значения не должна превышать восьми цифр, включая ведущие нули.  
+ Если аргумент *language_term* задан в виде строки, то он соответствует значению столбца alias системной таблицы syslanguages. Строка должна быть заключена в одиночные кавычки: **'**_language\_term_**'**. Если значением аргумента *language_term* является целое число, оно представляет собой действительный код языка. Если значение *language_term* задано в шестнадцатеричной форме, то после символов "0x" должна следовать шестнадцатеричная запись кода языка. Длина шестнадцатеричного значения не должна превышать восьми цифр, включая ведущие нули.  
   
  Если значение указано в двухбайтовой кодировке (DBCS), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразует его в Юникод.  
   

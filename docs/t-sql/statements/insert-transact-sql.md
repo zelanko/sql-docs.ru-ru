@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb27c4ca77382887acdbfec788df40e5cbfd76c7
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: 743496bde8f92203232c76ee9dddfc19d98be8d3
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798622"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100505"
 ---
 # <a name="insert-transact-sql"></a>Инструкция INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -809,7 +809,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
  В примерах этого раздела показано два метода массовой загрузки данных в таблицу с помощью инструкции INSERT.  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>У. Вставка данных в кучу с минимальным протоколированием  
- В следующем примере создается новая таблица (куча), в которую вставляются данные из другой таблицы с минимальным протоколированием. В примере предполагается, что для базы данных `AdventureWorks2012` выбрана модель восстановления FULL. Чтобы убедиться, что применяется минимальное протоколирование, модель восстановления базы данных `AdventureWorks2012` перед вставкой строк устанавливается в значение BULK_LOGGED, а после выполнения инструкции INSERT INTO… SELECT возвращается в значение FULL. Кроме того, для целевой таблицы `Sales.SalesHistory` указывается подсказка TABLOCK. Это обеспечивает минимальное использование журнала транзакций инструкцией и ее эффективное выполнение.  
+ В следующем примере создается таблица (куча), в которую вставляются данные из другой таблицы с минимальным протоколированием. В примере предполагается, что для базы данных `AdventureWorks2012` выбрана модель восстановления FULL. Чтобы убедиться, что применяется минимальное протоколирование, модель восстановления базы данных `AdventureWorks2012` перед вставкой строк устанавливается в значение BULK_LOGGED, а после выполнения инструкции INSERT INTO… SELECT возвращается в значение FULL. Кроме того, для целевой таблицы `Sales.SalesHistory` указывается подсказка TABLOCK. Это обеспечивает минимальное использование журнала транзакций инструкцией и ее эффективное выполнение.  
   
 ```sql
 -- Create the target heap.  

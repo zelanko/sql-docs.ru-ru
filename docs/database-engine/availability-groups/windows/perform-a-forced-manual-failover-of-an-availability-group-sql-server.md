@@ -15,12 +15,12 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 883252a6b4c7e69c488a497308889db6f7f9ac05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b391f73ab498c2ad87406b5f3dd8fa3268a75774
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834652"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120401"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "47834652"
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Принудительная отработка отказа (с возможной потерей данных)**  
   
-1.  Подключитесь к экземпляру сервера, на котором размещена реплика группы доступности, роль которой находится в состоянии SECONDARY или RESOLVING и на которую нужно выполнить переход.  
+1.  Подключитесь к экземпляру сервера, на котором размещена реплика группы доступности, роль которой находится в состоянии SECONDARY или RESOLVING и для которой нужно выполнить отработку отказа.  
   
 2.  Инструкция [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) используется следующим образом:  
   
@@ -179,7 +179,7 @@ ms.locfileid: "47834652"
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
  **Принудительная отработка отказа (с возможной потерей данных)**  
   
-1.  Перейдите в каталог (**cd**) экземпляра сервера, на котором размещена реплика группы доступности, роль которой находится в состоянии SECONDARY или RESOLVING и на которую нужно выполнить переход.  
+1.  Перейдите в каталог (**cd**) экземпляра сервера, на котором размещена реплика группы доступности, роль которой находится в состоянии SECONDARY или RESOLVING и для которой нужно выполнить отработку отказа.  
   
 2.  Используйте командлет **Switch-SqlAvailabilityGroup** с параметром **AllowDataLoss** в одной из следующих форм:  
   

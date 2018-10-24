@@ -11,12 +11,12 @@ ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e74573c676cb7793beff55dc478e79c7f4c5bdd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c3712370fef840e8bf265850d9ad4dbd946a52b
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730512"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905016"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Основные сведения о типах данных драйвера JDBC
 
@@ -24,7 +24,7 @@ ms.locfileid: "47730512"
 
 Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает использование базовых и расширенных типов данных JDBC внутри приложения Java, использующего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве своей базы данных.  
   
-С этой целью система типов драйвера JDBC включается в процесс преобразования между типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и типами и объектами языка Java. Типы JDBC моделируются на основе типов SQL-92 и SQL-99. Драйвер JDBC соответствует требованиям JDBC и разработан для обеспечения правильного баланса между предсказуемостью и гибкостью.  
+С этой целью типовая система драйвера JDBC включается в процесс преобразования между типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и типами и объектами языка Java. Типы JDBC моделируются на основе типов SQL-92 и SQL-99. Драйвер JDBC соответствует требованиям JDBC и разработан для обеспечения правильного баланса между предсказуемостью и гибкостью.  
   
 В подразделах данного раздела приводится описание использования базовых и расширенных типов данных и преобразования типов данных в другие типы данных.  
   

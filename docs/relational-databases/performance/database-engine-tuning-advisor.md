@@ -12,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ab1458236e0b3a7002fc0058c2ecc43b5c6a7f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb90a4311a1fe37905d5962e66572f7431db7a2a
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649452"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085260"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47649452"
  Версия помощника по настройке ядра СУБД для командной строки. Программа **dta** предназначена для использования функций помощника по настройке ядра СУБД в приложениях и скриптах.  
   
  Рабочая нагрузка  
- Файл скрипта Transact-SQL, файл трассировки или таблица трассировки, которая содержит показательную рабочую нагрузку для настраиваемых баз данных. Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], можно указать кэш планов в качестве рабочей нагрузки.  Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] вы можете [указать в качестве рабочей нагрузки кэш планов](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
+ Файл скрипта Transact-SQL, файл трассировки или таблица трассировки, которая содержит показательную рабочую нагрузку для настраиваемых баз данных. Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], можно указать кэш планов в качестве рабочей нагрузки.  Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] вы можете [указать в качестве рабочей нагрузки хранилище запросов](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
   
  входной XML-файл  
  Файл в формате XML, который помощник по настройке ядра СУБД может использовать для настройки рабочей нагрузки. Входной XML-файл поддерживает расширенные параметры настройки, недоступные в графическом интерфейсе пользователя или в программе **dta** .  

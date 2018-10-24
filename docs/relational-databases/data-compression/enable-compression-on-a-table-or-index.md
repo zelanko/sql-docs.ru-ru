@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 61b696e96cdad99bc536cf6d1e983996624bce39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 838fd86c8293554eb1c6d546b789c1dc60a2a658
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798112"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906454"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Включение сжатия таблицы или индекса
 
@@ -206,7 +206,7 @@ ms.locfileid: "47798112"
   
 #### <a name="to-enable-compression-on-a-table"></a>Чтобы включить сжатие таблицы  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -224,11 +224,11 @@ ms.locfileid: "47798112"
   
 #### <a name="to-enable-compression-on-an-index"></a>Чтобы включить сжатие индекса  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В примере сначала формируется запрос к представлению каталога `sys.indexes` для получения имени и `index_id` для каждого индекса таблицы `Production.TransactionHistory` . Затем выполняется хранимая процедура `sp_estimate_data_compression_savings` для получения размера индекса с указанным ID, если был выбран параметр сжатия PAGE. В конце в примере перестраивается индекс ID 2 (`IX_TransactionHistory_ProductID`), с указанием типа сжатия PAGE.  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В примере сначала формируется запрос к представлению каталога `sys.indexes` для получения имени и `index_id` для каждого индекса таблицы `Production.TransactionHistory` . Затем выполняется хранимая процедура `sp_estimate_data_compression_savings`, которая возвращает значение предполагаемого размера индекса с указанным ID, если был выбран параметр сжатия PAGE. В конце в примере перестраивается индекс ID 2 (`IX_TransactionHistory_ProductID`), с указанием типа сжатия PAGE.  
   
     ```  
     USE AdventureWorks2012;   

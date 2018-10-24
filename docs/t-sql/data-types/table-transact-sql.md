@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 7/24/2018
+ms.date: 10/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67919bf72fa411aedb7709ef81c6af9ac4cb5121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba13a096eac5b83a9bc094a2017ddde3cf6d8f81
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839762"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100465"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47839762"
 Специальный тип данных, который может быть использован для хранения результирующего набора для обработки в будущем. Тип **table** используется в первую очередь для временного хранения набора строк, возвращаемых как результирующий набор функции с табличным значением. Функции и переменные могут быть объявлены как имеющие тип **table**. Переменные **table** могут использоваться в функциях, хранимых процедурах и пакетах. Для объявления переменных типа **table** используйте инструкцию [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -127,6 +127,44 @@ SELECT select_list INTO table_variable;
 Также эта функция **не увеличивает частоту перекомпиляции**.  Эта функция эффективна при начальной компиляции. Итоговый кэшированный план создается на основе числа строк табличных переменных начальной отложенной компиляции. Кэшированный план повторно используется при выполнении последовательных запросов до тех пор, пока план не будет удален или перекомпилирован. 
 
 Если число строк табличных переменных, используемое для начальной компиляции плана, представляет стандартное значение, которое значительно отличается от предположительного фиксированного числа строк, последующие операции будут производительными.  Если число строк табличных переменных существенно меняется при каждом выполнении, производительность не будет повышена с помощью этой функции.
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>Отключение отложенной компиляции табличной переменной без изменения уровня совместимости
+Отложенную компиляцию табличной переменной можно отключить в области базы данных или инструкции, сохранив уровень совместимости базы данных 150 и выше. Чтобы отключить отложенную компиляцию табличной переменной для всех запросов, выполняемых из базы данных, выполните следующую команду в контексте соответствующей базы данных:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+Чтобы повторно включить отложенную компиляцию табличной переменной для всех запросов, выполняемых из базы данных, выполните следующую команду в контексте соответствующей базы данных:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+Вы также можете отключить отложенную компиляцию табличной переменной для определенного запроса, назначив DISABLE_DEFERRED_COMPILATION_TV в качестве указания запроса USE HINT.  Пример:
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
   
 ## <a name="examples"></a>Примеры  

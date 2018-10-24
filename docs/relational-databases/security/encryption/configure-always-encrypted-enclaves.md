@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e6fd1a6bdb0ada4f7256c07b487c31574756191
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712477"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307128"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Настройка Always Encrypted с безопасными анклавами
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -31,8 +31,9 @@ ms.locfileid: "47712477"
 4. Настройте тип анклава в экземпляре SQL Server.
 5. Подготовьте ключи с поддержкой анклава.
 6. Зашифруйте столбцы, содержащие конфиденциальные данные.
- 
 
+>[!NOTE]
+>Пошаговое руководство о том, как настроить тестовую среду и протестировать функциональные возможности Always Encrypted с безопасными анклавами в SSMS, см. в статье [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md) (Руководство по началу работы с Always Encrypted с безопасными анклавами в SSMS).
 
 ## <a name="configure-your-environment"></a>Настройка среды
 
@@ -78,7 +79,7 @@ ms.locfileid: "47712477"
 
 1. [.NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime).
 2. [SSMS 18.0 или более поздней версии](../../../ssms/download-sql-server-management-studio-ssms.md).
-3. [Модуль SQL Server PowerShell](../../../powershell/download-sql-server-ps-module.md) 21.5 или более поздней версии.
+3. [Модуль SQL Server PowerShell](../../../powershell/download-sql-server-ps-module.md) 21.1 или более поздней версии.
 4. [Visual Studio (рекомендуется версия 2017 или более поздняя)](https://visualstudio.microsoft.com/downloads/).
 5. [Пакет разработчика для .NET Framework 4.7.2](https://www.microsoft.com/net/download/visual-studio-sdks).
 6. [Пакет NuGet Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider) версии 2.2.0 или более поздней.

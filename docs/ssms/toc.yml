@@ -40,49 +40,54 @@ items:
   href: build-database-projects-by-using-sql-server-management-studio.md
 - name: Управление окнами SSMS
   href: understand-sql-server-management-studio-windows-management.md
-- name: Диалоговое окно «Внешние средства»
-  href: external-tools-dialog-box.md
-- name: диалоговое окно «Аргументы»
-  href: arguments-dialog-box.md
 - name: Администрирование серверов с помощью SSMS
   href: administer-servers-with-sql-server-management-studio.md
-- name: Условия лицензии
-  href: sql-server-management-studio-license-terms.md
 - name: Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server
   href: configure-wmi-to-show-server-status-in-sql-server-tools.md
 - name: Среда SSMS
   href: the-sql-server-management-studio-environment.md
-- name: Страницы свойств в SSMS
-  href: property-pages-in-sql-server-management-studio.md
-- name: Окно свойств в SSMS
-  href: properties-window-management-studio.md
-- name: Окно вывода в SSMS
-  href: output-window.md
-- name: диалоговое окно «О продукте»
-  href: about-dialog-box.md
-- name: Веб-браузер SSMS
-  href: sql-server-management-studio-web-browser.md
-- name: Общие элементы пользовательского интерфейса
-  href: general-user-interface-elements.md
-- name: Справка и поддержка пользователей в SSMS
-  href: user-assistance-in-sql-server-management-studio.md
+  items:
+  - name: Общие элементы пользовательского интерфейса
+    href: general-user-interface-elements.md
+  - name: диалоговое окно «Аргументы»
+    href: arguments-dialog-box.md
+  - name: диалоговое окно «О продукте»
+    href: about-dialog-box.md
+  - name: Веб-браузер SSMS
+    href: sql-server-management-studio-web-browser.md
+  - name: Диалоговое окно «Внешние средства»
+    href: external-tools-dialog-box.md
+  - name: Страницы свойств в SSMS
+    href: property-pages-in-sql-server-management-studio.md
+  - name: Окно свойств в SSMS
+    href: properties-window-management-studio.md
+  - name: Окно вывода в SSMS
+    href: output-window.md
+  - name: Веб-браузер SSMS
+    href: sql-server-management-studio-web-browser.md
+  - name: Использование панели элементов
+    href: use-the-toolbox.md
 - name: Аргументы для внешних средств
   href: use-of-sql-server-features-and-capabilities-wwi-oltp.md
 - name: Добавление внешнего инструмента в меню "Инструменты"
   href: add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
 - name: Настройка аудита входа
   href: configure-login-auditing-sql-server-management-studio.md
-- name: Использование панели элементов
-  href: use-the-toolbox.md
-- name: Программа SSMS
+- name: Служебная программа SSMS
   href: ssms-utility.md
 - name: Сочетания клавиш SSMS
   href: sql-server-management-studio-keyboard-shortcuts.md
-- name: Анонимные данные об использовании
-  href: sql-server-management-studio-telemetry-ssms.md
-ms.openlocfilehash: 82996fe6b504a872c7eba7f662e30519400f3c1e
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+- name: Ресурсы
+  items:
+  - name: Условия лицензии
+    href: sql-server-management-studio-license-terms.md
+  - name: Справка и поддержка пользователей в SSMS
+    href: user-assistance-in-sql-server-management-studio.md
+  - name: Анонимные данные об использовании
+    href: sql-server-management-studio-telemetry-ssms.md
+ms.openlocfilehash: c7d5f4ba9328f7563efa3d95616e8636c88f6c66
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899693"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336123"
