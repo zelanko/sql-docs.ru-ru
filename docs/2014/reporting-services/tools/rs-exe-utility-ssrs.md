@@ -120,7 +120,7 @@ ms.locfileid: "48141844"
 rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
- Подробный пример см. в разделе [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ Подробный пример см. в разделе [Образец скрипта программы rs.exe служб Reporting Services для переноса содержимого между серверами отчетов](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  Дополнительные примеры см. в разделе [Запуск файла скрипта для служб Reporting Services](run-a-reporting-services-script-file.md)  
   
@@ -130,7 +130,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  Скрипт должен быть написан на языке [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET и храниться в текстовом файле в кодировке Юникод или UTF-8 с расширением RSS. Отладить скрипт с помощью программы **rs** невозможно. Для отладки скрипта выполните код в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
 > [!TIP]  
->  Подробный пример см. в разделе [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+>  Подробный пример см. в разделе [Образец скрипта программы rs.exe служб Reporting Services для переноса содержимого между серверами отчетов](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 ## <a name="see-also"></a>См. также  
  [Запуска файла скрипта служб Reporting Services](run-a-reporting-services-script-file.md)   
