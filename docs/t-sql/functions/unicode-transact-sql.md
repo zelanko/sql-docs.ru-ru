@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae9988ac496800cca11139e562a9ba57dc62fe8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fb572b4afd20a946d71460ae5f60b52d0c236ba
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845022"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636453"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,14 +49,14 @@ UNICODE ( 'ncharacter_expression' )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- В версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], более ранних, чем [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] функция Юникода возвращала кодовую точку UCS-2 в диапазоне от 0 до 0xFFFF. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версиях при использовании параметров сортировки SC функция UNICODE возвращает кодовую точку UCS-16 в диапазоне от 0 до 0x10FFFF.  
+ В версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], более ранних, чем [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] функция Юникода возвращала кодовую точку UCS-2 в диапазоне от 0 до 0xFFFF. Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] при использовании параметров сортировки с поддержкой [дополнительных символов](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) Юникод возвращает кодовую точку UTF-16 в диапазоне от 0 до 0x10FFFF.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-unicode-and-the-nchar-function"></a>A. Использование функций UNICODE и NCHAR  
  В следующем примере функции `UNICODE` и `NCHAR` используются для вывода значения UNICODE для первого символа 24-значной строки `Åkergatan`, а также для вывода самого этого символа, `Å`.  
   
-```  
+```sql  
 DECLARE @nstring nchar(12);  
 SET @nstring = N'Åkergatan 24';  
 SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));  
@@ -72,7 +72,7 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 ### <a name="b-using-substring-unicode-and-convert"></a>Б. Использование функций SUBSTRING, UNICODE и CONVERT  
  В следующем примере функции `SUBSTRING`, `UNICODE` и `CONVERT` используются для вывода номера символа, символа в формате Юникод, а также значения UNICODE каждого из символов строки `Åkergatan 24`.  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
@@ -145,7 +145,7 @@ Character # Unicode Character UNICODE Value
  [CHAR (Transact-SQL)](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR (Transact-SQL)](../../t-sql/functions/nchar-transact-sql.md)   
  [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
- [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

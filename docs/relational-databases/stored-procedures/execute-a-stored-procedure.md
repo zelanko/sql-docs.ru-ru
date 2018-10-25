@@ -20,16 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db923d432be92abfea17ee12a2bcdf61601c9fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1076ee49f04e556dddb3639fa1e3e18e497bebf4
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802922"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419280"
 ---
 # <a name="execute-a-stored-procedure"></a>Выполнение хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Материалы по предыдущим версиям SQL Server см. в разделе [Выполнение хранимой процедуры](execute-a-stored-procedure.md).
 
   В этом разделе описывается, как выполнить хранимую процедуру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -69,7 +68,7 @@ ms.locfileid: "47802922"
   
 -   Выполнение системных хранимых процедур  
   
-     Имена системных процедур начинаются с префикса **sp_**. Поскольку они логически отображаются во всех базах данных, определяемых и пользователем и системой, то они могут выполняться из любой базы данных без полного указания имени процедуры. Однако рекомендуется уточнять имена всех системных процедур указанием схемы **sys** во избежание конфликтов имен. В следующем примере демонстрируется рекомендуемый метод вызова системной процедуры.  
+     Имена системных процедур начинаются с префикса **sp_**. Поскольку они логически отображаются во всех базах данных, определяемых и пользователем, и системой, то они могут выполняться из любой базы данных без полного указания имени процедуры. Однако рекомендуется уточнять имена всех системных процедур указанием схемы **sys** во избежание конфликтов имен. В следующем примере демонстрируется рекомендуемый метод вызова системной процедуры.  
   
     ```sql  
     EXEC sys.sp_who;  

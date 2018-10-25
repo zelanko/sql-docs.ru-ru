@@ -62,7 +62,7 @@ ms.locfileid: "48165424"
 |Журнал событий Windows, ошибка: устройство не готово|[Ошибка отсутствия готовности устройства](device-not-ready-error.md)|  
 |Журнал событий Windows: ошибка запроса ввода-вывода|[Обнаружения запроса неудачных входов и выходов](detect-failed-input-and-output-requests.md)|  
 |Журнал событий Windows: предупреждение об отложенном вводе-выводе|[Проверка на наличие проблем задержки ввода-вывода в подсистеме дискового ввода-вывода](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
-|Журнал событий Windows: ошибка ввода-вывода при сбое страницы физической памяти|[Input and Output Error During Hard Page Fault](input-and-output-error-during-hard-page-fault.md)|  
+|Журнал событий Windows: ошибка ввода-вывода при сбое страницы физической памяти|[Ошибка ввода-вывода во время сбоев страниц физической памяти](input-and-output-error-during-hard-page-fault.md)|  
 |Журнал событий Windows: ошибка при повторном считывании|[Проверка на наличие проблем повторного чтения в подсистеме дискового ввода-вывода](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Журнал событий Windows: ошибка из-за истечения времени ожидания ввода-вывода системы хранения|[Время ожидания ввода-вывода для системы хранения](storage-system-input-output-time-out.md)|  
 |Журнал событий Windows: сбой в системе|[Непредвиденные сбои системы](unexpected-system-failures.md)|  

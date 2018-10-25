@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c181aa25c7bf06a107ff4fc8a0b0bcd39f66cc2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c5995a59cc226700ccdc0aea15a8fe16a28d75
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775612"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356145"
 ---
 # <a name="databases"></a>Базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47775612"
  Пользователь, имеющий доступ к базе данных, может получить разрешения на доступ к объектам этой базы данных. Хотя разрешения и могут быть предоставлены отдельным пользователям, рекомендуется создавать роли базы данных, добавляя при этом пользователей базы данных к соответствующим ролям, а затем предоставлять разрешения ролям. Предоставление разрешений ролям, а не пользователям позволяет легко и понятно управлять процессом распределения разрешений, несмотря на постоянное изменение и рост числа пользователей. Дополнительные сведения о ролях и разрешениях см. в разделах [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md) и [Субъекты (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md).  
   
 ## <a name="working-with-databases"></a>Работа с базами данных  
- Большинство пользователей, работающих с базами данных, используют средство [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Средство [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] предоставляет графический пользовательский интерфейс для создания баз данных и их объектов. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] также содержит редактор запросов, позволяющий взаимодействовать с базами данных при написании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] можно установить с установочного диска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или загрузить с MSDN.  
+ Большинство пользователей, работающих с базами данных, используют средство [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Средство [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] предоставляет графический пользовательский интерфейс для создания баз данных и их объектов. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] также содержит редактор запросов, позволяющий взаимодействовать с базами данных при написании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] можно установить с установочного диска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или загрузить с MSDN. Дополнительные сведения о [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] см. [здесь](../../ssms/sql-server-management-studio-ssms.md).
   
 ## <a name="in-this-section"></a>в этом разделе  
   

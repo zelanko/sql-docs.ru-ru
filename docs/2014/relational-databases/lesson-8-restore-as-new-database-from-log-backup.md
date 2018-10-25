@@ -25,7 +25,7 @@ ms.locfileid: "48207924"
   
 -   Создали базу данных на исходном компьютере.  
   
--   Вы создали резервную копию базы данных (BAK-файл) в хранилище Windows Azure с помощью [SQL Server Backup and Restore with Windows Azure Blob Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) функции. Обратите внимание, что на этом шаге потребуется создать еще одни учетные данные SQL Server. Эти учетные данные используют ключи учетной записи хранения.  
+-   Вы создали резервную копию базы данных (BAK-файл) в хранилище Windows Azure с помощью [Резервное копирование и восстановление SQL Server с помощью службы хранения данных Windows Azure Blob](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) функции. Обратите внимание, что на этом шаге потребуется создать еще одни учетные данные SQL Server. Эти учетные данные используют ключи учетной записи хранения.  
   
 -   Получили учетную запись хранения Windows Azure.  
   

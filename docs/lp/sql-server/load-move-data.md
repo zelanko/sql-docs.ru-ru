@@ -2,16 +2,16 @@
 layout: HubPage
 hide_bc: true
 title: 'SQL Server: загрузка и перемещение данных'
-description: Ознакомьтесь с функциями, с помощью которых можно перемещать, загружать данные и управлять ими в SQL Server.
+description: Ознакомьтесь с функциями, которые позволяют загружать, перемещать и переносить базы данных и данные с помощью SQL Server.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 069e58327e32484d4ae1718130b469af1a0e51af
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 50ad47c11ccba509399104f019aaa07080299fd8
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336163"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390856"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -142,6 +142,25 @@ ms.locfileid: "49336163"
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="/sql/dea/database-experimentation-assistant-overview">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/database-experimentation-assistant.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Database Experimentation Assistant (DEA)</h3>
+                                                    <p>Помогает оценить целевую версию SQL Server для имеющейся рабочей нагрузки.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                             <li class="fullSpan">
                                 <div class="container intro">
                                 <h2>Загрузка и перемещение данных</h2>
@@ -204,25 +223,6 @@ ms.locfileid: "49336163"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sql/relational-databases/replication/sql-server-replication/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/load-move-data/replication.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Репликация</h3>
-                                                    <p> Представляет собой набор технологий копирования и распространения данных и объектов баз данных между базами данных, а также синхронизации баз данных для поддержания согласованности.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="/sql/integration-services/sql-server-integration-services">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -241,6 +241,25 @@ ms.locfileid: "49336163"
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="/sql/relational-databases/replication/sql-server-replication/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/replication.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Репликация</h3>
+                                                    <p> Представляет собой набор технологий копирования и распространения данных и объектов баз данных между базами данных, а также синхронизации баз данных для поддержания согласованности.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -252,16 +271,16 @@ ms.locfileid: "49336163"
         <h2>Оставайтесь с нами</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">Принять участие</a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Принять участие </a>
             </li>
            <li>
-                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">Получить справку</a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Получить справку </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">Оставить отзыв</a>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> Оставить отзыв </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">Пройти опрос</a>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Пройти опрос </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">Блог</a>

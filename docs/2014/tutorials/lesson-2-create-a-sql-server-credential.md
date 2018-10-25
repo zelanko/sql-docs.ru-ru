@@ -50,7 +50,7 @@ ms.locfileid: "48194574"
   
 5.  Проверьте инструкцию T-SQL и нажмите **Выполнить**.  
   
- Дополнительные сведения о службе хранилища больших двоичных объектов Windows Azure для резервного копирования основные понятия и требования, см. в разделе [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Дополнительные сведения о службе хранилища больших двоичных объектов Windows Azure для резервного копирования основные понятия и требования, см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилищ больших двоичных объектов Windows Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ### <a name="next-lesson"></a>Следующее занятие  
  [Занятие 3: Запись полной резервной копии в Windows Azure Blob Storage Service](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md).  

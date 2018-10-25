@@ -27,7 +27,7 @@ ms.locfileid: "48154814"
   
 ### <a name="using-transact-sql"></a>Использование Transact-SQL  
   
--   Так как SQL Server должен подключиться к внешнему источнику данных для получения файлов резервных копий, для проверки подлинности учетной записи хранения используются учетные данные SQL. Соответственно, в инструкции RESTORE необходимо указать параметр WITH CREDENTIAL. Дополнительные сведения см. в разделе [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+-   Так как SQL Server должен подключиться к внешнему источнику данных для получения файлов резервных копий, для проверки подлинности учетной записи хранения используются учетные данные SQL. Соответственно, в инструкции RESTORE необходимо указать параметр WITH CREDENTIAL. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилищ больших двоичных объектов Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 -   Если вы используете [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для управления вашими резервными копиями в облаке, можно просматривать все доступные резервные копии в хранилище с помощью функции **smart_admin.fn_available_backups** . Эта функция возвращает все доступные резервные копии для базы данных в таблице. Поскольку результаты возвращаются в виде таблицы, их можно фильтровать и сортировать. Дополнительные сведения см. в разделе [smart_admin.fn_available_backups &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql).  
   

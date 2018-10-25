@@ -22,7 +22,7 @@ ms.locfileid: "47713922"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
-  Существует несколько подходов, которые следует учитывать при планировании обновления предыдущего выпуска SQL Server до версии [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы свести к минимуму время простоя и риски. Можно выполнить обновление на месте, миграцию в новую установку или последовательное обновление. Следующая схема поможет вам выбрать один из этих подходов. Каждый из подходов, указанных в схеме, кроме того, обсуждается ниже. Чтобы получить дополнительные сведения о точках принятия решений в этой схеме, ознакомьтесь с разделом [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+  Существует несколько подходов, которые следует учитывать при планировании обновления предыдущего выпуска SQL Server до версии [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы свести к минимуму время простоя и риски. Можно выполнить обновление на месте, миграцию в новую установку или последовательное обновление. Следующая схема поможет вам выбрать один из этих подходов. Каждый из подходов, указанных в схеме, кроме того, обсуждается ниже. Чтобы получить дополнительные сведения о точках принятия решений в этой схеме, ознакомьтесь с разделом [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Дерево выбора метода для обновления компонента Database Engine](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Дерево выбора метода для обновления компонента Database Engine")  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47713922"
   
 -   среда разработки без конфигурации высокой доступности;  
   
--   рабочая среда без критически важных нагрузок, которая допускает некоторое время простоя и в которой используется новое оборудование и программное обеспечение. Время простоя зависит от размера базы данных и быстродействия подсистемы ввода-вывода. Обновление SQL Server 2014 при использовании оптимизированных для памяти таблиц займет немного больше времени. Дополнительные сведения см. в разделе [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+-   рабочая среда без критически важных нагрузок, которая допускает некоторое время простоя и в которой используется новое оборудование и программное обеспечение. Время простоя зависит от размера базы данных и быстродействия подсистемы ввода-вывода. Обновление SQL Server 2014 при использовании оптимизированных для памяти таблиц займет немного больше времени. Дополнительные сведения см. в разделе [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
 > [!WARNING]  
 >  При запуске программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] останавливается и перезапускается в процессе выполнения предварительных проверок.  
@@ -118,7 +118,7 @@ ms.locfileid: "47713922"
 -   Масштабируемая среда SQL Server Reporting Services. Подробное описание процедуры последовательного обновления в этой среде см. в разделе [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="next-steps"></a>Следующие шаги
- [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [Завершение обновления ядра СУБД](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
   

@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 388912c81c1ced9cc05c2b0c402e7a6141ce2452
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c22f55d90fe484e0c9e16f74228210f75a88a3d
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827024"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359288"
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ ERROR_NUMBER ( )
 ### <a name="a-using-errornumber-in-a-catch-block"></a>A. Использование функции ERROR_NUMBER в блоке CATCH  
 В приведенном ниже примере показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Блок `CATCH` возвращает номер ошибки.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -72,7 +72,9 @@ BEGIN CATCH
     SELECT ERROR_NUMBER() AS ErrorNumber;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```
 -----------
 
 (0 row(s) affected)
@@ -88,8 +90,7 @@ ErrorNumber
 ### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование функции ERROR_NUMBER в блоке CATCH с другими средствами обработки ошибок  
 В приведенном ниже примере показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Вместе с номером ошибки блок `CATCH` возвращает сведения о ней.  
 
-```  
-  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -104,7 +105,9 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```
 -----------
 
 (0 row(s) affected)
@@ -126,7 +129,8 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorLine  ErrorMessage
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
  [ERROR_STATE (Transact-SQL)](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
+ [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)     
+ [Справочник по ошибкам и событиям (компонент Database Engine)](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
   
 

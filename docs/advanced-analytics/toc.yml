@@ -66,11 +66,37 @@ items:
       href: tutorials/rtsql-predict-and-plot-from-model.md
   - name: Python
     items:
-    - name: Упаковка Python в хранимую процедуру
-      href: tutorials/wrap-python-in-tsql-stored-procedure.md
+    - name: Запуск Python с помощью T-SQL
+      href: tutorials/run-python-using-t-sql.md
 - name: Учебники
   href: tutorials/machine-learning-services-tutorials.md
   items:
+  - name: 'Данные '
+    items:
+    - name: Набор данных по авиарейсам
+      href: tutorials/demo-data-airlinedemo-in-sql.md
+    - name: Набор данных "Ирисы Фишера"
+      href: tutorials/demo-data-iris-in-sql.md
+    - name: Набор данных о работе такси в Нью-Йорке
+      href: tutorials/demo-data-nyctaxi-in-sql.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: Обучение и использование первой модели
+      href: tutorials/train-score-using-python-in-tsql.md
+    - name: Изучение аналитики в базе данных
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: Анализ и визуализация данных
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: Создание характеристик данных
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: Обучение и сохранение модели
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: Ввод модели в эксплуатацию
+        href: tutorials/sqldev-py6-operationalize-the-model.md
+    - name: Создание модели с помощью пакета revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: Чтение
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -79,15 +105,13 @@ items:
     - name: Изучение аналитики в базе данных
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 — Настройка демонстрационных данных
-        href: tutorials/sqldev-download-the-sample-data.md
-      - name: 2 — Визуализация данных
+      - name: 1. Визуализация данных
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 3 — Создание характеристик данных
+      - name: 2. Создание характеристик данных
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 4 — Обучение и сохранение в SQL
-        href: r/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 5 — Прогнозирование результатов
+      - name: 3. Обучение и сохранение в SQL
+        href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+      - name: 4. Прогнозирование результатов
         href: tutorials/sqldev-operationalize-the-model.md
     - name: Пошаговое руководство по обработке и анализу данных
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
@@ -139,31 +163,6 @@ items:
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: Создание простого моделирования
         href: tutorials/deepdive-create-a-simple-simulation.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: Запуск Python с помощью T-SQL
-      href: tutorials/run-python-using-t-sql.md
-      items:
-      - name: Обучение и оценка на основе модели Python в SQL Server
-        href: tutorials/train-score-using-python-in-tsql.md
-      - name: Создание модели с помощью revoscalepy в контексте вычислений SQL Server
-        href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: Изучение аналитики в базе данных
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: Получение данных и скриптов
-        href: tutorials/sqldev-py1-download-the-sample-data.md
-      - name: импорт данных
-        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
-      - name: Анализ и визуализация данных
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: Создание характеристик данных
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: Обучение и сохранение модели
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: Ввод модели в эксплуатацию
-        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: Примеры
   href: https://github.com/Microsoft/sql-server-samples
 - name: Решения
@@ -326,9 +325,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 263f18263288b78c183f4fc7e0dd129b192105dd
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 44eec73a9bf8e7dd931833ac9fbb54a34deaa770
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169237"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806784"

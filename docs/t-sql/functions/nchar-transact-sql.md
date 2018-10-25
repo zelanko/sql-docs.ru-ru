@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb0294ccfb7a099cda01c698719e71141eb88005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256ec0931c0abb3b15947a9f04892c35a5066862
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716558"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636443"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,9 +42,9 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>Аргументы  
  *integer_expression*  
- Если параметры сортировки базы данных не содержат флаг дополнительных символов (SC), то используются положительные целые числа от 0 до 65 535 (от 0 до 0xFFFF). При указании значения вне этого диапазона возвращается значение NULL. Дополнительные сведения о дополнительных символах см. в статье [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Если параметры сортировки базы данных не содержат флаг [дополнительных символов](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), используется положительное целое число от 0 до 65 535 (от 0 до 0xFFFF). При указании значения вне этого диапазона возвращается значение NULL. Дополнительные сведения о дополнительных символах см. в статье [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- Если параметры сортировки базы данных не поддерживают флаг дополнительных символов (SC), то используются положительные целые числа от 0 до 1 114 111 (от 0 до 0x10FFFF). При указании значения вне этого диапазона возвращается значение NULL.  
+ Если параметры сортировки базы данных поддерживают флаг дополнительных символов, используется положительное целое число от 0 до 1 114 111 (от 0 до 0x10FFFF). При указании значения вне этого диапазона возвращается значение NULL.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **nchar(1)**, когда параметры сортировки базы данных по умолчанию не поддерживают дополнительные символы.  
@@ -53,7 +53,7 @@ NCHAR ( integer_expression )
   
  Если параметр *integer_expression* лежит в диапазоне 0–0xFFFF, то возвращается только один символ. Для больших значений NCHAR возвращает соответствующую суррогатную пару. Не создавайте суррогатные пары с применением `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Вместо этого используйте параметры сортировки базы данных, которые поддерживают дополнительные символы, с указанием кодовой точки в Юникоде для суррогатной пары. В следующем примере рассматривается как старый метод конструирования суррогатной пары, так и предпочтительный метод с указанием кодовой точки в Юникоде.  
   
-```  
+```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
 DECLARE @d nvarchar(10) = N'𣅿';
 -- Old style method.  
@@ -71,7 +71,7 @@ SELECT NCHAR(UNICODE(@d));
 ### <a name="a-using-nchar-and-unicode"></a>A. Использование функций NCHAR и UNICODE  
  В следующем примере функции `UNICODE` и `NCHAR` используются для вывода значения `UNICODE` и `NCHAR` (символ Юникода) второго символа строки `København` и вывода второго фактического символа `ø`.  
   
-```  
+```sql  
 DECLARE @nstring nchar(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
@@ -90,7 +90,7 @@ GO
 ### <a name="b-using-substring-unicode-convert-and-nchar"></a>Б. Использование функций SUBSTRING, UNICODE, CONVERT и NCHAR  
  В следующем пример функции `SUBSTRING`, `UNICODE`, `CONVERT` и `NCHAR` используются для печати номера символа, символа Юникода и значения Юникода каждого символа в строке `København`.  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
