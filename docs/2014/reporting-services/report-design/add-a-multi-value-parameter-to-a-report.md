@@ -23,7 +23,7 @@ ms.locfileid: "48074477"
   
  Можно передавать отчету несколько значений параметра в URL-адресе отчета. Пример URL-адреса, содержащего Многозначный параметр, см. в разделе [передать Report Parameter Within a URL](../pass-a-report-parameter-within-a-url.md).  
   
- Сведения о том, как передавать несколько значений параметра хранимой процедуре, см. в статье [Working With Multi-Select Parameters for SSRS Reports](http://go.microsoft.com/fwlink/?LinkId=321529) (Работа с многозначными параметрами для отчетов служб SSRS) на сайте mssqltips.com.  
+ Сведения о том, как передавать несколько значений параметра хранимой процедуре, см. в статье [Работа с многозначными параметрами для отчетов служб SSRS](http://go.microsoft.com/fwlink/?LinkId=321529) на сайте mssqltips.com.  
   
 ### <a name="to-add-a-multi-value-parameter"></a>Добавление многозначного параметра  
   
