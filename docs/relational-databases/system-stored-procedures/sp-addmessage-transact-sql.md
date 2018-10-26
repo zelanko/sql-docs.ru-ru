@@ -25,7 +25,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47668332"
 ---
-# <a name="spaddmessage-transact-sql"></a>sp_addmergefilter (Transact-SQL)
+# <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Сохраняет новое пользовательское сообщение об ошибке в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Сообщения, сохраненные с помощью **sp_addmessage** можно просмотреть с помощью **sys.messages** представления каталога.  
