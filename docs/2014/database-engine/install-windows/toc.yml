@@ -1,373 +1,378 @@
+items:
 - name: Установка SQL Server
   href: installation-for-sql-server.md
 - name: Планирование установки SQL Server
   href: ../../sql-server/install/planning-a-sql-server-installation.md
   items:
-    - name: Новые возможности установки SQL Server
-      href: ../../sql-server/install/what-s-new-in-sql-server-installation.md
-    - name: Hardware and Software Requirements for Installing SQL Server 2014
-      href: ../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
-    - name: Вопросы безопасности при установке SQL Server
-      href: ../../sql-server/install/security-considerations-for-a-sql-server-installation.md
-    - name: Сетевые протоколы и библиотеки
-      href: ../../sql-server/install/network-protocols-and-network-libraries.md
-    - name: Работа с несколькими версиями и экземплярами SQL Server
-      href: ../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
-    - name: Версии SQL Server на местных языках
-      href: ../../sql-server/install/local-language-versions-in-sql-server.md
-    - name: Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server
-      href: ../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
+  - name: Новые возможности установки SQL Server
+    href: ../../sql-server/install/what-s-new-in-sql-server-installation.md
+  - name: Hardware and Software Requirements for Installing SQL Server 2014
+    href: ../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+  - name: Вопросы безопасности при установке SQL Server
+    href: ../../sql-server/install/security-considerations-for-a-sql-server-installation.md
+  - name: Сетевые протоколы и библиотеки
+    href: ../../sql-server/install/network-protocols-and-network-libraries.md
+  - name: Работа с несколькими версиями и экземплярами SQL Server
+    href: ../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
+  - name: Версии SQL Server на местных языках
+    href: ../../sql-server/install/local-language-versions-in-sql-server.md
+  - name: Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server
+    href: ../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
 - name: Установка SQL Server 2014
   href: install-sql-server.md
   items:
-    - name: О компоненте SQL Server Database Engine
-      href: install-sql-server-database-engine.md
-    - name: Установка распределенного воспроизведения
-      href: ../../tools/distributed-replay/install-distributed-replay.md
-    - name: Distributed Replay Requirements
-      href: ../../tools/distributed-replay/distributed-replay-requirements.md
-    - name: Установка распределенного воспроизведения (программа установки)
-      href: ../../sql-server/install/install-distributed-replay-setup.md
-    - name: Установка распределенного воспроизведения из командной строки
-      href: ../../tools/distributed-replay/install-distributed-replay-overview.md
-    - name: Установка компонентов распределенного воспроизведения с помощью файла конфигурации
-      href: ../../sql-server/install/install-distributed-replay-using-a-configuration-file.md
-    - name: Выполнение действий после установки
-      href: ../../tools/distributed-replay/complete-the-post-installation-steps.md
-    - name: Изменение учетных записей служб клиента и контроллера
-      href: ../../tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
-    - name: Восстановление установки распределенного воспроизведения
-      href: ../../sql-server/install/repair-a-distributed-replay-installation.md
-    - name: Удаление существующего экземпляра распределенного воспроизведения
-      href: ../../sql-server/install/uninstall-an-existing-instance-of-distributed-replay.md
-    - name: Установка репликации SQL Server
-      href: install-sql-server-replication.md
-    - name: Установка базовой версии средств управления SQL Server
-      href: ../../sql-server/install/install-sql-server-management-tools.md
-    - name: Установка компонентов SQL Server PowerShell
-      href: install-sql-server-powershell.md
-    - name: Установка SQL Server 2014 в операционной системе Server Core
-      href: install-sql-server-on-server-core.md
-    - name: Установка SQL Server с общей папкой SMB в качестве хранилища
-      href: install-sql-server-with-smb-fileshare-as-a-storage-option.md
-    - name: Вопросы по установке SQL Server с помощью SysPrep
-      href: considerations-for-installing-sql-server-using-sysprep.md
-    - name: Проверка установки SQL Server
-      href: validate-a-sql-server-installation.md
-    - name: Параметры для средства проверки конфигурации системы
-      href: check-parameters-for-the-system-configuration-checker.md
-    - name: Настройка SQL Server на установке Server Core
-      href: configure-sql-server-on-a-server-core-installation.md
-    - name: Configure the Windows Firewall to Allow SQL Server Access
-      href: ../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
-    - name: Настройка многосетевого компьютера для доступа к SQL Server
-      href: ../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
-    - name: Инструкции по установке
-      href: ../../sql-server/install/installation-how-to-topics.md
-    - name: Установка SQL Server «2014» с помощью мастера установки (программы установки)
-      href: install-sql-server-from-the-installation-wizard-setup.md
-    - name: Install SQL Server 2014 from the Command Prompt
-      href: install-sql-server-from-the-command-prompt.md
-    - name: установить SQL Server 2014 с помощью файла конфигурации
-      href: install-sql-server-using-a-configuration-file.md
-    - name: Установка SQL Server 2014 с помощью SysPrep
-      href: install-sql-server-using-sysprep.md
-    - name: добавить компоненты в экземпляр SQL Server 2014 (программа установки)
-      href: add-features-to-an-instance-of-sql-server-setup.md
-    - name: Удаление установки SQL Server 2014
-      href: repair-a-failed-sql-server-installation.md
-    - name: 'Переименование компьютера, на который установлен изолированный экземпляр SQL Server'
-      href: rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md
-    - name: Установка обновлений для обслуживания SQL Server 2014
-      href: install-sql-server-servicing-updates.md
-    - name: Просмотр и чтение файлов журналов программы установки SQL Server
-      href: view-and-read-sql-server-setup-log-files.md
+  - name: О компоненте SQL Server Database Engine
+    href: install-sql-server-database-engine.md
+  - name: Установка распределенного воспроизведения
+    href: ../../tools/distributed-replay/install-distributed-replay.md
+  - name: Distributed Replay Requirements
+    href: ../../tools/distributed-replay/distributed-replay-requirements.md
+  - name: Установка распределенного воспроизведения (программа установки)
+    href: ../../sql-server/install/install-distributed-replay-setup.md
+  - name: Установка распределенного воспроизведения из командной строки
+    href: ../../tools/distributed-replay/install-distributed-replay-overview.md
+  - name: Установка компонентов распределенного воспроизведения с помощью файла конфигурации
+    href: ../../sql-server/install/install-distributed-replay-using-a-configuration-file.md
+  - name: Выполнение действий после установки
+    href: ../../tools/distributed-replay/complete-the-post-installation-steps.md
+  - name: Изменение учетных записей служб клиента и контроллера
+    href: ../../tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
+  - name: Восстановление установки распределенного воспроизведения
+    href: ../../sql-server/install/repair-a-distributed-replay-installation.md
+  - name: Удаление существующего экземпляра распределенного воспроизведения
+    href: ../../sql-server/install/uninstall-an-existing-instance-of-distributed-replay.md
+  - name: Установка репликации SQL Server
+    href: install-sql-server-replication.md
+  - name: Установка базовой версии средств управления SQL Server
+    href: ../../sql-server/install/install-sql-server-management-tools.md
+  - name: Установка компонентов SQL Server PowerShell
+    href: install-sql-server-powershell.md
+  - name: Установка SQL Server 2014 в операционной системе Server Core
+    href: install-sql-server-on-server-core.md
+  - name: Установка SQL Server с общей папкой SMB в качестве хранилища
+    href: install-sql-server-with-smb-fileshare-as-a-storage-option.md
+  - name: Вопросы по установке SQL Server с помощью SysPrep
+    href: considerations-for-installing-sql-server-using-sysprep.md
+  - name: Проверка установки SQL Server
+    href: validate-a-sql-server-installation.md
+  - name: Параметры для средства проверки конфигурации системы
+    href: check-parameters-for-the-system-configuration-checker.md
+  - name: Настройка SQL Server на установке Server Core
+    href: configure-sql-server-on-a-server-core-installation.md
+  - name: Configure the Windows Firewall to Allow SQL Server Access
+    href: ../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
+  - name: Настройка многосетевого компьютера для доступа к SQL Server
+    href: ../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
+  - name: Инструкции по установке
+    href: ../../sql-server/install/installation-how-to-topics.md
+  - name: Установка SQL Server «2014» с помощью мастера установки (программы установки)
+    href: install-sql-server-from-the-installation-wizard-setup.md
+  - name: Install SQL Server 2014 from the Command Prompt
+    href: install-sql-server-from-the-command-prompt.md
+  - name: установить SQL Server 2014 с помощью файла конфигурации
+    href: install-sql-server-using-a-configuration-file.md
+  - name: Установка SQL Server 2014 с помощью SysPrep
+    href: install-sql-server-using-sysprep.md
+  - name: добавить компоненты в экземпляр SQL Server 2014 (программа установки)
+    href: add-features-to-an-instance-of-sql-server-setup.md
+  - name: Удаление установки SQL Server 2014
+    href: repair-a-failed-sql-server-installation.md
+  - name: Переименование компьютера, на который установлен изолированный экземпляр SQL Server
+    href: rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md
+  - name: Установка обновлений для обслуживания SQL Server 2014
+    href: install-sql-server-servicing-updates.md
+  - name: Просмотр и чтение файлов журналов программы установки SQL Server
+    href: view-and-read-sql-server-setup-log-files.md
 - name: Установка компонентов бизнес-аналитики SQL Server 2014
   href: ../../sql-server/install/install-sql-server-business-intelligence-features.md
   items:
-    - name: Примеры топологий и стоимости лицензирования для бизнес-аналитики
-      href: ../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md
-    - name: Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных
-      href: ../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md
-    - name: Установка служб Analysis Services в табличном режиме
-      href: ../../analysis-services/instances/install-windows/install-analysis-services.md
-    - name: Установка служб Data Quality Services
-      href: ../../data-quality-services/install-windows/install-data-quality-services.md
-    - name: Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS
-      href: ../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md
-    - name: Предоставление ролей DQS пользователям
-      href: ../../data-quality-services/install-windows/grant-dqs-roles-to-users.md
-    - name: Предоставление доступа к данным для операций со службами DQS
-      href: ../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md
-    - name: Export and Import DQS Knowledge Bases Using DQSInstaller.exe
-      href: ../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md
-    - name: Обновление сборок SQLCLR после загрузки обновлений .NET Framework
-      href: ../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md
-    - name: Обновление схемы базы данных DQS после установки обновления SQL Server
-      href: ../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md
-    - name: Установка служб Integration Services
-      href: ../../integration-services/install-windows/install-integration-services.md
-    - name: Возможности взаимодействия и совместной работы
-      href: ../../integration-services/install-windows/installing-integration-services-versions-side-by-side.md
-    - name: Установка служб Master Data Services
-      href: ../../master-data-services/install-windows/install-master-data-services.md
-    - name: Требования веб-приложений (службы Master Data Services)
-      href: ../../master-data-services/install-windows/web-application-requirements-master-data-services.md
-    - name: Требования к базе данных (службы Master Data Services)
-      href: ../../master-data-services/install-windows/database-requirements-master-data-services.md
-    - name: Создание базы данных служб Master Data Services
-      href: ../../master-data-services/install-windows/create-a-master-data-services-database.md
-    - name: Создание веб-приложения мастера основных данных (службы Master Data Services)
-      href: ../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md
-    - name: Обеспечение безопасности веб-приложения диспетчера основных данных
-      href: ../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md
-    - name: Связывание базы данных служб Master Data Services и веб-приложения
-      href: ../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md
-    - name: Включение интеграции служб Data Quality Services со службами Master Data Services
-      href: ../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md
-    - name: Многоязычное и международное развертывание (службы Master Data Services)
-      href: ../../master-data-services/install-windows/multi-lingual-and-global-deployments-master-data-services.md
-    - name: Установка сервера отчетов служб Reporting Services в собственном режиме
-      href: ../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
-    - name: Выполнение установки в режиме «только файлы» служб Reporting Services
-      href: ../../reporting-services/install-windows/files-only-installation-reporting-services.md
-    - name: Параллельная установка служб Reporting Services и служб IIS (собственный режим SSRS)
-      href: ../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
-    - name: Размещение базы данных сервера отчетов в отказоустойчивом кластере SQL Server
-      href: ../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-    - name: Использование диспетчера конфигурации служб Reporting Services (собственный режим)
-      href: ../../sql-server/install/reporting-services-configuration-manager-native-mode.md
+  - name: Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных
+    href: ../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md
+  - name: Установка служб Analysis Services в табличном режиме
+    href: ../../analysis-services/instances/install-windows/install-analysis-services.md
+  - name: Установка служб Data Quality Services
+    href: ../../data-quality-services/install-windows/install-data-quality-services.md
+  - name: Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS
+    href: ../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md
+  - name: Предоставление ролей DQS пользователям
+    href: ../../data-quality-services/install-windows/grant-dqs-roles-to-users.md
+  - name: Предоставление доступа к данным для операций со службами DQS
+    href: ../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md
+  - name: Export and Import DQS Knowledge Bases Using DQSInstaller.exe
+    href: ../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md
+  - name: Обновление сборок SQLCLR после загрузки обновлений .NET Framework
+    href: ../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md
+  - name: Обновление схемы базы данных DQS после установки обновления SQL Server
+    href: ../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md
+  - name: Установка служб Integration Services
+    href: ../../integration-services/install-windows/install-integration-services.md
+  - name: Возможности взаимодействия и совместной работы
+    href: ../../integration-services/install-windows/installing-integration-services-versions-side-by-side.md
+  - name: Установка служб Master Data Services
+    href: ../../master-data-services/install-windows/install-master-data-services.md
+  - name: Требования веб-приложений (службы Master Data Services)
+    href: ../../master-data-services/install-windows/web-application-requirements-master-data-services.md
+  - name: Требования к базе данных (службы Master Data Services)
+    href: ../../master-data-services/install-windows/database-requirements-master-data-services.md
+  - name: Создание базы данных служб Master Data Services
+    href: ../../master-data-services/install-windows/create-a-master-data-services-database.md
+  - name: Создание веб-приложения мастера основных данных (службы Master Data Services)
+    href: ../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md
+  - name: Обеспечение безопасности веб-приложения диспетчера основных данных
+    href: ../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md
+  - name: Связывание базы данных служб Master Data Services и веб-приложения
+    href: ../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md
+  - name: Включение интеграции служб Data Quality Services со службами Master Data Services
+    href: ../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md
+  - name: Многоязычное и международное развертывание (службы Master Data Services)
+    href: ../../master-data-services/install-windows/multi-lingual-and-global-deployments-master-data-services.md
+  - name: Установка сервера отчетов служб Reporting Services в собственном режиме
+    href: ../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
+  - name: Выполнение установки в режиме «только файлы» служб Reporting Services
+    href: ../../reporting-services/install-windows/files-only-installation-reporting-services.md
+  - name: Параллельная установка служб Reporting Services и служб IIS (собственный режим SSRS)
+    href: ../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
+  - name: Размещение базы данных сервера отчетов в отказоустойчивом кластере SQL Server
+    href: ../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
+  - name: Использование диспетчера конфигурации служб Reporting Services (собственный режим)
+    href: ../../sql-server/install/reporting-services-configuration-manager-native-mode.md
+    items:
+    - name: Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
+    - name: Настройка учетной записи службы (диспетчер конфигурации служб SSRS)
+      href: ../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md
+    - name: Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
+    - name: Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
+    - name: Настройка URL-адреса (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
+    - name: Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
+    - name: URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
+    - name: Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
+    - name: Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)
+      href: ../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md
+    - name: Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
+    - name: Настройка подключения к базе данных сервера отчетов
+      href: ../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md
+    - name: Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)
+      href: ../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md
+    - name: Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
+    - name: Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
+    - name: Инициализация сервера отчетов (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
+    - name: Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
+    - name: Создание резервных копий и восстановление ключей шифрования
+      href: ../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+    - name: Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+    - name: Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
+    - name: Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)
+      href: ../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
+    - name: Разделы справки (F1) диспетчера конфигурации служб Reporting Services (службы Reporting Services в собственном режиме)
+      href: ../../sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md
+    - name: Соединение с сервером отчетов, работающим в собственном режиме
+      href: ../../sql-server/install/connect-to-a-native-mode-report-server.md
+    - name: Состояние сервера отчетов (службы Reporting Services в собственном режиме)
+      href: ../../sql-server/install/report-server-status-ssrs-native-mode.md
+    - name: Учетная запись службы (службы Reporting Services в собственном режиме)
+      href: ../../sql-server/install/service-account-ssrs-native-mode.md
+    - name: URL-адрес веб-службы (службы Reporting Services в собственном режиме)
+      href: ../../sql-server/install/web-service-url-ssrs-native-mode.md
       items:
-        - name: Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-        - name: Настройка учетной записи службы (диспетчер конфигурации служб SSRS)
-          href: ../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md
-        - name: Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
-        - name: Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-        - name: Настройка URL-адреса (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-        - name: Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-        - name: URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-        - name: Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
-        - name: Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)
-          href: ../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md
-        - name: 'Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)'
-          href: ../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
-        - name: Настройка подключения к базе данных сервера отчетов
-          href: ../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md
-        - name: Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)
-          href: ../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md
-        - name: Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
-        - name: Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
-        - name: Инициализация сервера отчетов (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
-        - name: Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
-        - name: Создание резервных копий и восстановление ключей шифрования
-          href: ../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
-        - name: Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
-        - name: Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
-        - name: Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)
-          href: ../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
-        - name: Разделы справки (F1) диспетчера конфигурации служб Reporting Services (службы Reporting Services в собственном режиме)
-          href: ../../sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md
-        - name: 'Соединение с сервером отчетов, работающим в собственном режиме'
-          href: ../../sql-server/install/connect-to-a-native-mode-report-server.md
-        - name: Состояние сервера отчетов (службы Reporting Services в собственном режиме)
-          href: ../../sql-server/install/report-server-status-ssrs-native-mode.md
-        - name: Учетная запись службы (службы Reporting Services в собственном режиме)
-          href: ../../sql-server/install/service-account-ssrs-native-mode.md
-        - name: URL-адрес веб-службы (службы Reporting Services в собственном режиме)
-          href: ../../sql-server/install/web-service-url-ssrs-native-mode.md
-          items:
-            - name: Расширенная настройка нескольких веб-сайтов (службы Reporting Services в собственном режиме)
-              href: ../../sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md
-        - name: База данных (службы Reporting Services в собственном режиме)
-          href: ../../sql-server/install/database-ssrs-native-mode.md
-          items:
-            - name: Мастер изменения базы данных (службы Reporting Services в собственном режиме)
-              href: ../../sql-server/install/change-database-wizard-ssrs-native-mode.md
-            - name: Мастер изменения учетных данных (службы Reporting Services в собственном режиме)
-              href: ../../sql-server/install/change-credentials-wizard-ssrs-native-mode.md
-        - name: URL-адрес диспетчера отчетов (службы Reporting Services в собственном режиме)
-          href: ../../sql-server/install/report-manager-url-ssrs-native-mode.md
-        - name: Параметры электронной почты — диспетчер конфигурации (службы Reporting Services в собственном режиме)
-          href: ../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-        - name: Учетная запись выполнения (службы Reporting Services в собственном режиме)
-          href: ../../sql-server/install/execution-account-ssrs-native-mode.md
-        - name: Ключи шифрования (службы Reporting Services в собственном режиме)
-          href: ../../sql-server/install/encryption-keys-ssrs-native-mode.md
-          items:
-            - name: Резервная копия ключа шифрования (службы Reporting Services в собственном режиме)
-              href: ../../sql-server/install/backup-encryption-key-ssrs-native-mode.md
-            - name: Восстановление ключа шифрования (службы Reporting Services в собственном режиме)
-              href: ../../sql-server/install/restore-encryption-key-ssrs-native-mode.md
-        - name: Масштабное развертывание (сервер отчетов в собственном режиме)
-          href: ../../sql-server/install/scale-out-deployment-native-mode-report-server.md
-    - name: Установка компонентов бизнес-аналитики SQL Server с SharePoint (PowerPivot и службы Reporting Services)
-      href: ../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md
-    - name: Deployment Topologies for SQL Server BI Features in SharePoint
-      href: ../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md
-    - name: Указания по использованию функций бизнес-аналитики SQL Server в ферме SharePoint 2010
-      href: ../../sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md
-    - name: Контрольные списки для установки компонентов бизнес-аналитики в SharePoint
-      href: ../../sql-server/install/checklists-for-installing-bi-features-with-sharepoint.md
+      - name: Расширенная настройка нескольких веб-сайтов (службы Reporting Services в собственном режиме)
+        href: ../../sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md
+    - name: База данных (службы Reporting Services в собственном режиме)
+      href: ../../sql-server/install/database-ssrs-native-mode.md
       items:
-        - name: 'Контрольный список: службы Reporting Services, Power View и PowerPivot для SharePoint'
-          href: ../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md
-        - name: 'Контрольный список: масштабное развертывание путем добавления серверов PowerPivot в ферму SharePoint 2010'
-          href: ../../sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md
-        - name: 'Контрольный список: установка служб Reporting Services в существующей ферме SharePoint'
-          href: ../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md
-        - name: 'Контрольный список: установка нескольких серверов PowerPivot для SharePoint 2010'
-          href: ../../sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md
-        - name: Контрольный список. Использование PowerShell для проверки PowerPivot для SharePoint
-          href: ../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
-    - name: Установка служб Reporting Services в режиме интеграции с SharePoint (SharePoint 2010 и SharePoint 2013)
-      href: ../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
+      - name: Мастер изменения базы данных (службы Reporting Services в собственном режиме)
+        href: ../../sql-server/install/change-database-wizard-ssrs-native-mode.md
+      - name: Мастер изменения учетных данных (службы Reporting Services в собственном режиме)
+        href: ../../sql-server/install/change-credentials-wizard-ssrs-native-mode.md
+    - name: URL-адрес диспетчера отчетов (службы Reporting Services в собственном режиме)
+      href: ../../sql-server/install/report-manager-url-ssrs-native-mode.md
+    - name: Параметры электронной почты — диспетчер конфигурации (службы Reporting Services в собственном режиме)
+      href: ../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
+    - name: Учетная запись выполнения (службы Reporting Services в собственном режиме)
+      href: ../../sql-server/install/execution-account-ssrs-native-mode.md
+    - name: Ключи шифрования (службы Reporting Services в собственном режиме)
+      href: ../../sql-server/install/encryption-keys-ssrs-native-mode.md
       items:
-        - name: Требования к оборудованию и программному обеспечению для служб Reporting Services в режиме интеграции с SharePoint
-          href: ../../sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md
-        - name: 'Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек'
-          href: ../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md
-        - name: Установка служб Reporting Services для SharePoint 2013
-          href: ../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md
-        - name: Установка служб Reporting Services для SharePoint 2010
-          href: ../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md
-        - name: Установка или удаление надстройки служб Reporting Services для SharePoint
-          href: ../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
-        - name: Где найти надстройку служб SSRS для SharePoint
-          href: ../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md
-        - name: Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)
-          href: ../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
-        - name: Добавление дополнительного клиентского веб-интерфейса служб Reporting Services в ферме
-          href: ../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md
-        - name: Настройка электронной почты для приложения служб Reporting Services
-          href: ../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md
-        - name: Подготовка подписок и предупреждений для приложений служб SSRS
-          href: ../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md
-        - name: Утверждения для службы маркеров Windows (C2WTS) и SSRS
-          href: ../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md
-    - name: Установка PowerPivot для SharePoint 2013
-      href: ../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md
-      items:
-        - name: Требования к оборудованию и программному обеспечению для сервера служб Analysis Services в режиме интеграции с SharePoint (SQL Server 2014)
-          href: ../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md
-        - name: Пример конфигурации PowerPivot для SharePoint 2013 с минимальными правами
-          href: ../../analysis-services/instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2013.md
-        - name: Установка или удаление надстройки PowerPivot для SharePoint (SharePoint 2013)
-          href: ../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md
-        - name: Настройка PowerPivot и развертывание решений (SharePoint 2013)
-          href: ../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md
-        - name: Перенос PowerPivot на SharePoint 2013
-          href: ../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md
-        - name: Обновление книг и запланированное обновление данных (SharePoint 2013)
-          href: ../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md
+      - name: Резервная копия ключа шифрования (службы Reporting Services в собственном режиме)
+        href: ../../sql-server/install/backup-encryption-key-ssrs-native-mode.md
+      - name: Восстановление ключа шифрования (службы Reporting Services в собственном режиме)
+        href: ../../sql-server/install/restore-encryption-key-ssrs-native-mode.md
+    - name: Масштабное развертывание (сервер отчетов в собственном режиме)
+      href: ../../sql-server/install/scale-out-deployment-native-mode-report-server.md
+  - name: Установка компонентов бизнес-аналитики SQL Server с SharePoint (PowerPivot и службы Reporting Services)
+    href: ../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md
+  - name: Deployment Topologies for SQL Server BI Features in SharePoint
+    href: ../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md
+  - name: Указания по использованию функций бизнес-аналитики SQL Server в ферме SharePoint 2010
+    href: ../../sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md
+  - name: Контрольные списки для установки компонентов бизнес-аналитики в SharePoint
+    href: ../../sql-server/install/checklists-for-installing-bi-features-with-sharepoint.md
+    items:
+    - name: 'Контрольный список: службы Reporting Services, Power View и PowerPivot для SharePoint'
+      href: ../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md
+    - name: 'Контрольный список: масштабное развертывание путем добавления серверов PowerPivot в ферму SharePoint 2010'
+      href: ../../sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md
+    - name: 'Контрольный список: установка служб Reporting Services в существующей ферме SharePoint'
+      href: ../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md
+    - name: 'Контрольный список: установка нескольких серверов PowerPivot для SharePoint 2010'
+      href: ../../sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md
+    - name: Контрольный список. Использование PowerShell для проверки PowerPivot для SharePoint
+      href: ../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
+  - name: Установка служб Reporting Services в режиме интеграции с SharePoint (SharePoint 2010 и SharePoint 2013)
+    href: ../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
+    items:
+    - name: Требования к оборудованию и программному обеспечению для служб Reporting Services в режиме интеграции с SharePoint
+      href: ../../sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md
+    - name: Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек
+      href: ../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md
+    - name: Установка служб Reporting Services для SharePoint 2013
+      href: ../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md
+    - name: Установка служб Reporting Services для SharePoint 2010
+      href: ../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md
+    - name: Установка или удаление надстройки служб Reporting Services для SharePoint
+      href: ../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
+    - name: Где найти надстройку служб SSRS для SharePoint
+      href: ../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md
+    - name: Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)
+      href: ../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
+    - name: Добавление дополнительного клиентского веб-интерфейса служб Reporting Services в ферме
+      href: ../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md
+    - name: Настройка электронной почты для приложения служб Reporting Services
+      href: ../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md
+    - name: Подготовка подписок и предупреждений для приложений служб SSRS
+      href: ../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md
+    - name: Утверждения для службы маркеров Windows (C2WTS) и SSRS
+      href: ../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md
+  - name: Установка PowerPivot для SharePoint 2013
+    href: ../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md
+    items:
+    - name: Требования к оборудованию и программному обеспечению для сервера служб Analysis Services в режиме интеграции с SharePoint (SQL Server 2014)
+      href: ../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md
+    - name: Пример конфигурации PowerPivot для SharePoint 2013 с минимальными правами
+      href: ../../analysis-services/instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2013.md
+    - name: Установка или удаление надстройки PowerPivot для SharePoint (SharePoint 2013)
+      href: ../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md
+    - name: Настройка PowerPivot и развертывание решений (SharePoint 2013)
+      href: ../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md
+    - name: Перенос PowerPivot на SharePoint 2013
+      href: ../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md
+    - name: Обновление книг и запланированное обновление данных (SharePoint 2013)
+      href: ../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md
+  - name: Установка PowerPivot для SharePoint 2010
+    href: ../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md
+    items:
     - name: Установка PowerPivot для SharePoint 2010
-      href: ../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md
-      items:
-        - name: Установка PowerPivot для SharePoint 2010
-          href: ../../sql-server/install/install-powerpivot-for-sharepoint-2010.md
-        - name: Установка поставщика OLE DB служб Analysis Services на серверах SharePoint
-          href: ../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md
-        - name: Для поддержки экспорта списков SharePoint в виде веб-каналов данных установите службы ADO.NET Data Services
-          href: ../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md
-        - name: 'Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования'
-          href: ../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md
-        - name: Установка PowerPivot из командной строки
-          href: ../../sql-server/install/install-powerpivot-from-the-command-prompt.md
-        - name: Восстановление PowerPivot для SharePoint
-          href: ../../sql-server/install/repair-powerpivot-for-sharepoint.md
-        - name: Первоначальная конфигурация односерверной установки PowerPivot
-          href: ../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md
-    - name: Установка режима интеграции с SharePoint и собственного режима для служб Reporting Services из командной строки
-      href: ../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md
-    - name: Проверка или устранение неполадок при установке
-      href: ../../sql-server/install/verify-or-troubleshoot-sql-server-bi-feature-installation-problems.md
-    - name: Verify a Reporting Services Installation
-      href: ../../reporting-services/install-windows/verify-a-reporting-services-installation.md
-    - name: Устранение неполадок при установке служб Reporting Services
-      href: ../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md
-    - name: Проверка установки PowerPivot для SharePoint
-      href: ../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
-    - name: Устранение неполадок установки PowerPivot для SharePoint
-      href: ../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md
+      href: ../../sql-server/install/install-powerpivot-for-sharepoint-2010.md
+    - name: Установка поставщика OLE DB служб Analysis Services на серверах SharePoint
+      href: ../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md
+    - name: Для поддержки экспорта списков SharePoint в виде веб-каналов данных установите службы ADO.NET Data Services
+      href: ../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md
+    - name: Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования
+      href: ../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md
+    - name: Установка PowerPivot из командной строки
+      href: ../../sql-server/install/install-powerpivot-from-the-command-prompt.md
+    - name: Восстановление PowerPivot для SharePoint
+      href: ../../sql-server/install/repair-powerpivot-for-sharepoint.md
+    - name: Первоначальная конфигурация односерверной установки PowerPivot
+      href: ../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md
+  - name: Установка режима интеграции с SharePoint и собственного режима для служб Reporting Services из командной строки
+    href: ../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md
+  - name: Проверка или устранение неполадок при установке
+    href: ../../sql-server/install/verify-or-troubleshoot-sql-server-bi-feature-installation-problems.md
+  - name: Verify a Reporting Services Installation
+    href: ../../reporting-services/install-windows/verify-a-reporting-services-installation.md
+  - name: Устранение неполадок при установке служб Reporting Services
+    href: ../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md
+  - name: Проверка установки PowerPivot для SharePoint
+    href: ../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
+  - name: Устранение неполадок установки PowerPivot для SharePoint
+    href: ../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md
 - name: Обновление до SQL Server 2014
   href: upgrade-sql-server.md
   items:
-    - name: Поддерживаемые обновления версий и выпусков
-      href: supported-version-and-edition-upgrades.md
-    - name: Вы выполняете обновление с версии SQL Server 2005?
-      href: ../../sql-server/install/are-you-upgrading-from-sql-server-2005.md
-    - name: Использование помощника по обновлению для подготовки к обновлениям
-      href: ../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md
-    - name: Использование программы распределенного воспроизведения для подготовки обновлений
-      href: ../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md
-    - name: Обновление служб Analysis Services
-      href: upgrade-analysis-services.md
-    - name: 'Обновление [компонент ядра СУБД]'
-      href: upgrade-database-engine.md
-    - name: Перенос планов запросов
-      href: change-the-database-compatibility-mode-and-use-the-query-store.md
-    - name: Обновление служб Data Quality Services
-      href: upgrade-data-quality-services.md
-    - name: Обновление служб Integration Services
-      href: ../../integration-services/install-windows/upgrade-integration-services.md
-    - name: Обновление пакетов служб Integration Services
-      href: ../../integration-services/install-windows/upgrade-integration-services-packages.md
-    - name: обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS
-      href: ../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md
-    - name: Миграция скриптов в VSTA
-      href: ../../sql-server/install/migrate-scripts-to-vsta.md
-    - name: Обновление преобразований «Уточняющий запрос»
-      href: ../../sql-server/install/upgrade-lookup-transformations.md
-    - name: Обновление служб Master Data Services
-      href: upgrade-master-data-services.md
-    - name: Обновление PowerPivot для SharePoint
-      href: upgrade-power-pivot-for-sharepoint.md
-    - name: Обновление реплицируемых баз данных
-      href: upgrade-replicated-databases.md
-    - name: Upgrade and Migrate Reporting Services
-      href: ../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
-    - name: Перенос установки служб Reporting Services (собственный режим)
-      href: ../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md
-    - name: Перенос установки служб Reporting Services (режим интеграции с SharePoint)
-      href: ../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md
-    - name: Миграция из собственного режима в режим интеграции с SharePoint (SSRS)
-      href: ../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md
-    - name: Обновление базы данных сервера отчетов
-      href: ../../reporting-services/install-windows/upgrade-a-report-server-database.md
-    - name: Upgrade Reports
-      href: ../../reporting-services/install-windows/upgrade-reports.md
-    - name: Операции резервного копирования и восстановления для служб Reporting Services
-      href: ../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md
-    - name: Обновление средств управления SQL Server
-      href: upgrade-sql-server-management-tools.md
-    - name: Инструкции по обновлению
-      href: ../../sql-server/install/upgrade-how-to-topics.md
-    - name: Обновление до версии SQL Server 2014 с помощью мастера установки (программа установки)
-      href: upgrade-sql-server-using-the-installation-wizard-setup.md
-    - name: обновить SQL Server 2014 до другого выпуска (программа установки)
-      href: upgrade-to-a-different-edition-of-sql-server-setup.md
+  - name: Поддерживаемые обновления версий и выпусков
+    href: supported-version-and-edition-upgrades.md
+  - name: Вы выполняете обновление с версии SQL Server 2005?
+    href: ../../sql-server/install/are-you-upgrading-from-sql-server-2005.md
+  - name: Использование помощника по обновлению для подготовки к обновлениям
+    href: ../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md
+  - name: Использование программы распределенного воспроизведения для подготовки обновлений
+    href: ../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md
+  - name: Обновление служб Analysis Services
+    href: upgrade-analysis-services.md
+  - name: Обновление [компонент ядра СУБД]
+    href: upgrade-database-engine.md
+  - name: Перенос планов запросов
+    href: change-the-database-compatibility-mode-and-use-the-query-store.md
+  - name: Обновление служб Data Quality Services
+    href: upgrade-data-quality-services.md
+  - name: Обновление служб Integration Services
+    href: ../../integration-services/install-windows/upgrade-integration-services.md
+  - name: Обновление пакетов служб Integration Services
+    href: ../../integration-services/install-windows/upgrade-integration-services-packages.md
+  - name: обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS
+    href: ../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md
+  - name: Миграция скриптов в VSTA
+    href: ../../sql-server/install/migrate-scripts-to-vsta.md
+  - name: Обновление преобразований «Уточняющий запрос»
+    href: ../../sql-server/install/upgrade-lookup-transformations.md
+  - name: Обновление служб Master Data Services
+    href: upgrade-master-data-services.md
+  - name: Обновление PowerPivot для SharePoint
+    href: upgrade-power-pivot-for-sharepoint.md
+  - name: Обновление реплицируемых баз данных
+    href: upgrade-replicated-databases.md
+  - name: Upgrade and Migrate Reporting Services
+    href: ../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
+  - name: Перенос установки служб Reporting Services (собственный режим)
+    href: ../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md
+  - name: Перенос установки служб Reporting Services (режим интеграции с SharePoint)
+    href: ../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md
+  - name: Миграция из собственного режима в режим интеграции с SharePoint (SSRS)
+    href: ../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md
+  - name: Обновление базы данных сервера отчетов
+    href: ../../reporting-services/install-windows/upgrade-a-report-server-database.md
+  - name: Upgrade Reports
+    href: ../../reporting-services/install-windows/upgrade-reports.md
+  - name: Операции резервного копирования и восстановления для служб Reporting Services
+    href: ../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md
+  - name: Обновление средств управления SQL Server
+    href: upgrade-sql-server-management-tools.md
+  - name: Инструкции по обновлению
+    href: ../../sql-server/install/upgrade-how-to-topics.md
+  - name: Обновление до версии SQL Server 2014 с помощью мастера установки (программа установки)
+    href: upgrade-sql-server-using-the-installation-wizard-setup.md
+  - name: обновить SQL Server 2014 до другого выпуска (программа установки)
+    href: upgrade-to-a-different-edition-of-sql-server-setup.md
 - name: Удаление SQL Server 2014
   href: ../../sql-server/install/uninstall-sql-server.md
   items:
-    - name: Удаление существующего экземпляра SQL Server (программа установки)
-      href: ../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md
-    - name: Удаление объектов служб Data Quality Services
-      href: ../../sql-server/install/remove-data-quality-server-objects.md
-    - name: Удаление служб Master Data Services
-      href: ../../sql-server/install/uninstall-and-remove-master-data-services.md
-    - name: Удаление PowerPivot для SharePoint
-      href: ../../sql-server/install/uninstall-power-pivot-for-sharepoint.md
-    - name: Удаление служб Reporting Services
-      href: ../../sql-server/install/uninstall-reporting-services.md
+  - name: Удаление существующего экземпляра SQL Server (программа установки)
+    href: ../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md
+  - name: Удаление объектов служб Data Quality Services
+    href: ../../sql-server/install/remove-data-quality-server-objects.md
+  - name: Удаление служб Master Data Services
+    href: ../../sql-server/install/uninstall-and-remove-master-data-services.md
+  - name: Удаление PowerPivot для SharePoint
+    href: ../../sql-server/install/uninstall-power-pivot-for-sharepoint.md
+  - name: Удаление служб Reporting Services
+    href: ../../sql-server/install/uninstall-reporting-services.md
+ms.openlocfilehash: 0b023fe9b53636d1b407afe9e9ded827c6e7d936
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051166"
