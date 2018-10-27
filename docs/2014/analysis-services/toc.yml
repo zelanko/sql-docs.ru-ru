@@ -1,166 +1,167 @@
+items:
 - name: Службы Analysis Services
   href: analysis-services.md
   items:
-    - name: What's New
-      href: what-s-new-in-analysis-services.md
-    - name: Analysis Services Backward Compatibility
-      href: analysis-services-backward-compatibility.md
-    - name: Устаревшие возможности служб Analysis Services
-      href: deprecated-analysis-services-features-in-sql-server-2014.md
-    - name: Неподдерживаемые функциональные возможности служб Analysis Services
-      href: discontinued-analysis-services-functionality-in-sql-server-2014.md
-    - name: Критические изменения служб Analysis Services
-      href: breaking-changes-to-analysis-services-features-in-sql-server-2014.md
-    - name: Изменение работы функций служб Analysis Services
-      href: behavior-changes-to-analysis-services-features-in-sql-server-2014.md
+  - name: What's New
+    href: what-s-new-in-analysis-services.md
+  - name: Analysis Services Backward Compatibility
+    href: analysis-services-backward-compatibility.md
+  - name: Устаревшие возможности служб Analysis Services
+    href: deprecated-analysis-services-features-in-sql-server-2014.md
+  - name: Неподдерживаемые функциональные возможности служб Analysis Services
+    href: discontinued-analysis-services-functionality-in-sql-server-2014.md
+  - name: Критические изменения служб Analysis Services
+    href: breaking-changes-to-analysis-services-features-in-sql-server-2014.md
+  - name: Изменение работы функций служб Analysis Services
+    href: behavior-changes-to-analysis-services-features-in-sql-server-2014.md
 - name: Функции и задачи служб Analysis Services
   href: analysis-services-features-and-tasks.md
   items:
-    - name: Сравнение табличных и многомерных решений
-      href: comparing-tabular-and-multidimensional-solutions-ssas.md
-    - name: Средства и приложения
-      href: tools-and-applications-used-in-analysis-services.md
+  - name: Сравнение табличных и многомерных решений
+    href: comparing-tabular-and-multidimensional-solutions-ssas.md
+  - name: Средства и приложения
+    href: tools-and-applications-used-in-analysis-services.md
 - name: Управление экземплярами
   href: instances/analysis-services-instance-management.md
   items:
-    - name: Настройка после установки
-      href: instances/post-install-configuration-analysis-services.md
-      items:
-        - name: Настройка брандмауэра Windows
-          href: instances/configure-the-windows-firewall-to-allow-analysis-services-access.md
-        - name: Настройка учетной записи службы
-          href: instances/configure-service-accounts-analysis-services.md
-        - name: Предоставление разрешений администратора
-          href: instances/grant-server-admin-rights-to-an-analysis-services-instance.md
-        - name: 'Возможности, отключенные по умолчанию'
-          href: instances/features-off-by-default-analysis-services.md
-        - name: Группы серверов в среде SSMS
-          href: instances/register-an-analysis-services-instance-in-a-server-group.md
-        - name: Определение режима работы сервера
-          href: instances/determine-the-server-mode-of-an-analysis-services-instance.md
-        - name: Переименование экземпляра служб Analysis Services
-          href: instances/rename-an-analysis-services-instance.md
-    - name: Подключение к службам Analysis Services
-      href: instances/connect-to-analysis-services.md
-      items:
-        - name: Подключение из клиентских приложений
-          href: instances/connect-from-client-applications-analysis-services.md
-        - name: Свойства строки подключения
-          href: instances/connection-string-properties-analysis-services.md
-        - name: Методики проверки подлинности
-          href: instances/authentication-methodologies-supported-by-analysis-services.md
-        - name: Проверка подлинности Kerberos
-          href: instances/configure-analysis-services-for-kerberos-constrained-delegation.md
-        - name: регистрация SPN-адреса
-          href: instances/spn-registration-for-an-analysis-services-instance.md
-        - name: Доступ по HTTP-адресу
-          href: instances/configure-http-access-to-analysis-services-on-iis-8-0.md
-        - name: Поставщики данных
-          href: instances/data-providers-used-for-analysis-services-connections.md
-        - name: Отключение пользователей и сеансов
-          href: instances/disconnect-users-and-sessions-on-analysis-services-server.md
-    - name: Настройка свойств сервера
-      href: server-properties/server-properties-in-analysis-services.md
-      items:
-        - name: Свойства интеллектуального анализа данных
-          href: server-properties/data-mining-properties.md
-        - name: Свойства функций
-          href: server-properties/feature-properties.md
-        - name: свойства хранилища файлов
-          href: server-properties/filestore-properties.md
-        - name: Общие свойства
-          href: server-properties/general-properties.md
-        - name: Свойства диспетчера блокировок
-          href: server-properties/lock-manager-properties.md
-        - name: Свойства журнала
-          href: server-properties/log-properties.md
-        - name: Свойства памяти
-          href: server-properties/memory-properties.md
-        - name: Свойства сети
-          href: server-properties/network-properties.md
-        - name: Свойства OLAP
-          href: server-properties/olap-properties.md
-        - name: Свойства безопасности
-          href: server-properties/security-properties.md
-        - name: Свойства пула потоков
-          href: server-properties/thread-pool-properties.md
+  - name: Настройка после установки
+    href: instances/post-install-configuration-analysis-services.md
+    items:
+    - name: Настройка брандмауэра Windows
+      href: instances/configure-the-windows-firewall-to-allow-analysis-services-access.md
+    - name: Настройка учетной записи службы
+      href: instances/configure-service-accounts-analysis-services.md
+    - name: Предоставление разрешений администратора
+      href: instances/grant-server-admin-rights-to-an-analysis-services-instance.md
+    - name: Возможности, отключенные по умолчанию
+      href: instances/features-off-by-default-analysis-services.md
+    - name: Группы серверов в среде SSMS
+      href: instances/register-an-analysis-services-instance-in-a-server-group.md
+    - name: Определение режима работы сервера
+      href: instances/determine-the-server-mode-of-an-analysis-services-instance.md
+    - name: Переименование экземпляра служб Analysis Services
+      href: instances/rename-an-analysis-services-instance.md
+  - name: Подключение к службам Analysis Services
+    href: instances/connect-to-analysis-services.md
+    items:
+    - name: Подключение из клиентских приложений
+      href: instances/connect-from-client-applications-analysis-services.md
+    - name: Свойства строки подключения
+      href: instances/connection-string-properties-analysis-services.md
+    - name: Методики проверки подлинности
+      href: instances/authentication-methodologies-supported-by-analysis-services.md
+    - name: Проверка подлинности Kerberos
+      href: instances/configure-analysis-services-for-kerberos-constrained-delegation.md
+    - name: регистрация SPN-адреса
+      href: instances/spn-registration-for-an-analysis-services-instance.md
+    - name: Доступ по HTTP-адресу
+      href: instances/configure-http-access-to-analysis-services-on-iis-8-0.md
+    - name: Поставщики данных
+      href: instances/data-providers-used-for-analysis-services-connections.md
+    - name: Отключение пользователей и сеансов
+      href: instances/disconnect-users-and-sessions-on-analysis-services-server.md
+  - name: Настройка свойств сервера
+    href: server-properties/server-properties-in-analysis-services.md
+    items:
+    - name: Свойства интеллектуального анализа данных
+      href: server-properties/data-mining-properties.md
+    - name: Свойства функций
+      href: server-properties/feature-properties.md
+    - name: свойства хранилища файлов
+      href: server-properties/filestore-properties.md
+    - name: Общие свойства
+      href: server-properties/general-properties.md
+    - name: Свойства диспетчера блокировок
+      href: server-properties/lock-manager-properties.md
+    - name: Свойства журнала
+      href: server-properties/log-properties.md
+    - name: Свойства памяти
+      href: server-properties/memory-properties.md
+    - name: Свойства сети
+      href: server-properties/network-properties.md
+    - name: Свойства OLAP
+      href: server-properties/olap-properties.md
+    - name: Свойства безопасности
+      href: server-properties/security-properties.md
+    - name: Свойства пула потоков
+      href: server-properties/thread-pool-properties.md
 - name: Наблюдение за экземпляром служб Analysis Services
   href: instances/monitor-an-analysis-services-instance.md
   items:
-    - name: События трассировки служб Analysis Services
-      href: trace-events/analysis-services-trace-events.md
+  - name: События трассировки служб Analysis Services
+    href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
+    items:
+    - name: категория событий «Командные события»
+      href: https://docs.microsoft.com/bi-reference/trace-events/command-events-event-category
       items:
-        - name: категория событий «Командные события»
-          href: trace-events/command-events-event-category.md
-          items:
-            - name: Столбцы данных командных событий
-              href: trace-events/command-events-data-columns.md
-        - name: категория события «События обнаружения»
-          href: trace-events/discover-events-event-category.md
-          items:
-            - name: Столбцы данных событий обнаружения
-              href: trace-events/discover-events-data-columns.md
-        - name: категория события «Определение состояния сервера»
-          href: trace-events/discover-server-state-event-category.md
-          items:
-            - name: Столбцы данных событий «Определение состояния сервера»
-              href: trace-events/discover-server-state-events-data-columns.md
-        - name: Категория событий «Ошибки и предупреждения»
-          href: trace-events/errors-and-warnings-event-category.md
-          items:
-            - name: Столбцы данных событий ошибок и предупреждений
-              href: trace-events/errors-and-warnings-events-data-columns.md
-        - name: Категория событий «Загрузка и сохранение файлов»
-          href: trace-events/file-load-and-save-event-category.md
-          items:
-            - name: Столбцы загрузки файлов и сохранения данных
-              href: trace-events/file-load-and-save-data-columns.md
-        - name: Категория событий Lock
-          href: trace-events/lock-events-category.md
-          items:
-            - name: Столбцы данных событий блокировки
-              href: trace-events/lock-events-data-columns.md
-        - name: категория событий «События уведомления»
-          href: trace-events/notification-events-event-category.md
-          items:
-            - name: Столбцы данных событий уведомлений
-              href: trace-events/notification-events-data-columns.md
-        - name: категория событий «Отчеты о состоянии»
-          href: trace-events/progress-reports-event-category.md
-          items:
-            - name: Столбцы данных отчетов о состоянии
-              href: trace-events/progress-reports-data-columns.md
-        - name: Категория «События запросов»
-          href: trace-events/queries-events-category.md
-          items:
-            - name: Столбцы данных «События запросов»
-              href: trace-events/queries-events-data-columns.md
-        - name: Категория событий «Обработка запросов»
-          href: trace-events/query-processing-events-category.md
-          items:
-            - name: Столбцы данных событий обработки запросов
-              href: trace-events/query-processing-events-data-columns.md
-        - name: Категория событий «Аудит безопасности»
-          href: trace-events/security-audit-event-category.md
-          items:
-            - name: Столбцы данных аудита безопасности
-              href: trace-events/security-audit-data-columns.md
-        - name: категория события «События сеанса»
-          href: trace-events/session-events-event-category.md
-          items:
-            - name: Столбцы данных о событиях сеанса
-              href: trace-events/session-events-data-columns.md
-    - name: Use SQL Server Profiler to Monitor Analysis Services
-      href: instances/use-sql-server-profiler-to-monitor-analysis-services.md
+      - name: Столбцы данных командных событий
+        href: https://docs.microsoft.com/bi-reference/trace-events/command-events-data-columns
+    - name: категория события «События обнаружения»
+      href: https://docs.microsoft.com/bi-reference/trace-events/discover-events-event-category
       items:
-        - name: Введение в мониторинг служб Analysis Services при помощи приложения SQL Server Profiler
-          href: instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md
-        - name: Создание трассировки приложения Profiler для воспроизведения (службы Analysis Services)
-          href: instances/create-profiler-traces-for-replay-analysis-services.md
-    - name: Использование расширенных событий SQL Server (XEvents) для мониторинга служб Analysis Services
-      href: instances/monitor-analysis-services-with-sql-server-extended-events.md
-    - name: Использование динамических административных представлений для мониторинга служб Analysis Services
-      href: instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
+      - name: Столбцы данных событий обнаружения
+        href: https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns
+    - name: категория события «Определение состояния сервера»
+      href: https://docs.microsoft.com/bi-reference/trace-events/discover-server-state-event-category
+      items:
+      - name: Столбцы данных событий «Определение состояния сервера»
+        href: https://docs.microsoft.com/bi-reference/trace-events/discover-server-state-events-data-columns
+    - name: Категория событий «Ошибки и предупреждения»
+      href: https://docs.microsoft.com/bi-reference/trace-events/errors-and-warnings-event-category
+      items:
+      - name: Столбцы данных событий ошибок и предупреждений
+        href: https://docs.microsoft.com/bi-reference/trace-events/errors-and-warnings-events-data-columns
+    - name: Категория событий «Загрузка и сохранение файлов»
+      href: https://docs.microsoft.com/bi-reference/trace-events/file-load-and-save-event-category
+      items:
+      - name: Столбцы загрузки файлов и сохранения данных
+        href: https://docs.microsoft.com/bi-reference/trace-events/file-load-and-save-data-columns
+    - name: Категория событий Lock
+      href: https://docs.microsoft.com/bi-reference/trace-events/lock-events-category
+      items:
+      - name: Столбцы данных событий блокировки
+        href: https://docs.microsoft.com/bi-reference/trace-events/lock-events-data-columns
+    - name: категория событий «События уведомления»
+      href: https://docs.microsoft.com/bi-reference/trace-events/notification-events-event-category
+      items:
+      - name: Столбцы данных событий уведомлений
+        href: https://docs.microsoft.com/bi-reference/trace-events/notification-events-data-columns
+    - name: категория событий «Отчеты о состоянии»
+      href: https://docs.microsoft.com/bi-reference/trace-events/progress-reports-event-category
+      items:
+      - name: Столбцы данных отчетов о состоянии
+        href: https://docs.microsoft.com/bi-reference/trace-events/progress-reports-data-columns
+    - name: Категория «События запросов»
+      href: https://docs.microsoft.com/bi-reference/trace-events/queries-events-category
+      items:
+      - name: Столбцы данных «События запросов»
+        href: https://docs.microsoft.com/bi-reference/trace-events/queries-events-data-columns
+    - name: Категория событий «Обработка запросов»
+      href: https://docs.microsoft.com/bi-reference/trace-events/query-processing-events-category
+      items:
+      - name: Столбцы данных событий обработки запросов
+        href: https://docs.microsoft.com/bi-reference/trace-events/query-processing-events-data-columns
+    - name: Категория событий «Аудит безопасности»
+      href: https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category
+      items:
+      - name: Столбцы данных аудита безопасности
+        href: https://docs.microsoft.com/bi-reference/trace-events/security-audit-data-columns
+    - name: категория события «События сеанса»
+      href: https://docs.microsoft.com/bi-reference/trace-events/session-events-event-category
+      items:
+      - name: Столбцы данных о событиях сеанса
+        href: https://docs.microsoft.com/bi-reference/trace-events/session-events-data-columns
+  - name: Use SQL Server Profiler to Monitor Analysis Services
+    href: instances/use-sql-server-profiler-to-monitor-analysis-services.md
+    items:
+    - name: Введение в мониторинг служб Analysis Services при помощи приложения SQL Server Profiler
+      href: instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md
+    - name: Создание трассировки приложения Profiler для воспроизведения (службы Analysis Services)
+      href: instances/create-profiler-traces-for-replay-analysis-services.md
+  - name: Использование расширенных событий SQL Server (XEvents) для мониторинга служб Analysis Services
+    href: instances/monitor-analysis-services-with-sql-server-extended-events.md
+  - name: Использование динамических административных представлений для мониторинга служб Analysis Services
+    href: instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
 - name: Счетчики производительности
   href: instances/performance-counters-ssas.md
 - name: Очистка кэша служб Analysis Services
@@ -168,29 +169,29 @@
 - name: Скрипты для административных задач
   href: script-administrative-tasks-in-analysis-services.md
   items:
-    - name: Создание скриптов в среде Management Studio
-      href: instances/create-analysis-services-scripts-in-management-studio.md
-    - name: Use Analysis Services Templates in SQL Server Management Studio
-      href: instances/use-analysis-services-templates-in-sql-server-management-studio.md
-    - name: Использование проекта скриптов служб Analysis Services в среде Management Studio
-      href: instances/analysis-services-scripts-project-in-sql-server-management-studio.md
-    - name: Планирование задач администрирования с помощью агента SQL Server
-      href: instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md
-    - name: Создание скриптов PowerShell в службах Analysis Services
-      href: analysis-services-powershell.md
-    - name: Автоматизация административных задач с помощью служб SSIS
-      href: instances/automate-analysis-services-administrative-tasks-with-ssis.md
+  - name: Создание скриптов в среде Management Studio
+    href: instances/create-analysis-services-scripts-in-management-studio.md
+  - name: Use Analysis Services Templates in SQL Server Management Studio
+    href: instances/use-analysis-services-templates-in-sql-server-management-studio.md
+  - name: Использование проекта скриптов служб Analysis Services в среде Management Studio
+    href: instances/analysis-services-scripts-project-in-sql-server-management-studio.md
+  - name: Планирование задач администрирования с помощью агента SQL Server
+    href: instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md
+  - name: Создание скриптов PowerShell в службах Analysis Services
+    href: analysis-services-powershell.md
+  - name: Автоматизация административных задач с помощью служб SSIS
+    href: instances/automate-analysis-services-administrative-tasks-with-ssis.md
 - name: Сценарии глобализации
   href: globalization-scenarios-for-analysis-services-multiidimensional.md
   items:
-    - name: Языки и параметры сортировки
-      href: languages-and-collations-analysis-services.md
-    - name: Translations
-      href: translations-analysis-services.md
-    - name: Конвертация валюты
-      href: currency-conversions-analysis-services.md
-    - name: Советы и рекомендации
-      href: globalization-tips-and-best-practices-analysis-services.md
+  - name: Языки и параметры сортировки
+    href: languages-and-collations-analysis-services.md
+  - name: Translations
+    href: translations-analysis-services.md
+  - name: Конвертация валюты
+    href: currency-conversions-analysis-services.md
+  - name: Советы и рекомендации
+    href: globalization-tips-and-best-practices-analysis-services.md
 - name: Ведение журналов в службах Analysis Services
   href: instances/log-operations-in-analysis-services.md
 - name: Табличное моделирование +
@@ -202,283 +203,289 @@
 - name: PowerPivot для SharePoint
   href: power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
   items:
-    - name: Настройка и администрирование сервера PowerPivot в центре администрирования
-      href: power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md
-    - name: Развертывание решений PowerPivot
-      href: power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md
-    - name: Создание и настройка приложения службы PowerPivot
-      href: power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md
-    - name: Подключение приложения службы PowerPivot к веб-приложению SharePoint
-      href: power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md
-    - name: Активация интеграции функций PowerPivot для семейств веб-сайтов
-      href: power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md
-    - name: Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services
-      href: power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md
-    - name: Создание надежного расположения для сайтов PowerPivot
-      href: power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md
-    - name: Указание учетных записей служб PowerPivot
-      href: power-pivot-sharepoint/configure-power-pivot-service-accounts.md
-    - name: Настройка и просмотр файлов журнала SharePoint
-      href: power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md
-    - name: Настройка использования места на диске
-      href: power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md
-    - name: Настройка максимального размера передаваемого файла
-      href: power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md
-    - name: Справочник по параметрам конфигурации
-      href: power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md
-    - name: Запуск и остановка PowerPivot для сервера SharePoint
-      href: power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md
-    - name: Настройка PowerPivot с помощью Windows PowerShell
-      href: power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md
-    - name: PowerPivot Configuration Tools
-      href: power-pivot-sharepoint/power-pivot-configuration-tools.md
-      items:
-        - name: Настройка или восстановление PowerPivot для SharePoint 2013 (средство настройки PowerPivot)
-          href: power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md
-        - name: Настройка или восстановление PowerPivot для SharePoint 2010 (средство настройки PowerPivot)
-          href: configure-repair-powerpivot-sharepoint-2010.md
-    - name: Доступность и аварийное восстановление PowerPivot (SQL Server 2014)
-      href: power-pivot-sharepoint/power-pivot-availability-and-disaster-recovery.md
-    - name: Проверка подлинности и авторизация PowerPivot
-      href: power-pivot-sharepoint/power-pivot-authentication-and-authorization.md
-    - name: Правила определения исправности — настройка
-      href: power-pivot-sharepoint/configure-power-pivot-health-rules.md
-    - name: Справочник по правилам для определения исправности
-      href: power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md
-    - name: Панель мониторинга управления PowerPivot и данные об использовании
-      href: power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md
-    - name: Сбор данных об использовании PowerPivot
-      href: power-pivot-sharepoint/power-pivot-usage-data-collection.md
-      items:
-        - name: Настройка сбора данных об использовании с PowerPivot для SharePoint
-          href: power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md
-    - name: создать и настроить галерею PowerPivot
-      href: power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md
-      items:
-        - name: использовать галерею PowerPivot
-          href: power-pivot-sharepoint/use-power-pivot-gallery.md
-        - name: Удаление галереи PowerPivot
-          href: power-pivot-sharepoint/delete-power-pivot-gallery.md
-    - name: Доступ к данным PowerPivot
-      href: power-pivot-sharepoint/power-pivot-data-access.md
-    - name: Обновление данных PowerPivot
-      href: power-pivot-sharepoint/power-pivot-data-refresh.md
-      items:
-        - name: просмотреть журнал обновления данных PowerPivot
-          href: power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md
-        - name: Обновление данных PowerPivot с SharePoint 2013
-          href: power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md
-        - name: 'Планирование обновления данных и источники данных, которые не поддерживают проверку подлинности Windows (PowerPivot для SharePoint)'
-          href: power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md
-        - name: Обновление данных PowerPivot с SharePoint 2010
-          href: powerpivot-data-refresh-with-sharepoint-2010.md
-        - name: Планирование обновления данных с SharePoint 2010
-          href: schedule-a-data-refresh-powerpivot-for-sharepoint.md
-        - name: Настройка выделенного обновления данных или обработки только запросов
-          href: configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md
-        - name: Настройка сохраненных учетных данных для обновления данных PowerPivot
-          href: configure-stored-credentials-data-refresh-powerpivot-sharepoint.md
-        - name: Настройка учетной записи автоматического обновления данных PowerPivot
-          href: configure-unattended-data-refresh-account-powerpivot-sharepoint.md
-    - name: Веб-каналы данных PowerPivot
-      href: power-pivot-sharepoint/power-pivot-data-feeds.md
-      items:
-        - name: Создание или настройка библиотеки веб-каналов данных
-          href: power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md
-        - name: Использование веб-каналов данных PowerPivot
-          href: power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md
-        - name: Удаление библиотеки каналов данных PowerPivot
-          href: power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md
-        - name: Совместное использование веб-каналов данных в библиотеке каналов данных
-          href: power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md
-    - name: Соединение семантической модели бизнес-аналитики PowerPivot (BISM)
-      href: power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md
-      items:
-        - name: Добавление типа содержимого соединения семантической модели бизнес-аналитики в библиотеку
-          href: power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md
-        - name: Создание соединения семантической модели бизнес-аналитики с книгой PowerPivot
-          href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md
-        - name: Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных
-          href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md
-        - name: Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services
-          href: power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md
+  - name: Настройка и администрирование сервера PowerPivot в центре администрирования
+    href: power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md
+  - name: Развертывание решений PowerPivot
+    href: power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md
+  - name: Создание и настройка приложения службы PowerPivot
+    href: power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md
+  - name: Подключение приложения службы PowerPivot к веб-приложению SharePoint
+    href: power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md
+  - name: Активация интеграции функций PowerPivot для семейств веб-сайтов
+    href: power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md
+  - name: Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services
+    href: power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md
+  - name: Создание надежного расположения для сайтов PowerPivot
+    href: power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md
+  - name: Указание учетных записей служб PowerPivot
+    href: power-pivot-sharepoint/configure-power-pivot-service-accounts.md
+  - name: Настройка и просмотр файлов журнала SharePoint
+    href: power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md
+  - name: Настройка использования места на диске
+    href: power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md
+  - name: Настройка максимального размера передаваемого файла
+    href: power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md
+  - name: Справочник по параметрам конфигурации
+    href: power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md
+  - name: Запуск и остановка PowerPivot для сервера SharePoint
+    href: power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md
+  - name: Настройка PowerPivot с помощью Windows PowerShell
+    href: power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md
+  - name: PowerPivot Configuration Tools
+    href: power-pivot-sharepoint/power-pivot-configuration-tools.md
+    items:
+    - name: Настройка или восстановление PowerPivot для SharePoint 2013 (средство настройки PowerPivot)
+      href: power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md
+    - name: Настройка или восстановление PowerPivot для SharePoint 2010 (средство настройки PowerPivot)
+      href: configure-repair-powerpivot-sharepoint-2010.md
+  - name: Доступность и аварийное восстановление PowerPivot (SQL Server 2014)
+    href: power-pivot-sharepoint/power-pivot-availability-and-disaster-recovery.md
+  - name: Проверка подлинности и авторизация PowerPivot
+    href: power-pivot-sharepoint/power-pivot-authentication-and-authorization.md
+  - name: Правила определения исправности — настройка
+    href: power-pivot-sharepoint/configure-power-pivot-health-rules.md
+  - name: Справочник по правилам для определения исправности
+    href: power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md
+  - name: Панель мониторинга управления PowerPivot и данные об использовании
+    href: power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md
+  - name: Сбор данных об использовании PowerPivot
+    href: power-pivot-sharepoint/power-pivot-usage-data-collection.md
+    items:
+    - name: Настройка сбора данных об использовании с PowerPivot для SharePoint
+      href: power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md
+  - name: создать и настроить галерею PowerPivot
+    href: power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md
+    items:
+    - name: использовать галерею PowerPivot
+      href: power-pivot-sharepoint/use-power-pivot-gallery.md
+    - name: Удаление галереи PowerPivot
+      href: power-pivot-sharepoint/delete-power-pivot-gallery.md
+  - name: Доступ к данным PowerPivot
+    href: power-pivot-sharepoint/power-pivot-data-access.md
+  - name: Обновление данных PowerPivot
+    href: power-pivot-sharepoint/power-pivot-data-refresh.md
+    items:
+    - name: просмотреть журнал обновления данных PowerPivot
+      href: power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md
+    - name: Обновление данных PowerPivot с SharePoint 2013
+      href: power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md
+    - name: Планирование обновления данных и источники данных, которые не поддерживают проверку подлинности Windows (PowerPivot для SharePoint)
+      href: power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md
+    - name: Обновление данных PowerPivot с SharePoint 2010
+      href: powerpivot-data-refresh-with-sharepoint-2010.md
+    - name: Планирование обновления данных с SharePoint 2010
+      href: schedule-a-data-refresh-powerpivot-for-sharepoint.md
+    - name: Настройка выделенного обновления данных или обработки только запросов
+      href: configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md
+    - name: Настройка сохраненных учетных данных для обновления данных PowerPivot
+      href: configure-stored-credentials-data-refresh-powerpivot-sharepoint.md
+    - name: Настройка учетной записи автоматического обновления данных PowerPivot
+      href: configure-unattended-data-refresh-account-powerpivot-sharepoint.md
+  - name: Веб-каналы данных PowerPivot
+    href: power-pivot-sharepoint/power-pivot-data-feeds.md
+    items:
+    - name: Создание или настройка библиотеки веб-каналов данных
+      href: power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md
+    - name: Использование веб-каналов данных PowerPivot
+      href: power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md
+    - name: Удаление библиотеки каналов данных PowerPivot
+      href: power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md
+    - name: Совместное использование веб-каналов данных в библиотеке каналов данных
+      href: power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md
+  - name: Соединение семантической модели бизнес-аналитики PowerPivot (BISM)
+    href: power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md
+    items:
+    - name: Добавление типа содержимого соединения семантической модели бизнес-аналитики в библиотеку
+      href: power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md
+    - name: Создание соединения семантической модели бизнес-аналитики с книгой PowerPivot
+      href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md
+    - name: Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных
+      href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md
+    - name: Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services
+      href: power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md
 - name: Технический справочник
   href: powershell/technical-reference-ssas.md
 - name: Справочник по ошибкам и событиям (PowerPivot для SharePoint)
   href: power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
   items:
-    - name: 'При попытке установить соединение с внешним источником данных произошла ошибка. Следующие соединения не удалось обновить: Данные PowerPivot'
-      href: power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
-    - name: Не удалось загрузить файл или assembly «Microsoft.Data.Services
-      href: power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
-    - name: Не удалось загрузить файл или сборку Microsoft.AnalysisServices.SharePoint.Integration
-      href: power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
-    - name: 'В книге путь подключения к данным указывает на файл, находящийся на локальном жестком диске, или является недопустимым URI'
-      href: power-pivot-sharepoint/the-data-connection-path-is-invalid.md
-    - name: 'Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Следующие соединения не удалось обновить: Данные PowerPivot'
-      href: power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
-    - name: 'Следующие объекты не поддерживаются службой Excel Services и могут не отображаться совсем или отображаться лишь частично: комментарии, фигуры или другие объекты.'
-      href: power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
-    - name: 'Надежное расположение, в котором находится книга, не разрешает подключения к внешним данным'
-      href: power-pivot-sharepoint/trusted-location-does-not-allow-external-data-connections.md
-    - name: Эта книга содержит один или несколько запросов на обновление внешних данных.
-      href: power-pivot-sharepoint/this-workbook-contains-one-or-more-queries-that-refresh-external-data.md
-    - name: Не удалось обновить данные для подключения к данным в книге
-      href: power-pivot-sharepoint/unable-to-refresh-data-for-a-data-connection-in-the-workbook.md
+  - name: 'При попытке установить соединение с внешним источником данных произошла ошибка. Следующие соединения не удалось обновить: Данные PowerPivot'
+    href: power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
+  - name: Не удалось загрузить файл или assembly «Microsoft.Data.Services
+    href: power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
+  - name: Не удалось загрузить файл или сборку Microsoft.AnalysisServices.SharePoint.Integration
+    href: power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
+  - name: В книге путь подключения к данным указывает на файл, находящийся на локальном жестком диске, или является недопустимым URI
+    href: power-pivot-sharepoint/the-data-connection-path-is-invalid.md
+  - name: 'Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Следующие соединения не удалось обновить: Данные PowerPivot'
+    href: power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
+  - name: 'Следующие объекты не поддерживаются службой Excel Services и могут не отображаться совсем или отображаться лишь частично: комментарии, фигуры или другие объекты.'
+    href: power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
+  - name: Надежное расположение, в котором находится книга, не разрешает подключения к внешним данным
+    href: power-pivot-sharepoint/trusted-location-does-not-allow-external-data-connections.md
+  - name: Эта книга содержит один или несколько запросов на обновление внешних данных.
+    href: power-pivot-sharepoint/this-workbook-contains-one-or-more-queries-that-refresh-external-data.md
+  - name: Не удалось обновить данные для подключения к данным в книге
+    href: power-pivot-sharepoint/unable-to-refresh-data-for-a-data-connection-in-the-workbook.md
 - name: Справочник по пользовательскому интерфейсу
   href: user-interface-reference-analysis-services.md
   items:
-    - name: Мастеры пользовательского интерфейса для многомерного режима +
-      href: ui-wizards-multidimensional/ui-wizards-multidimensional.md
-    - name: Конструкторы пользовательского интерфейса и диалоговые окна для многомерного анализа +
-      href: ui-designers-dialog-boxes-multidimensional/ui-designers-dialog-boxes-multidimensional.md
-    - name: Конструкторы пользовательского интерфейса и диалоговые окна для табличного анализа +
-      href: ui-designers-dialog-boxes-tabular/ui-designers-dialog-boxes-tabular.md
-    - name: Конструкторы пользовательского интерфейса и диалоговые окна для интеллектуального анализа данных +
-      href: ui-designers-dialog-boxes-data-mining/ui-designers-dialog-boxes-data-mining.md
-    - name: Мастеры пользовательского интерфейса для интеллектуального анализа данных +
-      href: ui-wizards-data-mining/ui-wizards-data-mining.md
+  - name: Мастеры пользовательского интерфейса для многомерного режима +
+    href: ui-wizards-multidimensional/ui-wizards-multidimensional.md
+  - name: Конструкторы пользовательского интерфейса и диалоговые окна для многомерного анализа +
+    href: ui-designers-dialog-boxes-multidimensional/ui-designers-dialog-boxes-multidimensional.md
+  - name: Конструкторы пользовательского интерфейса и диалоговые окна для табличного анализа +
+    href: ui-designers-dialog-boxes-tabular/ui-designers-dialog-boxes-tabular.md
+  - name: Конструкторы пользовательского интерфейса и диалоговые окна для интеллектуального анализа данных +
+    href: ui-designers-dialog-boxes-data-mining/ui-designers-dialog-boxes-data-mining.md
+  - name: Мастеры пользовательского интерфейса для интеллектуального анализа данных +
+    href: ui-wizards-data-mining/ui-wizards-data-mining.md
 - name: Учебники по службам Analysis Services
   href: analysis-services-tutorials-ssas.md
   items:
-    - name: Табличное моделирование (учебник по Adventure Works)
-      href: tabular-modeling-adventure-works-tutorial.md
+  - name: Табличное моделирование (учебник по Adventure Works)
+    href: tabular-modeling-adventure-works-tutorial.md
+    items:
+    - name: Занятие 1. Создание нового проекта табличной модели
+      href: lesson-1-create-a-new-tabular-model-project.md
+    - name: Занятие 2. Добавление данных
+      href: lesson-2-add-data.md
+    - name: Занятие 3. Переименование столбцов
+      href: rename-columns.md
+    - name: Занятие 4. Диалоговое окно "Пометить как таблицу данных"
+      href: lesson-3-mark-as-date-table.md
+    - name: Занятие 5. Создание связей
+      href: lesson-4-create-relationships.md
+    - name: Занятие 6. Создание вычисляемых столбцов
+      href: lesson-5-create-calculated-columns.md
+    - name: Занятие 7. Создание мер
+      href: lesson-6-create-measures.md
+    - name: Занятие 8. Создание ключевых показателей эффективности
+      href: lesson-7-create-key-performance-indicators.md
+    - name: Занятие 9. Создание перспектив
+      href: lesson-8-create-perspectives.md
+    - name: Занятие 10. Создание иерархий
+      href: lesson-9-create-hierarchies.md
+    - name: Занятие 11. Создание секций
+      href: lesson-10-create-partitions.md
+    - name: Занятие 12. Создание ролей
+      href: lesson-11-create-roles.md
+    - name: Занятие 13. Анализ в Excel
+      href: lesson-12-analyze-in-excel.md
+    - name: Занятие 14. Развертывание
+      href: lesson-13-deploy.md
+    - name: Дополнительные занятия
+      href: ../tutorials/supplemental-lessons.md
       items:
-        - name: Занятие 1. Создание нового проекта табличной модели
-          href: lesson-1-create-a-new-tabular-model-project.md
-        - name: Занятие 2. Добавление данных
-          href: lesson-2-add-data.md
-        - name: Занятие 3. Переименование столбцов
-          href: rename-columns.md
-        - name: Занятие 4. Диалоговое окно "Пометить как таблицу данных"
-          href: lesson-3-mark-as-date-table.md
-        - name: Занятие 5. Создание связей
-          href: lesson-4-create-relationships.md
-        - name: Занятие 6. Создание вычисляемых столбцов
-          href: lesson-5-create-calculated-columns.md
-        - name: Занятие 7. Создание мер
-          href: lesson-6-create-measures.md
-        - name: Занятие 8. Создание ключевых показателей эффективности
-          href: lesson-7-create-key-performance-indicators.md
-        - name: Занятие 9. Создание перспектив
-          href: lesson-8-create-perspectives.md
-        - name: Занятие 10. Создание иерархий
-          href: lesson-9-create-hierarchies.md
-        - name: Занятие 11. Создание секций
-          href: lesson-10-create-partitions.md
-        - name: Занятие 12. Создание ролей
-          href: lesson-11-create-roles.md
-        - name: Занятие 13. Анализ в Excel
-          href: lesson-12-analyze-in-excel.md
-        - name: Занятие 14. Развертывание
-          href: lesson-13-deploy.md
-        - name: Дополнительные занятия
-          href: ../tutorials/supplemental-lessons.md
-          items:
-            - name: Реализация динамической безопасности с помощью фильтров строк
-              href: ../tutorials/implement-dynamic-security-by-using-row-filters.md
-            - name: Настройка свойств отчетов для отчетов Power View
-              href: supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
-    - name: Многомерное моделирование (учебник по Adventure Works)
-      href: multidimensional-modeling-adventure-works-tutorial.md
+      - name: Реализация динамической безопасности с помощью фильтров строк
+        href: ../tutorials/implement-dynamic-security-by-using-row-filters.md
+      - name: Настройка свойств отчетов для отчетов Power View
+        href: supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+  - name: Многомерное моделирование (учебник по Adventure Works)
+    href: multidimensional-modeling-adventure-works-tutorial.md
+    items:
+    - name: Сценарий учебника по службам Analysis Services
+      href: analysis-services-tutorial-scenario.md
+    - name: Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services
+      href: install-sample-data-and-projects.md
+    - name: Занятие 1. Определение представления источников данных в проекте служб Analysis Services
+      href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
       items:
-        - name: Сценарий учебника по службам Analysis Services
-          href: analysis-services-tutorial-scenario.md
-        - name: Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services
-          href: install-sample-data-and-projects.md
-        - name: Занятие 1. Определение представления источников данных в проекте служб Analysis Services
-          href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
-          items:
-            - name: Создание проекта служб Analysis Services
-              href: lesson-1-1-creating-an-analysis-services-project.md
-            - name: Определение источника данных
-              href: lesson-1-2-defining-a-data-source.md
-            - name: Определение представления источников данных
-              href: lesson-1-3-defining-a-data-source-view.md
-            - name: Изменение имен таблиц по умолчанию
-              href: lesson-1-4-modifying-default-table-names.md
-        - name: Занятие 2. Определение и развертывание куба
-          href: lesson-2-defining-and-deploying-a-cube.md
-          items:
-            - name: Определение измерения
-              href: lesson-2-1-defining-a-dimension.md
-            - name: Определение куба
-              href: lesson-2-2-defining-a-cube.md
-            - name: Добавление атрибутов к измерениям
-              href: lesson-2-3-adding-attributes-to-dimensions.md
-            - name: Просмотр свойств куба и измерения
-              href: lesson-2-4-reviewing-cube-and-dimension-properties.md
-            - name: Развертывание проекта служб Analysis Services
-              href: lesson-2-5-deploying-an-analysis-services-project.md
-            - name: Просмотр куба
-              href: lesson-2-6-browsing-the-cube.md
-        - name: 'Урок 3. Изменение мер, атрибутов и иерархий'
-          href: lesson-3-modifying-measures-attributes-and-hierarchies.md
-          items:
-            - name: Изменение мер
-              href: lesson-3-1-modifying-measures.md
-            - name: Изменение измерения «Заказчик»
-              href: lesson-3-2-modifying-the-customer-dimension.md
-            - name: Изменение измерения Product
-              href: lesson-3-3-modifying-the-product-dimension.md
-            - name: Изменение измерения Date
-              href: lesson-3-4-modifying-the-date-dimension.md
-            - name: Просмотр развернутого куба
-              href: lesson-3-5-browsing-the-deployed-cube.md
-        - name: Урок 4. Определение расширенных свойств атрибутов и измерений
-          href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
-          items:
-            - name: Использование измененной версии проекта Analysis Services Tutorial
-              href: lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md
-            - name: Определение свойств родительского атрибута в иерархии «родители-потомки»
-              href: lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md
-            - name: Автоматическое группирование элементов атрибута
-              href: lesson-4-3-automatically-grouping-attribute-members.md
-            - name: Скрытие и отключение иерархий атрибутов
-              href: lesson-4-4-hiding-and-disabling-attribute-hierarchies.md
-            - name: Сортировка элементов атрибута по вторичному атрибуту
-              href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
-            - name: Определение связей атрибутов в определенной пользователем иерархии
-              href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
-            - name: Определение свойств Unknown Member и Null Processing
-              href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
-        - name: Занятие 5. Определение связей между измерениями и группами мер
-          href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
-          items:
-            - name: Определение ссылочной связи
-              href: lesson-5-1-defining-a-referenced-relationship.md
-            - name: Определение связи фактов
-              href: lesson-5-2-defining-a-fact-relationship.md
-            - name: Определение связи «многие ко многим»
-              href: lesson-5-3-defining-a-many-to-many-relationship.md
-            - name: Определение степени гранулярности измерения в группе мер
-              href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
-        - name: Занятие 6. Определение вычислений
-          href: lesson-6-defining-calculations.md
-          items:
-            - name: Определение вычисляемых элементов
-              href: lesson-6-1-defining-calculated-members.md
-            - name: Определение именованных наборов
-              href: lesson-6-2-defining-named-sets.md
-        - name: Занятие 7. Определение ключевых показателей эффективности
-          href: lesson-7-defining-key-performance-indicators-kpis.md
-          items:
-            - name: Определение и поиск ключевых показателей эффективности
-              href: lesson-7-1-defining-and-browsing-kpis.md
-        - name: Занятие 8. Определение действий
-          href: lesson-8-defining-actions.md
-          items:
-            - name: Определение и использование действия детализации
-              href: lesson-8-1-defining-and-using-a-drillthrough-action.md
-        - name: Занятие 9. Определение перспектив и переводов
-          href: lesson-9-defining-perspectives-and-translations.md
-          items:
-            - name: Определение и поиск перспектив
-              href: lesson-9-1-defining-and-browsing-perspectives.md
-            - name: Определение и просмотр переводов
-              href: lesson-9-2-defining-and-browsing-translations.md
-        - name: Занятие 10. Определение ролей администрирования
-          href: lesson-10-defining-administrative-roles.md
-          items:
-            - name: Предоставление разрешений на обработку базы данных
-              href: lesson-10-granting-process-database-permissions.md
+      - name: Создание проекта служб Analysis Services
+        href: lesson-1-1-creating-an-analysis-services-project.md
+      - name: Определение источника данных
+        href: lesson-1-2-defining-a-data-source.md
+      - name: Определение представления источников данных
+        href: lesson-1-3-defining-a-data-source-view.md
+      - name: Изменение имен таблиц по умолчанию
+        href: lesson-1-4-modifying-default-table-names.md
+    - name: Занятие 2. Определение и развертывание куба
+      href: lesson-2-defining-and-deploying-a-cube.md
+      items:
+      - name: Определение измерения
+        href: lesson-2-1-defining-a-dimension.md
+      - name: Определение куба
+        href: lesson-2-2-defining-a-cube.md
+      - name: Добавление атрибутов к измерениям
+        href: lesson-2-3-adding-attributes-to-dimensions.md
+      - name: Просмотр свойств куба и измерения
+        href: lesson-2-4-reviewing-cube-and-dimension-properties.md
+      - name: Развертывание проекта служб Analysis Services
+        href: lesson-2-5-deploying-an-analysis-services-project.md
+      - name: Просмотр куба
+        href: lesson-2-6-browsing-the-cube.md
+    - name: Урок 3. Изменение мер, атрибутов и иерархий
+      href: lesson-3-modifying-measures-attributes-and-hierarchies.md
+      items:
+      - name: Изменение мер
+        href: lesson-3-1-modifying-measures.md
+      - name: Изменение измерения «Заказчик»
+        href: lesson-3-2-modifying-the-customer-dimension.md
+      - name: Изменение измерения Product
+        href: lesson-3-3-modifying-the-product-dimension.md
+      - name: Изменение измерения Date
+        href: lesson-3-4-modifying-the-date-dimension.md
+      - name: Просмотр развернутого куба
+        href: lesson-3-5-browsing-the-deployed-cube.md
+    - name: Урок 4. Определение расширенных свойств атрибутов и измерений
+      href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
+      items:
+      - name: Использование измененной версии проекта Analysis Services Tutorial
+        href: lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md
+      - name: Определение свойств родительского атрибута в иерархии «родители-потомки»
+        href: lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md
+      - name: Автоматическое группирование элементов атрибута
+        href: lesson-4-3-automatically-grouping-attribute-members.md
+      - name: Скрытие и отключение иерархий атрибутов
+        href: lesson-4-4-hiding-and-disabling-attribute-hierarchies.md
+      - name: Сортировка элементов атрибута по вторичному атрибуту
+        href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
+      - name: Определение связей атрибутов в определенной пользователем иерархии
+        href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+      - name: Определение свойств Unknown Member и Null Processing
+        href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
+    - name: Занятие 5. Определение связей между измерениями и группами мер
+      href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
+      items:
+      - name: Определение ссылочной связи
+        href: lesson-5-1-defining-a-referenced-relationship.md
+      - name: Определение связи фактов
+        href: lesson-5-2-defining-a-fact-relationship.md
+      - name: Определение связи «многие ко многим»
+        href: lesson-5-3-defining-a-many-to-many-relationship.md
+      - name: Определение степени гранулярности измерения в группе мер
+        href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
+    - name: Занятие 6. Определение вычислений
+      href: lesson-6-defining-calculations.md
+      items:
+      - name: Определение вычисляемых элементов
+        href: lesson-6-1-defining-calculated-members.md
+      - name: Определение именованных наборов
+        href: lesson-6-2-defining-named-sets.md
+    - name: Занятие 7. Определение ключевых показателей эффективности
+      href: lesson-7-defining-key-performance-indicators-kpis.md
+      items:
+      - name: Определение и поиск ключевых показателей эффективности
+        href: lesson-7-1-defining-and-browsing-kpis.md
+    - name: Занятие 8. Определение действий
+      href: lesson-8-defining-actions.md
+      items:
+      - name: Определение и использование действия детализации
+        href: lesson-8-1-defining-and-using-a-drillthrough-action.md
+    - name: Занятие 9. Определение перспектив и переводов
+      href: lesson-9-defining-perspectives-and-translations.md
+      items:
+      - name: Определение и поиск перспектив
+        href: lesson-9-1-defining-and-browsing-perspectives.md
+      - name: Определение и просмотр переводов
+        href: lesson-9-2-defining-and-browsing-translations.md
+    - name: Занятие 10. Определение ролей администрирования
+      href: lesson-10-defining-administrative-roles.md
+      items:
+      - name: Предоставление разрешений на обработку базы данных
+        href: lesson-10-granting-process-database-permissions.md
+ms.openlocfilehash: 919bcb9dbcfb7e9eef6b4914d3df2b764a7703fb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148187"

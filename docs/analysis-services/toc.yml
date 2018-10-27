@@ -223,7 +223,7 @@ items:
   - name: Управление серверами
     href: ../analysis-services/instances/analysis-services-instance-management.md
   - name: События трассировки
-    href: ../analysis-services/trace-events/analysis-services-trace-events.md
+    href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
 - name: Разработчик
   items:
   - name: Документация для разработчика служб Analysis Services
@@ -232,19 +232,19 @@ items:
     href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
     items:
     - name: Язык сценариев табличной модели (TMSL)
-      href: tabular-model-scripting-language-tmsl-reference.md
+      href: https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
     - name: Команды языка сценариев табличной модели (TMSL)
-      href: ../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md
+      href: https://docs.microsoft.com/bi-reference/tmsl/tmsl-reference-commands
     - name: Объекты языка сценариев табличной модели (TMSL)
-      href: ../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md
+      href: https://docs.microsoft.com/bi-reference/tmsl/tmsl-reference-tabular-objects
   - name: Программирование табличных моделей для уровней совместимости 1050–1103
     href: ./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
   - name: Язык сценариев Analysis Services (ASSL) +
     href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
   - name: Объекты управления аналитикой (AMO)+
-    href: ../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md
+    href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
   - name: ADOMD.NET +
-    href: ../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md
+    href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
   - name: Логическая архитектура OLAP +
     href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
   - name: Физическая архитектура OLAP +
@@ -252,9 +252,9 @@ items:
   - name: Расширение OLAP +
     href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
   - name: Наборы строк схемы
-    href: ../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md
+    href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: Язык сценариев Analysis Services (ASSL для XMLA)
-    href: scripting/analysis-services-scripting-language-assl-for-xmla.md
+    href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
   - name: Программирование интеллектуального анализа данных
     href: data-mining-programming.md
     items:
@@ -281,10 +281,10 @@ items:
   - name: Свойства сервера
     href: ../analysis-services/server-properties/server-properties-in-analysis-services.md
   - name: XML для аналитики (XMLA)
-    href: ../analysis-services/xmla/xml-for-analysis-xmla-reference.md
-ms.openlocfilehash: 94648fae78dfe48ac8768407ae80d913c6d39bc7
-ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
+    href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
+ms.openlocfilehash: b70c3825382c6b008fd5db0ddf1c29356df72ddb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45534046"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145369"

@@ -1,75 +1,82 @@
+items:
 - name: Программирование табличных моделей
   href: tabular-model-programming-for-compatibility-levels-1050-through-1103.md
 - name: Заметки языка CSDL для бизнес-аналитики (CSDLBI)
-  href: csdl-annotations-for-business-intelligence-csdlbi.md
+  href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
   items:
-    - name: Основные понятия CSDLBI
-      href: csdlbi-concepts.md
-    - name: Атрибуты CSDLBI для разработки отчетов
-      href: csdlbi-attributes-for-report-design.md
+  - name: Основные понятия CSDLBI
+    href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts
+  - name: Атрибуты CSDLBI для разработки отчетов
+    href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-attributes-for-report-design
 - name: Основные сведения о табличной объектной модели
   href: representation/understanding-tabular-object-model-at-levels-1050-through-1103.md
   items:
-    - name: Представление базы данных
-      href: representation/database-representation-tabular.md
-    - name: Представление подключения
-      href: representation/connection-representation-tabular.md
-    - name: Представление таблиц
-      href: representation/tables-representation-tabular.md
-    - name: Представление вычисляемого столбца
-      href: representation/tables-calculated-column-representation.md
-    - name: Представление вычисляемой меры
-      href: representation/tables-calculated-measure-representation.md
-    - name: Представление иерархии
-      href: representation/tables-hierarchy-representation.md
-    - name: Представление ключевого показателя эффективности
-      href: representation/tables-key-performance-indicator-representation.md
-    - name: Представление секции
-      href: representation/tables-partition-representation.md
-    - name: Представление связи
-      href: representation/relationship-representation-tabular.md
-    - name: Представление перспективы
-      href: representation/perspective-representation-tabular.md
-    - name: Отправка запроса для табличной модели
-      href: representation/querying-a-tabular-model.md
+  - name: Представление базы данных
+    href: representation/database-representation-tabular.md
+  - name: Представление подключения
+    href: representation/connection-representation-tabular.md
+  - name: Представление таблиц
+    href: representation/tables-representation-tabular.md
+  - name: Представление вычисляемого столбца
+    href: representation/tables-calculated-column-representation.md
+  - name: Представление вычисляемой меры
+    href: representation/tables-calculated-measure-representation.md
+  - name: Представление иерархии
+    href: representation/tables-hierarchy-representation.md
+  - name: Представление ключевого показателя эффективности
+    href: representation/tables-key-performance-indicator-representation.md
+  - name: Представление секции
+    href: representation/tables-partition-representation.md
+  - name: Представление связи
+    href: representation/relationship-representation-tabular.md
+  - name: Представление перспективы
+    href: representation/perspective-representation-tabular.md
+  - name: Отправка запроса для табличной модели
+    href: representation/querying-a-tabular-model.md
 - name: Технический справочник по CSDLBI
-  href: conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md
+  href: https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl
   items:
-    - name: Элемент AssociationSet (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md
-    - name: Элемент BaseProperty (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/baseproperty-element-csdlbi.md
-    - name: Элемент DefaultDetails (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md
-    - name: Элемент DisplayKey (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md
-    - name: Элемент EntityContainer (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/entitycontainer-element-csdlbi.md
-    - name: Элемент EntitySet (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md
-    - name: Элемент EntityType (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md
-    - name: Элемент Hierarchy (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md
-    - name: Элемент KPI (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md
-    - name: Элемент KpiGoal (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/kpigoal-element-csdlbi.md
-    - name: Элемент KpiStatus (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/kpistatus-element-csdlbi.md
-    - name: Элемент Level (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/level-element-csdlbi.md
-    - name: Элемент Measure (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/measure-element-csdlbi.md
-    - name: Элемент Member (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/member-element-csdlbi.md
-    - name: Элемент MemberRef (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md
-    - name: Элемент NavigationProperty (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/navigationproperty-element-csdlbi.md
-    - name: Элемент Property (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/property-element-csdlbi.md
-    - name: Элемент PropertyRef (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/propertyref-element-csdlbi.md
+  - name: Элемент AssociationSet (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/associationset-element-csdlbi
+  - name: Элемент BaseProperty (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/baseproperty-element-csdlbi
+  - name: Элемент DefaultDetails (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/defaultdetails-element-csdlbi
+  - name: Элемент DisplayKey (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/displaykey-element-csdlbi
+  - name: Элемент EntityContainer (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/entitycontainer-element-csdlbi
+  - name: Элемент EntitySet (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/entityset-element-csdlbi
+  - name: Элемент EntityType (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/entitytype-element-csdlbi
+  - name: Элемент Hierarchy (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/hierarchy-element-csdlbi
+  - name: Элемент KPI (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/kpi-element-csdlbi
+  - name: Элемент KpiGoal (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/kpigoal-element-csdlbi
+  - name: Элемент KpiStatus (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/kpistatus-element-csdlbi
+  - name: Элемент Level (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/level-element-csdlbi
+  - name: Элемент Measure (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/measure-element-csdlbi
+  - name: Элемент Member (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/member-element-csdlbi
+  - name: Элемент MemberRef (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/memberref-element-csdlbi
+  - name: Элемент NavigationProperty (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/navigationproperty-element-csdlbi
+  - name: Элемент Property (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/property-element-csdlbi
+  - name: Элемент PropertyRef (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/propertyref-element-csdlbi
 - name: Интерфейс IMDEmbedded
   href: imdembeddeddata-interface.md
+ms.openlocfilehash: febd610d6863a751ab484adec7f89cf33fd11d44
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148059"
