@@ -2,7 +2,7 @@
 title: Перенести учетные данные SQL Server с помощью Data Migration Assistant | Документация Майкрософт
 description: Узнайте, как перенести учетные данные SQL Server с помощью Data Migration Assistant
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e52fdcd55cddea31e317afe04833f5413c006325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9e6dad97bbfb2010f71e9e056da8a0912a4506
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836942"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643812"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Перенести учетные данные SQL Server с помощью Data Migration Assistant
 
@@ -44,7 +44,7 @@ ms.locfileid: "47836942"
 
 - В рамках миграции входа Data Migration Assistant назначает разрешения защищаемые объекты на целевом сервере SQL, которые существуют на исходном SQL Server. 
 
-  Если имя входа уже существует на целевом сервере SQL Server, Data Migration Assistant выполняет миграцию только разрешения, назначенные защищаемые объекты и не удастся восстановить весь имени входа.
+  Если имя входа уже существует на целевом сервере SQL Server, Data Migration Assistant миграция только разрешения, назначенные защищаемые объекты и не будет повторно создать весь имени входа.
 
 - Помощник по миграции данных делает наилучший для сопоставления имени входа пользователей базы данных, если имя входа уже существует на целевом сервере.
 

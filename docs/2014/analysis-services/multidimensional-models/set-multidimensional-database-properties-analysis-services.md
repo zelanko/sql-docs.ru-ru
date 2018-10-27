@@ -13,12 +13,12 @@ ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e08cccf573d86d7904e695afdab289084f65604
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 338eb4766573cf99d3070fe91cdd276721df79b8
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113436"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147979"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Задание свойств многомерной базы данных (службы Analysis Services)
   Предусмотрен целый ряд свойств базы данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которые можно настроить в конструкторе базы данных служб среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
@@ -38,7 +38,7 @@ ms.locfileid: "48113436"
   
 |Свойство|Описание|  
 |--------------|-----------------|  
-|Префикс статистической схемы|Общий префикс, который может использоваться для имен агрегатов всех секций базы данных. Дополнительные сведения см. в разделе [Элемент AggregationPrefix (ASSL)](../scripting/properties/aggregationprefix-element-assl.md).|  
+|Префикс статистической схемы|Общий префикс, который может использоваться для имен агрегатов всех секций базы данных. Дополнительные сведения см. в разделе [Элемент AggregationPrefix (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl).|  
 |Параметры сортировки|Если проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывается на экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , то база данных наследует свойство Collation севера, если не указать другое значение.|  
 |DataSourceImpersonationInfo|Указывает режим олицетворения по умолчанию для всех объектов источника данных в базе данных. Это режим, который использует служба [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] при обработке объектов, синхронизации серверов и выполнении инструкций интеллектуального анализа данных OpenQuery и SystemOpenSchema.|  
 |Предполагаемый размер|Содержит предполагаемый размер файлов базы данных на диске. Если данные хранятся в нескольких местах, оценка будет ограничена только файлами данных, хранящимися в папке базы данных.<br /><br /> Также в качестве основы для оценки памяти можно использовать `EstimatedSize`. Обычно требования к памяти больше размера данных на диске из-за наличия дополнительных структур данных, создаваемых при загрузке базы данных в память.<br /><br /> Для дальнейшей оценки требований к памяти можно также воспользоваться диспетчером задач, чтобы сравнить память процесса служб Analysis Services до и после обработки базы данных и отследить задействованный объем памяти в качестве метода анализа требований базы данных к памяти.|  
@@ -46,7 +46,7 @@ ms.locfileid: "48113436"
 |MasterDataSource ID|Используется удаленными секциями. Дополнительные сведения см. в разделе [Remote Partitions](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).|  
   
 ## <a name="see-also"></a>См. также  
- [Базы данных свойства &#40;службы SSAS — многомерные&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
- [Настройка свойств проекта служб Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
+ [Диалоговое окно "Свойства базы данных" (службы SSAS — многомерные)](../database-properties-dialog-box-ssas-multidimensional.md)   
+ [Настройка свойств проекта служб Analysis Services (среда SSDT)](configure-analysis-services-project-properties-ssdt.md)  
   
   

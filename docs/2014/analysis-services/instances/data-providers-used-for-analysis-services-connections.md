@@ -11,17 +11,17 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70a13f23a303ee87d3d4169f4b626d618d5a5b0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137004"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145230"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Поставщики данных, используемые для соединений со службами Analysis Services
   Службы Analysis Services предоставляют 3 поставщика данных для сервера и доступа к данным. Все приложения подключаются к службам Analysis Services с помощью одного из следующих поставщиков. Два из этих поставщиков, ADOMD.NET и управляющие объекты AMO служб Analysis Services, — управляемые поставщики данных. Поставщик OLE DB для служб Analysis Services (MSOLAP DLL) является собственным поставщиком данных.  
   
- В организациях, где работает несколько версий служб Analysis Services, может потребоваться установка более свежих версий поставщиков данных на пользовательских рабочих станциях, подключающихся к данным служб Analysis Services. Для подключения к более новым версиям служб Analysis Services необходимы поставщики данных из того же основного выпуска. Например, чтобы подключиться к [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], каждой рабочей станции должен быть поставщик данных из выпуска 2014. Несмотря на то что Excel устанавливает поставщиков данных, которые нужны программе для подключения, поставщик часто имеет более старую версию по сравнению с используемыми экземплярами служб Analysis Services.  
+ В организациях, где работает несколько версий служб Analysis Services, может потребоваться установка более свежих версий поставщиков данных на пользовательских рабочих станциях, подключающихся к данным служб Analysis Services. Для подключения к более новым версиям служб Analysis Services необходимы поставщики данных из того же основного выпуска. Например, для подключения к службам [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]на каждой рабочей станции должен быть поставщик данных из выпуска 2014. Несмотря на то что Excel устанавливает поставщиков данных, которые нужны программе для подключения, поставщик часто имеет более старую версию по сравнению с используемыми экземплярами служб Analysis Services.  
   
  Этот раздел состоит из следующих подразделов:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48137004"
   
 -   Установите соединение с экземпляром служб Analysis Services в среде SQL Server Management Studio. Щелкните правой кнопкой мыши экземпляр, необходимо проверить, выберите пункт **отчеты**и нажмите кнопку **Общие**. В отчете будут приведены сведения о выпуске и сборке.  
   
- Номер исходной версии основной сборки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] — 12.0.2000.9.  
+ Номер основной сборки первоначального выпуска [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] — 12.0.2000.9.  
   
  Дополнительные сведения о получении данных о версии и сборке см. в разделе [Определение версий и выпусков SQL Server и его компонентов](http://support.microsoft.com/kb/321185).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48137004"
   
  При подключении к базе данных свойства строки подключения для всех трех библиотек во многом совпадают. Почти любая строка подключения, заданная для ADOMD.NET (<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>), применима также для AMO и поставщика Analysis Services OLE DB. Дополнительные сведения см. в разделе [Свойства строки подключения (службы Analysis Services)](connection-string-properties-analysis-services.md).  
   
- Дополнительные сведения о подключении программным путем см. в разделе [Establishing Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net.md).  
+ Дополнительные сведения о подключении программным путем см. в разделе [Establishing Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net).  
   
 ##  <a name="blkmk_AMO"></a> AMO  
  Объекты AMO — это управляемый поставщик данных, используемый для администрирования сервера и определения данных. Например, объекты AMO используются в среде SQL Server Management Studio для подключения к службам Analysis Services.  
@@ -109,7 +109,7 @@ ms.locfileid: "48137004"
   
  Подключение с помощью объектов AMO обычно минимально и состоит из «источник данных =\<servername >». После того как соединение установлено, используется API-интерфейс для работы с коллекциями и основными объектами базы данных. Как SSDT, так и SSMS используют объекты AMO для подключения к экземпляру служб Analysis Services.  
   
- Дополнительные сведения о подключении программным путем см. в разделе [Programming AMO Fundamental Objects](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md).  
+ Дополнительные сведения о подключении программным путем см. в разделе [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects).  
   
 ## <a name="see-also"></a>См. также  
  [Подключение к службам Analysis Services](connect-to-analysis-services.md)  

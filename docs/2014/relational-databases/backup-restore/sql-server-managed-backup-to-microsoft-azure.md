@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fdffbcc946af91efd61a5e63da7f79087d3053f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af11bb2283db0561c176fb543ff21c3c04f676d3
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159804"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100255"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Управляемое резервное копирование SQL Server в Windows Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] управляет резервным копированием SQL Server в службе хранилища больших двоичных объектов Windows Azure и автоматизирует его. Стратегия резервного копирования, используемая [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], основана на сроке хранения и рабочей нагрузке в базе данных. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] поддерживает восстановление на момент времени для указанного периода хранения.   
@@ -42,7 +42,7 @@ ms.locfileid: "48159804"
  Функция SQL Server, которая автоматизирует резервное копирование и обслуживает резервные копии на основе срока хранения.  
   
  Срок хранения  
- Срок хранения используется [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для определения, какие файлы резервных копий следует оставить в хранилище для восстановления базы данных на момент времени в пределах указанного временного интервала.  Поддерживаемые значения находятся в диапазоне от 1 до 30 дней.  
+ По сроку хранения [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] определяет, какие файлы резервных копий следует оставить в хранилище для восстановления базы данных на момент времени в течение заданного периода.  Поддерживаемые значения находятся в диапазоне от 1 до 30 дней.  
   
  Цепочка журналов  
  Непрерывная последовательность резервных копий журналов называется цепочкой журналов. Цепочка журналов начинается с полной резервной копии базы данных.  
@@ -50,7 +50,7 @@ ms.locfileid: "48159804"
 ##  <a name="Concepts"></a> Требования, основные понятия и компоненты  
   
   
-###  <a name="Security"></a> разрешения  
+###  <a name="Security"></a> Permissions  
  Transact-SQL — это основной интерфейс, используемый для настройки и отслеживания [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Как правило, для выполнения конфигурации хранимых процедур, **db_backupoperator** роли базы данных с **ALTER ANY CREDENTIAL** разрешения, и `EXECUTE` разрешения на **sp_delete_ backuphistory** хранимая процедура является обязательным.  Для хранимых процедур и функций, используемых для просмотра информации, обычно требуются разрешения `Execute` для хранимой процедуры и `Select` для функции соответственно.  
   
 ###  <a name="Prereqs"></a> Предварительные требования  
@@ -72,7 +72,7 @@ ms.locfileid: "48159804"
 |-|-|  
 |Системный объект|Описание|  
 |**MSDB**|Хранит метаданные, журнал резервного копирования для всех резервных копий, созданных [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)|Системные хранимые процедуры для включения и настройки [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных.|  
+|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|Системные хранимые процедуры для включения и настройки [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных.|  
 |[smart_admin.set_instance_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|Системные хранимые процедуры для включения и настройки параметров по умолчанию [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для экземпляра SQL Server.|  
 |[smart_admin.sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|Системные хранимые процедуры для приостановки и возобновления [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[хранимую процедуру smart_admin.sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|Системные хранимые процедуры для включения и настройки мониторинга [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Примеры: включение расширенных событий, настроек почты для уведомлений.|  
@@ -158,7 +158,7 @@ ms.locfileid: "48159804"
 |Средства и сведения для устранения неполадок [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Устранение неполадок управляемого резервного копирования SQL Server в Microsoft Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   
 ## <a name="see-also"></a>См. также  
- [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [SQL Server Backup to URL-адрес](sql-server-backup-to-url.md)   
  [SQL Server управляемое резервное копирование в Windows Azure: взаимодействие и совместная работа](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
  [Устранение неполадок управляемого резервного копирования SQL Server в Microsoft Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  

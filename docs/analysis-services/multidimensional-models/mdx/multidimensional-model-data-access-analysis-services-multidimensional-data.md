@@ -1,5 +1,5 @@
 ---
-title: Доступ к данным многомерной модели (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Доступ к данным многомерной модели (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5bbf66795c7ac21b0c638aadffaa7bd2ab0a5974
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 66f178ecbfd65d9788790d64229785e3f86cc351
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024861"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148127"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "34024861"
 ### <a name="performancepoint-dashboards"></a>Панели мониторинга PerformancePoint  
  Панели мониторинга PerformancePoint используются для создания в SharePoint оценочных листов, в которых показатели бизнеса сравниваются со стандартными величинами. PerformancePoint включает поддержку соединений с многими мерными данными служб Analysis Services. Дополнительные сведения см. в разделе [Создание подключений к данным служб Analysis Services (службы PerformancePoint)](http://go.microsoft.com/fwlink/?linkid=232471).  
   
-### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
+### <a name="sql-server-data-tools"></a>SQL Server Data Tools (SSDT)  
  Конструкторы моделей и отчетов используют средства SQL Server Data Tools для построения решений, которые включают многомерные модели. При развертывании решения в экземпляре служб Analysis Services создается база данных, к которой в дальнейшем производятся подключения из Excel, служб Reporting Services и других клиентских приложений бизнес-аналитики.  
   
  Средства SQL Server Data Tools основаны на оболочке Visual Studio, и для хранения и упорядочивания моделей в них используются проекты. Дополнительные сведения см. в разделе [Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)](../../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
   
-### <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio  
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Для администраторов баз данных среда SQL Server Management Studio служит интегрированной средой управления экземплярами SQL Server, в том числе и экземплярами служб Analysis Services и многомерными базами данных. Дополнительные сведения см. в разделах [Среда SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b) и [Подключение к службам Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md).  
   
 ##  <a name="bkmk_querylang"></a> Языки запросов  
@@ -59,11 +59,11 @@ ms.locfileid: "34024861"
   
  [Запрос многомерных данных с помощью многомерных выражений](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [Ключевые понятия многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [Основные понятия о сценариях многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> Программные интерфейсы  
  При разработке пользовательского приложения, использующего многомерные данные, скорее всего, будет использоваться один из следующих способов доступа к данным.  
@@ -78,17 +78,17 @@ ms.locfileid: "34024861"
   
 |Интерфейс|Описание|  
 |---------------|-----------------|  
-|Управляющие объекты служб Analysis Services (AMO)|Объекты AMO — это основная объектная модель для администрирования экземпляров служб Analysis Services и многомерных баз данных из кода. Например, среда SQL Server Management Studio использует объекты AMO для поддержки администрирования серверов и баз данных. Дополнительные сведения см. в разделе [Разработка объектов управления аналитикой (объекты AMO)](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).|  
-|ADOMD.NET|ADOMD.NET служит основной объектной моделью для создания многомерных данных и доступа к ним в пользовательских приложениях. Для получения сведений служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с помощью стандартных интерфейсов доступа к данным платформы Microsoft .NET в управляемом пользовательском приложении можно использовать ADOMD.NET. Дополнительные сведения см. в разделах [Разработка с использованием ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md) и [Программирование клиента ADOMD.NET](../../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md).|  
+|Управляющие объекты служб Analysis Services (AMO)|Объекты AMO — это основная объектная модель для администрирования экземпляров служб Analysis Services и многомерных баз данных из кода. Например, среда SQL Server Management Studio использует объекты AMO для поддержки администрирования серверов и баз данных. Дополнительные сведения см. в разделе [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).|  
+|ADOMD.NET|ADOMD.NET служит основной объектной моделью для создания многомерных данных и доступа к ним в пользовательских приложениях. Для получения сведений служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с помощью стандартных интерфейсов доступа к данным платформы Microsoft .NET в управляемом пользовательском приложении можно использовать ADOMD.NET. Дополнительные сведения см. в разделах [Разработка с использованием ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) и [Программирование клиента ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming).|  
 |Поставщик OLE DB служб Analysis Services (MSOLAP.dll)|Для доступа к службам [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] из неуправляемого API-интерфейса программными средствами можно использовать собственный поставщик данных OLE DB. Дополнительные сведения см. в разделе [Поставщик OLE DB служб Analysis Services (службы Analysis Services — многомерные данные)](http://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8).|  
-|Наборы строк схемы|Таблицы наборов строк схемы — это структуры данных, содержащие описательные сведения о развернутой на сервере многомерной модели, а также о выполняющихся на сервере в настоящий момент действиях. Программист может выполнять запросы к таблицам наборов строк схемы из клиентских приложений, чтобы просматривать хранящиеся на экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] метаданные, а также для получения с него вспомогательной информации и данных отслеживания. Наборы строк схемы можно использовать со следующими программными интерфейсами: OLE DB, OLE DB для служб Analysis Services, OLE DB для интеллектуального анализа данных и XML для аналитики. Дополнительные сведения см. в разделе [Наборы строк схемы служб Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).<br /><br /> В следующем списке описывается несколько подходов к использованию наборов строк схемы:<br /><br /> — Выполнение запросов к динамическим административным представлениям из среды SQL Server Management Studio или в пользовательских отчетах для доступа к наборам строк схемы с помощью синтаксиса SQL. Дополнительные сведения см. в разделе [Использование динамических административных представлений для мониторинга служб Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).<br /><br /> — Написание кода ADOMD.NET, вызывающего набор строк схемы.<br /><br /> — Выполнение метода XMLA **Discover** непосредственно в экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] для получения сведений из набора строк схемы. Дополнительные сведения см. в статье [Метод Discover (XML для аналитики)](../../../analysis-services/xmla/xml-elements-methods-discover.md).|  
+|Наборы строк схемы|Таблицы наборов строк схемы — это структуры данных, содержащие описательные сведения о развернутой на сервере многомерной модели, а также о выполняющихся на сервере в настоящий момент действиях. Программист может выполнять запросы к таблицам наборов строк схемы из клиентских приложений, чтобы просматривать хранящиеся на экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] метаданные, а также для получения с него вспомогательной информации и данных отслеживания. Наборы строк схемы можно использовать со следующими программными интерфейсами: OLE DB, OLE DB для служб Analysis Services, OLE DB для интеллектуального анализа данных и XML для аналитики. Дополнительные сведения см. в разделе [Наборы строк схемы служб Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).<br /><br /> В следующем списке описывается несколько подходов к использованию наборов строк схемы:<br /><br /> — Выполнение запросов к динамическим административным представлениям из среды SQL Server Management Studio или в пользовательских отчетах для доступа к наборам строк схемы с помощью синтаксиса SQL. Дополнительные сведения см. в разделе [Использование динамических административных представлений для мониторинга служб Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).<br /><br /> — Написание кода ADOMD.NET, вызывающего набор строк схемы.<br /><br /> — Выполнение метода XMLA **Discover** непосредственно в экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] для получения сведений из набора строк схемы. Дополнительные сведения см. в статье [Метод Discover (XML для аналитики)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover).|  
 |XML для аналитики|XML для аналитики — это API-интерфейс самого низкого уровня из доступных программисту служб Analysis Services; он является общим компонентом в основе всех методик доступа к данным в службах Analysis Services. XML для аналитики (XMLA) — это стандартный отраслевой XML-протокол, основанный на SOAP, поддерживающий универсальный доступ к данным в любом стандартном источнике многомерных данных через соединение по протоколу HTTP. В нем для формулирования запросов к многомерным данным и ответов на запросы используется SOAP. Если приложение будет работать не на платформе Windows, с помощью XML для аналитики можно осуществлять доступ к многомерной базе данных, выполняющейся на сервере Windows в сети. Дополнительные сведения см. в разделе [Разработка с использованием XMLA в службах Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).|  
 |Язык ASSL|ASSL — это описательный термин, который относится к расширениям протокола XML для аналитики в службах Analysis Services. В то время как методы Execute и Discover описываются протоколом XML для аналитики, ASSL добавляет следующие возможности:<br /><br /> — Скрипт XML для аналитики<br /><br /> — Определения объектов XML для аналитики<br /><br /> — Команды XML для аналитики<br /><br /> Расширения ASSL позволяют службам Analysis Services использовать XML для аналитики за пределами базовых задач протокола, в том числе для определения данных, изменения данных и поддержки управления данными. Дополнительные сведения см. в разделе [Разработка на языке ASSL (язык ASSL)](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).|  
   
 ## <a name="see-also"></a>См. также  
  [Подключение к службам Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md)   
- [Развертывание с помощью функций анализа служб языка сценариев &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [Разработка с использованием XML для Аналитики в службах Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
+ [Разработка на языке ASSL (язык ASSL)](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Разработка с использованием XMLA в службах Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
  [Доступ к данным табличной модели](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   

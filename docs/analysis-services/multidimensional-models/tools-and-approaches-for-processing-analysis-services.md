@@ -1,5 +1,5 @@
 ---
-title: Средства и подходы для обработки (службы Analysis Services) | Документы Microsoft
+title: Средства и способы обработки (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4ecb64ddf6caedc2353541ab5d4aa7229b9a120f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10f07b04523aeafeb3166bb2e1dbf7072a7b53b5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027321"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147739"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Средства и способы обработки (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34027321"
   
 -   Наблюдение за обработкой с помощью приложения SQL Server Profiler.  
   
--   Программирование пользовательского решения с помощью объектов AMO. Дополнительные сведения см. в статье [Programming AMO OLAP Basic Objects](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md).  
+-   Программирование пользовательского решения с помощью объектов AMO. Дополнительные сведения см. в статье [Programming AMO OLAP Basic Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects).  
   
  Обработка имеет широкие возможности настройки, управляемые набором параметров обработки, которые определяют тип обработки (полная или добавочная), выполняемой на уровне объектов. Дополнительные сведения об обработке параметров и объектов см. в разделах [Параметры обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) и [Обработка объектов служб Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   

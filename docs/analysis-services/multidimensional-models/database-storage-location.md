@@ -1,5 +1,5 @@
 ---
-title: Расположение хранилища базы данных | Документы Microsoft
+title: Расположение хранилища базы данных | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9f96b5a919a898f987892fb517ed9687b1d2498
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0544e7e7d552098806d4c3d93751631d03520139
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022521"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146299"
 ---
 # <a name="database-storage-location"></a>Место хранения базы данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "34022521"
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
- [Присоединение и отсоединение баз данных служб Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
+ [Подключение и отключение баз данных служб Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Перемещение базы данных служб Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [Элемент DbStorageLocation](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)   
- [Создать элемент & #40; XML для Аналитики & #41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)   
- [Элемент Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [Синхронизировать элемент & #40; XML для Аналитики & #41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)  
+ [Элемент DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
+ [Элемент Create (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
+ [Элемент Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Элемент Synchronize (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

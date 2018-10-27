@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 8789efdd287964cc0c2db29fc128f11685df9898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf3027bc998a7170d7bf75c7801f517e015bd05d
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715532"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991197"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Восстановление базы данных SQL Server в контейнере Docker в Linux
 
@@ -36,7 +36,7 @@ ms.locfileid: "47715532"
 
 > [!div class="checklist"]
 > * Извлечение и запуск последней версии образа контейнера SQL Server Linux.
-> * Скопируйте файл базы данных World Wide Importers в контейнер.
+> * Скопируйте файл базы данных Wide World Importers в контейнер.
 > * Восстановите базу данных в контейнере.
 > * Выполнение инструкций Transact-SQL для просмотра и изменения базы данных.
 > * Резервное копирование с измененной базой данных.

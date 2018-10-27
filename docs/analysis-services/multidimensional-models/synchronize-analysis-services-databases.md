@@ -1,5 +1,5 @@
 ---
-title: Синхронизация баз данных Analysis Services | Документы Microsoft
+title: Синхронизация баз данных Analysis Services | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b50cdb2a9b6a32fbd2794e3265dc009f6c6e6bd2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025371"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145919"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Синхронизация баз данных служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34025371"
   
  Чтобы разрешить удаленные соединения между двумя экземплярами по умолчанию, TCP-порт 2383 должен быть открыт на обоих серверах. Дополнительные сведения о создании исключения в брандмауэре Windows см. в разделе [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Исходный и конечный серверы должны быть той же версией и пакетом обновления. Поскольку метаданные модели также синхронизированы, чтобы обеспечить совместимость сборки номер для обоих серверов должны совпадать. Выпуск каждой установки должен поддерживать синхронизацию баз данных. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]синхронизация базы данных поддерживается в выпусках Enterprise, Developer и Business Intelligence. Дополнительные сведения о возможностях каждого выпуска см. в разделе [выпуски и поддерживаемые функции для SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Исходный и конечный серверы должны быть той же версией и пакетом обновления. Так как метаданные модели также синхронизируется, чтобы обеспечить совместимость сборки номер для обоих серверов должны совпадать. Выпуск каждой установки должен поддерживать синхронизацию баз данных. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]синхронизация базы данных поддерживается в выпусках Enterprise, Developer и Business Intelligence. Дополнительные сведения о возможностях каждого выпуска, см. в разделе [выпуски и поддерживаемые функции для SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Режим развертывания сервера должен быть одинаковым на обоих серверах. Если синхронизируемая база данных является многомерной, то и исходный и целевой серверы должны быть настроены для работы в многомерном режиме сервера. Дополнительные сведения о режимах развертывания см. в разделе [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -182,8 +182,8 @@ ms.locfileid: "34025371"
  Если синхронизация членства и ролей не выполняется, то сейчас необходимо указать разрешения доступа пользователя в целевой базе данных.  
   
 ## <a name="see-also"></a>См. также  
- [Элемент Synchronize (XMLA)](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [Развертывание решений модели с использованием XML для Аналитики](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [Развертывание решений модели с помощью мастера развертывания](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Элемент Synchronize (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
+ [Развертывание решений модели с помощью XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
+ [Развертывание решений модели с использованием мастера развертывания](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e211d3c6d787cc57f8f64378bac34659b3a6545c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f08906f5de609cfd1a520d397a41fe5bc0f36bc4
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133224"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099665"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Вы выполняете обновление с версии SQL Server 2005?
   Окончание расширенной поддержки для SQL Server 2005 — еще одна причина выполнить обновление до более новой версии SQL Server и базы данных SQL Azure. Обновление позволяет обеспечить безопасность и соответствие требованиям, достичь высокой производительности и оптимизировать инфраструктуру платформы данных.  
@@ -83,6 +83,6 @@ ms.locfileid: "48133224"
 ## <a name="see-also"></a>См. также  
  [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
  [Прекращение поддержки SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
- [Обновление с SQL Server 2005 до SQL Server 2016](https://msdn.microsoft.com/en-US/library/mt168847.aspx)  
+ [Обновление с SQL Server 2005 до SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

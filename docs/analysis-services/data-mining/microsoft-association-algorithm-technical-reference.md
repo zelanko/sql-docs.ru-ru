@@ -1,5 +1,5 @@
 ---
-title: Технический справочник по алгоритму взаимосвязей (Майкрософт) | Документы Microsoft
+title: Технический справочник по алгоритму взаимосвязей (Майкрософт) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9cba8f282e1f355b7b4265298890eccb0a4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017391"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145909"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Технический справочник по алгоритму взаимосвязей (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34017391"
  Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает несколько параметров, влияющих на работу, производительность и точность итоговой модели интеллектуального анализа данных.  
   
 ### <a name="setting-algorithm-parameters"></a>Задание параметров алгоритма  
- Параметры модели интеллектуального анализа данных можно изменить в любой момент с помощью конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Можно также изменить параметры программным образом с помощью <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> коллекции объектов AMO или с помощью [элемент MiningModels &#40;ASSL&#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md) в XML для Аналитики. В следующей таблице содержатся описания всех параметров.  
+ Параметры модели интеллектуального анализа данных можно изменить в любой момент с помощью конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Можно также менять параметры программно с помощью <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> коллекции объектов AMO или с помощью [элемент MiningModels &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) в XML для Аналитики. В следующей таблице содержатся описания всех параметров.  
   
 > [!NOTE]  
 >  Изменить параметры существующей модели с помощью инструкций на языке расширений интеллектуального анализа данных нельзя. Нужно задать параметры в инструкциях DMX CREATE MODEL или ALTER STRUCTURE… ADD MODEL при создании модели.  
@@ -79,7 +79,7 @@ ms.locfileid: "34017391"
  *MAXIMUM_ITEMSET_SIZE*  
  Указывает максимальное количество элементов, допустимых в наборе элементов. Задание этого значения равным 0 указывает, что размер набора элементов не ограничен.  
   
- Значение по умолчанию — 3.  
+ Значение по умолчанию — 3.  
   
 > [!NOTE]  
 >  Снижение этого значения может привести к сокращению времени создания модели, поскольку обработка модели прекращается, когда достигнуто предельное значение.  
@@ -153,7 +153,7 @@ ms.locfileid: "34017391"
   
 ## <a name="see-also"></a>См. также  
  [Алгоритм взаимосвязей (Майкрософт)](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Примеры запросов к модели взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)   
- [Содержимое модели интеллектуального анализа данных для моделей взаимосвязей & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Примеры запросов моделей взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)   
+ [Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

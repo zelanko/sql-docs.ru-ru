@@ -15,12 +15,12 @@ ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24faef5cd2e65ae89cc200f3461133d00cc81716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c803d434fac98c6f2397465738599bac5fa1d8ad
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059944"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147229"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Привязки группы мер» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Привязки группы мер** для создания и изменения прямых связей между негранулярными атрибутами в измерении куба и столбцами в группе мер для связи обычного измерения, а также для указания параметров обработки значений NULL любого из атрибутов в измерении куба из диалогового окна **Задание связи**.  
@@ -44,7 +44,7 @@ ms.locfileid: "48059944"
 |------------|----------------|  
 |**Столбцы измерений**|Отображает столбцы таблицы измерений, на которой основан атрибут, выбранный на панели **Атрибуты** .|  
 |**Столбцы группы мер**|Выберите параметр **Унаследован от измерения** , чтобы использовать связь группы мер, унаследованную от измерения, или столбец из таблицы фактов, на котором основана группа мер, чтобы явно определить связь.|  
-|**Обработки значений NULL**|Выберите параметр обработки значения NULL ‎для атрибута. Дополнительные сведения о параметрах обработки значений NULL см. в разделе [Элемент NullProcessing (ASSL)](scripting/properties/nullprocessing-element-assl.md).|  
+|**Обработки значений NULL**|Выберите параметр обработки значения NULL ‎для атрибута. Дополнительные сведения о параметрах обработки значений NULL см. в разделе [Элемент NullProcessing (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl).|  
   
 ## <a name="see-also"></a>См. также  
  [Определите окно связи &#40;службы Analysis Services — многомерные данные&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)   

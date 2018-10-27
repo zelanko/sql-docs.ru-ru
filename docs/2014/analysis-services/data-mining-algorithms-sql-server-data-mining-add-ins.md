@@ -24,12 +24,12 @@ ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b1feb34dca2fba1bad8829edff24ef1ce54e1fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc9d8f4396be64de2160b39b57374dd1ab1bf3cf
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161564"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099275"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Алгоритмы интеллектуального анализа данных (надстройки интеллектуального анализа данных SQL Server)
   Надстройки интеллектуального анализа данных для Office поддерживают создание аналитических моделей с использованием следующих алгоритмов интеллектуального анализа данных. Все алгоритмы основаны на широко известных методах машинного обучения и реализованы в Microsoft Research.  
@@ -43,7 +43,7 @@ ms.locfileid: "48161564"
 |Алгоритм дерева принятия решений (Майкрософт)|Определяйте ранее неизвестные связи между различными элементами пользовательских данных для лучшего информационного обоснования своих решений или находите факторы, которые приводят к конкретным результатам.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
 |Алгоритм линейной регрессии (Майкрософт)|Найдите математическую формулу, которая описывает факторы, влияющие на числовой результат.<br /><br /> [http://msdn.microsoft.com/library/ms174824.aspx](http://msdn.microsoft.com/library/ms174824.aspx)|  
 |Алгоритм логистической регрессии (Майкрософт)|Идентифицируйте факторы, влияющие на двоичные результаты, и узнайте, как их использовать для воздействия на результаты.<br /><br /> [http://msdn.microsoft.com/library/ms174828.aspx](http://msdn.microsoft.com/library/ms174828.aspx)|  
-|Упрощенный алгоритм Байеса (Майкрософт)|Исследуйте связи в данных и находите среди них те, которые имеют наиболее тесную корреляцию с результатом.<br /><br /> [http://msdn.microsoft.com/en-us/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
+|Упрощенный алгоритм Байеса (Майкрософт)|Исследуйте связи в данных и находите среди них те, которые имеют наиболее тесную корреляцию с результатом.<br /><br /> [http://msdn.microsoft.com/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
 |Алгоритм нейронных сетей Майкрософт|Находите скрытые связи между несколькими входами и даже несколькими выходами. Используйте это для просмотра или для прогнозирования.<br /><br /> [http://msdn.microsoft.com/library/ms174941.aspx](http://msdn.microsoft.com/library/ms174941.aspx)|  
 |Алгоритм временных рядов (Майкрософт)|Используйте исторические данные для прогнозирования будущих значений.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
   

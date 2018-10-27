@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21467fe09feb96feb6ae865c8252623bbefe7eb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098523"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991257"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Импорт данных из Excel или экспорт данных в Excel с помощью служб SQL Server Integration Services (SSIS)
 
@@ -254,9 +254,9 @@ ms.locfileid: "48098523"
 [Работа с файлами Excel в задаче «Скрипт»](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
 
 ### <a name="about-the-sql-server-import-and-export-wizard"></a>Сведения о мастере импорта и экспорта SQL Server
-[Подключение к источнику данных Excel](/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)  
-[Приступая к работе с простым примером мастера импорта и экспорта](/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[Подключение к источнику данных Excel](/sql/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard)  
+[Приступая к работе с простым примером мастера импорта и экспорта](/sql/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard)
 
 ### <a name="other-articles"></a>Другие статьи
-[Импорт данных в SQL Server или базу данных Azure из Excel](/relational-databases/import-export/import-data-from-excel-to-sql.md)  
+[Импорт данных в SQL Server или базу данных Azure из Excel](/sql/relational-databases/import-export/import-data-from-excel-to-sql)  
 

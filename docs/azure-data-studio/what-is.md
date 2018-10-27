@@ -10,12 +10,12 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 296274548b725a620d577916d2c76d31c923c4c0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e30906efb126b0c7fba225ff2aeb3308f0bf050c
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356535"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099786"
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>Что такое [!INCLUDE[name-sos](../includes/name-sos.md)]?
 
@@ -47,7 +47,7 @@ ms.locfileid: "49356535"
 
 ## <a name="integrated-terminal"></a>Интегрированный терминал
 
-Используйте привычные инструменты командной строки (например, Bash, PowerShell, sqlcmd и bcp и ssh) в окне интегрированного терминала, прямо из [!INCLUDE[name-sos](../includes/name-sos-short.md)] пользовательского интерфейса. Дополнительные сведения о встроенном терминале, см. в разделе [интегрированная терминалов] (интегрированные terminal.md).
+Используйте привычные инструменты командной строки (например, Bash, PowerShell, sqlcmd и bcp и ssh) в окне интегрированного терминала, прямо из [!INCLUDE[name-sos](../includes/name-sos-short.md)] пользовательского интерфейса. Дополнительные сведения о встроенном терминале, см. в разделе [интегрированный терминал](integrated-terminal.md).
 
 ## <a name="extensibility-and-extension-authoring"></a>Расширяемость и создания расширений
 

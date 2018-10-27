@@ -11,12 +11,12 @@ ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16f7e8f89a2b5067f00ebd27fa1c59d1595a8c6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0afcf50aea6efc0d52adf0b1a82a317e9ec94d08
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173104"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146069"
 ---
 # <a name="remote-processing-analysis-services"></a>Удаленная обработка (службы Analysis Services)
   Можно выполнять запланированную или автоматическую обработку на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , при этом запрос на обработку приходит с одного компьютера, но выполняется на другом компьютере из той же сети.  
@@ -92,10 +92,10 @@ ms.locfileid: "48173104"
 2.  В качестве последнего шага измените задание так, чтобы оно выполнялось по вашему расписанию, добавив необходимые предупреждения и уведомления. Также, возможно, потребуется доработать скрипт обработки или создать несколько этапов в задании, чтобы объекты обрабатывались независимо.  
   
 ## <a name="see-also"></a>См. также  
- [Компоненты агента SQL Server](../../ssms/agent/sql-server-agent.md#Components)   
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components)   
  [Планирование задач администрирования служб SSAS с помощью агента SQL Server](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [Пакетная обработка &#40;служб Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [Пакетная обработка (службы Analysis Services)](batch-processing-analysis-services.md)   
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)   
- [Обработка объектов &#40;XML для Аналитики&#41;](../xmla/xml-elements-objects.md)  
+ [Обработка объектов (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

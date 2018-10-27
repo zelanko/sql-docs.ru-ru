@@ -13,12 +13,12 @@ ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 166fae1cb6fb76587b6741b6f47449d2600bf8e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155864"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145589"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Определение типа измерения (мастер измерений)
   Для определения типа измерения и добавления атрибутов специальных типов, связанных с выбранным типом измерений к измерению, используется страница **Определение типа измерения** .  
@@ -57,7 +57,7 @@ ms.locfileid: "48155864"
  Выберите для включения типа атрибутов в измерение.  
   
  **Тип атрибута**  
- Отображает тип атрибута, связанный с типом измерений, который выбран в поле **Тип измерения**. Дополнительные сведения о типах атрибутов см. в разделе [Элемент Type (DimensionAttribute) (ASSL)](scripting/properties/type-element-dimensionattribute-assl.md).  
+ Отображает тип атрибута, связанный с типом измерений, который выбран в поле **Тип измерения**. Дополнительные сведения о типах атрибутов см. в разделе [Элемент Type (DimensionAttribute) (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl).  
   
  **Атрибут измерения**  
  Выберите атрибут измерения, которому мастер измерений назначит специальный тип атрибута, отображаемый в поле **Тип атрибута**.  

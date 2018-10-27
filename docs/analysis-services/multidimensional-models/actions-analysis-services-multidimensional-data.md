@@ -1,5 +1,5 @@
 ---
-title: Действия (службы Analysis Services — многомерные данные) | Документы Microsoft
+title: Действия (службы Analysis Services — многомерные данные) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b7c4d8781aa316ab49fb3730dd783c77e2776441
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020491"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146369"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Действия (службы Analysis Services — многомерные данные)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34020491"
   
 -   Стандартные действия, которые возвращают элемент действия (URL, HTML, DataSet, RowSet и другие элементы), связанный с выделенной секцией куба, в которой происходит действие.  
   
- Интерфейс запроса, такой как ADOMD.NET, используется в клиентском приложении для выборки и предоставления доступа к действиям конечному пользователю. Дополнительные сведения см. в разделе [Разработка с использованием ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ Интерфейс запроса, такой как ADOMD.NET, используется в клиентском приложении для выборки и предоставления доступа к действиям конечному пользователю. Дополнительные сведения см. в разделе [Разработка с использованием ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Простой объект <xref:Microsoft.AnalysisServices.Action> состоит из основной информации, цели, в которой должно произойти действие, условия, ограничивающего область действия, и типа. Основная информация включает имя действия, описание действия, предлагаемый заголовок действия и др.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "34020491"
 ## <a name="types-of-actions"></a>Типы действий  
  В следующей таблице приведен список типов действий, доступных в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Тип действия|Description|  
+|Тип действия|Описание|  
 |-----------------|-----------------|  
 |Командная строка|Выполняет команду в командной строке|  
-|Набор данных|Возвращает клиентскому приложению набор данных.|  
+|Dataset|Возвращает клиентскому приложению набор данных.|  
 |Детализация|Возвращает инструкцию детализации в качестве выражения, которое клиент выполняет, чтобы вернуть набор строк|  
 |Html|Выполняет HTML-скрипт в браузере Интернета.|  
 |Частный|Выполняет операцию с использованием интерфейса, отличного от приведенных в данной таблице.|  

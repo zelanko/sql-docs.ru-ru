@@ -1,22 +1,22 @@
 ---
-title: Настройка Minikube для развертываний SQL Server 2019 CTP-версии 2.0 | Документация Майкрософт
-description: ''
+title: Настройка Minikube для развертывания кластера SQL Server 2019 больших данных | Документация Майкрософт
+description: Сведения о настройке Minikube для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных на одном компьютере.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a01d7e1f0162d4dc5cc1d604d5c780cf101646a5
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 71523efb55fd1bc41927b38d2e91abc9833c73b0
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100345"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050786"
 ---
-# <a name="configure-minikube-for-sql-server-2019-ctp-20"></a>Настройка Minikube для SQL Server 2019 CTP 2.0
+# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Настройка Minikube для развертывания кластера SQL Server 2019 больших данных
 
-Minikube — это средство, которое позволяет легко запускать Kubernetes на одном компьютере как ноутбук или к рабочему столу. Minikube запускает одноузловой кластер Kubernetes внутри виртуальной Машины на локальном компьютере для пользователей, которые хотят опробовать Kubernetes или разработку, используя его повседневной. 
+В этой статье описывается настройка **minikube** на одном компьютере для развертываний кластеров (Предварительная версия) SQL Server 2019 больших данных. Minikube — это средство, которое позволяет легко запускать Kubernetes на одном компьютере как ноутбук или к рабочему столу. Minikube запускает одноузловой кластер Kubernetes внутри виртуальной Машины на локальном компьютере для пользователей, которые хотят опробовать Kubernetes или разработку, используя его повседневной. 
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -72,6 +72,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Действия, описанные в этой статье настроили кластер Minikube. Следующим шагом является развертывание в кластере SQL Server 2019 CTP 2.0.
+Действия, описанные в этой статье настроили кластер Minikube. Следующим шагом является развертывание кластера SQL Server 2019 больших данных. Инструкции см. следующую статью:
 
 [Развертывание SQL Server 2019 CTP 2.0 в Kubernetes](deployment-guidance.md#deploy)

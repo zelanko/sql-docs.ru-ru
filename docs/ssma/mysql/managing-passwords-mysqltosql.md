@@ -13,12 +13,12 @@ ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 38790e904bb694e186e6355275dc6a6ff165c036
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbe616fb2aae8387d000520ead5586abca2db961
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848892"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099397"
 ---
 # <a name="managing-passwords-mysqltosql"></a>Управление паролями (MySQLToSQL)
 Этот раздел посвящен защита пароли к базам данных и процедуру для импорта или экспорта их на серверах:  
@@ -131,5 +131,5 @@ SSMA консольного приложения позволяет экспор
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA (MySQL)](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Выполнение команд консоли SSMA (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

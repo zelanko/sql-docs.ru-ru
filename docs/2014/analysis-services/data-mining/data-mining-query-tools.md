@@ -19,12 +19,12 @@ ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0baf445580017ba976d788c402e81aa06cbb2643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110534"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148239"
 ---
 # <a name="data-mining-query-interfaces"></a>Интерфейсы запросов интеллектуального анализа данных
   Запросы интеллектуального анализа данных основаны на языке расширения интеллектуального анализа данных (DMX). DMX-запросы используются в задачах прогнозирования и моделирования, в том числе для классификации, анализа рисков, формирования рекомендаций и линейной регрессии. Можно также извлечь статистику и закономерности, сформированные при обработке модели.  
@@ -87,16 +87,16 @@ ms.locfileid: "48110534"
   
  Однако XMLA представляет собой базовый формат сообщений для всех взаимодействий на сервере служб Analysis Service. В сообщении XMLA запросы представляются по-разному, в зависимости от того, на чем основан отправляемый прогнозирующий запрос: DMX, запрос содержимого либо запрос на получение метаданных модели через наборы строк схемы интеллектуального анализа данных.  
   
--   Текст **прогнозирующих запросов** (и всех других инструкций расширений интеллектуального анализа данных) отправляется в формате XMLA с помощью метода [Execute (XMLA)](../xmla/xml-elements-methods-execute.md), при этом DMX-запрос размещается как текст внутри элемента [Statement (XMLA)](../xmla/xml-elements-commands/statement-element-xmla.md) элемента [Command (XMLA)](../xmla/xml-elements-properties/command-element-xmla.md).  
+-   Текст **прогнозирующих запросов** (и всех других инструкций расширений интеллектуального анализа данных) отправляется в формате XMLA с помощью метода [Execute (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute), при этом DMX-запрос размещается как текст внутри элемента [Statement (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) элемента [Command (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/command-element-xmla).  
   
--   Чтобы получить **содержимое модели** и **метаданные модели**, например число кластеров, атрибутов, использованных в деревьях принятия решений, даты последней обработки модели и параметров алгоритма, заданные при создании модели, можно воспользоваться методом [Discover (XMLA)](../xmla/xml-elements-methods-discover.md), а также указать один из наборов строк схемы интеллектуального анализа данных в заголовке элемента [RequestType (XMLA)](../xmla/xml-elements-properties/type-element-xmla.md). Чтобы сузить область действия запроса, введите такие критерии, как ограничения, внутри элемента [RestrictionList (XMLA)](../xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
+-   Чтобы получить **содержимое модели** и **метаданные модели**, например число кластеров, атрибутов, использованных в деревьях принятия решений, даты последней обработки модели и параметров алгоритма, заданные при создании модели, можно воспользоваться методом [Discover (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover), а также указать один из наборов строк схемы интеллектуального анализа данных в заголовке элемента [RequestType (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla). Чтобы сузить область действия запроса, введите такие критерии, как ограничения, внутри элемента [RestrictionList (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla).  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Решения для интеллектуального анализа данных](data-mining-solutions.md)   
- [Основные сведения об инструкции расширения интеллектуального анализа данных Select](/sql/dmx/understanding-the-dmx-select-statement)   
+ [Общие сведения об инструкции расширения интеллектуального анализа данных SELECT](/sql/dmx/understanding-the-dmx-select-statement)   
  [Структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
  [Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](create-a-prediction-query-using-the-prediction-query-builder.md)   
- [Создание запроса расширений интеллектуального анализа данных в SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)  
+ [Создание DMX-запроса в среде SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

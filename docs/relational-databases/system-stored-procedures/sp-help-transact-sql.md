@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40099bef14b2172205a18101036b57d71f3b5812
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c41449a9d8c1a85e283598a350f4372d8b3b0780
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830052"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146049"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_help [ [ @objname = ] 'name' ]
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Результирующие наборы, возвращаемые зависят от того *имя* будет указано, когда он указан, и это какой объект базы данных.  
+ Результирующие наборы, возвращаемые зависят от того *имя* будет указано, когда он указан, и какой объект базы данных.  
   
 1.  Если **sp_help** выполняется без аргументов возвращается Общие сведения об объектах всех типов, которые существуют в текущей базе данных.  
   

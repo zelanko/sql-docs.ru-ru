@@ -11,12 +11,12 @@ ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5716541be57191cd6bb3e6e6399a354889b2cf58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3fc1b8aa5c6a2f76ebdfe98fd8aa98e5a593919
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179674"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144909"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Использование расширенных событий SQL Server (XEvents) для мониторинга служб Analysis Services
   Службы Analysis Services предоставляют возможности трассировки посредством использования [расширенных событий](../../relational-databases/extended-events/extended-events.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "48179674"
  Имя, присвоенное данной трассировке. Как правило, понятное определение трассировки. Обычно принято использовать в качестве имени значение *trace_id* .  
   
  *AS_event*  
- Событие служб Analysis Services, к которому должен быть предоставлен доступ. Имена событий см. в разделе [События трассировки служб Analysis Services](../trace-events/analysis-services-trace-events.md) .  
+ Событие служб Analysis Services, к которому должен быть предоставлен доступ. Имена событий см. в разделе [События трассировки служб Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) .  
   
  *data_filename*  
  Имя файла данных, который содержит данные события. Это имя имеет в качестве суффикса отметку времени, что позволяет предотвратить перезапись данных, если одно и то же сообщение трассировки передается снова и снова.  

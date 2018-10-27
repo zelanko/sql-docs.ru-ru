@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6f65ecd222adfbadab453084d2b5a0dfbfa171ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bca6dcb1287918901f3bfb11a8e33e9c8917e84
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136144"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100075"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Мониторинг и устранение неполадок с использованием памяти
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] использует память в шаблонах, отличных от дисковых таблиц. Можно контролировать объем выделенной памяти, используемый оптимизированными для памяти таблицами и индексами в базе данных, с помощью динамических административных представлений (DMV) и счетчиков производительности, предназначенных для подсистемы памяти и сборки мусора.  Это обеспечивает видимость на уровне системы и базы данных и позволяет предотвращать проблемы нехватки памяти.  
@@ -170,7 +170,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- Дополнительные сведения см. в статье [sys.dm_db_xtp_table_memory_stats](http://msdn.microsoft.com/en-us/99b8a95f-d04b-4edb-a764-17b95581d071).  
+ Дополнительные сведения см. в статье [sys.dm_db_xtp_table_memory_stats](http://msdn.microsoft.com/99b8a95f-d04b-4edb-a764-17b95581d071).  
   
 #### <a name="memory-consumption-by-internal-system-structures"></a>Использование памяти внутренними системными структурами  
  Память также используется системными объектами, например транзакционными структурами, буферами для разностных файлов и данных, структурами для сборки мусора и другими объектами. Можно узнать объем памяти, используемый для этих системных объектов с помощью запроса `sys.dm_xtp_system_memory_consumers` , как показано ниже.  

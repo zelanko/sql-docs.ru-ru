@@ -15,12 +15,12 @@ ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a23859191c8a1dfaf5f81a38d5a07c92e3a6394a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9296e5270fc3cb6114595dd1709b1a90e69a12ba
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225314"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147139"
 ---
 # <a name="developer39s-guide-analysis-services"></a>Разработчик&#39;руководство (службы Analysis Services)
     
@@ -34,13 +34,13 @@ ms.locfileid: "48225314"
  [Программирование многомерной модели](multidimensional-models/multidimensional-model-programming.md)  
  Описывает задачи разработки и способы интеграции объектов многомерной модели в пользовательское решение.  
   
- [Наборы строк схемы служб Analysis Services](schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Наборы строк схемы служб Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
  Описывает наборы строк схемы, в которых предоставляются сведения о состоянии сервера, операциях сервера и объектах базы данных.  
   
- [Язык сценариев Analysis Services &#40;ASSL&#41; ссылки](scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Язык сценариев Analysis Services &#40;ASSL&#41; ссылки](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  Описывает расширения языка ASSL для XMLA. Язык ASSL — это язык для определения и работы с данными для многомерных моделей служб Analysis Services, дополняющий спецификацию XMLA.  
   
- [XML для аналитики &#40;XMLA&#41; ссылки](xmla/xml-for-analysis-xmla-reference.md)  
+ [Справочник по XML для аналитики (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  Описывает основные понятия XMLA, помогающие понять преимущества, которые XMLA обеспечивает для пользовательского решения. Также описывается уровень совместимости со спецификацией XMLA 1.1.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Предоставление разрешений измерению (службы Analysis Services) | Документы Microsoft
+title: Предоставление разрешений измерению (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 396969e35cff70f94bfe07ea1cf57d5221f485e2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 834cfe3629aed196c27391c48829b6b66884b82d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022581"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147729"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Предоставление разрешений измерению (службы Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34022581"
 ## <a name="set-permissions-on-a-database-dimension"></a>Установка разрешений на измерение базы данных  
  Измерения базы данных являются отдельными объектами в рамках базы данных, которые позволяют повторное использование измерений в рамках одной и той же модели. Рассмотрим измерение базы данных ДАТА, которое много раз используется в модели в качестве измерений куба Дата Заказа, Дата Отгрузки и Дата Выполнения. Так как измерения кубов и базы данных являются одноранговыми объектами в базе данных, вы можете установить разрешения на обработку независимо на каждый объект.  
   
-1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
+1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
   
 2.  На вкладке **Измерения** настройка измерения должна быть установлена на **Все измерения базы данных**.  
   
@@ -51,20 +51,20 @@ ms.locfileid: "34022581"
 ## <a name="set-permissions-on-a-cube-dimension"></a>Установка разрешений на измерение базы куба  
  Разрешения куба являются разрешениями базы данных, которые были добавлены кубу. По этой причине структурно они зависят от связанных групп мер. Хотя вы можете обрабатывать эти объекты в автоматическом режиме, в рамках авторизации, имеет смысл рассматривать куб и измерения куба в качестве единой сущности.  
   
-1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
+1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
   
-2.  В **измерения** измените настройку измерения на \<имя куба > **измерения**.  
+2.  В **измерения** измените настройку измерения на \<Имя_куба > **измерения куба**.  
   
      По умолчанию разрешения наследуются от соответствующего измерения базы данных. Снимите флажок **Наследование** для изменения разрешений с **Чтение** на **Чтение/Запись**. Перед использованием разрешения **Чтение/Запись**убедитесь, что вы прочли примечание в предыдущем разделе.  
   
 > [!IMPORTANT]  
->  При выполнении настройки разрешений роли базы данных с помощью объектов AMO любая ссылка на измерение куба в атрибуте DimensionPermission куба отменяет наследование разрешений из атрибута DimensionPermission базы данных. Дополнительные сведения об AMO см. в разделе [Разработка объектов управления аналитикой (объекты AMO)](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  При выполнении настройки разрешений роли базы данных с помощью объектов AMO любая ссылка на измерение куба в атрибуте DimensionPermission куба отменяет наследование разрешений из атрибута DimensionPermission базы данных. Дополнительные сведения об AMO см. в разделе [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="see-also"></a>См. также  
  [Роли и разрешения (службы Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
- [Предоставьте куба или модели разрешения & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Предоставление разрешений на структуры интеллектуального анализа данных и моделей &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Предоставление настраиваемого доступа к измерению данных & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Предоставление настраиваемого доступа к ячейке данных & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Предоставление настраиваемого доступа к данным измерений (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

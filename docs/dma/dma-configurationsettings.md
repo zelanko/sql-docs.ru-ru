@@ -2,7 +2,7 @@
 title: Настройка параметров для помощника по миграции данных (SQL Server) | Документация Майкрософт
 description: Узнайте, как настроить параметры для Data Migration Assistant, обновляя значения в файле конфигурации
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 87e81a1b73ac8b3af9b9c35449dc4966fc4cf285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755582"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643822"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Настройка параметров для помощника по миграции данных
 
@@ -32,7 +32,7 @@ ms.locfileid: "47755582"
 
   % ProgramFiles %\\Microsoft Data Migration Assistant\\dma.exe.config
 
-- Служебная программа командной строки
+- Программа командной строки
 
   % ProgramFiles %\\Microsoft Data Migration Assistant\\dmacmd.exe.config 
 
@@ -40,9 +40,9 @@ ms.locfileid: "47755582"
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Количество баз данных для оценки в параллельном режиме
 
-Помощник по миграции данных получает доступ к нескольким базам данных в параллельном режиме. Во время оценки Data Migration Assistant извлечение приложения уровня данных (dacpac), чтобы разобраться со схемой базы данных. Эта операция может прерваться, если несколько баз данных на одном сервере оцениваются в параллельном режиме. 
+Помощник по миграции данных получает доступ к нескольким базам данных в параллельном режиме. Во время оценки Data Migration Assistant извлечение приложения уровня данных (dacpac), чтобы разобраться со схемой базы данных. Эта операция может истечь время ожидания, если несколько баз данных на одном сервере оцениваются в параллельном режиме. 
 
-Начиная с версии 2.0 Data Migration Assistant, вы можете обеспечить управление это путем задания параметра конфигурации parallelDatabases. Значение по умолчанию — 8.
+Начиная с версии 2.0 Data Migration Assistant, вы можете управлять это путем задания параметра конфигурации parallelDatabases. Значение по умолчанию — 8.
 
 ```
 <advisorGroup>
@@ -87,15 +87,15 @@ ms.locfileid: "47755582"
 
 - commandTimeout
 
-   Это задает свойство IDbCommand.CommandTimeout в *секунд*. (По умолчанию = 60)
+   Этот параметр задает свойство IDbCommand.CommandTimeout в *секунд*. (По умолчанию = 60)
 
 - databaseLockTimeout
 
-   Это эквивалентно [ЗАДАТЬ БЛОКИРОВКУ\_времени ожидания TIMEOUT\_период ](../t-sql/statements/set-lock-timeout-transact-sql.md) в *миллисекунд*. (По умолчанию = 5000)
+   Этот параметр аналогичен [ЗАДАТЬ БЛОКИРОВКУ\_времени ожидания TIMEOUT\_период](../t-sql/statements/set-lock-timeout-transact-sql.md) в *миллисекунд*. (По умолчанию = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-   Число подключений пула подключения SQL для использования. (По умолчанию = 8)
+  Этот параметр задает число подключений пула подключений SQL для использования. (По умолчанию = 8)
 
 ```
 <advisorGroup>
@@ -109,7 +109,6 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorGroup>
 ```
-
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Пороговое значение рекомендация
 

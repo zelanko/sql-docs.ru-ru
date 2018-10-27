@@ -1,5 +1,5 @@
 ---
-title: Средства запросов интеллектуального анализа данных | Документы Microsoft
+title: Средства запросов интеллектуального анализа данных | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e24cab61196e8d16f8bb79caeb47e075725d6ab2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 67f58d5fea9da2df2e65d4085446f591ebd7ff25
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015181"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147949"
 ---
 # <a name="data-mining-query-tools"></a>Средства запросов интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34015181"
  Редактор запросов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] также позволяет создавать и выполнять запросы расширений интеллектуального анализа данных. Вы можете подключиться к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и выбрать базу данных, столбцы структуры интеллектуального анализа данных и модель интеллектуального анализа данных. **Обозреватель метаданных** содержит список прогнозирующих функций, который можно просмотреть.  
   
 ##  <a name="bkmk_Templates"></a> Шаблоны расширений интеллектуального анализа данных  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]предусмотрены интерактивные шаблоны запросов расширений интеллектуального анализа данных, которые можно использовать для создания запросов расширений интеллектуального анализа данных. Если список шаблонов не отображается, щелкните **Вид** на панели инструментов и выберите команду **Обозреватель шаблонов**. Чтобы просмотреть все шаблоны служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в том числе шаблоны для DMX, MDX и XMLA, щелкните значок куба.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предусмотрены интерактивные шаблоны DMX-запросов, которые могут быть использованы при создании. Если список шаблонов не отображается, щелкните **Вид** на панели инструментов и выберите команду **Обозреватель шаблонов**. Чтобы просмотреть все шаблоны служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в том числе шаблоны для DMX, MDX и XMLA, щелкните значок куба.  
   
  Чтобы построить запрос с помощью шаблона, шаблон можно перетащить в открытое окно запроса либо дважды щелкнуть его для открытия нового соединения и новой панели запросов.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34015181"
 ##  <a name="bkmk_SSIS"></a> Компоненты интеллектуального анализа данных служб Integration Services  
  Можно также включать прогнозирующие запросы в состав пакета служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Создание и выполнение инструкций и прогнозирующих запросов расширений интеллектуального анализа данных поддерживается следующими задачами и преобразованиями служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |---------------|-----------------|  
 |Задача «Запрос интеллектуального анализа данных»|Выполняет DMX-запросы и другие инструкции DMX в рамках потока управления.<br /><br /> Редактор задач содержит построитель прогнозирующих запросов и текстовое поле для ручного изменения DMX-запроса. Но при этом редактор задач не может проверить запрос по объектам из решения служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Поэтому запросы лучше создать в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , а затем вставить текст инструкции или запроса в редактор задач.|  
 |преобразование «Запрос интеллектуального анализа данных»|Выполняет прогнозирующий запрос внутри потока данных с помощью данных источника, определенного в источнике потока данных.<br /><br /> Редактор задач содержит построитель прогнозирующих запросов и текстовое поле для ручного изменения DMX-запроса.<br /><br /> Это преобразование можно использовать для создания запросов, которые используют данные из потока данных. Иными словами, запросов, которые используют синтаксис PREDICTION JOIN. Этот компонент не может использоваться для выполнения запросов содержимого или других видов инструкций DMX.|  
@@ -63,16 +63,16 @@ ms.locfileid: "34015181"
   
  Однако XMLA представляет собой базовый формат сообщений для всех взаимодействий на сервере служб Analysis Service. В сообщении XMLA запросы представляются по-разному, в зависимости от того, на чем основан отправляемый прогнозирующий запрос: DMX, запрос содержимого либо запрос на получение метаданных модели через наборы строк схемы интеллектуального анализа данных.  
   
--   Текст **прогнозирующих запросов** (и всех других инструкций расширений интеллектуального анализа данных) отправляется в формате XMLA с помощью метода [Execute (XMLA)](../../analysis-services/xmla/xml-elements-methods-execute.md), при этом DMX-запрос размещается как текст внутри элемента [Statement (XMLA)](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md) элемента [Command (XMLA)](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md).  
+-   Текст **прогнозирующих запросов** (и всех других инструкций расширений интеллектуального анализа данных) отправляется в формате XMLA с помощью метода [Execute (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute), при этом DMX-запрос размещается как текст внутри элемента [Statement (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) элемента [Command (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/command-element-xmla).  
   
--   Чтобы получить **содержимое модели** и **метаданные модели**, например число кластеров, атрибутов, использованных в деревьях принятия решений, даты последней обработки модели и параметров алгоритма, заданные при создании модели, можно воспользоваться методом [Discover (XMLA)](../../analysis-services/xmla/xml-elements-methods-discover.md), а также указать один из наборов строк схемы интеллектуального анализа данных в заголовке элемента [RequestType (XMLA)](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md). Чтобы сузить область действия запроса, введите такие критерии, как ограничения, внутри элемента [RestrictionList (XMLA)](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
+-   Чтобы получить **содержимое модели** и **метаданные модели**, например число кластеров, атрибутов, использованных в деревьях принятия решений, даты последней обработки модели и параметров алгоритма, заданные при создании модели, можно воспользоваться методом [Discover (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover), а также указать один из наборов строк схемы интеллектуального анализа данных в заголовке элемента [RequestType (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/requesttype-element-xmla). Чтобы сузить область действия запроса, введите такие критерии, как ограничения, внутри элемента [RestrictionList (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla).  
   
-## <a name="see-also"></a>См. также:  
- [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Ссылка](../../dmx/data-mining-extensions-dmx-reference.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Решения для интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Основные сведения об инструкции расширений интеллектуального анализа данных Select](../../dmx/understanding-the-dmx-select-statement.md)   
- [Структура и использовании прогнозирующих запросов расширений интеллектуального анализа данных](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Общие сведения об инструкции расширения интеллектуального анализа данных SELECT](../../dmx/understanding-the-dmx-select-statement.md)   
+ [Структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
- [Создать запрос расширений интеллектуального анализа данных в SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ [Создание DMX-запроса в среде SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Развертывание с помощью функций анализа служб язык сценариев (ASSL) | Документы Microsoft
+title: Разработка с помощью функций анализа служб языка сценариев (ASSL) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d1c01f567599353d360d8cf4a213e2abaa6c6cff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c113e07099ed96abdb0eb5f62c8517ee422d3cc7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025841"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145809"
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>Разработка на языке ASSL (язык ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "34025841"
   
 -   Язык описания данных DDL, или язык определения объектов, который определяет и описывает экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], а также базы данных и объекты баз данных, находящихся в этом экземпляре.  
   
--   Командный язык, который отправляет команд-действий, таких как **создать**, **Alter**, или **процесс**, к экземпляру служб Analysis Services. Этот язык рассматривается в [XML для аналитики &#40;XMLA&#41; ссылки](../../../analysis-services/xmla/xml-for-analysis-xmla-reference.md).  
+-   Командный язык, который отправляет команд-действий, таких как **создать**, **Alter**, или **процесс**, к экземпляру служб Analysis Services. Этот язык рассматривается в [XML для аналитики &#40;XMLA&#41; ссылку](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference).  
   
  Чтобы просмотреть код ASSL, описывающий многомерное решение в среде [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], можно использовать команду «Показать код» на уровне проекта. Также можно создать или изменить скрипт языка ASSL в среде [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] с помощью редактора запросов XMLA. Построенные скрипты можно использовать для управления объектами и выполнения команд на сервере.  
   
 ## <a name="see-also"></a>См. также  
  [Объекты ASSL и характеристики объектов](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)   
- [Соглашения XML языка ASSL](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md)   
- [Источники данных и привязки & #40; Многомерные службы SSAS & #41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
+ [Обозначения в XML в ASSL](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md)   
+ [Источники данных и привязки (многомерные службы SSAS)](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   
   

@@ -2,7 +2,7 @@
 title: Определить нужный номер SKU базы данных Azure SQL для вашей локальной базы данных (Data Migration Assistant) | Документация Майкрософт
 description: Узнайте, как использовать помощник по миграции данных для выявления справа номер SKU базы данных SQL Azure для вашей локальной базы данных
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 63a21ebfd11e9104a2a4b3722a6d54df57784f81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684452"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49644002"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Определить нужный номер SKU базы данных Azure SQL для базы данных на предприятии
 
@@ -141,7 +141,7 @@ TSV выходной файл будет содержать столбцы, ко
 - **MetricValue** -рекомендуется база данных Azure SQL SKU.
 - **SQLMiEquivalentCores** -Если вы решили перейти к управляемому экземпляру Azure SQL Database, можно использовать это значение для числа ядер.
 - **IsTierRecommended** -предпринимаем Минимальное рекомендуемое SKU для каждого уровня. Затем мы применяем эвристику для определения правильного уровня для базы данных. 
-- **ExclusionReasons** -это значение пустым, если рекомендуем использовать уровень. Для каждого уровня, не рекомендуется мы предоставляем причин, почему он не используется.
+- **ExclusionReasons** -это значение пустым, если рекомендуем использовать уровень. Для каждого уровня, не рекомендуется мы предоставляем причин, почему он не выбраны.
 - **AppliedRules** -короткий нотации правил, которые были применены.
 
 Рекомендуемое значение — минимальный номер SKU, необходимые для запросов для запуска в Azure с помощью Доля успешных попыток, аналогичную локальных баз данных. Например если Рекомендуемый минимальный номер SKU уровня "стандартный" S4, а затем выбрав S3 или ниже будет запросы истечения времени ожидания или не могут быть выполнены.

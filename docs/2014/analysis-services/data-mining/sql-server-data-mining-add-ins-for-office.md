@@ -11,12 +11,12 @@ ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2909079aa87638386db1398af6f62c10f96f66b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f27a9834fb8a33ab98f9a8e7c6d309d10056484
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223798"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099885"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Надстройки интеллектуального анализа данных SQL Server для Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Надстройки для интеллектуального анализа данных — это упрощенный набор средств для прогнозирующего анализа, позволяющий использовать данные в Excel для построения аналитических моделей для прогнозирования, рекомендации и исследования.  
@@ -82,7 +82,7 @@ ms.locfileid: "48223798"
   
 -   Standard  
   
- В зависимости от выпуска служб SQL Server Analysis Services, с которым устанавливается соединение, некоторые дополнительные алгоритмы могут оказаться недоступными. Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2014](https://msdn.microsoft.com/en-us/library/cc645993.aspx).  
+ В зависимости от выпуска служб SQL Server Analysis Services, с которым устанавливается соединение, некоторые дополнительные алгоритмы могут оказаться недоступными. Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2014](https://msdn.microsoft.com/library/cc645993.aspx).  
   
  Дополнительные сведения об установке см. на странице центра загрузки: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   

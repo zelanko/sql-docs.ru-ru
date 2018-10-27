@@ -12,12 +12,12 @@ ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d03d763bc0992973604f2b891492931d23415994
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13b703abc7c95523de9c8e2a5e06e984711f50bd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178654"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147939"
 ---
 # <a name="tabular-model-programming"></a>Программирование табличных моделей
   В табличных моделях реляционные конструкции служат для моделирования данных служб Analysis Services, которые используются в аналитических приложениях и отчетах. Эти модели работают в экземпляре служб Analysis Services, настроенном для табличного режима, с использованием модуля аналитики в памяти для хранения и быстрого просмотра таблиц, при применении которого выполняется статистическая обработка и вычисление данных по запросу.  
@@ -27,11 +27,11 @@ ms.locfileid: "48178654"
  В этом разделе приведены дополнительные сведения о том, как программным образом работать с сущностями табличной модели и их свойствами.  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Заметки языка CSDL для бизнес-аналитики &#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Основные сведения о табличной объектной модели](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [Технический справочник по аннотациям бизнес-аналитики для языка CSDL](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Технический справочник по аннотациям бизнес-аналитики для языка CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
  [Интерфейс IMDEmbedded](imdembeddeddata-interface.md)  
   

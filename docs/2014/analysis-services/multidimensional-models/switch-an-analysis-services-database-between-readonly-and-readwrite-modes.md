@@ -15,15 +15,15 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b2f9b97122e157ffd356163de63b0ab96708f36a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178204"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147879"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Переключение базы данных служб Analysis Services между режимами ReadOnly и ReadWrite
-  Часто возникают ситуации при [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] хочет изменить режим чтения и записи табличной или многомерной базы данных администратор базы данных (dba). Эти ситуации часто обусловлены производственной необходимостью, например общий доступ к базе данных пулом [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] серверов для удобства работы пользователя.  
+  Часто возникают ситуации, когда администратору баз данных (dba) служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо изменить режим чтения/записи в табличной или многомерной базе данных. Эти ситуации часто обусловлены производственной необходимостью, например общий доступ к базе данных пулом [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] серверов для удобства работы пользователя.  
   
  Существует много способов изменения режима работы базы данных. В этом документе описаны следующие распространенные сценарии:  
   
@@ -170,12 +170,12 @@ ms.locfileid: "48178204"
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Присоединение и отсоединение баз данных служб Analysis Services](attach-and-detach-analysis-services-databases.md)   
+ [Подключение и отключение баз данных служб Analysis Services](attach-and-detach-analysis-services-databases.md)   
  [Место хранения базы данных](database-storage-location.md)   
  [Режимы ReadWriteModes базы данных](database-readwritemodes.md)   
- [Элемент Attach](../xmla/xml-elements-commands/attach-element.md)   
- [Элемент detach](../xmla/xml-elements-commands/detach-element.md)   
- [Элемент ReadWriteMode](../xmla/xml-elements-properties/readwritemode-element.md)   
- [Элемент DbStorageLocation](../xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Элемент Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Элемент Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Элемент ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [Элемент DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

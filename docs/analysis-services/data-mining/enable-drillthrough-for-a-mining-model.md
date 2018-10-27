@@ -1,5 +1,5 @@
 ---
-title: Включить детализацию для модели интеллектуального анализа данных | Документы Microsoft
+title: Включение детализации для модели интеллектуального анализа данных | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a928e8d49c815ad087b5baf19f9f85c7888c75dd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0de38435c74f68e2558f0b6893324bc431dc32ed
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145399"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>включить детализацию для модели интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Если в модели интеллектуального анализа данных включена детализация, то при просмотре модели можно извлекать подробные сведения о вариантах, использованных при создании модели. Для просмотра этой информации необходимо иметь соответствующие разрешения. Структура к моменту просмотра должна быть уже обработана.  
   
- **Разрешения** . Чтобы пользователь мог детализировать данные модели или структуры, он должен быть членом роли, имеющей разрешения [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) в отношении такой модели или структуры интеллектуального анализа данных. Разрешения на детализацию устанавливаются отдельно для структуры и для модели.  
+ **Разрешения** . Чтобы пользователь мог детализировать данные модели или структуры, он должен быть членом роли, имеющей разрешения [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) в отношении такой модели или структуры интеллектуального анализа данных. Разрешения на детализацию устанавливаются отдельно для структуры и для модели.  
   
 -   Разрешения на детализацию модели позволяют проводить детализацию на основе модели даже при отсутствии разрешений на детализацию структуры.  
   
@@ -51,6 +52,6 @@ ms.lasthandoff: 05/10/2018
 4.  В меню **База данных** выберите **Обработать**.  
   
 ## <a name="see-also"></a>См. также  
- [Запросы детализации & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+ [Запросы детализации (интеллектуальный анализ данных)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

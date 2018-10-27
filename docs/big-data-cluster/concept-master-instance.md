@@ -1,18 +1,18 @@
 ---
 title: Что такое большие данные кластеров SQL Server главного экземпляра? | Документы Майкрософт
-description: ''
+description: В этой статье описывается основной экземпляр в кластере SQL Server 2019 больших данных.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3b17330f38d30400564171ba09328dc4f8c8be7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c58d925e9d52ee4496f8a324eab91bbfa7ccaad
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796894"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051066"
 ---
 # <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>Что такое большие данные SQL Server кластера главного экземпляра?
 
@@ -63,6 +63,6 @@ SQL Server 2019 упрощает для больших объемов данны
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о больших кластерах данных SQL Server, см. в разделе приведены общие:
+Дополнительные сведения о кластерах больших данных SQL Server, см. в разделе приведены общие:
 
-- [Что такое кластерами больших данных SQL Server 2019 г.](big-data-cluster-overview.md)
+- [Что такое кластеры SQL Server 2019 больших данных?](big-data-cluster-overview.md)

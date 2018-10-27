@@ -12,12 +12,12 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45a1af97868260d103890c13ce7c7446dd8f01d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098144"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146520"
 ---
 # <a name="csdlbi-concepts"></a>Основные понятия CSDLBI
   Язык определения концептуальной схемы с заметками бизнес-аналитики (CSDLBI) основан на среде Entity Data Framework, которая является абстракцией, представляющей данные способом, который позволяет программно оценивать, опрашивать или экспортировать разрозненные наборы данных. CSDLBI используется для представления моделей данных, созданных с помощью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], поскольку поддерживает широкий выбор отчетов, управляемых данными, и приложений.  
@@ -131,7 +131,7 @@ ms.locfileid: "48098144"
   
  **Размеры:** измерение в CSDLBI представляется как со столбцами и свойствами сущности (таблицы). Обратите внимание, что измерение, даже не входящее в перспективу, но включенное в модель, будет представлено в выходе языка CSDL, отмеченное как `Hidden`.  
   
- **Перспективы:** клиент может запрашивать язык CSDL для отдельных перспектив. Дополнительные сведения см. в разделе [строк DISCOVER_CSDL_METADATA](../schema-rowsets/xml/discover-csdl-metadata-rowset.md).  
+ **Перспективы:** клиент может запрашивать язык CSDL для отдельных перспектив. Дополнительные сведения см. в разделе [строк DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
  **Иерархии:** иерархии поддерживаются и представлены в CSDLBI как набор слоев.  
   
@@ -148,6 +148,6 @@ ms.locfileid: "48098144"
  **Ограничения:** безопасность ячеек не поддерживается.  
   
 ## <a name="see-also"></a>См. также  
- [Заметки языка CSDL для бизнес-аналитики &#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

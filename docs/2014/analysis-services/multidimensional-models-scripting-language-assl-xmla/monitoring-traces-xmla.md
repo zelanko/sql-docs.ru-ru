@@ -17,21 +17,21 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb8056842eb19bfa81cfdcf7494e058108f3e836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077884"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146469"
 ---
 # <a name="monitoring-traces-xmla"></a>Наблюдение за трассировками (XMLA)
-  Можно использовать [Subscribe](../xmla/xml-elements-commands/subscribe-element-xmla.md) в XML для аналитики (XMLA) для наблюдения за существующей трассировкой, определенной в экземпляре команда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Команда `Subscribe` возвращает результаты трассировки в виде набора строк.  
+  Можно использовать [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) в XML для аналитики (XMLA) для наблюдения за существующей трассировкой, определенной в экземпляре команда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Команда `Subscribe` возвращает результаты трассировки в виде набора строк.  
   
 ## <a name="specifying-a-trace"></a>Задание трассировки  
- [Объект](../xmla/xml-elements-properties/object-element-xmla.md) свойство `Subscribe` команды должен содержать ссылку объекта либо [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра или трассировку на [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра. Если свойство `Object` не задано или в свойстве `Object` не указан идентификатор трассировки, команда `Subscribe` отслеживает трассировку сеанса по умолчанию для явного сеанса, указанного в заголовке SOAP для данной команды.  
+ [Объект](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) свойство `Subscribe` команды должен содержать ссылку объекта либо [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра или трассировку на [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра. Если свойство `Object` не задано или в свойстве `Object` не указан идентификатор трассировки, команда `Subscribe` отслеживает трассировку сеанса по умолчанию для явного сеанса, указанного в заголовке SOAP для данной команды.  
   
 ## <a name="returning-results"></a>Возвращаемые результаты  
- Команда `Subscribe` возвращает набор строк, содержащий события трассировки, которые зафиксировала указанная трассировка. `Subscribe` Команда возвращает результаты трассировки, пока не будет отменена командой [отменить](../xmla/xml-elements-commands/cancel-element-xmla.md) команды.  
+ Команда `Subscribe` возвращает набор строк, содержащий события трассировки, которые зафиксировала указанная трассировка. `Subscribe` Команда возвращает результаты трассировки, пока не будет отменена командой [отменить](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) команды.  
   
  Набор строк содержит столбцы, перечисленные в следующей таблице.  
   

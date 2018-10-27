@@ -11,12 +11,12 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4176e9dc902ae4c83024ba5e659a2467585d71c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b586dae30582b5438d249ce719196b146721bc2
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115714"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099525"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Импорт HTML в отчет (построитель отчетов и службы SSRS)
   Текстовое поле можно использовать для вставки в отчет текста в формате HTML, выбранного из поля набора данных. Этот текст может исходить из любого простого или сложного выражения, обработка которого приводит к получению правильно отформатированного кода HTML. Отформатированный текст может быть подготовлен к просмотру в любом поддерживаемом формате вывода, включая PDF.  
@@ -61,7 +61,7 @@ ms.locfileid: "48115714"
   
     -   Относительные единицы длины CSS пропускаются и не поддерживаются. Неподдерживаемые единицы включают em, ex, px, %, rem.  
   
-     См. дополнительные сведения о [значениях и единицах CSS](http://msdn.microsoft.com/en-us/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
+     См. дополнительные сведения о [значениях и единицах CSS](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
   
 -   color  
   
@@ -78,6 +78,6 @@ ms.locfileid: "48115714"
 -   Применительно к атрибутам и стилям CSS, если свойство задано больше одного раза, применяется только последний экземпляр свойства. Например, если текстом является **\<p align="left" align="right">**, то текст выравнивается по правому краю.  
   
 ## <a name="see-also"></a>См. также  
- [Подготовка к просмотру в HTML &#40;построитель отчетов и службы SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
+ [Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

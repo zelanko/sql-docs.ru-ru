@@ -1,5 +1,5 @@
 ---
-title: Создание запроса содержимого модели интеллектуального анализа данных | Документы Microsoft
+title: Создание запроса содержимого модели интеллектуального анализа данных | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a0bc8d9a216f55f04cab4a4012945d2b11cf429
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 98fff978408aa53e030efeceb67af6cc0977597a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019971"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145079"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Создание запроса содержимого к модели интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "34019971"
   
      Шаблон **Запрос содержимого** откроется в соответствующем редакторе кода. На панели метаданных приводится список моделей, доступных в текущей базе данных. Чтобы изменить базу данных, выберите другую базу данных в списке **Доступные базы данных** .  
   
-5.  Введите имя модели интеллектуального анализа данных в строке, `FROM` [*\<модели интеллектуального анализа данных, имя, MyModel >*]`.CONTENT`. Если имя модели интеллектуального анализа данных содержит пробелы, его необходимо заключить в квадратные скобки.  
+5.  Введите имя модели интеллектуального анализа данных в строку, `FROM` [*\<модели интеллектуального анализа данных, имя, MyModel >*]`.CONTENT`. Если имя модели интеллектуального анализа данных содержит пробелы, его необходимо заключить в квадратные скобки.  
   
      Можно не вводить имя, а выбрать модель интеллектуального анализа данных в **обозревателе объектов** и перетащить его в шаблон.  
   
 6.  В строке `SELECT` *\<список выбора, список выражений, \* >*, введите имена столбцов в наборе строк схемы содержимого модели интеллектуального анализа данных.  
   
-     Чтобы просмотреть список столбцов, которые можно возвратить в запросах содержимого модели интеллектуального анализа данных, см. раздел [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+     Чтобы просмотреть список столбцов, которые можно возвратить в запросах содержимого модели интеллектуального анализа данных, см. раздел [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 7.  При желании можно ввести условие в предложении шаблона WHERE, чтобы ограничить число возвращаемых строк.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "34019971"
      На панели «Результат» отобразится содержимое модели.  
   
     > [!NOTE]  
-    >  Чтобы просмотреть список всех наборов строк схемы, которые можно запросить в текущем экземпляре, используется следующий запрос: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Список наборов строк схемы, относящихся к интеллектуальному анализу данных, см. в разделе [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
+    >  Чтобы просмотреть список всех наборов строк схемы, которые можно запросить в текущем экземпляре, используется следующий запрос: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Список наборов строк схемы, относящихся к интеллектуальному анализу данных, см. в разделе [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets).  
   
 ## <a name="see-also"></a>См. также  
- [Содержимое модели интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Наборы строк схемы интеллектуального анализа данных](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)  
   
   

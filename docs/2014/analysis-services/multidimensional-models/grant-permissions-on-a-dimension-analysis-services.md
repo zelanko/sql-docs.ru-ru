@@ -18,12 +18,12 @@ ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c230750377d2667d70d239a7a90a7a69d4ff209
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20893db4e26824b06a1e21e47f74147312a7257d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068334"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146329"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Предоставление разрешений измерению (службы Analysis Services
   Настройка безопасности измерения используется для установки разрешений на объект измерения, а не на его данные. Обычно, при предоставлении или ограничении доступа к операциям обработки является основной целью при установке разрешений на измерение.  
@@ -66,13 +66,13 @@ ms.locfileid: "48068334"
      По умолчанию разрешения наследуются от соответствующего измерения базы данных. Снимите флажок **Наследование** для изменения разрешений с **Чтение** на **Чтение/Запись**. Перед использованием разрешения **Чтение/Запись**убедитесь, что вы прочли примечание в предыдущем разделе.  
   
 > [!IMPORTANT]  
->  При выполнении настройки разрешений роли базы данных с помощью объектов AMO любая ссылка на измерение куба в атрибуте DimensionPermission куба отменяет наследование разрешений из атрибута DimensionPermission базы данных. Дополнительные сведения об AMO см. в разделе [Разработка объектов управления аналитикой (объекты AMO)](analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  При выполнении настройки разрешений роли базы данных с помощью объектов AMO любая ссылка на измерение куба в атрибуте DimensionPermission куба отменяет наследование разрешений из атрибута DimensionPermission базы данных. Дополнительные сведения об AMO см. в разделе [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="see-also"></a>См. также  
- [Роли и разрешения &#40;служб Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [Предоставление разрешений кубу или модели &#40;служб Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Предоставление разрешений на структур интеллектуального анализа данных и моделей &#40;служб Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Предоставление настраиваемого доступа к данным измерения &#40;служб Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Предоставление настраиваемого доступа к данным ячейки &#40;служб Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Роли и разрешения (службы Analysis Services)](roles-and-permissions-analysis-services.md)   
+ [Предоставление разрешений кубу или модели (службы Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)   
+ [Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Предоставление настраиваемого доступа к данным измерений (службы Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

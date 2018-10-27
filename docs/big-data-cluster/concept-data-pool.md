@@ -1,22 +1,22 @@
 ---
 title: Что такое пул данных кластеров SQL больших данных? | Документы Майкрософт
-description: ''
+description: В этой статье описывается пула данных в кластере SQL Server 2019 больших данных.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3a75f47148ff59d58d0d0d1397ba445b064c028f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf47aa1734e2b1a849fb8333da9c914ea4244f41
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796299"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050767"
 ---
 # <a name="what-is-a-sql-big-data-clusters-data-pool"></a>Что такое пул данных кластеров SQL больших данных?
 
-В этой статье описывается роль *пулы данных SQL Server* в SQL Server 2019 preview кластера больших данных. Архитектура и функциональные возможности пула данных SQL в следующих разделах.
+В этой статье описывается роль *пулы данных SQL Server* в кластере SQL Server 2019 предварительного просмотра больших данных. Архитектура и функциональные возможности пула данных SQL в следующих разделах.
 
 ## <a name="data-pool-architecture"></a>Архитектура пула данных
 

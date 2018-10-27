@@ -11,12 +11,12 @@ ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfbce4b8128d7278349539cedf73a87e498b1bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26a0aae710b18350c9ef62166e004f702eb88c7e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092836"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146559"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Создание прогнозов для модели кластеризации последовательностей (учебник по интеллектуальному анализу данных — средний уровень)
   После изучения модели кластеризации последовательностей лучше с ее просмотра в средстве просмотра, можно создать прогнозирующие запросы с помощью построителя прогнозирующих запросов на **модель интеллектуального анализа данных** вкладку в конструкторе интеллектуального анализа данных. Чтобы создать прогноз, сначала необходимо выбрать модель кластеризации последовательностей, а затем входные данные. Входные данные можно выбрать из внешнего источника данных или можно создать одноэлементный запрос и предоставить значения в диалоговом окне.  
@@ -198,10 +198,10 @@ NATURAL PREDICTION JOIN
 ## <a name="next-steps"></a>Следующие шаги  
  После завершения всех разделов в [данных учебник по интеллектуальному анализу &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), скорее всего, чтобы узнать, как с помощью инструкций расширений интеллектуального анализа данных (DMX) для построения моделей и Создание прогнозов. Дополнительные сведения см. в разделе [Создание и запрос данных модели интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: учебники &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
- Пользователи, которым знакомы основные понятия программирования, также могут использовать объекты AMO для работы с объектами интеллектуального анализа данных программным путем. Дополнительные сведения см. в разделе [Классы интеллектуального анализа данных объектов AMO](../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Пользователи, которым знакомы основные понятия программирования, также могут использовать объекты AMO для работы с объектами интеллектуального анализа данных программным путем. Дополнительные сведения см. в разделе [Классы интеллектуального анализа данных объектов AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
 ## <a name="see-also"></a>См. также  
- [Примеры запросов модели кластеризации последовательностей](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Модель интеллектуального анализа данных для моделей кластеризации последовательностей &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Примеры запросов к модели кластеризации последовательностей](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [Содержимое моделей интеллектуального анализа данных для моделей кластеризации последовательностей (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

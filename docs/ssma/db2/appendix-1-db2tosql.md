@@ -10,12 +10,12 @@ ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1eb4c99231fb8b0e6024743176f74f70754a7028
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8450ffcccf0daafbadd80e095873971a30c43029
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627652"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098796"
 ---
 # <a name="appendix---1-db2tosql"></a>Приложение 1 (DB2ToSQL)
 Краткий обзор команд консоли SSMA параметры командной строки:  
@@ -32,5 +32,5 @@ ms.locfileid: "47627652"
 |8|-?|Нет|Неприменимо|Неприменимо|  
   
 ## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[Выполнение команд консоли SSMA](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

@@ -1,5 +1,5 @@
 ---
-title: Шаг 4 создания данных компонентов с помощью T-SQL | Документы Microsoft
+title: Создание функций данных с помощью T-SQL | Документация Майкрософт
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a0f77a624a94ca78b92539d8f098506246ac45e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eb63a00a2141fcc41194c48e56b9440340ab763a
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202076"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806684"
 ---
-# <a name="step-4-create-data-features-using-t-sql"></a>Шаг 4. Создание характеристик данных с помощью T-SQL
+# <a name="create-data-features-using-t-sql"></a>Создание функций данных с помощью T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-После исследования данных вы собрали некоторые аналитические данные из данных и не переходить на *компонентов engineering*. Этот процесс создания признаков на основе необработанных данных может быть важным этапом в расширенных аналитических инструментов моделирования.
+После просмотра данных, вы собрали определенной объем аналитической из данных и готовы для перехода на *реконструирование*. Этот процесс создания характеристик из необработанных данных может быть важный этап расширенного аналитического моделирования.
 
-В этой статье является частью учебника [analytics Python в базе данных для разработчиков SQL](sqldev-in-database-python-for-sql-developers.md). 
+Эта статья входит учебник по, [Python в базе данных аналитики для разработчиков SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 На этом этапе вы научитесь создавать характеристики на основе необработанных данных с помощью функции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Затем вы вызовите эту функцию из хранимой процедуры, чтобы создать таблицу, содержащую значения характеристик.
 
@@ -29,9 +29,9 @@ ms.locfileid: "31202076"
 
 Вы используете пользовательскую функцию T-SQL _fnCalculateDistance_для вычисления расстояния по формуле гаверсинуса, а затем другую пользовательскую функцию T-SQL _fnEngineerFeatures_для создания таблицы, содержащей все характеристики.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Вычисление расстояния маршрута с помощью fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Вычисление расстояния поездки с помощью функции fnCalculateDistance
 
-1.  Функция _fnCalculateDistance_ должна была быть загружена и зарегистрирована в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в рамках подготовки к работе с этим пошаговым руководством. Внимательно просмотрите код.
+1.  Функция _fnCalculateDistance_ должна была быть загружена и зарегистрирована в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в рамках подготовки к работе с этим пошаговым руководством. Внимательно изучите код.
   
     В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]последовательно разверните узлы **Программируемость**, **Функции** и **Скалярные функции**.
     Щелкните правой кнопкой мыши функцию _fnCalculateDistance_, а затем выберите команду **Изменить** , чтобы открыть скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] в новом окне запроса.
@@ -106,16 +106,16 @@ ms.locfileid: "31202076"
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Как видите, расстояние по счетчику не всегда соответствует географическому расстоянию. Именно поэтому важно конструируются.
+    Как видите, расстояние по счетчику не всегда соответствует географическому расстоянию. Именно поэтому важно, проектирование признаков.
 
-На следующем шаге вы узнаете, как использовать функции этих данных для создания и обучения модели машинного обучения с помощью Python.
+На следующем шаге вы научитесь использовать характеристики данных для создания и обучения модели машинного обучения с помощью Python.
 
 ## <a name="next-step"></a>Следующий шаг
 
-[Шаг 5: Обучение и сохранить модель Python, с помощью T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Обучение и сохранение модели Python с помощью T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Предыдущий шаг
 
-[Шаг 3. Анализ и визуализация данных](sqldev-py3-explore-and-visualize-the-data.md)
+[Анализ и визуализация данных](sqldev-py3-explore-and-visualize-the-data.md)
 
 

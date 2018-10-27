@@ -1,5 +1,5 @@
 ---
-title: Отключение пользователей и сеансов на анализе сервера служб | Документы Microsoft
+title: Отключение пользователей и сеансов на анализе сервера служб | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 99072a36fe65679dbf81aa0ba3f4efdb3b487533
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e4868a7ff2e8b03835988cd4517909c722eaf4a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014351"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144779"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Отключение пользователей и сеансов на сервере служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,12 +65,12 @@ ms.locfileid: "34014351"
   
  В редких случаях [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не закроет сеанс, если не сможет отследить все сеансы и SPID, связанные с соединением (например, когда несколько сеансов открыто в сценарии HTTP).  
   
- Дополнительную информацию о XMLA, упомянутом в данном разделе, см. в разделах [Метод Execute (XMLA)](../../analysis-services/xmla/xml-elements-methods-execute.md) и [Элемент Cancel (XMLA)](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md).  
+ Дополнительную информацию о XMLA, упомянутом в данном разделе, см. в разделах [Метод Execute (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) и [Элемент Cancel (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla).  
   
-## <a name="see-also"></a>См. также:  
- [Управление & #40; соединений и сеансов XML для Аналитики & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [Элемент BeginSession & #40; XML для Аналитики & #41;](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)   
- [Элемент EndSession & #40; XML для Аналитики & #41;](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
- [Элемент Session & #40; XML для Аналитики & #41;](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)  
+## <a name="see-also"></a>См. также  
+ [Управление соединениями и сеансами (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [Элемент BeginSession (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/beginsession-element-xmla)   
+ [Элемент EndSession (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/endsession-element-xmla)   
+ [Элемент Session (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/session-element-xmla)  
   
   

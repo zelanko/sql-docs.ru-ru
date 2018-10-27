@@ -17,12 +17,12 @@ ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e81e0e7acf0d31be45f1d653ed2a6926f55b57fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7d83a8422bc8bfbe851a77d8dc42f83db159454
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113414"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146989"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>Введение в мониторинг служб Analysis Services при помощи приложения SQL Server Profiler
   Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] можно использовать для мониторинга событий, формируемых экземпляром служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. С помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]можно выполнять следующее:  
@@ -60,7 +60,7 @@ ms.locfileid: "48113414"
  Чтобы обеспечить оптимальную производительность, используйте приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для мониторинга только наиболее важных событий. Мониторинг слишком многих событий приводит к перегрузке и может привести к избыточному увеличению размера файла или таблицы трассировки, особенно при длительном мониторинге. Кроме того, для ограничения количества собираемых данных и предотвращения увеличения трассировок используйте фильтры.  
   
 ## <a name="see-also"></a>См. также  
- [События трассировки служб Analysis Services](../trace-events/analysis-services-trace-events.md)   
- [Создание трассировок Profiler для воспроизведения &#40;служб Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
+ [События трассировки служб Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)   
+ [Создание трассировки приложения Profiler для воспроизведения (службы Analysis Services)](create-profiler-traces-for-replay-analysis-services.md)  
   
   

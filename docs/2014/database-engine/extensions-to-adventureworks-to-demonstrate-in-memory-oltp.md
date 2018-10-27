@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120391"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100415"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Расширения AdventureWorks для демонстрации In-Memory OLTP
     
@@ -23,7 +23,7 @@ ms.locfileid: "49120391"
  В этом образце показана новая функция [!INCLUDE[hek_2](../includes/hek-2-md.md)], входящая в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Она показывает оптимизированные для памяти таблицы и скомпилированные в собственном коде хранимые процедуры, с ее помощью можно также продемонстрировать преимущества производительности [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
->  Этот раздел о SQL Server 2016 можно найти в статье [Расширения AdventureWorks для демонстрации In-Memory OLTP](https://msdn.microsoft.com/en-US/library/mt465764.aspx).  
+>  Этот раздел о SQL Server 2016 можно найти в статье [Расширения AdventureWorks для демонстрации In-Memory OLTP](https://msdn.microsoft.com/library/mt465764.aspx).  
   
  Пример выполняет преобразование 5 таблиц в базе данных AdventureWorks в оптимизированные для памяти таблицы. В нем также есть демонстрационная рабочая нагрузка в форме обработки заказа на продажу. С помощью этой демонстрационной рабочей нагрузки можно оценить выигрыш по производительности, который формируется при использовании [!INCLUDE[hek_2](../includes/hek-2-md.md)] на сервере.  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- Как видите, общий объем данных составляет примерно 6,5 ГБ. Обратите внимание, что размер индексов в таблицах SalesOrderHeader_inmem и SalesOrderDetail_inmem так же, как размер индексы до вставки заказов на продажу. Размер индексов не изменился, потому что в обеих таблицах используются индексы HASH, а они являются статическими.  
+ Как видите, общий объем данных составляет примерно 6,5 ГБ. Обратите внимание, что индексы в таблицах SalesOrderHeader_inmem и SalesOrderDetail_inmem имеют тот же размер, что и индексы до вставки заказов на продажу. Размер индексов не изменился, потому что в обеих таблицах используются индексы HASH, а они являются статическими.  
   
 #### <a name="after-demo-reset"></a>После сброса образца  
  Для сброса образца используется хранимая процедура Demo.usp_DemoReset. Она удаляет данные из таблиц SalesOrderHeader_inmem и SalesOrderDetail_inmem и вносит в них данные из исходных таблиц SalesOrderHeader и SalesOrderDetail.  

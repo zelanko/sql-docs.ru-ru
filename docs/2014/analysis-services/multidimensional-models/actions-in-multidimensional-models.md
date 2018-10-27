@@ -16,12 +16,12 @@ ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92291282cfe763c33b548d85e65912b9f3ab6bf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084684"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146429"
 ---
 # <a name="actions-in-multidimensional-models"></a>Действия в многомерных моделях
   Действие представляет собой инициированную пользователем операцию для выбранного куба или его части. Эта операция может запускать приложение, для которого в качестве параметра используется выбранный элемент, или получать сведения о выбранном элементе. Дополнительные сведения о действиях см. в разделе [Действия (службы Analysis Services — многомерные данные)](actions-analysis-services-multidimensional-data.md).  
@@ -77,10 +77,10 @@ ms.locfileid: "48084684"
 |**Приложение**|Описывает приложение действия.|  
 |**Описание**|Описывает действие.|  
 |**Заголовок**|Указывает заголовок, отображаемый для действия. Если заголовок является многомерным Выражением, укажите `True` для **заголовок является многомерным Выражением**.|  
-|**Caption is MDX**|Укажите `True` Если заголовок является многомерным Выражением или `False` Если это не так.|  
+|**Caption is MDX**|Укажите значение `True`, если заголовок является многомерным выражением, а в обратном случае — значение `False`.|  
   
 > [!NOTE]  
->  Определение действий типов «HTML» и «Командная строка» производится на языке сценариев служб анализа данных (ASSL) или с помощью объектов AMO. Дополнительные сведения см. в разделах [Элемент Action (ASSL)](../scripting/objects/action-element-assl.md), [Элемент Type (Action) (ASSL)](../scripting/properties/type-element-action-assl.md) и [Программирование расширенных объектов AMO OLAP](analysis-management-objects/programming-amo-olap-advanced-objects.md).  
+>  Определение действий типов «HTML» и «Командная строка» производится на языке сценариев служб анализа данных (ASSL) или с помощью объектов AMO. Дополнительные сведения см. в разделах [Элемент Action (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Элемент Type (Action) (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) и [Программирование расширенных объектов AMO OLAP](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects).  
   
 ## <a name="creating-a-reporting-action"></a>Создание действия «Построение отчета»  
  Сервер отчетов отвечает на запросы с URL-адресами для отчетов. Чтобы создать действие построения отчета, выберите в меню **Куб** пункт **Создать действие с отчетами**. Для действия отчета доступны следующие параметры.  

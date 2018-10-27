@@ -14,12 +14,12 @@ ms.assetid: 02d33fc9-f3f4-4b85-8b90-449b68625cf7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 119b06da83da044f2ab8663433f76312540c72a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5047647ef5f440987b4b20db99ad42dacf4fc4d0
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141754"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147929"
 ---
 # <a name="backup-options"></a>Параметры резервного копирования
   Существует несколько способов резервного копирования баз данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , и все они требуют прав администратора сервера и базы данных. Можно открыть диалоговое окно **Резервное копирование** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], установить нужную конфигурацию параметров, а затем запустить резервное копирование из самого окна. Кроме этого, можно создать скрипт, используя настройки, уже заданные в файле. Затем скрипт можно сохранить и запускать так часто, как требуется.  
@@ -31,9 +31,9 @@ ms.locfileid: "48141754"
 >  У учетной записи служб Analysis Services должны быть разрешения на запись в папку резервного копирования, заданную для каждого из файлов. Кроме того, пользователь должен быть членом одной из следующих ролей: роли администратора в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или роли базы данных с разрешениями «Полный доступ (Администратор)» в базе данных, для которой создается резервная копия.  
   
 ## <a name="see-also"></a>См. также  
- [Создать резервную копию базы данных-диалоговое окно &#40;службы Analysis Services — многомерные данные&#41;](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Диалоговое окно "Создание резервной копии базы данных" (службы Analysis Services — многомерные данные)](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Создание и восстановление резервных копий баз данных служб Analysis Services](backup-and-restore-of-analysis-services-databases.md)   
- [Резервное копирование элемента &#40;XML для Аналитики&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
- [Резервное копирование, восстановление и синхронизация баз данных &#40;XML для Аналитики&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Элемент Backup (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
+ [Резервное копирование, восстановление и синхронизация баз данных (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

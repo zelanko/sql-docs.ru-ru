@@ -16,12 +16,12 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: afa6c20ccf591b4cea6917cd11817cb24c786abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078064"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145099"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Диалоговое окно «Свойства сервера анализа данных» (службы Analysis Services)
   Используйте диалоговое окно **Свойства сервера анализа данных** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для задания общих свойств, языка или параметров сортировки и безопасности экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Чтобы открыть диалоговое окно **Свойства сервера анализа данных**, щелкните правой кнопкой мыши экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в **обозревателе объектов** и выберите в контекстном меню пункт **Свойства**. Диалоговое окно **Свойства сервера анализа данных** содержит следующие свойства.  
@@ -35,7 +35,7 @@ ms.locfileid: "48078064"
   
 -   **1103** — уровень совместимости сервера по умолчанию для режимов развертывания 1 и 2 для установок, которые поддерживают табличный режим или [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)].  
   
- Сервер возвращает это значение в том случае, когда клиент, поддерживающий пространство имен, запрашивает DISCOVER_XML_METADATA. Дополнительные сведения см. в разделе [Набор строк DISCOVER_XML_METADATA](schema-rowsets/xml/discover-xml-metadata-rowset.md).  
+ Сервер возвращает это значение в том случае, когда клиент, поддерживающий пространство имен, запрашивает DISCOVER_XML_METADATA. Дополнительные сведения см. в разделе [Набор строк DISCOVER_XML_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset).  
   
 ## <a name="general-properties"></a>Общие свойства  
  Эта страница служит для задания основных и дополнительных общих свойств, например расположения папок и сетевых установок для экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -99,7 +99,7 @@ ms.locfileid: "48078064"
  [Определение режима работы сервера экземпляра служб Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Настройка свойств сервера в службах Analysis Services](server-properties/server-properties-in-analysis-services.md)   
  [Методики проверки подлинности, поддерживаемые службами Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Роли и разрешения &#40;служб Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
- [Языки и параметры сортировки &#40;служб Analysis Services&#41;](languages-and-collations-analysis-services.md)  
+ [Роли и разрешения (службы Analysis Services)](multidimensional-models/roles-and-permissions-analysis-services.md)   
+ [Языки и параметры сортировки (службы Analysis Services)](languages-and-collations-analysis-services.md)  
   
   

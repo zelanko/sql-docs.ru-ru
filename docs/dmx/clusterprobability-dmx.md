@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d4d8ce16bb07af07bd2bfd651cf5fc1ae15b7e08
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b8412cf0465594c2546c18990be51510f8938c27
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38030280"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147969"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- Дополнительные сведения об использовании этого синтаксиса см. в разделе [SELECT FROM &#60;модели&#62;. СОДЕРЖИМОГО &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-content-dmx.md). Дополнительные сведения о наборе строк схемы содержимого модели интеллектуального анализа данных, см. в разделе [набор строк DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+ Дополнительные сведения об использовании этого синтаксиса см. в разделе [SELECT FROM &#60;модели&#62;. СОДЕРЖИМОГО &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-content-dmx.md). Дополнительные сведения о наборе строк схемы содержимого модели интеллектуального анализа данных, см. в разделе [набор строк DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  Если \<заголовок узла > не указан, функция возвращает вероятность, что входной вариант принадлежит к наиболее подходящему кластеру. Используйте **кластера** функция возвращает наиболее вероятного кластера.  
   

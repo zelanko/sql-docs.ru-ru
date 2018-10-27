@@ -15,12 +15,12 @@ ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 247be53e3811e721d05733320372caf7f1350032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71d89f9e8e80aa611d9c8077cf75f7f42af855da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225024"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148229"
 ---
 # <a name="adomdnet-server-functionality"></a>Функциональные возможности сервера ADOMD.NET
   Все серверные объекты ADOMD.NET предоставляют доступ только для чтения к данным и метаданным на сервере. Чтобы извлечь данные и метаданные, необходимо использовать модель серверных объектов ADOMD.NET, поскольку модель серверных объектов не поддерживает наборы строк схемы.  
@@ -63,6 +63,6 @@ CALL FinalSalesNumbers()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Программирование сервера ADOMD.NET](adomd-net-server-programming.md)  
+ [Программирование сервера ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: ca32e043a07ba15046637df8bc3c14a1d6a79968
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d3a51f05159967505c22854817b0331ff607d7e
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735602"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099523"
 ---
 # <a name="generating-reports-oracletosql"></a>Создание отчетов (OracleToSQL)
 В консоли SSMA на уровне дерева объектов создаются отчеты определенных действий, выполняемых с помощью команд.  
@@ -142,5 +142,5 @@ ms.locfileid: "47735602"
 -   Сбой скрипта  
   
 ## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA (Oracle)](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Выполнение команд консоли SSMA (Oracle)](http://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

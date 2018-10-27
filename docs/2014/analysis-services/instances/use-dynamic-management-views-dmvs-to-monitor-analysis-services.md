@@ -11,17 +11,17 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3cbb873693a80b284e263594bfbcd4cb2046b216
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56e2626f2d8e452c34f57ad883720eb96d140b27
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079804"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148128"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Использование динамических административных представлений для мониторинга служб Analysis Services
   Динамические административные представления служб Analysis Services — это структуры запросов, которые предоставляют сведения о локальных операциях сервера и его состоянии. Структура запроса — это интерфейс для наборов строк схемы, которые возвращают метаданные и сведения об экземпляре служб Analysis Services.  
   
- Для большинства запросов к динамическим административным Представлениям используется `SELECT` инструкции и `$System` схемы с набором строк схемы XML/A.  
+ В большинстве запросов к динамическим административным представлениям используется инструкция `SELECT` и схема `$System` с набором строк схемы XML/A.  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
@@ -103,65 +103,65 @@ ORDER BY TABLE_NAME ASC
   
 |Набор строк|Описание|  
 |------------|-----------------|  
-|[Набор строк DBSCHEMA_CATALOGS](../schema-rowsets/ole-db/dbschema-catalogs-rowset.md)|Возвращает список баз данных служб Analysis Services для текущего соединения.|  
-|[Набор строк DBSCHEMA_COLUMNS](../schema-rowsets/ole-db/dbschema-columns-rowset.md)|Возвращает список всех столбцов в текущей базе данных. Этот список можно использовать для построения запроса к динамическому административному представлению.|  
-|[Набор строк DBSCHEMA_PROVIDER_TYPES](../schema-rowsets/ole-db/dbschema-provider-types-rowset.md)|Возвращает сведения о базовых типах данных, поддерживаемых поставщиком данных OLE DB.|  
-|[Набор строк DBSCHEMA_TABLES](../schema-rowsets/ole-db/dbschema-tables-rowset.md)|Возвращает список всех таблиц в текущей базе данных. Этот список можно использовать для построения запроса к динамическому административному представлению.|  
-|[Набор строк DISCOVER_CALC_DEPENDENCY](../schema-rowsets/xml/discover-calc-dependency-rowset.md)|Возвращает список столбцов и таблиц, используемых в модели, имеющей зависимости с другими столбцами и таблицами.|  
-|[Набор строк DISCOVER_COMMAND_OBJECTS](../schema-rowsets/xml/discover-command-objects-rowset.md)|Предоставляет сведения по использованию ресурсов и активности для объектов, которые используются указанной командой.|  
-|[Набор строк DISCOVER_COMMANDS](../schema-rowsets/xml/discover-commands-rowset.md)|Предоставляет сведения по использованию ресурсов и активности для текущей исполняемой команды.|  
-|[Набор строк DISCOVER_CONNECTIONS](../schema-rowsets/xml/discover-connections-rowset.md)|Предоставляет сведения об использовании ресурсов и активности для открытых соединений со службами Analysis Services.|  
-|[Набор строк DISCOVER_CSDL_METADATA](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)|Возвращает сведения о табличной модели.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
-|[Набор строк DISCOVER_DB_CONNECTIONS](../schema-rowsets/xml/discover-db-connections-rowset.md)|Предоставляет сведения об использовании ресурсов и активности для открытых соединений со службами Analysis Services к внешним источникам данных, например, во время обработки или импорта.|  
-|[Набор строк DISCOVER_DIMENSION_STAT](../schema-rowsets/xml/discover-dimension-stat-rowset.md)|Возвращает атрибуты в измерении или столбцы в таблице, в зависимости от типа модели.|  
-|[Набор строк DISCOVER_ENUMERATORS](../schema-rowsets/xml/discover-enumerators-rowset.md)|Возвращает метаданные о перечислителях, поддерживаемых для конкретных источников данных.|  
-|[Набор строк DISCOVER_INSTANCES](../schema-rowsets/ole-db-olap/discover-instances-rowset.md)|Возвращает сведения об указанном экземпляре.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
-|[Набор строк DISCOVER_JOBS](../schema-rowsets/xml/discover-jobs-rowset.md)|Возвращает сведения о текущих заданиях.|  
-|[Набор строк DISCOVER_KEYWORDS &#40;XML для Аналитики&#41;](../schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Возвращает список зарезервированных ключевых слов.|  
-|[Набор строк DISCOVER_LITERALS](../schema-rowsets/xml/discover-literals-rowset.md)|Возвращает список литералов, включая типы данных и значения, поддерживаемые XML для аналитики.|  
-|[Набор строк DISCOVER_LOCKS](../schema-rowsets/xml/discover-locks-rowset.md)|Возвращает моментальный снимок блокировок, используемых в указанное время.|  
-|[Набор строк DISCOVER_MEMORYGRANT](../schema-rowsets/xml/discover-memorygrant-rowset.md)|Возвращает сведения о памяти, выделенной службами Analysis Services при запуске.|  
-|[Набор строк DISCOVER_MEMORYUSAGE](../schema-rowsets/xml/discover-memoryusage-rowset.md)|Показывает использование памяти определенными объектами.|  
-|[Набор строк DISCOVER_OBJECT_ACTIVITY](../schema-rowsets/xml/discover-object-activity-rowset.md)|Сообщает об активности объекта с момента последнего запуска службы.|  
-|[Набор строк DISCOVER_OBJECT_MEMORY_USAGE](../schema-rowsets/xml/discover-object-memory-usage-rowset.md)|Сообщает об использовании памяти объектом.|  
-|[Набор строк DISCOVER_PARTITION_DIMENSION_STAT](../schema-rowsets/xml/discover-partition-dimension-stat-rowset.md)|Предоставляет сведения об атрибутах в измерении.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
-|[Набор строк DISCOVER_PARTITION_STAT](../schema-rowsets/xml/discover-partition-stat-rowset.md)|Предоставляет сведения о секциях в измерении, таблице или группе мер.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
-|[Набор строк DISCOVER_PERFORMANCE_COUNTERS](../schema-rowsets/xml/discover-performance-counters-rowset.md)|Список столбцов, используемых счетчиком производительности.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
-|[Набор строк DISCOVER_PROPERTIES](../schema-rowsets/xml/discover-properties-rowset.md)|Возвращает сведения о свойствах, поддерживаемых XML для аналитики для указанного источника данных.|  
-|[Набор строк DISCOVER_SCHEMA_ROWSETS](../schema-rowsets/xml/discover-schema-rowsets-rowset.md)|Возвращает имена, ограничения, описание и другие сведения для всех значений перечисления, поддерживаемых XML для аналитики.|  
-|[Набор строк DISCOVER_SESSIONS](../schema-rowsets/xml/discover-sessions-rowset.md)|Сообщает об активных сеансах, включая сеанс пользователя и его длительность.|  
-|[Набор строк DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](../schema-rowsets/xml/discover-storage-table-column-segments-rowset.md)|Содержит сведения на уровне столбцов и сегментов о таблицах хранилища, используемых в базе данных служб Analysis Services в табличном режиме или режиме SharePoint.|  
-|[Набор строк DISCOVER_STORAGE_TABLE_COLUMNS](../schema-rowsets/xml/discover-storage-table-columns-rowset.md)|Позволяет клиенту определить назначение столбцов таблиц хранилища, используемых базой данных служб Analysis Services, работающей в табличном режиме или режиме SharePoint.|  
-|[Набор строк DISCOVER_STORAGE_TABLES](../schema-rowsets/xml/discover-storage-tables-rowset.md)|Возвращает сведения о таблицах, используемых для хранения моделей в базе данных табличной модели.|  
-|[Набор строк DISCOVER_TRACE_COLUMNS](../schema-rowsets/xml/discover-trace-columns-rowset.md)|Возвращает XML-описание столбцов, доступных в трассировке.|  
-|[Набор строк DISCOVER_TRACE_DEFINITION_PROVIDERINFO](../schema-rowsets/xml/discover-trace-definition-providerinfo-rowset.md)|Возвращает сведения об имени и версии поставщика.|  
-|[Набор строк DISCOVER_TRACE_EVENT_CATEGORIES](../schema-rowsets/xml/discover-trace-event-categories-rowset.md)|Возвращает список доступных категорий.|  
-|[Набор строк DISCOVER_TRACES](../schema-rowsets/xml/discover-traces-rowset.md)|Возвращает список трассировок, работающих в данном соединении.|  
-|[Набор строк DISCOVER_TRANSACTIONS](../schema-rowsets/xml/discover-transactions-rowset.md)|Возвращает список транзакций, работающих в данном соединении.|  
+|[Набор строк DBSCHEMA_CATALOGS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|Возвращает список баз данных служб Analysis Services для текущего соединения.|  
+|[Набор строк DBSCHEMA_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|Возвращает список всех столбцов в текущей базе данных. Этот список можно использовать для построения запроса к динамическому административному представлению.|  
+|[Набор строк DBSCHEMA_PROVIDER_TYPES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-provider-types-rowset)|Возвращает сведения о базовых типах данных, поддерживаемых поставщиком данных OLE DB.|  
+|[Набор строк DBSCHEMA_TABLES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|Возвращает список всех таблиц в текущей базе данных. Этот список можно использовать для построения запроса к динамическому административному представлению.|  
+|[Набор строк DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|Возвращает список столбцов и таблиц, используемых в модели, имеющей зависимости с другими столбцами и таблицами.|  
+|[Набор строк DISCOVER_COMMAND_OBJECTS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|Предоставляет сведения по использованию ресурсов и активности для объектов, которые используются указанной командой.|  
+|[Набор строк DISCOVER_COMMANDS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|Предоставляет сведения по использованию ресурсов и активности для текущей исполняемой команды.|  
+|[Набор строк DISCOVER_CONNECTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Предоставляет сведения об использовании ресурсов и активности для открытых соединений со службами Analysis Services.|  
+|[Набор строк DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|Возвращает сведения о табличной модели.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
+|[Набор строк DISCOVER_DB_CONNECTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|Предоставляет сведения об использовании ресурсов и активности для открытых соединений со службами Analysis Services к внешним источникам данных, например, во время обработки или импорта.|  
+|[Набор строк DISCOVER_DIMENSION_STAT](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-dimension-stat-rowset)|Возвращает атрибуты в измерении или столбцы в таблице, в зависимости от типа модели.|  
+|[Набор строк DISCOVER_ENUMERATORS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-enumerators-rowset)|Возвращает метаданные о перечислителях, поддерживаемых для конкретных источников данных.|  
+|[Набор строк DISCOVER_INSTANCES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/discover-instances-rowset)|Возвращает сведения об указанном экземпляре.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
+|[Набор строк DISCOVER_JOBS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-jobs-rowset)|Возвращает сведения о текущих заданиях.|  
+|[Набор строк DISCOVER_KEYWORDS (XMLA)](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|Возвращает список зарезервированных ключевых слов.|  
+|[Набор строк DISCOVER_LITERALS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-literals-rowset)|Возвращает список литералов, включая типы данных и значения, поддерживаемые XML для аналитики.|  
+|[Набор строк DISCOVER_LOCKS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-locks-rowset)|Возвращает моментальный снимок блокировок, используемых в указанное время.|  
+|[Набор строк DISCOVER_MEMORYGRANT](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memorygrant-rowset)|Возвращает сведения о памяти, выделенной службами Analysis Services при запуске.|  
+|[Набор строк DISCOVER_MEMORYUSAGE](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memoryusage-rowset)|Показывает использование памяти определенными объектами.|  
+|[Набор строк DISCOVER_OBJECT_ACTIVITY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-object-activity-rowset)|Сообщает об активности объекта с момента последнего запуска службы.|  
+|[Набор строк DISCOVER_OBJECT_MEMORY_USAGE](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-object-memory-usage-rowset)|Сообщает об использовании памяти объектом.|  
+|[Набор рядов DISCOVER_PARTITION_DIMENSION_STAT](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-partition-dimension-stat-rowset)|Предоставляет сведения об атрибутах в измерении.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
+|[Набор строк DISCOVER_PARTITION_STAT](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-partition-stat-rowset)|Предоставляет сведения о секциях в измерении, таблице или группе мер.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
+|[Набор строк DISCOVER_PERFORMANCE_COUNTERS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-performance-counters-rowset)|Список столбцов, используемых счетчиком производительности.<br /><br /> Необходимо добавить функцию SYSTEMRESTRICTSCHEMA и дополнительные параметры.|  
+|[Набор строк DISCOVER_PROPERTIES](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-properties-rowset)|Возвращает сведения о свойствах, поддерживаемых XML для аналитики для указанного источника данных.|  
+|[Набор строк DISCOVER_SCHEMA_ROWSETS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-schema-rowsets-rowset)|Возвращает имена, ограничения, описание и другие сведения для всех значений перечисления, поддерживаемых XML для аналитики.|  
+|[Набор строк DISCOVER_SESSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-sessions-rowset)|Сообщает об активных сеансах, включая сеанс пользователя и его длительность.|  
+|[Набор строк DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-column-segments-rowset)|Содержит сведения на уровне столбцов и сегментов о таблицах хранилища, используемых в базе данных служб Analysis Services в табличном режиме или режиме SharePoint.|  
+|[Набор строк DISCOVER_STORAGE_TABLE_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-columns-rowset)|Позволяет клиенту определить назначение столбцов таблиц хранилища, используемых базой данных служб Analysis Services, работающей в табличном режиме или режиме SharePoint.|  
+|[Набор строк DISCOVER_STORAGE_TABLES](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-tables-rowset)|Возвращает сведения о таблицах, используемых для хранения моделей в базе данных табличной модели.|  
+|[Набор строк DISCOVER_TRACE_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-columns-rowset)|Возвращает XML-описание столбцов, доступных в трассировке.|  
+|[Набор строк DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-definition-providerinfo-rowset)|Возвращает сведения об имени и версии поставщика.|  
+|[Набор строк DISCOVER_TRACE_EVENT_CATEGORIES](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-event-categories-rowset)|Возвращает список доступных категорий.|  
+|[Набор строк DISCOVER_TRACES](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)|Возвращает список трассировок, работающих в данном соединении.|  
+|[Набор строк DISCOVER_TRANSACTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-transactions-rowset)|Возвращает список транзакций, работающих в данном соединении.|  
 |[Набор строк DISCOVER_XEVENT_TRACE_DEFINITION](../dev-guide/discover-xevent-trace-definition-rowset.md)|Возвращает список трассировок xevent, работающих в данном соединении.|  
-|[Набор строк DMSCHEMA_MINING_COLUMNS](../schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Список отдельных столбцов всех моделей интеллектуального анализа данных, доступных в текущем соединении.|  
-|[Набор строк DMSCHEMA_MINING_FUNCTIONS](../schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Возвращает список функций, поддерживаемых алгоритмами интеллектуального анализа данных на сервере.|  
-|[Набор строк DMSCHEMA_MINING_MODEL_CONTENT](../schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|Возвращает набор строк, состоящий из столбцов, описывающий текущую модель.|  
-|[Набор строк DMSCHEMA_MINING_MODEL_CONTENT_PMML](../schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|Возвращает набор строк, состоящий из столбцов, описывающий текущую модель в формате PMML.|  
-|[Набор строк DMSCHEMA_MINING_MODEL_XML](../schema-rowsets/data-mining/dmschema-mining-model-xml-rowset.md)|Возвращает набор строк, состоящий из столбцов, описывающий текущую модель в формате PMML.|  
-|[Набор строк DMSCHEMA_MINING_MODELS](../schema-rowsets/data-mining/dmschema-mining-models-rowset.md)|Возвращает список моделей интеллектуального анализа данных в текущей базе данных.|  
-|[Набор строк DMSCHEMA_MINING_SERVICE_PARAMETERS](../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md)|Возвращает список параметров для алгоритмов на сервере.|  
-|[Набор строк DMSCHEMA_MINING_SERVICES](../schema-rowsets/data-mining/dmschema-mining-services-rowset.md)|Предоставляет список алгоритмов интеллектуального анализа данных, доступных на сервере.|  
-|[Набор строк DMSCHEMA_MINING_STRUCTURE_COLUMNS](../schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset.md)|Возвращает список всех столбцов всех моделей интеллектуального анализа данных, доступных в текущем соединении.|  
-|[Набор строк DMSCHEMA_MINING_STRUCTURES](../schema-rowsets/data-mining/dmschema-mining-structures-rowset.md)|Список структур интеллектуального анализа данных, доступных в текущем соединении.|  
-|[Набор строк MDSCHEMA_CUBES](../schema-rowsets/ole-db-olap/mdschema-cubes-rowset.md)|Возвращает сведения о кубах, определенных в текущей базе данных.|  
-|[Набор строк MDSCHEMA_DIMENSIONS](../schema-rowsets/ole-db-olap/mdschema-dimensions-rowset.md)|Возвращает сведения об измерениях, определенных в текущей базе данных.|  
-|[Набор строк MDSCHEMA_FUNCTIONS](../schema-rowsets/ole-db-olap/mdschema-functions-rowset.md)|Возвращает список функций, доступных клиентским приложениям, подключенным к базе данных.|  
-|[Набор строк MDSCHEMA_HIERARCHIES](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)|Возвращает сведения об иерархиях, определенных в текущей базе данных.|  
-|[Набор строк MDSCHEMA_INPUT_DATASOURCES](../schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md)|Возвращает сведения об исходных объектах данных, определенных в текущей базе данных.|  
-|[Набор строк MDSCHEMA_KPIS](../schema-rowsets/ole-db-olap/mdschema-kpis-rowset.md)|Возвращает сведения о ключевых показателях эффективности, определенных в текущей базе данных.|  
-|[Набор строк MDSCHEMA_LEVELS](../schema-rowsets/ole-db-olap/mdschema-levels-rowset.md)|Возвращает сведения об уровнях в иерархиях, определенных в текущей базе данных.|  
-|[Набор строк MDSCHEMA_MEASUREGROUP_DIMENSIONS](../schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)|Список измерений групп мер.|  
-|[Набор строк MDSCHEMA_MEASUREGROUPS](../schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset.md)|Возвращает список групп мер в текущем соединении.|  
-|[Набор строк MDSCHEMA_MEASURES](../schema-rowsets/ole-db-olap/mdschema-measures-rowset.md)|Возвращает список мер в текущем соединении.|  
-|[Набор строк MDSCHEMA_MEMBERS](../schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|Возвращает список всех элементов в текущем соединении по базе данных, кубу и измерению.|  
-|[Набор строк MDSCHEMA_PROPERTIES](../schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Возвращает полное имя каждого свойства, включая тип свойства, тип данных и другие метаданные.|  
-|[Набор строк MDSCHEMA_SETS](../schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Возвращает список наборов, определенных в текущем соединении.|  
+|[Набор строк DMSCHEMA_MINING_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-columns-rowset)|Список отдельных столбцов всех моделей интеллектуального анализа данных, доступных в текущем соединении.|  
+|[Набор строк DMSCHEMA_MINING_FUNCTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-functions-rowset)|Возвращает список функций, поддерживаемых алгоритмами интеллектуального анализа данных на сервере.|  
+|[Набор строк DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)|Возвращает набор строк, состоящий из столбцов, описывающий текущую модель.|  
+|[Набор строк DMSCHEMA_MINING_MODEL_CONTENT_PMML](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|Возвращает набор строк, состоящий из столбцов, описывающий текущую модель в формате PMML.|  
+|[Набор строк DMSCHEMA_MINING_MODEL_XML](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-xml-rowset)|Возвращает набор строк, состоящий из столбцов, описывающий текущую модель в формате PMML.|  
+|[Набор строк DMSCHEMA_MINING_MODELS](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-models-rowset)|Возвращает список моделей интеллектуального анализа данных в текущей базе данных.|  
+|[Набор строк DMSCHEMA_MINING_SERVICE_PARAMETERS](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset)|Возвращает список параметров для алгоритмов на сервере.|  
+|[Набор строк DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)|Предоставляет список алгоритмов интеллектуального анализа данных, доступных на сервере.|  
+|[Набор строк DMSCHEMA_MINING_STRUCTURE_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset)|Возвращает список всех столбцов всех моделей интеллектуального анализа данных, доступных в текущем соединении.|  
+|[Набор строк DMSCHEMA_MINING_STRUCTURES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-structures-rowset)|Список структур интеллектуального анализа данных, доступных в текущем соединении.|  
+|[Набор строк MDSCHEMA_CUBES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-cubes-rowset)|Возвращает сведения о кубах, определенных в текущей базе данных.|  
+|[Набор строк MDSCHEMA_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-dimensions-rowset)|Возвращает сведения об измерениях, определенных в текущей базе данных.|  
+|[Набор строк MDSCHEMA_FUNCTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-functions-rowset)|Возвращает список функций, доступных клиентским приложениям, подключенным к базе данных.|  
+|[Набор строк MDSCHEMA_HIERARCHIES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)|Возвращает сведения об иерархиях, определенных в текущей базе данных.|  
+|[Набор строк MDSCHEMA_INPUT_DATASOURCES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|Возвращает сведения об исходных объектах данных, определенных в текущей базе данных.|  
+|[Набор строк MDSCHEMA_KPIS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|Возвращает сведения о ключевых показателях эффективности, определенных в текущей базе данных.|  
+|[Набор строк MDSCHEMA_LEVELS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|Возвращает сведения об уровнях в иерархиях, определенных в текущей базе данных.|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS, набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|Список измерений групп мер.|  
+|[Набор строк MDSCHEMA_MEASUREGROUPS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|Возвращает список групп мер в текущем соединении.|  
+|[Набор строк MDSCHEMA_MEASURES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|Возвращает список мер в текущем соединении.|  
+|[Набор строк MDSCHEMA_MEMBERS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|Возвращает список всех элементов в текущем соединении по базе данных, кубу и измерению.|  
+|[Набор строк MDSCHEMA_PROPERTIES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|Возвращает полное имя каждого свойства, включая тип свойства, тип данных и другие метаданные.|  
+|[MDSCHEMA_SETS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Возвращает список наборов, определенных в текущем соединении.|  
   
 ## <a name="see-also"></a>См. также  
  [Руководстве по использованию служб Analysis Services SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   

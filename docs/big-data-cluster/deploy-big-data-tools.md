@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 971fc2f8e8a77b00f3d2c5cd6390fec351ffc0f3
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 18df937cfed15d7302a58267eb392a1933d73052
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827305"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643792"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio
 
@@ -32,22 +32,31 @@ ms.locfileid: "48827305"
 
 При подключении к кластеру больших данных, у вас есть возможность подключения к SQL Server [главного экземпляра](concept-master-instance.md) или к шлюзу HDFS или Spark. Ниже показано, как подключиться к каждому.
 
-## <a name="master-instance"></a>Основной экземпляр
+## <a id="master"></a> Основной экземпляр
 
 1. В Azure данных Studio нажмите клавишу **F1** > **новое подключение**.
+
 1. В **тип подключения**выберите **Microsoft SQL Server**.
+
 1. Введите IP-адрес главного экземпляра SQL Server в **имя_сервера** (например:  **\<IP-адрес\>, 31433**).
+
+1. Введите имя входа SQL **имя пользователя** и **пароль**.
+
 1. Изменение **имя базы данных** для **high_value_data** базы данных.
 
    ![Подключиться к основной экземпляр](./media/deploy-big-data-tools/connect-to-cluster.png)
 
 1. Нажмите клавишу **Connect**и **панель мониторинга сервера** должен отображаться.
 
-## <a name="hdfsspark-gateway"></a>Шлюз HDFS и Spark
+## <a id="hdfs"></a> Шлюз HDFS и Spark
 
 1. В Azure данных Studio нажмите клавишу **F1** > **новое подключение**.
+
 1. В **тип подключения**выберите **кластера больших данных в SQL Server**.
+
 1. Введите IP-адрес кластера больших данных в **имя сервера**.
+
+1. Введите `root` для **пользователя** и укажите **пароль** к кластеру больших данных.
 
    ![Подключение к шлюзу HDFS и Spark](./media/deploy-big-data-tools/connect-to-cluster-hdfs-spark.png)
 

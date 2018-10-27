@@ -14,12 +14,12 @@ ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad59ce6f605c913e621d4d377ec3d48e8cbf2b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164294"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147579"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Управление решениями и объектами интеллектуального анализа данных
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержит клиентские средства, предназначенные для управления структурами и моделями интеллектуального анализа данных. В этом разделе описаны операции управления, которые могут выполняться с помощью каждой из сред.  
@@ -29,9 +29,9 @@ ms.locfileid: "48164294"
 ## <a name="in-this-section"></a>В этом разделе  
  [Перемещение объектов интеллектуального анализа данных](moving-data-mining-objects.md)  
   
- [Требования к обработке и рекомендации по &#40;интеллектуального анализа данных&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](processing-requirements-and-considerations-data-mining.md)  
   
- [С помощью SQL Server Profiler, наблюдение за интеллектуальным &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [Наблюдение за интеллектуальным анализом данных с помощью приложения SQL Server Profiler (службы Analysis Services — интеллектуальный анализ данных)](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>Обнаружение объектов интеллектуального анализа данных  
  Обработанные структуры и модели интеллектуального анализа данных хранятся в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -52,7 +52,7 @@ ms.locfileid: "48164294"
   
 -   [Изменение свойств модели интеллектуального анализа данных](change-the-properties-of-a-mining-model.md)  
   
--   [Просмотр или изменение флагов модели &#40;интеллектуального анализа данных&#41;](modeling-flags-data-mining.md)  
+-   [Просмотр или изменение флагов моделирования (интеллектуальный анализ данных)](modeling-flags-data-mining.md)  
   
 -   [Просмотр или изменение параметров алгоритма](view-or-change-algorithm-parameters.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48164294"
 > [!WARNING]  
 >  Все изменения структуры или модели интеллектуального анализа данных, включая изменения таких метаданных, как имена или описания, требуют повторной обработки соответствующей модели или структуры.  
   
- Если у вас файл решения, который использовался для создания проекта интеллектуального анализа данных или объектов, можно импортировать существующий проект на сервере, с помощью мастера импорта служб Analysis Services, внести необходимые изменения в объекты и затем выполнить повторное развертывание с `Incremental` параметр. Дополнительные сведения см. в разделе [Импорт проекта интеллектуального анализа данных с помощью мастера импорта служб Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
+ Если нет возможности использовать файл решения, который использовался для создания проекта или объектов интеллектуального анализа данных, то можно импортировать существующий проект с сервера с помощью мастера импорта служб Analysis Services, внести необходимые изменения в объекты, а затем выполнить повторное развертывание с параметром `Incremental`. Дополнительные сведения см. в разделе [Импорт проекта интеллектуального анализа данных с помощью мастера импорта служб Analysis Services](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>Управление объектами интеллектуального анализа данных в среде SQL Server Management Studio  
  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]позволяет создавать скрипты со структурами и моделями интеллектуального анализа данных, обрабатывать эти структуры и модели и удалять их. В обозревателе объектов можно просмотреть лишь ограниченный набор свойств, однако дополнительные метаданные о моделях интеллектуального анализа данных доступны в окне редактора **DMX-запрос** , где нужно выбрать соответствующую структуру интеллектуального анализа данных.  
@@ -76,7 +76,7 @@ ms.locfileid: "48164294"
 ### <a name="analysis-management-objects-amo"></a>Объекты AMO  
  Объекты AMO — это объектная модель, построенная на основе XMLA, которая обеспечивает полный доступ к объектам интеллектуального анализа данных. Объекты AMO позволяют создавать, развертывать и отслеживать структуры и модели интеллектуального анализа данных.  
   
--   [Основные понятия и объектная модель AMO](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [Основные понятия и объектная модель AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164294"
 ### <a name="data-mining-extensions-dmx"></a>Расширения интеллектуального анализа данных  
  Расширения интеллектуального анализа данных могут быть использованы вместе с другими интерфейсами команд, например с [!INCLUDE[vstecado](../../includes/vstecado-md.md)] или ADOMD.Net, для создания и удаления структур и моделей интеллектуального анализа данных, а также создания запросов к ним.  
   
--   [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции определения данных](/sql/dmx/dmx-statements-data-definition)  
+-   [Инструкции определения расширений интеллектуального анализа данных](/sql/dmx/dmx-statements-data-definition)  
   
  **Ограничения.** Некоторые свойства нельзя изменять с помощью расширения интеллектуального анализа данных.  
   

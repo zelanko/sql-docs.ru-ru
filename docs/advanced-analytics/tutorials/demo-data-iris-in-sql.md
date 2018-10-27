@@ -1,6 +1,6 @@
 ---
-title: Набор данных IRIS демонстрации для SQL Server | Документация Майкрософт
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap Python code in a SQL Server stored procedure.
+title: Набор данных IRIS Демонстрация учебники по SQL Server Python и R | Документация Майкрософт
+Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 48cc9f5424cb196e37dc3f263d6b55c8666f0292
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 74e4cbe97d64f922de2cdfe1f67eae5d3a3e24bd
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463052"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806674"
 ---
-#  <a name="iris-demo-data-for-sql-server"></a>IRIS демонстрационных данных для SQL Server
+#  <a name="iris-demo-data-for-sql-server-python-and-r-tutorials"></a>IRIS демонстрационных данных для SQL Server Python и R руководств
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этом упражнении Подготовка базы данных SQL Server, содержащей таблицы для [набора данных Iris цветок](https://en.wikipedia.org/wiki/Iris_flower_data_set) и модели хранения. IRIS данные включаются в дистрибутивах R и Python, устанавливаемые с SQL Server. Он используется в учебники по машинному обучению для SQL Server. 
+В этом упражнении, создание базы данных SQL Server для хранения данных из [набора данных Iris цветок](https://en.wikipedia.org/wiki/Iris_flower_data_set) и моделей, основанных на тех же данных. Данных IRIS включается в дистрибутивах R и Python, устанавливаемые с SQL Server и используется в учебники по машинному обучению для SQL Server. 
 
 Для этого упражнения вам понадобится [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) или другого средства, которые могут выполнять запросы T-SQL.
 
@@ -26,7 +26,7 @@ ms.locfileid: "49463052"
 
 +  [Использовать модели Python в SQL Server для обучения и оценки](train-score-using-python-in-tsql.md)
 
-## <a name="prepare-the-database-and-tables"></a>Подготовка базы данных и таблиц
+## <a name="create-the-database"></a>Создайте базу данных
 
 1. Запустите SQL Server Management Studio, а затем открыть новое **запроса** окна.  
 
@@ -139,7 +139,7 @@ ms.locfileid: "49463052"
     > Изменение хранимой процедуры позже, не нужно удалить и создать его повторно. Используйте [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql) инструкции. 
 
 
-## <a name="query-data-for-verification"></a>Запрос данных для проверки подлинности
+## <a name="query-the-data"></a>Запрос данных
 
 В качестве шага проверки выполните запрос, чтобы убедиться, что данные были отправлены.
 

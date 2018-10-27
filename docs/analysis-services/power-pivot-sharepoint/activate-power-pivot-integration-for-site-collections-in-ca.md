@@ -1,5 +1,5 @@
 ---
-title: Активация интеграции PowerPivot для семейств веб-сайтов в ЦС | Документы Microsoft
+title: Активация интеграции PowerPivot для семейств веб-сайтов в ЦС | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77c8cb0d9e9617bfa0560ae1e9bc6389a297a5c2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 564ff616ec13b5f7f669db4cf6402114175f5670
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026121"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100065"
 ---
 # <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>Активация интеграции PowerPivot для семейств веб-сайтов в ЦС
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34026121"
   
 1.  На сайте SharePoint нажмите кнопку **Действия сайта**.  
   
-     По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что часто доступен сайта SharePoint, введя http://\<имя компьютера > Открыть корневой коллекции сайтов.  
+     По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что можно часто к сайту SharePoint, введя http://\<имя компьютера > Открыть корневой коллекции сайтов.  
   
 2.  Щелкните элемент **Настройки сайта**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34026121"
   
 ## <a name="see-also"></a>См. также  
  [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Первоначальная настройка (Power Pivot для SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)   
- [Установка Power Pivot для SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
+ [Первоначальная конфигурация (PowerPivot для SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)   
+ [Установка Power Pivot для SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   
   

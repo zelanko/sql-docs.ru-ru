@@ -1,5 +1,5 @@
 ---
-title: Программирование табличных моделей уровня совместимости 1200 | Документы Microsoft
+title: Программирование табличных моделей уровня совместимости 1200 | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,48 +9,49 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8e0bfc84806e44ef05312da9d15d1afaa7dd9754
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4f1ab3b825ad85d490493c1ffa05d7e066ec0cce
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144763"
 ---
-# <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Табличные модели программирования для совместимости уровня 1200 и выше
+# <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Программирование табличных моделей с уровнем совместимости 1200 и выше
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Начиная с уровнем совместимости 1200, табличных метаданных используется для описания модели конструкций, заменив исторических многомерные метаданные как дескрипторы для табличной модели объектов. Метаданные для таблицы, столбцы и связи являются таблицы, столбца и связи, а не многомерные эквиваленты (измерений и атрибутов).  
+Начиная с уровнем совместимости 1200 табличных метаданных используется для описания модели конструкции, заменив исторических многомерные метаданные как дескрипторы для табличной модели объектов. Метаданные для таблицы, столбцы и связи являются таблицы, столбца и связи, а не многомерные аналоги (измерений и атрибутов).  
   
-Можно создавать новые модели на уровне совместимости 1200 или выше с помощью API Microsoft.AnalysisServices.Tabular, последнюю версию из SQL Server Data Tools (SSDT), или путем изменения **CompatibilityLevel** существующих табличных модель для обновления (также выполняется в SSDT). Таким образом привязывает модель к более новым версиям сервера, средств и программных интерфейсов.   
+Можно создать новые модели на уровне совместимости 1200 или выше с помощью API Microsoft.AnalysisServices.Tabular, последнюю версию из SQL Server Data Tools (SSDT), или путем изменения **CompatibilityLevel** существующих табличных модель, чтобы обновить его (также выполняется в SSDT). Это привязывает модель к более новым версиям сервера, средств и программных интерфейсов.   
   
-Обновление существующего табличного решения рекомендуется, но не является обязательным. Существующий скрипт и пользовательских решений, которые используют или управление табличными моделями или баз данных можно использовать в качестве-является. Более ранними уровнями совместимости полностью поддерживаются в SQL Server 2016 с помощью функции, доступные на этом уровне. Azure Analysis Services поддерживает только уровень совместимости 1200 и выше.
+Обновление существующего табличного решения рекомендуется, но не является обязательным. Существующий скрипт и пользовательских решений, которые используют или управление табличными моделями или баз данных можно использовать в качестве-является. Более низких уровнях совместимости, полностью поддерживаются в SQL Server 2016 с помощью функции, доступные на этом уровне. Службы Azure Analysis Services поддерживает только уровень совместимости 1200 и выше.
   
- Новых табличных моделей потребуется другой код и сценарии, в приведенных ниже разделах.  
+ Новых табличных моделей требуется различный код и скрипт, представлены ниже.  
   
 ## <a name="object-model-definitions-as-tabular-metadata-constructs"></a>Определения модели объектов как конструкции табличных метаданных  
- Объектную модель табличных моделей 1200 или выше представлены в JSON через [языке скриптов табличных моделей](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) и с помощью языка описания данных объектов AMO через новое пространство имен [ Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)
+ Табличная модель объектов для моделей 1200 или выше предоставляется в JSON с помощью [Tabular Model Scripting Language](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) и с помощью языка описания данных AMO через новое пространство имен, [ Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)
 
 ## <a name="script-for-tabular-models-and-databases"></a>Скрипт для табличных моделей и баз данных  
- TMSL — это JSON язык сценариев для табличных моделей с поддержкой создание, чтение, обновление, операции удаления. Можно обновить данные через TMSL и вызова операций базы данных для присоединения, отъединение, резервного копирования и восстановления и синхронизации.  
+ TMSL — это JSON язык сценариев для табличных моделей с поддержкой для создания, чтения, обновления, операции удаления. Можно обновить данные через TMSL и вызова операций базы данных для присоединения, отъединение, резервное копирование, восстановление и синхронизация.  
   
- Объекты AMO PowerShell сценарий TMSL принимает в качестве входных данных.  
+ Объекты AMO PowerShell в качестве входных данных принимает скрипт TMSL.  
   
- В разделе [языке скриптов табличных моделей &#40;TMSL&#41; ссылки](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) и [Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md) для получения дополнительной информации.  
+ См. в разделе [Tabular Model Scripting Language &#40;TMSL&#41; ссылку](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) и [Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md) Дополнительные сведения.  
   
 ## <a name="query-languages"></a>Языки запросов  
  DAX и многомерных Выражений поддерживаются для всех табличных моделей.  
   
 ## <a name="expression-language"></a>Язык выражений  
- Фильтры и выражения, используемые для создания вычисляемых объектов, включая меры и ключевые показатели эффективности, организуются в DAX. В разделе [основные сведения о DAX в табличных моделях](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md) и [выражения анализа данных &#40;DAX&#41; в службах Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5).  
+ Фильтры и выражения, используемые для создания вычисляемых объектов, включая меры и ключевые показатели эффективности, организуются в DAX. См. в разделе [основные сведения о DAX в табличных моделях](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md) и [выражения анализа данных &#40;DAX&#41; в службах Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5).  
   
 ## <a name="managed-code-for-tabular-models-and-databases"></a>Управляемый код для табличных моделей и баз данных  
- Объекты AMO включает новое пространство имен Microsoft.AnalysisServices.Tabular, для работы с моделями, программными средствами. В разделе [Microsoft.AnalysisServices имен](https://msdn.microsoft.com/library/ms146720\(SQL.130\).aspx) для получения дополнительной информации.  
+ Объекты AMO включают новое пространство имен Microsoft.AnalysisServices.Tabular, для работы с моделями, программными средствами. См. в разделе [пространства имен Microsoft.AnalysisServices](https://msdn.microsoft.com/library/ms146720\(SQL.130\).aspx) Дополнительные сведения.  
   
 > [!NOTE]  
->  Клиентские библиотеки табличной модели объектов (TOM), ADOMD.NET и объекты управления Analysis Services (AMO) теперь модуля выполнения .NET 4.0.   
+>  Клиентские библиотеки объекты управления Analysis Services (AMO), ADOMD.NET и табличной модели объектов (TOM) теперь Выбор среды выполнения .NET 4.0.   
   
 ## <a name="see-also"></a>См. также  
  [Документация для разработчика служб Analysis Services](../../analysis-services/analysis-services-developer-documentation.md)   
- [Программирование табличных моделей для обеспечения совместимости уровни 1050 до 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
+ [Программирование табличных моделей для совместимости уровни 1050 по 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
  [Технический справочник по ](../../analysis-services/powershell/technical-reference-ssas.md) [обновление служб Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
- [Уровни совместимости табличных моделей и баз данных](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
+ [Уровень совместимости табличных моделей и баз данных](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   

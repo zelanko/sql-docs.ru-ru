@@ -2,7 +2,7 @@
 title: Оценка предприятия и объединение отчетов с оценкой (SQL Server) | Документация Майкрософт
 description: Узнайте, как использовать DMA для оценки предприятия и объединение отчетов с оценкой перед обновлением SQL Server или переход на базу данных SQL Azure.
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 573e704402cfc8680497ab3a9d45ab7bf3c4ebf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7212118f018b616b1f82f3ed91aced97482e9c6
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721092"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960788"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Оценка предприятия и объединять оценки с помощью DMA
 
@@ -37,14 +37,14 @@ ms.locfileid: "47721092"
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
 - Загрузите и извлеките:
     - [DMA отчеты Power BI шаблона](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
-    - [LoadWarehouse скрипт](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip).
+    - [LoadWarehouse скрипт](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Загрузка модулей PowerShell
 Сохранение модулей PowerShell в каталог modules PowerShell позволяет вызывать модули без необходимости загружать их явно перед использованием.
 
 Чтобы загрузить модули, выполните следующие действия:
 1. Перейдите к C:\Program Files\WindowsPowerShell\Modules и создайте папку с именем **DataMigrationAssistant**.
-2. Откройте [модули PowerShell](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip), а затем сохраните их в созданную папку.
+2. Откройте [модули PowerShell](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip), а затем сохраните их в созданную папку.
 
       ![Модули PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -62,7 +62,7 @@ ms.locfileid: "47721092"
 
     PowerShell должен загружаться эти модули автоматически при запуске нового сеанса PowerShell.
 
-## <a name="create-an-inventory-of-sql-servers"></a>Создание инвентаризации серверов SQL Server
+## <a name="create-inventory"></a> Создание инвентаризации серверов SQL Server
 Прежде чем запустить сценарий PowerShell для оценки серверов SQL Server, необходимо создать перечень серверов SQL Server, который вы хотите оценить.
 
 Этот инвентаризации может находиться в одном из двух форм:
@@ -98,9 +98,9 @@ ms.locfileid: "47721092"
 
 |Параметр  |Описание
 |---------|---------|
-|**getServerListFrom** | Данные инвентаризации. Возможные значения: **SqlServer** и **CSV**. |
+|**getServerListFrom** | Данные инвентаризации. Возможные значения: **SqlServer** и **CSV**.<br/>Дополнительные сведения см. в разделе [создания перечня серверов SQL Server](#create-inventory). |
 |**serverName** | Имя экземпляра SQL Server при использовании запасов **SqlServer** в **getServerListFrom** параметра. |
-|**Имя базы данных** | Размещение таблицы inventory базы данных. |
+|**databaseName** | Размещение таблицы inventory базы данных. |
 |**AssessmentName** | Имя оценки DMA. |
 |**TargetPlatform** | Оценка целевого типа, который вы хотите выполнить.  Возможные значения: **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, и **SQLServerWindows2017**. |
 |**AuthenticationMethod** | Метод проверки подлинности для подключения к целевым объектам SQL Server, вы хотите оценить. Возможные значения: **SQLAuth** и **WindowsAuth**. |
@@ -112,7 +112,7 @@ ms.locfileid: "47721092"
 
 ## <a name="consuming-the-assessment-json-file"></a>Использование JSON-файл оценки
 
-После завершения оценку, теперь вы готовы для импорта данных в SQL Server для анализа. Чтобы использовать файл JSON для оценки, откройте PowerShell и выполните функцию dmaProcessor.
+После завершения оценку, вы теперь все готово для импорта данных в SQL Server для анализа. Чтобы использовать файл JSON для оценки, откройте PowerShell и выполните функцию dmaProcessor.
  
   ![Листинг функция dmaProcessor](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
@@ -121,12 +121,12 @@ ms.locfileid: "47721092"
 |Параметр  |Описание
 |---------|---------|
 |**processTo**  | Расположение, к которому будут обрабатываться JSON-файл. Возможные значения: **SQLServer** и **AzureSQLDatabase**. |
-|**serverName** | Экземпляр SQL Server, к которому данные будут обрабатываться.  Если указать **AzureSQLDatabase** для **processTo** параметра, включите только имя SQL Server (не используйте. database.windows.net). Вам предложат ввести двух имен входа при разработке для базы данных SQL Azure; Первый — учетные данные клиента Azure, второй — на имя для входа администратора для сервера SQL Azure. |
-|**CreateDMAReporting** | Промежуточной базы данных, создаваемой для обработки JSON-файл.  Если база данных уже существует, и вы настроите этот параметр один, затем объекты не создаются.  Этот параметр полезен для повторного создания один объект, который был удален. |
+|**serverName** | Экземпляр SQL Server, к которому данные будут обрабатываться.  Если указать **AzureSQLDatabase** для **processTo** параметра, включите только имя SQL Server (не включайте. database.windows.net). Вам предложат для двух имен входа при разработке для базы данных SQL Azure; Первый — учетные данные клиента Azure, второй — на имя для входа администратора для сервера SQL Azure. |
+|**CreateDMAReporting** | Промежуточной базы данных, создаваемой для обработки JSON-файл.  Если база данных уже существует, необходимо задать этот параметр один, затем не создаются объекты.  Этот параметр полезен для повторного создания один объект, который был удален. |
 |**CreateDataWarehouse** | Создает хранилище данных, который будет использоваться в отчете Power BI. |
-|**Имя базы данных** | Имя базы данных DMAReporting. |
+|**databaseName** | Имя базы данных DMAReporting. |
 |**warehouseName** | Имя базы данных хранилища данных. |
-|**jsonDirectory** | Каталог, содержащий JSON-файл оценки.  Если есть несколько JSON-файлов в каталоге, то они обрабатываются по очереди. |
+|**jsonDirectory** | Каталог, содержащий JSON-файл оценки.  Если имеются несколько JSON-файлов в каталоге, то они при обработке по одному. |
 
 Функция dmaProcessor обычно занимает несколько секунд для обработки одного файла.
 
@@ -135,7 +135,7 @@ ms.locfileid: "47721092"
 
 1. Используйте сценарий LoadWarehouse для заполнения отсутствующих значений в измерениях.
 
-    Сценарий принимает данные из таблицы ReportData в базе данных DMAReporting и загрузить его в хранилище.  При возникновении ошибки во время этого процесса загрузки, они скорее всего представляют собой результат применения недостающие записи в таблицах измерений.
+    Сценарий принимает данные из таблицы ReportData в базе данных DMAReporting и загрузить его в хранилище.  При возникновении ошибки во время этого процесса загрузки, скорее всего они результатом недостающие записи в таблицах измерений.
 
 2. Загрузка хранилища данных.
  
@@ -158,7 +158,7 @@ ms.locfileid: "47721092"
 
       ![Загрузить шаблон DMA отчеты Power BI](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
-   После отчета обновляются данные из **DMAWarehouse** базы данных, появится сообщение следующего вида.
+   После отчета обновляются данные из **DMAWarehouse** базы данных, вам предоставляется отчет, подобный следующему.
 
    ![Представление отчетов DMAWarehouse](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
 

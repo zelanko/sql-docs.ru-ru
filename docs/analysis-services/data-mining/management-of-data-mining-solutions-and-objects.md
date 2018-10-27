@@ -1,5 +1,5 @@
 ---
-title: Управление решениями интеллектуального анализа данных и объектами | Документы Microsoft
+title: Управление решениями интеллектуального анализа данных и объектами | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed8768dc456f1805b139138e8591f6f9749525eb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145689"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Управление решениями и объектами интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,13 +42,13 @@ ms.lasthandoff: 05/10/2018
   
  По следующим ссылкам можно получить полезные сведения об изменении объектов интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
--   [Изменить представление источника данных, используемого для структуры интеллектуального анализа данных](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Изменение представления источников данных, используемого для структуры интеллектуального анализа данных](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
--   [Изменить свойства структуры интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
+-   [Изменение свойств структуры интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
 -   [Изменение свойств модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [Просмотр или изменение модели флаги & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [Просмотр или изменение флагов моделирования (интеллектуальный анализ данных)](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [Просмотр или изменение параметров алгоритма](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>Управление объектами интеллектуального анализа данных в среде SQL Server Management Studio  
  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]позволяет создавать скрипты со структурами и моделями интеллектуального анализа данных, обрабатывать эти структуры и модели и удалять их. В обозревателе объектов можно просмотреть лишь ограниченный набор свойств, однако дополнительные метаданные о моделях интеллектуального анализа данных доступны в окне редактора **DMX-запрос** , где нужно выбрать соответствующую структуру интеллектуального анализа данных.  
   
--   [Создать запрос расширений интеллектуального анализа данных в SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+-   [Создание запроса расширений интеллектуального анализа данных в SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="managing-data-mining-objects-programmatically"></a>Программное управление объектами интеллектуального анализа данных  
  Создание, изменение, обработка и удаление объектов интеллектуального анализа данных реализуются при помощи следующих языков программирования. Разные языки предназначены для выполнения разных задач. Результатом могут стать ограничения на типы операций, доступных для выполнения. Например, некоторые свойства объектов интеллектуального анализа данных нельзя изменить с помощью расширений интеллектуального анализа данных, для этого придется использовать язык XMLA или объекты AMO.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/10/2018
 ### <a name="analysis-management-objects-amo"></a>Объекты AMO  
  Объекты AMO — это объектная модель, построенная на основе XMLA, которая обеспечивает полный доступ к объектам интеллектуального анализа данных. Объекты AMO позволяют создавать, развертывать и отслеживать структуры и модели интеллектуального анализа данных.  
   
--   [Основные понятия и объектная модель AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [Основные понятия и объектная модель AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   

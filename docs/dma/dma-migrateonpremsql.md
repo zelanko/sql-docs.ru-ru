@@ -2,7 +2,7 @@
 title: Обновления на локальный сервер SQL Server в SQL Server или SQL Server на виртуальных машинах Azure с помощью Data Migration Assistant | Документация Майкрософт
 description: Узнайте, как обновление с помощью помощника по миграции данных на локальном сервере SQL Server до более поздней версии SQL Server или SQL Server на виртуальных машинах Azure
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f23edbbd6f7a1d051c7585b563cd2f3f1575b640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833132"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643842"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Обновление на локальном сервере SQL Server до SQL Server или SQL Server на виртуальных машинах Azure с помощью Data Migration Assistant
 
@@ -81,7 +81,7 @@ ms.locfileid: "47833132"
 
 5. Выберите **Далее**.
 
-Data Migration Assistant выполняет проверки в папки, резервного копирования, данных и файла журнала расположений. Если какой-либо проверки завершается ошибкой, исправьте параметры, а затем выберите **Далее**.
+Data Migration Assistant выполняет проверки для папки резервного копирования, данные и расположение файлов журнала. Если какой-либо проверки завершается ошибкой, исправьте параметры, а затем выберите **Далее**.
 
 ## <a name="select-logins"></a>Выберите имена для входа
 

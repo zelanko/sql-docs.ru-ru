@@ -1,5 +1,5 @@
 ---
-title: Внутренние свойства элементов (многомерные Выражения) | Документы Microsoft
+title: Внутренние свойства элементов (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 97e1507617d710373dea39b546b74fc77a1d90de
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a2e30dcf1875b09630516be9d9deb3248a95481e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025741"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146178"
 ---
-# <a name="mdx-member-properties---intrinsic-member-properties"></a>Свойства элементов MDX - внутренние свойства элементов
+# <a name="mdx-member-properties---intrinsic-member-properties"></a>Свойства элементов многомерных Выражений — внутренние свойства элементов
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] предоставляет внутренние свойства элементов измерения, которые можно включить в запрос для возвращения дополнительных данных или метаданных для использования в пользовательском приложении или при исследовании в модели или структуре. Если используются клиентские средства SQL Server, внутренние свойства можно просматривать в среде SQL Server Management Studio (SSMS).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "34025741"
 ## <a name="context-sensitive-member-properties"></a>Свойства элементов, зависящие от контекста  
  Все элементы измерения и уровня поддерживают группу внутренних свойств, зависящих от контекста. Эти свойства перечислены в следующей таблице.  
   
-|property|Описание|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**ID**|Внутренний идентификатор элемента.|  
 |**Key**|Значение ключа элемента в исходном типе данных. Параметр MEMBER_KEY сохранен в целях обратной совместимости.  Параметр MEMBER_KEY имеет то же самое значение, что и KEY0 для несоставного ключа, и имеет значение NULL для составных ключей.|  
@@ -85,9 +85,9 @@ ms.locfileid: "34025741"
  В следующей таблице перечислены внутренние свойства, которые поддерживаются службами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]и не зависят от контекста.  
   
 > [!NOTE]  
->  Столбцы в наборе строк схемы MEMBERS поддерживают внутренние свойства элементов, перечисленные в следующей таблице. Дополнительные сведения о наборе строк схемы **MEMBERS** см. в разделе [Набор строк MDSCHEMA_MEMBERS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Столбцы в наборе строк схемы MEMBERS поддерживают внутренние свойства элементов, перечисленные в следующей таблице. Дополнительные сведения о наборе строк схемы **MEMBERS** см. в разделе [Набор строк MDSCHEMA_MEMBERS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
-|property|Описание|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**CATALOG_NAME**|Имя куба, которому принадлежит элемент.|  
 |**CHILDREN_CARDINALITY**|Количество потомков элемента. Значение этого свойства может быть приблизительным, поэтому не стоит рассчитывать на него для определения точного числа. Поставщики должны возвращать возможное наивернейшее приблизительное значение.|  
@@ -205,15 +205,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>См. также  
  [PeriodsToDate (многомерные выражения)](../../../mdx/periodstodate-mdx.md)   
- [Дочерние элементы &#40;многомерных Выражений&#41;](../../../mdx/children-mdx.md)   
- [Hierarchize & #40; Многомерные Выражения & #41;](../../../mdx/hierarchize-mdx.md)   
- [Число & #40; Выбрать & #41; & #40; Многомерные Выражения & #41;](../../../mdx/count-set-mdx.md)   
- [Фильтр & #40; Многомерные Выражения & #41;](../../../mdx/filter-mdx.md)   
- [AddCalculatedMembers & #40; Многомерные Выражения & #41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel & #40; Многомерные Выражения & #41;](../../../mdx/drilldownlevel-mdx.md)   
- [Свойства & #40; Многомерные Выражения & #41;](../../../mdx/properties-mdx.md)   
- [PrevMember &#40;многомерных Выражений&#41;](../../../mdx/prevmember-mdx.md)   
- [С помощью свойства элементов & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [Children (многомерные выражения)](../../../mdx/children-mdx.md)   
+ [Hierarchize (многомерные выражения)](../../../mdx/hierarchize-mdx.md)   
+ [Count (наборы) (многомерные выражения)](../../../mdx/count-set-mdx.md)   
+ [Filter (многомерные выражения)](../../../mdx/filter-mdx.md)   
+ [AddCalculatedMembers (многомерные выражения)](../../../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel (многомерные выражения)](../../../mdx/drilldownlevel-mdx.md)   
+ [Properties (многомерные выражения)](../../../mdx/properties-mdx.md)   
+ [PrevMember (многомерные выражения)](../../../mdx/prevmember-mdx.md)   
+ [Использование свойств элементов (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../../../mdx/mdx-function-reference-mdx.md)  
   
   

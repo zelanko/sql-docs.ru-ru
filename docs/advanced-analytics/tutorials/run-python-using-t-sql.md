@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e22b280c4fea395f8c7cf7c4b559d5ff5a22d6c1
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461920"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050903"
 ---
 # <a name="run-python-using-t-sql"></a>Запуск Python с помощью T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,6 +64,33 @@ ms.locfileid: "49461920"
     
     Кроме того может потребоваться включить сетевые протоколы, которые были отключены, или открыть брандмауэр SQL Server мог обмениваться данными с внешними клиентами. Дополнительные сведения см. в разделе [Устранение неполадок при установке](../common-issues-external-script-execution.md).
 
+### <a name="call-revoscalepy-functions"></a>Вызов функций revoscalepy
+
+Чтобы убедиться, что **revoscalepy** нет, выполните скрипт, который содержит [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) , формирующий статистические сводных данных. Этот сценарий демонстрируется извлечение данных xdf-пример в файл из встроенных примеры, включенные в revoscalepy. Предоставляет функцию RxOptions **sampleDataDir** параметр, который возвращает расположение файлов образца.
+
+Поскольку rx_summary возвращает объект типа `class revoscalepy.functions.RxSummary.RxSummaryResults`, который содержит несколько элементов, можно использовать для извлечения только кадр данных в табличном формате pandas.
+
+```SQL
+EXEC sp_execute_external_script @language = N'Python', 
+@script = N'
+import os
+from pandas import DataFrame
+from revoscalepy import rx_summary
+from revoscalepy import RxXdfData
+from revoscalepy import RxOptions
+
+sample_data_path = RxOptions.get_option("sampleDataDir")
+print(sample_data_path)
+
+ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+summary = rx_summary("ArrDelay + DayOfWeek", ds)
+print(summary)
+dfsummary = summary.summary_data_frame
+OutputDataSet = dfsummary
+'
+WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
+```
+
 ## <a name="basic-python-interaction"></a>Основные взаимодействия Python
 
 Существует два способа для выполнения кода Python в SQL Server:
@@ -102,7 +129,7 @@ ms.locfileid: "49461920"
 Сейчас помните, эти правила:
 
 + Все содержимое `@script` аргумент должен быть указан корректный код Python. 
-+ Код должен следовать всем правилам привычные для Python, отступы, имена переменных и т. д. Когда отобразится сообщение об ошибке, проверьте, пробелы и регистр.
++ Код должен следовать всем правилам Python относительно отступов, имена переменных и т. д. Когда отобразится сообщение об ошибке, проверьте, пробелы и регистр.
 + Если вы используете все библиотеки, которые не загружаются по умолчанию, необходимо использовать инструкцию импорта в начале сценария для их загрузки. SQL Server добавляет несколько библиотек конкретного продукта. Дополнительные сведения см. в разделе [библиотек Python](../python/python-libraries-and-data-types.md).
 + Если библиотека еще не установлен, остановите и установить пакет Python за пределами SQL Server, как описано здесь: [Установка новых пакетов Python в SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 

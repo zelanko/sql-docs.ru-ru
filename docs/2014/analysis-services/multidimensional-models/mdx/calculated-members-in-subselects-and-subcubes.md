@@ -11,18 +11,18 @@ ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b729fb46b83617f0bcc9b0fc7ea7c93583513da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4c7b695882605eacd19d61bf6fe2cc71d8a6048
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188384"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148259"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах
   В предыдущих версиях вычисляемые элементы не допускались в подзапросах выборки и вложенных кубах. Тем не менее, начиная с версии SQL Server 2008, они разрешены и включаются свойством соединения. Кроме того, в SQL Server 2008 R2 определяется новое поведение вычисляемых элементов в подзапросах выборки и вложенных кубах.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах  
- `SubQueries` Свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или `DBPROPMSMDSUBQUERIES` свойство в [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) определяет поведение или квоту для вычисляемых элементов или вычисляемых Задает в подзапросах выборки и вложенных кубах. В контексте настоящего документа, если не указано иное, термин «подзапросы выборки» означает подзапросы выборки и вложенные кубы.  
+ `SubQueries` Свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или `DBPROPMSMDSUBQUERIES` свойство в [поддерживаемые свойства XMLA &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) определяет поведение или квоту для вычисляемых элементов или вычисляемых Задает в подзапросах выборки и вложенных кубах. В контексте настоящего документа, если не указано иное, термин «подзапросы выборки» означает подзапросы выборки и вложенные кубы.  
   
  Свойство SubQueries может принимать следующие значения.  
   
@@ -125,6 +125,6 @@ Where [Measures].[Reseller Sales Amount]
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Подзапросы выборки в запросах](subselects-in-queries.md)   
- [Поддерживаемые свойства XMLA &#40;XML для Аналитики&#41;](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
+ [Поддерживаемые свойства XMLA (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

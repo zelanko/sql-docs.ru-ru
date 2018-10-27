@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b10662d32952565ccf7b30a6615470d2557749f3
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 8777a346fe95f8399d14651fb00517fe0f599496
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348645"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147961"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Правила именования объектов (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  В этом разделе описываются соглашения об именовании объектов. В нем также приведены зарезервированные слова и символы, которые нельзя использовать в именах объектов, в коде или в скриптах в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  В этом разделе описаны соглашения об именах объектов, а также зарезервированные слова и символы, которые нельзя использовать в именах объектов, в коде или в скриптах служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##  <a name="bkmk_Names"></a> Соглашения об именовании  
  Каждый объект имеет свойства **Name** и **ID** , которые должны быть уникальными в области определения родительской коллекции. Например, два измерения могут иметь одинаковое имя, только если они находятся в разных базах данных.  
@@ -66,7 +66,7 @@ ms.locfileid: "43348645"
   
 |Объект|Недопустимые символы|  
 |------------|------------------------|  
-|**Server**|При именовании серверных объектов следуйте соглашению об именах для сервера Windows. См. в разделе [соглашения об именах (Windows)](/windows/desktop/DNS/naming-conventions) подробные сведения.|  
+|**Server**|При именовании серверных объектов следуйте соглашению об именах для сервера Windows. Дополнительные сведения см. в разделе [Соглашения об именах (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |**DataSource**|: / \ * &#124; ? "[] () {} <>|  
 |**Level** или **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
 |**Dimension** или **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
@@ -88,6 +88,6 @@ ms.locfileid: "43348645"
 ## <a name="see-also"></a>См. также  
  [Зарезервированные слова многомерных Выражений](../../../mdx/mdx-reserved-words.md)   
  [Поддержка параметров перевода в службах Analysis Services](../../../analysis-services/translation-support-in-analysis-services.md)   
- [XML для анализа соответствия &#40;XML для Аналитики&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML для анализа соответствия &#40;XML для Аналитики&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

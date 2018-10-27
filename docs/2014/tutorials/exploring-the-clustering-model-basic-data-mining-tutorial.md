@@ -11,12 +11,12 @@ ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e56d1dc66e8e6ac73a3ae8b1888cbdee16c63df
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147774"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146746"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Изучение модели кластеризации (учебник по интеллектуальному анализу данных — начальный уровень)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Алгоритм кластеризации группировку вариантов в кластеры, имеющие одинаковые характеристики. Такие группирования полезно использовать для просмотра данных, выявления в них аномалий и создания прогнозов.  
@@ -89,7 +89,7 @@ ms.locfileid: "48147774"
  С помощью **характеристики кластера** вкладке можно просмотреть более подробно характеристики, составляющие кластер. Вместо сравнения характеристик всех кластеров (как на вкладке «Профили кластера») кластеры можно анализировать по одному. Например, если вы выберите **много покупателей велосипедов** из **кластера** списка, можно просмотреть характеристики покупателей данного кластера. Хотя данное представление отличается от средства просмотра профилей кластера, результаты остаются такими же.  
   
 > [!NOTE]  
->  Если не задать начальное значение для **holdoutseed**, результаты будут отличаться каждый раз при обработке модели. Дополнительные сведения см. в разделе [элемент HoldoutSeed](../analysis-services/scripting/properties/holdoutseed-element.md)  
+>  Если не задать начальное значение для **holdoutseed**, результаты будут отличаться каждый раз при обработке модели. Дополнительные сведения см. в разделе [элемент HoldoutSeed](https://docs.microsoft.com/bi-reference/assl/properties/holdoutseed-element)  
   
 
   

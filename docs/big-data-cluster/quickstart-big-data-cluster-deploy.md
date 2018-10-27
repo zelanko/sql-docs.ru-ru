@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 839823f9336a09b0790ee41b74793e548742c1d5
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 899a02996e6415cbf35ed903c276ca23b78c6961
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384109"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050996"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Краткое руководство по Развертыванию кластера больших данных SQL Server в службе Azure Kubernetes (AKS)
 
@@ -26,9 +26,9 @@ ms.locfileid: "49384109"
 
 На компьютере, вы используете для выполнения команд для установки кластера больших данных SQL Server, установите [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Большие данные кластера SQL Server требуется 1,10 ОС, Kubernetes, для сервера и клиента (kubectl). Чтобы установить kubectl, см. в разделе [установки kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
 
-Чтобы установить `mssqlctl` кластера инструмента интерфейса командной строки для управления больших данных SQL Server на клиентском компьютере, необходимо сначала установить [Python](https://www.python.org/downloads/) версии не ниже версии 3.0 и [pip3](https://pip.pypa.io/en/stable/installing/). `pip` уже установлен, если вы используете версию Python по крайней мере 3.4, загруженные из [python.org](https://www.python.org/).
+Чтобы установить **mssqlctl** инструмента интерфейса командной строки для управления SQL Server на больших данных кластера на клиентском компьютере, необходимо сначала установить [Python](https://www.python.org/downloads/) версии не ниже версии 3.0 и [pip3](https://pip.pypa.io/en/stable/installing/). `pip` уже установлен, если вы используете версию Python по крайней мере 3.4, загруженные из [python.org](https://www.python.org/).
 
-Если отсутствует установку Python `requests` пакета, необходимо установить `requests` с помощью `python -m pip install requests`. Если у вас уже есть `requests` пакета, обновите ее до последней версии с помощью `python -m pip install requests --upgrade`.
+Если отсутствует установку Python `requests` пакета, необходимо установить `requests` с помощью `python -m pip install requests` (использовать `python3` для этих команд в Linux). Если у вас уже есть `requests` пакета, обновите ее до последней версии с помощью `python -m pip install requests --upgrade`.
 
 ## <a name="verify-aks-configuration"></a>Проверка конфигурации AKS
 
@@ -40,11 +40,14 @@ kubectl config view
 
 ## <a name="install-mssqlctl-cli-management-tool"></a>Установка средства управления mssqlctl интерфейса командной строки
 
-Выполните следующую команду, чтобы установить `mssqlctl` средство на клиентском компьютере. Команда выполняется из Windows и клиента Linux, но убедитесь, что вы используете его из окна командной строки, под управлением Windows с правами администратора или перед ними `sudo` в Linux:
+Выполните следующую команду, чтобы установить **mssqlctl** средство на клиентском компьютере. Команда выполняется из Windows и клиента Linux, но убедитесь, что вы используете его из окна командной строки, под управлением Windows с правами администратора или перед ними `sudo` в Linux:
 
 ```
 pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
 ```
+
+> [!TIP]
+> Если **mssqlctl** не правильную установку, просмотрите действия по готовности к установке в статье [установить mssqlctl](deployment-guidance.md#mssqlctl).
 
 ## <a name="define-environment-variables"></a>Определение переменных среды
 
@@ -103,7 +106,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
 > [!NOTE]
-> Во время ограниченной общедоступной предварительной версии Docker учетные данные для загрузки изображений кластера больших данных в SQL Server предоставляются корпорацией Майкрософт для каждого клиента. Чтобы запросить доступ, зарегистрируйте [здесь](https://aka.ms/eapsignup)и укажите ваш интерес к попробуйте кластеры больших данных в SQL Server.
+> Во время ограниченной общедоступной предварительной версии Docker учетные данные для загрузки изображений кластера больших данных SQL Server предоставляются корпорацией Майкрософт для каждого клиента. Чтобы запросить доступ, зарегистрируйте [здесь](https://aka.ms/eapsignup)и укажите ваш интерес к попробуйте кластеры больших данных в SQL Server.
 
 ## <a name="deploy-a-big-data-cluster"></a>Развертывание кластера больших данных
 

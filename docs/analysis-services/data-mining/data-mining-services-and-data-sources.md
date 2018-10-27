@@ -1,5 +1,5 @@
 ---
-title: Службы интеллектуального анализа данных и источники данных | Документы Microsoft
+title: Службы интеллектуального анализа данных и источников данных | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ddcf169206e795899861e7b7fe8be6430ad9cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: acb8f97708cd92bc0bdee1278d8b672908d65877
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016591"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145889"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Службы интеллектуального анализа данных и источники данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "34016591"
  Можно также установить свойства, позволяющие тонко настраивать сервер и управлять безопасностью использования клиента. Дополнительные сведения см. в статье [Feature Properties](../../analysis-services/server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о поддержке подключаемых алгоритмов выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Дополнительные сведения о поддержке подключаемых алгоритмов выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Программный доступ к объектам интеллектуального анализа данных  
  Можно использовать следующие модели объектов для создания соединения с базой данных служб Analysis Services и работы с объектами интеллектуального анализа данных.  
@@ -117,14 +117,14 @@ ms.locfileid: "34016591"
   
  Если процедура возвратит набор данных, клиент получит набор данных или таблицу данных с вложенной таблицей, содержащей строки. Например, если создать запрос к содержимому модели, запрос вернет всю модель. Чтобы не получать слишком много строк, можно написать хранимую процедуру с помощью объектной модели ADOMD+.  
   
- Чтобы написать серверную хранимую процедуру, необходимо сослаться на пространство имен Microsoft.AnalysisServices.AdomdServer. Дополнительные сведения о создании и использовании хранимых процедур см. в разделе [User Defined Functions and Stored Procedures](../../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md).  
+ Чтобы написать серверную хранимую процедуру, необходимо сослаться на пространство имен Microsoft.AnalysisServices.AdomdServer. Дополнительные сведения о создании и использовании хранимых процедур см. в разделе [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Хранимые процедуры нельзя использовать для изменения безопасности в серверных объектах базы данных. При выполнении хранимой процедуры для определения доступа ко всем серверным объектам используется текущий контекст пользователя. Поэтому пользователи должны иметь соответствующие разрешения для всех объектов базы данных, к которым они получают доступ.  
   
 ## <a name="see-also"></a>См. также  
  [Физическая архитектура (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Физическая архитектура & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
- [Управление решениями интеллектуального анализа данных и объектов](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Физическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [Управление решениями и объектами интеллектуального анализа данных](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

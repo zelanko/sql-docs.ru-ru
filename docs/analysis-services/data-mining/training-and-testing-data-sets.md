@@ -1,5 +1,5 @@
 ---
-title: Обучающие и проверочные наборы данных | Документы Microsoft
+title: Наборы обучающих и проверочных данных | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe6d39614bbeaca70f8e0e6d205be5cbcbc05bbc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018247"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145619"
 ---
 # <a name="training-and-testing-data-sets"></a>Обучающие и проверочные наборы данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34018247"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Изменение свойств структуры для создания набора проверочных данных  
  Если после создания и обработки структуры интеллектуального анализа данных нужно отделить набор проверочных данных, то можно изменить свойства структуры интеллектуального анализа данных. Чтобы изменить способ секционирования данных, измените следующие свойства.  
   
-|property|Описание|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**HoldoutMaxCases**|Задает максимальное число вариантов, включаемых в проверочный набор.|  
 |**HoldoutMaxPercent**|Задает максимальное число вариантов, включаемых в проверочный набор в качестве процентной доли от полного набора данных. Чтобы набора данных не было, укажите значение 0.|  
@@ -97,15 +97,15 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |Подраздел|Ссылки|  
 |------------|-----------|  
 |Описывает, каким образом фильтры модели взаимодействуют с обучающим и проверочным наборами данных.|[Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)|  
-|Описывает, как использование обучающих и проверочных данных влияет на перекрестные проверки.|[Перекрестная проверка & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Предоставляет сведения о программных интерфейсах для работы с обучающим и проверочным наборами данных в структуре интеллектуального анализа данных.|[Основные понятия и модель объектов AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [Элемент MiningStructure (ASSL)](../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Содержит синтаксис DMX для создания контрольных наборов.|[СОЗДАНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ & #40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ & #41;](../../dmx/create-mining-structure-dmx.md)|  
-|Получить данные о вариантах в обучающем и проверочном наборах.|[Наборы строк схемы интеллектуального анализа данных](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [Наборы строк схемы интеллектуального анализа данных (службы SSAS)](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
+|Описывает, как использование обучающих и проверочных данных влияет на перекрестные проверки.|[Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Предоставляет сведения о программных интерфейсах для работы с обучающим и проверочным наборами данных в структуре интеллектуального анализа данных.|[Основные понятия и модель объектов AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Элемент MiningStructure (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|Содержит синтаксис DMX для создания контрольных наборов.|[СОЗДАНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ (DMX)](../../dmx/create-mining-structure-dmx.md)|  
+|Получить данные о вариантах в обучающем и проверочном наборах.|[Наборы строк схемы интеллектуального анализа данных](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)<br /><br /> [Наборы строк схемы интеллектуального анализа данных (службы SSAS)](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   
  [Основные понятия интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-concepts.md)   
  [Решения для интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Тестирование и проверка & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

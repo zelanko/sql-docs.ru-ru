@@ -1,18 +1,18 @@
 ---
 title: Что такое кластеры SQL Server 2019 больших данных? | Документы Майкрософт
-description: ''
+description: Дополнительные сведения о кластерах SQL Server 2019 больших данных (Предварительная версия), которые работают на платформе Kubernetes и обеспечивают масштабирование для реляционных и данные из HDFS.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/25/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: 3a18eeca5bd6af2fb0bb9562f126351ac4d3f1c9
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 7648988fb861531a403efe17b883f53eca8e5dbe
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085060"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051006"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>Что такое кластеры SQL Server 2019 больших данных?
 
@@ -24,11 +24,11 @@ ms.locfileid: "49085060"
 
 Кластерами больших данных SQL Server обеспечивают гибкость во взаимодействии с большими данными. Можно запрашивать внешние источники данных, хранение больших данных в HDFS, под управлением SQL Server или извлечения данных из нескольких источников данных в кластер. Затем можно использовать данные для искусственного Интеллекта, машинного обучения и другие задачи анализа. Дополнительные сведения об этих сценариях в следующих разделах.
 
-### <a name="data-virtualization"></a>Виртуализации данных
+### <a name="data-virtualization"></a>Виртуализация данных
 
 За счет использования [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md), больших данных кластеров SQL Server можно запросить внешних источников данных без импорта данных. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] вводит новые соединители с источниками данных.
 
-![Виртуализации данных](media/big-data-cluster-overview/data-virtualization.png)
+![Виртуализация данных](media/big-data-cluster-overview/data-virtualization.png)
 
 ### <a name="data-lake"></a>Озера данных
 

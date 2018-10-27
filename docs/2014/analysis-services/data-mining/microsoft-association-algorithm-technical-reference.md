@@ -21,12 +21,12 @@ ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8d5a8e800b961406231e0f0e515b250a17cb3ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d709a575ddde6fe9d3f31e7d8a50b8f6dec83a5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091084"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146019"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Технический справочник по алгоритму взаимосвязей (Майкрософт)
   Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой простую реализацию хорошо известного априорного алгоритма.  
@@ -74,7 +74,7 @@ ms.locfileid: "48091084"
  Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает несколько параметров, влияющих на работу, производительность и точность итоговой модели интеллектуального анализа данных.  
   
 ### <a name="setting-algorithm-parameters"></a>Задание параметров алгоритма  
- Параметры модели интеллектуального анализа данных можно изменить в любой момент с помощью конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Можно также менять параметры программно с помощью <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> коллекции объектов AMO или с помощью [элемент MiningModels &#40;ASSL&#41; ](../scripting/collections/miningmodels-element-assl.md) в XML для Аналитики. В следующей таблице содержатся описания всех параметров.  
+ Параметры модели интеллектуального анализа данных можно изменить в любой момент с помощью конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Можно также менять параметры программно с помощью <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> коллекции объектов AMO или с помощью [элемент MiningModels &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) в XML для Аналитики. В следующей таблице содержатся описания всех параметров.  
   
 > [!NOTE]  
 >  Изменить параметры существующей модели с помощью инструкций на языке расширений интеллектуального анализа данных нельзя. Нужно задать параметры в инструкциях DMX CREATE MODEL или ALTER STRUCTURE… ADD MODEL при создании модели.  
@@ -144,7 +144,7 @@ ms.locfileid: "48091084"
  Применяется к столбцу структуры интеллектуального анализа данных.  
   
  MODEL_EXISTENCE_ONLY  
- Означает, что столбец будет рассматриваться как имеющий два возможных состояния: `Missing` и `Existing`. NULL означает отсутствие значения.  
+ Столбец будет обрабатываться так, как будто у него два возможных состояния: `Missing` и `Existing`. NULL означает отсутствие значения.  
   
  Применяется к столбцу модели интеллектуального анализа данных.  
   
@@ -165,6 +165,6 @@ ms.locfileid: "48091084"
 ## <a name="see-also"></a>См. также  
  [Алгоритм взаимосвязей (Майкрософт)](microsoft-association-algorithm.md)   
  [Примеры запросов моделей взаимосвязей](association-model-query-examples.md)   
- [Модель интеллектуального анализа данных для моделей взаимосвязей &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

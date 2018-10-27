@@ -1,5 +1,5 @@
 ---
-title: Инструкция CREATE MEASURE (многомерные Выражения) | Документы Microsoft
+title: Инструкция CREATE MEASURE (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: aa895099420b022cf15d7cd3a91472511c1100e3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 37a8b8ef757184e7467c3551148c8c149bb45097
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741442"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144460"
 ---
-# <a name="mdx-data-definition---create-measure"></a>Определения данных многомерных Выражений — создать МЕРУ
+# <a name="mdx-data-definition---create-measure"></a>Определение данных многомерных выражений — CREATE MEASURE
 
 
   Создает меру в табличной модели.  
@@ -43,7 +43,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
 ## <a name="remarks"></a>Примечания  
  *Measure_Name* должно быть заключено в квадратные скобки.  
   
- Инструкция CREATE MEASURE может использоваться только внутри определения скрипта MDX; в разделе [элемент MdxScript &#40;ASSL&#41;](../analysis-services/scripting/objects/mdxscript-element-assl.md).  
+ Инструкция CREATE MEASURE используется только внутри определения скрипта многомерных Выражений; см. в разделе [элемент MdxScript &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/mdxscript-element-assl).  
   
  Можно также определить вычисляемый элемент для использования только в одном запросе. Для определения вычисляемого элемента, ограниченного рамками одного запроса, используется предложение WITH в инструкции SELECT. Дополнительные сведения см. в разделе [построение мер в многомерных Выражениях](../analysis-services/multidimensional-models/mdx/mdx-building-measures.md).  
   

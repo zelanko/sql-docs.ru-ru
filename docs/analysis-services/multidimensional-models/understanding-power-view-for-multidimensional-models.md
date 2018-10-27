@@ -1,5 +1,5 @@
 ---
-title: Основные сведения о Power View для многомерных моделей | Документы Microsoft
+title: Основные сведения о Power View для многомерных моделей | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 23f30c2cebf7e048a8fb515edf370f4ab858bbff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300502"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147459"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Основные сведения о Power View для многомерных моделей
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34300502"
   
 -   Для поддержки функций клиента Power View требуется Microsoft Silverlight 5. Дополнительные сведения см. в разделе [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-## <a name="features"></a>Функции  
+## <a name="features"></a>Компоненты  
  **Собственная поддержка для Power View**  
   
  В этом выпуске многомерные модели поддерживают анализ и визуализацию с использованием Power View в режиме SharePoint. Не требуется какая-либо специальная настройка многомерных моделей. Но обнаруживаются некоторые отличия в том, как объекты многомерной модели отображаются в Power View, по сравнению с другими клиентскими средствами, такими как Microsoft Excel и Microsoft Performance Point. В этом выпуске не поддерживаются анализ и визуализация многомерных моделей с использованием Power View в Excel.  
@@ -62,7 +62,7 @@ ms.locfileid: "34300502"
 |Measure|Measure|  
 |Мера без группы мер|В таблице с именем Measures|  
 |Связь измерений куба группы мер|Связь|  
-|Perspective|Perspective|  
+|Перспектива|Перспектива|  
 |Ключевой показатель эффективности|Ключевой показатель эффективности|  
 |Иерархии типа «пользователи или родители-потомки»|Иерархия|  
 |Папка отображения|Папка отображения|  
@@ -76,7 +76,7 @@ ms.locfileid: "34300502"
   
  **Группы мер в списке полей Power View**  
   
- ![Список в Power View полей](../../analysis-services/multidimensional-models/media/daxmd-powerviewfieldlist.gif "список в Power View полей")  
+ ![Поле списка в Power View](../../analysis-services/multidimensional-models/media/daxmd-powerviewfieldlist.gif "поле списка в Power View")  
   
  Меры в группах мер отображаются как меры. Вычисляемые меры, не имеющие связанной группы мер, группируются в специальной таблице с именем Measures.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "34300502"
   
  **Измерения, атрибуты и иерархии в SQL Server Data Tools (SSDT) и список полей Power View**  
   
- ![Измерения в SSDT и в списке полей Power View](../../analysis-services/multidimensional-models/media/daxmd-ssdt-dimensions.gif "измерений в SSDT и списке полей Power View")  
+ ![Измерения в SSDT и списке полей Power View](../../analysis-services/multidimensional-models/media/daxmd-ssdt-dimensions.gif "измерений в SSDT и списке полей Power View")  
   
 ### <a name="dimension-attribute-type"></a>Тип атрибута измерения  
  Многомерные модели поддерживают связывание атрибутов измерений с конкретными типами атрибутов измерений. На приведенном ниже рисунке показано измерение Geography, в котором атрибуты City, State-Province, Country и Postal Code имеют связанные с ними географические типы. Доступ к ним предоставляется в табличных метаданных. Power View распознает метаданные, позволяя пользователям создавать визуализации карт. Это показано значком карты рядом со столбцами City, Country, Postal Code и State-Province таблицы Geography в списке полей Power View.  
@@ -125,7 +125,7 @@ ms.locfileid: "34300502"
   
  **Отчет Power View с вычисляемыми элементами**  
   
- ![Вычисляемые элементы в Power View](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "вычисляемых элементов в Power View")  
+ ![Вычисляемые элементы в Power View](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "вычисляемые элементы в Power View")  
   
 ### <a name="default-members"></a>элементы по умолчанию;  
  Многомерные модели поддерживают элементы по умолчанию для атрибутов измерений. Элемент по умолчанию используется службами Analysis Services при статистической обработке данных для запроса. Доступ к элементу по умолчанию атрибута измерения предоставляется как к значению по умолчанию или фильтру для соответствующего столбца в табличных метаданных.  
@@ -147,7 +147,7 @@ ms.locfileid: "34300502"
   
  **Тип атрибута измерения ImageURL в SSDT**  
   
- ![Свойства атрибутов измерения](../../analysis-services/multidimensional-models/media/daxmd-dimattribute-properties.gif "свойства атрибутов измерения")  
+ ![Свойства атрибутов измерения](../../analysis-services/multidimensional-models/media/daxmd-dimattribute-properties.gif "измерения свойств атрибута")  
   
 ## <a name="parent-child-hierarchies"></a>Иерархии типа «родители-потомки»  
  Многомерные модели поддерживают иерархии типа «родители-потомки», доступ к которым предоставляется как к иерархиям в табличных метаданных. Доступ к каждому уровню иерархии типа «родители-потомки» обеспечивается как к скрытому столбцу. Доступ к ключевому атрибуту измерения типа «родители-потомки» не предоставляется в табличных метаданных.  
@@ -217,7 +217,7 @@ ms.locfileid: "34300502"
   
  Запрос DISCOVER_CSDL_METADATA имеет следующие ограничения:  
   
-|Название|Обязательно|Описание|  
+|Имя|Обязательно|Описание|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Да|Имя каталога или базы данных.|  
 |PERSPECTIVE_NAME|Да, если куб содержит несколько перспектив. Необязательное, если имеется только один куб или перспектива по умолчанию.|Имя куба или имя перспективы в многомерной базе данных.|  
@@ -225,7 +225,7 @@ ms.locfileid: "34300502"
   
  Возвращаемый документ языка CSDL представляет модель как пространство имен, содержащее сущности, ассоциации и свойства.  
   
- Дополнительные сведения о заметках CSDLBI для табличных моделей см. в статьях [Технический справочник по аннотациям бизнес-аналитики для языка CSDL](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) на сайте MSDN и [\[MS-CSDLBI\]: формат файла определений концептуальной схемы с заметками бизнес-аналитики](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Дополнительные сведения о заметках CSDLBI для табличных моделей см. в статьях [Технический справочник по аннотациям бизнес-аналитики для языка CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) на сайте MSDN и [\[MS-CSDLBI\]: формат файла определений концептуальной схемы с заметками бизнес-аналитики](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## <a name="client-help-on-officecom"></a>Справка по клиентам на Office.com  
  Следующие статьи, предоставляемые на сайте Office.com, описывают, как выглядят объекты многомерной модели в Power View, и показывают, как создать образец отчета:  

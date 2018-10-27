@@ -11,12 +11,12 @@ ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e0c2204aeb8c428d558b8bfe31f29c19ba6d773
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2ca1078bbc0d70ca36ad97e3b2f4aa69cd7d170
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212094"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148459"
 ---
 # <a name="subselects-in-queries"></a>Подзапросы выборки в запросах
   Выражения подзапросов выборки являются вложенными выражениями SELECT, которые используются для ограничения пространства куба, из которого вычисляется внешнее выражение SELECT. Подзапросы выборки позволяют определять новое пространство, в котором будут выполняться все вычисления.  
@@ -350,6 +350,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   Предложение HAVING нельзя использовать в предложении оси, вместо него следует применять выражение функции [Filter (многомерные выражения)](/sql/mdx/filter-mdx).  
   
--   По умолчанию вычисляемые элементы не допускаются в подзапросах выборки; Тем не менее, это ограничение можно изменить, в сеансам, путем присвоения значения для `SubQueries` свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или `DBPROP_MSMD_SUBQUERIES` свойство в [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). См. в разделе [вычисляемые элементы в подзапросах выборки и вложенных кубах](calculated-members-in-subselects-and-subcubes.md) подробное описание поведения вычисляемых элементов в зависимости от значения `SubQueries` или `DBPROP_MSMD_SUBQUERIES`.  
+-   По умолчанию вычисляемые элементы не допускаются в подзапросах выборки; Тем не менее, это ограничение можно изменить, в сеансам, путем присвоения значения для `SubQueries` свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или `DBPROP_MSMD_SUBQUERIES` свойство в [поддерживаемые свойства XMLA &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). См. в разделе [вычисляемые элементы в подзапросах выборки и вложенных кубах](calculated-members-in-subselects-and-subcubes.md) подробное описание поведения вычисляемых элементов в зависимости от значения `SubQueries` или `DBPROP_MSMD_SUBQUERIES`.  
   
   

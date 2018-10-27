@@ -1,22 +1,22 @@
 ---
 title: Что такое пул вычислительных кластеров SQL больших данных? | Документы Майкрософт
-description: ''
+description: В этой статье описывается пул вычислительных в кластере SQL Server 2019 больших данных.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: c17f6ac604edc021299f473137dcf6c5e470e3d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f13687bf55a9e267582a0749043c51d2e2b3bf
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796918"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050802"
 ---
 # <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>Что такое пул вычислительных кластеров SQL больших данных?
 
-В этой статье описывается роль *пулов вычислений SQL Server* в SQL Server 2019 preview кластера больших данных. Вычислительные пулы обеспечивают горизонтальное масштабирование вычислительных ресурсов для кластера больших данных. Архитектура и функциональные возможности пул вычислительных в следующих разделах.
+В этой статье описывается роль *пулов вычислений SQL Server* в кластере SQL Server 2019 предварительного просмотра больших данных. Вычислительные пулы обеспечивают горизонтальное масштабирование вычислительных ресурсов для кластера больших данных. Архитектура и функциональные возможности пул вычислительных в следующих разделах.
 
 ## <a name="compute-pool-architecture"></a>Архитектура пула вычислений
 

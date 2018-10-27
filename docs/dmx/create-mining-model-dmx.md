@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ae4979d02f92ef95364cc264c1a89c83b49a48d2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980594"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148049"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Имя алгоритма интеллектуального анализа данных, определенное текущим поставщиком.  
   
 > [!NOTE]  
->  Список алгоритмов, поддерживаемых текущим поставщиком могут быть получены с помощью [набор строк DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Чтобы просмотреть алгоритмы, поддерживаемые в текущий экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], см. в разделе [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
+>  Список алгоритмов, поддерживаемых текущим поставщиком могут быть получены с помощью [набор строк DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Чтобы просмотреть алгоритмы, поддерживаемые в текущий экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], см. в разделе [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *список параметров*  
  Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
@@ -95,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Список типов данных, типов содержимого, распределений столбцов и флагов моделирования, используемых при определении столбца, см. в следующих разделах.  
   
--   [Типы данных &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Типы данных (интеллектуальный анализ данных)](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Типы содержимого &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Типы содержимого (интеллектуальный анализ данных)](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Распределения столбцов &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Распределения столбцов (интеллектуальный анализ данных)](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Флаги моделирования &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Флаги моделирования (интеллектуальный анализ данных)](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  К инструкции можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает использование следующих \<связи столбцов > предложения.  
   

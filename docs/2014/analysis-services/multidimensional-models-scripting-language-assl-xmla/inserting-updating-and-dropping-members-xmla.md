@@ -21,15 +21,15 @@ ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d035cf5891c12857fcdcbc2da7df2304eb10dcdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1c30b916d910b93b53ae10a9eefaa19d45c957a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171494"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148029"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Вставка, обновление и удаление элементов (XMLA)
-  Можно использовать [вставить](../xmla/xml-elements-commands/insert-element-xmla.md), [обновление](../xmla/xml-elements-commands/update-element-xmla.md), и [Drop](../xmla/xml-elements-commands/drop-element-xmla.md) команды XML для аналитики (XMLA) чтобы соответственно вставлять, обновления или удаления элементов из измерения, доступного для записи. Дополнительные сведения о записи измерений, см. в разделе [измерениях](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+  Можно использовать [вставить](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [обновление](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla), и [Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) команды XML для аналитики (XMLA) чтобы соответственно вставлять, обновления или удаления элементов из измерения, доступного для записи. Дополнительные сведения о записи измерений, см. в разделе [измерениях](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 ## <a name="inserting-new-members"></a>Вставка новых элементов  
  Команда `Insert` вставляет новые элементы в указанные атрибуты в измерение, доступное для записи.  
@@ -48,9 +48,9 @@ ms.locfileid: "48171494"
   
  Команда `Insert` принимает только два свойства.  
   
--   [Объект](../xmla/xml-elements-properties/object-element-xmla.md) свойство, содержащее ссылку на объект для измерения, в котором должны быть вставлены элементы. Ссылка на объект для измерения содержит идентификатор базы данных, идентификатор куба и идентификатор измерения.  
+-   [Объект](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) свойство, содержащее ссылку на объект для измерения, в котором должны быть вставлены элементы. Ссылка на объект для измерения содержит идентификатор базы данных, идентификатор куба и идентификатор измерения.  
   
--   [Атрибуты](../xmla/xml-elements-properties/attributes-element-xmla.md) свойство, которое содержит один или несколько [атрибут](../xmla/xml-elements-properties/attribute-element-xmla.md) элементы для определения атрибутов, в которых должны быть вставлены элементы. Каждый элемент `Attribute` определяет атрибут и указывает имя, значение, переводы, унарный оператор, пользовательскую свертку, свойства пользовательской свертки и пропущенные уровни для одного элемента, которые должны быть добавлены к указанному атрибуту.  
+-   [Атрибуты](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attributes-element-xmla) свойство, которое содержит один или несколько [атрибут](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attribute-element-xmla) элементы для определения атрибутов, в которых должны быть вставлены элементы. Каждый элемент `Attribute` определяет атрибут и указывает имя, значение, переводы, унарный оператор, пользовательскую свертку, свойства пользовательской свертки и пропущенные уровни для одного элемента, которые должны быть добавлены к указанному атрибуту.  
   
     > [!NOTE]  
     >  Необходимо включать все свойства для элемента `Attribute`. В противном случае может произойти ошибка.  
@@ -77,13 +77,13 @@ ms.locfileid: "48171494"
     > [!NOTE]  
     >  Необходимо включать все свойства для элемента `Attribute`. В противном случае может произойти ошибка.  
   
--   [Где](../xmla/xml-elements-properties/where-element-xmla.md) свойство, которое содержит один или несколько `Attribute` элементов, ограничивающих атрибуты, в которых должны быть обновлены элементы. Свойство `Where` является ключевым для ограничения действия команды `Update` указанными экземплярами элемента. Если `Where` свойство не указано, будут обновлены все экземпляры данного элемента. Например, есть три клиента, в отношении которых требуется изменить название города с Redmond на Bellevue. Чтобы изменить название города, необходимо задать свойство `Where`, определяющее три элемента атрибута Customer, для которых должны быть изменены элементы атрибута City. Если не задать это свойство `Where`, то после выполнения команды `Update` для каждого клиента, названием города которого в данный момент является Redmond, это название будет изменено на Bellevue.  
+-   [Где](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla) свойство, которое содержит один или несколько `Attribute` элементов, ограничивающих атрибуты, в которых должны быть обновлены элементы. Свойство `Where` является ключевым для ограничения действия команды `Update` указанными экземплярами элемента. Если `Where` свойство не указано, будут обновлены все экземпляры данного элемента. Например, есть три клиента, в отношении которых требуется изменить название города с Redmond на Bellevue. Чтобы изменить название города, необходимо задать свойство `Where`, определяющее три элемента атрибута Customer, для которых должны быть изменены элементы атрибута City. Если не задать это свойство `Where`, то после выполнения команды `Update` для каждого клиента, названием города которого в данный момент является Redmond, это название будет изменено на Bellevue.  
   
     > [!NOTE]  
     >  За исключением новых элементов, команда `Update` может обновлять только значения ключей атрибутов для атрибутов, не включенных в предложение `Where`. Например, название города невозможно обновить при обновлении клиента, поскольку в этом случае название города будет изменено для всех клиентов.  
   
 ### <a name="updating-members-in-parent-attributes"></a>Обновление элементов в родительских атрибутах  
- Для поддержки родительских атрибутов `Update` команды необязательный [MoveWithDescendants](../xmla/xml-elements-properties/movewithdescendants-element-xmla.md)имеет свойства. Если свойству `MoveWithDescendants` задано значение TRUE, это указывает, что потомки родительского элемента должны быть перемещены вместе с родительским элементом при изменении идентификатора данного родительского элемента. Если этому свойству задано значение FALSE, то при перемещении родительского элемента его непосредственные потомки повышаются до уровня, на котором до этого находился родительский элемент.  
+ Для поддержки родительских атрибутов `Update` команды необязательный [MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)имеет свойства. Если свойству `MoveWithDescendants` задано значение TRUE, это указывает, что потомки родительского элемента должны быть перемещены вместе с родительским элементом при изменении идентификатора данного родительского элемента. Если этому свойству задано значение FALSE, то при перемещении родительского элемента его непосредственные потомки повышаются до уровня, на котором до этого находился родительский элемент.  
   
  При обновлении элементов в родительском атрибуте команда `Update` не может обновлять элементы в других атрибутах.  
   
@@ -106,16 +106,16 @@ ms.locfileid: "48171494"
     >  Элементы `Attribute`, включенные в команду `Drop`, должны содержать только свойства `AttributeName` и `Keys`. В противном случае может произойти ошибка.  
   
 ### <a name="dropping-members-in-parent-attributes"></a>Удаление элементов в родительских атрибутах  
- Установка [DeleteWithDescendants](../xmla/xml-elements-properties/deletewithdescendants-element-xmla.md) свойство указывает, что потомки родительского элемента, который также должен быть удален с родительского элемента. Если этому свойству задано значение FALSE, непосредственные потомки данного родительского элемента не удаляются, а повышаются до уровня, на котором находился родительский элемент.  
+ Установка [DeleteWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla) свойство указывает, что потомки родительского элемента, который также должен быть удален с родительского элемента. Если этому свойству задано значение FALSE, непосредственные потомки данного родительского элемента не удаляются, а повышаются до уровня, на котором находился родительский элемент.  
   
 > [!IMPORTANT]  
 >  Чтобы удалить и родительский элемент, и его потомков, пользователю необходимо иметь только разрешения на удаление родительского элемента. Разрешения на удаление потомков иметь не обязательно.  
   
 ## <a name="see-also"></a>См. также  
- [Элемент DROP &#40;XML для Аналитики&#41;](../xmla/xml-elements-commands/drop-element-xmla.md)   
- [Вставка элемента &#40;XML для Аналитики&#41;](../xmla/xml-elements-commands/insert-element-xmla.md)   
- [Элемент Update &#40;XML для Аналитики&#41;](../xmla/xml-elements-commands/update-element-xmla.md)   
- [Определение и идентификация объектов &#40;XML для Аналитики&#41;](../xmla/xml-elements-objects.md)   
+ [Элемент DROP &#40;XML для Аналитики&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
+ [Вставка элемента &#40;XML для Аналитики&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
+ [Элемент Update &#40;XML для Аналитики&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
+ [Определение и идентификация объектов &#40;XML для Аналитики&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)   
  [Разработка с использованием XMLA в службах Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Действия в многомерных моделях | Документы Microsoft
+title: Действия в многомерных моделях | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ed03893bbf3f18137329fc1792ecd0b30a77a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145709"
 ---
 # <a name="actions-in-multidimensional-models"></a>Действия в многомерных моделях
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,16 +65,16 @@ ms.lasthandoff: 05/10/2018
  **Дополнительные свойства**  
  Выберите свойство. Следующая таблица содержит сводку возможных свойств.  
   
-|property|Описание|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**Вызов**|Указывает способ запуска действия. Интерактивный способ, заданный по умолчанию, указывает на то, что действие будет запущено при открытии пользователем объекта. Допустимые параметры:<br /><br /> Пакет<br /><br /> Интерактивно<br /><br /> При открытии|  
 |**Приложение**|Описывает приложение действия.|  
-|**Description**|Описывает действие.|  
+|**Описание**|Описывает действие.|  
 |**Заголовок**|Указывает заголовок, отображаемый для действия. Если заголовок является многомерным выражением, то укажите значение **True** для свойства **Caption is MDX**.|  
 |**Caption is MDX**|Укажите значение **True** , если заголовок является многомерным выражением, а в обратном случае — значение **False** .|  
   
 > [!NOTE]  
->  Определение действий типов «HTML» и «Командная строка» производится на языке сценариев служб анализа данных (ASSL) или с помощью объектов AMO. Дополнительные сведения см. в разделах [Элемент Action (ASSL)](../../analysis-services/scripting/objects/action-element-assl.md), [Элемент Type (Action) (ASSL)](../../analysis-services/scripting/properties/type-element-action-assl.md) и [Программирование расширенных объектов AMO OLAP](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md).  
+>  Определение действий типов «HTML» и «Командная строка» производится на языке сценариев служб анализа данных (ASSL) или с помощью объектов AMO. Дополнительные сведения см. в разделах [Элемент Action (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Элемент Type (Action) (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) и [Программирование расширенных объектов AMO OLAP](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects).  
   
 ## <a name="creating-a-reporting-action"></a>Создание действия «Построение отчета»  
  Сервер отчетов отвечает на запросы с URL-адресами для отчетов. Чтобы создать действие построения отчета, выберите в меню **Куб** пункт **Создать действие с отчетами**. Для действия отчета доступны следующие параметры.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/10/2018
  **Сервер отчетов**  
  Свойства, описанные в следующей таблице, указываются для сервера отчетов.  
   
-|property|Описание|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**Имя сервера**|Имя компьютера, на котором запущен сервер отчетов.|  
 |**Путь сервера**|Путь, предоставленный сервером отчетов.|  
@@ -108,7 +109,7 @@ parametervalue1
 & ...  
 ```  
   
- Например:  
+ Пример:  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  

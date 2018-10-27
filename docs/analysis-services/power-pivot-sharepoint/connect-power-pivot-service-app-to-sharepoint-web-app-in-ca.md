@@ -1,5 +1,5 @@
 ---
-title: Подключение приложения службы Power Pivot для SharePoint веб-приложения в ЦС | Документы Microsoft
+title: Подключение приложения службы Power Pivot к веб-приложению SharePoint в ЦС | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4699746404fcc7e5f4384f2ce9871232d9aa44a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd72f62cc513064e01c04e5a501b18a070f4c7a8
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024151"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098977"
 ---
-# <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Подключение приложения службы Power Pivot для SharePoint веб-приложения в ЦС
+# <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Подключение приложения службы Power Pivot к веб-приложению SharePoint в ЦС
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] может использовать неограниченное число веб-приложений SharePoint в ферме. Чтобы приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] стало доступным, его необходимо добавить в список ассоциаций служб.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "34024151"
   
 ## <a name="see-also"></a>См. также  
  [Создание и настройка приложения службы PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [Первоначальная настройка (Power Pivot для SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
+ [Первоначальная конфигурация (PowerPivot для SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
   
   

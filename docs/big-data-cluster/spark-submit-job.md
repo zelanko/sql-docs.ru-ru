@@ -9,19 +9,19 @@ ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
 ms.date: 10/01/2018
-ms.openlocfilehash: 93ddd7a049bfadd4b2a3ac9ab9db87742d557f3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0787663b0c2eccfed33bf5c2cc681be4f2ef5edc
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796291"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050846"
 ---
 # <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Отправка задания Spark в кластерах больших данных SQL Server в Azure Data Studio
 
 Одним из основных сценариев является возможность отправлять задания Spark для SQL Server 2019 CTP 2.0. Функция отправки задания Spark позволяет отправить локальные файлы JAR-файл или Py со ссылками на кластер SQL Server 2019 больших данных. Он также позволяет выполнять JAR-файл или копировать файлы, которые уже находятся в файловой системе HDFS. 
 
 ## <a name="prerequisite"></a>Предварительные требования 
-Установите средства работы с большими данными для SQL Server и подключение к кластеру больших данных, перед отправкой задания Spark. Сведения об установке, см. ссылку [развертывание больших данных средств](deploy-big-data-tools.md).
+Установите средства работы с большими данными для SQL Server и подключение к кластеру больших данных, перед отправкой задания Spark. Сведения об установке, см. ссылку [развертывание средств работы с большими данными](deploy-big-data-tools.md).
 
 ## <a name="open-spark-job-submission-dialog"></a>Открыть диалоговое окно отправки задания Spark
 Существует несколько способов, чтобы открыть диалоговое окно отправки задания Spark. Способы включают панели мониторинга, контекстное меню в обозревателе объектов и Palate команды.

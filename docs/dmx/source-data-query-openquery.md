@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6f7b4744c3f521ed4c51e461f2b01a748b9b6496
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 895c28f0989debb899c1e01c80a18483d3cda5a1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989762"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147819"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;запрос источника данных&gt; -OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ OPENQUERY(<named datasource>, <query syntax>)
 ## <a name="remarks"></a>Примечания  
  **OPENQUERY** обеспечивает более безопасный способ доступа к внешним данным путем поддержки разрешений источника данных. Так как строка соединения хранится в источнике данных, администраторы могут использовать свойства источника данных для управления доступом к данным. Дополнительные сведения об источниках данных см. в разделе [поддерживаемые источники данных &#40;службы SSAS — многомерные&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
- Вы можете получить список источников данных, доступных на сервере, запросив **MDSCHEMA_INPUT_DATASOURCES** набора строк схемы. Дополнительные сведения об использовании **MDSCHEMA_INPUT_DATASOURCES**, см. в разделе [набор строк MDSCHEMA_INPUT_DATASOURCES](../analysis-services/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md).  
+ Вы можете получить список источников данных, доступных на сервере, запросив **MDSCHEMA_INPUT_DATASOURCES** набора строк схемы. Дополнительные сведения об использовании **MDSCHEMA_INPUT_DATASOURCES**, см. в разделе [набор строк MDSCHEMA_INPUT_DATASOURCES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset).  
   
  Кроме того, список источников данных в текущей базе данных служб Analysis Services можно получить с помощью следующего DMX-запроса:  
   

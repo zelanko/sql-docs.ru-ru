@@ -10,12 +10,12 @@ ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 167496250631866c009caef0dfe2044db4d11d6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ba9694808be6922762f023af496bc64ff2403b8
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644592"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099855"
 ---
 # <a name="managing-passwords-accesstosql"></a>Управление паролями (AccessToSQL)
 Этот раздел посвящен защита пароли к базам данных и процедуру для импорта или экспорта их на серверах:  
@@ -122,5 +122,5 @@ SSMA консольного приложения позволяет экспор
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA (доступ)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Выполнение команд консоли SSMA (доступ)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

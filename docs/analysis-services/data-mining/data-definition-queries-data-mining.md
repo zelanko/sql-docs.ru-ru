@@ -1,5 +1,5 @@
 ---
-title: Запросы определения данных (интеллектуальный анализ данных) | Документы Microsoft
+title: Запросы определения данных (интеллектуальный анализ данных) | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 562a3c0fd3b73c60f3e729afe926d61d68e55b1b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a38c0fb30533e0569d14cec0387d362fa4cabc87
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015667"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148279"
 ---
 # <a name="data-definition-queries-data-mining"></a>Запросы, определяющие данные (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,14 +59,14 @@ ms.locfileid: "34015667"
   
 -   Определение набора данных, который будет использоваться при обучении модели интеллектуального анализа с помощью инструкции [INSERT INTO (DMX)](../../dmx/insert-into-dmx.md) в сочетании с запросом источника данных, например OPENROWSET.  
   
- Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] включает шаблоны запроса, которые могут помочь в создании определений запросов данных. Дополнительные сведения см. в статье [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] включает шаблоны запроса, которые могут помочь в создании определений запросов данных. Дополнительные сведения см. в статье [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
   
  Шаблоны, предоставляемые для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чаще всего содержат только общее определение синтаксиса, которое необходимо будет адаптировать путем ввода либо в окне **Запрос** , либо в диалоговом окне ввода параметров.  
   
  Пример ввода параметров с помощью этого интерфейса см. в разделе [Создание одноэлементного прогнозирующего запроса из шаблона](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md).  
   
 ###  <a name="bkmk_Scripts"></a> Создание сценариев инструкций определений данных  
- Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обеспечивают работу с несколькими языками для написания скриптов и программирования, которые служат для создания или изменения объектов интеллектуального анализа данных, а также для определения источников данных.  Хотя расширения интеллектуального анализа данных направлены на ускорение обработки заданий интеллектуального анализа данных, для работы с объектами сценариев или в пользовательском режиме можно также воспользоваться XMLA и AMO.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обеспечивают работу с несколькими языками для написания скриптов и программирования, которые служат для создания или изменения объектов интеллектуального анализа данных, а также для определения источников данных.  Хотя расширения интеллектуального анализа данных направлены на ускорение обработки заданий интеллектуального анализа данных, для работы с объектами сценариев или в пользовательском режиме можно также воспользоваться XMLA и AMO.  
   
  Надстройка интеллектуального анализа данных для Excel также содержит множество шаблонов запросов и **Расширенный редактор запросов**, который поможет написать сложные инструкции для расширений интеллектуального анализа данных. Запросы можно составить в интерактивном режиме, после чего переключиться в представление SQL для захвата инструкций расширений интеллектуального анализа данных.  
   
@@ -81,14 +81,14 @@ ms.locfileid: "34015667"
   
 |||  
 |-|-|  
-|Работа с шаблонами для DMX-запросов.|[Использовать шаблоны служб Analysis Services в SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Работа с шаблонами для DMX-запросов.|[Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Построитель прогнозирующих запросов может использоваться для создания любых запросов.|[Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|Выполнив захват определений запроса с помощью программы SQL Server Profiler, пользуйтесь полученными трассировками для слежения за службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|Подробнее о языках скриптов и языках программирования для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[XML для аналитики & #40; XML для Аналитики & #41; Ссылка](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Разработка с использованием объектов AMO & #40; Объекты AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|Управление моделями в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Экспорт и импорт объектов интеллектуального анализа данных](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [ЭКСПОРТИРОВАТЬ & #40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ & #41;](../../dmx/export-dmx.md)<br /><br /> [ИМПОРТИРОВАТЬ & #40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ & #41;](../../dmx/import-dmx.md)|  
+|Выполнив захват определений запроса с помощью программы SQL Server Profiler, пользуйтесь полученными трассировками для слежения за службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|Подробнее о языках скриптов и языках программирования для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Справочник по XML для аналитики (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)<br /><br /> [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
+|Управление моделями в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Экспорт и импорт объектов интеллектуального анализа данных](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT (расширения интеллектуального анализа данных)](../../dmx/export-dmx.md)<br /><br /> [IMPORT (расширения интеллектуального анализа данных)](../../dmx/import-dmx.md)|  
 |Подробнее об OPENROWSET и других способах запроса внешних данных.|[&#60;запрос источника данных&#62;](../../dmx/source-data-query.md).|  
   
-## <a name="see-also"></a>См. также:  
- [Мастер интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   

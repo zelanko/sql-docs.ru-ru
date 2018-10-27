@@ -13,12 +13,12 @@ ms.assetid: da1174d6-d82b-4337-ac19-7368dbd95a84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cdaa5e0fe92c09b728540d28aa71bdc786d8cae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36ad3870fbbbfbcb457e54929bcd4729b7814d8b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149184"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147719"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Свойства сборки» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Свойства сборки** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] используется для задания свойств ссылки на сборку в базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Чтобы отобразить диалоговое окно **Свойства сборки** , можно щелкнуть правой кнопкой мыши сборку в **обозревателе объектов** и выбрать пункт **Свойства**.  
@@ -35,7 +35,7 @@ ms.locfileid: "48149184"
 |**Тип**|Отображается тип ссылки на сборку. Могут отображаться следующие значения:<br /><br /> **Сборка .NET**: ссылка на сборку ссылается на [!INCLUDE[msCoName](../includes/msconame-md.md)] сборки .NET Framework.<br /><br /> **Библиотека DLL COM**: ссылка на сборку указывает на библиотеку COM.|  
 |**Source**|Отображается источник ссылки на сборку. Обычно это свойство содержит полный путь и имя файла сборки, на которую указывает ссылка.|  
 |**Набор разрешений**|Выберите набор разрешений, используемый для определения доступа к ссылке на сборку. Дополнительные сведения о возможных значениях этого свойства см. в разделе <xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>.|  
-|**Сведения об олицетворении**|Выберите сведения об олицетворении, используемые при обращении к ссылке на сборку. Дополнительные сведения о возможных значениях этого свойства см. в разделе [Элемент ImpersonationInfo (ASSL)](scripting/properties/impersonationinfo-element-assl.md).|  
+|**Сведения об олицетворении**|Выберите сведения об олицетворении, используемые при обращении к ссылке на сборку. Дополнительные сведения о возможных значениях этого свойства см. в разделе [Элемент ImpersonationInfo (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl).|  
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

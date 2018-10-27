@@ -1,5 +1,5 @@
 ---
-title: Измерения в многомерных моделях | Документы Microsoft
+title: Измерения в многомерных моделях | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cdae19df652c081290f04d6227a394aa6d90676f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f5f58f5c771d176cedf332e51a33c354bbaf652c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027241"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145449"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Измерения в многомерных моделях
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "34027241"
  При создании куба в него можно также добавить любые измерения, которые уже существуют в базе данных. Эти измерения могли быть ранее определены мастером измерений для другого куба. После того как измерение базы данных определено, его изменение и настройка производятся в конструкторе измерений. Кроме того, в ограниченной степени измерение куба может быть настроено при помощи конструктора кубов.  
   
 > [!NOTE]  
->  Разрабатывать и настраивать измерения, атрибуты и иерархии можно также программным способом с помощью XML для аналитики или объектов AMO. Дополнительные сведения см. в разделах [Справочник по языку ASSL](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) и [Разработка объектов управления аналитикой (объекты AMO)](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  Разрабатывать и настраивать измерения, атрибуты и иерархии можно также программным способом с помощью XML для аналитики или объектов AMO. Дополнительные сведения см. в разделах [Справочник по языку ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) и [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В следующей таблице описаны подразделы, содержащиеся в этом разделе.  
   
  [Определение измерений базы данных](../../analysis-services/multidimensional-models/define-database-dimensions.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "34027241"
  [Определение связей атрибутов](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
  Описывает определение, изменение и настройку связи атрибутов при помощи конструктора измерений.  
   
- [Создание определяемых пользователем иерархий](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
+ [Создание пользовательских иерархий](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  Описывает определение, изменение и настройку пользовательской иерархии атрибутов измерений при помощи конструктора измерений.  
   
  [Использование мастера бизнес-аналитики для улучшения измерений](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  

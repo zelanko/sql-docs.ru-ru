@@ -17,15 +17,15 @@ ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6be578d76164e597fe7057bc02f69bf9d9bcce74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c459fcb3efc86566eef046df30d2d8ad9ea601b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142454"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145855"
 ---
 # <a name="merging-partitions-xmla"></a>Слияние секций (XMLA)
-  Если секции имеют одинаковые статистические схемы и структуры, можно объединить секции с помощью [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) в XML для аналитики (XMLA) команду. При управлении секциями их слияние является важным действием, особенно для тех секций, в которых содержатся исторические данные, секционированные по дате.  
+  Если секции имеют одинаковые статистические схемы и структуры, можно объединить секции с помощью [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) в XML для аналитики (XMLA) команду. При управлении секциями их слияние является важным действием, особенно для тех секций, в которых содержатся исторические данные, секционированные по дате.  
   
  Например, в финансовом кубе может быть две секции.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48142454"
  В двух секциях установлены разные параметры хранения, но одинаковые статистические схемы. Вместо того чтобы в конце года обрабатывать куб по годам исторических данных, можно воспользоваться командой `MergePartitions`, чтобы выполнить слияние секции для текущего года с секцией для предыдущих лет. В этом случае будут сохранены данные статистических вычислений; при этом не требуется полной обработки куба, на что может уйти много времени.  
   
 ## <a name="specifying-partitions-to-merge"></a>Указание секций для слияния  
- При `MergePartitions` команда выполнена, статистической обработки данных, хранящихся в исходных секций, указанных в [источника](../xmla/xml-elements-properties/source-element-xmla.md) свойство добавляется в целевую секцию, указанную в [целевой](../xmla/xml-elements-properties/target-element-xmla.md) свойство.  
+ При `MergePartitions` команда выполнена, статистической обработки данных, хранящихся в исходных секций, указанных в [источника](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) свойство добавляется в целевую секцию, указанную в [целевой](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) свойство.  
   
 > [!NOTE]  
 >  Свойство `Source` может содержать несколько ссылок объектов на секции. Но свойство `Target` не предоставляет такой возможности.  

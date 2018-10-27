@@ -10,12 +10,12 @@ ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbcd28bde611ece919c9a4f2ab0c65a4d646cd7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4ff4fdcf07b84455b76994d23cc2c9b0f738106
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594022"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100105"
 ---
 # <a name="generating-reports-db2tosql"></a>Создание отчетов (DB2ToSQL)
 В консоли SSMA на уровне дерева объектов создаются отчеты определенных действий, выполняемых с помощью команд.  
@@ -138,5 +138,5 @@ ms.locfileid: "47594022"
 -   Сбой скрипта  
   
 ## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[Выполнение команд консоли SSMA](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

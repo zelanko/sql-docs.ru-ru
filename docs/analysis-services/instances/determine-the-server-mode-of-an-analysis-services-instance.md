@@ -1,5 +1,5 @@
 ---
-title: Определение режима сервера служб Analysis Services экземпляр | Документы Microsoft
+title: Определение режима работы сервера анализа экземпляра служб Services | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 52f12b7d828f9d863f3efe29355e59b6a76d33ef
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 85501a0b8899e375965a7e999ce2d4e938f14cc0
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017461"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099724"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Определение режима работы сервера экземпляра служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34017461"
 ## <a name="server-icons-in-object-explorer"></a>Значки сервера в обозревателе объектов  
  Самый простой способ определить режим сервера — это подключиться к серверу в среде SQL Server Management Studio и посмотреть на значок рядом с именем сервера в обозревателе объектов. На рисунке ниже показаны три экземпляра служб Analysis Services, развернутые в режиме многомерных данных, табличном режиме и режиме [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] :  
   
- ![Объект Explorer значки для каждого режима сервера](../../analysis-services/instances/media/ssas-ssms-servermodes.gif "значки обозревателя объектов для каждого режима сервера")  
+ ![Объект Explorer значки для каждого режима работы сервера](../../analysis-services/instances/media/ssas-ssms-servermodes.gif "значки обозревателя объектов для каждого режима работы сервера")  
   
 ## <a name="viewing-deploymentmode-property-in-msmdsrvini-file"></a>Просмотр свойства DeploymentMode в файле MSMDSRV.INI  
  Также можно проверить свойство **DeploymentMode** в файле msmdsrv.ini, который имеется в каждом экземпляре служб Analysis Services. Значение этого свойства определяет режим сервера. Допустимые значения: 0 (многомерный), 1 (SharePoint) или 2 (табличный). Чтобы открыть файл msmdsrv.ini, необходимо быть администратором служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (то есть членом роли сервера). Этот файл содержит структурированный XML-код. Просмотреть этот файл можно в Блокноте или другом текстовом редакторе.  
@@ -51,10 +51,10 @@ ms.locfileid: "34017461"
 ## <a name="see-also"></a>См. также  
  [Установка служб Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   
  [Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
- [Установка Power Pivot для SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
- [Подключитесь к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
+ [Установка Power Pivot для SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
+ [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Решения табличных моделей](../../analysis-services/tabular-models/tabular-models-ssas.md)   
  [Решения многомерной модели ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Модели интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

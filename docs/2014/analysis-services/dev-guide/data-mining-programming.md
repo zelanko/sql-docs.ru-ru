@@ -14,12 +14,12 @@ ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8aa16d708683a33281ee0836321e11f0a16e3211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d0148c1f8284610178cde16852494c297fb4c6e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047704"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147359"
 ---
 # <a name="data-mining-programming"></a>Программирование интеллектуального анализа данных
   Если встроенные инструменты и средства просмотра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не соответствуют требованиям, их можно расширить, создав собственные программные расширения служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. При таком подходе имеются два варианта.  
@@ -57,17 +57,17 @@ ms.locfileid: "48047704"
  Описываются дополнения к спецификации для поддержки интеллектуального анализа данных и многомерных данных: новые наборы строк схемы и столбцы, язык расширений интеллектуального анализа данных (DMX) для создания и управления ими структур интеллектуального анализа данных.  
   
 ## <a name="related-reference"></a>Связанные справочники  
- [Разработка с использованием ADOMD.NET](../multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [Разработка с использованием ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
  Знакомит с клиентом ADOMD.NET и программными объектами сервера.  
   
- [Разработка объектов управления аналитикой &#40;объектов AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
  Представляет библиотеку программирования объектов AMO.  
   
- [Язык сценариев разработки с использованием Analysis Services &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Разработка на языке ASSL (язык ASSL)](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  Знакомит с XML для аналитики (XMLA) и его расширениями.  
   
 ## <a name="see-also"></a>См. также  
  [Руководство разработчика &#40;служб Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

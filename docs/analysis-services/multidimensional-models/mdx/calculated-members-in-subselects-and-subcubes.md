@@ -1,5 +1,5 @@
 ---
-title: Вычисляемые элементы в подзапросах выборки и вложенных кубах | Документы Microsoft
+title: Вычисляемые элементы в подзапросах выборки и вложенных кубах | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 673f73c91f4cf3206e9f9df15f248b059a4e78d4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8bae68e24f6a7f2dfd42e335a9e003f56cf1d610
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023831"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145319"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Вычисляемый элемент — это элемент измерения, значение которого вычисляется из выражения во время выполнения и может использоваться в подзапросах выборки и вложенных кубах, чтобы более точно определить пространство куба запроса.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>Включение вычисляемых элементов в подпространстве  
- Свойство строки подключения **SubQueries** в разделе <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или свойство **DBPROPMSMDSUBQUERIES** в разделе [Поддерживаемые свойства XMLA (XMLA)](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) определяет поведение или квоту для вычисляемых элементов или вычисляемых наборов в подзапросах выборки и вложенных кубах. В контексте настоящего документа, если не указано иное, термин «подзапросы выборки» означает подзапросы выборки и вложенные кубы.  
+ Свойство строки подключения **SubQueries** в разделе <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или свойство **DBPROPMSMDSUBQUERIES** в разделе [Поддерживаемые свойства XMLA (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) определяет поведение или квоту для вычисляемых элементов или вычисляемых наборов в подзапросах выборки и вложенных кубах. В контексте настоящего документа, если не указано иное, термин «подзапросы выборки» означает подзапросы выборки и вложенные кубы.  
   
  Свойство SubQueries может принимать следующие значения.  
   
 |||  
 |-|-|  
-|Value|Описание|  
+|Значение|Описание|  
 |0|Вычисляемые элементы не допускаются в подзапросах выборки и вложенных кубах.<br /><br /> Если при вычислении подзапроса выборки или вложенного куба присутствует ссылка на вычисляемый элемент, возникает ошибка.|  
 |1|Вычисляемые элементы допускаются в подзапросах выборки и вложенных кубах, однако в возвращаемое подпространство восходящие элементы не вводятся.|  
 |2|Вычисляемые элементы допускаются в подзапросах выборки и вложенных кубах, и в возвращаемое подпространство вводятся восходящие элементы. Кроме того, в выборке вычисляемых элементов допускается смешанная гранулярность.|  
@@ -108,7 +108,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|235 171,62 $|419,46 $|4996,25 $|131 788,82 $|97 967,09 $|  
-|United States|235 171,62 $|419,46 $|4996,25 $|131 788,82 $|97 967,09 $|  
+|США|235 171,62 $|419,46 $|4996,25 $|131 788,82 $|97 967,09 $|  
 |Oregon|30 968,25 $|419,46 $|4996,25 $|17 442,97 $|8109,56 $|  
 |Portland|30 968,25 $|419,46 $|4996,25 $|17 442,97 $|8109,56 $|  
 |97205|30 968,25 $|419,46 $|4996,25 $|17 442,97 $|8109,56 $|  
@@ -119,12 +119,12 @@ Where [Measures].[Reseller Sales Amount]
   
  В приведенных результатах агрегированные значения для [All Geographies], [United States], [Oregon] и [Washington] получаются на основе статической обработки родителей &[Portland]&[OR] и &[Spokane]&[WA]. Из вычисляемого элемента не берется ничего.  
   
-### <a name="remarks"></a>Замечания  
+### <a name="remarks"></a>Примечания  
  В выражениях подзапроса выборки или вложенного куба допускается использование только элементов, вычисляемых в сеансе, или элементов, вычисляемых глобально. Наличие в многомерном запросе элементов, вычисляемых в запросе, приведет к ошибке выполнения выражения подзапроса выборки или вложенного куба.  
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Подзапросы выборки в запросах](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [Поддерживаемые свойства XMLA & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
+ [Поддерживаемые свойства XMLA (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

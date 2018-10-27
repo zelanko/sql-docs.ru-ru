@@ -1,5 +1,5 @@
 ---
-title: Свойства ячеек (многомерные Выражения) | Документы Microsoft
+title: Свойства ячеек (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 481d89abac98dee1095e55a9890cea100f6c4db6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023431"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145309"
 ---
-# <a name="mdx-cell-properties---using-cell-properties"></a>Свойства ячеек MDX - свойства ячеек
+# <a name="mdx-cell-properties---using-cell-properties"></a>Свойства ячеек многомерных Выражений — с помощью свойства ячейки
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Свойства ячеек в языке многомерных выражений содержат сведения о содержимом и формате ячеек многомерного источника данных, такого как куб.  
   
@@ -42,7 +42,7 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>Поддерживаемые внутренние свойства ячеек  
  В следующей таблице перечислены поддерживаемые внутренние свойства ячеек, используемые в качестве значений `<property>` .  
   
-|property|Описание|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**ACTION_TYPE**|Битовая маска, определяющая существующие типы действий над ячейкой. Это свойство может принимать одно из следующих значений:<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Примечание. Действия детализации не поддерживаются для запросов, содержащих набор в предложении WHERE.|  
 |**BACK_COLOR**|Цвет фона при отображении свойства **VALUE** или **FORMATTED_VALUE**. Дополнительные сведения см. в разделе [Свойства ячеек FORE_COLOR и BACK_COLOR (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
@@ -69,7 +69,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE** (0x10000009)   Ячейку нельзя обновить, поскольку обновление не поддерживается моделью интеллектуального анализа, косвенным измерением или измерением интеллектуального анализа данных.|  
 |**VALUE**|Неформатированное значение ячейки.|  
   
- Для работы с ячейками требуются только свойства ячеек **CELL_ORDINAL**, **FORMATTED_VALUE**и **VALUE** . Все внутренние или предоставленные поставщиком свойства ячеек, включая их типы данных и поддержку поставщиками, определены в наборе строк схемы **PROPERTIES** . Дополнительные сведения о наборе строк схемы **PROPERTIES** см. в разделе [Набор строк MDSCHEMA_PROPERTIES](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md).  
+ Для работы с ячейками требуются только свойства ячеек **CELL_ORDINAL**, **FORMATTED_VALUE**и **VALUE** . Все внутренние или предоставленные поставщиком свойства ячеек, включая их типы данных и поддержку поставщиками, определены в наборе строк схемы **PROPERTIES** . Дополнительные сведения о наборе строк схемы **PROPERTIES** см. в разделе [Набор строк MDSCHEMA_PROPERTIES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset).  
   
  По умолчанию, если не используется ключевое слово **CELL PROPERTIES** , возвращаются свойства ячеек **VALUE**, **FORMATTED_VALUE**и **CELL_ORDINAL** (именно в этом порядке). Если используется ключевое слово **CELL PROPERTIES** , возвращаются свойства ячеек, явно перечисленные в ключевом слове.  
   
@@ -101,6 +101,6 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Основные принципы запросов многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

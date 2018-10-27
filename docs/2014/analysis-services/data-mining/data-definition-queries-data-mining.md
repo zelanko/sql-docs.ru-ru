@@ -11,12 +11,12 @@ ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 602aae01c3ce19c83e44f039fdf3f996dfdb72b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf9674f348541e0c4d8fe4f8c6c35740124b91d2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164134"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147522"
 ---
 # <a name="data-definition-queries-data-mining"></a>Запросы, определяющие данные (интеллектуальный анализ данных)
   При интеллектуальном анализе данных категория *запрос определения данных* означает инструкции расширения интеллектуального анализа данных или команды XMLA, которые выполняют следующие действия.  
@@ -82,14 +82,14 @@ ms.locfileid: "48164134"
   
 |||  
 |-|-|  
-|Работа с шаблонами для DMX-запросов.|[Использование шаблонов служб Analysis Services в среде SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Работа с шаблонами для DMX-запросов.|[Use Analysis Services Templates in SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Построитель прогнозирующих запросов может использоваться для создания любых запросов.|[Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|Выполнив захват определений запроса с помощью программы SQL Server Profiler, пользуйтесь полученными трассировками для слежения за службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|Подробнее о языках скриптов и языках программирования для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[XML для аналитики &#40;XMLA&#41; ссылки](../xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Разработка объектов управления аналитикой &#40;объектов AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|Управление моделями в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Экспорт и импорт объектов интеллектуального анализа данных](export-and-import-data-mining-objects.md)<br /><br /> [ЭКСПОРТ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](/sql/dmx/export-dmx)<br /><br /> [ИМПОРТ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](/sql/dmx/import-dmx)|  
+|Выполнив захват определений запроса с помощью программы SQL Server Profiler, пользуйтесь полученными трассировками для слежения за службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|Подробнее о языках скриптов и языках программирования для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Справочник по XML для аналитики (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)<br /><br /> [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
+|Управление моделями в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Экспорт и импорт объектов интеллектуального анализа данных](export-and-import-data-mining-objects.md)<br /><br /> [EXPORT (расширения интеллектуального анализа данных)](/sql/dmx/export-dmx)<br /><br /> [IMPORT (расширения интеллектуального анализа данных)](/sql/dmx/import-dmx)|  
 |Подробнее об OPENROWSET и других способах запроса внешних данных.|[&#60;запрос источника данных&#62;](/sql/dmx/source-data-query).|  
   
 ## <a name="see-also"></a>См. также  
- [Мастер интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-wizard-analysis-services-data-mining.md)  
+ [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-wizard-analysis-services-data-mining.md)  
   
   

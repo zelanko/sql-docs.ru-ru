@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016091"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145999"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Какой новые возможности служб Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -94,7 +94,7 @@ SQL Server 2016 Analysis Services включает множество усове
  ### <a name="powershell-for-tabular-models"></a>PowerShell для табличных моделей    
  Этот выпуск включает усовершенствования PowerShell для табличных моделей на уровне совместимости 1200. Можно использовать все применимые командлеты, а также командлеты, предназначенные специально для табличного режима: [Invoke ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) и [Invoke-ProcessTable](../analysis-services/powershell/invoke-processtable-cmdlet.md).    
  ### <a name="ssms-scripting-database-operations"></a>Создание сценариев SSMS для операций базы данных    
- В [последнем выпуске среды Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)включена возможность написания сценариев для таких команд базы данных, как Create, Alter, Delete, Backup, Restore, Attach, Detach. Результатом является TMSL в формате JSON. Дополнительные сведения см. в [справочнике по языке TMSL (Tabular Model Scripting Language)](../analysis-services/tabular-model-scripting-language-tmsl-reference.md).    
+ В [последнем выпуске среды Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)включена возможность написания сценариев для таких команд базы данных, как Create, Alter, Delete, Backup, Restore, Attach, Detach. Результатом является TMSL в формате JSON. Дополнительные сведения см. в [справочнике по языке TMSL (Tabular Model Scripting Language)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference).    
  ### <a name="analysis-services-execute-ddl-task"></a>Задача «Выполнение инструкции DDL служб Analysis Services»    
  Теперь задача[Выполнение инструкции DDL служб Analysis Services](../integration-services/control-flow/analysis-services-execute-ddl-task.md) , помимо прочего, принимает команды на языке TMSL.     
  ### <a name="ssas-powershell-cmdlet"></a>Командлет PowerShell SSAS    
@@ -103,7 +103,7 @@ SQL Server 2016 Analysis Services включает множество усове
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>В SSMS поддерживается язык сценариев TMSL.    
   [Последняя версия SSMS](http://msdn.microsoft.com/library/mt238290.aspx)позволяет создавать сценарии автоматизации большинства административных задач для табличных моделей 1200. В настоящее время можно сгенерировать сценарии для следующих задач: обработка на любом уровне, а также для операций CREATE, ALTER, DELETE на уровне базы данных.    
     
- С функциональной точки зрения TMSL эквивалентен расширению ASSL XML, предоставляющему определения многомерных объектов. Однако для описания табличных метаданных TMSL использует собственные дескрипторы, такие как **model**, **table**и **relationship** . Дополнительные сведения о схеме см. в [справочнике по языку TMSL (Tabular Model Scripting Language)](../analysis-services/tabular-model-scripting-language-tmsl-reference.md).    
+ С функциональной точки зрения TMSL эквивалентен расширению ASSL XML, предоставляющему определения многомерных объектов. Однако для описания табличных метаданных TMSL использует собственные дескрипторы, такие как **model**, **table**и **relationship** . Дополнительные сведения о схеме см. в [справочнике по языку TMSL (Tabular Model Scripting Language)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference).    
     
  Созданный сценарий на базе JSON для табличной модели может иметь следующий вид:    
     
@@ -121,7 +121,7 @@ SQL Server 2016 Analysis Services включает множество усове
 }    
 ```    
 
-Полезными данными является документ JSON, который может быть минимальным, как приведенный выше пример, или же содержать полный набор определений объектов. Синтаксис описывается в [справочнике по языку TMSL (Tabular Model Scripting Language)](../analysis-services/tabular-model-scripting-language-tmsl-reference.md).
+Полезными данными является документ JSON, который может быть минимальным, как приведенный выше пример, или же содержать полный набор определений объектов. Синтаксис описывается в [справочнике по языку TMSL (Tabular Model Scripting Language)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference).
 
 Результатом выполнения команд CREATE, ALTER, и DELETE на уровне базы данных будет сценарий TMSL сценарий в знакомом окне XMLA.  Кроме того, в этом выпуске поддерживается написание сценариев и для других команд, например Process. Поддержка скриптов для других действий может быть добавлена в будущем выпуске.    
 

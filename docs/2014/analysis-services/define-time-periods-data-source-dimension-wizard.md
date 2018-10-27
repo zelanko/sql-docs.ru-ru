@@ -13,12 +13,12 @@ ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2086fa86f65cd467b84bf77e57123ded51e3dd4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aacc0e61ca3db517b5f05aa93ed43b3268e40529
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161464"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144619"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Определение временных периодов (источник данных) (мастер измерений)
   Страница **Определение временных периодов** используется для определения атрибутов, представляющих периоды времени в измерении времени, которое имеет столбцы в таблице, заданной на странице **Выбор типа измерения** .  
@@ -28,7 +28,7 @@ ms.locfileid: "48161464"
   
 ## <a name="options"></a>Параметры  
  **Имя свойства времени**  
- Выводит типы атрибутов, которые используются для указания периодов времени в измерении времени. Дополнительные сведения о типах атрибутов см. в разделе [Элемент Type (DimensionAttribute) (ASSL)](scripting/properties/type-element-dimensionattribute-assl.md).  
+ Выводит типы атрибутов, которые используются для указания периодов времени в измерении времени. Дополнительные сведения о типах атрибутов см. в разделе [Элемент Type (DimensionAttribute) (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl).  
   
 > [!NOTE]  
 >  Тип атрибута `Date` должен использоваться только для столбцов с типом данных DateTime.  

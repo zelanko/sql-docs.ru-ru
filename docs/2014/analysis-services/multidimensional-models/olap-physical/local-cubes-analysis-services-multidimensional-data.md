@@ -14,12 +14,12 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f334a0282a27d707e0c1ec99817ddee3d318fff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b84fe6ed1b6b06eee783aef0f214017cca8bca
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216654"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145879"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Локальные кубы (службы Analysis Services — многомерные данные)
   Для создания, обновления или удаления локальных кубов разработайте и выполните скрипт ASSL или программу AMO.  
@@ -40,8 +40,8 @@ ms.locfileid: "48216654"
   
 |Источник данных для локального куба|Метод создания|  
 |------------------------------------|---------------------|  
-|Серверный куб|Можно использовать инструкцию CREATE GLOBAL CUBE или [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] скрипт языка сценариев (ASSL) для создания и наполнения куба из серверного куба. Дополнительные сведения см. в разделе [инструкция CREATE глобального КУБА &#40;многомерных Выражений&#41; ](/sql/mdx/mdx-data-definition-create-global-cube) или [язык сценариев служб Analysis Services &#40;ASSL&#41; ссылку](../../scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
-|Реляционный источник данных|Для создания и наполнения куба из реляционной базы данных OLE DB используется скрипт ASSL. Для создания локального куба с помощью скрипта ASSL можно просто соединиться с локальным файлом куба (*.CUB) и выполнить скрипт ASSL, аналогичный сценарию ASSL, выполняемому на экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] для создания серверного куба. Дополнительные сведения см. в разделе [язык сценариев служб Analysis Services &#40;ASSL&#41; ссылку](../../scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
+|Серверный куб|Можно использовать инструкцию CREATE GLOBAL CUBE или [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] скрипт языка сценариев (ASSL) для создания и наполнения куба из серверного куба. Дополнительные сведения см. в разделе [инструкция CREATE глобального КУБА &#40;многомерных Выражений&#41; ](/sql/mdx/mdx-data-definition-create-global-cube) или [язык сценариев служб Analysis Services &#40;ASSL&#41; ссылку](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
+|Реляционный источник данных|Для создания и наполнения куба из реляционной базы данных OLE DB используется скрипт ASSL. Для создания локального куба с помощью скрипта ASSL можно просто соединиться с локальным файлом куба (*.CUB) и выполнить скрипт ASSL, аналогичный сценарию ASSL, выполняемому на экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] для создания серверного куба. Дополнительные сведения см. в разделе [язык сценариев служб Analysis Services &#40;ASSL&#41; ссылку](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
   
  С помощью инструкции REFRESH CUBE можно перестроить локальный куб и обновить его данные. Дополнительные сведения см. в разделе [инструкцию обновления КУБА &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-definition-refresh-cube).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48216654"
   
 ## <a name="see-also"></a>См. также  
  [Инструкция CREATE GLOBAL CUBE &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-definition-create-global-cube)   
- [Язык сценариев разработки с использованием Analysis Services &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Разработка на языке ASSL (язык ASSL)](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Инструкции CUBE обновления &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-definition-refresh-cube)  
   
   

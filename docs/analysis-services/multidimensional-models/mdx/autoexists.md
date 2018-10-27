@@ -1,5 +1,5 @@
 ---
-title: Автоматическая проверка существования | Документы Microsoft
+title: Автоматическая проверка существования | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5f7c111f85e3b43a560b70171f8af470a9fc505a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3c156f9e0d6df2afbf7710b1ed5c19fb60034e92
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024771"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146255"
 ---
-# <a name="autoexists"></a>Автоматическая проверка существования
+# <a name="autoexists"></a>автоматическая проверка существования
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Концепция *автоматической проверки существования* ограничивает пространство куба теми ячейками, которые фактически существуют в кубе, в противоположность тем ячейкам, которые могут существовать в результате создания всех возможных комбинаций элементов иерархии атрибута, принадлежащих одной иерархии. Это происходит потому, что элементы одной иерархии атрибута не могут существовать в одном измерении с элементами другой иерархии атрибута. Если в инструкции SELECT используются две или более иерархии атрибута одного измерения, службы Analysis Services оценивают эти атрибуты, чтобы убедиться, что элементы этих атрибутов правильно ограничены и соответствуют критериям остальных атрибутов.  
   
@@ -308,15 +308,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$ 8 568 958,27**|**$ 139 393,27**|**1,63 %**|  
 |**HL Mountain Frame**|**$ 3 365 069,27**|**$ 174,11**|**0,01 %**|  
   
- Поведение автоматической проверки существования может изменяться с помощью параметра AUTOEXISTS = [1 | 2 | 3] параметр в строке подключения; в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) и <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> для использования параметра.  
+ Поведение автоматической проверки существования может изменяться с помощью параметра AUTOEXISTS = [1 | 2 | 3] параметр в строке подключения; см. в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) и <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> сведения об использовании параметра.  
   
 ## <a name="see-also"></a>См. также  
- [Ключевые понятия многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Пространство куба](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Кортежи](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [Работа с членами, кортежей и наборов & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Работа с элементами, кортежами и наборами (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Визуальные и невизуальные итоги](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [Справочник по языку многомерных Выражений & #40; Многомерные Выражения & #41;](../../../mdx/mdx-language-reference-mdx.md)   
- [Многомерные выражения & #40; Многомерные Выражения & #41; Ссылка](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Справочник по языку многомерных выражений (многомерные выражения)](../../../mdx/mdx-language-reference-mdx.md)   
+ [Справочник по многомерным выражениям (многомерные выражения)](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

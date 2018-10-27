@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 250d2efd6d212348083f5dc3bbc355c466f4811b
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 26703f73312b5531490afc7d01319d4ac290bebe
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461860"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806764"
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Python в базе данных аналитики для разработчиков SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,30 +37,23 @@ ms.locfileid: "49461860"
 
 Вы можете выполнять все задачи с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимые процедуры в знакомой среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
-- [Шаг 1. Скачивание образца данных](demo-data-nyctaxi-in-sql.md)
 
-    Скачайте образец набора данных и все файлы сценариев на локальном компьютере.
-
-- [Шаг 2. Импорт данных в SQL Server с помощью PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
-
-    Выполните сценарий PowerShell, который создает базу данных и таблицу на указанном экземпляре и загружает демонстрационные данные в таблицу.
-
-- [Шаг 3: Анализ и визуализация данных с помощью Python](sqldev-py3-explore-and-visualize-the-data.md)
+- [Анализ и визуализация данных с помощью Python](sqldev-py3-explore-and-visualize-the-data.md)
 
     Выполните базовому просмотру данных и визуализации, путем вызова Python из [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимых процедур.
 
-- [Шаг 4: Создание функций данных с помощью Python в T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [Создание функций данных с помощью Python в T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     Сформируйте характеристики данных с помощью пользовательских функций SQL.
   
-- [Шаг 5: Обучение и сохранение модели Python с помощью T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [Обучение и сохранение модели Python с помощью T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     Создание и сохранение модели машинного обучения, с помощью Python в хранимых процедурах.
   
     В этом пошаговом руководстве показано, как выполнять задачи двоичной классификации; Можно также использовать данные для построения моделей регрессии или классификации по нескольким классам.
 
   
--  [Шаг 6: Ввод в эксплуатацию моделей Python](sqldev-py6-operationalize-the-model.md)
+-  [ Ввод в эксплуатацию моделей Python](sqldev-py6-operationalize-the-model.md)
 
     После сохранения модели в базу данных, вызовите ее для прогнозирования с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].
 

@@ -13,12 +13,12 @@ ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dae6b521b26158e8bf854fe357d7119ca3a3b4c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acec8d8bb72566d00593634d7d2ee27a41fd9688
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161754"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148089"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Создание запроса интеллектуального анализа данных с помощью XMLA
   С помощью объектов AMO, инструкций DMX и языка XML/A можно создавать разнообразные запросы к объектам интеллектуального анализа данных.  
@@ -100,7 +100,7 @@ ms.locfileid: "48161754"
      На панели результатов выводится определение схемы и значения для заданной модели.  
   
 ## <a name="see-also"></a>См. также  
- [Содержимое модели интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Наборы строк схемы интеллектуального анализа данных](../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
+ [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

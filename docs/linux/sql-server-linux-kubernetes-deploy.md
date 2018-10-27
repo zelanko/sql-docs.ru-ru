@@ -1,5 +1,5 @@
 ---
-title: Развертывание SQL Server AlwaysOn группы доступности в кластере Kubernetes
+title: Развертывать группу доступности SQL Server Always On, в кластере Kubernetes
 description: В этой статье описывается параметры для SQL Server Kubernetes Always On доступности группы оператор глобальным требованиям
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,106 +10,106 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d4a2786a795b20e9c2f943824027859230b2c85
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 117faab160c512f4732b0709b0b2e1024a196893
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460469"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991187"
 ---
-# <a name="deploy-a-sql-server-always-on-availability-group-on-kubernetes-cluster"></a>Развертывание SQL Server Always On группы доступности в кластере Kubernetes
+# <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Развертывать группу доступности SQL Server Always On, в кластере Kubernetes
 
 В этой статье пример развертывает группу доступности SQL Server Always On, в кластере Kubernetes с тремя репликами. Вторичные реплики находятся в режиме синхронной фиксации.
 
-На платформе Kubernetes развертывание включает оператор SQL Server, SQL Server контейнеры и нагрузки служб балансировки. Оператор автоматически управляет группы доступности. В этой статье объясняется, как:
+На платформе Kubernetes, развертывание включает оператор SQL Server, SQL Server контейнеры и нагрузки служб балансировки. Оператор автоматически управляет группы доступности. В этой статье объясняется, как:
 
-- Развертывание оператор, контейнеры SQL Server и службы балансировки нагрузки
-- Подключение к группе доступности с помощью служб
-- Добавление базы данных в группу доступности
+- Развертывание, оператор, контейнеры SQL Server и службы балансировки нагрузки.
+- Подключение к группе доступности со службами.
+- Добавление базы данных к группе доступности.
 
 ## <a name="requirements"></a>Требования
 
 - Кластер Kubernetes
 - Kubernetes версии 1.11.0 или более поздней версии
 - По крайней мере три узла
-- [kubectl](http://kubernetes.io/docs/tasks/tools/install-kubectl/).
-- Доступ к [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) репозитория github
+- [kubectl](http://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- Доступ к [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) репозитория GitHub
 
-  >[!NOTE]
-  >Можно использовать любой тип кластера Kubernetes. Чтобы создать кластер Kubernetes в службе Azure Kubernetes (AKS), см. в разделе [создание кластера AKS](http://docs.microsoft.com/azure/aks/create-cluster).
-  > Следующий скрипт создает четыре узла кластера Kubernetes в Azure.
-  >```azure-cli
-  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
-  >```
+>[!NOTE]
+>Можно использовать любой тип кластера Kubernetes. Чтобы создать кластер Kubernetes в службе Azure Kubernetes (AKS), см. в разделе [создание кластера AKS](http://docs.microsoft.com/azure/aks/create-cluster).
+> Следующий скрипт создает четырех узлов кластера Kubernetes в Azure.
+>```azure-cli
+az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
+>```
 
 ## <a name="deploy-the-operator-sql-server-containers-and-load-balancing-services"></a>Развертывание оператор, контейнеры SQL Server и службы балансировки нагрузки
 
 1. Создание [пространства имен](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/).
 
-  В этом примере используется пространство имен с именем `ag1`. Выполните следующую команду, чтобы создать пространство имен.
-
-  ```azurecli
-  kubectl create namespace ag1
-  ```
-
-  Все объекты, принадлежащие к этому решению находятся в `ag1` пространства имен.
+      В этом примере используется пространство имен с именем `ag1`. Выполните следующую команду, чтобы создать пространство имен.
+    
+      ```azurecli
+      kubectl create namespace ag1
+      ```
+    
+      Все объекты, принадлежащие к этому решению находятся в `ag1` пространства имен.
 
 1. Настройте и разверните манифест оператор SQL Server.
 
-  Копирование SQL Server [ `operator.yaml` ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/operator.yaml) файла из [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
+      Копирование SQL Server [ `operator.yaml` ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/operator.yaml) файла из [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
+    
+      `operator.yaml` Файла есть манифест развертывания для оператора Kubernetes.
+    
+      Применить манифест к кластеру Kubernetes.
+    
+      ```azurecli
+      kubectl apply -f operator.yaml --namespace ag1
+      ```
+    
+1. Создание секрета для Kubernetes с паролями для `sa` учетной записи и главный ключ экземпляра SQL Server.
 
-  `operator.yaml` Файла есть манифест развертывания для оператора Kubernetes.
-
-  Применить манифест к кластеру Kubernetes.
-
-  ```azurecli
-  kubectl apply -f operator.yaml --namespace ag1
-  ```
-
-1. Создание секрета Kubernetes с паролями для `sa` учетной записи и главный ключ экземпляра SQL Server.
-
-  Создайте секрет с `kubectl`.
-  
-  В следующем примере создается с именем секрета `sql-secrets` в `ag1` пространства имен. Секрет хранит два пароля:
-  
-  - `sapassword` хранит пароль для SQL Server `sa` учетной записи.
-  - `masterkeypassword` сохраняет пароль, используемый для создания главного ключа SQL Server. 
-
-  Скопируйте сценарий в свой терминал. Замените каждый `<>` сложный пароль и выполните сценарий, чтобы создать секрет.
-
-  >[!NOTE]
-  >Нельзя использовать пароль `&`, или `` ` `` символов.
-
-  ```azurecli
-  kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
-  ```
+      Создайте секрет с `kubectl`.
+      
+      В следующем примере создается с именем секрета `sql-secrets` в `ag1` пространства имен. Секрет хранит два пароля:
+      
+      - `sapassword` хранит пароль для SQL Server `sa` учетной записи.
+      - `masterkeypassword` сохраняет пароль, используемый для создания главного ключа SQL Server. 
+    
+   Скопируйте сценарий в свой терминал. Замените каждый `<>` сложный пароль и выполните сценарий, чтобы создать секрет.
+    
+   >[!NOTE]
+   >Нельзя использовать пароль `&` или `` ` `` символов.
+    
+   ```azurecli
+   kubectl create secret generic sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
+   ```
 
 1. Развертывание пользовательских ресурсов SQL Server.
 
-  Скопируйте манифест SQL Server [ `sqlserver.yaml` ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/sqlserver.yaml) из [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
+      Скопируйте манифест SQL Server [ `sqlserver.yaml` ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/sqlserver.yaml) из [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
+    
+      >[!NOTE]
+      >`sqlserver.yaml` Файл описывает контейнеры SQL Server, утверждения постоянного тома, постоянные тома и службы балансировки нагрузки, которые требуются для каждого экземпляра SQL Server.
+    
+      Применить манифест к кластеру Kubernetes.
+    
+      ```azurecli
+      kubectl apply -f sqlserver.yaml --namespace ag1
+      ```
+      
+На следующем рисунке показано успешное применение `kubectl apply` для этого примера.
 
-  >[!NOTE]
-  >`sqlserver.yaml` Файл описывает контейнеры SQL Server, утверждения постоянного тома, постоянные тома и службы балансировки нагрузки, которые требуются для каждого экземпляра SQL Server.
+![Создание sqlservers](./media/sql-server-linux-kubernetes-deploy/create-sqlservers.png)
 
-  Применить манифест к кластеру Kubernetes.
+После установки SQL Server манифеста оператор развертывает контейнеры SQL Server.
 
-  ```azurecli
-  kubectl apply -f sqlserver.yaml --namespace ag1
-  ```
-  
-  На следующем рисунке показано успешное применение `kubectl apply` для этого примера.
+Kubernetes размещает контейнеры в модули. Используйте `kubectl get pods --namespace ag1` для просмотра состояния модулей POD. Ниже приведен пример развертывания после развертывания модулей SQL Server. 
 
-  ![Создание sqlservers](./media/sql-server-linux-kubernetes-deploy/create-sqlservers.png)
-
-  После установки SQL Server манифеста оператор развертывает контейнеры SQL Server.
-
-  Kubernetes размещает контейнеры в модули. Используйте `kubectl get pods --namespace ag1` для просмотра состояния модулей POD. Ниже приведен пример развертывания после развертывания модулей SQL Server. 
-
-  ![встроенные модули](./media/sql-server-linux-kubernetes-deploy/builtpods.png)
+![встроенные модули](./media/sql-server-linux-kubernetes-deploy/builtpods.png)
 
 ### <a name="monitor-the-deployment"></a>Мониторинг развертывания
 
-Можно использовать [панели мониторинга Kubernetes со службой Azure Kubernetes (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-dashboard) мониторинге развертывания.
+Можно использовать [панели мониторинга Kubernetes со службой Azure Kubernetes](https://docs.microsoft.com/azure/aks/kubernetes-dashboard) мониторинге развертывания.
 
 Используйте `az aks browse` для запуска панели мониторинга. 
 
@@ -136,11 +136,11 @@ IP-адресом подключаются к экземпляру SQL Server, �
 
 - В результате `kubectl get services` для пространства имен `ag1`.
 
- Службы, службы балансировки нагрузки, которые создаются для каждого контейнера SQL Server. Используйте эти IP-адреса как конечные точки для подключения непосредственно к экземплярам SQL Server в кластере.
+- Службы балансировки нагрузки, которые создаются для каждого контейнера SQL Server. Используйте эти IP-адреса как конечные точки для подключения непосредственно к экземплярам SQL Server в кластере.
 
 - `sqlcmd` Подключения к первичной реплике, с помощью `sa` учетной записи через конечную точку подсистемы балансировки нагрузки.
 
-![connect](./media/sql-server-linux-kubernetes-deploy/connect.png)
+![Подключение](./media/sql-server-linux-kubernetes-deploy/connect.png)
 
 ## <a name="add-a-database-to-the-availability-group"></a>Добавление базы данных в группу доступности
 
@@ -153,35 +153,35 @@ IP-адресом подключаются к экземпляру SQL Server, �
 
 1. Создание базы данных.
 
-  ```sql
-  CREATE DATABASE [demodb]
-  ```
+      ```sql
+      CREATE DATABASE [demodb]
+      ```
 
 1. Создание полной резервной копии базы данных, чтобы начать цепочку журналов.
 
-  ```sql
-  USE MASTER
-  GO
-  BACKUP DATABASE [demodb] 
-  TO DISK = N'/var/opt/mssql/data/demodb.bak'
-  ```
+      ```sql
+      USE MASTER
+      GO
+      BACKUP DATABASE [demodb] 
+      TO DISK = N'/var/opt/mssql/data/demodb.bak'
+      ```
 
 1. Добавьте базу данных к группе доступности.
 
-  ```sql
-  ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [demodb]
-  ```
+      ```sql
+      ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [demodb]
+      ```
+    
+Эта группа доступности создается с помощью автоматического заполнения, чтобы SQL Server автоматически создает вторичные реплики.
 
-Эта группа доступности создается с помощью автоматического заполнения, поэтому SQL Server автоматически создает вторичные реплики.
-
-Можно просмотреть состояние группы доступности с помощью панели мониторинга группы SQL Server Management Studio доступности.
+Можно просмотреть состояние группы доступности с помощью панели мониторинга группы обеспечения доступности SQL Server Management Studio.
 
 ![панель мониторинга](./media/sql-server-linux-kubernetes-deploy/dashboard.png)
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Подключиться к группе доступности SQL Server в кластере Kubernetes](sql-server-linux-kubernetes-connect.md)
+- [Подключение к группе доступности SQL Server в кластере Kubernetes](sql-server-linux-kubernetes-connect.md)
 
-[Управление группой доступности SQL Server в кластере Kubernetes](sql-server-linux-kubernetes-manage.md)
+- [Управлять группой доступности SQL Server в кластере Kubernetes](sql-server-linux-kubernetes-manage.md)
 
-[Группы доступности SQL Server в кластере Kubernetes](sql-server-ag-kubernetes.md)
+- [SQL Server поддерживает группы доступности на контейнеры в кластере Kubernetes](sql-server-ag-kubernetes.md)

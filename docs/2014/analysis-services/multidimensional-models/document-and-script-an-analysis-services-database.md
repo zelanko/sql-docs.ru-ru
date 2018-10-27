@@ -18,15 +18,15 @@ ms.assetid: 125044e2-8d36-4733-8743-8bb68ff9aa4e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 427b5278f743570162899c3e876a5e0505feb3ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1a10d27612d127bcc9fcc5ca60f97575f6fc1fe
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124654"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144691"
 ---
 # <a name="document-and-script-an-analysis-services-database"></a>Документирование и работа со скриптами в базе данных служб Analysis Services
-  После того как база данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развернута, вы можете использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для вывода метаданных базы данных или объекта, содержащегося в ней, в качестве скрипта XML для аналитики (XMLA). Можно вывести этот скрипт в новое окно **Редактор запросов XML для аналитики** , в файл или в буфер обмена. Дополнительные сведения о XML для Аналитики, см. в разделе [язык сценариев служб Analysis Services &#40;ASSL&#41; ссылку](../scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+  После того как база данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развернута, вы можете использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для вывода метаданных базы данных или объекта, содержащегося в ней, в качестве скрипта XML для аналитики (XMLA). Можно вывести этот скрипт в новое окно **Редактор запросов XML для аналитики** , в файл или в буфер обмена. Дополнительные сведения о XML для Аналитики, см. в разделе [язык сценариев служб Analysis Services &#40;ASSL&#41; ссылку](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).  
   
  Сформированный скрипт XML для аналитики использует элементы языка скриптов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL) для определения объектов, содержащихся в скрипте. Если создан скрипт CREATE, результирующий скрипт XML для аналитики будет содержать команду XML для аналитики **Создать** и элементы ASSL, которые могут быть использованы для создания всей структуры базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в экземпляре. Если создан скрипт ALTER, результирующий скрипт XML для аналитики будет содержать команду XML для аналитики **Изменить** и элементы ASSL, которые могут быть использованы для восстановления структуры существующей базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в состояние, в котором она находилась на момент создания скрипта.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48124654"
   
 ## <a name="see-also"></a>См. также  
  [Изменение или удаление базы данных служб Analysis Services](modify-or-delete-an-analysis-services-database.md)   
- [Элемент ALTER &#40;XML для Аналитики&#41;](../xmla/xml-elements-commands/alter-element-xmla.md)   
- [Создать элемент &#40;XML для Аналитики&#41;](../xmla/xml-elements-commands/create-element-xmla.md)  
+ [Элемент Alter (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla)   
+ [Элемент Create (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2e829ecd98386ff5ac89b2863466a4feef80dd20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa858ed572260ffa89baa5dabf735e838cf1b083
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744732"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099236"
 ---
 # <a name="appendix---1-mysqltosql"></a>Приложение 1 (MySQLToSQL)
 Краткий обзор команд консоли SSMA параметры командной строки:  
@@ -32,5 +32,5 @@ ms.locfileid: "47744732"
 |8|-?|Нет|Неприменимо|Неприменимо|  
   
 ## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA (MySQL)](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Выполнение команд консоли SSMA (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

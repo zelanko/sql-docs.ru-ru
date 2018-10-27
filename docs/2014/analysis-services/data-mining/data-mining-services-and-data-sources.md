@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f74492fc0d177ba87fe29dc73a5cd67e9663a61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090974"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145899"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Службы интеллектуального анализа данных и источники данных
   Для интеллектуального анализа данных требуется соединение с экземпляром служб SQL Server Analysis Services. Данные из куба не требуются для интеллектуального анализа данных, и рекомендуется использовать реляционные источники данных. Однако интеллектуальный анализ данных использует компоненты, предоставляемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -78,7 +78,7 @@ ms.locfileid: "48090974"
 -   `AllowAdHocOpenRowsetQueries` Управляет нерегламентированным доступом к поставщикам OLE DB, которые загружаются непосредственно в оперативную память сервера.  
   
     > [!IMPORTANT]  
-    >  Чтобы повысить безопасность, рекомендуется присвоить этому свойству значение `false`. Значение по умолчанию — `false`. Тем не менее, если это свойство имеет значение `false`, пользователи могут продолжать создавать одноэлементные запросы и использовать функцию OPENQUERY в разрешенных источниках данных.  
+    >  Чтобы повысить безопасность, рекомендуется присвоить этому свойству значение `false`. Значение по умолчанию — `false`. Однако, если это свойство имеет значение `false`, пользователи могут продолжать создавать одноэлементные запросы и использовать функцию OPENQUERY в разрешенных источниках данных.  
   
 -   **AllowedProvidersInOpenRowset** Задает поставщика, если включен нерегламентированный доступ. Можно указать нескольких поставщиков, введя список идентификаторов ProgID с разделителями-запятыми.  
   
@@ -118,14 +118,14 @@ ms.locfileid: "48090974"
   
  Если процедура возвратит набор данных, клиент получит набор данных или таблицу данных с вложенной таблицей, содержащей строки. Например, если создать запрос к содержимому модели, запрос вернет всю модель. Чтобы не получать слишком много строк, можно написать хранимую процедуру с помощью объектной модели ADOMD+.  
   
- Чтобы написать серверную хранимую процедуру, необходимо сослаться на пространство имен Microsoft.AnalysisServices.AdomdServer. Дополнительные сведения о создании и использовании хранимых процедур см. в разделе [User Defined Functions and Stored Procedures](../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md).  
+ Чтобы написать серверную хранимую процедуру, необходимо сослаться на пространство имен Microsoft.AnalysisServices.AdomdServer. Дополнительные сведения о создании и использовании хранимых процедур см. в разделе [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Хранимые процедуры нельзя использовать для изменения безопасности в серверных объектах базы данных. При выполнении хранимой процедуры для определения доступа ко всем серверным объектам используется текущий контекст пользователя. Поэтому пользователи должны иметь соответствующие разрешения для всех объектов базы данных, к которым они получают доступ.  
   
 ## <a name="see-also"></a>См. также  
- [Физическая архитектура &#40;службы Analysis Services — многомерные данные&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Физическая архитектура &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](physical-architecture-analysis-services-data-mining.md)   
+ [Физическая архитектура (службы Analysis Services — многомерные данные)](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [Физическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](physical-architecture-analysis-services-data-mining.md)   
  [Управление решениями и объектами интеллектуального анализа данных](management-of-data-mining-solutions-and-objects.md)  
   
   

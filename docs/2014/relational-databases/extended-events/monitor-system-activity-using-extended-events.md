@@ -14,12 +14,12 @@ ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96897590a9d6b0607422ab98682cb6415f11e3d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68957668604e746f8f3a7d3392f934c66332523e
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143134"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991127"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>отслеживать активность системы с помощью расширенных событий
   Эта процедура показывает, как использовать расширенные события совместно со средством отслеживания событий для Windows (ETW) в целях мониторинга активности системы. Процедура показывает также варианты использования инструкций CREATE EVENT SESSION, ALTER EVENT SESSION и DROP EVENT SESSION.  
@@ -120,8 +120,8 @@ ms.locfileid: "48143134"
  [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [DROP EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/drop-event-session-transact-sql)   
- [Представления каталога расширенных событий &#40;Transact-SQL&#41;] (~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql   
+ [Представления каталога расширенных событий (Transact-SQL)](/sql/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql)  
  [Динамические административные представления расширенных событий](../views/views.md)   
- [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
+ [Цели расширенных событий SQL Server](../../database-engine/sql-server-extended-events-targets.md)  
   
   

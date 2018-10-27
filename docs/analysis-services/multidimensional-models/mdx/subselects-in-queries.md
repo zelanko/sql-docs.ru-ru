@@ -1,5 +1,5 @@
 ---
-title: Подзапросы выборки в запросах | Документы Microsoft
+title: Подзапросы выборки в запросах | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a74ddce096d58ba7b350617515bae3edc5b80c45
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 77aadc5cfc60df17b9553810b5dee2562717b8b3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025271"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147889"
 ---
 # <a name="subselects-in-queries"></a>Подзапросы выборки в запросах
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -202,10 +202,10 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|29 358 677,22 $|$ 80 450 596,98|  
-|United States|9 389 789,51 $|$ 80 450 596,98|  
+|США|9 389 789,51 $|$ 80 450 596,98|  
 |Орегон|1 170 991,54 $|$ 80 450 596,98|  
 |Portland|110 649,54 $|$ 80 450 596,98|  
-|Вашингтон|2 467 248,34 $|$ 80 450 596,98|  
+|Washington|2 467 248,34 $|$ 80 450 596,98|  
 |Seattle|75 164,86 $|$ 80 450 596,98|  
   
  В приведенном выше примере «Seattle» является дочерним для «Washington», «Portland» — для «Орегона», «Oregon» и «Washington» — дочерние для «United States», а «United States» — для [Customer Geography].[All Customers]. Все элементы, показанные в данном примере, имеют другие элементы с общим родителем, влияющие на статистическое значение родителя, т. е. города Спокане, Такома и Эверетт имеют общего родителя с Сиэтлом и все они будут влиять на сумму для продаж через Интернет в штате Вашингтон. Значение Reseller Sales Amount не зависит от атрибута «Customer Geography», поэтому в результатах отображается значение «Все». Следующее многомерное выражение иллюстрирует влияние фильтра на предложение подзапроса выборки.  
@@ -231,8 +231,8 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|2 467 248,34 $|$ 80 450 596,98|  
 |United States|2 467 248,34 $|$ 80 450 596,98|  
-|Вашингтон|2 467 248,34 $|$ 80 450 596,98|  
-|Seattle|75 164,86 $|$ 80 450 596,98|  
+|Washington|2 467 248,34 $|$ 80 450 596,98|  
+|Seattle|75 164,86 $|80 450 596,98 $|  
   
  Приведенные выше результаты показывают, что только предки и потомки штата Вашингтон входят в подпространство, по которому вычислялась внешняя инструкция SELECT. Орегон и Портленд были удалены из вложенного куба, поскольку Орегон и все другие штаты, имеющие общего родителя, не были упомянуты в подзапросе выборки, тогда как Вашингтон был.  
   
@@ -257,7 +257,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|-|-|-|-|  
 ||Все продукты|Accessory|Components|Mountain|Road|Touring|  
 |All Customers|29 358 677,22 $|604 053,30 $|(null)|10 251 183,52 $|14 624 108,58 $|3 879 331,82 $|  
-|United States|9 389 789,51 $|217 168,79 $|(null)|3 547 956,78 $|4 322 438,41 $|1 302 225,54 $|  
+|США|9 389 789,51 $|217 168,79 $|(null)|3 547 956,78 $|4 322 438,41 $|1 302 225,54 $|  
 |Орегон|1 170 991,54 $|30 513,17 $|(null)|443 607,98 $|565 372,10 $|131 498,29 $|  
 |Portland|110 649,54 $|2 834,17 $|(null)|47 099,91 $|53 917,17 $|6 798,29 $|  
 |Вашингтон|2 467 248,34 $|62 662,92 $|(null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
@@ -282,8 +282,8 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|-|-|-|-|  
 ||Все продукты|Accessory|Components|Mountain|Road|Touring|  
 |All Customers|2 467 248,34 $|62 662,92 $|(null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
-|United States|2 467 248,34 $|62 662,92 $|(null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
-|Вашингтон|2 467 248,34 $|62 662,92 $|(null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
+|США|2 467 248,34 $|62 662,92 $|(null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
+|Washington|2 467 248,34 $|62 662,92 $|(null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
 |Seattle|75 164,86 $|2 695,74 $|(null)|19 914,53 $|44 820,06 $|7 734,54 $|  
   
  В приведенном выше результате видим, что значения All Products скорректированы и отражают только данные по штату Вашингтон, как и предполагалось.  
@@ -338,7 +338,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Очевидно, между двумя наборами результатов есть различия. Первый запрос ответил на вопрос, каковы пять наиболее популярных продуктов в пяти наиболее успешных регионах, а второй запрос — где лучше всего продаются пять наиболее популярных продуктов.  
   
-### <a name="remarks"></a>Замечания  
+### <a name="remarks"></a>Примечания  
  Для подзапросов выборки действуют следующие ограничения.  
   
 -   Предложение WHERE не фильтрует подпространство.  
@@ -349,6 +349,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   Предложение HAVING нельзя использовать в предложении оси, вместо него следует применять выражение функции [Filter (многомерные выражения)](../../../mdx/filter-mdx.md).  
   
--   По умолчанию вычисляемые элементы не допускаются в подзапросах выборки; Тем не менее, это ограничение можно изменить, в сеансам, путем присвоения значения для **вложенные запросы** свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или **DBPROP_MSMD_SUBQUERIES** свойство в [ Поддерживаемые свойства XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Дополнительные сведения о поведении вычисляемых элементов в зависимости от значений свойства [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) или **DBPROP_MSMD_SUBQUERIES** см. в разделе **Вычисляемые элементы в подзапросах выборки и вложенных кубах**.  
+-   По умолчанию вычисляемые элементы не допускаются в подзапросах выборки; Тем не менее, это ограничение можно изменить, в сеансам, путем присвоения значения для **вложенные запросы** свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или **DBPROP_MSMD_SUBQUERIES** свойство в [ Поддерживаемые свойства XMLA &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Дополнительные сведения о поведении вычисляемых элементов в зависимости от значений свойства [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) или **DBPROP_MSMD_SUBQUERIES** см. в разделе **Вычисляемые элементы в подзапросах выборки и вложенных кубах**.  
   
   

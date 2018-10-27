@@ -1,5 +1,5 @@
 ---
-title: Power Pivot Management Dashboard and Usage Data | Документы Microsoft
+title: Power Pivot Management Dashboard and Usage Data | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 30f0e84ee388a8a452c855fbd045863f7e2389b0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030345"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099935"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Информационная панель управления PowerPivot и данные об использовании
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "34030345"
   
 5.  Откройте ODC-файл в текстовом редакторе.  
   
-6.  В  **\<ODC: ConnectionString >** элемент, прокрутите до конца строки и удалите **внедренные данные = False**, а затем удалите **режим изменения = 0**. Если последним символом в строке является точка с запятой, удалите его.  
+6.  В  **\<ODC: ConnectionString >** элемент, прокрутите список до конца строки и удалите **внедренные данные = False**, а затем удалите **Edit Mode = 0**. Если последним символом в строке является точка с запятой, удалите его.  
   
 7.  Сохраните файл. Остальные шаги зависят от используемой версии [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] и Excel.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "34030345"
     9. Рядом с полем «Задать запрос многомерных выражений» нажмите кнопку **Конструктор** , чтобы открыть конструктор запросов многомерных выражений для сбора данных, с которыми вы будете работать, а затем создайте отчет в виде сводной таблицы или сводной диаграммы для просмотра данных в Excel.  
   
 ## <a name="see-also"></a>См. также  
- [Обновление данных Power Pivot в SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [Обновление данных Power Pivot в SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [Настройка сбора данных об использовании с PowerPivot для SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

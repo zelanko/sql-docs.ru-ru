@@ -20,17 +20,17 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f2e2d0b49f58eff2eac52103bddc6fda818aeb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adf5cc81979d8efe9426c082464cb7d7bba52c14
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849283"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150205"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Возвращает сведения о странице в базе данных.  Функция возвращает одну строку, содержащим данные заголовков со страницы, включая `object_id`, `index_id`, и `partition_id`.  Эта функция заменяет потребность в использовании `DBCC PAGE` в большинстве случаев.
+Возвращает сведения о странице в базе данных.  Функция возвращает одну строку, содержащим данные заголовков со страницы, включая `object_id`, `index_id`, и `partition_id`.  В большинстве случаев эта функция заменяет потребность в использовании `DBCC PAGE`.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -59,58 +59,58 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|database_id |ssNoversion |Идентификатор базы данных |
-|file_id |ssNoversion |Идентификатор файла |
-|page_id |ssNoversion |Идентификатор страницы |
-|page_type |ssNoversion |Тип страницы |
-|page_type_desc |Nvarchar(64) |Описание типа страницы |
-|page_flag_bits |Nvarchar(64) |Флаговые биты в заголовке страницы |
-|page_flag_bits_desc |nvarchar(256) |Описание bits флаг в заголовке страницы |
-|page_type_flag_bits |Nvarchar(64) |Введите флаговые биты в заголовке страницы |
-|page_type_flag_bits_desc |Nvarchar(64) |Описание bits флаг типа в заголовке страницы |
-|object_id |ssNoversion |Идентификатор объекта, получившего страницы |
-|index_id |ssNoversion |Идентификатор индекса (0 для страниц данных кучи) |
-|partition_id |BIGINT |Идентификатор секции |
-|alloc_unit_id |BIGINT |Идентификатор единицы распределения |
-|page_level |ssNoversion |Уровня страницы в индексе (конечного = 0) |
-|slot_count |SMALLINT |Общее число слотов (используемое и неиспользуемое) <br> Для страницы данных это число соответствует числу строк. |
-|ghost_rec_count |SMALLINT |Число записей, помеченных как фантомную. на странице <br> Фантомных записей — это приложения, была помечена для удаления, но еще не удалены. |
-|torn_bits |ssNoversion |1 бит на сектор для обнаружения оборванных записей. Также используется для хранения контрольной суммы <br> Это значение используется для обнаружения повреждения данных |
-|is_iam_pg |bit |Бит, чтобы указать, является ли страницы IAM-страницы  |
-|is_mixed_ext |bit |Чтобы указать, если бит выделенных в смешанный экстент |
-|pfs_file_id |SMALLINT |Идентификатор файла соответствующий PFS-страницы |
-|pfs_page_id |ssNoversion |Идентификатор соответствующего PFS-страницы |
-|pfs_alloc_percent |ssNoversion |Процент распределения, как указано в PFS байтов |
-|pfs_status |Nvarchar(64) |PFS байтов |
-|pfs_status_desc |Nvarchar(64) |Описание PFS байта |
-|gam_file_id |SMALLINT |Идентификатор файла, соответствующей страницы GAM |
-|gam_page_id |ssNoversion |Идентификатор страницы, соответствующей страницы GAM |
-|gam_status |bit |Чтобы указать, если бит выделенный в GAM |
-|gam_status_desc |Nvarchar(64) |Описание состояния бита на карте GAM |
-|sgam_file_id |SMALLINT |Идентификатор файла, соответствующий SGAM-страницы |
-|sgam_page_id |ssNoversion |Идентификатор страницы, соответствующий SGAM-страницы |
-|sgam_status |bit |Чтобы указать, если бит выделенных в SGAM |
-|sgam_status_desc |Nvarchar(64) |Описание состояния соответствующий бит SGAM |
-|diff_map_file_id |SMALLINT |Идентификатор соответствующей страницы битовой карте разностного файла |
-|diff_map_page_id |ssNoversion |Идентификатор страницы, соответствующей страницы разностная битовая карта |
-|diff_status |bit |Бит, чтобы указать, если изменяется состояние копирования |
-|diff_status_desc |Nvarchar(64) |Описание состояния бита diff |
-|ml_file_id |SMALLINT |Идентификатор файла на соответствующей странице точечного рисунка минимальное протоколирование |
-|ml_page_id |ssNoversion |Идентификатор страницы, соответствующей страницы точечного рисунка минимальное протоколирование |
-|ml_status |bit |Бит, чтобы указать, если страницы минимальный журнал |
-|ml_status_desc |Nvarchar(64) |Описание состояния минимальное протоколирование бит |
-|free_bytes |SMALLINT |Количество свободных байт на страницу |
-|free_data_offset |ssNoversion |Смещение свободного места в конце области данных |
-|reserved_bytes |SMALLINT |Количество свободных байт, зарезервированной с помощью все транзакции (Если куча) <br> Количество фантомных строк (если конечный индекс) |
-|reserved_xdes_id |SMALLINT |Пространство, порожденного m_xdesID для m_reservedCnt <br> Только для отладки |
-|xdes_id |Nvarchar(64) |Последняя транзакция, порожденного m_reserved <br> Только для отладки |
-|prev_page_file_id |SMALLINT |Предыдущий идентификатор файла страницы |
-|prev_page_page_id |ssNoversion |Предыдущей страницы, идентификатор страницы |
-|next_page_file_id |SMALLINT |Следующий идентификатор файла страницы |
-|next_page_page_id |ssNoversion |Следующая страница идентификатор страницы |
-|min_len |SMALLINT |Длина строки фиксированного размера |
-|lsn |Nvarchar(64) |Регистрационный номер / метки времени |
-|header_version |ssNoversion |Версия заголовка страницы |
+|database_id |ssNoversion |Идентификатор базы данных |
+|file_id |ssNoversion |Идентификатор файла |
+|page_id |ssNoversion |Идентификатор страницы |
+|page_type |ssNoversion |Тип страницы |
+|page_type_desc |Nvarchar(64) |Описание типа страницы |
+|page_flag_bits |Nvarchar(64) |Флаговые биты в заголовке страницы |
+|page_flag_bits_desc |nvarchar(256) |Описание bits флаг в заголовке страницы |
+|page_type_flag_bits |Nvarchar(64) |Введите флаговые биты в заголовке страницы |
+|page_type_flag_bits_desc |Nvarchar(64) |Описание bits флаг типа в заголовке страницы |
+|object_id |ssNoversion |Идентификатор объекта, получившего страницы |
+|index_id |ssNoversion |Идентификатор индекса (0 для страниц данных кучи) |
+|partition_id |BIGINT |Идентификатор секции |
+|alloc_unit_id |BIGINT |Идентификатор единицы распределения |
+|page_level |ssNoversion |Уровня страницы в индексе (конечного = 0) |
+|slot_count |SMALLINT |Общее число слотов (используемое и неиспользуемое) <br> Для страницы данных это число соответствует числу строк. |
+|ghost_rec_count |SMALLINT |Число записей, помеченных как фантомную. на странице <br> Фантомных записей — это приложения, была помечена для удаления, но еще не удалены. |
+|torn_bits |ssNoversion |1 бит на сектор для обнаружения оборванных записей. Также используется для хранения контрольной суммы <br> Это значение используется для обнаружения повреждения данных |
+|is_iam_pg |bit |Бит, чтобы указать, является ли страницы IAM-страницы  |
+|is_mixed_ext |bit |Чтобы указать, если бит выделенных в смешанный экстент |
+|pfs_file_id |SMALLINT |Идентификатор файла соответствующий PFS-страницы |
+|pfs_page_id |ssNoversion |Идентификатор соответствующего PFS-страницы |
+|pfs_alloc_percent |ssNoversion |Процент распределения, как указано в PFS байтов |
+|pfs_status |Nvarchar(64) |PFS байтов |
+|pfs_status_desc |Nvarchar(64) |Описание PFS байта |
+|gam_file_id |SMALLINT |Идентификатор файла, соответствующей страницы GAM |
+|gam_page_id |ssNoversion |Идентификатор страницы, соответствующей страницы GAM |
+|gam_status |bit |Чтобы указать, если бит выделенный в GAM |
+|gam_status_desc |Nvarchar(64) |Описание состояния бита на карте GAM |
+|sgam_file_id |SMALLINT |Идентификатор файла, соответствующий SGAM-страницы |
+|sgam_page_id |ssNoversion |Идентификатор страницы, соответствующий SGAM-страницы |
+|sgam_status |bit |Чтобы указать, если бит выделенных в SGAM |
+|sgam_status_desc |Nvarchar(64) |Описание состояния соответствующий бит SGAM |
+|diff_map_file_id |SMALLINT |Идентификатор соответствующей страницы битовой карте разностного файла |
+|diff_map_page_id |ssNoversion |Идентификатор страницы, соответствующей страницы разностная битовая карта |
+|diff_status |bit |Бит, чтобы указать, если изменяется состояние копирования |
+|diff_status_desc |Nvarchar(64) |Описание состояния бита diff |
+|ml_file_id |SMALLINT |Идентификатор файла на соответствующей странице точечного рисунка минимальное протоколирование |
+|ml_page_id |ssNoversion |Идентификатор страницы, соответствующей страницы точечного рисунка минимальное протоколирование |
+|ml_status |bit |Бит, чтобы указать, если страницы минимальный журнал |
+|ml_status_desc |Nvarchar(64) |Описание состояния минимальное протоколирование бит |
+|free_bytes |SMALLINT |Количество свободных байт на страницу |
+|free_data_offset |ssNoversion |Смещение свободного места в конце области данных |
+|reserved_bytes |SMALLINT |Количество свободных байт, зарезервированной с помощью все транзакции (Если куча) <br> Количество фантомных строк (если конечный индекс) |
+|reserved_xdes_id |SMALLINT |Пространство, порожденного m_xdesID для m_reservedCnt <br> Только для отладки |
+|xdes_id |Nvarchar(64) |Последняя транзакция, порожденного m_reserved <br> Только для отладки |
+|prev_page_file_id |SMALLINT |Предыдущий идентификатор файла страницы |
+|prev_page_page_id |ssNoversion |Предыдущей страницы, идентификатор страницы |
+|next_page_file_id |SMALLINT |Следующий идентификатор файла страницы |
+|next_page_page_id |ssNoversion |Следующая страница идентификатор страницы |
+|min_len |SMALLINT |Длина строки фиксированного размера |
+|lsn |Nvarchar(64) |Регистрационный номер / метки времени |
+|header_version |ssNoversion |Версия заголовка страницы |
 
 ## <a name="remarks"></a>Примечания
 `sys.dm_db_page_info` Функции динамического управления возвращает сведения о странице как `page_id`, `file_id`, `index_id`, `object_id` и т.д., которые присутствуют в верхнем колонтитуле страницы. Эта информация полезна для устранения неполадок и отладки различных производительности (конфликты блокировок и кратковременных блокировок) и повреждений.
@@ -143,7 +143,7 @@ FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 SELECT page_info.* 
 FROM sys.dm_exec_requests AS d  
 CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r  
-CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
+CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS page_info
 ```
 
 ## <a name="see-also"></a>См. также  

@@ -1,5 +1,5 @@
 ---
-title: Основные сведения об архитектуре Microsoft OLAP | Документы Microsoft
+title: Основные сведения об архитектуре Microsoft OLAP | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,39 +9,39 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5cf2fee66f02aec5fb35393d9ea1a2bbc3333218
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 96188955e60c11e4780ed4ffcf0be637b9e81871
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025391"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147640"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Основные сведения об архитектуре Microsoft OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Изучите указанные ниже разделы, чтобы лучше понять работу многомерных баз данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и запланировать способ реализации многомерных баз данных в своем решении бизнес-аналитики.  
   
- ![Маленький значок папки](../../../analysis-services/media/filefolder-small.png "маленький значок папки") **логической архитектуры**  
- [Объекты сервера & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md)  
+ ![Маленький значок папки](../../../analysis-services/media/filefolder-small.png "маленький значок папки") **логическая архитектура**  
+ [Объекты сервера &#40;службы Analysis Services — многомерные данные&#41;](../../../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md)  
   
- [Объекты измерений & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
+ [Объектов измерений &#40;службы Analysis Services — многомерные данные&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
   
- [Объекты куба & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
+ [Объекты куба &#40;службы Analysis Services — многомерные данные&#41;](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
  [Подробнее...](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  ![Маленький значок папки](../../../analysis-services/media/filefolder-small.png "маленький значок папки") **физическая архитектура**  
  [Серверные компоненты ядра OLAP](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)  
   
- [Локальные кубы & #40; Analysis Services — многомерные данные & #41;](../../../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)  
+ [Локальные кубы &#40;службы Analysis Services — многомерные данные&#41;](../../../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)  
   
  [Подробнее...](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)  
   
  ![Маленький значок папки](../../../analysis-services/media/filefolder-small.png "маленький значок папки") **программная архитектура**  
- [Разработка с использованием объектов AMO & #40; Объекты AMO & #41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- [Разработка с использованием служб Analysis Services Scripting Language & #40; ASSL & #41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Разработка на языке ASSL (язык ASSL)](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [Разработка с использованием ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [Разработка с использованием ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![Маленький значок папки](../../../analysis-services/media/filefolder-small.png "маленький значок папки") **вопросы международного использования**  
  [Сценарии глобализации для служб Analysis Services](../../../analysis-services/globalization-scenarios-for-analysis-services.md)  

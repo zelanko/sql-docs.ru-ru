@@ -14,12 +14,12 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5940856a7d3c5854017af7169ab24939e3b4c3c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d168b898368aa2219fdf47faa1fed52152797b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084484"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145049"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Основные сведения об архитектуре Microsoft OLAP
   Изучите указанные ниже разделы, чтобы лучше понять работу многомерных баз данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и запланировать способ реализации многомерных баз данных в своем решении бизнес-аналитики.  
@@ -41,11 +41,11 @@ ms.locfileid: "48084484"
  [Подробнее...](understanding-microsoft-olap-physical-architecture.md)  
   
  ![Маленький значок папки](../../../integration-services/media/filefolder-small.gif "маленький значок папки") **программная архитектура**  
- [Разработка объектов управления аналитикой &#40;объектов AMO&#41;](../analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- [Язык сценариев разработки с использованием Analysis Services &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Разработка на языке ASSL (язык ASSL)](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [Разработка с использованием ADOMD.NET](../adomd-net/developing-with-adomd-net.md)  
+ [Разработка с использованием ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![Маленький значок папки](../../../integration-services/media/filefolder-small.gif "маленький значок папки") **вопросы международного использования**  
  [Сценарии глобализации для многомерных служб Analysis Services](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  

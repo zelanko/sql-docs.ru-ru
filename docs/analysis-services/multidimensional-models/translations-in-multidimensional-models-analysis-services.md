@@ -1,5 +1,5 @@
 ---
-title: Переводы в многомерных моделях (службы Analysis Services) | Документы Microsoft
+title: Переводы в многомерных моделях (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ac278f3e254e353d9ab7b6dc6d6fd7850b442c9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026681"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147079"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Переводы в многомерных моделях (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34026681"
   
 4.  Щелкните правой кнопкой мыши любое поле и выберите **Просмотр данных**. Вы увидите английский, испанский и французский переводы для каждого элемента.  
   
- Форматы даты, времени и валюты не реализуются с помощью переводов. Для динамического предоставления определенных форматов на основе языкового стандарта клиента используйте мастер преобразования валюты и свойство **FormatString** . Дополнительные сведения см. в разделах [Конвертация валюты (службы Analysis Services)](../../analysis-services/currency-conversions-analysis-services.md) и [Элемент FormatString (ASSL)](../../analysis-services/scripting/properties/formatstring-element-assl.md).  
+ Форматы даты, времени и валюты не реализуются с помощью переводов. Для динамического предоставления определенных форматов на основе языкового стандарта клиента используйте мастер преобразования валюты и свойство **FormatString** . Дополнительные сведения см. в разделах [Конвертация валюты (службы Analysis Services)](../../analysis-services/currency-conversions-analysis-services.md) и [Элемент FormatString (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
  В разделе[Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) в учебнике по службам Analysis Services описывается создание и тестирование переводов.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34026681"
   
 4.  Постройте и разверните проект.  
   
-5.  Подключитесь к базе данных с помощью клиентского приложения, например Excel, добавив в строку подключения код языка. Дополнительные сведения см. в разделе [Советы и рекомендации по глобализации (службы Analysis Services)](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md).  
+5.  Подключитесь к базе данных с помощью клиентского приложения, например Excel, добавив в строку подключения код языка. Дополнительные сведения см. в разделе [Советы и рекомендации по глобализации (службы Analysis Services)](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>Добавление переводов в измерение и атрибуты  
  Переводы можно добавить в измерения базы данных, атрибуты, иерархии и уровни в иерархии.  
@@ -94,7 +94,7 @@ ms.locfileid: "34026681"
   
 3.  На странице свойств базы данных задайте в свойстве **Language** код языка, указанный для перевода. При необходимости задайте значение свойства **Collation** , если значение по умолчанию больше не имеет смысла.  
   
-4.  Соберите и разверните базу данных.  
+4.  Постройте и разверните базу данных.  
   
 ## <a name="deleting-translation-objects"></a>Удаление объектов перевода  
  Можно щелкнуть правой кнопкой мыши объект перевода в измерении или в конструкторе кубов, чтобы окончательно удалить его. Нельзя восстановить или повторно использовать удаленный объект, поэтому следует проверить список удаляемых объектов перед продолжением.  
@@ -119,6 +119,6 @@ ms.locfileid: "34026681"
   
 ## <a name="see-also"></a>См. также  
  [Сценарии глобализации для служб Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Языки и параметры сортировки &#40;служб Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
+ [Языки и параметры сортировки (службы Analysis Services)](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   

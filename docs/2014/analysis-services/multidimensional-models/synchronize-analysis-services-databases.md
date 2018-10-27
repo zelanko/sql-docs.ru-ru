@@ -16,12 +16,12 @@ ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a627434141bd417d9801354a7879d0879e1c85cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bede06ab45511cbb1ec96aefb7e933f077bbe92c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174144"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147859"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Синхронизация баз данных служб Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] имеют функцию синхронизации баз данных, которая делает две базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] идентичными, копируя данные и метаданные из базы данных на исходном сервере в базу данных на целевом сервере. Используйте функцию синхронизации баз данных для выполнения следующих задач:  
@@ -188,7 +188,7 @@ ms.locfileid: "48174144"
  Если синхронизация членства и ролей не выполняется, то сейчас необходимо указать разрешения доступа пользователя в целевой базе данных.  
   
 ## <a name="see-also"></a>См. также  
- [Элемент Synchronize &#40;XML для Аналитики&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Элемент Synchronize (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Развертывание решений модели с помощью XMLA](deploy-model-solutions-using-xmla.md)   
  [Развертывание решений модели с использованием мастера развертывания](deploy-model-solutions-using-the-deployment-wizard.md)  
   

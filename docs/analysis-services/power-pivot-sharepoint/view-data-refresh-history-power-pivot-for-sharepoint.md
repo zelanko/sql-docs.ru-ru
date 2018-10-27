@@ -1,5 +1,5 @@
 ---
-title: Просмотр журнала (Power Pivot для SharePoint) обновления данных | Документы Microsoft
+title: Просмотр журнала (Power Pivot для SharePoint) обновления данных | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b05a5f8fa173699aebe8567a329e7a93ee58975
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028655"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099685"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Просмотр журнала обновления данных (PowerPivot для SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,9 +55,9 @@ ms.locfileid: "34028655"
 ##  <a name="pageelements"></a> Использование сведений из журнала  
  На странице журнала обновления данных содержатся подробные сведения о каждой операции обновления. Сведения на этой странице позволяют определить, произошло ли обновление и, если нет, почему оно завершилось сбоем.  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
-|Название|Определяет имя файла книги Excel, которая содержит данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|Имя|Определяет имя файла книги Excel, которая содержит данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |Текущее состояние|В число допустимых значений входят **Запланировано**, **Обновление**, **Выполнено**и **Сбой**.<br /><br /> Состояние**Запланировано** отображается при создании расписания. После первого запуска обновления данных это сообщение о состоянии больше не появляется.<br /><br /> Состояние**Обновление** показывает, что выполняется обновление данных. Запрос находится в очереди или выполняется на сервере.<br /><br /> Состояние**Выполнено** показывает, что последняя операция обновления данных завершилась, а обновленная книга возвращена обратно в библиотеку SharePoint.<br /><br /> Состояние**Сбой** показывает, что последняя операция обновления данных завершилась сбоем. Обновленные данные не были сохранены. Книга содержит те же данные, которые находились в ней до начала обновления данных.|  
 |Последнее успешное обновление|Указывает дату, когда последнее обновление данных завершилось успешно.|  
 |Следующее обновление по расписанию|Указывает дату, на которую запланировано следующее обновление данных.<br /><br /> Ссылка **Настроить расписание** открывает страницу определения расписания. Если для книги есть разрешения уровня "Участие", вы можете щелкнуть ссылку для просмотра и изменения расписания, которое управляет автоматическим обновлением данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в книге.|  
@@ -68,7 +68,7 @@ ms.locfileid: "34028655"
   
 ## <a name="see-also"></a>См. также  
  [Настройка сбора данных об использовании с PowerPivot для SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [Планирование обновления данных (Power Pivot для SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
+ [Планирование обновления данных (Power Pivot для SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
  [Обновление данных Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

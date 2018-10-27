@@ -1,24 +1,24 @@
 ---
-title: Настроить службу Azure Kubernetes для развертываний SQL Server 2019 CTP-версии 2.0 | Документация Майкрософт
-description: ''
+title: Настроить службу Azure Kubernetes для развертывания кластера SQL Server 2019 больших данных | Документация Майкрософт
+description: Сведения о настройке службы Azure Kubernetes (AKS) для развернутых кластеров (Предварительная версия) SQL Server 2019 больших данных.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ee1faae6d43cbf2cc6c8a23086600241ad15e061
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 3a1cd6dcaf669071517f1a7c6196e22ce33f55ca
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460899"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050916"
 ---
-# <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Настройка службы Azure Kubernetes для SQL Server 2019 CTP 2.0
+# <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Настроить службу Azure Kubernetes для развертываний SQL Server 2019 (Предварительная версия)
 
-Служба Azure Kubernetes (AKS) позволяет легко создавать, настраивать и администрировать кластер виртуальных машин, настроенных с кластером Kubernetes для запуска контейнерных приложений. 
+В этой статье описывается настройка службы Azure Kubernetes (AKS) для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных. 
 
-Это позволяет использовать имеющиеся навыки либо положиться большого и постоянно растущего сообщества опыт, развертывание и управление ими контейнерных приложений в Microsoft Azure.
+AKS позволяет легко создавать, настраивать и администрировать кластер виртуальных машин, настроенных с кластером Kubernetes для запуска контейнерных приложений. Это позволяет использовать имеющиеся навыки либо положиться большого и постоянно растущего сообщества опыт, развертывание и управление ими контейнерных приложений в Microsoft Azure.
 
 В этой статье описаны шаги по развертыванию Kubernetes в AKS с помощью Azure CLI. Если у вас нет подписки Azure, создайте бесплатную учетную запись перед началом работы.
 
@@ -34,7 +34,7 @@ ms.locfileid: "49460899"
 
 - В этом разделе необходимо иметь Azure CLI версии 2.0.4 или более поздней версии. Если требуется выполнить установку или обновление, см. в разделе [Установка Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Запустите `az --version` чтобы узнать версию, при необходимости.
 
-- Установка [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Кластера больших данных в SQL Server требуется любой дополнительный номер версии в рамках диапазона 1,10 версий, для Kubernetes, но для сервера и клиента. Чтобы установить определенную версию на клиент kubectl, см. в разделе [установки kubectl двоичных с помощью curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Для AKS необходимо использовать `--kubernetes-version` параметр для указания версии отличается от по умолчанию. Обратите внимание на то, что в выпуском CTP2.0 AKS поддерживает только 1.10.7 и 1.10.8 версии. 
+- Установка [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Кластера больших данных в SQL Server требует любой дополнительный номер версии в рамках диапазона 1,10 версий для Kubernetes, но для сервера и клиента. Чтобы установить определенную версию на клиент kubectl, см. в разделе [установки kubectl двоичных с помощью curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Для AKS необходимо использовать `--kubernetes-version` параметр для указания версии отличается от по умолчанию. Обратите внимание на то, что в выпуском CTP2.0 AKS поддерживает только 1.10.7 и 1.10.8 версии. 
 
 
 > [!NOTE]
@@ -110,4 +110,4 @@ ms.locfileid: "49460899"
 
 Действия, описанные в этой статье настроить кластер Kubernetes в AKS. Следующим шагом является развертывание SQL Server 2019 больших данных в кластере.
 
-[Развертывание кластера SQL Server 2019 больших данных в Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Краткое руководство по Развертыванию кластера больших данных SQL Server в службе Azure Kubernetes (AKS)](quickstart-big-data-cluster-deploy.md)

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 17ba8e06b0344ffa9aa24c9506eb52ad7e954e2b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981187"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148139"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "38981187"
 5.  Дважды щелкните текст внутри \<файл > элемента. Введите имя файла резервной копии, включая расширение ABF. Укажите полный путь к файлу, если не используется местоположение резервной копии по умолчанию. Дополнительные сведения см. в разделе [Резервное копирование, восстановление и синхронизация баз данных (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ##  <a name="bkmk_schemarowset"></a> Создание запроса набора строк схемы с помощью шаблона XML для аналитики  
- **Обозреватель шаблонов** содержит только один шаблон для запросов набора строк схемы. Чтобы использовать шаблон, нужно знать требования к набору строк схемы, который будет использоваться, включая обязательные элементы и столбцы, которые могут быть использованы в качестве ограничений. Дополнительные сведения см. в разделе [Наборы строк схемы служб Analysis Services](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
+ **Обозреватель шаблонов** содержит только один шаблон для запросов набора строк схемы. Чтобы использовать шаблон, нужно знать требования к набору строк схемы, который будет использоваться, включая обязательные элементы и столбцы, которые могут быть использованы в качестве ограничений. Дополнительные сведения см. в разделе [Наборы строк схемы служб Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).  
   
  Обратите внимание, что многие из наборов строк схемы для простоты также реализованы в виде динамических административных представлений. Используя соответствующее динамическое административное представление, можно выполнить запрос к набору строк схемы с помощью синтаксиса Transact-SQL. Например, следующие запросы возвращают те же результаты, но один из результатов имеет формат XML, а другой — табличный формат. Дополнительные сведения о динамических административных представлениях см. в разделе [Использование динамических административных представлений для мониторинга служб Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).  
   
@@ -132,7 +132,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  Откройте **обозреватель шаблонов**и перетащите шаблон **Выявление наборов строк схемы**в пустое окно запроса.  
   
-3.  В шаблоне замените [элемент RequestType &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) элемента со следующим текстом: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  В шаблоне замените [элемент RequestType &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/requesttype-element-xmla) элемента со следующим текстом: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  Нажмите кнопку **Выполнить**.  
   
@@ -216,7 +216,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ## <a name="see-also"></a>См. также  
  [Справочник по многомерным выражениям (многомерные выражения)](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Справочник по языку ASSL (ASSL для XMLA)](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Язык сценариев Analysis Services &#40;ASSL для XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Справочник по языку ASSL (ASSL для XMLA)](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Справочник по языку ASSL (ASSL для XMLA)](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

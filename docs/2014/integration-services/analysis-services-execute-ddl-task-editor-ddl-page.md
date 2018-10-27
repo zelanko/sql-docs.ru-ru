@@ -15,12 +15,12 @@ ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bee729056f1654e265e7e37d92dcfd0015381f71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8f07c94b986c697721188a50e2ec5d478ac0b1b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119924"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146860"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Редактор задачи «Выполнение инструкции DDL служб Analysis Services» (страница DDL)
   Используйте страницу **DDL** диалогового окна **Редактор задачи "Выполнение инструкции DDL служб аналитики"**, чтобы настроить соединение с проектом [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или базой данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], а также предоставить сведения об источнике инструкций языка определения данных (DDL).  
@@ -61,11 +61,11 @@ ms.locfileid: "48119924"
  **См. также:** [Переменные в службах Integration Services](integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services редактор выполнение инструкции DDL задач &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
- [Страница «выражения»](expressions/expressions-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Выполнение инструкции DDL служб Analysis Services" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)   
  [Поток управления](control-flow/control-flow.md)   
- [Язык сценариев Analysis Services &#40;ASSL&#41; ссылки](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [XML для аналитики &#40;XMLA&#41; ссылки](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
+ [Язык сценариев Analysis Services &#40;ASSL&#41; ссылки](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Справочник по XML для аналитики (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

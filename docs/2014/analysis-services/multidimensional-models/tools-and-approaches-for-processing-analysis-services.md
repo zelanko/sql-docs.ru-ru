@@ -14,12 +14,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: edddafdbc51c9f67beb7b0f92efddf1e14f9fc79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4d37cd9a4ef101f9243fbf5dafdc7df43dfa62c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118474"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146309"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Средства и способы обработки (службы Analysis Services)
   Обработка — это операция, при которой службы Analysis Services запрашивают реляционный источник данных и заполняют этими данными объекты служб Analysis Services.  
@@ -42,7 +42,7 @@ ms.locfileid: "48118474"
   
 -   Наблюдение за обработкой с помощью приложения SQL Server Profiler.  
   
--   Программирование пользовательского решения с помощью объектов AMO. Дополнительные сведения см. в статье [Programming AMO OLAP Basic Objects](analysis-management-objects/programming-amo-olap-basic-objects.md).  
+-   Программирование пользовательского решения с помощью объектов AMO. Дополнительные сведения см. в статье [Programming AMO OLAP Basic Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects).  
   
  Обработка имеет широкие возможности настройки, управляемые набором параметров обработки, которые определяют тип обработки (полная или добавочная), выполняемой на уровне объектов. Дополнительные сведения об обработке параметров и объектов см. в разделах [Параметры обработки (службы Analysis Services)](processing-options-and-settings-analysis-services.md) и [Обработка объектов служб Analysis Services](processing-analysis-services-objects.md).  
   

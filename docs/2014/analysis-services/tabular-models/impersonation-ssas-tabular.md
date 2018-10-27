@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6455a83328f973004f6c0e7ff39f574413693d94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112040"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145599"
 ---
 # <a name="impersonation-ssas-tabular"></a>Олицетворение (табличные службы SSAS)
   В этом разделе авторы табличных моделей узнают, каким образом учетные данные используются службами Analysis Services при подключении к источнику данных для импорта и обработки (обновления) данных.  
@@ -71,7 +71,7 @@ ms.locfileid: "48112040"
 |**Конкретное имя пользователя Windows и пароль** <sup>2</sup>|ImpersonateWindowsUserAccount|Этот параметр указывает, что модель будет использовать учетную запись пользователя Windows для импорта или обработки данных из источника данных. Домен и имя учетной записи пользователя используют следующий формат:**\<доменное имя >\\< имя учетной записи пользователя\>**. При создании новой модели с помощью мастера импорта таблиц это значение установлено по умолчанию.|  
 |**Учетная запись службы**|ImpersonateServiceAccount|Этот параметр указывает модели использовать учетные данные безопасности, связанные с экземпляром служб Analysis Services, управляющим моделью.|  
   
- <sup>1</sup>ImpersonationMode указывает значение для [элемент DataSourceImpersonationInfo &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) свойство в источнике данных.  
+ <sup>1</sup>ImpersonationMode указывает значение для [элемент DataSourceImpersonationInfo &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) свойство в источнике данных.  
   
  <sup>2</sup>при использовании этого параметра, в том случае, если база данных рабочей области удаляется из памяти, из-за перезагрузки или **сохранение рабочей области** свойству **выгрузить из памяти** или  **Удалить из рабочей области**, и этот проект модели закрыт, в следующем сеансе при попытке обработать данные из таблицы, вам будет предложено ввести учетные данные для каждого источника данных. Аналогичным образом, если база данных развернутой модели удаляется из памяти, система попросит указать учетные данные для каждого источника данных.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48112040"
   
 ## <a name="see-also"></a>См. также  
  [Режим DirectQuery (табличные службы SSAS)](directquery-mode-ssas-tabular.md)   
- [Источники данных &#40;табличные службы SSAS&#41;](../data-sources-ssas-tabular.md)   
- [Развертывание решений табличной модели &#40;табличные службы SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Источники данных (табличные службы SSAS)](../data-sources-ssas-tabular.md)   
+ [Развертывание решений табличной модели (табличные службы SSAS)](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

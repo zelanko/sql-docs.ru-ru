@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ad46e78f5accb54a3870f0c12a8442dc76201b9
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: e437507d139959c21f723f8a674ca4879570339f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36760099"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145679"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>Предоставление прав администратора сервера для экземпляра служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,10 +24,10 @@ ms.locfileid: "36760099"
   
  По умолчанию члены локальной группы администраторов автоматически получают права администраторов в службе Analysis Server. Хотя локальной группе явно не предоставлено членство в роли администратора сервера [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , локальные администраторы могут создавать базы данных, создавать пользователей и разрешения и выполнять другие разрешенные системным администраторам задачи. Кроме этого, можно настроить неявное предоставление прав администратора. Эта возможность определяется свойством сервера **BuiltinAdminsAreServerAdmins** , имеющим по умолчанию значение **true** . Это свойство вы можете изменить в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Security Properties](../../analysis-services/server-properties/security-properties.md).  
   
- После установки можно изменить членство в роли, чтобы добавить дополнительных пользователей с полными правами доступа к службе. Ролями сервера вы можете также управлять с помощью объектов AMO. Дополнительные сведения см. в разделе [Разработка объектов управления аналитикой (объекты AMO)](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+ После установки можно изменить членство в роли, чтобы добавить дополнительных пользователей с полными правами доступа к службе. Ролями сервера вы можете также управлять с помощью объектов AMO. Дополнительные сведения см. в разделе [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предусматривают несколько очень детализированных ролей для обработки и выполнять запросы на уровне сервера, базы данных и объекта. Инструкции по использованию этих ролей см. в разделе [Роли и разрешения (службы Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md).  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предусматривают несколько очень детализированных ролей, позволяющих обрабатывать и выполнять запросы на уровне сервера, базы данных или объекта. Инструкции по использованию этих ролей см. в разделе [Роли и разрешения (службы Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md).  
   
 ## <a name="modify-server-role-membership"></a>Изменение членства в роли сервера  
   
