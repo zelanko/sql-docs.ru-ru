@@ -13,12 +13,12 @@ ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de325b7b012b932b9c2b292d05d36bbd93adab66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c7df43a5a6a0f00ec1f2bce13cf79f424265abf
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797382"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098896"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Параметры (обозреватель объектов SQL Server — меню "Команды")
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,5 +45,5 @@ ms.locfileid: "47797382"
 Назначает число возвращаемых строк, указанное в создаваемом скрипте редактора запросов. Значение по умолчанию составляет 1000 строк.  
   
 ## <a name="see-also"></a>См. также:  
-[Подсистема аудита SQL Server (Database Engine)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
+[Подсистема аудита SQL Server (ядро СУБД)](http://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   

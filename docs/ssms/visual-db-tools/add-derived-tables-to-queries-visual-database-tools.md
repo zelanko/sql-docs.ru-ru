@@ -16,12 +16,12 @@ ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4af6f1ff410395623c3857d347e0497d044b53eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2b6426bc81e459369a6f75c79570ca450d07e4e
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715912"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099895"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>Добавление производных таблиц в запросы (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,5 +39,5 @@ ms.locfileid: "47715912"
 [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Создание запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Открытие запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/open-queries-visual-database-tools.md)  
-[SELECT (Transact-SQL)](http://msdn.microsoft.com/en-us/dc85caea-54d1-49af-b166-f3aa2f3a93d0)  
+[SELECT (Transact-SQL)](http://msdn.microsoft.com/dc85caea-54d1-49af-b166-f3aa2f3a93d0)  
   
