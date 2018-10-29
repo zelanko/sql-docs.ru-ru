@@ -1,21 +1,24 @@
-- name: Драйвер Microsoft JDBC для SQL Server
-  href: microsoft-jdbc-driver-for-sql-server.md
-- name: Примеры кода JDBC +
-  href: ../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md
-- name: Справка по API JDBC +
-  href: reference/jdbc-driver-api-reference.md
-- name: Начало работы с драйвером JDBC
-  href: getting-started-with-the-jdbc-driver.md
+items:
+- name: 4.2 Microsoft JDBC Driver для SQL Server
   items:
-    - name: "Шаг\_1. Настройка среды разработки для разработки на Java"
+  - name: Microsoft JDBC Driver 4.2 for SQL Server
+    href: microsoft-jdbc-driver-for-sql-server.md
+  - name: Примеры кода JDBC +
+    href: ../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md
+  - name: Справка по API JDBC +
+    href: reference/jdbc-driver-api-reference.md
+  - name: Начало работы с драйвером JDBC
+    href: getting-started-with-the-jdbc-driver.md
+    items:
+    - name: Шаг 1. Настройка среды разработки для разработки на Java
       href: step-1-configure-development-environment-for-java-development.md
-    - name: "Шаг\_2. Создание базы данных для разработки на Java"
+    - name: Шаг 2. Создание базы данных для разработки на Java
       href: step-2-create-a-sql-database-for-java-development.md
-    - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью Java"
+    - name: 'Шаг 3. Подтверждение концепции: подключение к SQL с помощью Java'
       href: step-3-proof-of-concept-connecting-to-sql-using-java.md
-- name: Общие сведения о драйвере JDBC
-  href: overview-of-the-jdbc-driver.md
-  items:
+  - name: Общие сведения о драйвере JDBC
+    href: overview-of-the-jdbc-driver.md
+    items:
     - name: Скачивание драйвера Microsoft JDBC Driver for SQL Server
       href: download-microsoft-jdbc-driver-for-sql-server.md
     - name: Заметки о выпуске для драйвера JDBC
@@ -38,9 +41,9 @@
       href: frequently-asked-questions-faq-for-jdbc-driver.md
     - name: Зависимости компонентов Microsoft JDBC Driver для SQL Server
       href: ../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
-- name: Защита приложений драйвера JDBC
-  href: securing-jdbc-driver-applications.md
-  items:
+  - name: Защита приложений драйвера JDBC
+    href: securing-jdbc-driver-applications.md
+    items:
     - name: Обеспечение безопасности строк подключений
       href: securing-connection-strings.md
     - name: Проверка введенного пользователем
@@ -52,15 +55,15 @@
     - name: Режим FIPS
       href: ../../connect/jdbc/fips-mode.md
       items:
-        - name: Основные сведения о поддержке SSL
-          href: understanding-ssl-support.md
-        - name: Соединение с помощью SSL-шифрования
-          href: connecting-with-ssl-encryption.md
-        - name: Настройка SSL-шифрования на клиенте
-          href: configuring-the-client-for-ssl-encryption.md
-- name: Повышение производительности и надежности с помощью драйвера JDBC
-  href: improving-performance-and-reliability-with-the-jdbc-driver.md
-  items:
+      - name: Основные сведения о поддержке SSL
+        href: understanding-ssl-support.md
+      - name: Соединение с помощью SSL-шифрования
+        href: connecting-with-ssl-encryption.md
+      - name: Настройка SSL-шифрования на клиенте
+        href: configuring-the-client-for-ssl-encryption.md
+  - name: Повышение производительности и надежности с помощью драйвера JDBC
+    href: improving-performance-and-reliability-with-the-jdbc-driver.md
+    items:
     - name: Закрытие неиспользуемых объектов
       href: closing-objects-when-not-in-use.md
     - name: Управление размером транзакции
@@ -73,9 +76,9 @@
       href: sparse-columns.md
     - name: Кэширование метаданных подготовленной инструкции для JDBC Driver
       href: prepared-statement-metadata-caching-for-the-jdbc-driver.md
-- name: Диагностика проблем с драйвером JDBC
-  href: diagnosing-problems-with-the-jdbc-driver.md
-  items:
+  - name: Диагностика проблем с драйвером JDBC
+    href: diagnosing-problems-with-the-jdbc-driver.md
+    items:
     - name: Обработка ошибок
       href: handling-errors.md
     - name: Получение версии драйвера
@@ -86,57 +89,57 @@
       href: troubleshooting-connectivity.md
     - name: Доступ к диагностическим сведениям в журнале расширенных событий
       href: accessing-diagnostic-information-in-the-extended-events-log.md
-- name: Образец приложений драйвера JDBC
-  href: sample-jdbc-driver-applications.md
-  items:
+  - name: Образец приложений драйвера JDBC
+    href: sample-jdbc-driver-applications.md
+    items:
     - name: Соединение и извлечение данных
       href: connecting-and-retrieving-data.md
       items:
-        - name: Образец URL-адреса соединения
-          href: connection-url-sample.md
-        - name: Образец источника данных
-          href: data-source-sample.md
+      - name: Образец URL-адреса соединения
+        href: connection-url-sample.md
+      - name: Образец источника данных
+        href: data-source-sample.md
     - name: Работа с типами данных (JDBC)
       href: working-with-data-types-jdbc.md
       items:
-        - name: Образец базовых типов данных
-          href: basic-data-types-sample.md
-        - name: Образец типа данных SQLXML
-          href: sqlxml-data-type-sample.md
-        - name: Образец пространственных типов данных
-          href: spatial-data-types-sample.md
+      - name: Образец базовых типов данных
+        href: basic-data-types-sample.md
+      - name: Образец типа данных SQLXML
+        href: sqlxml-data-type-sample.md
+      - name: Образец пространственных типов данных
+        href: spatial-data-types-sample.md
     - name: Работа с результирующими наборами
       href: working-with-result-sets.md
       items:
-        - name: Получение образца данных результирующего набора
-          href: retrieving-result-set-data-sample.md
-        - name: Изменение образца данных результирующего набора
-          href: modifying-result-set-data-sample.md
-        - name: Образец кэширования данных результирующего набора
-          href: caching-result-set-data-sample.md
+      - name: Получение образца данных результирующего набора
+        href: retrieving-result-set-data-sample.md
+      - name: Изменение образца данных результирующего набора
+        href: modifying-result-set-data-sample.md
+      - name: Образец кэширования данных результирующего набора
+        href: caching-result-set-data-sample.md
     - name: Работа с большими объемами данных
       href: working-with-large-data.md
       items:
-        - name: Образец считывания данных большого объема
-          href: reading-large-data-sample.md
-        - name: Образец считывания данных большого объема с помощью хранимых процедур
-          href: reading-large-data-with-stored-procedures-sample.md
-        - name: Образец обновления данных большого объема
-          href: updating-large-data-sample.md
+      - name: Образец считывания данных большого объема
+        href: reading-large-data-sample.md
+      - name: Образец считывания данных большого объема с помощью хранимых процедур
+        href: reading-large-data-with-stored-procedures-sample.md
+      - name: Образец обновления данных большого объема
+        href: updating-large-data-sample.md
     - name: Образец обнаружения и классификации данных
       href: data-discovery-classification-sample.md
-- name: Соответствие требованиям и юридические аспекты использования драйвера JDBC для SQL
-  href: compliance-and-legal-for-the-jdbc-sql-driver.md
-  items:
+  - name: Соответствие требованиям и юридические аспекты использования драйвера JDBC для SQL
+    href: compliance-and-legal-for-the-jdbc-sql-driver.md
+    items:
     - name: Соответствие JDBC 4.1 для JDBC Driver
       href: jdbc-4-1-compliance-for-the-jdbc-driver.md
     - name: Соответствие JDBC 4.2 для JDBC Driver
       href: jdbc-4-2-compliance-for-the-jdbc-driver.md
-    - name: "Соответствие требованиям JDBC\_4.3 для JDBC Driver"
+    - name: Соответствие требованиям JDBC 4.3 для JDBC Driver
       href: jdbc-4-3-compliance-for-the-jdbc-driver.md
-- name: Руководство по программированию для драйвера JDBC для SQL
-  href: programming-guide-for-jdbc-sql-driver.md
-  items:
+  - name: Руководство по программированию для драйвера JDBC для SQL
+    href: programming-guide-for-jdbc-sql-driver.md
+    items:
     - name: Соединение с SQL Server с помощью драйвера JDBC
       href: connecting-to-sql-server-with-the-jdbc-driver.md
     - name: Основные сведения о типах данных драйвера JDBC
@@ -153,117 +156,123 @@
       href: using-always-encrypted-with-the-jdbc-driver.md
     - name: Статьи руководства
       items:
-        - name: Использование инструкций в SQL
-          href: using-statements-with-sql.md
-        - name: 'Использование инструкции SQL для изменения объектов баз данных '
-          href: using-an-sql-statement-to-modify-database-objects.md
-        - name: Задание свойств источника данных
-          href: setting-the-data-source-properties.md
-        - name: Задание свойств соединения
-          href: setting-the-connection-properties.md
-        - name: Использование хранимых процедур без параметров
-          href: using-a-stored-procedure-with-no-parameters.md
-        - name: Использование метаданных о параметрах
-          href: using-parameter-metadata.md
-        - name: Использование базовых типов данных
-          href: using-basic-data-types.md
-        - name: Использование пространственных типов данных
-          href: use-spatial-datatypes.md
-        - name: Основные сведения о транзакциях
-          href: understanding-transactions.md
-        - name: Работа с соединением
-          href: working-with-a-connection.md
-        - name: Функции поддержки различных языков драйвера JDBC
-          href: international-features-of-the-jdbc-driver.md
-        - name: Использование расширенных типов данных
-          href: using-advanced-data-types.md
-        - name: Общие сведения о различиях типов данных
-          href: understanding-data-type-differences.md
-        - name: Использование нескольких результирующих наборов
-          href: using-multiple-result-sets.md
-        - name: Использование удержания
-          href: using-holdability.md
-        - name: Соединение с использованием проверки подлинности Azure Active Directory
-          href: connecting-using-azure-active-directory-authentication.md
-        - name: Общие сведения о преобразованиях типов данных
-          href: understanding-data-type-conversions.md
-        - name: Общие сведения об управлении параллелизмом
-          href: understanding-concurrency-control.md
-        - name: Использование хранимых процедур с входными параметрами
-          href: using-a-stored-procedure-with-input-parameters.md
-        - name: Использование метаданных базы данных
-          href: using-database-metadata.md
-        - name: Интерфейс SQLXML
-          href: sqlxml-interface.md
-        - name: Обработка сложных инструкций
-          href: handling-complex-statements.md
-        - name: Использование пулов соединений
-          href: using-connection-pooling.md
-        - name: Справочник по API Always Encrypted для драйвера JDBC
-          href: always-encrypted-api-reference-for-the-jdbc-driver.md
-        - name: Использование встроенной проверки подлинности Kerberos для подключения к SQL Server
-          href: using-kerberos-integrated-authentication-to-connect-to-sql-server.md
-        - name: Использование хранимых процедур со счетчиком обновлений
-          href: using-a-stored-procedure-with-an-update-count.md
-        - name: Основные сведения о блокировке строк
-          href: understanding-row-locking.md
-        - name: Поддержка высокой доступности и аварийного восстановления в драйвере JDBC
-          href: jdbc-driver-support-for-high-availability-disaster-recovery.md
-        - name: Использование метаданных результирующего набора
-          href: using-result-set-metadata.md
-        - name: Основные сведения о транзакциях XA
-          href: understanding-xa-transactions.md
-        - name: Использование автоматически сформированных ключей
-          href: using-auto-generated-keys.md
-        - name: Использование зеркального отображения базы данных (JDBC)
-          href: using-database-mirroring-jdbc.md
-        - name: Поддержка национального набора символов
-          href: national-character-set-support.md
-        - name: Основные сведения о типах курсоров
-          href: understanding-cursor-types.md
-        - name: Программирование с SQLXML.
-          href: programming-with-sqlxml.md
-        - name: Использование хранимых процедур с состояниями возврата
-          href: using-a-stored-procedure-with-a-return-status.md
-        - name: Использование инструкции SQL без параметров
-          href: using-an-sql-statement-with-no-parameters.md
-        - name: Подключение к базе данных SQL Azure
-          href: connecting-to-an-azure-sql-database.md
-        - name: Использование инструкции SQL для изменения данных
-          href: using-an-sql-statement-to-modify-data.md
-        - name: Формирование URL-адреса соединения
-          href: building-the-connection-url.md
-        - name: Использование точек сохранения
-          href: using-savepoints.md
-        - name: 'Использование параметров, возвращающих табличные значения'
-          href: using-table-valued-parameters.md
-        - name: Поддержка XML-данных
-          href: supporting-xml-data.md
-        - name: Использование инструкции SQL с параметрами
-          href: using-an-sql-statement-with-parameters.md
-        - name: Основные сведения об уровнях изоляции
-          href: understanding-isolation-levels.md
-        - name: Оболочки и интерфейсы
-          href: wrappers-and-interfaces.md
-        - name: Использование массового копирования с драйвером JDBC
-          href: using-bulk-copy-with-the-jdbc-driver.md
-        - name: Использование API массового копирования для операции пакетной вставки
-          href: use-bulk-copy-api-batch-insert-operation.md
-        - name: Использование хранимых процедур с выходными параметрами
-          href: using-a-stored-procedure-with-output-parameters.md
-        - name: Выполнение пакетных операций
-          href: performing-batch-operations.md
-        - name: Определяемые пользователем типы
-          href: user-defined-types.md
-        - name: Настройка способа отправки значений java.sql.Time на сервер
-          href: configuring-how-java-sql-time-values-are-sent-to-the-server.md
-        - name: Использование escape-последовательностей SQL
-          href: using-sql-escape-sequences.md
-        - name: Использование инструкций с хранимыми процедурами
-          href: using-statements-with-stored-procedures.md
-        - name: Пример Azure Key Vault версии 6.0.0
-          href: azure-key-vault-sample-version-6.0.0.md
-        - name: Пример Azure Key Vault версии 6.2.2
-          href: azure-key-vault-sample-version-6.2.2.md
-        - name: "Пример Azure\_Key\_Vault версии\_7.0.0"
-          href: azure-key-vault-sample-version-7-0-0.md
+      - name: Использование инструкций в SQL
+        href: using-statements-with-sql.md
+      - name: 'Использование инструкции SQL для изменения объектов баз данных '
+        href: using-an-sql-statement-to-modify-database-objects.md
+      - name: Задание свойств источника данных
+        href: setting-the-data-source-properties.md
+      - name: Задание свойств соединения
+        href: setting-the-connection-properties.md
+      - name: Использование хранимых процедур без параметров
+        href: using-a-stored-procedure-with-no-parameters.md
+      - name: Использование метаданных о параметрах
+        href: using-parameter-metadata.md
+      - name: Использование базовых типов данных
+        href: using-basic-data-types.md
+      - name: Использование пространственных типов данных
+        href: use-spatial-datatypes.md
+      - name: Основные сведения о транзакциях
+        href: understanding-transactions.md
+      - name: Работа с соединением
+        href: working-with-a-connection.md
+      - name: Функции поддержки различных языков драйвера JDBC
+        href: international-features-of-the-jdbc-driver.md
+      - name: Использование расширенных типов данных
+        href: using-advanced-data-types.md
+      - name: Общие сведения о различиях типов данных
+        href: understanding-data-type-differences.md
+      - name: Использование нескольких результирующих наборов
+        href: using-multiple-result-sets.md
+      - name: Использование удержания
+        href: using-holdability.md
+      - name: Соединение с использованием проверки подлинности Azure Active Directory
+        href: connecting-using-azure-active-directory-authentication.md
+      - name: Общие сведения о преобразованиях типов данных
+        href: understanding-data-type-conversions.md
+      - name: Общие сведения об управлении параллелизмом
+        href: understanding-concurrency-control.md
+      - name: Использование хранимых процедур с входными параметрами
+        href: using-a-stored-procedure-with-input-parameters.md
+      - name: Использование метаданных базы данных
+        href: using-database-metadata.md
+      - name: Интерфейс SQLXML
+        href: sqlxml-interface.md
+      - name: Обработка сложных инструкций
+        href: handling-complex-statements.md
+      - name: Использование пулов соединений
+        href: using-connection-pooling.md
+      - name: Справочник по API Always Encrypted для драйвера JDBC
+        href: always-encrypted-api-reference-for-the-jdbc-driver.md
+      - name: Использование встроенной проверки подлинности Kerberos для подключения к SQL Server
+        href: using-kerberos-integrated-authentication-to-connect-to-sql-server.md
+      - name: Использование хранимых процедур со счетчиком обновлений
+        href: using-a-stored-procedure-with-an-update-count.md
+      - name: Основные сведения о блокировке строк
+        href: understanding-row-locking.md
+      - name: Поддержка высокой доступности и аварийного восстановления в драйвере JDBC
+        href: jdbc-driver-support-for-high-availability-disaster-recovery.md
+      - name: Использование метаданных результирующего набора
+        href: using-result-set-metadata.md
+      - name: Основные сведения о транзакциях XA
+        href: understanding-xa-transactions.md
+      - name: Использование автоматически сформированных ключей
+        href: using-auto-generated-keys.md
+      - name: Использование зеркального отображения базы данных (JDBC)
+        href: using-database-mirroring-jdbc.md
+      - name: Поддержка национального набора символов
+        href: national-character-set-support.md
+      - name: Основные сведения о типах курсоров
+        href: understanding-cursor-types.md
+      - name: Программирование с SQLXML.
+        href: programming-with-sqlxml.md
+      - name: Использование хранимых процедур с состояниями возврата
+        href: using-a-stored-procedure-with-a-return-status.md
+      - name: Использование инструкции SQL без параметров
+        href: using-an-sql-statement-with-no-parameters.md
+      - name: Подключение к базе данных SQL Azure
+        href: connecting-to-an-azure-sql-database.md
+      - name: Использование инструкции SQL для изменения данных
+        href: using-an-sql-statement-to-modify-data.md
+      - name: Формирование URL-адреса соединения
+        href: building-the-connection-url.md
+      - name: Использование точек сохранения
+        href: using-savepoints.md
+      - name: Использование параметров, возвращающих табличные значения
+        href: using-table-valued-parameters.md
+      - name: Поддержка XML-данных
+        href: supporting-xml-data.md
+      - name: Использование инструкции SQL с параметрами
+        href: using-an-sql-statement-with-parameters.md
+      - name: Основные сведения об уровнях изоляции
+        href: understanding-isolation-levels.md
+      - name: Оболочки и интерфейсы
+        href: wrappers-and-interfaces.md
+      - name: Использование массового копирования с драйвером JDBC
+        href: using-bulk-copy-with-the-jdbc-driver.md
+      - name: Использование API массового копирования для операции пакетной вставки
+        href: use-bulk-copy-api-batch-insert-operation.md
+      - name: Использование хранимых процедур с выходными параметрами
+        href: using-a-stored-procedure-with-output-parameters.md
+      - name: Выполнение пакетных операций
+        href: performing-batch-operations.md
+      - name: Определяемые пользователем типы
+        href: user-defined-types.md
+      - name: Настройка способа отправки значений java.sql.Time на сервер
+        href: configuring-how-java-sql-time-values-are-sent-to-the-server.md
+      - name: Использование escape-последовательностей SQL
+        href: using-sql-escape-sequences.md
+      - name: Использование инструкций с хранимыми процедурами
+        href: using-statements-with-stored-procedures.md
+      - name: Пример Azure Key Vault версии 6.0.0
+        href: azure-key-vault-sample-version-6.0.0.md
+      - name: Пример Azure Key Vault версии 6.2.2
+        href: azure-key-vault-sample-version-6.2.2.md
+      - name: Пример Azure Key Vault версии 7.0.0
+        href: azure-key-vault-sample-version-7-0-0.md
+ms.openlocfilehash: 3c63ab259dc117d5f0d7a5193dacdcd4cdc90f9d
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051136"
