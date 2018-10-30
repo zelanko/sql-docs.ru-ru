@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec2227925dcc8023a04c3993b2cecd32e89a4db4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b279c177a7e5b627c8ead3103cb2bd8ad6a58d78
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742952"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031443"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов
 
@@ -265,7 +265,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ```  
   
 > [!TIP]  
->  Сведения по использованию Windows PowerShell для создания серверов отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на виртуальных машинах Windows Azure см. в разделе [Использование PowerShell для создания виртуальной машины Windows Azure с сервером отчетов в собственном режиме](http://msdn.microsoft.com/library/dn449661.aspx).  
+>  Сведения по использованию Windows PowerShell для создания серверов отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на виртуальных машинах Windows Azure см. в разделе [Использование PowerShell для создания виртуальной машины Windows Azure с сервером отчетов в собственном режиме](https://msdn.microsoft.com/library/dn449661.aspx).  
   
 ##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> Сервер отчетов в режиме интеграции с SharePoint, семейство веб-сайтов бизнес-аналитики, на сервер отчетов в собственном режиме — виртуальная машина Windows Azure  
  В следующем примере выполняется миграция содержимого:  

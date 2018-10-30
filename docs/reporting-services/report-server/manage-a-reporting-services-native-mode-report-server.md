@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c945a601238c6ba110986c236d1079ec9ba99bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3b8b5baec563f2c5c99a08a730204581b6abdc7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677862"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021598"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Управление сервером отчетов служб Reporting Services в собственном режиме
   Этот раздел содержит описание процедур по настройке экземпляра сервера отчетов в собственном режиме с использованием диспетчера конфигурации служб Reporting Services.  
@@ -29,7 +29,7 @@ ms.locfileid: "47677862"
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  Представляет шаги запуска программы настройки служб Reporting Services.  
   
- [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
+ [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
  Объясняет, как задать учетную запись и пароль службы сервера отчетов.  
   
  [Регистрация имени участника-службы для сервера отчетов](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "47677862"
  [Настройка масштабного развертывания сервера отчетов в основном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Представляет шаги настройки нескольких серверов отчетов для совместного использования базы данных сервера отчетов.  
   
- [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
  Содержит шаги настройки сервера отчетов для доставки по электронной почте.  
   
  [настроить брандмауэр для доступа к серверу отчетов](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
@@ -65,6 +65,6 @@ ms.locfileid: "47677862"
   
 ## <a name="see-also"></a>См. также:  
  [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Настройка и администрирование сервера отчетов (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
+ [Настройка и администрирование сервера отчетов (режим интеграции с SharePoint служб Reporting Services)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
   
   

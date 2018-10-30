@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec8ba62b63324bb8aceeef976a482325af9248d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1385736df737044304649ddf5b17797d052f5a8e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785442"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029243"
 ---
 # <a name="previewing-reports"></a>Предварительный просмотр отчетов
   При проектировании отчета     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] может понадобиться просмотреть его до публикации в рабочей среде. Это можно сделать несколькими способами: воспользовавшись вкладкой «Предварительный просмотр» конструктора отчетов, при помощи окна предварительного просмотра в конструкторе отчетов, а также опубликовав отчет на сервере отчетов в тестовом режиме.  
@@ -51,7 +51,7 @@ ms.locfileid: "47785442"
 ## <a name="see-also"></a>См. также:  
  [Печать отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Печать отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)   
- [Публикация отчетов](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+ [Публикация отчетов](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
  [Использование пользовательских сборок с отчетами](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 1e3d1af1202c172eda900d5fe9e2830ff201de72
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "47639782"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029503"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Новые возможности служб SQL Server Reporting Services (SSRS)
 
@@ -79,7 +79,7 @@ ms.locfileid: "47639782"
  #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Пользовательская фирменная символика на веб-портале [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   С помощью пакета настройки фирменной символики можно настроить [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] , задав логотип и цвета организации.  
   
-  Дополнительные сведения об индивидуальной фирменной символике см. в разделе [Фирменная символика на веб-портале](http://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1).
+  Дополнительные сведения об индивидуальной фирменной символике см. в разделе [Фирменная символика на веб-портале](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1).
  
  #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Ключевые показатели эффективности (KPI) на веб-портале [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -87,7 +87,7 @@ ms.locfileid: "47639782"
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  
- Дополнительные сведения см. в разделе [Работа с ключевыми показателями эффективности на веб-портале](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb).
+ Дополнительные сведения см. в разделе [Работа с ключевыми показателями эффективности на веб-портале](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb).
   
  
  ### <a name="mobile-reports"></a>Мобильные отчеты
@@ -166,7 +166,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |**Общие учетные данные для подписок на общую папку**. Благодаря подпискам на общую папку [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сейчас существует два рабочих процесса.<br /><br /> Новая возможность в этой версии: администратор вашей [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] может настроить одну учетную запись для общей папки, которая будет использоваться для одной или нескольких подписок. Настройка учетной записи общей папки выполняется в диспетчере конфигурации собственного режима. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **Укажите учетную запись общей папки**, а затем на странице конфигурации подписки установите флажок **Используется учетная запись общей папки**.<br /><br /> Настройка отдельных подписок с разными учетными данными для целевой общей папки.<br /><br /> Кроме того, два этих подхода можно использовать совместно. Например, когда какие-то подписки на общую папку используют централизованную учетную запись общей папки, а другие подписки используют разные учетные данные.|Основной режим|  
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
- Новая версия SSDT включает в себя шаблоны проектов для [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: мастер проектов сервера отчетов и проект сервера отчетов. Сведения о загрузке SSDT см. в разделе [SQL Server Data Tools для Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkId=827542).  
+ Новая версия SSDT включает в себя шаблоны проектов для [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: мастер проектов сервера отчетов и проект сервера отчетов. Сведения о загрузке SSDT см. в разделе [SQL Server Data Tools для Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
 
 ### <a name="report-builder-improvements"></a>Усовершенствования построителя отчетов
 
@@ -186,14 +186,14 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 -   [Windows 8.1 DPI Scaling Enhancements](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
--   [Высокое разрешение и Windows 8.1](http://technet.microsoft.com/library/dn528848.aspx)  
+-   [Высокое разрешение и Windows 8.1](https://technet.microsoft.com/library/dn528848.aspx)  
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Новые возможности в службах Analysis Services](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
+[Новые возможности в службах Analysis Services](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [Обратная совместимость](reporting-services-backward-compatibility.md)   
-[Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server 2016](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server 2016](https://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Обновление и перенос служб Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [службы Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

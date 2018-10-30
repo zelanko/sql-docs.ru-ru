@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 36c66a0317fddf9b0b9d6a32ef328706125efea9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec1e9fc7ec041794b92b5372799678a22483b39e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759502"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021788"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Справочник по ошибкам и событиям (службы Reporting Services)
   Этот раздел содержит сведения об ошибках и событиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Файлы журналов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также содержат сведения об ошибках. Дополнительные сведения о доступных типах файлов журналов и способах просмотра журналов см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "47759502"
 |119|Ошибка|Активация|Сервер отчетов<br /><br /> обработчик планирования и доставки|*\<Источник>* не имеет доступа к содержимому базы данных сервера отчетов.|  
 |120|Ошибка|Активация|Сервер отчетов|Не удается расшифровать симметричный ключ. Скорее всего, изменилась учетная запись, под которой выполняется служба. Дополнительные сведения см. в разделе [Настройка ключей шифрования и управление ими (диспетчер конфигураций служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Ошибка|Запуск или завершение|Сервер отчетов|Не удалось запустить службу удаленного вызова процедур (RPC).|  
-|122|Предупреждение|Доставка|обработчик планирования и доставки|Обработчику планирования и доставки не удалось подключиться к SMTP-серверу, который используется для доставки электронной почты. Дополнительные сведения о подключениях к SMTP-серверу см. в руководстве по [настройке сервера отчетов для использования доставки электронной почты (SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).|  
+|122|Предупреждение|Доставка|обработчик планирования и доставки|Обработчику планирования и доставки не удалось подключиться к SMTP-серверу, который используется для доставки электронной почты. Дополнительные сведения о подключении к SMTP-серверу см. в статье [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).|  
 |123|Предупреждение|Ведение журнала|Сервер отчетов<br /><br /> Диспетчер отчетов|Серверу отчетов не удалось выполнить запись в журнал трассировки. Дополнительные сведения о журналах трассировки см. в разделе [Журнал трассировки службы сервера отчетов](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |124|Сведения|Активация|Сервер отчетов|Служба сервера отчетов не инициализирована. Дополнительные сведения см. в разделе [Инициализация сервера отчетов (диспетчер конфигураций служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
 |125|Сведения|Активация|Сервер отчетов|Ключ, используемый для шифрования данных, успешно извлечен. Дополнительные сведения о ключах см. в разделе [Настройка ключей шифрования и управление ими (диспетчер конфигураций служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
@@ -64,7 +64,7 @@ ms.locfileid: "47759502"
   
 ## <a name="see-also"></a>См. также:  
  [Отслеживание подписок служб Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)   
- [Файлы и источники журналов Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
+ [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]

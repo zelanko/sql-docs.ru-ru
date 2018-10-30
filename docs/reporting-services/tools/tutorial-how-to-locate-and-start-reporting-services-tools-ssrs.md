@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 76bd175c9461e1781502471d0ed17037c168c041
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60db1fe9f00084ce95d94af131e72a14f1e3988e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856808"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021168"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)
 
@@ -86,7 +86,7 @@ ms.locfileid: "47856808"
 4.  Если веб-портал запускается на локальном сервере отчетов, см. раздел [Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
    
 ##  <a name="bkmk_managements_studio"></a> Среда Management Studio  
- Администраторы сервера отчетов могут использовать среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для управления сервером отчетов наряду с другими серверными компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be).  
+ Администраторы сервера отчетов могут использовать среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для управления сервером отчетов наряду с другими серверными компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be).  
   
 ### <a name="to-start-sql-server-management-studio"></a>Начало работы в среде SQL Server Management Studio  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47856808"
   
  Конструктор отчетов доступен в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] в среде Visual Studio. Рабочая область конструирования в конструкторе отчетов содержит окна, мастера и меню на вкладках, используемые для доступа к функциям создания отчетов. Средство конструктора отчетов становится доступным при выборе шаблона проекта сервера отчетов или мастера сервера отчетов в средствах [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения см. в разделе [Службы Reporting Services в SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). 
  
-Скачать [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).  
+Скачать [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).  
   
 ### <a name="to-start-report-designer"></a>Запуск конструктора отчетов  
   
@@ -134,7 +134,7 @@ ms.locfileid: "47856808"
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
  [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) — это автономное приложение, с помощью которого можно создавать отчеты с разбиением на страницы вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Существующие отчеты можно настраивать и обновлять независимо от того, были ли они созданы в конструкторе отчетов или в предыдущих версиях [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Его можно установить с веб-портала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или из Центра загрузки Майкрософт.  
   
- [Построитель отчетов можно скачать](http://go.microsoft.com/fwlink/?LinkID=219138) из Центра загрузки Майкрософт.  
+ [Построитель отчетов можно скачать](https://go.microsoft.com/fwlink/?LinkID=219138) из Центра загрузки Майкрософт.  
   
 ### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>Запуск [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
@@ -146,14 +146,14 @@ ms.locfileid: "47856808"
   
      либо  
   
-     [Построитель отчетов можно скачать](http://go.microsoft.com/fwlink/?LinkID=219138) из Центра загрузки Майкрософт.  
+     [Построитель отчетов можно скачать](https://go.microsoft.com/fwlink/?LinkID=219138) из Центра загрузки Майкрософт.  
   
 3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , и можно будет создать или открыть отчет с разбиением на страницы.  
   
 ##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
- [Издатель мобильных отчетов SQL Server](http://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) позволяет создать мобильные отчеты, которые можно просмотреть на веб-портале [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и на мобильных устройствах, например iPad и iPhone.   Его можно установить с веб-портала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или из Центра загрузки Майкрософт.  
+ [Издатель мобильных отчетов SQL Server](https://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) позволяет создать мобильные отчеты, которые можно просмотреть на веб-портале [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и на мобильных устройствах, например iPad и iPhone.   Его можно установить с веб-портала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или из Центра загрузки Майкрософт.  
   
- [Издатель мобильных отчетов для SQL Server можно скачать](http://go.microsoft.com/fwlink/?LinkID=733527) из Центра загрузки Майкрософт.  
+ [Издатель мобильных отчетов для SQL Server можно скачать](https://go.microsoft.com/fwlink/?LinkID=733527) из Центра загрузки Майкрософт.  
   
 ### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>Запуск [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
@@ -165,18 +165,18 @@ ms.locfileid: "47856808"
   
      либо  
   
-     [Издатель мобильных отчетов для SQL Server можно скачать](http://go.microsoft.com/fwlink/?LinkID=733527) из Центра загрузки Майкрософт.  
+     [Издатель мобильных отчетов для SQL Server можно скачать](https://go.microsoft.com/fwlink/?LinkID=733527) из Центра загрузки Майкрософт.  
   
 3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] , и можно будет создать или открыть мобильный отчет.  
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Издатель мобильных отчетов для SQL Server можно скачать](http://go.microsoft.com/fwlink/?LinkID=733527)   
-[Построитель отчетов можно скачать](http://go.microsoft.com/fwlink/?LinkID=219138)  
-[Скачивание SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) 
+[Издатель мобильных отчетов для SQL Server можно скачать](https://go.microsoft.com/fwlink/?LinkID=733527)   
+[Построитель отчетов можно скачать](https://go.microsoft.com/fwlink/?LinkID=219138)  
+[Скачивание SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714) 
 [Установка режима интеграции с SharePoint для служб Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
 [Сервер отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
 [Средства проектирования запросов](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Учебники по службам Reporting Services](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

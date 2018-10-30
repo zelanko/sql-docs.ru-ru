@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b07cf939df0df0233ec0d7e91800eb1a16b4fa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99dbf8f5a9ba634899360b86d7f778d73a30de80
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644862"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020608"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Создание компонента времени разработки пользовательского элемента отчета
   Компонент времени разработки пользовательского элемента отчета ― это элемент управления, который может быть использован в конструкторе отчетов среды Visual Studio. Компонент времени разработки пользовательского элемента отчета предоставляет активную область конструктора, поддерживающую операции перетаскивания, интеграцию с браузером свойств среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и возможность использования пользовательских редакторов свойств.  
@@ -25,9 +25,9 @@ ms.locfileid: "47644862"
  Свойства, заданные при помощи компонента времени разработки в среде разработки, сериализуются и десериализуются средой проектирования узла и сохраняются в виде элементов в файле на языке определения отчетов (RDL). При выполнении отчета обработчиком отчетов свойства, заданные при помощи компонента времени разработки, передаются компоненту времени выполнения пользовательского элемента отчета, который подготавливает к просмотру пользовательский элемент отчета и возвращает его обратно обработчику отчетов.  
   
 > [!NOTE]  
->  Компонент времени разработки для пользовательского элемента отчета реализуется в виде компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. В этом документе приводится описание реализации, характерной для компонента времени разработки пользовательского элемента отчета. Дополнительные сведения о разработке компонентов с использованием платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе [Компоненты в Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) библиотеки MSDN.  
+>  Компонент времени разработки для пользовательского элемента отчета реализуется в виде компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. В этом документе приводится описание реализации, характерной для компонента времени разработки пользовательского элемента отчета. Дополнительные сведения о разработке компонентов с использованием платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе [Компоненты в Visual Studio](https://go.microsoft.com/fwlink/?LinkId=116576) библиотеки MSDN.  
   
- Образец полностью реализованного пользовательского элемента отчета см. на странице [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Образец полностью реализованного пользовательского элемента отчета см. на странице [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="implementing-a-design-time-component"></a>Реализация компонента времени разработки  
  Основной класс компонента времени разработки для пользовательского элемента отчета наследуется от класса **Microsoft.ReportDesigner.CustomReportItemDesigner**. Помимо стандартных атрибутов, используемых для элемента управления [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], класс компонента также должен определять атрибут **CustomReportItem**. Этот атрибут должен соответствовать имени пользовательского элемента отчета, определенному в файле reportserver.config. Список атрибутов [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе «Атрибуты» документации по SDK [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
@@ -182,7 +182,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Использование крайних элементов  
- Классы пользовательского элемента отчета также могут реализовывать класс **Microsoft.ReportDesigner.Design.Adornment**. Крайний элемент позволяет элементу управления пользовательского элемента отчета иметь области за пределами основного прямоугольника области конструктора. Эти области могут обрабатывать события пользовательского интерфейса, такие как щелчки кнопкой мыши и операции перетаскивания. Класс **Adornment**, определенный в пространстве имен **Microsoft.ReportDesigner** служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], является транзитной реализацией класса <xref:System.Windows.Forms.Design.Behavior.Adorner>, используемого в Windows Forms. Полные сведения о классе **Adorner** см. в разделе [Общие сведения о службе расширения функциональности](http://go.microsoft.com/fwlink/?LinkId=116673) библиотеки MSDN. Образец кода, реализующего класс **Microsoft.ReportDesigner.Design.Adornment**, см. в разделе [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Классы пользовательского элемента отчета также могут реализовывать класс **Microsoft.ReportDesigner.Design.Adornment**. Крайний элемент позволяет элементу управления пользовательского элемента отчета иметь области за пределами основного прямоугольника области конструктора. Эти области могут обрабатывать события пользовательского интерфейса, такие как щелчки кнопкой мыши и операции перетаскивания. Класс **Adornment**, определенный в пространстве имен **Microsoft.ReportDesigner** служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], является транзитной реализацией класса <xref:System.Windows.Forms.Design.Behavior.Adorner>, используемого в Windows Forms. Полные сведения о классе **Adorner** см. в разделе [Общие сведения о службе расширения функциональности](https://go.microsoft.com/fwlink/?LinkId=116673) библиотеки MSDN. Образец кода, реализующего класс **Microsoft.ReportDesigner.Design.Adornment**, см. в разделе [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Дополнительные сведения о программировании и использовании форм Windows Forms в среде [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] см. в следующих разделах библиотеки MSDN:  
   

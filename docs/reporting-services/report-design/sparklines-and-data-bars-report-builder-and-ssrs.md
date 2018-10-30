@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71458d579b710b282f75fd10d4006b737632d266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50d198fc0f16cc8cfda844f7e037d46e3e845f1a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710822"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021268"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Спарклайны и гистограммы (построитель отчетов и службы SSRS)
   Sparkline-графики и гистограммы — это небольшие простые диаграммы, которые содержат много сведений в небольшом пространстве и часто бывают встроены в текст.   
@@ -25,7 +25,7 @@ ms.locfileid: "47710822"
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Чтобы начать работу со спарклайнами, см. раздел [Учебник. Добавление спарклайна в отчет (построитель отчетов)](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) и видеоролики [Инструкции. Создание спарклайна в таблице](http://go.microsoft.com/fwlink/?LinkId=197092) и [Спарклайны, линейчатые диаграммы и индикаторы в построителе отчетов](http://technet.microsoft.com/bi/video/ff877165) .  
+ Чтобы начать работу со спарклайнами, см. раздел [Учебник. Добавление спарклайна в отчет (построитель отчетов)](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) и видеоролики [Инструкции. Создание спарклайна в таблице](https://go.microsoft.com/fwlink/?LinkId=197092) и [Спарклайны, линейчатые диаграммы и индикаторы в построителе отчетов](https://technet.microsoft.com/bi/video/ff877165) .  
   
 > [!NOTE]  
 >  Спарклайны и гистограммы можно опубликовать вместе с родительской таблицей, матрицей или списком, а также отдельно как элемент отчета. Узнайте больше об [элементах отчета](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d02bcf4e91bdea5c4df59b7f850adbe5e5c2ce0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800992"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029803"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Сервер отчетов служб Reporting Services (режим SharePoint)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47800992"
 
  Дополнительные сведения об установке и настройке см. в следующем документе.  
   
--   [Установка служб Reporting Services в режиме интеграции с SharePoint для SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
+-   [Установка служб Reporting Services в режиме интеграции с SharePoint для SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
   
 -   [Добавление дополнительного сервера отчетов в ферму](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47800992"
   
 -   Все страницы приложений, средства, сообщения об ошибках и предупреждения, создаваемые службами Reporting Services, будут выводиться на языке, используемом экземпляром служб Reporting Services (это один из языков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
--   Страницы приложения, открываемые на сайте SharePoint, веб-часть средства просмотра отчетов и построитель отчетов отображаются на одном из языков, поддерживаемых для надстройки служб Reporting Services. Список поддерживаемых языков см. в [скачиваемых материалах по SQL Server](http://msdn.microsoft.com/sql/downloads/) и на странице скачивания надстройки для служб SQL Server 2016 Reporting Services.  
+-   Страницы приложения, открываемые на сайте SharePoint, веб-часть средства просмотра отчетов и построитель отчетов отображаются на одном из языков, поддерживаемых для надстройки служб Reporting Services. Список поддерживаемых языков см. в [скачиваемых материалах по SQL Server](https://msdn.microsoft.com/sql/downloads/) и на странице скачивания надстройки для служб SQL Server 2016 Reporting Services.  
   
 -   Сайты и центр администрирования SharePoint, справка в Интернете и сообщения доступны на языках, поддерживаемых продуктами Office Server.  
   
@@ -128,16 +128,16 @@ ms.locfileid: "47800992"
   
 |**Задача**|**Ссылка**|  
 |--------------|--------------|  
-|Подробные инструкции по установке и настройке служб Reporting Services в режиме интеграции с SharePoint.|[Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) и [Добавление дополнительного сервера отчетов в ферму](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
-|Горизонтально масштабируемое развертывание служб Reporting Services в SharePoint путем добавления дополнительных серверов отчетов.|[Добавление дополнительного сервера отчетов в ферму](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) и [Топологии развертывания для компонентов бизнес-аналитики SQL Server в SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
+|Подробные инструкции по установке и настройке служб Reporting Services в режиме интеграции с SharePoint.|[Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) и [Добавление дополнительного сервера отчетов в ферму](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|Горизонтально масштабируемое развертывание служб Reporting Services в SharePoint путем добавления дополнительных серверов отчетов.|[Добавление дополнительного сервера отчетов в ферму](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) и [Топологии развертывания для компонентов бизнес-аналитики SQL Server в SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
 |Добавление дополнительных клиентских веб-интерфейсов SharePoint с установленными компонентами Reporting Services для просмотра элементов отчетов.|[Добавление дополнительного клиентского веб-интерфейса служб Reporting Services в ферме](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Настройка электронной почты для сервера отчетов в среде SharePoint.|[Настройка электронной почты для приложения служб Reporting Services](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
-|Последние сведения об этом выпуске доступны на TechNet Wiki.|[Рекомендации, советы и сведения по устранению неполадок служб SQL Server 2012 Reporting Services](http://go.microsoft.com/fwlink/?LinkId=221297).|  
+|Последние сведения об этом выпуске доступны на TechNet Wiki.|[Рекомендации, советы и сведения по устранению неполадок служб SQL Server 2012 Reporting Services](https://go.microsoft.com/fwlink/?LinkId=221297).|  
 
 ## <a name="next-steps"></a>Следующие шаги
 
 [Установка и удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
 [Веб-часть "Средство просмотра отчетов" на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[Викторина. Настройка служб SSRS 2012 для интеграции с SharePoint](http://go.microsoft.com/fwlink/?LinkId=306443)  
+[Викторина. Настройка служб SSRS 2012 для интеграции с SharePoint](https://go.microsoft.com/fwlink/?LinkId=306443)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

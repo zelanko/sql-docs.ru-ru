@@ -19,12 +19,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3e415e506e50ca5cbd9642e790697a4b4644565
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 777647d3e558327eb635a0ae8d2794d82d453c25
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776562"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150175"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Перенос базы данных путем отсоединения и присоединения (язык Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,6 @@ ms.locfileid: "47776562"
 1.  Отсоединение базы данных. Дополнительные сведения см. в разделе [Отсоединение базы данных](../../relational-databases/databases/detach-a-database.md).  
   
 2.  Переместите в «Проводнике» или окне командной строки файлы отсоединенной базы данных и журналов в новое место.  
-  
-    > [!NOTE]  
-    >  Если база данных включает только один файл небольшого размера, для ее перемещения можно использовать электронную почту.  
   
      Перенос файлов журналов обязателен, даже если нужно создать новые файлы журналов. В некоторых случаях для повторного присоединения базы данных требуются файлы ее существующих журналов. Поэтому всегда храните все файлы отсоединенных журналов, пока база данных не будет успешно присоединена без них.  
   

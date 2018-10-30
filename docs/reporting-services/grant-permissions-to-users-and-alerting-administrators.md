@@ -9,12 +9,12 @@ ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e3fccefab667aefae9f6b481a6e4f0ea73144bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98977f845f2226413c19b338dc15b11589231b98
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705762"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028073"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>Предоставление разрешений для пользователей и оповещение администраторов
 
@@ -29,7 +29,7 @@ ms.locfileid: "47705762"
 
 **Администраторы предупреждений**— разрешения должны включать разрешение SharePoint на управление предупреждениями. По умолчанию только уровень разрешения «Полный доступ» включает такое разрешение для сайтов, созданных с использованием шаблона веб-сайта группы. Если используются другие шаблоны сайтов, появляются разные списки групп SharePoint по умолчанию. Можно добавить разрешение на управление предупреждениями к одному из встроенных уровней разрешений или создать собственный уровень разрешений, включающий разрешения, позволяющие администраторам предупреждений просматривать и удалять предупреждения данных.
 
-Дополнительные сведения о разрешениях SharePoint см. в разделе [Пользовательские разрешения и уровни разрешений (SharePoint Server 2010)](http://technet.microsoft.com/library/cc721640.aspx).
+Дополнительные сведения о разрешениях SharePoint см. в разделе [Пользовательские разрешения и уровни разрешений (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx).
 
 ## <a name="grant-permissions"></a>Предоставить разрешения
   
@@ -56,4 +56,4 @@ ms.locfileid: "47705762"
 [Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

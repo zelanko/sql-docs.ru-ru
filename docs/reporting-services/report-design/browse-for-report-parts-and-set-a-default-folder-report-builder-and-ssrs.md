@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 185e75f558d3af598806f9a1896186d352007b3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 638d4ccecba36eec60561b7d0418273e258df6ba
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732092"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099815"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS)
 Самым простым способом создания отчет [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы является добавление существующих элементов отчета, таких как таблицы и диаграммы, к отчету из галереи элементов отчетов. При добавлении элемента отчета к отчету добавляется также все, что необходимо для его выполнения. Например, все элементы отчета, используемые для отображения данных, зависят от набора данных, т. е. запроса и соединения с источником данных. После добавления элемента отчета к отчету ее можно изменить в соответствии с требованиями.  
@@ -61,10 +61,10 @@ ms.locfileid: "47732092"
  Чтобы этот параметр вступил в силу, не нужно перезапускать построитель отчетов.  
   
 ## <a name="see-also"></a>См. также:  
- [Проверка наличия обновлений или отключение обновлений (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
+ [Проверка наличия обновлений или отключение обновлений (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [Элементы отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Элементы отчета и наборы данных в построителе отчетов](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Устранение неполадок в элементах отчета (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Устранение неполадок в элементах отчета (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Публикация и повторная публикация элементов отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

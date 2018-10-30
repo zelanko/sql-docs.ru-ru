@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94cb190dd6933f7a226734b3110f9620c782d0d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 567a22114f04644b2a20d8d2653f859c10ae5534
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613802"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029313"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Отображение на диаграмме ряда с несколькими диапазонами данных
 
@@ -44,7 +44,7 @@ ms.locfileid: "47613802"
   
  Если включена возможность разрыва шкалы, но разрыв шкалы не появляется, хотя между диапазонами достаточно большой зазор, следует установить для свойства CollapsibleSpaceThreshold значение меньше 25. Свойство CollapsibleSpaceThreshold указывает, какой процент пространства, которое можно сократить, должен разделять диапазоны данных. Дополнительные сведения см. в разделе [Добавление в диаграмму разрывов шкалы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md).  
   
- Поддерживается до пяти разрывов шкалы на диаграмму; однако диаграмма с несколькими разрывами шкалы становится нечитаемой. Если диапазонов больше двух, возможно, для вывода этих данных лучше подойдет другой метод. Дополнительные сведения см. в разделе [Несколько рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+ Поддерживается до пяти разрывов шкалы на диаграмму; однако диаграмма с несколькими разрывами шкалы становится нечитаемой. Если диапазонов больше двух, возможно, для вывода этих данных лучше подойдет другой метод. Дополнительные сведения см. в разделе [Multiple Series on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="unsupported-scale-break-scenarios"></a>Случаи, когда разрывы шкалы не поддерживаются  
  Разрывы шкалы не поддерживаются на диаграммах в следующих случаях.  
@@ -57,7 +57,7 @@ ms.locfileid: "47613802"
   
 -   Диаграмма относится к одному из следующих типов: полярная, круговая, воронкообразная, пирамидальная или любая диаграмма с накоплением.  
   
- Пример диаграммы с разрывами шкалы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Пример диаграммы с разрывами шкалы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
 
 ## <a name="next-steps"></a>Следующие шаги
 
@@ -65,7 +65,7 @@ ms.locfileid: "47613802"
 [Форматирование диаграммы](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 [Объемные эффекты, рельеф и другие эффекты на диаграмме](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
 [Диаграммы](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[Диалоговое окно "Свойства оси" — "Параметры оси"](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+[Диалоговое окно "Свойства оси" — "Параметры оси"](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
 [Объединение мелких срезов на круговой диаграмме](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6ea519e4f22c3b08485f520537fe1f22c3b069d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5764d853f70213c0f92b68af28f0647ba6d1a1e5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666712"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021148"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Выражения (построитель отчетов и службы SSRS)
   Выражения часто используются в отчетах с разбивкой на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] для получения, вычисления, отображения, группирования, сортировки, параметризации и форматирования данных. 
@@ -115,5 +115,5 @@ ms.locfileid: "47666712"
 -   [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 -   [Примеры выражений групп (построитель отчетов и службы SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
 -   [Учебник. Общие сведения о выражениях](Tutorial:%20Introducing%20Expressions.md)
--   [Образцы отчетов (построитель отчетов и службы SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+-   [Образцы отчетов (построитель отчетов и службы SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

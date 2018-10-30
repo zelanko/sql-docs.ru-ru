@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d0aca5eaf6f0e56eab3b991611199334d003c4a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 7309f4669a0672ca65b0c74961c14e83d073a4c6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906004"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030383"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Службы Reporting Services в SQL Server Data Tools (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] это среда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для создания решений бизнес-аналитики. SSDT содержит среду разработки, (конструктор отчетов), в которой можно открывать, изменять, просматривать, сохранять и развертывать определения отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы, общие источники данных, общие наборы данных и элементы отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] не входит в SQL Server. Скачать [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] это среда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для создания решений бизнес-аналитики. SSDT содержит среду разработки, (конструктор отчетов), в которой можно открывать, изменять, просматривать, сохранять и развертывать определения отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы, общие источники данных, общие наборы данных и элементы отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] не входит в SQL Server. Скачать [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714). 
   
  В этом разделе описываются решения, проекты, шаблоны проектов и конфигурации служб [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], а также представления, меню, панели инструментов и сочетания клавиш, которые можно использовать в конструкторе отчетов.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48906004"
   
  Панель свойств используется для следующих действий.  
   
--   Задание свойств для текущего выбранного элемента в области конструктора. Некоторые свойства имеют раскрывающийся список значений. Кроме того, можно ввести значение непосредственно в ячейку. Некоторые свойства содержат коллекцию значений, что обозначается как **(Коллекция)**. Большинство свойств принимает в качестве значения выражение; сложные выражения обозначаются как **\<Выражение>**. Чтобы открыть диалоговое окно **Выражение**, нажмите кнопку **\<Выражение>**. Дополнительные сведения см. в разделе [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
+-   Задание свойств для текущего выбранного элемента в области конструктора. Некоторые свойства имеют раскрывающийся список значений. Кроме того, можно ввести значение непосредственно в ячейку. Некоторые свойства содержат коллекцию значений, что обозначается как **(Коллекция)**. Большинство свойств принимает в качестве значения выражение; сложные выражения обозначаются как **\<Выражение>**. Чтобы открыть диалоговое окно **Выражение**, нажмите кнопку **\<Выражение>**. Дополнительные сведения см. в разделе [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   С помощью кнопок панели инструментов на панели свойств можно переключать сетку с вида по категориям на вид в алфавитном порядке. В представлении по категориям можно развернуть ту или иную категорию, чтобы увидеть все принадлежащие к ней свойства. Чтобы открыть диалоговое окно свойств элемента, нажмите кнопку **Страницы свойств** на панели инструментов или щелкните элемент правой кнопкой мыши и выберите **Свойства**.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "48906004"
   
 
 ##  <a name="bkmk_SourceControl"></a> Система управления версиями  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] может интегрироваться с подключаемыми модулями источников данных. На страницах "Проекты" и "Решения" диалогового окна **Параметры** можно указать подключаемые модули и настроить свойства.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] может интегрироваться с подключаемыми модулями источников данных. На страницах "Проекты" и "Решения" диалогового окна Параметры** можно указать подключаемые модули и настроить свойства.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Пользовательские шаблоны отчетов  
  Чтобы использовать пользовательские отчеты в качестве шаблонов для создания новых отчетов просто скопируйте их в папку ReportProject на том компьютере, где установлена среда [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . По умолчанию эта папка находится в следующем расположении: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Когда в проект отчета добавляется новый элемент, пользовательский отчет отображается на панели «Шаблоны».  
@@ -305,10 +305,10 @@ ms.locfileid: "48906004"
   
 ## <a name="next-steps"></a>Следующие шаги
 
-[Скачать SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
+[Скачать SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)   
 [Reporting Services, отчеты служб](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [Язык определения отчетов](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [Развертывание и поддержка версий в SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

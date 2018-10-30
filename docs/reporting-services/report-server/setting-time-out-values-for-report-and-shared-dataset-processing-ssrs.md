@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 206c242dc250eb99b5cc00228928238fd4bc779c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2b9c0607b2e7fbcc43ba45190c7acb6e0d92cd3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847813"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030703"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS)
   В [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно указать значения времени ожидания, чтобы ограничить использование системных ресурсов. Сервер отчетов поддерживает два значения времени ожидания:  
@@ -56,6 +56,6 @@ ms.locfileid: "47847813"
  [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Управление запущенным процессом](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Диспетчер отчетов (службы SSRS в собственном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

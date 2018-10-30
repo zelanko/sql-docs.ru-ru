@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79d3ad6cf88bc4581ddea74e145d21c88c57114b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4367c20c7f673f1075182385de092231ca289c72
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833272"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031073"
 ---
 # <a name="report-server-service-trace-log"></a>Журнал трассировки службы сервера отчетов
   Журналы трассировки сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] представляют собой текстовый файл ASCII, содержащий подробные сведения об операциях службы сервера отчетов.  Файл содержит сведения об операциях, выполняемых веб-службой сервера отчетов, веб-порталом и процессом фоновой обработки. Файл журнала трассировки содержит избыточные сведения, которые записываются в другие файлы журналов, а также дополнительные сведения, недоступные иным способом. Данные журнала трассировки могут оказаться полезными при отладке приложения, содержащего сервер отчетов, либо при изучении конкретной проблемы, зафиксированной в журнале событий или журнале выполнения. Например, при устранении неполадок с подписками.  
@@ -110,5 +110,5 @@ ms.locfileid: "47833272"
 ## <a name="see-also"></a>См. также:  
  [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
- Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   

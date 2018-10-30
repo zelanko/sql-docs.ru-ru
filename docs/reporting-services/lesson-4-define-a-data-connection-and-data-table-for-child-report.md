@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b160390718e62854fa1fbfb5aae1d12310420477
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95816785bf328d4f1e7e50d5ce34f854b6c7da15
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695768"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031463"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Занятие 4. Определение подключения к данным и таблицы данных для родительского отчета
 После проектирования родительского отчета далее необходимо создать подключение к данным и таблицу данных для дочернего отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2014.  
@@ -61,7 +61,7 @@ ms.locfileid: "47695768"
     > [!WARNING]  
     > Обязательно снимите флажок **Создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)**.  
   
-    На этом настройка объекта [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) ADO.NET в качестве источника данных для отчета завершена. На странице конструктора набора данных в Visual Studio появится добавленный объект **DataTable** со списком столбцов, указанных в запросе. Набор данных DataSet2 содержит данные таблицы PurhcaseOrderDetail, указанные в запросе.  
+    На этом настройка объекта [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) ADO.NET в качестве источника данных для отчета завершена. На странице конструктора набора данных в Visual Studio появится добавленный объект **DataTable** со списком столбцов, указанных в запросе. Набор данных DataSet2 содержит данные таблицы PurhcaseOrderDetail, указанные в запросе.  
   
 11. Сохраните файл.  
   

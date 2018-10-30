@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e82acf2dba0fac879868951ce992193c3a1f645
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f04b7e05737db7eadb28f8c8f5266c6e984e0094
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661262"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028943"
 ---
 # <a name="manage-report-data-sources"></a>Управление источниками данных отчета
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]отчеты, модели отчетов и управляемые данными подписки получают данные из внешних источников данных. Чтобы подключиться к внешнему источнику данных, сервер отчетов использует сведения соединения с источником данных, которые определены в отчете, модели или подписке или на которые они ссылаются. Свойства соединения с источником данных всегда определяются при создании отчета или модели, но управление ими может выполняться отдельно после публикации отчета или модели на сервере отчетов.  
@@ -61,13 +61,13 @@ ms.locfileid: "47661262"
 |----------|----------|----------|  
 |Просмотр примеров строк соединения.||[Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Выбор подхода для получения учетных данных для соединения с источником данных.||[Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
-|Добавление свойств соединения с источником данных в файл определения отчета (RDL).|конструктор отчетов|[Создание внедренного или общего источника данных (службы SSRS)](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
+|Добавление свойств соединения с источником данных в файл определения отчета (RDL).|конструктор отчетов|[Создание внедренного или общего источника данных (службы SSRS)](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
 |Добавление и создание ссылки на файл общего источника данных (RDS) в проекте отчета.|конструктор отчетов|[Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Создание стандартного списка, из которого пользователь выбирает источник данных во время выполнения. Когда пользователь запрашивает отчет, то список источников данных берется из отчета. Пользователь должен выбрать источник данных, который следует использовать при выполнении отчета. Для добавления в отчет списка выбора источников данных используется выражение.<br /><br /> Это называется динамическим соединением с источником данных.|конструктор отчетов|[Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Создание на сервере отчетов совместно используемого элемента источника данных.|[Создание, изменение и удаление общих источников данных](create-modify-and-delete-shared-data-sources-ssrs.md) |  
 |Сохранение учетных данных, необходимых для создания подписок или моментальных снимков отчетов.|Веб-портал|[Сохраненные учетные данные в источнике данных Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
 |Изменение свойств соединения с источником данных для опубликованного отчета.|Веб-портал|[Настройка свойств источника данных для отчета](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
-|Создание на сервере отчетов совместно используемого элемента источника данных.|Сайт SharePoint|[Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
+|Создание на сервере отчетов совместно используемого элемента источника данных.|Сайт SharePoint|[Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
 |Использование с отчетом существующего ODC-файла, содержащего сведения о соединении.|Сайт SharePoint|[Использование ODC-файла подключения к данным Office в отчетах (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  

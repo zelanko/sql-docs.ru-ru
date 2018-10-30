@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee889c409d7e520822cc7d2449369dc20f5ef044
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66e98f21d426bc2b9d570990d72703b6cb059391
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669714"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100045"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Изменение модуля доставки отчетов служб Reporting Services по умолчанию
   Вы можете изменить настройки конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы сменить модуль доставки по умолчанию, который отображается в списке **Доставлено** , на странице определения подписки. Например, можно изменить конфигурацию так, чтобы при создании пользователями новой подписки по умолчанию выбиралась доставка в общую папку, а не доставка по почте. Можно также изменить порядок модулей доставки в пользовательском интерфейсе.  
@@ -111,9 +111,21 @@ ms.locfileid: "47669714"
   
 ## <a name="see-also"></a>См. также:  
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Доставка отчетов в общие папки с помощью служб Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Доставка по электронной почте в службах Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
- [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Доставка электронной почтой в службах Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
+ [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-  
+<!-- TODO:
+The above See Also link to the old MSDN at...
+https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83
+
+...is redirected to the following Docs link, for SQL Server 2014...
+
+https://docs.microsoft.com/en-us/sql/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager?view=sql-server-2014
+
+...So if I was not presently resolving conflicts with public repo PR, related to private repo PR 7827,
+the better fix would be to replace the whole MSDN link with the newer Docs link (to which the older MSDN link is redirected).
+Maybe later someone can perform this replacement, and under docs/reporting-services/ there are multiple similar replacement opportunities.
+GeneMi , 2018/10/25
+-->

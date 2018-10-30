@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e7fe8ed24590c924a6691834104eaf0d4e018312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa026182ac6001a9ca360dedba85dfc7ea8eafec
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737242"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020268"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Создание базы данных сервера отчетов, работающего в собственном режиме
 
@@ -71,7 +71,7 @@ ms.locfileid: "47737242"
   
 ### <a name="to-create-a-local-report-server-database"></a>Создание базы данных локального сервера отчетов  
   
-1.  Запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и установите соединение с экземпляром сервера отчетов, для которого создается база данных. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и установите соединение с экземпляром сервера отчетов, для которого создается база данных. Дополнительные сведения см. в разделе [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  На странице "База данных" нажмите кнопку **Изменить базу данных**.  
   
@@ -151,4 +151,4 @@ ms.locfileid: "47737242"
 [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

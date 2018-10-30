@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 521448c47efdb1ceebbc2f4b1efb0b80378920a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5411edfe1db31233bf987231871040abc4fe2ea1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836152"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030363"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>Добавление кода в отчет (службы SSRS)
   В любом выражении можно вызвать собственный пользовательский код. Данный код можно предоставить следующими способами.  
@@ -56,7 +56,7 @@ ms.locfileid: "47836152"
      Если поместить такое выражение в ячейку таблицы, отображающую значения категории, то при возникновении в поле набора данных для данной строки слова «Bike», в качестве значения ячейки таблицы будет отображено слово «Bicycle».  
   
 ## <a name="see-also"></a>См. также:  
- [Диалоговое окно «Свойства отчета» — «Код»](http://msdn.microsoft.com/library/955d4b11-17b4-4f1c-9690-6e7af54caea7)   
+ [Диалоговое окно «Свойства отчета» — «Код»](https://msdn.microsoft.com/library/955d4b11-17b4-4f1c-9690-6e7af54caea7)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ссылки на коллекцию параметров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   

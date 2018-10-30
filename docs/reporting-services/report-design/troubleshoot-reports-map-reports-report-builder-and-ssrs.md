@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d68f689ebcf937acae4b1bf5579eb282c8e1932
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8668a88ef7e2375c0500fed68b1ffbc4a0494ba9
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847512"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100395"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)
   Проблемы с картами могут возникнуть при добавлении карты или слоя карты в отчет с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , при настройке существующей карты или слоя карты в отчете, при предварительном просмотре карты в отчете или при публикации отчета с картой. Этот раздел помогает устранять эти проблемы.  
@@ -187,7 +187,7 @@ ms.locfileid: "47847512"
   
 -   Проекция карты должна быть **Меркатор**.  
   
--   Для локального предварительного просмотра необходимо иметь доступ в Интернет. Для отчета, запускаемого на сервере отчетов, сервер отчетов должен быть настроен для поддержки мозаичного фона. Дополнительные сведения см. в разделе «Планирование поддержки карты» [документации по службам Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) , входящей в состав электронной документации по SQL Server.  
+-   Для локального предварительного просмотра необходимо иметь доступ в Интернет. Для отчета, запускаемого на сервере отчетов, сервер отчетов должен быть настроен для поддержки мозаичного фона. Дополнительные сведения см. в разделе «Планирование поддержки карты» [документации по службам Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) , входящей в состав электронной документации по SQL Server.  
   
  Дополнительные сведения о добавлении слоя мозаики см. в разделе [Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -206,6 +206,6 @@ ms.locfileid: "47847512"
   
 ## <a name="see-also"></a>См. также:  
  [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Устранение неполадок в построителе отчетов](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [Устранение неполадок в построителе отчетов](https://msdn.microsoft.com/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   

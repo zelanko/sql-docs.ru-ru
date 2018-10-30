@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1acafd612881dfc107d72239c1e521a4edead043
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853393"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031863"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Коллекция полей набора данных (построитель отчетов и службы SSRS)
   Поля набора представляют данные из соединения с данными. Поле может использоваться для представления как числовых, так и нечисловых данных. Примеры включают в себя следующее: объемы продаж, итоговые суммы продаж, имена клиентов, идентификаторы баз данных, URL-адреса, изображения, пространственные данные и адреса электронной почты. В области конструктора поля отображаются в виде выражений в элементах отчета, таких как текстовые поля, таблицы и диаграммы.  
@@ -76,9 +76,9 @@ ms.locfileid: "47853393"
   
 -   **Источник данных** Типы данных, поддерживаемые версией типа источника данных, с которым выполняется соединение.  
   
-     Например, стандартные типы данных для источника данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включают **int**, **datetime**и **varchar**. Типы данных, представленные в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , поддерживают **date**, **time**, **datetimetz**и **datetime2**. Дополнительные сведения см. в разделе [Типы данных (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98362).  
+     Например, стандартные типы данных для источника данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включают **int**, **datetime**и **varchar**. Типы данных, представленные в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , поддерживают **date**, **time**, **datetimetz**и **datetime2**. Дополнительные сведения см. в разделе [Типы данных (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362).  
   
--   **Поставщик данных или модуль обработки данных.** Типы данных, поддерживаемые версией поставщика данных или модуля обработки данных, которые выбираются при соединении с источником данных. Поставщики данных, основанные на платформе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , используют типы данных, поддерживаемые средой CLR. Дополнительные сведения о типах данных поставщиков данных платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе [Сопоставления типов данных (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) и [Работа с базовыми типами](http://go.microsoft.com/fwlink/?LinkId=112177) на сайте MSDN.  
+-   **Поставщик данных или модуль обработки данных.** Типы данных, поддерживаемые версией поставщика данных или модуля обработки данных, которые выбираются при соединении с источником данных. Поставщики данных, основанные на платформе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , используют типы данных, поддерживаемые средой CLR. Дополнительные сведения о типах данных поставщиков данных платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе [Сопоставления типов данных (ADO.NET)](https://go.microsoft.com/fwlink/?LinkId=112178) и [Работа с базовыми типами](https://go.microsoft.com/fwlink/?LinkId=112177) на сайте MSDN.  
   
      Например, стандартные типы данных, поддерживаемые платформой [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , включают **Int32** и **String**. Календарные даты и время поддерживаются структурой **DateTime** . Платформа [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 с пакетом обновления 1 (SP1) обеспечивает поддержку структуры **DateTimeOffset** для дат со смещением часового пояса.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47853393"
     |**DateTimeTZ**|**DateTimeOffset**|Дата и время со смещением часового пояса|  
     |**DateTime2**|**DateTime**|Дата и время с долями миллисекунд|  
   
- Дополнительные сведения о типах баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделах [Типы данных (компонент Database Engine)](http://go.microsoft.com/fwlink/?linkid=98362) и [Типы данных и функции даты и времени (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
+ Дополнительные сведения о типах баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделах [Типы данных (компонент Database Engine)](https://go.microsoft.com/fwlink/?linkid=98362) и [Типы данных и функции даты и времени (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360).  
   
  Дополнительные сведения о включении ссылок на поле набора данных из выражения см. в разделе [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
@@ -106,7 +106,7 @@ ms.locfileid: "47853393"
   
   
 ## <a name="see-also"></a>См. также:  
- [Диалоговое окно "Свойства набора данных" — "Поля" (построитель отчетов)](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
+ [Диалоговое окно "Свойства набора данных" — "Поля" (построитель отчетов)](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [Элементы отчета и наборы данных в построителе отчетов](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

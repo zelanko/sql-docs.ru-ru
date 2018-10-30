@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1255f614972ef03858d3528f395e95797c192465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9662a3e69b7d870b7f376f7a0c699db75584ad62
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721511"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021088"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Отправка документов в библиотеку SharePoint (службы Reporting Services в режиме интеграции с SharePoint)
 
@@ -43,7 +43,7 @@ ms.locfileid: "47721511"
   
      Если определение отчета использует файл общего источника данных (RSDS) для хранения сведений о соединении с внешним источником данных, можно одновременно передать и RDL-файл, и RSDS-файл. Для этого выберите **Передать несколько документов**, укажите оба файла и нажмите кнопку **ОК**.  
   
- При передаче отчета, который содержит ссылки на общие источники данных, модели отчетов или вложенные отчеты, ссылки будут потеряны при передаче файлов. Дополнительные сведения о сбросе ссылок см. в разделе [Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ При передаче отчета, который содержит ссылки на общие источники данных, модели отчетов или вложенные отчеты, ссылки будут потеряны при передаче файлов. Дополнительные сведения о сбросе ссылок см. в разделе [Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
  При передаче отчет выполняется по запросу при его открытии, при этом из источника данных извлекаются активные данные. Можно настроить отчет на получение данных по расписанию или на использование кэшированных данных. Дополнительные сведения см. в разделе [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "47721511"
 ## <a name="see-also"></a>См. также раздел
 
  [опубликовать отчет в библиотеке SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [Публикация общего источника данных в библиотеку SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [опубликовать общий источник данных в библиотеке SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

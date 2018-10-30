@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5f848443fbfcbbb1c45aadf910f6493f408bf59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ebb6fe63178870a5b76383523fc04c9472a4659
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849322"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021879"
 ---
 # <a name="preload-the-cache-report-manager"></a>выполнить предварительную загрузку кэша (диспетчер отчетов)
   Можно предварительно загрузить кэш для общего набора данных путем создания плана обновления кэша для общего набора данных.  
@@ -37,7 +37,7 @@ ms.locfileid: "47849322"
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Предварительная загрузка кэша путем создания плана обновления кэша  
   
-1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** , а затем к элементу, который необходимо кэшировать.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47849322"
   
 ### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Предварительная загрузка в кэш отчета для конкретного пользователя с использованием управляемой данными подписки  
   
-1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** , а затем перейдите к отчету, для которого необходимо создать подписку.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "47849322"
      Или нажмите **По расписанию, созданному для этой подписки** для создания пользовательского расписания, а затем нажмите кнопку **Далее**. Настройте расписание, затем нажмите кнопку **Готово**.  
   
     > [!NOTE]  
-    >  Чтобы подписчики получили самый новый отчет, настраиваемое расписание должно быть согласовано с расписанием доставки отчета, которое определено для подписчиков. Дополнительные сведения см. в разделе [Диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+    >  Чтобы подписчики получили самый новый отчет, настраиваемое расписание должно быть согласовано с расписанием доставки отчета, которое определено для подписчиков. Дополнительные сведения см. в разделе [Диспетчер отчетов (службы SSRS в собственном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 14. Настройте параметры выполнения отчета следующим образом. На странице отчета перейдите на вкладку **Свойства** .  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47849322"
 18. Нажмите кнопку **Применить**.  
   
 ## <a name="see-also"></a>См. также:  
- [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Создание управляемой данными подписки (учебник по службам SSRS)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Производительность, моментальные снимки, кэширование (службы Reporting Services)](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   

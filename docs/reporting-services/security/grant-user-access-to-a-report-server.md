@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8994681f816de7d1f7b8d35eaee87d58b77c04ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711262"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021858"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Предоставление пользователям доступа к серверу отчетов
 
@@ -96,9 +96,9 @@ ms.locfileid: "47711262"
 ## <a name="next-steps"></a>Следующие шаги
 
 [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Страница "Создание назначения ролей": "Изменение назначения ролей" (диспетчер отчетов)](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Страница "Свойства безопасности", элементы (диспетчер отчетов)](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
+[Страница "Создание назначения ролей": "Изменение назначения ролей" (диспетчер отчетов)](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+[Страница "Свойства безопасности", элементы (диспетчер отчетов)](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [Назначения ролей](../../reporting-services/security/role-assignments.md)   
 [Определение ролей](../../reporting-services/security/role-definitions.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

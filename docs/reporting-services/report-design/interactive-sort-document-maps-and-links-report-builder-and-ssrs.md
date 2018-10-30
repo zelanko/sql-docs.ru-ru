@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9653a40f5f7789e693041533e2706ee56bf8799a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6beb41ffbf94f803887f5e72bfe7e527c7f6c8b2
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856384"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029883"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)
   В веб-средах можно добавлять множество функций, обеспечивающих взаимодействие пользователей с отчетами. Пользователи могут изменять порядок сортировки значений в отчете, показывать или скрывать элементы отчета, а также щелкать ссылки для перехода к другим отчетам или веб-страницам. Также можно добавить оглавление или схему документа. Пользователи отчета могут переходить к различным областям отчета, щелкая элементы в оглавлении или схеме документа.  
@@ -27,7 +27,7 @@ ms.locfileid: "47856384"
 -   **Ссылки на детализованные отчеты** — переход к другим отчетам на том же сервере отчетов. Дополнительные сведения см. в разделе [Детализированные отчеты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Ссылки, привязанные к полям набора данных, могут стать мишенью для злонамеренного вторжения. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md) [электронной документации](http://go.microsoft.com/fwlink/?LinkId=154888) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+>  Ссылки, привязанные к полям набора данных, могут стать мишенью для злонамеренного вторжения. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md) [электронной документации](https://go.microsoft.com/fwlink/?LinkId=154888) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
   
  Также можно предоставить пользователям возможность управлять отображением отчета и его содержимым, создавая выражения, включающие ссылки на параметры для сортировки, фильтрации и определения видимости. Дополнительные сведения см. в разделах [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md), [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) и [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   

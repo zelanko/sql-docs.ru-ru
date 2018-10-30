@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db0e7b193a21824f9eeb8e0745c60708cd660f57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14540871ad8be2c59bc8eb899ccb30b06f0278f5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657172"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030333"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services (SSRS), отчеты служб
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — отчеты с разбивкой на страницы — это основанные на XML определения отчетов, включающие данные отчетов и элементы макета отчетов. В клиентской файловой системе определения отчетов имеют расширение RDL. После публикации отчета с разбивкой на страницы он становится элементом отчета, хранящимся на сервере отчетов или на сайте SharePoint. Отчеты с разбивкой на страницы — это лишь одна из частей серверной платформы создания отчетов, предоставляемой службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Вам также доступно [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -122,7 +122,7 @@ ms.locfileid: "47657172"
 ## <a name="view-reports"></a>Просмотр отчетов  
  В дополнение к предварительному просмотру отчета, сохраненного локально или опубликованного на сервере отчетов, можно предоставить несколько различных способов просмотра отчета для читателей. Отчеты можно просматривать следующими способами.  
   
--   **Браузер.**  Для просмотра опубликованных отчетов можно использовать веб-службу сервера отчетов или сайта SharePoint. На сайте SharePoint можно также настроить веб-часть для просмотра опубликованных отчетов. Дополнительные сведения см. в разделах [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Диспетчер отчетов (службы SSRS в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) и [Доступ по URL-адресу (SSRS)](../../reporting-services/url-access-ssrs.md).  
+-   **Браузер.**  Для просмотра опубликованных отчетов можно использовать веб-службу сервера отчетов или сайта SharePoint. На сайте SharePoint можно также настроить веб-часть для просмотра опубликованных отчетов. Дополнительные сведения см. в разделах [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Диспетчер отчетов (службы SSRS в основном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) и [Доступ по URL-адресу (SSRS)](../../reporting-services/url-access-ssrs.md).  
   
 -   **Доставка.**  Можно настроить подписку для доставки отчетов читателям по электронной почте или сохранения в общей папке файлов.  Дополнительные сведения см. в разделе [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47657172"
   
 -   **Печать.**  Читатели могут распечатать отчет или страницы из него, в зависимости от способа его просмотра. Дополнительные сведения см. в разделе [Печать отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Веб-приложение или приложение Windows Forms.**  Можно использовать среду Visual Studio для разработки приложения ASP.NET AJAX или приложения Windows Form, в котором будет расположен элемент управления средства просмотра отчетов. Элемент управления может указывать на опубликованные отчеты на сервере отчетов. Дополнительные сведения см. в подразделе [Отчеты Майкрософт](http://go.microsoft.com/fwlink/?LinkID=205399).  
+-   **Веб-приложение или приложение Windows Forms.**  Можно использовать среду Visual Studio для разработки приложения ASP.NET AJAX или приложения Windows Form, в котором будет расположен элемент управления средства просмотра отчетов. Элемент управления может указывать на опубликованные отчеты на сервере отчетов. Дополнительные сведения см. в подразделе [Отчеты Майкрософт](https://go.microsoft.com/fwlink/?LinkID=205399).  
   
 ## <a name="manage-reports"></a>Управление отчетами  
  Управление опубликованным отчетом:  

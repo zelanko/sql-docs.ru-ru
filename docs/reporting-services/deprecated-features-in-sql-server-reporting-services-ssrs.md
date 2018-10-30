@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38401a47ecb5c14682e0866c32d62a873a52d773
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1aee888aa086908ddbaf120bf4a62d1f23ce4948
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754762"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031273"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>Нерекомендуемые функции служб SQL Server Reporting Services в SQL Server 2016
 
@@ -38,7 +38,7 @@ ms.locfileid: "47754762"
 
 ## <a name="features-not-supported-in-previous-versions-of-sql-server-reporting-services"></a>Функции, не поддерживаемые в предыдущих версиях служб SQL Server Reporting Services
 
-- [Устаревшие функции служб SQL Server 2014 Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md)
+- [Устаревшие функции служб SQL Server 2014 Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md)
 
 - [Устаревшие функции служб SQL Server 2012 Reporting Services](deprecated-features-in-sql-server-reporting-services-ssrs.md)
 
@@ -48,4 +48,4 @@ ms.locfileid: "47754762"
  [Изменения в работе служб SQL Server Reporting Services в SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
  [Неподдерживаемые возможности в SQL Server Reporting Services в SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md) 
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

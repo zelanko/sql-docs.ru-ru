@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3cafcc36570f06bfd85b8b9579a9b7c9ec94f7c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b22342b9f73ad87a2b6474772cd542b6a96ba55
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752532"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030633"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Служба и приложения службы Reporting Services в SharePoint
 
@@ -28,7 +28,7 @@ ms.locfileid: "47752532"
   
 ## <a name="creating-a-reporting-services-service-application"></a>Создание приложения службы Reporting Services
 
- Для создания приложений служб Reporting Services можно использовать центр администрирования SharePoint или скрипты PowerShell. Дополнительные сведения об использовании центра администрирования SharePoint см. в разделе "Создание приложения службы Reporting Services" статьи [Установка служб Reporting Services в режиме интеграции с SharePoint для SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). В подразделе PowerShell этого раздела приведен пример скрипта PowerShell для создания приложений службы.  
+ Для создания приложений служб Reporting Services можно использовать центр администрирования SharePoint или скрипты PowerShell. Дополнительные сведения об использовании центра администрирования SharePoint см. в статье "Создание приложения службы Reporting Services" статьи [Установка служб Reporting Services в режиме интеграции с SharePoint для SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). В подразделе PowerShell этого раздела приведен пример скрипта PowerShell для создания приложений службы.  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>Изменение взаимосвязей приложения службы с использованием группы прокси
 
@@ -83,4 +83,4 @@ ms.locfileid: "47752532"
 |Управление параметрами приложения службы.|[Управление приложением службы SharePoint — Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|  
 |Резервное копирование и восстановление приложения службы и связанных компонентов, таких как ключи шифрования и прокси-серверы.|[Резервное копирование и восстановление приложения службы SharePoint — Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 906ff754691e70bbaf9d3ccc641906411de4a76c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3777d43e44819b8c9882a381b5814a69ac116fbb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739232"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031913"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Отчеты с разбивкой на страницы служб Reporting Services проектирования с конструктором отчетов (SSRS)
 
 Для создания полнофункциональных отчетов с разбивкой на страницы и систем отчетности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используется конструктор отчетов. Конструктор отчетов — это графический интерфейс, с помощью которого можно задавать источники данных, наборы данных, запросы, позиции макета отчета для областей данных и полей, а также такие интерактивные возможности, как параметры и наборы отчетов, которые работают совместно.  
 
-Конструктор отчетов — это функция  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]среды Microsoft Visual Studio для создания решений бизнес-аналитики. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] не входит в SQL Server. Скачать [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+Конструктор отчетов — это функция  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]среды Microsoft Visual Studio для создания решений бизнес-аналитики. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] не входит в SQL Server. Скачать [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714). 
   
 ## <a name="benefits-of-report-projects"></a>Преимущества проектов отчетов  
 Проекты отчетов используются как контейнеры для определений отчетов и ресурсов. Используйте проекты для:  
@@ -69,7 +69,7 @@ ms.locfileid: "47739232"
   
 -   **Добавить существующий элемент.** Существующее определение отчета (RDL-файл) открывается в конструкторе отчетов. При открытии отчета или проекта из более ранней версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] проект может автоматически обновиться до текущей версии, а отчет  — до текущей схемы. Дополнительные сведения см. в разделе [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
--   **Импортировать отчет Access [!INCLUDE[msCoName](../../includes/msconame-md.md)].** Импорт всех отчетов из базы данных Access (MDB, ACCDB) или файла проекта (ADP). Конструктор отчетов преобразует каждый отчет из файла базы данных или файла проекта в формат языка определения отчетов (RDL) и сохраняет их в указанном проекте отчета. Не все функции отчета Access передаются в файл определения отчета (RDL). Дополнительные сведения см. в разделе [Импорт отчетов из Microsoft Access &#40;Reporting Services&#41;](http://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) и [Поддерживаемые функции отчетов Access &#40;SSRS&#41;](http://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
+-   **Импортировать отчет Access [!INCLUDE[msCoName](../../includes/msconame-md.md)].** Импорт всех отчетов из базы данных Access (MDB, ACCDB) или файла проекта (ADP). Конструктор отчетов преобразует каждый отчет из файла базы данных или файла проекта в формат языка определения отчетов (RDL) и сохраняет их в указанном проекте отчета. Не все функции отчета Access передаются в файл определения отчета (RDL). Дополнительные сведения см. в разделе [Импорт отчетов из Microsoft Access &#40;Reporting Services&#41;](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) и [Поддерживаемые функции отчетов Access &#40;SSRS&#41;](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
   
     > [!NOTE]  
     >  Чтобы использовать функцию импорта, необходимо, чтобы на компьютере, на котором установлен конструктор отчетов, был установлен Access 2002 или более поздняя версия. При импорте отчетов должен быть доступен источник данных для отчетов Access.  
@@ -180,9 +180,9 @@ ms.locfileid: "47739232"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Скачивание SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)  
+[Скачивание SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
 [Службы Reporting Services в SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [Средства проектирования запросов](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Развертывание и поддержка версий в SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

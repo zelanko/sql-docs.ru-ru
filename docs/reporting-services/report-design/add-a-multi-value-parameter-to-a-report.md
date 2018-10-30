@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 97345e896dc3df2af8f6441fead1a0d9cd7ba617
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a7823a0757cb4980a52b9ab9577829ce9d6102f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802637"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029983"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Добавление в отчет параметра с несколькими значениями
   В отчет можно добавить параметр, который позволит пользователю выбирать несколько значений для этого параметра.  
   
  Можно передавать отчету несколько значений параметра в URL-адресе отчета. Пример URL-адреса, содержащего многозначный параметр, см. в разделе [Передача параметров отчета в URL-адресе](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
- Сведения о том, как передавать несколько значений параметра хранимой процедуре, см. в статье [Working With Multi-Select Parameters for SSRS Reports](http://go.microsoft.com/fwlink/?LinkId=321529) (Работа с многозначными параметрами для отчетов служб SSRS) на сайте mssqltips.com.  
+ Сведения о том, как передавать несколько значений параметра хранимой процедуре, см. в статье [Working With Multi-Select Parameters for SSRS Reports](https://go.microsoft.com/fwlink/?LinkId=321529) (Работа с многозначными параметрами для отчетов служб SSRS) на сайте mssqltips.com.  
   
 ## <a name="to-add-a-multi-value-parameter"></a>Добавление многозначного параметра  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3936b2918f9bc5dae127d44fe9001944ac7e3eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84e7f739f0d7dfe8e47b8053a37db327ee6b49a4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799462"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031653"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Командлеты PowerShell для режима интеграции служб Reporting Services с SharePoint
 
@@ -34,7 +34,7 @@ ms.locfileid: "47799462"
 
 ## <a name="cmdlet-summary"></a>Обзор командлетов
 
- Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)**. Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](http://technet.microsoft.com/library/hh847814.aspx). В следующих сводках по командлетам упоминания "баз данных" приложения службы относятся ко всем базам данных, созданным и используемым приложением службы Reporting Services. Это включает базы данных конфигурации, предупреждений и временные базы данных.  
+ Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)**. Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](https://technet.microsoft.com/library/hh847814.aspx). В следующих сводках по командлетам упоминания "баз данных" приложения службы относятся ко всем базам данных, созданным и используемым приложением службы Reporting Services. Это включает базы данных конфигурации, предупреждений и временные базы данных.  
   
  Если при вводе примеров PowerShell отображается сообщение об ошибке следующего вида:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47799462"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Дополнительные сведения см. в разделе [Использование Windows PowerShell для управления SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
+ Дополнительные сведения см. в разделе [Использование Windows PowerShell для управления SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx).  
   
 ### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>Открытие командной консоли SharePoint и выполнение командлетов
   
@@ -293,4 +293,4 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 [Контрольный список. Использование PowerShell для проверки Power Pivot для SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
 [Получение справки по SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c4814359213649eb4bb7ed5a8d3b36c5b1dd8cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18b41757ada0d21136e5768eade88ecf8b2a7d40
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645122"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029763"
 ---
 # <a name="caching-reports-ssrs"></a>Кэширование отчетов (службы SSRS)
   Сервер отчетов может кэшировать копию обработанного отчета и вернуть эту копию при открытии отчета пользователем. Единственным свидетельством того, что отчет является копией сохраненного в кэш отчета, являются дата и время выполнения отчета. Если дата или время не являются текущими, и отчет представляет собой моментальный снимок, то отчет был извлечен из кэша.  
@@ -74,6 +74,6 @@ ms.locfileid: "47645122"
  [Предварительная загрузка кэша (диспетчер отчетов)](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Расписания](../../reporting-services/subscriptions/schedules.md)   
  [Общие наборы данных в кэше (службы SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Параметры обновления кэша (диспетчер отчетов)](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
+ [Параметры обновления кэша (диспетчер отчетов)](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

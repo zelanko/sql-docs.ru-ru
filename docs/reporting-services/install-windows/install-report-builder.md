@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 458db88f63ac2d27db03cace86593907ef67b3b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebcef28bd5b785bb72059986e39aae34d8af7921
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662992"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021328"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] является автономным приложением и устанавливается на компьютере пользователем или администратором. Вы можете установить приложение из центра загрузки Майкрософт, с сервера отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] или с сайта SharePoint, интегрированного с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -36,13 +36,13 @@ ms.locfileid: "47662992"
   
 ## <a name="system-requirements"></a>Требования к системе
   
- См. раздел **системные требования** на [странице загрузки построителя отчетов](http://go.microsoft.com/fwlink/?LinkID=734968) в центре загрузки Майкрософт.
+ См. раздел **системные требования** на [странице загрузки построителя отчетов](https://go.microsoft.com/fwlink/?LinkID=734968) в центре загрузки Майкрософт.
   
 ##  <a name="download"></a> Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] с сайта загрузки  
   
-1.  На [странице построителя отчетов в центре загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=734968) нажмите **Скачать**.  
+1.  На [странице построителя отчетов в центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=734968) нажмите **Скачать**.  
   
-2.  После завершения скачивания [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нажмите кнопку **Запустить**.  
+2.  После завершения загрузки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нажмите кнопку  **Запустить**.  
   
      Будет запущен мастер SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47662992"
 4.  На странице **Целевой сервер по умолчанию** можно по желанию привести URL-адрес целевого сервера отчетов, если он отличается от адреса по умолчанию. Нажмите кнопку **Далее**.  
   
     > [!NOTE]  
-    >  Если планируется работать со средством [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], когда оно подключено к серверу отчетов, на этом этапе будет удобнее указать URL-адрес сервера. Вы также можете сделать это в диалоговом окне **Параметры** в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
+    >  Если планируется работать со средством [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , когда оно подключено к серверу отчетов, на данном этапе будет удобнее указать URL-адрес сервера. Вы также можете сделать это в диалоговом окне **Параметры** в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
 5.  Нажмите кнопку **Установить**, чтобы завершить установку [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
@@ -71,9 +71,9 @@ ms.locfileid: "47662992"
   
  Если необходимо произвести установку в полностью автоматическом режиме, без какого-либо взаимодействия с пользовательским интерфейсом, укажите параметр **/quiet** . Флаг параметра подавляет сообщения об ошибках установки. В связи с этим при использовании автоматической установки рекомендуется включить параметр **/l** , указывающий необходимость ведения журнала.   
   
-1.  На [странице построителя отчетов в центре загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=734968)нажмите **Скачать**.  
+1.  На [странице построителя отчетов в центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=734968)нажмите **Скачать**.  
   
-2.  После завершения скачивания [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нажмите кнопку **Сохранить**.  
+2.  После завершения скачивания [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нажмите кнопку  **Сохранить**.  
   
 3.  В меню **Пуск** выберите команду **Выполнить**.  
   
@@ -93,13 +93,13 @@ ms.locfileid: "47662992"
   
 ## <a name="set-includessrbnoversionincludesssrbnoversionmd-defaults"></a>Установка значений по умолчанию для [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
--   После установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] вы можете задать параметры по умолчанию. Щелкните **Файл** > **Параметры**.  
+-   После установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]вы можете задать некоторые параметры по умолчанию. Щелкните **Файл** > **Параметры**.  
   
      Рекомендуем настроить стандартный веб-портал [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или сайт SharePoint. Дополнительные сведения см. в статье [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md).  
   
 -   Щелкните **Построитель отчетов** .  
   
-     Если сервер отчетов отсутствует в списке существующих серверов, закройте диалоговое окно **Открытие отчета**, а затем в нижней части **нажмите кнопку** Подключиться [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], чтобы подключиться к серверу.  
+     Если сервер отчетов отсутствует в списке существующих серверов, закройте диалоговое окно **Открытие отчета** , а затем в нижней части **нажмите кнопку** Подключиться [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , чтобы подключиться к серверу.  
   
 ## <a name="see-also"></a>См. также:  
  [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)   

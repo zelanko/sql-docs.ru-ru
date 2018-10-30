@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 85c2fac7-80bf-45b7-8654-764b5f5231f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 766b33607487a8dcc247402b16edd67ab86071ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a84d99a0b1da1257591714491424e6a634571f4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818972"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029633"
 ---
 # <a name="my-settings-for-power-bi-integration-web-portal"></a>Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)
 
@@ -46,4 +46,4 @@ ms.locfileid: "47818972"
 [Панели мониторинга в Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 [Веб-портал](../reporting-services/web-portal-ssrs-native-mode.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

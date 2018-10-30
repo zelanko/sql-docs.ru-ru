@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fcd1fae7282c03c739abb172304e69c9b1417a3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18a447d64711fb59aaa73183357acf39d90fd3ec
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613052"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030773"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Регистрация стандартного поставщика данных .NET Framework (службы SSRS)
   Чтобы набор данных отчета служб [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] получал данные с помощью поставщика данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сторонней разработки, необходимо развернуть и зарегистрировать сборку поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] в двух местах: на клиенте, используемом для разработки отчета, и на сервере отчетов. На клиенте поставщик данных должен быть зарегистрирован в качестве типа источника данных и связан с конструктором запросов. После этого этот поставщик может быть выбран в качестве типа источника данных при создании набора данных для отчета. При этом откроется связанный конструктор запросов, помогающий создавать запросы для этого типа источников данных. На сервере отчетов поставщик данных необходимо зарегистрировать в качестве типа источника данных. После этого может производиться обработка опубликованных отчетов, которые в качестве источника данных используют этот поставщик.  
@@ -36,7 +36,7 @@ ms.locfileid: "47613052"
   
 1.  Перейдите в каталог bin по умолчанию сервера отчетов, на котором планируется использование поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . По умолчанию каталог bin сервера отчетов находится в папке *\<диск>*:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
   
-2.  Скопируйте сборку из промежуточной папки в каталог bin сервера отчетов. Можно также загрузить сборку в глобальный кэш сборок (GAC). Дополнительные сведения см. в разделе [Работа со сборками и глобальным кэшем сборок](http://go.microsoft.com/fwlink/?linkid=63912) в документации по пакету SDK платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на веб-узле MSDN.  
+2.  Скопируйте сборку из промежуточной папки в каталог bin сервера отчетов. Можно также загрузить сборку в глобальный кэш сборок (GAC). Дополнительные сведения см. в разделе [Работа со сборками и глобальным кэшем сборок](https://go.microsoft.com/fwlink/?linkid=63912) в документации по пакету SDK платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на веб-узле MSDN.  
   
 #### <a name="to-register-a-net-data-provider-on-the-report-server"></a>Регистрация сборки поставщика данных на сервере отчетов  
   
@@ -109,7 +109,7 @@ ms.locfileid: "47613052"
   
 1.  Перейдите в каталог по умолчанию PrivateAssemblies на клиенте конструктора отчетов, на котором будет использоваться поставщик данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . По умолчанию каталог PrivateAssemblies расположен в папке *\<диск>*:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-2.  Скопируйте сборку из промежуточной папки в каталог PrivateAssemblies клиента конструктора отчетов. Можно также загрузить сборку в глобальный кэш сборок (GAC). Дополнительные сведения см. в разделе [Работа со сборками и глобальным кэшем сборок](http://go.microsoft.com/fwlink/?linkid=63912) в документации по пакету SDK платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на веб-узле MSDN.  
+2.  Скопируйте сборку из промежуточной папки в каталог PrivateAssemblies клиента конструктора отчетов. Можно также загрузить сборку в глобальный кэш сборок (GAC). Дополнительные сведения см. в разделе [Работа со сборками и глобальным кэшем сборок](https://go.microsoft.com/fwlink/?linkid=63912) в документации по пакету SDK платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на веб-узле MSDN.  
   
 #### <a name="to-register-a-net-data-provider-on-the-report-designer-client"></a>Регистрация сборки поставщика данных на клиенте конструктора отчетов  
   
@@ -134,7 +134,7 @@ ms.locfileid: "47613052"
     |**Название**|Уникальное имя поставщика данных, например **MyNETDataProvider**. Длина атрибута **Name** не должна превышать 255 символов. Имя должно быть уникальным среди всех элементов, вложенных в элемент **Extension** файла конфигурации. Указанное здесь значение отображается в раскрывающемся списке типов источников данных при создании нового источника данных.|  
     |**Тип**|Список с разделителями-запятыми, включающий полное имя пространства имен для класса, реализующего интерфейс <xref:System.Data.IDbConnection> , а затем имя сборки поставщика [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (без расширения DLL).|  
   
-     Например, для DLL-файла, развертываемого в каталоге PrivateAssemblies [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , новый элемент может выглядеть следующим образом.  
+     Например, для DLL-файла, развертываемого в каталоге PrivateAssemblies [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], новый элемент может выглядеть следующим образом.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   

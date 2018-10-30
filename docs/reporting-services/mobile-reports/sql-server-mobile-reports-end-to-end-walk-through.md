@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8aba9144a16da8494d4f303053b164462e0cae8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717222"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021178"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильные отчеты SQL Server: руководство по использованию
 Используйте пошаговые инструкции по созданию мобильных отчетов для экрана любого размера с помощью [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и по просмотру отчетов в мобильных приложениях Power BI.
@@ -32,11 +32,11 @@ ms.locfileid: "47717222"
   
 * Для создания источников данных и ключевых показателей эффективности, а также для публикации наборов данных и мобильных отчетов нужен доступ к [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * [Создание общих наборов данных](../install-windows/install-report-builder.md).  
-* Для создания мобильных отчетов [установите издатель мобильных отчетов для Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
+* Для создания мобильных отчетов [установите издатель мобильных отчетов для Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
 *  ИЛИ образец базы данных World Wide Importers, доступный на странице [Образцы Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Для просмотра результата: 
-  *   [зарегистрируйтесь в службе Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) и
+  *   [зарегистрируйтесь в службе Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) и
   *  [скачайте мобильное приложение Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) на устройство под управлением iOS, Windows 10 или телефон с Android.  
 
   
@@ -63,7 +63,7 @@ ms.locfileid: "47717222"
    
 ## <a name="shared-dataset">Создание общего набора данных</a>  
   
-Для создания общего набора данных используйте существующее клиентское средство [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , например конструктор отчетов в [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  В этом пошаговом руководстве используется [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Установите построитель отчетов](../install-windows/install-report-builder.md) или запустите его на своем веб-портале. Вы создадите три набора данных: один для значения ключевого показателя эффективности, второй для тренда ключевого показателя эффективности и один с дополнительными полями для мобильного отчета служб Reporting Services.     
+Для создания общего набора данных используйте существующее клиентское средство [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , например конструктор отчетов в [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  В этом пошаговом руководстве используется [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Установите построитель отчетов](../install-windows/install-report-builder.md)или запустите его на веб-портале. Вы создадите три набора данных: один для значения ключевого показателя эффективности, второй для тренда ключевого показателя эффективности и один с дополнительными полями для мобильного отчета служб Reporting Services.     
   
 1. Чтобы запустить [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , на веб-портале **щелкните** > **Создать** Отчет с разбивкой на страницы [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   
@@ -133,7 +133,7 @@ ms.locfileid: "47717222"
     
 ## <a name="create-mobile-report">Создание мобильных отчетов Reporting Services</a>  
    
-Для создания мобильных отчетов служб Reporting Services [установите издатель мобильных отчетов для Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766)или запустите его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
+Для создания мобильных отчетов служб Reporting Services [установите издатель мобильных отчетов для Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766)или запустите его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 
 При первом открытии [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]отобразится пустой холст, на котором можно создать мобильный отчет. Начните с создания визуальных элементов или выполните запуск с помощью ваших данных. Если сначала создать визуальные элементы, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] автоматически создает смоделированные данные, привязанные к отчету, и динамически изменяется по мере изменения выбранных визуальных элементов. Попробуйте сделать это сами.   
   
@@ -259,7 +259,7 @@ ms.locfileid: "47717222"
   
 Чтобы просмотреть отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , сначала необходимо:
 
-*  [зарегистрироваться в службе Power BI](http://go.microsoft.com/fwlink/?LinkID=513879), если у вас еще нет учетной записи;
+*  [зарегистрироваться в службе Power BI](https://go.microsoft.com/fwlink/?LinkID=513879), если у вас еще нет учетной записи;
 *  [скачать мобильное приложение Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) на мобильное устройство.  
 
 ### <a name="view-your-mobile-report"></a>Просмотр мобильного отчета

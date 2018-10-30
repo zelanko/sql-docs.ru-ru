@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f28687ef3d4faa4feb10aac78bed8c1ee28bed85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69be1793c824014abc7262ebdb7d231ce4bb66af
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743572"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020568"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Параллельная установка служб Reporting Services и служб IIS
 
@@ -82,4 +82,4 @@ ms.locfileid: "47743572"
 [Настройка URL-адреса](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Установка сервера отчетов служб Reporting Services в собственном режиме](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d570d67c1ecc43d04ffbfc748951b8cde2b3619
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e42aec0a8630d26b7831217418f35197bc338567
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644422"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030613"
 ---
 # <a name="start-report-builder"></a>Запуск построителя отчетов
 
@@ -28,7 +28,7 @@ ms.locfileid: "47644422"
  
 ![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
- Пользователь или администратор может также [установить построитель отчетов на компьютер из Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=219138). См. подраздел "Установка построителя отчетов с помощью Systems Manager Server" в разделе [Установка построителя отчетов](../../reporting-services/install-windows/install-report-builder.md) .
+ Пользователь или администратор может также [установить построитель отчетов на компьютер из Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=219138). См. подраздел "Установка построителя отчетов с помощью Systems Manager Server" в разделе [Установка построителя отчетов](../../reporting-services/install-windows/install-report-builder.md) .
  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] не устанавливается вместе со службами SQL Server Reporting Services. Его необходимо скачать и установить отдельно.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47644422"
   
      В первый раз будет предложено [установить построитель отчетов](../../reporting-services/install-windows/install-report-builder.md). 
   
-     После этого откроется [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], и можно будет приступить к созданию отчета или открыть отчет с сервера отчетов.  
+     После этого откроется [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , и можно будет приступить к созданию отчета или открыть отчет с сервера отчетов.  
   
 ## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-in-sharepoint-integrated-mode"></a>Запуск [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] в режиме интеграции с SharePoint  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47644422"
   
      В первый раз будет запущен мастер [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] для SQL Server. Дополнительные сведения см. в разделе [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) .  
   
-     Откроется [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], и можно будет приступить к созданию отчета или открыть отчет на сервере отчетов.  
+     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] , и можно будет приступить к созданию отчета или открыть отчет на сервере отчетов.  
   
      **Примечание** . Если меню **Создать документ** не содержит параметры **Отчет построителя отчетов**, **Модель построителя отчетов**или **Источник данных отчета**, необходимо добавить типы их содержимого в библиотеку SharePoint. Дополнительные сведения см. в разделе [Добавление типов содержимого служб Reporting Services в библиотеку SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
@@ -67,4 +67,4 @@ ms.locfileid: "47644422"
 [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
 [Определение параметров по умолчанию для построителя отчетов](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

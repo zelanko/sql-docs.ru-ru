@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 656cf55483947a17696fdaf4c09f7ebe08124d20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1f756c0f2e843f2a13e394bb739647530feda09
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654324"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029170"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Учебник. Создание детализированных и главных отчетов (построитель отчетов)
 В этом учебнике описывается создание двух типов отчетов [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы: детализированного отчета и главного отчета. Образцы данных по продажам, использованные в этих отчетах, извлекаются из куба служб Analysis Services. 
@@ -25,7 +25,7 @@ ms.locfileid: "47654324"
 Предполагаемое время для выполнения заданий данного учебника: 30 минут.  
   
 ## <a name="requirements"></a>Требования  
-В рамках этого учебника требуется доступ к кубу Contoso Sales как для детализированного, так и для главного отчета. Этот набор включает хранилище данных ContosoDW и базу данных OLAP Contoso_Retail. Создаваемые в данном учебнике отчеты извлекают данные из куба Contoso Sales. Базу данных OLAP Contoso_Retail можно скачать в [Центре загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=191575). Необходимо скачать только файл ContosoBIdemoABF.exe. Он содержит базу данных OLAP.  
+В рамках этого учебника требуется доступ к кубу Contoso Sales как для детализированного, так и для главного отчета. Этот набор включает хранилище данных ContosoDW и базу данных OLAP Contoso_Retail. Создаваемые в данном учебнике отчеты извлекают данные из куба Contoso Sales. Базу данных OLAP Contoso_Retail можно скачать в [Центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=191575). Необходимо скачать только файл ContosoBIdemoABF.exe. Он содержит базу данных OLAP.  
   
 Второй файл, ContosoBIdemoBAK.exe, относится к хранилищу данных ContosoDW, которое не используется в данном учебнике.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47654324"
 10. Выберите **Тип учетных данных**.  
   
     > [!NOTE]  
-    > В зависимости от настройки разрешений для источника данных может потребоваться изменить параметры проверки подлинности по умолчанию. Дополнительные сведения см. в разделах [Security &#40;Report Builder&#41;](../reporting-services/report-builder/security-report-builder.md).  
+    > В зависимости от настройки разрешений для источника данных может потребоваться изменить параметры проверки подлинности по умолчанию. Дополнительные сведения см. в разделах [Безопасность (построитель отчетов)](../reporting-services/report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

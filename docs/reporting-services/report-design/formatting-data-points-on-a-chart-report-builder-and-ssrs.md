@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c132829009fb8212919434dff77f8ceb5710be6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6ed0e02b12080389b12d0dabc9028de33e9cdb4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624572"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021228"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)
 В отчете [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы точка данных является наименьшей неделимой сущностью диаграммы. Для нефигурных диаграмм представление точек данных зависит от типа диаграммы. Например, ряд графика состоит из одной или нескольких соединенных точек данных. Для фигурных диаграмм точки данных представляются отдельными срезами или сегментами, из которых состоит диаграмма. Например, для круговой диаграммы каждый из сегментов является точкой данных. Дополнительные сведения см. в разделе [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "47624572"
 |#MAX|Максимальное значение Y в ряду.|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|Первое значение Y в ряду.|All|`=First(Fields!MyDataField.Value)`|  
   
- Чтобы отформатировать ключевое слово, укажите в скобках строку форматирования платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Например, чтобы указать в подсказке значение точки данных как двузначное число, заключите строку форматирования "N2" в фигурные скобки (например, "#VALY{N2}") для свойства **ToolTip** ряда. Дополнительные сведения о строках форматирования [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе [Типы форматирования](http://go.microsoft.com/fwlink/?LinkId=112024) на веб-узле MSDN. Дополнительные сведения о форматировании чисел в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Форматирование чисел и дат &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ Чтобы отформатировать ключевое слово, укажите в скобках строку форматирования платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Например, чтобы указать в подсказке значение точки данных как двузначное число, заключите строку форматирования "N2" в фигурные скобки (например, "#VALY{N2}") для свойства **ToolTip** ряда. Дополнительные сведения о строках форматирования [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе [Типы форматирования](https://go.microsoft.com/fwlink/?LinkId=112024) на веб-узле MSDN. Дополнительные сведения о форматировании чисел в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Форматирование чисел и дат &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
  Дополнительные сведения о добавлении ключевых слов к диаграмме см. в разделах [Отображение всплывающих подсказок для ряда &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md) и [Изменение текста элемента условных обозначений &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0223f4df57498da9c018c65c0cf690225d4178c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e20440d6b70a4e70bf92d1789ef944f332d3dafc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817502"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021248"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Резервное копирование и восстановление приложений служб Reporting Services для SharePoint
 
@@ -71,9 +71,9 @@ ms.locfileid: "47817502"
   
  Дополнительные сведения см. в следующих разделах документации по SharePoint.  
   
- [Резервное копирование приложения службы (SharePoint Foundation 2010) в документации SharePoint](http://msdn.microsoft.com/library/ee748601.aspx).  
+ [Резервное копирование приложения службы (SharePoint Foundation 2010) в документации SharePoint](https://msdn.microsoft.com/library/ee748601.aspx).  
   
- [Создайте резервную копию приложения службы (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
+ [Создайте резервную копию приложения службы (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Проверьте учетную запись выполнения и проверку подлинности базы данных
 
@@ -125,7 +125,7 @@ ms.locfileid: "47817502"
   
  Дополнительные сведения см. в следующих разделах документации по SharePoint.  
   
- [Восстановление приложения службы (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx).  
+ [Восстановление приложения службы (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx).  
   
  [Восстановление приложения службы (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
 
@@ -161,4 +161,4 @@ ms.locfileid: "47817502"
   
 6.  Нажмите кнопку **ОК**.
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

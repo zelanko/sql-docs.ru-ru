@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5662157cebcc5cf66c8b30dee24028d24d58568a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b41f81a9a42ca572633d858fd22113d8a6d718a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031613"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимают запросы, в которых определена проверка подлинности Negotiate или NTLM. Если в развертывание входят клиентские приложения и браузеры, в которых используются поставщики безопасности, то можно использовать значения по умолчанию без дополнительной настройки. Если нужно использовать другого поставщика безопасности для встроенной безопасности Windows (например, требуется применять протокол Kerberos напрямую) или если значения по умолчанию были изменены, и нужно восстановить первоначальные настройки, то можно использовать сведения данного раздела, чтобы указать настройки проверки подлинности на сервере отчетов.  
@@ -130,7 +130,7 @@ ms.locfileid: "47770902"
   
 -   Зарегистрируйте имя участника-службы для службы сервера отчетов, которая запускается от учетной записи пользователя домена. Дополнительные сведения см. в статье [Регистрация имени субъекта-службы (SPN) для сервера отчетов](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
--   Измените учетную запись службы для запуска под встроенной учетной записью, такой как сетевая служба. Встроенные учетные записи сопоставляют имя участника-службы HTTP с именем участника-службы Host, которое определяется при соединении компьютера с сетью. Дополнительные сведения см. в разделе [Настройка учетной записи службы (диспетчер конфигураций служб SSRS)](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
+-   Измените учетную запись службы для запуска под встроенной учетной записью, такой как сетевая служба. Встроенные учетные записи сопоставляют имя участника-службы HTTP с именем участника-службы Host, которое определяется при соединении компьютера с сетью. Дополнительные сведения см. в разделе [Настройка учетной записи службы (диспетчер конфигураций служб SSRS)](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
   
 -   Используйте NTLM. Как правило, NTLM функционирует в случаях, когда проверка подлинности протокола Kerberos заканчивается неуспешно. Чтобы задействовать NTLM, удалите **RSWindowsNegotiate** из файла RSReportServer.config и проверьте, что указан только **RSWindowsNTLM** . Если выбран этот подход, то можно продолжить использовать учетную запись пользователя домена для службы сервера отчетов, даже если для него не определено имя участника-службы (SPN).  
   
@@ -148,7 +148,7 @@ ms.locfileid: "47770902"
   
 -   Например, десятичное значение можно преобразовать в шестнадцатеричный формат с помощью калькулятора [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Калькулятор поддерживает несколько режимов, где имеются переключатели «Dec» и «Hex». Установите переключатель в положение «Dec», вставьте или введите десятичное значение из файла журнала и переведите переключатель в положение «Hex».  
   
--   Откройте раздел [Атрибут управления учетными записями](http://go.microsoft.com/fwlink/?LinkId=183366) , чтобы получить атрибут для учетной записи службы.  
+-   Откройте раздел [Атрибут управления учетными записями](https://go.microsoft.com/fwlink/?LinkId=183366) , чтобы получить атрибут для учетной записи службы.  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>Имена участников-служб, настроенные в Active Directory для учетной записи служб Reporting Services  
  Чтобы включить имя участника зеркального отображения в файл журнала трассировки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , можно временно включить функцию расширенной защиты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -202,14 +202,14 @@ ms.locfileid: "47770902"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Дополнительные сведения о Kerberos и серверах отчетов см. на странице [Развертывание решений бизнес-аналитики с помощью SharePoint, служб Reporting Services и сервера мониторинга PerformancePoint с Kerberos.](http://go.microsoft.com/fwlink/?LinkID=177751)  
+-   Дополнительные сведения о Kerberos и серверах отчетов см. на странице [Развертывание решений бизнес-аналитики с помощью SharePoint, служб Reporting Services и сервера мониторинга PerformancePoint с Kerberos.](https://go.microsoft.com/fwlink/?LinkID=177751)  
   
 ## <a name="see-also"></a>См. также:  
  [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Настройка обычной проверки подлинности на сервере отчетов](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
- [Настройка нестандартной проверки подлинности или проверки подлинности с помощью форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Расширенная защита для аутентификации с использованием служб Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
+ [Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
+ [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0d5b2101e4fb6ce80e2eb53f7d1f43137273cd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b0f49608e5245121377ff53a7f2194d3ba09da3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612032"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031293"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс конструктора реляционных запросов (построитель отчетов)
   Построитель и конструктор отчетов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]включают как графический, так и текстовый конструктор запросов, которые помогают создавать запросы, указывающие, какие данные следует получить из реляционных баз данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] для набора данных отчета. Графический конструктор запросов используется для просмотра метаданных, интерактивного создания запроса, а также для просмотра его результатов. Текстовый конструктор запросов используется для просмотра запроса, созданного графическим конструктором запросов, или для его изменения. Также можно импортировать существующий запрос из файла или отчета.  
@@ -89,7 +89,7 @@ ms.locfileid: "47612032"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует [!INCLUDE[tsql](../../includes/tsql-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] использует [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Оба диалекта языка SQL поддерживают предложение, ключевое слово и статистические выражения, предоставляемые конструктором запросов.  
   
- Дополнительные сведения о [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Справочник по Transact-SQL (компонент Database Engine)](../../t-sql/transact-sql-reference-database-engine.md) [электронной документации](http://go.microsoft.com/fwlink/?LinkId=141687) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+ Дополнительные сведения о [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Справочник по Transact-SQL (компонент Database Engine)](../../t-sql/transact-sql-reference-database-engine.md) [электронной документации](https://go.microsoft.com/fwlink/?LinkId=141687) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
   
  Следующая таблица содержит список агрегатов и предоставляет краткое описание каждого из них.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "47612032"
   
 -   **Левая таблица.** Отображается имя первой таблицы, являющейся частью отношения соединения.  
   
--   **Тип соединения.** Отображает тип инструкции SQL JOIN, используемой в автоматически созданном запросе. По умолчанию, если было обнаружено ограничение внешнего ключа, используется INNER JOIN. Другими типами соединений могут быть LEFT JOIN или RIGHT JOIN. Если ни один из данных типов соединения неприменим, столбец **Тип соединения** отображает значение **Без связи**. Для несвязанных таблиц не создаются соединения CROSS JOIN, вместо этого необходимо вручную создать связи, соединяя столбцы в левой и правой таблицах. Дополнительные сведения о типах соединений см. в разделе «Основные принципы соединений» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?LinkId=141687) на сайте msdn.microsoft.com.  
+-   **Тип соединения.** Отображает тип инструкции SQL JOIN, используемой в автоматически созданном запросе. По умолчанию, если было обнаружено ограничение внешнего ключа, используется INNER JOIN. Другими типами соединений могут быть LEFT JOIN или RIGHT JOIN. Если ни один из данных типов соединения неприменим, столбец **Тип соединения** отображает значение **Без связи**. Для несвязанных таблиц не создаются соединения CROSS JOIN, вместо этого необходимо вручную создать связи, соединяя столбцы в левой и правой таблицах. Дополнительные сведения о типах соединений см. в разделе «Основные принципы соединений» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [электронной документации по SQL Server](https://go.microsoft.com/fwlink/?LinkId=141687) на сайте msdn.microsoft.com.  
   
 -   **Правая таблица.** Отображается имя второй таблицы в связи соединения.  
   
@@ -195,6 +195,6 @@ ms.locfileid: "47612032"
  Чтобы обеспечить наибольшую управляемость запроса, следует использовать текстовый конструктор запросов. Чтобы переключиться в текстовый конструктор запросов, на панели инструментов нажмите кнопку переключателя **Редактировать как текст**. После изменения запроса в текстовом конструкторе запросов будет невозможно использовать конструктор реляционных запросов. После этого запрос всегда будет открываться в текстовом конструкторе запросов. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов (построитель отчетов)](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Конструкторы запросов (построитель отчетов)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Конструкторы запросов (построитель отчетов)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

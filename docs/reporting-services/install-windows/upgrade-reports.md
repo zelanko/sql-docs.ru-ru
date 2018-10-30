@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d46045779c71ecbe1743d2497344e812d323f04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 072b8d78d0dcb70b56fe596bd3e994395bd6e64b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777772"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028903"
 ---
 # <a name="upgrade-reports-ssrs"></a>Обновление отчетов (службы SSRS)
 
@@ -142,4 +142,4 @@ RDL-файлы определения отчетов автоматически 
 [Пользовательские элементы отчета](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Обновление базы данных сервера отчетов](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

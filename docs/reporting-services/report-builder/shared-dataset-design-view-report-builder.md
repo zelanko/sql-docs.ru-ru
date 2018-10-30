@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47da73089d622ca0dffc6f9cb9d92a1a1c8244dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1be128dd301e5f545d1e008c8710c6e738063595
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800152"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020469"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Представление конструктора общих наборов данных (построитель отчетов)
   Набор данных в отчете представляет данные отчета, возвращаемые из запроса к внешнему источнику данных. Общие наборы данных публикуются на сервере отчетов и могут использоваться в нескольких отчетах. Можно создавать наборы данных для совместного использования с другими пользователями. В окне создания общего набора данных можно выбрать общий источник данных, указать свойства для общего набора данных и создать запрос в конструкторе запросов.  
@@ -31,7 +31,7 @@ ms.locfileid: "47800152"
 > [!NOTE]  
 >  Общий набор данных должен быть основан на общем источнике данных. Если необходимый источник данных недоступен, его необходимо создать на сервере отчетов. Дополнительные сведения см. в статье [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- Дополнительные сведения см. в разделе [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Дополнительные сведения см. в разделе [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ### <a name="dataset"></a>Dataset  
  Кнопка **Параметры набора** служит для изменения свойств общего набора данных, следующие основные параметры.  

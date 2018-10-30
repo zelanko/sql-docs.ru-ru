@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f9831d45e62711a4fed958b13e12d44d53320a3f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ce603b38e1e210944cc27b7d25c9ee5df3c3c027
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906394"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030103"
 ---
 # <a name="security-report-builder"></a>Безопасность (построитель отчетов)
   Построитель отчетов — это клиентское приложение для создания отчетов, предназначенное для работы с сервером отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Сервер отчетов может быть настроен для работы в собственном режиме как автономный сервер или для работы в режиме интеграции с SharePoint для поддержки отчетов на сайте SharePoint.  
@@ -43,7 +43,7 @@ ms.locfileid: "48906394"
   
      Для осуществления просмотра или публикации элементов на сервере отчетов разрешения, применимые к элементам, связанным с отчетами, и операции разделяются на роли. Администратор сервера отчетов присваивает пользователю одну или несколько ролей. Например, стандартная роль «браузер» позволяет просматривать отчеты, папки, модели и ресурсы.  
   
-     Если не удается установить связь или перейти к серверу отчетов, свяжитесь с администратором сервера отчетов. Дополнительные сведения см. в разделе [Защита и обеспечение безопасности служб Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md) документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+     Если не удается установить связь или перейти к серверу отчетов, свяжитесь с администратором сервера отчетов. Дополнительные сведения см. в разделе [Защита и обеспечение безопасности служб Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md) документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   Сервер отчетов, настроенный для работы в режиме интеграции с SharePoint  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48906394"
   
  Чтобы предоставить возможность другим пользователям просматривать и искать элементы, опубликованные для совместного использования, необходимо договориться с администратором сервера отчетов и организовать папки таким образом, чтобы пользователи могли осуществлять к ним доступ. Для создания отчетов и запуска опубликованных отчетов необходимо иметь доступ.  
   
- Дополнительные сведения см. в следующих разделах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]документации по[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службам в [электронной документации по](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Дополнительные сведения см. в следующих разделах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]документации по[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службам в [электронной документации по](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   [Роли и разрешения (службы Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -88,13 +88,13 @@ ms.locfileid: "48906394"
   
  Учетные данные не сохраняются в определении отчета. Они управляются отдельно от отчета на сервере отчетов или на сайте SharePoint и в клиенте создания отчетов.  
   
- Во время разработки отчета учетные данные используются для выполнения запросов к набору данных и предварительного просмотра отчета. Во время выполнения учетные данные используются для выполнения отчетов и кэширования результатов запросов. Результаты запросов общего набора данных также могут кэшироваться независимо. Учетные данные времени выполнения и времени разработки могут отличаться. Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Во время разработки отчета учетные данные используются для выполнения запросов к набору данных и предварительного просмотра отчета. Во время выполнения учетные данные используются для выполнения отчетов и кэширования результатов запросов. Результаты запросов общего набора данных также могут кэшироваться независимо. Учетные данные времени выполнения и времени разработки могут отличаться. Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
- Дополнительные сведения об обеспечении безопасности данных см. в следующих разделах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]документации по[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службам в [электронной документации по](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Дополнительные сведения об обеспечении безопасности данных см. в следующих разделах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]документации по[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службам в [электронной документации по](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- Дополнительные сведения об источниках данных см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Дополнительные сведения об источниках данных см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
   
 ##  <a name="Models"></a> Общие сведения о моделях и фильтрах безопасности  
@@ -108,13 +108,13 @@ ms.locfileid: "48906394"
   
 -   Не используйте параметры, основанные на параметрах запроса и имеющие тип **Text** , кроме случаев, когда предоставляются допустимые значения. Список доступных значений позволяет пользователю выбрать только допустимые значения. Без списка доступных значений невозможно контролировать, какие значения пользователь сможет ввести.  
   
--   Не используйте глобальный идентификатор [&UserID] для обеспечения безопасности личных данных. Как параметр отчета данное значение может быть задано в URL-адресе отчета с использованием синтаксиса URL-адреса. Если данное значение используется в выражении в общем наборе данных, то это препятствует кэшированию набора данных. Дополнительные сведения см. в разделе [Ссылка на параметр доступа по URL-адресу](../../reporting-services/url-access-parameter-reference.md) документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   Не используйте глобальный идентификатор [&UserID] для обеспечения безопасности личных данных. Как параметр отчета данное значение может быть задано в URL-адресе отчета с использованием синтаксиса URL-адреса. Если данное значение используется в выражении в общем наборе данных, то это препятствует кэшированию набора данных. Дополнительные сведения см. в разделе [Ссылка на параметр доступа по URL-адресу](../../reporting-services/url-access-parameter-reference.md) документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
- После публикации элементов на сервере отчетов администратор сервера отчетов может помочь настроить для них безопасность, установив безопасность на основе ролей или безопасность на уровне папок и элементов. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md) документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ После публикации элементов на сервере отчетов администратор сервера отчетов может помочь настроить для них безопасность, установив безопасность на основе ролей или безопасность на уровне папок и элементов. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md) документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
   
 ## <a name="see-also"></a>См. также:  
- [Установка и удаление построителя отчетов](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+ [Установка и удаление построителя отчетов](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

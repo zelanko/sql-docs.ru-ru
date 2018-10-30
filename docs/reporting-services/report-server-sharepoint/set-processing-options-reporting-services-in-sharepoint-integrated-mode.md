@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6fbd7d58efd17f7fcbd35cc79a6de78c29946eaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 092b497ba4c42d563abce997a50b965b727bd72c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839242"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020688"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)
 
@@ -96,4 +96,4 @@ ms.locfileid: "47839242"
  [Кэширование отчетов](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [Задание значений времени ожидания при обработке отчетов и общих наборов данных](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

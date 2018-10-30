@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2dfa6b9d901b836133af5d0fe851d06c0e7d03cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d82159a1d93e51715888fc405a94d91a4ffbb925
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596863"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031569"
 ---
 # <a name="update-a-resource-report-manager"></a>обновить ресурс (диспетчер отчетов)
   Ресурс можно обновить, заменив его более новой версией. Ресурсы представляют собой хранящиеся на сервере отчетов элементы, по содержимому аналогичные переданным файлам. Можно заменить существующий ресурс, импортировав в существующий ресурс обновленное или совершенно другое содержимое файла. Обновление ресурса позволяет заменить только содержимое ресурса, сохраняя его существующие свойства и настройки безопасности.  
   
 ### <a name="to-update-a-resource"></a>Обновление ресурса  
   
-1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  В диспетчере отчетов перейдите к ресурсу, который нужно обновить, или найдите его.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "47596863"
  Если обновляемый ресурс содержит изображение, используемое в отчете, необходимо обновить отчет, чтобы изображение в нем обновилось.  
   
 ## <a name="see-also"></a>См. также:  
- [Страница "Содержимое" (диспетчер отчетов)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Страница "Передача файла" (диспетчер отчетов)](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [Страница "Содержимое" (диспетчер отчетов)](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Страница "Передача файла" (диспетчер отчетов)](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Передача файлов в папку](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [Справка F1 диспетчера отчетов](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Справка F1 диспетчера отчетов](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   

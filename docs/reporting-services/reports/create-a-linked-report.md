@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a757dd4dac0e788c33e1189171c58987a7bc4fa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df16c043688de82a549ec506ece457730626dda1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663622"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029063"
 ---
 # <a name="create-a-linked-report"></a>Создание связанного отчета
   Связанный отчет является элементом сервера отчетов, обеспечивающим точку доступа к существующему отчету. Концептуально связанный отчет можно сравнить с ярлыком, который используется для запуска программы или открытия файла.  
@@ -42,10 +42,10 @@ ms.locfileid: "47663622"
   
 ## <a name="see-also"></a>См. также:  
  [Открытие и закрытие отчетов (диспетчер отчетов)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Страница "Создание связанного отчета" (диспетчер отчетов)](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
- [Страница "Выбор расположения элементов" (диспетчер отчетов)](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
- [Страница "Общие свойства", "Отчеты" (диспетчер отчетов)](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
+ [Страница "Создание связанного отчета" (диспетчер отчетов)](https://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
+ [Страница "Выбор расположения элементов" (диспетчер отчетов)](https://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
+ [Страница "Общие свойства", "Отчеты" (диспетчер отчетов)](https://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
  [Основные понятия служб Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

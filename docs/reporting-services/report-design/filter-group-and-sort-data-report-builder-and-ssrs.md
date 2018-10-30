@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe646114217d00fbdf18b6eb304c8826b8b949d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74f047ddc136ae1b117f533d45391ef8b2048441
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725972"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031133"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)
   Выражения в отчетах используются для управления, организации и сортировки данных отчетов. По умолчанию по мере создания наборов данных и разработки макета отчета свойства элементов отчета задаются автоматически выражениями, исходя из полей набора данных, параметров и других элементов, появляющихся на панели данных отчета. Можно также добавить кнопку интерактивной сортировки к таблице или ячейке матрицы, чтобы пользователь мог в интерактивном режиме изменять порядок сортировки рядов для групп или строк внутри групп.  
@@ -47,7 +47,7 @@ ms.locfileid: "47725972"
   
 -   [Учебники по службам Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
--   [Образцы отчетов (построитель отчетов и службы SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+-   [Образцы отчетов (построитель отчетов и службы SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

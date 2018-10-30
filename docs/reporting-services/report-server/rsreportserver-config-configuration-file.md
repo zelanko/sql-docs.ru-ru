@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 300e3c89da8fb37120baa211d2701b60f59b7716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776082"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020348"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 В файле [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** хранятся параметры, которые используются веб-службой сервера отчетов и для фоновой обработки. Все приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] работают в одном процессе, который считывает параметры конфигурации, хранящиеся в файле RSReportServer.config. Серверы отчетов, работающие в собственном режиме и в режиме интеграции с SharePoint, используют файл RSReportServer.config, однако в этих режимах используются разные параметры из этого файла конфигурации. Версия файла для режима интеграции с SharePoint имеет меньший размер, поскольку многие параметры для этого режима хранятся не в файле, а в базах данных конфигурации SharePoint. В этом разделе описывается файл конфигурации по умолчанию, который устанавливается для собственного режима и для режима интеграции с SharePoint, а также некоторые важные параметры и варианты работы, которые управляются файлом конфигурации.  
@@ -57,7 +57,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  В следующей таблице представлены сведения об общих параметрах конфигурации в первой части файла. Параметры представлены в том порядке, в котором они следуют в файле конфигурации. В последнем столбце таблицы указывается, к какому режиму работы сервера отчетов относится данный параметр: основному режиму **(N)** , режиму интеграции с SharePoint **(S)** или к обоим режимам.  
   
 > [!NOTE]  
->  В этом разделе «максимальное целое число» соответствует значению INT_MAX, равному 2147483647.  См. дополнительные сведения об [ограничении ресурсов](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  В этом разделе «максимальное целое число» соответствует значению INT_MAX, равному 2147483647.  См. дополнительные сведения об [ограничении ресурсов](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Настройка|Описание|Режим|  
 |-------------|-----------------|----------|  
@@ -90,7 +90,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  Раздел**URLReservations** определяет доступ по протоколу HTTP к веб-службе сервера отчетов и веб-порталу для текущего экземпляра. URL-адреса резервируются и хранятся в компоненте HTTP.SYS при настройке сервера отчетов.  
   
 > [!WARNING]  
->  Для режима интеграции с SharePoint резервирование URL-адресов настраивается в центре администрирования SharePoint. См. дополнительные сведения о [настройке альтернативного сопоставления доступа (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
+>  Для режима интеграции с SharePoint резервирование URL-адресов настраивается в центре администрирования SharePoint. См. дополнительные сведения о [настройке альтернативного сопоставления доступа (https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
   
  Не изменяйте резервирования URL-адресов напрямую в файле конфигурации. Чтобы создать или изменить резервирования URL-адресов для сервера отчетов, работающего в собственном режиме, всегда используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или поставщик WMI сервера отчетов. Если изменять значения в файле конфигурации, можно повредить резервирования и тем самым вызвать серьезные ошибки во время выполнения или оставить несвязанные резервирования в компоненте HTTP.SYS, которые не будут удалены при удалении программного обеспечения. Дополнительные сведения см. в статьях [Настройка URL-адресов сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) и [URL-адреса файлов конфигурации &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md).  
   
@@ -236,7 +236,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**ExcludedRenderFormats**, **RenderingExtension**|Эти параметры используются для намеренного исключения форматов экспорта, не подходящих полностью для доставки в общую папку. Эти форматы обычно используются для интерактивных отчетов, просмотра или предварительного кэширования отчетов. Они не создают файлов в форматах, которые могут быть легко просмотрены при помощи приложений для настольного компьютера.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> NULL|  
   
 ####  <a name="bkmk_email_extension"></a> Параметры конфигурации модуля электронной почты сервера отчетов  
- Электронная почта сервера отчетов использует сетевое SMTP-устройство для отправки отчетов по адресам электронной почты. Прежде чем использовать этот модуль доставки, его необходимо настроить. Дополнительные сведения см. в статьях [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) и [Доставка электронной почтой в службах Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+ Электронная почта сервера отчетов использует сетевое SMTP-устройство для отправки отчетов по адресам электронной почты. Прежде чем использовать этот модуль доставки, его необходимо настроить. Дополнительные сведения см. в статьях [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) и [Доставка электронной почтой в службах Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Настройка|Описание|  
 |-------------|-----------------|  
@@ -381,8 +381,8 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |-------------|-----------------|  
 |**MaxConnections**|Задает максимальное количество соединений с веб-службами Bing maps.|  
 |**Timeout**|Укажите время ожидания отклика в секундах от веб-служб Bing maps.|  
-|**AppID**|Указывает идентификатор приложения (AppID) для использования при работе с веб-службами Bing maps. **(Default)** указывает AppID служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , заданный по умолчанию.<br /><br /> Дополнительные сведения об использовании в отчете мозаичных элементов Bing Map см. в разделах [Дополнительные условия использования](http://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Не изменяйте это значение, если не указан пользовательский идентификатор AppID для собственного лицензионного соглашения по работе с веб-службами Bing Maps. При изменении идентификатора AppID не нужно перезапускать службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы изменения вступили в силу.|  
-|**CacheLevel**|Указывает значение из «Перечисления HttpRequestCacheLevel» System.Net.Cache. Значение по умолчанию ― **Default**. Дополнительные сведения см. в разделе [Перечисление HttpRequestCacheLevel](http://go.microsoft.com/fwlink/?LinkId=153353).|  
+|**AppID**|Указывает идентификатор приложения (AppID) для использования при работе с веб-службами Bing maps. **(Default)** указывает AppID служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , заданный по умолчанию.<br /><br /> Дополнительные сведения об использовании в отчете мозаичных элементов Bing Map см. в разделах [Дополнительные условия использования](https://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Не изменяйте это значение, если не указан пользовательский идентификатор AppID для собственного лицензионного соглашения по работе с веб-службами Bing Maps. При изменении идентификатора AppID не нужно перезапускать службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы изменения вступили в силу.|  
+|**CacheLevel**|Указывает значение из «Перечисления HttpRequestCacheLevel» System.Net.Cache. Значение по умолчанию ― **Default**. Дополнительные сведения см. в разделе [Перечисление HttpRequestCacheLevel](https://go.microsoft.com/fwlink/?LinkId=153353).|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> Файл конфигурации по умолчанию для сервера отчетов, работающего в собственном режиме  
  Файл rsreportserver.config по умолчанию устанавливается в следующее местоположение:  
@@ -840,6 +840,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Инициализация сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Хранение зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8bca8f07e927dec72690683e0519e181d79d4f79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d8b28b0799ec5ffac1f00e54cf2305a1027bc35
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031413"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Закрепление элементов служб Reporting Services на информационных панелях Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] позволяют пользователям закрепить элементы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] из панели инструментов средства просмотра отчетов на информационной панели [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] в качестве новой плитки.   Для этого администратор должен сначала интегрировать сервер отчетов с Azure Active Directory и [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "47710558"
   
 ##  <a name="bkmk_requirements_to_pin"></a> Требования для закрепления  
   
--   Сервер отчетов настроен для интеграции с [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Дополнительные сведения см. в разделе [Интеграция сервера отчетов с Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Если сервер отчетов не настроен, вы не увидите кнопку **Закрепить на информационной панели Power BI** на панели инструментов.  
+-   Сервер отчетов настроен для интеграции с [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Дополнительные сведения см. в разделе [Power BI Report Server Integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Если сервер отчетов не настроен, вы не увидите кнопку **Закрепить на информационной панели Power BI** на панели инструментов.  
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47710558"
   
 ##  <a name="bkmk_to_pin"></a> Закрепление элемента отчета  
   
-1. Убедитесь, что вы вошли в [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. В [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]щелкните пункт меню **Мои параметры** и выполните вход. См. дополнительные сведения о [странице "Мои параметры", используемой для интеграции с Power BI на веб-портале](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+1. Убедитесь, что вы вошли в [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. В [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]щелкните пункт меню **Мои параметры** и выполните вход. См. дополнительные сведения о [странице "Мои параметры", используемой для интеграции с Power BI на веб-портале](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -107,13 +107,13 @@ ms.locfileid: "47710558"
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **Закрепленные элементы отображают устаревшие данные** на панели мониторинга [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , и какое-то время они обновлялись.  Истек срок действия маркера учетных данных пользователя, и вам необходимо снова выполнить вход.  Регистрация учетных данных пользователя в Azure и [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] действует 90 дней. В[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]щелкните **Мои параметры**. Дополнительные сведения см. в статье [Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **Закрепленные элементы отображают устаревшие данные** на панели мониторинга [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , и какое-то время они обновлялись.  Истек срок действия маркера учетных данных пользователя, и вам необходимо снова выполнить вход.  Регистрация учетных данных пользователя в Azure и [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] действует 90 дней. В[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]щелкните **Мои параметры**. Дополнительные сведения см. в разделе [Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
   
 -   **Закрепленные элементы отображают устаревшие данные** на информационной панели [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , и они ни разу не обновлялись.  Проблема состоит в том, что отчет не настроен на использование сохраненных учетных данных. Отчет должен использовать сохраненные учетные данные, так как во время закрепления элемента отчета создается подписка [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для управления расписанием обновления плиток. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] требуются сохраненные учетные данные. При просмотре страницы **Мои подписки** отображается сообщение об ошибке следующего вида:  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **Истек срок действия учетных данных Power BI:**  при попытке закрепления элемента появляется следующее сообщение об ошибке. В [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]щелкните **Мои параметры** и на странице "Мои параметры" щелкните **Войти**. См. дополнительные сведения о [странице "Мои параметры", используемой для интеграции с Power BI на веб-портале](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **Истек срок действия учетных данных Power BI:**  при попытке закрепления элемента появляется следующее сообщение об ошибке. В [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]щелкните **Мои параметры** и на странице "Мои параметры" щелкните **Войти**. Дополнительные сведения см. в статье  [Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5) .  
   
         Cannot Pin : Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "47710558"
 
 ## <a name="see-also"></a>См. также:  
  [Интеграция сервера отчетов с Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
- [Страница "Мои параметры", используемая для интеграции с Power BI на веб-портале](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+ [Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
  [Панели мониторинга в Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   

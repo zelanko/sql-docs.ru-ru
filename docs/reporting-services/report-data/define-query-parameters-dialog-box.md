@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76f6abd2b517540c20a249eb4b6014f9fadcbc0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ebd184c5aea88c8a8de1be96e00d7393e12fcf6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795342"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029133"
 ---
 # <a name="define-query-parameters-dialog-box"></a>Диалоговое окно «Определение параметров запроса»
   В диалоговом окне **Определение параметров запроса** можно указать значения параметров, используемые при запуске запроса в конструкторе запросов во время разработки для просмотра образца данных. Параметры запроса фильтруют данные в источнике данных и позволяют ограничивать объем данных, обрабатываемых отчетом. Эти значения не сохраняются вместе с определением отчета.  
@@ -31,6 +31,6 @@ ms.locfileid: "47795342"
 ## <a name="see-also"></a>См. также:  
  [Тип соединения SQL Server (службы SSRS)](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Конструкторы запросов служб Reporting Services](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)  
+ [Конструкторы запросов служб Reporting Services](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)  
   
   

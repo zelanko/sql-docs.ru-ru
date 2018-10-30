@@ -8,12 +8,12 @@ ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: db4bea93fb172bc47665e993e3185d29841be758
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cada882236484e5c7c7325f44b5633479a81f6e1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783464"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028679"
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Выбор между доступом по URL-адресу и протоколом SOAP
 
@@ -45,6 +45,6 @@ ms.locfileid: "47783464"
   
  В большинстве случаев для работы с отчетами необходим и доступ по URL-адресу, и вызовы протокола SOAP. Протокол SOAP используется для исходного соединения с базой данных сервера отчетов и представления списка доступных отчетов в пользовательском интерфейсе, а доступ по URL-адресу применяется для фактического доступа к отдельным отчетам и перехода по отчетам.  
   
- Пример того, как можно сочетать доступ по URL-адресу и веб-службу для интегрированной отчетности, см. на странице [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).
+ Пример того, как можно сочетать доступ по URL-адресу и веб-службу для интегрированной отчетности, см. на странице [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d7c41d826b1dec0aca01080fb3482c03e5fa594
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5bf68f2655a7ffb024d7458595fc0439a51817c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608334"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020648"
 ---
 # <a name="data-driven-subscriptions"></a>управляемая данными подписка
   Управляемая данными подписка обеспечивает возможность использования данных динамической подписки, получаемых от внешнего источника данных во время выполнения. В управляемой данными подписке можно также использовать статический текст и значения по умолчанию, указываемые при определении подписки. С помощью управляемых данными подписок можно осуществлять следующее.  
@@ -42,7 +42,7 @@ ms.locfileid: "47608334"
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>Требование для использования управляемых данными подписок  
  Функциональность управляемых данными подписок доступна не во всех выпусках продукта. Существуют также ограничения на виды источников данных, которые можно использовать для получения данных о подписчиках во время выполнения. В следующем списке содержатся дополнительные сведения о требованиях.  
   
--   Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с поддержкой функций управляемых данными подписок см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с поддержкой функций управляемых данными подписок см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   Выберите источник данных подписки, который будет поставлять серверу отчетов данные схемы. Примеры поддерживаемых типов источников данных включают реляционные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , базы данных Oracle, базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , данные пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , источники данных ODBC и OLE DB. Дополнительные сведения о требованиях к источникам данных подписчиков см. в разделе [Использование внешнего источника данных подписчика (управляемая данными подписка)](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47608334"
   
 ## <a name="see-also"></a>См. также:  
  [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Страница "Создание управляемой данными подписки" (диспетчер отчетов)](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
+ [Страница "Создание управляемой данными подписки" (диспетчер отчетов)](https://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
  [Предварительная загрузка кэша (диспетчер отчетов)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

@@ -15,19 +15,19 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52e879b6b5cbfcd38b2532391f1640f2b8f85681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681492"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032083"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Параметры отчета (Построитель отчетов и Конструктор отчетов)
-  В этом разделе описываются распространенные варианты применения параметров отчета [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , доступные свойства и многое другое. Параметры отчета позволяют управлять данными отчета, объединять связанные отчеты и изменять внешний вид отчетов. Параметры отчета можно использовать в отчетах с разбиением на страницы, создаваемых с помощью таких средств, как [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] и конструктор отчетов, а также в мобильных отчетах, которые создаются в [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Дополнительные сведения о параметрах отчета см. в разделе [Понятия параметров отчета](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+  В этом разделе описываются распространенные варианты применения параметров отчета [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], доступные свойства и многое другое. Параметры отчета позволяют управлять данными отчета, объединять связанные отчеты и изменять внешний вид отчетов. Параметры отчета можно использовать в отчетах с разбиением на страницы, создаваемых с помощью таких средств, как [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] и конструктор отчетов, а также в мобильных отчетах, которые создаются, используя [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Дополнительные сведения о параметрах отчета см. в разделе [Понятия параметров отчета](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], режим [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint и собственный режим|  
+|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint и в собственном режиме|  
   
  Сведения о самостоятельном добавлении параметра в отчет см. в разделе [Учебник. Добавление параметра к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
     
@@ -159,7 +159,7 @@ ms.locfileid: "47681492"
   
 -   В запросах [!INCLUDE[tsql](../../includes/tsql-md.md)] различные источники данных поддерживают различный синтаксис параметров. Поддерживаются диапазоны параметров, определяемые в запросе по положению или по имени. Дополнительные сведения см. в подразделах, посвященных типам внешних источников данных, в разделе [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md). Чтобы создать параметризованный запрос, в конструкторе реляционных запросов нужно выбрать режим параметров для фильтра. Дополнительные сведения см. в разделе [Пользовательский интерфейс конструктора реляционных запросов &#40;построитель отчетов&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
--   Для запросов, основанных на таких многомерных источниках данных, как службы Microsoft SQL Server Analysis Services, SAP NetWeaver BI или Hyperion Essbase, можно указать, следует ли создавать параметры на основе фильтра, указанного в конструкторе запросов. Дополнительные сведения о конструкторе запросов см. в подразделе в разделе [Конструкторы запросов (построитель отчетов)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9), соответствующем модулю обработки данных.  
+-   Для запросов, основанных на таких многомерных источниках данных, как службы Microsoft SQL Server Analysis Services, SAP NetWeaver BI или Hyperion Essbase, можно указать, следует ли создавать параметры на основе фильтра, указанного в конструкторе запросов. Дополнительные сведения о конструкторе запросов см. в подразделе в разделе [Конструкторы запросов (построитель отчетов)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9), соответствующем модулю обработки данных.  
   
 ##  <a name="bkmk_Manage_Parameters"></a> Управление параметрами опубликованного отчета  
  При разработке отчета параметры отчета сохраняются в определении отчета. При публикации отчета сохранение параметров отчета и управление ими осуществляется отдельно от определения отчета.  
@@ -233,13 +233,13 @@ ms.locfileid: "47681492"
   
 
 ##  <a name="bkmk_Related_Topics"></a> См. также  
- [Настройка параметров отчета SSRS (тест)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [Настройка параметров отчета SSRS (тест)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
  [Учебник. Добавление параметра к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [Понятия параметров отчета](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
- [Образцы отчетов (построитель отчетов и службы SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [Образцы отчетов (построитель отчетов и службы SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   

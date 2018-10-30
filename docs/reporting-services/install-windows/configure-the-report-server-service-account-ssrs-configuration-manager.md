@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 797b174427fa5a23542c26131dc3a74cd81fbba2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d343831a702a3301cdff7b6c18bcd39318cd6241
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603012"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021338"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] реализован в виде единой службы, состоящей из веб-службы сервера отчетов, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]и приложения фоновой обработки, которое предназначено для запланированной обработки отчетов и доставки подписки. В этом разделе описан процесс начальной настройки учетной записи службы, а также изменения учетной записи или пароля при помощи программы настройки служб Reporting Services.  
@@ -88,7 +88,7 @@ ms.locfileid: "47603012"
   
 -   [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) в электронной документации по SQL Server.  
   
--   [Руководство по планированию безопасности учетных записей и служб](http://go.microsoft.com/fwlink/?LinkId=69155) в MSDN.  
+-   [Руководство по планированию безопасности учетных записей и служб](https://go.microsoft.com/fwlink/?LinkId=69155) в MSDN.  
   
 ## <a name="updating-an-expired-password"></a>Обновление пароля с истекшим сроком действия  
  Если служба сервера отчетов запущена от имени учетной записи домена и срок действия пароля истек до его обновления в диспетчере конфигураций Reporting Services, служба не будет запускаться до тех пор, пока не будет задан новый пароль.  

@@ -8,12 +8,12 @@ ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f68945ab92db13f80236cfa900067a7d38533849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 900ec3c13cae856dea769d6a761cf502557a4d22
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614122"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028984"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Интеграция служб Reporting Services в приложения
 
@@ -54,4 +54,4 @@ ms.locfileid: "47614122"
 
 Сведения об API REST в SQL Server 2017 Reporting Services см. в разделе [Разработка с помощью API REST для служб Reporting Services](../developer/rest-api.md).
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

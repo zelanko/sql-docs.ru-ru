@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: add231df29906b945d1637c09969b670f4419909
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08af2a5d42742dcb165aa2038b858ae1ae2b491
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703782"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028633"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Линейчатые диаграммы (построитель отчетов и службы SSRS)
   На линейчатой диаграмме ряд отображается в виде наборов горизонтальных линий. Простая линейчатая диаграмма очень напоминает гистограмму, на которой ряд отображается в виде наборов вертикальных линий, и линейчатую диаграмму диапазонов, на которой ряд отображается в виде наборов горизонтальных линий с разными начальными и конечными точками.  
@@ -65,7 +65,7 @@ ms.locfileid: "47703782"
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Добавление в диаграмму стилей рамки, рельефа и текстуры &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Учебник. Добавление в отчет линейчатой диаграммы (построитель отчетов)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Учебник. Добавление в отчет линейчатой диаграммы](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Учебник. Добавление в отчет линейчатой диаграммы (построитель отчетов)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Учебник. Добавление в отчет линейчатой диаграммы](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

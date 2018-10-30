@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a01fc40e8946c9d6b9620dc0c17e51d1dd0db6e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b0d32e2705b63ddc5f12af84e0589a9c940582d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620482"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029683"
 ---
 # <a name="upload-files-to-a-folder"></a>Передача файлов в папку
   Предусмотрена возможность передавать файлы из файловой системы и сохранять их в качестве управляемых элементов в базе данных сервера отчетов. Действия системы при передаче зависят от типа файла.  
@@ -57,7 +57,7 @@ ms.locfileid: "47620482"
 |Просмотр содержимого папки|Просмотр ресурсов, просмотр отчетов|  
   
 ## <a name="see-also"></a>См. также:  
- [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md)   
  [Передача файла или отчета (диспетчер отчетов)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  

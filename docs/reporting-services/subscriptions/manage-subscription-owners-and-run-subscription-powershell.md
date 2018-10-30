@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c1280abde041d47e43fc1452f675e882e17ca68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0f09bb0b1a9e4abbcd462eb515f6832853d511e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624463"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021738"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Управление владельцами подписки и запуск подписки — PowerShell
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -47,17 +47,17 @@ ms.locfileid: "47624463"
 ### <a name="permissions"></a>Разрешения  
  В этом разделе приводится сводка по уровням разрешений, необходимым для использования каждого метода в собственном режиме и режиме SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. В скриптах, рассматриваемых в этом разделе, используются следующие методы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   [Метод ReportingService2010.ListSubscriptions](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+-   [Метод ReportingService2010.ListSubscriptions](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
   
--   [Метод ReportingService2010.ChangeSubscriptionOwner](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+-   [Метод ReportingService2010.ChangeSubscriptionOwner](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
   
--   [ReportingService2010.ListChildren](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+-   [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
   
--   Метод [ReportingService2010.FireEvent](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) используется только в последнем скрипте для запуска конкретной подписки. Если использовать этот скрипт не планируется, можно проигнорировать требования к методу FireEvent.  
+-   Метод [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) используется только в последнем скрипте для запуска конкретной подписки. Если использовать этот скрипт не планируется, можно проигнорировать требования к методу FireEvent.  
   
  **Собственный режим.**  
   
--   Вывод списка подписок: [перечисление ReadSubscription](http://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) в отчете И пользователь является владельцем подписки ИЛИ ReadAnySubscription.  
+-   Вывод списка подписок: [перечисление ReadSubscription](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) в отчете И пользователь является владельцем подписки ИЛИ ReadAnySubscription.  
   
 -   Изменение подписок: пользователь должен состоять в группе BUILTIN\Administrators  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47624463"
   
  **Режим интеграции с SharePoint:**  
   
--   Вывод списка подписок: ManageAlerts ИЛИ [CreateAlerts](http://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) в отчете И пользователь является владельцем подписки и подписка является подпиской по времени.  
+-   Вывод списка подписок: ManageAlerts ИЛИ [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) в отчете И пользователь является владельцем подписки и подписка является подпиской по времени.  
   
 -   Изменение подписок: ManageWeb  
   
@@ -133,7 +133,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ```  
   
 > [!TIP]  
->  Чтобы проверить URL-адреса сайтов в режиме SharePoint, воспользуйтесь командлетом SharePoint **Get-SPSite**. Дополнительные сведения см. в статье [Get-SPSite](http://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx).  
+>  Чтобы проверить URL-адреса сайтов в режиме SharePoint, воспользуйтесь командлетом SharePoint **Get-SPSite**. Дополнительные сведения см. в статье [Get-SPSite](https://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
 ##  <a name="bkmk_list_all_one_user"></a> Скрипт: вывод списка подписок, принадлежащих конкретному пользователю  
  Этот скрипт перечисляет все подписки, принадлежащие конкретному пользователю. С помощью этого скрипта можно проверить подключение или проверить путь к отчету и ИД подписки для использования в других скриптах. Этот скрипт полезен в случае, если какой-либо сотрудник увольняется из организации и необходимо проверить принадлежащие ему подписки, чтобы в дальнейшем сменить владельца или удалить подписку.  
@@ -381,12 +381,12 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
   
 ## <a name="see-also"></a>См. также:  
  
-[Метод ReportingService2010.ListSubscriptions](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+[Метод ReportingService2010.ListSubscriptions](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
 
-[Метод ReportingService2010.ChangeSubscriptionOwner](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+[Метод ReportingService2010.ChangeSubscriptionOwner](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
 
-[ReportingService2010.ListChildren](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+[ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
 
-[ReportingService2010.FireEvent](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
+[ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
   
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98acaa9f56b509a0894c9ec512f0df02c2cfd3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5489f4086cf8bfb7b2609538a0cda5a1c2515ad
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762382"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100185"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Отслеживание подписок служб Reporting Services
   Вы можете отслеживать подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательском интерфейсе, Windows PowerShell или в файлах журнала. Параметры, которые можно отслеживать, зависят от того, какой режим сервера отчетов используется.  
@@ -118,7 +118,7 @@ ms.locfileid: "47762382"
  Если какие-либо условия приводят к деактивации подписки, то она отразит этот факт, когда сервер отчетов пытается запустить ее. Если в расписании подписки задана доставка отчета каждую пятницу в 2:00 утра, а применяемый подпиской модуль доставки удален в понедельник в 9:00 утра, то подписка не отразит свое неактивное состояние до 2:00 утра пятницы.  
   
 ## <a name="see-also"></a>См. также:  
- [old_Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [old_Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
  [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

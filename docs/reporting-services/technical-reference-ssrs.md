@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 378c5baad5b1527c76cfb26496dca71a98a4ce03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8ed5f298da17422e90cb6ab29fba596a0422079
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721802"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021038"
 ---
 # <a name="technical-reference-ssrs"></a>Технический справочник (службы SSRS)
 
@@ -31,11 +31,11 @@ ms.locfileid: "47721802"
  ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Маленький значок папки") **Справочник по функциям**  
  [Справка F1 по использованию конструктора отчетов](../reporting-services/tools/report-designer-f1-help.md)  
   
- [Справка F1 диспетчера отчетов](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Справка F1 диспетчера отчетов](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
- [Справка мастера отчетов](http://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
+ [Справка мастера отчетов](https://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
   
  [Просмотра HTML-страниц и панель инструментов отчета](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
@@ -51,4 +51,4 @@ ms.locfileid: "47721802"
  ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Маленький значок папки") **Библиотека классов поставщика WMI служб Reporting Services**  
  [Справочник по библиотеке поставщика WMI служб Reporting Services (SSRS)](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6a8c6213a215c1ea88ca84d4156e74b36ae81e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25ac3270e936f80bce62bdeeb67965c4688dfbcf
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805082"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020338"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>настроить сервер отчетов для удаленного администрирования
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]экземпляры сервера отчетов можно настраивать локально или удаленно. Чтобы настроить удаленный экземпляр сервера отчетов, можно использовать программу настройки служб Reporting Services. Также можно написать пользовательский код, который будет использовать поставщик инструментария управления Windows (WMI) служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Программа настройки служб Reporting Services предоставляет графический интерфейс поставщика WMI, поэтому такая настройка сервера отчетов не требует написания кода. При запуске программы можно указать, к какому удаленному серверу необходимо подключаться.  
@@ -39,7 +39,7 @@ ms.locfileid: "47805082"
   
  В некоторых организациях настроены групповые политики, которые предотвращают доступ к администрированию удаленного сервера для определенных операционных систем или пользователей. Прежде чем приступить к изменению настроек брандмауэра, выполните проверку вместе с администратором сети на наличие ограничений для удаленного администрирования.  
   
- Дополнительные сведения см. в разделе [Подключение через брандмауэр Windows](http://go.microsoft.com/fwlink/?LinkId=63615) документации пакета Platform SDK в MSDN.  
+ Дополнительные сведения см. в разделе [Подключение через брандмауэр Windows](https://go.microsoft.com/fwlink/?LinkId=63615) документации пакета Platform SDK в MSDN.  
   
 ## <a name="tasks"></a>Задания  
  Для включения возможности удаленной настройки выполняются следующие задачи.  

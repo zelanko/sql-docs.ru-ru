@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 08/16/2018
-ms.openlocfilehash: dc4d8ec77fa0782fa2aa4f851a5d8f756cb0ecfa
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 49058b7c6ef7bc3fce9997c5492a1551b94f46dd
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120061"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021699"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Свойства сервера (страница «Дополнительно») — службы Reporting Services
 
@@ -160,4 +160,4 @@ ms.locfileid: "49120061"
 [Написание скриптов для задач развертывания и администрирования](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 [Включение и отключение рабочего пространства "Мои отчеты"](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

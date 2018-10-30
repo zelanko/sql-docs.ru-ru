@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 895a314c644dfa6ce217c2673cec2ded5e251471
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd8898bd56b140782b0df3d0abdcee56fb7a9b34
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030983"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>зарегистрировать имя участника-службы для сервера отчетов
   При развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в сети, где для взаимной проверки подлинности используется протокол Kerberos, а сервер отчетов настроен для запуска от учетной записи пользователя домена, необходимо создать для службы сервера отчетов имя участника-службы (SPN).  
@@ -23,7 +23,7 @@ ms.locfileid: "47763902"
   
  Чтобы создать имя субъекта-службы, можно воспользоваться программой командной строки **SetSPN** . Дополнительные сведения см. в следующих разделах:  
   
--   [Setspn](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (http://technet.microsoft.com/library/cc731241(WS.10).aspx).  
+-   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
   
 -   [Синтаксис имен субъектов-служб (SPN) SetSPN (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
@@ -58,7 +58,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
     Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-     Например: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`.  
+     Например: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  Выполните команду.  
   
@@ -67,7 +67,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 7.  Добавьте `<RSWindowsNegotiate/>` в качестве первой записи этого раздела для включения Kerberos.  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+ [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
  [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Управление сервером отчетов Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

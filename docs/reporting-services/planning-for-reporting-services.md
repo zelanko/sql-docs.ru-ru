@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: adfa89703f24d9ce93653dc897d494ccef769a0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50282a856d6d6448923c05b7e81394b6f9e6c541
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746322"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031723"
 ---
 # <a name="planning-for-reporting-services"></a>Планирование для служб Reporting Services
   Эти подразделы помогут лучше понять работу служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Сведения об установке и настройке среды служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в соответствии с потребностями пользователя.  
@@ -21,15 +21,15 @@ ms.locfileid: "47746322"
  ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Маленький значок папки") **Планирование и архитектура общих компонентов служб Reporting Services**  
  [Поддержка браузера для служб Reporting Services и Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
- [Планирование создания отчетов и развертывания отчетов | Службы Reporting Services](http://msdn.microsoft.com/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
+ [Планирование создания и развертывания отчетов | Службы Reporting Services](https://msdn.microsoft.com/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
   
- [Просмотр отчетов служб Reporting Services на устройствах с Microsoft Surface и Apple iOS](http://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
+ [Просмотр отчетов служб Reporting Services на устройствах с Microsoft Surface и Apple iOS](https://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
   
  ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Маленький значок папки") **Установка служб Reporting Services**  
  [Сервер отчетов служб Reporting Services](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
- [Контрольный список развертывания: установка служб Reporting Services в существующей ферме SharePoint](http://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
+ [Контрольный список развертывания: установка служб Reporting Services в существующей ферме SharePoint](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
   
- [Deployment Topologies for SQL Server BI Features in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)  
+ [Deployment Topologies for SQL Server BI Features in SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)  
   
   

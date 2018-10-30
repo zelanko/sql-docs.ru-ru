@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ecb1ff697f90149b102592306a8756bd7a84f776
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b026e4e361ff6664dfdc78d0215ec3ed723fe93
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777502"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021648"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Настройка масштабного развертывания сервера отчетов, работающего в собственном режиме
 
@@ -48,7 +48,7 @@ ms.locfileid: "47777502"
   
 -   Инструкции по установке экземпляров сервера отчетов см. в статье [Установка SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Если планируется выполнить масштабное развертывание на NLB-кластере, следует настроить NLB-кластер перед настройкой масштабного развертывания. Дополнительные сведения см. в статье [настроить сервер отчетов в кластере с балансированием сетевой нагрузки](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+-   Если планируется выполнить масштабное развертывание на NLB-кластере, следует настроить NLB-кластер перед настройкой масштабного развертывания. Дополнительные сведения см. в статье [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 -   Просмотрите процедуры этого раздела с инструкциями по организации общего доступа к базе данных сервера отчетов и присоединению серверов отчетов к масштабному развертыванию.  
   
@@ -143,7 +143,7 @@ An error occurred within the report server database.  This may be due to a conne
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Настройка учетной записи службы](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+[Настройка учетной записи службы](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
 [Настройка URL-адреса](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Создание базы данных сервера отчетов, работающего в собственном режиме](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Настройка URL-адресов сервера отчетов](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
@@ -151,4 +151,4 @@ An error occurred within the report server database.  This may be due to a conne
 [Добавление и удаление ключей шифрования для масштабного развертывания](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
 [Управление сервером отчетов Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

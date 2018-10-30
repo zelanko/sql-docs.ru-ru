@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bcf1d79e8d0be544ca6d9606bcee97112a0c0f42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2896ebfae8b785aff35e3f484c4d695f3b48409a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723912"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021158"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Использование элемента управления WinForms ReportViewer
   Для просмотра отчетов, развернутых на сервере отчетов, и отчетов, существующих в локальной файловой системе, можно использовать элемент управления WinForms ReportViewer для подготовки отчетов к просмотру в приложении Windows.  
@@ -151,7 +151,7 @@ End Class
   
 3.  Перейти в папку, в которой были установлены проекты образцов отчетов [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-     Чтобы скачать примеры отчетов, перейдите в раздел [Примеры отчетов AdventureWorks 2012](http://go.microsoft.com/fwlink/?LinkId=404153).  
+     Чтобы скачать примеры отчетов, перейдите в раздел [Примеры отчетов AdventureWorks 2012](https://go.microsoft.com/fwlink/?LinkId=404153).  
   
 4.  Выберите файл Sales Order Detail.rdl и нажмите кнопку **Добавить**.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17a6be9dcb025b1a7d654a954f8b42b817702223
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d89562ce168d8cf5662fc7af96da3d89cdafe509
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906284"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021928"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Учебник. Создание отчета в свободной форме (построитель отчетов)
 В этом учебнике вы создадите отчет с разбивкой на страницы в качестве информационного бюллетеня. На каждой странице выводится статический текст, сводные визуальные элементы и образец подробных данных по продажам.
@@ -505,7 +505,7 @@ ms.locfileid: "48906284"
 * [Создание счета-фактуры и формы со списками](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Ячейки, строки и столбцы области данных табликса (построитель отчетов и службы SSRS)](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-Дополнительные сведения о конструкторах запросов см. в разделах [Конструкторы запросов (построитель отчетов)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) и [Пользовательский интерфейс текстового конструктора запросов (построитель отчетов)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Дополнительные сведения о конструкторах запросов см. в разделах [Конструкторы запросов (построитель отчетов)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) и [Пользовательский интерфейс текстового конструктора запросов (построитель отчетов)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Учебники по построителю отчетов](../reporting-services/report-builder-tutorials.md) 

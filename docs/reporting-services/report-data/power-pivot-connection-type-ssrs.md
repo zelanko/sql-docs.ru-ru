@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46a91e610fd49f19a4f755b039ce7b111840d5ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d86acb0dae3d8f9059229dda764403aa999fd817
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611572"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030853"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Тип соединения PowerPivot (SSRS)
   Для извлечения данных из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , опубликованной в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сайте SharePoint, можно использовать модуль обработки данных служб SQL Server Analysis Services.  
@@ -23,7 +23,7 @@ ms.locfileid: "47611572"
 ## <a name="prerequisites"></a>предварительные требования  
  Источник данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] должен быть опубликован в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сайте SharePoint.  
   
- Для подключения к книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из построителя отчетов необходимо установить на рабочей станции библиотеку SQL Server 2008 R2 ADOMD.NET. Эта клиентская библиотека устанавливается вместе с [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel, но, если используется компьютер, на котором нет этого приложения, необходимо скачать и установить ADOMD.NET со страницы [Пакет дополнительных компонентов SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=192565).  
+ Для подключения к книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из построителя отчетов необходимо установить на рабочей станции библиотеку SQL Server 2008 R2 ADOMD.NET. Эта клиентская библиотека устанавливается вместе с [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel, но, если используется компьютер, на котором нет этого приложения, необходимо скачать и установить ADOMD.NET со страницы [Пакет дополнительных компонентов SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=192565).  
   
 ## <a name="data-source-type"></a>Тип источника данных  
  Используйте тип источника данных отчета **Microsoft SQL Server Analysis Services**.  
@@ -32,7 +32,7 @@ ms.locfileid: "47611572"
  Строкой подключения является URL-адрес для книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], опубликованной на сайте SharePoint в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или другой библиотеке, например `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Учетные данные  
- Укажите учетные данные, необходимые для доступа к книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и сайту SharePoint, например данные для проверки подлинности Windows (встроенная безопасность). Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Указание учетных данных в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Укажите учетные данные, необходимые для доступа к книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и сайту SharePoint, например данные для проверки подлинности Windows (встроенная безопасность). Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Указание учетных данных в построителе отчетов](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 ## <a name="queries"></a>Запросы  
  После подключения к источнику данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] используйте графический конструктор запросов многомерных выражений для формирования запроса путем просмотра и выбора из базовых структур данных. После создания запроса запустите его, чтобы просмотреть выбранный образец данные на панели результатов.  
@@ -61,7 +61,7 @@ ms.locfileid: "47611572"
 -   Отчет содержит только данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из источника данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ## <a name="see-also"></a>См. также:  
- [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services (построитель отчетов)](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
+ [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services (построитель отчетов)](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

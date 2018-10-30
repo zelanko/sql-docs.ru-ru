@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8eaada7d40896156dee1ba51b9a02b90b1ff9e70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5835d17dcb628eebe99bff4c6e3182a10e41dbe7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741392"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021048"
 ---
 # <a name="feature-reference-reporting-services"></a>Справочник по функциям (службы Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включают несколько средств и приложений, которые могут использоваться для создания, управления и просмотра отчетов. В этом разделе приводятся конкретные подразделы, описывающие диалоговые окна, веб-страницы и мастера этих инструментальных средств и приложений.  
@@ -29,7 +29,7 @@ ms.locfileid: "47741392"
  [Справка F1 конструктора отчетов](../reporting-services/tools/report-designer-f1-help.md)  
  Предоставляет справку для конструктора отчетов и его диалоговых окон, мастера отчетов и мастера изображений.  
   
- [Разделы справки по диспетчеру конфигурации служб Reporting Services](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
+ [Разделы справки по диспетчеру конфигурации служб Reporting Services](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  Справка к инструменту настройки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для развертывания и управления экземплярами сервера отчетов.  
   
  [Справка F1 по использованию сервера отчетов среде Management Studio](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
@@ -40,9 +40,9 @@ ms.locfileid: "47741392"
   
 ## <a name="see-also"></a>См. также:  
  [Основные понятия служб Reporting Services (SSRS)](../reporting-services/reporting-services-concepts-ssrs.md)   
- [Отчеты служб Reporting Services (службы SSRS)](../reporting-services/reports/reporting-services-reports-ssrs.md)   
+ [Отчеты служб Reporting Services (SSRS)](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../reporting-services/report-data/report-datasets-ssrs.md)   
  [Приступая к работе с построителем отчетов](http://www.microsoft.com/download/en/details.aspx?id=29072)   
- [Проектирование и реализация отчетов с помощью построителя отчетов 1.0](http://go.microsoft.com/fwlink/?LinkId=142601)  
+ [Проектирование и реализация отчетов с помощью построителя отчетов 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

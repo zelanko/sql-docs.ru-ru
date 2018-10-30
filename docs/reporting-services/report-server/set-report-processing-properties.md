@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d4391fb3957c9b0d3529ebb51d038398786c15d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b0f9d441db188551b1b2073e968c8f000b21107
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838582"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031773"
 ---
 # <a name="set-report-processing-properties"></a>Установка свойств обработки отчетов
   Свойства выполнения отчета определяют, как отчет обрабатывается. Свойства выполнения должны быть установлены для каждого отчета отдельно.  
   
- Чтобы настроить свойства выполнения отчета, откройте отчет в диспетчере отчетов, а затем перейдите к странице свойств «Выполнение». Дополнительные сведения см. в статье [Страница "Обработка свойств параметров" (диспетчер отчетов)](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). Установить свойства можно также с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], см. статью [Страница "Свойства параметров обработки" (диспетчер отчетов)](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ Чтобы настроить свойства выполнения отчета, откройте отчет в диспетчере отчетов, а затем перейдите к странице свойств «Выполнение». Дополнительные сведения см. в статье [Страница "Обработка свойств параметров" (диспетчер отчетов)](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). Установить свойства можно также с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], см. статью [Страница "Свойства параметров обработки" (диспетчер отчетов)](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
   
 ## <a name="report-execution-modes"></a>Режимы выполнения отчета  
  Отчет можно запустить либо по требованию, либо как моментальный снимок. Далее описываются оба этих подхода.  

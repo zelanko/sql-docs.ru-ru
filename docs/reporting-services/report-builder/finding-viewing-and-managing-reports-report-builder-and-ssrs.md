@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 59d4ffbb3c2088ae4b517ab99e0b2705ffccd047
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 2d28ffb546476d2e18fd1dc57d04c837f7176142
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085450"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029701"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)
   В построителе отчетов можно просматривать папки на сервере отчетов или на сайте SharePoint для поиска отчетов, общих источников данных, моделей и других связанных элементов отчета, а также просматривать конкретный компьютер для поиска локальных отчетов. Чтобы было проще находить отчеты, построитель отчетов поддерживает список недавно использованных серверов и сайтов и предоставляет прямой доступ к папкам «Рабочий стол», «Мои документы» и «Мой компьютер» в файловой системе компьютера.  
@@ -77,7 +77,7 @@ ms.locfileid: "49085450"
  ![Панель инструментов "Отчет"](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Панель инструментов \"Отчет\"")  
 Панель инструментов «Отчеты»  
   
- После запуска отчета его можно экспортировать в другой формат, например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel или PDF. Можно также экспортировать отчет с помощью модуля обработки данных, например модуля подготовки отчетов к просмотру в формате CSV, а затем использовать файл данных CSV в качестве входного для другого приложения. Дополнительные сведения об экспорте отчетов см. в разделах [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) и [Экспорт отчета в файл другого типа (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
+ После запуска отчета его можно экспортировать в другой формат, например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel или PDF. Можно также экспортировать отчет с помощью модуля обработки данных, например модуля подготовки отчетов к просмотру в формате CSV, а затем использовать файл данных CSV в качестве входного для другого приложения. Дополнительные сведения об экспорте отчетов см. в разделах [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) и [Экспорт отчета в файл другого типа (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
   
  Самый простой способ выбрать и запустить отчет — открыть диспетчер отчетов и выполнить поиск нужного отчета или перейти к нему. Пошаговые инструкции по открытию отчетов см. в разделе [Открытие и закрытие отчетов (диспетчер отчетов)](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "49085450"
   
  Чтобы получить доступ к страницам приложения, выберите относящиеся к элементу действия из раскрывающегося меню в отчете или в другом элементе сервера отчетов, ранее добавленном в библиотеку SharePoint. В зависимости от типа элемента и наличия необходимых разрешений может быть доступно создание отчетов в построителе отчетов, формирование моделей и задание параметров безопасности для элементов моделей.  
   
- Дополнительные сведения о службах Reporting Services и технологии SharePoint см. в статье [Настройка и администрирование сервера отчетов (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) в [электронной документации](http://go.microsoft.com/fwlink/?LinkId=154888) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+ Дополнительные сведения о службах Reporting Services и технологии SharePoint см. в статье [Настройка и администрирование сервера отчетов (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) в [электронной документации](https://go.microsoft.com/fwlink/?LinkId=154888) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Поиск элементов сервера отчетов на сайте SharePoint  
  Перед заданием свойств элемента необходимо определить его расположение. Элементы сервера отчетов всегда хранятся в библиотеках или в папке в пределах библиотеки.  
@@ -148,6 +148,6 @@ ms.locfileid: "49085450"
 ## <a name="see-also"></a>См. также:  
  [Сохранение отчетов (построитель отчетов)](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Установка и удаление построителя отчетов](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
+ [Установка и удаление построителя отчетов](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

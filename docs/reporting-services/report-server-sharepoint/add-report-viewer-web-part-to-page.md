@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e0b05a9d3f78215a11d5ae4071a3a3ed39e225a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9adedc8637acf84feccd5b24fa540892399ebc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595612"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030423"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Добавление веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на страницу SharePoint
 
@@ -74,4 +74,4 @@ ms.locfileid: "47595612"
 * Отчеты Power BI невозможно использовать с веб-частью "Средство просмотра отчетов".
 * Если вы не видите веб-часть "Средство просмотра отчетов", которую хотите добавить на страницу, убедитесь в том, что [веб-часть "Средство просмотра отчетов" развернута](deploy-report-viewer-web-part.md).
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

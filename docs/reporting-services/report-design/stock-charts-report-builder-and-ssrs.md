@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8fd78d37c9ae890fc2a5412916acc55b30487f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38412eabee8a497532e12e139294ee47a1c57165
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725482"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020708"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>Биржевые диаграммы (построитель отчетов и службы SSRS)
 
@@ -21,7 +21,7 @@ ms.locfileid: "47725482"
   
  ![Биржевая диаграмма](../../reporting-services/report-design/media/rs-stockchart.gif "Биржевая диаграмма")  
   
- Пример биржевой диаграммы доступен в виде образца отчета построителя отчетов. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Пример биржевой диаграммы доступен в виде образца отчета построителя отчетов. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -43,6 +43,6 @@ ms.locfileid: "47725482"
 [Диаграммы диапазонов](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [Диаграммы](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Форматирование диаграммы](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Диалоговое окно "Свойства оси" — "Параметры оси"](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[Диалоговое окно "Свойства оси" — "Параметры оси"](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

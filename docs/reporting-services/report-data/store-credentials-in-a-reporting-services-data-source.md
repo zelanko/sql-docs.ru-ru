@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0cde0748588a56421e7577bf5f9a7d9d8348ccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75789117747794ce3eeb7a1b19bdeff6bfbd6d0c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832502"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027733"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Сохраненные учетные данные в источнике данных Reporting Services
   Сохраненные учетные данные, используемые сервером отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , можно настроить для получения доступа к внешним данным отчета. Сохраненные учетные данные используются, если отчет запускается автоматически, например, подписка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которая публикует отчет как электронное письмо. Сервер отчетов возвращает и использует учетные данные при планировании или запуске обработки отчета. В этом разделе описывается настройка сохраненных учетных данных для серверов отчетов как в собственном режиме, так и в режиме интеграции с SharePoint.  
@@ -30,11 +30,11 @@ ms.locfileid: "47832502"
 ##  <a name="bkmk_top"></a> Требования политики безопасности для сохраненных учетных данных  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Учетная запись, которая используется для сохраненных учетных данных, должна быть настроена в соответствии с одной из указанных ниже политик безопасности на сервере отчетов. Рекомендуется выбирать политику с минимальным уровнем разрешений, необходимых для используемой среды.  
   
-1.  **Локальный вход в систему**. Дополнительные сведения см. в разделе [Разрешение локального входа](http://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
+1.  **Локальный вход в систему**. Дополнительные сведения см. в разделе [Разрешение локального входа](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
   
-2.  **Вход в качестве пакетного задания**. Дополнительные сведения см. в разделе [Вход в качестве пакетного задания](http://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
+2.  **Вход в качестве пакетного задания**. Дополнительные сведения см. в разделе [Вход в качестве пакетного задания](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
   
-3.  Общие сведения о политиках см. в разделе [Изменение параметров безопасности для объекта групповой политики](http://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
+3.  Общие сведения о политиках см. в разделе [Изменение параметров безопасности для объекта групповой политики](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> Настройка сохраненных учетных данных для источника данных, связанного с отчетами (собственный режим)  
   

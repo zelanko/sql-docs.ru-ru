@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8978a5ad1429890861c96238317b38189c144409
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13b71430d1d07eb8c33492bfe18c7c2b2395b951
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826722"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027823"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Сохранение отчетов на сервере отчетов (построитель отчетов)
   В построителе отчетов можно сохранить определение отчета на сервере отчетов (также называется публикацией отчета). Если отчет сохранен на сервере отчетов, его могут просматривать другие пользователи. При каждом запуске опубликованного отчета будут получены самые последние данные. Чтобы сохранить статическую копию отчета, готового к просмотру, экспортируйте отчет в другой формат файла и сохраните его или используйте функцию журнала отчета, чтобы сохранить версию отчета, готового к просмотру.  
@@ -50,6 +50,6 @@ ms.locfileid: "47826722"
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Сохранение отчетов (построитель отчетов)](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [Экспорт отчета в файл другого типа (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
+ [Экспорт отчета в файл другого типа (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
   
   

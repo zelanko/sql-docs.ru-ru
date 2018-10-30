@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3892815dee3002e06abf6c76e4604225a29749a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba16d32c5a44385329f789c2e0851609514be616
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777352"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028573"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Урок 6. Добавление в приложение элемента управления ReportViewer
 После завершения проектирования дочернего отчета с помощью мастера отчетов далее необходимо добавить в приложение веб-сайта элемент управления ReportViewer. Если вы используете веб-сайт отчетов ASP.NET, элемент управления ReportViewer будет добавлен на страницу default.aspx.   
@@ -30,7 +30,7 @@ ms.locfileid: "47777352"
   
 5.  В поле **Выбор отчета** выберите созданный родительский отчет.  
   
-    После выбора отчета экземпляры источников данных, используемых в отчете, будут созданы автоматически. Будет сформирован код для создания экземпляра каждого объекта DataTable (и его контейнера [DataSet](http://msdn.microsoft.com/library/system.data.dataset.aspx) ). В область конструктора будут добавлены элементы управления [ObjectDataSource](http://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx) , соответствующие каждому источнику данных, который используется в отчете. Настройка этих элементов управления источником данных осуществляется автоматически.  
+    После выбора отчета экземпляры источников данных, используемых в отчете, будут созданы автоматически. Будет сформирован код для создания экземпляра каждого объекта DataTable (и его контейнера [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) ). В область конструктора будут добавлены элементы управления [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx) , соответствующие каждому источнику данных, который используется в отчете. Настройка этих элементов управления источником данных осуществляется автоматически.  
   
 6.  В меню «Построение» выберите команду «Построить веб-сайт».  
   

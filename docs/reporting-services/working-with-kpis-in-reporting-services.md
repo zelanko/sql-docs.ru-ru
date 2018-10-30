@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: adebe82c29aff88167bd5c8e3cfa02f3f35785c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cd0827109cff1cda866ed8a0d85f9cb37ab54f6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784872"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021588"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Работа с ключевыми показателями эффективности в службах Reporting Services
 
@@ -107,4 +107,4 @@ ms.locfileid: "47784872"
 [Веб-портал](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Работа с общими наборами данных](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

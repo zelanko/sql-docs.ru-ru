@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 128614f4276c3853bc2b5d5f69306ac89db6c370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744572"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030203"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Создание мобильных отчетов служб Reporting Services
 С помощью издателя мобильных отчетов для Microsoft SQL Server в рабочей области конструирования с настраиваемыми строками и столбцами сетки, а также гибкими элементами мобильных отчетов можно быстро создавать мобильные отчеты, которые масштабируются в соответствии с любым размером экрана.  
   
-Прежде чем начать создание мобильного отчета впервые, можно установить издатель мобильных отчетов для SQL Server на локальном компьютере с веб-портала служб Reporting Services. Его также можно установить из [Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=733527). Впоследствии вы сможете начинать работу и на веб-портале, и локально.   
+Прежде чем начать создание мобильного отчета впервые, можно установить издатель мобильных отчетов для SQL Server на локальном компьютере с веб-портала служб Reporting Services. Его также можно установить из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=733527). Впоследствии вы сможете начинать работу и на веб-портале, и локально.   
     
 1. На верхней панели веб-портала Reporting Services выберите **Создать** > **Мобильный отчет**.  
   

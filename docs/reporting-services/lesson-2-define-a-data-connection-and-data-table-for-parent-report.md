@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dfdddd3e263ef6f83f8ad12635c76c61fef6e284
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d284bc507c3398c85cf823528f17fdbd671e96a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603138"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021778"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета
 После создания нового проекта веб-сайта с использованием шаблона веб-сайта ASP.NET для Visual C# далее необходимо создать подключение к данным и таблицу данных для родительского отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2014.  
@@ -26,7 +26,7 @@ ms.locfileid: "47603138"
   
     В результате к проекту добавляется новый XSD-файл **DataSet1.xsd** и открывается конструктор набора данных.  
   
-3.  Из окна "Панель элементов" перетащите элемент управления **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx.aspx)** в рабочую область конструирования. Запустится мастер настройки **TableAdapter** .  
+3.  Из окна "Панель элементов" перетащите элемент управления **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx.aspx)** в рабочую область конструирования. Запустится мастер настройки **TableAdapter** .  
   
 4.  На странице **Выбор подключения к данным** щелкните **Новое подключение**.  
   

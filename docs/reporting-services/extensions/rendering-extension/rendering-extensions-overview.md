@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf01ea0fda03d38291c8a41a044fc409406fa89b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b727b8ff0bdfcca2af46cf1df56b5080c0a56215
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679342"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027953"
 ---
 # <a name="rendering-extensions-overview"></a>Общие сведения о модулях подготовки отчетов
   Модуль подготовки отчетов – это компонент или модуль сервера отчетов, преобразующий данные отчета и сведения о макете в формат, определяемый устройством отображения. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] включает в себя семь модулей подготовки отчетов: HTML, Excel, Word, CSV или текст, XML, изображения и PDF. Можно создать дополнительные модули подготовки для создания отчетов в других форматах.  
@@ -54,7 +54,7 @@ ms.locfileid: "47679342"
   
  Создание пользовательского модуля подготовки отчетов — это сложный процесс. Обычно модуль подготовки отчетов должен поддерживать все возможные сочетания элементов отчета; кроме того, для него необходимо внедрить сотни классов, интерфейсов, методов и свойств. Если пользователю необходимо подготовить отчет в формате, отсутствующем в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], и он решил написать собственную реализацию с использованием управляемого кода, то в коде модуля подготовки отчетов должен быть реализован интерфейс **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension**, необходимый серверу отчетов.  
   
- Дополнительную документацию и технические документы по службам [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] см. в новейших технических ресурсах на [веб-сайте служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=19951).  
+ Дополнительную документацию и технические документы по службам [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] см. в новейших технических ресурсах на [веб-сайте служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
 ## <a name="see-also"></a>См. также:  
  [Реализация модуля подготовки отчетов](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

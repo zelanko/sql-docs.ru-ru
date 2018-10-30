@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 437116ae427f9d5ed6492962ad290b496f7b1090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 548c66c7e62f5197e27a633ea4f8325c1466cdd8
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666842"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021211"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>создать, изменить или удалить папку (диспетчер отчетов)
   Для упорядочения элементов и управления элементами, публикуемыми на сервере отчетов, можно создать папки. Создание папок поможет пользователям находить интересующие их отчеты. Для диспетчеров содержимого папки обеспечивают инфраструктуру для применения разрешений. Можно создать назначения ролей для определенных папок, чтобы ограничить доступ к отчетам, которые находятся на стадии разработки или не подлежат широкому распространению.  
   
 ### <a name="to-create-a-folder"></a>Создание папки  
   
-1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  В диспетчере отчетов выберите корневую папку, а затем нажмите **Создать папку**. Либо, чтобы создать папку внутри существующей папки, перейдите к этой папке на странице **Содержимое** , а затем щелкните папку, чтобы открыть ее. После этого нажмите **Создать папку**.  
   
@@ -72,8 +72,8 @@ ms.locfileid: "47666842"
 7.  Для сохранения изменений нажмите кнопку **Применить** .  
   
 ## <a name="see-also"></a>См. также:  
- [Страница "Создание папки" (диспетчер отчетов)](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
- [Страница "Содержимое" (диспетчер отчетов)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Страница "Создание папки" (диспетчер отчетов)](https://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
+ [Страница "Содержимое" (диспетчер отчетов)](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

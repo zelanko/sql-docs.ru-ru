@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d533acbbc99d02c644d910e1b2ee3555d58bece0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2cc79176f0c52cd1fdceae0d04d46b4279e9d50
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699502"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030753"
 ---
 # <a name="role-assignments---modify-or-delete"></a>Изменение или удаление назначений ролей
   Назначение ролей сопоставляет учетную запись группы или пользователя со стандартным определением роли, включающим задачи, которые могут быть выполнены. Оно определяет типы операций, которые пользователь может выполнять с папками, отчетами, моделями и другим типом содержимого. Чтобы создать, изменить или удалить назначения ролей, используется диспетчер отчетов. После создания назначения ролей для конкретного пользователя или группы ее можно изменить, выбрав другую роль. Если нужно отменить разрешения на сервер отчетов, можно удалить на нем назначение ролей.  
@@ -34,7 +34,7 @@ ms.locfileid: "47699502"
   
 ### <a name="to-modify-or-delete-a-system-role-assignment"></a>Удаление или изменение назначения системной роли  
   
-1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Щелкните элемент **Настройки сайта**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47699502"
 ## <a name="see-also"></a>См. также:  
  [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Назначения ролей](../../reporting-services/security/role-assignments.md)   
- [Страница "Параметры сайта" (диспетчер отчетов)](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [Страница "Создание назначения системной роли": "изменение назначения системных ролей" (диспетчер отчетов)](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [Страница "Параметры сайта" (диспетчер отчетов)](https://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [Страница "Создание назначения системной роли": "изменение назначения системных ролей" (диспетчер отчетов)](https://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   

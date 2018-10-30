@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76448fc4a919b9931ea97712038be9ba0f2c2da2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f8e1ebaaeaf6ea6ee413bf20f83beaddcbdd465
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747542"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020358"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Работа с общими наборами данных (веб-портал)
 
@@ -104,4 +104,4 @@ ms.locfileid: "47747542"
   
 Затем можно **изменить** или **удалить** планы из списка. Параметр **Новый на основе существующего** доступен, когда выбран один и только один план обновления кэша. При выборе этого параметра создаваемый план обновления будет скопирован из исходного плана. Страница плана обновления кэша открывается предварительно заполненная подробными сведениями выбранного плана. Затем можно изменить параметры плана обновления и сохранить план с новым описанием.  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

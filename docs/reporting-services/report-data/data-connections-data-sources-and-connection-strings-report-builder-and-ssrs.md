@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b6b443d1cdba9a72d6117465fd5c350d79abd63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 809d427a6644a95a9f86ec3fbc9bf0d19023cc32
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611882"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030019"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)
 
@@ -20,7 +20,7 @@ ms.locfileid: "47611882"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  Для включения данных в отчет с разбиением на страницы [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] прежде всего следует создать *источники данных* и *наборы данных*. Данная тема объясняет типы источников данных, как создать источники данных и предоставляет важную информацию, относящуюся к учетным данным источника данных. Источник данных включает в себя тип источника данных, информацию о подключении и используемый тип учетных данных. Существует два типа источников данных отчета: внедренные и общие. Внедренный источник данных определяется в отчете и используется только этим отчетом. Общий источник данных определяется независимо от отчета и может использоваться несколькими отчетами. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
+  Для включения данных в отчет с разбиением на страницы [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] или  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] прежде всего следует создать *источники данных* и *наборы данных*. Данная тема объясняет типы источников данных, как создать источники данных и предоставляет важную информацию, относящуюся к учетным данным источника данных. Источник данных включает в себя тип источника данных, информацию о подключении и используемый тип учетных данных. Существует два типа источников данных отчета: внедренные и общие. Внедренный источник данных определяется в отчете и используется только этим отчетом. Общий источник данных определяется независимо от отчета и может использоваться несколькими отчетами. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
 
 ## <a name="data-in-includessrbnoversionincludesssrbnoversionmd"></a>Данные в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
  ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
@@ -50,7 +50,7 @@ ms.locfileid: "47611882"
   
      Разработчики могут воспользоваться API-интерфейсом <xref:Microsoft.ReportingServices.DataProcessing> для создания модулей обработки данных, работающих с другими типами источников данных.  
   
--   В [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] перейдите на сервер отчетов или веб-сайт SharePoint и выберите общие источники данных или создайте внедренные источники данных в отчете. В [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]невозможно создать общий источник данных. В [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] невозможно использовать пользовательские модули обработки данных.  
+-   В [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] перейдите на сервер отчетов или веб-сайт SharePoint и выберите общие источники данных или создайте внедренные источники данных в отчете. В [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]невозможно создать общий источник данных. В [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]нельзя использовать пользовательские модули обработки данных.  
   
  В следующей таблице приведены все различия между внедренными и общими источниками данных.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47611882"
   
 -   интерфейс ODBC  
   
--   Семантическая модель бизнес-аналитики Microsoft для Power View: этот тип источников данных доступен на сайте SharePoint, настроенном для работы с коллекцией [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Этот тип источника данных используется только для презентаций [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Дополнительную информацию смотрите в [Построение отличных семантических табличных моделей бизнес-аналитики для Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Семантическая модель бизнес-аналитики Microsoft для Power View: этот тип источников данных доступен на сайте SharePoint, настроенном для работы с коллекцией [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Этот тип источника данных используется только для презентаций [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Дополнительную информацию смотрите в [Построение отличных семантических табличных моделей бизнес-аналитики для Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Полный список источников данных и версий, поддерживаемых [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
@@ -158,4 +158,4 @@ ms.locfileid: "47611882"
 [Определение свойств развертывания](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Определение учетных данных и сведениях о подключении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

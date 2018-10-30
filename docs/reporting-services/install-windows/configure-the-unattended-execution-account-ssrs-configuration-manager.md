@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7fa941d5c7229eeba45e52bddb2b434d3cae44da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643312"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099915"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предусматривает специальную учетную запись, предназначенную для автоматической обработки отчетов и отправки запросов на соединение по сети. Эти учетные записи используются для следующего.  
@@ -101,6 +101,6 @@ ms.locfileid: "47643312"
  Данные учетной записи удаляются из файла RSReportServer.config.  
   
 ## <a name="see-also"></a>См. также:  
- [Диспетчер конфигурации служб Reporting Services (службы Reporting Services в собственном режиме)](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
+ [Диспетчер конфигурации служб Reporting Services (службы Reporting Services в собственном режиме)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
   
   

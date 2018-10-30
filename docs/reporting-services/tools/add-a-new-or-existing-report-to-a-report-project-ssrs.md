@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dd18d9586dd7777b306b7c25cf67124026ce8255
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dba27d665c40e84cd8240f996d3f6b8f5e782e7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727052"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031143"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Добавление в проект отчета новый или существующий отчет (службы SSRS)
   В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно добавить в проект новый отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы либо с помощью мастера отчетов, либо добавив пустой отчет. Кроме того, можно добавить в проект существующий отчет. После добавления отчета его имя появляется в папке **Отчеты** проекта.  
@@ -33,7 +33,7 @@ ms.locfileid: "47727052"
   
     -   **Выбор источника данных.** Первым шагом создания отчета является определение источника данных. Помимо отображения списка всех общих источников данных, содержащихся в проекте отчета, мастер отчетов даст возможность создать новый источник данных.  
   
-    -   **Проектирование отчета.** Следующим шагом является конструирование запроса. Строку запроса можно ввести вручную, создать с помощью конструктора запросов либо импортировать из другого отчета. Дополнительные сведения о конструкторах запросов см. в разделе [Reporting Services Query Designers](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835).  
+    -   **Проектирование отчета.** Следующим шагом является конструирование запроса. Строку запроса можно ввести вручную, создать с помощью конструктора запросов либо импортировать из другого отчета. Дополнительные сведения о конструкторах запросов см. в разделе [Reporting Services Query Designers](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835).  
   
     -   **Выбор типа отчета.** Следующим шагом является выбор типа отчета. Можно выбрать табличный или матричный отчет. Табличный отчет имеет фиксированное число столбцов. Матричный (перекрестный) отчет имеет переменное число столбцов, которое зависит от результатов запроса. Отчет-карта связывает аналитические данные с географическими.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "47727052"
   
 ## <a name="see-also"></a>См. также:  
  [Учебники по службам Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)  
- Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

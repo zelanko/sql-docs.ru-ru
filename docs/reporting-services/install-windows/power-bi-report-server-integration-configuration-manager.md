@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 6561f4a6378a31485722a9e87d59d293ced0dad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19543e33782d2d175f5ddfbc065f6016cbed3fcc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759432"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029583"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Интеграция сервера отчетов с Power BI (диспетчер конфигурации)
 
@@ -113,7 +113,7 @@ ms.locfileid: "47759432"
 
 1. Пользователь просматривает отчеты в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] и при первом закреплении элемента отчета из [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]
 
-2. он будет перенаправлен на страницу входа в Azure AD. Кроме того, выполнить вход можно со страницы [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Когда пользователь входит в управляемый клиент Azure, между его учетной записью Azure и разрешениями [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается связь.  Дополнительные сведения см. в статье [Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+2. он будет перенаправлен на страницу входа в Azure AD. Кроме того, выполнить вход можно со страницы [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Когда пользователь входит в управляемый клиент Azure, между его учетной записью Azure и разрешениями [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается связь.  Дополнительные сведения см. в разделе [Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
 
 3. Маркер безопасности пользователя возвращается на сервер отчетов и
 
@@ -125,7 +125,7 @@ ms.locfileid: "47759432"
 
 7. Создается подписка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для управления запланированным обновлением элемента отчета на плитке панели мониторинга. Подписка использует маркер безопасности, который был создан при входе пользователя в систему.
 
-     Маркер действует в течение **90 дней**, после чего пользователю необходимо выполнить вход еще раз, чтобы создать маркер. По истечении срока действия маркера закрепленные плитки по-прежнему будут отображаться на панели мониторинга, но данные обновляться не будут.  Для подписок, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используемых для закрепленных элементов, будут выводиться сообщения об ошибках до тех пор, пока не будет создан новый маркер пользователя. См. статью [Страница "Мои параметры", используемая для интеграции с Power BI (веб-портал)](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). для получения дополнительных сведений.
+     Маркер действует в течение **90 дней**, после чего пользователю необходимо выполнить вход еще раз, чтобы создать маркер. По истечении срока действия маркера закрепленные плитки по-прежнему будут отображаться на панели мониторинга, но данные обновляться не будут.  Для подписок, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используемых для закрепленных элементов, будут выводиться сообщения об ошибках до тех пор, пока не будет создан новый маркер пользователя. См. статью [Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). для получения дополнительных сведений.
 
 Когда пользователь закрепляет элемент второй раз, шаги 1–4 пропускаются. Вместо них из базы данных ReportServer извлекается идентификатор приложения и URL-адреса, и поток продолжается с шага 5.
 
@@ -149,8 +149,8 @@ ms.locfileid: "47759432"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Мои параметры для интеграции с Power BI (веб-портал)](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Мои параметры для интеграции с Power BI (веб-портал)](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Закрепление элементов служб Reporting Services на информационных панелях Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Панели мониторинга в Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

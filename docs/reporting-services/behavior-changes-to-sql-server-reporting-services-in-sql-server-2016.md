@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2959b333de3c183394a46e580101489f6eed87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0524ee3eab63c2be21ff4196a2c68a3c30bd13ba
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845672"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028473"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>Изменения в работе служб SQL Server Reporting Services в SQL Server 2016
 
@@ -45,4 +45,4 @@ ms.locfileid: "47845672"
 [Неподдерживаемые возможности в службах SQL Server Reporting Services в версии SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
 [Критические изменения в SQL Server Reporting Services в SQL Server 2016](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

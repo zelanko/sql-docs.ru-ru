@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a26c80da92e52c785ab247ce6ea6463d6e31886d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 048503cecc50b684aea1d684cdef4a849ee0378f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670892"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030195"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Счетчики производительности для MSRS 2011 в режиме интеграции с SharePoint, объекты производительности
   В этой статье рассматриваются счетчики производительности для объектов производительности **MSRS 2011 Web Service SharePoint Mode** и **MSRS 2011 Windows Service SharePoint Mode** , которые принадлежат к числу компонентов развертывания служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в режиме SharePoint.  
@@ -28,7 +28,7 @@ ms.locfileid: "47670892"
 > [!NOTE]  
 >  Эти объекты производительности служат для наблюдения за событиями на локальном сервере отчетов. При запуске сервера отчетов в масштабном развертывании счетчики относятся к текущему серверу, а не к масштабному развертыванию в целом.  
   
- Объекты производительности доступны в системном мониторе Windows (**Perfmon.exe**). Дополнительные сведения см. в документации по Windows. [Профилирование среды выполнения](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Объекты производительности доступны в системном мониторе Windows (**Perfmon.exe**). Дополнительные сведения см. в документации по Windows. [Профилирование среды выполнения](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  Сведения о счетчиках производительности и серверах отчетов в собственном режиме см. в разделах [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 (собственный режим)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) и [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 в режиме интеграции с SharePoint (режим интеграции с SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47670892"
 -   [Использование командлетов PowerShell для возврата списков](#bkmk_powershell)  
   
 ##  <a name="bkmk_webservice"></a> Счетчики производительности веб-службы MSRS 2011 в режиме интеграции с SharePoint  
- Объект производительности **MSRS 2011 Web Service SharePoint Mode** используется для наблюдения за производительностью сервера отчетов. Этот объект производительности включает коллекцию счетчиков, используемых для отслеживания работы сервера отчетов, обычно инициируемой интерактивными операциями просмотра отчетов. Если включить этот счетчик, его можно применять ко всем экземплярам служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Также можно выбирать конкретные экземпляры. Эти счетчики сбрасываются, когда платформа [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] останавливает веб-службу сервера отчетов.  
+ Объект производительности **MSRS 2011 Web Service SharePoint Mode** используется для наблюдения за производительностью сервера отчетов. Этот объект производительности включает коллекцию счетчиков, используемых для отслеживания работы сервера отчетов, обычно инициируемой интерактивными операциями просмотра отчетов. Если включить этот счетчик, его можно применять ко всем экземплярам служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Также можно выбирать конкретные экземпляры. Эти счетчики сбрасываются, когда платформа [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] останавливает веб-службу сервера отчетов.  
   
  В следующей таблице перечислены счетчики, включенные в объект производительности **MSRS 2011 Web Service SharePoint Mode** .  
   

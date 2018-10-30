@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a57d7330dba6703b8cdcae264dc835113e4a0e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea2e2b6ef177f4c11d7655f4a4a66c159d40961a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594763"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029053"
 ---
 # <a name="saving-reports-report-builder"></a>Сохранение отчетов (построитель отчетов)
   В построителе отчетов отчеты с разбивкой на страницы можно сохранить на сервере отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , в библиотеке SharePoint, в общей папке файлов, для которой имеются разрешения на запись, или на компьютере. 
@@ -62,7 +62,7 @@ ms.locfileid: "47594763"
    
 ## <a name="see-also"></a>См. также:  
  [Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Установка и удаление построителя отчетов](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+ [Установка и удаление построителя отчетов](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Печать отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
