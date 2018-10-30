@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e4a453952dc67bdb572697b0d20de2c15fa034
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072178"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991307"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Журнал изменений для SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "49072178"
 ### <a name="known-issues"></a>Известные проблемы:
 
 - Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS.
-- SSDT 15.8.1 сейчас не поддерживает Windows 7 с пакетом обновления 1 (SP1). Если у вас установлена эта операционная система, используйте версию 15.8.0
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT для Visual Studio 2017 (15.8)
@@ -492,16 +491,16 @@ ms.locfileid: "49072178"
     - Добавлены столбцы как в PowerQuery.
     - Параметры доступа к данным в моделях 1400 (свойства уровня модели, используемой подсистемой M).
         - Включить быстрое объединение (по умолчанию используется значение "ложь"; если задано значение "истина", подсистема комбинирования игнорирует уровни конфиденциальности источников данных при объединении данных)
-        - Включить устаревшие перенаправления (по умолчанию используется значение "ложь"; если задано значение "истина", подсистема комбинирования будет использовать потенциально небезопасные перенаправления HTTP,  например из HTTPS в HTTP URI).  
-        - Возвращать значения ошибок, равные NULL (по умолчанию используется значение "ложь"; если задано значение "истина", ошибки на уровне ячеек возвращаются со значением NULL; если же задано значение "ложь" и ячейка содержит ошибку, выдается исключение)  
+        - Включить устаревшие перенаправления (по умолчанию используется значение "ложь"; если задано значение "истина", подсистема комбинирования будет использовать потенциально небезопасные перенаправления HTTP,  например из HTTPS в HTTP URI).  
+        - Возвращать значения ошибок, равные NULL (по умолчанию используется значение "ложь"; если задано значение "истина", ошибки на уровне ячеек возвращаются со значением NULL; если же задано значение "ложь" и ячейка содержит ошибку, выдается исключение)  
     - Дополнительные (файловые) источники данных с использованием PowerQuery.
-        - Excel 
-        - Text/CSV 
-        - Xml 
-        - Json 
-        - Папка 
-        - База данных Access 
-        - хранилище BLOB-объектов Azure 
+        - Excel 
+        - Text/CSV 
+        - Xml 
+        - Json 
+        - Папка 
+        - База данных Access 
+        - хранилище BLOB-объектов Azure 
     - Локализованный пользовательский интерфейс PowerQuery
 - Окно инструментов редактора DAX
     - Улучшен интерфейс редактирования DAX для мер, вычисляемых столбцов и выражений строк, доступный в представлении в меню "Другие окна" в SSDT.
@@ -610,24 +609,24 @@ ms.locfileid: "49072178"
 В DacFx добавлены два новых API: DacServices.Publish() и DacServices.Script(). В них также можно выполнять действия Publish, Script и Report в рамках одной операции. Ниже представлены примеры использования.
 
 ```
-DacServices service = new DacServices(connectionString);
-using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
-var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+DacServices service = new DacServices(connectionString);
+using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
+var options = new PublishOptions() {
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
-// Call publish and receive deployment script & report in the results
-PublishResult result = service.Publish(package, "TargetDb", options);
+// Call publish and receive deployment script & report in the results
+PublishResult result = service.Publish(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
 
-// Call script and receive deployment script & report in results
-result = service.Script(package, "TargetDb", options);
+// Call script and receive deployment script & report in results
+result = service.Script(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
@@ -662,7 +661,7 @@ Console.WriteLine(result.DeploymentReport);
 
 **Служба интеграции**
 
-* Исправлена ошибка подключения [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks): перемещение нескольких задач пакета службы интеграции.
+* Исправлена ошибка подключения  [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks): перемещение нескольких задач пакета службы интеграции.
 
 
 
@@ -675,7 +674,7 @@ Console.WriteLine(result.DeploymentReport);
 
 **Новые возможности**
 
-Теперь сравнение схем поддерживается в SqlPackage.exe и API платформы приложений уровня данных (DacFx). Дополнительные сведения см. в статье [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/) (Сравнение схем SqlPackage и платформы приложений уровня данных).
+Теперь сравнение схем поддерживается в SqlPackage.exe и API платформы приложений уровня данных (DacFx). Дополнительные сведения см. в статье  [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/) (Сравнение схем SqlPackage и платформы приложений уровня данных).
 
 **Analysis Services. Режим интегрированной рабочей области для табличного экземпляра SSDT (SSAS)**
 

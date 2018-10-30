@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 190d354ffc7f5e0c0c0bd3fb4cf5c99a69890271
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864392"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150185"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Учебник: дополнительные советы и рекомендации по использованию SSMS
 В этом учебнике приводятся некоторые дополнительные советы по использованию SQL Server Management Studio (SSMS). В этой статье показано, как выполнить следующие действия: 
@@ -133,7 +133,7 @@ ms.locfileid: "47864392"
 
 
 ## <a name="filter-objects-in-object-explorer"></a>Фильтрация объектов в обозревателе объектов
-Чтобы упростить поиск объектов в базах данных, содержащих много объектов, можно воспользоваться фильтрацией. В этом разделе описано, как фильтровать таблицы, но эти же действия можно выполнять в любом другом узле обозревателя объектов:
+В базах данных, в которых имеется множество объектов, можно использовать фильтрацию для поиска конкретных таблиц, представлений и т. д. В этом разделе описано, как фильтровать таблицы, но эти же действия можно выполнять в любом другом узле обозревателя объектов:
 
 1. Подключитесь к серверу SQL Server.
 2. Разверните узел **Базы данных** > **AdventureWorks** > **Таблицы**. Будут показаны все таблицы в базе данных.
