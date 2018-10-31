@@ -88,7 +88,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Идентификатор расписания.|  
 |**job_count**|**int**|Возвращенное количество заданий.|  
   
-> **Примечание:****sp_help_jobschedule** возвращает значения из **dbo.sysjobschedules** и **dbo.sysschedules** системных таблиц в **msdb** .   **sysjobschedules** обновляется каждые 20 минут. Это может повлиять на значения, возвращаемые этой хранимой процедурой.  
+> **Примечание:** **sp_help_jobschedule** возвращает значения из **dbo.sysjobschedules** и **dbo.sysschedules** системных таблиц в **msdb** .   **sysjobschedules** обновляется каждые 20 минут. Это может повлиять на значения, возвращаемые этой хранимой процедурой.  
   
 ## <a name="remarks"></a>Примечания  
  Параметры **sp_help_jobschedule** может использоваться только в определенных сочетаниях. Если *schedule_id* указано, ни *job_id* , ни *имя_задания* можно указать. В противном случае *job_id* или *имя_задания* параметры могут быть использованы *schedule_name*.  
