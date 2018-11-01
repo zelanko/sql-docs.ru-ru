@@ -77,7 +77,7 @@ ms.locfileid: "48076124"
 ### <a name="expanded-csv-data-renderer"></a>Расширен модуль подготовки данных в формате CSV  
  В [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], CSV-файл включает данные диаграмм и датчиков. Приложения, которые используют применявшуюся ранее структуру CSV-файлов, больше работать не будут из-за появления дополнительных столбцов для диаграмм и датчиков.  
   
- Дополнительные сведения см. в разделе [Exporting to a CSV File &#40;Report Builder and SSRS&#41;](report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [Экспорт в CSV-файл &#40;построитель отчетов и службы SSRS&#41;](report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также  
  [Изменения в работе в SQL Server Reporting Services в SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   

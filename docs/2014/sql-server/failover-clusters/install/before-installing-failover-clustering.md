@@ -54,7 +54,7 @@ ms.locfileid: "48116456"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Эти файлы можно установить, запустив файл SqlSupport.msi, который находится на установочном носителе [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
--   Убедитесь, что в кластере сервера WSFC не установлены антивирусные программы. Дополнительные сведения см. в статье [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Базы знаний Майкрософт, [Antivirus software may cause problems with cluster services](http://go.microsoft.com/fwlink/?LinkId=116986).  
+-   Убедитесь, что в кластере сервера WSFC не установлены антивирусные программы. Дополнительные сведения см. в статье [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Базы знаний Майкрософт, [антивирусное программное обеспечение может вызвать проблемы в работе кластера служб](http://go.microsoft.com/fwlink/?LinkId=116986).  
   
 -   В имени кластерной группы при установке отказоустойчивого кластера нельзя использовать следующие символы:  
   
