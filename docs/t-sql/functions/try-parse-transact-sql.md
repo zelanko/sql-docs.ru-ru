@@ -92,7 +92,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 |Полное имя|Псевдоним|LCID|Конкретная культура|  
 |---------------|-----------|----------|----------------------|  
-|us_english|Английский|1033|ru-RU|  
+|us_english|Английский|1033|en-US|  
 |Deutsch|German|1031|de-DE|  
 |Français|Французский|1036|fr-FR|  
 |日本語|Японский|1041|ja-JP|  
