@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7520a4e9bdc346113e4777bd6899f5ccc0e01c
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 957d8c397843f30e831dcc0a5f33943b959bac90
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460319"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226266"
 ---
 # <a name="polybase-features-and-limitations"></a>Возможности и ограничения PolyBase
 
@@ -62,15 +62,11 @@ ms.locfileid: "49460319"
 
 PolyBase имеет следующие ограничения.
 
-- Максимальный размер строки, включая полную длину столбцов переменной длины, не может превышать 32 МБ в SQL Server или 1 МБ в хранилище данных Azure SQL.
-
-- PolyBase не поддерживает типы данных Hive 0.12+ (например, Char(), VarChar()).
+- Максимальный размер строки, включая полную длину в столбцах переменной длины, не может превышать 32 КБ в SQL Server или 1 МБ в хранилище данных SQL Azure.
 
 - При экспорте данных в формате файлов ORC из SQL Server или хранилища данных SQL Azure столбцы с большим объемом текста могут ограничиваться всего 50 столбцами из-за ошибок нехватки памяти в Java. Чтобы обойти эту проблему, экспортируйте подмножество столбцов.
 
-- Не удается прочесть или записать данные, зашифрованные в местах хранения в Hadoop. Сюда входят зашифрованные зоны HDFS или прозрачное шифрование.
-
-- PolyBase не может подключиться к экземпляру Hortonworks, если включена поддержка KNOX.
+- PolyBase не может подключиться к экземпляру Hortonworks, если включена поддержка Knox.
 
 - Если вы используете таблицы Hive с параметром transactional, равным true, PolyBase не имеет доступа к данным в каталоге таблицы Hive.
 
@@ -80,10 +76,6 @@ PolyBase имеет следующие ограничения.
 - [PolyBase не устанавливается при добавлении узла в отказоустойчивый кластер SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
-
-- Встроенная проверка подлинности не поддерживается. Сейчас поддерживаются только имя пользователя и пароль.  
-
-- Шифрование включено по умолчанию.
 
 ## <a name="next-steps"></a>Следующие шаги
 

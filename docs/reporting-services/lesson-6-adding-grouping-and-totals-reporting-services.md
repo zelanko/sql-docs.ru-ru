@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1efff69fb2311d1c81ac4f25a1a51fe456b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720512"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051017"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 На этом занятии вы добавите группирование и итоги к отчету [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для организации и суммирования данных.  
@@ -33,9 +33,9 @@ ms.locfileid: "47720512"
   
 4.  Из области **Данные отчета** перетащите поле **Order** на панель **Группы строк** . Поместите это поле под обозначением "Дата" и над обозначением **(Сведения)**.
 
-![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
+    ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
-    Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
+    Обратите внимание, что дескриптор строки теперь включает две скобки, указывая на наличие двух групп: ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png). В этой таблице теперь имеются также два столбца **Заказ** .  
   
 5.  Удалите исходные столбцы **Дата** и **Заказ** **справа** от двойной линии. Это приведет к удалению соответствующих отдельных значений записи, чтобы отображалось только значение группы. Выберите маркеры двух столбцов, щелкните правой кнопкой мыши и выберите пункт **Удалить столбцы**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47720512"
   
 4.  В меню **Формат** щелкните элемент **Цвет фона**, а затем щелкните элемент **Оранжевый**и нажмите кнопку **ОК**.  
   
-    ![](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
+    ![Задание оранжевого цвета фона](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
 ## <a name="bkmk_addgrandtotal"></a>Добавление общего итога к отчету  
   
@@ -113,9 +113,9 @@ ms.locfileid: "47720512"
 2.  Откройте меню **Проект** и выберите пункт **Свойства учебника...**.  
   
 3.  В поле **TargetServerURL** введите имя сервера отчетов, например:   
-- `http:/<servername>/reportserver`  
+    - `http:/<servername>/reportserver`  
    
-- `http://localhost/reportserver` работает, если отчет создается на сервере отчетов.  
+    - `http://localhost/reportserver` работает, если отчет создается на сервере отчетов.  
   
   
 4. Обратите внимание на то, что TargetReportFolder — это имя проекта, используемое в учебнике.  Это имя папки, в которой отчет будет развернут в следующих шагах.  
@@ -143,15 +143,15 @@ ms.locfileid: "47720512"
   
     Перейдите по URL-адресу веб-портала [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
     **Примечание** . URL-адресом *портала* является "Reports", но URL-адресом *сервера* отчетов не является "Reportserver".  Пример:   
-    - `http://<server name>/reports`.  
-     - `http://localhost/reports` работает, если отчет создается на сервере отчетов.  
+    `http://<server name>/reports`.  
+    `http://localhost/reports` работает, если отчет создается на сервере отчетов.  
   
 8.  Перейдите в папку, которая содержит отчет. Имя по умолчанию — *tutorial*, то есть имя проекта или имя, которые вы ввели в поле TargetReportFolder в свойствах проекта.   
 Щелкните имя отчета **Заказы на продажу** , чтобы отобразить этот отчет в браузере.  
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** Учебник по созданию базового табличного отчета успешно освоен.**  
+Учебник по созданию базового табличного отчета успешно освоен.  
   
 ## <a name="see-also"></a>См. также:  
 [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

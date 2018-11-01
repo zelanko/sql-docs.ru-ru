@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13f8153d681ce4992726f17375cf98c8c5ab9cff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7acbaa7d880abca786c995860dbc6d7068392619
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605872"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099905"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Синтаксические обозначения в Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47605872"
 |{ } (фигурные скобки)|Обязательные элементы синтаксиса. Скобки набирать не следует.|  
 |[**,**...*n*]|Указывает на то, что предшествующий элемент можно повторить *n* раз. Вхождения элемента разделяются запятыми.|  
 |[...*n*]|Указывает на то, что предшествующий элемент можно повторить *n* раз. Отдельные вхождения элемента разделяются пробелами.|  
-|;|Признак конца инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Хотя точка с запятой не требуется для большинства инструкций в данной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], она понадобится в следующей версии.|  
+|;|Признак конца инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Хотя точка с запятой не требуется для большинства инструкций в этой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], этот символ станет обязательным в будущей версии.|  
 |\<label> ::=|Имя синтаксического блока. Это обозначение используется для группирования и маркировки сегментов с длинным синтаксисом или элемента синтаксиса, который может использоваться в нескольких местах в пределах одной инструкции. Каждое место, в котором может быть использован синтаксический блок, обозначается меткой, заключенной в двойные угловые скобки: \<label>.<br /><br /> Набор представляет собой коллекцию выражений, например \<grouping set>; а список — коллекцию наборов, например \<composite element list>.|  
   
 ## <a name="multipart-names"></a>Многочастные имена  

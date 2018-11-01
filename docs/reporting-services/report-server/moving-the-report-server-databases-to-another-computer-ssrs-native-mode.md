@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1e144c70a1ceca4097597a8a87d639865f96b68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94cdbe6358bd0361addd70d682a3d0d41e70bbba
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742944"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100225"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)
 
-  Базы данных сервера отчетов, используемые в установке, можно переместить на экземпляр компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] , находящийся на другом компьютере. Базы данных reportserver и reportservertempdb должны перемещаться или копироваться вместе. Установка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует наличия обеих баз данных. База данных reportservertempdb должна быть связана по имени с перемещаемой базой данных reportserver.  
+  Базы данных сервера отчетов, используемые при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], можно переместить в экземпляр на другом компьютере. Базы данных reportserver и reportservertempdb должны перемещаться или копироваться вместе. Установка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует наличия обеих баз данных. База данных reportservertempdb должна быть связана по имени с перемещаемой базой данных reportserver.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в основном режиме.  
   
@@ -226,4 +226,4 @@ GO
 [Настройка ключей шифрования и управление ими](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [База данных сервера отчетов](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

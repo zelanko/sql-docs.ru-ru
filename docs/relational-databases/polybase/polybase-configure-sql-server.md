@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4729d78f0cfecf80f65dbff0f7bc2d6abe2ebbfa
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 90b535714eea3a00ecffd2cf010187fbcd676a82
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874262"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806644"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Настройка PolyBase для доступа к внешним данным в SQL Server
 
@@ -68,7 +68,7 @@ ms.locfileid: "48874262"
     WITH ( 
     LOCATION = sqlserver://SqlServer,
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
+      CREDENTIAL = SQLServerCredentials
     );
 
      ```
@@ -80,7 +80,7 @@ ms.locfileid: "48874262"
      GO
      ```
 
-1.  Создайте внешние таблицы, которые представляют данные, хранящиеся во внешней системе SQL Server, с помощью инструкции [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+1.  Создайте внешние таблицы для представления данных, хранимых во внешней системе SQL Server, с помощью инструкции [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
      ```sql
      /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
@@ -107,6 +107,10 @@ ms.locfileid: "48874262"
      ```sql
       CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
+
+## <a name="sql-server-connector-compatible-types"></a>Совместимые типы соединителей SQL Server
+
+Вы можете установить подключение к другим источникам данных, поддерживающим подключение SQL Server. Соединитель SQL Server PolyBase позволяет создать внешнюю таблицу **Хранилища данных SQL Azure и Базы данных SQL Azure**. Для этого выполните те же действия, что указаны выше. Учетные данные в области базы, адрес сервера, порт и строка расположения должны соответствовать аналогичным параметрам в совместимом источнике данных, к которому нужно подключиться.
 
 ## <a name="next-steps"></a>Следующие шаги
 

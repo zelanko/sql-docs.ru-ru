@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 07fe3c1266cbdbabd13afc86aad9db04ea004932
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: f63416c3400f328f0602aa804dc66716067eeb7e
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419201"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226306"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачивание и установка SQL Server Data Tools (SSDT) для Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,16 +87,18 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 1. [Скачайте автономный установщик SSDT](#ssdt-for-vs-2017-standalone-installer).
 2. [Скачайте vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe).
-3. Не отключаясь от Интернета, выполните одну из следующих команд, чтобы скачать все файлы, необходимые для автономной установки. Следует использовать параметр `--layout`. Замените <filepath> на фактический путь, чтобы сохранить файлы.
+3. Не отключаясь от Интернета, выполните одну из следующих команд, чтобы скачать все файлы, необходимые для автономной установки. Обязательно используйте параметр `--layout`, чтобы непосредственно скачать файлы для автономной установки. Замените <filepath> на фактический путь макетов, чтобы сохранить файлы.
 
+   
    A.   Для установки конкретного языка передайте локаль: `vs_sql.exe --layout c:\<filepath> --lang en-us` (размер версии с одним языком — примерно 1 ГБ)  
    Б. Для установки всех языков пропустите аргумент `--lang`: `vs_sql.exe --layout c:\<filepath>` (размер версии со всеми языками — примерно 3,9 ГБ).
 
+4. Выполните `SSDT-Setup-ENU.exe /layout c:\<filepath>`, чтобы извлечь полезные данные SSDT в то же место `<filepath>`, куда были скачаны файлы VS2017. Это гарантирует, что все файлы будут находиться в одной папке макетов.
+
 Дальнейшие действия можно выполнить в автономном режиме.
 
-1. Скопируйте полезные данные VS2017 в папку полезных данных SSDT. Убедитесь, что все файлы находятся в одной папке layouts.
-2. Запустите `vs_setup.exe --NoWeb`, чтобы установить оболочку VS2017 Shell и SQL Server Data Project.
-3. Запустите `SSDT-Setup-ENU.exe /install` и выберите SSIS/SSRS/SSAS.
+1. Запустите `vs_setup.exe --NoWeb`, чтобы установить оболочку VS2017 Shell и SQL Server Data Project.
+2. В папке макетов запустите `SSDT-Setup-ENU.exe /install` и выберите SSIS/SSRS/SSAS.
 
    - Для автоматической установки запустите `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 677d076d912cc7b3926fdd8ae2ef9dcc79c7b350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762372"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806724"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Настройка PolyBase для доступа к внешним данным в Hadoop
 
@@ -88,12 +88,15 @@ ms.locfileid: "47762372"
 
 Чтобы запросить данные из источника данных Hadoop, необходимо определить внешнюю таблицу для использования в запросах Transact-SQL. Далее указаны шаги по настройке внешней таблицы.
 
-1. Создайте главный ключ в базе данных. Это необходимо для шифрования секрета учетных данных.
+1. Создайте в базе данных главный ключ, если его нет. Это необходимо для шифрования секрета учетных данных.
 
-   ```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-   ```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+     ```
+    ## <a name="arguments"></a>Аргументы
+    PASSWORD ='password'
 
+    Пароль, который использовался при шифровке главного ключа базы данных. Аргумент password должен соответствовать требованиям политики паролей Windows на компьютере, где размещается экземпляр SQL Server.
 1. Создайте учетные данные на уровне базы данных для кластеров Hadoop, защищенных с помощью Kerberos.
 
    ```sql

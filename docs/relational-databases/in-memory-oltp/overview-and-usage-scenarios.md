@@ -13,12 +13,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bbb4cce22423cbc5ac2f6e4941ffa1c624f18d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830742"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150195"
 ---
 # <a name="overview-and-usage-scenarios"></a>Общие сведения и сценарии использования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,6 +129,7 @@ ms.locfileid: "47830742"
 #### <a name="customer-case-studies"></a>Клиентские сценарии
 
 - Одним нашим клиентам удалось повысить производительность на 40 %, просто заменив традиционные возвращающие табличное значение параметры на возвращающие табличное значение параметры, оптимизированные для памяти: [High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)(Скоростной прием данных Интернета вещей с помощью выполняющейся в памяти OLTP в Azure).
+- В ходе масштабирования инфраструктуры компания SentryOne значительно усовершенствовала прием данных, снизив задержку практически до нуля в решении мониторинга и заменив таблицы в tempdb на выполняющиеся в памяти таблицы OLTP: [Solution provider breaks through performance ceiling with data monitoring innovation](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure) (Инновационный мониторинг данных позволил поставщику решений преодолеть потолок производительности).
 
 ### <a name="etl-extract-transform-load"></a>Извлечение, преобразование и загрузка
 

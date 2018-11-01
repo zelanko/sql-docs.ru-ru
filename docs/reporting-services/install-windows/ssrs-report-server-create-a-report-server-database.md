@@ -1,17 +1,17 @@
 ---
 title: Создание базы данных сервера отчетов (диспетчер конфигураций служб SSRS) | Документы Майкрософт
-ms.date: 09/20/2017
+ms.date: 10/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c2a0a6391e1eeecf6f5831072528840c3257d1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768242"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050908"
 ---
 # <a name="create-a-report-server-database"></a>создать базу данных сервера отчетов
 
@@ -66,10 +66,10 @@ ms.locfileid: "47768242"
 >  Сервер отчетов и экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором хранится база данных сервера отчетов, могут находиться в разных доменах. При развертывании в Интернете сервер, как правило, защищают с помощью брандмауэра. При настройке доступа в Интернет на сервере отчетов для защиты соединения при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который защищен брандмауэром и IPSEC, следует использовать учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="database-server-edition-requirements"></a>Требования к выпуску сервера баз данных  
- При создании базы данных сервера отчетов убедитесь в том, что данный выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть использован для ее хранения. Дополнительные сведения см. в подразделе "Требования к выпуску серверной базы данных сервера отчетов" раздела [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ При создании базы данных сервера отчетов убедитесь в том, что данный выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть использован для ее хранения. Дополнительные сведения см. в разделе [Требования к выпуску серверной базы данных сервера отчетов](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) статьи [Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server 2016](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Диспетчер конфигурации служб Reporting Services](http://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+[Диспетчер конфигурации служб Reporting Services](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

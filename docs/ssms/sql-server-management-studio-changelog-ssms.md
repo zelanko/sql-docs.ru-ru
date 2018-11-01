@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e19cfe7a0ad2292491dfc6b392f47e5a452774a
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307148"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226396"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "49307148"
 
 SSMS 18.x работает на основе изолированной оболочки Visual Studio 2017:
 
-- Это означает, что оболочка современная (мы выбрали Visual Studio 2107 15.6.4). Новая оболочка содержит все исправления специальных возможностей, внесенные в SSMS и Visual Studio.
+- Это означает использование современной оболочки (мы выбрали Visual Studio 2017 15.6.4). Новая оболочка содержит все исправления специальных возможностей, внесенные в SSMS и Visual Studio.
 
 Улучшения специальных возможностей:
 
@@ -127,7 +127,8 @@ Always On:
 Файлы аудита:
 
 - Изменен метод проверки подлинности с ключа учетной записи хранения на проверку подлинности на основе Azure AD.
-Always Encrypted на базе AD:
+
+Always Encrypted:
 
 - Добавлена вкладка Always Encrypted с флажком *Включить Always Encrypted* (в диалоговом окне *Соединение с сервером*), на которой теперь можно легко включить или отключить шифрование Always Encrypted для подключения к базе данных.
 - Добавлено несколько улучшений поддержки Always Encrypted с безопасными анклавами:
@@ -1128,7 +1129,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Устранена проблема, из-за которой операция "Сформировать скрипт…" завершалась ошибкой для баз данных SQL Azure.
 - Исправлены ошибки в разделах "Создать скрипт как" и "Мастер создания скриптов", которые приводили к добавлению лишних новых строк при создании таких объектов, как хранимые процедуры. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - Поставщик SQLAS PowerShell: добавлено свойство LastProcessed в папки Dimension и MeasureGroup. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
-- Статистика активных запросов: исправлена ошибка, при которой отображается только первый запрос в пакете. [Элемент Connect] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- Статистика активных запросов: исправлена ошибка, при которой отображается только первый запрос в пакете. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
 - Showplan: отображение максимального показателя вместо суммы для потоков в окне свойств.
 - Хранилище запросов: добавлен новый отчет для запросов с большой переменчивостью при выполнении.
 - Проблемы производительности обозревателя объектов: [элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3114074). Контекстное меню таблиц ненадолго зависает. SSMS замедляет работу при щелчке индекса таблицы правой кнопкой мыши (при работе через удаленное подключение в Интернете). Избегайте выполнения табличных запросов с сортировкой на сервере.
@@ -1139,8 +1140,8 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Исправлена ошибка, вызывающая аварийное завершение работы SSMS при попытке отображения разрешений для базы данных.
 - Хранилище запросов: общие улучшения в контекстных меню для сеток результатов в отчете хранилища запросов.
 - Настройка Always Encrypted для существующей таблицы завершается с ошибками, в которых указаны посторонние объекты. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
-- Настройка Always Encrypted для существующей базы данных с несколькими схемами не работает. [Элемент Connect] (http://connect.microsoft.com/SQLServer/feedback/details/3109591)
-- Мастер зашифрованного столбца в Always Encrypted завершается с ошибкой из-за того, что база данных содержит представления, ссылающиеся на системные представления. [Элемент Connect] (http://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- Настройка Always Encrypted для существующей базы данных с несколькими схемами не работает. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- Мастер зашифрованного столбца в Always Encrypted завершается с ошибкой из-за того, что база данных содержит представления, ссылающиеся на системные представления. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3111925)
 - При шифровании с помощью Always Encrypted ошибки из-за обновления модулей после шифрования обрабатываются неправильно.
 - Исправлена ошибка усечения пользовательского интерфейса в диалоговом окне "Регистрация нового сервера".
 - Исправлено условие в пользовательском интерфейсе DMF, которое вызывало неправильное обновление выражений, содержащих константные строковые значения с кавычками.

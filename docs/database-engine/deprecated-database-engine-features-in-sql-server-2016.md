@@ -16,12 +16,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87fcb3590b628af4400edf3c3f6541f0f11a9b92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b476cd8c1579ba519d8f045154be4bd7628badc6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598602"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032093"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Категория|Устаревшая функция|Замена|Имя функции|Идентификатор функции|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Резервное копирование и восстановление|Инструкция RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD остается устаревшей. Поддержка инструкций BACKUP { DATABASE &#124; LOG } WITH PASSWORD и BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD прекращена.|Нет.|BACKUP DATABASE или LOG WITH PASSWORD<br /><br /> BACKUP DATABASE или LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Уровни совместимости|Обновление с версии 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Когда [поддержка](http://aka.ms/sqllifecycle) версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] завершается, соответствующий уровень совместимости базы данных помечается как нерекомендуемый. Однако мы будем как можно дольше поддерживать приложения, сертифицированные для работы на любом соответствующем уровне совместимости, чтобы упростить обновление. Дополнительные сведения об уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Уровень совместимости базы данных 100|108|  
+|Уровни совместимости|Обновление с версии 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Когда [поддержка](http://aka.ms/sqllifecycle) версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] завершается, соответствующий уровень совместимости базы данных помечается как нерекомендуемый. Однако мы будем как можно дольше поддерживать приложения, сертифицированные для работы на любом соответствующем уровне совместимости, чтобы упростить обновление. Дополнительные сведения об уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Уровень совместимости базы данных 100|108|  
 |Объекты базы данных|Возможность возвращать результирующие наборы из триггеров.|None|Возврат результатов из триггера|12|  
 |Шифрование|Шифрование с использованием алгоритмов RC4 и RC4_128 является устаревшим. В следующей версии запланировано удаление его поддержки. Расшифровка с использованием алгоритмов RC4 и RC4_128 не является устаревшей.|Используйте другой алгоритм шифрования, например AES.|Устаревший алгоритм шифрования|253|  
 |Удаленные серверы|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|Замените удаленные серверы связанными серверами. Процедуру sp_addserver можно использовать только с параметром local.|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -64,7 +64,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Категория|Устаревшая функция|Замена|Имя функции|Идентификатор функции|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Уровни совместимости|sp_dbcmptlevel|ALTER DATABASE… SET COMPATIBILITY_LEVEL. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
-|Уровни совместимости|Уровень совместимости базы данных 110 и 120|Запланируйте обновление базы данных и приложения для следующего выпуска.|Уровень совместимости базы данных 110<br /><br /> Уровень совместимости базы данных 120||  
+|Уровни совместимости|Уровень совместимости базы данных 110 и 120|Запланируйте обновление базы данных и приложения для следующего выпуска. Однако мы будем как можно дольше поддерживать приложения, сертифицированные для работы на любом соответствующем уровне совместимости, чтобы упростить обновление. Дополнительные сведения об уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Уровень совместимости базы данных 110<br /><br /> Уровень совместимости базы данных 120||  
 |XML|Создание встроенных схем XDR|Директива XMLDATA для параметра XML FOR является устаревшей. В режимах RAW и AUTO следует использовать создание XSD-схем. В режиме EXPLICT для директивы XMLDATA замены нет.|XMLDATA|181|  
 |Резервное копирование и восстановление|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE или LOG TO TAPE|235|  
 |Резервное копирование и восстановление|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  

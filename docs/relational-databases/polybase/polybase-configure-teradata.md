@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b1baf1655619a3bc4b61939e2de8310956c9678d
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 1140e537e4ea7614df90f964ae280b7d86741d31
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874278"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806634"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Настройка PolyBase для доступа к внешним данным в Teradata
 
@@ -27,27 +27,28 @@ ms.locfileid: "48874278"
 
 Если вы не установили PolyBase, см. раздел [Установка PolyBase](polybase-installation.md). Необходимые условия описываются в статье, посвященной установке.
 
-Для использования Polybase в Teradata требуется распространяемый компонент VC++. 
+Для использования PolyBase в Teradata требуется распространяемый компонент VC++.
  
 ## <a name="configure-an-external-table"></a>Настройка внешней таблицы
 
 Чтобы запросить данные из источника данных Teradata, необходимо создать внешние таблицы, позволяющие ссылаться на внешние данные. Этот раздел содержит пример кода для создания таких внешних таблиц. 
- 
-Рекомендуется создавать статистику для столбцов внешней таблицы, особенно для тех, которые используются для объединения, применения фильтров и статистических вычислений, чтобы обеспечить оптимальную производительность запросов.
 
 В этом разделе будут созданы такие объекты:
 
-- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
+- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-
-1. Создайте главный ключ в базе данных. Это необходимо для шифрования секрета учетных данных.
+1. Создайте в базе данных главный ключ, если его нет. Это необходимо для шифрования секрета учетных данных.
 
      ```sql
-     CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
+    ## <a name="arguments"></a>Аргументы
+    PASSWORD ='password'
+
+    Пароль, который используется при шифровке главного ключа базы данных. Аргумент password должен соответствовать требованиям политики паролей Windows на компьютере, где размещается экземпляр SQL Server.
 
 1. Создайте учетные данные на уровне базы данных.
  
@@ -56,31 +57,25 @@ ms.locfileid: "48874278"
       *  IDENTITY: user name for external source.  
      *  SECRET: password for external source.
      */
-     CREATE DATABASE SCOPED CREDENTIAL TeradataCredentials 
+     CREATE DATABASE SCOPED CREDENTIAL credential_name
      WITH IDENTITY = 'username', Secret = 'password'
      ```
 
-1. Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Укажите расположение внешнего источника данных и учетные данные для Teradata.
+1. Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
      ```sql
     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    * CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
     */  
-    CREATE EXTERNAL DATA SOURCE TeradataInstance
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH ( 
-    LOCATION = teradata://TeradataServer,
-    -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
+    LOCATION = teradata://<server address>[:<port>],
+   -- PUSHDOWN = ON | OFF,
+    CREDENTIAL =credential_name
     );
 
-     ```
-
-1. Создайте схемы для внешних данных.
-
-     ```sql
-     CREATE SCHEMA teradata;
-     GO
      ```
 
 1.  Создайте внешние таблицы, которые представляют данные, хранящиеся во внешней системе Teradata: [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
@@ -89,7 +84,7 @@ ms.locfileid: "48874278"
      /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
       *  DATA_SOURCE: the external data source, created above.
       */
-     CREATE EXTERNAL TABLE teradata.lineitem(
+     CREATE EXTERNAL TABLE customer(
       L_ORDERKEY INT NOT NULL,
       L_PARTKEY INT NOT NULL,
      L_SUPPKEY INT NOT NULL,
@@ -108,18 +103,18 @@ ms.locfileid: "48874278"
      L_COMMENT VARCHAR(44) NOT NULL
      )
      WITH (
-     LOCATION='tpch.lineitem',
-     DATA_SOURCE=TeradataInstance
+     LOCATION='customer',
+     DATA_SOURCE= external_data_source_name
      );
      ```
 
-1. Создайте статистику по внешней таблице для оптимизации производительности.
+1. **Необязательно.** Создайте статистику для внешней таблицы.
+
+    Чтобы обеспечить оптимальную производительность запросов, мы советуем создать статистику столбцов внешней таблицы, особенно тех, которые используются для объединения, применения фильтров и статистических выражений.
 
      ```sql
-      CREATE STATISTICS LineitemOrderKeyStatistics ON teradata.lineitem(L_ORDERKEY) WITH FULLSCAN; 
-      ```
-
-
+      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+     ```
 
 ## <a name="next-steps"></a>Следующие шаги
 

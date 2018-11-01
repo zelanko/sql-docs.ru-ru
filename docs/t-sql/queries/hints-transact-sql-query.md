@@ -1,7 +1,7 @@
 ---
 title: Указания запросов (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 521a3a19ce2e1278d856cc3ade5feed67b4182c5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ecdfe3131c797dc10c1bfe87fcfd6c7e7a3eb1c9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906314"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806834"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -257,29 +257,33 @@ ms.locfileid: "48906314"
 
  Поддерживаются следующие имена подсказок:    
  
-*  'DISABLE_OPTIMIZED_NESTED_LOOP'  
- Заставляет обработчик запросов не использовать операцию сортировки (сортировки пакетов) для оптимизации соединений вложенного цикла при формировании плана запроса. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
-*  'FORCE_LEGACY_CARDINALITY_ESTIMATION'  <a name="use_hint_ce70"></a> Указывает оптимизатору запросов использовать модель [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более ранних версий. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 или параметру [Конфигурация области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON.
-*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'  
- Включает исправления в оптимизаторе запросов, выпущенные в накопительных пакетах обновления и пакетах обновления SQL Server. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 или параметру [Конфигурация области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) QUERY_OPTIMIZER_HOTFIXES=ON.
-*  'DISABLE_PARAMETER_SNIFFING'  
- Указывает оптимизатору запросов использовать распространение среднего значения данных во время компиляции запроса с одним или несколькими параметрами, что делает план запроса независимым от значения параметра, которое сначала использовалось при компиляции запроса. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 или параметру [Конфигурация области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) PARAMETER_SNIFFING=OFF.
-*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'    <a name="use_hint_correlation"></a> Указывает SQL Server создавать план с минимальной избирательностью при оценке и предикатов AND для фильтров, которые будут применяться при корреляции. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 при использовании модели оценки кратности в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более ранних версиях и имеет тот же эффект, что и при использовании [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 с моделью оценки кратности в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более поздних версиях.
-*  'DISABLE_OPTIMIZER_ROWGOAL'  <a name="use_hint_rowgoal"></a>Указывает SQL Server создать план без использования корректировок цели строки с запросами, содержащими ключевые слова TOP, OPTION (FAST N), IN или EXISTS. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
-*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
- Позволяет использовать автоматически созданную быструю статистику (поправку к гистограмме) для любого начального столбца индекса, для которого требуется оценить кратность. Гистограмма, используемая для оценки кратности, будет так откорректирована во время компиляции запроса, чтобы учитывать фактическое максимальное или минимальное значение этого столбца. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
-*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'    <a name="use_hint_join_containment"></a> Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создать план запроса с допущением простого вложения вместо допущения базового вложения по умолчанию для соединений в модели [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) оптимизатора запросов [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более поздней версии. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
- Заставляет оптимизатор запросов использовать модель [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md), которая соответствует текущему уровню совместимости базы данных. Используйте это указание для переопределения параметра [Конфигурация области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON или [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
-*  "DISABLE_INTERLEAVED_EXECUTION_TVF"   
- Отключает выполнение с чередованием для функций с табличным значением с несколькими инструкциями. Дополнительные сведения см. в разделе о [выполнении с чередованием для функций с табличным значением с несколькими инструкциями](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
-*  "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK"     
- Отключает обратную связь по временно предоставляемому буферу памяти в пакетном режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в пакетном режиме](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
-*  "DISABLE_BATCH_MODE_ADAPTIVE_JOINS"     
- Отключает адаптивные соединения в пакетном режиме. Дополнительные сведения см. в разделе [Адаптивные соединения в пакетном режиме](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
-*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
+   Побуждает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создать план запроса с допущением простого вложения вместо допущения базового вложения по умолчанию для соединений в модели [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) оптимизатора запросов версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более поздних. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
+*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
+   Заставляет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создавать план с минимальной избирательностью при оценке предикатов AND для фильтров в случае корреляции. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 при использовании модели оценки кратности в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более ранних версиях и имеет тот же эффект, что и при использовании [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 с моделью оценки кратности в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более поздних версиях.
+*  "DISABLE_BATCH_MODE_ADAPTIVE_JOINS"       
+   Отключает адаптивные соединения в пакетном режиме. Дополнительные сведения: [Адаптивные соединения в пакетном режиме](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
+*  "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK"       
+   Отключает обратную связь по временно предоставляемому буферу памяти в пакетном режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в пакетном режиме](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
+*  "DISABLE_INTERLEAVED_EXECUTION_TVF"      
+   Отключает выполнение с чередованием для функций с табличным значением с несколькими инструкциями. Дополнительные сведения см. в разделе о [выполнении с чередованием для функций с табличным значением с несколькими инструкциями](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+*  'DISABLE_OPTIMIZED_NESTED_LOOP'      
+   Заставляет обработчик запросов не использовать операцию сортировки (сортировки пакетов) для оптимизации соединений вложенного цикла при формировании плана запроса. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
+*  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
+   Заставляет SQL Server создать план без использования корректировок цели строки с запросами, содержащими ключевые слова TOP, OPTION (FAST N), IN или EXISTS. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
+*  'DISABLE_PARAMETER_SNIFFING'      
+   Указывает оптимизатору запросов использовать распространение среднего значения данных во время компиляции запроса с одним или несколькими параметрами, что делает план запроса независимым от значения параметра, которое сначала использовалось при компиляции запроса. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 или параметру [Конфигурация области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) PARAMETER_SNIFFING=OFF.
+*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
+   Позволяет использовать автоматически созданную быструю статистику (поправку к гистограмме) для любого начального столбца индекса, для которого требуется оценить кратность. Гистограмма, используемая для оценки кратности, будет так откорректирована во время компиляции запроса, чтобы учитывать фактическое максимальное или минимальное значение этого столбца. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
+*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
+   Включает исправления в оптимизаторе запросов, выпущенные в накопительных пакетах обновления и пакетах обновления SQL Server. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 или параметру [Конфигурация области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) QUERY_OPTIMIZER_HOTFIXES=ON.
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
+   Заставляет оптимизатор запросов использовать модель [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md), которая соответствует текущему уровню совместимости базы данных. Используйте это указание для переопределения параметра [Конфигурация области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON или [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
+*  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
+   Заставляет оптимизатор запросов использовать модель [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более ранних версий. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 или параметру [Конфигурация области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON.
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  Принудительно применяет поведение оптимизатора запросов на уровне запроса, как если бы запрос был скомпилирован с уровнем совместимости базы данных *n*, где *n* — это поддерживаемый уровень совместимости базы данных. Список значений, поддерживаемых сейчас для *n*, см. здесь: [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md). **Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления CU10).    
- 
+
    > [!NOTE]
    > Указание QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n не переопределяет значение по умолчанию или параметр оценки унаследованной кратности, если оно применяется с использованием конфигурации области баз данных, флага трассировки или другого указания запроса, например QUERYTRACEON.   
    > Это указание влияет только на поведение оптимизатора запросов. Оно не влияет на другие функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые могут зависеть от [уровня совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), включая доступность некоторых функций базы данных.  
@@ -287,7 +291,7 @@ ms.locfileid: "48906314"
     
 *  'QUERY_PLAN_PROFILE'      
  Включает упрощенное профилирование для запроса. Когда завершается запрос, содержащий это новое указание, вызывается новое расширенное событие query_plan_profile. Это расширенное событие предоставляет статистику выполнения и фактический план выполнения XML (подобно расширенному событию query_post_execution_showplan, но только для запросов, содержащих новое указание). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 (CU3) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 11 (CU11)). 
- 
+
   > [!NOTE]
   > Если включен сбор расширенных событий query_post_execution_showplan, в каждый запрос, который выполняется на сервере, будет добавлена стандартная инфраструктура профилирования. Это может повлиять на общую производительность сервера.      
   > Если вместо этого вы включите сбор расширенных событий *query_thread_profile* для использования упрощенной инфраструктуры профилирования, издержки производительности будут гораздо ниже, но по-прежнему могут влиять на производительность сервера.       

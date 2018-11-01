@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a51842a1682b5e02db4ea216bddefbabbf0a7f56
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 39889d49702394f0aec8f79c328e28ba318c9864
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874312"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806744"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Настройка PolyBase для доступа к внешним данным в MongoDB
 
@@ -25,13 +25,11 @@ ms.locfileid: "48874312"
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Если вы не установили PolyBase, см. раздел [Установка PolyBase](polybase-installation.md). Необходимые условия описываются в статье, посвященной установке.
+Если вы не установили PolyBase, см. раздел [Установка PolyBase](polybase-installation.md).
 
 ## <a name="configure-an-external-table"></a>Настройка внешней таблицы
 
 Чтобы запросить данные из источника данных MongoDB, необходимо создать внешние таблицы, позволяющие ссылаться на внешние данные. Этот раздел содержит пример кода для создания таких внешних таблиц.
-
-Чтобы обеспечить оптимальную производительность запросов, мы советуем создать статистику столбцов внешней таблицы, особенно тех, которые используются для объединения, применения фильтров и статистических выражений.
 
 В этом разделе будут созданы такие объекты:
 
@@ -40,52 +38,50 @@ ms.locfileid: "48874312"
 - CREATE EXTERNAL TABLE (Transact-SQL)
 - CREATE STATISTICS (Transact-SQL)
 
-1.    Создайте главный ключ в базе данных. Это необходимо для шифрования секрета учетных данных.
+1. Создайте в базе данных главный ключ, если его нет. Это необходимо для шифрования секрета учетных данных.
 
-      ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-      ```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+     ```
+    ## <a name="arguments"></a>Аргументы
+    PASSWORD ='password'
 
-1.   Создайте учетные данные на уровне базы данных.
+    Пароль, который использовался при шифровке главного ключа базы данных. Аргумент password должен соответствовать требованиям политики паролей Windows на компьютере, где размещается экземпляр SQL Server.
+
+1.   Создайте учетные данные в области базы данных для доступа к источнику MongoDB.
 
      ```sql
      /*  specify credentials to external data source
      *  IDENTITY: user name for external source.  
      *  SECRET: password for external source.
      */
-     CREATE DATABASE SCOPED CREDENTIAL MongoDBCredentials 
+     CREATE DATABASE SCOPED CREDENTIAL credential_name 
      WITH IDENTITY = 'username', Secret = 'password';
      ```
 
-1.  Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Укажите расположение внешнего источника данных и учетные данные для источника данных MongoDB.
+1.  Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
      ```sql
-     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+     /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
     */  
-    CREATE EXTERNAL DATA SOURCE MongoInstance
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH (
-    LOCATION = mongodb://MongoServer,
+    LOCATION = mongodb://<server>[:<port>],
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = MongoDBCredentials
+      CREDENTIAL = credential_name
     );
      ```
 
-1. Создайте схемы для внешних данных.
-
-     ```sql
-     CREATE SCHEMA MongoDB;
-     GO
-     ```
-
-1.  Создайте внешние таблицы, которые представляют данные, хранящиеся во внешней системе MongoDB, с помощью инструкции [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+1.  Создайте внешние таблицы для представления данных, хранимых во внешней системе MongoDB, с помощью инструкции [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
 
      ```sql
      /*  LOCATION: MongoDB table/view in '<database_name>.<schema_name>.<object_name>' format
      *  DATA_SOURCE: the external data source, created above.
      */
-     CREATE EXTERNAL TABLE MongoDB.orders(
+     CREATE EXTERNAL TABLE customers(
      [O_ORDERKEY] DECIMAL(38) NOT NULL,
      [O_CUSTKEY] DECIMAL(38) NOT NULL,
      [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
@@ -94,19 +90,22 @@ ms.locfileid: "48874312"
      [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
      )
      WITH (
-     LOCATION='TPCH..ORDERS',
-     DATA_SOURCE= MongoDBInstance
+     LOCATION='customer',
+     DATA_SOURCE= external_data_source_name
      );
      ```
 
-1. Создайте статистику по внешней таблице для оптимизации производительности.
+1. **Необязательно.** Создайте статистику для внешней таблицы.
+
+    Чтобы обеспечить оптимальную производительность запросов, мы советуем создать статистику столбцов внешней таблицы, особенно тех, которые используются для объединения, применения фильтров и статистических выражений.
 
      ```sql
-      CREATE STATISTICS OrdersOrderKeyStatistics ON MongoDB.orders(O_ORDERKEY) WITH FULLSCAN;
+      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
 
+
 ## <a name="flattening"></a>Преобразование в плоскую структуру
- Преобразование в плоскую структуру включено для вложенных и повторяющихся данных из коллекций документов MongoDB. Пользователь должен включить функцию создания внешней таблицы и явным образом указать реляционную схему для коллекций документов MongoDB, которые могут содержать вложенные и (или) повторяющиеся данные. В будущем мы включим возможность автоматического обнаружения схемы в коллекциях документов Mongo.
+ Преобразование в плоскую структуру доступно для вложенных и повторяющихся данных из коллекций документов MongoDB. Пользователь должен включить функцию `create an external table` и явным образом указать реляционную схему для коллекций документов MongoDB, которые могут содержать вложенные и повторяющиеся данные. В будущем мы включим возможность автоматического обнаружения схемы в коллекциях документов Mongo.
 Вложенные или повторяющиеся типы данных JSON будут преобразованы в плоскую структуру следующим образом.
 
 * Объект: коллекция неупорядоченных ключей и значений, заключенная в фигурные скобки (вложенные данные)
@@ -150,6 +149,10 @@ ms.locfileid: "48874312"
 |135898560000 |Объект |10|
 |1322006400000|Объект |9|
 |1299715200000 |B |14|
+
+## <a name="cosmos-db-connection"></a>Подключение Cosmos DB
+
+Используя API Mongo в Cosmos DB и соединитель Mongo DB PolyBase, вы можете создать внешнюю таблицу **экземпляра Cosmos DB**. Для этого выполните те же действия, что указаны выше. Учетные данные в области базы данных, а также адрес сервера, порт и строка расположения должны соответствовать серверу Cosmos DB. 
 
 ## <a name="next-steps"></a>Следующие шаги
 
