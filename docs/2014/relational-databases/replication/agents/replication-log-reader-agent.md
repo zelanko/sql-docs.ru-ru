@@ -1,7 +1,7 @@
 ---
 title: Агент чтения журнала репликации | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7704a37bf8d3972944a17cc5ca1d3a6b209faf3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 892f89c0c2d3161b0df16ad9337237ce14bef159
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202434"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226346"
 ---
 # <a name="replication-log-reader-agent"></a>Агент чтения журнала репликации
   Агент чтения журнала производит мониторинг журналов транзакций всех баз данных, включенных в репликацию транзакций, и копирует помеченные для репликации транзакции из журнала транзакций в базу данных распространителя.  
@@ -101,7 +101,10 @@ ms.locfileid: "48202434"
 |**0**|Указывает, что SSL не используется.|  
 |**1**|Указывает, что SSL используется, но агент не проверяет, подписан ли сертификат сервера SSL надежным издателем.|  
 |**2**|Указывает, что SSL используется и сертификат подтвержден.|  
-  
+
+ > [!NOTE]  
+ >  Допустимый SSL-сертификат задается с полным доменным именем SQL Server. Если параметр -EncryptionLevel имеет значение 2, то для подключения агента создайте псевдоним на локальном сервере SQL Server. Для параметра Alias Name (Имя псевдонима) должно быть указано имя сервера, а для параметра Server (Сервер) — полное доменное имя SQL Server.
+ 
  Дополнительные сведения см. в статье [Общие сведения о безопасности (репликация)](../security/security-overview-replication.md).  
   
  **-ExtendedEventConfigFile** *configuration_path_and_file_name*  

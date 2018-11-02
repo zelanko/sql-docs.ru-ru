@@ -1,7 +1,7 @@
 ---
 title: Агент распространения репликации | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 29/10/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93648144c2da900c88888b78bbb77dab9bbc5233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ba109b21eb8af1f4260aee43f8a9c5f8d3a3bdb
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222630"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226336"
 ---
 # <a name="replication-distribution-agent"></a>Агент распространения репликации
   Агент распространения репликации перемещает моментальный снимок (для репликации моментальных снимков или транзакций) и транзакции, находящиеся в таблицах базы данных распространителя (для репликации транзакций), в целевые таблицы на подписчиках.  
@@ -140,7 +140,10 @@ ms.locfileid: "48222630"
 |**0**|Указывает, что SSL не используется.|  
 |**1**|Указывает, что SSL используется, но агент не проверяет, подписан ли сертификат сервера SSL надежным издателем.|  
 |**2**|Указывает, что SSL используется и сертификат подтвержден.|  
-  
+ 
+ > [!NOTE]  
+ >  Допустимый SSL-сертификат задается с полным доменным именем SQL Server. Если параметр -EncryptionLevel имеет значение 2, то для подключения агента создайте псевдоним на локальном сервере SQL Server. Для параметра Alias Name (Имя псевдонима) должно быть указано имя сервера, а для параметра Server (Сервер) — полное доменное имя SQL Server.
+
  Дополнительные сведения см. в статье [Общие сведения о безопасности (репликация)](../security/security-overview-replication.md).  
   
  **-ErrorFile** *error_path_and_file_name*  

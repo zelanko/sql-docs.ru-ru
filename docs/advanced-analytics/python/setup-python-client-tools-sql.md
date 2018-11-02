@@ -8,22 +8,22 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 326676d1be684b90784351de316590ebdb1ff29f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: b328d6c44dd8f75e3d74a3abe74f3324f31e1409
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051156"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216628"
 ---
 # <a name="set-up-a-python-client-for-use-with-sql-server-machine-learning"></a>Настройка клиента Python для использования с помощью машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Интеграция Python доступен, начиная с SQL Server 2017 или более поздней версии, при включении параметра Python в установке служб машинного обучения (в базе данных). Дополнительные сведения см. в разделе [установить SQL Server служб машинного обучения](../install/sql-machine-learning-services-windows-install.md).
+Интеграция Python доступен, начиная с SQL Server 2017 или более поздней версии, при включении параметра Python в [установки служб машинного обучения (в базе данных)](../install/sql-machine-learning-services-windows-install.md). 
 
-В этой статье сведения о настройке клиентской рабочей станции разработки, таким образом, можно подключиться к удаленному серверу SQL включена для машинного обучения и интеграция Python. В итоге вы получите те же библиотеки Python, как на SQL Server, а также для принудительной отправки вычислений из локального сеанса в удаленный сеанс на сервере SQL Server.
+В этой статье сведения о настройке клиентской рабочей станции разработки Python, таким образом, можно подключиться к удаленному серверу SQL включена для машинного обучения и интеграция Python. В этом упражнении используется записные книжки Jupyter для выполнения кода Python. После выполнения действий, описанных в этой статье, вы получите те же библиотеки Python, как на SQL Server. Также будет знать, как принудительно отправлять вычисления из локального сеанса Python к удаленному сеансу Python на сервере SQL Server.
 
 > [!Tip]
-> Демонстрационные видеоматериалы см. в разделе [выполнения R и Python удаленно, в SQL Server из записных книжек Jupyter](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
+> Видеодемонстрация упражнения в этой статье, см. в разделе [выполнения R и Python удаленно, в SQL Server из записных книжек Jupyter](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 > [!Note]
 > Альтернативой Установка клиентских библиотек использования отдельного сервера. Автономный сервер в качестве полнофункционального клиента — это, некоторые клиенты предпочитают для дополнительной работы сценария end-to-end. Если у вас есть [изолированный сервер](../install/sql-machine-learning-standalone-windows-install.md) , указанное в программу установки SQL Server, у вас есть сервер Python, который является полностью отделены от экземпляр ядра СУБД SQL Server. Одиночная верси сервера включает в себя открытым исходным кодом базового дистрибутива Anaconda, а также библиотеки Microsoft. Можно найти исполняемый файл Python в этом месте: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. Как проверка файлов установки клиентских, откройте [записной книжки Jupyter](#python-tools) для выполнения команд, с помощью Python.exe на сервере.
@@ -127,7 +127,7 @@ Anaconda включает записные книжки Jupyter. На следу
 
 Перед попыткой на следующем шаге, убедитесь, что у вас есть разрешения на экземпляре SQL Server, а также строку подключения к [образца базы данных Iris](../tutorials/demo-data-iris-in-sql.md). Если база данных не существует и у вас достаточно разрешений, вы можете [создать базу данных с помощью следующей процедуры встроенный](#create-iris-remotely).
 
-Замените строку подключения с допустимыми значениями. В примере кода используется `"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"` , но ваш код должен указать удаленный сервер, возможно с именем экземпляра.
+Замените строку подключения с допустимыми значениями. В примере кода используется `"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"` , но ваш код должен указать удаленный сервер, возможно с именем экземпляра, а параметр credential, который сопоставляется имя входа пользователя базы данных.
 
 ### <a name="define-a-function"></a>Определить функцию
 
@@ -237,7 +237,7 @@ iris = datasets.load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 ```
 
-### <a name="3---use-recoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3 - использование RecoscalePy API-интерфейсы для создания таблицы и загрузки данных Iris
+### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3 - использование Revoscalepy API-интерфейсы для создания таблицы и загрузки данных Iris
 
 ```Python
 from revoscalepy import RxSqlServerData, rx_data_step

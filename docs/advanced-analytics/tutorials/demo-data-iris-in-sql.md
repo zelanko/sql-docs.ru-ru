@@ -1,5 +1,5 @@
 ---
-title: Набор данных IRIS Демонстрация учебники по SQL Server Python и R | Документация Майкрософт
+title: Набор данных IRIS Демонстрация учебники Python и R в SQL Server | Документация Майкрософт
 Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 74e4cbe97d64f922de2cdfe1f67eae5d3a3e24bd
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 2fbe5915f7b135882bbbefbb83b572d2cd640837
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806674"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216688"
 ---
-#  <a name="iris-demo-data-for-sql-server-python-and-r-tutorials"></a>IRIS демонстрационных данных для SQL Server Python и R руководств
+#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Демонстрационных данных IRIS учебники Python и R в SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом упражнении, создание базы данных SQL Server для хранения данных из [набора данных Iris цветок](https://en.wikipedia.org/wiki/Iris_flower_data_set) и моделей, основанных на тех же данных. Данных IRIS включается в дистрибутивах R и Python, устанавливаемые с SQL Server и используется в учебники по машинному обучению для SQL Server. 

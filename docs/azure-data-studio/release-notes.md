@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411201"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237070"
 ---
 # <a name="azure-data-studio-release-notes"></a>Заметки о выпуске Azure Data Studio
 
@@ -23,8 +23,8 @@ ms.locfileid: "49411201"
 
 ## <a name="october-2018-october-release"></a>Октября 2018 г. (Октябрьский выпуск)
 
-Дата выпуска: 18 октября 2018 г.  
-версия: 1.1.3
+Дата выпуска: 29 октября 2018 г.  
+версия: 1.1.4
 
 - Представляем обозреватель ресурсов Azure для просмотра баз данных SQL Azure
 - Повысить устойчивость подключения обозревателя объектов и редактора запросов
@@ -32,6 +32,12 @@ ms.locfileid: "49411201"
 - Обновление до [расширение предварительной версии SQL Server 2019 г.](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 
 ### <a name="bug-fixes"></a>Исправления ошибок
+- Исправить [выдавать #2717](https://github.com/Microsoft/azuredatastudio/issues/2717): результирующий XML-столбец, нажмите кнопку форматирования
+- Исправить [выдавать #2993](https://github.com/Microsoft/azuredatastudio/issues/2993): windows результат его ширина не завершена
+- Исправить [выдавать #2999](https://github.com/Microsoft/azuredatastudio/issues/2999): не удалось загрузить файл System.Diagnostics.Tracing на компьютере Mac, при подключении к базе данных
+- Исправить [выдавать #2851](https://github.com/Microsoft/azuredatastudio/issues/2851): временной ряд диаграммы не отображаются надлежащим образом
+- Исправить [выдавать #2996](https://github.com/Microsoft/azuredatastudio/issues/2996): временной потери таблицы из-за внезапного сеанса изменения
+- ...
 
 Подробные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), и [выпуски](https://github.com/Microsoft/azuredatastudio/releases).
 

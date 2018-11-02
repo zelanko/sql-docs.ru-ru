@@ -1,5 +1,5 @@
 ---
-title: Изменение измерения «Дата» | Документы Microsoft
+title: Изменение измерения Date | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e45dbb5f33ba17211fcb60bc6d8cca9e47aa1ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2e060b546287b1a56a103086b8a4d6fc7e120be9
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019671"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753571"
 ---
-# <a name="lesson-3-4---modifying-the-date-dimension"></a>Занятие 3-4-изменение измерения «Дата»
+# <a name="lesson-3-4---modifying-the-date-dimension"></a>Занятие 3 – 4-изменение измерения Date
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 В ходе выполнения задач этого раздела мы создадим определяемую пользователем иерархию и изменим имена элементов, отображаемых для атрибутов «Дата», «Месяц», «Календарный квартал» и «Календарное полугодие». Также мы определим составные ключи для атрибутов, настроим порядок сортировки элементов измерения и зададим связи атрибутов.  
@@ -86,7 +86,7 @@ ms.locfileid: "34019671"
   
 5.  Перетащите атрибут **Date Key** с панели **Атрибуты** в ячейку **<new level>** на панели **Иерархии** под уровнем **English Month Name** .  
   
-6.  На панели **Иерархии** щелкните правой кнопкой мыши строку заголовка окна **Иерархия** , выберите команду **Переименовать**и введите **Календарная дата**.  
+6.  В **иерархий** области щелкните правой кнопкой мыши строку заголовка **иерархии** иерархии, нажмите кнопку **Переименовать**, а затем введите **календарная дата**.  
   
 7.  С помощью контекстного меню иерархии **Календарная дата** измените имя уровня **English Month Name** на **Календарный месяц**, а имя уровня **Date Key** — на **Дата**.  
   

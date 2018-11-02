@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 343e40cc0872c07d21d319717d33811a366a88b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66622346bdc180dbbe4de9e734699dd1e522e95c
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750513"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753541"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Настройка параметров SQL Server с помощью переменных среды в Linux
 
@@ -61,8 +61,8 @@ ms.locfileid: "47750513"
 | **MSSQL_DUMP_DIR** | Перейдите в каталог, где SQL Server будет Депонировать дампы памяти и другие файлы для устранения неполадок по умолчанию. |
 | **MSSQL_ENABLE_HADR** | Включение группы доступности. Например "1" включена и отключена "0" |
 | **MSSQL_AGENT_ENABLED** | Включите агент SQL Server. Например «true» включен, и «false» отключена. По умолчанию агент отключен.  |
-| **MSSQL_MASTER_DATA_FILE** | Задает расположение файла данных базы данных master. |
-| **MSSQL_MASTER_LOG_FILE** | Задает расположение файла журнала базы данных master. |
+| **MSSQL_MASTER_DATA_FILE** | Задает расположение файла данных базы данных master. Должен иметь имя **master.mdf** до первого запуска сервера SQL Server. |
+| **MSSQL_MASTER_LOG_FILE** | Задает расположение файла журнала базы данных master. Должен иметь имя **mastlog.ldf** до первого запуска сервера SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Задает расположение файлов журнала ошибок. |
 
 ::: moniker-end
@@ -85,13 +85,13 @@ ms.locfileid: "47750513"
 | **MSSQL_DUMP_DIR** | Перейдите в каталог, где SQL Server будет Депонировать дампы памяти и другие файлы для устранения неполадок по умолчанию. |
 | **MSSQL_ENABLE_HADR** | Включение группы доступности. Например "1" включена и отключена "0" |
 | **MSSQL_AGENT_ENABLED** | Включите агент SQL Server. Например «true» включен, и «false» отключена. По умолчанию агент отключен.  |
-| **MSSQL_MASTER_DATA_FILE** | Задает расположение файла данных базы данных master. |
-| **MSSQL_MASTER_LOG_FILE** | Задает расположение файла журнала базы данных master. |
+| **MSSQL_MASTER_DATA_FILE** | Задает расположение файла данных базы данных master. Должен иметь имя **master.mdf** до первого запуска сервера SQL Server. |
+| **MSSQL_MASTER_LOG_FILE** | Задает расположение файла журнала базы данных master. Должен иметь имя **mastlog.ldf** до первого запуска сервера SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Задает расположение файлов журнала ошибок. |
 
 ::: moniker-end
 
-## <a name="example-initial-setup"></a>Пример: начальная настройка
+## <a name="use-with-initial-setup"></a>Использование с начальной настройки
 
 В этом примере выполняется `mssql-conf setup` настроить переменные среды. Указываются следующие переменные среды:
 
@@ -104,7 +104,7 @@ ms.locfileid: "47750513"
 sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf setup
 ```
 
-## <a name="example-docker"></a>Пример: Docker
+## <a name="use-with-docker"></a>Использовать с Docker
 
 В этом примере команда docker использует следующие переменные среды, чтобы создать новый контейнер SQL Server:
 

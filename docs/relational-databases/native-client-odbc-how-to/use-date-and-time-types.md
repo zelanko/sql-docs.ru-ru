@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98df8afa8bc4f345e3b9a04eb0f2834742e46bab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98830c2ca88bef278d14d970c5fa3b9102c850d1
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767122"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753480"
 ---
 # <a name="use-date-and-time-types"></a>Использование типов данных даты и времени
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47767122"
   Этот образец показывает, как инициализировать структуры данных даты-времени, добавленные в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Затем подготавливаются входные значения, привязываются параметры и выполняется запрос. Дополнительные сведения об использовании этих типов см. в разделе [время улучшения функций даты и &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Пример  
- Потребуется источник данных ODBC с именем DateTime. Базой данных по умолчанию для DateTime должна быть tempdb. Этот источник данных должен быть основан на драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Потребуется источник данных ODBC с именем DateTime. Базой данных по умолчанию для DateTime должна быть tempdb. Этот источник данных должен быть основан на драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47767122"
   
  Третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) удаляет таблицу, используемую данным образцом.  
   
-```  
+```sql
 use tempdb  
 GO  
   
@@ -50,7 +50,7 @@ CREATE TABLE DateTimeTypes (datecol date, time2col time(7), datetime2col datetim
 GO  
 ```  
   
-```  
+```cpp
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  
 #include <Sqlext.h>  
@@ -68,7 +68,7 @@ class direxec {
    HSTMT hstmt;   // Statement Handle  
    SQLHDESC hdesc;   // Descriptor handle  
    unsigned char szData[MAX_DATA];   // Returned Data Storage  
-   SDWORD cbData;   // Output Lenght of data  
+   SDWORD cbData;   // Output Length of data  
    unsigned char char_ds_name[SQL_MAX_DSN_LENGTH];   // Data Source Name  
   
    SQL_DATE_STRUCT date;   // date structure  
@@ -138,7 +138,7 @@ direxec::direxec() {
   
 // Allocate environment handles, connection handle, connect to data source, and allocate statement handle  
 void direxec::sqlconn() {  
-   // Allocate the enviroment handle  
+   // Allocate the environment handle  
    rc = SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv);  
    check_rc(rc);  
   
@@ -237,7 +237,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql
 USE tempdb  
 GO  
   

@@ -4,7 +4,7 @@ description: В этом кратком руководстве показано,
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/07/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ddf8882cfe4c51194515b181fb6b9e6e80426710
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: f3388bdb66b27cb790079e103cdcf5583b406ad4
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085290"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753551"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Краткое руководство: Образы контейнеров запуск SQL Server с помощью Docker
 
@@ -44,8 +44,9 @@ ms.locfileid: "49085290"
 ## <a id="requirements"></a> Предварительные требования
 
 - Docker Engine 1.8+ на любом поддерживаемом дистрибутиве Linux или Docker для Mac или Windows. Дополнительные сведения см. в разделе [Установка Docker](https://docs.docker.com/engine/installation/).
-- Не менее 2 ГБ места на диске
-- Не менее 2 ГБ ОЗУ
+- Docker **overlay2** драйвера запоминающего устройства. Это значение по умолчанию для большинства пользователей. Если обнаружится, что вы не используете этот поставщик хранилища и необходимо изменить, см. инструкции и предупреждений в [документации docker overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver).
+- Минимум 2 ГБ места на диске.
+- Не менее 2 ГБ ОЗУ.
 - [Требования к системе для SQL Server на Linux](sql-server-linux-setup.md#system).
 
 <!--The following H2 is versioned for 2017 and 2019. Much of the content is duplicated, so

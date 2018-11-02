@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c921b89dc3f6928ccbfc3f9fc727015dadc05b7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169084"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743209"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Управление и интеграцию рабочих нагрузок обучения машины на сервере SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,6 +87,18 @@ R и Python машинного обучения предоставляется [
 
 > [!NOTE]
 > Для пакетов R прав администратора сервера не требуются специально для установки пакета при использовании альтернативных методов. См. в разделе [Установка пакетов R в SQL Server](install-additional-r-packages-on-sql-server.md) подробные сведения.
+
+## <a name="monitoring-script-execution"></a>Мониторинг выполнения скрипта
+
+Скрипты R и Python, которые выполняются в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , запускаются с [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] интерфейс. Тем не менее панель запуска не регулируется ресурсами и не отслеживается отдельно, так как это служба безопасности, предоставляемые корпорацией Майкрософт, который управляет ресурсами соответствующим образом.
+
+Управление внешних скриптов, запускаемых от службы панели запуска выполняется с помощью [объект задания Windows](/windows/desktop/ProcThread/job-objects). Объект задания позволяет управлять группой процессов как единым целым. Каждый объект задания является иерархическим и управляет атрибутами всех связанных с ним процессов. Операции, выполняемые объектом задания, влияют на все связанные с ним процессы.
+
+Таким образом, если необходимо завершить одно задание, связанное с объектом, учтите, что все связанные с ним процессы также будут завершены. Если вы используете скрипт R, который назначен объекту задания Windows и выполняет задание, связанное с ODBC, которое необходимо завершить, родительский процесс скрипта R также будет завершен.
+
+Если запустить внешний скрипт, использующего параллельную обработку, один объект задания Windows управляет всеми параллельными дочерними процессами.
+
+Чтобы определить, выполняется ли процесс в задании, используйте функцию `IsProcessInJob`.
 
 ## <a name="next-steps"></a>Следующие шаги
 

@@ -1,7 +1,7 @@
 ---
 title: Агент чтения очереди репликации | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8ba3f9ef9c76957872114fd05cf98520ce44bb4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f63676830d79bc8ec9c3ffd462e9d836364df159
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078244"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236971"
 ---
 # <a name="replication-queue-reader-agent"></a>Агент чтения очереди репликации
   Агент чтения очереди репликации — это исполняемый файл, который считывает сообщения, хранящиеся в очереди [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или очереди сообщений [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , а затем применяет их к издателю. Агент чтения очереди используется совместно с публикациями транзакций и публикациями моментальных снимков, которые допускают обновление посредством очередей.  
@@ -86,6 +86,9 @@ ms.locfileid: "48078244"
 |**0**|Указывает, что SSL не используется.|  
 |**1**|Указывает, что SSL используется, но агент не проверяет, подписан ли сертификат сервера SSL надежным издателем.|  
 |**2**|Указывает, что SSL используется и сертификат подтвержден.|  
+
+ > [!NOTE]  
+ >  Допустимый SSL-сертификат задается с полным доменным именем SQL Server. Если параметр -EncryptionLevel имеет значение 2, то для подключения агента создайте псевдоним на локальном сервере SQL Server. Для параметра Alias Name (Имя псевдонима) должно быть указано имя сервера, а для параметра Server (Сервер) — полное доменное имя SQL Server.
   
  Дополнительные сведения см. в статье [Общие сведения о безопасности (репликация)](../security/security-overview-replication.md).  
   

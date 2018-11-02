@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3a1cd6dcaf669071517f1a7c6196e22ce33f55ca
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: e3a73eab49c947d950981a9bdb41098ee00a9b9f
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050916"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216684"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Настроить службу Azure Kubernetes для развертываний SQL Server 2019 (Предварительная версия)
 
@@ -27,11 +27,8 @@ AKS позволяет легко создавать, настраивать и 
 
 ## <a name="prerequisites"></a>предварительные требования
 
-- Для среды AKS минимальное требование виртуальной Машины — по крайней мере два агента виртуальных машин (в дополнение к главному узлу) минимального размера [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Минимальные ресурсы, необходимые каждой виртуальной Машины: 4 ЦП и 14 ГБ памяти.
+- Для среды AKS минимальным требованием для виртуальной Машины — по крайней мере два агента виртуальных машин (в дополнение к master), с помощью по крайней мере 4 ЦП и оставить 32 ГБ памяти каждая. Инфраструктура Azure предлагает несколько вариантов размера для виртуальных машин, см. в разделе [здесь](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) для выбранных элементов в регионе, который вы планируете развернуть.
   
-   > [!NOTE]
-   > Если вы планируете запускать задания с большими данными или нескольких приложений Spark, минимальный размер — [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), и минимальные ресурсы, необходимые каждой виртуальной Машины — 8 процессоров и 32 ГБ памяти.
-
 - В этом разделе необходимо иметь Azure CLI версии 2.0.4 или более поздней версии. Если требуется выполнить установку или обновление, см. в разделе [Установка Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Запустите `az --version` чтобы узнать версию, при необходимости.
 
 - Установка [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Кластера больших данных в SQL Server требует любой дополнительный номер версии в рамках диапазона 1,10 версий для Kubernetes, но для сервера и клиента. Чтобы установить определенную версию на клиент kubectl, см. в разделе [установки kubectl двоичных с помощью curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Для AKS необходимо использовать `--kubernetes-version` параметр для указания версии отличается от по умолчанию. Обратите внимание на то, что в выпуском CTP2.0 AKS поддерживает только 1.10.7 и 1.10.8 версии. 
@@ -81,7 +78,7 @@ AKS позволяет легко создавать, настраивать и 
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_DS3_v2 \
+    --node-vm-size Standard_E4s_v3 \
     --node-count 2 \
     --kubernetes-version 1.10.7
     ```
