@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: d809326a23487f23d1c5efeb6b771472c4ebcd67
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 7ac57fa950442eac91af3ae8f2552b25585afade
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336273"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971055"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -197,7 +197,7 @@ ms.locfileid: "49336273"
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
-                                                          <h3>безопасность</h3>
+                                                          <h3>Безопасность</h3>
                                                           <p><b>Разрешения, управление доступом, Always Encrypted, TDE, SSL</b></p>
                                                       </div>
                                                   </div>
@@ -254,8 +254,8 @@ ms.locfileid: "49336273"
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
-                                                          <h3>структура базы данных;</h3>
-                                                          <p><b>Файловый поток, файловая таблица, пространственные данные, представления, триггеры, графы, порядковые номера, хранимые процедуры, отслеживание изменений</b> </p>
+                                                          <h3>Структура базы данных</h3>
+                                                          <p><b>Граф, отслеживание изменений, порядковые номера, представления, пространственные данные, триггеры, файловая таблица, файловый поток, хранимые процедуры </b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -274,7 +274,7 @@ ms.locfileid: "49336273"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Данные запросов</h3>
-                                                          <p><b>Курсоры, синонимы, написание скриптов, соединения, определяемые пользователем функции, полнотекстовый поиск</b></p>
+                                                          <p><b>Синонимы, написание скриптов, соединения, определяемые пользователем функции, полнотекстовый поиск</b></p>
                                                       </div>
                                                   </div>
                                               </div>

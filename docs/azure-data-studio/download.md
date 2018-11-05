@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07c5e65558bf4544da08f631a1d57290352bb451
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: dc8632769f54a9b6eba25a1a1b5ad55b70bc1c59
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411141"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965960"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачайте и установите Studio данных Azure
 
@@ -28,9 +28,9 @@ ms.locfileid: "49411141"
 
 |Платформа|Загрузить|Дата выпуска| Версия |
 |:---|:---|:---|:---|
-|Windows|[Установщик](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=2030736)|18 октября 2018 г. |1.1.3|
-|macOS|[ZIP](https://go.microsoft.com/fwlink/?linkid=2030738)|18 октября 2018 г. |1.1.3|
-|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|18 октября 2018 г. |1.1.3|
+|Windows|[Установщик](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=2030736)|30 октября 2018 г. |1.1.4|
+|macOS|[ZIP](https://go.microsoft.com/fwlink/?linkid=2030738)|30 октября 2018 г. |1.1.4|
+|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|30 октября 2018 г. |1.1.4|
 
 Дополнительные сведения о последнем выпуске см. в разделе [заметки о выпуске](release-notes.md).
 
@@ -146,10 +146,19 @@ ms.locfileid: "49411141"
 - SUSE Linux Enterprise Server версии 12 с пакетом обновления 2 (SP2)
 - Ubuntu 16.04
 
+## <a name="recommended-system-requirements"></a>Рекомендуемые требования к системе
+Для оптимальной производительности используйте рекомендованным системным требованиям.
+
+|             | Число ядер ЦП | Памяти и оперативной памяти |
+|:-----------:|:---------:|:----------:|
+| Рекомендуемая |     4     |      8     |
+|   Минимальные   |     2     |      4     |
+|             |           |            |
+
 ## <a name="check-for-updates"></a>Проверка обновлений
 Чтобы проверить наличие последних обновлений, щелкните значок шестеренки в нижней левой части окна, а затем **проверять наличие обновлений**
 
-## <a name="supported-sql-offerings-ssms-180-preview"></a>Поддерживаемые предложения SQL (Предварительная версия SSMS 18.0)
+## <a name="supported-sql-offerings"></a>Поддерживаемые предложения SQL
 
 * Эта версия Azure Data Studio работает со всеми [поддерживаемых версиях SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) и обеспечивает поддержку для работы с новейшими облачными функциями в базе данных SQL Azure и хранилище данных SQL Azure. Azure Data Studio также предоставляет поддержку предварительной версии управляемого экземпляра SQL Azure.
 

@@ -9,17 +9,69 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bc9b0e8b89fb7fd6e507e9e615190fef21a94466
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4dde052645662689b4f783777b4aec847c613e6d
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461109"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237080"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Новые возможности в Analytics Platform System, хранилища данных MPP горизонтального масштабирования
 См. в разделе, новые возможности в последние обновления устройства для Microsoft® Analytics Platform System (APS). APS является горизонтальное масштабирование локальное устройство, на котором размещена MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.2"></a>
+## <a name="aps-cu72"></a>APS CU7.2
+Дата выпуска - октября 2018 г.
+
+### <a name="support-for-tls-12"></a>Поддержка TLS 1.2
+APS CU7.2 поддерживает TLS 1.2. Клиентский компьютер APS и APS внутриузловой теперь можно задать для обмена данными только через TLS 1.2. Такие средства, как SSDT, служб SSIS и установлены на клиентских компьютерах, которые предназначены для обмена данными только через TLS 1.2 Dwloader теперь можно подключиться к ТД, с помощью TLS 1.2. По умолчанию APS будет поддерживать все версии TLS (1.0, 1.1 и 1.2) для обеспечения обратной совместимости. Если вы собираетесь задать устройства APS для stictly используйте TLS 1.2, это можно сделать, изменив параметры реестра. 
+
+См. в разделе [Настройка TLS 1.2 на APS](configure-tls12-aps.md) Дополнительные сведения.
+
+### <a name="hadoop-encryption-zone-support-for-polybase"></a>Поддерживает зоны шифрования Hadoop для PolyBase
+PolyBase теперь может обмениваться данными с зоны шифрования Hadoop. См. в разделе APS изменения конфигурации, которые требуются в [настроить безопасность Hadoop](polybase-configure-hadoop-security.md#encryptionzone).
+
+### <a name="insert-select-maxdop-options"></a>Параметры maxdop INSERT-Select
+Мы добавили [переключатель](appliance-feature-switch.md) , позволяет выбрать параметры maxdop больше 1 для операций insert-select. Теперь вы можете задать параметр maxdop 0, 1, 2 или 4. Значение по умолчанию равно 1.
+
+> [!IMPORTANT]  
+> Увеличение maxdop может иногда привести медленнее операций или ошибки взаимоблокировок. Если это происходит, измените параметр обратно на maxdop 1 и повторите операцию.
+
+### <a name="columnstore-index-health-dmv"></a>Работоспособности индексов ColumnStore динамическое административное Представление
+Можно просмотреть, используя сведения о работоспособности columnstore index **dm_pdw_nodes_db_column_store_row_group_physical_stats** динамического административного представления. Используйте следующее представление для определения фрагментации и решить, когда для перестроения или реорганизации индекса columnstore.
+
+```sql
+create view dbo.vCS_rg_physical_stats
+as 
+with cte
+as
+(
+select   tb.[name]                    AS [logical_table_name]
+,        rg.[row_group_id]            AS [row_group_id]
+,        rg.[state]                   AS [state]
+,        rg.[state_desc]              AS [state_desc]
+,        rg.[total_rows]              AS [total_rows]
+,        rg.[trim_reason_desc]        AS trim_reason_desc
+,        mp.[physical_name]           AS physical_name
+FROM    sys.[schemas] sm
+JOIN    sys.[tables] tb               ON  sm.[schema_id]          = tb.[schema_id]                             
+JOIN    sys.[pdw_table_mappings] mp   ON  tb.[object_id]          = mp.[object_id]
+JOIN    sys.[pdw_nodes_tables] nt     ON  nt.[name]               = mp.[physical_name]
+JOIN    sys.[dm_pdw_nodes_db_column_store_row_group_physical_stats] rg      ON  rg.[object_id]     = nt.[object_id]
+                                                                            AND rg.[pdw_node_id]   = nt.[pdw_node_id]
+                                        AND rg.[pdw_node_id]    = nt.[pdw_node_id]                                          
+)
+select *
+from cte;
+```
+
+### <a name="polybase-date-range-increase-for-orc-and-parquet-files"></a>PolyBase увеличение диапазон дат для файлов ORC и Parquet
+Чтение, Импорт и экспорт типов данных даты, с помощью PolyBase, теперь поддерживает даты до 1970-01-01 и после 2038-01-20 для типов файлов ORC и Parquet.
+
+### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>Адаптер загрузки данных служб SSIS для SQL Server 2017 в качестве целевого объекта
+Новый адаптер назначения APS служб SSIS, которая поддерживает SQL Server 2017, как цель развертывания можно загрузить из [сайт загрузки](https://www.microsoft.com/en-us/download/details.aspx?id=57472).
+
 <a name="h2-aps-cu7.1"></a>
 ## <a name="aps-cu71"></a>APS CU7.1
 Дата выпуска - июля 2018 г.
