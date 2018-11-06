@@ -6,8 +6,7 @@ ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.topic: reference
 apiname:
 - IBCPSession::BCPControl (OLE DB)
@@ -17,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: caaf11c422cfe4579a029952259110214fa454a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e5a5d04d3ec4abded68154e54c086fedc852af4
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676222"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033641"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>Метод IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,13 +52,13 @@ HRESULT BCPControl(
 |BCP_OPTION_BATCH|Количество строк на пакет. Значение по умолчанию равно 0. Оно обозначает все строки в таблице при извлечении данных или все строки в файле пользовательских данных при копировании данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. При значении меньше 1 параметр BCP_OPTION_BATCH принимает значение по умолчанию.|  
 |BCP_OPTION_DELAYREADFMT|Логическое значение. Если ему задано значение true, то [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) будет читаться при выполнении. Если false (по умолчанию), IBCPSession::BCPReadFmt будет сразу же считать файл форматирования. Если возникнет ошибка последовательности **BCP_OPTION_DELAYREADFMT** имеет значение true, при вызове метода IBCPSession::BCPColumns или IBCPSession::BCPColFmt.<br /><br /> Ошибка последовательности также возникнет при вызове метода `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` после вызова метода `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` и IBCPSession::BCPWriteFmt.<br /><br /> Дополнительные сведения см. в разделе [Обнаружение метаданных](../../oledb/features/metadata-discovery.md).|  
 |BCP_OPTION_FILECP|Аргумент *iValue* содержит номер кодовой страницы для файла данных. Можно указать номер кодовой страницы, такой как 1252 или 850, или одно из следующих значений.<br /><br /> BCP_FILECP_ACP: данные в файле находятся в кодовой странице Microsoft Windows® клиента.<br /><br /> BCP_FILECP_OEMCP: данные в файле находятся в кодовой странице изготовителя оборудования (OEM) клиента (по умолчанию).<br /><br /> BCP_FILECP_RAW: данные в файле находятся в кодовой странице [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|BCP_OPTION_FILEFMT|Номер версии для формата файла данных. Может иметь значение 80 ([!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]) или 110 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]). Значение по умолчанию — 110. Это может оказаться полезным при экспорте или импорте данных в форматах, которые поддерживались прежними версиями сервера.  Например, чтобы импортировать данные, полученные из текстового столбца на сервере [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] , в столбец типа **varchar(max)** на сервере [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] или более поздней версии, следует указать значение 80. Аналогично при указании значения 80 при экспорте данных из столбца **varchar(max)** данные столбца сохраняются точно так же, как сохраняются текстовые столбцы в формате [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], и их можно будет импортировать в текстовый столбец сервера [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)].|  
+|BCP_OPTION_FILEFMT|Номер версии для формата файла данных. Может иметь значение 80 ([!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]) или 110 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]). Значение по умолчанию — 110. Это может оказаться полезным при экспорте или импорте данных в форматах, которые поддерживались прежними версиями сервера.  Например, чтобы импортировать данные, полученные из текстового столбца на сервере [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] , в столбец типа **varchar(max)** на сервере [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] или более поздней версии, следует указать значение 80. Аналогично при указании значения 80 при экспорте данных из столбца **varchar(max)** данные столбца сохраняются точно так же, как сохраняются текстовые столбцы в формате [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] , и их можно импортировать в текстовый столбец сервера [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] .|  
 |BCP_OPTION_FIRST|Первая строка данных копируемого файла или таблицы. Значение по умолчанию равно 1. Если задать для этого параметра значение меньше 1, то будет установлено значение по умолчанию.|  
 |BCP_OPTION_FIRSTEX|В операциях bcp out задает первую строку таблицы базы данных для копирования в файл данных.<br /><br /> В операциях bcp in задает первую строку файла данных для копирования в таблицу базы данных.<br /><br /> Параметр *iValue* должен представлять адрес 64-разрядного целого числа со знаком, содержащего значение. Максимальное значение, которое можно передать в BCPFIRSTEX, составляет 2^63-1.|  
 |BCP_OPTION_FMTXML|Используется, чтобы указать, что созданный файл форматирования должен быть в формате XML. Отключен по умолчанию, и по умолчанию файлы форматирования сохраняются как текстовые файлы. XML-файл форматирования обеспечивает более высокую гибкость, но связан с некоторыми дополнительными ограничениями. Например, нельзя указать для поля одновременно префикс и признак конца, что было возможно в старых файлах форматирования.<br /><br /> Примечание: Только в XML-файлы форматирования поддерживаются при [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] средства устанавливаются вместе с драйвером OLE DB для SQL Server.|  
-|BCP_OPTION_HINTS|Аргумент *iValue* содержит указатель на расширенный символ. Адресуемая строка задает подсказки для обработки массового копирования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или инструкцию [!INCLUDE[tsql](../../../includes/tsql-md.md)], которая возвращает результирующий набор. Если указана инструкция [!INCLUDE[tsql](../../../includes/tsql-md.md)], которая возвращает более одного результирующего набора, все результирующие наборы после первого не учитываются.|  
+|BCP_OPTION_HINTS|Аргумент *iValue* содержит указатель на расширенный символ. Адресуемая строка задает подсказки для обработки массового копирования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или инструкцию [!INCLUDE[tsql](../../../includes/tsql-md.md)] , которая возвращает результирующий набор. Если указана инструкция [!INCLUDE[tsql](../../../includes/tsql-md.md)] , которая возвращает более одного результирующего набора, все результирующие наборы после первого не учитываются.|  
 |BCP_OPTION_KEEPIDENTITY|Если аргумент *iValue* имеет значение TRUE, этот параметр указывает, что методы массового копирования вставляют значения данных, предоставленные для столбцов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], определенных с ограничением IDENTITY. Входной файл должен содержать значения для столбцов идентификаторов. Если эти значения не заданы, то для вставляемых строк создаются новые значения идентификаторов. Данные в файле, предназначенные для столбцов идентификаторов, не учитываются.|  
-|BCP_OPTION_KEEPNULLS|Указывает, будут ли пустые значения данных в файле преобразовываться в значения NULL в таблице [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если аргумент *iValue* имеет значение TRUE, пустые значения в таблице [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] преобразуются в NULL. По умолчанию пустые значения преобразовываются в значения по умолчанию для столбца в таблице [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], если значение по умолчанию существует.|  
+|BCP_OPTION_KEEPNULLS|Указывает, будут ли пустые значения данных в файле преобразовываться в значения NULL в таблице [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Если аргумент *iValue* имеет значение TRUE, пустые значения в таблице [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . По умолчанию пустые значения преобразовываются в значения по умолчанию для столбца в таблице [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , если значение по умолчанию существует.|  
 |BCP_OPTION_LAST|Последняя копируемая строка. По умолчанию копируются все строки. При значении менее 1 этот параметр сбрасывается в значение по умолчанию.|  
 |BCP_OPTION_LASTEX|В операциях bcp out задает последнюю строку таблицы базы данных для копирования в файл данных.<br /><br /> В операциях bcp in задает последнюю строку файла данных для копирования в таблицу базы данных.<br /><br /> Параметр *iValue* должен представлять адрес 64-разрядного целого числа со знаком, содержащего значение. Максимальное значение, передаваемое в BCPLASTEX, составляет 2^63-1.|  
 |BCP_OPTION_MAXERRS|Число ошибок, при достижении которого операция массового копирования завершается неудачей. Значение по умолчанию равно 10. При значении менее 1 этот параметр сбрасывается в значение по умолчанию. В операции массового копирования допускается не более 65 535 ошибок. Если выполнить попытку установить этот параметр в значение, превышающее 65 535, будет установлено значение 65 535.|  
@@ -79,10 +78,10 @@ HRESULT BCPControl(
  Метод выполнен успешно.  
   
  E_FAIL  
- Произошла ошибка, связанная с поставщиком. Подробные сведения можно получить при помощи интерфейса [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
+ Произошла ошибка, связанная с поставщиком. Подробные сведения можно получить при помощи интерфейса [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
   
  E_UNEXPECTED  
- Непредвиденный вызов метода. Например, перед вызовом этой функции не был вызван метод [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
+ Непредвиденный вызов метода. Например, перед вызовом этой функции не был вызван метод [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) .  
   
  E_OUTOFMEMORY  
  Недостаточно памяти.  

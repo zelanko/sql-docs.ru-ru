@@ -6,8 +6,7 @@ ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.topic: reference
 apiname:
 - IBCPSession::BCPDone (OLE DB)
@@ -17,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 2989f2dc79574b7a0959ffea5a3ff5988bead882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0338fc05683c22df4a900f709770ac35e8b2bad
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728122"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031531"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Никакая другая операция не может быть вызвана применительно к интерфейсу [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) после вызова метода **BCPDone**. Единственной возможностью является вызов метода [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) для инициализации операции массового копирования. Это аналогично вызову метода [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
+ Никакая другая операция не может быть вызвана применительно к интерфейсу [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) после вызова метода **BCPDone**. Единственной возможностью является вызов метода [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) для инициализации операции массового копирования. Это аналогично вызову метода [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  S_OK  
@@ -51,7 +50,7 @@ HRESULT BCPDone(void);
 ## <a name="example"></a>Пример  
  В этом образце показано, как использовать интерфейс **IBCPSession** .  
   
- Перед запуском этого образца необходимо выполнить следующий код [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
+ Перед запуском этого образца необходимо выполнить следующий код [!INCLUDE[tsql](../../../includes/tsql-md.md)] :  
   
 ```sql  
 create table fltest(col1 int, col2 int, col3 image)  
