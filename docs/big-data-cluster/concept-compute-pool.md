@@ -4,15 +4,15 @@ description: В этой статье описывается пул вычисл
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 67f13687bf55a9e267582a0749043c51d2e2b3bf
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 6aa73c5881a4b6a17e190c26c15f97b3d8c79c14
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050802"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221800"
 ---
 # <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>Что такое пул вычислительных кластеров SQL больших данных?
 
@@ -23,7 +23,7 @@ ms.locfileid: "50050802"
 Пул вычислительных состоит из одного или нескольких вычислительных модулями, запущенными в Kubernetes. Автоматическое создание и управление этих модулей координируется [главного экземпляра SQL Server](concept-master-instance.md). Каждый модуль содержит набор базовых служб и экземпляра компонента SQL Server database engine.
 
 > [!NOTE]
-> CTP 2.0 поддерживает только пул одном вычислительном кластере.
+> CTP 2.1 поддерживает только пул одном вычислительном кластере.
 
 ## <a name="scale-out-groups"></a>Масштабируемые группы
 

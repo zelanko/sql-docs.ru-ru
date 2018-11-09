@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e6155be9338f7d7c04c7ecfd5312d38d909065e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57936009880849b3ca1e566110e688b699f6835b
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628152"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269738"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>Использование функции SQL Server и возможности WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ PolyBase используется для объединения сведения
 
 Чтобы включить использование PolyBase в образце базы данных, убедитесь, что он установлен и выполните следующую хранимую процедуру в базе данных:
 
-    EXEC [Application].[Configuration_ApplyPolybase]
+    EXEC [Application].[Configuration_ApplyPolyBase]
 
 Это создаст внешнюю таблицу `dbo.CityPopulationStatistics` , ссылающийся на открытый набор данных, содержащий данные о населении для городов в Соединенных Штатах, размещенных в хранилище больших двоичных объектов. Вы, рекомендуется проверить код в хранимую процедуру, чтобы понять процесс настройки. Если вы хотите разместить данные в хранилище больших двоичных объектов и защиту от общий доступ, необходимо предпринять дополнительные действия по настройке. Следующий запрос возвращает данные из этого внешнего набора данных:
 

@@ -4,15 +4,15 @@ description: Узнайте, как использовать портал адм
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 764e1689b4b793e3a993c058517a892f93d6d439
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356055"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221470"
 ---
 # <a name="introduction-to-the-cluster-administration-portal"></a>Общие сведения о портале администрирования кластера
 
@@ -32,7 +32,7 @@ ms.locfileid: "49356055"
 После запуска модуль контроллера на портале администрирования кластера можно использовать для мониторинга развертывания. Доступны на портале с помощью внешних IP-адрес и порт номер для `service-proxy-lb` (например: **https://\<ip адрес\>: 30777**). Учетные данные для доступа к порталу администрирования являются значениями `CONTROLLER_USERNAME` и `CONTROLLER_PASSWORD` переменные среды, приведенные выше.
 
 > [!NOTE]
-> Для CTP 2.0 имеется предупреждение системы безопасности при доступе к веб-страницы, поскольку оно использует SSL-сертификатов, автоматически созданный.
+> Для CTP-версии 2.1 имеется предупреждение системы безопасности при доступе к веб-страницы, поскольку оно использует SSL-сертификатов, автоматически созданный.
 
 ## <a name="overview"></a>Обзор
 

@@ -3,24 +3,26 @@ title: R и Python службы машинного обучения в SQL Serve
 description: R в SQL Server и Python в SQL Server, интеграция с реляционными данными для обработки и анализа данных и статистическое моделирование, моделей машинного обучения, прогнозная аналитика, визуализация данных и многое другое.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/10/2018
+ms.date: 11/06/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cf67348b703677035435e54c323334478a1dfdf4
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+ms.openlocfilehash: 0768ae40b110bbb2b85890f0a8b4eff0339cedde
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343119"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269707"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Службы машинного обучения (R, Python) в SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Службы машинного обучения SQL Server 2017 представляет собой дополнение к экземпляр ядра СУБД, используемый для выполнения кода R и Python на сервере SQL Server. Код выполняется в платформу расширения, изолированной от основных процессов, но полностью доступны для реляционных данных, как хранимые процедуры, скрипт T-SQL, содержащий инструкции R или Python или R или Python код, содержащий T-SQL. 
 
-Если вы ранее использовали [SQL Server 2016 R Services](r/sql-server-r-services.md), службы машинного обучения в SQL Server 2017 является следующим поколением поддержки R и обновленных версий базовый R, RevoScaleR, MicrosoftML, и другие библиотеки, представленные в 2016 г.
+Если вы ранее использовали [SQL Server 2016 R Services](r/sql-server-r-services.md), службы машинного обучения в SQL Server 2017 является следующим поколением поддержки R и обновленных версий базовый R, RevoScaleR, MicrosoftML, и другие библиотеки, представленные в 2016 г. 
+
+В базе данных SQL Azure [служб машинного обучения (с помощью R)]((https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)) в настоящее время находится в общедоступной предварительной версии.
 
 Основные преимущества служб машинного обучения — это степень его enterprise R и пакеты Python для предоставления расширенной аналитики в масштабе и возможность передачи вычислений и обработки, где хранятся данные, что устраняет необходимость извлечения данных между сеть.
 

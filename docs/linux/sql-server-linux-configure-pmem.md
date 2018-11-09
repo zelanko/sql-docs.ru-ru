@@ -4,41 +4,43 @@ description: В этой статье приведены пошаговые ин
 author: DBArgenis
 ms.author: argenisf
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 71c4af08573f54b5a33a95f0c821dfdb81b4f0a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07f068a24c60fe82c299387fe859f07296f21df8
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765599"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269438"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Настройка постоянной памяти (PMEM) для SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье описывается настройка постоянной памяти (PMEM) для SQL Server в Linux. Поддержка PMEM в Linux появилась в SQL Server 2019 CTP 2.0.
+В этой статье описывается настройка постоянной памяти (PMEM) для SQL Server в Linux. В предварительной версии SQL Server 2019 появилась поддержка PMEM в Linux.
 
 ## <a name="overview"></a>Обзор
 
-SQL Server 2016 добавлена поддержка для долговременного DIMM и оптимизации называется [заключительного фрагмента журнала, кэширование на NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/) , сокращено количество операций, необходимых для усиления защиты буфера журнала в постоянное хранилище. Этот вариант использует возможности Windows Server для прямого доступа к постоянной памяти устройства в режим DAX.
+SQL Server 2016 добавлена поддержка для долговременного DIMM и оптимизации называется [заключительного фрагмента журнала, кэширование на NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Эти оптимизации уменьшенное количество операций, необходимых для усиления защиты буфера журнала в постоянное хранилище. Этот вариант использует Windows Server прямой доступ к постоянной памяти устройства в режим DAX.
 
-Предварительная версия SQL Server 2019 расширяет поддержку для постоянной памяти устройства (PMEM) для Linux, предоставляя полный просвещения из данных и файлы журнала транзакций на PMEM. Просвещение ссылается на метод доступа к запоминающему устройству с помощью операций memcpy эффективный пространства пользователя. Вместо просмотра файла системы и хранения данных стека, SQL Server использует поддержку DAX в Linux, чтобы непосредственно поместить данные об устройствах, требуя в минимальной задержкой.
+Предварительная версия SQL Server 2019 расширяет поддержку для постоянной памяти устройства (PMEM) для Linux, предоставляя полный просвещения из данных и файлы журнала транзакций на PMEM. Просвещение ссылается на метод доступа к запоминающему устройству с помощью эффективного пространства пользователя `memcpy()` операций. Вместо того, чтобы переход через стек системы и хранилища файлов SQL Server использует возможности DAX в Linux, чтобы напрямую помещения данных в устройства, что позволяет снизить задержку.
 
 ## <a name="enable-enlightenment-of-database-files"></a>Включить просвещения файлов базы данных
 Чтобы включить просвещения файлов базы данных в SQL Server в Linux, выполните следующие действия.
 
-1. Настройка устройств в Linux, это делается с помощью `ndctl` служебной программы.
+1. Настройка устройств.
 
-  - Установите install `ndctl` для настройки устройства pmem. Его можно найти [здесь](https://docs.pmem.io/getting-started-guide/installing-ndctl).
+  В Linux, используйте `ndctl` служебной программы.
+
+  - Установка `ndctl` для настройки устройства PMEM. Его можно найти [здесь](https://docs.pmem.io/getting-started-guide/installing-ndctl).
   - Используйте [ndctl], создание пространства имен.
 
   ```bash 
-  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* –map=mem
+  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* -–map=mem
   ```
 
   >[!NOTE]
@@ -59,7 +61,7 @@ ndctl list
 ]
 ```
 
-  - Создание и подключение устройства pmem
+  - Создание и подключение устройства PMEM
 
     Например для файловой системы XFS
 

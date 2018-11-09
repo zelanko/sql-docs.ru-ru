@@ -4,15 +4,15 @@ description: Сведения о настройке службы Azure Kubernete
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/23/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: e3a73eab49c947d950981a9bdb41098ee00a9b9f
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: 07ee0ac0db742eca9a55decfcd78cb76b75e0160
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216684"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221660"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Настроить службу Azure Kubernetes для развертываний SQL Server 2019 (Предварительная версия)
 
@@ -27,12 +27,11 @@ AKS позволяет легко создавать, настраивать и 
 
 ## <a name="prerequisites"></a>предварительные требования
 
-- Для среды AKS минимальным требованием для виртуальной Машины — по крайней мере два агента виртуальных машин (в дополнение к master), с помощью по крайней мере 4 ЦП и оставить 32 ГБ памяти каждая. Инфраструктура Azure предлагает несколько вариантов размера для виртуальных машин, см. в разделе [здесь](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) для выбранных элементов в регионе, который вы планируете развернуть.
+- Для среды AKS для оптимальной производительности при проверке основных сценариев мы рекомендуем по крайней мере три агента виртуальных машин (в дополнение к master), с помощью по крайней мере 4 виртуальных ЦП и оставить 32 ГБ памяти каждая. Инфраструктура Azure предлагает несколько вариантов размера для виртуальных машин, см. в разделе [здесь](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) для выбранных элементов в регионе, который вы планируете развернуть.
   
 - В этом разделе необходимо иметь Azure CLI версии 2.0.4 или более поздней версии. Если требуется выполнить установку или обновление, см. в разделе [Установка Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Запустите `az --version` чтобы узнать версию, при необходимости.
 
-- Установка [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Кластера больших данных в SQL Server требует любой дополнительный номер версии в рамках диапазона 1,10 версий для Kubernetes, но для сервера и клиента. Чтобы установить определенную версию на клиент kubectl, см. в разделе [установки kubectl двоичных с помощью curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Для AKS необходимо использовать `--kubernetes-version` параметр для указания версии отличается от по умолчанию. Обратите внимание на то, что в выпуском CTP2.0 AKS поддерживает только 1.10.7 и 1.10.8 версии. 
-
+- Установка [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) с как минимум версии 1.10 для сервера и клиента. Если вы хотите установить конкретную версию на клиент kubectl, см. в разделе [установки kubectl двоичных с помощью curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Для AKS, необходимо использовать `--kubernetes-version` параметр, чтобы указать версию стандарта не по умолчанию.
 
 > [!NOTE]
 Обратите внимание, что это наклон версии клиента и сервера поддерживается +/-1 дополнительный номер версии. В документации по Kubernetes состояния «клиент должен быть неравномерно распределенных не более чем один дополнительный номер версии с главного сервера, что может привести образце, на один дополнительный номер версии. Например, версия 1.3 главной должны работать с версии 1.1, версия 1.2 и версия 1.3 узлов и должны работать с версии 1.2, версия 1.3 и клиентов версии 1.4.» Дополнительные сведения см. в разделе [Kubernetes поддерживаемые выпуски и наклона компонент](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -79,8 +78,8 @@ AKS позволяет легко создавать, настраивать и 
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
     --node-vm-size Standard_E4s_v3 \
-    --node-count 2 \
-    --kubernetes-version 1.10.7
+    --node-count 3 \
+    --kubernetes-version 1.10.8
     ```
 
     Можно увеличить или уменьшить количество агентов по умолчанию, изменив `--node-count <n>` где `<n>` — количество узлов агентов, которые вы хотите иметь.

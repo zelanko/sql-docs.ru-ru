@@ -4,15 +4,15 @@ description: Дополнительные сведения о работе в к
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f80f8a4e8014b6d05a2e4c6a0b5697609381a07
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 100372f339f2d064e14b7882fdfb1a661b824cc6
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050841"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221790"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Сохранение данных с кластером больших данных SQL Server в Kubernetes
 
@@ -24,7 +24,7 @@ ms.locfileid: "50050841"
 
 > [!NOTE]
 
-> Для CTP-версии 2.0, только `ReadWriteOnce` поддерживается режим доступа для всего кластера.
+> Для CTP-версии 2.1, только `ReadWriteOnce` поддерживается режим доступа для всего кластера.
 
 ## <a name="deployment-settings"></a>Параметры развертывания
 

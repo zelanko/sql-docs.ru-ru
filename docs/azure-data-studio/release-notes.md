@@ -2,7 +2,7 @@
 title: Заметки о выпуске Azure Data Studio | Документация Майкрософт
 description: Заметки о выпуске Azure Data Studio
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -10,16 +10,42 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
-ms.translationtype: MT
+ms.openlocfilehash: 8a330c046d5e8398d03302863013ab9b0c1df37f
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237070"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269967"
 ---
 # <a name="azure-data-studio-release-notes"></a>Заметки о выпуске Azure Data Studio
 
-**[Скачайте Октябрьский выпуск!](download.md)**
+**[Скачайте Ноябрьский выпуск!](download.md)**
+
+## <a name="november-2018-november-release"></a>Ноябрь 2018 г. (Ноябрьский выпуск)
+
+Дата выпуска: 6 ноября 2018 г.  
+версия: 1.2.4
+
+- Общие сведения о компании Idera расширения
+- Обновление до [расширение предварительной версии SQL Server 2019 г.](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Знакомство с вставить расширение плана
+- Введение в запросы расширение High Color, включая темы редактора SSMS
+- Исправления в расширения агента SQL Server Profiler и импорта
+- Исправление.Net Core вызывает проблему KeepAlive сокета прерванные неактивные подключения в Mac OS
+- Обновления службы средств SQL для.Net Core 2,2 предварительной версии 3 (для поддержки итоговой AAD)
+
+### <a name="bug-fixes"></a>Исправления ошибок
+- Исправить [выдавать #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): потеряно подключение к базе данных SQL Azure
+- Исправить [выдавать #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): «Недопустимый аргумент» исключение, развернув узел обозревателя Объектов базы данных
+- Исправить [выдавать #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): правильно отображать сообщения несколько строк в результатах запроса
+- Исправить [выдавать #2906](https://github.com/Microsoft/azuredatastudio/pull/2906): имя документа исправить изменить данные, если имя таблицы содержит специальные символы
+- Исправить [выдавать #2929](https://github.com/Microsoft/azuredatastudio/issues/2929): построение в расширении журнал изменений, что надо проверять заметки о выпуске VSCode для изменения
+- Исправить [выдавать #2719](https://github.com/Microsoft/azuredatastudio/issues/2719): "высококонтрастной" теме тип Double/триад значки
+- Исправить [выдавать #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Добавление интерфейса командной строки для подключения к SQL Server
+- Исправить [выдавать #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Добавление поддержки темы плана запроса
+- ...
+
+Подробные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), и [выпуски](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="october-2018-october-release"></a>Октября 2018 г. (Октябрьский выпуск)
 
@@ -58,7 +84,7 @@ ms.locfileid: "50237070"
     - Используйте библиотеки PROSE код ускорителя в своей записной книжке, чтобы узнать файл формата и типы данных для подготовки данных быстро.
   - Обозреватель ресурсов Azure
     - Представление обозревателя ресурсов Azure позволяет просматривать данные, связанные конечные точки для учетных записей Azure и создавать подключения к ним в обозревателе объектов. В этом выпуске поддерживаются базами данных SQL Azure и серверами.
-  - SQL Server Polybase Создание внешних таблиц
+  - SQL Server PolyBase Создание внешних таблиц
     - Создание внешней таблицы и поддерживающие его структуры метаданных с помощью простой в использовании мастера. В этом выпуске поддерживаются удаленных серверов SQL Server и Oracle.
 - Запрос сетки результатов производительности и улучшения взаимодействия с Пользователем для большое количество результирующих наборов.
 - Из 1,23 обновить исходный код Visual Studio Code, чтобы 1.26.1 с макета сетки, а также улучшенные параметры редактор (Предварительная версия).

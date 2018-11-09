@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9c434df0576275af84fd9f4b0e5f57e584323ab6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b5d9e27db92ba048f0b6400c00313e81a1899f7
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693552"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269449"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Настройка репозиториев для установки и обновления SQL Server в Linux
 
@@ -23,7 +23,7 @@ ms.locfileid: "47693552"
 В этой статье описываются способы настройки на правильный репозиторий для SQL Server 2017 и SQL Server 2019 установок и обновлений на платформе Linux.
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 уже доступен! Чтобы опробовать, воспользуйтесь этой статьей для настройки нового **mssql-server-preview** репозитория. Установите, следуя инструкциям в [руководство по установке](sql-server-linux-setup.md).
+> Предварительная версия SQL Server 2019 уже доступен! Чтобы опробовать, воспользуйтесь этой статьей для настройки нового **mssql-server-preview** репозитория. Установите, следуя инструкциям в [руководство по установке](sql-server-linux-setup.md).
 
 ## <a id="repositories"></a> Репозитории
 
@@ -32,7 +32,7 @@ ms.locfileid: "47693552"
 | Хранилище | Имя | Описание |
 |---|---|---|
 | **Предварительная версия (2017 г.)** | **mssql-server** | Репозиторий SQL Server 2017 CTP и версии-Кандидата (неподдерживаемые). |
-| **Предварительная версия (2019 г.)** | **MSSQL-server-preview** | Версия-Кандидат и CTP-версии SQL Server 2019 репозиторий. |
+| **Предварительная версия (2019 г.)** | **MSSQL-server-preview** | SQL Server 2019 предварительной версии и версии-КАНДИДАТА репозитория. |
 | **CU** | **mssql-server-2017** | База данных SQL Server 2017 накопительное обновление (CU). |
 | **GDR** | **mssql-server-2017-gdr** | SQL Server 2017 GDR репозиторий только критические обновления. |
 

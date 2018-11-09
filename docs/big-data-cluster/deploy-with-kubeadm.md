@@ -4,15 +4,15 @@ description: Сведения о настройке Kubernetes на нескол
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/23/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 70ba143bf01336dbd77718007ccd0fb61acc21bb
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 842a23877290aec76f7813f27b68b4bccd7b5c9b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051395"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221780"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-deployments"></a>Настройка Kubernetes на нескольких компьютерах, для развертываний SQL Server 2019
 
@@ -143,4 +143,4 @@ kubectl get nodes
 
 Действия, описанные в этой статье настроить кластер Kubernetes на нескольких компьютерах Ubuntu. Следующим шагом является развертывание кластера SQL Server 2019 больших данных. Инструкции см. следующую статью:
 
-[Развертывание SQL Server 2019 CTP 2.0 в Kubernetes](deployment-guidance.md#deploy)
+[Развертывание SQL Server 2019 CTP 2.1 в Kubernetes](deployment-guidance.md#deploy)
