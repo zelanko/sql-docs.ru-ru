@@ -12,18 +12,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991307"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216812"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Журнал изменений для SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Это журнал изменений для [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Подробные сведения о новых и измененных возможностях см. в [блоге группы разработчиков SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+
+## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT для Visual Studio 2017 (15.8.2)
+Номер сборки: 14.0.16182.0  
+Дата выпуска: 5 ноября 2018 г.  
+
+### <a name="whats-new"></a>Новые возможности
+**SSIS**
+
+Исправлена проблема, когда при развертывании в Azure-SSIS проекта SSIS с пакетами, содержащими задачу Script с назначением в виде неструктурированного файла, пакеты в Azure-SSIS не запускались. 
+
+### <a name="known-issues"></a>Известные проблемы:
+
+- Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS.
+- SSDT для Visual Studio 2017 (15.8.2) не поддерживает конструирование пакетов, содержащих источники или назначения Oracle или Teradata. Использование SSDT для Visual Studio 2017 (15.8).
 
 
 ## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT для Visual Studio 2017 (15.8.1)
@@ -40,6 +55,8 @@ ms.locfileid: "49991307"
 ### <a name="known-issues"></a>Известные проблемы:
 
 - Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS.
+- При развертывании в Azure-SSIS проекта SSIS с пакетами, содержащими задачу Script с назначением в виде неструктурированного файла, пакеты в Azure-SSIS не запускаются.
+- SSDT для Visual Studio 2017 (15.8.1) не поддерживает конструирование пакетов, содержащих источники или назначения Oracle или Teradata. Использование SSDT для Visual Studio 2017 (15.8).
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT для Visual Studio 2017 (15.8)
@@ -436,7 +453,7 @@ ms.locfileid: "49991307"
 
 **Проекты Integration Services**
 - Исправлена проблема, из-за которой контейнер ForEachLoop ADO/ADO.NET отображался неправильно.
-- Исправлена проблема, которая заключалась в том, что некоторые задачи, компоненты и мастеры не были локализованы.
+- Исправлена проблема, которая заключалась в том, что некоторые задачи, компоненты и мастера не были локализованы.
 - Последняя версия *TargetServerVersion* изменена с "SQL Server vNext" на "SQL Server 2017".
 
 
