@@ -1,11 +1,9 @@
 ---
 title: Общие сведения о пространственных индексах | Документация Майкрософт
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
@@ -13,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a775ffdbe70eb47214ecb100ad395d37ca79a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113643"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018679"
 ---
 # <a name="spatial-indexes-overview"></a>Общие сведения о пространственных индексах
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает пространственные данные и пространственные индексы. *Пространственный индекс* представляет собой тип расширенного индекса, позволяющий индексировать пространственные столбцы. Пространственный столбец представляет собой столбец таблицы, в котором содержатся данные пространственного типа, например `geometry` или `geography`.  
@@ -156,7 +154,7 @@ ms.locfileid: "48113643"
 >  Плотности сеток в пространственном индексе можно просмотреть в столбцах bounding_box_xmin, bounding_box_ymin, bounding_box_xmax и bounding_box_ymax представления каталога [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .  
   
 #### <a name="the-geography-grid-tessellation-scheme"></a>Схема тесселяции сетки географических объектов  
- Эта схема тесселяции применяется только к `geography` столбца. В этом разделе рассматриваются методы, поддерживаемые тесселяцией географических объектов, и описывается, как геодезическое пространство проецируется на плоскость, которая затем подвергается декомпозиции в сеточную иерархию.  
+ Эта схема тесселяции применяется только к столбцу `geography`. В этом разделе рассматриваются методы, поддерживаемые тесселяцией географических объектов, и описывается, как геодезическое пространство проецируется на плоскость, которая затем подвергается декомпозиции в сеточную иерархию.  
   
 > [!NOTE]  
 >  Эту схему тесселяции можно задать явным образом с помощью предложения USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) в инструкции [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
@@ -223,7 +221,7 @@ ms.locfileid: "48113643"
 -   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *номер*  
   
 ### <a name="queries-that-use-spatial-indexes"></a>Запросы, использующие пространственные индексы  
- Пространственные индексы поддерживаются только в запросах, содержащих оператор пространственного индекса в `WHERE` предложение. Пример синтаксиса.  
+ Пространственные индексы поддерживаются только в запросах, содержащих оператор пространственного индекса в предложении `WHERE`. Пример синтаксиса.  
   
 ```  
 [spatial object].SpatialMethod([reference spatial object]) [ = | < ] [const literal or variable]  

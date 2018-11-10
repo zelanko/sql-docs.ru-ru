@@ -1,11 +1,9 @@
 ---
 title: Идентификаторы пространственных ссылок | Документация Майкрософт
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Spatial Reference Identifiers (SRIDs)
@@ -15,12 +13,12 @@ ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba0aa0cb97d94eddf422d03cb1918940e915670a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cba308c746bd3cec33742cbdf8231371d18aab3
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229654"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018999"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>идентификаторы пространственных ссылок (SRID)
   У каждого пространственного экземпляра имеется идентификатор пространственной ссылки (SRID). Идентификатор SRID соответствует системе пространственных ссылок, основанной на конкретном эллипсоиде, используемом для плоского или сферического сопоставления.  

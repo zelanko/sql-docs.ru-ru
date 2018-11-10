@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.failingvalues.f1
@@ -15,12 +14,12 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d04ec425853a4d1d3489d1e04e0223d1ea61093
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b6da26bc764c8ac3c02b9f6a8972127f9248d56
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080264"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032071"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Импорт значений в домен из файла Excel
   В этом разделе описывается, как импортировать значения из файла Excel в домен [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Использование файла Excel для импорта значений домена в приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] позволяет упростить процесс создания набора знаний, экономя время и усилия. Это позволяет пользователям, у которых имеется список допустимых значений данных в файле формата Excel или в текстовом файле, импортировать эти значения в домен. Из файла Microsoft Excel вы можете импортировать значения домена в домен или домены в базу знаний. (Дополнительные сведения об импорте доменов в базу знаний см. в разделе [Импорт доменов из файла Excel при обнаружении набора знаний](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md).) Экспорт в файл Excel не поддерживается.  

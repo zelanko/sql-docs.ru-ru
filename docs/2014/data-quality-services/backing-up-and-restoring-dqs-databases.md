@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aacaab21574c3cf70e1c3ee358094dd212462441
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9ff06a230ea00af78b98e561f3fe4ae69886b5ff
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119211"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029862"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Резервное копирование и восстановление баз данных DQS
   В этом разделе описывается, как проводить резервное копирование и восстановление баз данных DQS.  
@@ -25,7 +24,7 @@ ms.locfileid: "49119211"
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
   
--   Необходимо знать или запомните пароль для главного ключа базы данных, который использовался во время установки сервера DQS.  
+-   Необходимо знать пароль для главного ключа базы данных, который вы указывали при установке сервера DQS.  
   
 -   Убедитесь, что не существует текущих операций или процессов в DQS. Это можно проверить с помощью экрана **Мониторинг активности** . Дополнительные сведения о работе с этим экраном см. в разделе [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   

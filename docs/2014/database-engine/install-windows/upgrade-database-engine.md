@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
@@ -15,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4767b695f0c2c3668278e30f47f389664b4a4ef0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189554"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018569"
 ---
 # <a name="upgrade-database-engine"></a>Обновление [компонент ядра СУБД]
   В данном разделе содержатся сведения, которые понадобятся для понимания процесса обновления при подготовке к нему. Он состоит из следующих подразделов.  
@@ -47,7 +46,7 @@ ms.locfileid: "48189554"
 >  При обновлении до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с предыдущей версии выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise выберите "Enterprise Edition: лицензирование по числу ядер" и "Enterprise Edition". Эти выпуски Enterprise отличаются только режимом лицензирования. Дополнительные сведения см. в разделе [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Контрольный список действий перед обновлением  
- Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает обновление предыдущей версии до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Есть также возможность выполнить миграцию баз данных из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Миграция может быть произведена из одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в другой на том же компьютере или из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на другой компьютер. Варианты миграции: при помощи мастера копирования баз данных, резервное копирование и восстановление функциональные возможности, использование [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] импорта и экспорта и массового экспорта и импорта методы.  
+ Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает обновление предыдущей версии до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Есть также возможность выполнить миграцию баз данных из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Миграция может быть произведена из одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в другой на том же компьютере или из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на другой компьютер. Произвести ее можно следующими способами: при помощи мастера копирования баз данных, функций резервного копирования и восстановления, мастера импорта и экспорта служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], а также при помощи массового экспорта и импорта.  
   
  Перед обновлением компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]просмотрите следующие источники:  
   
@@ -108,7 +107,7 @@ ms.locfileid: "48189554"
  Если уровень совместимости пользовательской базы данных до обновления был 100 или выше, после обновления он останется таким же. Если уровень совместимости до обновления был 90, в обновленной базе данных он устанавливается в значение 100, что является минимально поддерживаемым уровнем совместимости в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Новые пользовательские базы данных наследуют уровень совместимости `model` базы данных.  
+>  Новые пользовательские базы данных наследуют уровень совместимости базы данных `model`.  
   
 ## <a name="migrating-databases"></a>Миграция баз данных  
  Переместить пользовательские базы данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно при помощи функций резервного копирования и восстановления либо с помощью функций отсоединения и присоединения, предоставляемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Копирование баз данных путем создания и восстановления резервных копий](../../relational-databases/databases/copy-databases-with-backup-and-restore.md) или [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
@@ -133,7 +132,7 @@ ms.locfileid: "48189554"
   
 -   Проверьте или удалите подсказки USE PLAN, которые формируются [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и применяются в запросах для секционированных таблиц и индексов.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет изменить способ обработки запросов для секционированных таблиц и индексов. Запросы к секционированным объектам с указанием USE PLAN для планов, сформированных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , могут оказаться несовместимыми с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. После выполнения обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]рекомендуется выполнить следующие процедуры.  
+     В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] изменился способ обработки запросов к страницам секционированных таблиц и индексов. Запросы к секционированным объектам с указанием USE PLAN для планов, сформированных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , могут оказаться несовместимыми с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. После выполнения обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]рекомендуется выполнить следующие процедуры.  
   
      **При указании USE PLAN указана непосредственно в запрос:**  
   

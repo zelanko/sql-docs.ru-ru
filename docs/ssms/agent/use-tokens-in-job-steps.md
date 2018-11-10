@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a122ffdd014b61f4253936f59e2a8766fe799824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675572"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743229"
 ---
 # <a name="use-tokens-in-job-steps"></a>Использование токенов в шагах задания
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,8 +73,8 @@ ms.locfileid: "47675572"
 |**(A-ERR)**|Номер ошибки. Если задание запускается в результате предупреждения, то номер ошибки автоматически замещает в шаге задания этот токен.|  
 |**(A-SEV)**|Серьезность ошибки. Если задание запускается в результате предупреждения, то степень серьезности ошибки автоматически замещает в шаге задания этот токен.|  
 |**(A-MSG)**|Текст сообщения. Если задание запускается в результате предупреждения, то текст сообщения автоматически замещает в шаге задания этот токен.|  
-|**(JOBNAME)**|Имя задания.|  
-|**(STEPNAME)**|Имя шага этапа.|  
+|**(JOBNAME)**|Имя задания. Этот токен доступен только в SQL Server 2016 и более поздних версиях.|  
+|**(STEPNAME)**|Имя шага этапа. Этот токен доступен только в SQL Server 2016 и более поздних версиях.|  
 |**(DATE)**|Текущая дата (в формате ГГГГММДД).|  
 |**(INST)**|Имя экземпляра. Для экземпляра по умолчанию этот токен будет иметь имя экземпляра по умолчанию, а именно MSSQLSERVER.|  
 |**(JOBID)**|Идентификатор задания.|  

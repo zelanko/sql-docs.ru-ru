@@ -1,11 +1,9 @@
 ---
 title: LineString | Документация Майкрософт
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
@@ -14,18 +12,18 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b03537992a8f6c63c36ffb079f661aee171439be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2efe03bcff016070c9017068c62e823dd36d497a
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059754"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018479"
 ---
 # <a name="linestring"></a>LineString
   `LineString` является одномерным объектом, представляющим последовательность точек и соединяющих их линейных сегментов.  
   
 ## <a name="linestring-instances"></a>Экземпляры LineString  
- На рисунке ниже показаны примеры `LineString` экземпляров.  
+ На рисунке ниже приведены примеры экземпляров `LineString`.  
   
  ![Примеры геометрических экземпляров LineString](../../database-engine/media/linestring.gif "Примеры геометрических экземпляров LineString")  
   
@@ -33,7 +31,7 @@ ms.locfileid: "48059754"
   
 -   на рисунке 1 представлен простой незамкнутый экземпляр объекта `LineString`;  
   
--   На рисунке 2 представлен отличный от простого незамкнутый `LineString` экземпляра.  
+-   на рисунке 2 представлен отличный от простого незамкнутый экземпляр объекта `LineString`;  
   
 -   на рисунке 3 продемонстрирован простой замкнутый экземпляр объекта `LineString`, представляющий собой кольцо;  
   
@@ -50,20 +48,20 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  `@g3` показывает, что, хотя экземпляр `LineString` допустим, он недействителен.  
   
- Следующие `LineString` не является принимаемым. Он выдаст исключение `System.FormatException`.  
+ Следующий экземпляр `LineString` недопустим. Он выдаст исключение `System.FormatException`.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>Допустимые экземпляры  
- Для `LineString` экземпляр был допустимым, он должен удовлетворять следующим условиям.  
+ Чтобы экземпляр `LineString` был действителен, он должен соответствовать следующим критериям.  
   
-1.  `LineString` Экземпляр должен быть принят.  
+1.  Экземпляр `LineString` должен быть принят.  
   
 2.  Если экземпляр `LineString` не является пустым, он должен содержать по меньшей мере две различные точки.  
   
-3.  `LineString` Экземпляра не может перекрывать сам себя на интервале из двух или более последовательных точек.  
+3.  Экземпляр `LineString` не может перекрывать сам себя на интервале из двух или более последовательных точек.  
   
  Следующие экземпляры `LineString` являются действительными.  
   
@@ -76,7 +74,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 ```  
   
- Следующие `LineString` экземпляры являются недопустимыми.  
+ Следующие экземпляры `LineString` не являются действительными.  
   
 ```  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  

@@ -1,11 +1,9 @@
 ---
 title: Точка | Документация Майкрософт
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Point geometry subtype [SQL Server]
@@ -14,15 +12,15 @@ ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c74251c9c1224dbbd376b57d81d5d180d03cb9c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c680f40a27f0a0ba450d061dae3127872d1262a7
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146874"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51017991"
 ---
 # <a name="point"></a>Точка
-  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пространственных данных, `Point` является объектом без измерения, представляющим отдельное месторасположение и может содержать Z (высота) и m (Мера).  
+  В пространственных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр `Point` является объектом без измерения, представляющим отдельное месторасположение, и может содержать значения Z (уровень) и M (мера).  
   
 ## <a name="geography-data-type"></a>Тип данных Geography  
  Тип Point для типа данных geography представляет единичное расположение, где *Lat* представляет широту, а *Long* — долготу. Значения широты и долготы измеряются в градусах. Значения широты всегда находятся в интервале [-90, 90]. Все значения, находящиеся вне этого диапазона, вызывают исключение. Значения долготы всегда находятся в интервале [-180, 180]. Все значения, находящиеся вне этого диапазона, преобразуются в соответствующие значения в его пределах. Например, если введено значение долготы 190, то оно будет преобразовано в значение -170. *SRID* представляет идентификатор пространственной ссылки экземпляра **geography** , который необходимо вернуть.  

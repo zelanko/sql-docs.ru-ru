@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -21,12 +20,12 @@ ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b933796b755020f5ffdafb9904ab85a5d2202ba9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88dfe4836cc84b7792639817a01c026f6d3f3283
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202204"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018109"
 ---
 # <a name="upgrade-analysis-services"></a>Обновление служб Analysis Services
   Используйте пакет установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Подробные сведения об обновлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме интеграции с SharePoint см. в разделе [обновление PowerPivot для SharePoint](upgrade-power-pivot-for-sharepoint.md). Дополнительные сведения об обновлении существующего SQL Server экземпляра, см. в разделе [обновление до SQL Server 2014 с помощью мастера установки &#40;установки&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  

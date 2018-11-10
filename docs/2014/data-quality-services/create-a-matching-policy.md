@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbmatchingresults.f1
@@ -15,12 +14,12 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2313708f4669b9cde09233d6a87d66eaf5662fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dc7379ef20846309872c6faf707aab04fb6a364
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090954"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033121"
 ---
 # <a name="create-a-matching-policy"></a>Создание политики сопоставления
   В этом разделе описывается создание политики сопоставления в базе знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Подготовка процесса сопоставления в DQS с помощью выполнения операции политики сопоставления на образце данных. В данной операции создается и проверяется одно или несколько правил сопоставления в политике, затем публикуется база знаний, что делает правила сопоставления доступными для общего пользования. В базе знаний может быть только одна политика сопоставления, но эта политика может содержать несколько правил сопоставления.  

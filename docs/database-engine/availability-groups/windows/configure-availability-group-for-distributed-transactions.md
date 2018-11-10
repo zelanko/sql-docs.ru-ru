@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2338ab3c9648af64e772f93639635abf504dafac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07dadc3a5268ab45d54c234b51e89905767b80bd
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595848"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411774"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Настройка группы доступности для распределенных транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47595848"
 Для выполнения распределенных транзакций группу доступности необходимо настроить таким образом, чтобы базы данных регистрировались как диспетчеры ресурсов распределенных транзакций.  
 
 >[!NOTE]
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] с пакетом обновления 2 и более поздней версии предоставляет полную поддержку распределенных транзакций в группах доступности. В версиях [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] до пакета обновления 2 распределенные транзакции между базами данных (т. е. транзакции между базами данных на одном и том же экземпляре SQL Server), включающие базу данных в группе доступности, не поддерживаются. В [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] подобного ограничения нет. 
+>[!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и более поздние версии включают полную поддержку распределенных транзакций в группах доступности. В версиях [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] до пакета обновления 2 (SP2) распределенные транзакции между базами данных (т. е. транзакции между базами данных в одном экземпляре SQL Server), включающие базу данных в группе доступности, не поддерживаются. В [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] подобного ограничения нет. 
 >
 >Конфигурация [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] настраивается точно так же, как и конфигурация [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
@@ -147,10 +147,10 @@ ALTER AVAILABILITY GROUP MyaAG
 Microsoft Distributed Transaction Coordinator (MS DTC) 
 failed to reenlist citing that the database RMID does 
 not match the RMID [xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx] 
-associated with the transaction.  Please manually resolve
+associated with the transaction.  Please manually resolve
 the transaction.
     
-SQL Server detected a DTC/KTM in-doubt transaction with UOW 
+SQL Server detected a DTC/KTM in-doubt transaction with UOW 
 {yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy}.Please resolve it 
 following the guideline for Troubleshooting DTC Transactions.
 ```

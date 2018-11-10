@@ -45,7 +45,7 @@ ms.locfileid: "47828592"
 ####  <a name="Permissions"></a> Permissions  
  Для импорта значений доменов из файла Excel необходимо иметь роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Import"></a> Import values from an Excel file into a domain  
+##  <a name="Import"></a> Импорт значений из файла Excel в домен  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   

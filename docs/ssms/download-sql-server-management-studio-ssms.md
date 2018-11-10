@@ -24,15 +24,19 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09b339293e7dff650a7c91850d745b9c580f856e
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 20dbf5e89a29c7a92cb3c8172cb037f0983203ec
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419259"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971075"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
 SQL Server Management Studio (SSMS) — это интегрированная среда для управления любой инфраструктурой SQL: от SQL Server до базы данных SQL Azure. SSMS предоставляет средства для настройки, наблюдения и администрирования экземпляров SQL. С помощью SSMS можно развертывать, отслеживать и обновлять компоненты уровня данных, используемые вашими приложениями, а также создавать запросы и скрипты.
 
 Используйте SQL Server Management Studio (SSMS) для создания запросов к базам данных и хранилищам данных, их проектирования и управления ими, где бы они ни находились: на локальном компьютере или в облаке.

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: f488e4141d6479f7b26af66e5924d00fa71a68e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f0ac8fe36994630f42d7ec41287c9ddcb76c9fc
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599528"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269847"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство: Установка SQL Server и создать базу данных в Red Hat
 
@@ -30,7 +30,7 @@ ms.locfileid: "47599528"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-В этом кратком руководстве вы установите SQL Server 2019 CTP 2.0 на Red Hat Enterprise Linux (RHEL) 7.3 +. После этого следует подключиться с помощью **sqlcmd** создать свою первую базу данных и выполнения запросов.
+В этом кратком руководстве вы установите предварительную версию SQL Server 2019 на Red Hat Enterprise Linux (RHEL) 7.3 +. После этого следует подключиться с помощью **sqlcmd** создать свою первую базу данных и выполнения запросов.
 
 ::: moniker-end
 
@@ -142,7 +142,7 @@ ms.locfileid: "47599528"
    sudo firewall-cmd --reload
    ```
 
-На этом этапе 2019 CTP-версии SQL Server 2.0 работает на вашем компьютере RHEL и готов к использованию!
+На этом этапе предварительной версии SQL Server 2019 работает на вашем компьютере RHEL и готов к использованию!
 
 ::: moniker-end
 

@@ -3,17 +3,17 @@ title: Занятие 3 обучение и сохранение модели с
 description: Учебник, в котором показано, как внедрить R в SQL Server хранимых процедур и функций T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/29/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 73e1b2ef70821af2247de000eba45a495075e614
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 23387a6074f0c4a1dd6b4cb675b84f7aaced2a06
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463049"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033562"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>Занятие 3: Обучение и сохранение модели с помощью T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,12 +24,14 @@ ms.locfileid: "49463049"
 
 ## <a name="create-the-stored-procedure"></a>Создайте хранимую процедуру
 
-При вызове R из T-SQL, можно использовать системную хранимую процедуру, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Тем не менее, для процессов, которые часто повторяются например повторное Обучение модели, проще инкапсулировать вызов `sp_execute_exernal_script` хранимой процедуры в другую.
+При вызове R из T-SQL, можно использовать системную хранимую процедуру, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Тем не менее для процессов, которые часто повторяются например повторное Обучение модели, проще инкапсулировать вызов процедуры sp_execute_exernal_script в другой хранимой процедуры.
 
-1.  Во-первых создайте хранимую процедуру, которая содержит код R для построения модели прогнозирования tip. В [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], откройте новую **запроса** окна и выполните следующую инструкцию, чтобы создать хранимую процедуру _TrainTipPredictionModel_. Эта хранимая процедура определяет входные данные и использует пакет R для создания модели логистической регрессии.
+1. В [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], откройте новую **запроса** окна.
+
+2. Выполните следующую инструкцию, чтобы создать хранимую процедуру **RxTrainLogitModel**. Эта хранимая процедура определяет входные данные и использует **rxLogit** из RevoScaleR для создания модели логистической регрессии.
 
     ```SQL
-    CREATE PROCEDURE [dbo].[TrainTipPredictionModel]
+    CREATE PROCEDURE [dbo].[RxTrainLogitModel]
     
     AS
     BEGIN
@@ -60,17 +62,15 @@ ms.locfileid: "49463049"
     GO
     ```
 
-    - Тем не менее чтобы убедиться, что некоторые данные, оставшиеся для проверки модели, 70% данных выбираются в случайном порядке из таблицы данных о поездках в такси.
-    
-    - Запрос SELECT использует пользовательскую скалярную функцию _fnCalculateDistance_ для вычисления прямого расстояния между местами посадки и высадки.  Результаты выполнения запроса сохраняются во входной переменной R по умолчанию `InputDataset`.
+    -Чтобы убедиться, что некоторые данные, оставшиеся для проверки модели, 70% данных выбираются в случайном порядке из таблицы данных о поездках в такси в учебных целях.
+
+    - Запрос SELECT использует пользовательскую скалярную функцию *fnCalculateDistance* для вычисления прямого расстояния между местами посадки и высадки. результаты запроса сохраняются в входной переменной R по умолчанию, `InputDataset`.
   
-    - Скрипт R вызывает `rxLogit` функцию, которая является одним из расширенных функций R в состав [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], чтобы создать модель логистической регрессии.
+    - Скрипт R вызывает **rxLogit** функцию, которая является одним из расширенных функций R в состав [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], чтобы создать модель логистической регрессии.
   
         Двоичная переменная _tipped_ применяется в качестве столбца *меток* или результатов, и модель компонуется с использованием следующих столбцов характеристик:  _passenger_count_, _trip_distance_, _trip_time_in_secs_и _direct_distance_.
   
     -   Модель обучения, сохраненная в переменной R `logitObj`, сериализуется и помещается в кадр данных для вывода в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выходные данные вставляются в таблицу _nyc_taxi_models_базы данных, чтобы их можно было использовать для составления прогнозов в будущем.
-  
-2.  Выполните инструкцию, чтобы создать хранимую процедуру, если он еще не существует.
 
 ## <a name="generate-the-r-model-using-the-stored-procedure"></a>Создание модели R, с помощью хранимой процедуры
 
@@ -79,7 +79,7 @@ ms.locfileid: "49463049"
 1. Создание модели R, вызовите хранимую процедуру без указания параметров:
 
     ```SQL
-    EXEC TrainTipPredictionModel
+    EXEC RxTrainLogitModel
     ```
 
 2. Контрольные значения **сообщений** окно [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для сообщений, которые должны передаваться в R **stdout** потока, как это сообщение: 
@@ -98,11 +98,11 @@ ms.locfileid: "49463049"
     0x580A00000002000302020....
     ```
 
-В следующем шаге вы используете обученную модель для создания прогнозов.
+На следующем шаге вы используете обученную модель для создания прогнозов.
 
 ## <a name="next-lesson"></a>Следующее занятие
 
-[Занятие 4: Ввод модели в эксплуатацию](../tutorials/sqldev-operationalize-the-model.md)
+[Занятие 4: Прогнозирование возможных результатов, с помощью модели R в хранимой процедуре](../tutorials/sqldev-operationalize-the-model.md)
 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 

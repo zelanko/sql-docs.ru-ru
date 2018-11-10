@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 37d50985338f6ac0e3cabdebf53b289e77716e39
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: bcc0382f7203f3b53ed78da075ae0fa4c4c2d9e9
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852099"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971125"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
 
@@ -236,7 +236,7 @@ ms.locfileid: "48852099"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **Необязательно**|Указывает, может ли поставщик MSOLAP выполняться внутрипроцессно.<br /><br /> Значение по умолчанию: 1 = включено|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMACCOUNT<br /><br /> **Требуется для SPI_AS_NewFarm**|Определяет учетную запись пользователя домена для запуска служб центра администрирования SharePoint и других важных служб на ферме.<br /><br /> Этот параметр используется только для экземпляров служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которые установлены путем выбора /ROLE = SPI_AS_NEWFARM.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMPASSWORD<br /><br /> **Требуется для SPI_AS_NewFarm**|Позволяет задать пароль для учетной записи фермы.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/PASSPHRASE<br /><br /> **Требуется для SPI_AS_NewFarm**|Определяет парольную фразу, используемую для добавления дополнительных серверов приложений или серверов клиентских веб-интерфейсов к ферме SharePoint.<br /><br /> Этот параметр используется только для экземпляров служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которые установлены путем выбора /ROLE = SPI_AS_NEWFARM.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/PASSPHRASE<br /><br /> **Требуется для SPI_AS_NewFarm**|Определяет парольную фразу, используемую для добавления дополнительных серверов приложений или серверов клиентских веб-интерфейсов к ферме SharePoint.<br /><br /> Этот параметр используется только для экземпляров служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], которые установлены путем выбора /ROLE = SPI_AS_NEWFARM.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMADMINIPORT<br /><br /> **Требуется для SPI_AS_NewFarm**|Определяет порт, используемый для соединения с веб-приложением центра администрирования SharePoint.<br /><br /> Этот параметр используется только для экземпляров служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которые установлены путем выбора /ROLE = SPI_AS_NEWFARM.|  
 |Обозреватель SQL Server|/BROWSERSVCSTARTUPTYPE<br /><br /> **Необязательно**|Указывает режим [запуска](#Accounts) для службы обозревателя SQL Server. Поддерживаемые значения:<br /><br /> **Автоматически**<br /><br /> **Отключено**<br /><br /> **Вручную**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **Необязательно**|Включает ввод учетных данных в режиме «Запуск от имени» для установки [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .|  
@@ -246,7 +246,7 @@ ms.locfileid: "48852099"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **Необязательно**|Указывает каталог для файлов резервных копий.<br /><br /> Значение по умолчанию — `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Необязательно**|Задает параметры сортировки для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Значение по умолчанию основано на локали операционной системы Windows. Дополнительные сведения см. в разделе [Настройка параметров сортировки в программе установки](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx).|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **Необязательно**|Добавляет текущего пользователя в предопределенную роль сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** . Параметр /ADDCURRENTUSERASSQLADMIN может использоваться при установке выпусков Express или при использовании /Role=ALLFeatures_WithDefaults. Дополнительные сведения см. в подразделе /ROLE ниже.<br /><br /> Использование /ADDCURRENTUSERASSQLADMIN является необязательным, но обязательным является /ADDCURRENTUSERASSQLADMIN или /SQLSYSADMINACCOUNTS. Значения по умолчанию:<br /><br /> **Верно** для выпусков [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> **False** для всех остальных выпусков|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Обязательно**|Указывает стартовую учетную запись для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Обязательно**|Указывает стартовую учетную запись для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Указывает пароль для SQLSVCACCOUNT.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **Необязательно**|Указывает режим [запуска](#Accounts) для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поддерживаемые значения:<br /><br /> **Автоматически**<br /><br /> **Отключено**<br /><br /> **Вручную**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **Обязательно**|С помощью этого параметра имена входа подготавливаются в качестве членов роли sysadmin.<br /><br /> Для выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], отличных от [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], параметр /SQLSYSADMINACCOUNTS является обязательным. Для выпусков [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] использование параметра /SQLSYSADMINACCOUNTS является необязательным, но нужно указать один из двух параметров — /SQLSYSADMINACCOUNTS или /ADDCURRENTUSERASSQLADMIN.|  
@@ -355,7 +355,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **Необязательно**|Указывает режим безопасности для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Если этот параметр не задан, то поддерживается только режим проверки подлинности Windows.<br /><br /> Поддерживаемое значение: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **Необязательно**|Указывает каталог для файлов резервных копий.<br /><br /> Значение по умолчанию:<br /><br /> `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Необязательно**|Задает параметры сортировки для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Значение по умолчанию основано на локали операционной системы Windows. Дополнительные сведения см. в разделе [Настройка параметров сортировки в программе установки](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx).|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Обязательно**|Указывает стартовую учетную запись для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Обязательно**|Указывает стартовую учетную запись для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Указывает пароль для SQLSVCACCOUNT.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **Необязательно**|Указывает режим [запуска](#Accounts) для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поддерживаемые значения:<br /><br /> **Автоматически**<br /><br /> **Отключено**<br /><br /> **Вручную**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **Обязательно**|С помощью этого параметра имена входа подготавливаются в качестве членов роли sysadmin.|  
@@ -561,7 +561,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **Необязательно**|Указывает режим безопасности для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Если этот параметр не задан, то поддерживается только режим проверки подлинности Windows.<br /><br /> Поддерживаемое значение: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **Необязательно**|Указывает каталог для файлов резервных копий.<br /><br /> Значение по умолчанию — `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Необязательно**|Задает параметры сортировки для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Значение по умолчанию основано на локали операционной системы Windows. Дополнительные сведения см. в разделе [Настройка параметров сортировки в программе установки](http://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx).|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Обязательно**|Указывает стартовую учетную запись для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Обязательно**|Указывает стартовую учетную запись для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Указывает пароль для SQLSVCACCOUNT.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **Обязательно**|С помощью этого параметра имена входа подготавливаются в качестве членов роли **sysadmin**.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **Необязательно**|Указывает каталог для файлов данных пользовательских баз данных.<br /><br /> Значение по умолчанию — `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`.|  
@@ -880,9 +880,9 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|Устанавливает компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] без репликации и без компонента Full-Text Search.|  
 |/FEATURES=SQLEngine, FullText|Устанавливает компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] с компонентом Full-Text Search.|  
-|/FEATURES=SQL, Tools|Устанавливает полный набор функций компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и все средства.|  
+|/FEATURES=SQL,Tools|Устанавливает полный набор функций компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и все средства.|  
 |/FEATURES=BOL|Устанавливает компоненты электронной документации по SQL Server для просмотра содержимого справки и управления им.|  
-|/FEATURES=SQLEngine, PolyBase|Устанавливает обработчик PolyBase.|  
+|/FEATURES=SQLEngine,PolyBase|Устанавливает обработчик PolyBase.|  
   
 ##  <a name="RoleParameters"></a> Параметры роли  
  Роль установки или параметр /Role позволяет устанавливать стандартный набор компонентов. Роли SSAS устанавливают экземпляр служб SSAS в существующей ферме SharePoint либо в новой ненастроенной ферме. Каждый сценарий поддерживается двумя ролями установки. Одновременно может быть выбрана только одна роль установки. При выборе роли программа установки устанавливает функции и компоненты, которые принадлежат роли. Указанные для роли компоненты могут быть изменены. Дополнительные сведения об использовании параметра роли функций см. в разделе [Установка Power Pivot из командной строки](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 

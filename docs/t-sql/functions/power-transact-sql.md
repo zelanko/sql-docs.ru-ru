@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea72540271302223a35538e3c97e9f01c47e8d99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00186d12bd33b5ca808f1265acc1940f3c40706f
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838992"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743179"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,18 @@ POWER ( float_expression , y )
  Степень, в которую возводится аргумент *float_expression*. *y* — выражение категории точного числового или приблизительного числового типа данных, за исключением типа данных **bit**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- Возвращает тот же тип, что был передан во *float_expression*. Например, если во *float_expression* был передан тип **decimal**(2,0), возвращается результат типа **decimal**(2,0).  
+ Тип возвращаемого значения зависит от типа входных данных *float_expression*:
+ 
+|Входной тип|Возвращаемый тип|  
+|----------|-----------|  
+|**float**, **real**|**float**|
+|**decimal(*p*, *s*)**|**decimal(38, *s*)**|
+|**int**, **smallint**, **tinyint**|**int**|
+|**bigint**|**bigint**|
+|**money**, **smallmoney**|**money**|
+|**bit**, **char**, **nchar**, **varchar**, **nvarchar**|**float**|
+ 
+Если результат по размеру не соответствует типу возвращаемого значения, происходит ошибка арифметического переполнения.
   
 ## <a name="examples"></a>Примеры  
   

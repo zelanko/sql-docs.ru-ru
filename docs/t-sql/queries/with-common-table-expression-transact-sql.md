@@ -28,17 +28,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 239bcbfdb1aa932189fdd77863b68489c3cb7edc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c7768b97ba5fc337ab06b42e61fb1e80330bc76
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744692"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970976"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH обобщенное_табличное_выражение (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Задается временно именованный результирующий набор, называемый обобщенным табличным выражением (ОТВ). Он извлекается при выполнении простого запроса и определяется в области выполнения одиночной инструкции SELECT, INSERT, UPDATE или DELETE. Это предложение может использоваться также в инструкции CREATE VIEW как часть определяющей ее инструкции SELECT. Обобщенное табличное выражение может включать ссылки на само себя. Такое выражение называется рекурсивным обобщенным табличным выражением.  
+> [!div class="nextstepaction"]
+> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Задается временно именованный результирующий набор, называемый обобщенным табличным выражением (ОТВ). Он извлекается при выполнении простого запроса и определяется в области выполнения одиночной инструкции SELECT, INSERT, UPDATE или DELETE. Это предложение может использоваться также в инструкции CREATE VIEW как часть определяющей ее инструкции SELECT. Обобщенное табличное выражение может включать ссылки на само себя. Такое выражение называется рекурсивным обобщенным табличным выражением.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -22,19 +22,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa1dc96a026a08aa66218f0a30ca580fb524e9d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 537a2da418940ef267305078f0375d6c51716677
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653480"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970345"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает ранг каждой строки в секции результирующего набора. Ранг строки вычисляется как единица плюс количество рангов, находящихся до этой строки.  
+> [!div class="nextstepaction"]
+> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-  Функции ROW_NUMBER и RANK похожи. ROW_NUMBER нумерует все строки по порядку (например, 1, 2, 3, 4, 5). RANK назначает одинаковое числовое значение строкам, претендующим на один ранг (например, 1, 2, 2, 4, 5).   
+Возвращает ранг каждой строки в секции результирующего набора. Ранг строки вычисляется как единица плюс количество рангов, находящихся до этой строки.  
+
+Функции ROW_NUMBER и RANK похожи. ROW_NUMBER нумерует все строки по порядку (например, 1, 2, 3, 4, 5). RANK назначает одинаковое числовое значение строкам, претендующим на один ранг (например, 1, 2, 2, 4, 5).   
   
 > [!NOTE]
 > RANK — это временное значение, вычисляемое во время выполнения запроса. Сведения о хранении номеров в таблице см. в разделах [Свойство IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) и [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 

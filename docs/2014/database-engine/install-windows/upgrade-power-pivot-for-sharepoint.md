@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84a76e85aeb73138f2c633bfa361325c0423ca96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 956503602a4a9266427f7242097755f3ff6a7294
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197254"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019029"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Обновление PowerPivot для SharePoint
   В этом разделе описаны шаги, необходимые для обновления развертывания [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] до [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Конкретная последовательность действий зависит от версии SharePoint вашей среды и включает надстройку PowerPivot для SharePoint (**spPowerPivot.msi**).  
@@ -48,9 +47,9 @@ ms.locfileid: "48197254"
   
  **SQL Server:**  
   
--   Если существующая установка PowerPivot имеет [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] пакет обновления 2 (SP2) является обязательным для обновления до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Если существующая установка PowerPivot имеет версию [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], то для обновления до [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
--   Если существующая установка PowerPivot имеет [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] пакет обновления 1 (SP1) является обязательным для обновления до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Если существующая установка PowerPivot имеет версию [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], то для обновления до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
  **SharePoint 2010.**  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48197254"
   
          либо  
   
-         На **запустить** последовательно выберите пункты **все программы**, нажмите кнопку [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], нажмите кнопку **средства настройки**, а затем нажмите кнопку **PowerPivot для SharePoint 2013 Конфигурация слишком**. Обратите внимание, что это средство присутствует в списке вариантов, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+         В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**, **Средство настройки PowerPivot для SharePoint 2013**. Обратите внимание, что это средство присутствует в списке вариантов, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
     2.  Во время запуска средство настройки проверяет состояние обновления решения фермы и решений веб-приложений PowerPivot. При обнаружении более старых версий решений появится сообщение: **Обнаружены более новые версии файлов решений PowerPivot. Выберите параметр обновления для обновления фермы**". Нажмите кнопку **ОК** , чтобы закрыть сообщение проверки системы.  
   
@@ -149,13 +148,13 @@ ms.locfileid: "48197254"
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  **Запустите [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установки** на первом сервере приложений SharePoint, где выполняется **SQL Server Analysis Services (PowerPivot)** службы Windows, чтобы обновить экземпляр POWERPIVOT. На странице «Установка» мастера установки SQL Server выберите вариант обновления. Дополнительные сведения см. в разделе [обновление до SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
+5.  **Запустите программу установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Установку** на первом сервере приложений SharePoint, где запущена служба Windows **Службы SQL Server Analysis Services (PowerPivot)** , чтобы обновить экземпляр POWERPIVOT. На странице «Установка» мастера установки SQL Server выберите вариант обновления. Дополнительные сведения см. в разделе [обновление до SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 6.  **Перезапустите сервер** перед запуском средства настройки. В этом случае любые обновления или необходимые компоненты, установленные программой установки SQL Server, будут полностью настроены в системе.  
   
 7.  **Запустите средство настройки PowerPivot** на первом сервере приложений SharePoint, где выполняется служба SQL Server Analysis Services (PowerPivot) для обновления решений и веб-служб в SharePoint. На этом шаге нельзя использовать центр администрирования.  
   
-    1.  На **запустить** последовательно выберите пункты **все программы**, нажмите кнопку [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], нажмите кнопку **средства настройки**, а затем нажмите кнопку **средство настройки PowerPivot** . Обратите внимание, что это средство присутствует в списке вариантов, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+    1.  В меню **Пуск** последовательно укажите пункты **Все программы**, щелкните [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], щелкните **Средства настройки**и выберите пункт **Средство настройки PowerPivot**. Обратите внимание, что это средство присутствует в списке вариантов, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
     2.  Во время запуска средство настройки проверяет состояние обновления решения фермы и решений веб-приложений PowerPivot. При обнаружении более старых версий решений появится сообщение: "Обнаружены более новые версии файлов решений PowerPivot. Выберите параметр обновления для обновления фермы". Нажмите кнопку **OК** , чтобы закрыть окно сообщения.  
   

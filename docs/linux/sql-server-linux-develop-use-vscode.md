@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: 7775ece865eea62aad52f1c942c522ad21ed1108
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1ae9056ecbaf158b275798d69d691ae64e6ef06
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686622"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033631"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Использование Visual Studio Code для создания и выполнения скриптов Transact-SQL для SQL Server
 
@@ -250,7 +250,7 @@ Visual Studio Code — графический редактор кода для L
 
 В реальной ситуации, можно создать скрипт, который необходимо сохранить и запустить более поздней версии (для администрирования или как часть более крупного проекта разработки). В этом случае можно сохранить скрипт с **.sql** расширения.
 
-Если вы не знакомы с T-SQL, см. в разделе [Учебник. Составление инструкций Transact-SQL] и [Справочник по Transact-SQL (ядро СУБД)].
+Если вы не знакомы с T-SQL, изучите разделы [Учебник. Составление инструкций Transact-SQL] (Руководство: написание инструкций Transact-SQL) и [Справочник по Transact-SQL (ядро СУБД)] (Справочник по Transact-SQL (ядро СУБД)).
 
 Дополнительные сведения о с помощью или способствовать низкой расширения mssql см. в разделе [вики-сайте проекта для расширения mssql].
 

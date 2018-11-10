@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3fb96c10c017a1505f0a6e0036de346040cfec0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5ab84f7892b3ef4e146096c2bc35201585d782b
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195764"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029722"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Типы данных SQL Server и службы SSIS, поддерживаемые для доменов DQS
   В SQL Server и службах SQL Server Integration Services (SSIS) имеется много типов данных, но только четыре из них предназначены для доменов DQS: Date, Decimal, Integer и String. В DQS поддерживаются не все типы данных SQL Server и служб SSIS. Сопоставление исходных данных с доменом DQS для проведения действия по обеспечению качества данных возможно только в том случае, если исходный тип данных поддерживается службами DQS и совпадает с типом данных домена DQS. В данном разделе приведены сведения о типах данных SQL Server и службах SSIS, которые поддерживаются и доступны для сопоставления с каждым из четырех типов данных для доменов DQS.  

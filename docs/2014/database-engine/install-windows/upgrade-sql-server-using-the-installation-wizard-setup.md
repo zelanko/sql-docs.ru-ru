@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
@@ -14,12 +13,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 06ffc2c8633407ddcc3f7c6d8a55933d05a3d26a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12df16f62110cf41e4228326ab642924a7b61f80
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060574"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018319"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Обновление до версии SQL Server 2014 с помощью мастера установки (программа установки)
   Мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает обновление всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через единое дерево компонентов. Можно также установить [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] параллельно с предыдущей версией или выполнить перенос существующих баз данных и параметров конфигурации из предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем применить их к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -125,7 +124,7 @@ ms.locfileid: "48060574"
   
 -   **Регистрация серверов:** в процессе обновления удаляются настройки реестра для предыдущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После обновления необходимо заново зарегистрировать серверы.  
   
--   **Обновление статистики** — чтобы оптимизировать производительность запросов, рекомендуется обновить статистику для всех обновленных баз данных. Используйте `sp_updatestats` хранимую процедуру для обновления статистики в пользовательских таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] баз данных.  
+-   **Обновление статистики** — чтобы оптимизировать производительность запросов, рекомендуется обновить статистику для всех обновленных баз данных. Используйте хранимую процедуру `sp_updatestats` для обновления статистики в пользовательских таблицах баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   **Настройка новой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — чтобы уменьшить уязвимую контактную зону системы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по выбору устанавливает и активирует ключевые службы и функции. Дополнительные сведения о настройке контактной зоны см. в файле Readme для данной версии.  
   

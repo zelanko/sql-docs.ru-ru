@@ -23,15 +23,18 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d262e2d2a4c79a44f0b5a5245991f32b3676487
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5deb2b29c70187bb0222e21df7193f300f7eb7b0
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723872"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970545"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Учебники по SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+> [!div class="nextstepaction"]
+> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Учебник по SQL Server Management Studio (SSMS) познакомит вас с этой интегрированной средой для управления инфраструктурой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] представляет собой графический интерфейс для настройки экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], наблюдения за ними и управления ими. Среда также позволяет развертывать, отслеживать и обновлять компоненты уровня данных, используемые приложениями, например базами данных. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] также предоставляет редакторы [!INCLUDE[tsql](../../includes/tsql-md.md)], языка многомерных выражений, расширений интеллектуального анализа данных и XML для изменения и отладки скриптов.  
   

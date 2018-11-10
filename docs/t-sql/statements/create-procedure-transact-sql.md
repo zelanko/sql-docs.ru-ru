@@ -47,17 +47,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8bddec40694be543a425a58c28a5a8d8f1bb65d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72a1972d6824b30ac97fedc2652fe89620a96ff3
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780812"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970695"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Создает [!INCLUDE[tsql](../../includes/tsql-md.md)] или хранимую процедуру CLR в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], хранилище данных SQL Azure и Parallel Data Warehouse. Хранимые процедуры похожи на процедуры из других языков программирования в том, что они могут:  
+> [!div class="nextstepaction"]
+> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Создает [!INCLUDE[tsql](../../includes/tsql-md.md)] или хранимую процедуру CLR в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], хранилище данных SQL Azure и Parallel Data Warehouse. Хранимые процедуры похожи на процедуры из других языков программирования в том, что они могут:  
   
 -   принимать входные параметры и возвращать вызывающей процедуре или пакету ряд значений в виде выходных параметров;  
   

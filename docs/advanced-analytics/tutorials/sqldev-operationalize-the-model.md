@@ -1,21 +1,21 @@
 ---
 title: Занятие 4 возможных выхода прогноза с помощью модели R (машинного обучения SQL Server) | Документация Майкрософт
-description: Учебник, в котором показано, как внедрить R в SQL Server хранимых процедур и функций T-SQL
+description: Руководство, описывающее для ввода в эксплуатацию встроенный скрипт R в SQL Server хранимые процедуры с помощью функций T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.date: 10/30/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 07c99279fdb511f1c6f59e15f83644a89642c176
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 8485cd4e24e067cf6a4e6feef0c39c3c3051a166
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462130"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032541"
 ---
-# <a name="lesson-4-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Занятие 4: Прогнозирование возможных результатов, с помощью модели R в хранимой процедуре
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Занятие 4: Выполнение прогнозов с помощью языка R, внедренных в хранимую процедуру
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Эта статья входит руководства для разработчиков SQL по использованию R в SQL Server.
@@ -30,10 +30,10 @@ ms.locfileid: "49462130"
 
 ## <a name="basic-scoring"></a>Базовый процесс оценки
 
-Хранимая процедура **PredictTip** иллюстрирует базовый синтаксис для заключения вызова прогноза в хранимую процедуру.
+Хранимая процедура **RxPredict** иллюстрирует базовый синтаксис для заключения вызова rxPredict RevoScaleR в хранимой процедуре.
 
 ```SQL
-CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
+CREATE PROCEDURE [dbo].[RxPredict] @inquery nvarchar(max) 
 AS 
 BEGIN 
   
@@ -64,11 +64,11 @@ GO
   
 + Значение, возвращенное `rxPredict` функция **float** , представляет вероятность того, что драйвер возвращает tip, любом размере.
 
-## <a name="batch-scoring"></a>Пакетная оценка
+## <a name="batch-scoring-a-list-of-predictions"></a>Пакетной оценки (список прогнозов)
 
-Теперь рассмотрим, как производится пакетная оценка.
+Распространенный сценарий — для формирования прогнозов для нескольких наблюдений в пакетном режиме. На этом шаге давайте посмотрим, как производится пакетная оценка.
 
-1.  Сначала получим набор входных данных меньшего размера, с которым будем далее работать. Этот запрос создает список первых 10 поездок с числом пассажиров и другими характеристиками, необходимыми для составления прогноза.
+1.  Начинайте с получения меньший набор входных данных для работы с. Этот запрос создает список первых 10 поездок с числом пассажиров и другими характеристиками, необходимыми для составления прогноза.
   
     ```SQL
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -93,13 +93,11 @@ GO
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    Этот запрос можно использовать в качестве входных данных в хранимую процедуру **PredictTipMode**, в который как часть загрузки.
-
-2. Внимательно изучите код хранимой процедуры **PredictTipMode** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Создайте хранимую процедуру с именем **RxPredictBatchOutput** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[RxPredictBatchOutput]  ******/
+    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -127,26 +125,28 @@ GO
     SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
 
     -- Call the stored procedure for scoring and pass the input data
-    EXEC [dbo].[PredictTip] @inquery = @query_string;
+    EXEC [dbo].[RxPredictBatchOutput] @inquery = @query_string;
     ```
   
-4. Хранимая процедура возвращает ряд значений, представляющих прогнозы для каждой из первых 10 поездок. Тем не менее верхнем поездок, также являются одним пассажиром с расстоянием поездки в относительно короткий, для которого драйвер вряд ли чаевые.
+Хранимая процедура возвращает ряд значений, представляющих прогнозы для каждой из первых 10 поездок. Тем не менее верхнем поездок, также являются одним пассажиром с расстоянием поездки в относительно короткий, для которого драйвер вряд ли чаевые.
   
 
 > [!TIP]
 > 
 > Вместо того чтобы возвращать только «Да совет» и «нет чаевых» результаты, можно также получить оценку вероятности прогноза и затем применить предложение WHERE для _Оценка_ значения столбца, чтобы классифицировать оценки как «высокая вероятность чаевых» или " Низкая вероятность чаевых», используя пороговое значение, например 0,5 или 0,7. Это действие отсутствует в хранимой процедуре, но его можно легко реализовать.
 
-## <a name="single-row-scoring"></a>Оценка одной строки
+## <a name="single-row-scoring-of-multiple-inputs"></a>Оценка одной строки из нескольких наборов входных данных
 
-Иногда требуется передать из приложения отдельные значения и получить один результат на их основе. Например, можно настроить лист Excel, веб-приложение или отчет служб Reporting Services так, чтобы они вызывали хранимую процедуру, передавая в нее входные значения, введенные или выбранные пользователями.
+Иногда требуется передать несколько входных значений и получить один прогноз на основании этих значений. Например можно настроить лист Excel, веб-приложения или отчета служб Reporting Services для вызова хранимой процедуры и передачи входных данных введенные или выбранные пользователями из этих приложений.
 
-В этом разделе вы узнаете, как создавать отдельные прогнозы с помощью хранимой процедуры.
+В этом разделе вы узнаете, как создавать отдельные прогнозы с помощью хранимой процедуры, которая принимает несколько входов, например число пассажиров, расстояние поездки и т. д. Хранимая процедура создает оценку на основе ранее сохраненные модели R.
+  
+Если вызвать хранимую процедуру из внешнего приложения, убедитесь, что данные соответствуют требованиям модели r. К ним могут относиться возможность приведения или преобразования входных данных в тип данных R или проверка типа и длины данных. 
 
-1. Внимательно изучите код хранимой процедуры **PredictTipSingleMode**, который входит в состав загрузки.
+1. Создание хранимой процедуры **RxPredictSingleRow**.
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
     AS
     BEGIN
     DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
@@ -165,19 +165,13 @@ GO
       WITH RESULT SETS ((Score float));  
     END
     ```
-  
-    - Эта хранимая процедура принимает в качестве входных данных несколько отдельных значений, таких как число пассажиров, расстояние поездки и т. д.
-  
-        Если вызвать хранимую процедуру из внешнего приложения, убедитесь, что данные соответствуют требованиям модели r. К ним могут относиться возможность приведения или преобразования входных данных в тип данных R или проверка типа и длины данных. 
-  
-    -   Хранимая процедура создает оценку на основе сохраненной модели R.
-  
+
 2. Попробуйте выполнить ее, указав значения вручную.
   
     Откройте новую **запроса** окно и вызовите хранимую процедуру, предоставляя значения для каждого из параметров. Параметры представляют столбцы признаков, используемых моделью и являются обязательными.
 
     ```
-    EXEC [dbo].[PredictTipSingleMode] @passenger_count = 0,
+    EXEC [dbo].[RxPredictSingleRow] @passenger_count = 0,
     @trip_distance = 2.5,
     @trip_time_in_secs = 631,
     @pickup_latitude = 40.763958,
@@ -189,7 +183,7 @@ GO
     Также можно использовать этот короткую форму, поддерживаемые для [параметров для хранимой процедуры](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
     ```SQL
-    EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    EXEC [dbo].[PredictRxMultipleInputs] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 3. Результаты показывают, что вероятность получения чаевых не хватает (ноль) в этих первых 10 поездок, так как все являются одним пассажиром на сравнительно короткое расстояние.

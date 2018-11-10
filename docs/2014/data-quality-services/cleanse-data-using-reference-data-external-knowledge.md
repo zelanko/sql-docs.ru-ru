@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d561f608b1a69f3872d66c8f454853ffeee5b82b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c556fb02eaad5a97a3f844991ba64440ac65f7b3
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149804"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029662"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Очистка данных с использованием знаний о справочных данных (внешних знаний)
   В этом разделе описывается очистка данных с использованием набора знаний из поставщиков ссылочных данных. Все этапы очистки данных с использованием набора знаний из поставщиков эталонных данных точно такие же, как описано в разделе [Очистка данных с использованием набора знаний служб DQS &#40;внутренних&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md), а в этом разделе приведены сведения по очистке данных с использованием службы эталонных данных в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -53,7 +52,7 @@ ms.locfileid: "48149804"
 ##  <a name="Cleanse"></a> Очистка данных с использованием набора знаний о ссылочных данных  
  Мы продолжим этот же пример использования доменов, которые сопоставлялись в предыдущем разделе, [Добавление домена или составного домена к ссылочным данным](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md), со службой Melissa Data в Windows Azure Marketplace. Теперь мы будем использовать те же домены для очистки образцов адресов в США. Шаги по очистке данных описаны в разделе [Очистка данных с использованием набора знаний служб DQS &#40;внутренних&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). Однако мы будем привлекать ваше внимание к важным деталям в ходе этого процесса.  
   
-1.  Создайте проект служб DQS и выберите действие **Очистка** . См. в разделе [Создание проекта качества данных](../../2014/data-quality-services/create-a-data-quality-project.md).  
+1.  Создайте проект служб DQS и выберите действие **Очистка** . См. раздел [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md).  
   
 2.  На странице **Сопоставление** сопоставьте следующие 4 домена с соответствующими столбцами в исходных данных: **Строка адреса**, **Город**, **Штат**и **Почтовый индекс**. Нажмите кнопку **Далее**.  
   

@@ -10,18 +10,18 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1140e537e4ea7614df90f964ae280b7d86741d31
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 7abd9873b3aeefb5644ade0497fe89c47d7cd343
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806634"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757959"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Настройка PolyBase для доступа к внешним данным в Teradata
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье описывается использование PolyBase в экземпляре SQL Server для запроса внешних данных в Teradata.
+В этой статье описывается использование PolyBase в экземпляре SQL Server для запроса внешних данных в Teradata.
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -33,22 +33,23 @@ ms.locfileid: "49806634"
 
 Чтобы запросить данные из источника данных Teradata, необходимо создать внешние таблицы, позволяющие ссылаться на внешние данные. Этот раздел содержит пример кода для создания таких внешних таблиц. 
 
-В этом разделе будут созданы такие объекты:
+В этом разделе будут созданы следующие объекты:
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-1. Создайте в базе данных главный ключ, если его нет. Это необходимо для шифрования секрета учетных данных.
+1. Создайте в базе данных главный ключ, если его нет. Он необходим для шифрования секрета учетных данных.
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
-    ## <a name="arguments"></a>Аргументы
+    **Аргументы**
+
     PASSWORD ='password'
 
-    Пароль, который используется при шифровке главного ключа базы данных. Аргумент password должен соответствовать требованиям политики паролей Windows на компьютере, где размещается экземпляр SQL Server.
+    Находится ли пароль, используемый для шифрования главного ключа, в базе данных? Пароль должен соответствовать требованиям политики паролей Windows на компьютере, где размещается экземпляр SQL Server.
 
 1. Создайте учетные данные на уровне базы данных.
  
@@ -78,7 +79,7 @@ ms.locfileid: "49806634"
 
      ```
 
-1.  Создайте внешние таблицы, которые представляют данные, хранящиеся во внешней системе Teradata: [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+1.  Создайте внешние таблицы для представления данных, хранимых во внешнем экземпляре системы Teradata, с помощью инструкции [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
      ```sql
      /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
@@ -108,9 +109,9 @@ ms.locfileid: "49806634"
      );
      ```
 
-1. **Необязательно.** Создайте статистику для внешней таблицы.
+1. *Необязательно.* Создайте статистику для внешней таблицы.
 
-    Чтобы обеспечить оптимальную производительность запросов, мы советуем создать статистику столбцов внешней таблицы, особенно тех, которые используются для объединения, применения фильтров и статистических выражений.
+    Чтобы обеспечить оптимальную производительность запросов, создайте статистику столбцов внешней таблицы, особенно тех, которые используются для объединения, фильтров и статистических выражений.
 
      ```sql
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

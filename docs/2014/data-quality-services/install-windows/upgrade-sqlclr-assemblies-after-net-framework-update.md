@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4721b388d35974b8e9749d74dbdf5f9ec988d85e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48166ece4bdbfb8472890c61ee4a33e3ce4243d0
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105334"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032231"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Обновление сборок SQLCLR после загрузки обновлений .NET Framework
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) представляют собой набор процедур среды SQLCR, которые ссылаются на сборки Microsoft .NET Framework 4. Установка на компьютер любых обновлений .NET Framework, оказывающих влияние на какую-либо подобную сборку, приводит к изменениям в Module Version ID (MVID) сборки в глобальном кэше сборок (GAC). Это приводит к возникновению рассогласования между идентификаторами MVID используемой сборки в глобальном кэше сборок и сборки, входящей в состав [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -29,7 +28,7 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
  Чтобы исправить эту неполадку, необходимо обновить измененные сборки SQLCLR в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Для этого запустите файл DQSInstaller.exe с параметром командой строки **upgradedlls** , что позволит пропустить повторное создание баз данных DQS и выполнить только обновления задействованных сборок. Существующие базы знаний, проекты служб DQS и любые другие данные в DQS сохранятся.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
   
 -   Необходимо выполнить вход от имени члена группы администраторов на компьютере [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .  
   

@@ -11,18 +11,20 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0ffdc0f6940caaffe8b50db57b5a694f38211aa5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d9389f515c6e6558a5df2a39a778e24b9179567
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713922"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970785"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Выбор метода обновления компонента Database Engine
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+> [!div class="nextstepaction"]
+> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
   
-  Существует несколько подходов, которые следует учитывать при планировании обновления предыдущего выпуска SQL Server до версии [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы свести к минимуму время простоя и риски. Можно выполнить обновление на месте, миграцию в новую установку или последовательное обновление. Следующая схема поможет вам выбрать один из этих подходов. Каждый из подходов, указанных в схеме, кроме того, обсуждается ниже. Чтобы получить дополнительные сведения о точках принятия решений в этой схеме, ознакомьтесь с разделом [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+Существует несколько подходов, которые следует учитывать при планировании обновления предыдущего выпуска SQL Server до версии [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы свести к минимуму время простоя и риски. Можно выполнить обновление на месте, миграцию в новую установку или последовательное обновление. Следующая схема поможет вам выбрать один из этих подходов. Каждый из подходов, указанных в схеме, кроме того, обсуждается ниже. Чтобы получить дополнительные сведения о точках принятия решений в этой схеме, ознакомьтесь с разделом [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Дерево выбора метода для обновления компонента Database Engine](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Дерево выбора метода для обновления компонента Database Engine")  
   

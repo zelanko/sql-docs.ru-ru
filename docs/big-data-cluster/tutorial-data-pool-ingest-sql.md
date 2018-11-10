@@ -4,15 +4,15 @@ description: Этом руководстве показано, как прием
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: c909379c92b2eb9a98c1c191987570946a8cc002
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 1f585a354175ff893869cef7f2f47b12fe244634
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644239"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221700"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Руководство: Прием данных в пул данных SQL Server с помощью Transact-SQL
 
@@ -66,7 +66,7 @@ ms.locfileid: "49644239"
       );
    ```
   
-1. В CTP 2.0 Создание данных пула является асинхронным, но нет способа определить, когда сеть будет еще. Подождите 2 минуты, чтобы убедиться в том, что при создании пула данных, прежде чем продолжить.
+1. В CTP-версии 2.1 Создание данных пула является асинхронным, но нет способа определить, когда сеть будет еще. Подождите 2 минуты, чтобы убедиться в том, что при создании пула данных, прежде чем продолжить.
 
 ## <a name="load-data"></a>Загрузка данных
 

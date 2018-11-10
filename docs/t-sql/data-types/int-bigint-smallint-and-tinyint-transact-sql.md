@@ -29,15 +29,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f20eb4ac7629cd89dab503a768ede51cd68836a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d811ff0bab33f2f88760bdefbb6c56e28791d0
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723972"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970416"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint и tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Типы точных числовых данных, использующие целые значения. Для экономии места в базе данных используйте тип данных наименьшего размера, который гарантирует возможность хранения всех возможных значений. Например, типа tinyint достаточно для хранения возраста людей, так как он не может превышать 255 лет. Однако типа tinyint будет недостаточно для возраста зданий, так как они могут быть старше 255 лет.
   

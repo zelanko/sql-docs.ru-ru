@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
@@ -14,12 +13,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e2d660f095c2f6e4d098fe2f0d60ef547a02ad7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101734"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018439"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Настройка SQL Server на установке Server Core
   Этот раздел содержит сведения о настройке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на установке Server Core из [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1). См. следующие разделы:  
@@ -28,15 +27,15 @@ ms.locfileid: "48101734"
   
 -   [Установка обновлений для SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
   
--   [Запуск и остановка службы SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
+-   [Запуск или остановка службы SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
   
 -   [Включение групп доступности AlwaysOn](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
   
--   [Настройка удаленного доступа к SQL Server на Server Core](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
+-   [Настройка удаленного доступа к SQL Server, запускаемого в Server Core](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
   
 -   [Приложение SQL Server Profiler](configure-sql-server-on-a-server-core-installation.md#bkmk_profiler)  
   
--   [Аудит SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_auditing)  
+-   [Подсистема аудита SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_auditing)  
   
 -   [Программы командной строки](configure-sql-server-on-a-server-core-installation.md#bkmk_cmd)  
   
@@ -77,7 +76,7 @@ ms.locfileid: "48101734"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объединяет последние обновления продукта с установкой основного продукта, чтобы он и применимые обновления устанавливались одновременно.  
   
- Когда программа установки обнаруживает последние версии соответствующих обновлений, эти обновления загружаются и интегрируются в текущую процедуру установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Функция обновления продукта может включить в установку пакет обновления, накопительное обновление или и то и другое.  
+ Когда программа установки обнаруживает последние версии соответствующих обновлений, эти обновления загружаются и интегрируются в текущую процедуру установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Функция обновления продукта может включить в установку пакет обновления, накопительное обновление или и то и другое.  
   
  Укажите параметры UpdateEnabled и UpdateSource, чтобы ввести последние обновления продукта в установку основного продукта. В следующем примере показано, как выполнить обновления продукта в процессе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -117,7 +116,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  Включение групп доступности AlwaysOn является предварительным требованием для экземпляра сервера, чтобы использовать группы доступности в качестве решения высокого уровня доступности и аварийного восстановления. Дополнительные сведения об управлении группами доступности AlwaysOn см. в разделе [Включение и отключение групп доступности AlwaysOn (SQL Server)](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>Удаленное использование диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Эти действия предназначены для выполнения на Компьютере под управлением клиентской редакции [!INCLUDE[win7](../../includes/win7-md.md)] или более поздней версии, или другом сервере, где установлена графическая оболочка сервера (т. е. полной установки [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] или установки сервера Windows Server 8 Включенной графической оболочкой).  
+ Эти действия предназначены для выполнения на компьютере под управлением клиентской редакции [!INCLUDE[win7](../../includes/win7-md.md)] или более поздней версии или на другом сервере, где установлена графическая оболочка сервера (т. е. полной установки [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] или Windows 8 с включенным компонентом графической оболочки сервера).  
   
 1.  Откройте оснастку «Управление компьютером». Чтобы открыть оснастку «Управление компьютером», выполните одно из следующих действий.  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e04e10b21e0210329a3ce6c09bc10bad53245f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45909dae2443b594b12de98a2403178bdd7ce1ca
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068814"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032711"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   Очистка данных — это процесс анализа качества данных в источнике данных с выполняемым вручную утверждением или отклонением рекомендаций, даваемых системой, и внесением изменений в данные. Очистка данных в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) состоит из автоматического процесса, анализирующего соответствие данных знаниям из базы знаний, и интерактивного процесса, позволяющего диспетчеру данных проверять и изменять результаты автоматического процесса, чтобы обеспечить надлежащий результат очистки данных.  
@@ -99,7 +98,7 @@ ms.locfileid: "48068814"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описывает настройку пороговых значений для операции очистки.|[Настройка пороговых значений для очистки и сопоставления](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|Описывает настройку пороговых значений для операции очистки.|[Configure Threshold Values for Cleansing and Matching](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |Описывает очистку данных с использованием знаний, построенных в DQS.|[Очистка данных с использованием набора знаний служб DQS &#40;внутренних&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
 |Описывает очистку данных с использованием знаний, полученных от службы эталонных данных.|[Очистка данных с использованием набора знаний об эталонных данных &#40;внешних&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Описывает очистку составного домена.|[Очистка данных в составном домене](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)|  

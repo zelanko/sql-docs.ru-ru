@@ -1,11 +1,9 @@
 ---
 title: Создание, изменение и удаление пространственных индексов | Документация Майкрософт
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -18,12 +16,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f935fa237c13f71c6ad7cc0ee97a4d7577a516ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485b9bd38754309602df8002bf651188d322d6d8
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122354"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018659"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Создание, изменение и удаление пространственных индексов
   Пространственный индекс позволяет более эффективно выполнять определенные операции со столбцами из `geometry` или `geography` тип данных ( *пространственного столбца*). Для пространственного столбца может быть задано несколько пространственных индексов. Это целесообразно, например, при индексировании различных параметров тесселяции в одном столбце.  
@@ -85,7 +83,7 @@ ms.locfileid: "48122354"
   
      Таблица откроется в конструкторе таблиц.  
   
-2.  Выберите `geometry` или `geography` столбцов для индекса.  
+2.  Выберите столбец `geometry` или `geography` для создания индекса.  
   
 3.  В меню **Конструктор таблиц** выберите пункт **Пространственный индекс**.  
   
@@ -130,7 +128,7 @@ ms.locfileid: "48122354"
   
   
 ##  <a name="restrictions"></a> Ограничения пространственных индексов  
- Пространственный индекс может быть создан только в столбце типа `geometry` или `geography`.  
+ Пространственный индекс можно создать только для столбца типа `geometry` или `geography`.  
   
 ### <a name="table-and-view-restrictions"></a>Ограничения таблиц и представлений  
  Пространственные индексы можно определить только для таблицы, у которой имеется первичный ключ. Максимально допустимое число столбцов первичного ключа составляет 15.  

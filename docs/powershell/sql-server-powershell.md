@@ -10,12 +10,12 @@ ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7cd28b110116921bf6bf90bcd7ffdbb51e613419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9c5354f0a94dc8ec3cccc66f751124554554357
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764252"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411734"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,11 @@ ms.locfileid: "47764252"
 
 **Обновите скрипты PowerShell, если они импортируют модуль SQLPS.**
 
-Если у вас есть скрипты PowerShell, которые выполняют команду `Import-Module -Name SQLPS`, и вы хотите использовать преимущества новых функциональных возможностей поставщика и новых командлетов, необходимо изменить их на `Import-Module -Name SqlServer`. Новый модуль устанавливается в папку `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer`. Поэтому не нужно обновлять переменную $env:PSModulePath. При наличии скриптов, использующих версии модуля **SqlServer** сторонних производителей или сообщества следует использовать параметр Prefix, чтобы избежать конфликтов имен. Модуль, используемый агентом SQL Server, не изменился. 
+Если у вас есть скрипты PowerShell, которые выполняют команду `Import-Module -Name SQLPS`, и вы хотите использовать преимущества новых функциональных возможностей поставщика и новых командлетов, необходимо изменить их на `Import-Module -Name SqlServer`. Новый модуль устанавливается в папку `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer`. Поэтому не нужно обновлять переменную $env:PSModulePath. При наличии скриптов, использующих версию модуля с именем **SqlServer**, созданную сторонними производителями или сообществом, используйте параметр Prefix, чтобы имена не конфликтовали.
 
-  
+Модуль, используемый агентом SQL Server, не изменился. Следовательно, действия заданий с типом PowerShell будут использовать модуль SQLPS. Дополнительные сведения: [Запуск PowerShell с помощью агента SQL Server](run-windows-powershell-steps-in-sql-server-agent.md).
+
+
 ## <a name="sql-server-powershell-components"></a>Компоненты SQL Server PowerShell  
 Модуль **SqlServer** загружает две оснастки Windows PowerShell.  
   

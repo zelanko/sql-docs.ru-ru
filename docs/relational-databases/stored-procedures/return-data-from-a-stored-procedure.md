@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 170f68a33a1c46a2a58f2bfb8814c872bb7405a0
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 0fba28ddaa76fc441bff847f19633ccbfbfef91e
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383769"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411794"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Возврат данных из хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "49383769"
  ### <a name="examples-of-returning-data-using-a-result-set"></a>Примеры возврата данных с помощью результирующего набора 
   Приведенный ниже пример показывает хранимую процедуру, которая возвращает значения LastName и SalesYTD для всех строк SalesPerson, которые также отображаются в представлении vEmployee.
   
- ```  
+ ```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -59,7 +59,7 @@ GO
 ### <a name="examples-of-output-parameter"></a>Примеры выходного параметра  
  Следующий пример представляет процедуру с входным и выходным параметрами. Параметр `@SalesPerson` получает входное значение, указанное вызывающей программой. Инструкция SELECT использует значение, переданное входному параметру для получения верного значения `SalesYTD` . Инструкция SELECT также присваивает это значение выходному параметру `@SalesYTD` , который возвращает значение вызывающей программе при завершении процедуры.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -82,7 +82,7 @@ GO
   
  В следующем примере вызывается процедура, которая была создана в первом примере и сохраняет выходное значение, возвращенное вызванной процедурой в переменной `@SalesYTD` , являющейся локальной в вызывающей программе.  
   
-```  
+```sql
 -- Declare the variable to receive the output value of the procedure.  
 DECLARE @SalesYTDBySalesPerson money;  
 -- Execute the procedure specifying a last name for the input parameter  
@@ -138,7 +138,7 @@ GO
  
  Сначала создайте процедуру, которая объявляет и затем открывает курсор в таблице Currency.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.uspCurrencyCursor', 'P' ) IS NOT NULL  
@@ -159,7 +159,7 @@ GO
   
  Затем выполните пакет, который объявляет локальную переменную курсора, выполняет процедуру, присваивающую курсор локальной переменной, и затем выбирает строки из курсора.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyCursor CURSOR;  
@@ -177,12 +177,12 @@ GO
 ## <a name="returning-data-using-a-return-code"></a>Возврат данных с использованием кода возврата  
  Процедура может возвращать целочисленное значение, называемое кодом возврата, чтобы указать состояние выполнения процедуры. Код возврата для процедуры указывается при помощи инструкции RETURN. Как и выходные параметры, при выполнении процедуры код возврата необходимо сохранить в переменной, чтобы использовать это значение в вызывающей программе. Например, переменная `@result` типа данных **int** используется для хранения кода возврата из процедуры `my_proc`, например:  
   
-```  
+```sql
 DECLARE @result int;  
 EXECUTE @result = my_proc;  
 ```  
   
- Коды возврата часто применяются в блоках управления потоком процедур для присвоения кода возврата каждой из возможных ошибок. Чтобы выяснить, произошла ли во время выполнения инструкции ошибка, запустите функцию @@ERROR после инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].  До появления обработки ошибок TRY/CATCH/THROW в TSQL для определения успеха или сбоя хранимых процедур иногда требовались коды возврата.  Хранимые процедуры должны всегда указывать на сбой с помощью ошибки (которая при необходимости создается с помощью THROW/RAISERROR), не полагаясь в этом на код возврата.  Кроме того, следует избегать использования кода возврата для возврата данных приложения.
+ Коды возврата часто применяются в блоках управления потоком процедур для присвоения кода возврата каждой из возможных ошибок. Чтобы выяснить, произошла ли во время выполнения инструкции ошибка, запустите функцию @@ERROR после инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].  До появления обработки ошибок TRY/CATCH/THROW в TSQL для определения успеха или сбоя хранимых процедур иногда требовались коды возврата.  Хранимые процедуры должны всегда выдавать сообщение при возникновении ошибки (которое при необходимости создается с помощью THROW/RAISERROR), не полагаясь в этом на код возврата.  Кроме того, следует избегать использования кода возврата для возврата данных приложения.
   
 ### <a name="examples-of-return-codes"></a>Примеры кодов возврата  
  В следующем примере показана процедура `usp_GetSalesYTD` с обработкой ошибок, устанавливающей специальные значения кода возврата для различных ошибок. В следующей таблице показано целое число, которое назначается процедурой каждой возможной ошибке, и соответствующее значение каждого числа.  
@@ -195,7 +195,7 @@ EXECUTE @result = my_proc;
 |3|Произошла ошибка при получении значения продаж.|  
 |4|Найдено значение NULL для продаж данного менеджера.|  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.usp_GetSalesYTD', 'P') IS NOT NULL  
@@ -255,7 +255,7 @@ PRINT N'Year-to-date sales for this employee is ' +
   
  Следующий пример создает программу обработки кодов возврата, которые возвращаются процедурой `usp_GetSalesYTD` .  
   
-```  
+```sql
 -- Declare the variables to receive the output value and return code   
 -- of the procedure.  
 DECLARE @SalesYTDForSalesPerson money, @ret_code int;  

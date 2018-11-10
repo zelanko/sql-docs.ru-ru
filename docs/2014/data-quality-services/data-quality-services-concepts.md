@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 623db4fff3bbafeb0da09899527406b0d4686181
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170984"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032123"
 ---
 # <a name="data-quality-services-concepts"></a>Основные понятия служб Data Quality Services
   В этом разделе содержится краткая сводка по основным понятиям служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) в управлении набором знаний, проектах служб DQS и их администрировании.  
@@ -34,13 +33,13 @@ ms.locfileid: "48170984"
   
  **Политика сопоставления**  
   
- Политика сопоставления содержит правила сопоставления, используемые для выполнения дедупликации данных. Процесс политики сопоставления позволяет создавать правила сопоставления, настраивать их на основе результатов сопоставления и профилирования данных, а также добавлять политику в базу знаний. Дополнительные сведения см. в статье [Data Matching](../../2014/data-quality-services/data-matching.md).  
+ Политика сопоставления содержит правила сопоставления, используемые для выполнения дедупликации данных. Процесс политики сопоставления позволяет создавать правила сопоставления, настраивать их на основе результатов сопоставления и профилирования данных, а также добавлять политику в базу знаний. Дополнительные сведения см. в статье [Сопоставление данных](../../2014/data-quality-services/data-matching.md).  
   
  **Службы эталонных данных**  
   
  С помощью эталонных данных можно проверить, исправить и обогатить данные, воспользовавшись службами компаний, гарантирующих качество своих эталонных данных. Для подключения к поставщикам эталонных данных можно использовать службы Windows Azure Marketplace или установить прямое соединение с поставщиком. Дополнительные сведения см. в статье [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
- Дополнительные сведения об управлении знаниями в DQS см. в разделе [DQS знаний и домены](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Дополнительные сведения об управлении знаниями в DQS см. в разделе [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Основные понятия проекта служб DQS  
  Диспетчер данных выполняет операции повышения качества данных (очистки и сопоставления) с использованием проекта качества данных в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -61,7 +60,7 @@ ms.locfileid: "48170984"
   
  **Профилирование и уведомления**  
   
- Профилирование данных дает диспетчерам данных статистику реального времени и сведения о данных, которые обрабатываются в DQS, для операций очистки или сопоставления при выполнении проекта качества данных. Профилирование данных позволяет оценить эффективность операций очистки и сопоставления в проекте качества данных, а уведомления помогают пользователю выполнять действия для совершенствования операций очистки и сопоставления. Дополнительные сведения см. в разделе [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Профилирование данных дает диспетчерам данных статистику реального времени и сведения о данных, которые обрабатываются в DQS, для операций очистки или сопоставления при выполнении проекта качества данных. Профилирование данных позволяет оценить эффективность операций очистки и сопоставления в проекте качества данных, а уведомления помогают пользователю выполнять действия для совершенствования операций очистки и сопоставления. Дополнительные сведения см. в статье [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
  Дополнительные сведения о проектах служб DQS см. в разделе [Проекты служб Data Quality Services &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md).  
   
@@ -70,25 +69,25 @@ ms.locfileid: "48170984"
   
  **Мониторинг активности**  
   
- В ходе мониторинга активности отображаются статус и состояние каждого действия, выполненного в пределах диапазона данных, предоставляются данные по каждому действию. Администраторы DQS могут управлять этими действиями. Дополнительные сведения см. в разделе [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
+ В ходе мониторинга активности отображаются статус и состояние каждого действия, выполненного в пределах диапазона данных, предоставляются данные по каждому действию. Администраторы DQS могут управлять этими действиями. Дополнительные сведения см. в статье [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   
  **Configuration**  
   
  Параметр «Конфигурация» позволяет выполнять следующие действия.  
   
--   Настраивать параметры службы эталонных данных. Дополнительные сведения см. в разделе [Configure DQS to Use Reference Data](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
+-   Настраивать параметры службы эталонных данных. Дополнительные сведения см. в статье [Configure DQS to Use Reference Data](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
   
 -   Задавать пороговые значения для операций очистки и сопоставления. Дополнительные сведения см. в статье [Настройка пороговых значений для очистки и сопоставления](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
 -   Включать и отключать уведомления о профилировании. Дополнительные сведения см. в разделе [Включение или отключение уведомлений по профилированию в DQS](../../2014/data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
   
--   Настраивать степени серьезности для файлов журнала DQS на уровне действий или на более точном уровне модулей. Дополнительные сведения см. в разделе [Configure Severity Levels for DQS Log Files](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
+-   Настраивать степени серьезности для файлов журнала DQS на уровне действий или на более точном уровне модулей. Дополнительные сведения см. в статье [Configure Severity Levels for DQS Log Files](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
   
  **Безопасность DQS**  
   
- Роли в рамках механизма обеспечения безопасности SQL Server используются для обеспечения безопасности DQS. Уровень доступа пользователя в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] определяется тремя ролями DQS: dqs_administrator, dqs_kb_editor и dqs_kb_operator. Роли нельзя предоставлять пользователям в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Для этого используется среда SQL Server Management Studio. Дополнительные сведения см. в разделе [безопасность DQS](../../2014/data-quality-services/dqs-security.md).  
+ Роли в рамках механизма обеспечения безопасности SQL Server используются для обеспечения безопасности DQS. Уровень доступа пользователя в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] определяется тремя ролями DQS: dqs_administrator, dqs_kb_editor и dqs_kb_operator. Роли нельзя предоставлять пользователям в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Для этого используется среда SQL Server Management Studio. Дополнительные сведения см. в статье [DQS Security](../../2014/data-quality-services/dqs-security.md).  
   
- Дополнительные сведения об администрировании DQS см. в разделе [Администрирование DQS](../../2014/data-quality-services/dqs-administration.md).  
+ Дополнительные сведения об администрировании DQS см. в разделе [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
 ## <a name="see-also"></a>См. также  
  [Службы Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  

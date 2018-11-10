@@ -1,6 +1,6 @@
 ---
 title: Параметры конфигурации для SQL Server в Docker | Документация Майкрософт
-description: Ознакомьтесь с различными способами с помощью и взаимодействия с SQL Server 2017 и образы контейнеров 2019 CTP 2.0 в Docker. Сюда входят сохранение данных, копирование файлов и устранения неполадок.
+description: Ознакомьтесь с различными способами с помощью и взаимодействия с SQL Server 2017 и 2019 изображения предварительного просмотра контейнера в Docker. Сюда входят сохранение данных, копирование файлов и устранения неполадок.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ef759f41dd481510524d541751417a4dbe1c02c7
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 0dbc72cf39e1dee5abad6ceb961f1b437287e5ba
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753561"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270027"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Настройка образов контейнеров SQL Server в Docker
 
@@ -29,10 +29,10 @@ ms.locfileid: "50753561"
 
 ## <a name="pull-and-run-the-container-image"></a>Извлечение и запуск образа контейнера
 
-Для извлечения и запуска контейнера образов Docker для SQL Server 2017 и SQL Server 2019 CTP 2.0, выполните предварительные требования и шаги в следующем кратком руководстве.
+Для извлечения и запуска Docker образов контейнеров для предварительной версии SQL Server 2017 и SQL Server 2019, выполните предварительные требования и шаги в следующем кратком руководстве.
 
 - [Запустите образ контейнера SQL Server 2017 с Docker](quickstart-install-connect-docker.md?view=sql-server-2017)
-- [Запустите образ контейнера SQL Server 2019 CTP 2.0 с помощью Docker](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [Запустите образ контейнера SQL Server 2019 предварительной версии с помощью Docker](quickstart-install-connect-docker.md?view=sql-server-ver15)
 
 В этой статье конфигурации содержит избыточное использование сценариев, в следующих разделах.
 
@@ -41,9 +41,9 @@ ms.locfileid: "50753561"
 
 ## <a id="rhel"></a> Запуск образов контейнеров на основе RHEL
 
-Вся документация об образах контейнеров SQL Server Linux укажите контейнеры на основе Ubuntu. Начиная с SQL Server 2019 CTP 2.0, можно использовать контейнеры на основе по Red Hat Enterprise Linux (RHEL). Изменения в репозитории контейнера из **mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu** для **mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0** во всех команд docker.
+Вся документация об образах контейнеров SQL Server Linux укажите контейнеры на основе Ubuntu. Начиная с предварительной версией SQL Server 2019, можно использовать контейнеры на основе по Red Hat Enterprise Linux (RHEL). Изменения в репозитории контейнера из **mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu** для **mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0** во всех команд docker.
 
-Например следующая команда извлекает последний контейнер SQL Server 2019 CTP 2.0, использующего RHEL:
+Например следующая команда извлекает последний контейнер предварительной версии SQL Server 2019, использующий RHEL:
 
 ```bash
 sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
@@ -134,7 +134,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 ### <a name="tools-inside-the-container"></a>Инструменты в контейнере
 
-Начиная с SQL Server 2017 CTP 2.0 [средств командной строки SQL Server](sql-server-linux-setup-tools.md) включены в образ контейнера. При подключении к образу с интерактивной командной строке средства можно запустить локально.
+Начиная с SQL Server 2017 preview, [средств командной строки SQL Server](sql-server-linux-setup-tools.md) включены в образ контейнера. При подключении к образу с интерактивной командной строке средства можно запустить локально.
 
 1. Выполните команду `docker exec -it`, чтобы запустить интерактивную оболочку bash внутри запущенного контейнера. В следующем примере `e69e056c702d` идентификатор контейнера.
 
@@ -178,7 +178,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-В следующем примере создаются два контейнера SQL Server 2019 CTP 2.0 и сопоставляет их с порты **1401** и **1402** на хост-компьютере.
+В следующем примере создаются два контейнера предварительной версии SQL Server 2019 и сопоставляет их с порты **1401** и **1402** на хост-компьютере.
 
 ```bash
 docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 0de0286065166137ebe83ce2a46dfb41d1670fc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2053e338bf14d11f25e6e12b3d6c5aee6b8e636e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816062"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033581"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Использовать Visual Studio для создания баз данных для SQL Server в Linux
 
@@ -107,7 +107,7 @@ SQL Server в Linux поддерживается SSDT 17.0, версия-КАН�
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Если вы не знакомы с T-SQL, см. в разделе [Учебник. Составление инструкций Transact-SQL] и [Справочник по Transact-SQL (ядро СУБД)].
+Если вы не знакомы с T-SQL, изучите разделы [Учебник. Составление инструкций Transact-SQL] (Руководство: написание инструкций Transact-SQL) и [Справочник по Transact-SQL (ядро СУБД)] (Справочник по Transact-SQL (ядро СУБД)).
 
 Дополнительные сведения о разработке базы данных с помощью SQL Data Tools, см. в разделе [документы MSDN по SSDT]
 

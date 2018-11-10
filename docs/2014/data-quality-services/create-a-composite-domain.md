@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createcd.f1
@@ -14,12 +13,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6362196706e3c37ffbd325aeb8ff5576ca897c02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b72ee81d92629baa657ffb3bde2596cdb2abb96a
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105374"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030331"
 ---
 # <a name="create-a-composite-domain"></a>Создание составного домена
   В этом разделе описывается, как создать составной домен в базе знаний в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Составной домен состоит из нескольких отдельных доменов, применимых к одному полю данных. Дополнительные сведения о составных доменах см. в разделе [Управление составным доменом](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -46,7 +45,7 @@ ms.locfileid: "48105374"
   
 3.  Выберите действие **Обнаружение знаний** и нажмите кнопку **Создать** , чтобы создать новую базу знаний, или нажмите кнопку **Открыть** , чтобы открыть существующую базу знаний.  
   
-4.  На странице **Сопоставление** укажите соединение с источником данных. Дополнительные сведения см. в разделе [обнаружение знаний](../../2014/data-quality-services/perform-knowledge-discovery.md).  
+4.  На странице **Сопоставление** укажите соединение с источником данных. Дополнительные сведения см. в разделе [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
   
 5.  В таблице **Сопоставления** выберите исходный столбец из раскрывающегося списка для столбца **Исходный столбец** пустой строки. Убедитесь, что исходный столбец содержит составной домен, состоящий из двух существующих отдельных доменов. Если соответствующих отдельных доменов не существует, щелкните значок **Создать домен** .  
   

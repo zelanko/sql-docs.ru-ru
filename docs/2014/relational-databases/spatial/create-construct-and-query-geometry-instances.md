@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
@@ -14,17 +13,17 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 259a55908c97286805566ad0642391487aab77cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 036ce2fe942866092ba774f98d6b306c8f0ea254
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158974"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018197"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Создание, конструирование и запрос экземпляров geometry
-  Плоский пространственный тип данных, `geometry`, представляет данные в Евклидовой (плоской) системе координат. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот тип реализован как тип данных среды CLR.  
+  Планарный пространственный тип данных `geometry` представляет данные в евклидовой (плоской) системе координат. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот тип реализован как тип данных среды CLR.  
   
- `geometry` Тип является стандартным и доступен в каждой базе данных. Можно создать столбцов таблицы типа `geometry` и работать с `geometry` данных так же, как использовать другие типы среды CLR.  
+ Тип `geometry` является стандартным и доступен в каждой базе данных. В таблице можно создать столбцы типа `geometry` и обращаться с данными `geometry` так же, как и с данными других типов среды CLR.  
   
  Тип данных `geometry` (плоский), поддерживаемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], соответствует спецификации Open Geospatial Consortium (OGC) «Простые объекты для SQL» версии 1.1.0.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "48158974"
 ##  <a name="creating"></a> Создание или построение нового экземпляра геометрического объекта  
   
 ###  <a name="existing"></a> Создание нового экземпляра геометрического объекта из существующего экземпляра  
- `geometry` Тип данных предоставляет многочисленные встроенные методы, которые можно использовать для создания новых `geometry` экземпляров на основе существующих.  
+ Тип данных `geometry` содержит множество встроенных методов, с помощью которых можно создавать новые объекты `geometry` на основе существующих.  
   
  **Создание буфера вокруг геометрического объекта**  
  [STBuffer (тип данных geometry)](/sql/t-sql/spatial-geometry/stbuffer-geometry-data-type)  
@@ -101,7 +100,7 @@ ms.locfileid: "48158974"
   
   
 ###  <a name="wkb"></a> Построение экземпляра геометрического объекта на основе входных данных в формате Well-Known Binary Input  
- WKB представляет собой двоичный формат, открытого геопространственного консорциума (OGC), позволяющий `geometry` данных, которые передаются между клиентским приложением и базой данных SQL. Следующие функции допускают создание геометрических объектов на основе входных данных формата WKB.  
+ WKB представляет собой описанный консорциумом OGC двоичный формат, позволяющий осуществлять обмен данными типа `geometry` между клиентскими приложениями и базой данных SQL. Следующие функции допускают создание геометрических объектов на основе входных данных формата WKB.  
   
  **Создание экземпляра геометрического объекта любого типа на основе входных данных формата WKB**  
  [STGeomFromWKB (тип данных geometry)](/sql/t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type)  
@@ -138,7 +137,7 @@ ms.locfileid: "48158974"
   
   
 ##  <a name="returning"></a> Получение данных в формате Well-Known Text и Well-Known Binary из геометрического экземпляра  
- Можно использовать следующие методы для возврата в формате WKT или формате WKB формат `geometry` экземпляр:  
+ Можно использовать следующие методы для получения данных экземпляра `geometry` в формате WKT или формате WKB:  
   
  **Получение WKT-представления экземпляра геометрического объекта**  
  [STAsText (тип данных geometry)](/sql/t-sql/spatial-geometry/stastext-geometry-data-type)  
@@ -160,7 +159,7 @@ ms.locfileid: "48158974"
  Все `geometry` экземпляры имеют ряд свойств, которые можно извлечь с помощью методов, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет. В следующих разделах описаны свойства и поведение геометрических типов данных, а также методы для запросов к ним.  
   
 ###  <a name="valid"></a> Допустимость, тип экземпляра и сведения GeometryCollection  
- Один раз `geometry` создан экземпляр, можно использовать следующие методы для определения того, является правильным форматом, получить типа экземпляра или, в случае экземпляра-коллекции, получить определенный `geometry` экземпляра.  
+ Как только экземпляр `geometry` сформирован, при помощи следующих методов можно определить правильность его формата, получить тип этого экземпляра или, в случае экземпляра-коллекции, получить определенный экземпляр `geometry`.  
   
  **Получение типа геометрического объекта**  
  [STGeometryType (тип данных geometry)](/sql/t-sql/spatial-geometry/stgeometrytype-geometry-data-type)  
@@ -212,7 +211,7 @@ ms.locfileid: "48158974"
   
   
 ###  <a name="dimension"></a> Измерение  
- Непустой `geometry` экземпляра может иметь 0, 1 или 2 измерения. Без измерений `geometries`, такие как `Point` и `MultiPoint`, не имеют длины или области. Одномерные объекты, такие как `LineString, CircularString, CompoundCurve`, и `MultiLineString`, имеют длину. Двумерные объекты, такие как `Polygon`, `CurvePolygon` и `MultiPolygon`, имеют длину и площадь. Пустые экземпляры имеют измерение -1, а экземпляр `GeometryCollection` имеет площадь, зависящую от типов его содержимого.  
+ Непустой объект `geometry` может иметь 0, 1 или 2 измерения. Объекты `geometries`, имеющие 0 измерений, например `Point` и `MultiPoint`, не имеют ни длины, ни площади. Одномерные объекты, такие как `LineString, CircularString, CompoundCurve` и `MultiLineString`, имеют длину. Двумерные объекты, такие как `Polygon`, `CurvePolygon` и `MultiPolygon`, имеют длину и площадь. Пустые экземпляры имеют измерение -1, а экземпляр `GeometryCollection` имеет площадь, зависящую от типов его содержимого.  
   
  **Получение измерения экземпляра**  
  [STDimension](/sql/t-sql/spatial-geometry/stdimension-geometry-data-type)  
@@ -226,7 +225,7 @@ ms.locfileid: "48158974"
   
   
 ###  <a name="empty"></a> Пустой  
- *Пустой* `geometry` экземпляр не содержит ни одной точки. Длина пустых `LineString, CircularString`, `CompoundCurve`, и `MultiLineString` экземпляров равно нулю. Площадь пустых `Polygon`, `CurvePolygon`, и `MultiPolygon` экземпляров имеет значение 0.  
+ *Пустой* `geometry` экземпляр не содержит ни одной точки. Длина пустых экземпляров `LineString, CircularString`, `CompoundCurve` и `MultiLineString` равна нулю. Площадь пустых экземпляров `Polygon`, `CurvePolygon` и `MultiPolygon` равна нулю.  
   
  **Проверка, является ли экземпляр пустым**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type).  
@@ -263,7 +262,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 1, 0 0, 1 0, 0 1), (1 1, 1 0))');
 SELECT @g.STBoundary().ToString();  
 ```  
   
- Границы `Polygon` или `MultiPolygon` экземпляр — это совокупность его колец.  
+ Граница экземпляра `Polygon` или `MultiPolygon` — это совокупность его колец.  
   
 ```  
 DECLARE @g geometry;  
@@ -285,9 +284,9 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> Замыкание  
- Объект *закрыто* `geometry` — это фигура, начальная и конечная точки которой совпадают. `Polygon` считаются замкнутыми. Экземпляры `Point` не замкнуты.  
+ Объект *закрыто* `geometry` — это фигура, начальная и конечная точки которой совпадают. Экземпляры `Polygon` считаются замкнутыми. Экземпляры `Point` не замкнуты.  
   
- Кольцо — это простые, закрыто `LineString` экземпляра.  
+ Кольцо — это простой замкнутый экземпляр `LineString`.  
   
  **Определение, является ли экземпляр замкнутым**  
  [STIsClosed](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)  
@@ -317,7 +316,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ##  <a name="rel"></a> Определение связей между геометрическими объектами  
- `geometry` Тип данных предоставляет множество встроенных методов, которые можно использовать для определения связи между двумя `geometry` экземпляров.  
+ Тип данных `geometry` предоставляет множество встроенных методов, с помощью которых можно определить связи между двумя объектами типа `geometry`.  
   
  **Определение возможного наличия одинакового набора точек в двух объектах**  
  [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  

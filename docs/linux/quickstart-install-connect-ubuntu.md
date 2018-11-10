@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 2632b10aaf69701f93e51c1c945523300307789a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b37e3c27448f187b3c1717414599f2de120790d9
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656692"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269727"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Краткое руководство: Установка SQL Server и создать базу данных в Ubuntu
 
@@ -24,13 +24,13 @@ ms.locfileid: "47656692"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-В этом кратком руководстве вы устанавливаете SQL Server 2017 или SQL Server 2019 CTP 2.0 на Ubuntu 16.04. После этого следует подключиться с помощью **sqlcmd** создать свою первую базу данных и выполнения запросов.
+В этом кратком руководстве вы устанавливаете SQL Server 2017 или предварительной версии SQL Server 2019 на Ubuntu 16.04. После этого следует подключиться с помощью **sqlcmd** создать свою первую базу данных и выполнения запросов.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-В этом кратком руководстве установите SQL Server 2019 CTP 2.0 на Ubuntu 16.04. После этого следует подключиться с помощью **sqlcmd** создать свою первую базу данных и выполнения запросов.
+В этом кратком руководстве установкой предварительной версии SQL Server 2019 на Ubuntu 16.04. После этого следует подключиться с помощью **sqlcmd** создать свою первую базу данных и выполнения запросов.
 
 ::: moniker-end
 
@@ -147,7 +147,7 @@ ms.locfileid: "47656692"
 
 6. Если вы планируете удаленное подключение, также может потребоваться открыть порт SQL Server TCP (по умолчанию 1433) в брандмауэре.
 
-На этом этапе 2019 CTP-версии SQL Server 2.0 работает на компьютере Ubuntu и готов к использованию!
+На этом этапе предварительной версии SQL Server 2019 выполняется на компьютере Ubuntu и готов к использованию!
 
 ::: moniker-end
 

@@ -25,7 +25,7 @@ ms.locfileid: "48058854"
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]бизнес-правила можно применять выборочно, если требуется обновить или проверить подмножество элементов с использованием бизнес-правил.  
   
 > [!NOTE]  
->  Инструкции о том, как применить бизнес-правила ко всем элементам в версии модели, см. в разделе [Validate a Version against Business Rules &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md).  
+>  Инструкции о том, как применить бизнес-правила ко всем элементам в версии модели, см. в разделе [проверка версии на соответствие бизнес-правила &#40;службы Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md).  
   
 ## <a name="prerequisites"></a>предварительные требования  
  Для выполнения этой процедуры:  

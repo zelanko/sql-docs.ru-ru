@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.cdvaluerelations.f1
@@ -13,12 +12,12 @@ ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d26836ca62c4a86cfbfde5b7f29920911ac6efdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12689babd1fbb928e4ec086ef78d85d263ea17cb
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081864"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032871"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>Использование связей значений в составном домене
   В этом разделе описываются способы просмотра сочетаний значений, обнаруженных для составного домена в процессе обнаружения знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Эта страница показывает количество повторений сочетаний значений. Управление значениями не поддерживается для составных доменов, поэтому операции с этими значениями выполнить не удастся.  
@@ -39,7 +38,7 @@ ms.locfileid: "48081864"
   
 2.  На главном экране клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] откройте или создайте базу знаний. Выберите операцию **Управление доменами** , а затем нажмите кнопку **Открыть** или **Создать**. Дополнительные сведения см. в разделе [Создание базы знаний](../../2014/data-quality-services/create-a-knowledge-base.md) или [Открытие базы знаний](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
-3.  Из **Списка доменов** на странице **Управление доменами** выберите составной домен, для которого надо создать доменное правило, или просто создайте новый составной домен. Если вам нужно создать новый домен, см. в разделе [создать составной домен](../../2014/data-quality-services/create-a-composite-domain.md).  
+3.  Из **Списка доменов** на странице **Управление доменами** выберите составной домен, для которого надо создать доменное правило, или просто создайте новый составной домен. Если нужно создать новый домен, см. раздел [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md).  
   
 4.  Перейдите на вкладку **Связи значений** .  
   

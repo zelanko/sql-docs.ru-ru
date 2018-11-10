@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 479021af7c7e15b8f9d0a82a45b4f644f7a7c29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcd1529858502ca186b99152f754014999239e90
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051354"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032371"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Импорт доменов из файла Excel при обнаружении набора знаний
   В этом разделе описывается, как импортировать один или несколько доменов из файла Excel в действие обнаружения знаний [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Процесс импорта упрощает процесс формирования набора знаний, экономя время и силы. Это позволяет пользователям, у которых данные хранятся в файлах Excel или текстовых файлах, создавать базу знаний с применением этих данных. (Дополнительные сведения об импорте значений в домен существующей базы знаний см. в разделе [Импорт значений в домен из файла Excel](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md).) Экспорт в файл Excel не поддерживается.  
@@ -71,7 +70,7 @@ ms.locfileid: "48051354"
 ##  <a name="FollowUp"></a> Дальнейшие действия. После импорта доменов из файла Excel  
  После импорта доменов из файла Excel можно добавить наборы знаний в домены или использовать домены в проекте очистки данных или сопоставления в зависимости от содержания доменов. Дополнительные сведения см. в разделах [Обнаружение знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md), [Управление составным доменом](../../2014/data-quality-services/managing-a-composite-domain.md), [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md), [Очистка данных](../../2014/data-quality-services/data-cleansing.md) и [Сопоставление данных](../../2014/data-quality-services/data-matching.md).  
   
-##  <a name="How"></a> How the import works  
+##  <a name="How"></a> Как работает Импорт  
  В ходе операции импорта служба DQS интерпретирует файл Excel следующим образом:  
   
 -   Столбец представляет домен  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - feature adding [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8826d410c545ba5d172ee3544919584dd8a32761
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 526eb1e020a7e2a2e1228b55062013088355bcb2
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062154"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018349"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>добавить компоненты в экземпляр SQL Server 2014 (программа установки)
   В этом разделе приведена пошаговая процедура добавления компонентов в экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Некоторые компоненты и службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принадлежат определенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такие компоненты называются привязанными к экземпляру. Они имеют ту же версию, что и экземпляр, которому они принадлежат, и используются только для этого экземпляра. К экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно добавить привязанные к экземпляру компоненты и общие компоненты, если они еще не установлены. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -80,9 +79,9 @@ ms.locfileid: "48062154"
   
     -   Режим безопасности: выберите для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]режим проверки подлинности, «Проверка подлинности Windows» или «Смешанный режим». Если выбран смешанный режим проверки подлинности, необходимо задать надежный пароль для встроенной учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-         После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [Настройка компонента Database Engine - Провизионирование учетных записей](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+         После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**и затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Настройка компонента Database Engine - Провизионирование учетных записей](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**и затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
      После изменения списка нажмите кнопку **ОК**. Проверьте список администраторов в диалоговом окне конфигурации. После завершения работы со списком нажмите кнопку **Далее**.  
   

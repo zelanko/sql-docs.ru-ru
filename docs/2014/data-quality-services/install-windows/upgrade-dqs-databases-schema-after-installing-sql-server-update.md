@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a393a77951d28b8960c268745b3f02f500d563b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 063b286b1addf62b226fc075299dbabd119d3764
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168324"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032064"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Обновление схемы базы данных DQS после установки обновления SQL Server
   После установки обновления SQL Server (обновления, исправления или накопительного обновления) на ранее настроенном экземпляре DQS можно обновить схему баз данных DQS, запустив файл DQSInstaller.exe с параметром командной строки **upgrade**. В противном случае может появиться сообщение об ошибке при попытке соединения с сервером DQS через клиент Data Quality:  
@@ -54,7 +53,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
     dqsinstaller.exe -upgrade  
     ```  
   
-5.  Установщик предложит создать резервную копию базы данных DQS, прежде чем продолжить. Если вы уже резервные копии баз данных DQS, введите `Y` или `Yes` и нажмите клавишу ВВОД, чтобы продолжить обновление.  
+5.  Установщик предложит создать резервную копию базы данных DQS, прежде чем продолжить. Если резервное копирование баз данных DQS уже выполнено, введите `Y` или `Yes` и нажмите клавишу ВВОД, чтобы продолжить обновление.  
   
 6.  После успешного обновления схемы баз данных DQS отображается сообщение о завершении.  
   

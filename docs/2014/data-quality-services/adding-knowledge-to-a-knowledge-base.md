@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f369ac83237e2e903515a168506e9b08ef396f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19adfe90d99e0d40408951e09ce9de6893382897
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205550"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030171"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Добавление знаний в базу знаний
   В этом разделе описываются способы, которыми можно добавить знания в базу знаний служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Прежде чем приступать к работе со службами DQS, необходимо получить набор знаний о данных. Для этого необходимо построить и поддерживать базу знаний служб DQS, а также пополнять ее наборами знаний, связанными с соответствующими типами источников данных. База знаний является репозиторием знаний о данных, который дает представление о данных и помогает поддерживать их целостность.  
@@ -40,7 +39,7 @@ ms.locfileid: "48205550"
 ##  <a name="Discovery"></a> Обнаружение набора знаний  
  В процессе обнаружения знаний образец данных анализируется на соответствие критериям DQS, затем полученные знания добавляются в базу знаний. Это изменяющий данные автоматизированный процесс, при котором обнаруживаются несоответствия и синтаксические ошибки в данных. Действие по обнаружению знаний выполняется мастером, который представляет собой страницу для интерактивного управления значениями домена.  
   
--   Дополнительные сведения в документации см. в разделе [обнаружение знаний](../../2014/data-quality-services/perform-knowledge-discovery.md).  
+-   Дополнительные сведения в документации см. в разделе [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md).  
   
 -   Чтобы просмотреть видео, в котором показано обнаружение знаний, щелкните [здесь](http://msdn.microsoft.com/sqlserver/hh323825.aspx).  
   
@@ -69,6 +68,6 @@ ms.locfileid: "48205550"
 ##  <a name="Default"></a> Использование базы знаний DQS по умолчанию  
  Службы DQS поставляются с предварительно созданной базой знаний, известной как «Данные служб DQS», содержащей домены для данных о компаниях и адресах США. С помощью этой базы знаний можно быстро начать проект, не создавая новую базу знаний. База знаний «Данные служб DQS» доступна только для чтения, но на ее основе диспетчер данных может создать новую базу знаний.  
   
--   Дополнительные сведения в документации см. в разделе [с помощью DQS Default Knowledge Base](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md).  
+-   Дополнительные сведения в документации см. в разделе [Using the DQS Default Knowledge Base](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md).  
   
   

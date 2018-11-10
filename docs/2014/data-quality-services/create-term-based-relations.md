@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.kbtermsbased.f1
@@ -13,12 +12,12 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 524c0b4b875d8fc63cbd508c04032d7b50453c3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eca92d02eac642f48e64c15217fd6b354790bb97
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092844"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030321"
 ---
 # <a name="create-term-based-relations"></a>Создание связей на основе термина
   В этом разделе описано создание связей на основе термина для домена в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Связь на основе термина (TBR) позволяет исправить термин, являющийся частью значения в домене. Это позволяет считать идентичными синонимами несколько значений, идентичных по написанию во всем, кроме отдельных частей. Например, вы можете задать связь на основе термина, которая изменяет термин «Inc.» на «Incorporated». Термин «Inc.» будет заменяться при каждом его появлении в домене. Экземпляры «Contoso, Inc.» будут заменяться на «Contoso, Incorporated», и эти два значения станут рассматриваться как точные синонимы.  
@@ -98,7 +97,7 @@ ms.locfileid: "48092844"
   
 6.  Нажмите кнопку **Применить изменения** , чтобы применить связи домена на основе термина.  
   
-7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](../../2014/data-quality-services/end-the-domain-management-activity.md).  
+7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После создания связей на основе термина  
  После создания связей на основе термина можно выполнить другие задачи управления доменами с текущим доменом, выполнить обнаружение набора знаний для добавления набора знаний к домену или добавить политику сопоставления к домену. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  

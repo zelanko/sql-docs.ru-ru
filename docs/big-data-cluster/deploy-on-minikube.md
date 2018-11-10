@@ -4,15 +4,15 @@ description: Сведения о настройке Minikube для развер
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 71523efb55fd1bc41927b38d2e91abc9833c73b0
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 4a3785d994b6bd40b6b808d07d5272fa7534a7fb
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050786"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221577"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Настройка Minikube для развертывания кластера SQL Server 2019 больших данных
 
@@ -20,7 +20,7 @@ ms.locfileid: "50050786"
 
 ## <a name="prerequisites"></a>предварительные требования
 
-- Чтобы запустить Minikube кластер для SQL Server 2019 CTP 2.0 в конфигурации кластера больших данных SQL, рекомендуется наличие по крайней мере 32 ГБ ОЗУ на компьютере.
+- Чтобы запустить Minikube кластер для SQL Server 2019 CTP-версии 2.1 в конфигурации кластера больших данных SQL, рекомендуется наличие по крайней мере 32 ГБ ОЗУ на компьютере.
 
    > [!TIP] 
    > Если на компьютере установлена только минимум, рекомендованный объем памяти, затем настройки развертывания кластера могут быть только 1 вычислительный экземпляр пула, 1 экземпляр пула данных и экземпляр пула хранения 1. Эта конфигурация должна использоваться только в тестовых средах где устойчивости и доступности данных не важен. См. в разделе [документации по развертыванию](deployment-guidance.md#define-environment-variables) Дополнительные сведения о переменных среды, чтобы задать для настройки числа реплик для данных пулов вычислительных пулов и пулы носителей.
@@ -44,7 +44,7 @@ ms.locfileid: "50050786"
 
 ## <a name="install-minikube"></a>Установка Minikube
 
-Установка Minikube в соответствии с инструкциями для [v0.28.2 выпуска](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). Большие данные кластера SQL Server 2019 CTP 2.0 работает только в том случае, в версии v0.24.1 и более.
+Установка Minikube в соответствии с инструкциями для [v0.28.2 выпуска](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). Кластер SQL Server 2019 CTP 2.1 больших данных работает только в версии v0.24.1 и более.
 
 ## <a name="create-a-minikube-cluster"></a>Создание кластера Minikube
 
@@ -74,4 +74,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 Действия, описанные в этой статье настроили кластер Minikube. Следующим шагом является развертывание кластера SQL Server 2019 больших данных. Инструкции см. следующую статью:
 
-[Развертывание SQL Server 2019 CTP 2.0 в Kubernetes](deployment-guidance.md#deploy)
+[Развертывание SQL Server 2019 CTP 2.1 в Kubernetes](deployment-guidance.md#deploy)

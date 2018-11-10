@@ -1,10 +1,9 @@
 ---
 title: Хранимые процедуры | Документация Майкрософт
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-clien
+ms.technology: native-client
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, stored procedures
@@ -15,12 +14,12 @@ ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 217baa6d3116f0297c95ffb16c2d157bc034cfcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082604"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018329"
 ---
 # <a name="stored-procedures"></a>Хранимые процедуры
   Хранимая процедура ([хранимые процедуры &#40;СУБД&#41;](../../stored-procedures/stored-procedures-database-engine.md)) представляет собой исполняемый объект из базы данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает:  
@@ -35,11 +34,11 @@ ms.locfileid: "48082604"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Выполнение хранимых процедур &#40;OLE DB&#41;](stored-procedures-running.md)  
+-   [Выполнение хранимых процедур (OLE DB)](stored-procedures-running.md)  
   
--   [Вызов хранимой процедуры &#40;OLE DB&#41;](stored-procedures-calling.md)  
+-   [Вызов хранимых процедур (OLE DB)](stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>См. также  
- [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)  
+ [SQL Server Native Client (OLE DB)](sql-server-native-client-ole-db.md)  
   
   

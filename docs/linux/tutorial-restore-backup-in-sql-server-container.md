@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: cf3027bc998a7170d7bf75c7801f517e015bd05d
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f6616b966faa48dfc56d8333a9f760c254cfae3e
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991197"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269917"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Восстановление базы данных SQL Server в контейнере Docker в Linux
 
@@ -30,7 +30,7 @@ ms.locfileid: "49991197"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Этом руководстве показано, как перемещать и восстановите файл резервной копии SQL Server в образ контейнера SQL Server 2019 CTP-версии 2.0 Linux, запуск в Docker.
+Этот учебник посвящен перемещения и восстановления файла резервной копии SQL Server в образ контейнера SQL Server 2019 Предварительная версия Linux под управлением Docker.
 
 ::: moniker-end
 
@@ -114,7 +114,7 @@ ms.locfileid: "49991197"
 
 1. Откройте окно терминала bash в Linux или Mac или сеанс PowerShell с повышенными правами в Windows.
 
-1. Получите образ контейнера SQL Server 2019 CTP-версии 2.0 Linux из Docker Hub.
+1. Извлечь предварительной версии SQL Server 2019 образа контейнера Linux из Docker Hub.
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
@@ -143,7 +143,7 @@ ms.locfileid: "49991197"
       -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
    ```
 
-   Эта команда создает контейнер SQL Server 2019 CTP 2.0 с Developer edition (по умолчанию). Порт SQL Server **1433** предоставляется на узле, что порт **1401**. Необязательный `-v sql1data:/var/opt/mssql` параметр создает контейнер томов данных с именем **sql1ddata**. Это позволяет сохранить данные, созданные SQL Server.
+   Эта команда создает контейнер предварительной версии SQL Server 2019 с Developer edition (по умолчанию). Порт SQL Server **1433** предоставляется на узле, что порт **1401**. Необязательный `-v sql1data:/var/opt/mssql` параметр создает контейнер томов данных с именем **sql1ddata**. Это позволяет сохранить данные, созданные SQL Server.
 
 1. Для просмотра ваших контейнеров Docker используйте команду `docker ps`.
 
@@ -533,7 +533,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-В этом руководстве вы узнали, как резервное копирование базы данных на Windows и переместите его на сервер Linux, под управлением SQL Server 2019 CTP 2.0. Вы узнали, как для:
+В этом руководстве вы узнали, как резервное копирование базы данных на Windows и переместите его на сервер Linux, под управлением предварительной версии SQL Server 2019. Вы узнали, как для:
 
 ::: moniker-end
 

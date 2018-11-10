@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1e1ce15df4a6d26c572284e3694608f09b188ed7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d9bcc1a87bd4853736cdc43d597e58728b848e1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200994"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018269"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Установка SQL Server 2014 с помощью SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, доступны в центре установки. На странице **Дополнительно** **центра установки** имеется два параметра: **Подготовка образа изолированного экземпляра[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** и **Завершение образа подготовленного изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. В разделах [Подготовка](#prepare) и [Завершение](#complete) подробно описывается процесс установки. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -90,7 +89,7 @@ ms.locfileid: "48200994"
   
 2.  Присоедините кластер отработки отказа Windows.  
   
-3.  Запустите setup.exe с `/ACTION=AddNode` на всех узлах:  
+3.  Запустите файл setup.exe с параметром `/ACTION=AddNode` на всех узлах.  
   
     ```  
     setup.exe /q /ACTION=AddNode /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -177,7 +176,7 @@ ms.locfileid: "48200994"
 8.  На странице **Обзор компонента** будут отображены выбранные средства и компоненты, включенные в установку на шаге подготовки. Если необходимо добавить дополнительные компоненты к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не включенному в подготовленный экземпляр, то сначала завершите данный шаг, чтобы закончить создание экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а затем добавьте компоненты на странице **Добавить компоненты** в **Центре установки**.  
   
     > [!NOTE]  
-    >  Можно добавить компоненты, доступные для устанавливаемой версии продукта. Дополнительные сведения см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+    >  Можно добавить компоненты, доступные для устанавливаемой версии продукта. Дополнительные сведения см. в разделе [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 9. На странице «Конфигурация экземпляра» укажите имя подготовленного экземпляра. После завершения настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]это имя будет присвоено экземпляру. Чтобы продолжить, нажмите кнопку **Далее** .  
   
@@ -207,9 +206,9 @@ ms.locfileid: "48200994"
   
     -   Режим безопасности — выберите для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]режим проверки подлинности: «Проверка подлинности Windows» или «Смешанный режим». Если выбран смешанный режим проверки подлинности, необходимо задать надежный пароль для встроенной учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-         После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [Настройка компонента Database Engine - Провизионирование учетных записей](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+         После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**и затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Настройка компонента Database Engine - Провизионирование учетных записей](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**и затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
      После изменения списка нажмите кнопку **ОК**. Проверьте список администраторов в диалоговом окне конфигурации. После завершения работы со списком нажмите кнопку **Далее**.  
   

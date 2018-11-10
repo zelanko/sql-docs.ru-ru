@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9dd4bbcb2c2b610cfa91eea160f4194fa9df9e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: beb1b18d03b557aad4709ee024be888c712c2c12
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174494"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031861"
 ---
 # <a name="managing-a-composite-domain"></a>Управление составным доменом
   В этом разделе описывается использование составных доменов в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Иногда один домен не позволяет удовлетворительно представить данные в поле. Чтобы представить данные, необходимо группировать отдельные домены. Для этого создается составной домен. Составной домен состоит из нескольких отдельных доменов и сопоставляется с полем данных, включающим несколько связанных терминов, которые не обработаны с помощью анализа, а включены в одно составное значение. Каждый термин в значении представляется другим, отдельным доменом. Только после включения отдельных доменов в составные домены и последующего сопоставления составного домена с полем данных вы можете создать набор знаний в базе знаний о данных в этом поле с помощью создания набора знаний в отдельных доменах. Составной домен, как и отдельный домен, — это семантическое представление данных в одном поле данных.  

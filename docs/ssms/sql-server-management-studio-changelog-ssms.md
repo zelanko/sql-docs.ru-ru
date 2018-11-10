@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: fdea834df198dc8fbaf403816895a99d9140e4ec
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226396"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270277"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1093,7 +1093,7 @@ RestoreDefaultFonts — восстановление настроек по ум
 Исправлена ошибка в мастере Always Encrypted, когда страница входа в Azure Key Vault не отображала подписки Azure при наличии нескольких каталогов Azure Active Directory. Исправлена ошибка в мастере Always Encrypted, когда страница входа в Azure Key Vault не отображала подписки Azure, для которых у пользователя есть разрешения читателя.
   - Исправлена ошибка, из-за которой файлы ресурсов могли загружаться неправильно, а в результате выдавались ложные сообщения об ошибках.
 - Улучшена контрастность гиперссылок на странице параметров SSMS.
-- Исправлена ошибка, когда узлы Polybase не отображаются при подключении к SQL Server Express (2016 SP1).
+- Исправлена ошибка, когда узлы PolyBase не отображаются при подключении к SQL Server Express 2016 с пакетом обновления 1 (SP1).
 - Исправлена ошибка, из-за которой SSMS не могла изменить уровень совместимости базы данных Azure на версию 140.
 - Повышена производительность обозревателя объектов при развертывании списка баз данных Azure. [Элемент Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
 - Исправлена ошибка некорректного появления элемента контекстного меню "Просмотр журнала SQL Server" для нереляционных типов сервера (AS, RS, IS). 
@@ -1136,7 +1136,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Мастер развертывания Azure (развертывание базы данных на виртуальной машине Azure) удален из SSMS.
 - Исправлена ошибка, при которой отсутствующие индексы не отображались в планах выполнения в SSMS [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3114194).
 - Исправлена распространенная ошибка, вызывающая аварийное завершение работы при закрытии SSMS.
-- Исправлена ошибка в обозревателе объектов при открытии контекстного меню для узлов "Polybase | Масштабируемая группа" [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115128).
+- Исправлена ошибка в обозревателе объектов при открытии контекстного меню для узлов PolyBase | Масштабируемая группа [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115128).
 - Исправлена ошибка, вызывающая аварийное завершение работы SSMS при попытке отображения разрешений для базы данных.
 - Хранилище запросов: общие улучшения в контекстных меню для сеток результатов в отчете хранилища запросов.
 - Настройка Always Encrypted для существующей таблицы завершается с ошибками, в которых указаны посторонние объекты. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3103181)

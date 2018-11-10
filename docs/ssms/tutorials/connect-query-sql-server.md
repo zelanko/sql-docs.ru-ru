@@ -11,14 +11,18 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 02aee760447f61867f5ec85bbe24266539a44a33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baa4f703e4c76722dcecb729299e6ff416784f75
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738252"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970386"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Учебник. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio
+
+> [!div class="nextstepaction"]
+> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
 Это руководство научит вас подключаться к экземпляру SQL Server с использованием SQL Server Management Studio (SSMS) и выполнять некоторые базовые команды Transact-SQL (T-SQL). В статье показано, как выполнять следующие задачи.
 
 > [!div class="checklist"]  

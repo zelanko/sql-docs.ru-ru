@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 572470c85de7a8340a61e0a24b54c6632fe1b06f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84ac455efb9a5babe801d11218659730382dab8d
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666682"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965982"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DBCC CLONEDATABASE
 (  
     source_database_name
     ,  target_database_name
-    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB ] [ , BACKUP_CLONEDB ] } ]   
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]   
 )  
 ```  
   
@@ -72,16 +72,21 @@ DBCC CLONEDATABASE
 NO_STATISTICS  
 Указывает, необходимо ли исключить статистику по таблицам или индексу из клона. Если этот параметр не задан, статистика по таблицам или индексу включается автоматически. Этот параметр доступен начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1).
 
-NO_QUERYSTORE Указывает, необходимо ли исключить данные хранилища запросов из клона. Если этот параметр не задан, а в базе данных-источнике включено хранилище запросов, его данные копируются в клон. Этот параметр доступен начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1).
+NO_QUERYSTORE<br>
+Указывает, нужно ли исключить данные хранилища запросов из клона. Если этот параметр не задан, а в базе данных-источнике включено хранилище запросов, его данные копируются в клон. Этот параметр доступен начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1).
 
 VERIFY_CLONEDB  
-Проверяет согласованность новой базы данных.  Этот параметр обязателен, если клонируемая база данных предназначена для использования в рабочей среде.  Включение параметра VERIFY_CLONEDB также отключает сбор статистики и данных хранилища запросов, то есть эквивалентно выполнению инструкции с параметрами WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  Этот параметр доступен начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2).
+Проверяет согласованность новой базы данных.  Этот параметр обязателен, если клонируемая база данных предназначена для использования в рабочей среде.  Включение параметра VERIFY_CLONEDB также отключает сбор статистики и данных хранилища запросов, то есть эквивалентно выполнению инструкции с параметрами WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  Этот параметр доступен начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 3 (SP3), [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 8 (CU8).
 
 > [!NOTE]  
 > С помощью следующей команды можно проверить, готова ли клонированная база данных к использованию в рабочей среде: <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
+
+SERVICEBROKER<br>
+Указывает, следует ли включать в клон связанные системные каталоги Service Broker.  Параметр SERVICEBROKER недопустимо использовать с VERIFY_CLONEDB.  Этот параметр доступен начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 3 (SP3), [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 8 (CU8).
+
 BACKUP_CLONEDB  
-Создает и проверяет резервную копию клонированной базы данных.  При использовании в сочетании с параметром VERIFY_CLONEDB клонированная база данных проверяется перед созданием резервной копии.  Этот параметр доступен начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2).
+Создает и проверяет резервную копию клонированной базы данных.  При использовании в сочетании с параметром VERIFY_CLONEDB клонированная база данных проверяется перед созданием резервной копии.  Этот параметр доступен начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 3 (SP3), [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 8 (CU8).
   
 ## <a name="remarks"></a>Remarks
 Инструкция DBCC CLONEDATABASE выполняет указанные ниже проверки. Если хотя бы одна из них не пройдена, команда завершается сбоем.

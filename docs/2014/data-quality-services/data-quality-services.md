@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cf190518a5875487a859360df3a3c11e0ed4ecbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b7b1364d13bd653b81464e26c3f434525623451
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218870"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033341"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
-  [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) — это продукт, предназначенный для повышения качества данных на основе знаний. DQS позволяет построить базу знаний и использовать ее для выполнения разнообразных важных задач по обеспечению качества данных, включая исправление, дополнение, стандартизацию и устранение дубликатов данных. DQS позволяет выполнять очистку данных с использованием служб эталонных данных, расположенных в облаке и предоставляемых поставщиками эталонных данных. DQS также предоставляет функции профилирования, встроенные в задачи по обеспечению качества данных, что позволяет анализировать целостность данных.  
+  [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) — это продукт, обеспечивающий качество данных на основе знаний. DQS позволяет построить базу знаний и использовать ее для выполнения разнообразных важных задач по обеспечению качества данных, включая исправление, дополнение, стандартизацию и устранение дубликатов данных. DQS позволяет выполнять очистку данных с использованием служб эталонных данных, расположенных в облаке и предоставляемых поставщиками эталонных данных. DQS также предоставляет функции профилирования, встроенные в задачи по обеспечению качества данных, что позволяет анализировать целостность данных.  
   
  DQS состоит из [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] и [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], которые устанавливаются в составе [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] — это компонент экземпляра SQL Server, состоящий из трех каталогов SQL Server с функциями обеспечения качества данных и хранения. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] — это общий компонент SQL Server, который используется бизнес-пользователями, информационными работниками и ИТ-специалистами для выполнения автоматизированного анализа качества данных и интерактивного управления качеством данных. Также вы можете выполнять процессы обеспечения качества данных с помощью функций, доступных в [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] и службах Master Data Services (MDS), которые основаны на DQS.  
   

@@ -20,17 +20,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1076ee49f04e556dddb3639fa1e3e18e497bebf4
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 7077b950a6039a9c123cc991c00f5f28e23ff6ca
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419280"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970315"
 ---
 # <a name="execute-a-stored-procedure"></a>Выполнение хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  В этом разделе описывается, как выполнить хранимую процедуру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+> [!div class="nextstepaction"]
+> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+В этом разделе описывается, как выполнить хранимую процедуру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Существует два способа выполнения хранимой процедуры. Первым и наиболее распространенным подходом является вызов процедуры приложением или пользователем. Второй подход — настройка автоматического выполнения процедуры при запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если процедура вызывается приложением или пользователем, то в вызове явно указывается ключевое слово [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE или EXEC. Процедуру также можно вызывать и выполнять без ключевого слова, если она является первой инструкцией в пакете [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   

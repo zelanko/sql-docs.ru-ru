@@ -4,15 +4,15 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 899a02996e6415cbf35ed903c276ca23b78c6961
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050996"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269559"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Краткое руководство по Развертыванию кластера больших данных SQL Server в службе Azure Kubernetes (AKS)
 
@@ -28,8 +28,6 @@ ms.locfileid: "50050996"
 
 Чтобы установить **mssqlctl** инструмента интерфейса командной строки для управления SQL Server на больших данных кластера на клиентском компьютере, необходимо сначала установить [Python](https://www.python.org/downloads/) версии не ниже версии 3.0 и [pip3](https://pip.pypa.io/en/stable/installing/). `pip` уже установлен, если вы используете версию Python по крайней мере 3.4, загруженные из [python.org](https://www.python.org/).
 
-Если отсутствует установку Python `requests` пакета, необходимо установить `requests` с помощью `python -m pip install requests` (использовать `python3` для этих команд в Linux). Если у вас уже есть `requests` пакета, обновите ее до последней версии с помощью `python -m pip install requests --upgrade`.
-
 ## <a name="verify-aks-configuration"></a>Проверка конфигурации AKS
 
 После развертывания кластера AKS, можно выполнить следующую команду kubectl, чтобы просмотреть конфигурации кластера. Убедитесь, что этот kubectl указывает контекст правильный кластера.
@@ -43,8 +41,11 @@ kubectl config view
 Выполните следующую команду, чтобы установить **mssqlctl** средство на клиентском компьютере. Команда выполняется из Windows и клиента Linux, но убедитесь, что вы используете его из окна командной строки, под управлением Windows с правами администратора или перед ними `sudo` в Linux:
 
 ```
-pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
+pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl  
 ```
+
+> [!IMPORTANT]
+> Если вы установили предыдущего выпуска, необходимо удалить кластер *перед* обновление **mssqlctl** и установки новой версии. Дополнительные сведения см. в разделе [обновление до нового выпуска](deployment-guidance.md#upgrade).
 
 > [!TIP]
 > Если **mssqlctl** не правильную установку, просмотрите действия по готовности к установке в статье [установить mssqlctl](deployment-guidance.md#mssqlctl).
@@ -58,7 +59,7 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 - В [командное окно](http://docs.microsoft.com/visualstudio/ide/reference/command-window), кавычки включаются в переменных среды. Если используются кавычки программы-оболочки для пароля, кавычки будут включены в пароль.
 - В bash кавычки не включаются в переменной. Наши примеры используйте двойные кавычки `"`.
 - Пароль можно задать переменные среды на любое другое, но убедитесь, что они достаточно сложны и не используйте `!`, `&`, или `'` символов.
-- Для выпуска CTP 2.0 не изменить порты по умолчанию.
+- Для выпуска CTP 2.1 не изменить порты по умолчанию.
 - `sa` Учетная запись является администратором системы на экземпляре SQL Server Master, которая создается во время установки. После создания контейнера SQL Server указанную вами переменную среды `MSSQL_SA_PASSWORD` можно обнаружить, запустив `echo $MSSQL_SA_PASSWORD` в контейнере. В целях безопасности измените вашей `sa` пароля в соответствии с практическими рекомендациями, описанными [здесь](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Инициализируйте следующие переменные среды.  Они необходимы для развертывания кластера больших данных:
@@ -110,7 +111,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 
 ## <a name="deploy-a-big-data-cluster"></a>Развертывание кластера больших данных
 
-Чтобы развернуть кластер SQL Server 2019 CTP 2.0 больших данных в кластере Kubernetes, выполните следующую команду:
+Чтобы развернуть кластер SQL Server 2019 CTP 2.1 больших данных в кластере Kubernetes, выполните следующую команду:
 
 ```bash
 mssqlctl create cluster <name of your cluster>

@@ -47,17 +47,20 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2d503a4c136bbdae2142f232cf96e2e83067c945
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 47e81b6b7ad40810a643244eabd47292e685d61b
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461159"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970845"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Создает новую таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+> [!div class="nextstepaction"]
+> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Создает новую таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 > [!NOTE]   
 >  Синтаксис [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] см. в статье [CREATE TABLE (хранилище данных SQL Azure)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
@@ -1048,7 +1051,7 @@ GO
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] поддерживает глобальные временные таблицы, которые хранятся в базе данных tempdb и областью действия которых является база данных. Это означает, что глобальные временные таблицы являются общими для всех сеансов пользователей в рамках одной [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Сеансы пользователей, связанные с другими базами данных, не имеют доступа к глобальным временным таблицам.
 
-В глобальных временных таблицах для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] используются те же синтаксис и семантика, что и для временных таблиц в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точно так же временные хранимые процедуры действуют в области базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Локальные временные таблицы (с префиксом #) также поддерживаются [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и имеют тот же синтаксис и семантику, что и в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  См. предыдущий раздел [Временные таблицы](#temporary-tables).  
+В глобальных временных таблицах для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] используются те же синтаксис и семантика, что и для временных таблиц в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точно так же временные хранимые процедуры действуют в области базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Локальные временные таблицы (с префиксом #) также поддерживаются [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и имеют тот же синтаксис и семантику, что и в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  См. предыдущий раздел [Временные таблицы](#temporary-tables).  
 
 > [!IMPORTANT]
 > Эта возможность доступна для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

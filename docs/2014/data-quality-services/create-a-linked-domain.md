@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.linkeddomain.f1
@@ -13,12 +12,12 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7213b82f77bf283cf3debf268ed089058b05c7e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff3112e552eb037f0f4c000cd0e62bbdfa952150
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140133"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032406"
 ---
 # <a name="create-a-linked-domain"></a>Создание связанного домена
   В этом разделе описывается, как создать связанный домен в базе знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Связанный домен создается из другого, существующего ранее домена и наследует все значения, правила и свойства из домена, с которым он связан, за исключением имени и описания. Набором связанных доменов вы можете управлять как одним доменом. Связывая один домен с другим, вы создаете домен, который наследует содержание другого домена.  

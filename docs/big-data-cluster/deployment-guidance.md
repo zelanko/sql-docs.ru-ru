@@ -4,15 +4,15 @@ description: Дополнительные сведения о развертыв
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/08/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: de19577b4a83bc10875bf56f4c0f2924828a00ea
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 70d8b07caf618cb5f1629fc80f0ca1db8b73ad3c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051186"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269867"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Развертывание сервера SQL, большие данные кластера в Kubernetes
 
@@ -26,7 +26,7 @@ ms.locfileid: "50051186"
 
 ## <a id="prereqs"></a> Необходимые условия для кластера Kubernetes
 
-Кластера больших данных в SQL Server требуется версия минимальное v1.10 для Kubernetes, но для сервера и клиента. Чтобы установить определенную версию на клиент kubectl, см. в разделе [установки kubectl двоичных с помощью curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl).  Последние версии minikube и AKS, по крайней мере 1.10. Для AKS, необходимо использовать `--kubernetes-version` параметр для указания версии отличается от по умолчанию.
+Кластера больших данных в SQL Server требуется версия минимальное v1.10 для Kubernetes, но для сервера и клиента. Чтобы установить определенную версию на клиент kubectl, см. в разделе [установки kubectl двоичных с помощью curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Последние версии minikube и AKS, по крайней мере 1.10. Для AKS, необходимо использовать `--kubernetes-version` параметр для указания версии отличается от по умолчанию.
 
 > [!NOTE]
 > Обратите внимание на то, что Kubernetes версии клиента и сервера должны быть + 1 или -1, дополнительный номер версии. Дополнительные сведения см. в разделе [Kubernetes поддерживаемые выпуски и наклона компонент](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -54,7 +54,12 @@ ms.locfileid: "50051186"
 
 ## <a id="deploy"></a> Развертывание кластера больших данных в SQL Server
 
-После настройки кластера Kubernetes, вы можно приступить к развертыванию для больших данных кластера SQL Server. Чтобы развернуть кластер больших данных в Azure с помощью всех конфигураций по умолчанию для среды разработки и тестирования, следуйте инструкциям в этой статье:
+После настройки кластера Kubernetes, вы можно приступить к развертыванию для больших данных кластера SQL Server. 
+
+> [!NOTE]
+> Если при обновлении с предыдущей версии, ознакомьтесь с разделом [обновления этой статьи](#upgrade).
+
+Чтобы развернуть кластер больших данных в Azure с помощью всех конфигураций по умолчанию для среды разработки и тестирования, следуйте инструкциям в этой статье:
 
 [Краткое руководство: Развертывание кластера больших данных SQL Server в Kubernetes](quickstart-big-data-cluster-deploy.md)
 
@@ -71,6 +76,9 @@ kubectl config view
 ## <a id="mssqlctl"></a> Установка mssqlctl
 
 **mssqlctl** — программа командной строки, написанный на Python, что позволяет кластера администраторов для начальной загрузки и управления кластером больших данных с помощью REST API. Минимальная требуемая версия Python — версии 3.5. Необходимо также иметь `pip` , используемый для загрузки и установки **mssqlctl** средство. 
+
+> [!IMPORTANT]
+> Если вы установили предыдущего выпуска, необходимо удалить кластер *перед* обновление **mssqlctl** и установки новой версии. Дополнительные сведения см. в разделе [обновление до нового выпуска](deployment-guidance.md#upgrade).
 
 ### <a name="windows-mssqlctl-installation"></a>Mssqlctl установки Windows
 
@@ -89,7 +97,7 @@ kubectl config view
 1. Установка **mssqlctl** , выполнив следующую команду:
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ### <a name="linux-mssqlctl-installation"></a>Установка mssqlctl Linux
@@ -105,17 +113,10 @@ kubectl config view
    sudo -H pip3 install --upgrade pip
    ```
 
-1. Убедитесь, что у вас есть последнюю версию **запросы** пакета.
-
-   ```bash
-   sudo -H python3 -m pip install requests
-   sudo -H python3 -m pip install requests --upgrade
-   ```
-
 1. Установка **mssqlctl** , выполнив следующую команду:
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ## <a name="define-environment-variables"></a>Определение переменных среды
@@ -275,6 +276,29 @@ minikube ip
 ```bash
 kubectl get svc -n <name of your cluster>
 ```
+
+## <a id="upgrade"></a> Обновление до нового выпуска
+
+В настоящее время единственный способ обновления до нового выпуска кластерам больших данных — вручную удаления и повторного создания кластера. Каждый выпуск содержит уникальной версии **mssqlctl** , не совместим с предыдущей версией. Кроме того Если кластер старых нужно было загрузить изображения на новый узел, последний образ может оказаться несовместимым с старые образы в кластере. Чтобы обновить до последней версии, следуйте инструкциям ниже:
+
+1. Перед удалением старого кластера, резервное копирование данных на экземпляре SQL Server master и в HDFS. Для главного экземпляра SQL Server, можно использовать [Архивация и восстановление SQL Server](data-ingestion-restore-databse.md). Для HDFS вы [можно скопировать данные с **curl**](data-ingestion-curl.md).
+
+1. Удалите старый кластер с `mssqlctl delete cluster` команды.
+
+   ```bash
+    mssqlctl delete cluster <old-cluster-name>
+   ```
+
+1. Установите последнюю версию **mssqlctl**.
+   
+   ```bash
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > Для каждого выпуска, путь к **mssqlctl** изменения. Даже если вы ранее установили **mssqlctl**, необходимо переустановить из последней пути перед созданием нового кластера.
+
+1. Установите последнюю версию, следуя инструкциям из раздела [развернуть раздел](#deploy) этой статьи. 
 
 ## <a name="next-steps"></a>Следующие шаги
 

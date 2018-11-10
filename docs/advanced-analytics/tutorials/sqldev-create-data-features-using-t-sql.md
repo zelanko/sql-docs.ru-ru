@@ -1,6 +1,6 @@
 ---
-title: Урок 2 функций создайте данных, с помощью функций T-SQL (машинного обучения SQL Server) | Документация Майкрософт
-description: Учебник, в котором показано, как внедрить R в SQL Server хранимых процедур и функций T-SQL
+title: Урок 2 функций создания данных, с помощью функций T-SQL (R в службе машинного обучения SQL Server) | Документация Майкрософт
+description: Учебник, в котором показано, как добавить вычисления для хранимых процедур для использования в моделях R машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f5427772ea438a198b1236a865e8cdbdd0b09d70
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 4986d7ae5e51eaf0e89b3ee986ac7597e4a5edb7
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462100"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031501"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Занятие 2: Создание функций данных с помощью R и T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f98b8ba6a5396af70c0475f177e719a39a48b388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088284"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019049"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>обновить SQL Server 2014 до другого выпуска (программа установки)
   Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает обновление различных выпусков [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Сведения о поддерживаемых способах обновления выпуска см. в разделе [Поддерживаемые обновления выпусков и версий](supported-version-and-edition-upgrades.md). Прежде чем начать обновление выпуска экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ознакомьтесь со следующими разделами.  
@@ -74,7 +73,7 @@ ms.locfileid: "48088284"
   
  В дополнение к приведенным выше шагам, возможно, потребуется выполнить следующие действия, если выполняется обновление с версии [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
--   Пользователи, заданные в [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , не изменяются. В частности, группа пользователей BUILTIN\Users сохраняется. При необходимости отключите, удалите или переназначьте эти учетные записи. Дополнительные сведения см. в статье [Настройка учетных записей службы Windows и разрешений](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Пользователи, заданные в [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , не изменяются. В частности, группа пользователей BUILTIN\Users сохраняется. При необходимости отключите, удалите или переназначьте эти учетные записи. Дополнительные сведения см. в разделе [Настройка учетных записей службы Windows и разрешений](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 -   Размеры и режим восстановления для системных баз данных tempdb и model после обновления остаются неизменными. При необходимости измените эти настройки. Дополнительные сведения см. в статье [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   

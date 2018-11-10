@@ -4,31 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa6b2fb7566b90fe2ea3116475f2afc4ee262e0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50c29f343399e0cc7d3c65d630ac622278d10eec
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188516"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032021"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Присоединение и отсоединение баз данных DQS
   В этом разделе описывается, как отсоединять и присоединять базы данных DQS.  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Limitations"></a> ограничения  
+###  <a name="Limitations"></a> Ограничения  
  Список ограничений см. в статье [Присоединение и отсоединение базы данных (SQL Server)](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
   
--   Убедитесь, что не существует текущих операций или процессов в DQS. Это можно проверить с помощью экрана **Мониторинг активности** . Подробные сведения о работе с этим экраном см. в разделе [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
+-   Убедитесь, что не существует текущих операций или процессов в DQS. Это можно проверить с помощью экрана **Мониторинг активности** . Дополнительные сведения о работе с этим экраном см. в разделе [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   
 -   Убедитесь, что на сервере [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]нет подключенных пользователей.  
   

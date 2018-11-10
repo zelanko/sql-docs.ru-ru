@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0955a3d8db2e9969996d0a9e37a3f20645f18f70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2f3642a8638fc39c538bb2609e061c2491a0136
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753432"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966042"
 ---
 # <a name="from-transact-sql"></a>Предложение FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -409,15 +409,15 @@ ON (p.ProductID = v.ProductID);
 ## <a name="using-apply"></a>Использование оператора APPLY  
  Как левый, так и правый операнды оператора APPLY являются табличными выражениями. Главное различие между этими операндами состоит в том, что *right_table_source* может использовать функцию с табличным значением, которая принимает столбец из *left_table_source* в качестве одного из аргументов функции. *left_table_source* может включать функции с табличным значением, но не может содержать аргументы, которые являются столбцами из *right_table_source*.  
   
- Для предоставления табличного источника для предложения FROM оператор APPLY выполняет следующее:  
+Для предоставления табличного источника для предложения FROM оператор APPLY выполняет следующее:  
   
 1.  Оценивает *right_table_source* для каждой строки а *left_table_source* для создания наборов строк.  
   
-     Значения в *right_table_source* зависят от *left_table_source*. *right_table_source* может быть представлено примерно в следующем виде: `TVF(left_table_source.row)`, где `TVF` является функцией с табличным значением.  
+    Значения в *right_table_source* зависят от *left_table_source*. *right_table_source* может быть представлено примерно в следующем виде: `TVF(left_table_source.row)`, где `TVF` является функцией с табличным значением.  
   
 2.  Объединяет результирующие наборы, предоставляемые для каждой строки при оценке *right_table_source* с left_table_source*left_table_source*, посредством выполнения операции UNION ALL.  
   
-     Список столбцов, полученный в результате выполнения оператора APPLY, представляет собой набор столбцов из *left_table_source*, объединенный со списком столбцов из *right_table_source*.  
+    Список столбцов, полученный в результате выполнения оператора APPLY, представляет собой набор столбцов из *left_table_source*, объединенный со списком столбцов из *right_table_source*.  
   
 ## <a name="using-pivot-and-unpivot"></a>Использование операторов PIVOT и UNPIVOT  
  Аргументы *pivot_column* и *value_column* являются столбцами группирования, используемыми оператором PIVOT. Для получения выходного результирующего набора оператор PIVOT выполняет следующее:  
@@ -579,32 +579,35 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```  
   
 ### <a name="k-using-apply"></a>Л. Использование оператора APPLY  
- Следующий пример исходит из того, что в базе данных существуют следующие таблицы с данной схемой:  
+Следующий пример предполагает, что в базе данных существуют следующие таблицы и функция с табличным значением:  
+
+|Имени объекта|Имена столбцов|      
+|---|---|   
+|Departments|DeptID, DivisionID, DeptName, DeptMgrID|      
+|EmpMgr|MgrID, EmpID|     
+|Employees|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
+|GetReports(MgrID)|EmpID, EmpLastName, EmpSalary|     
   
--   `Departments`: `DeptID`, `DivisionID`, `DeptName`, `DeptMgrID`  
+Функция с табличным значением `GetReports` возвращает список всех сотрудников, которые находятся в прямом или косвенном подчинении указанного менеджера `MgrID`.  
   
--   `EmpMgr`: `MgrID`, `EmpID`  
-  
--   `Employees`: `EmpID`, `EmpLastName`, `EmpFirstName`, `EmpSalary`  
-  
- Также есть функция `GetReports(MgrID)` с табличным значением, возвращающая список всех сотрудников (`EmpID`, `EmpLastName`, `EmpSalary`), которые находятся в прямом или косвенном подчинении указанного менеджера `MgrID`.  
-  
- В этом примере используется `APPLY` для возврата всех отделов и всех сотрудников этих отделов. Если в каком-либо отделе нет сотрудников, для этого отдела не будет возвращено никаких строк.  
+В этом примере используется `APPLY` для возврата всех отделов и всех сотрудников этих отделов. Если в каком-либо отделе нет сотрудников, для этого отдела не будет возвращено никаких строк.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d    
+CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
- Если необходимо, чтобы запрос предоставил строки для тех отделов без сотрудников, в которых будут выданы значения NULL для столбцов `EmpID`, `EmpLastName` и `EmpSalary`, нужно вместо APPLY применить `OUTER APPLY`.  
+Если необходимо, чтобы запрос предоставил строки для тех отделов без сотрудников, в которых будут выданы значения NULL для столбцов `EmpID`, `EmpLastName` и `EmpSalary`, нужно вместо APPLY применить `OUTER APPLY`.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d   
+OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
 ### <a name="l-using-cross-apply"></a>М. Использование CROSS APPLY  
- В следующем примере показано получение моментального снимка всех планов запросов, находящихся в кэше планов, путем получения дескрипторов планов для всех планов запросов в кэше запросом динамического административного представления `sys.dm_exec_cached_plans`. Затем оператор `CROSS APPLY` передает дескрипторы планов в `sys.dm_exec_query_plan`. Вывод инструкции Showplan в формате XML для каждого плана, находящегося в кэше планов, находится в столбце `query_plan` возвращаемой таблицы.  
+В следующем примере показано получение моментального снимка всех планов запросов, находящихся в кэше планов, путем получения дескрипторов планов для всех планов запросов в кэше запросом динамического административного представления `sys.dm_exec_cached_plans`. Затем оператор `CROSS APPLY` передает дескрипторы планов в `sys.dm_exec_query_plan`. Вывод инструкции Showplan в формате XML для каждого плана, находящегося в кэше планов, находится в столбце `query_plan` возвращаемой таблицы.  
   
 ```sql
 USE master;  

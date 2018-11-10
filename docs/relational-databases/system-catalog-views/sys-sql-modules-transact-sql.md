@@ -1,7 +1,7 @@
 ---
 title: sys.sql_modules (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6e5929ac379b4e20ee4f25bf7e3ede42e980082
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59f65e8743dab760b54cec9b088f5feca8d49e0b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705602"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221540"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,6 +47,9 @@ ms.locfileid: "47705602"
 |**null_on_null_input**|**bit**|Модуль был объявлен, чтобы обеспечить выходные значения NULL для любых входных значений NULL.|  
 |**execute_as_principal_id**|**Int**|ID-идентификатор участника базы данных, указанного в инструкции EXECUTE AS.<br /><br /> По умолчанию и в случае EXECUTE AS CALLER имеет значение NULL.<br /><br /> Идентификатор заданного участника, если EXECUTE AS SELF или EXECUTE AS \<участника >.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = не скомпилированы в собственном коде<br /><br /> 1 = скомпилированы в собственном коде<br /><br /> Значение по умолчанию — 0.|  
+|**is_inlineable**|**bit**|**Применяется к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и более поздних версий.<br/><br />Указывает, является ли модуль inlineable или нет. Inlineability зависит от условий, заданных [здесь](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = не inlineable<br /><br /> 1 = является inlineable. <br /><br /> Для определяемых пользователем скалярных функций значение будет равно 1, если определяемая пользователем Функция inlineable и 0 в противном случае. Он всегда содержит значение 1 для Встроенные возвращающие табличное значение функции и 0 для всех других типов модуля.<br />|  
+|**inline_type**|**bit**|**Применяется к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и более поздних версий.<br /><br />Указывает ли встраивание включен для модуля в настоящее время. <br /><br />0 = встраивания находится в отключенном состоянии<br /><br /> 1 = встраивания включен.<br /><br /> Для скалярных определяемых пользователем функций, значение будет равно 1, если встроенные включен (явно или неявно). Значение всегда равно 1 для Встроенные возвращающие табличное значение функции и 0 для других типов модуля.<br />|  
+
   
 ## <a name="remarks"></a>Примечания  
  Выражение SQL для ограничения по умолчанию, объект типа D, находится в [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) представления каталога. Выражение SQL для ПРОВЕРОЧНОГО ограничения объектом типа C, находится в [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) представления каталога.  

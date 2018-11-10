@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 481a75c420ece410f4b7489013c6297dc7b84869
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3769df724031fb72511c92dca8494a3eb893b6a6
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211284"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018979"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Установка SQL Server с общей папкой SMB в качестве хранилища
-  Запуск [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], системные базы данных (Master, Model, MSDB и TempDB), и [!INCLUDE[ssDE](../../includes/ssde-md.md)] пользовательских баз данных может быть установлен с файлового сервера Server Message Block (SMB), использовать как хранилище. Это относится как к изолированному варианту установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и к установке кластеров отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], системные базы данных (Master, Model, MSDB и TempDB) и пользовательские базы данных компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] можно установить с использованием протокола SMB в качестве хранилища файлового сервера Server Message Block (SMB). Это относится как к изолированному варианту установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и к установке кластеров отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Файловый поток в настоящее время не поддерживается в общей папке SMB.  

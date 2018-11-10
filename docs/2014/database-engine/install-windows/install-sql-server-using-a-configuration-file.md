@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55f5fdabcb3c751c0c9d4575e0375d4438fea30b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149774"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018709"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>установить SQL Server 2014 с помощью файла конфигурации
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки предоставляет возможность создать файл конфигурации на основе системных значений по умолчанию и значений, вводимых во время выполнения. Файл конфигурации может быть использован для развертывания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на всем предприятии с одной и той же конфигурацией. Стандартизировать установки в ручном режиме на территории предприятия также можно, создав пакетный файл, запускающий файл Setup.exe.  

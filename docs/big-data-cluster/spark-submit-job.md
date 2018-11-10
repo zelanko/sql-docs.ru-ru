@@ -8,17 +8,17 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 0787663b0c2eccfed33bf5c2cc681be4f2ef5edc
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.date: 11/06/2018
+ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050846"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221610"
 ---
 # <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Отправка задания Spark в кластерах больших данных SQL Server в Azure Data Studio
 
-Одним из основных сценариев является возможность отправлять задания Spark для SQL Server 2019 CTP 2.0. Функция отправки задания Spark позволяет отправить локальные файлы JAR-файл или Py со ссылками на кластер SQL Server 2019 больших данных. Он также позволяет выполнять JAR-файл или копировать файлы, которые уже находятся в файловой системе HDFS. 
+Одним из основных сценариев является возможность отправлять задания Spark для SQL Server 2019 CTP 2.1. Функция отправки задания Spark позволяет отправить локальные файлы JAR-файл или Py со ссылками на кластер SQL Server 2019 больших данных. Он также позволяет выполнять JAR-файл или копировать файлы, которые уже находятся в файловой системе HDFS. 
 
 ## <a name="prerequisite"></a>Предварительные требования 
 Установите средства работы с большими данными для SQL Server и подключение к кластеру больших данных, перед отправкой задания Spark. Сведения об установке, см. ссылку [развертывание средств работы с большими данными](deploy-big-data-tools.md).

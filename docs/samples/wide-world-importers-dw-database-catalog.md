@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c329594ad6349f58c4ed910bdb1b86b040a07c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ead11248d0eebe198890884b427f864cfea756c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627118"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270167"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Каталог базы данных WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ WideWorldImportersDW имеет в следующих таблицах факт�
 |Configuration_ApplyPartitionedColumnstoreIndexing|Применяет как секционирования и индексов columnstore для таблиц фактов.|
 |Configuration_ConfigureForEnterpriseEdition|Применяется секционирование, columnstore индексирования и в памяти.|
 |Configuration_EnableInMemory|Заменяет интеграции промежуточных таблиц с оптимизированной для памяти таблиц SCHEMA_ONLY, чтобы повысить производительность ETL.|
-|Configuration_ApplyPolybase|Настраивает внешний источник данных, формат файла и таблицы.|
+|Configuration_ApplyPolyBase|Настраивает внешний источник данных, формат файла и таблицы.|
 |Configuration_PopulateLargeSaleTable|Применяет изменения enterprise edition, а затем заполняет больший объем данных для календарного года 2012 как дополнительные данные журнала.|
 |Configuration_ReseedETL|Удаляет существующие данные и перезапускает ETL начальные значения. Это позволяет при повторном заполнении базы данных OLAP в соответствии с обновленных строк в базе данных OLTP.|
 

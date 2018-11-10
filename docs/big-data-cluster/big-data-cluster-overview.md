@@ -4,19 +4,21 @@ description: Дополнительные сведения о кластерах
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/25/2018
+ms.date: 11/06/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: 603e84f3f4e1e27052df6996ae06933ace585c0f
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: e8cdfff0efe8164df7487b3ba2a5bee6cbf0b940
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226286"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221710"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>Что такое кластеры SQL Server 2019 больших данных?
 
 Начиная с [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], кластеры SQL Server больших данных позволяют развертывать масштабируемые кластеры SQL Server, Spark и HDFS контейнеров, работающих на платформе Kubernetes. Эти компоненты работают рядом друг с другом, чтобы можно было чтение, запись и обработки больших данных из Transact-SQL или Spark, позволяя легко объединить и анализа реляционных данных высокой ценности с большими данными большого объема.
+
+Дополнительные сведения о новых функциях и известных проблем для последнего выпуска см. в разделе [заметки о выпуске](big-data-cluster-release-notes.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 

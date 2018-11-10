@@ -29,17 +29,20 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fe248d0be41ab6b88196a0db627851e9d31afa50
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 29bb936325bde06220d982948a1e6c599e9ce784
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411211"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970515"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Создает триггер языка обработки данных, DDL или входа. Триггер — это особая разновидность хранимой процедуры, выполняемая автоматически при возникновении события на сервере базы данных. Триггеры языка обработки данных выполняются по событиям, вызванным попыткой пользователя изменить данные с помощью языка обработки данных. Событиями DML являются процедуры INSERT, UPDATE или DELETE, применяемые к таблице или представлению. Эти триггеры срабатывают при запуске любого допустимого события независимо от того, влияет ли оно на какие-либо строки таблицы. Дополнительные сведения см. в разделе [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
+> [!div class="nextstepaction"]
+> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Создает триггер языка обработки данных, DDL или входа. Триггер — это особая разновидность хранимой процедуры, выполняемая автоматически при возникновении события на сервере базы данных. Триггеры языка обработки данных выполняются по событиям, вызванным попыткой пользователя изменить данные с помощью языка обработки данных. Событиями DML являются процедуры INSERT, UPDATE или DELETE, применяемые к таблице или представлению. Эти триггеры срабатывают при запуске любого допустимого события независимо от того, влияет ли оно на какие-либо строки таблицы. Дополнительные сведения см. в разделе [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
  Триггеры DDL срабатывают в ответ на ряд событий языка описания данных (DDL). Эти события прежде всего соответствуют инструкциям [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE, ALTER, DROP и некоторым системным хранимым процедурам, которые выполняют схожие с DDL операции. Триггеры входа могут срабатывать в ответ на событие LOGON, возникающее при установлении пользовательских сеансов. Триггеры могут создаваться непосредственно из инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или методов сборок, созданных в среде CLR платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и переданных экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет создавать несколько триггеров для любой инструкции.  
   

@@ -7,18 +7,16 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: fa8ab18d7ca4e44d3b30129c7353c24660cd0b3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5cac4a24abcca8c6ae17b598ed3eba5ec9c1f4e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090950"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030071"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Text Editor - Plain Text - General Page)
   Используйте это диалоговое окно для смены режима изменения текстового редактора, который используется для редактирования документа, не связанного с определенным языком разработки. Для отображения этих настроек выберите пункт **Параметры** в меню **Сервис** , раскройте узел **Текстовый редактор**, щелкните **Неформатированный текст** , а затем выберите **Общие**.  

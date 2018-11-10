@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e22b930ecab06ef6bd635cddd21af8ebbf8f1b11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44169d3d7b2744b06af31eb6212383db3a0f8b36
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168654"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032781"
 ---
 # <a name="use-the-dqs-speller"></a>Использование средства проверки орфографии DQS
   Средство проверки орфографии [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) проверяет синтаксис, орфографию и структуру предложения для строковых значений в домене. Средство проверки орфографии — это автономная, клиентская функция, которая не имеет интеграции с серверными подсистемами и не оказывает влияния на текущие потоки или состояния. Средство проверки орфографии выявляет те строковые значения, которые в нем рассматриваются как потенциальные ошибки, а затем отмечает их подчеркиванием красной линией в том же месте, где вручную вносятся другие изменения в значениях домена. Это следующие места:  
