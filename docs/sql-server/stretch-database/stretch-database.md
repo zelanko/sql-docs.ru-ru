@@ -24,7 +24,7 @@ ms.locfileid: "47689592"
 
   Stretch Database прозрачно и безопасно переносит холодные данные в облако Microsoft Azure.  
   
- Если к работе с Stretch Database нужно приступить немедленно, см. статью [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md).  
+ Если к работе с Stretch Database нужно приступить немедленно, см. статью [Запуск мастера включения растяжения для базы данных](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md).  
   
 ## <a name="what-are-the-benefits-of-stretch-database"></a>Каковы преимущества Stretch Database?  
  Stretch Database предоставляет следующие преимущества.  
