@@ -43,7 +43,7 @@ ms.locfileid: "48122884"
 |-|-|  
 |**Описание**|**Раздел**|  
 |Описывает, как уведомить оператора о состоянии задания.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
-|Описывает, как записать состояние задания в журнал приложений Windows.|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
+|Описывает, как записать состояние задания в журнал приложений Windows.|[Запись данных о состоянии задания в журнал приложений Windows](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Наблюдение и обработка событий](monitor-and-respond-to-events.md)  
