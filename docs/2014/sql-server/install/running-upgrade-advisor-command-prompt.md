@@ -57,10 +57,10 @@ where <server_info> is any combination of the following:
  **-Экземпляр** *имя_экземпляра*  
  Задает имя анализируемого экземпляра. Значение по умолчанию отсутствует. Если этот параметр не указан, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] просматриваться не будет. Значением для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию является MSSQLSERVER. Для именованного экземпляра укажите имя экземпляра.  
   
- **-ASInstance***AS_instance_name*   
+ **-ASInstance**  *AS_instance_name*   
  Задает имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для анализа. Значение по умолчанию отсутствует. Если это значение не указано, то службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] просматриваться не будут. Значением для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] по умолчанию является MSSQLServerOLAPService. Для именованного экземпляра укажите имя экземпляра.  
   
- **-RSInstance***RS_instance_name*   
+ **-RSInstance**  *RS_instance_name*   
  Задает имя экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для анализа. Значение по умолчанию отсутствует. Если это значение не указано, то службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] просматриваться не будут. Значением для экземпляра по умолчанию служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] является ReportServer. Для именованного экземпляра укажите имя экземпляра.  
   
  **-SqlUser** *login_id*  
