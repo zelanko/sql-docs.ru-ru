@@ -25,7 +25,7 @@ ms.locfileid: "47776142"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В разделе рассматриваются различные комбинации подходов к распознаванию конфликтов и устранению конфликтов, возможные при использовании логических записей. В репликации слиянием возникает конфликт, когда изменение одних и тех же данных производится более чем одним узлом, или же в репликации слиянием возникают определенные типы ошибок, такие как нарушение ограничений, когда изменяется репликация. Дополнительные сведения о распознавании и разрешении конфликтов см. в разделе [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [Указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
 ## <a name="conflict-detection"></a>Обнаружение конфликтов  
  Способ обнаружения конфликтов в логических записях определяется двумя свойствами статьи: **column_tracking** и **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздние версии также поддерживают обнаружение на уровне логической записи.  

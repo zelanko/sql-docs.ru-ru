@@ -106,7 +106,7 @@ ms.locfileid: "47747202"
   
 1.  Для каждого общего источника данных необходимо повторно ввести строку соединения.  
   
-2.  Для каждого отчета и общего источника данных, который использует сохраненные учетные данные, необходимо заново ввести имя пользователя и пароль, затем сохранить. Дополнительные сведения см. в статье [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+2.  Для каждого отчета и общего источника данных, который использует сохраненные учетные данные, необходимо заново ввести имя пользователя и пароль, затем сохранить. Дополнительные сведения см. в статье [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 3.  Откройте каждую управляемую данными подписку и заново введите учетные данные для базы данных подписки.  
   
