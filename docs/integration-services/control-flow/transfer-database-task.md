@@ -19,12 +19,12 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e23db45cfe4dd389593ae71726af000b1404390a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2492d80cd8899002d0b6baf5c219b5a724a6aab9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830542"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639081"
 ---
 # <a name="transfer-database-task"></a>Задача «Передача базы данных»
   Задача «Передача базы данных» передает базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между двумя экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В отличие от других задач, передающих объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только путем копирования, задача «Передача базы данных» может копировать или перемещать базу данных. Эту задачу можно также использовать для копирования базы данных в пределах того же сервера.  
@@ -43,7 +43,7 @@ ms.locfileid: "47830542"
 ## <a name="execution-value"></a>Значение выполнения  
  Значение выполнения, заданное в свойстве **ExecutionValue** задачи, возвращает значение 1, поскольку в отличие от других задач передачи, задача «Передача базы данных» может передавать только одну базу данных.  
   
- С помощью выделения пользовательской переменной для свойства **ExecValueVariable** задачи "Передача базы данных" сведения об ошибках передачи становятся доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ С помощью выделения пользовательской переменной для свойства **ExecValueVariable** задачи "Передача базы данных" сведения об ошибках передачи становятся доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача базы данных» содержит следующие пользовательские записи в журнале.  
@@ -80,7 +80,7 @@ ms.locfileid: "47830542"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-transfer-database-task"></a>Настройка задачи «Передача базы данных» с помощью программных средств  
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе.  

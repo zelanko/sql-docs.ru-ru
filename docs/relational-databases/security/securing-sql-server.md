@@ -19,18 +19,18 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c526b7c991f3df5eb33042e2d25f7152ae80887a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 367cc129fdb0f4786c37af5f1cf1fa4bb112fa90
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760802"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663303"
 ---
 # <a name="securing-sql-server"></a>Обеспечение безопасности SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Защиту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно рассматривать как последовательность шагов, затрагивающих четыре области: платформу, проверку подлинности, объекты (включая данные) и приложения, получающие доступ к системе. В приведенных ниже разделах описано создание и реализация эффективного плана обеспечения безопасности.  
   
- Дополнительные сведения о безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. на веб-сайте [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) . Они включают руководство с рекомендациями и контрольный список безопасности. Кроме того, этот веб-сайт содержит сведения о пакетах обновлений и файлы для загрузки.  
+ Дополнительные сведения о безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. на веб-сайте [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) . Они включают руководство с рекомендациями и контрольный список безопасности. Кроме того, этот веб-сайт содержит сведения о пакетах обновлений и файлы для загрузки.  
   
 ## <a name="platform-and-network-security"></a>Безопасность платформы и сети  
  Платформа для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включает в себя физическое оборудование и сетевые компьютеры, с помощью которых клиенты соединяются с серверами базы данных, а также двоичные файлы, применяемые для обработки запросов базы данных.  
@@ -78,7 +78,7 @@ ms.locfileid: "47760802"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программные файлы|[Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяют повысить безопасность. Для определения новейшего доступного пакета обновления для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]перейдите на веб-сайт [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяют повысить безопасность. Для определения новейшего доступного пакета обновления для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]перейдите на веб-сайт [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) .  
   
  С помощью приведенного ниже скрипта можно определить установленный в системе пакет обновления.  
   
@@ -125,7 +125,7 @@ GO
   
 |Сведения о|См.|  
 |---------------------------|---------|  
-|Соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Использование среды SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
+|Соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Использование среды SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
 |Соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и запуск запросов из командной строки|[Программа sqlcmd](../../tools/sqlcmd-utility.md)|  
 |Настройка сети и управление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md)|  
 |Включение и отключение компонентов с помощью средства управления на основе политики|[Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
@@ -143,7 +143,7 @@ GO
 ## <a name="related-content"></a>См. также  
  [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[Оптимальные методы обеспечения безопасности SQL Server 2012 — рабочие и административные задачи](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
+[Оптимальные методы обеспечения безопасности SQL Server 2012 — рабочие и административные задачи](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [Блог по безопасности SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [Оптимальные методы обеспечения безопасности и безопасность на уровне меток (технические описания)](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
 [Безопасность на уровне строк](../../relational-databases/security/row-level-security.md)   

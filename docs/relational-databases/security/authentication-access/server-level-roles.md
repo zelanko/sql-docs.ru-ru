@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9995eeab10fcb0e2b681886cb8ad49fbeb37fac0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2466e5b1cff9efb055d348a7e72729fa5208156
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856232"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661333"
 ---
 # <a name="server-level-roles"></a>Роли уровня сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47856232"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  Разрешение **CONTROL SERVER** похоже на, но не идентично **sysadmin** предопределенной роли сервера. Разрешения не влекут за собой членства роли, а членства роли не предоставляют разрешений. (Пример **CONTROL SERVER** не подразумевает членство в предопределенной роли сервера **sysadmin**.) Однако иногда возможно олицетворять между ролями и эквивалентными разрешениями. Большинство команд **DBCC** и многие системные процедуры требуют членство в **sysadmin** предопределенной роли сервера. Список из 171 системной хранимой процедуры, которым требуется членство в роли **sysadmin** , содержится в следующей записи блога Андреаса Волтера (Andreas Wolter) [Сравнение CONTROL SERVER и sysadmin/sa: разрешения, системные процедуры, DBCC, автоматическое создание схем и расширение привилегий — разъяснения](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  Разрешение **CONTROL SERVER** похоже на, но не идентично **sysadmin** предопределенной роли сервера. Разрешения не влекут за собой членства роли, а членства роли не предоставляют разрешений. (Пример **CONTROL SERVER** не подразумевает членство в предопределенной роли сервера **sysadmin**.) Однако иногда возможно олицетворять между ролями и эквивалентными разрешениями. Большинство команд **DBCC** и многие системные процедуры требуют членство в **sysadmin** предопределенной роли сервера. Список из 171 системной хранимой процедуры, которым требуется членство в роли **sysadmin** , содержится в следующей записи блога Андреаса Волтера (Andreas Wolter) [Сравнение CONTROL SERVER и sysadmin/sa: разрешения, системные процедуры, DBCC, автоматическое создание схем и расширение привилегий — разъяснения](https://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Разрешение на уровне сервера  
  В пользовательские роли сервера можно добавить только разрешения уровня сервера. Для составления списка разрешений уровня сервера, выполните следующее выражение. Разрешениями уровня сервера являются:  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5835d17dcb628eebe99bff4c6e3182a10e41dbe7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0c343a3a0326fe8da74ed475bc8dbf6b018a27f0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021048"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811807"
 ---
 # <a name="feature-reference-reporting-services"></a>Справочник по функциям (службы Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включают несколько средств и приложений, которые могут использоваться для создания, управления и просмотра отчетов. В этом разделе приводятся конкретные подразделы, описывающие диалоговые окна, веб-страницы и мастера этих инструментальных средств и приложений.  
@@ -42,7 +42,7 @@ ms.locfileid: "50021048"
  [Основные понятия служб Reporting Services (SSRS)](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Отчеты служб Reporting Services (SSRS)](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../reporting-services/report-data/report-datasets-ssrs.md)   
- [Приступая к работе с построителем отчетов](http://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [Приступая к работе с построителем отчетов](https://www.microsoft.com/download/en/details.aspx?id=29072)   
  [Проектирование и реализация отчетов с помощью построителя отчетов 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

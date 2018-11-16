@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57ceb8a68ec89d1bb0f5e78109445719d84d731a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804662"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641151"
 ---
 # <a name="change-data-capture-ssis"></a>Система отслеживания измененных данных (SSIS)
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]система отслеживания измененных данных предоставляет эффективное решение для проблемы проведения добавочных загрузок из исходных таблиц в киоски и хранилища данных.  
@@ -96,9 +96,9 @@ ms.locfileid: "47804662"
 ## <a name="samples-of-change-data-capture-packages"></a>Образцы пакетов системы отслеживания изменений данных  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют два образца, демонстрирующих использование системы отслеживания измененных данных в пакетах. Дополнительные сведения см. в следующих разделах:  
   
--   [Файл Readme. Образец пакета для отслеживания измененных данных за указанный интервал](http://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [Файл Readme. Образец пакета для отслеживания измененных данных за указанный интервал](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [Файл Readme. Образец пакета для отслеживания измененных данных с момента последнего запроса](http://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [Файл Readme. Образец пакета для отслеживания измененных данных с момента последнего запроса](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
@@ -119,6 +119,6 @@ ms.locfileid: "47804662"
 -   [Выполнение добавочной загрузки нескольких таблиц](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>См. также  
- Запись блога [SSIS Design Pattern — Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679)(на английском языке) на сайте sqlblog.com  
+ Запись блога [SSIS Design Pattern — Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679)(на английском языке) на сайте sqlblog.com  
   
   

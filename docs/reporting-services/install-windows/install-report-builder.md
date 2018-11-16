@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebcef28bd5b785bb72059986e39aae34d8af7921
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021328"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813187"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] является автономным приложением и устанавливается на компьютере пользователем или администратором. Вы можете установить приложение из центра загрузки Майкрософт, с сервера отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] или с сайта SharePoint, интегрированного с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "50021328"
  
 ## <a name="install-includessrbnoversionincludesssrbnoversionmd-with-system-center-configuration-manager"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] с System Center Configuration Manager 
   
- Администратор также может принудительно отправить программу на компьютер пользователя с помощью таких программ, как System Center Configuration Manager. Сведения по использованию определенного программного обеспечения для установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]можно получить в документации по этому программному обеспечению. Дополнительные сведения см. в разделе [Сайт System Center Configuration Manager](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager).  
+ Администратор также может принудительно отправить программу на компьютер пользователя с помощью таких программ, как System Center Configuration Manager. Сведения по использованию определенного программного обеспечения для установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]можно получить в документации по этому программному обеспечению. Дополнительные сведения см. в разделе [Сайт System Center Configuration Manager](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).  
   
 > [!IMPORTANT]  
 >  Для запуска операций из командной строки в Windows Vista и Windows 7 требуются повышенные разрешения безопасности; эти ОС будут запрашивать разрешения на выполнение командной строки. Эта установка выполняется не автоматически. Для проведения автоматической установки необходимо запустить командную строку от имени администратора.  

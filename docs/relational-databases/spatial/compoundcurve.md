@@ -11,19 +11,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cab23e9c1c0515cd0fd49b191928870aeb2184c7
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 26495b201fcfc29b891a83c4f7cc4011cfd7cbd9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019039"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658923"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Объект **CompoundCurve** — это набор из нуля или большего количества непрерывных экземпляров **CircularString** или **LineString** геометрического или географического типов.  
   
 > [!IMPORTANT]  
->  Подробное описание и примеры использования новых возможностей обработки пространственных данных в этом выпуске, включая подтип **CompoundCurve** , можно получить, скачав технический документ [Новые возможности обработки пространственных данных в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Подробное описание и примеры использования новых возможностей обработки пространственных данных в этом выпуске, включая подтип **CompoundCurve** , можно получить, скачав технический документ [Новые возможности обработки пространственных данных в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Можно создать пустой экземпляр **CompoundCurve** , но, чтобы экземпляр **CompoundCurve** был допустимым, он должен удовлетворять следующим требованиям.  
   

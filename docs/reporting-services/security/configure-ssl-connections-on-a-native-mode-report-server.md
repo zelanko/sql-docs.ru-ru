@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddb9d77d0c2ddc9ac729bd0389a3bb70196cb189
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5cd953a67893c2f9c457389a74c309fa207b2aad
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020278"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813607"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Настройка соединений SSL для сервера отчетов, работающего в собственном режиме
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] В собственном режиме используется HTTP-служба протокола SSL для установления зашифрованного соединения с сервером отчетов. Если в локальном хранилище сертификатов на компьютере сервера отчетов установлен CER-файл сертификата, можно связать его с резервированием URL-адресов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для поддержки соединений сервера отчетов через зашифрованный канал.  
   
 > [!TIP]  
->  Если используется режим интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с SharePoint, см. дополнительные сведения в документации по SharePoint. Например, руководство по [включению SSL в веб-приложении SharePoint 2010 (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx).  
+>  Если используется режим интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с SharePoint, см. дополнительные сведения в документации по SharePoint. Например, руководство по [включению SSL в веб-приложении SharePoint 2010 (https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx).  
   
  Поскольку службы IIS также используют HTTP-службу SSL, возникает ряд важных проблем взаимодействия, которые необходимо учитывать при запуске служб IIS и служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на одном компьютере. Ознакомьтесь с разделом «Проблемы взаимодействия со службами IIS», где приводятся рекомендации по решению данных проблем.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "50020278"
   
  Привязки SSL являются общими ресурсами в Microsoft Windows. Изменения, проведенные в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или других программах наподобие диспетчера IIS, могут отразиться на работе других приложений, работающих на этом же компьютере. Рекомендуется пользоваться для изменения привязок тем же средством, которое использовалось для их создания.  Например, если создание привязок SSL производилось в диспетчере конфигурации, то рекомендуется работать с ними в той же программе в течение всего срока их службы. Если же для создания привязок использовался диспетчер IIS, то рекомендуется и все дальнейшие операции с этими привязками выполнять также с помощью диспетчера IIS. Если службы IIS установлены на компьютере до установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , рекомендуется проверить конфигурацию SSL в IIS перед настройкой служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Если удаление привязок SSL для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняется с помощью диспетчера конфигурации служб Reporting Services, то может перестать работать SSL для веб-сайтов на сервере, где работают службы IIS, или на другом сервере HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Диспетчер конфигурации удаляет следующий раздел реестра. Если этот раздел реестра удаляется, привязка SSL для IIS также удаляется. Без этой привязки SSL для протокола HTTPS не поддерживается. Выполнить диагностику этой проблемы можно с помощью диспетчера IIS или программы HTTPCFG.exe. Чтобы решить эту проблему, восстановите привязку SSL для своих веб-сайтов с помощью диспетчера IIS. Чтобы предотвратить возникновение этой проблемы в будущем, с помощью диспетчера IIS удалите привязки SSL, а затем с помощью диспетчера IIS восстановите привязку для нужных веб-сайтов. Дополнительные сведения см. в статье базы знаний [SSL перестает работать после удаления привязки SSL (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n).  
+ Если удаление привязок SSL для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняется с помощью диспетчера конфигурации служб Reporting Services, то может перестать работать SSL для веб-сайтов на сервере, где работают службы IIS, или на другом сервере HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Диспетчер конфигурации удаляет следующий раздел реестра. Если этот раздел реестра удаляется, привязка SSL для IIS также удаляется. Без этой привязки SSL для протокола HTTPS не поддерживается. Выполнить диагностику этой проблемы можно с помощью диспетчера IIS или программы HTTPCFG.exe. Чтобы решить эту проблему, восстановите привязку SSL для своих веб-сайтов с помощью диспетчера IIS. Чтобы предотвратить возникновение этой проблемы в будущем, с помощью диспетчера IIS удалите привязки SSL, а затем с помощью диспетчера IIS восстановите привязку для нужных веб-сайтов. Дополнительные сведения см. в статье базы знаний [SSL перестает работать после удаления привязки SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
   
 ## <a name="see-also"></a>См. также:  
  [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   

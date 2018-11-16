@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 53fc11dc3735f1a27401164044c452a038c9c0ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594773"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638151"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Поддержка высокого уровня доступности в Scale Out
 
@@ -29,7 +29,7 @@ ms.locfileid: "47594773"
 Чтобы настроить высокий уровень доступности на стороне мастера Scale Out с использованием функций AlwaysOn для каталога служб SSIS, выполните указанные ниже действия:
 
 ## <a name="1-prerequisites"></a>1. предварительные требования
-Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонента и средств отказоустойчивого кластера для Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Установите компоненты и средства на всех узлах кластера.
+Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонента и средств отказоустойчивого кластера для Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Установите компоненты и средства на всех узлах кластера.
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Установка мастера Scale Out в основном узле
 Установите службы ядра СУБД SQL Server, службы Integration Services и мастер Scale Out в основном узле для мастера Scale Out. 

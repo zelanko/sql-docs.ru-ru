@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ed8247257e6687c71b9f516d68014a475cbc2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614442"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658083"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>темпоральные таблицы с системным управлением версиями и таблицы с оптимизацией памяти
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Темпоральные таблицы с системным управлением версиями для [таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) — это экономичное решение для сценариев, в которых требуется [аудит и анализ на момент времени данных](http://msdn.microsoft.com/library/mt631669.aspx) для данных, собранных из рабочих нагрузок In-Memory OLTP. Они обеспечивают высокую скорость обработки транзакций, параллелизм без блокировки и в то же время возможность хранения большого объема данных журнала, которые легко можно запросить.  
+  Темпоральные таблицы с системным управлением версиями для [таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) — это экономичное решение для сценариев, в которых требуется [аудит и анализ на момент времени данных](https://msdn.microsoft.com/library/mt631669.aspx) для данных, собранных из рабочих нагрузок In-Memory OLTP. Они обеспечивают высокую скорость обработки транзакций, параллелизм без блокировки и в то же время возможность хранения большого объема данных журнала, которые легко можно запросить.  
   
 ## <a name="overview"></a>Обзор  
  Темпоральные таблицы с системным управлением версиями автоматически сохраняют полный журнал изменений данных и предоставляют удобные расширения Transact-SQL для анализа на момент времени. В типичном сценарии журнал данных хранится в течение длительного времени (несколько месяцев и даже лет) несмотря на то, что они не запрашиваются регулярно.  

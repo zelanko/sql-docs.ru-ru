@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4be2b5d0c7d1beacd7c13c1fc6cf57e02fc0113
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cf7d56b973c08f88bc785e5d5ef2d45ea0260ac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661522"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658753"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47661522"
   
  Класс событий Showplan XML Statistics Profile отображает полные данные этапа компиляции, поэтому трассировки, которые содержат этот класс событий, могут существенно увеличивать рабочую нагрузку. Чтобы минимизировать привносимые издержки, используйте этот класс событий только в трассировках, наблюдающих за определенными проблемами в течение непродолжительного периода времени.  
   
- Документы Showplan XML имеют схему, связанную с ними. Эта схема находится на [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkId=41740)или является частью установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Документы Showplan XML имеют схему, связанную с ними. Эта схема находится на [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkId=41740)или является частью установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="showplan-xml-statistics-profile-event-class-data-columns"></a>Столбцы данных класса событий «Профиль статистики инструкции Showplan XML»  
   

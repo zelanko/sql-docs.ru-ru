@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d93d1ea55e06e1ee6b1a36bc9f2e3a341db58cfe
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e219907601a7c517c7fb7f53bb301bee14b06e6b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169055"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703652"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -168,13 +168,13 @@ SET <optionspec>
 -   2 — ошибки и предупреждения  
   
 SQLDUMPEREDUMPFLAGS  
- Определяет тип файлов дампа, создаваемых служебной программой SQLDumper в SQL Server. Значение по умолчанию — 0. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Определяет тип файлов дампа, создаваемых служебной программой SQLDumper в SQL Server. Значение по умолчанию — 0. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
- Место, где служебная программа SQLDumper сохраняет файлы дампов. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Место, где служебная программа SQLDumper сохраняет файлы дампов. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
- Максимальное время создания дампа программой SQLDumper в случае сбоя SQL Server (в миллисекундах). Значение по умолчанию равно 0, то есть время создания дампа неограниченно. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Максимальное время создания дампа программой SQLDumper в случае сбоя SQL Server (в миллисекундах). Значение по умолчанию равно 0, то есть время создания дампа неограниченно. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
  Условия, при которых должно произойти переключение при сбое или перезапуск экземпляра отказоустойчивого кластера SQL Server. Значение по умолчанию, равное 3, означает, что ресурс SQL Server будет переключаться на резервный ресурс или перезапускаться в случае критической ошибки сервера. Дополнительные сведения об этом и других уровнях условий ошибки см. в разделе [Настройка параметров свойства FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  

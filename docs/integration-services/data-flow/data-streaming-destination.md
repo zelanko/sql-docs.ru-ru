@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 958446082e1576e14f50d09a9b8b7181bf2f18af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771582"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638611"
 ---
 # <a name="data-streaming-destination"></a>Назначение потоковой передачи данных
   **Назначение потоковой передачи данных** — это компонент назначения служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), который позволяет **поставщику OLE DB для служб SSIS** использовать выходные данные пакета служб SSIS в качестве табличного результирующего набора. Можно создать связанный сервер, использующий поставщик OLE DB для служб SSIS, а затем выполнить SQL-запрос к связанному серверу, чтобы просмотреть данные, возвращаемые пакетом служб SSIS.  
@@ -54,7 +54,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
  Центр администрирования позволяет публиковать представления в базе данных SQL Server. Таким образом, вы можете опубликовать пакет служб SSIS в качестве представления SQL, используя мастер публикации пакетов служб SSIS. Затем в Центре администрирования Power BI можно выбрать представление, которое следует включить в веб-канал OData. Администратор данных может обращаться к веб-каналу из пакета служб SSIS, используя надстройку Power Query для Excel.  
   
- Подробное пошаговое руководство см. в разделе [Публикация пакетов служб SSIS в качестве источников веб-каналов OData](http://go.microsoft.com/fwlink/?LinkID=317367).  
+ Подробное пошаговое руководство см. в разделе [Публикация пакетов служб SSIS в качестве источников веб-каналов OData](https://go.microsoft.com/fwlink/?LinkID=317367).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -81,6 +81,6 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  Как и на вкладке "Входные столбцы", на этой вкладке можно изменить имена выходных столбцов. В древовидном представлении слева разверните узел **Data Streaming Destination Input** (Входные данные назначения потоковой передачи данных), а затем — **Входные столбцы**. Щелкните имя входного столбца и измените имя выходного столбца в области справа.  
   
 ## <a name="see-also"></a>См. также:  
- [Публикация пакетов служб SSIS в качестве источников веб-каналов OData](http://go.microsoft.com/fwlink/?LinkID=317367)  
+ [Публикация пакетов служб SSIS в качестве источников веб-каналов OData](https://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15c87cdbe7f96b3775a4ecfc475436e2996c212e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eb8e352e18331142adf23a76371d49d8403a4cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630122"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696822"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Урок 1. Создание объектов базы данных и отправка запросов к ним
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "47630122"
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] могут быть написаны и пересланы компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)] следующими способами:  
   
--   При помощи среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Предполагается, что вы используете среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], но можно также использовать среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, которая может быть загружена бесплатно с веб-узла [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?linkid=67359).  
+-   При помощи среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Предполагается, что вы используете среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], но можно также использовать среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, которая может быть загружена бесплатно с веб-узла [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=67359).  
   
 -   Посредством программы [sqlcmd](../tools/sqlcmd-utility.md).  
   
@@ -213,7 +213,7 @@ ms.locfileid: "47630122"
 |||  
 |-|-|  
 |[Строковые функции (Transact-SQL)](../t-sql/functions/string-functions-transact-sql.md)|[Типы данных и функции даты и времени (Transact-SQL)](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[Математические функции (Transact-SQL)](../t-sql/functions/mathematical-functions-transact-sql.md)|[Функции для работы с типами данных text и image (Transact-SQL)](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
+|[Математические функции (Transact-SQL)](../t-sql/functions/mathematical-functions-transact-sql.md)|[Функции для работы с типами данных text и image (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
 
 ## <a name="create-views-and-stored-procedures"></a>Создание представлений и хранимых процедур
 Представление является хранимой инструкцией SELECT, а хранимая процедура представляет собой одну или более инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] , выполняемых в виде пакета.  

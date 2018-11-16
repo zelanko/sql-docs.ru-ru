@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efcfa1d417a68428beb724c21f918f8af07dfffe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f4b3c22e81f28116fcdaaa83076ff4212b24bf5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708532"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676073"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47708532"
  Показывает, был ли объект создан с параметром «заключенный в кавычки идентификатор» в значении ON. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **Укрупнение блокировки**  
- Указывает укрупнение блокировки гранулярности таблицы. Дополнительные сведения о блокировке в компоненте Database Engine см. в разделе [Руководство по блокировке транзакций и управлению версиями строк SQL Server](http://msdn.microsoft.com/library/jj856598.aspx). Возможны следующие значения:  
+ Указывает укрупнение блокировки гранулярности таблицы. Дополнительные сведения о блокировке в компоненте Database Engine см. в разделе [Руководство по блокировке транзакций и управлению версиями строк SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). Возможны следующие значения:  
   
  AUTO  
  Этот параметр позволяет [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] выбрать степень детализации укрупнения блокировки, подходящую для данной схемы таблицы.  

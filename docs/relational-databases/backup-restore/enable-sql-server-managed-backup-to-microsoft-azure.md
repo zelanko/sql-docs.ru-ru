@@ -11,18 +11,18 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 753c323030f5d854bba3e0cd7bd985f8fdc90d24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fedebfb082639114ec068f80db436af7b8a035b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649702"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672803"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Включение управляемого резервного копирования SQL Server в Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описано, как включить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] с параметрами по умолчанию на уровне базы данных и экземпляра. Здесь также объясняется, как включить уведомления по электронной почте и как отслеживать резервное копирование.  
   
- В этом руководстве используется Azure PowerShell. Перед началом работы с руководством [скачайте и установите Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+ В этом руководстве используется Azure PowerShell. Перед началом работы с руководством [скачайте и установите Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
 >  Если также требуется включить дополнительные параметры или использовать настраиваемое расписание, выполните эти настройки, прежде чем включать [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Дополнительные сведения см. в статье [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "47649702"
   
 #### <a name="create-the-azure-blob-container"></a>Создание контейнера BLOB-объектов Azure  
   
-1.  **Оформите подписку Azure.** Если у вас уже есть подписка Azure, перейдите к следующему шагу. В противном случае вы можете начать работу с [бесплатной пробной версией](http://azure.microsoft.com/pricing/free-trial/) или просмотреть [варианты приобретения](http://azure.microsoft.com/pricing/purchase-options/).  
+1.  **Оформите подписку Azure.** Если у вас уже есть подписка Azure, перейдите к следующему шагу. В противном случае вы можете начать работу с [бесплатной пробной версией](https://azure.microsoft.com/pricing/free-trial/) или просмотреть [варианты приобретения](https://azure.microsoft.com/pricing/purchase-options/).  
   
 2.  **Создайте учетную запись хранения Azure.** Если у вас уже есть учетная запись хранения, перейдите к следующему шагу. В противном случае можно создать учетную запись хранения с помощью [портала управления Azure](https://manage.windowsazure.com/) или Azure PowerShell. Следующая команда `New-AzureStorageAccount` создает учетную запись хранения с именем `managedbackupstorage` в восточной части США.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47649702"
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
     ```  
   
-     Дополнительные сведения об учетных записях хранения см. в статье [Об учетных записях хранения Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
+     Дополнительные сведения об учетных записях хранения см. в статье [Об учетных записях хранения Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
 3.  **Создайте контейнер BLOB-объектов для файлов резервных копий.** Контейнер BLOB-объектов можно создать на портале управления Azure или с помощью Azure PowerShell. Следующая команда `New-AzureStorageContainer` создает контейнер BLOB-объектов с именем `backupcontainer` в учетной записи хранения `managedbackupstorage` .  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47649702"
     |**URL-адрес контейнера:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**Маркер SAS:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     Запишите URL-адрес контейнера и SAS для использования при создании учетных данных (CREDENTIAL) SQL. Общие сведения о SAS см. в статье [Подписанные URL-адреса. Часть 1: общие сведения о модели SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+     Запишите URL-адрес контейнера и SAS для использования при создании учетных данных (CREDENTIAL) SQL. Общие сведения о SAS см. в статье [Подписанные URL-адреса. Часть 1: общие сведения о модели SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>Как включить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   

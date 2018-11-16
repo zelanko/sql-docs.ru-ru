@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021098"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814097"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Экспорт в Microsoft Word (построитель отчетов и службы SSRS)
 
@@ -112,9 +112,9 @@ ms.locfileid: "50021098"
   
  В следующих разделах приведена дополнительная информация о настройке параметров Office и Word.  
   
--   Изменить язык редактирования можно в **Языковых параметрах Microsoft Office** или в диалоговом окне **Параметры Word** в Word. Дополнительные сведения см. в разделе [Включение использования других языков в программах Office](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
+-   Изменить язык редактирования можно в **Языковых параметрах Microsoft Office** или в диалоговом окне **Параметры Word** в Word. Дополнительные сведения см. в разделе [Включение использования других языков в программах Office](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
   
--   Установка языкового пакета Office и изменение языка редактирования. Дополнительные сведения см. в разделах [Включение использования других языков в программах Office](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) и [Параметры языка Office](http://office.microsoft.com/language/).  
+-   Установка языкового пакета Office и изменение языка редактирования. Дополнительные сведения см. в разделах [Включение использования других языков в программах Office](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) и [Параметры языка Office](https://office.microsoft.com/language/).  
   
 > [!NOTE]  
 >  Смена языка редактирования в **языковых параметрах Microsoft Office** или в диалоговом окне **Параметры Word** в Word отразится на всех программах Office.  

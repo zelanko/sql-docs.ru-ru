@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7f87bdfcbebe8843564a95a9f38f5d69a649cd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 328f313630286f3ef2a67fc7c27455e411d3d294
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729642"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658913"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47729642"
   
     -   **Создать из существующего полнотекстового списка стоп-слов**  
   
-     Дополнительные сведения см. в разделе [Создание списка полнотекстовых стоп-слов (страница "Общие")](http://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309).  
+     Дополнительные сведения см. в разделе [Создание списка полнотекстовых стоп-слов (страница "Общие")](https://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47729642"
   
 4.  Щелкните правой кнопкой мыши список стоп-слов, свойства которого необходимо изменить, и выберите пункт **Свойства**.  
   
-5.  В диалоговом окне [Свойства полнотекстового списка стоп-слов](http://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) выполните указанные ниже действия.  
+5.  В диалоговом окне [Свойства полнотекстового списка стоп-слов](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) выполните указанные ниже действия.  
   
     1.  В списке **Действия** выберите одно из следующих действий: **Добавить стоп-слово**, **Удалить стоп-слово**, **Удалить все стоп-слова**или **Очистить список стоп-слов**.  
   

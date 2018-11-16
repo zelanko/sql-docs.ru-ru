@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb46770565c85b148028084026bb9d2f26a91afc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: da90014c17b0540a8bee4e691835361068227565
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030295"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814157"
 ---
 # <a name="run-a-reporting-services-script-file"></a>Запуск файла скрипта для служб Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Файлы скриптов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняются из командной строки с помощью среды скриптов служб (программа rs.exe). В программе rs.exe доступно множество аргументов командной строки. Дополнительные сведения о параметрах командной строки см. в разделе [Служебная программа RS.exe (службы SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md). Образцы скриптов см. на странице [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
@@ -25,31 +25,31 @@ ms.locfileid: "50030295"
 -   Запустите файл Script.rss в среде выполнения скриптов, при этом укажите целевой сервер отчетов. По умолчанию применяется проверка подлинности Windows.  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver  
+    rs –i Script.rss -s https://servername/reportserver  
     ```  
   
 -   Запустите файл Script.rss в среде выполнения скриптов, при этом задайте имя пользователя и пароль для ответа на вызовы веб-службы.  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -u myusername -p mypassword  
+    rs –i Script.rss -s https://servername/reportserver -u myusername -p mypassword  
     ```  
   
 -   Запустите файл Script.rss в среде выполнения скриптов, задайте лимит времени ожидания для сервера в 30 секунд.  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -l 30  
+    rs –i Script.rss -s https://servername/reportserver -l 30  
     ```  
   
 -   Запустите файл Script.rss в среде выполнения скриптов, при этом укажите глобальную переменную скрипта с именем *report*.  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -v report="Company Sales"  
+    rs –i Script.rss -s https://servername/reportserver -v report="Company Sales"  
     ```  
   
 -   Запустите файл Script.rss в среде выполнения скриптов, при этом укажите, что операции веб-службы в файле скриптов должны выполняться в виде пакета.  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -b  
+    rs –i Script.rss -s https://servername/reportserver -b  
     ```  
   
 ## <a name="see-also"></a>См. также:  
