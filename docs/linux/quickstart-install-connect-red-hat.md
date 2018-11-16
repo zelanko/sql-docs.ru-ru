@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 9f0ac8fe36994630f42d7ec41287c9ddcb76c9fc
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 8d5b044adbdc0e5a846013aff1922b3cb1cb5dc8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269847"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669453"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство: Установка SQL Server и создать базу данных в Red Hat
 
@@ -41,7 +41,7 @@ ms.locfileid: "51269847"
 
 Необходимо иметь RHEL 7.3 или 7.4 машину с **по крайней мере 2 ГБ** памяти.
 
-Чтобы установить Red Hat Enterprise Linux на своем локальном компьютере, перейдите к [ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Кроме того, можно создать виртуальные машины RHEL в Azure. См. в разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)и использовать `--image RHEL` в вызове `az vm create`.
+Чтобы установить Red Hat Enterprise Linux на своем локальном компьютере, перейдите к [ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Кроме того, можно создать виртуальные машины RHEL в Azure. См. в разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)и использовать `--image RHEL` в вызове `az vm create`.
 
 Если вы ранее установили CTP-версии или версии-кандидате SQL Server 2017, необходимо сначала удалить старое хранилище, затем выполните следующие действия. Дополнительные сведения см. в разделе [репозиториев Настройка виртуальных машин Linux для SQL Server 2017 и 2019 ](sql-server-linux-change-repo.md).
 

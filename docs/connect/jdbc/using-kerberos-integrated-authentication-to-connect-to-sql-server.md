@@ -11,18 +11,18 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e4f058b1ae9f35df86b1e326c520bd4ebb588c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd82f894db2afc469c40c883deab2071b0e89f98
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798902"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600454"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Использование встроенной проверки подлинности Kerberos для подключения к SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Начиная с версии [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] приложение может с помощью свойства соединения **authenticationScheme** указать, что соединение с базой данных должно выполняться с использованием встроенной проверки подлинности Kerberos типа 4. См. в разделе [заданию свойств соединения](../../connect/jdbc/setting-the-connection-properties.md) Дополнительные сведения о свойствах. Дополнительные сведения о протоколе Kerberos см. в разделе [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758).
+Начиная с версии [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] приложение может с помощью свойства соединения **authenticationScheme** указать, что соединение с базой данных должно выполняться с использованием встроенной проверки подлинности Kerberos типа 4. См. в разделе [заданию свойств соединения](../../connect/jdbc/setting-the-connection-properties.md) Дополнительные сведения о свойствах. Дополнительные сведения о протоколе Kerberos см. в разделе [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758).
 
 При использовании встроенной проверки подлинности в модуле Java **Krb5LoginModule** его можно настроить с помощью [класса Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).
 
@@ -54,7 +54,7 @@ ms.locfileid: "47798902"
 
 Следующие рекомендации помогут настроить протокол Kerberos.
 
-1. Задайте **AllowTgtSessionKey** 1 в реестре Windows. Дополнительные сведения см. в статье [Разделы реестра протокола Kerberos и параметры конфигурации KDC в Windows Server 2003](http://support.microsoft.com/kb/837361).
+1. Задайте **AllowTgtSessionKey** 1 в реестре Windows. Дополнительные сведения см. в статье [Разделы реестра протокола Kerberos и параметры конфигурации KDC в Windows Server 2003](https://support.microsoft.com/kb/837361).
 2. Убедитесь, что конфигурация Kerberos (файл krb5.conf в среде UNIX) содержит верные указания на область (realm) и KDC в вашей среде.
 3. Инициализируйте кэш TGT с помощью kinit или войдя в домен.
 4. Когда приложение, использующее свойство **authenticationScheme=JavaKerberos**, запускается в операционной системе Windows Vista или Windows 7, следует использовать стандартную учетную запись пользователя. Но если приложение запускается от имени учетной записи администратора, то оно должно запускаться с правами доступа администратора.
@@ -72,9 +72,9 @@ ms.locfileid: "47798902"
 
 Дополнительные сведения об именах субъектов-служб (SPN) см. в разделах:
 
-- [Как использовать проверку подлинности по протоколу Kerberos в SQL Server](http://support.microsoft.com/kb/319723)
+- [Как использовать проверку подлинности по протоколу Kerberos в SQL Server](https://support.microsoft.com/kb/319723)
 
-- [Использование протокола Kerberos в SQL Server](http://go.microsoft.com/fwlink/?LinkId=207814)
+- [Использование протокола Kerberos в SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
 
 > [!NOTE]  
 > До выхода версии 6.2 драйвера JDBC, правильное использование Cross сферы Kerberos, необходимо явно задать **serverSpn**.

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147869"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697018"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Проверки согласованности базы данных (DBCC) для служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "50147869"
  DBCC для Analysis Services будет выполняться в любой базе данных служб Analysis Services на любом уровне совместимости, при условии что база данных работает в экземпляре SQL Server 2016. Убедитесь, что вы используете правильный синтаксис команды для каждого типа базы данных.  
   
 > [!NOTE]  
->  Если вы читали раздел [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md), то, возможно, обратили внимание на то, что средство DBCC в службах Analysis Services поддерживает гораздо более узкую область проверки. DBCC в службах Analysis Services является единственной командой, которая сообщает исключительно о повреждении данных в базе данных или отдельных объектах. Если вам требуется решить другие задачи, такие как сбор сведений, попробуйте использовать сценарии PowerShell для объектов AMO или сценарии XMLA. Ссылки на дополнительные сведения см. в разделе [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md) .  
+>  Если вы читали раздел [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md), то, возможно, обратили внимание на то, что средство DBCC в службах Analysis Services поддерживает гораздо более узкую область проверки. DBCC в службах Analysis Services является единственной командой, которая сообщает исключительно о повреждении данных в базе данных или отдельных объектах. Если вам требуется решить другие задачи, такие как сбор сведений, попробуйте использовать сценарии PowerShell для объектов AMO или сценарии XMLA.
   
 ## <a name="permission-requirements"></a>Требования к разрешениям  
  Для выполнения команды необходимо быть администратором базы данных или сервера Analysis Services (членом роли сервера). В разделе [Предоставление разрешений базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) или [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
@@ -299,7 +299,6 @@ Execution complete
 ## <a name="see-also"></a>См. также  
  [Обработка базы данных, таблицы или секции (службы Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Уровень совместимости табличных моделей в службах Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3ecb2395d350c66423fbf9b9da66dd2d30cf2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dab1e03a0c1f2364ec3557e375f7db044ad5b5cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770952"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605134"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47770952"
   
 ## <a name="step-2--execute-query"></a>Шаг 2: Выполнение запроса  
   
-[Sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) функция может использоваться для извлечения результирующего набора из запроса к базе данных SQL. Эта функция фактически принимает любой запрос и объект соединения и возвращает результирующий набор, который может быть выполнена итерация с использованием [sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+[Sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) функция может использоваться для извлечения результирующего набора из запроса к базе данных SQL. Эта функция фактически принимает любой запрос и объект соединения и возвращает результирующий набор, который может быть выполнена итерация с использованием [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  

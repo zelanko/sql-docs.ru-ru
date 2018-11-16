@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: 1708bf5d1fbd47f7fb2dcefbbb5150d4b5646343
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: b99aa6be170402b0e8f18dddd578c1fb6c615dd6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324576"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601874"
 ---
 # <a name="fips-mode"></a>Режим FIPS
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ Microsoft JDBC Driver для SQL Server поддерживает *совмест
 
 ## <a name="fips-configured-jvm"></a>FIPS настроенной виртуальной машине Java
 
-Утвержденные модули FIPS конфигурации, можно найти по [проверки FIPS 140-1 и криптографические модули FIPS 140-2](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
+Утвержденные модули FIPS конфигурации, можно найти по [проверки FIPS 140-1 и криптографические модули FIPS 140-2](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
 
 Поставщики могут иметь некоторые дополнительные действия по настройке виртуальной машины Java с FIPS.
 
@@ -87,7 +87,7 @@ private Certificate getCertificate(String pathName)
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
 ## <a name="appropriate-policy-files"></a>Соответствующие политики файлов
-Некоторые поставщики предоставляют FIPS необходимы неограниченный JAR-файлы политики. В таком случае для Sun / Oracle, скачать Java Cryptography Extension (JCE) неограниченное стойкость файлы политики юрисдикции для [JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) или [JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). 
+Некоторые поставщики предоставляют FIPS необходимы неограниченный JAR-файлы политики. В таком случае для Sun / Oracle, скачать Java Cryptography Extension (JCE) неограниченное стойкость файлы политики юрисдикции для [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) или [JRE 7](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). 
 
 ## <a name="appropriate-configuration-parameters"></a>Соответствующие параметры.
 Чтобы запустить драйвер JDBC в режиме совместимости с FIPS, настройте свойства соединения, как показано в следующей таблице. 

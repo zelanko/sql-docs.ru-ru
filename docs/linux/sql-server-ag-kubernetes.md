@@ -10,35 +10,35 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 02d76e3eadd8852d1c512c263e74dd8f8d6013de
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: c74b39f4b7816221e2258bde2b1fef2b9e74d9d3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356455"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658583"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Группы доступности AlwaysOn для SQL Server контейнеров
 
-SQL Server 2019 поддерживает группы доступности на контейнеры в Kubernetes. Для групп доступности, развертывание SQL Server [Kubernetes оператор](http://coreos.com/blog/introducing-operators.html) к кластеру Kubernetes. Оператор помогает упаковывать, развертывать и администрировать группы доступности в кластере.
+SQL Server 2019 поддерживает группы доступности на контейнеры в Kubernetes. Для групп доступности, развертывание SQL Server [Kubernetes оператор](https://coreos.com/blog/introducing-operators.html) к кластеру Kubernetes. Оператор помогает упаковывать, развертывать и администрировать группы доступности в кластере.
 
 ![Группы Доступности в контейнере Kubernetes](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
 В приведенном выше рисунке кластеров kubernetes с четырьмя узлами размещения группы доступности с тремя репликами. Решение включает в себя следующие компоненты:
 
-* Kubernetes [ *развертывания*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). Развертывание включает оператор и карту конфигурации. Они предоставляют образ контейнера, программного обеспечения и инструкции, необходимые для развертывания экземпляров SQL Server для группы доступности.
+* Kubernetes [ *развертывания*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). Развертывание включает оператор и карту конфигурации. Они предоставляют образ контейнера, программного обеспечения и инструкции, необходимые для развертывания экземпляров SQL Server для группы доступности.
 
-* Три узла, каждый из которых размещает [ *StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). Содержит StatefulSet [ *pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Содержит каждым pod:
+* Три узла, каждый из которых размещает [ *StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). Содержит StatefulSet [ *pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Содержит каждым pod:
   * Контейнер SQL Server одного экземпляра SQL Server.
   * Агент группы доступности. 
 
-* Два [ *ConfigMaps* ](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) связаны с группой доступности. ConfigMaps содержат следующие сведения:
+* Два [ *ConfigMaps* ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) связаны с группой доступности. ConfigMaps содержат следующие сведения:
   * Развертывание для оператора.
   * Группа доступности.
 
- * [*Постоянные тома* ](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) — части хранилища. Объект *утверждение постоянного тома* (PVC) — это запрос для хранилища пользователя. Каждый контейнер связан с утверждение постоянного тома для хранения данных и журналов. В службе Kubernetes Azure (AKS), вы [создать утверждение постоянного тома](http://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) для автоматически подготовки хранилища на основе класса хранения.
+ * [*Постоянные тома* ](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) — части хранилища. Объект *утверждение постоянного тома* (PVC) — это запрос для хранилища пользователя. Каждый контейнер связан с утверждение постоянного тома для хранения данных и журналов. В службе Kubernetes Azure (AKS), вы [создать утверждение постоянного тома](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) для автоматически подготовки хранилища на основе класса хранения.
 
 
-Кроме того, кластер сохраняет [ *секреты* ](http://kubernetes.io/docs/concepts/configuration/secret/) пароли, сертификаты, ключи и другие конфиденциальные сведения.
+Кроме того, кластер сохраняет [ *секреты* ](https://kubernetes.io/docs/concepts/configuration/secret/) пароли, сертификаты, ключи и другие конфиденциальные сведения.
 
 ## <a name="deploy-the-availability-group-in-kubernetes"></a>Развертывание группы доступности в Kubernetes
 
@@ -74,11 +74,11 @@ StatfulSet содержит:
 
 * `mssql-operator`
 
-    Этот процесс развертывается как отдельное развертывание Kubernetes. Он регистрирует [настраиваемых ресурсов Kubernetes](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) вызывается `SqlServer` (sqlservers.mssql.microsoft.com). Затем он ожидает передачи данных для таких ресурсов создается или обновляется в кластере Kubernetes. Для каждого такого события, он создает или обновляет ресурсы Kubernetes для соответствующего экземпляра (например StatefulSet или `mssql-server-k8s-init-sql` задания).
+    Этот процесс развертывается как отдельное развертывание Kubernetes. Он регистрирует [настраиваемых ресурсов Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) вызывается `SqlServer` (sqlservers.mssql.microsoft.com). Затем он ожидает передачи данных для таких ресурсов создается или обновляется в кластере Kubernetes. Для каждого такого события, он создает или обновляет ресурсы Kubernetes для соответствующего экземпляра (например StatefulSet или `mssql-server-k8s-init-sql` задания).
 
 * `mssql-server-k8s-health-agent`
 
-    Этот веб-сервер обслуживает Kubernetes [проверки активности](http://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) для определения работоспособности экземпляра SQL Server. Отслеживание работоспособности локального экземпляра SQL Server путем вызова `sp_server_diagnostics` и сравнить результаты с политикой монитора.
+    Этот веб-сервер обслуживает Kubernetes [проверки активности](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) для определения работоспособности экземпляра SQL Server. Отслеживание работоспособности локального экземпляра SQL Server путем вызова `sp_server_diagnostics` и сравнить результаты с политикой монитора.
 
 * `mssql-ha-supervisor`
 
@@ -92,7 +92,7 @@ StatfulSet содержит:
 
 * `mssql-server-k8s-init-sql`
   
-    Этот Kubernetes [задания](http://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) применяет настройки требуемого состояния для экземпляра SQL Server. Задание создается с помощью оператора, каждый раз при создании или обновлении ресурса SqlServer. Он гарантирует, что целевой экземпляр SQL Server, соответствующий настраиваемого ресурса имеет требуемой конфигурацией, описанной в ресурсе.
+    Этот Kubernetes [задания](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) применяет настройки требуемого состояния для экземпляра SQL Server. Задание создается с помощью оператора, каждый раз при создании или обновлении ресурса SqlServer. Он гарантирует, что целевой экземпляр SQL Server, соответствующий настраиваемого ресурса имеет требуемой конфигурацией, описанной в ресурсе.
 
     Например если параметры являются обязательными, оно будет завершено их:
   * Обновить пароль системного Администратора

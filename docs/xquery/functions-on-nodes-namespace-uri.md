@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 41b7cb2839945837540ff90d09a58e051cff635d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 046017ed9e7a9f99f2fde48426888045b4a02890
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609182"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667174"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Функции с узлами — namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
 ```  
 SELECT Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
      namespace-uri(/AWMI:root[1]/AWMI:Location[1])') as Result  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
@@ -76,16 +75,16 @@ WHERE ProductModelID=7
  Результат:  
   
 ```  
-http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
+https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>Б. Использование функции namespace-uri() без аргумента в предикате  
- Следующий запрос указывается в типизированном столбце xml типа CatalogDescription. Выражение возвращает все узлы элементов, чей URI-код пространства имен является адресом `http://www.adventure-works.com/schemas/OtherFeatures`. Пространства имен -**uri()** функции указан без аргумента и использует узел контекста.  
+ Следующий запрос указывается в типизированном столбце xml типа CatalogDescription. Выражение возвращает все узлы элементов, чей URI-код пространства имен является адресом `https://www.adventure-works.com/schemas/OtherFeatures`. Пространства имен -**uri()** функции указан без аргумента и использует узел контекста.  
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-   /p1:ProductDescription//*[namespace-uri() = "http://www.adventure-works.com/schemas/OtherFeatures"]  
+declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+   /p1:ProductDescription//*[namespace-uri() = "https://www.adventure-works.com/schemas/OtherFeatures"]  
 ') as Result  
 FROM Production.ProductModel  
 WHERE ProductModelID=19  
@@ -94,13 +93,13 @@ WHERE ProductModelID=19
  Частичный результат:  
   
 ```  
-<p1:wheel xmlns:p1="http://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
-<p2:saddle xmlns:p2="http://www.adventure-works.com/schemas/OtherFeatures">  
-  <p3:i xmlns:p3="http://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
+<p1:wheel xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
+<p2:saddle xmlns:p2="https://www.adventure-works.com/schemas/OtherFeatures">  
+  <p3:i xmlns:p3="https://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
 …  
 ```  
   
- Пространство имен URI в предыдущем запросе можно изменить на адрес `http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Тогда будут получены все дочерние узлы элемента <`ProductDescription`>, чья часть URI-кода пространства имен расширенного QName является адресом `http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
+ Пространство имен URI в предыдущем запросе можно изменить на адрес `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Тогда будут получены все дочерние узлы элемента <`ProductDescription`>, чья часть URI-кода пространства имен расширенного QName является адресом `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
   
 ### <a name="implementation-limitations"></a>Ограничения реализации  
  Существуют следующие ограничения:  
@@ -108,7 +107,7 @@ WHERE ProductModelID=19
 -   **Namespace-uri()** функция возвращает экземпляры типа xs: String вместо xs: anyURI.  
   
 ## <a name="see-also"></a>См. также  
- [Функции с узлами](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Функции с узлами](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [Функция local-name &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   
   

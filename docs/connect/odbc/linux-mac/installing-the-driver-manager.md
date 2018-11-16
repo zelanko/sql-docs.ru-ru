@@ -13,12 +13,12 @@ ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78eaf77064fb96c024c548c320ca9feeec10ce02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5ffb878e0d30ce7f905ce74647e8db8c2983501
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597989"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605824"
 ---
 # <a name="installing-the-driver-manager"></a>Установка диспетчера драйверов
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47597989"
   
 5.  Когда все готово к установке, а ваш компьютер имеет доступ к внешнему сайту по протоколу FTP, выполните следующую команду: **./build_dm.sh**.
 
-Если компьютер не может получить доступ к внешнему сайту по протоколу FTP, получите `unixODBC-2.3.0.tar.gz`. Вы можете получить `unixODBC-2.3.0.tar.gz` из [ http://www.unixodbc.org ](http://www.unixodbc.org/). Щелкните ссылку **Скачать** в левой части страницы, чтобы перейти на страницу скачивания. Щелкните соответствующую ссылку для скачивания unixODBC-2.3.0 (не unixODBC-2.3.1). В этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версия UnixODBC-2.3.1 не поддерживается. Выполните следующую команду, чтобы начать установки диспетчера драйверов unixODBC: **./build_dm.sh--URL-адрес загрузки = file://unixODBC-2.3.0.tar.gz**.  
+Если компьютер не может получить доступ к внешнему сайту по протоколу FTP, получите `unixODBC-2.3.0.tar.gz`. Вы можете получить `unixODBC-2.3.0.tar.gz` из [ https://www.unixodbc.org ](https://www.unixodbc.org/). Щелкните ссылку Скачать** в левой части страницы, чтобы перейти на страницу скачивания. Щелкните соответствующую ссылку для скачивания unixODBC-2.3.0 (не unixODBC-2.3.1). В этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версия UnixODBC-2.3.1 не поддерживается. Выполните следующую команду, чтобы начать установки диспетчера драйверов unixODBC: **./build_dm.sh--URL-адрес загрузки = file://unixODBC-2.3.0.tar.gz**.  
 
 6.  Введите **YES**, чтобы приступить к распаковке файлов. Эта часть процесса может занять около 5 минут.  
 
@@ -66,7 +66,7 @@ ms.locfileid: "47597989"
 
 1.  Удалите все старые установленные версии unixODBC (например, unixODBC 2.2.11). В Red Hat Enterprise Linux 5 или 6 выполните следующую команду: **yum remove unixODBC**. В SUSE Linux Enterprise **zypper удалить unixODBC**.  
   
-2.  Перейдите на сайт [http://www.unixodbc.org](http://www.unixodbc.org/). Щелкните ссылку **Скачать** в левой части страницы, чтобы перейти на страницу скачивания. Щелкните соответствующую ссылку, чтобы сохранить файл unixODBC-2.3.0.tar.gz на компьютере. В этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версия UnixODBC-2.3.1 не поддерживается.  
+2.  Перейдите на сайт [https://www.unixodbc.org](https://www.unixodbc.org/). Щелкните ссылку **Скачать** в левой части страницы, чтобы перейти на страницу скачивания. Щелкните соответствующую ссылку, чтобы сохранить файл unixODBC-2.3.0.tar.gz на компьютере. В этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версия UnixODBC-2.3.1 не поддерживается.  
   
 3.  На компьютере Linux выполните команду: **tar xvzf unixODBC-2.3.0.tar.gz**.  
   

@@ -14,12 +14,12 @@ ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ad5d49841db9abdd0b512c1d36454eccc5ff73a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cd3795f57f544d5f7003f7aab60be2a08a64229
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782882"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607194"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Трассировка доступа к данным с помощью драйвера ODBC в Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
 
-[Документации по unixODBC](http://www.unixodbc.org/doc/UserManual/) описаны различия между пользовательских и системных источников данных. В заключение:  
+[Документации по unixODBC](https://www.unixodbc.org/doc/UserManual/) описаны различия между пользовательских и системных источников данных. В заключение:  
 
 - Пользовательские имена DSN---это источников данных, которые доступны только для конкретного пользователя. Пользователи могут подключаться с помощью, добавлять, изменять и удалить свои собственные источники данных пользователя. Пользовательские имена DSN хранятся в файле в домашнем каталоге пользователя или его подкаталог.
   

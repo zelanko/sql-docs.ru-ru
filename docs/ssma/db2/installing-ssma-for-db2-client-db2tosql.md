@@ -10,12 +10,12 @@ ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4e77b08484a08871d2b9dcd70de0ddf339bb8f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d479c8f7de1c9d7463e57f37f9e8588c9bc68b6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805972"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666503"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Установка SSMA для DB2 клиента (DB2ToSQL)
 SSMA клиента состоит из программных файлов, которые выполняют следующие задачи:  
@@ -41,7 +41,7 @@ SSMA предназначен для работы с помощью DB2 для z
   
 -   Установщик [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows версии 3.1 или более поздняя версия.  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версии 4.0 или более поздней версии. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версии 4.0 можно найти в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установочного носителя. Можно также получить его из [Центр разработчиков .NET Framework](http://go.microsoft.com/fwlink/?LinkId=48882).  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версии 4.0 или более поздней версии. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версии 4.0 можно найти в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установочного носителя. Можно также получить его из [Центр разработчиков .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 -   Поставщик Microsoft OLE DB для DB2 версии 5 или более поздней версии и подключение к базам данных DB2, которые требуется перенести.  
   
@@ -50,9 +50,9 @@ SSMA предназначен для работы с помощью DB2 для z
 -   4 ГБ ОЗУ рекомендуется.  
   
 ## <a name="microsoft-oledb-provider-for-db2"></a>Поставщик данных OLE DB для DB2 (Майкрософт)  
-Чтобы загрузить поставщик OLE DB для DB2 версии 5.0, перейдите к [пакет дополнительных компонентов Microsoft® SQL Server® 2014](http://www.microsoft.com/download/details.aspx?id=42295).  
+Чтобы загрузить поставщик OLE DB для DB2 версии 5.0, перейдите к [пакет дополнительных компонентов Microsoft® SQL Server® 2014](https://www.microsoft.com/download/details.aspx?id=42295).  
   
-SSMA можно загрузить из Интернета. Чтобы загрузить последнюю версию, см. в разделе [SQL Server Migration Assistant страницу загрузки](http://aka.ms/ssmafordb2).  
+SSMA можно загрузить из Интернета. Чтобы загрузить последнюю версию, см. в разделе [SQL Server Migration Assistant страницу загрузки](https://aka.ms/ssmafordb2).  
   
 После загрузки последней версии, необходимо извлечь установочные файлы от перед установкой SSMA.  
   

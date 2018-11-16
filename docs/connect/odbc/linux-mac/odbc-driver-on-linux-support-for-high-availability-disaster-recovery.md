@@ -11,25 +11,25 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5922753b28c401312f917ce662b56c7378634a77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 952194b55ef14527e2f04d18edb5873e6098d2da
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687044"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600104"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Поддержка высокой доступности и аварийного восстановления в драйвере ODBC для Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Драйверы ODBC для Linux и macOS поддержки [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Дополнительные сведения о [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] см. в следующих статьях.  
   
--   [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
--   [Создание и настройка групп доступности (SQL Server)](http://msdn.microsoft.com/library/ff878265.aspx)  
+-   [Создание и настройка групп доступности (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
--   [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](http://msdn.microsoft.com/library/ff929171.aspx)  
+-   [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](http://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx)  
   
 Прослушиватель для заданной группы доступности можно задать в строке подключения. Если приложение ODBC в Linux или macOS подключено к базе данных в группе доступности, которая выполняет переход на другой ресурс, то исходное соединение разрывается, а приложение должно установить новое соединение, чтобы продолжить работу после отработки отказа.
 

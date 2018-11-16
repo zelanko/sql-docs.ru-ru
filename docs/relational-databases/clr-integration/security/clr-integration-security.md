@@ -15,12 +15,12 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4da058b6c4a36640ceb5273c18df5bf10feb602a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48f9935f26ac4ae17b15f4008dcdb0d8a0e69e5c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607212"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677723"
 ---
 # <a name="clr-integration-security"></a>Безопасность интеграции со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,16 @@ ms.locfileid: "47607212"
  [Атрибуты защиты узла и программирование интеграции со средой CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Содержит сведения о значениях атрибутов защиты узла (host protection attribute, HPA), запрещенных в сборках SAFE и EXTERNAL_ACCESS.  
   
- [Ссылки в средствах безопасности интеграции со средой CLR](http://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [Ссылки в средствах безопасности интеграции со средой CLR](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
  Описывает механизм вызова фрагментов пользовательского кода друг из друга в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Олицетворение и средства обеспечения безопасности при интеграции со средой CLR](http://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [Олицетворение и средства обеспечения безопасности при интеграции со средой CLR](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
  Описывает доступ управляемого кода к внешним ресурсам с использованием олицетворения.  
   
- [Частично доверенный вызывающий код](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [Частично доверенный вызывающий код](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  Описывает проблемы, возникающие, когда управляемый метод вызывает метод класса, содержащегося в другой сборке.  
   
- [Домены приложений и безопасность интеграции со средой CLR](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
+ [Домены приложений и безопасность интеграции со средой CLR](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
  Описывает загрузку сборок в домены приложений.  
   
 ## <a name="see-also"></a>См. также  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8819415108993d4e25a2bbfe899f2fabd6d104d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f946aa354ddde07db6abd5797982c1621bf24dbb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847342"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605254"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Загрузка драйверов Майкрософт для PHP для SQL Server
 
@@ -25,10 +25,10 @@ ms.locfileid: "47847342"
 
 В следующих версиях драйверов для PHP в Windows доступны для загрузки:
 
-- [Драйверы Майкрософт версии 5.3 для PHP для SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=57163)
-- [Драйверы Майкрософт версии 5.2 для PHP для SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=56729)
-- [Драйверы Майкрософт версии 4.3 для PHP для SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=55642)
-- [Драйверы Майкрософт версии 4.0, 3.2, 3.1 и 3.0 для PHP для SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=20098)
+- [Драйверы Майкрософт версии 5.3 для PHP для SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
+- [Драйверы Майкрософт версии 5.2 для PHP для SQL Server](https://www.microsoft.com/download/details.aspx?id=56729)
+- [Драйверы Майкрософт версии 4.3 для PHP для SQL Server](https://www.microsoft.com/download/details.aspx?id=55642)
+- [Драйверы Майкрософт версии 4.0, 3.2, 3.1 и 3.0 для PHP для SQL Server](https://www.microsoft.com/download/details.aspx?id=20098)
 
 ## <a name="linux-and-macos"></a>Linux и macOS
 

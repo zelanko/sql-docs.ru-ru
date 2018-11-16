@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a6502fa85e7a04aeb94007fa82f1f31d8562e2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d93734ea9ef55361eb065f1f200757632dca1fd7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724562"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662403"
 ---
 # <a name="calling-a-stored-procedure"></a>Вызов хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47724562"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC для собственного клиента поддерживает оба управляющая последовательность ODBC CALL и [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) инструкции для выполнения хранимых процедур; предпочтительным методом является управляющая последовательность ODBC CALL. Использование синтаксиса ODBC позволяет приложению получать коды возврата хранимых процедур, а драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирован в целях использования протокола, первоначально разработанного для отправки вызовов удаленных процедур (RPC) между компьютерами, на которых выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
   
 > [!NOTE]  
->  При вызове [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимые процедуры с именованными параметрами ODBC (Дополнительные сведения см. в разделе [привязка параметров по имени (именованные параметры)](http://go.microsoft.com/fwlink/?LinkID=209721)), имена параметров должны начинаться с "\@" символов. Это ограничение, характерное для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это ограничение контролируется строже, чем в компонентах доступа к данным MDAC.  
+>  При вызове [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимые процедуры с именованными параметрами ODBC (Дополнительные сведения см. в разделе [привязка параметров по имени (именованные параметры)](https://go.microsoft.com/fwlink/?LinkID=209721)), имена параметров должны начинаться с "\@" символов. Это ограничение, характерное для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это ограничение контролируется строже, чем в компонентах доступа к данным MDAC.  
   
  Управляющая последовательность ODBC CALL для вызова процедуры такова:  
   

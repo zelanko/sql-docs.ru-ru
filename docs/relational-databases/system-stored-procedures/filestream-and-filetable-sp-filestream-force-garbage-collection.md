@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 350c007c8a0153f2dfd0f84d596110b3dea29500
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 145bfe599fa0117b689a002d47807eca217ba7bc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733422"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669093"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_filestream_force_garbage_collection
 |*file_name*|Указывает имя контейнера FILESTREAM|  
 |*num_collected_items*|Указывает число элементов FILESTREAM (файлов и каталогов), которые были собраны как мусор (удалены) в данном контейнере.|  
 |*num_marked_for_collection_items*|Указывает число элементов FILESTREAM (файлов и каталогов), которые были отмечены для сборки мусора в данном контейнере. Эти элементы еще не были удалены, но могут быть помечены для удаления после этапа сбора мусора.|  
-|*num_unprocessed_items*|Указывает число подлежащих сборке мусора элементов FILESTREAM (файлов и каталогов), для которых сборка в данном контейнере не была выполнена. Это может произойти по разным причинам, включая следующие.<br /><br /> Файлы закреплены, так как еще не создана резервная копия журналов или контрольной точки.<br /><br /> Файлы относятся к модели восстановления FULL или BULK_LOGGED.<br /><br /> Существует длительно выполняющаяся активная транзакция.<br /><br /> Задание чтения журнала репликации не запущена. См. в техническом [хранилище FILESTREAM в SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) Дополнительные сведения.|  
+|*num_unprocessed_items*|Указывает число подлежащих сборке мусора элементов FILESTREAM (файлов и каталогов), для которых сборка в данном контейнере не была выполнена. Это может произойти по разным причинам, включая следующие.<br /><br /> Файлы закреплены, так как еще не создана резервная копия журналов или контрольной точки.<br /><br /> Файлы относятся к модели восстановления FULL или BULK_LOGGED.<br /><br /> Существует длительно выполняющаяся активная транзакция.<br /><br /> Задание чтения журнала репликации не запущена. См. в техническом [хранилище FILESTREAM в SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=209156) Дополнительные сведения.|  
 |*last_collected_xact_seqno*|Возвращает последний соответствующий номер последовательности LSN, до которого для файлов была выполнена сборка мусора в указанном контейнере FILESTREAM.|  
   
 ## <a name="remarks"></a>Примечания  

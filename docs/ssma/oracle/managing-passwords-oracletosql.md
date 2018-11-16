@@ -13,12 +13,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 903fd6b9af4bc363f5f37ea353ab9ddeb93e347c
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: efe58d365cacd0f163299ce6c030bdc34a4b76cd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099418"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664503"
 ---
 # <a name="managing-passwords-oracletosql"></a>Управление паролями (OracleToSQL)
 Этот раздел посвящен защита пароли к базам данных и процедуру для импорта или экспорта их на серверах:  
@@ -127,5 +127,5 @@ SSMA консольного приложения позволяет экспор
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA (Oracle)](http://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Выполнение команд консоли SSMA (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

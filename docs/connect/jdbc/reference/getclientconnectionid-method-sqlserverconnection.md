@@ -11,12 +11,12 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa6954248b747cfd08789fa6f2e73ebc1e4befba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 823411df1521292914f7b8decf0636d1e6a330e7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730022"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600734"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>Метод getClientConnectionID (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,7 +59,7 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
   
  Метод **getClientConnectionID** будет работать независимо от того, с какой версией сервера устанавливается соединение, но журналы расширенных событий и записи по ошибкам кольцевого буфера соединений отсутствуют в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 и предыдущих версиях.  
   
- Идентификатор соединения можно найти в журнале расширенных событий, чтобы определить, на сервере ли произошла ошибка (если включена регистрация расширенных событий в журнале для идентификатора соединения). Для некоторых ошибок идентификатор соединения можно также найти в кольцевом буфере соединений ([Устранение неполадок подключения в SQL Server 2008 с помощью кольцевого буфера соединений](http://go.microsoft.com/fwlink/?LinkId=207752)). Если в кольцевом буфере соединений идентификатор соединения отсутствует, то скорее всего возникла сетевая ошибка.  
+ Идентификатор соединения можно найти в журнале расширенных событий, чтобы определить, на сервере ли произошла ошибка (если включена регистрация расширенных событий в журнале для идентификатора соединения). Для некоторых ошибок идентификатор соединения можно также найти в кольцевом буфере соединений ([Устранение неполадок подключения в SQL Server 2008 с помощью кольцевого буфера соединений](https://go.microsoft.com/fwlink/?LinkId=207752)). Если в кольцевом буфере соединений идентификатор соединения отсутствует, то скорее всего возникла сетевая ошибка.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

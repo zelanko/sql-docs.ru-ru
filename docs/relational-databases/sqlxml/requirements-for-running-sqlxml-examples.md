@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0921b3c42518a5b0dfe318b0fec7666a9d2074ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 766425f6b0ac75699115146f5e471299bf0a8d41
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760374"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664053"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Требования к запуску примеров SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47760374"
   
  Чтобы создать рабочие образцы на основе примеров SQLXML 4.0, должны быть установлены следующие компоненты:  
   
--   Образец базы данных AdventureWorks. Дополнительные сведения см. в разделе [образцы баз данных AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
+-   Образец базы данных AdventureWorks. Дополнительные сведения см. в разделе [образцы баз данных AdventureWorks](https://msftdbprodsamples.codeplex.com/).  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Дополнительные сведения см. в статье [Установка SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   

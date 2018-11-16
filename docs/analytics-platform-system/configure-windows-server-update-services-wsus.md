@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4868aa775ac2958cc0e034196a0e911b58e78a34
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 0b79db4806f22c7d25af4f292fedddb46b40d1e7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018529"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696943"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Настройка Windows Server Update Services (WSUS) в Analytics Platform System
 Эти инструкции описывают шаги по использованию мастера настройки Windows Server Update Services (WSUS) для настройки служб WSUS для Analytics Platform System. Необходимо настроить службы WSUS, перед применением обновлений программного обеспечения на устройство. На виртуальной машине VMM устройства уже установлена служба WSUS.  
   
-Дополнительные сведения о настройке служб WSUS см. в разделе [руководство по установке WSUS пошаговое](http://go.microsoft.com/fwlink/?LinkId=202417) веб-сайта WSUS. После настройки WSUS, см. в разделе [скачивание и применение обновлений Майкрософт &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) инициировать обновление.  
+Дополнительные сведения о настройке служб WSUS см. в разделе [руководство по установке WSUS пошаговое](https://go.microsoft.com/fwlink/?LinkId=202417) веб-сайта WSUS. После настройки WSUS, см. в разделе [скачивание и применение обновлений Майкрософт &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) инициировать обновление.  
   
 > [!WARNING]  
 > Если возникают ошибки во время этого процесса настройки, остановите и обратитесь за помощью в службу поддержки. Не пропускать ошибки или продолжить в процессе, после получения ошибки.  
@@ -79,7 +79,7 @@ ms.locfileid: "51018529"
   
 4.  Выбор вышестоящего сервера.  
   
-    На **Выбор вышестоящего сервера** страницы мастера настройки WSUS вы сможете выбрать, как WSUS на этом узле управления виртуальной машины будут подключаться к вышестоящему серверу для получения обновлений программного обеспечения. Доступны два варианты для синхронизации с вышестоящим сервером [центра обновления Майкрософт](http://go.microsoft.com/fwlink/?LinkId=133349) или синхронизация обновлений с другим сервером Windows Server Update Services.  
+    На **Выбор вышестоящего сервера** страницы мастера настройки WSUS вы сможете выбрать, как WSUS на этом узле управления виртуальной машины будут подключаться к вышестоящему серверу для получения обновлений программного обеспечения. Доступны два варианты для синхронизации с вышестоящим сервером [центра обновления Майкрософт](https://go.microsoft.com/fwlink/?LinkId=133349) или синхронизация обновлений с другим сервером Windows Server Update Services.  
   
     #### <a name="to-update-by-using-microsoft-update"></a>Чтобы обновить с помощью центра обновления Майкрософт  
   

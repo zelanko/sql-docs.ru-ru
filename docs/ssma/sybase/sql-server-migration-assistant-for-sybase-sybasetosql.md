@@ -10,12 +10,12 @@ ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: a0d72eea63d104d4cd110df4a12a505675a41344
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82de3d69201a26980936172b2b08dcda9900b7a9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732732"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671689"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>SQL Server Migration Assistant для Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) для Sybase Adaptive Server Enterprise (ASE) — это средство для переноса баз данных ASE для [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 или [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 или [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 или [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 или [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 или [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 в Windows и Linux (Предварительная версия) или [!INCLUDE[msCoName](../../includes/msconame_md.md)] база данных Azure SQL. SSMA для Sybase преобразует объекты базы данных ASE для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов базы данных, создает эти объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL, и затем переносит данные из ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL.  
@@ -32,5 +32,5 @@ ms.locfileid: "47732732"
 |[Миграция баз данных Sybase ASE в SQL Server — база данных Azure SQL &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)|Обзор процесса преобразования и подробные сведения о каждом шаге в процессе.|  
 |[Справочник по пользовательскому интерфейсу &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)|Содержит документацию по SSMA для Sybase диалоговых окон.|  
 |[Работа с SSMA для Sybase консоли](working-with-ssma-for-sybase-console-sybasetosql.md)|Содержит документацию по SSMA консольного приложения.|  
-|[Получение SSMA для Sybase помощь](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Сведения о получении дополнительной помощи.|  
+|[Получение SSMA для Sybase помощь](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Сведения о получении дополнительной помощи.|  
   

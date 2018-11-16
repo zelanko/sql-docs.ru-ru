@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8decfb0a7378ef1acfaf671276f6449cde19ba1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c67e42a98bf6b653b35ead538449d725a6ed9d96
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794612"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662263"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Просмотр и работа с выходными данными помощника по настройке ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47794612"
  Графический пользовательский интерфейс можно также использовать для просмотра выходных данных настройки, созданных программой командной строки **dta** .  
   
 > [!NOTE]  
->  Если в служебной программе командной строки **dta** с помощью аргумента **-ox** задана запись выходных данных в XML-файл, можно открыть и просмотреть выходной XML-файл, выбрав пункт **Открыть файл** в меню **Файл** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Сведения о программе командной строки **dta** см. в разделе [dta, программа](../../tools/dta/dta-utility.md).  
+>  Если в служебной программе командной строки **dta** с помощью аргумента **-ox** задана запись выходных данных в XML-файл, можно открыть и просмотреть выходной XML-файл, выбрав пункт **Открыть файл** в меню **Файл** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Сведения о программе командной строки **dta** см. в разделе [dta, программа](../../tools/dta/dta-utility.md).  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Просмотр рекомендаций по настройке с помощью GUI помощника по настройке ядра СУБД  
   
@@ -175,7 +175,7 @@ ms.locfileid: "47794612"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     XML-схема помощника по настройке ядра СУБД также доступна на веб-сайте [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta).  
+     XML-схема помощника по настройке ядра СУБД также доступна на веб-сайте [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta).  
   
 6.  После создания рабочей нагрузки и входного XML-файла все готово для передачи входного файла в программу командной строки **dta** для анализа. Убедитесь, что имя выходного XML-файла для аргумента программы **-ox** указано. Будет создан выходной XML-файл с рекомендуемой конфигурацией, указанной в элементе **Configuration** . Если нужно снова запустить помощник по настройке ядра СУБД для проверки другой предположительной конфигурации, основанной на выходных данных, можно скопировать содержимое элемента **Configuration** из выходного файла и вставить его в новый или в первоначальный входной XML-файл. Сведения о том, как работать с входным XML-файлом в программе командной строки **dta** , см. в разделе о настройке базы данных с помощью программы командной строки dta статьи [Запуск и использование помощника по настройке ядра СУБД](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   

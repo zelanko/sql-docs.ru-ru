@@ -11,12 +11,12 @@ ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c87e7b85282c7ca237689296e08d2b7645240ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0134b1f5f20c02a853ef31024191ed69e9129908
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767142"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602654"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Соединение с использованием проверки подлинности Azure Active Directory
 
@@ -221,7 +221,7 @@ You have successfully logged on as: <your user name>
     3. Перейдите на вкладку «Регистрация приложений».
     4. В панели нажмите кнопку «Регистрация нового приложения».
     5. Введите понятное имя для приложения mytokentest, выберите «веб-приложение или API».
-    6. Мы не требуется URL-адрес входа. Просто укажите ничего: "http://mytokentest«.
+    6. Мы не требуется URL-адрес входа. Просто укажите ничего: "https://mytokentest«.
     7. Нажмите кнопку «Создать» в нижней.
     9. Хотя по-прежнему на портале Azure, перейдите на вкладку «Параметры» вашего приложения и перейдите на вкладку «Свойства».
     10. Найдите значение «Application ID» (то есть идентификатор клиента) и скопируйте его, потребуется позже при настройке приложения (например, 1846943b-ad04-4808-aa13-4702d908b5c1). См. в разделе следующего моментального снимка.

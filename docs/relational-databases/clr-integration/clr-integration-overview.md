@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 956ddabb6101f524de052afb107e5434d6d87892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1231fc3c3f18711357ccf84daf06fb4821fa27a2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850985"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664934"
 ---
 # <a name="clr-integration---overview"></a>Общие сведения об интеграции со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ ms.locfileid: "47850985"
  Расширенные хранимые процедуры позволяют реализовать возможности, недоступные в хранимых процедурах [!INCLUDE[tsql](../../includes/tsql-md.md)]. Однако расширенные хранимые процедуры могут нарушить целостность процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а управляемый код, проверенный на строгую типизацию, — нет. Далее, управление памятью, планирование потоков и волокон, а также службы Synchronization Services более тесно интегрированы между управляемым кодом среды CLR и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Интеграция со средой CLR обеспечивает более защищенный по сравнению с расширенными хранимыми процедурами способ создания хранимых процедур при необходимости выполнения задач, недоступных для [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения об интеграции со средой CLR и расширенных хранимых процедур см. в разделе [производительность интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="see-also"></a>См. также  
- [Установка .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [Архитектура интеграции со средой CLR](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [Установка .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Архитектура интеграции со средой CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [Доступ к данным из объектов базы данных CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Приступая к работе с интеграцией со средой CLR](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   

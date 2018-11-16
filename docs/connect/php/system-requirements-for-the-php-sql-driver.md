@@ -13,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3784a3ba9b05bde0fafea486ddfdf3a968f96914
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: f2828098784601e10136ed8dd0f4b6f0272137d6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461129"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601106"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Системные требования драйверов Майкрософт для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "49461129"
 
 ## <a name="php"></a>PHP
 
-Сведения о том, как скачать и установить актуальные и стабильные двоичные файлы, см. на [веб-сайте PHP](http://php.net).  Драйверы Майкрософт для PHP для SQL Server требуются следующие версии PHP:
+Сведения о том, как скачать и установить актуальные и стабильные двоичные файлы, см. на [веб-сайте PHP](https://php.net).  Драйверы Майкрософт для PHP для SQL Server требуются следующие версии PHP:
 
 |PHP для SQL Server версии драйвера&#8594;<br />&#8595; версия PHP|5.3 и 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
 |---|---|---|---|---|---|
@@ -42,7 +42,7 @@ ms.locfileid: "49461129"
 
 -   Версия файла драйвера должна находиться в каталоге расширения PHP. См. в разделе [версии драйверов](#driver-versions) сведения о разных файлах драйвера.  Сведения о скачивании драйверов см. в статье [Драйверы Майкрософт для PHP для SQL Server](download-drivers-php-sql-server.md). Сведения о настройке драйвера для PHP см. в статье [Загрузка драйверов Майкрософт для PHP для SQL Server](../../connect/php/loading-the-php-sql-driver.md).
 
--   Требуется веб-сервер. Веб-сервер должен быть настроен на выполнение PHP. Сведения о размещении приложений PHP с IIS, см. в разделе [учебник на веб-сайт на PHP](http://php.net/manual/fa/install.windows.iis.php).  
+-   Требуется веб-сервер. Веб-сервер должен быть настроен на выполнение PHP. Сведения о размещении приложений PHP с IIS, см. в разделе [учебник на веб-сайт на PHP](https://php.net/manual/fa/install.windows.iis.php).  
 
     [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] был протестирован в службе IIS 10 с помощью FastCGI.  
 

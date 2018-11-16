@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: d1163c58933ab4d2b6d7faa8b643a3401d87d530
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 4760c70f71b798fb31d96c6b36fb91afe6de9667
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270137"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666023"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 в Linux
 
@@ -78,7 +78,7 @@ ms.locfileid: "51270137"
 
 ## <a id="CU12"></a> CU12 (октября 2018 г.)
 
-Это накопительный пакет обновления 12 (CU12) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3045.24. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/en-us/help/4464082 ](https://support.microsoft.com/en-us/help/4464082).
+Это накопительный пакет обновления 12 (CU12) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3045.24. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/help/4464082 ](https://support.microsoft.com/help/4464082).
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -92,7 +92,7 @@ ms.locfileid: "51270137"
 
 ## <a id="CU11"></a> CU11 (сентября 2018 г.)
 
-Это накопительное обновление 11 (CU11) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3038.14. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/en-us/help/4462262 ](https://support.microsoft.com/en-us/help/4462262).
+Это накопительное обновление 11 (CU11) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3038.14. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/help/4462262 ](https://support.microsoft.com/help/4462262).
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -106,7 +106,7 @@ ms.locfileid: "51270137"
 
 ## <a id="CU10"></a> CU10 (августа 2018 г.)
 
-Это накопительный пакет обновления 10 (CU10) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3037.1. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/en-us/help/4342123 ](https://support.microsoft.com/en-us/help/4342123).
+Это накопительный пакет обновления 10 (CU10) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3037.1. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/help/4342123 ](https://support.microsoft.com/help/4342123).
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -120,7 +120,7 @@ ms.locfileid: "51270137"
 
 ## <a id="CU9-GDR2"></a> CU9-GDR2 (августа 2018 г.)
 
-Это обновление безопасности, которая также включает ранее выпущенные (CU9) и накопительным Обновлением для SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3035.2. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/en-us/help/4293805 ](https://support.microsoft.com/en-us/help/4293805).
+Это обновление безопасности, которая также включает ранее выпущенные (CU9) и накопительным Обновлением для SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3035.2. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/help/4293805 ](https://support.microsoft.com/help/4293805).
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -134,7 +134,7 @@ ms.locfileid: "51270137"
 
 ## <a id="GDR2"></a> GDR2 (августа 2018 г.)
 
-Это обновление безопасности, которое включает только исправления безопасности GDR2 (и GDR1) для SQL Server 2017.  Версия ядра SQL Server для этого выпуска — 14.0.2002.14. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/en-us/help/4293803 ](https://support.microsoft.com/en-us/help/4293803).
+Это обновление безопасности, которое включает только исправления безопасности GDR2 (и GDR1) для SQL Server 2017.  Версия ядра SQL Server для этого выпуска — 14.0.2002.14. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/help/4293803 ](https://support.microsoft.com/help/4293803).
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -148,7 +148,7 @@ ms.locfileid: "51270137"
 
 ## <a id="CU9"></a> CU9 (июля 2018 г.)
 
-Это накопительный пакет обновления 9 (CU9) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3030.27. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/en-us/help/4341265 ](https://support.microsoft.com/en-us/help/4341265).
+Это накопительный пакет обновления 9 (CU9) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3030.27. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/help/4341265 ](https://support.microsoft.com/help/4341265).
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -162,7 +162,7 @@ ms.locfileid: "51270137"
 
 ## <a id="CU8"></a> CU8 (июня 2018 г.)
 
-Это накопительный пакет обновления 8 (CU8) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3029.16. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/en-us/help/4338363 ](https://support.microsoft.com/en-us/help/4338363).
+Это накопительный пакет обновления 8 (CU8) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3029.16. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/help/4338363 ](https://support.microsoft.com/help/4338363).
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -176,7 +176,7 @@ ms.locfileid: "51270137"
 
 ## <a id="CU7"></a> Накопительным пакетом обновления 7 (мая 2018 г.)
 
-Это накопительный пакет обновления 7 (CU7) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3026.27. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/en-us/help/4229789 ](https://support.microsoft.com/en-us/help/4229789).
+Это накопительный пакет обновления 7 (CU7) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3026.27. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/help/4229789 ](https://support.microsoft.com/help/4229789).
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -236,7 +236,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU4"></a> Накопительным пакетом обновления 4 (февраля 2018 г.)
 
-Это накопительный пакет обновления 4 (CU4) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3022.28. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/en-us/help/4056498 ](https://support.microsoft.com/en-us/help/4056498).
+Это накопительный пакет обновления 4 (CU4) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3022.28. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/help/4056498 ](https://support.microsoft.com/help/4056498).
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -253,7 +253,7 @@ sudo systemctl start mssql-server
 
 ## <a id="GDR1"></a> GDR1 (января 2018 г.)
 
-Это обновление безопасности, который содержит исключительно GDR1, исправления безопасности для SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.2000.63. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/en-us/help/4057122 ](https://support.microsoft.com/en-us/help/4057122).
+Это обновление безопасности, который содержит исключительно GDR1, исправления безопасности для SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.2000.63. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/help/4057122 ](https://support.microsoft.com/help/4057122).
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -267,7 +267,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU3"></a> Накопительным пакетом обновления 3 (января 2018 г.)
 
-Это накопительный пакет обновления 3 (CU3) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3015.40. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/en-us/help/4052987 ](https://support.microsoft.com/en-us/help/4052987).
+Это накопительный пакет обновления 3 (CU3) выпуск SQL Server 2017. Версия ядра SQL Server для этого выпуска — 14.0.3015.40. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/help/4052987 ](https://support.microsoft.com/help/4052987).
 
 ### <a name="package-details"></a>Сведения о пакете
 

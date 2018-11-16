@@ -23,12 +23,12 @@ ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 223aa817298fc21dedbbb763b3f775feaa4e2807
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f99d182691ed08ebf7a3e8e71572068cd08848f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812922"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673443"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Доступ к данным из объектов среды CLR для работы с базами данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47812922"
  [Интеграция со средой CLR и транзакции](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
  Содержит описание интеграции с ADO.NET и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR новой платформы транзакций, представленной в пространстве имен System.Transactions.  
   
- [Сериализация XML из объектов базы данных CLR](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
+ [Сериализация XML из объектов базы данных CLR](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
  Объясняет, как задействовать сценарии сериализации XML объектов базы данных CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
   

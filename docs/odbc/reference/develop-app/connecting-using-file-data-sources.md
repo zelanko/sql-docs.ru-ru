@@ -18,12 +18,12 @@ ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af24a0656f46f0256775f4ea1649ab806e207fdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856354"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677323"
 ---
 # <a name="connecting-using-file-data-sources"></a>Подключение с использованием файловых источников данных
 Сведения о соединении для источника данных хранится в файле .dsn. Таким образом строку подключения можно использовать несколько раз одним пользователем или совместно использовать несколько пользователей, если они имеют установлены соответствующие драйверы. Файл содержит имя драйвера (или другой источник данных в случае такие источники данных) и при необходимости строка подключения, который может использоваться с **SQLDriverConnect**. Диспетчер драйверов формирует строку подключения для вызова **SQLDriverConnect** из ключевых слов в файле .dsn.  
@@ -55,4 +55,4 @@ DSN = MyDataSource
  Строка подключения, используемая для источника данных представляет собой объединение ключевые слова, указанные в файле .dsn и ключевые слова, указанные в строке подключения в вызове **SQLDriverConnect**. Если ключевые слова в файле .dsn конфликтуют с ключевыми словами в строке подключения, диспетчер драйверов решает, следует использовать значение ключевого слова. Дополнительные сведения см. в разделе [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## <a name="see-also"></a>См. также  
- [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
+ [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)

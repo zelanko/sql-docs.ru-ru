@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0edf87997b8b53266e7597b392bb217288590636
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fc7f06a3b7c2455777b56de0875841c51905e95
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810152"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604364"
 ---
 # <a name="using-integrated-authentication"></a>Использование встроенной проверки подлинности
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,7 +57,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 
 Когда приложение запускается в виде службы, обновляйте учетные данные Kerberos, чтобы обеспечить постоянную доступность службы, так как учетные данные намеренно имеют срок действия. Драйвер ODBC не обновляйте учетные данные. Убедитесь в наличии `cron` заданий или скрипт, который периодически выполняют обновление учетных данных до их истечения срока действия. Чтобы избежать запроса пароля для каждого обновления, можно использовать файла keytab.  
   
-Статья[Конфигурация и использование Kerberos](http://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) содержит сведения о способах применения Kerberos для служб в Linux.
+Статья[Конфигурация и использование Kerberos](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) содержит сведения о способах применения Kerberos для служб в Linux.
   
 ## <a name="tracking-access-to-a-database"></a>Отслеживание доступа к базе данных
 
@@ -67,7 +67,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 Для аудита действий в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] от имени пользователей, отличных от системной учетной записи, приложение должно использовать [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
-Для повышения производительности приложение может использовать организацию пулов соединений со встроенной проверкой подлинности и аудитом. Однако совмещение организации пулов соединений, встроенной проверки подлинности и аудита создает угрозу безопасности, так как диспетчер драйверов unixODBC позволяет различным пользователям повторно использовать подключения из пула. Дополнительные сведения см. в статье [Организация пулов соединений ODBC](http://www.unixodbc.org/doc/conn_pool.html).  
+Для повышения производительности приложение может использовать организацию пулов соединений со встроенной проверкой подлинности и аудитом. Однако совмещение организации пулов соединений, встроенной проверки подлинности и аудита создает угрозу безопасности, так как диспетчер драйверов unixODBC позволяет различным пользователям повторно использовать подключения из пула. Дополнительные сведения см. в статье [Организация пулов соединений ODBC](https://www.unixodbc.org/doc/conn_pool.html).  
 
 Перед повторным использованием приложение должно сбросить соединения в пуле, выполнив `sp_reset_connection`.  
 
@@ -83,7 +83,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 -   Сервер приложений осуществляет проверку подлинности в качестве другой базы данных и подключается к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проходит проверку подлинности как пользователь базы данных в другой базе данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняет проверку подлинности как пользователь базы данных для другой базы данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 После настройки встроенной проверки подлинности учетные данные передаются связанному серверу.  
   
@@ -126,7 +126,7 @@ forwardable = yes
 
 При сбое проверки подлинности Kerberos драйвер ODBC в Linux или macOS не использует проверку подлинности NTLM.  
 
-Дополнительные сведения о проверке подлинности компьютеров Linux или macOS с помощью Active Directory, см. в разделе [проверки подлинности клиентов Linux с помощью Active Directory](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) и [советы и рекомендации по интеграции OS X с Active Directory](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Дополнительные сведения о настройке Kerberos см. в разделе [MIT Kerberos документации](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Дополнительные сведения о проверке подлинности компьютеров Linux или macOS с помощью Active Directory, см. в разделе [проверки подлинности клиентов Linux с помощью Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) и [советы и рекомендации по интеграции OS X с Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Дополнительные сведения о настройке Kerberos см. в разделе [MIT Kerberos документации](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a>См. также:  
 [Указания по программированию](../../../connect/odbc/linux-mac/programming-guidelines.md)

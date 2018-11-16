@@ -10,12 +10,12 @@ ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 74ece76fcb02fe77825d0f08e76b262df195d7b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab734e93743d3a3158feb16dba044b58e7f48f23
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768914"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670523"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Подключение к DB2 (DB2ToSQL)
 Используйте **подключение к DB2** диалоговое окно для подключения к базе данных DB2, которые требуется перенести.  
@@ -70,7 +70,7 @@ ms.locfileid: "47768914"
   
 Строки подключения состоят из пар имен и значений параметров.  
   
--   Строки соединения OLE DB, см. в разделе [поставщик Microsoft OLE DB для DB2](http://go.microsoft.com/fwlink/?LinkId=85640) статье в библиотеке MSDN.  
+-   Строки соединения OLE DB, см. в разделе [поставщик Microsoft OLE DB для DB2](https://go.microsoft.com/fwlink/?LinkId=85640) статье в библиотеке MSDN.  
   
 Для строки подключения SSMA всегда включать параметр поставщика. Кроме того убедитесь, что включают параметр порта при подключении к DB2.  
   

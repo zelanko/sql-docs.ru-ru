@@ -22,12 +22,12 @@ ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13120ff00d2935ed4cb10b91afad9c9076302c05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 215ff84696cfc3d7590777ab1a2ad0f17c48d2a6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741732"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664083"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>Представления каталога сообщений (для ошибок) — sys.messages
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +48,8 @@ ms.locfileid: "47741732"
 ## <a name="see-also"></a>См. также  
  [THROW (Transact-SQL)](../../t-sql/language-elements/throw-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Сообщения &#40;ошибок&#41; представления каталога &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
- [Сообщение об исключении программирование окон](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
+ [Сообщения &#40;ошибок&#41; представления каталога &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
+ [Сообщение об исключении программирование окон](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
  [Сообщения об ошибках](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [События и ошибки компонента Database Engine](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
   

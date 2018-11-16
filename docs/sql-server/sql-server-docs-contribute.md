@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 881189fdec593d48b443d85ee548ca1bb80b24a8
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 578c7002e4366dd0b0b4ef4e633d5e59dffe4802
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146059"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697692"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Участие в работе над документацией по SQL Server
 
@@ -33,7 +33,7 @@ ms.locfileid: "50146059"
 
 Можно вносить простые изменения в содержимое в SQL Server через браузер и отправлять их в корпорацию Майкрософт. Полный процесс описан в статье [Обзор руководства по участию в документации Майкрософт](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). В следующем видеоролике показан сквозной процесс отправки изменений в браузере.
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
 
 > [!TIP]
 > Обратите внимание, что расположение кнопки **Изменить** немного отличается от того, что показано в видео, но процесс аналогичен.

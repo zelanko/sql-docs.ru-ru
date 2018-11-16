@@ -23,12 +23,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 994011062b36f028157c3f70b3f2ed3c335d526f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f09f9e2f9ad166edb764aa33a8b20623e11cf08
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612912"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600674"
 ---
 # <a name="return-codes"></a>Коды возврата
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47612912"
 
   Для краткости можно сказать, что вызов функции-члена класса или структуры завершается успешно либо с ошибкой. Точнее сказать, вызов функции может оказаться успешным, но результат оказывается не таким, на какой рассчитывал разработчик приложения.  
   
- Дополнительные сведения о кодах возврата OLE DB см. в статье [Коды возврата (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631).  
+ Дополнительные сведения о кодах возврата OLE DB см. в статье [Коды возврата (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
   
  Когда драйвер OLE DB для SQL Server функция-член возвращает значение S_OK, функция успешно выполнена.  
   

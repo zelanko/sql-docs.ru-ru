@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 30dffe30bfe0b87156f65d5c21bd0aaba033f0af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62270c3cce4b1a5f57874d6cd40c7c64ff409100
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746852"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600304"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server в Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -111,10 +111,10 @@ ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)
 **Поддержка TLS 1.2**: The Microsoft ODBC Driver 13.0 для SQL Server в Linux теперь поддерживает TLS 1.2 при использовании защиты обмена данными с SQL Server.
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux  
-Драйвер ODBC в SUSE Linux (предварительная версия) поддерживает 64-разрядную версию SUSE Linux Enterprise 11 с пакетом обновления 2. Дополнительные сведения см. в статье [Требования к системе](../../../connect/odbc/linux-mac/system-requirements.md).  
+Драйвер ODBC в SUSE Linux (предварительная версия) поддерживает 64-разрядную версию SUSE Linux Enterprise 11 с пакетом обновления 2. Дополнительные сведения см. в статье [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md).  
 
 Драйвер ODBC для Linux поддерживает [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Дополнительные сведения см. в разделе [драйвера ODBC в Linux Поддержка высокой доступности и аварийного восстановления](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-Драйвер ODBC для Linux поддерживает подключения к Базе данных SQL Microsoft Azure. Дополнительные сведения см. в статье [Практическое руководство. Подключение к Базе данных Azure SQL Windows с помощью ODBC](http://msdn.microsoft.com/library/hh974312.aspx).  
+Драйвер ODBC для Linux поддерживает подключения к Базе данных SQL Microsoft Azure. Дополнительные сведения см. в статье [Практическое руководство. Подключение к Базе данных Azure SQL Windows с помощью ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 `-l` Был добавлен параметр (время ожидания входа) `bcp`. Дополнительные сведения см. в статье [Подключение с помощью **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f20220208aed16d745dbab5aecce64e6653ef350
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394571"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700922"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Загрузка данных с помощью служб Integration Services для Parallel Data Warehouse
 Предоставляет ссылки и информация о развертывании для загрузки данных в SQL Server Parallel Data Warehouse с помощью пакетов служб SQL Server Integration Services (SSIS).  
@@ -29,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -249,12 +249,12 @@ id,city,lastUpdateDate,orderDate
 ## <a name="see-also"></a>См. также  
 [Создание задачи «скрипт», который использует адаптер загрузки данных PDW служб SSIS](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
-[Проектирование и разработка пакетов (службы Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[Учебник: Создание основного пакета с помощью мастера](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
-[Приступая к работе (службы Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
-[Пример формирования динамических пакетов](http://go.microsoft.com/fwlink/?LinkId=202413)  
-[Проектирование пакетов служб SSIS для параллелизма (видеоматериал SQL Server)](http://msdn.microsoft.com/library/dd795221.aspx)  
-[Примеры сообщества Microsoft SQL Server: Службы Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
+[Проектирование и разработка пакетов (службы Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[Учебник: Создание основного пакета с помощью мастера](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[Приступая к работе (службы Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
+[Пример формирования динамических пакетов](https://go.microsoft.com/fwlink/?LinkId=202413)  
+[Проектирование пакетов служб SSIS для параллелизма (видеоматериал SQL Server)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Примеры сообщества Microsoft SQL Server: Службы Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Повышение эффективности добавочной загрузки измененных данных](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [Преобразование "Медленно изменяющееся измерение"](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [Задача «Массовая вставка»](../integration-services/control-flow/bulk-insert-task.md)  

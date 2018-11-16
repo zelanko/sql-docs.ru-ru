@@ -21,12 +21,12 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 93e6bcfc4ec686f61672fa382d545db5a7000f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838802"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662853"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  Имя базы данных для включения управляемого резервного копирования на определенной базе данных.  
   
  @container_url  
- URL-адрес, указывающий местоположение резервной копии. Когда @credential_name имеет значение NULL, этот URL-адрес является URL-адрес общего доступа URL-адреса (SAS) в контейнер больших двоичных объектов в службе хранилища Azure, и резервные копии использовать новый возможность резервного копирования на блок больших двоичных объектов. Дополнительные сведения см. в статье [основные сведения о SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Когда @credential_name указан, то это URL-адрес учетной записи хранения, а резервные копии использовать устаревшие возможность резервного копирования на странице большого двоичного объекта.  
+ URL-адрес, указывающий местоположение резервной копии. Когда @credential_name имеет значение NULL, этот URL-адрес является URL-адрес общего доступа URL-адреса (SAS) в контейнер больших двоичных объектов в службе хранилища Azure, и резервные копии использовать новый возможность резервного копирования на блок больших двоичных объектов. Дополнительные сведения см. в статье [основные сведения о SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Когда @credential_name указан, то это URL-адрес учетной записи хранения, а резервные копии использовать устаревшие возможность резервного копирования на странице большого двоичного объекта.  
   
 > [!NOTE]  
 >  Только URL-адрес SAS поддерживается для этого параметра в настоящее время.  

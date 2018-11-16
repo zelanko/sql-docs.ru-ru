@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 7cbc1a78a2cce71494da04ffeb19649b22b2585e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4293880c6301712876d3a76a88ad9090925296b9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736482"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600804"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Установка Microsoft ODBC Driver for SQL Server на Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -369,12 +369,12 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Каждый из этих пакетов в свою очередь имеет свои собственные зависимости, которые могут или не присутствовать в системе. Общее решение этой проблемы, см. в документации по вашему дистрибутиву пакета диспетчера: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), и [SUSE](https://en.opensuse.org/Portal:Zypper)
+Каждый из этих пакетов в свою очередь имеет свои собственные зависимости, которые могут или не присутствовать в системе. Общее решение этой проблемы, см. в документации по вашему дистрибутиву пакета диспетчера: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), и [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 Также часто бывает вручную загрузить все зависимые пакеты и помещать их на компьютере, а затем вручную установить каждый пакет, в свою очередь, окончания работы [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 пакета.
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
-  - Загрузите последнюю версию `msodbcsql` `.rpm` отсюда: http://packages.microsoft.com/rhel/7/prod/
+  - Загрузите последнюю версию `msodbcsql` `.rpm` отсюда: https://packages.microsoft.com/rhel/7/prod/
   - Установка зависимостей и драйвер
   
 ```
@@ -383,7 +383,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- Загрузите последнюю версию `msodbcsql` `.deb` отсюда: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- Загрузите последнюю версию `msodbcsql` `.deb` отсюда: https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - Установка зависимостей и драйвер 
 
 ```
@@ -392,7 +392,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- Загрузите последнюю версию `msodbcsql` `.rpm` отсюда: http://packages.microsoft.com/sles/12/prod/
+- Загрузите последнюю версию `msodbcsql` `.rpm` отсюда: https://packages.microsoft.com/sles/12/prod/
 - Установите зависимости и драйвер
 
 ```
@@ -424,7 +424,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 4.  Чтобы просмотреть список доступных параметров установки, выполните следующую команду: **./install.sh**.  
   
-5.  Создайте резервную копию **odbcinst.ini**. Установка драйвера обновляет **odbcinst.ini**. Файл odbcinst.ini содержит список драйверов, которые зарегистрированы с помощью диспетчера драйверов unixODBC. Чтобы определить на компьютере расположение файла odbcinst.ini, выполните следующую команду: ```odbc_config --odbcinstini```.  
+5.  Создайте резервную копию **odbcinst.ini**. Установка драйвера обновляет **odbcinst.ini**. Файл odbcinst.ini содержит список драйверов, которые зарегистрированы с помощью диспетчера драйверов unixODBC. Чтобы найти расположение файла odbcinst.ini на компьютере, выполните следующую команду: ```odbc_config --odbcinstini```.  
   
 6.  Перед установкой драйвера выполните следующую команду: `./install.sh verify`. Выходные данные команды `./install.sh verify` показывают, есть ли на компьютере ПО, необходимое для поддержки драйвера ODBC на Linux.  
   
@@ -436,7 +436,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 Для проверки, что драйвер ODBC в Linux зарегистрирован, выполните следующую команду: ```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```.  
   
-В статье[Использование существующих примеров MSDN C++ ODBC для драйвера ODBC в Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) показан пример кода, который подключается к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью драйвера ODBC в Linux.  
+В статье[Использование существующих примеров MSDN C++ ODBC для драйвера ODBC в Linux](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) показан пример кода, который подключается к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью драйвера ODBC в Linux.  
   
 **Удаление**  
   
@@ -488,15 +488,15 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
   
 Дополнительные сведения об устранении неполадок подключения см. в статьях:  
   
--   [Шаги для устранения неполадок с подключением SQL](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [Шаги для устранения неполадок с подключением SQL](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
--   [Устранение проблем с подключением в SQL Server 2005 — часть I](http://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
+-   [Устранение проблем с подключением в SQL Server 2005 — часть I](https://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
   
--   [Устранение проблем с подключением в SQL Server 2008 с помощью кольцевого буфера подключения](http://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
+-   [Устранение проблем с подключением в SQL Server 2008 с помощью кольцевого буфера подключения](https://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
   
--   [Средство устранения неполадок проверки подлинности SQL Server](http://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
+-   [Средство устранения неполадок проверки подлинности SQL Server](https://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
   
--   [Сведения об ошибке (http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
+-   [Сведения об ошибке (https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     Номер ошибки, указанный в URL-адресе (11001), следует изменить в соответствии с отображаемой ошибкой.  
   

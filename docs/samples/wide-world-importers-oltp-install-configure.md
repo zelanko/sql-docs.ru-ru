@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3860eae1663b512af1835a0e1268145a742d161a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701462"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673483"
 ---
 # <a name="installation-and-configuration"></a>Установка и настройка
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -23,14 +23,14 @@ ms.locfileid: "47701462"
 
 ## <a name="prerequisites"></a>предварительные требования
 
-- [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (или более поздней версии) или [базы данных SQL Azure](https://azure.microsoft.com/services/sql-database/). Для полной версии примера используйте SQL Server Evaluation, Developer или Enterprise Edition.
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (или более поздней версии) или [базы данных SQL Azure](https://azure.microsoft.com/services/sql-database/). Для полной версии примера используйте SQL Server Evaluation, Developer или Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Для получения наилучших результатов используйте от июня 2016 г. или более поздней версии.
 
 ## <a name="download"></a>Загрузить
 
 В последнем выпуске примера:
 
-[Wide world-importers выпуска](http://go.microsoft.com/fwlink/?LinkID=800630)
+[Wide world-importers выпуска](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 Скачайте образец WideWorldImporters базы данных резервного копирования или bacpac-файл, соответствующий выпуска SQL Server или базы данных SQL Azure.
 
@@ -90,5 +90,5 @@ ms.locfileid: "47701462"
 
 Безопасность на уровне строк не включена по умолчанию в bacpac-файл для загрузки из WideWorldImporters. Чтобы включить безопасность на уровне строк в базе данных, выполните следующую хранимую процедуру:
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 

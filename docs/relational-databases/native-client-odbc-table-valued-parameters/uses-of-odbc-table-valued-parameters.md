@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e79708ffe1ca40a38d93378b93481d6fdd91ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25c8da6552446f7c34cd6deb050b2074da67443c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766572"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673113"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>Сценарии использования возвращающих табличное значение параметров ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47766572"
 ## <a name="table-valued-parameter-with-fully-bound-multirow-buffers-send-data-as-a-tvp-with-all-values-in-memory"></a>Возвращающий табличное значение параметр с многострочными буферами с полной привязкой (отправка данных в виде возвращающего табличное значение параметра со всеми значениями в памяти)  
  При использовании с многострочными буферами с полной привязкой все значения параметров доступны в памяти. Например, это характерно для транзакции OLTP, в которой возвращающие табличное значение параметры могут быть упакованы в одну хранимую процедуру. Без возвращающих табличное значение параметров для этого потребовалось бы динамическое создание сложного пакета с несколькими инструкциями или несколько обращений к серверу.  
   
- Возвращающие табличные значения параметра, привязанного с помощью [SQLBindParameter](http://go.microsoft.com/fwlink/?LinkId=59328) вместе с другими параметрами. После привязки всех параметров приложение устанавливает атрибут фокуса параметра, SQL_SOPT_SS_PARAM_FOCUS, для каждого возвращающего табличное значение параметра и вызывает SQLBindParameter для столбцов возвращающих табличные значения параметра.  
+ Возвращающие табличные значения параметра, привязанного с помощью [SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328) вместе с другими параметрами. После привязки всех параметров приложение устанавливает атрибут фокуса параметра, SQL_SOPT_SS_PARAM_FOCUS, для каждого возвращающего табличное значение параметра и вызывает SQLBindParameter для столбцов возвращающих табличные значения параметра.  
   
  Тип сервера для возвращающего табличное значение параметра является новым типом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_SS_TABLE. Типом привязки C для типа SQL_SS_TABLE должен быть всегда SQL_C_DEFAULT. Никакие данные для параметра, привязанного к возвращающему табличное значение параметру, не передаются; они используются, чтобы передавать метаданные таблицы и управлять передачей данных в столбцах, составляющих возвращающий табличное значение параметр.  
   
