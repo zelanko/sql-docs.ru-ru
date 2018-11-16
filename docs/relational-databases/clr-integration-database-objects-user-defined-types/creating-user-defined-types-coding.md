@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0647d1e0f7dd082b3ce3aab668d8af8d5673efb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795772"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661564"
 ---
 # <a name="creating-user-defined-types---coding"></a>Создание определяемых пользователем типов — программирование
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -621,7 +621,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  Дополнение нужно для того, чтобы гарантировать полное отделение значения культуры от значения суммы. Тогда при сравнении одного значения определяемого пользователем типа с другим в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] значение одной культуры можно будет побайтно сравнить со значением другой культуры, а значения байтов одной денежной суммы — со значениями байтов другой денежной суммы.  
   
- Для получения полного кода для **валюты** определяемого пользователем ТИПА, выполните инструкции по установке CLR образцов в [образцы SQL Server Database Engine](http://msftengprodsamples.codeplex.com/).  
+ Для получения полного кода для **валюты** определяемого пользователем ТИПА, выполните инструкции по установке CLR образцов в [образцы SQL Server Database Engine](https://msftengprodsamples.codeplex.com/).  
   
 ### <a name="currency-attributes"></a>Атрибуты Currency  
  **Валюты** определяемого пользователем ТИПА определен со следующими атрибутами.  
@@ -745,7 +745,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- Для получения полного кода для **валюты** определяемого пользователем ТИПА, см. в разделе [образцы SQL Server Database Engine](http://msftengprodsamples.codeplex.com/).  
+ Для получения полного кода для **валюты** определяемого пользователем ТИПА, см. в разделе [образцы SQL Server Database Engine](https://msftengprodsamples.codeplex.com/).  
   
 ## <a name="see-also"></a>См. также  
  [Создание определяемого пользователем типа](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7578df8d31dadba739bb2de58a8568f6ba55d7e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55741ddbf71eaff963e25c8e087c3cff31389409
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661962"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670502"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Указание связей при помощи sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47661962"
  **\<Связь >** элемент определяет CustomerID в таблице Sales.SalesOrderHeader как внешний ключ, ссылающийся на первичный ключ CustomerID в таблице Sales.Customer. Поэтому заказы, принадлежащие заказчику, отображаются как дочерний элемент элемента,  **\<клиента >** элемент.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -121,7 +121,7 @@ ms.locfileid: "47661962"
  Ниже приведена новый вариант схемы, в которой определена неименованная связь.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Customer" sql:relation="Sales.Customer"  type="CustomerType" />  
@@ -206,7 +206,7 @@ ms.locfileid: "47661962"
  В следующей схеме **msdata: Relationship** заметки на  **\<продукта >** элемент указывает два значения: OrderOD и ODProduct. Порядок следования этих значений важен.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -244,7 +244,7 @@ ms.locfileid: "47661962"
  Вместо указания именованной связи можно задать анонимную связь. В этом случае все содержимое  **\<заметки >**...  **\</annotation >**, который описывает две связи, отображаются как дочерний элемент элемента  **\<продукта >**.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Order" msdata:relation="Sales.SalesOrderHeader"   
@@ -323,7 +323,7 @@ ms.locfileid: "47661962"
  Схема в этом примере включает \<клиента > элемент с \<CustomerID > дочерний элемент и атрибут OrderIDList типа IDREFS. \<Клиента > элемент сопоставляется таблице Sales.Customer в базе данных AdventureWorks. По умолчанию область действия этого сопоставления применяется к все дочерние элементы или атрибуты, если только **SQL: Relation** заметка указывается для дочернего элемента или атрибута, в этом случае должны быть соответствующие связи первичный ключ/внешний ключ определена с помощью \<связи > элемента. И дочерний элемент или атрибут, который указывает другую таблицу при помощи **отношения** необходимо также указать заметки, **связь** заметки.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -392,7 +392,7 @@ ms.locfileid: "47661962"
  **\<Порядок >** элемент включает  **\<OrderDetail >** дочерний элемент. **\<SQL: Relationship >** заметка указывается для  **\<OrderDetail >** дочерний элемент, поэтому подробности заказа отображаются как дочерние элементы элемента, **\<Order >** элемент.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -496,7 +496,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
  Следующий XML-представлении  **\<Emp1 >** и  **\<Emp2 >** элементов, сопоставление для Sales.Emp1 и Sales.Emp2 таблиц:  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

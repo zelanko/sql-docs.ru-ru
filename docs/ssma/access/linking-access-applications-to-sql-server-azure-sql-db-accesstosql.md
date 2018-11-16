@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 61558536574750e7588124afb75cf26ee580b22a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701512"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668533"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Связь приложений Access SQL Server — база данных SQL Azure (AccessToSQL)
 Если вы хотите использовать существующие приложения Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно связать исходные таблицы Access с перенесенными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или таблиц SQL Azure. Связывание изменяет базу данных Access, благодаря чему ваши запросы, формы, отчеты и данные доступа к страницам использовать данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure вместо данных в базе данных.  
@@ -56,7 +56,7 @@ ms.locfileid: "47701512"
   
 > [!IMPORTANT]  
 > Чтобы связать таблицы access с базой данных Azure, требуется SQL Server Native Client(SNAC) версии 10.5 или более поздней версии.   
-> Можно получить последнюю версию SNAC из [пакет дополнительных компонентов Microsoft® SQL Server® 2008 R2](http://go.microsoft.com/fwlink/?LinkId=196940).  
+> Можно получить последнюю версию SNAC из [пакет дополнительных компонентов Microsoft® SQL Server® 2008 R2](https://go.microsoft.com/fwlink/?LinkId=196940).  
   
 ## <a name="unlinking-access-tables"></a>Отсоединение доступа к таблицам  
 Когда вы не отмените привязку в таблице Access из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или таблицу SQL Azure, SSMA восстанавливает исходные таблицы Access и ее данных.  

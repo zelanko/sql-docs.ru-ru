@@ -15,16 +15,16 @@ ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c1d76ff4205e84033542b28938509b4267988163
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bca5485634769322ce41ea85b4e08801af507d6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730752"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602145"
 ---
 # <a name="connect-property-example-vbscript"></a>Пример свойства Connect (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Этот код демонстрируется задание [Connect](../../../ado/reference/rds-api/connect-property-rds.md) во время разработки:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47730752"
 .  
    <PARAM NAME="SQL" VALUE="Select * from Sales">  
    <PARAM NAME="CONNECT" VALUE="Provider=SQLOLEDB;Integrated Security=SSPI;Initial Catalog=Pubs">  
-   <PARAM NAME="Server" VALUE="http://MyWebServer">  
+   <PARAM NAME="Server" VALUE="https://MyWebServer">  
 .  
 </OBJECT>  
 ```  
@@ -86,7 +86,7 @@ BODY {
 </TBODY>  
 </TABLE>  
 <FORM name="frmInput">  
-    SERVER: <INPUT Name="txtServer" Size="103" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+    SERVER: <INPUT Name="txtServer" Size="103" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
     DATA SOURCE: <INPUT Name="txtDataSource" Size="93" Value="<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
     CONNECT: <INPUT Name="txtConnect" Size="100"><BR>  
     SQL: <INPUT Name="txtSQL" Size="110" Value="Select FirstName, LastName from Employees">  

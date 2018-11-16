@@ -17,12 +17,12 @@ ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f70970ec872d3c921fa10e3eacb1c54d7c4de2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632212"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600024"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Поставщик OLE DB для публикации в Интернете
 ADO [записи](../../../ado/reference/ado-api/record-object-ado.md) и [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объектов можно использовать поставщик Microsoft OLE DB для публикаций в Интернете (поставщика Интернет-публикаций) получить доступ и использовать ресурсы, такие как веб-папки или файлы обслуживаемые Microsoft FrontPage. С помощью ADO можно указать источник **записи**, **Stream**, или [записей](../../../ado/reference/ado-api/recordset-object-ado.md) быть URL-адрес. Вы можно отправить, загрузить, переместить, скопировать и удалите ресурсы или напрямую манипулировать свойства ресурса.  
@@ -36,20 +36,20 @@ ADO [записи](../../../ado/reference/ado-api/record-object-ado.md) и [Stre
 -   Укажите «URL-адрес =» в строке подключения. Пример:  
   
     ```  
-    objConn.Open "URL=http://servername"  
+    objConn.Open "URL=https://servername"  
     ```  
   
 -   Укажите Msdaipp.dso для *поставщика* ключевое слово строки подключения. Пример:  
   
     ```  
-    objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
+    objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
 -   Укажите Msdaipp.dso для [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойство [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Пример:  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  
-    objConn.Open "http://servername"  
+    objConn.Open "https://servername"  
     ```  
   
 > [!NOTE]

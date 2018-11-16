@@ -10,12 +10,12 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dddc4c6234f97d5491b70fa6adf55fc1159f3535
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff31e00ecb56138239a1d6d87de276754e84a5e6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670860"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657866"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Преобразование схем DB2 (DB2ToSQL)
 После подключения к DB2, подключенных к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и задание проекта и параметры сопоставления данных, можно преобразовать объекты базы данных DB2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов базы данных.  
@@ -147,7 +147,7 @@ ms.locfileid: "47670860"
 -   Объект можно исключить из миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателя метаданных и обозреватель метаданных DB2, снимите флажок рядом с элементом перед загрузкой объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и перенос данных из DB2.  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующий шаг в процессе миграции является [загрузит преобразованные объекты в SQL Server](http://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
+Следующий шаг в процессе миграции является [загрузит преобразованные объекты в SQL Server](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
   
 ## <a name="see-also"></a>См. также  
 [Миграция данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  

@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8b396984a03a816d325c6b97cd8cf291b56b6fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddf90bb571be757645b1d20b45fc9d9dd879d22a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758246"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673234"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Перечисление источников данных OLE DB (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,16 +27,16 @@ ms.locfileid: "47758246"
 
   В этом образце показано, как использовать объект перечислителя для построения списка доступных источников данных.  
   
- Для перечисления источников данных, видимых перечислителю SQLOLEDB, потребитель вызывает метод [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) . Этот метод возвращает набор строк информации о видимых в настоящее время источниках данных.  
+ Для перечисления источников данных, видимых перечислителю SQLOLEDB, потребитель вызывает метод [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) . Этот метод возвращает набор строк информации о видимых в настоящее время источниках данных.  
   
- В зависимости от используемой сетевой библиотеки проводится поиск источников данных в соответствующем домене. Для именованных каналов это домен, в который загружен клиент. Для AppleTalk это зона по умолчанию. Для SPX/IPX это список установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], найденный в системной базе данных. Для Banyan VINES это установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], найденные в локальной сети. Сокеты Multiprotocol и TCP/IP не поддерживаются.  
+ В зависимости от используемой сетевой библиотеки проводится поиск источников данных в соответствующем домене. Для именованных каналов это домен, в который загружен клиент. Для AppleTalk это зона по умолчанию. Для SPX/IPX это список установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , найденный в системной базе данных. Для Banyan VINES это установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , найденные в локальной сети. Сокеты Multiprotocol и TCP/IP не поддерживаются.  
   
  При выключении и включении сервера может потребоваться несколько минут на обновление информации об этих доменах.  
   
- Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
+ Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>Перечисление источников данных OLE DB  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47758246"
 6.  Получите данные из копии строки, находящейся в наборе строк, путем вызова метода **IRowset::GetData**и обработайте их.  
   
 ## <a name="example"></a>Пример  
- Скомпилируйте с библиотекой ole32.lib и выполните следующий листинг кода C++. Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
+ Скомпилируйте с библиотекой ole32.lib и выполните следующий листинг кода C++. Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
 ```  
 // compile with: ole32.lib  

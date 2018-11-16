@@ -15,16 +15,16 @@ ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57c0c8e6a7a6bcab7ea5d096ee27ae510065daa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe7074c592c837d292257bcaa18f3eb0638a6515
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634802"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606724"
 ---
 # <a name="internettimeout-property-example-vb"></a>Пример свойства InternetTimeout (Visual Basic)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  В этом примере показано [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) свойство, которое существует на [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) и [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) объектов. В этом примере используется **DataControl** и устанавливает время ожидания до 20 секунд.  
   
@@ -38,7 +38,7 @@ Public Sub Main()
     Dim rst As ADODB.Recordset  
     Set dc = New RDS.DataControl  
   
-    dc.Server = "http://MyServer"  
+    dc.Server = "https://MyServer"  
     dc.ExecuteOptions = 1  
     dc.FetchOptions = 1  
     dc.Connect = "Provider='sqloledb';Data Source='MySqlServer';" & _  

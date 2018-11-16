@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3e39c7e7d6c94ce83889fbd6e29b26da278862f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e55b8ee380645df874d10b04e54e341411105953
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618478"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658300"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Что&#39;возможности в SQLXML 4.0 с пакетом обновления 1
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47618478"
 -   Проблемы переноса  
   
 ## <a name="installing-sqlxml-40-sp1"></a>Установка SQLXML 4.0 с пакетом обновления 1 (SP1)  
- До версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] компонент SQLXML 4.0 распространялся с SQL Server и входил в состав установки по умолчанию всех версий SQL Server, за исключением SQL Server Express. Начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], последняя версия SQLXML (SQLXML 4.0 с пакетом обновления 1 (SP1)) больше не включается в состав SQL Server. Чтобы установить SQLXML 4.0 с пакетом обновления 1, загрузите ее из [места установки для SQLXML 4.0 с пакетом обновления 1](http://www.microsoft.com/download/details.aspx?id=30403).  
+ До версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] компонент SQLXML 4.0 распространялся с SQL Server и входил в состав установки по умолчанию всех версий SQL Server, за исключением SQL Server Express. Начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], последняя версия SQLXML (SQLXML 4.0 с пакетом обновления 1 (SP1)) больше не включается в состав SQL Server. Чтобы установить SQLXML 4.0 с пакетом обновления 1, загрузите ее из [места установки для SQLXML 4.0 с пакетом обновления 1](https://www.microsoft.com/download/details.aspx?id=30403).  
   
  Файлы SQLXML 4.0 с пакетом обновления 1 (SP1) устанавливаются в следующий каталог:  
   

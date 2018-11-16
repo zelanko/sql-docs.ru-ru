@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb00dc8525e4543df862bbe2bcd3eddfc1a04087
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35b2c1eb2b3e714d8b70b8d65a5f96a7dcee379e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733722"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673733"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "47733722"
 |**is_db_chaining_on**|**bit**|1 = межбазовые цепочки владения в состоянии ON<br /> 0 = межбазовые цепочки владения в состоянии OFF|  
 |**is_parameterization_forced**|**bit**|1 = параметризация в состоянии FORCED<br /> 0 = параметризация в состоянии SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = база данных имеет главный ключ шифрования<br /> 0 = база данных не имеет главного ключа шифрования|  
-|**is_query_store_on**|**bit**|1 = запрос хранилища включено для этой базы данных. Проверьте [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) для просмотра состояния хранилища запросов.<br /> 0 = запрос хранилище не включено<br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**is_query_store_on**|**bit**|1 = запрос хранилища включено для этой базы данных. Проверьте [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) для просмотра состояния хранилища запросов.<br /> 0 = запрос хранилище не включено<br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
 |**is_published**|**bit**|1 = база данных является базой данных публикации в топологии репликации транзакций или моментальных снимков<br /> 0 = не является базой данных публикации|  
 |**is_subscribed**|**bit**|Данный столбец не используется. Он всегда возвращает 0, независимо от состояния подписчика базы данных.|  
 |**is_merge_published**|**bit**|1 = база данных является базой данных публикации в топологии репликации слиянием<br /> 0 = база данных не является базой данных публикации в топологии репликации слиянием|  

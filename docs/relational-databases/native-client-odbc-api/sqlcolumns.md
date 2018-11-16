@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6117efa06effea24fda8fac4c1567bbe8a6c390
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 050269e2c7183c8b4c318749bc3adc93be056119
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697772"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664833"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47697772"
   
  **SQLColumns** может быть выполнена для статического серверного курсора. При попытке выполнить **SQLColumns** для обновляемого (динамического или набора ключей) курсора будет возвращено значение SQL_SUCCESS_WITH_INFO, указывающее, что тип курсора был изменен.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента поддерживает выдачу сведений о таблицах на связанных серверах, принимая двухкомпонентное имя для *CatalogName* параметр: *имя_связанного_сервера.имя_каталога*.  
+ Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает выдачу сведений о таблицах, находящихся на связанных серверах, принимая двухкомпонентное имя в параметре *CatalogName* : *Имя_Связанного_Сервера.Имя_Каталога*.  
   
  Для ODBC 2. *x* приложений не с помощью подстановочных знаков в *TableName*, **SQLColumns** возвращает сведения обо всех таблицах, имена которых соответствуют параметру *TableName*и которые принадлежат текущему пользователю. Если текущему пользователю принадлежит таблица, имя которого соответствует *TableName* параметра **SQLColumns** возвращает сведения обо всех таблицах, принадлежащих другим пользователям, в которых соответствует имени таблицы  *TableName* параметра. Для ODBC 2. *x* приложений с использованием подстановочных знаков, **SQLColumns** возвращает все таблицы, имена которых соответствуют параметру *TableName*. Для ODBC 3. *x* приложений **SQLColumns** возвращает все таблицы, имена которых соответствуют параметру *TableName* независимо от владельца или же используются подстановочные знаки.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47697772"
  Дополнительные сведения о разреженных столбцах в ODBC см. в разделе [Поддержка разреженных столбцов &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLColumns](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [Функция SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

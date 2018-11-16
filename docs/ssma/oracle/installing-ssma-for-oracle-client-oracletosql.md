@@ -12,12 +12,12 @@ ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 72df6a9da82e421dfb921501c110d363aa54a8f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27e5c0ef0c834806351bda73eb69dbe783d78db2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781564"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666823"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Установка клиента SSMA для Oracle (OracleToSQL)
 SSMA клиента состоит из программных файлов, которые выполняют следующие задачи:  
@@ -43,7 +43,7 @@ SSMA предназначен для работы с Oracle 9 и более по
   
 -   Установщик [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows версии 3.1 или более поздняя версия.  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версии 4.0 или более поздней версии. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версии 4.0 можно найти в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установочного носителя. Можно также получить его из [Центр разработчиков .NET Framework](http://go.microsoft.com/fwlink/?LinkId=48882).  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версии 4.0 или более поздней версии. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версии 4.0 можно найти в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установочного носителя. Можно также получить его из [Центр разработчиков .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 -   Клиент Oracle 9.0 или более поздней версии и подключения к базам данных Oracle, которые требуется перенести. Версия клиента Oracle должен быть той же версии или более поздней версии, чем версия базы данных Oracle.  
   
@@ -54,7 +54,7 @@ SSMA предназначен для работы с Oracle 9 и более по
 -   4 ГБ ОЗУ рекомендуется.  
   
 ## <a name="installing-the-ssma-for-oracle-client"></a>Установка SSMA для клиента Oracle  
-SSMA можно загрузить из Интернета. Чтобы загрузить последнюю версию, см. в разделе [SQL Server Migration Assistant страницу загрузки](http://aka.ms/ssmafororacle).  
+SSMA можно загрузить из Интернета. Чтобы загрузить последнюю версию, см. в разделе [SQL Server Migration Assistant страницу загрузки](https://aka.ms/ssmafororacle).  
   
 После загрузки последней версии, необходимо извлечь установочные файлы от перед установкой SSMA.  
   

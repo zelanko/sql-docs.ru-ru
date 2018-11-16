@@ -14,18 +14,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5757401b45cb66267d80091783d1ec900346722f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7d18848c7cb1baa328210884fb4460628a12d9e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784672"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669043"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Основные проблемы безопасности SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Далее приведены рекомендации по безопасности при использовании SQLXML для доступа к данным.  
   
--   Поставщик sqlxmloledb ИМЕЕТ **StreamFlags** свойство, которое можно задать флаги, указывающее, какие функции SQLXML следует включить или отключить для каждого конкретного экземпляра. При помощи этого свойства можно настраивать использование SQLXML, а также гарантировать, что работать будут только требуемые компоненты. Дополнительные сведения см. в разделе [поставщик SQLXMLOLEDB &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
+-   Поставщик sqlxmloledb ИМЕЕТ **StreamFlags** свойство, которое можно задать флаги, указывающее, какие функции SQLXML следует включить или отключить для каждого конкретного экземпляра. При помощи этого свойства можно настраивать использование SQLXML, а также гарантировать, что работать будут только требуемые компоненты. Дополнительные сведения см. в разделе [поставщик SQLXMLOLEDB &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
   
 -   Когда возникают и возвращаются ошибки SQLXML, они могут содержать такие сведения о схеме базы данных, как имена таблиц, имена столбцов или сведения о типе. При обработке этих ошибок следует соблюдать осторожность с тем, чтобы сведения об установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не стали доступными пользователям, когда в этом нет необходимости.  
   

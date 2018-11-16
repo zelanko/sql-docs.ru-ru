@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7d1c6c05e196e1a845c073545c3f79f0f83a19b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622282"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656763"
 ---
 # <a name="creating-an-assembly"></a>Создание сборки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   Сборка, которая вызывается или на которую указывает ссылка, была создана в этой базе данных.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Уровни безопасности при создании сборки  
- При создании сборки в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных, можно указать один из трех различных уровней безопасности, в котором может выполняться код: **БЕЗОПАСНОМ**, **EXTERNAL_ACCESS**, или **UNSAFE** . Когда **CREATE ASSEMBLY** инструкция выполняется, выполняются определенные проверки сборку кода, которая может привести к сборке, не зарегистрирована на сервере. Дополнительные сведения см. в разделе образца Impersonation на [CodePlex](http://msftengprodsamples.codeplex.com/).  
+ При создании сборки в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных, можно указать один из трех различных уровней безопасности, в котором может выполняться код: **БЕЗОПАСНОМ**, **EXTERNAL_ACCESS**, или **UNSAFE** . Когда **CREATE ASSEMBLY** инструкция выполняется, выполняются определенные проверки сборку кода, которая может привести к сборке, не зарегистрирована на сервере. Дополнительные сведения см. в разделе образца Impersonation на [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **БЕЗОПАСНЫЙ** набор разрешений по умолчанию и работает для большинства сценариев. Чтобы задать определенный уровень безопасности, измените синтаксис инструкции CREATE ASSEMBLY следующим образом.  
   
@@ -136,6 +136,6 @@ WITH PERMISSION_SET = UNSAFE;
  [При удалении сборки](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Свойство базы данных TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md)   
- [Частично доверенный вызывающий код](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [Частично доверенный вызывающий код](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

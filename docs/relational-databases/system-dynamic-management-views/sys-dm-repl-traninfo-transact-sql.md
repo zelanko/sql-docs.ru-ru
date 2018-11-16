@@ -19,12 +19,12 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c67f85b2a98b950b9614bfeb712c4d47d03d943b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9aa68c8c0dbc702b7f0db3e3186c7ddb56266dbc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795032"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664978"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47795032"
 |**begin_lsn**|**Nvarchar(64)**|Регистрационный номер (LSN) начальной записи транзакции в журнале.|  
 |**commit_lsn**|**Nvarchar(64)**|Номер LSN записи в журнале фиксирования транзакции.|  
 |**dbid**|**smallint**|Идентификатор базы данных.|  
-|**строки**|**int**|Идентификатор реплицированной команды в транзакции.|  
+|**rows**|**int**|Идентификатор реплицированной команды в транзакции.|  
 |**xdesid**|**Nvarchar(64)**|Идентификатор транзакции.|  
 |**artcache_table_address**|**varbinary(8)**|Адрес в памяти структуры кэшированной таблицы статьи, использованной в последний раз для данной транзакции.|  
 |**server**|**nvarchar(514)**|Имя сервера.|  
@@ -77,7 +77,7 @@ ms.locfileid: "47795032"
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с репликацией &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
- [Динамические административные представления, связанные с системой отслеживания измененных данных (Transact-SQL)](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [Динамические административные представления, связанные с системой отслеживания измененных данных (Transact-SQL)](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
 

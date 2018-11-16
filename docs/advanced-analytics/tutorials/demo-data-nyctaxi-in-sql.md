@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3618504d0db8003df7787778d84d62990c83b8fb
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: ea4651c76d0c8fbc14d22a51c7789d65a20b8484
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217802"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701352"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Демонстрационные данные такси Нью-ЙОРКА для учебники по SQL Server Python и R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье объясняется, как установить образец базы данных, состоящий из общедоступных данных из [такси Нью-Йорке и Лимузинов комиссии](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Эти данные используются в учебниках несколько R и Python для анализа в базе данных в SQL Server. Чтобы пример кода выполнялось быстрее, мы создали представительную выборку из данных 1%. В системе файл резервной копии базы данных является немного более чем 90 МБ, предоставляя 1,7 млн. строк в первичной таблице данных.
+В этой статье объясняется, как установить образец базы данных, состоящий из общедоступных данных из [такси Нью-Йорке и Лимузинов комиссии](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Эти данные используются в учебниках несколько R и Python для анализа в базе данных в SQL Server. Чтобы пример кода выполнялось быстрее, мы создали представительную выборку из данных 1%. В системе файл резервной копии базы данных является немного более чем 90 МБ, предоставляя 1,7 млн. строк в первичной таблице данных.
 
 Для этого упражнения вам понадобится [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) или другое средство, которое можно восстановить файл резервной копии базы данных и выполнять запросы T-SQL.
 

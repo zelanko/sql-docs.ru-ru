@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e3dac6aefb8db2dbd1c651f0a2cf27b0f29559c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735018"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350068"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Служба для OLE DB Обзор формирования данных
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ ms.locfileid: "47735018"
 ## <a name="provider-keyword"></a>Ключевое слово службы
  Для вызова службы Data Shaping Service для OLE DB, укажите следующие значения и ключевое слово в строке подключения.
 
-```
+```vb
 "Provider=MSDataShape"
 ```
 
@@ -44,14 +44,14 @@ ms.locfileid: "47735018"
 
  Можно также задать для записи динамические свойства, указав их имена в качестве ключевых слов в строке подключения. Например, в Microsoft Visual Basic задайте **поставщик данных** динамическое свойство «MSDASQL», указав:
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
  Можно также задать или получить динамического свойства, указав его имя в качестве индекса в [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) свойство. Например, приведенный ниже код извлекает и печатает текущее значение **поставщик данных** динамического свойства, затем задает новое значение, если cn. DataProvider было присвоено «MSDataShape» (прямо или косвенно через строку подключения) и не было открыто соединение:
 
-```
+```vb
 Debug.Print cn.Properties("Data Provider")
 cn.Properties("Data Provider") = "MSDASQL"
 ```

@@ -10,12 +10,12 @@ ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 3e2e84fd2117afe15075084741e65989a30960cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674182"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681112"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Подключение к Oracle (OracleToSQL)
 Используйте **подключение к Oracle** диалоговое окно для подключения к базе данных Oracle, которые требуется перенести.  
@@ -70,7 +70,7 @@ ms.locfileid: "47674182"
   
 Строки подключения состоят из пар имен и значений параметров.  
   
--   Строки соединения OLE DB, см. в разделе [поставщик Microsoft OLE DB для Oracle](http://go.microsoft.com/fwlink/?LinkId=85640) статье в библиотеке MSDN.  
+-   Строки соединения OLE DB, см. в разделе [поставщик Microsoft OLE DB для Oracle](https://go.microsoft.com/fwlink/?LinkId=85640) статье в библиотеке MSDN.  
   
 Для строки подключения SSMA всегда включать параметр поставщика. Кроме того убедитесь, что включают параметр порта при подключении к базе данных Oracle.  
   

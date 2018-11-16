@@ -14,12 +14,12 @@ ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 13a05a0eee4dc8f36b74ca707a6dc18e57389280
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: a7df105a383cb7a647df1f26dbfc7793ae376df5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099215"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660163"
 ---
 # <a name="managing-passwords-sybasetosql"></a>Управление паролями (SybaseToSQL)
 Этот раздел посвящен защита пароли к базам данных и процедуру для импорта или экспорта их на серверах:  
@@ -132,5 +132,5 @@ SSMA консольного приложения позволяет экспор
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA (Sybase)](http://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Выполнение команд консоли SSMA (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

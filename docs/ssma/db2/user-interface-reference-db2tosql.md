@@ -10,12 +10,12 @@ ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 481429d65f587cdbeb7ed977cafd4553f697c59c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771451"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671684"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Справочник по пользовательскому интерфейсу (DB2ToSQL)
 В этом разделе содержатся разделы справки по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) для DB2.  
@@ -31,7 +31,7 @@ ms.locfileid: "47771451"
 |[Подключение к базе данных DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Используйте **подключение к DB2** диалоговое окно для подключения к базе данных DB2, которые требуется перенести.|  
 |[Подключение к SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|Используйте **подключение к SQL Server** диалоговое окно для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для которого требуется выполнить миграцию.|  
 |[Отчет о миграции данных &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Отображает результаты миграции данных из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Параметры миграции данных](http://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Используйте **расширенные параметры миграции данных** tab, чтобы создавать пользовательские запросы для переноса данных.|  
+|[Параметры миграции данных](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Используйте **расширенные параметры миграции данных** tab, чтобы создавать пользовательские запросы для переноса данных.|  
 |[Изменение сопоставления типов &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|Используйте **новое сопоставление типа** или **изменить сопоставление типов** диалоговые окна для создания или изменения сопоставления типов данных между исходной и целевой баз данных и объектов базы данных.|  
 |[Глобальные параметры &#40;редактор&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|Страница редактора **глобальные параметры** диалоговое окно для настройки параметров редактора кода.|  
 |[Глобальные параметры &#40;диалоговые окна&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|Используйте страницу диалоговые окна **глобальные параметры** диалоговое окно для настройки по умолчанию диалоговое окно и параметры предупреждения.|  

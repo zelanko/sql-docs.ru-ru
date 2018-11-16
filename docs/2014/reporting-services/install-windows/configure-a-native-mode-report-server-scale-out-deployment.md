@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b0f084ebb6298ce141d39db444d24a241f878210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095554"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606854"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)
+
   Службы Reporting Services в собственном режиме поддерживают модель масштабного развертывания, которая позволяет запускать несколько экземпляров сервера отчетов, совместно использующих одну базу данных сервера отчетов. Масштабное развертывание позволяет увеличить масштабируемость сервера отчетов, чтобы обслуживать одновременно больше пользователей и повысить нагрузочную способность сервера отчетов. Масштабное развертывание также может быть использовано для выделения отдельных серверов для обработки интерактивных или запланированных отчетов.  
   
  Серверы отчетов в режиме интеграции с SharePoint для масштабного развертывания используется инфраструктура продуктов SharePoint. Масштабное развертывание в режиме интеграции с SharePoint выполняется за счет добавления новых серверов отчетов в режиме интеграции с SharePoint в ферму SharePoint. Сведения о масштабном развертывании в режиме интеграции с SharePoint см. в статье [Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
@@ -41,7 +42,7 @@ ms.locfileid: "48095554"
   
 -   Просмотрите [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации, инструкции по установке экземпляров сервера отчетов.  
   
--   Если планируется выполнить масштабное развертывание на NLB-кластере, следует настроить NLB-кластер перед настройкой масштабного развертывания. Дополнительные сведения см. в статье [настроить сервер отчетов в кластере с балансированием сетевой нагрузки](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+-   Если планируется выполнить масштабное развертывание на NLB-кластере, следует настроить NLB-кластер перед настройкой масштабного развертывания. Дополнительные сведения см. в статье [Configure a Report Server on a Network Load Balancing Cluster](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 -   Просмотрите процедуры этого раздела с инструкциями по организации общего доступа к базе данных сервера отчетов и присоединению серверов отчетов к масштабному развертыванию.  
   
@@ -119,11 +120,11 @@ ms.locfileid: "48095554"
  Если серверы отчетов планируется запускать в кластере со сбалансированной нагрузкой, необходима дополнительная настройка. Дополнительные сведения см. в статье [настроить сервер отчетов в кластере с балансированием сетевой нагрузки](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 ## <a name="see-also"></a>См. также  
- [Настройка учетной записи службы &#40;диспетчер конфигурации служб SSRS&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Настройка подключения к базе данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Управление сервером отчетов Reporting Services в собственном режиме](../report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

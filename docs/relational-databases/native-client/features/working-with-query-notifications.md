@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb9e6c469e4cc90565cfc0864b4f03fee44d326f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 889f791f74d7f28496b763eb942907ab8227ef4d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747062"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670743"
 ---
 # <a name="working-with-query-notifications"></a>Работа с уведомлениями запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "47747062"
 CREATE QUEUE myQueue  
 CREATE SERVICE myService ON QUEUE myQueue   
   
-([http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
+([https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
 ```  
   
 > [!NOTE]  
->  Служба должна использовать стандартный контракт `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`, показанный выше.  
+>  Служба должна использовать стандартный контракт `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`, показанный выше.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента поддерживает уведомление потребителей об изменении набора строк. Потребитель получает уведомление на каждой стадии изменения набора строк, а также при каждой попытке внести изменение.  
@@ -117,7 +117,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Если значение свойств SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT и SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS не равно NULL, то при каждом выполнении этой команды на сервер отправляется заголовок потока табличных данных уведомлений о запросах, содержащий три атрибута, указанных выше. Если значение любого из них равно NULL, заголовок не отправляется и возвращается SQL_SUCCESS_WITH_INFO. Выполняется проверка [функция SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, и **SqlExecute**, что все они завершаются неуспешно, если атрибуты не допускаются. Точно так же, когда эти атрибуты уведомлений о запросах отправляются для версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] младше [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], выполнение завершается неудачей с SQL_SUCCESS_WITH_INFO.  
+ Если значение свойств SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT и SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS не равно NULL, то при каждом выполнении этой команды на сервер отправляется заголовок потока табличных данных уведомлений о запросах, содержащий три атрибута, указанных выше. Если значение любого из них равно NULL, заголовок не отправляется и возвращается SQL_SUCCESS_WITH_INFO. Выполняется проверка [функция SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, и **SqlExecute**, что все они завершаются неуспешно, если атрибуты не допускаются. Точно так же, когда эти атрибуты уведомлений о запросах отправляются для версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] младше [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], выполнение завершается неудачей с SQL_SUCCESS_WITH_INFO.  
   
 > [!NOTE]  
 >  Подготовка инструкций никогда не вызывает запуска подписки; подписка может быть запущена выполнением инструкции.  

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a8ef2abe539c47e3a66092d12628ee6850e7a58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852873"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667785"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47852873"
   
 |*ValuePtr* значение|Описание|  
 |----------------------|-----------------|  
-|SQL_DP_ON|По умолчанию. После вызова метода [функция SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360), Подготовка инструкции откладывается до **SQLExecute** вызывается или выполнения операции метасвойства (**SQLDescribeCol** или **SQLDescribeParam**) выполняется.|  
+|SQL_DP_ON|По умолчанию. После вызова метода [функция SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), Подготовка инструкции откладывается до **SQLExecute** вызывается или выполнения операции метасвойства (**SQLDescribeCol** или **SQLDescribeParam**) выполняется.|  
 |SQL_DP_OFF|Инструкция подготавливается сразу же **SQLPrepare** выполняется.|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -150,7 +150,7 @@ ms.locfileid: "47852873"
  Если каталог функция SQLTables, SQLColumns или SQLPrimaryKeys вызывается, если SQL_SOPT_SS_NAME_SCOPE имеет значение, отличное от SQL_SS_NAME_SCOPE_TABLE, SQL_ERROR возвращается. Создается диагностическая запись с параметром SQLSTATE HY010 и сообщением «Ошибочная последовательность функций (значение атрибута SQL_SOPT_SS_NAME_SCOPE не равно SQL_SS_NAME_SCOPE_TABLE)».  
   
 ## <a name="see-also"></a>См. также  
- [SQLGetStmtAttr, функция](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr, функция](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

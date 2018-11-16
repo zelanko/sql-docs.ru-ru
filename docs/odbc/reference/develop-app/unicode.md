@@ -14,17 +14,17 @@ ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9ee58c367e83a61afef45d7df3358488dcb85a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e6201b83b909573476b043cdb1a10543f894def
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821072"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661813"
 ---
 # <a name="unicode"></a>Юникод
 Юникод определяет кодировку для символов во многих языках.  
   
- Дополнительные сведения о стандарте Юникода, см. в разделе [консорциума Юникода](http://www.unicode.org).  
+ Дополнительные сведения о стандарте Юникода, см. в разделе [консорциума Юникода](https://www.unicode.org).  
   
  Юникод определяет набор универсальных символов. Кодовую страницу Windows ANSI определяет набор символов, обычно содержащий символов одного языка. Возможно, более сложно написать приложение, которое требуется использовать разные кодовые страницы.  
   

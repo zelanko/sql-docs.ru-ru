@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c693cf60054e03120b44ae30f631e407da8809b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 002003864c61dae1b55f7fdfab10ff18ec97f68f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659928"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669683"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47659928"
 |**counter_name**|**nchar(128)**|Имя счетчика. Чтобы получить дополнительные сведения о счетчике, это имя раздела, чтобы выбрать из списка счетчиков в [использование объектов SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
 |**instance_name**|**nchar(128)**|Имя заданного экземпляра счетчика. Обычно содержит имя базы данных.|  
 |**cntr_value**|**bigint**|Текущее значение счетчика.<br /><br /> **Примечание:** для посекундных счетчиков данное значение является совокупным. Значение частоты должно быть вычислено выборкой значений в дискретные интервалы времени. Разность между двумя последовательными значениям выборки равна частоте используемого интервала времени.|  
-|**cntr_type**|**int**|Тип счетчика, как определено архитектурой производительности Windows. См. в разделе [типы счетчиков производительности WMI](http://msdn2.microsoft.com/library/aa394569.aspx) на сайтах MSDN или документации по Windows Server, Дополнительные сведения о типах счетчиков производительности.|  
+|**cntr_type**|**int**|Тип счетчика, как определено архитектурой производительности Windows. См. в разделе [типы счетчиков производительности WMI](https://msdn2.microsoft.com/library/aa394569.aspx) на сайтах MSDN или документации по Windows Server, Дополнительные сведения о типах счетчиков производительности.|  
 |**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="remarks"></a>Примечания  

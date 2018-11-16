@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 179bc0379e508954c93464b6f1075334756dd250
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085490"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677683"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Настройка кластера общий диск Red Hat Enterprise Linux для SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Это руководство содержит инструкции по созданию двухузлового общего диска кластера для SQL Server в Red Hat Enterprise Linux. Кластеризации уровень основан на Red Hat Enterprise Linux (RHEL) [дополнение HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) создаются на основе [Pacemaker](http://clusterlabs.org/). Экземпляр SQL Server активен на одном узле или в другой.
+Это руководство содержит инструкции по созданию двухузлового общего диска кластера для SQL Server в Red Hat Enterprise Linux. Кластеризации уровень основан на Red Hat Enterprise Linux (RHEL) [дополнение HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) создаются на основе [Pacemaker](https://clusterlabs.org/). Экземпляр SQL Server активен на одном узле или в другой.
 
 > [!NOTE] 
 > Доступ к Red Hat высокого уровня ДОСТУПНОСТИ надстройки и документацию требуется подписка. 
@@ -30,7 +30,7 @@ ms.locfileid: "49085490"
 
 ![Red Hat Enterprise Linux 7 кластер с общими дисками SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Дополнительные сведения о конфигурации кластера, параметры агентов ресурсов и управления, см. в статье [RHEL справочная документация по](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Дополнительные сведения о конфигурации кластера, параметры агентов ресурсов и управления, см. в статье [RHEL справочная документация по](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
@@ -201,8 +201,8 @@ NFS-сервера выполните следующие действия.
 
 Дополнительные сведения об использовании NFS см. следующие ресурсы:
 
-* [NFS серверов и firewalld | Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
-* [Подключить том NFS | Руководство для администраторов сети Linux](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
+* [NFS серверов и firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [Подключить том NFS | Руководство для администраторов сети Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
 * [Конфигурации NFS-сервера](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Подключить каталог файлов базы данных, указав общее хранилище
@@ -389,7 +389,7 @@ NFS-сервера выполните следующие действия.
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-* [Кластер с нуля](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) руководство из Pacemaker
+* [Кластер с нуля](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) руководство из Pacemaker
 
 ## <a name="next-steps"></a>Следующие шаги
 

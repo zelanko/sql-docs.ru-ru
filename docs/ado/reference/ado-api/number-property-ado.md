@@ -18,12 +18,12 @@ ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38135d1afa2fbdf680a7f2c1f89ddcbe513484f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afc9955920784af966ef5d793d76ce251df1bc1d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803042"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602904"
 ---
 # <a name="number-property-ado"></a>Свойство Number (ADO)
 Указывает число, которое однозначно определяет [ошибка](../../../ado/reference/ado-api/error-object.md) объекта.  
@@ -34,7 +34,7 @@ ms.locfileid: "47803042"
 ## <a name="remarks"></a>Примечания  
  Используйте **номер** свойства, чтобы определить, какая ошибка произошла. Значение свойства — это уникальное число, соответствующее условие ошибки.  
   
- [Ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции возвращает значение HRESULT в шестнадцатеричном формате (например, 0x80004005) или длинное целое значение (например, 2147467259). Эти значения HRESULT может быть инициировано базовые компоненты, например OLE DB или даже OLE, сам. Дополнительные сведения об этих номерах см. в разделе [ошибки (OLE DB)](http://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) в [Справочник программиста OLE DB по](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  
+ [Ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции возвращает значение HRESULT в шестнадцатеричном формате (например, 0x80004005) или длинное целое значение (например, 2147467259). Эти значения HRESULT может быть инициировано базовые компоненты, например OLE DB или даже OLE, сам. Дополнительные сведения об этих номерах см. в разделе [ошибки (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) в [Справочник программиста OLE DB по](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Error](../../../ado/reference/ado-api/error-object.md)  

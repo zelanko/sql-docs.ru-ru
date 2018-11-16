@@ -18,12 +18,12 @@ ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85f3bc694fa1636316eb19de49ad5ad9defa5eaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b72ce858925c0df0c4faba7f90b0dcc606d52ed8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718382"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665041"
 ---
 # <a name="common-language-runtime-integration-overview"></a>Общие сведения об интеграции со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +53,14 @@ ms.locfileid: "47718382"
  [Новые возможности в интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  Описывает новые возможности в данном выпуске.  
   
- [Архитектура интеграции со средой CLR](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
+ [Архитектура интеграции со средой CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
  Описание целей разработки интеграции со средой CLR.  
   
  [Включение интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-enabling.md)  
  Описание включения интеграции со средой CLR.  
   
 ## <a name="see-also"></a>См. также  
- [Установка .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Установка .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Производительность интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

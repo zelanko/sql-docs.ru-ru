@@ -5,8 +5,7 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcff6266a24602b0ce1f17818d1c4b0451b1adaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830652"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512809"
 ---
 # <a name="sql-graph-architecture"></a>Архитектура графа базы данных SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47830652"
 Пользователи могут создавать один график на базу данных. Граф состоит из таблиц узлов и ребер. Узла или граничной таблицы могут быть созданы в любой схемы в базе данных, но все они принадлежат к одной логической диаграммы. Таблицы узлов — коллекция узлов того же типа. Например таблица узлов Person содержит все лица узлах, принадлежащих к диаграмме. Аналогичным образом краевую таблицу — это совокупность краев того же типа. Например таблица Friends edge содержит всех краев, которые подключаются к другому лицу человека. Так как узлы и ребра хранятся в таблицах, большая часть операций, поддерживаемых в обычных таблицах поддерживаются узла или граничной таблицы. 
  
  
-![SQL-graph-architecture](../../relational-databases/graphs/media/sql-graph-architecture.png "архитектуру базы данных Sql graph")   
+![SQL-graph-architecture](../../relational-databases/graphs/media/sql-graph-architecture.png "архитектуру базы данных Sql graph")   
 
 Рис. 1: Архитектура базы данных SQL Graph
  
@@ -57,7 +56,7 @@ ms.locfileid: "47830652"
 
 Рис. 2 показано, как для таблиц узлов и ребер хранятся в базе данных. 
 
-![пользователь друзей tables](../../relational-databases/graphs/media/person-friends-tables.png "узел Person и друзей периметра таблиц")   
+![пользователь друзей tables](../../relational-databases/graphs/media/person-friends-tables.png "узел Person и друзей периметра таблиц")   
 
 Рис. 2: Представление таблицы узлов и ребер
 
@@ -113,7 +112,7 @@ ms.locfileid: "47830652"
 |from_id_\<hex_string>  |bigint |1  |Внутренняя из узла `graph_id`  |
 |$from_id_\<hex_string > |NVARCHAR   |0  |внешние из узла `node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |внутренний узел `object_id`  |
-|to_id_\<hex_string>    |bigint |1  |Внутренний узел `graph_id`  |
+|to_id_\<hex_string>    |bigint |1  |внутренний узел `graph_id`  |
 |$to_id_\<hex_string >   |NVARCHAR   |0  |внешний узел `node_id`  |
  
 ### <a name="system-functions"></a>Системные функции
@@ -140,7 +139,7 @@ ms.locfileid: "47830652"
 |ALTER TABLE    |[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|Таблиц узлов и ребер может быть изменен так же с помощью реляционной таблице `ALTER TABLE`. Пользователи могут добавлять или изменять пользовательские столбцы, индексы или ограничения. Однако изменение столбцы внутреннего графика, например `$node_id` или `$edge_id`, приведет к ошибке.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Пользователи могут создавать индексы на псевдо столбцов и определяемых пользователем столбцах таблицы узлов и ребер. Поддерживаются все типы индексов, включая кластеризованный и некластеризованный индексы columnstore.  |
 |СОЗДАНИЕ ОГРАНИЧЕНИЯ ГРАНИЦ    |[ОГРАНИЧЕНИЯ ГРАНИЦ &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Пользователи могут теперь создавать ограничения границ на граничные таблицы для реализации определенной семантики и также целостность данных  |
-|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Узлов и ребер таблиц можно удалить так же с помощью реляционной таблице `DROP TABLE`. Тем не менее в этом выпуске нет никаких ограничений, чтобы не краев пункты удаленного узла, а каскадного удаления границ, после удаления узел или узел таблицы не поддерживается. Рекомендуется, если удаляется таблица узлов, пользователи помещают краям, подключается к тем узлам в этой таблице узла вручную, чтобы поддерживать целостность данных в диаграмме.  |
+|DROP TABLE |[DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)  |Узлов и ребер таблиц можно удалить так же с помощью реляционной таблице `DROP TABLE`. Тем не менее в этом выпуске нет никаких ограничений, чтобы не краев пункты удаленного узла, а каскадного удаления границ, после удаления узел или узел таблицы не поддерживается. Рекомендуется, если удаляется таблица узлов, пользователи помещают краям, подключается к тем узлам в этой таблице узла вручную, чтобы поддерживать целостность данных в диаграмме.  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Инструкции языка обработки (DML) данных

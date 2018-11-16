@@ -18,12 +18,12 @@ ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1c2ae0553627e80daf99a7bd23fe1182f5df52d2
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: f68d02aa82033f9f5ff4fde3c62e153bb919676b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217902"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660843"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Свойство Dependencies (класс SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ object.Dependencies [= value]
 ## <a name="remarks"></a>Примечания  
   
 ## <a name="see-also"></a>См. также  
- [Запуск и остановка служб](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

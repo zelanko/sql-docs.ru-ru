@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 1fe1a785314b30e0f6027c845da5ac2b34692966
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 891f86328042091bb1e7a67f725f13ee160dccf3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796722"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665833"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Отработка отказа группы доступности AlwaysOn в Linux
 
@@ -104,8 +104,8 @@ ms.locfileid: "47796722"
 >При автоматическом переходе на другой ресурс ограничение расположения не добавляется, поэтому очистка не требуется. 
 
 Дополнительные сведения см. в следующих разделах:
-- [Chapter 7. Managing Cluster Resources](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html) (Глава 7. Управление ресурсами кластера)
-- [Pacemaker — перемещение ресурсов вручную](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
+- [Chapter 7. Managing Cluster Resources](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html) (Глава 7. Управление ресурсами кластера)
+- [Pacemaker — перемещение ресурсов вручную](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
  [руководство по администрированию SLES - ресурсы](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 ## <a name="forceFailover"></a> Принудительная отработка отказа 

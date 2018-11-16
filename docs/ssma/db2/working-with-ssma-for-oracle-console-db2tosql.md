@@ -10,12 +10,12 @@ ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8169375ac349f887d861245911b02a65f965044c
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 99eaef8a8612669f8a155672cccf0cb0c74e7f39
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099635"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656354"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Работа с SSMA для Oracle консоли (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Миграции выпуска Assistant (SSMA) для DB2 теперь доступна через консольное приложение командной строки. Файлы скриптов образуют входных данных для приложения, для выполнения команд. Как консольное приложение SSMA обеспечивает взаимодействие на уровне сценария позволяет сократить цикл миграции и масштабирует мероприятий по миграции.  
@@ -39,5 +39,5 @@ ms.locfileid: "50099635"
 |[Устранение неполадок &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)|Предоставляет краткие сведения об устранении проблемы при миграции.|  
   
 ## <a name="see-also"></a>См. также  
-[Начало работы с SSMA для DB2 консоли](http://msdn.microsoft.com/f245c017-023e-4880-8721-8908d339525e)  
+[Начало работы с SSMA для DB2 консоли](https://msdn.microsoft.com/f245c017-023e-4880-8721-8908d339525e)  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2a227848ac7f7fde500aa03a1ab206d19c11f3fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d17cc2ccc46733c857f884f78a1b0c9b3f980586
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758722"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674113"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Рабочий процесс WideWorldImportersDW ETL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47758722"
 
 Затем последовательность задач потока данных загружает каждого измерения. После этого они загружаются каждый факт.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - SQL Server 2016 (или более поздней версии), с помощью WideWorldImporters и WideWorldImportersDW базы данных (в том же или в разных экземплярах SQL Server)
 - SQL Server Management Studio
@@ -45,7 +45,7 @@ ms.locfileid: "47758722"
 
 ## <a name="download"></a>Загрузить
 
-Последний выпуск примера, см. в разделе [wide world-importers выпуска](http://go.microsoft.com/fwlink/?LinkID=800630). Скачайте *ежедневного ETL.ispac* файл пакета служб Integration Services.
+Последний выпуск примера, см. в разделе [wide world-importers выпуска](https://go.microsoft.com/fwlink/?LinkID=800630). Скачайте *ежедневного ETL.ispac* файл пакета служб Integration Services.
 
 Исходный код для повторного создания образца базы данных, см. в разделе [wide world importers —](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl).
 

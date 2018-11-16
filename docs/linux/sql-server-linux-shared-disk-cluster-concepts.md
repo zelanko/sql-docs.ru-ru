@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: bc689b96be7fbfcf348ec6d55e27abcceb2024d6
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 668bf72f2673b123ce5a238dbbf5cd7af43604d4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032671"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676533"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Экземпляры отказоустойчивого кластера — SQL Server в Linux
 
@@ -35,7 +35,7 @@ ms.locfileid: "51032671"
 
     Дополнительные сведения о конфигурации кластера, параметры агента ресурсов, управления, рекомендации и рекомендации, см. в разделе [SUSE Linux Enterprise высокого уровня доступности расширения 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-Надстройка RHEL высокого уровня ДОСТУПНОСТИ и для которых Имеется SUSE основаны на [Pacemaker](http://clusterlabs.org/).
+Надстройка RHEL высокого уровня ДОСТУПНОСТИ и для которых Имеется SUSE основаны на [Pacemaker](https://clusterlabs.org/).
 
 На следующей схеме показано, хранения показано на двух серверах. Кластеризации компонентов - Corosync и Pacemaker - координату связи и управления ресурсами. Один из серверов имеет активное подключение к ресурсам хранилища и SQL Server. Когда Pacemaker обнаруживает сбой кластеризации компоненты управления перемещения ресурсов на другой узел.  
 

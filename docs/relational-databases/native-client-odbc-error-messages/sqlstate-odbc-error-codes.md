@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9797709fb012db8bc82a21a84c2927ab65aa3016
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18f7ebab7d6463c419d31464c1343d6fd03d4cec
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796430"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672983"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (коды ошибок ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "47796430"
   
  Дополнительные сведения о кодах ошибок состояния см. в следующих разделах.  
   
--   [Приложение А. Коды ошибок ODBC](http://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [Приложение А. Коды ошибок ODBC](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
--   [Сопоставления SQLSTATE](http://go.microsoft.com/fwlink/?LinkId=89355)  
+-   [Сопоставления SQLSTATE](https://go.microsoft.com/fwlink/?LinkId=89355)  
   
 ## <a name="see-also"></a>См. также  
  [Обработка ошибок и сообщений](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

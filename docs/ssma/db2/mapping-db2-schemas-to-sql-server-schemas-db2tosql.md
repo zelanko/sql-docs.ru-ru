@@ -10,12 +10,12 @@ ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b0f5bcfff72abb16c45aebc12f7c1a2220e2330f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fe903d81bc698ff324b504034ed92025570254c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735502"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656633"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Сопоставление схем DB2 со схемами SQL Server (DB2ToSQL)
 В DB2 каждая база данных имеет один или несколько схем. По умолчанию SSMA выполняет миграцию всех объектов в схеме DB2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных с именем схемы. Тем не менее, можно настраивать сопоставление схем DB2 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] баз данных.  
@@ -60,7 +60,7 @@ ms.locfileid: "47735502"
 1.  На вкладке схемы сопоставления, щелкните любую строку и нажмите кнопку **восстановить значения по умолчанию** для возврата в базу данных по умолчанию и схему.  
   
 ## <a name="next-steps"></a>Следующие шаги  
-Если вы хотите анализировать преобразование объектов DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов, вы можете [(SSMA распространено) отчет о миграции данных](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241).  
+Если вы хотите анализировать преобразование объектов DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов, вы можете [(SSMA распространено) отчет о миграции данных](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241).  
   
 ## <a name="see-also"></a>См. также  
 [Подключение к SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  

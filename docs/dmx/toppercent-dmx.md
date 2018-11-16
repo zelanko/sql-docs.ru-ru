@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 781b5c660826ff963497a5b89b7bc01a16eeb265
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 60af695b92b23db33b009c446431a1b8f325d68f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040402"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600394"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ TopPercent(<table expression>, <rank expression>, <percent>)
  **TopPercent** функция возвращает верхние строки в порядке убывания ранга на основе вычисленного значения \<rank expression > аргумент для каждой строки таким образом, чтобы сумма \<rank expression > значения по крайней мере заданному проценту, заданному по \<процентов > аргумент. **TopPercent** возвращает возможные наименьшее количество элементов, соответствующих указанному значению процента.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается прогнозирующий запрос к модели взаимосвязей, построенной с помощью [основам интеллектуального анализа данных](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ В следующем примере создается прогнозирующий запрос к модели взаимосвязей, построенной с помощью [основам интеллектуального анализа данных](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  Чтобы понять, как работает TopPercent, возможно, будет сначала выполнить прогнозирующий запрос, который возвращает только вложенную таблицу.  
   

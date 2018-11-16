@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 335888ba664751bb20348472736ad697b8fe2b6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad16bb39d693e78f0d6678cbf5d6b1c4abfb5816
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633482"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663274"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47633482"
 |percent_complete|**int**|Процент завершения выполнения операции. Значения не являются непрерывными и допустимые значения перечислены ниже. Не равно NULL.<br/><br/>0 = операция не запущена<br/>50 = операция выполняется<br/>100 = операция завершена|  
 |error_code|**int**|Код ошибки, возникшей при неудачном выполнении операции. Если значение равно 0, операция завершилась успешно.|  
 |error_desc|**nvarchar(2048)**|Описание ошибки, которая возникла во время неудачного выполнения операции.|  
-|error_severity|**int**|Степень серьезности ошибки, которая возникла во время неудачного выполнения операции. Дополнительные сведения об уровнях серьезности ошибок см. в разделе [степени серьезности ошибок ядра СУБД](http://go.microsoft.com/fwlink/?LinkId=251052).|  
+|error_severity|**int**|Степень серьезности ошибки, которая возникла во время неудачного выполнения операции. Дополнительные сведения об уровнях серьезности ошибок см. в разделе [степени серьезности ошибок ядра СУБД](https://go.microsoft.com/fwlink/?LinkId=251052).|  
 |error_state|**int**|Зарезервировано для последующего использования. Совместимость с будущими версиями не гарантируется.|  
 |start_time|**datetime**|Метка времени начала операции.|  
 |last_modify_time|**datetime**|Метка времени последнего изменения записи для длительных операций. Для успешно выполненных операций в этом поле отображается метка времени завершения операции.|  

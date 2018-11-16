@@ -12,12 +12,12 @@ ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e69c48d9f5c026f6c71b80a4a9a67ed83c989c25
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 2da773ee52b036854b5b908615ebadafb0de591d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099625"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665494"
 ---
 # <a name="generating-reports-mysqltosql"></a>Создание отчетов (MySQLToSQL)
 В консоли SSMA на уровне дерева объектов создаются отчеты определенных действий, выполняемых с помощью команд.  
@@ -144,5 +144,5 @@ ms.locfileid: "50099625"
 -   Сбой скрипта  
   
 ## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[Выполнение команд консоли SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

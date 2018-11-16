@@ -15,30 +15,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d81731eb933f5f1c35eff3ae358462d90af07f5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f0d131422aa9d901e6a92cb5c9e573a076b1e71
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743332"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675439"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента заданы следующие дополнительные поля для **SQLGetDiagField**. Эти поля поддерживают множество отчетов об ошибках для приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и доступны во всех диагностических записях, созданных дескрипторами соединения ODBC и дескрипторами инструкций ODBC. Эти поля определены в файле sqlncli.h.  
+  В драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заданы следующие дополнительные поля для функции **SQLGetDiagField**. Эти поля поддерживают множество отчетов об ошибках для приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и доступны во всех диагностических записях, созданных дескрипторами соединения ODBC и дескрипторами инструкций ODBC. Эти поля определены в файле sqlncli.h.  
   
 |Поля диагностических записей|Описание|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Сообщает номер строки хранимой процедуры, на которой произошла ошибка. Значение SQL_DIAG_SS_LINE значимо, только если SQL_DIAG_SS_PROCNAME возвращает значение. Значение возвращается как 16-разрядное целое число без знака.|  
-|SQL_DIAG_SS_MSGSTATE|Состояние сообщения об ошибке. Сведения о состоянии сообщения об ошибке, см. в разделе [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). Значение возвращается как 32-разрядное целое число со знаком.|  
-|SQL_DIAG_SS_PROCNAME|Имя хранимой процедуры, в которой возникла ошибка, если это имеет смысл. Значение возвращается как символьная строка. Максимальная длина строки (в символах) зависит от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ее можно определить путем вызова [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) запрашивая значение sql_max_procedure_name_len.|  
+|SQL_DIAG_SS_MSGSTATE|Состояние сообщения об ошибке. Сведения о состоянии сообщения об ошибке см. в разделе [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). Значение возвращается как 32-разрядное целое число со знаком.|  
+|SQL_DIAG_SS_PROCNAME|Имя хранимой процедуры, в которой возникла ошибка, если это имеет смысл. Значение возвращается как символьная строка. Максимальная длина строки (в символах) зависит от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ее можно определить путем вызова функции [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) , запрашивая значение SQL_MAX_PROCEDURE_NAME_LEN.|  
 |SQL_DIAG_SS_SEVERITY|Степень серьезности связанного сообщения об ошибке. Значение возвращается как 32-разрядное целое число со знаком.|  
 |SQL_DIAG_SS_SRVNAME|Имя сервера, на котором произошла ошибка. Значение возвращается как символьная строка. Длина строки (в символах) задается макросом SQL_MAX_SQLSERVERNAME в файле sqlncli.h.|  
   
  Специальные диагностические поля [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], содержащие символьные данные, SQL_DIAG_SS_PROCNAME и SQL_DIAG_SS_SRVNAME, возвращают эти данные клиенту как строки в ANSI, строки в Юникоде или строки, оканчивающиеся нулевым байтом. Если необходимо, счетчик символов должен быть изменен с учетом ширины символа. Также можно использовать переносимый тип данных C, такой как TCHAR или SQLTCHAR, чтобы удостовериться, что программная переменная имеет правильную длину.  
   
- Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает следующие дополнительные коды динамических функций, содержащие последнюю попытку выполнения инструкции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Код динамической функции возвращается в заголовке (запись 0) диагностического набора записей и доступен при каждом выполнении (успешном или нет).  
+ Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает следующие дополнительные коды динамических функций, содержащие последнюю попытку выполнения инструкции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Код динамической функции возвращается в заголовке (запись 0) диагностического набора записей и доступен при каждом выполнении (успешном или нет).  
   
 |Код динамической функции|Source|  
 |---------------------------|------------|  
@@ -104,7 +104,7 @@ ms.locfileid: "47743332"
  Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLGetDiagField](http://go.microsoft.com/fwlink/?LinkId=59352)   
+ [Функция SQLGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)   
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

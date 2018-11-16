@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95c8e17da28a97c6a640f993f16fadea506c1970
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 868198cc8efed50b18acee169c345781345d4964
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652562"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655954"
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>Компоненты доступа к данным SQLXML 4.0 — поставщик SQLXMLOLEDB
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47652562"
      Отображает функции SQLXML 4.0 с помощью новой технологии доступа к данным, которая расширяет и дополняет текущие версии компонентов доступа к данным MDAC. SQLNCLI11 обеспечивает полную поддержку для функций, представленных в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Дополнительные сведения см. в статье [Программирование SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Поставщик SQLXMLOLEDB &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)  
+ [Поставщик SQLXMLOLEDB &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)  
  Описывает поставщик SQLXMLOLEDB и демонстрирует его использование.  
   
   

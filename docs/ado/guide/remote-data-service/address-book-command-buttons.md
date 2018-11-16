@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64570b9a6f2052fdc3f9e5544a442853110587b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e3b29fd5f4fab7e487be5be18752ac7de892537
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613152"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560301"
 ---
 # <a name="address-book-command-buttons"></a>Кнопки команд адресной книги
 Адресная книга приложение включает в себя следующие кнопки:  
@@ -33,7 +33,7 @@ ms.locfileid: "47613152"
 -   Объект **Отмена изменений** кнопку, чтобы отменить изменения.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="find-button"></a>Кнопка  
  Щелкнув **найти** кнопку активирует процедуры VBScript Find_OnClick Sub, которая создает и отправляет запрос SQL. После нажатия этой кнопки заполняет таблицу данных.  
@@ -45,7 +45,7 @@ ms.locfileid: "47613152"
   
  Например если **Фамилия** поле содержал запись «Berge» и **Title** поле содержал запись «Руководитель программы», инструкции SQL (значение `myQuery`) будет считывать:  
   
-```  
+```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
 ```  
   
@@ -54,7 +54,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
 ## <a name="preparing-and-sending-the-query"></a>Подготовка и отправка запроса  
  Последняя часть процедуры Find_OnClick Sub состоит из двух операторов. Первый оператор назначает [SQL](../../../ado/reference/rds-api/sql-property.md) свойство [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) равное динамически построенного запроса SQL. Вторая инструкция вызывает **RDS. DataControl** объекта (`DC1`) для запроса к базе данных, а затем отобразите новые результаты запроса в сетке.  
   
-```  
+```vb
 Sub Find_OnClick  
    '...  
    DC1.SQL = myQuery  
@@ -65,7 +65,7 @@ End Sub
 ## <a name="update-profile-button"></a>Кнопки "обновить профиль"  
  Щелкнув **обновить профиль** процедуры VBScript Update_OnClick Sub, которая выполняет активирует кнопку [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) и [обновить](../../../ado/reference/rds-api/refresh-method-rds.md) методы.  
   
-```  
+```vb
 Sub Update_OnClick  
    DC1.SubmitChanges  
    DC1.Refresh  
@@ -77,7 +77,7 @@ End Sub
 ## <a name="cancel-changes-button"></a>Кнопка "Отмена изменений"  
  Щелкнув **Отмена изменений** активирует процедуру VBScript Cancel_OnClick Sub, выполняющий [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) метод.  
   
-```  
+```vb
 Sub Cancel_OnClick  
    DC1.CancelUpdate  
 End Sub  

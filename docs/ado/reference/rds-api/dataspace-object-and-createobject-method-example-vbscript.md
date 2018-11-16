@@ -16,16 +16,16 @@ ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 196641267bfedaff0de657d842b75a38c7cac75a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d24d67f3c798c061fe10c932f36aa4e7f007f772
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753362"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602364"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>Примеры объекта DataSpace и метода CreateObject (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  В следующем примере показано, как использовать [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) метод [RDS. Пространство данных](../../../ado/reference/rds-api/dataspace-object-rds.md) с бизнес-объекта по умолчанию, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Чтобы протестировать этот пример, вырезать и вставить этот код между \<текст > и \</Body > теги в обычном HTML документа и назовите его **DataSpaceVBS.asp**. Сценарий ASP будет идентификации сервера.  
   
@@ -107,7 +107,7 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
     Dim strCnxn  
     Dim strSQL  
   
-    strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+    strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
     strCnxn = "Provider='sqloledb';Data Source=" & _  
             "<%=Request.ServerVariables("SERVER_NAME")%>" & ";" & _  
             "Integrated Security='SSPI';Initial Catalog='Northwind';"  
@@ -140,7 +140,7 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
   
 ```  
 Sub Window_OnLoad()  
-   strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+   strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
    Set BO = ADS1.CreateObject("VbBusObj.VbBusObjCls", strServer)  
    txtConnect.Value = "dsn=Pubs;uid=MyUserID;pwd=MyPassword;"  
    txtGetRecordset.Value = "Select * From authors for Browse"  

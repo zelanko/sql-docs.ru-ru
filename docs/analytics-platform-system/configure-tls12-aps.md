@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 638633a84721532ad05a52126aa7bcfd3f2bb6b7
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 15bee3f68bf922ec9220c9ac570e5bd372f47483
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237196"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697862"
 ---
 # <a name="configure-tls-12-in-aps"></a>Настройка TLS 1.2 в APS
 
@@ -22,7 +22,7 @@ ms.locfileid: "50237196"
 
 > [!WARNING]
 > Настоящий раздел, метод или задача содержит шаги, в которых указано, как внести изменения в реестр. Тем не менее при изменении реестра неправильно, может привести к потере данных и необходимости переустановки операционной системы, могут возникнуть серьезные проблемы. Настоятельно рекомендуется создать резервную копию реестра перед внесением изменений. Тогда в случае возникновения проблем реестр можно будет восстановить. Дополнительные сведения о том, как резервное копирование и восстановление реестра щелкните следующий номер статьи базы знаний Майкрософт:<br>
-[322756](https://support.microsoft.com/en-us/help/322756) как резервное копирование и восстановление реестра Windows
+[322756](https://support.microsoft.com/help/322756) как резервное копирование и восстановление реестра Windows
 
 **Отключите:**
 ```

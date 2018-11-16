@@ -13,12 +13,12 @@ ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59b00a521624759af8f73a94f75c4a74101b1937
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 486f97e3d1dbea4cbe14bbd16269a687ee03cf0e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839682"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601264"
 ---
 # <a name="xslt-transformations"></a>Преобразования XSLT
 XSLT могут применяться в созданный XML-документ для преобразования его в другой формат. Общие сведения о формате XML в ADO помогает в разработке XSLT-шаблоны, которые можно преобразовать в более удобные форму.  
@@ -30,21 +30,21 @@ XSLT могут применяться в созданный XML-докумен�
   
 ```  
 <?xml version="1.0" encoding="ISO-8859-1"?>  
-<html xmlns:xsl="http://www.w3.org/TR/WD-xsl">  
+<html xmlns:xsl="https://www.w3.org/TR/WD-xsl">  
 <body STYLE="font-family:Arial, helvetica, sans-serif; font-size:12pt; background-color:white">  
 <table border="1" style="table-layout:fixed" width="600">  
-  <col width="200"></col>  
-  <tr bgcolor="teal">  
-    <th><font color="white">CustomerId</font></th>  
-    <th><font color="white">CompanyName</font></th>  
-    <th><font color="white">ContactName</font></th>  
-  </tr>  
+  <col width="200"></col>  
+  <tr bgcolor="teal">  
+    <th><font color="white">CustomerId</font></th>  
+    <th><font color="white">CompanyName</font></th>  
+    <th><font color="white">ContactName</font></th>  
+  </tr>  
 <xsl:for-each select="xml/rs:data/z:row">  
-  <tr bgcolor="navy">  
-    <td><font color="white"><xsl:value-of select="@CustomerID"/></font></td>  
-    <td><font color="white"><xsl:value-of select="@CompanyName"/></font></td>  
-    <td><font color="white"><xsl:value-of select="@ContactName"/></font></td>   
-  </tr>  
+  <tr bgcolor="navy">  
+    <td><font color="white"><xsl:value-of select="@CustomerID"/></font></td>  
+    <td><font color="white"><xsl:value-of select="@CompanyName"/></font></td>  
+    <td><font color="white"><xsl:value-of select="@ContactName"/></font></td>   
+  </tr>  
 </xsl:for-each>  
 </table>  
 </body>  

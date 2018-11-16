@@ -10,12 +10,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 89998a328aa400958d8cd406f412bf7f91b4884e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845798"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668410"
 ---
 # <a name="sql-server-migration-assistant"></a>Помощник миграции SQL Server
 Microsoft SQL Server миграции Assistant (SSMA) — это средство, предназначенное для автоматизации миграции баз данных в SQL Server из Microsoft Access, DB2, MySQL, Oracle и SAP ASE.  
@@ -49,11 +49,11 @@ Microsoft SQL Server миграции Assistant (SSMA) — это средств
 ** Этот целевой объект поддерживается только SSMA для Oracle.
  
 ## <a name="downloads"></a>Файлы для загрузки
-- [SSMA для Access](http://aka.ms/ssmaforaccess)
-- [SSMA для DB2](http://aka.ms/ssmafordb2)
-- [SSMA для MySql](http://aka.ms/ssmaformysql)
-- [SSMA для Oracle](http://aka.ms/ssmafororacle)
-- [SSMA для SAP ASE](http://aka.ms/ssmaforsybase)
+- [SSMA для Access](https://aka.ms/ssmaforaccess)
+- [SSMA для DB2](https://aka.ms/ssmafordb2)
+- [SSMA для MySql](https://aka.ms/ssmaformysql)
+- [SSMA для Oracle](https://aka.ms/ssmafororacle)
+- [SSMA для SAP ASE](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>Получение поддержки SSMA  
 **Центр справки и поддержки для Microsoft SQL Server миграции Assistant (SSMA):**  
@@ -62,9 +62,9 @@ Microsoft SQL Server миграции Assistant (SSMA) — это средств
   
 -   **Форумы сообщества SQL Server** — задать вопрос в сообществе SQL Server  
   
-    -   [Сообщество SQL Server](http://go.microsoft.com/fwlink/?LinkId=42455) -участников групп новостей и форумы, контролируемые сообществом SQL Server. На сайте также перечислены источники информации сообщества, такие как блоги и веб-сайты.  
+    -   [Сообщество SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455) -участников групп новостей и форумы, контролируемые сообществом SQL Server. На сайте также перечислены источники информации сообщества, такие как блоги и веб-сайты.  
   
-    -   [Сообщество центра разработчиков SQL Server](http://go.microsoft.com/fwlink/?LinkId=42456) -участников групп новостей, форумы и другие ресурсы сообщества, которые полезны для разработчиков SQL Server  
+    -   [Сообщество центра разработчиков SQL Server](https://go.microsoft.com/fwlink/?LinkId=42456) -участников групп новостей, форумы и другие ресурсы сообщества, которые полезны для разработчиков SQL Server  
   
 -   Служба технической поддержки — перейти к [ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) и выполните поиск «SQL Server Migration Assistant».  Выберите версию, а затем выберите «запустить запрос».  Служба технической поддержки входит в состав средства Помощник по миграции SQL Server.  
   

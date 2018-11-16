@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985329"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601465"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;модели &gt; (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>Примечания  
  **SELECT DISTINCT FROM** оператор работает только с одним столбцом или с набором связанных столбцов. С набором несвязанных столбцов это предложение не работает.  
   
- **SELECT DISTINCT FROM** инструкция позволяет напрямую ссылаться на столбец внутри вложенной таблицы. Например:  
+ **SELECT DISTINCT FROM** инструкция позволяет напрямую ссылаться на столбец внутри вложенной таблицы. Пример:  
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Непрерывный|Средняя точка для значений столбца.|  
   
 ## <a name="discrete-column-example"></a>Пример дискретного столбца  
- В следующем образце кода основан на `[TM Decision Tree]` модели, которая создается в [основам интеллектуального анализа данных](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Запрос возвращает уникальные значения, существующие в дискретном столбце `Gender`.  
+ В следующем образце кода основан на `[TM Decision Tree]` модели, которая создается в [основам интеллектуального анализа данных](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Запрос возвращает уникальные значения, существующие в дискретном столбце `Gender`.  
   
 ```  
 SELECT DISTINCT [Gender]  

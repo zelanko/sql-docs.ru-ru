@@ -10,12 +10,12 @@ ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c4e3fcf3b9353a43a453dd1c70c24960bc331ff2
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: b5138dea4cfea23d77dae5d4bc766b4c2738f4e7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099705"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659074"
 ---
 # <a name="generating-reports-accesstosql"></a>Создание отчетов (AccessToSQL)
 В консоли SSMA на уровне дерева объектов создаются отчеты определенных действий, выполняемых с помощью команд.  
@@ -143,5 +143,5 @@ ms.locfileid: "50099705"
 -   Сбой скрипта  
   
 ## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA (доступ)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Выполнение команд консоли SSMA (доступ)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

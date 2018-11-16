@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f5c991130c59d1999cc68d27ffccc15138ffc34d
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 5ffad259ca0de75ad2eb4b7fc6f51614f1c4dea9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269757"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700365"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Новые возможности в Analytics Platform System, хранилища данных MPP горизонтального масштабирования
 См. в разделе, новые возможности в последние обновления устройства для Microsoft® Analytics Platform System (APS). APS является горизонтальное масштабирование локальное устройство, на котором размещена MPP SQL Server Parallel Data Warehouse. 
@@ -70,7 +70,7 @@ from cte;
 Чтение, Импорт и экспорт типов данных даты, с помощью PolyBase, теперь поддерживает даты до 1970-01-01 и после 2038-01-20 для типов файлов ORC и Parquet.
 
 ### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>Адаптер загрузки данных служб SSIS для SQL Server 2017 в качестве целевого объекта
-Новый адаптер назначения APS служб SSIS, которая поддерживает SQL Server 2017, как цель развертывания можно загрузить из [сайт загрузки](https://www.microsoft.com/en-us/download/details.aspx?id=57472).
+Новый адаптер назначения APS служб SSIS, которая поддерживает SQL Server 2017, как цель развертывания можно загрузить из [сайт загрузки](https://www.microsoft.com/download/details.aspx?id=57472).
 
 <a name="h2-aps-cu7.1"></a>
 ## <a name="aps-cu71"></a>APS CU7.1
@@ -111,7 +111,7 @@ APS AU7 вводит переключателя функций в [Configuration
 ### <a name="known-issues"></a>Известные проблемы
 С программным обеспечением APS AU7, обновление Intel BIOS предоставляется исправления, которые описываются как проблема *атаки упреждающего исполнения на стороне канала*. Цель атаки — воспользоваться, называемых *уязвимости Spectre и Meltdown*. Несмотря на то, что упаковываются вместе с APS, установлено ли обновление BIOS вручную, а не как часть установки программного обеспечения APS AU7.
 
-Корпорация Майкрософт рекомендует всем клиентам установить обновление BIOS. Microsoft замеряли последствия ядра виртуальный адрес затенение (KVAS), службы ядра страницы таблицы косвенного обращения (KPTI) и косвенных ветви прогноза по устранению рисков (IBP) на различных рабочих нагрузок SQL в различных средах. Измерения найти значительное снижение на некоторых рабочих нагрузок. На основе результатов, рекомендуется протестировать производительность эффект включения обновления BIOS, перед их развертыванием в рабочей среде. См. в руководстве по SQL Server [здесь](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
+Корпорация Майкрософт рекомендует всем клиентам установить обновление BIOS. Microsoft замеряли последствия ядра виртуальный адрес затенение (KVAS), службы ядра страницы таблицы косвенного обращения (KPTI) и косвенных ветви прогноза по устранению рисков (IBP) на различных рабочих нагрузок SQL в различных средах. Измерения найти значительное снижение на некоторых рабочих нагрузок. На основе результатов, рекомендуется протестировать производительность эффект включения обновления BIOS, перед их развертыванием в рабочей среде. См. в руководстве по SQL Server [здесь](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"

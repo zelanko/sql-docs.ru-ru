@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 59897cbe6abc13b9842dc148ef8c2de4413926d0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050903"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702962"
 ---
 # <a name="run-python-using-t-sql"></a>Запуск Python с помощью T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +139,7 @@ WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColM
 
 Другие виды входные данные могут передаваться как переменные SQL: например, можно передать обученной модели как переменную, например с помощью функции сериализации [pickle](https://docs.python.org/3.0/library/pickle.html) или [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) для записи модели двоичный формат.
 
-Хранимая процедура возвращает один Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) кадр данных в качестве выходных данных, но можно также выводить скалярных величин и модели как переменные. Например можно выходные данные обученной модели в качестве двоичной переменной и передать его в инструкцию T-SQL INSERT для записи в таблицу модели. Можно также создавать графики (в двоичном формате) или скаляры (отдельных значений, таких как дата и время, затраченное время для обучения модели и так далее).
+Хранимая процедура возвращает один Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) кадр данных в качестве выходных данных, но можно также выводить скалярных величин и модели как переменные. Например можно выходные данные обученной модели в качестве двоичной переменной и передать его в инструкцию T-SQL INSERT для записи в таблицу модели. Можно также создавать графики (в двоичном формате) или скаляры (отдельных значений, таких как дата и время, затраченное время для обучения модели и так далее).
 
 Теперь давайте взглянем на просто значение по умолчанию входных и выходных переменных sp_execute_external_script: `InputDataSet` и `OutputDataSet`. 
 
@@ -313,7 +313,7 @@ SQL Server основан на Python **pandas** пакет, который от
 
 Скалярные математические результаты преобразуется в табличную структуру, по-прежнему необходимо преобразовывать их в формат, поддерживающий работу SQL Server. 
 
-1. Чтобы преобразовать последовательность в формат Data.Frame, вызовите pandas [кадр данных](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) метод.
+1. Чтобы преобразовать последовательность в формат Data.Frame, вызовите pandas [кадр данных](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) метод.
 
     ```sql
     execute sp_execute_external_script 

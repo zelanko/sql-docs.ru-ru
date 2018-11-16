@@ -12,12 +12,12 @@ ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a5b55065790b63c2fb63803f70bf00d56e704cb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d9317b63b01a4d1e78f5c8d4818c63d9974be4f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763982"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656594"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Установка клиента SSMA для MySQL (MySQLToSQL)
 SSMA для MySQL клиента состоит из программных файлов, которые выполняют следующие задачи:  
@@ -43,7 +43,7 @@ SSMA для MySQL предназначен для работы с MySQL 4.1 ил
   
 -   Установщик [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows версии 3.1 или более поздняя версия.  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версии 4.0 или более поздней версии. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версии 4.0 доступен на носителе продукта SQL Server. Можно также получить его из [Центр разработчиков .NET Framework](http://go.microsoft.com/fwlink/?LinkId=48882).  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версии 4.0 или более поздней версии. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версии 4.0 доступен на носителе продукта SQL Server. Можно также получить его из [Центр разработчиков .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 -   MySQL 5.1 драйвер ODBC и подключения к базам данных MySQL, которые требуется перенести. MySQL можно установить с сайта MySQL. Сведения о подключениях см. в разделе [подключение к MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
@@ -54,7 +54,7 @@ SSMA для MySQL предназначен для работы с MySQL 4.1 ил
 -   4 ГБ ОЗУ рекомендуется.  
   
 ## <a name="installing-ssma-for-mysql-client"></a>Установка SSMA для MySQL клиента  
-SSMA можно загрузить из Интернета. Чтобы загрузить последнюю версию, см. в разделе [SQL Server Migration Assistant страницу загрузки](http://aka.ms/ssmaformysql).  
+SSMA можно загрузить из Интернета. Чтобы загрузить последнюю версию, см. в разделе [SQL Server Migration Assistant страницу загрузки](https://aka.ms/ssmaformysql).  
   
 После загрузки последней версии, необходимо извлечь файлы установки перед установкой SSMA.  
   

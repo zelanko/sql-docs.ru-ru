@@ -21,18 +21,18 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: e78d5226a4ab726718eb7725640de22dd811a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764413"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677673"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Подготовка баз данных Access для миграции (AccessToSQL)
 Прежде чем выполнять миграцию баз данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо определить, какие базы данных для переноса и убедитесь, что эти базы данных готовы к миграции.  
   
 ## <a name="determining-when-to-migrate-to-sql-server"></a>Определение условий к переходу на SQL Server  
-Базы данных Jet, который используется в качестве ядра базы данных для доступа, — это гибкий и простой в использовании решение для управления данными. Тем не менее слишком больших баз данных и дополнительные критически важна, многие пользователи найти что они требуют повышения производительности, безопасности и доступности. Для приложений, требующих более надежную платформу данных, рассмотрите возможность перехода основных баз данных для этих приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о том, когда следует выполнять перенос см. в разделе [страница сведений о миграции](http://go.microsoft.com/fwlink/?LinkId=68571) на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайта.  
+Базы данных Jet, который используется в качестве ядра базы данных для доступа, — это гибкий и простой в использовании решение для управления данными. Тем не менее слишком больших баз данных и дополнительные критически важна, многие пользователи найти что они требуют повышения производительности, безопасности и доступности. Для приложений, требующих более надежную платформу данных, рассмотрите возможность перехода основных баз данных для этих приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о том, когда следует выполнять перенос см. в разделе [страница сведений о миграции](https://go.microsoft.com/fwlink/?LinkId=68571) на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайта.  
   
 После переноса базы данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно продолжать использовать доступ с помощью связанных таблиц, или можно вручную перенести приложения на [!INCLUDE[msCoName](../../includes/msconame_md.md)] кода на основе .NET Framework, который взаимодействует непосредственно с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

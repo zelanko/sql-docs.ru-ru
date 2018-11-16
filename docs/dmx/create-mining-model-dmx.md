@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ae4979d02f92ef95364cc264c1a89c83b49a48d2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 2ea71a918ab9ceb1afba41e5af0148212f33044b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148049"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607144"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -127,7 +127,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 ## <a name="remarks"></a>Примечания  
  Если необходимо создать модель со встроенным набором проверочных данных, следует после ALTER MINING STRUCTURE использовать инструкцию CREATE MINING STRUCTURE. При этом не все типы моделей поддерживают набор контрольных данных. Дополнительные сведения см. в статье [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md).  
   
- Пошаговое руководство по для создания модели интеллектуального анализа данных при помощи инструкции CREATEMODEL, см. в разделе [учебник по расширений интеллектуального анализа данных прогнозирования временных рядов](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Пошаговое руководство по для создания модели интеллектуального анализа данных при помощи инструкции CREATEMODEL, см. в разделе [учебник по расширений интеллектуального анализа данных прогнозирования временных рядов](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 ## <a name="naive-bayes-example"></a>Пример упрощенного алгоритма Байеса  
  В следующем примере используется [!INCLUDE[msCoName](../includes/msconame-md.md)] упрощенный алгоритм Байеса для создания новой модели интеллектуального анализа данных. Столбец Bike Buyer определяется как прогнозируемый атрибут.  

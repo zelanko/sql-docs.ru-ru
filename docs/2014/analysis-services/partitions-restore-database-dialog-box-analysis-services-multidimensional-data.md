@@ -13,12 +13,12 @@ ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb51c9ec57e20ecd641a06964624987e636a6c40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164394"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639871"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Секции (диалоговое окно «Восстановление базы данных») (службы Analysis Services - многомерные данные)
   Страница **Секции** диалогового окна **Восстановление базы данных** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] позволяет указать расположение для восстановления локальных секций, а также указать, восстанавливать ли удаленные секции и удаленные файлы резервных копий для восстановления удаленных секций.  
@@ -29,7 +29,7 @@ ms.locfileid: "48164394"
 > [!NOTE]  
 >  После восстановления существующей базы данных пользователь, выполнявший восстановление, может утратить доступ к этой базе данных. Потеря доступа может произойти в случае, если на время создания резервной копии этот пользователь не был членом роли сервера и роли базы данных с разрешением «Полный доступ (Администратор)».  
   
- **Для отображения страницы «секции» в диалоговом окне Восстановление базы данных**  
+ **Чтобы открыть страницу секций в диалоговом окне Восстановление базы данных**  
   
 -   В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши папку **Базы данных** экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или базу данных в окне **Обозреватель объектов**, выберите пункт **Восстановить**, а затем на панели **Выбор страницы**выберите **Секции**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164394"
 |**...**|Нажмите, чтобы отобразить диалоговое окно **Удаленные секции — дополнительные параметры** и изменить дополнительные параметры, например строку подключения для источника данных, для восстановления удаленной секции. Дополнительные сведения о диалоговом окне **Удаленные секции — дополнительные параметры** см. в разделе [Диалоговое окно "Удаленные секции — дополнительные параметры" (службы Analysis Services — многомерные данные)](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>См. также  
- [Восстановление базы данных-диалоговое окно &#40;службы Analysis Services — многомерные данные&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Диалоговое окно "Восстановление базы данных" (службы Analysis Services — многомерные данные)](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Общие &#40;восстановление базы данных-диалоговое окно&#41; &#40;службы Analysis Services — многомерные данные&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Создание и восстановление резервных копий баз данных служб Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

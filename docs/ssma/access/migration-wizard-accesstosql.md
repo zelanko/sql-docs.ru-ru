@@ -19,12 +19,12 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0c77ff9dae7d6d700289cdff4daff56ba4457651
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62ef99767be3f228702a06d89ba52f5c3a9821fb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636202"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664823"
 ---
 # <a name="migration-wizard-accesstosql"></a>Мастер миграции (AccessToSQL)
 Мастер миграции поможет выполнить перенос один или несколько баз данных с доступом к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. С помощью мастера, будет создание проекта, добавьте в проект базы данных, выберите объекты для переноса и подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Также будет преобразовать, загрузить и перенести схем доступа и данные. При необходимости вы можете связать доступа к таблицам для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблиц или SQL Azure.  
@@ -41,18 +41,18 @@ ms.locfileid: "47636202"
 По умолчанию SSMA будет запущен мастер миграции при запуске SSMA. Чтобы предотвратить автоматический запуск мастера, снимите этот флажок.  
   
 ## <a name="create-new-project-page"></a>Создать новую страницу проекта  
-На странице Создание нового проекта вводится проекта имя, расположение и миграции проекта тип файла (версия целевого SQL Server, используемый для миграции). Дополнительные сведения см. в разделе [новый проект (SSMA)](http://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)  
+На странице Создание нового проекта вводится проекта имя, расположение и миграции проекта тип файла (версия целевого SQL Server, используемый для миграции). Дополнительные сведения см. в разделе [новый проект (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)  
   
 ## <a name="add-access-databases-page"></a>Добавить страницу базы данных Access  
 На странице добавления базы данных Access является, который можно добавить один или несколько баз данных Access в проект. Отдельные базы данных можно добавить, щелкнув **баз данных, добавить**и затем выбрав базы данных из **откройте** окна. Или можно найти базы данных с помощью **найти баз данных** кнопки. Дополнительные сведения см. в следующих разделах:  
   
 -   [Добавление и удаление файлов баз данных Access](adding-and-removing-access-database-files-accesstosql.md)  
   
--   [Мастер поиска баз данных (выбор расположений)](http://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)  
+-   [Мастер поиска баз данных (выбор расположений)](https://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)  
   
--   [Мастер поиска баз данных (Выбор файлов)](http://msdn.microsoft.com/2f574a34-4bab-40a4-89a8-ad4907ffc3fd)  
+-   [Мастер поиска баз данных (Выбор файлов)](https://msdn.microsoft.com/2f574a34-4bab-40a4-89a8-ad4907ffc3fd)  
   
--   [Мастер поиска баз данных (проверка выбора)](http://msdn.microsoft.com/62e20e03-50cc-4ac8-8072-524d194d2ec3)  
+-   [Мастер поиска баз данных (проверка выбора)](https://msdn.microsoft.com/62e20e03-50cc-4ac8-8072-524d194d2ec3)  
   
 ## <a name="select-objects-to-migrate-page"></a>Выберите объекты для страниц  
 На выбор объектов для миграции страницу выберите объекты для преобразования. Можно выбрать все объекты, группы объектов или отдельных объектов.  
@@ -73,10 +73,10 @@ ms.locfileid: "47636202"
   
 Если у вас есть много объектов, может потребоваться использовать **Расширенный выбор объектов** параметры в области справа для фильтрации доступа к объектам базы данных. Например, если вы выберите **таблиц** в области слева, затем можно отфильтровать список таблиц, введя строки в **фильтра** поле. Затем можно выбрать или очистить фильтруемых таблиц для миграции с помощью кнопок в верхней части области.  
   
-Дополнительные сведения о фильтрации см. в раздел Options [Расширенный выбор объектов (SSMA распространено)](http://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
+Дополнительные сведения о фильтрации см. в раздел Options [Расширенный выбор объектов (SSMA распространено)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
   
 ## <a name="connect-to-sql-server-page"></a>Подключение к странице SQL Server  
-На странице подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] странице Укажите свойства соединения, а затем подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [подключение к SQL Server](http://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+На странице подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] странице Укажите свойства соединения, а затем подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [подключение к SQL Server](https://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
   
 > [!IMPORTANT]  
 > Возникает сразу после успешного подключения **связь с таблицами** страницы, где предусмотрена возможность связывания в таблицах. Нажмите кнопку **Далее** и запускает миграции.  
@@ -96,10 +96,10 @@ ms.locfileid: "47636202"
 ## <a name="migration-status-page"></a>Страница состояния миграции  
 На странице состояния миграции отображается ход выполнения преобразования схем доступа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или схем SQL Azure, загрузке преобразованный схем в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, и затем перенос данных.  
   
-Дополнительные сведения об этой странице см. в разделе [преобразование, загрузка и миграция](http://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
+Дополнительные сведения об этой странице см. в разделе [преобразование, загрузка и миграция](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
   
 ## <a name="see-also"></a>См. также  
 [Приступая к работе с SQL Server Migration Assistant для Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[Reference(Access) интерфейса пользователя](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Reference(Access) интерфейса пользователя](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

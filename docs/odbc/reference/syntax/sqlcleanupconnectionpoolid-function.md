@@ -13,19 +13,19 @@ ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1dc2552c848b691346c57a0191f9c9200bad4523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666172"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673553"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>Функция SQLCleanupConnectionPoolID
 **Соответствие стандартам**  
  Версия была введена: ODBC 3,81 соответствие стандартам: ODBC  
   
  **Сводка**  
- **SQLCleanupConnectionPoolID** информирует драйвер, истекло время ожидания идентификатор пула. Истекло время ожидания пула, идентификатор может времени ожидания, каждый раз, когда были все соединения в пул, связанный с таким Идентификатором пула. См. в разделе [пула в Microsoft Data Access Components](http://msdn.microsoft.com/library/ms810829.aspx) Дополнительные сведения о времени ожидания соединения.  
+ **SQLCleanupConnectionPoolID** информирует драйвер, истекло время ожидания идентификатор пула. Истекло время ожидания пула, идентификатор может времени ожидания, каждый раз, когда были все соединения в пул, связанный с таким Идентификатором пула. См. в разделе [пула в Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) Дополнительные сведения о времени ожидания соединения.  
   
 ## <a name="syntax"></a>Синтаксис  
   

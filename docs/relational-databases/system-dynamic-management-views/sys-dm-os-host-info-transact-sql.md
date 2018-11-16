@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 764e2f6481121bb7684c9c4db4b56af9dc9628f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55291c5cc30b9fe16d7bd259bab03677f6df45db
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602343"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672953"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "47602343"
 |**host_distribution** |**nvarchar(256)** |Описание операционной системы. |
 |**host_release**|**nvarchar(256)**|Выпуск операционной системы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (номер версии). Список значений и описаний, см. в разделе [версии операционной системы (Windows)](/windows/desktop/SysInfo/operating-system-version). <br> Для Linux возвращает пустую строку. |  
 |**host_service_pack_level**|**nvarchar(256)**|Версия пакета обновления операционной системы Windows. <br> Для Linux возвращает пустую строку. |  
-|**host_sku**|**int**|Идентификатор Windows SKU. Список идентификаторов SKU и описания, см. в разделе [функция GetProductInfo](http://msdn.microsoft.com/library/ms724358.aspx). Допускает значение NULL. <br> Для Linux возвращает значение NULL. |  
-|**os_language_version**|**int**|Идентификатор локали (LCID) операционной системы Windows. Список значений LCID и описания, см. в разделе [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). Не может иметь значение null.|  
+|**host_sku**|**int**|Идентификатор Windows SKU. Список идентификаторов SKU и описания, см. в разделе [функция GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx). Допускает значение NULL. <br> Для Linux возвращает значение NULL. |  
+|**os_language_version**|**int**|Идентификатор локали (LCID) операционной системы Windows. Список значений LCID и описания, см. в разделе [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Не может иметь значение null.|  
 
 ## <a name="remarks"></a>Примечания  
 Этот режим аналогичен [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), добавлению столбцов для разделения Windows и Linux.

@@ -15,16 +15,16 @@ ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7f1a765d67307eb116c567c9cd5998d27b1ff53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7263e9b320eb84d0f8ae9aaba6005a454a4b5838
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770122"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606834"
 ---
 # <a name="converttostring-method-example-vbscript"></a>Пример метода ConvertToString (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  В следующем примере показано, как преобразовать **записей** в строку в кодировке MIME, используя **RDSServer.DataFactory ConvertToString** метод. В нем также показано, как можно преобразовать строку обратно в **записей**. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как **ConvertToString.htm**.  
   
@@ -41,7 +41,7 @@ Sub ConvertToStringX()
     Const adcFetchUpFront = 1  
   
     ' Replace value below with your server name to use without ASP.  
-    strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+    strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>">  
   
     Set objDF = RDS1.CreateObject("RDSServer.DataFactory", strServer)  
     Set objRs = objDF.Query(txtConnect.Value,txtQueryRecordset.Value)  

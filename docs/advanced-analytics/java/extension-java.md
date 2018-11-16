@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2d69a255c56c3b15051a393b74eb1492a4f830f4
-ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
+ms.openlocfilehash: b11025a69a0e72bb7cea1c478350da0f6ede85bf
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359341"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696423"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>Расширение языка Java в SQL Server 2019 
 
@@ -32,7 +32,7 @@ ms.locfileid: "49359341"
 
 | Операционная система | Версия Java | JRE загрузки | Загрузки JDK |
 |------------------|--------------|--------------|--------------|
-| Windows          | 1.10         | [JRE 10](http://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
+| Windows          | 1.10         | [JRE 10](https://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](https://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
 | Linux            | 1.8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
 
 В Linux **mssql-server расширяемости java** пакет автоматически устанавливает JRE 1.8, если они еще не установлены. Скрипты установки также добавить путь виртуальной машины Java для переменной среды JAVA_HOME.

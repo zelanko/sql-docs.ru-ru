@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e431283b9438b6b566f03632b35a84afa4d4e8e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82151259ece037991602c6dc0bb10a0c1fbf803e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827844"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673893"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Скрытие элементов и атрибутов при помощи sql:hide
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47827844"
  **\<Person.Contact >** элемент имеет сложный тип и, следовательно, сопоставляется с таблицей с тем же именем (сопоставление по умолчанию). Все атрибуты  **\<Person.Contact >** элемента имеют простой тип и сопоставляются со столбцами с теми же именами в Person.Contacttable в базе данных AdventureWorks. В схеме **SQL: hide** задана заметка для **ContactID** атрибута. При указании запроса XPath к этой схеме **ContactID** не возвращается в XML-документе.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -95,7 +95,7 @@ ms.locfileid: "47827844"
  Когда **SQL: hide** указана для элемента, элемент и его атрибуты или дочерние элементы не отображаются в XML-документ, который создается. Вот другой схеме XSD, в котором **SQL: hide** заметка указывается для  **\<OD >** элемент:  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   

@@ -10,12 +10,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 1b66f63b66066831d7e0276049d774136c1b5138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bdbe8616f5f2c3252f813e6e2636966ff16ec16
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743822"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662283"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Завершение подготовки тестовых случаев (OracleToSQL)
 Последняя страница мастера находятся Описание тестового случая и сведения об объектах, задействованных в тесте. Кроме того на этой странице можно разместить тест параметры выполнения.  
@@ -54,7 +54,7 @@ ms.locfileid: "47743822"
   
 -   При выборе **попросите пользователя, если не удалось выполнить сравнение таблиц**, пользователь может выбрать необходимое действие, если происходит ошибка.  
   
-Нажмите кнопку **Готово** кнопку, чтобы сохранить подготовленного тестовый случай в [использование репозиториев тестирования (OracleToSQL)](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
+Нажмите кнопку **Готово** кнопку, чтобы сохранить подготовленного тестовый случай в [использование репозиториев тестирования (OracleToSQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
   
 ## <a name="see-also"></a>См. также  
 [Использование репозиториев тестирования &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  

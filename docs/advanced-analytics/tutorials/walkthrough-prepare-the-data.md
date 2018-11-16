@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5206213c06b283e8736dea8079f6909149e670e9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142094"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703682"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Подготовка данных с помощью PowerShell (Пошаговое руководство)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "48142094"
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - В этом примере используется функция R grep для поиска вектора доступных путей и нахождения пути, включающего «Program Files». Дополнительные сведения см. в разделе [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep).
+    - В этом примере используется функция R grep для поиска вектора доступных путей и нахождения пути, включающего «Program Files». Дополнительные сведения см. в разделе [ https://www.rdocumentation.org/packages/base/functions/grep ](https://www.rdocumentation.org/packages/base/functions/grep).
 
     - Если вы считаете, что пакеты уже установлены, проверьте список установленных пакетов, выполнив `installed.packages()`.
 
@@ -173,7 +173,7 @@ This step (plugging in database information) takes 0.48 seconds.
 
 Чтобы скачать данные вручную, щелкните приведенную ниже ссылку правой кнопкой мыши и выберите пункт **Сохранить объект как**.
 
-[http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
+[https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
 
 Запомните путь к скачанному файлу данных и его имя. Требуется полный путь для загрузки данных в таблицу с помощью **bcp**.
 
@@ -265,7 +265,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 Данные представляют собой представительную выборку из набора данных по работе такси в Нью-Йорке, который содержит записи о более чем 173 миллионах отдельных поездок в 2013 году, включая сведения о размере оплаты и чаевых за каждую поездку. Чтобы с этими данными было проще работать, команда Майкрософт по обработке и анализу данных произвела выборку приблизительно 1 % из всего набора.  Эти данные были помещены в общедоступный контейнер хранилища BLOB-объектов в Azure в формате CSV. Исходные данные представляют собой несжатый файл, немного менее 350 МБ.
 
-+ Открытый набор данных: [такси Нью-ЙОРКА и Лимузины комиссии](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Открытый набор данных: [такси Нью-ЙОРКА и Лимузины комиссии](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 + [Создание моделей машинного Обучения Azure на основе набора данных такси Нью-ЙОРКА](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/).
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cffb25700ccd160f62cc7ad54164bf5fe168225a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 017f301d9888ddd4f90d70e7d993faf840640a66
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832012"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670693"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Wide World Importers образцы баз данных для Microsoft SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,4 +65,4 @@ SQL Server Analysis Services используется для создания а
 
 Лицензия для образца базы данных и образец кода описывается в следующей статье: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-Образец базы данных включает в себя общих данных, который был загружен из data.gov и естественным EarthData. Ниже приведены условия использования. [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
+Образец базы данных включает в себя общих данных, который был загружен из data.gov и естественным EarthData. Ниже приведены условия использования. [https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

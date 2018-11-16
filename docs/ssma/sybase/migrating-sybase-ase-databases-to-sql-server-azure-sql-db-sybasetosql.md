@@ -10,12 +10,12 @@ ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 551808268b4f6eb8a0d5c16c14bcb16ba977ce61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96ade7125c0d03963e8e012ed72bdb8fdef492cf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738182"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662353"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>Миграция баз данных SAP ASE на SQL Server — база данных SQL Azure (SybaseToSQL)
 SQL Server Migration Assistant (SSMA) для SAP Adaptive Server Enterprise (ASE) — это комплексное среда, которая поможет вам быстро перенос баз данных SAP ASE для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure. С помощью SSMA для SAP ASE, можно просмотреть объекты базы данных и данных, оценка баз данных для миграции, миграция объектов базы данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure, а затем перенести данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure.  
@@ -31,17 +31,17 @@ SQL Server Migration Assistant (SSMA) для SAP Adaptive Server Enterprise (ASE
   
 3.  [Подключение к экземпляру SQL Server](connecting-to-sql-server-sybasetosql.md) или [подключиться к экземпляру базы данных SQL Azure](connecting-to-azure-sql-db-sybasetosql.md).  
   
-4.  [Сопоставление схем базы данных SAP ASE и SQL Server / схемы баз данных базы данных SQL Azure](http://msdn.microsoft.com/2c927003-c49d-4fe1-8e3e-5b2899166268).  
+4.  [Сопоставление схем базы данных SAP ASE и SQL Server / схемы баз данных базы данных SQL Azure](https://msdn.microsoft.com/2c927003-c49d-4fe1-8e3e-5b2899166268).  
   
 5.  При необходимости [создание отчетов с оценкой](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) обращаться к таким объектам базы данных для преобразования и оценить время преобразования.  
   
-6.  [Преобразование схем баз данных SAP ASE в SQL Server / схемы базы данных SQL Azure](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3).  
+6.  [Преобразование схем баз данных SAP ASE в SQL Server / схемы базы данных SQL Azure](https://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3).  
   
-7.  [Загрузка преобразованных объектов в SQL Server и базы данных SQL Azure](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
+7.  [Загрузка преобразованных объектов в SQL Server и базы данных SQL Azure](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
     Либо сохраните сценарий и запустите его [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure, или синхронизировать объекты базы данных.  
   
-8.  [Перенос данных в SQL Server и базы данных SQL Azure](http://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
+8.  [Перенос данных в SQL Server и базы данных SQL Azure](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
   
 9. При необходимости обновите приложения базы данных.  
   

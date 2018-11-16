@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfccae77af978ad0422d6eae0ca965624c8ee615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2144513a5f5de453c93215edcc2bb416d53781bc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602672"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677383"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Выделение дескрипторов и соединение с SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "47602672"
   
 2.  Включите зависящий от драйвера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файл заголовка Odbcss.h.  
   
-3.  Вызовите [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) с **HandleType** из SQL_HANDLE_ENV, для инициализации ODBC и выделить дескриптор среды.  
+3.  Вызовите [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) с **HandleType** из SQL_HANDLE_ENV, для инициализации ODBC и выделить дескриптор среды.  
   
 4.  Вызовите [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) с **атрибут** значение SQL_ATTR_ODBC_VERSION и **ValuePtr** присвоено значение SQL_OV_ODBC3 для указания, то приложение будет использовать функции ODBC 3.x-format вызовы.  
   
-5.  Можно также вызвать [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) задать другой среде, параметры или вызов [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) для их получения.  
+5.  Можно также вызвать [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) задать другой среде, параметры или вызов [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) для их получения.  
   
-6.  Вызовите [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) с **HandleType** из SQL_HANDLE_DBC выделить дескриптор соединения.  
+6.  Вызовите [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) с **HandleType** из SQL_HANDLE_DBC выделить дескриптор соединения.  
   
 7.  Можно также вызвать [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) для установки параметров соединения, или вызов [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) для их получения.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47602672"
 13. Вызовите **SQLFreeHandle** с **HandleType** из SQL_HANDLE_ENV, для освобождения дескриптора среды.  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Пример  
  В этом примере показан вызов **SQLDriverConnect** для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] без использования существующего источника данных ODBC. Путем передачи незавершенной строки соединения для **SQLDriverConnect**, он заставляет драйвер ODBC для запроса пользователя на ввод отсутствующих сведений.  

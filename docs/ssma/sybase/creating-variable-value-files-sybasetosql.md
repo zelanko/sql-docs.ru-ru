@@ -13,12 +13,12 @@ ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: df421edd33f0b578d41b356d6e8e7d1a9c41336d
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: a172018d136df39c0eb27d8f19b17c783524fe0c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098592"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664203"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>Создание файлов переменных значений (SybaseToSQL)
 Файл переменных значение является XML-файл, состоящий из значений параметра команды, имя сервера источника или назначения, которые часто изменяются в зависимости от одного сервера миграции. При возникновении большое количество миграцию баз данных, несколько файлов переменной для хранения значения каждого исходного сервера создается, на которые ссылается файл скрипта базы данных master с **– v** переключиться в командной строке. Это помогает в поддержании статических значений в нескольких файлах скриптов, если значения переменных в нескольких файлах переменной.  
@@ -94,5 +94,5 @@ ms.locfileid: "50098592"
 Следующий шаг в работе консоли — [Создание файлов подключения к серверу &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
 ## <a name="see-also"></a>См. также  
-[Создание файлов к серверу (Sybase)](http://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
+[Создание файлов к серверу (Sybase)](https://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
   

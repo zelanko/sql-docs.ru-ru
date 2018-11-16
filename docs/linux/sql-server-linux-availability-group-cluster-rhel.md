@@ -10,23 +10,23 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c828c2345bf87461ba924cbdd23eb262336d1dcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715462"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670823"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Настройка кластера RHEL для группы доступности SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом документе объясняется, как создать кластер группа доступности с тремя узлами для SQL Server в Red Hat Enterprise Linux. Для обеспечения высокой доступности группы доступности в Linux требует трех узлов — см. в разделе [высокий уровень доступности и защиты данных для конфигураций группы доступности](sql-server-linux-availability-group-ha.md). Кластеризации уровень основан на Red Hat Enterprise Linux (RHEL) [дополнение HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) создаются на основе [Pacemaker](http://clusterlabs.org/). 
+В этом документе объясняется, как создать кластер группа доступности с тремя узлами для SQL Server в Red Hat Enterprise Linux. Для обеспечения высокой доступности группы доступности в Linux требует трех узлов — см. в разделе [высокий уровень доступности и защиты данных для конфигураций группы доступности](sql-server-linux-availability-group-ha.md). Кластеризации уровень основан на Red Hat Enterprise Linux (RHEL) [дополнение HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) создаются на основе [Pacemaker](https://clusterlabs.org/). 
 
 > [!NOTE] 
 > Доступ к полной документации Red Hat требуется действующая подписка. 
 
-Дополнительные сведения о конфигурации кластера, параметры агентов ресурсов и управления, см. в статье [RHEL справочная документация по](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Дополнительные сведения о конфигурации кластера, параметры агентов ресурсов и управления, см. в статье [RHEL справочная документация по](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server не интегрированы настолько, насколько это Pacemaker в Linux как в отказоустойчивой кластеризации Windows Server. Экземпляр SQL Server неизвестно кластера. Pacemaker обеспечивает согласование ресурсов кластера. Кроме того имя виртуальной сети для отказоустойчивого кластера Windows Server — не имеет эквивалента в Pacemaker. Доступность группы динамические административные представления (DMV), к которым запрос сведений о кластере возвращать пустые строки в кластерах Pacemaker. Чтобы создать прослушиватель для прозрачного переподключения после отработки отказа, вручную Зарегистрируйте имя прослушивателя в DNS с помощью IP-адрес, используемый для создания виртуальный IP-адрес. 
@@ -58,7 +58,7 @@ ms.locfileid: "47715462"
 
 ### <a name="enable-the-high-availability-subscription-for-rhel"></a>Активация подписки высокого уровня доступности для RHEL
 
-Каждый узел кластера должен иметь соответствующая подписка для RHEL и высокий уровень доступности, добавьте. Ознакомьтесь с требованиями в [Установка высокого уровня доступности кластера пакетов в Red Hat Enterprise Linux](http://access.redhat.com/solutions/45930). Выполните следующие действия для настройки подписки и репозитории.
+Каждый узел кластера должен иметь соответствующая подписка для RHEL и высокий уровень доступности, добавьте. Ознакомьтесь с требованиями в [Установка высокого уровня доступности кластера пакетов в Red Hat Enterprise Linux](https://access.redhat.com/solutions/45930). Выполните следующие действия для настройки подписки и репозитории.
 
 1. Зарегистрируйте систему.
 
@@ -88,7 +88,7 @@ ms.locfileid: "47715462"
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-Дополнительные сведения см. в разделе [высокий уровень доступности кластера Pacemaker — Open Source,](http://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+Дополнительные сведения см. в разделе [высокий уровень доступности кластера Pacemaker — Open Source,](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
 
 После настройки подписки, выполните следующие действия, чтобы настроить Pacemaker.
 
@@ -110,9 +110,9 @@ ms.locfileid: "47715462"
 
 Сведения о STONITH и ограждения см. в разделе со следующими статьями:
 
-* [Pacemaker кластеры с нуля](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
-* [Ограждения и STONITH](http://clusterlabs.org/doc/crm_fencing.html)
-* [Red Hat надстройку высокого уровня доступности с Pacemaker: ограждения](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Pacemaker кластеры с нуля](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [Ограждения и STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+* [Red Hat надстройку высокого уровня доступности с Pacemaker: ограждения](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 Поскольку уровень узла ограждения конфигурации во многом зависит от среды, отключите его в этом руководстве (его можно настроить позже). Следующий скрипт отключает ограждения уровня узла:
 
@@ -149,7 +149,7 @@ pcs resource update ag1 meta failure-timeout=60s
 ```
 
 
-Сведения о свойствах кластера Pacemaker, см. в разделе [свойства кластеров Pacemaker](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
+Сведения о свойствах кластера Pacemaker, см. в разделе [свойства кластеров Pacemaker](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Создание имени входа SQL Server для Pacemaker
 

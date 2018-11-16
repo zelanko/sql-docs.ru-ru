@@ -44,8 +44,8 @@
    В следующем примере показан файл `/etc/hosts` на узле **node1** с дополнениями для узлов **node1**, **node2** и **node3**. В этом документе **node1** ссылается на сервер, на котором размещена первичная реплика. И **node2** и **node3** ссылаться на серверы, на которых размещены вторичные реплики.
 
     ```
-    127.0.0.1   localhost localhost4 localhost4.localdomain4
-    ::1       localhost localhost6 localhost6.localdomain6
+    127.0.0.1   localhost localhost4 localhost4.localdomain4
+    ::1       localhost localhost6 localhost6.localdomain6
     10.128.18.12 node1
     10.128.16.77 node2
     10.128.15.33 node3
@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-Дополнительные сведения о сеансах см. в разделе [расширенные события AlwaysOn](http://msdn.microsoft.com/library/dn135324.aspx).
+Дополнительные сведения о сеансах см. в разделе [расширенные события AlwaysOn](https://msdn.microsoft.com/library/dn135324.aspx).
 
 ## <a name="create-a-certificate"></a>Создание сертификата
 
@@ -166,6 +166,6 @@ TCP-порт в брандмауэре должен быть открыт для
 >[!IMPORTANT]
 >Для выпуска SQL Server 2017, единственного способа проверки подлинности поддерживается для конечной точки зеркального отображения базы данных является `CERTIFICATE`. `WINDOWS` Параметр будет добавлена в будущем выпуске.
 
-Дополнительные сведения см. в статье [Конечная точка зеркального отображения базы данных (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+Дополнительные сведения см. в статье [Конечная точка зеркального отображения базы данных (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx).
 
 

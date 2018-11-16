@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 565217e494b753ee22c2fa3715f17108a9fab5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be6edd514530acca7ac79cebf959a09d20562ac5
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638312"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350648"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Поставщик Microsoft OLE DB для ODBC-Обзор
 Для использования программистами ADO или служб удаленных рабочих СТОЛОВ идеальном мире бы один, в котором каждый источник предоставляет интерфейс OLE DB таким образом, ADO может вызывать непосредственно в источнике данных. Несмотря на то, что все чаще других поставщиков базы данных при реализации интерфейсов OLE DB, некоторые источники данных не еще доступны таким образом. Однако большинство систем СУБД, в настоящее время может осуществляться через ODBC.
@@ -227,7 +227,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="dynamic-properties"></a>Динамические свойства
  Поставщик Microsoft OLE DB для ODBC вставляет несколько динамических свойств в **свойства** коллекцию неоткрытый [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [Команда](../../../ado/reference/ado-api/command-object-ado.md) объектов.
 
- В следующих таблицах представлены cross-index имен ADO и OLE DB для каждого динамического свойства. Справочник программиста OLE DB по указано имя свойства ADO с термином «Description». Дополнительные сведения об этих свойствах можно найти в справочнике программиста OLE DB. Найдите имя свойства OLE DB в индексе или см. в разделе [приложение C: OLE DB свойства](http://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ В следующих таблицах представлены cross-index имен ADO и OLE DB для каждого динамического свойства. Справочник программиста OLE DB по указано имя свойства ADO с термином «Description». Дополнительные сведения об этих свойствах можно найти в справочнике программиста OLE DB. Найдите имя свойства OLE DB в индексе или см. в разделе [приложение C: OLE DB свойства](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## <a name="connection-dynamic-properties"></a>Динамические свойства подключения
  Следующие свойства добавляются к **подключения** объекта **свойства** коллекции.
@@ -429,7 +429,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Возможности обновления|DBPROP_UPDATABILITY|
 |Использование закладок|DBPROP_BOOKMARKS|
 
- Сведения о реализации и функционального сведения о поставщике Microsoft OLE DB для ODBC, см. в разделе [Справочник программиста OLE DB по](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) или посетите узел доступа к данным и веб-хранилища в центре разработчиков на сайте MSDN.
+ Сведения о реализации и функционального сведения о поставщике Microsoft OLE DB для ODBC, см. в разделе [Справочник программиста OLE DB по](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) или посетите узел доступа к данным и веб-хранилища в центре разработчиков на сайте MSDN.
 
 ## <a name="see-also"></a>См. также
  [Команда объект (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [свойство CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [выполнения Метод (объект Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md) [(объект Recordset ADO) метод Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) [коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Свойство provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [поддерживает метод](../../../ado/reference/ado-api/supports-method.md)

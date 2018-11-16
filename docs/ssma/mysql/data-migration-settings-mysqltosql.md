@@ -10,19 +10,19 @@ ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: cc8849c19adb9e372c0c74d2f213e77ff4e7407d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90f76ef4d52fd5a1b7ed04d268954d0fed756324
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643032"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681152"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Параметры миграции данных (MySQLToSQL)
   
 ## <a name="data-migration-settings"></a>Параметры миграции данных  
 **Параметры миграции данных** позволяет пользователю создавать пользовательские запросы для переноса данных.  
   
--   Эта вкладка доступна, когда **расширенных параметров переноса данных** присваивается **Показать** , отображается, если параметр имеет значение **скрыть** в параметрах проекта. Дополнительные сведения о параметрах проекта миграции см. в разделе [параметры проекта (миграция)](http://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9) .  
+-   Эта вкладка доступна, когда **расширенных параметров переноса данных** присваивается **Показать** , отображается, если параметр имеет значение **скрыть** в параметрах проекта. Дополнительные сведения о параметрах проекта миграции см. в разделе [параметры проекта (миграция)](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9) .  
   
 -   Синтаксический анализ инструкций Custom SQL будут реализованы в **параметры миграции данных** вкладке узел таблицы.  
   
@@ -53,5 +53,5 @@ ms.locfileid: "47643032"
 -   **Отмена:** щелкните **отменить** восстановления присутствует параметров, прежде чем были внесены изменения.  
   
 ## <a name="see-also"></a>См. также  
-[Перенос данных MySQL в SQL Server/SQL Azure](http://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
+[Перенос данных MySQL в SQL Server/SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
   

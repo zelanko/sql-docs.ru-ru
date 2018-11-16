@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b480c400ae2068bb6701192e77d97672ddeb024e
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 5f770ce536dcbc29245d1b6e853a2548ab1ec744
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254450"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701452"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Распространенные проблемы со службой панели запуска и выполнения внешних скриптов в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
  Служба запуска доверенного SQL Server поддерживает выполнение внешнего скрипта R и Python. В SQL Server 2016 R Services с пакетом обновления 1 предоставляет службу. SQL Server 2017 включает в себя выдаются панели запуска в процессе установки начальные.
 
-Несколько проблемы могут препятствовать панели запуска с начала, включая проблемы с конфигурацией или изменения или отсутствуют сетевые протоколы. В этой статье содержатся рекомендации по устранению неполадок для многих проблем. Для любого мы пропустили, вы можете публиковать вопросы для [Machine Learning Server форум](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR).
+Несколько проблемы могут препятствовать панели запуска с начала, включая проблемы с конфигурацией или изменения или отсутствуют сетевые протоколы. В этой статье содержатся рекомендации по устранению неполадок для многих проблем. Для любого мы пропустили, вы можете публиковать вопросы для [Machine Learning Server форум](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR).
 
 **Применяется к:** служб R SQL Server 2016, SQL Server 2017 службы машинного обучения
 

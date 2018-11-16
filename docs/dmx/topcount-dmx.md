@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e67e1e408186e78f00c4b54399fb2e87ac673541
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989859"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601744"
 ---
 # <a name="topcount-dmx"></a>TopCount (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  Тем не менее существуют ситуации, где может по-прежнему необходимо использовать TopCount. Например, расширения интеллектуального анализа данных не поддерживает **ВЕРХНЕЙ** квалификатор в инструкции подзапроса выборки. [PredictHistogram &#40;расширений интеллектуального анализа данных&#41; ](../dmx/predicthistogram-dmx.md) функция также поддерживает добавление **ВЕРХНЕЙ**.  
   
 ## <a name="examples"></a>Примеры  
- Следующие примеры являются прогнозирующими запросами к модели взаимосвязей, построенной с помощью [основам интеллектуального анализа данных](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Запросы возвращают одинаковые результаты, но в первом примере используется TopCount во втором примере использует функцию Predict.  
+ Следующие примеры являются прогнозирующими запросами к модели взаимосвязей, построенной с помощью [основам интеллектуального анализа данных](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Запросы возвращают одинаковые результаты, но в первом примере используется TopCount во втором примере использует функцию Predict.  
   
  Чтобы понять, как работает TopCount, может оказаться полезным будет сначала выполнить прогнозирующий запрос, который возвращает только вложенную таблицу.  
   

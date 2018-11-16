@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: dedd8b0c51176d64f4f65b27bd90f747f8690859
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252012"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674204"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Развертывание контейнера SQL Server в Kubernetes с помощью службы Azure Kubernetes (AKS)
 
@@ -33,11 +33,11 @@ ms.locfileid: "48252012"
 
 ## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>Решения высокой ДОСТУПНОСТИ на платформе Kubernetes, запущенные в службе Azure Kubernetes
 
-Kubernetes 1.6 и более поздних версий имеется поддержка [классы хранения](http://kubernetes.io/docs/concepts/storage/storage-classes/), [утверждения постоянного тома](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)и [тип тома дисков Azure](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). Можно создать и управлять экземплярами SQL Server непосредственно на платформе Kubernetes. Пример в этой статье показано, как создать [развертывания](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) для достижения высокого уровня доступности конфигурации, аналогичную экземпляра отказоустойчивого кластера общий диск. В этой конфигурации Kubernetes играет роль оркестратора кластера. При сбое экземпляру SQL Server в контейнере, orchestrator обеспечивает начальную загрузку другой экземпляр контейнера, который подключается к тем же постоянное хранилище.
+Kubernetes 1.6 и более поздних версий имеется поддержка [классы хранения](https://kubernetes.io/docs/concepts/storage/storage-classes/), [утверждения постоянного тома](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)и [тип тома дисков Azure](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). Можно создать и управлять экземплярами SQL Server непосредственно на платформе Kubernetes. Пример в этой статье показано, как создать [развертывания](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) для достижения высокого уровня доступности конфигурации, аналогичную экземпляра отказоустойчивого кластера общий диск. В этой конфигурации Kubernetes играет роль оркестратора кластера. При сбое экземпляру SQL Server в контейнере, orchestrator обеспечивает начальную загрузку другой экземпляр контейнера, который подключается к тем же постоянное хранилище.
 
 ![Схема кластера Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-На предыдущей схеме `mssql-server` — это контейнер в [pod](http://kubernetes.io/docs/concepts/workloads/pods/pod/). Kubernetes управляет ресурсами кластера. Объект [реплика](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) гарантирует, что модуль автоматическое восстановление после сбоя узла. Приложения подключаются к службе. В этом случае служба представляет подсистему балансировки нагрузки, на котором размещена IP-адресом, которое изменяется после выхода из строя `mssql-server`.
+На предыдущей схеме `mssql-server` — это контейнер в [pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/). Kubernetes управляет ресурсами кластера. Объект [реплика](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) гарантирует, что модуль автоматическое восстановление после сбоя узла. Приложения подключаются к службе. В этом случае служба представляет подсистему балансировки нагрузки, на котором размещена IP-адресом, которое изменяется после выхода из строя `mssql-server`.
 
 На следующей схеме `mssql-server` сбой контейнер. Как orchestrator Kubernetes гарантирует правильное количество работоспособных экземпляров в реплике задать и запускает контейнер в соответствии с конфигурацией. Оркестратор начинает новый pod на одном узле, и `mssql-server` повторно подключается к тем же постоянное хранилище. Служба подключается к создан повторно `mssql-server`.
 
@@ -52,7 +52,7 @@ Kubernetes 1.6 и более поздних версий имеется подд
 * **Кластер Kubernetes**
    - Руководства требуется кластер Kubernetes. В действиях используется [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) для управления кластером. 
 
-   - См. в разделе [развертывание кластера службы контейнеров Azure (AKS)](http://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) для создания и подключения к кластеру Kubernetes в AKS при помощи одного узла `kubectl`. 
+   - См. в разделе [развертывание кластера службы контейнеров Azure (AKS)](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) для создания и подключения к кластеру Kubernetes в AKS при помощи одного узла `kubectl`. 
 
    >[!NOTE]
    >Для защиты от сбоя узла, кластер Kubernetes требует более чем на одном узле.
@@ -62,7 +62,7 @@ Kubernetes 1.6 и более поздних версий имеется подд
 
 ## <a name="create-an-sa-password"></a>Создать пароль SA
 
-Создайте пароль SA в кластере Kubernetes. Kubernetes можно управлять сведения конфиденциальные данные, такие как пароли, как [секреты](http://kubernetes.io/docs/concepts/configuration/secret/).
+Создайте пароль SA в кластере Kubernetes. Kubernetes можно управлять сведения конфиденциальные данные, такие как пароли, как [секреты](https://kubernetes.io/docs/concepts/configuration/secret/).
 
 Следующая команда создает пароль для учетной записи SA:
 
@@ -77,9 +77,9 @@ Kubernetes 1.6 и более поздних версий имеется подд
 
 ## <a name="create-storage"></a>Создание хранилища
 
-Настройка [постоянного тома](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) и [утверждение постоянного тома](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) в кластере Kubernetes. Выполните следующие действия: 
+Настройка [постоянного тома](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) и [утверждение постоянного тома](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) в кластере Kubernetes. Выполните следующие действия: 
 
-1. Создайте манифест для определения класса хранения и постоянного тома утверждения.  Манифест задает средство подготовки хранилища, параметры, и [освободить политики](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming). Кластер Kubernetes этот манифест используется для создания постоянного хранилища. 
+1. Создайте манифест для определения класса хранения и постоянного тома утверждения.  Манифест задает средство подготовки хранилища, параметры, и [освободить политики](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming). Кластер Kubernetes этот манифест используется для создания постоянного хранилища. 
 
    В следующем примере yaml определяет класс хранения и утверждение постоянного тома. Средство подготовки класс хранения является `azure-disk`, поскольку в этом кластере Kubernetes в Azure. Тип учетной записи хранения `Standard_LRS`. Утверждение постоянного тома называется `mssql-data`. Включает в себя метаданные утверждение постоянного тома заметки подключении его обратно в класс хранения. 
 
@@ -155,7 +155,7 @@ Kubernetes 1.6 и более поздних версий имеется подд
 
 В этом примере экземпляр SQL Server для размещения контейнеров описан как объект развертывания Kubernetes. В результате развертывания создается набор реплик. Реплика создается pod. 
 
-На этом шаге создайте манифест для описания контейнера на основе SQL Server [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) образа Docker. Манифеста ссылки `mssql-server` утверждение постоянного тома и `mssql` секрет, который вы уже применили к кластеру Kubernetes. В манифесте также описывается [службы](http://kubernetes.io/docs/concepts/services-networking/service/). Эта служба — это балансировщик нагрузки. Подсистема балансировки нагрузки гарантирует, что IP-адрес сохраняется после восстановления экземпляра SQL Server. 
+На этом шаге создайте манифест для описания контейнера на основе SQL Server [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) образа Docker. Манифеста ссылки `mssql-server` утверждение постоянного тома и `mssql` секрет, который вы уже применили к кластеру Kubernetes. В манифесте также описывается [службы](https://kubernetes.io/docs/concepts/services-networking/service/). Эта служба — это балансировщик нагрузки. Подсистема балансировки нагрузки гарантирует, что IP-адрес сохраняется после восстановления экземпляра SQL Server. 
 
 1. Создайте манифест (yaml-файл) для описания развертывания. В следующем примере описывается развертывание, включая контейнер, основанный на образ контейнера SQL Server.
 
@@ -212,7 +212,7 @@ Kubernetes 1.6 и более поздних версий имеется подд
    * `value: "Developer"`: Задает контейнер для запуска SQL Server Developer edition. Выпуск Developer edition не лицензирован для производственных данных. Если для использования в рабочей среде развертывания, задайте соответствующий выпуск (`Enterprise`, `Standard`, или `Express`). 
 
       >[!NOTE]
-      >Дополнительные сведения см. в разделе [как лицензии SQL Server](http://www.microsoft.com/sql-server/sql-server-2017-pricing).
+      >Дополнительные сведения см. в разделе [как лицензии SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
    * `persistentVolumeClaim`— Это значение требуется запись для `claimName:` , сопоставляется с именем, используется для утверждения постоянного тома. В этом руководстве используется `mssql-data`. 
 
@@ -275,9 +275,9 @@ Kubernetes 1.6 и более поздних версий имеется подд
 
 Следующие приложения можно использовать для подключения к экземпляру SQL Server. 
 
-* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
+* [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
 
-* [SSDT](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
    
@@ -327,6 +327,6 @@ Kubernetes автоматически повторно создает pod для
 ## <a name="next-steps"></a>Следующие шаги
 
 > [!div class="nextstepaction"]
->[Общие сведения о Kubernetes](http://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Общие сведения о Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 
 

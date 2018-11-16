@@ -17,12 +17,12 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc084a4fc2d5448efce8721c426ce78a4bb18a76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c1a53f8c310f43503b7dde8c85beb862a66e953
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655522"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606688"
 ---
 # <a name="open-method-ado-recordset"></a>Метод Open (объект Recordset ADO)
 Открывает курсор на [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -61,7 +61,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  С помощью **откройте** метод **записей** открывается курсор, который представляет записей из базовой таблицы, результаты запроса, или ранее сохраненному **записей**.  
   
- Используйте необязательный *источника* аргумент, чтобы указать источник данных, с помощью одного из следующих: **команда** объектной переменной, инструкции SQL, хранимой процедуры, имя таблицы, URL-адрес или полное путь имя файла. Если *источника* — это путь к имени файла, он может быть полный путь («c:\dir\file.rst»), относительный путь (».. \file.RST»), или URL-адрес (» http://files/file.rst«).  
+ Используйте необязательный *источника* аргумент, чтобы указать источник данных, с помощью одного из следующих: **команда** объектной переменной, инструкции SQL, хранимой процедуры, имя таблицы, URL-адрес или полное путь имя файла. Если *источника* — это путь к имени файла, он может быть полный путь («c:\dir\file.rst»), относительный путь (».. \file.RST»), или URL-адрес (» https://files/file.rst«).  
   
  Не рекомендуется использовать *источника* аргумент **откройте** метод для выполнения запроса, не возвращающих записи, так как нет простого способа определить, успешно ли выполнен вызов. **Записей** возвращается такой запрос будет закрыт. Чтобы выполнить запрос, который не возвращает записи, например инструкцию SQL INSERT, вызовите [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) метод **команда** объекта или [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) метод [Подключения](../../../ado/reference/ado-api/connection-object-ado.md) вместо этого объекта.  
   

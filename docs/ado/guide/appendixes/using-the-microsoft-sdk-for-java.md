@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 02/15/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edab19ee8b3ae4eee186835d25220ee638c41149
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab4aaed1cfd661d38476c81f8bdc3dcab3aa0f88
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786922"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350498"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Использование пакета Microsoft SDK для Java
 
@@ -38,13 +38,13 @@ Microsoft SDK для Java представляет собой набор раз�
   
 1.  Выполните следующую команду в командной строке. Необходимо задать путь для включения пакета SDK Microsoft для каталога Java Bin, или выполните команду из этого расположения. Как правило в том же расположении, что Visual Studio устанавливается Microsoft SDK для Java. Это инструкция одной команды.  
   
-    ```  
+    ```java
     \<path to DevStudio>\<path to Java SDK>\bin\JactiveX.exe /javatlb "C:\program files\common files\system\ado\msado15.dll"  
     ```  
   
 2.  Выполните следующую команду для компиляции созданных классов. Параметр /g:t включает создание отладочных символов таким образом, вы можете отслеживать в. Символы Java. Удалите для сборок выпуска.  
   
-    ```  
+    ```java
     jvc /g:t c:\<windows>\Java\trustlib\msado15\*.Java  
     ```  
   

@@ -23,12 +23,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 081a43863385ced49fa1863c4667c8b435be6f99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d44d8031daaac656cb99a7477991dc6c30ce864
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698432"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666513"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Системные хранимые процедуры (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47698432"
   
 |Категория|Описание|  
 |--------------|-----------------|  
-|[Активная Георепликация хранимых процедур](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Используется для управления для управления конфигурациями активной Георепликации в базе данных SQL Azure|  
+|[Активная Георепликация хранимых процедур](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Используется для управления для управления конфигурациями активной Георепликации в базе данных SQL Azure|  
 |[Хранимые процедуры каталога](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Используются для реализации функций словаря данных ODBC и изоляции ODBC-приложений от изменений во внутренних системных таблицах.|  
 |[Хранимые процедуры системы отслеживания измененных данных](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Используются для включения, отключения или подготовки отчетов об объектах системы отслеживания измененных данных.|  
 |[Хранимые процедуры курсора](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Используются для реализации переменной функциональности курсоров.|  
@@ -48,7 +48,7 @@ ms.locfileid: "47698432"
 |[Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|Используются для работы с электронной почтой в пределах экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Хранимые процедуры плана обслуживания базы данных](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|Используются для выполнения основных задач, необходимых для управления производительностью базы данных.|  
 |[Хранимые процедуры распределенных запросов](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Используются для реализации распределенных запросов и управления ими.|  
-|[FileStream и хранимые процедуры FileTable &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Используется для настройки и управления функциями FILESTREAM и FileTable.|  
+|[FileStream и хранимые процедуры FileTable &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Используется для настройки и управления функциями FILESTREAM и FileTable.|  
 |[Хранимые процедуры правил брандмауэра &#40;база данных Azure SQL&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Используется для настройки брандмауэра базы данных SQL Azure.|  
 |[Компонент Full-Text Search хранимых процедур](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Используются для создания полнотекстовых индексов и запросов к ним.|  
 |[Общие расширенные хранимые процедуры](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|Используются, чтобы предоставить внешним программам интерфейс к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения различных задач обслуживания.|  
@@ -56,16 +56,16 @@ ms.locfileid: "47698432"
 |[Хранимые процедуры хранилища данных управления &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Используется для настройки хранилища данных управления.|  
 |[OLE Automation хранимых процедур](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Используются, чтобы включить стандартные объекты OLE-автоматизации использования в стандартном пакете [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[Хранимые процедуры управления на основе политик](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Используется для управления на основе политики.|  
-|[Хранимые процедуры PolyBase](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Добавление или удаление компьютера из группы горизонтального масштабирования PolyBase.|  
+|[Хранимые процедуры PolyBase](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Добавление или удаление компьютера из группы горизонтального масштабирования PolyBase.|  
 |[Query Store хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Используется для настройки производительности.|  
 |[Хранимые процедуры репликации](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Используются для управления репликацией.|  
 |[Безопасность хранимых процедур](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|Используются для управления безопасностью.|  
-|[Моментальный снимок резервной копии хранимых процедур](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Используется для удаления резервной копии FILE_SNAPSHOT, а также все его моментальные снимки или удаления отдельных файла резервной копии моментальных снимков.|  
-|[Хранимые процедуры пространственного индекса](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Используется для анализа и улучшения производительности индексирования пространственных индексов.|  
+|[Моментальный снимок резервной копии хранимых процедур](https://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Используется для удаления резервной копии FILE_SNAPSHOT, а также все его моментальные снимки или удаления отдельных файла резервной копии моментальных снимков.|  
+|[Хранимые процедуры пространственного индекса](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Используется для анализа и улучшения производительности индексирования пространственных индексов.|  
 |[Агент SQL Server хранимых процедур](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|Используются приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для наблюдения за производительностью и активностью.|  
 |[SQL Server Profiler хранимых процедур](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|Используются агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для управления запланированных или зависящих от событий действий.|  
 |[Stretch Database хранимых процедур](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Используется для управления базами данных stretch.|  
-|[Темпоральные таблицы хранимых процедур](http://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Используйте для темпоральных таблиц|  
+|[Темпоральные таблицы хранимых процедур](https://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Используйте для темпоральных таблиц|  
 |[Хранимые процедуры XML](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|Используются для работы с текстом в формате XML.|  
   
 > [!NOTE]  

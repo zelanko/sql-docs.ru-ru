@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 74a6b4780aab192e09b24f385ac5357c2515a5fc
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419269"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677923"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Устранение неполадок в SQL Server в Linux
 
@@ -118,9 +118,9 @@ ms.locfileid: "49419269"
 Для дампов ядра 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-Для дампов SQL 
+For SQL dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -207,7 +207,7 @@ ms.locfileid: "49419269"
 
 2. Ошибка: Имя узла должно быть 15 символов или меньше.
 
-   Это известные проблема, которая происходит всякий раз, когда имя компьютера, на котором выполняется попытка установки SQL Server пакет Debian длиннее 15 символов. В настоящее время не существует обходных путей Кроме изменение имени компьютера. Одним из способов добиться этого является редактирования файла имя узла и перезагрузить компьютер. Следующие [руководство по веб-сайт](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) это раздел содержит подробное описание.
+   Это известные проблема, которая происходит всякий раз, когда имя компьютера, на котором выполняется попытка установки SQL Server пакет Debian длиннее 15 символов. В настоящее время не существует обходных путей Кроме изменение имени компьютера. Одним из способов добиться этого является редактирования файла имя узла и перезагрузить компьютер. Следующие [руководство по веб-сайт](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) это раздел содержит подробное описание.
 
 3. Сбросить пароль системного администрирования (SA).
 
@@ -239,7 +239,7 @@ ms.locfileid: "49419269"
    sqlcmd -S myserver -U sa -P Test\$\$
    ```
 
-   Ресурсы: [специальные символы](http://tldp.org/LDP/abs/html/special-chars.html)
-   [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
+   Ресурсы: [специальные символы](https://tldp.org/LDP/abs/html/special-chars.html)
+   [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

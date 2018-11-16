@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e03932fe9d6cc98648c2e0da2e2cdd963a8d67f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c247ab2681f2ff1b0891c15e0348a088f08e42c1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826142"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677583"
 ---
 # <a name="driver-manager-connection-pooling"></a>Организация пулов соединений диспетчера драйверов
 Организация пулов соединений позволяет приложению использовать соединение из пула подключений, которые не нужно заново установить для каждого использования. После подключения создан и помещен в пул, приложение можно повторно использовать это подключение без выполнения полного процесса.  
@@ -59,11 +59,11 @@ ms.locfileid: "47826142"
     > [!NOTE]  
     >  Сопоставления запрошенного подключения соединение из пула, определяется атрибут SQL_ATTR_CP_MATCH среды. Дополнительные сведения см. в разделе [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
   
-     Использование пулов соединений приложения ODBC должны вызывать метод [CoInitializeEx](http://go.microsoft.com/fwlink/?LinkID=116307) во время инициализации приложения и [CoUninitialize](http://go.microsoft.com/fwlink/?LinkId=116310) при закрытии приложения.  
+     Использование пулов соединений приложения ODBC должны вызывать метод [CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307) во время инициализации приложения и [CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310) при закрытии приложения.  
   
 5.  Вызовы **SQLDisconnect** завершении с соединением. Соединение возвращается в пул подключений и становится доступным для повторного использования.  
   
- Приводится подробное описание см. в разделе [пула в Microsoft Data Access Components](http://go.microsoft.com/fwlink/?LinkId=120776).  
+ Приводится подробное описание см. в разделе [пула в Microsoft Data Access Components](https://go.microsoft.com/fwlink/?LinkId=120776).  
   
 ## <a name="connection-pooling-considerations"></a>Объединение подключений в пул вопросы  
  Выполнить какие-либо из следующих действий, с помощью команды SQL (а не через API-Интерфейс ODBC) могут повлиять на состояние подключения и вызывать непредвиденные проблемы при активном организация пулов соединений:  
@@ -85,4 +85,4 @@ ms.locfileid: "47826142"
 ## <a name="see-also"></a>См. также  
  [Подключение к данным источника или драйвер](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Создание пулов в Microsoft Data Access Components](http://go.microsoft.com/fwlink/?LinkId=120776)
+ [Создание пулов в Microsoft Data Access Components](https://go.microsoft.com/fwlink/?LinkId=120776)

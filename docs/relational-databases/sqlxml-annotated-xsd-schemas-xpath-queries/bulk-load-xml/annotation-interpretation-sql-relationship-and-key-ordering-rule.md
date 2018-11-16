@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e247e2bf49c9fcf0c6eb211bd9c83b6444118f17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab60a5cae291c307b0717b2d90409e26b835327f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808162"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675303"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Интерпретация заметки — sql:relationship и правило упорядочения ключа
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47808162"
  Рассмотрим следующую схему XSD, в котором отношение "один ко многим" между  **\<клиента >** и  **\<порядок >** является элементов (один клиент может разместить много заказов) с помощью  **\<SQL: Relationship >** элемент:  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"<>   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

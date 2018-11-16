@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: a8a4cd22d4637c2d6fd86bf61d25c16dda728394
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 21034e0e7ae4e84d245d12b631c96c41760c46c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753591"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658816"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server в Linux с помощью средства mssql-conf
 
@@ -148,7 +148,7 @@ ms.locfileid: "50753591"
    sudo systemctl restart mssql-server
    ```
 
-Дополнительные сведения см. в разделе [отзывы по SQL Server в Linux](sql-server-linux-customer-feedback.md) и [заявление о конфиденциальности SQL Server](http://go.microsoft.com/fwlink/?LinkID=868444).
+Дополнительные сведения см. в разделе [отзывы по SQL Server в Linux](sql-server-linux-customer-feedback.md) и [заявление о конфиденциальности SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## <a id="datadir"></a> Изменение расположения каталога данных или журнала по умолчанию
 
@@ -506,7 +506,7 @@ sudo systemctl restart mssql-server
 
 В дополнение к настройке этих значений, необходимо также настроить маршрутизацию и обновить брандмауэр для порта 135. Дополнительные сведения о том, как это сделать, см. в разделе [настройка MSDTC на Linux](sql-server-linux-configure-msdtc.md).
 
-Существует несколько других параметров для mssql-conf, который можно использовать для наблюдения и диагностики MSDTC. В следующей таблице кратко описаны эти параметры. Дополнительные сведения по их использованию см. сведения в статье службы поддержки Windows, [как включить диагностическую трассировку для MS DTC](https://support.microsoft.com/en-us/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
+Существует несколько других параметров для mssql-conf, который можно использовать для наблюдения и диагностики MSDTC. В следующей таблице кратко описаны эти параметры. Дополнительные сведения по их использованию см. сведения в статье службы поддержки Windows, [как включить диагностическую трассировку для MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
 | параметр MSSQL-conf | Описание |
 |---|---|

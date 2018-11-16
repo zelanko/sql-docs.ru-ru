@@ -10,12 +10,12 @@ ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 20e52c835d54ec1cac31e1821bfe49876683e324
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3df0803e7c4d86126077b716a2a66ebab3379b9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631272"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657294"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Загрузка преобразованных объектов базы данных, в SQL Server (DB2ToSQL)
 После преобразования схем DB2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно иметь SSMA создания объектов, или можно внести в скрипт объекты и запускать сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные с фактическое содержимое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных.  
@@ -104,7 +104,7 @@ ms.locfileid: "47631272"
 После загрузки объекты преобразованный базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно предоставлять и запрещать разрешения для этих объектов. Рекомендуется сделать это перед миграцией данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о способах обеспечения безопасности объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе «Безопасность вопросы для баз данных и базы данных приложений» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующий шаг в процессе миграции является [миграция данных DB2 в SQL Server](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
+Следующий шаг в процессе миграции является [миграция данных DB2 в SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
   
 ## <a name="see-also"></a>См. также  
 [Миграция данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  

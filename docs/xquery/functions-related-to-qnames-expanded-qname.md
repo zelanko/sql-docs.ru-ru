@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cbf18272b3cb8cfebd24f09c8ae33f50a18da4e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 898d2f0982ce5538f853335ea652891e7c390547
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739842"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670053"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Функции, связанные с QName — expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   Преобразование данных типа xs:QName type к любому другому типу не поддерживается в приложении [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. По этой причине **expanded-QName()** функция не может использоваться в XML-конструкции. Например при создании узла, такого как `<e> expanded-QName(…) </e>`, значение должно быть нетипизированным. Это потребовало бы преобразования значения типа xs:QName, возвращаемого функцией `expanded-QName()` к типу xdt:untypedAtomic. Однако это не поддерживается. Решение приведено далее в примере в этом же подразделе.  
   
--   Можно модифицировать или сравнить существующие значения типа QName. Например `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` сравнивает значение элемента <`e`>, с QName, возвращаемым **expanded-QName()** функции.  
+-   Можно модифицировать или сравнить существующие значения типа QName. Например `/root[1]/e[1] eq expanded-QName("https://nsURI" "myNS")` сравнивает значение элемента <`e`>, с QName, возвращаемым **expanded-QName()** функции.  
   
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбцов в [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных.  
@@ -71,8 +70,8 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 -- go  
 -- Create XML schema collection  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"  
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<schema xmlns="https://www.w3.org/2001/XMLSchema"  
+    xmlns:xs="https://www.w3.org/2001/XMLSchema"   
     targetNamespace="QNameXSD"   
       xmlns:xqo="QNameXSD" elementFormDefault="qualified">  
       <element name="Root" type="xqo:rootType" />  
@@ -87,7 +86,7 @@ go
 CREATE TABLE T( XmlCol xml(SC) )  
 -- Insert sample XML instnace  
 INSERT INTO T VALUES ('  
-<Root xmlns="QNameXSD" xmlns:ns="http://myURI">  
+<Root xmlns="QNameXSD" xmlns:ns="https://myURI">  
       <ElemQN>ns:someName</ElemQN>  
 </Root>')  
 go  
@@ -95,7 +94,7 @@ go
 SELECT * from T  
 go  
 -- Result  
-<Root xmlns="QNameXSD" xmlns:ns="http://myURI">  
+<Root xmlns="QNameXSD" xmlns:ns="https://myURI">  
   <ElemQN>ns:someName</ElemQN>  
 </Root>   
 ```  
@@ -108,7 +107,7 @@ UPDATE T
 SET XmlCol.modify('  
   declare default element namespace "QNameXSD";   
   replace value of /Root[1]/ElemQN   
-  with expanded-QName("http://myURI", "myLocalName") ')  
+  with expanded-QName("https://myURI", "myLocalName") ')  
 go  
 -- Verify the result  
 SELECT * from T  
@@ -119,7 +118,7 @@ go
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
-  <ElemQN xmlns:p1="http://myURI">p1:myLocalName</ElemQN>  
+  <ElemQN xmlns:p1="https://myURI">p1:myLocalName</ElemQN>  
 </Root>  
 ```  
   
@@ -144,7 +143,7 @@ go
 -- DROP XML SCHEMA COLLECTION SC  
 -- go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
       <element name="root" type="QName" nillable="true"/>  
 </schema>'  
 go  
@@ -152,7 +151,7 @@ go
 CREATE TABLE T (xmlCol XML(SC))  
 go  
 -- Insert an XML instance.  
-insert into T values ('<root xmlns:a="http://someURI">a:b</root>')  
+insert into T values ('<root xmlns:a="https://someURI">a:b</root>')  
  go  
 -- Verify  
 SELECT *   
@@ -163,7 +162,7 @@ FROM T
   
 ```  
 update T SET xmlCol.modify('  
-insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into / ')  
+insert <root>{expanded-QName("https://ns","someLocalName")}</root> as last into / ')  
 go  
 ```  
   
@@ -175,7 +174,7 @@ insert <root xsi:nil="true"/> as last into / ')
 go  
 -- now replace the nil value with another QName.  
 update T SET xmlCol.modify('  
-replace value of /root[last()] with expanded-QName("http://ns","someLocalName") ')  
+replace value of /root[last()] with expanded-QName("https://ns","someLocalName") ')  
 go  
  -- verify   
 SELECT * FROM T  
@@ -184,9 +183,9 @@ go
 <root>b</root>  
 ```  
   
- `<root xmlns:a="http://someURI">a:b</root>`  
+ `<root xmlns:a="https://someURI">a:b</root>`  
   
- `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
+ `<root xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:p1="https://ns">p1:someLocalName</root>`  
   
  Можно сравнить значение QName, как показано в следующем запросе. Запрос возвращает только <`root`> элементы, значения которых соответствуют QName типа значения, возвращенного **expanded-QName()** функции.  
   
@@ -194,7 +193,7 @@ go
 SELECT xmlCol.query('  
     for $i in /root  
     return  
-       if ($i eq expanded-QName("http://ns","someLocalName") ) then  
+       if ($i eq expanded-QName("https://ns","someLocalName") ) then  
           $i  
        else  
           ()')  
@@ -205,6 +204,6 @@ FROM T
  Существует одно ограничение: **expanded-QName()** функция принимает пустую последовательность в качестве второго аргумента и возвращает пустой не вызывает ошибку времени выполнения, если второй аргумент являются неверными.  
   
 ## <a name="see-also"></a>См. также  
- [Функции, связанные с QName &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [Функции, связанные с QName &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

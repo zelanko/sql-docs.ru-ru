@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a330c046d5e8398d03302863013ab9b0c1df37f
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
-ms.translationtype: HT
+ms.openlocfilehash: 9723a51154d0098271f8d3206c7f7a7470598422
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269967"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289924"
 ---
 # <a name="azure-data-studio-release-notes"></a>Заметки о выпуске Azure Data Studio
 
@@ -26,7 +26,6 @@ ms.locfileid: "51269967"
 Дата выпуска: 6 ноября 2018 г.  
 версия: 1.2.4
 
-- Общие сведения о компании Idera расширения
 - Обновление до [расширение предварительной версии SQL Server 2019 г.](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 - Знакомство с вставить расширение плана
 - Введение в запросы расширение High Color, включая темы редактора SSMS

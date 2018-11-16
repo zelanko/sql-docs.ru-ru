@@ -18,16 +18,16 @@ ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f68d08d4902e6bdcde291c75cb463d8f525a3eb3
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: a785d94bd777117055e71b9f46a6122baa8b9813
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217452"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675733"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>Метод SetEnable (класс ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Включает сетевой протокол клиента, который задается параметром [Настройка клиентских протоколов](http://technet.microsoft.com/library/ms181035.aspx).  
+  Включает сетевой протокол клиента, который задается параметром [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,6 +46,6 @@ object.SetEnableMethod()
 ## <a name="remarks"></a>Примечания  
   
 ## <a name="see-also"></a>См. также  
- [Настройка клиентских сетевых протоколов и сетевых библиотек](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Настройка клиентских сетевых протоколов и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

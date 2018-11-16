@@ -15,12 +15,12 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98de1a3a2e03a576b84543bf3578d87e7ad6c655
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657981"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350478"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Поставщик Microsoft OLE DB для Обзор SQL Server
 Поставщик Microsoft OLE DB для SQL Server, SQLOLEDB, позволяет ADO для доступа к Microsoft SQL Server.
@@ -30,7 +30,7 @@ ms.locfileid: "47657981"
 ## <a name="connection-string-parameters"></a>Параметры строки соединения
  Чтобы подключиться к этим поставщиком, задайте *поставщика* аргумент [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства:
 
-```
+```vb
 SQLOLEDB
 ```
 
@@ -39,7 +39,7 @@ SQLOLEDB
 ## <a name="typical-connection-string"></a>Типичная строка подключения
  — Строка соединения для данного поставщика:
 
-```
+```vb
 "Provider=SQLOLEDB;Data Source=serverName;"
 Initial Catalog=databaseName;
 User ID=MyUserID;Password=MyPassword;"
@@ -76,14 +76,14 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="command-object-usage"></a>Использование объекта Command
  SQLOLEDB принимает сочетание ODBC, ANSI и связанные с SQL Server Transact-SQL как допустимый синтаксис. Например, следующая инструкция SQL использует escape-последовательность ODBC SQL, чтобы указать строковую функцию LCASE.
 
-```
+```sql
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 
 ```
 
  Функция LCASE возвращает строковое выражение, в котором все символы приведены к нижнему регистру. Строковая функция ANSI SQL LOWER выполнит та же операция, поэтому следующая инструкция SQL является эквивалентно представленного выше инструкции ODBC ANSI:
 
-```
+```sql
 SELECT customerid=LOWER(CustomerID) FROM Customers
 
 ```
@@ -95,14 +95,14 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
 
 ## <a name="odbc-sql"></a>ODBC SQL
 
-```
+```vb
 {call SalesByCategory('Produce', '1995')}
 
 ```
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-```
+```sql
 EXECUTE SalesByCategory 'Produce', '1995'
 
 ```
@@ -135,7 +135,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="dynamic-properties"></a>Динамические свойства
  Поставщик Microsoft OLE DB для SQL Server вставляет несколько динамических свойств в **свойства** коллекцию неоткрытый [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [ Команда](../../../ado/reference/ado-api/command-object-ado.md) объектов.
 
- В следующих таблицах представлены cross-index имен ADO и OLE DB для каждого динамического свойства. Справочник программиста OLE DB по указано имя свойства ADO с термином «Description». Дополнительные сведения об этих свойствах можно найти в справочнике программиста OLE DB. Найдите имя свойства OLE DB в индексе или см. в разделе [приложение C: OLE DB свойства](http://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ В следующих таблицах представлены cross-index имен ADO и OLE DB для каждого динамического свойства. Справочник программиста OLE DB по указано имя свойства ADO с термином «Description». Дополнительные сведения об этих свойствах можно найти в справочнике программиста OLE DB. Найдите имя свойства OLE DB в индексе или см. в разделе [приложение C: OLE DB свойства](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## <a name="connection-dynamic-properties"></a>Динамические свойства подключения
  Следующие свойства добавляются к **свойства** коллекцию **подключения** объекта.
@@ -355,7 +355,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Корневой XML|SSPROP_STREAM_XMLROOT|
 |XSL|SSPROP_STREAM_XSL|
 
- Определенные сведения о реализации и функционального сведения о Microsoft Server поставщик OLE DB SQL, см. в разделе [поставщик SQL Server](http://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).
+ Определенные сведения о реализации и функционального сведения о Microsoft Server поставщик OLE DB SQL, см. в разделе [поставщик SQL Server](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).
 
 ## <a name="see-also"></a>См. также
  [Свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [свойство Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

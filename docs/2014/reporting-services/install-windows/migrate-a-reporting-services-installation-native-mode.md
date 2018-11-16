@@ -1,32 +1,23 @@
 ---
 title: Перенос установки служб Reporting Services (собственный режим) | Документация Майкрософт
-ms.custom: ''
-ms.date: 08/10/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- database-engine
-ms.topic: conceptual
-helpviewer_keywords:
-- manual Reporting Services migrations
-- Report Server Windows service
-- custom Reporting Services installations
-- automatic Reporting Services migrations
-- Reporting Services, upgrades
-- upgrading Reporting Services
-- migrating Reporting Services
-ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0c156dee6d76d9b83cdaa2cc7f1856e128d53186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.custom: ''
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.technology: database-engine
+ms.topic: conceptual
+ms.date: 08/10/2017
+ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082894"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604065"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Перенос установки служб Reporting Services (собственный режим)
+
   В этом разделе приводятся пошаговые инструкции, позволяющие выполнить миграцию одной из следующих поддерживаемых версий [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , развернутых в собственном режиме, в новый экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -77,7 +68,7 @@ ms.locfileid: "48082894"
   
  Установлены ограничения на выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на которых размещается база данных сервера отчетов. Ознакомьтесь со следующим разделом, если повторно используется база данных сервера отчетов, которая была создана в предыдущей установке.  
   
--   [Создать базу данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+-   [Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
 ##  <a name="bkmk_fixed_database_name"></a> Фиксированное имя базы данных  
  Нельзя переименовать базу данных сервера отчетов. Идентификатор базы данных записывается в хранимых процедурах сервера отчетов при создании базы данных. Переименование первичной или временной баз данных сервера отчетов приводит к возникновению ошибок при выполнении этих процедур, поэтому установка сервера отчетов становится недействительной.  
@@ -268,9 +259,9 @@ ms.locfileid: "48082894"
 2.  Удалите службы IIS, если они более не нужны на этом компьютере.  
   
 ## <a name="see-also"></a>См. также  
- [Перенос установки служб Reporting Services &#40;режиме интеграции с SharePoint&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
- [База данных сервера отчетов &#40;собственный режим служб SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
- [Обновление и перенос служб Reporting Services](upgrade-and-migrate-reporting-services.md)   
+ [Перенос установки служб Reporting Services (режим интеграции с SharePoint)](migrate-a-reporting-services-installation-sharepoint-mode.md)   
+ [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../report-server/report-server-database-ssrs-native-mode.md)   
+ [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Обратная совместимость служб Reporting Services](../reporting-services-backward-compatibility.md)   
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 65ab4d5ebf1fbe64d3e85854df186d9ebe098e84
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985266"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600064"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;структуры&gt;. ВАРИАНТЫ
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  Поэтому, чтобы защитить конфиденциальные или персональные данные, следует построить представление источника данных маскирование персональных данных, а разрешение **AllowDrillthrough** разрешение для структуры интеллектуального анализа данных или модели интеллектуального анализа данных только тогда, когда обязательно.  
   
 ## <a name="examples"></a>Примеры  
- Следующие примеры основаны на структуре интеллектуального анализа данных, Прямая почтовая рассылка, основанное на [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] базы данных и связанных с ней моделей. Дополнительные сведения см. в разделе [основам интеллектуального анализа данных](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Следующие примеры основаны на структуре интеллектуального анализа данных, Прямая почтовая рассылка, основанное на [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] базы данных и связанных с ней моделей. Дополнительные сведения см. в разделе [основам интеллектуального анализа данных](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>Пример 1: Детализация до вариантов структуры  
  Следующий пример возвращает список 500 старейших покупателей в структуре интеллектуального анализа данных «Целевая рассылка». Запрос возвращает все столбцы в модели интеллектуального анализа данных, но строки — только тех покупателей, которые приобрели велосипеды. Строки упорядочены по возрасту покупателя. Кроме того, можно изменять список выражений таким образом, чтобы он возвращал только необходимые столбцы.  

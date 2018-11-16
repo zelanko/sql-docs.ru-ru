@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 47e2e35095f60e3dec3960b5a83ac8d7ca710ebc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a1335b430346cf64d143ce3e07887d78f65a451
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706932"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662333"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW Установка и настройка
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47706932"
 
 В последнем выпуске примера:
 
-[Wide world-importers выпуска](http://go.microsoft.com/fwlink/?LinkID=800630)
+[Wide world-importers выпуска](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 Скачайте образец WideWorldImportersDW базы данных резервного копирования или bacpac-файл, соответствующий выпуска SQL Server или базы данных SQL Azure.
 

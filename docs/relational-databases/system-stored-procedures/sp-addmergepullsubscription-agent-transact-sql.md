@@ -17,12 +17,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da16887ff7debf09e69fc72cf464f5838cf6ddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749749"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681372"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -294,13 +294,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Имя существующего задания агента. *имя_задания* — **sysname**, со значением по умолчанию NULL. Этот аргумент указывается только тогда, когда подписка будет синхронизироваться с использованием существующего задания, а не вновь создаваемого задания (выбор по умолчанию). Если вы не являетесь членом **sysadmin** предопределенной роли сервера, необходимо указать *job_login* и *job_password* при указании *имя_задания*.  
   
  [  **@dynamic_snapshot_location =** ] **"***dynamic_snapshot_location***"** ]  
- Путь к папке, из которой будут считываться файлы моментальных снимков, при использовании моментального снимка фильтруемых данных. *dynamic_snapshot_location* — **nvarchar(260)**, значение по умолчанию NULL. Дополнительные сведения см. в статье [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Путь к папке, из которой будут считываться файлы моментальных снимков, при использовании моментального снимка фильтруемых данных. *dynamic_snapshot_location* — **nvarchar(260)**, значение по умолчанию NULL. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  [  **@use_web_sync =** ] *use_web_sync*  
  Указывает, включена ли веб-синхронизация. *use_web_sync* — **бит**, значение по умолчанию 0. **1** указывает, что подписки по запросу могут синхронизироваться через Интернет по протоколу HTTP.  
   
  [  **@internet_url =** ] **"***internet_url***"**  
- Расположение прослушивателя репликации (REPLISAPI.DLL) для веб-синхронизации. *internet_url* — **nvarchar(260)**, значение по умолчанию NULL. *internet_url* — это полный URL-адрес в формате `http://server.domain.com/directory/replisapi.dll`. Если сервер настроен для прослушивания порта, отличного от 80-го, необходимо также задать номер порта в формате `http://server.domain.com:portnumber/directory/replisapi.dll`, где `portnumber` указывает номер порта.  
+ Расположение прослушивателя репликации (REPLISAPI.DLL) для веб-синхронизации. *internet_url* — **nvarchar(260)**, значение по умолчанию NULL. *internet_url* — это полный URL-адрес в формате `https://server.domain.com/directory/replisapi.dll`. Если сервер настроен для прослушивания порта, отличного от 80-го, необходимо также задать номер порта в формате `https://server.domain.com:portnumber/directory/replisapi.dll`, где `portnumber` указывает номер порта.  
   
  [  **@internet_login =** ] **"***internet_login***"**  
  Имя входа, используемое агентом слияния при подключении к веб-серверу, на котором размещены службы веб-синхронизации с обычной проверкой подлинности HTTP. *internet_login* — **sysname**, значение по умолчанию NULL.  

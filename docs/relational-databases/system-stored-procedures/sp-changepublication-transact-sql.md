@@ -17,12 +17,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c715b7af71fc98df34036daf9311f1ed32b1c772
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e80f468f917a240981fc6e4c16df862d72084541
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689732"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670173"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**Параллельные**|Используется собственный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
 ||**Concurrent_c**|Используется символьный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
 |**Идентификатор задачи**||Это свойство устарело и больше не поддерживается.|  
-|**allow_drop**|**true**|Позволяет `DROP TABLE` DLL поддержки для статей, которые являются частью репликации транзакций. Минимальная поддерживаемая версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 или более поздней версии и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 или более поздней версии. Дополнительная справка: [базы Знаний 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|Позволяет `DROP TABLE` DLL поддержки для статей, которые являются частью репликации транзакций. Минимальная поддерживаемая версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 или более поздней версии и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 или более поздней версии. Дополнительная справка: [базы Знаний 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Отключает `DROP TABLE` DLL поддержки для статей, которые являются частью репликации транзакций. Это **по умолчанию** значение этого свойства.|
 |**NULL** (по умолчанию)||Возвращает список поддерживаемых значений для *свойство*.|  
   

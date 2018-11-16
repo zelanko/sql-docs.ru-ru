@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3927708ae0e9fe00043bc0cb51926d836dd912f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a81f7808275dfee216d6d884db45e267e06271c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748702"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662493"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Использование параметров инструкции — привязка параметров
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47748702"
   
  Именованные параметры поддерживаются только в том случае, при использовании [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** инструкции или escape-последовательность ODBC CALL для выполнения хранимой процедуры.  
   
- Если **SQL_DESC_NAME** имеет значение для параметра хранимой процедуры, остальные параметры хранимой процедуры в запросе также следует задать **SQL_DESC_NAME**.  Если используются литералы вызовов хранимых процедур, параметры которой имеют **SQL_DESC_NAME** задано, эти литералы должны иметь формат *"имя*=*значение*", где *имя* является именем параметра хранимой процедуры (например, @p1). Дополнительные сведения см. в разделе [привязка параметров по имени (именованные параметры)](http://go.microsoft.com/fwlink/?LinkId=167215).  
+ Если **SQL_DESC_NAME** имеет значение для параметра хранимой процедуры, остальные параметры хранимой процедуры в запросе также следует задать **SQL_DESC_NAME**.  Если используются литералы вызовов хранимых процедур, параметры которой имеют **SQL_DESC_NAME** задано, эти литералы должны иметь формат *"имя*=*значение*", где *имя* является именем параметра хранимой процедуры (например, @p1). Дополнительные сведения см. в разделе [привязка параметров по имени (именованные параметры)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>См. также  
  [Использование параметров инструкции](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

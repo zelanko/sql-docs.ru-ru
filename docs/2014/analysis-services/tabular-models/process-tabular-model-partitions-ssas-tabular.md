@@ -11,12 +11,12 @@ ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e113f931e318c501f69540ec19e97e3ae72b553f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04f2f2c71c3560fe892d63dd5263b8b6f846a241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130544"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638621"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>Обработка секций табличной модели (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Приведенные в этом разделе задачи описывают обработку секций в базе данных model с помощью диалогового окна **Обработка секций** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "48130544"
   
 2.  В диалоговом окне **Секции** на вкладке **Секции**нажмите кнопку «Обработка».  
   
-3.  В диалоговом окне **Обработка секций** выберите один из следующих режимов из списка **Режим** :  
+3.  В **обработать секции** отображаемое в диалоговом окне **режим** выберите один из следующих режимов обработки:  
   
     |Режим|Описание|  
     |----------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "48130544"
 4.  В столбце флажков **Обработка** выберите секции для обработки в текущем режиме и нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также  
- [Секции табличных моделей &#40;табличные службы SSAS&#41;](partitions-ssas-tabular.md)   
- [Создание и управление секциями табличной модели &#40;табличные службы SSAS&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Секции табличных моделей (табличные службы SSAS)](partitions-ssas-tabular.md)   
+ [Создание секций табличной модели и управление ими (табличные службы SSAS)](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

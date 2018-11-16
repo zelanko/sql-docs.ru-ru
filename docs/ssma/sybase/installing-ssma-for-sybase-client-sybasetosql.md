@@ -10,12 +10,12 @@ ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 091482cbfc42dabead28ceade0c7840860ae3cc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cca10f2a54a70e91e46bb8b98e9799885b5f175
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776617"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671724"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>Установка клиента SSMA для Sybase (SybaseToSQL)
 SSMA клиента состоит из программных файлов, которые используются для подключения к серверу базы данных Sybase Adaptive Server Enterprise (ASE) и экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или база данных SQL Azure, преобразовать объекты базы данных ASE для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или синтаксис базы данных SQL Azure, загрузка объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или база данных SQL Azure, а затем перенести данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure.  
@@ -31,7 +31,7 @@ SSMA предназначен для работы с ASE 11.9.2 или боле�
   
 -   Установщик [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows версии 3.1 или более поздняя версия.  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework версии 4.0 или более поздней версии. В .NET Framework версии 4.0 можно найти в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установочного носителя. Можно также получить его из [Центр разработчиков .NET Framework](http://go.microsoft.com/fwlink/?LinkId=48882).  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework версии 4.0 или более поздней версии. В .NET Framework версии 4.0 можно найти в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установочного носителя. Можно также получить его из [Центр разработчиков .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 -   Поставщик Sybase OLEDB/ADO.Net/ODBC и подключение к серверу базы данных Sybase ASE с базами данных, которые требуется перенести. Поставщики можно установить с носителя продукта Sybase ASE. Сведения о подключениях см. в разделе [подключение к Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
@@ -40,7 +40,7 @@ SSMA предназначен для работы с ASE 11.9.2 или боле�
 -   4 ГБ ОЗУ рекомендуется.  
   
 ## <a name="installing-the-ssma-for-sybase-client"></a>Установка SSMA для Sybase клиента  
-SSMA можно загрузить из Интернета. Чтобы загрузить последнюю версию, см. в разделе [SQL Server Migration Assistant страницу загрузки](http://aka.ms/ssmaforsybase).  
+SSMA можно загрузить из Интернета. Чтобы загрузить последнюю версию, см. в разделе [SQL Server Migration Assistant страницу загрузки](https://aka.ms/ssmaforsybase).  
   
 После загрузки последней версии, необходимо извлечь установочные файлы от перед установкой SSMA.  
   

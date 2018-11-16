@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2610d8691748e316396ccd7babcc0c9e4991aa29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13a1019d2781ea71f5f1017051f113a985f989be
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796932"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656384"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47796932"
  Когда [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняется инструкция INSERT, UPDATE, DELETE или MERGE с предложением OUTPUT, то эта функция не возвращает число строк, затронутых пока не обработаны все строки результирующего набора, формируемого предложение OUTPUT. К строкам эти строки осуществляется вызовом SQLFetch или SQLFetchScroll. SQLResultCols возвращает -1, пока не обработаны все результирующие строки. После SQLFetch или SQLFetchScroll вернет значение SQL_NO_DATA, приложение должно вызвать SQLRowCount, чтобы определить количество строк, затронутых перед вызовом SQLMoreResults для перемещения к следующему результату.  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLRowCount](http://go.microsoft.com/fwlink/?LinkId=59367)   
+ [Функция SQLRowCount](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   
