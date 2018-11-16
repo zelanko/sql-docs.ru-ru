@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d566f66531785b8ac4ccee5b60e26caf2c83848
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6e44af551221792f288cb23ef616f68b0c7965d6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028843"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814317"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Устранение неполадок с подключением к серверу и базе данных в Reporting Services
 Используйте этот раздел, чтобы решать проблемы, возникающие при подключении к серверу отчетов. Также в этом разделе описываются сообщения о непредвиденных ошибках. Дополнительные сведения о настройке источников данных и настройке данных о подключении сервера отчетов см. в разделах [Задание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) и [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "50028843"
 * Проверьте правильность URL-адреса сервера отчетов и строки подключения к базе данных сервера отчетов. Если службы Reporting Services или компонент Database Engine были установлены как именованный экземпляр, строка соединения по умолчанию, которая создается во время установки, будет содержать имя экземпляра. Например, если экземпляр по умолчанию выпуска SQL Server Express with Advanced Services устанавливался на сервер с именем DEVSRV01, URL-адресом диспетчера отчетов будет DEVSRV01\Reports$SQLEXPRESS. Имя базы данных сервера отчетов в строке соединения будет похоже на DEVSRV01\SQLEXPRESS. Дополнительные сведения о URL-адресах и строках соединения с источниками данных для SQL Server Express см. в разделе [Службы Reporting Services в выпуске SQL Server Express with Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Чтобы проверить строку соединения с базой данных сервера отчетов, запустите программу настройки служб Reporting Services и просмотрите страницу "Установка базы данных".  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>Невозможно установить соединение. Убедитесь, что запущен сервер.  
-Эта ошибка возвращается поставщиком ADOMD.NET. Существует несколько возможных причин этой ошибки. Если сервер указан как «localhost», попробуйте вместо этого указать имя сервера. Эта ошибка может также произойти в случае, если невозможно выделить память для нового соединения. Дополнительные сведения см. в [статье 912017 базы знаний. Сообщение об ошибке при подключении к экземпляру служб Analysis Services SQL Server 2005:](http://support.microsoft.com/kb/912017)(Error message when you connect to an instance of SQL Server 2005 Analysis Services:).  
+Эта ошибка возвращается поставщиком ADOMD.NET. Существует несколько возможных причин этой ошибки. Если сервер указан как «localhost», попробуйте вместо этого указать имя сервера. Эта ошибка может также произойти в случае, если невозможно выделить память для нового соединения. Дополнительные сведения см. в [статье 912017 базы знаний. Сообщение об ошибке при подключении к экземпляру служб Analysis Services SQL Server 2005:](https://support.microsoft.com/kb/912017)(Error message when you connect to an instance of SQL Server 2005 Analysis Services:).  
   
 Если эта ошибка также содержит "Неизвестный узел", она указывает на недоступность сервера служб Analysis Services или на отказ в соединении. Если сервер служб Analysis Services установлен в качестве именованного экземпляра на удаленном компьютере, возможно, потребуется запустить службу браузера SQL Server, чтобы получить имя порта, используемого экземпляром.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "50028843"
   
 Чтобы устранить эту ошибку, необходимо переустановить программное обеспечение. В других случаях в качестве временного решения можно соединиться с сервером отчетов через конечную точку SOAP.  
   
-* В диалоговом окне **Соединение с сервером** в среде Management Studio в поле **Имя сервера**введите URL-адрес сервера отчетов. По умолчанию это `http://<your server name>/reportserver`. Или, если используется SQL Server 2008 Express with Advanced Services, это `http://<your server name>/reportserver$sqlexpress`.  
+* В диалоговом окне **Соединение с сервером** в среде Management Studio в поле **Имя сервера**введите URL-адрес сервера отчетов. По умолчанию это `https://<your server name>/reportserver`. Или, если используется SQL Server 2008 Express with Advanced Services, это `https://<your server name>/reportserver$sqlexpress`.  
   
 Чтобы устранить эту ошибку (для последующей установки соединения через поставщика WMI), запустите программу установки, чтобы исправить службы Reporting Services, либо переустановите службы Reporting Services.  
   

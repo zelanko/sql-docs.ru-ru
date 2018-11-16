@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e5ff6d186c4dc724ed344a1fe89ecb2d92bfb5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4498b558e740927f52ab53a0edb8a615a34c0690
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722682"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657783"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  Создание образца базы данных с оптимизированной для памяти файловой группой данных. Сведения о создании базы данных с оптимизированной для памяти файловой группой данных см. в разделе [Создание таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
-2.  Создайте источник данных ODBC с именем PrepExecSample, указывающий на базу данных. Используйте драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Можно также изменить пример и использовать [драйвер Microsoft ODBC для SQL Server](http://msdn.microsoft.com/library/jj730314.aspx).  
+2.  Создайте источник данных ODBC с именем PrepExecSample, указывающий на базу данных. Используйте драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Можно также изменить пример и использовать [драйвер Microsoft ODBC для SQL Server](https://msdn.microsoft.com/library/jj730314.aspx).  
   
 3.  Запустите скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] (см. ниже) для образца базы данных.  
   

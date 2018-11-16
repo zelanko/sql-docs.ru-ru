@@ -12,12 +12,12 @@ ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2db5804b0ac8af0648a38e862bb81adedd9ef016
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c32d42292c9d16984fe37b72741da7941852ff8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669672"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699694"
 ---
 # <a name="install-data-quality-services"></a>Установка служб Data Quality Services
 
@@ -53,7 +53,7 @@ ms.locfileid: "47669672"
   
 |Компонент DQS|Минимальные требования к системе|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Память (ОЗУ): не менее 2 ГБ, рекомендуется 4 ГБ или более.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] ядро СУБД. Дополнительные сведения см. в статье [Установка компонентов SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Память (ОЗУ): не менее 2 ГБ, рекомендуется 4 ГБ или более.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Компонент Database Engine. Дополнительные сведения см. в статье [Установка компонентов SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|Платформа .NET Framework 4.0 (при ее отсутствии устанавливается во время установки клиента [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] )<br /><br /> Internet Explorer 6.0 с пакетом обновления 1 (SP1) или более поздняя версия.|  
   
 > [!IMPORTANT]  
@@ -117,7 +117,7 @@ ms.locfileid: "47669672"
                     [Предоставление доступа к данным для операций со службами DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Видео: установка и настройка служб DQS](http://go.microsoft.com/fwlink/?LinkId=238241)   
+ [Видео: установка и настройка служб DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [Обновление сборок SQLCLR после загрузки обновлений .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Экспорт и импорт баз знаний DQS с помощью DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Обновление служб Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
@@ -125,6 +125,6 @@ ms.locfileid: "47669672"
  [Установка компонентов бизнес-аналитики SQL Server](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [Удаление SQL Server](../../sql-server/install/uninstall-sql-server.md)   
  [Службы Data Quality Services](../../data-quality-services/data-quality-services.md)   
- [Устранение неполадок во время установки и настройки DQS](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
+ [Устранение неполадок во время установки и настройки DQS](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   

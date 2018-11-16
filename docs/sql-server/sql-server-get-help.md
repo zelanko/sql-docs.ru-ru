@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 03294cce7e8c800d51b5a333e92d611cf8b694fe
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: e4e48ba424b9c9c8ef56d1280d774c7ee3120ffe
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384099"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698232"
 ---
 # <a name="sql-server-help-and-feedback"></a>Справка и отзывы по SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "49384099"
 Если вы коммерческий пользователь, ознакомьтесь со страницей [контактов](https://support.microsoft.com/gp/contactus81?forceorigin=esmc&Audience=Commercial) корпорации Майкрософт.
 
 ## <a name="i-want-to-review-license-information-about-sql-server"></a>Я хочу просмотреть сведения о лицензиях для SQL Server
-Скачать и изучить сведения о лицензиях для SQL Server можно на странице [дополнительных условий лицензирования для Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299). 
+Скачать и изучить сведения о лицензиях для SQL Server можно на странице [дополнительных условий лицензирования для Microsoft SQL Server](https://www.microsoft.com/download/details.aspx?id=39299). 
 
 ## <a name="i-want-to-ask-the-community-for-help"></a>Я хочу обратиться за помощью к сообществу 
 Если вы решили обратиться за помощью в активное сообщество по SQL Server, у вас есть для этого много возможностей!
@@ -80,9 +80,9 @@ ms.locfileid: "49384099"
 ## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>Я хочу оставить отзыв о содержимом документации по SQL
 
 ### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![изменить содержимое](../includes/media/edit-topic-pencil.png) Редактирование содержимого
-Предположим, вы нашли неточности в нашей документации. Знаете ли вы, что это содержимое вы можете изменить самостоятельно? Это не только улучшит нашу документацию, но и даст вам статус участника в создании этой страницы! Дополнительные сведения см. на странице [http://aka.ms/editsqldocs](http://aka.ms/editsqldocs). 
+Предположим, вы нашли неточности в нашей документации. Знаете ли вы, что это содержимое вы можете изменить самостоятельно? Это не только улучшит нашу документацию, но и даст вам статус участника в создании этой страницы! Дополнительные сведения см. на странице [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
 
 ### <a name="surveys"></a>Опросы
-Если у вас есть немного свободного времени и желание поделиться мыслями об использовании документации по SQL, примите участие в опросе! Он размещен на странице [http://aka.ms/SQLDocSurvey](http://aka.ms/SQLDocSurvey) и займет у вас около 10–15 минут. 
+Если у вас есть немного свободного времени и желание поделиться мыслями об использовании документации по SQL, примите участие в опросе! Он размещен на странице [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) и займет у вас около 10–15 минут. 
 
-У вас есть чем поделиться с командой разработки содержимого по SQL? Идеи, предложения, отзывы, что угодно еще! Вы сможете это сделать на странице [http://aka.ms/SQLDocsFeedback](http://aka.ms/SQLDocsFeedback). 
+У вас есть чем поделиться с командой разработки содержимого по SQL? Идеи, предложения, отзывы, что угодно еще! Вы сможете это сделать на странице [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 

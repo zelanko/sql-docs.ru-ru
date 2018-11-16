@@ -15,12 +15,12 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47b3ca2abf53fe93a24eb23650c1b741a2445988
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b1954044626059e8a637aa41292839062269250
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684401"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640036"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Программная загрузка и запуск удаленного пакета
   Чтобы выполнить удаленные пакеты с локального компьютера, на котором не установлены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], запустите пакеты таким образом, чтобы они выполнялись на удаленном компьютере, на котором установлены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Чтобы запустить пакеты на удаленном компьютере с локального компьютера, понадобится агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], веб-служба или удаленный компонент. Если попытаться запустить удаленные пакеты непосредственно с локального компьютера, пакеты будут загружены на локальный компьютер и будут запущены оттуда. Если на локальном компьютере не установлены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], запуск пакетов окажется невозможен.  
@@ -45,7 +45,7 @@ ms.locfileid: "47684401"
 > [!NOTE]  
 >  Значение возврата хранимой процедуры **sp_start_job** указывает, удалось ли хранимой процедуре успешно запустить задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Значение возврата не указывает на успешное или неуспешное выполнение пакета.  
   
- Сведения об устранении неполадок в пакетах, запускаемых из агента заданий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье базы знаний [Пакет служб SSIS не выполняется при вызове пакета из шага задания агента SQL Server](http://support.microsoft.com/kb/918760).  
+ Сведения об устранении неполадок в пакетах, запускаемых из агента заданий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье базы знаний [Пакет служб SSIS не выполняется при вызове пакета из шага задания агента SQL Server](https://support.microsoft.com/kb/918760).  
   
 ### <a name="sample-code"></a>Образец кода  
   
@@ -176,7 +176,7 @@ Imports System.Web.Services.Protocols
 Imports Microsoft.SqlServer.Dts.Runtime  
 Imports System.IO  
   
-<WebService(Namespace:="http://dtsue/")> _  
+<WebService(Namespace:="https://dtsue/")> _  
 <WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _  
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _  
 Public Class LaunchSSISPackageService  
@@ -252,7 +252,7 @@ using System.Web.Services.Protocols;
 using Microsoft.SqlServer.Dts.Runtime;  
 using System.IO;  
   
-[WebService(Namespace = "http://dtsue/")]  
+[WebService(Namespace = "https://dtsue/")]  
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]  
 public class LaunchSSISPackageServiceCS : System.Web.Services.WebService  
 {  
@@ -417,7 +417,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Видеоролик [Как автоматизировать выполнение пакета служб SSIS с помощью агента SQL Server (видеоматериалы по SQL Server)](http://technet.microsoft.com/sqlserver/ff686764.aspx) на сайте technet.microsoft.com  
+-   Видеоролик [Как автоматизировать выполнение пакета служб SSIS с помощью агента SQL Server (видеоматериалы по SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx) на сайте technet.microsoft.com  
   
 ## <a name="see-also"></a>См. также:  
  [Основные сведения об отличиях между локальным и удаленным выполнением](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

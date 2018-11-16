@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f7b76775e501d2ba9c3c13191beb75973d9f6bbb
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120291"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604954"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "49120291"
   
  Основное преимущество применения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с источниками данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] заключается в возможности использования доступных для чтения вторичных реплик в качестве источников данных для отчетов, при этом вторичные реплики продолжают обеспечивать отработку отказа для базы данных-источника.  
   
- Общие сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Вопросы и ответы по группам доступности AlwaysOn для SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768).  
+ Общие сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Вопросы и ответы по группам доступности AlwaysOn для SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
   
  **В этом разделе:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "49120291"
   
  Это сообщение выдается в том случае, когда в строке подключения служб [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] указано одно из свойств [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , которое сервер не распознает. Указанное сообщение об ошибке отображается при нажатии кнопки «Проверка подключения» в пользовательском интерфейсе служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , а также при просмотре отчета, если на сервере отчета включено отслеживание удаленных ошибок.  
   
- Дополнительные сведения о необходимом исправлении см. в разделе [Исправление КБ 2654347A добавляет поддержку функций AlwaysOn из SQL Server 2012 в платформу .NET Framework 3.5 с пакетом обновления 1 (SP1)](http://go.microsoft.com/fwlink/?LinkId=242896).  
+ Дополнительные сведения о необходимом исправлении см. в разделе [Исправление КБ 2654347A добавляет поддержку функций AlwaysOn из SQL Server 2012 в платформу .NET Framework 3.5 с пакетом обновления 1 (SP1)](https://go.microsoft.com/fwlink/?LinkId=242896).  
   
  Дополнительные сведения о требованиях [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в статье [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -142,7 +142,7 @@ ms.locfileid: "49120291"
   
 -   ReportServerTempDB  
   
- В этом режиме базы данных Alerting и связанные компоненты не поддерживаются и не используются. Серверы отчетов, работающие в собственном режиме, настраиваются в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . В режиме интеграции с SharePoint в качестве имени базы данных приложения службы следует указать имя точки доступа клиента, которую вы создали при конфигурации SharePoint. Дополнительные сведения о настройке SharePoint с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Настройка и управление группами доступности SQL Server для SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165).  
+ В этом режиме базы данных Alerting и связанные компоненты не поддерживаются и не используются. Серверы отчетов, работающие в собственном режиме, настраиваются в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . В режиме интеграции с SharePoint в качестве имени базы данных приложения службы следует указать имя точки доступа клиента, которую вы создали при конфигурации SharePoint. Дополнительные сведения о настройке SharePoint с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Настройка и управление группами доступности SQL Server для SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165).  
   
 > [!NOTE]  
 >  Серверы отчетов, работающие в режиме интеграции с SharePoint, используют процесс синхронизации между базами данных приложения служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и базами данных содержимого SharePoint. Важно поддерживать работу баз данных сервера отчетов и баз данных содержимого вместе. Следует рассмотреть возможность включения этих баз данных в одну группу доступности, чтобы отработка отказа и восстановление для них выполнялось одновременно. Рассмотрим следующий сценарий.  

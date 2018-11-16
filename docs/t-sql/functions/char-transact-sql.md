@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a548ec574f6ae81b6e365f8f0e9f68db6357102
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 4603333bce62f363a70c82936dfdbb28478f6a0d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643782"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701942"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ CHAR ( integer_expression )
 Целое число от 0 до 255. `CHAR` возвращает значение `NULL` для целочисленных выражений за пределами этого диапазона, или когда целое число выражает только первый байт двухбайтового символа.
 
 > [!NOTE]
-> Некоторые неевропейские кодировки, такие как [Shift Japanese Industrial Standards (Shift JIS)](http://www.wikipedia.org/wiki/Shift_JIS), содержат символы, которые могут быть представлены в однобайтовой схеме кодирования, но требуют многобайтового кодирования. Дополнительные сведения о кодировках см. в статье [Однобайтовые и многобайтовые кодировки](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
+> Некоторые неевропейские кодировки, такие как [Shift Japanese Industrial Standards (Shift JIS)](https://www.wikipedia.org/wiki/Shift_JIS), содержат символы, которые могут быть представлены в однобайтовой схеме кодирования, но требуют многобайтового кодирования. Дополнительные сведения о кодировках см. в статье [Однобайтовые и многобайтовые кодировки](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
   
 ## <a name="return-types"></a>Типы возвращаемых данных
 **char(1)**

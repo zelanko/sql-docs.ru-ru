@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 42d80d891621de73b4bc333ad1728e595a8bf810
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743229"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703582"
 ---
 # <a name="use-tokens-in-job-steps"></a>Использование токенов в шагах задания
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "50743229"
 ## <a name="updating-job-steps-to-use-macros"></a>Обновление шагов заданий для использования маркеров  
 Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 1 (SP1), шаги заданий, содержащие токены без экранирующих макросов, завершаются сбоем и возвращают сообщение об ошибке; это сообщение указывает на то, что шаг задания содержит токены, обновление которых при помощи макроса необходимо перед тем, как задание можно будет выполнить.  
   
-Вместе со статьей 915845 [!INCLUDE[msCoName](../../includes/msconame_md.md)] SQL Server Agent Job Steps That Use Tokens Fail in SQL Server 2005 Service Pack 1 [(Сбой шагов заданий агента SQL Server, использующих токены, в SQL Server 2005 с пакетом обновления 1) базы знаний](http://support.microsoft.com/kb/915845)предоставляется скрипт, использование которого позволяет обновить все шаги задания, содержащие токены с макросом **ESCAPE_NONE** . После применения этого скрипта рекомендуется как можно скорее просмотреть шаги заданий, в которых используются токены, и заменить макрос **ESCAPE_NONE** экранирующим макросом, который соответствует контексту шага задания.  
+Вместе со статьей 915845 [!INCLUDE[msCoName](../../includes/msconame_md.md)] SQL Server Agent Job Steps That Use Tokens Fail in SQL Server 2005 Service Pack 1 [(Сбой шагов заданий агента SQL Server, использующих токены, в SQL Server 2005 с пакетом обновления 1) базы знаний](https://support.microsoft.com/kb/915845)предоставляется скрипт, использование которого позволяет обновить все шаги задания, содержащие токены с макросом **ESCAPE_NONE** . После применения этого скрипта рекомендуется как можно скорее просмотреть шаги заданий, в которых используются токены, и заменить макрос **ESCAPE_NONE** экранирующим макросом, который соответствует контексту шага задания.  
   
 Следующая таблица показывает, каким образом замена токенов обрабатывается агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы включить или отключить замену токенов предупреждений, щелкните правой кнопкой мыши элемент **Агент SQL Server** в обозревателе объектов, выберите пункт меню **Свойства**и на странице **Система предупреждений** установите или снимите флажок **Заменить токены всех ответов заданий на предупреждения** .  
   

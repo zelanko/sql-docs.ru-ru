@@ -1,22 +1,20 @@
 ---
 title: Новые возможности в SQL Server 2019 | Документация Майкрософт
-ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a98e8c702b3d3ff772ccf42bdfd56153ddd7fc
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272622"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703912"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Новые возможности в SQL Server 2019
 
@@ -25,7 +23,7 @@ ms.locfileid: "51272622"
 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] основывается на предыдущих выпусках для расширения SQL Server как платформы, которая поддерживает ряд языков разработки, типов данных, операционных систем, а также работает в локальной и облачной средах. В этой статье перечислены новые возможности SQL Server 2019. Дополнительные сведения и известные проблемы см. в статье с [заметками о выпуске предварительной версии SQL Server 2019](sql-server-ver15-release-notes.md).
 
 **Попробуйте SQL Server 2019!**
-- [![Скачайте из Центра оценки](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Скачать SQL Server 2019 для установки на компьютерах с Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![Скачайте из Центра оценки](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Скачать SQL Server 2019 для установки на компьютерах с Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - Установите на компьютерах с Linux для [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) и [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Работайте с SQL Server 2019 в Docker](../linux/quickstart-install-connect-docker.md).
 
@@ -178,7 +176,7 @@ SQL Server 2019 (предварительная версия) предостав
 
   В случае сбоя создания индекса без функции возобновляемости операцию создания индекса в подключенном режиме нужно снова выполнить и полностью перезапустить.
 
-В этом выпуске мы расширим возобновляемые функции, добавив эту функцию в доступную [перестройку возобновляемого индекса в подключенном режиме](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+В этом выпуске мы расширим возобновляемые функции, добавив эту функцию в доступную [перестройку возобновляемого индекса в подключенном режиме](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
 
 Кроме того, эту функцию можно установить по умолчанию для конкретной базы данных с помощью [стандартного параметра на уровне базы данных для возобновляемых операций DDL и операций DDL в подключенном режиме](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
@@ -264,7 +262,7 @@ SQL Server 2019 (предварительная версия) предостав
 
 Без этой функции вам необходимо указывать параметры возобновляемых операций и операций в подключенном режиме непосредственно в операторе индекса DDL (например, создание и перестроение индекса).
 
-Дополнительные сведения о возобновляемых операциях с индексами см. [в этой статье](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
+Дополнительные сведения о возобновляемых операциях с индексами см. [в этой статье](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
 ### <a id="ha"></a>Группы доступности AlwaysOn — больше синхронных реплик (CTP 2.0)
 
@@ -331,7 +329,7 @@ SQL Server 2019 (предварительная версия) предостав
 
 Упрощенная инфраструктура профилирования запросов (LWP) предоставляет более эффективные данные производительности запросов, чем стандартные технологии профилирования. Сейчас упрощенное профилирование включено по умолчанию. Эта возможность представлена в [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] с пакетом обновления 1. Упрощенное профилирование предоставляет механизм сбора статистики выполнения запросов с ожидаемыми издержками ресурсов ЦП 2 %, по сравнению с издержками ЦП до 75 % для стандартного механизма профилирования запросов. В предыдущих версиях эта функция была выключена по умолчанию. Администраторы баз данных могут включить ее с помощью [флага трассировки 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-Дополнительные сведения об упрощенном профилировании см. в записи блога, [посвященной получению сведений о ходе выполнения запроса](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+Дополнительные сведения об упрощенном профилировании см. в записи блога, [посвященной получению сведений о ходе выполнения запроса](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
 
 ### <a id="polybase"></a>Новые соединители PolyBase
 

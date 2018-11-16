@@ -12,12 +12,12 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 01e3594d662a78b5f9e71f4c8b23612fd739fc4e
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: a966bec7dc015bf29d8a8ae2e2a217f3b7bf7402
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254340"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656703"
 ---
 # <a name="sql-server-distributed-replay"></a>Распределенное воспроизведение SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,8 +72,8 @@ ms.locfileid: "50254340"
 |Описывает, как при помощи средства администрирования можно инициировать операции на контроллере, наблюдать за ними и отменять их.|[Параметры командной строки средства администрирования (программа распределенного воспроизведения)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)|  
   
 ## <a name="see-also"></a>См. также:  
- [Форум о распределенном воспроизведении SQL Server](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Использование распределенного воспроизведения для нагрузочного теста SQL Server. Часть 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Использование распределенного воспроизведения для нагрузочного теста SQL Server. Часть 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Форум о распределенном воспроизведении SQL Server](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Использование распределенного воспроизведения для нагрузочного теста SQL Server. Часть 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Использование распределенного воспроизведения для нагрузочного теста SQL Server. Часть 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

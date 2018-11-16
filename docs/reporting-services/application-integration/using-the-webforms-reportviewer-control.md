@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a5146555a434bd2f0b5c864fd4daae7e66d2cb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dcd5aab378463274c8856241a948360c9ec2f72e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722262"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813037"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Использование элемента управления WebForms ReportViewer
   Для просмотра отчетов, развернутых на сервере отчетов, и отчетов, существующих в локальной файловой системе, можно использовать элемент управления WebForms ReportViewer для подготовки отчетов к просмотру в веб-приложении.  
@@ -82,7 +82,7 @@ protected void Page_Init(object sender, EventArgs e)
   
         // Set the report server URL and report path  
         serverReport.ReportServerUrl =  
-            new Uri("http://<Server Name>/reportserver");  
+            new Uri("https://<Server Name>/reportserver");  
         serverReport.ReportPath =  
             "/AdventureWorks Sample Reports/Sales Order Detail";  
   
@@ -118,7 +118,7 @@ Partial Class _Default
   
             'Set the report server URL and report path  
             serverReport.ReportServerUrl = _  
-                New Uri("http://<Server Name>/reportserver")  
+                New Uri("https://<Server Name>/reportserver")  
             serverReport.ReportPath = _  
                 "/AdventureWorks Sample Reports/Sales Order Detail"  
   

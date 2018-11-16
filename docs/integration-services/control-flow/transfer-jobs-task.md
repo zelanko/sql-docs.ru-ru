@@ -17,12 +17,12 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed0d9624c4a2ffb0393d01a196624a56771811e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73236a13046257caabc572de24957524d1cb41ea
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780622"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639024"
 ---
 # <a name="transfer-jobs-task"></a>Задача «Передача заданий»
   Задача «Передача заданий» служит для передачи одного или нескольких заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "47780622"
  Задача «Передача заданий» инициирует уведомляющее событие, сообщающее число переданных заданий, а также событие-предупреждение в случае, когда задание перезаписывается. Задача не сообщает о ходе передачи задания; она сообщает лишь о выполнении 0% и 100%.  
   
 ## <a name="execution-value"></a>Значение выполнения  
- Значение выполнения, определяемое свойством **ExecutionValue** задачи, возвращает число переданных заданий. Назначив пользовательскую переменную значению свойства **ExecValueVariable** задачи "Передача заданий", можно сделать сведения о передаче заданий доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Значение выполнения, определяемое свойством **ExecutionValue** задачи, возвращает число переданных заданий. Назначив пользовательскую переменную значению свойства **ExecValueVariable** задачи "Передача заданий", можно сделать сведения о передаче заданий доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача заданий» позволяет настраивать запись в журнал следующих событий:  
@@ -74,7 +74,7 @@ ms.locfileid: "47780622"
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="transfer-jobs-task-editor-general-page"></a>Редактор задачи «Передача заданий» (страница «Общие»)
   Используйте страницу **Общие** в диалоговом окне **Редактор задачи «Передача заданий»** , чтобы назвать и описать задачу передачи заданий.  

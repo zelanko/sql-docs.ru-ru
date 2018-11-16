@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fceef986a2d0cd3bf6d127cf449d99185ebca7cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716752"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671252"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Использование проверочных утверждений Transact-SQL в модульных тестах SQL Server
 При выполнении модульного теста SQL Server запускается тестовый скрипт Transact\-SQL и возвращается его результат. Иногда результаты возвращаются в виде результирующего набора. Результаты можно проверить с помощью условий теста. Например, по тестовому условию можно проверить число возвращенных строк в результирующем наборе. Можно также проверить время, которое заняло выполнение конкретного теста. Дополнительные сведения об условиях теста см. в статье [Использование условий теста в модульных тестах SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
@@ -79,7 +79,7 @@ ms.locfileid: "47716752"
   
 @ErrorState — произвольное целое число в диапазоне от 1 до 127. Оно служит для различения повторений одной и той же ошибки, возникшей в разных местах кода.  
   
-Дополнительные сведения см. в разделе справки [RAISERROR (Transact-SQL)](http://msdn.microsoft.com/library/ms178592.aspx). Пример использования RAISERROR в модульном тесте SQL Server приведен в статье [Практическое руководство. Написание модульного теста SQL Server, который выполняется в области действия одной транзакции](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Дополнительные сведения см. в разделе справки [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Пример использования RAISERROR в модульном тесте SQL Server приведен в статье [Практическое руководство. Написание модульного теста SQL Server, который выполняется в области действия одной транзакции](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

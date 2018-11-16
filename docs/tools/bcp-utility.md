@@ -5,8 +5,7 @@ ms.date: 02/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -30,17 +29,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8455d2c3681b78fe892e91d20857ee2ad7a7dfb2
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 51c510345b83f7dcf9279692b30de639af64a2fb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383849"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675383"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > Последнюю версию служебной программы bcp, см. в разделе [14.0 служебные программы командной строки Microsoft для SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
+ > Последнюю версию служебной программы bcp, см. в разделе [14.0 служебные программы командной строки Microsoft для SQL Server ](https://go.microsoft.com/fwlink/?LinkID=825643)
 
  > С помощью программы bcp на платформе Linux, см. в разделе [Установка sqlcmd и bcp в Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -184,7 +183,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Параметр*first_row* может иметь положительное целое значение до 2^63-1. Аргумент **-F** *first_row* имеет нумерацию, которая начинается с 1.  
 
 **-G**<a name="G"></a>  
- Клиент использует этот переключатель при подключении к базе данных SQL Azure или хранилищу данных SQL Azure, чтобы указать, что проверка подлинности пользователя выполняется с помощью Azure Active Directory. Параметра -G требуется [версии 14.0.3008.27 или более поздней версии](http://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните команду bcp -v. Дополнительные сведения см. в разделе [использование аутентификации Azure Active Directory для аутентификации с помощью базы данных SQL или хранилище данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+ Клиент использует этот переключатель при подключении к базе данных SQL Azure или хранилищу данных SQL Azure, чтобы указать, что проверка подлинности пользователя выполняется с помощью Azure Active Directory. Параметра -G требуется [версии 14.0.3008.27 или более поздней версии](https://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните команду bcp -v. Дополнительные сведения см. в разделе [использование аутентификации Azure Active Directory для аутентификации с помощью базы данных SQL или хранилище данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
 
 > [!TIP]
 >  Для проверки, если ваша версия bcp поддерживает для типа проверки подлинности Active Directory Azure (AAD) **bcp--** (bcp\<пространства >\<dash >\<dash >) и убедитесь, что вы видите - G в списке Доступные аргументы.
@@ -384,7 +383,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 ## Примечания<a name="remarks"></a>
  Программа **bcp** 13.0 устанавливается при установке средств [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Если установлены средства как [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , так и более ранней версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то в зависимости от значения переменной среды PATH вместо **bcp** 13.0 необходимо использовать более раннюю версию клиента **bcp** . Переменная среды определяет набор каталогов, используемых Windows для поиска исполняемых файлов. Чтобы определить используемую версию, запустите в командной строке Windows команду **bcp /v** . Сведения о настройке пути для команды в переменной среды PATH см. в справке Windows.  
  
-Служебную программу bcp можно скачать отдельно от [пакета дополнительных компонентов Microsoft SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52676).  Выберите `ENU\x64\MsSqlCmdLnUtils.msi` или `ENU\x86\MsSqlCmdLnUtils.msi`.
+Служебную программу bcp можно скачать отдельно от [пакета дополнительных компонентов Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52676).  Выберите `ENU\x64\MsSqlCmdLnUtils.msi` или `ENU\x86\MsSqlCmdLnUtils.msi`.
 
   
  XML-файлы форматирования поддерживаются только при установке средств [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] вместе с собственным клиентом [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

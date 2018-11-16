@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c5096ef0690e915b1063c684ed60e00bcba8f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27ef6862a5fcfb6e63ffcbdd89fb1e000c2065f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854542"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667033"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Оценка количества элементов (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,11 +83,11 @@ GO
  
 Или, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), используется [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
- ```sql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
-OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+WHERE OrderAddedDate >= '2016-05-01'; 
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
 **Хранилище запросов**: появившееся в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] хранилище запросов является удобным инструментом для анализа производительности запросов. В среде [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] откройте **обозреватель объектов**. Затем откройте узел вашей базы данных; если хранилище запросов включено, вы увидите узел **Хранилище запросов**.  
@@ -108,7 +108,7 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> Рекомендуется установить последний выпуск [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) и регулярно обновлять его.  
+> Рекомендуется установить последний выпуск [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) и регулярно обновлять его.  
   
 Другой способ отслеживания процесса оценки кратности (CE) подразумевает использование расширенного события с именем **query_optimizer_estimate_cardinality**. Следующий пример кода [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он записывает XEL-файл в папку `C:\Temp\` (хотя этот путь можно изменить). При открытии XEL-файла в [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] отображаются подробные сведения об этом файле.  
   
@@ -139,17 +139,17 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-Сведения о расширенных событиях, адаптированных для [!INCLUDE[ssSDS](../../includes/sssds-md.md)], см. в разделе [Расширенные события в базе данных SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+Сведения о расширенных событиях, адаптированных для [!INCLUDE[ssSDS](../../includes/sssds-md.md)], см. в разделе [Расширенные события в базе данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
 ## <a name="steps-to-assess-the-ce-version"></a>Процедура оценки версии CE  
   
 Далее приводятся пошаговые инструкции, позволяющие оценить, не выполняется ли какой-нибудь из важных запросов медленнее с учетом последних данных CE. Для выполнения некоторых шагов нужно выполнить пример кода из предыдущего раздела.  
   
-1.  Откройте [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Убедитесь, что для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задан наивысший доступный уровень совместимости.  
+1.  Откройте среду [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Убедитесь, что для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задан наивысший доступный уровень совместимости.  
   
 2.  Выполните следующие подготовительные действия:  
   
-    1.  Откройте [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)].  
+    1.  Откройте среду [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)].  
   
     2.  Запустите T-SQL, чтобы убедиться, что для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задан наивысший доступный уровень совместимости.  
   
@@ -270,8 +270,8 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>См. также:  
  [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Оптимизация планов запроса с помощью средства оценки кратности SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [Оптимизация планов запроса с помощью средства оценки кратности SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Указания запросов](../../t-sql/queries/hints-transact-sql-query.md)     
  [Указания запросов USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
+ [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)   

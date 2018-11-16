@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: aabe54448e4f91a87531d4e56de4f617a1610d4f
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 6f9f6b87abbac930bc51d5b0f5a32d48e0afb730
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419129"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701997"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Настройка SQL Server для отправки отзывов в корпорацию Майкрософт
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ AND instance_name = '_Total'
 После завершения установки вы можете изменить параметры сбора данных об использовании для компонентов и экземпляров SQL Server с помощью приложения отчетов об ошибках и использовании. Это приложение доступно как часть установки SQL Server. Это средство позволяет настроить параметры использования данных отдельно для каждого экземпляра SQL Server.
 
 > [!NOTE]
-> Приложение отчетов об ошибках и использовании размещается в списке средств настройки SQL Server. Это средство можно использовать для управления настройками, а также сбора отчетов об ошибках и сведений об использовании точно также, как в SQL Server 2017. Отчеты об ошибках создаются отдельно от сбора сведений об использовании, что позволяет включать и отключать эти механизмы отдельно. С отчетом об ошибках в корпорацию Майкрософт отправляются аварийные дампы, которые могут содержать конфиденциальные сведения, как описано в [заявлении о конфиденциальности](http://go.microsoft.com/fwlink/?LinkID=868444).
+> Приложение отчетов об ошибках и использовании размещается в списке средств настройки SQL Server. Это средство можно использовать для управления настройками, а также сбора отчетов об ошибках и сведений об использовании точно также, как в SQL Server 2017. Отчеты об ошибках создаются отдельно от сбора сведений об использовании, что позволяет включать и отключать эти механизмы отдельно. С отчетом об ошибках в корпорацию Майкрософт отправляются аварийные дампы, которые могут содержать конфиденциальные сведения, как описано в [заявлении о конфиденциальности](https://go.microsoft.com/fwlink/?LinkID=868444).
 
 Чтобы открыть средство отчетов об ошибках и использовании SQL Server, выберите действие **Запустить** и выполните поиск по слову "ошибка". Вы увидите элемент отчетов об ошибках и использовании SQL Server. Запустив это средство, вы сможете управлять сведениями об использовании и серьезных ошибках, которые собираются для экземпляров и компонентов, установленных на соответствующем компьютере.
 
@@ -153,7 +153,7 @@ AND instance_name = '_Total'
  
 - Windows Server 2016 и Windows 10
 
-    [Configure Windows telemetry in your organization](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization) (Настройка телеметрии Windows в вашей организации)
+    [Configure Windows telemetry in your organization](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization) (Настройка телеметрии Windows в вашей организации)
 - Windows Server 2008 R2 и Windows 7
 
     [WER Settings](/windows/desktop/wer/wer-settings) (Параметры отчетов об ошибках Windows)

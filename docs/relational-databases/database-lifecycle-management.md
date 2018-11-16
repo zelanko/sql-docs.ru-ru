@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
@@ -33,12 +32,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1427cea1e6a920b0c3705a5a305e165b4ccb99be
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f6771cb18d227c4e81290129ed5611da584988e7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991098"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665026"
 ---
 # <a name="database-lifecycle-management"></a>Управление жизненным циклом базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ ms.locfileid: "49991098"
   
  Управление жизненным циклом баз данных начинается с обсуждения проекта и цели, разработки, тестирования, построения, развертывания, обслуживания, наблюдения и резервного копирования и заканчивается архивом данных. В этом разделе представлены общие сведения об этапах управления жизненным циклом базы данных, начиная с ее разработки и включая сборку, развертывание и мониторинг. В разделе также рассматриваются действия по управлению данными и операции, связанные с переносом данных, такие как импорт или экспорт, резервное копирование, миграция и синхронизация.  
   
- Полностью этот раздел можно прочитать по адресу: [Управление жизненным циклом баз данных](http://go.microsoft.com/fwlink/?LinkId=276949).  
+ Полностью этот раздел можно прочитать по адресу: [Управление жизненным циклом баз данных](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a>См. также:  
- [Домашняя страница Windows Azure](http://www.windowsazure.com/)   
- [Центр разработчиков Windows Azure](http://www.windowsazure.com/develop/overview/)   
- [Центр управления Windows Azure](http://www.windowsazure.com/manage/overview/)   
- [Блог рабочей группы по Windows Azure](http://www.windowsazure.com/community/blog/)   
- [Возможности поддержки Windows Azure](http://www.windowsazure.com/support/contact/)  
+ [Домашняя страница Windows Azure](https://www.windowsazure.com/)   
+ [Центр разработчиков Windows Azure](https://www.windowsazure.com/develop/overview/)   
+ [Центр управления Windows Azure](https://www.windowsazure.com/manage/overview/)   
+ [Блог рабочей группы по Windows Azure](https://www.windowsazure.com/community/blog/)   
+ [Возможности поддержки Windows Azure](https://www.windowsazure.com/support/contact/)  
   
   

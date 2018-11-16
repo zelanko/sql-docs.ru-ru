@@ -15,12 +15,12 @@ ms.assetid: 38e8146d-86bf-48c9-a436-2269bdadb27d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f29999a359fac2725e8c7f9c64001ecb6ba75d2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1f999e3558d31ea8b869917acec1d5f5a9028ea
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630102"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696183"
 ---
 # <a name="static-aggregate-geography-methods"></a>Статические агрегатные географические методы
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "47630102"
   
  Дополнительные сведения о спецификациях консорциума OGC см. в одном из следующих источников:  
   
- [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](http://go.microsoft.com/fwlink/?LinkId=93627)  
+ [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
- [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
+ [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [Спецификации OGC, язык GML](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [Спецификации OGC, язык GML](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="in-this-section"></a>в этом разделе  
   

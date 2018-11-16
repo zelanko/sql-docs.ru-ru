@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c625459ae357dd0c8db1ab7b2255e95e5787b1f0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ac129843dafffbc53c32f639e0ed1113d53eec6b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029343"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813667"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Установка сервера отчетов служб Reporting Services 2016 в собственном режиме
 
@@ -85,15 +85,15 @@ ms.locfileid: "50029343"
 |Часть|Описание|  
 |----------|-----------------|  
 |Prefix|Префиксом по умолчанию является HTTP. Если сертификат SSL уже установлен, программа установки попытается создать резервирование URL-адресов с префиксом HTTPS.|  
-|Имя узла|Именем узла по умолчанию является строгий шаблон (+). Он указывает, что сервер отчетов принимает все HTTP-запросы в заданном порте для любого имени узла, который соответствует компьютеру, включая `http://<computername>/reportserver`, `http://localhost/reportserver` или `http://<IPAddress>/reportserver`|  
+|Имя узла|Именем узла по умолчанию является строгий шаблон (+). Он указывает, что сервер отчетов принимает все HTTP-запросы в заданном порте для любого имени узла, который соответствует компьютеру, включая `https://<computername>/reportserver`, `https://localhost/reportserver` или `https://<IPAddress>/reportserver`|  
 |Порт|По умолчанию используется порт 80. Следует иметь в виду, что если используется порт, отличный от 80, то его необходимо явным образом указывать в URL-адресе при открытии веб-приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в окне браузера.|  
 |Виртуальный каталог|По умолчанию имена виртуальных каталогов формируются по модели ReportServer_\<*имя_экземпляра*> для веб-службы сервера отчетов и по модели Reports_\<*имя_экземпляра*> — для [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Для веб-службы сервера отчетов по умолчанию используется виртуальный каталог **reportserver**. Для [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]используется виртуальный каталог по умолчанию **reports**.|  
   
  Ниже приведен пример полного URL-адреса.  
   
--   `http://+:80/reportserver`, предоставляет доступ к серверу отчетов.  
+-   `https://+:80/reportserver`, предоставляет доступ к серверу отчетов.  
   
--   `http://+:80/reports`, предоставляет доступ к [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)].
+-   `https://+:80/reports`, предоставляет доступ к [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)].
   
 ##  <a name="bkmk_installwithwizard"></a> Установка в основном режиме с помощью мастера установки SQL Server  
  В следующем списке описываются конкретные шаги и параметры служб  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , выбираемые в мастере установки SQL Server. В этом списке описаны не все страницы мастера установки, а только страницы, связанные со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которые являются частью установки в собственном режиме.  
@@ -130,9 +130,9 @@ ms.locfileid: "50029343"
   
 5.  Учтите: если на странице "Конфигурация экземпляра" вы решили настроить **именованный экземпляр**, вам нужно будет использовать имя этого экземпляра в URL-адресах при переходе к диспетчеру отчетов и самому серверу отчетов. Если имя экземпляра — THESQLINSTANCE, URL-адреса будут выглядеть так:  
   
-    -   `http://[ServerName]/ReportServer_THESQLINSTANCE`  
+    -   `https://[ServerName]/ReportServer_THESQLINSTANCE`  
   
-    -   `http://[ServerName]/Reports_THESQLINSTANCE`  
+    -   `https://[ServerName]/Reports_THESQLINSTANCE`  
   
 6.  **Конфигурация сервера**: если вы планируете использовать функцию подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , на странице **Конфигурация сервера** укажите **автоматический** тип запуска агента SQL Server.   Значение по умолчанию — вручную.  
   
@@ -153,9 +153,9 @@ ms.locfileid: "50029343"
   
     -   Откройте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и убедитесь, что вы можете подключиться к серверу отчетов.  
   
-    -   Откройте браузер **с правами администратора** и подключитесь к диспетчеру отчетов служб [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], например `http://localhost/Reports`.  
+    -   Откройте браузер **с правами администратора** и подключитесь к диспетчеру отчетов служб [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], например `https://localhost/Reports`.  
   
-    -   Откройте браузер с правами администратора и подключитесь к странице сервера отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Например,  `http://localhost/ReportServer`  
+    -   Откройте браузер с правами администратора и подключитесь к странице сервера отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Например,  `https://localhost/ReportServer`  
   
  Дополнительные сведения см. в подразделе «Собственный режим» следующих двух разделов:  
   

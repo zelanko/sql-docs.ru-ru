@@ -16,12 +16,12 @@ ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99773e3327831cdb622382483bc9c128b9ffef82
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: f1243a0979148b8c5a4a0f98b28cc7e1c7ad677f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100135"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700389"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Создание проектов баз данных с использованием среды SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ ms.locfileid: "50100135"
   
 ## <a name="see-also"></a>См. также:  
 [Использование среды SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[Создание, анализ и изменение запросов в среде SQL Server Management Studio](http://msdn.microsoft.com/062051e4-4b77-4969-98ae-d2547c24ce3e)  
+[Создание, анализ и изменение запросов в среде SQL Server Management Studio](https://msdn.microsoft.com/062051e4-4b77-4969-98ae-d2547c24ce3e)  
 [Решения (среда SQL Server Management Studio)](../ssms/solution/solutions-sql-server-management-studio.md)  
   

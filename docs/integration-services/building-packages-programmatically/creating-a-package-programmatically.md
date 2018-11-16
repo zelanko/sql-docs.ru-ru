@@ -19,12 +19,12 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b09b200cfead07be03449d6f62c70ee3fc180d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4782edbfb3b353dbd07313e0568847d5c696ad8
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704342"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637731"
 ---
 # <a name="creating-a-package-programmatically"></a>Создание пакета программным способом
   Объект <xref:Microsoft.SqlServer.Dts.Runtime.Package> представляет собой контейнер верхнего уровня для всех остальных объектов в решении служб [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Пакет, являющийся контейнером верхнего уровня, создается в качестве первого объекта, а последующие объекты добавляются в него и затем выполняются в контексте пакета. Сам пакет перемещения или преобразования данных не осуществляет. Для выполнения этих функций используются задачи, содержащиеся в пакете. Задачи выполняют основную работу пакета. Они определяют функциональность пакета. Пакет создается и выполняется всего тремя строками кода, однако к нему могут быть добавлены различные задачи и объекты <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, что обеспечивает дополнительную функциональность пакета. В этом разделе описывается программное создание пакета. В нем не содержатся сведения о создании задач или диспетчера соединений <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Эти темы рассматриваются в последующих разделах.  
@@ -151,9 +151,9 @@ End Module
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Запись в блоге [Образец API-интерфейса ― источник OleDB и назначение OleDB](http://go.microsoft.com/fwlink/?LinkId=220824) на сайте blogs.msdn.com.  
+-   Запись в блоге [Образец API-интерфейса ― источник OleDB и назначение OleDB](https://go.microsoft.com/fwlink/?LinkId=220824) на сайте blogs.msdn.com.  
   
--   Запись в блоге [EzAPI — обновление для SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) на сайте blogs.msdn.com.  
+-   Запись в блоге [EzAPI — обновление для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) на сайте blogs.msdn.com.  
   
 ## <a name="see-also"></a>См. также:  
  [Программное добавление задач](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

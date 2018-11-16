@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d32ba5273572c8f67729025e63580fa3355ec958
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4d12f59b94771a73f6f3b5db5290747940c768d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636492"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700942"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Обновление экземпляров SQL Server, работающих в кластерах Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012
 
@@ -319,7 +319,7 @@ ms.locfileid: "47636492"
 ## <a name="next-steps"></a>Следующие шаги
 - [Завершение обновления ядра СУБД](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [Изменение режима совместимости базы данных и использование хранилища запросов](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
-- [Использование преимуществ новых функций SQL Server 2016](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
+- [Использование преимуществ новых функций SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
 - [Обновление экземпляра отказоустойчивого кластера SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)
 - [Просмотр и чтение файлов журналов программы установки SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [Добавление компонентов в экземпляр SQL Server 2016 (программа установки)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

@@ -17,12 +17,12 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa43a9bac948f5d03d21689b4272f2c93317792b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0451f0bdb394d66fa8477c43aee801bd25ead1db
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654882"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638761"
 ---
 # <a name="execute-process-task"></a>Задача «Выполнение процесса»
   Задача «Выполнение процесса» запускает приложение или пакетный файл как часть рабочего процесса пакета служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Хотя задача «Выполнение процесса» может использоваться для выполнения любого стандартного приложения, такого как [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] или [!INCLUDE[ofprword](../../includes/ofprword-md.md)], обычно она применяется для запуска бизнес-приложений или командных файлов, работающих с источником данных. Например, задачу «Выполнение процесса» можно использовать для развертывания сжатого текстового файла. Потом пакет сможет использовать текстовый файл в качестве источника данных для потока данных в пакете. Или, например, задача «Выполнение процесса» может использоваться для запуска приложения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , создающего ежедневный отчет о продажах. Затем можно присоединить отчет к задаче «Отправка почты» и разослать отчет по списку распространения.  
@@ -42,12 +42,12 @@ ms.locfileid: "47654882"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### <a name="property-settings"></a>Параметры свойств  
  Если задача «Выполнение процесса» запускает пользовательское приложение, она предоставляет входные данные для приложения с помощью одного или обоих следующих методов.  
   
--   Переменной, указанной в свойстве **StandardInputVariable** . Дополнительные сведения о переменных см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   Переменной, указанной в свойстве **StandardInputVariable** . Дополнительные сведения о переменных см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 -   Аргумента, указанного в параметре **Arguments** . Например, если задача открывает документ в приложении Word, то аргументом может быть имя DOC-файла.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47654882"
   
  Можно использовать выражение, чтобы задать различные свойства задачи «Выполнение процесса».  
   
- При использовании свойства **StandardInputVariable** для настройки задачи «Выполнение процесса» на предоставление входных данных, вызовите метод **Console.ReadLine** из приложения, чтобы считать входные данные. Дополнительные сведения см. в разделе [Console.ReadLine Method](http://go.microsoft.com/fwlink/?LinkId=129201)в библиотеке классов платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ При использовании свойства **StandardInputVariable** для настройки задачи «Выполнение процесса» на предоставление входных данных, вызовите метод **Console.ReadLine** из приложения, чтобы считать входные данные. Дополнительные сведения см. в разделе [Console.ReadLine Method](https://go.microsoft.com/fwlink/?LinkId=129201)в библиотеке классов платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  При использовании свойства **Аргументы** для настройки задачи «Выполнение процесса» на предоставление входных данных выполните одно из следующих действий, чтобы получить аргументы.  
   
@@ -68,11 +68,11 @@ ms.locfileid: "47654882"
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     Дополнительные сведения см. в разделе [My.Application.CommandLineArgs Property](http://go.microsoft.com/fwlink/?LinkId=129200), в справочнике [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
+     Дополнительные сведения см. в разделе [My.Application.CommandLineArgs Property](https://go.microsoft.com/fwlink/?LinkId=129200), в справочнике [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
   
 -   Если для подготовки приложения применяется Microsoft Visual C#, используйте метод **Main**.  
   
-     Дополнительные сведения см. в разделе [Command-Line Arguments (C# Programming Guide)](http://go.microsoft.com/fwlink/?LinkId=129406)в руководстве по программированию на C#.  
+     Дополнительные сведения см. в разделе [Command-Line Arguments (C# Programming Guide)](https://go.microsoft.com/fwlink/?LinkId=129406)в руководстве по программированию на C#.  
   
  Задача «Выполнение процесса» также содержит свойства **StandardOutputVariable** и **StandardErrorVariable** , чтобы указать переменные, которые используют стандартное устройство вывода и вывод ошибок приложения соответственно.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47654882"
  **StandardInputVariable**  
  Выберите переменную для ввода данных для этого процесса или нажмите кнопку \<**Создать переменную...**> для создания новой переменной:  
   
- **См. также:** [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
  Выберите переменную для получения выходных данных этого процесса или нажмите кнопку \<**Создать переменную...**> для создания новой переменной.  

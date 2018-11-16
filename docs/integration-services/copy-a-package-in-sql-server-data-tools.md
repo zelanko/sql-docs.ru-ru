@@ -16,12 +16,12 @@ ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 834ffc7227301ba01d6c669940661bead6d1ab58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9aee07af3a8c8026448cc6804df1bc979e78c538
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785865"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638431"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Копирование пакета с помощью SQL Server Data Tools
   В этом разделе описывается, как создать новый пакет служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] копированием существующего пакета и как обновить свойства **Name** и **GUID** нового пакета.  
@@ -54,7 +54,7 @@ ms.locfileid: "47785865"
 11. В меню **Файл** выберите команду **Сохранить выбранные элементы** , чтобы сохранить новый пакет.  
   
 ## <a name="see-also"></a>См. также:  
- [Сохранение одной копии пакета](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
+ [Сохранение одной копии пакета](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
  [Создание пакетов в SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)   
  [Пакеты служб Integration Services (SSIS)](../integration-services/integration-services-ssis-packages.md)  
   

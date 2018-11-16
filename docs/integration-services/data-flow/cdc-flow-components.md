@@ -11,12 +11,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78d5b8b15d9a063646e9a68e3a77c08166ffde8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3a062cd23809db8edf5439f252dabcc6d905dad
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828602"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641191"
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
   Компоненты отслеживания измененных данных Attunity для служб Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] позволяют разработчикам служб SSIS работать с CDC и уменьшают сложность пакетов CDC.  
@@ -40,7 +40,7 @@ ms.locfileid: "47828602"
 ## <a name="installation"></a>Установка  
  В этом разделе описываются процедуры установки для компонентов CDC для служб Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
- Компоненты CDC для SSIS входят в пакет с конструктором и службой системы отслеживания измененных данных Microsoft® для Oracle (от Attunity для Microsoft SQL Server®). Скачиваемые компоненты входят в пакет дополнительных компонентов SQL Server. Скачать компоненты пакета дополнительных компонентов можно со страницы [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).  
+ Компоненты CDC для SSIS входят в пакет с конструктором и службой системы отслеживания измененных данных Microsoft® для Oracle (от Attunity для Microsoft SQL Server®). Скачиваемые компоненты входят в пакет дополнительных компонентов SQL Server. Скачать компоненты пакета дополнительных компонентов можно со страницы [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).  
   
 ### <a name="version-support"></a>Поддерживаемые версии
 
@@ -205,15 +205,15 @@ ms.locfileid: "47828602"
   
 -   Запись в блоге [CDC в SSIS для SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)на сайте mattmasson.com.  
   
--   Запись в блоге [Служба CDC для Oracle в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827), касающуюся параметра службы CDC, см. на сайте blogs.msdn.com.  
+-   Запись в блоге [Служба CDC для Oracle в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827), касающуюся параметра службы CDC, см. на сайте blogs.msdn.com.  
   
--   Техническую статью [Установка системы отслеживания измененных данных Microsoft SQL Server 2012 для Oracle компании Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)см. на сайте social.technet.microsoft.com.  
+-   Техническую статью [Установка системы отслеживания измененных данных Microsoft SQL Server 2012 для Oracle компании Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)см. на сайте social.technet.microsoft.com.  
   
--   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](http://go.microsoft.com/fwlink/?LinkId=252960)см. на сайте social.technet.microsoft.com.  
+-   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](https://go.microsoft.com/fwlink/?LinkId=252960)см. на сайте social.technet.microsoft.com.  
   
--   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](http://go.microsoft.com/fwlink/?LinkId=252961)см. на сайте social.technet.microsoft.com.  
+-   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)см. на сайте social.technet.microsoft.com.  
   
--   Видеоролик [CDC для баз данных Oracle, использующих службы SQL Server Integration Services 2012 (видео по SQL Server)](http://technet.microsoft.com/sqlserver/jj218898)на сайте technet.microsoft.com.  
+-   Видеоролик [CDC для баз данных Oracle, использующих службы SQL Server Integration Services 2012 (видео по SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)на сайте technet.microsoft.com.  
   
 ## <a name="see-also"></a>См. также:  
  [Задача управления CDC](../../integration-services/control-flow/cdc-control-task.md)  

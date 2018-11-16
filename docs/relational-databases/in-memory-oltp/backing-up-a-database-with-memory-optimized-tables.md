@@ -11,12 +11,12 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0d607699e630ee7107b2ae3460e3b3152bb94bb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0faaa704bb7a160d4a17d80a97efd2bae85b629
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703422"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671251"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Резервное копирование базы данных с оптимизированными для памяти таблицами
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,6 +70,6 @@ ms.locfileid: "47703422"
  Если таблицы, оптимизированные для памяти, являются значительной частью размера базы данных, то разностная резервная копии может значительно уменьшить размер резервной копии. Для типичных рабочих нагрузок OLTP разностные резервные копии будут намного меньше, чем полные резервные копии баз данных.  
   
 ## <a name="see-also"></a>См. также:  
- [Резервное копирование и восстановление оптимизированных для памяти таблиц](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+ [Резервное копирование и восстановление оптимизированных для памяти таблиц](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

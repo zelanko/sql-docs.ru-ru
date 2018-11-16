@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc385863afdd0ec6c9c5fb06799f8109f0c9cea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645152"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813357"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Настройка URL-адреса (диспетчер конфигурации служб SSRS)
   Приступать к использованию [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] или веб-службы сервера отчетов можно лишь после настройки как минимум одного URL-адреса для каждого приложения. Настройка URL-адресов является обязательной в случае установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме "только файлы" (иначе говоря, если на странице "Параметры установки" сервера отчетов в мастере установки выбран параметр **Установить, но не настраивать сервер** ). При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию URL-адреса настраиваются автоматически для каждого приложения.  
@@ -78,7 +78,7 @@ ms.locfileid: "47645152"
   
          `netstat –anp tcp`  
   
-    -   Просмотрите статью службы технической поддержки Майкрософт [Сведения о назначении портов TCP/IP](http://support.microsoft.com/kb/174904), обращая внимание на порядок назначения портов TCP и на различия между известными портами (от 0 до 1023), зарегистрированными портами (от 1024 до 49151) и динамическими, или частными, портами (от 49152 до 65535).  
+    -   Просмотрите статью службы технической поддержки Майкрософт [Сведения о назначении портов TCP/IP](https://support.microsoft.com/kb/174904), обращая внимание на порядок назначения портов TCP и на различия между известными портами (от 0 до 1023), зарегистрированными портами (от 1024 до 49151) и динамическими, или частными, портами (от 49152 до 65535).  
   
     -   При использовании брандмауэра Windows необходимо открыть порт. Инструкции см. в разделе [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
@@ -124,9 +124,9 @@ ms.locfileid: "47645152"
 ## <a name="setting-advanced-properties-to-specify-additional-urls"></a>Установка дополнительных свойств для указания дополнительных URL-адресов  
  Несколько URL-адресов веб-службы сервера отчетов или [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] можно зарезервировать, указав различные порты или имена узлов (IP-адрес или имя заголовка узла, которое сервер доменных имен может преобразовать в IP-адрес, назначенный компьютеру). Создав несколько URL-адресов, можно установить различные пути доступа к одному экземпляру сервера отчетов. Так, для обеспечения доступа к серверу отчетов через локальную сеть и через экстрасеть можно использовать применяемый по умолчанию URL-адрес для доступа по локальной сети и дополнительное полное имя узла для доступа через экстрасеть.  
   
--   `http://myserver01/reportserver`  
+-   `https://myserver01/reportserver`  
   
--   `http://www.adventure-works.com/reportserver`  
+-   `https://www.adventure-works.com/reportserver`  
   
  Назначение нескольких имен виртуальных каталогов для одного экземпляра приложения не допускается. Каждый экземпляр приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сопоставляется одному имени виртуального каталога. При наличии на одном компьютере нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] имя виртуального каталога должно включать в себя имя этого экземпляра; таким образом гарантируется, что каждый запрос доставляется правильному адресату.  
  
@@ -151,7 +151,7 @@ ms.locfileid: "47645152"
   
 2.  Нажмите кнопку **Добавить**.  
   
-3.  Щелкните IP-адрес или имя заголовка узла. При указании заголовка узла обязательно используйте такое имя, которое может разрешить служба DNS. При указании общедоступного доменного имени включайте весь URL-адрес, в том числе `http://www`.  
+3.  Щелкните IP-адрес или имя заголовка узла. При указании заголовка узла обязательно используйте такое имя, которое может разрешить служба DNS. При указании общедоступного доменного имени включайте весь URL-адрес, в том числе `https://www`.  
   
 4.  Укажите номер порта. При указании нестандартного порта URL-адрес приложения должен всегда включать номер порта.  
   
@@ -165,13 +165,13 @@ ms.locfileid: "47645152"
 ##  <a name="URLExamples"></a> Примеры конфигурации URL-адресов  
  Приведенный ниже список содержит несколько примеров того, как может выглядеть URL-адрес сервера отчетов.  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
--   `http://localhost/reportserver_SQLEXPRESS`  
+-   `https://localhost/reportserver_SQLEXPRESS`  
   
--   `http://sales01/reportserver`  
+-   `https://sales01/reportserver`  
   
--   `http://sales01:8080/reportserver`  
+-   `https://sales01:8080/reportserver`  
   
 -   `https://sales.adventure-works.com/reportserver`  
   
@@ -179,13 +179,13 @@ ms.locfileid: "47645152"
   
  URL-адреса, используемые для доступа к [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] , имеют тот же формат и обычно создаются на том же веб-сайте, где расположен сервер отчетов. Единственным различием является имя виртуального каталога (в данном случае это **reports** , но можно использовать любое имя по своему усмотрению).  
   
--   `http://localhost/reports`  
+-   `https://localhost/reports`  
   
--   `http://localhost/reports_SQLEXPRESS`  
+-   `https://localhost/reports_SQLEXPRESS`  
   
--   `http://sales01/reports`  
+-   `https://sales01/reports`  
   
--   `http://sales01:8080/reports`  
+-   `https://sales01:8080/reports`  
   
 -   `https://sales.adventure-works.com/reports`  
   

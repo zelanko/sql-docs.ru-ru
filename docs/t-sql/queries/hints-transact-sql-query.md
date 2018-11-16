@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecdfe3131c797dc10c1bfe87fcfd6c7e7a3eb1c9
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: d0b16356be0c36f48f9e82b4a49e483c3eac529b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806834"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704092"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -287,7 +287,7 @@ ms.locfileid: "49806834"
    > [!NOTE]
    > Указание QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n не переопределяет значение по умолчанию или параметр оценки унаследованной кратности, если оно применяется с использованием конфигурации области баз данных, флага трассировки или другого указания запроса, например QUERYTRACEON.   
    > Это указание влияет только на поведение оптимизатора запросов. Оно не влияет на другие функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые могут зависеть от [уровня совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), включая доступность некоторых функций базы данных.  
-   > Дополнительные сведения об этом указании см. в разделе [Developer’s Choice: Hinting Query Execution model](http://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) (Выбор разработчика: модель выполнения запроса указания).
+   > Дополнительные сведения об этом указании см. в разделе [Developer’s Choice: Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) (Выбор разработчика: модель выполнения запроса указания).
     
 *  'QUERY_PLAN_PROFILE'      
  Включает упрощенное профилирование для запроса. Когда завершается запрос, содержащий это новое указание, вызывается новое расширенное событие query_plan_profile. Это расширенное событие предоставляет статистику выполнения и фактический план выполнения XML (подобно расширенному событию query_post_execution_showplan, но только для запросов, содержащих новое указание). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 (CU3) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 11 (CU11)). 
@@ -296,7 +296,7 @@ ms.locfileid: "49806834"
   > Если включен сбор расширенных событий query_post_execution_showplan, в каждый запрос, который выполняется на сервере, будет добавлена стандартная инфраструктура профилирования. Это может повлиять на общую производительность сервера.      
   > Если вместо этого вы включите сбор расширенных событий *query_thread_profile* для использования упрощенной инфраструктуры профилирования, издержки производительности будут гораздо ниже, но по-прежнему могут влиять на производительность сервера.       
   > Если вы включите расширенное событие query_plan_profile, упрощенная инфраструктура профилирования будет применяться только к запросам, которые выполняются с указанием QUERY_PLAN_PROFILE, и не повлияет на другие рабочие нагрузки на сервере. Используйте это указание для профилирования конкретного запроса, не влияя на другие части рабочей нагрузки сервера.
-  > Дополнительные сведения об упрощенном профилировании см. в записи блога, [посвященной получению сведений о ходе выполнения запроса](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+  > Дополнительные сведения об упрощенном профилировании см. в записи блога, [посвященной получению сведений о ходе выполнения запроса](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
  
 Список всех поддерживаемых имен USE HINT можно запросить с помощью динамического административного представления [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
 

@@ -10,12 +10,12 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcb60c8c249f0b1f1a789b25134bfbcc2419210a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cfc2b3cbb9dedc9f2b8902229c6aea9e68226ec
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694503"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604000"
 ---
 # <a name="configure-distributed-availability-group"></a>Настройка распределенной группы доступности  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ GO
 ```  
   
 > [!NOTE]  
->  **LISTENER_URL** указывает прослушиватель для каждой группы доступности, а также конечную точку зеркального отображения базы данных для группы доступности. В этом примере это порт `5022` (а не порт `60173` , который использовался для создания прослушивателя). Если вы используете подсистему балансировки нагрузки, например в Azure, [добавьте правило балансировки нагрузки для порта распределенной группы доступности](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Добавьте правило для порта прослушивателя в дополнение к порту экземпляра SQL Server. 
+>  **LISTENER_URL** указывает прослушиватель для каждой группы доступности, а также конечную точку зеркального отображения базы данных для группы доступности. В этом примере это порт `5022` (а не порт `60173` , который использовался для создания прослушивателя). Если вы используете подсистему балансировки нагрузки, например в Azure, [добавьте правило балансировки нагрузки для порта распределенной группы доступности](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Добавьте правило для порта прослушивателя в дополнение к порту экземпляра SQL Server. 
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Присоединение распределенной группы доступности во втором кластере  
  Присоедините распределенную группу доступности во втором кластере WSFC.  

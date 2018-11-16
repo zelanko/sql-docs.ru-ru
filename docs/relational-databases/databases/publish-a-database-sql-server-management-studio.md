@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ead1b1837f389d4c2a9d433b35caad7f0380ad7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 955bbdf7932516623eb09f043bd7885455155e50
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624512"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671903"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Публикация базы данных (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47624512"
 >  Функциональные возможности, использование которых описано в этом разделе, раньше обеспечивал мастер публикации базы данных. В мастер формирования и публикации скриптов также было добавлено средство публикации, а мастер публикации базы данных больше не поддерживается.  
   
 ## <a name="generate-and-publish-scripts-wizard"></a>Мастер формирования и публикации скриптов  
- Мастер формирования и публикации скриптов можно использовать для публикации базы данных или отдельных ее объектов на поставщике услуг размещения. Поставщик услуг размещения SQL Server представляет собой интерфейс обмена данными для веб-службы. Веб-служба создается с помощью проекта Database Publishing Service в пакете SQL Server Hosting Toolkit на CodePlex. Веб-служба облегчает клиентам поставщика услуг размещения публикацию баз данных с помощью мастера формирования и публикации скриптов. Дополнительные сведения о загрузке пакета SQL Server Hosting Toolkit см. на странице [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025).  
+ Мастер формирования и публикации скриптов можно использовать для публикации базы данных или отдельных ее объектов на поставщике услуг размещения. Поставщик услуг размещения SQL Server представляет собой интерфейс обмена данными для веб-службы. Веб-служба создается с помощью проекта Database Publishing Service в пакете SQL Server Hosting Toolkit на CodePlex. Веб-служба облегчает клиентам поставщика услуг размещения публикацию баз данных с помощью мастера формирования и публикации скриптов. Дополнительные сведения о загрузке пакета SQL Server Hosting Toolkit см. на странице [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025).  
   
  Мастер формирования и публикации скриптов также может использоваться для создания скриптов переноса базы данных.  
   

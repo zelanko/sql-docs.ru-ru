@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb85a4e0f209fd5589c55e0392393c61a57e6fe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 134831664f7b13177dac016bb9b92906a2974eb5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835932"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703592"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Режимы кворума WSFC и участвующая в голосовании конфигурация (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "47835932"
 > [!IMPORTANT]  
 >  Для использования параметров NodeWeight необходимо применить следующее исправление ко всем серверам в кластере WSFC:  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): доступно исправление, позволяющее настраивать узел кластера, не имеющий голосов кворума в [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] и в [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): доступно исправление, позволяющее настраивать узел кластера, не имеющий голосов кворума в [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] и в [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Рекомендуемые настройки для голосования с кворумом  
  При включении или отключении голоса конкретного узла WSFC соблюдайте следующие правила.  
@@ -110,7 +110,7 @@ ms.locfileid: "47835932"
 >   
 >  -   Узел кластера, на котором размещена первичная реплика, не имеет голоса.  
 > -   Вторичная реплика настроена для автоматического перехода на другой ресурс, а ее узел кластера не имеет голоса.  
-> -   [KB2494036](http://support.microsoft.com/kb/2494036) не установлено на всех узлах кластера, на которых размещены реплики доступности. Это обновление необходимо для добавления или удаления голосов для узлов кластера в многосайтовых развертываниях. Однако в односайтовых развертываниях это обычно не требуется, поэтому можно безопасно пропустить предупреждение.  
+> -   [KB2494036](https://support.microsoft.com/kb/2494036) не установлено на всех узлах кластера, на которых размещены реплики доступности. Это обновление необходимо для добавления или удаления голосов для узлов кластера в многосайтовых развертываниях. Однако в односайтовых развертываниях это обычно не требуется, поэтому можно безопасно пропустить предупреждение.  
   
 > [!TIP]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предлагает несколько системных динамических административных представлений, которые могут помочь в управлении параметрами конфигурации кластера WSFC и голосовании с кворумом узлов.  
@@ -125,13 +125,13 @@ ms.locfileid: "47835932"
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Проверка конфигурации голосов кворума в мастерах групп доступности AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Технологии Windows Server: отказоустойчивые кластеры](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Технологии Windows Server: отказоустойчивые кластеры](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Пошаговое руководство по отказоустойчивым кластерам: настройка кворума в отказоустойчивом кластере](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Пошаговое руководство по отказоустойчивым кластерам: настройка кворума в отказоустойчивом кластере](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>См. также:  
  [Аварийное восстановление WSFC через принудительный кворум (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

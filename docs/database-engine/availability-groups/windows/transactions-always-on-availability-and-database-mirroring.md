@@ -16,12 +16,12 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93088a7d39261f014a742b93f7d9e89ea55b52a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad9700e9b1c86b454191e51c6a7e4ee52c393c6b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611033"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606844"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Транзакции — группы доступности AlwaysOn и зеркальное отображение баз данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ SQL Server 2017 поддерживает распределенные транз
 
 Дополнительные сведения см. в следующих статьях:
 
-- [DTC Administration Guide](http://msdn.microsoft.com/library/ms681291.aspx) (Руководство по администрированию DTC)
-- [DTC Developers Guide](http://msdn.microsoft.com/library/ms679938.aspx) (Руководство для разработчиков DTC)
-- [DTC Programmers Reference](http://msdn.microsoft.com/library/ms686108.aspx) (Справочник для программистов DTC)
+- [DTC Administration Guide](https://msdn.microsoft.com/library/ms681291.aspx) (Руководство по администрированию DTC)
+- [DTC Developers Guide](https://msdn.microsoft.com/library/ms679938.aspx) (Руководство для разработчиков DTC)
+- [DTC Programmers Reference](https://msdn.microsoft.com/library/ms686108.aspx) (Справочник для программистов DTC)
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 с пакетом обновления 1 (SP1) и более ранние версии: поддержка транзакций между базами данных в одном экземпляре SQL Server  
 
@@ -60,7 +60,7 @@ SQL Server 2017 поддерживает распределенные транз
   
  Необходимо выполнить следующие требования.  
   
--   Группы доступности должны быть запущены в Windows Server 2012 R2 или более поздней версии. Для Windows Server 2012 R2 необходимо установить обновление KB3090973, доступное по адресу [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
+-   Группы доступности должны быть запущены в Windows Server 2012 R2 или более поздней версии. Для Windows Server 2012 R2 необходимо установить обновление KB3090973, доступное по адресу [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  
   
 -   Группы доступности необходимо создать с помощью команды **CREATE AVAILABILITY GROUP** и предложения **WITH DTC\_SUPPORT = PER_DB**. Сейчас невозможно изменить существующую группу доступности.  
 

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8ff63651f0c23418c5ff5a6a386af4e2674a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19d870d64816dfea011bc0a5c245b5a18a8f5aa3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684972"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675823"
 ---
 # <a name="sql-server-extended-events-packages"></a>Пакеты обработки расширенных событий SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ where name = 'keyword_map'
 >  Ключевые слова наиболее точно соответствуют текущему группированию событий трассировки SQL.  
   
 ### <a name="targets"></a>Цели  
- Цели являются объектами-получателями событий. Цели обрабатывают события или синхронно в потоке, запускающем событие, или асинхронно в потоке, предоставленном системой. Расширенные события предоставляют несколько целей, которые можно использовать по собственному усмотрению для направления выхода событий. Дополнительные сведения см. в статье [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+ Цели являются объектами-получателями событий. Цели обрабатывают события или синхронно в потоке, запускающем событие, или асинхронно в потоке, предоставленном системой. Расширенные события предоставляют несколько целей, которые можно использовать по собственному усмотрению для направления выхода событий. Дополнительные сведения см. в статье [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
 ### <a name="actions"></a>Действия  
  Действие — это программный ответ или серия ответов на событие. Действия привязаны к событию, и каждое событие может иметь уникальный набор действий.  
@@ -220,6 +220,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>См. также:  
  [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Подсистема расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

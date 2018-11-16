@@ -22,12 +22,12 @@ ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ba861b5e0aa289f4ac7bd8a7f406f0f8a5958a91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64ea4a6f152ebeaa5898de35e386fbde8d09aab6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713642"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703282"
 ---
 # <a name="create-contract-transact-sql"></a>Инструкция CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ CREATE CONTRACT contract_name
   
  Необходимо, чтобы контракт позволял инициатору посылать сообщения. Инструкция CREATE CONTRACT завершается сбоем, если в контракте не содержится ни одного сообщения типа SENT BY ANY или SENT BY INITIATOR.  
   
- Независимо от контракта служба всегда может принимать сообщения типов `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`, `http://schemas.microsoft.com/SQL/ServiceBroker/Error` и `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] использует эти типы сообщений в системных сообщениях для приложения.  
+ Независимо от контракта служба всегда может принимать сообщения типов `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`, `https://schemas.microsoft.com/SQL/ServiceBroker/Error` и `https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] использует эти типы сообщений в системных сообщениях для приложения.  
   
  Контракт не может быть временным объектом. Контракты могут иметь имена, начинающиеся с символа #, но являются постоянными объектами.  
   

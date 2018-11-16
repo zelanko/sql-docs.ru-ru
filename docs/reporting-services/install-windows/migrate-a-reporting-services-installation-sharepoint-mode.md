@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf12709e232d4b9d84f311784f78d469b7f00e7b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: fd029f997770dd78269f58bed5daddc60699fb8a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021318"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813409"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Перенос установки служб Reporting Services (режим интеграции с SharePoint)
 
@@ -48,9 +48,9 @@ ms.locfileid: "50021318"
 ###  <a name="bkmk_content_only_migration"></a> Перенос только содержимого  
  **Перенос только содержимого служб Reporting Services** . Если требуется скопировать содержимое [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в новую ферму, то необходимо использовать такие инструменты, как **rs.exe** , чтобы скопировать содержимое в новый установленный экземпляр SharePoint. Дополнительные сведения о переносах только содержимого см. в следующих материалах:  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .** Скрипты могут переносить содержимое и ресурсы между серверами отчетов в собственном режиме и режиме интеграции с SharePoint. Дополнительные сведения см. в статьях [Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) и [Скрипт программы RS.exe служб Reporting Services, который переносит содержимое с одного сервера отчетов на другой](http://azuresql.codeplex.com/releases/view/115207).  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .** Скрипты могут переносить содержимое и ресурсы между серверами отчетов в собственном режиме и режиме интеграции с SharePoint. Дополнительные сведения см. в статьях [Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) и [Скрипт программы RS.exe служб Reporting Services, который переносит содержимое с одного сервера отчетов на другой](https://azuresql.codeplex.com/releases/view/115207).  
   
--   **Средство миграции служб Reporting Services** . Средство миграции может скопировать элементы отчета с сервера в основном режиме на сервер в режиме интеграции с SharePoint. См. дополнительные сведения о [средстве миграции служб Reporting Services](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
+-   **Средство миграции служб Reporting Services** . Средство миграции может скопировать элементы отчета с сервера в основном режиме на сервер в режиме интеграции с SharePoint. См. дополнительные сведения о [средстве миграции служб Reporting Services](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560).  
   
 ###  <a name="bkmk_full_migration"></a> Полный перенос  
  **Полная миграция** . При переносе в новую ферму баз данных содержимого SharePoint вместе с базами данных каталогов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать серию параметров архивации и восстановления, представленных в данном разделе. В некоторых случаях на этапе восстановления необходимо использовать инструменты, отличные от инструментов, которые использовались при резервном копировании. Например, диспетчер конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать для резервного копирования ключей шифрования из предыдущей версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Но для восстановления ключей шифрования в установку SQL Server 2016 Reporting Services в режиме интеграции с SharePoint необходимо использовать центр администрирования SharePoint или PowerShell.  

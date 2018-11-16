@@ -15,12 +15,12 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d8fdee121bbeea704d53068b6829548ffe7b07b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b95d209a033f30c13ea1bd21d99e845733fa9857
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800742"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642411"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Справочник по сообщениям об ошибках служб Integration Services
   Следующие таблицы содержат стандартные ошибки, предупреждения и информационные сообщения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в возрастающей цифровой последовательности в каждой категории вместе с числовыми кодами и символьными именами. Каждая ошибка определена как поле в классе <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> в пространстве имен <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -230,8 +230,8 @@ ms.locfileid: "47800742"
 |0xC0015004|-1073655804|DTS_E_CANTWRITETOFILE|Не удалось открыть файл "%1" для записи. Возможно, файл доступен только для чтения или нет достаточных разрешений.|  
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|Отсутствует результирующий набор строк, связанный с выполнением этого запроса. Результат указан неверно.|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|Отладочные файлы дампа не были правильно созданы. Значение hresult равно 0x%1!8.8X!.|  
-|0xC0016001|-1073651711|DTS_E_INVALIDURL|Указан недопустимый URL-адрес. Это может случиться, когда URL-адрес сервера или прокси-сервера содержит значение NULL или имеет неверный формат. Допустимый формат URL-адреса в форме http://ServerName:Port/ResourcePath или https://ServerName:Port/ResourcePath.|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|Недопустимый URL-адрес %1. Это может происходить, когда указана схема, отличная от указанной http или https, или URL-адрес имеет неверный формат. Допустимый формат URL-адреса в форме http://ServerName:Port/ResourcePath или https://ServerName:Port/ResourcePath.|  
+|0xC0016001|-1073651711|DTS_E_INVALIDURL|Указан недопустимый URL-адрес. Это может случиться, когда URL-адрес сервера или прокси-сервера содержит значение NULL или имеет неверный формат. Допустимый формат URL-адреса в форме https://ServerName:Port/ResourcePath или https://ServerName:Port/ResourcePath.|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|Недопустимый URL-адрес %1. Это может происходить, когда указана схема, отличная от указанной http или https, или URL-адрес имеет неверный формат. Допустимый формат URL-адреса в форме https://ServerName:Port/ResourcePath или https://ServerName:Port/ResourcePath.|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|Не удалось установить соединение с сервером %1. Эта ошибка может возникать, когда сервер не существует или неверно настроен прокси-сервер.|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|Соединение с сервером было сброшено или прервано. Повторите попытку позже.|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|Неудачная попытка входа для "%1". Эта ошибка возникает, когда предоставлены неверные учетные данные входа. Проверьте учетные данные входа.|  
@@ -2013,7 +2013,7 @@ ms.locfileid: "47800742"
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|Сведения о типе данных схемы XML для "%1" в элементе "%2" были изменены.  Выполните повторную инициализацию метаданных для этого компонента и проверьте сопоставления столбцов.|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 не используется при соединении или копировании. Удалите неиспользуемый столбец из списка входных столбцов.|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|Ошибка сортировки входящего буфера. Произошло переполнение стека.  Задайте меньшее значение для свойства DefaultBufferMaxRows в задаче потока данных.|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Рекомендуется изменить параметр PROVIDER в строке подключения на %1 или загрузить с сайта http://www.microsoft.com/downloads и установить файлы поддержки для %2.|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Рекомендуется изменить параметр PROVIDER в строке подключения на %1 или загрузить с сайта https://www.microsoft.com/downloads и установить файлы поддержки для %2.|  
 |||DTS_E_INITTASKOBJECTFAILED|Не удалось инициализировать объект задачи для задачи "%1!s!" типа "%2!s!" из-за ошибки 0x%3!8.8X! "%4!s!".|  
 |||DTS_E_GETCATMANAGERFAILED|Не удалось создать диспетчер категорий компонентов COM из-за ошибки 0x%1!8.8X! "%2!s!".|  
 |||DTS_E_COMPONENTINITFAILED|Компонент %1!s! не удалось инициализировать из-за ошибки 0x%2!8.8X! "%3!s!".|  

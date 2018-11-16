@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c2b6e5c1f33b60cd2dc9d2dd58599ffbccf1b4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d6ad65d148f35255a93563cbdcb247efe8a61da
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666652"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661343"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Разработка с использованием постоянного шифрования с поставщиком данных .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -570,7 +570,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## <a name="see-also"></a>См. также:
 
 - [Always Encrypted (ядро СУБД)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Блог о постоянном шифровании](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+- [Блог о постоянном шифровании](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [Постоянное шифрование: защита конфиденциальных данных в базе данных SQL с помощью шифрования базы данных](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 
 

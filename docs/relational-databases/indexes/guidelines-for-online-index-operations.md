@@ -19,12 +19,12 @@ ms.author: mikeray
 manager: craigg
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d899c0626ed1ac49f70ce83b80741e626bd7252b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b648c1ec93ed3a1425b39055438735f70aed6a4a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906054"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668593"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Рекомендации по операциям с индексами в режиме "в сети"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "48906054"
   
  Поскольку на финальной фазе удерживаются блокировки S-lock и Sch-M, будьте внимательны при выполнении операций с индексами в сети внутри явно объявленных пользовательских транзакций (например: в блоке BEGIN TRANSACTION...COMMIT), поскольку в этом случае блокировка будет удерживаться до окончания транзакции, мешая одновременной работе пользователей.  
   
- Перестроение индекса в сети может привести к увеличению фрагментации, когда оно выполняется с параметрами `MAX DOP > 1` и `ALLOW_PAGE_LOCKS = OFF` . Дополнительные сведения см. в статье [Как это работает. Перестроение индекса в сети может привести к увеличению фрагментации](http://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
+ Перестроение индекса в сети может привести к увеличению фрагментации, когда оно выполняется с параметрами `MAX DOP > 1` и `ALLOW_PAGE_LOCKS = OFF` . Дополнительные сведения см. в статье [Как это работает. Перестроение индекса в сети может привести к увеличению фрагментации](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
   
 ## <a name="transaction-log-considerations"></a>Рекомендации по журналу транзакций  
  Масштабные операции с индексами, выполняемые в режиме в сети или вне сети, могут привести к формированию больших объемов данных, которые вызовут переполнение журнала транзакций. Для гарантии возможности отката операций с индексами журнал транзакций не может быть усечен до завершения операции с индексом, однако может быть выполнено его резервное копирование. Иными словами, журнал транзакций должен иметь достаточно места для сохранения и транзакции операции с индексом и текущих пользовательских транзакций на весь период выполнения операции с индексом. Дополнительные сведения см. в статье [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  

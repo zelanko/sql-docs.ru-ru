@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 21745dae4137bd96fff43b48bf794cf1b67519e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a72cb156eca1c69785e16e6875a517b2d99922d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803312"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603254"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Вопросы по установке SQL Server с помощью SysPrep
 
@@ -43,7 +43,7 @@ ms.locfileid: "47803312"
   
 - Совместно со средством Windows System Preparation (также называемым Windows SysPrep) можно создать образ операционной системы, включая ненастроенный подготовленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на первоначальном компьютере. Затем можно выполнить развертывание этого образа операционной системы на нескольких компьютерах. После завершения настройки операционной системы подготовленные экземпляры можно настроить на шаге «Завершение создания образа» в программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-    Средство Windows SysPrep служит для подготовки образов операционной системы. Оно используется для получения настроенного образа операционной системы, готового к развертыванию в пределах всей организации. Дополнительные сведения о программе SysPrep и работе с ней см. в разделе [SysPrep](http://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
+    Средство Windows SysPrep служит для подготовки образов операционной системы. Оно используется для получения настроенного образа операционной системы, готового к развертыванию в пределах всей организации. Дополнительные сведения о программе SysPrep и работе с ней см. в разделе [SysPrep](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
   
 ## <a name="installation-media-considerations"></a>Рекомендации при работе с установочными носителями  
  Если используется полная версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то необходимо учитывать следующие моменты.  

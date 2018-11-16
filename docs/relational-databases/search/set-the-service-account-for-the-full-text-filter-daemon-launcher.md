@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a6aa1d3f6417d91c43eb59ea40c773e7b2b2619
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 301d4af9c9c9ddc36b57005d2b5b34ddb51b35aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715702"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678103"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Настройка учетной записи службы средства запуска управляющей программы полнотекстовой фильтрации
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "47715702"
      Служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выступает в качестве сервера именованного канала для клиента службы запуска управляющей программы полнотекстовой фильтрации SQL Server. Если именованный канал уже был создан другим процессом до запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то в журнале регистрации ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнале событий Windows вносится запись об ошибке, а полнотекстовый поиск становится недоступным.  Определите, в каком процессе или приложении предпринимается попытка использовать тот же именованный канал, и закройте это приложение.  
   
 ## <a name="see-also"></a>См. также:  
- [Инструкции по управлению службами (диспетчер конфигурации SQL Server)](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
+ [Инструкции по управлению службами (диспетчер конфигурации SQL Server)](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
  [Обновление полнотекстового поиска](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

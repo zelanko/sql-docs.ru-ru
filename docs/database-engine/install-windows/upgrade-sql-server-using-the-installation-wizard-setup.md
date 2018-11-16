@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e1ef574febdd3c4624138c70d5d5d8acb74c6a3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840849b3d08feac21dd5b96235405773fc06f64c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803724"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607164"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Обновление SQL Server с помощью мастера установки (программа установки)
 
@@ -120,7 +120,7 @@ ms.locfileid: "47803724"
   
      После ввода данных входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нажмите кнопку **Далее**.  
   
-15. На странице «Параметры обновления полнотекстового поиска» укажите параметры обновления для обновляемых баз данных. Дополнительные сведения см. в разделе [Параметры обновления полнотекстового поиска](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+15. На странице «Параметры обновления полнотекстового поиска» укажите параметры обновления для обновляемых баз данных. Дополнительные сведения см. в разделе [Параметры обновления полнотекстового поиска](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
   
 16. Если все правила удовлетворены, окно «Правила компонентов» автоматически сменится следующим.  
   
@@ -143,6 +143,6 @@ ms.locfileid: "47803724"
   
 ## <a name="see-also"></a>См. также:  
  [Обновление SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Обратная совместимость_удалено](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [Обратная совместимость_удалено](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   
