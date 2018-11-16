@@ -15,12 +15,12 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09422214ac33ed7179d66a46aed9db09f2ef6039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1527b212385f280d16bf3f86ce753352b4fb744
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805312"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603944"
 ---
 # <a name="connecting-to-sql-server"></a>Подключение к SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -64,18 +64,18 @@ Server = [protocol:]server[,port]
  - **master.INFORMATION_SCHEMA.TABLES bcp out файл OutFile.dat -S <server> - U <name> - P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Использование протокола SSL  
-Для шифрования подключений к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно использовать протокол SSL. SSL защищает имена пользователей и пароли [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по сети. Кроме того, SSL проверяет идентификатор сервера для защиты от атак "злоумышленник в середине".  
+Можно использовать протокол SSL для шифрования соединения с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. SSL защищает имена пользователей и пароли [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по сети. Кроме того, SSL проверяет идентификатор сервера для защиты от атак "злоумышленник в середине".  
 
 Включение шифрования повышает безопасность за счет снижения производительности.
 
-Дополнительные сведения см. в разделе [шифрование соединений с SQL Server](http://go.microsoft.com/fwlink/?LinkId=220900) и [использование шифрования без проверки](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
+Дополнительные сведения см. в разделе [шифрование соединений с SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) и [использование шифрования без проверки](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
 
 Независимо от параметров для **Encrypt** и **TrustServerCertificate**учетные данные входа на сервер (имя пользователя и пароль) всегда шифруются. Следующая таблица показывает эффект от параметров **Encrypt** и **TrustServerCertificate** .  
 
 ||**TrustServerCertificate = нет**|**TrustServerCertificate = yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|Сертификат сервера не проверяется.<br /><br />Данные, передаваемые между клиентом и сервером, не шифруются.|Сертификат сервера не проверяется.<br /><br />Данные, передаваемые между клиентом и сервером, не шифруются.|  
-|**Encrypt=yes**|Сертификат сервера проверяется.<br /><br />Данные, передаваемые между клиентом и сервером, шифруются.<br /><br />Имя (или IP-адрес) в общем имени субъекта (CN) или альтернативном имени субъекта (SAN) в SSL-сертификате [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должно точно совпадать с именем (или IP-адресом) сервера, указанным в строке подключения.|Сертификат сервера не проверяется.<br /><br />Данные, передаваемые между клиентом и сервером, шифруются.|  
+|**Encrypt=yes**|Сертификат сервера проверяется.<br /><br />Данные, передаваемые между клиентом и сервером, шифруются.<br /><br />Имя (или IP-адрес) в общем имени субъекта (CN) или альтернативном имени субъекта (SAN) в SSL-сертификате [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должно точно совпадать с именем сервера (или IP-адресом), указанным в строке подключения.|Сертификат сервера не проверяется.<br /><br />Данные, передаваемые между клиентом и сервером, шифруются.|  
 
 По умолчанию зашифрованные соединения всегда проверяют сертификат сервера. Тем не менее, при подключении к серверу с самозаверяющий сертификат, также добавьте `TrustServerCertificate` параметр для обхода проверки сертификата со списком доверенных центров сертификации:  
 

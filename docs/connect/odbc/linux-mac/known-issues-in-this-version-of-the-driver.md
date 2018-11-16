@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25ebc4837eb37604a45e98112fa5fc24bdb3e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15c0402f83dec65b6476d481b77553a037d4fa47
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743002"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602034"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>Известные проблемы в данной версии драйвера
 
@@ -25,7 +25,7 @@ ms.locfileid: "47743002"
 
 Эта статья содержит список известных проблем с Microsoft ODBC Driver 13, 13.1 и 17 for SQL Server в Linux и macOS.
 
-Дополнительные проблемы будут публиковаться в [блоге группы разработчиков драйвера Microsoft ODBC](http://blogs.msdn.com/b/sqlnativeclient/).  
+Дополнительные проблемы будут публиковаться в [блоге группы разработчиков драйвера Microsoft ODBC](https://blogs.msdn.com/b/sqlnativeclient/).  
 
 - В Windows, Linux и macOS символы из кодировки области личных символов (PUA) или символов, определяемых конечными пользователями (EUDC), могут преобразовываться по-разному. Преобразования, выполняемые на сервере в пределах [!INCLUDE[tsql](../../../includes/tsql-md.md)], используют библиотеку функций преобразования Windows. Преобразования в драйвере с помощью преобразования библиотек Windows, Linux или macOS. Каждая из библиотек может давать разные результаты при выполнении преобразований. Дополнительные сведения см. в статье [End-User-Defined and Private Use Area Characters](/windows/desktop/Intl/end-user-defined-characters) (Символы, определяемые конечными пользователями, и символы области личных символов).
 

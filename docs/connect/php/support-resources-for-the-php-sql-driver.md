@@ -13,12 +13,12 @@ ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc1b92962a13772c1b8ab8abdb4b2b1a776dd9d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9905a251ae9ebe858cc3a100de357011826b6a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638122"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606004"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Ресурсы поддержки по драйверам Майкрософт для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "47638122"
 Чтобы обратиться за помощью к коллегам, заходите на [форумы IIS](https://forums.iis.net/).  
   
 ## <a name="php-support-resources"></a>Ресурсы поддержки PHP  
-[Документация по PHP для Windows](http://windows.php.net/)  
+[Документация по PHP для Windows](https://windows.php.net/)  
   
-Последние сведения о PHP см. в статье [ http://www.php.net/ ](http://www.php.net).  
+Последние сведения о PHP см. в статье [ https://www.php.net/ ](https://www.php.net).  
   
-Документация по PHP, см. в статье [ http://www.php.net/docs.php ](http://www.php.net/docs.php).  
+Документация по PHP, см. в статье [ https://www.php.net/docs.php ](https://www.php.net/docs.php).  
   
 ## <a name="microsoft-customer-support"></a>Служба поддержки клиентов Майкрософт  
 Вопросы, относящиеся к [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], вы можете обратиться к [поддержки Майкрософт](https://support.microsoft.com/contactus/), или обратитесь за помощью на [странице проекта Github](https://github.com/Microsoft/msphpsql/issues).  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: b37e3c27448f187b3c1717414599f2de120790d9
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 917e43dd6a9c78e5199967df58a2d46c4843cf13
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269727"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677960"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Краткое руководство: Установка SQL Server и создать базу данных в Ubuntu
 
@@ -41,7 +41,7 @@ ms.locfileid: "51269727"
 
 Необходимо иметь компьютер Ubuntu 16.04 с **по крайней мере 2 ГБ** памяти.
 
-Чтобы установить Ubuntu на своем локальном компьютере, перейдите к [ http://www.ubuntu.com/download/server ](http://www.ubuntu.com/download/server). Также можно создать виртуальные машины Ubuntu в Azure. См. в разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Чтобы установить Ubuntu на своем локальном компьютере, перейдите к [ https://www.ubuntu.com/download/server ](https://www.ubuntu.com/download/server). Также можно создать виртуальные машины Ubuntu в Azure. См. в разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > В настоящее время [подсистема Windows для Linux](https://msdn.microsoft.com/commandline/wsl/about) для Windows 10 не поддерживается в качестве целевого объекта установки.

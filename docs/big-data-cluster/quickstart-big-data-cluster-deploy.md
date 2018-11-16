@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: c25474a30ace6ed6e1ab0560f1b3746a071690ef
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269559"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697042"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Краткое руководство по Развертыванию кластера больших данных SQL Server в службе Azure Kubernetes (AKS)
 
@@ -56,7 +56,7 @@ pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1
 
 Прежде чем продолжить, обратите внимание, следующие важные моменты:
 
-- В [командное окно](http://docs.microsoft.com/visualstudio/ide/reference/command-window), кавычки включаются в переменных среды. Если используются кавычки программы-оболочки для пароля, кавычки будут включены в пароль.
+- В [командное окно](https://docs.microsoft.com/visualstudio/ide/reference/command-window), кавычки включаются в переменных среды. Если используются кавычки программы-оболочки для пароля, кавычки будут включены в пароль.
 - В bash кавычки не включаются в переменной. Наши примеры используйте двойные кавычки `"`.
 - Пароль можно задать переменные среды на любое другое, но убедитесь, что они достаточно сложны и не используйте `!`, `&`, или `'` символов.
 - Для выпуска CTP 2.1 не изменить порты по умолчанию.

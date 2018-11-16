@@ -14,12 +14,12 @@ ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5778bdbfa00d3280e6257572a6c5357b23945b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b2677e5614fd8e50c34084624dda19c3ced54d6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754673"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600334"
 ---
 # <a name="default-php-data-types"></a>типы данных PHP по умолчанию;
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "47754673"
 
 [Converting Data Types](../../connect/php/converting-data-types.md)
 
-[Типы PHP](http://php.net/manual/en/language.types.php)
+[Типы PHP](https://php.net/manual/en/language.types.php)
 
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 

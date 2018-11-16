@@ -11,12 +11,12 @@ ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d883a74e8e783ed289917b9970cc1c5956f4b0be
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 623b4bf9a88031cf891e88f75c30b06716bb27ff
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905807"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605024"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Шаг 1. Настройка среды разработки для разработки на Python в pymssql
 Необходимо будет настроить среду разработки с предварительными требованиями, чтобы разрабатывать приложения, используя драйвер Python для SQL Server.    
@@ -30,7 +30,7 @@ A. Перейдите к [python.org](https://www.python.org/downloads/)
 Б. Щелкните соответствующую ссылку msi установщика Windows.   
 в. Один раз Скачанный запуска MSI-файл для установки среды выполнения Python  
   
-2. **Загрузка модуля pymssql** из [здесь](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
+2. **Загрузка модуля pymssql** из [здесь](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
   
     Убедитесь, что выбран правильный файл whl.  Например: Если вы используете Python 2.7 на 64-разрядном компьютере выберите: pymssql‑2.1.1‑cp27‑none‑win_amd64.whl. После загрузки файла whl разместите его в папку C:/Python27 папке.  
       

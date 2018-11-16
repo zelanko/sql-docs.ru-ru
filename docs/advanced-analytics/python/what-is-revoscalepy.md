@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1d4d8bbb47c34fce61bdb95a3184a1d2b10f4d1
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 8b2e217f599112019e96f3e20b727456b9da607f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889480"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697572"
 ---
 # <a name="introducing-revoscalepy-in-sql-server-machine-learning"></a>Знакомство с revoscalepy в машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -163,7 +163,7 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 
 Можно получить справку о любой функции Python путем импорта модуля и последующего вызова `help()`. Например, на котором работают `help(revoscalepy)` из интерфейса IDE Python возвращает список всех функций в модуле revoscalepy с их сигнатурами.
 
-При использовании инструментов Python для Visual Studio, можно использовать IntelliSense для получения справки синтаксиса и аргументов. Дополнительные сведения см. в разделе [поддержка Python в Visual Studio](http://docs.microsoft.com/visualstudio/python/installation)и скачать модуль, который соответствует вашей версии Visual Studio. Можно использовать Python с помощью Visual Studio 2015 и 2017 или более ранних версий.
+При использовании инструментов Python для Visual Studio, можно использовать IntelliSense для получения справки синтаксиса и аргументов. Дополнительные сведения см. в разделе [поддержка Python в Visual Studio](https://docs.microsoft.com/visualstudio/python/installation)и скачать модуль, который соответствует вашей версии Visual Studio. Можно использовать Python с помощью Visual Studio 2015 и 2017 или более ранних версий.
 
 ## <a name="see-also"></a>См. также
 

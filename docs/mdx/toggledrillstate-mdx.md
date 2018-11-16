@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 652afb0595634d7fb4474ed9042edda26f83a52a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 58acac77e4826855997791476b0602699452b7b8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147309"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701902"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (многомерные выражения)
 
@@ -48,7 +48,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
   
  Запрос свойства XMLA MdpropMdxDrillFunctions позволяет проверить уровень поддержки, предоставляемой сервером для функций детализации; см. в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) сведения.  
   
- См. в разделе [журнала базы данных: набор функций многомерных Выражений: функция ToggleDrillState(), где есть](http://go.microsoft.com/fwlink/?LinkId=517759) сценарии и примеры, включающие эту функцию.  
+ См. в разделе [журнала базы данных: набор функций многомерных Выражений: функция ToggleDrillState(), где есть](https://go.microsoft.com/fwlink/?LinkId=517759) сценарии и примеры, включающие эту функцию.  
   
 ## <a name="example"></a>Пример  
  В следующем примере выполняется детализация углублением элемента Australia в первом наборе и детализация обобщением элемента United States в первом наборе.  

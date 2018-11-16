@@ -11,12 +11,12 @@ ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ff8b884253f43c0b1092eb5ad7244eca7f3e3db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1520106fa39e850bf09d78a5eeee955fba1260fb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605822"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606744"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>Информация о примерах кода в документации
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,11 +26,11 @@ ms.locfileid: "47605822"
   
 -   Почти во всех примерах предполагается, что SQL Server 2008 или более поздней версии и базы данных AdventureWorks установлены на локальном компьютере.  
   
-    Сведения о том, как скачать бесплатные выпуски и пробные версии SQL Server см. в статье [SQL Server](http://go.microsoft.com/fwlink/?LinkID=120193).  
+    Сведения о том, как скачать бесплатные выпуски и пробные версии SQL Server см. в статье [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193).  
   
     Сведения о том, как загрузить и установить базы данных AdventureWorks, см. в разделе [страницы AdventureWorks в репозитории Github примеров SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
   
--   Почти все примеры кода в этой документации предназначены для выполнения из командной строки, что позволяет автоматически тестировать все примеры кода. Сведения о том, как запустить PHP из командной строки, см. в статье [Использование PHP из командной строки](http://php.net/manual/en/features.commandline.php).  
+-   Почти все примеры кода в этой документации предназначены для выполнения из командной строки, что позволяет автоматически тестировать все примеры кода. Сведения о том, как запустить PHP из командной строки, см. в статье [Использование PHP из командной строки](https://php.net/manual/en/features.commandline.php).  
   
 -   Хотя примеры предназначены для запуска из командной строки, любой пример можно выполнить путем вызова из браузера без внесения каких-либо изменений в сценарий. Для форматирования выходных данных хорошо, замените каждый элемент «\n» "\<\/br >» в каждом примере перед вызовом его из браузера.  
   

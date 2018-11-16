@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f514cdf3e115ed381d758aa2f94605e7a1b1cb2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 903ce31cec6ce738fb478661da651f73a072e39d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664872"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601534"
 ---
 # <a name="about-ole-db-properties"></a>О свойствах OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,6 +52,6 @@ ms.locfileid: "47664872"
   
 ## <a name="see-also"></a>См. также:  
  [Создание приложения с драйвером OLE DB для SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
- [Свойства (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
+ [Свойства (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

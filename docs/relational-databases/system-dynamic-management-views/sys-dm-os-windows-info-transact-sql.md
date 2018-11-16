@@ -19,12 +19,12 @@ ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b61127c2844117b2d9c042b352129a1860e227c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f258d7e49f86ed8015d8e51f2373633b7d7f10c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743192"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663143"
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "47743192"
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar(256)**|Для Windows возвращает номер выпуска. Список значений и описаний, см. в разделе [версии операционной системы (Windows)](/windows/desktop/SysInfo/operating-system-version). Не может быть NULL.|  
 |**windows_service_pack_level**|**nvarchar(256)**| Для Windows возвращает номер пакета обновления. Не может быть NULL. |  
-|**windows_sku**|**int**|Для Windows возвращает идентификатор Windows Stock сохранение номер SKU. Список идентификаторов SKU и описания, см. в разделе [функция GetProductInfo](http://msdn.microsoft.com/library/ms724358.aspx). Значение NULL. |  
-|**os_language_version**|**int**| Для Windows возвращает идентификатор языкового стандарта Windows (LCID) операционной системы. Список значений LCID и описания, см. в разделе [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). Не может быть NULL.|  
+|**windows_sku**|**int**|Для Windows возвращает идентификатор Windows Stock сохранение номер SKU. Список идентификаторов SKU и описания, см. в разделе [функция GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx). Значение NULL. |  
+|**os_language_version**|**int**| Для Windows возвращает идентификатор языкового стандарта Windows (LCID) операционной системы. Список значений LCID и описания, см. в разделе [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Не может быть NULL.|  
   
   
 ## <a name="permissions"></a>Разрешения  

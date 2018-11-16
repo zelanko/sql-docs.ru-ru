@@ -11,17 +11,17 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b56b2b415479ed6a290fe87f52befb5a5331521
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 321176cae5783968826f3094f63a5c6e30a1d3e9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682572"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601974"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Функции поддержки различных языков драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Функции интернационализации [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] включают в себя следующее:  
+  Функции интернационализации [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] включают в себя следующее.  
   
 -   Поддержка полной локализации на тех же языках, что и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,10 +55,10 @@ ms.locfileid: "47682572"
 ## <a name="collation-support"></a>Поддержка параметров сортировки  
  В версии JDBC Driver 3.0 поддерживаются все параметры сортировки, поддерживаемые [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], а также новые параметры сортировки и новые версии имен параметров сортировки Windows, реализованные в [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
- Дополнительные сведения о параметрах сортировки см. в разделах [Поддержка параметров сортировки и Юникода](http://go.microsoft.com/fwlink/?LinkId=131366) и [Имя параметров сортировки Windows (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=131367) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Дополнительные сведения о параметрах сортировки см. в разделах [Поддержка параметров сортировки и Юникода](https://go.microsoft.com/fwlink/?LinkId=131366) и [Имя параметров сортировки Windows (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-international-domain-names-idn"></a>Использование международных доменных имен (IDN)  
- JDBC Driver 6.0 для SQL Server поддерживает использование международных доменных имен (IDN), которые при необходимости могут преобразовать имя сервера в Юникоде в кодировку, совместимую с ASCII (Punycode), во время подключения.  Если международные доменные имена хранятся в системе доменных имен (DNS) в виде строк ASCII в формате Punycode (как указано в RFC 3490), включите преобразование имени сервера в Юникоде, задав для свойства serverNameAsACE значение true.  В противном случае, если служба DNS настроена на использование символов Юникода, задайте для свойства serverNameAsACE значение false (по умолчанию).  Для более старых версий JDBC Driver можно также преобразовать имя сервера в Punycode с помощью методов [IDN.toASCII Java](http://docs.oracle.com/javase/8/docs/api/java/net/IDN.html), прежде чем устанавливать это свойство для подключения.  
+ JDBC Driver 6.0 для SQL Server поддерживает использование международных доменных имен (IDN), которые при необходимости могут преобразовать имя сервера в Юникоде в кодировку, совместимую с ASCII (Punycode), во время подключения.  Если международные доменные имена хранятся в системе доменных имен (DNS) в виде строк ASCII в формате Punycode (как указано в RFC 3490), включите преобразование имени сервера в Юникоде, задав для свойства serverNameAsACE значение true.  В противном случае, если служба DNS настроена на использование символов Юникода, задайте для свойства serverNameAsACE значение false (по умолчанию).  Для более старых версий JDBC Driver можно также преобразовать имя сервера в Punycode с помощью методов [IDN.toASCII Java](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html), прежде чем устанавливать это свойство для подключения.  
   
 > [!NOTE]  
 >  Большинство программ сопоставителя, написанных для платформ, отличных от Windows, основано на интернет-стандартах DSN, поэтому для международных доменных имен чаще всего используется формат Punycode, хотя DNS-сервер под управлением Windows в частной сети можно в индивидуальном порядке настроить на использование символов UTF-8.  Дополнительные сведения см. в разделе [Поддержка символов Юникода](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  

@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386618d9dc6dd0d1fe23fe0480105c3e8f01c914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726388"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600864"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Устойчивость подключения в драйвере ODBC в Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47726388"
 > [!IMPORTANT]  
 >  Функция устойчивости подключений поддерживается в Базах данных SQL Microsoft Azure и SQL Server 2014 (и более поздних версий).  
   
- Дополнительные сведения об устойчивости неактивных подключений см. в статье [Техническая статья — устойчивость неактивных подключений](http://go.microsoft.com/fwlink/?LinkId=393996).  
+ Дополнительные сведения об устойчивости неактивных подключений см. в статье [Техническая статья — устойчивость неактивных подключений](https://go.microsoft.com/fwlink/?LinkId=393996).  
   
  Драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows имеет два параметра для управления поведением повторного подключения.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47726388"
   
      Можно изменить число повторных попыток подключения, когда вы:  
   
-    -   определяете или изменяете источник данных, использующий драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с элементом управления **Число попыток подключения**;  
+    -   определяете или изменяете источник данных, использующий драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с элементом управления **Число попыток подключения** ;  
   
     -   используете ключевое слово строки подключения **ConnectRetryCount** .  
   

@@ -13,19 +13,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9054dde2ce697cf954ad36474220a38c3d1210d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be4ecd3bfdf88029f56e86fb071edc51987a21b2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656382"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604594"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Вставка данных в параметры, возвращающие табличные значения
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server поддерживает две модели задания потребителем данных для строк параметров с табличными значениями: принудительная и по запросу. Образец, в котором демонстрируется применение модели по запросу, см. в разделе [Образцы программирования служб SQL Server](http://msftdpprodsamples.codeplex.com/).  
+  Драйвер OLE DB для SQL Server поддерживает две модели задания потребителем данных для строк параметров с табличными значениями: принудительная и по запросу. Образец, в котором демонстрируется применение модели по запросу, см. в разделе [Образцы программирования служб SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
 > [!NOTE]  
 >  Столбец возвращающего табличное значение параметра должен содержать во всех строках либо значения по умолчанию, либо значения, отличные от значений по умолчанию. Нельзя, чтобы в одних строках были значения по умолчанию, а в других — значения, отличные от них. Следовательно, в привязках табличных параметров единственными значениями состояния, разрешенными для столбца набора строк возвращающего табличное значение параметра, являются DBSTATUS_S_ISNULL и DBSTATUS_S_OK. Значение DBSTATUS_S_DEFAULT приведет к сбою, и значению состояния привязки будет присвоено значение DBSTATUS_E_BADSTATUS.  

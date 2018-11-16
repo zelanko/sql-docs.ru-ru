@@ -14,12 +14,12 @@ ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af84ebccf47802e157f75ac591f7cd96c5e822be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06bb27e8faf8269090bc5920889d1b70f85dc71e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754674"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600384"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Практическое руководство. Извлечение символьных данных в виде потока с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47754674"
 Драйвер SQLSRV использует преимущества потоков PHP для извлечения больших объемов данных с сервера. Пример в этой статье показывает, как извлекать символьные данные в виде потока.  
   
 ## <a name="example"></a>Пример  
-Следующий пример извлекает строку из таблицы *Production.ProductReview* базы данных AdventureWorks. Поле *Comments* возвращенной строки извлекается в виде потока и отображается с помощью функции [fpassthru](http://php.net/manual/function.fpassthru.php) PHP.  
+Следующий пример извлекает строку из таблицы *Production.ProductReview* базы данных AdventureWorks. Поле *Comments* возвращенной строки извлекается в виде потока и отображается с помощью функции [fpassthru](https://php.net/manual/function.fpassthru.php) PHP.  
   
 Извлечение данных в виде потока осуществляется с помощью [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) и [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) с типом возвращаемого значения, указанным в виде потока символов. Тип возвращаемого значения определяется с помощью константы **SQLSRV_PHPTYPE_STREAM**. Сведения о константах **sqlsrv** см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   

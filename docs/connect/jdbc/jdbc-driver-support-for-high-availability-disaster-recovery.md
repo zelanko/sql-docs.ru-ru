@@ -11,19 +11,19 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aefb03c667d870800a67f49c50baccf2230d7e2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b101070aaaef8a0e287bf02d943359d9fca8de67
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836172"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605484"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Поддержка высокой доступности и аварийного восстановления в драйвере JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  В этом разделе рассматривается поддержка [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] высокой доступности с аварийным восстановлением ― [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. Дополнительные сведения о среде [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]см. в электронной документации по [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
+  В этом разделе рассматривается поддержка [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] высокой доступности с аварийным восстановлением ― [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. Дополнительные сведения о [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] см. в электронной документации по [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- Начиная с версии 4.0 драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] в свойствах подключения можно указать прослушиватель группы доступности (высокой доступности и аварийного восстановления). Если приложение [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] подключается к базе данных AlwaysOn, которая выполняет отработку отказа, то первоначальное подключение разрывается и приложение должно открыть новое подключение, чтобы продолжить работу после обработки отказа. В версии [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] добавлены следующие [свойства подключения](../../connect/jdbc/setting-the-connection-properties.md):  
+ Начиная с версии 4.0 драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], в свойствах подключения можно указать прослушиватель группы доступности (аварийного восстановления и высокой готовности). Если приложение [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] подключается к базе данных AlwaysOn, которая выполняет отработку отказа, то первоначальное подключение разрывается и приложение должно открыть новое подключение, чтобы продолжить работу после обработки отказа. В версии [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] добавлены следующие [свойства подключения](../../connect/jdbc/setting-the-connection-properties.md):  
   
 -   **multiSubnetFailover**  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47836172"
   
  Указание **multiSubnetFailover=true** при подключении к объекту, отличному от прослушивателя группы доступности или экземпляра отказоустойчивого кластера, может привести к снижению производительности и не поддерживается.  
   
- Если диспетчер безопасности не установлен, то виртуальная машина Java кэширует виртуальные IP-адреса (VIP) на ограниченный период времени (по умолчанию определяемый реализацией JDK и свойствами Java networkaddress.cache.ttl и networkaddress.cache.negative.ttl). Если диспетчер безопасности JDK установлен, то виртуальная машина Java будет кэшировать адреса VIP, причем кэш по умолчанию не обновляется. Необходимо установить «время существования» для кэша виртуальной машины Java (networkaddress.cache.ttl) в один день. Если этого не сделать, то старые значения не будут исключаться из кэша виртуальной машины Java при добавлении или обновлении адресов VIP. Дополнительные сведения о параметрах networkaddress.cache.ttl и networkaddress.cache.negative.ttl см. в разделе [ http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
+ Если диспетчер безопасности не установлен, то виртуальная машина Java кэширует виртуальные IP-адреса (VIP) на ограниченный период времени (по умолчанию определяемый реализацией JDK и свойствами Java networkaddress.cache.ttl и networkaddress.cache.negative.ttl). Если диспетчер безопасности JDK установлен, то виртуальная машина Java будет кэшировать адреса VIP, причем кэш по умолчанию не обновляется. Необходимо установить «время существования» для кэша виртуальной машины Java (networkaddress.cache.ttl) в один день. Если этого не сделать, то старые значения не будут исключаться из кэша виртуальной машины Java при добавлении или обновлении адресов VIP. Дополнительные сведения о параметрах networkaddress.cache.ttl и networkaddress.cache.negative.ttl см. в разделе [ https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
   
  Следуйте приведенным ниже рекомендациям для подключения к серверу в группе доступности или экземпляру отказоустойчивого кластера.  
   

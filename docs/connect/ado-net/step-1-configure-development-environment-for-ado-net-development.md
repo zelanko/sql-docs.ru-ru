@@ -11,12 +11,12 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4c78d9001a802b60963f9c02ad03b84b431a025
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75d2e123831a3a5d0db3e780634c6d9c7d996844
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617002"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606494"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Шаг 1. Настройка среды разработки для разработки в ADO.NET
 
@@ -31,8 +31,8 @@ ms.locfileid: "47617002"
 1. ![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[загрузить и установить .NET Framework, включая ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 2. Установите Visual Studio Community или аналогичую интегрированную среду разработки (IDE) для написания и компиляция исходного кода C#. Корпорация Майкрософт теперь предоставляет Visual Studio Community *бесплатный*.  
-    - [Скачать Visual Studio Community](http://www.visualstudio.com/products/visual-studio-community-vs)  
-    - [Дополнительные параметры для бесплатной Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+    - [Скачать Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs)  
+    - [Дополнительные параметры для бесплатной Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
 ### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET core для Linux Ubuntu и MacOS

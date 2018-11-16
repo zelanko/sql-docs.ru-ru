@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 66f12f33e7b6eaac901ca29961465be71e7996e3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851979"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605654"
 ---
 # <a name="understanding-xa-transactions"></a>Основные сведения о транзакциях XA
 
@@ -45,7 +45,7 @@ ms.locfileid: "48851979"
 
 - Если транзакции XA используются вместе с координатором распределенных транзакций (Майкрософт) (MS DTC), то текущая версия MS DTC может не поддерживать сильно связанные ветви XA. Например, в MS DTC действует взаимно однозначное сопоставление между идентификатором ветви транзакции XA (XID) и идентификатором транзакции MS DTC, и работа, выполняемая слабосвязанными ветвями XA, изолируется.  
   
-     Исправление, предоставляемое в статье [MSDTC and Tightly Coupled Transactions](http://support.microsoft.com/kb/938653), обеспечивает поддержку сильно связанных ветвей XA, когда несколько ветвей XA с одним глобальным идентификатором транзакции (GTRID) сопоставляются с одним идентификатором транзакции MS DTC. В результате в каждой из нескольких сильно связанных ветвей XA в диспетчере ресурсов (например, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) можно просматривать изменения, выполненные другой ветвью.  
+     Исправление, предоставляемое в статье [MSDTC and Tightly Coupled Transactions](https://support.microsoft.com/kb/938653), обеспечивает поддержку сильно связанных ветвей XA, когда несколько ветвей XA с одним глобальным идентификатором транзакции (GTRID) сопоставляются с одним идентификатором транзакции MS DTC. В результате в каждой из нескольких сильно связанных ветвей XA в диспетчере ресурсов (например, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) можно просматривать изменения, выполненные другой ветвью.  
   
 - Флаг [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) разрешает приложениям использовать тесно связанные транзакции XA, имеющие различные идентификаторы ветвей транзакции (BQUAL), но одинаковые глобальные идентификаторы транзакции (GTRID) и идентификатор формата (FormatID). Для использования этой функции необходимо задать [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) на параметр flags XAResource.start метода:  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48851979"
 ### <a name="BKMK_ServerSide"></a> Настройка параметров времени ожидания сервера для автоматического отката неподготовленных транзакций  
 
 > [!WARNING]  
-> Этот серверный параметр появился в версии Microsoft JDBC Driver 4.2 для SQL Server (и более поздних версиях). Чтобы это обновленное поведение работало, убедитесь, что файл sqljdbc_xa.dll на сервере обновлен. Дополнительные сведения о настройке времени ожидания на стороне клиента см. в описании [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+> Этот серверный параметр появился в версии Microsoft JDBC Driver 4.2 для SQL Server (и более поздних версиях). Чтобы это обновленное поведение работало, убедитесь, что файл sqljdbc_xa.dll на сервере обновлен. Дополнительные сведения о настройке времени ожидания на стороне клиента см. в описании [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
 
 Существует два параметра реестра (типа DWORD) для управления временем ожидания распределенных транзакций.  
   
@@ -167,7 +167,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<inst
   
 ### <a name="configuring-the-user-defined-roles"></a>Настройка определяемых пользователем ролей
 
-Чтобы предоставить определенному пользователю разрешения для участия в распределенных транзакциях через драйвер JDBC, его необходимо включить в роль SqlJDBCXAUser. Например, следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет добавить пользователя с именем shelby (стандартное имя входа пользователя SQL) в роль SqlJDBCXAUser:  
+Чтобы предоставить определенному пользователю разрешения для участия в распределенных транзакциях через драйвер JDBC, его необходимо включить в роль SqlJDBCXAUser. Например, следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет добавить пользователя с именем shelby (стандартное имя входа пользователя SQL Server) в роль SqlJDBCXAUser:  
 
 ```sql
 USE master  

@@ -13,12 +13,12 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28e5394d824a5999aec90cffb21e07e72dea1691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f391f25c6a8dc4914e0bb50362ef284ab9a1b4d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605512"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603754"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Константы (драйверы Майкрософт для PHP для SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47605512"
 Эта статья описывает константы, которые определены [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="pdosqlsrv-driver-constants"></a>Константы драйвера PDO_SQLSRV  
-Константы, перечисленные на [веб-сайте PDO](http://php.net/manual/book.pdo.php), допустимы в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+Константы, перечисленные на [веб-сайте PDO](https://php.net/manual/book.pdo.php), допустимы в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 Ниже описаны константы, характерные для продуктов Майкрософт, в драйвере PDO_SQLSRV.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "47605512"
 |SQLSRV_PARAM_OUT|Указывает параметр вывода.|  
   
 ### <a name="phptype-constants"></a>Константы PHPTYPE  
-Следующая таблица содержит константы, которые используются для описания типов данных PHP. Дополнительные сведения о типах данных PHP см. в статье [Типы PHP](http://php.net/manual/en/language.types.php).  
+Следующая таблица содержит константы, которые используются для описания типов данных PHP. Дополнительные сведения о типах данных PHP см. в статье [Типы PHP](https://php.net/manual/en/language.types.php).  
   
 |Константа SQLSRV|Тип данных PHP|  
 |-------------------|-----------------|  

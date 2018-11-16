@@ -11,12 +11,12 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1de9ce8b14dd164ac24ac1bb7098494dbc134bfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a298a7c7f65a198e5bfb0922f2b061fd44079739
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778262"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604704"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Шаг 1. Настройка среды разработки для разработки на языке Ruby
 Необходимо будет настроить среду разработки с предварительными требованиями, чтобы разрабатывать приложения, используя драйвер Ruby для SQL Server.    
@@ -27,7 +27,7 @@ ms.locfileid: "47778262"
 ## <a name="windows"></a>Windows  
   
 1.  **Скачайте установщик Ruby**  
-Если компьютер не является Ruby установите ее. Для новых пользователей ruby мы рекомендуем использовать Ruby 2.2.X установщиков. Они предоставляют стабильный языка и обширный список пакетов (жемчужины), совместимых и обновленный. Go [страницу загрузки Ruby](http://rubyinstaller.org/downloads/) и загрузите установщик соответствующие 2.1.x. Для примера, при работе в 64-разрядном компьютере, скачайте установщик Ruby 2.1.6 (x 64).   
+Если компьютер не является Ruby установите ее. Для новых пользователей ruby мы рекомендуем использовать Ruby 2.2.X установщиков. Они предоставляют стабильный языка и обширный список пакетов (жемчужины), совместимых и обновленный. Go [страницу загрузки Ruby](https://rubyinstaller.org/downloads/) и загрузите установщик соответствующие 2.1.x. Для примера, при работе в 64-разрядном компьютере, скачайте установщик Ruby 2.1.6 (x 64).   
   
 2.  **Установите Ruby**  
 Скачав установщик, сделайте следующее:  

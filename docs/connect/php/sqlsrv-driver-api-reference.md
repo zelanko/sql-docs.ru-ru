@@ -11,12 +11,12 @@ ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1b1b94952006e338b324e7ca1da1d3bcbf8c2a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87b04db9a25df8ddf7329ef3d2f0142875296c63
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756592"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601214"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>Справочник по API для драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ API для драйвера SQLSRV в [!INCLUDE[ssDriverPHP](../../includes/ssdr
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|Предоставляет сведения о сервере.|  
   
 ## <a name="reference"></a>Справочник  
-[Руководство по PHP](http://php.net/manual)  
+[Руководство по PHP](https://php.net/manual)  
   
 ## <a name="see-also"></a>См. также:  
 [Обзор драйверов Майкрософт для PHP для SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
