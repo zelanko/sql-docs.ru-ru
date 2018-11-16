@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 02/15/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 392b1a0dd471c699dfc10f9c105d9975508968b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 713d471d350877a207b49a9649db0b7262273f52
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606493"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350378"
 ---
 # <a name="visual-c-ado-programming"></a>Программирование объектов ADO с использованием Visual C++
 Справочник по API ADO представлены функции ADO интерфейс программирования (API) с помощью синтаксиса для Microsoft Visual Basic. То, что целевая аудитория всем пользователям, программистам ADO использовать разных языков, например Visual Basic, Visual C++ (с и без **#import** директивы) и Visual J ++ (с пакетом класс ADO и WFC).  
@@ -44,26 +44,26 @@ ms.locfileid: "47606493"
   
  Вы можете получить или задать свойство с вызовами из этих форм:  
   
-```  
-variable = objectPtr->GetProperty(); // get property value   
-objectPtr->PutProperty(value);       // set property value  
-objectPtr->PutRefProperty(&value);   // set property with object pointer  
-```  
+```cpp
+variable = objectPtr->GetProperty(); // get property value   
+objectPtr->PutProperty(value);       // set property value  
+objectPtr->PutRefProperty(&value);   // set property with object pointer  
+```
   
 ## <a name="using-property-directives"></a>Свойство директив using  
  **__Declspec(property...)**  директивы компилятора является расширением языка C, характерные для Майкрософт, которое объявляет функцию, которая используется как свойство, чтобы альтернативный синтаксис. Таким образом можно задать или получить значения свойства в виде, аналогичную Visual Basic. Например можно задать и получить свойство таким образом:  
   
-```  
-objectPtr->property = value;        // set property value  
-variable = objectPtr->property;     // get property value  
-```  
+```cpp
+objectPtr->property = value;        // set property value  
+variable = objectPtr->property;     // get property value  
+```
   
  Обратите внимание, что у вас нет к коду:  
   
-```  
-objectPtr->PutProperty(value);      // set property value  
-variable = objectPtr->GetProperty;  // get property value  
-```  
+```cpp
+objectPtr->PutProperty(value);      // set property value  
+variable = objectPtr->GetProperty;  // get property value  
+```
   
  Компилятор создает соответствующий **Get ***-*, **поместить**-, или **PutRef *** свойство* звонок, основываясь на объявленных какие альтернативный синтаксис и является ли свойство чтения или записи.  
   
@@ -78,36 +78,36 @@ variable = objectPtr->GetProperty;  // get property value
   
  **__Declspec(property...)**  объявляет директивы компилятора **элемент** свойство как альтернативный синтаксис для каждой коллекции фундаментальные **GetItem() для удаленного элемента** метод. Альтернативный синтаксис используются квадратные скобки и будет выглядеть ссылки на массив. Как правило две формы выглядеть следующим образом:  
   
-```  
+```cpp
   
       collectionPtr->GetItem(index);  
 collectionPtr->Item[index];  
-```  
+```
   
  Например, назначить значение к полю **записей** объект, с именем ***rs***, который является производным от **авторов** таблицы **pubs** базы данных. Используйте **Item()** свойство для доступа к третий **поле** из **записей** объект **поля** (коллекции, индексируются из коллекции равно нулю; Предположим, третье поле называется ***au_fname***). Затем вызовите **Value()** метод **поле** для присваивания строковое значение.  
   
  Это можно выразить в Visual Basic в следующих четырех способов (в последних двух форм уникальны для Visual Basic; в других языках не имеют эквивалентов):  
   
-```  
+```cpp
 rs.Fields.Item(2).Value = "value"  
 rs.Fields.Item("au_fname").Value = "value"  
 rs(2) = "value"  
 rs!au_fname = "value"  
-```  
+```
   
  Является эквивалентом в Visual C++ для первых двух форм выше:  
   
-```  
+```cpp
 rs->Fields->GetItem(long(2))->PutValue("value");   
 rs->Fields->GetItem("au_fname")->PutValue("value");  
-```  
+```
   
  - или - (альтернативный синтаксис **значение** также отображается свойство)  
   
-```  
+```cpp
 rs->Fields->Item[long(2)]->Value = "value";  
 rs->Fields->Item["au_fname"]->Value = "value";  
-```  
+```
   
  Примеры итерации по коллекции см. в разделе «Коллекции ADO», «Справочника ADO».  
   
@@ -139,14 +139,14 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  Например, объявление **Recordset::Open** метод:  
   
-```  
-    HRESULT Open (  
-        const _variant_t & Source,  
-        const _variant_t & ActiveConnection,  
-        enum CursorTypeEnum CursorType,  
-        enum LockTypeEnum LockType,  
-        long Options );  
-```  
+```cpp
+    HRESULT Open (  
+        const _variant_t & Source,  
+        const _variant_t & ActiveConnection,  
+        enum CursorTypeEnum CursorType,  
+        enum LockTypeEnum LockType,  
+        long Options );  
+```
   
  `ActiveConnection` Аргумента принимает ссылку на **_variant_t**, который может кода как строку подключения или указатель на открытый **подключения** объекта.  
   
@@ -177,13 +177,13 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  Три метода являются исключениями для обычной работы **vtMissing**. Это **Execute** методы **подключения** и **команда** объектов и **NextRecordset** метод **Записей** объекта. Ниже приведены их сигнатуры.  
   
-```  
-_RecordsetPtr <A HREF="mdmthcnnexecute.htm">Execute</A>( _bstr_t CommandText, VARIANT * RecordsAffected,   
-        long Options );  // Connection  
-_RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAffected, VARIANT * Parameters,   
-        long Options );  // Command  
-_RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
-```  
+```cpp
+_RecordsetPtr <A HREF="mdmthcnnexecute.htm">Execute</A>( _bstr_t CommandText, VARIANT * RecordsAffected,   
+        long Options );  // Connection  
+_RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAffected, VARIANT * Parameters,   
+        long Options );  // Command  
+_RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
+```
   
  Параметры, *RecordsAffected* и *параметры*, являются указателями на **Variant**. *Параметры* является входным параметром, который указывает адрес **Variant** содержит один параметр или массив параметров, определяющие выполняемой команды. *RecordsAffected* является выходным параметром, который указывает адрес **Variant**, где возвращается число строк, затронутых этим методом.  
   
@@ -193,11 +193,11 @@ _RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAff
   
  Таким образом для этих трех методов, является допустимым для таких как написать код:  
   
-```  
-pConnection->Execute("commandText", NULL, adCmdText);   
-pCommand->Execute(NULL, NULL, adCmdText);  
+```cpp
+pConnection->Execute("commandText", NULL, adCmdText);   
+pCommand->Execute(NULL, NULL, adCmdText);  
 pRecordset->NextRecordset(NULL);  
-```  
+```
   
 ## <a name="error-handling"></a>Обработка ошибок  
  В модели COM большинство операций возвращает код возврата HRESULT, указывающее, успешно ли завершен функции. **#Import** директива приводит к возникновению ошибки кода программы-оболочки вокруг каждого «raw» метод или свойство и проверяет возвращаемое значение HRESULT. Если значение HRESULT указывает на ошибку, код оболочки выводит ошибку COM, вызывающий _com_issue_errorex() с кодом возврата HRESULT в качестве аргумента. Ошибка COM-объектов может быть перехвачено в **попробуйте**-**catch** блока. (Ради повышения эффективности в catch ссылку **_com_error** объекта.)  
@@ -212,54 +212,54 @@ pRecordset->NextRecordset(NULL);
 ### <a name="declaring-an-ado-object"></a>Объявление объекта ADO  
  В Visual Basic, переменная объекта ADO (в данном случае для **записей** объекта) объявляется следующим образом:  
   
-```  
+```vb
 Dim rst As ADODB.Recordset  
-```  
+```
   
  Предложение "`ADODB.Recordset`«, — это идентификатор ProgID **записей** объекта, как определено в реестре. Новый экземпляр класса **записи** объекта объявляется следующим образом:  
   
-```  
+```vb
 Dim rst As New ADODB.Recordset  
-```  
+```
   
  -или-  
   
-```  
+```vb
 Dim rst As ADODB.Recordset  
 Set rst = New ADODB.Recordset  
-```  
+```
   
  В Visual C++ **#import** директива вызовет объявления типа смарт-указателя для всех объектов ADO. Например, переменную, которая указывает на **_Recordset** объект имеет тип **_RecordsetPtr**и объявляется следующим образом:  
   
-```  
+```cpp
 _RecordsetPtr  rs;  
-```  
+```
   
  Переменную, которая указывает на новый экземпляр класса **_Recordset** объект объявляется следующим образом:  
   
-```  
+```cpp
 _RecordsetPtr  rs("ADODB.Recordset");  
-```  
+```
   
  -или-  
   
-```  
+```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
-```  
+```
   
  -или-  
   
-```  
+```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance(__uuidof(_Recordset));  
-```  
+```
   
  После **CreateInstance** вызывается метод, переменная может использоваться следующим образом:  
   
-```  
+```cpp
 rs->Open(...);  
-```  
+```
   
  Обратите внимание, что в одном из случаев "`.`" является оператором так, будто переменной экземпляра класса (`rs.CreateInstance`) и в другом случае "`->`" оператор используется так, будто переменной указатель на интерфейс (`rs->Open`).  
   
@@ -268,61 +268,61 @@ rs->Open(...);
 ### <a name="coding-a-missing-parameter--string"></a>Кодирование отсутствует параметр — строка  
  При необходимости код отсутствует **строка** операнда в Visual Basic, просто опускать операнд. Необходимо указать операнд в Visual C++. Код **_bstr_t** , имеющего пустую строку в качестве значения.  
   
-```  
-_bstr_t strMissing(L"");  
-```  
+```cpp
+_bstr_t strMissing(L"");  
+```
   
 ### <a name="coding-a-missing-parameter--variant"></a>Отсутствует параметр кодирования — Variant  
  При необходимости код отсутствует **Variant** операнда в Visual Basic, просто опускать операнд. Необходимо указать все операнды в Visual C++. Код отсутствует **Variant** параметр с **_variant_t** специальное значение, DISP_E_PARAMNOTFOUND и тип, VT_ERROR. Можно также задать **vtMissing**, которой эквивалентное Предопределенная константа предоставляемую **#import** директива.  
   
-```  
-_variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
-```  
+```cpp
+_variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
+```
   
  - или -  
   
-```  
+```cpp
 ...vtMissing...;  
-```  
+```
   
 ### <a name="declaring-a-variant"></a>Объявление типа Variant  
  В Visual Basic **Variant** объявлен с **Dim** следующим образом:  
   
-```  
-Dim VariableName As Variant  
-```  
+```vb
+Dim VariableName As Variant  
+```
   
  В Visual C++, объявите переменную как тип **_variant_t**. Несколько схема **_variant_t** объявления, показаны ниже.  
   
 > [!NOTE]
 >  Эти объявления просто предоставить примерно представляете себе, что кода в своей программе. Дополнительные сведения см. в приведенных ниже примерах и документации Visual C ++.  
   
-```  
-_variant_t  VariableName(value);  
-_variant_t  VariableName((data type cast) value);  
-_variant_t  VariableName(value, VT_DATATYPE);  
-_variant_t  VariableName(interface * value, bool fAddRef = true);  
-```  
+```cpp
+_variant_t  VariableName(value);  
+_variant_t  VariableName((data type cast) value);  
+_variant_t  VariableName(value, VT_DATATYPE);  
+_variant_t  VariableName(interface * value, bool fAddRef = true);  
+```
   
 ### <a name="using-arrays-of-variants"></a>Использование массивов объектов типа Variant  
  В Visual Basic, массивы **варианты** оформляются с **Dim** инструкции или вы можете использовать **массива** функции, как показано в следующем примере кода:  
   
-```  
-Public Sub ArrayOfVariants  
-Dim cn As ADODB.Connection  
-Dim rs As ADODB.Recordset  
+```vb
+Public Sub ArrayOfVariants  
+Dim cn As ADODB.Connection  
+Dim rs As ADODB.Recordset  
 Dim fld As ADODB.Field  
   
-    cn.Open "DSN=pubs"  
-    rs = cn.OpenSchema(adSchemaColumns, _  
-        Array(Empty, Empty, "authors", Empty))  
+    cn.Open "DSN=pubs"  
+    rs = cn.OpenSchema(adSchemaColumns, _  
+        Array(Empty, Empty, "authors", Empty))  
     For Each fld in rs.Fields  
         Debug.Print "Name = "; fld.Name  
     Next fld  
     rs.Close  
     cn.Close  
-End Sub  
-```  
+End Sub  
+```
   
  В следующем примере Visual C++ демонстрируется использование **SafeArray** использовании **_variant_t**.  
   
@@ -333,12 +333,12 @@ End Sub
   
 2.  Требуется только одномерный массив, поэтому вы можете использовать **SafeArrayCreateVector**, вместо общего назначения **SAFEARRAYBOUND** объявления и **SafeArrayCreate** функция. Ниже приведен код будет выглядеть, как при использовании **SafeArrayCreate**:  
   
-    ```  
-       SAFEARRAYBOUND   sabound[1];  
-       sabound[0].lLbound = 0;  
-       sabound[0].cElements = 4;  
-       pSa = SafeArrayCreate(VT_VARIANT, 1, sabound);  
-    ```  
+    ```cpp
+       SAFEARRAYBOUND   sabound[1];  
+       sabound[0].lLbound = 0;  
+       sabound[0].cElements = 4;  
+       pSa = SafeArrayCreate(VT_VARIANT, 1, sabound);  
+    ```
   
 3.  Схеме, определенной значением константы перечислимого типа, **adSchemaColumns**, связанный с четырьмя столбцами ограничение: значениям TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME и COLUMN_NAME. Таким образом, массив **Variant** создается значений с четырьмя элементами. Затем указывается значение ограничения, которое соответствует с третьим столбцом, TABLE_NAME.  
   
@@ -348,15 +348,15 @@ End Sub
   
      Если **SafeArrayDestroy** были вызывается, код будет выглядеть следующим образом:  
   
-    ```  
-          TESTHR(SafeArrayDestroy(pSa));  
-       vtCriteria.vt = VT_EMPTY;  
-          vtCriteria.parray = NULL;  
-    ```  
+    ```cpp
+          TESTHR(SafeArrayDestroy(pSa));  
+       vtCriteria.vt = VT_EMPTY;  
+          vtCriteria.parray = NULL;  
+    ```
   
      Тем не менее, гораздо проще разрешить **_variant_t** управление **SafeArray**.  
   
-```  
+```cpp
 // Visual_CPP_ADO_Prog_1.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  
@@ -411,27 +411,27 @@ int main() {
    }  
    CoUninitialize();  
 }  
-```  
+```
   
 ### <a name="using-property-getputputref"></a>С помощью свойства Get/Put/PutRef  
  В Visual Basic имя свойства не уточняется ли его получить, назначенный или присвоить ссылку.  
   
-```  
-Public Sub GetPutPutRef  
-Dim rs As New ADODB.Recordset  
-Dim cn As New ADODB.Connection  
-Dim sz as Integer  
-cn.Open "Provider=sqloledb;Data Source=yourserver;" & _  
-         "Initial Catalog=pubs;Integrated Security=SSPI;"  
-rs.PageSize = 10  
-sz = rs.PageSize  
-rs.ActiveConnection = cn  
-rs.Open "authors",,adOpenStatic  
+```vb
+Public Sub GetPutPutRef  
+Dim rs As New ADODB.Recordset  
+Dim cn As New ADODB.Connection  
+Dim sz as Integer  
+cn.Open "Provider=sqloledb;Data Source=yourserver;" & _  
+         "Initial Catalog=pubs;Integrated Security=SSPI;"  
+rs.PageSize = 10  
+sz = rs.PageSize  
+rs.ActiveConnection = cn  
+rs.Open "authors",,adOpenStatic  
 ' ...  
 rs.Close  
 cn.Close  
-End Sub  
-```  
+End Sub  
+```
   
  В этом примере Visual C++ показано **получить**/**поместить**/**PutRef *** свойство*.  
   
@@ -442,7 +442,7 @@ End Sub
   
 2.  Нет необходимости для приведения операнда `rs->PutRefActiveConnection(cn)` для `(IDispatch *)` так как тип операнда уже `(IDispatch *)`.  
   
-```  
+```cpp
 // Visual_CPP_ado_prog_2.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  
@@ -480,35 +480,35 @@ int main() {
    }  
    ::CoUninitialize();  
 }  
-```  
+```
   
 ### <a name="using-getitemx-and-itemx"></a>С помощью GetItem(x) и элемент [x]  
  Этот пример Visual Basic демонстрируется синтаксис стандартного и альтернативного **элемент**().  
   
-```  
-Public Sub GetItemItem  
-Dim rs As New ADODB.Recordset  
-Dim name as String  
-rs = rs.Open "authors", "DSN=pubs;", adOpenDynamic, _  
-         adLockBatchOptimistic, adTable  
-name = rs(0)  
-' -or-  
-name = rs.Fields.Item(0)  
-rs(0) = "Test"  
+```vb
+Public Sub GetItemItem  
+Dim rs As New ADODB.Recordset  
+Dim name as String  
+rs = rs.Open "authors", "DSN=pubs;", adOpenDynamic, _  
+         adLockBatchOptimistic, adTable  
+name = rs(0)  
+' -or-  
+name = rs.Fields.Item(0)  
+rs(0) = "Test"  
 rs.UpdateBatch  
-' Restore name  
-rs(0) = name  
+' Restore name  
+rs(0) = name  
 rs.UpdateBatch  
 rs.Close  
-End Sub  
-```  
+End Sub  
+```
   
  В этом примере Visual C++ показано **элемент**.  
   
 > [!NOTE]
 >  Следующее примечание соответствует закомментированные разделы в примере кода: при обращении к коллекции с **элемент**, индекс, **2**, должен быть приведен к **long** , вызывается соответствующий конструктор.  
   
-```  
+```cpp
 // Visual_CPP_ado_prog_3.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  
@@ -549,7 +549,7 @@ void main() {
    }  
    ::CoUninitialize();  
 }  
-```  
+```
   
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>Приведение указателей объектов ADO с (IDispatch *)  
  В следующем примере Visual C++ демонстрируется использование (IDispatch *) для указателей объектов ADO приведения.  
@@ -565,7 +565,7 @@ void main() {
   
  Этот раздел кода показаны некоторые полезные поведения **_variant_t** и **_bstr_t** операторы.  
   
-```  
+```cpp
 // Visual_CPP_ado_prog_4.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  

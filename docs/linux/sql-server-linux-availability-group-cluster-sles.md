@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3fb1b2646e399e5fe96dcc66f60aa92b4f009116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383739"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670623"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Настройка кластера SLES для группы доступности SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Это руководство содержит инструкции по созданию кластер с тремя узлами для SQL Server в SUSE Linux Enterprise Server (SLES) 12 с пакетом обновления 2. Для обеспечения высокой доступности группы доступности в Linux требует трех узлов — см. в разделе [высокий уровень доступности и защиты данных для конфигураций группы доступности](sql-server-linux-availability-group-ha.md). Кластеризации уровень основан на SUSE [высокий уровень доступности расширения (для которых Имеется)](https://www.suse.com/products/highavailability) создаются на основе [Pacemaker](http://clusterlabs.org/). 
+Это руководство содержит инструкции по созданию кластер с тремя узлами для SQL Server в SUSE Linux Enterprise Server (SLES) 12 с пакетом обновления 2. Для обеспечения высокой доступности группы доступности в Linux требует трех узлов — см. в разделе [высокий уровень доступности и защиты данных для конфигураций группы доступности](sql-server-linux-availability-group-ha.md). Кластеризации уровень основан на SUSE [высокий уровень доступности расширения (для которых Имеется)](https://www.suse.com/products/highavailability) создаются на основе [Pacemaker](https://clusterlabs.org/). 
 
 Дополнительные сведения о конфигурации кластера, параметры агента ресурсов, управления, рекомендации и рекомендации, см. в разделе [SUSE Linux Enterprise высокого уровня доступности расширения 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
@@ -79,7 +79,7 @@ ms.locfileid: "49383739"
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   Дополнительные сведения см. в разделе [руководство по администрированию SLES — раздел "Прочее"](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
+   Дополнительные сведения см. в разделе [руководство по администрированию SLES — раздел "Прочее"](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
 
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Создание имени входа SQL Server для Pacemaker
@@ -104,7 +104,7 @@ ms.locfileid: "49383739"
 
 ## <a name="set-up-the-first-node"></a>Настройка первого узла
 
-   Ссылаться на [инструкции по установке SLES](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+   Ссылаться на [инструкции по установке SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
 
 1. Войдите в систему как `root` физической или виртуальной машины, которые вы хотите использовать в качестве узла кластера.
 2. Запустите скрипт начальной загрузки, выполнив:
@@ -220,7 +220,7 @@ crm configure property cluster-recheck-interval=2min
 
 Узел уровня ограждения гарантирует, что узел не все ресурсы. Это делается путем сброса параметров узла и его реализация Pacemaker вызывается STONITH (что означает «устранение неисправностей другой узел в заголовке»). Pacemaker поддерживает разнообразные полезные ограждения устройств, таких как источник бесперебойного питания питания или управления картами для серверов.
 
-Дополнительные сведения см. в разделе [кластеров Pacemaker с нуля](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [ограждения и Stonith](http://clusterlabs.org/doc/crm_fencing.html) и [документации SUSE HA: ограждения и STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Дополнительные сведения см. в разделе [кластеров Pacemaker с нуля](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [ограждения и Stonith](https://clusterlabs.org/doc/crm_fencing.html) и [документации SUSE HA: ограждения и STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 Во время инициализации кластера STONITH будет отключен, если конфигурация не обнаруживается. Его можно включить позже, выполнив следующую команду:
 

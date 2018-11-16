@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1925249781d938ad95bd4c27e60f797f8ad7b5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5869fe4903ea60a42e8710b0acc969e8a8bc6202
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717582"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673993"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -111,9 +111,9 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Средний размер записи в байтах.<br /><br /> Для индекса средний размер записи применяется к текущему уровню сбалансированного дерева в единице распределения IN_ROW_DATA.<br /><br /> Для кучи — средний размер записи в единице распределения IN_ROW_DATA.<br /><br /> Для единиц распределения LOB_DATA или ROW_OVERFLOW_DATA — средний размер записи во всей единице распределения.<br /><br /> Значение NULL, если *режим* = LIMITED.|  
 |forwarded_record_count|**bigint**|Количество записей в куче, содержащих указатели на данные в других местах. (Такое состояние возникает во время обновления, когда не хватает места для сохранения новой строки в исходном расположении.)<br /><br /> NULL для любой единицы распределения, отличающейся от единиц распределения IN_ROW_DATA для кучи.<br /><br /> Значение NULL для куч, если указан *режим* = LIMITED.|  
 |compressed_page_count|**bigint**|Количество сжатых страниц.<br /><br /> Вновь выделенные для куч страницы не сжаты с использованием сжатия PAGE. Куча — это СТРАНИЦА, сжимаемая при наступлении двух особых условий: при массовом импорте данных или при перестройке кучи. Типичные операции DML, которые вызывают выделение страниц, не связаны со сжатием PAGE. Перестройте кучу, если значение compressed_page_count увеличивается сверх желательного порога.<br /><br /> Для таблиц с кластеризованным индексом значение compressed_page_count указывает эффективность сжатия страниц.|  
-|hobt_id|BIGINT|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Применительно к индексам columnstore только это идентификатор для набора строк, который отслеживает данные внутренней columnstore для секции. Наборы строк, хранимых как кучи данных или двоичного дерева. Они имеют одинаковые Идентификаторы индекса как родительский индекс columnstore. Дополнительные сведения см. в разделе [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> Значение NULL, если|  
-|column_store_delete_buffer_state|TINYINT|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN;<br /><br /> 2 = СТОК<br /><br /> 3 = ЗАПИСЬ НА ДИСК<br /><br /> 4 = СНЯТИЯ С УЧЕТА<br /><br /> 5 = ГОТОВНОСТЬ|  
-|column_store_delete_buff_state_desc||**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> НЕ является ДОПУСТИМЫМ — родительский индекс не индекс columnstore.<br /><br /> OPEN — методов Deleter и сканеры используйте его.<br /><br /> СТОК — методов Deleter сток, но ее по-прежнему использовать сканеры.<br /><br /> Запись на ДИСК — закрытия буфера и строк в буфере, записываются в точечном рисунке delete.<br /><br /> Снятия с УЧЕТА – строк в буфере закрытых delete были записаны в точечном рисунке delete, но буфер не был усечен, поскольку сканеры по-прежнему используют ее. Новый сканеры не нужно использовать эксплуатации буфера, поскольку буфер, open, достаточно.<br /><br /> ГОТОВО – это буфера удаления готов к использованию.|  
+|hobt_id|BIGINT|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Применительно к индексам columnstore только это идентификатор для набора строк, который отслеживает данные внутренней columnstore для секции. Наборы строк, хранимых как кучи данных или двоичного дерева. Они имеют одинаковые Идентификаторы индекса как родительский индекс columnstore. Дополнительные сведения см. в разделе [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> Значение NULL, если|  
+|column_store_delete_buffer_state|TINYINT|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN;<br /><br /> 2 = СТОК<br /><br /> 3 = ЗАПИСЬ НА ДИСК<br /><br /> 4 = СНЯТИЯ С УЧЕТА<br /><br /> 5 = ГОТОВНОСТЬ|  
+|column_store_delete_buff_state_desc||**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> НЕ является ДОПУСТИМЫМ — родительский индекс не индекс columnstore.<br /><br /> OPEN — методов Deleter и сканеры используйте его.<br /><br /> СТОК — методов Deleter сток, но ее по-прежнему использовать сканеры.<br /><br /> Запись на ДИСК — закрытия буфера и строк в буфере, записываются в точечном рисунке delete.<br /><br /> Снятия с УЧЕТА – строк в буфере закрытых delete были записаны в точечном рисунке delete, но буфер не был усечен, поскольку сканеры по-прежнему используют ее. Новый сканеры не нужно использовать эксплуатации буфера, поскольку буфер, open, достаточно.<br /><br /> ГОТОВО – это буфера удаления готов к использованию.|  
   
 ## <a name="remarks"></a>Примечания  
  Функция динамического управления sys.dm_db_index_physical_stats заменяет инструкцию DBCC SHOWCONTIG.  
@@ -197,7 +197,7 @@ GO
   
 -   Использование инструкции ALTER INDEX REBUILD, заменившей DBCC DBREINDEX, для перестроения индекса, как «в сети», так и в режиме «вне сети». Дополнительные сведения см. в разделе [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
   
- Фрагментация сама по себе не является достаточной причиной реорганизации или перестроения индекса. Основной эффект фрагментации заключается в том, что она замедляет упреждающее чтение во время просмотра индекса. В результате этого увеличивается время ответа. Если запрос к фрагментированным таблице или индексу не предусматривает просмотра, потому что в основном выполняются единичные уточняющие запросы, устранение фрагментации может не дать никакого эффекта. Дополнительные сведения см. в этом [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?linkid=31012).  
+ Фрагментация сама по себе не является достаточной причиной реорганизации или перестроения индекса. Основной эффект фрагментации заключается в том, что она замедляет упреждающее чтение во время просмотра индекса. В результате этого увеличивается время ответа. Если запрос к фрагментированным таблице или индексу не предусматривает просмотра, потому что в основном выполняются единичные уточняющие запросы, устранение фрагментации может не дать никакого эффекта. Дополнительные сведения см. в этом [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?linkid=31012).  
   
 > [!NOTE]  
 >  Выполнение инструкции DBCC SHRINKFILE или DBCC SHRINKDATABASE может вызвать фрагментацию, если индекс частично или полностью перемещается во время операции сжатия. Поэтому, если необходимо выполнить операцию сжатия, нужно выполнить ее до устранения фрагментации.  
@@ -430,8 +430,8 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [Системные представления &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [Системные представления &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

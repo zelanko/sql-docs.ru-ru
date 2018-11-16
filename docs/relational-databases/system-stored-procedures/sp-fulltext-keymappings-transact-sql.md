@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: deece034b6ef4f6159a34705b21e39d8279f36f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8e07af93050ec752a9cf26b56238269ca63aa9d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716292"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660484"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  Внутренний идентификатор документа (DocId), который соответствует значению ключа. При использовании недопустимого значения *docid* не происходит возврата значений.  
   
  *Ключ*  
- Значение полнотекстового ключа из указанной таблицы. При использовании недопустимого значения *key* не происходит возврата значений. Сведения о значениях ключей полнотекстового поиска см. в разделе [Управление полнотекстовыми индексами](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ Значение полнотекстового ключа из указанной таблицы. При использовании недопустимого значения *key* не происходит возврата значений. Сведения о значениях ключей полнотекстового поиска см. в разделе [Управление полнотекстовыми индексами](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 > [!IMPORTANT]  
 >  Дополнительные сведения об использовании одного, двух или трех параметров см. в подразделе «Примечания» далее в этом разделе.  
@@ -90,7 +90,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="examples"></a>Примеры  
   
 > [!NOTE]  
->  В примерах этого раздела используется `Production.ProductReview` таблицу [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] образца базы данных. Этот индекс можно создать, выполнив пример, приведенный для `ProductReview` в таблицу [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  В примерах этого раздела используется таблица `Production.ProductReview` образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Этот индекс можно создать, выполнив пример, приведенный для `ProductReview` в таблицу [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. Получение значений Key и DocId  
  В следующем примере используется [DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md) инструкцию, чтобы создать локальную переменную, `@table_id` и присвоить идентификатор `ProductReview` таблицу в качестве его значения. В примере выполняется **sp_fulltext_keymappings** указание `@table_id` для *table_id* параметра.  

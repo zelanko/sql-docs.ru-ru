@@ -1,5 +1,5 @@
 ---
-title: Группы элементов атрибутов (дискретизация) | Документы Microsoft
+title: Группы элементов атрибутов (дискретизация) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: edf1f554a4e7829883263198b132f479b0001d5d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021761"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813717"
 ---
-# <a name="attribute-properties---group-attribute-members"></a>Свойства атрибутов - группирование элементов атрибута
+# <a name="attribute-properties---group-attribute-members"></a>Свойства атрибута — группирование элементов атрибутов
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Группа элементов является созданным системой набором последовательных элементов измерения. В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]элементы атрибута могут группироваться в различные группы элементов в ходе процесса, называемого дискретизацией. Уровень в иерархии содержит либо группы элементов, либо элементы, но не то и другое сразу. Когда пользователи выполняют обзор уровня, содержащего группы элементов, они видят имена и значения ячеек групп элементов. Элементы, формируемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для поддержания групп членов, называются элементами группирования и выглядят как обычные элементы.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34021761"
   
  `<First definition> ::= <Name expression>`  
   
- `<Intermediate defintion> ::= <Name expression>`  
+ `<Intermediate definition> ::= <Name expression>`  
   
  `<Last definition> ::= <Name expression>`  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34021761"
   
  Параметр `<Bucket name>` представляет собой строковое выражение, которое может использовать набор переменных для представления данных об элементе или группе элементов в виде части имени группы элементов:  
   
-|Переменная|Description|  
+|Переменная|Описание|  
 |--------------|-----------------|  
 |%{Первый элемент сегмента}|Имя первого элемента должно включаться в текущую группу элементов.|  
 |%{Последний элемент сегмента}|Имя последнего элемента должно включаться в текущую группу элементов.|  

@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3369dfd653f1a0485f60145779b5691e200493a3
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: eb92907b87382c9aad2b7c1a580bf0feb33ac7bd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254410"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657153"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>Хранимые процедуры хранилища данных SQL
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "50254410"
  [sp_special_columns_100 &#40;хранилище данных SQL&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  Некоторые дополнительные системные хранимые процедуры используются только в пределах экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или через клиентские API-интерфейсов и не предназначены для общего использования. Эти процедуры перечислены в [системные хранимые процедуры (Transact-SQL)](http://msdn.microsoft.com/library/ms187961.aspx). Эти процедуры могут быть изменены и совместимость не гарантируется. Все процедуры в списке не доступны в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+>  Некоторые дополнительные системные хранимые процедуры используются только в пределах экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или через клиентские API-интерфейсов и не предназначены для общего использования. Эти процедуры перечислены в [системные хранимые процедуры (Transact-SQL)](https://msdn.microsoft.com/library/ms187961.aspx). Эти процедуры могут быть изменены и совместимость не гарантируется. Все процедуры в списке не доступны в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые функции &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   

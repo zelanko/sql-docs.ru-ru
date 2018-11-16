@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a054ef8015379d7360f513ce075c1001bf08d898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4323fd5542216550013624dc75a6428cd1a8cd0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844972"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663593"
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47844972"
 |**process_kernel_time_ms**|**bigint**|**Применимо к**: с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее время в миллисекундах, затраченное всеми потоками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме ядра. Это значение может быть больше, чем время одного процессора, поскольку оно включает в себя время всех процессоров сервера. Не допускает значения NULL.|  
 |**process_user_time_ms**|**bigint**|**Применимо к**: с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее время в миллисекундах, затраченное всеми потоками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в пользовательском режиме. Это значение может быть больше, чем время одного процессора, поскольку оно включает в себя время всех процессоров сервера. Не допускает значения NULL.|  
 |**time_source**|**int**|**Применимо к**: с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает API-интерфейс, который службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют для извлечения реального времени. Не допускает значения NULL.<br /><br /> 0 = QUERY_PERFORMANCE_COUNTER<br /><br /> 1 = MULTIMEDIA_TIMER|  
-|**time_source_desc**|**nvarchar(60)**|**Применимо к**: с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Описывает **time_source** столбца. Не допускает значения NULL.<br /><br /> QUERY_PERFORMANCE_COUNTER = [QueryPerformanceCounter](http://go.microsoft.com/fwlink/?LinkId=163095) API извлекает реальное время.<br /><br /> MULTIMEDIA_TIMER = [мультимедийного таймера](http://go.microsoft.com/fwlink/?LinkId=163094) API, который извлекает реальное время.|  
+|**time_source_desc**|**nvarchar(60)**|**Применимо к**: с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Описывает **time_source** столбца. Не допускает значения NULL.<br /><br /> QUERY_PERFORMANCE_COUNTER = [QueryPerformanceCounter](https://go.microsoft.com/fwlink/?LinkId=163095) API извлекает реальное время.<br /><br /> MULTIMEDIA_TIMER = [мультимедийного таймера](https://go.microsoft.com/fwlink/?LinkId=163094) API, который извлекает реальное время.|  
 |**virtual_machine_type**|**int**|**Применимо к**: с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, выполняется ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виртуальной среде.  Не допускает значения NULL.<br /><br /> 0 = нет<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
 |**virtual_machine_type_desc**|**nvarchar(60)**|**Применимо к**: с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Описывает **virtual_machine_type** столбца. Не допускает значения NULL.<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не запущена на виртуальной машине.<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется внутри гипервизора, который подразумевает виртуализацию с поддержкой аппаратного обеспечения. При установке роли Hyper_V низкоуровневая оболочка размещает операционную систему, чтобы экземпляр, запущенный на ОС узла, выполнялся в этой оболочке.<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на виртуальной машине, не использующей поддержку оборудования, например Microsoft Virtual PC.|  
 |**softnuma_configuration**|**int**|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, что настроены узлы NUMA способом. Не допускает значения NULL.<br /><br /> 0 = OFF указывает оборудования по умолчанию<br /><br /> 1 = автоматическая архитектура soft-NUMA<br /><br /> 2 = вручную программной архитектуры NUMA с помощью реестра|  

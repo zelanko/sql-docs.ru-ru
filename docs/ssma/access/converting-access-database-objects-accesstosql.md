@@ -30,12 +30,12 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8137ed37cdbe3bec62e8f7e5a900ade9513894fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735192"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666203"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Преобразование объектов базы данных Access (AccessToSQL)
 После добавления базы данных Access и подключены к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, SSMA отображает метаданные для доступа и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты базы данных SQL Azure. Теперь Выбор объектов базы данных Access и затем преобразовать схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или схем SQL Azure.  
@@ -49,7 +49,7 @@ ms.locfileid: "47735192"
 Во время преобразования SSMA выводит состояние в области вывода и ошибки, предупреждения и информационные сообщения на панель список ошибок. Эти сведения можно используйте для определения, нужно ли изменять базы данных Access или процесс преобразования, чтобы получить результаты требуемое преобразование. Можно также использовать сведения в [Подготовка базы данных Access для миграции](preparing-access-databases-for-migration-accesstosql.md) раздел, чтобы определить, что будет и не будут преобразованы.  
   
 ## <a name="setting-conversion-options"></a>Установка параметров преобразования  
-Прежде чем выполнять преобразование объектов, просмотрите параметры преобразования проекта в **параметры проекта** диалоговое окно. В этом диалоговом окне, можно задать как SSMA преобразует столбцов типа memo индексированных, первичные ключи, ограничения внешнего ключа, отметки времени и таблицы без индексов. Дополнительные сведения см. в разделе [параметры проекта (преобразование)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+Прежде чем выполнять преобразование объектов, просмотрите параметры преобразования проекта в **параметры проекта** диалоговое окно. В этом диалоговом окне, можно задать как SSMA преобразует столбцов типа memo индексированных, первичные ключи, ограничения внешнего ключа, отметки времени и таблицы без индексов. Дополнительные сведения см. в разделе [параметры проекта (преобразование)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## <a name="conversion-results"></a>Результаты преобразования  
 В следующей таблице показаны объекты доступа преобразуются, в результате чего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объектов SQL Azure:  

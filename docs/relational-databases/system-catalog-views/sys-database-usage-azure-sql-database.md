@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b5735a0829579a612999381e3108717ac1f7430c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f17e34de7c230b111652ea57a3baa072a442a6a5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822070"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656743"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47822070"
  **Sys.database_usage** представление возвращает одну строку за каждый день вашей подписки.  
   
 ## <a name="see-also"></a>См. также  
- [Сведения о ценах на базы данных SQL](http://go.microsoft.com/fwlink/?LinkID=394978)   
- [Учетные записи и выставление счетов в базе данных Azure SQL для Windows](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [Сведения о ценах на базы данных SQL](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [Учетные записи и выставление счетов в базе данных Azure SQL для Windows](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

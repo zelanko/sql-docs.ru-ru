@@ -12,12 +12,12 @@ ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9298a094187b38cf005928dfc4832fc529222b1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 068ae849454fefbc6a4bd08d19a530a59d2788e8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601793"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666573"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Преобразование объектов базы данных SAP ASE (SybaseToSQL)
 После подключения к SAP Adaptive Server Enterprise (ASE), подключенных к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL и задание проекта и параметры сопоставления данных, можно преобразовать объекты базы данных SAP Adaptive Server Enterprise (ASE) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных Azure SQL объекты.  
@@ -124,7 +124,7 @@ T-SQL используются следующие ключевые слова с
 -   Объект можно исключить из миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или обозреватель метаданных SQL Azure и обозреватель метаданных Sybase, снимите флажок рядом с элементом перед загрузкой объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL, так и перенос данных из SAP ASE.  
   
 ## <a name="next-steps"></a>Следующие шаги  
-Следующим шагом в процессе миграции является [загрузка преобразовать объекты базы данных в SQL Server / SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
+Следующим шагом в процессе миграции является [загрузка преобразовать объекты базы данных в SQL Server / SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
 ## <a name="see-also"></a>См. также  
 [Миграция баз данных SAP ASE в SQL Server — база данных Azure SQL &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

@@ -13,12 +13,12 @@ ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f0390360aef76b15c9743780eff787dd0a2d275d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04e58ec9c40f62932c4a711c1e96c0bd4e8162e2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676502"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666173"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Использование репозиториев тестирования (OracleToSQL)
 Хранилище тестов SSMA хранилищами тестировщик SSMA тестовых случаев и результаты теста для последующего использования. Данные хранилища сохраняются в таблицах SQL Server **TestCaseRepository** и **RunTestCaseResultRepository** в схеме **ssma_oracle_utilities** из **ssmatesterdb** базы данных.  
@@ -50,7 +50,7 @@ ms.locfileid: "47676502"
   
 -   Нажмите кнопку **изменить** , чтобы запустить мастер тестовый случай и изменить выбранный тест.  
   
--   Нажмите кнопку **запуска** кнопку, чтобы открыть [выполнение тестовых случаев (OracleToSQL)](http://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) диалогового окна и выполнения выбранного теста.  
+-   Нажмите кнопку **запуска** кнопку, чтобы открыть [выполнение тестовых случаев (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) диалогового окна и выполнения выбранного теста.  
   
 ## <a name="test-results-repository"></a>Репозиторий результатов теста  
 Вы можете просмотреть хранилище результатов теста на **результаты теста** странице **репозитория тестовых случаев** окна. Откройте ее, щелкнув **результатов теста...** из **тест-инженер** меню.  

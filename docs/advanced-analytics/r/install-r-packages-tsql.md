@@ -1,6 +1,6 @@
 ---
-title: Позволяет установить пакеты R на службы обучения машины SQL Server T-SQL (Создание ВНЕШНЕЙ БИБЛИОТЕКИ) | Документы Microsoft
-description: Добавление новых пакетов R обучения машины службы (в базе данных) для SQL Server 2017 г.
+title: С помощью T-SQL (CREATE EXTERNAL LIBRARY) установка пакетов R на службы машинного обучения SQL Server | Документация Майкрософт
+description: Добавление новых пакетов R для служб SQL Server 2017 машинного обучения (в базе данных)
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/30/2018
@@ -8,37 +8,37 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7a5a0c394e9a26244661a4ae712d20583c1f1c99
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 897bafaaf5ec32c417bb5d9625ce6cef22d6e783
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585486"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699392"
 ---
-# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server-2017-machine-learning-services"></a>Используйте T-SQL (Создание ВНЕШНЕЙ БИБЛИОТЕКИ) для установки R-пакетов в службах SQL Server 2017 г. машин обучения
+# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server-2017-machine-learning-services"></a>С помощью T-SQL (CREATE EXTERNAL LIBRARY) установка пакетов R на службы машинного обучения SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье описывается установка нового R-пакетов в экземпляре SQL Server, где включена машинного обучения. Существует несколько подходов для выбора. С помощью T-SQL лучше всего подходит для администраторов сервера, не знакомых с R.
+В этой статье описывается установка новых пакетов R в экземпляре SQL Server, где включена машинного обучения. Существует несколько подходов для выбора. С помощью T-SQL лучше всего подходит для администраторов сервера, кто не знаком с R.
 
 **Область применения:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-[Создать ВНЕШНЮЮ БИБЛИОТЕКУ](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) инструкция делает возможным добавление пакета или набора пакетов экземпляра или определенной базы данных без выполнения R или Python code напрямую. Однако этот метод требует подготовки пакета и разрешения дополнительные базы данных.
+[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) инструкция делает возможным добавление пакета или набора пакетов экземпляра или определенной базы данных без выполнения R или Python code напрямую. Тем не менее этот метод требует подготовки пакета и разрешения дополнительные базы данных.
 
-+ Все пакеты должны быть доступны как локальный ZIP-файл, а не загруженные по запросу из Интернета.
++ Все пакеты должен быть доступен в виде локального ZIP-файла, а не Скачанный по запросу из Интернета.
 
-+ Все зависимости необходимо определить по имени и версии и включены в ZIP-файл. Выполнение инструкции завершается неудачно, если требуемые пакеты недоступны, включая зависимости пакетов подчиненных. 
++ Все зависимости необходимо определить по имени и версии и включены в ZIP-файл. Инструкция завершается неудачно, если необходимые пакеты недоступны, включая зависимости пакетов подчиненных. 
 
-+ Должно быть **db_owner** или иметь разрешение на создание ВНЕШНЕЙ БИБЛИОТЕКИ в роль базы данных. Дополнительные сведения см. в разделе [создать ВНЕШНЮЮ БИБЛИОТЕКУ](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
++ Будьте **db_owner** или иметь разрешение CREATE EXTERNAL LIBRARY в роли базы данных. Дополнительные сведения см. в разделе [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
-## <a name="download-packages-in-archive-format"></a>Загрузить пакеты в формате архива
+## <a name="download-packages-in-archive-format"></a>Скачивание пакетов в формат архива
 
-При установке одного пакета, загрузите пакет в ZIP-формате.
+При установке одного пакета, скачайте пакет в формате ZIP.
 
-Это чаще всего для установки нескольких пакетов из-за зависимости пакетов. Если пакет требует другие пакеты, необходимо проверить, все они доступны друг с другом во время установки. Мы рекомендуем [Создание локального репозитория](create-a-local-package-repository-using-minicran.md) с помощью [miniCRAN](http://andrie.github.io/miniCRAN/) сборка представляет собой полный набор пакетов, а также [igraph](http://igraph.org/r/) для анализа зависимостей пакетов. Неверная версия пакета установки или пропуск зависимость пакета может привести к ошибке инструкции, создание ВНЕШНЕЙ БИБЛИОТЕКИ. 
+Очень часто Установка нескольких пакетов из-за зависимости пакетов. Если пакет требует других пакетов, необходимо убедиться, что все они доступны друг к другу во время установки. Мы рекомендуем [Создание локального репозитория](create-a-local-package-repository-using-minicran.md) с помощью [miniCRAN](https://andrie.github.io/miniCRAN/) сборка полный набор пакетов, а также [igraph](https://igraph.org/r/) для анализа зависимостей пакетов. Неправильная версия пакета установки, или пропуск зависимость пакета может вызвать инструкцию CREATE EXTERNAL LIBRARY, переход на другой. 
 
 ## <a name="copy-the-file-to-a-local-folder"></a>Скопируйте файл в локальную папку
 
-Скопируйте ZIP-файл, содержащий все пакеты в локальную папку на сервере. Если на сервере нет доступа к файловой системе, можно также передать полный пакет как переменную, с использованием двоичного формата. Дополнительные сведения см. в разделе [создать ВНЕШНЮЮ БИБЛИОТЕКУ](../../t-sql/statements/create-external-library-transact-sql.md).
+Скопируйте ZIP-файл, содержащий все пакеты в локальную папку на сервере. Если у вас нет доступа к файловой системе на сервере, можно также передать полный пакет как переменную, с использованием двоичного формата. Дополнительные сведения см. в разделе [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
 ## <a name="run-the-statement-to-upload-packages"></a>Выполните инструкцию, чтобы отправить пакеты
 
@@ -46,7 +46,7 @@ ms.locfileid: "34585486"
 
 Выполните инструкцию T-SQL `CREATE EXTERNAL LIBRARY` для передачи коллекции ZIP-пакета в базе данных.
 
-Например, следующая инструкция называет в качестве источника пакета в репозиторий miniCRAN, содержащее **randomForest** пакет, вместе с его зависимости. 
+Например, следующая инструкция имена как источник типа, содержащее репозитория miniCRAN **randomForest** пакет, вместе с зависимостями. 
 
 ```SQL
 CREATE EXTERNAL LIBRARY randomForest
@@ -54,11 +54,11 @@ FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
 ```
 
-Нельзя использовать произвольное имя; Имя внешней библиотеки должен иметь же имя, которое будет использоваться при загрузке или при вызове пакета.
+Нельзя использовать произвольное имя; Внешняя библиотека имя должно иметь имя, которое вы будете использовать при загрузке или вызова пакета.
 
 ## <a name="verify-package-installation"></a>Проверка установки пакета
 
-Если библиотеке успешно создан, можно запускать пакет в SQL Server, путем вызова внутри хранимой процедуры.
+Если библиотека создана успешно, при запуске пакета в SQL Server, путем ее вызова внутри хранимой процедуры.
     
 ```SQL
 EXEC sp_execute_external_script
@@ -69,5 +69,5 @@ EXEC sp_execute_external_script
 ## <a name="see-also"></a>См. также
 
 + [Получение сведений о пакете](determine-which-packages-are-installed-on-sql-server.md)
-+ [Учебники R](../tutorials/sql-server-r-tutorials.md)
++ [Учебники по R](../tutorials/sql-server-r-tutorials.md)
 + [Практические руководства](sql-server-machine-learning-tasks.md)

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f7721018d887fdb4c24293c4076f384167f38a55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695082"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350279"
 ---
 # <a name="working-with-multidimensional-data"></a>Работа с многомерными данными
 Объект *набора ячеек* является результатом запроса многомерных данных. Он состоит из коллекции осей, обычно не более четырех осей и обычно только два или три. *Оси* — это коллекция элементов из одного или нескольких измерений, который используется для поиска или фильтрации определенных значений в кубе.  
@@ -64,7 +64,7 @@ ms.locfileid: "47695082"
   
  Координаты представляется в виде позиции с двумя членами — один из менеджеров по продажам измерения, а другой из измерения «География»:  
   
-```  
+```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
 (Valentine, Japan), (Nash, Seattle), (Nash, Boston), (Nash, USA_North),  
 (Nash, Japan)  
@@ -72,7 +72,7 @@ ms.locfileid: "47695082"
   
  Ось y имеет только одно измерение, содержащее следующие на 8 позиций:  
   
-```  
+```console
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   

@@ -27,12 +27,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11cb2d92d0a18e837a1bf7887ddf6f7a2dfbc449
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 089ced09d718b0716f0c19d4553e52ff02c3d505
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628832"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665583"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2017 в Linux
 
@@ -50,7 +50,7 @@ ms.locfileid: "47628832"
 
 ### <a name="try-sql-server"></a>Попробуйте SQL Server!    
     
-[Скачать SQL Server 2017](http://www.microsoft.com/sql-server/sql-server-2017)
+[Скачать SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] , выпуски  
  Эти выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]описаны в следующей таблице. 
@@ -217,9 +217,9 @@ SQL Server 2017 в Linux поддерживает компонент SQL Server 
 ## <a name="next-steps"></a>Следующие шаги 
  [Выпуски и поддерживаемые функции для SQL Server 2017 — Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Выпуски и поддерживаемые функции для SQL Server 2016 — Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [Выпуски и поддерживаемые функции для SQL Server 2014 — Windows](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
+ [Выпуски и поддерживаемые функции для SQL Server 2014 — Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [Спецификации SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
+ [Спецификации SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
 
   
   

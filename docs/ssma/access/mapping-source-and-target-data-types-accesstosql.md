@@ -16,18 +16,18 @@ ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 075cb0870d7fa3f4cbddaef60c2de4d1aa0683c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a32f7f321baa17dbcdaf557bb7de033422a02dbc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668718"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668263"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Сопоставление исходного и целевого типов данных (AccessToSQL)
 Типы доступа базы данных отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы базы данных. При преобразовании объектов базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов, необходимо указать способ сопоставления типов данных из Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Вы можете принять сопоставления типов данных по умолчанию, или можно настроить сопоставления, как показано в следующих процедурах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
-SSMA имеет набор по умолчанию сопоставления типов данных. Список сопоставлений по умолчанию, см. в разделе [параметры проекта (сопоставление типов)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+SSMA имеет набор по умолчанию сопоставления типов данных. Список сопоставлений по умолчанию, см. в разделе [параметры проекта (сопоставление типов)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
   
 ## <a name="customizing-data-type-mappings"></a>Настройка сопоставления типов данных  
 С помощью **параметры проекта** диалоговом окне можно настроить сопоставление типов для всех баз данных и объектов базы данных в проекте. Сопоставления типов для проекта применяются ко всем базам данных и объектов базы данных, у которых нет сопоставления пользовательского типа.  

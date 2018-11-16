@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ebaeb1a0fce11d984f858247763c4222d4a8b27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c611eff42a3cd31894e27b1a7737ca77e91bea
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603552"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670413"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Типы данных XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47603552"
  В XPath есть три типа данных: **строка**, **номер**, и **логическое**. **Номер** IEEE 754 двойной точности с плавающей запятой всегда имеет тип данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float(53)** тип данных лучше всего соответствует XPath **номер**. Тем не менее **float(53)** отлично от IEEE 754. В частности, этот тип не содержит ни значения NaN (не число), ни значения бесконечности. Попытка преобразовать нечисловую строку в **номер** и попытка деления на ноль приводит к ошибке.  
   
 ## <a name="xpath-conversions"></a>Преобразования в XPath  
- При использовании запроса XPath, например, `OrderDetail[@UnitPrice > "10.0"]`, явные и неявные преобразования типов данных могут различными неочевидными способами изменить значение запроса. Поэтому важно знать, как реализована система типов данных в XPath. Спецификация языка XPath, язык XML Path (XPath) версии 1.0 консорциума W3C Proposed Recommendation 8 октября 1999 года, можно найти на веб-сайте W3C по http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ При использовании запроса XPath, например, `OrderDetail[@UnitPrice > "10.0"]`, явные и неявные преобразования типов данных могут различными неочевидными способами изменить значение запроса. Поэтому важно знать, как реализована система типов данных в XPath. Спецификация языка XPath, язык XML Path (XPath) версии 1.0 консорциума W3C Proposed Recommendation 8 октября 1999 года, можно найти на веб-сайте W3C по https://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Операторы XPath делятся на четыре категории:  
   

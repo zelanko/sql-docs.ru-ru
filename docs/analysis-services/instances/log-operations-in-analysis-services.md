@@ -1,5 +1,5 @@
 ---
-title: Записи операций в службах Analysis Services | Документы Microsoft
+title: Записи операций в службах Analysis Services | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ba0be2d0a46790f1a330a75c25461983e0b7488a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a4332497abe58a610a4ebba2d1c92b24aa9f5bd6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018611"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701642"
 ---
 # <a name="log-operations-in-analysis-services"></a>Журнал операций в службах Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "34018611"
   
 -   [Советы и рекомендации](#bkmk_tips)  
   
-> [!NOTE]  
->  Если необходимы дополнительные сведения о ведении журнала, узнайте об операциях трассировки, показывающих пути выполнения запросов и обработки. Объекты трассировки для динамической и длительной трассировки (например, аудит доступа к кубу), а также рекомендации о том, как лучше использовать "черный ящик", приложения SQL Server Profiler и xEvents, можно найти по ссылкам на этой странице: [Наблюдение за экземпляром служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md).  
   
 ##  <a name="bkmk_location"></a> Расположение и типы журналов  
  Службы Analysis Services предоставляют журналы, описанные ниже.  
@@ -46,7 +44,7 @@ ms.locfileid: "34018611"
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Журнал ошибок|Постоянное наблюдение и устранение основных неполадок|Да|  
 |Таблица OlapQueryLog реляционной базы данных|Журнал запросов|Сбор входных данных для мастера оптимизации использования|Нет|  
-|Файлы SQLDmp\<guid > файлы с расширением mdmp|Сбои и исключения|Устранение серьезных неполадок|Нет|  
+|Файлы SQLDmp\<guid > файлы с расширениями mdmp|Сбои и исключения|Устранение серьезных неполадок|Нет|  
   
  Настоятельно рекомендуется ознакомиться со следующей ссылкой для получения дополнительных сведений, не охваченных в этом разделе. [Подсказки к начальному сбору данных от службы технической поддержки Майкрософт](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
@@ -99,7 +97,7 @@ ms.locfileid: "34018611"
 ##  <a name="bkmk_querylog"></a> Журналы запросов  
  Журнал запросов — немного неверное название, в том смысле, что он не регистрирует действия пользователей, связанные с запросами MDX или DAX. Вместо этого он собирает данные о запросах, сформированные службами Analysis Services, которые впоследствии используются в качестве входных данных в мастере оптимизации с учетом использования. Данные, собранные в журнале запросов, не предназначены для прямого анализа. В частности, наборы данных описаны в битовых массивах, при этом ноль или один указывают на части набора данных, включенные в запрос. Эти данные тоже предназначены для мастера.  
   
- Для мониторинга и устранения неполадок запросов многие разработчики и администраторы используют средство сообщества **ASTrace**. Также можно использовать приложение SQL Server Profiler, xEvents или трассировку служб Analysis Services. Ссылки, связанные с трассировкой, см. в разделе [Наблюдение за экземпляром служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md) .  
+ Для мониторинга и устранения неполадок запросов многие разработчики и администраторы используют средство сообщества **ASTrace**. Также можно использовать приложение SQL Server Profiler, xEvents или трассировку служб Analysis Services.
   
  Когда следует использовать журнал запросов Рекомендуется включить журнал запросов как часть процедуры по настройке производительности запросов, включающей мастер оптимизации с учетом использования. Журнал запросов не существует, пока не включен компонент, не создана поддерживающая структура данных и не заданы свойства, используемые службами Analysis Services для обнаружения и заполнения журнала.  
   
@@ -181,7 +179,7 @@ ms.locfileid: "34018611"
   
 ## <a name="see-also"></a>См. также  
  [Управление экземплярами служб Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Введение в мониторинг служб Analysis Services в SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
- [Свойства сервера служб Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
+ [Введение в мониторинг служб Analysis Services при помощи приложения SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   

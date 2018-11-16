@@ -23,17 +23,17 @@ ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f8dd4dcfc08366e78f11fc8b10fa269f17bb09e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 128c83e0fd63b2724311aec046bdb9683c569a03
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708442"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664123"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Установка SQL Server Migration Assistant для Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) для доступа устанавливается с помощью мастера на основе установщика Windows. Этот раздел содержит сведения о необходимых компонентах установки, ссылку на последнюю версию SSMA и инструкции по установке, лицензирование, удаление и обновление SSMA.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Перед установкой SSMA, убедитесь, что ваша система отвечает следующим требованиям:  
   
 -   Windows 7 или более поздней версии или Windows Server 2008 или более поздней версии.  
@@ -46,12 +46,12 @@ ms.locfileid: "47708442"
   
 -   Майкрософт доступа к данным объекта (DAO) версия поставщика, 12.0 и 14.0. Установить поставщик DAO с продукта Microsoft Office 2010 или 2007 также можно загрузить с веб-сайте Майкрософт.  
   
--   SQL Server Native доступа Client (SNAC) версии 10.5 и более поздних версий для миграции в SQL Azure. Можно получить последнюю версию SNAC из [пакет дополнительных компонентов Microsoft® SQL Server® 2008 R2](http://go.microsoft.com/fwlink/?LinkId=196940)  
+-   SQL Server Native доступа Client (SNAC) версии 10.5 и более поздних версий для миграции в SQL Azure. Можно получить последнюю версию SNAC из [пакет дополнительных компонентов Microsoft® SQL Server® 2008 R2](https://go.microsoft.com/fwlink/?LinkId=196940)  
   
 -   4 ГБ ОЗУ (рекомендуется).  
   
 ## <a name="installing-ssma"></a>Установка SSMA  
-SSMA можно загрузить из Интернета. Чтобы загрузить последнюю версию, см. в разделе [SQL Server Migration Assistant страницу загрузки](http://aka.ms/ssmaforaccess).  
+SSMA можно загрузить из Интернета. Чтобы загрузить последнюю версию, см. в разделе [SQL Server Migration Assistant страницу загрузки](https://aka.ms/ssmaforaccess).  
   
 После загрузки последней версии, необходимо извлечь установочные файлы от перед установкой SSMA.
 
