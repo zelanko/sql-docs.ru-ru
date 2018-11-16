@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1de98e2d7009bb787b5904c33560655cabcc314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dfb694a6e9bd6bbdd3525251747a42b35271ab0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809716"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674123"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (оптимизация в памяти)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ ms.locfileid: "47809716"
 |[Требования для использования таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|Перечисляются требования к программному обеспечению и оборудованию, а также рекомендации по использованию оптимизированных для памяти таблиц.|  
 |[Примеры кода In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|Содержит образцы кода, которые показывают, как создавать и использовать оптимизированные для памяти таблицы.|  
 |[Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Дает вводное описание таблиц, оптимизированных для памяти.|  
-|[Основные сведения о табличных переменных, оптимизированных для памяти](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|Пример кода, показывающий, как использовать переменную оптимизированной для памяти таблицы вместо традиционной табличной переменной для уменьшения использования базы данных tempdb.|  
-|[Индексы для оптимизированных для памяти таблиц](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|Содержит базовое описание индексов, оптимизированных для памяти.|  
+|[Основные сведения о табличных переменных, оптимизированных для памяти](https://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|Пример кода, показывающий, как использовать переменную оптимизированной для памяти таблицы вместо традиционной табличной переменной для уменьшения использования базы данных tempdb.|  
+|[Индексы для оптимизированных для памяти таблиц](https://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|Содержит базовое описание индексов, оптимизированных для памяти.|  
 |[Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|Содержит базовое описание хранимых процедур, скомпилированных в собственном коде.|  
-|[Управление памятью для компонента "Выполняющаяся в памяти OLTP"](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|Основные сведения об управлении памятью системы.|  
+|[Управление памятью для компонента "Выполняющаяся в памяти OLTP"](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|Основные сведения об управлении памятью системы.|  
 |[Создание и управление хранилищем для оптимизированных для памяти объектов](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|Описывает файлы данных и разностные файлы, в которых хранятся сведения о транзакциях в оптимизированных для памяти таблицах.|  
-|[Резервное копирование и восстановление оптимизированных для памяти таблиц](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|Описывает резервное копирование, восстановление и восстановление оптимизированных для памяти таблиц. |  
+|[Резервное копирование и восстановление оптимизированных для памяти таблиц](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|Описывает резервное копирование, восстановление и восстановление оптимизированных для памяти таблиц. |  
 |[Поддержка Transact-SQL для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|Описывает поддержку службой [!INCLUDE[tsql](../../includes/tsql-md.md)] службы [!INCLUDE[hek_2](../../includes/hek-2-md.md)].|  
 |[Поддержка высокого уровня доступности в базах данных OLTP в памяти](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|Описывает группы доступности и отказоустойчивые кластеры в службе [!INCLUDE[hek_2](../../includes/hek-2-md.md)].|  
 |[Поддержка SQL Server для In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|Описание нового и обновленного синтаксиса и функций, поддерживающих оптимизированные для памяти таблицы.|  
@@ -79,13 +79,13 @@ ms.locfileid: "47809716"
 
 -   [Техническая документация по внутренней структуре выполняющейся в памяти OLTP SQL Server](https://msdn.microsoft.com/library/mt764316.aspx)  
 
--   [Сравнение функций SQL Server In-Memory OLTP и columnstore](http://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
+-   [Сравнение функций SQL Server In-Memory OLTP и columnstore](https://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
 
 -   Новые возможности In-Memory OLTP в SQL Server 2016 [Часть 1](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) и [Часть 2](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
   
--   [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)  
+-   [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Блог о выполняющейся в памяти OLTP](http://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [Блог о выполняющейся в памяти OLTP](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
 ## <a name="see-also"></a>См. также:  
  [Функции базы данных](../../relational-databases/database-features.md)  

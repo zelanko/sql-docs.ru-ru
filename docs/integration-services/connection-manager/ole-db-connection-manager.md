@@ -18,18 +18,18 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe7228a4566f86467be3eb7b3f6ecd72d6ac6b9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ac4984fca803cbcf5d18fa4b34fdd8629dfe8c9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849162"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640037"
 ---
 # <a name="ole-db-connection-manager"></a>диспетчер соединений OLE DB
   Диспетчер соединений OLE DB позволяет пакету подключаться к источнику данных с помощью поставщика OLE DB. Например, диспетчер соединений OLE DB, который подключается к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , может использовать поставщик [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
 > [!NOTE]    
->  Собственный поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 11.0 не поддерживает новые ключевые слова строки соединения (MultiSubnetFailover=True) для отказоустойчивых кластеров с несколькими подсетями. Дополнительные сведения см. в разделе [Заметки о выпуске SQL Server](http://go.microsoft.com/fwlink/?LinkId=247824) и запись блога [Always On Multi-Subnet Failover and SSIS](http://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)(Отработка отказа в нескольких подсетях и службы SSIS) на сайте www.mattmasson.com.    
+>  Собственный поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 11.0 не поддерживает новые ключевые слова строки соединения (MultiSubnetFailover=True) для отказоустойчивых кластеров с несколькими подсетями. Дополнительные сведения см. в разделе [Заметки о выпуске SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) и запись блога [Always On Multi-Subnet Failover and SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)(Отработка отказа в нескольких подсетях и службы SSIS) на сайте www.mattmasson.com.    
     
 > [!NOTE]    
 >  Если источником данных является [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007, то для него понадобится источник данных, отличный от поставщиков для более ранних версий Excel или Access. Дополнительные сведения см. в разделе [Подключение к книге Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md) и [Подключение к базе данных Access](../../integration-services/connection-manager/connect-to-an-access-database.md).    
@@ -60,9 +60,9 @@ ms.locfileid: "47849162"
     
 ## <a name="related-content"></a>См. также    
     
--   Статья Wiki [Соединители служб SSIS с Oracle](http://go.microsoft.com/fwlink/?LinkId=220670) на сайте social.technet.microsoft.com    
+-   Статья Wiki [Соединители служб SSIS с Oracle](https://go.microsoft.com/fwlink/?LinkId=220670) на сайте social.technet.microsoft.com    
     
--   Техническая статья [Connection Strings for OLE DB Providers](http://go.microsoft.com/fwlink/?LinkId=220744)(Строки подключения для поставщиков OLE DB) на сайте carlprothman.net.    
+-   Техническая статья [Connection Strings for OLE DB Providers](https://go.microsoft.com/fwlink/?LinkId=220744)(Строки подключения для поставщиков OLE DB) на сайте carlprothman.net.    
     
 ## <a name="configure-ole-db-connection-manager"></a>настройка диспетчера соединений OLE DB
   Используйте диалоговое окно **Настройка диспетчера соединений OLE DB** , чтобы добавить соединение с источником данных. Это может быть либо новое соединение, либо копия существующего соединения.  
@@ -89,8 +89,8 @@ ms.locfileid: "47849162"
   
 ## <a name="see-also"></a>См. также:    
  [Источник OLE DB](../../integration-services/data-flow/ole-db-source.md)     
- [Назначение OLE DB](../../integration-services/data-flow/ole-db-destination.md)     
- [Задача "Выполнение SQL"](../../integration-services/control-flow/execute-sql-task.md)     
+ [Назначение «OLE DB»](../../integration-services/data-flow/ole-db-destination.md)     
+ [Задача «Выполнение SQL»](../../integration-services/control-flow/execute-sql-task.md)     
  [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)    
     
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af97fe48532d87f252cb9d86934d536611a33198
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bcb77ea92b255b15698596f73064404581c34b76
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021800"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813157"
 ---
 # <a name="xml-connection-type-ssrs"></a>Тип соединения XML (службы SSRS)
   Чтобы включить данные из источника XML-данных в отчет, необходим набор данных, основанный на источнике данных отчета типа XML. Этот встроенный тип источника данных основан на модуле обработки данных XML. Используйте этот тип источника данных для подключения и получения данных из внедренных в запрос XML-документов, веб-служб и данных XML.  
@@ -29,8 +29,8 @@ ms.locfileid: "50021800"
   
 |Типы XML-документов|Пример строки соединения|  
 |-----------------------|-------------------------------|  
-|Веб-служба|`http://adventure-works.com/results.aspx`|  
-|XML-документ|`http://localhost/XML/Customers.xml`|  
+|Веб-служба|`https://adventure-works.com/results.aspx`|  
+|XML-документ|`https://localhost/XML/Customers.xml`|  
 |Внедренный XML-документ|*Пустой*|  
   
  Дополнительные примеры строк соединения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  

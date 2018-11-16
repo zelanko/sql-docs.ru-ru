@@ -16,12 +16,12 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0418a9324567b60edf3dac43e8d6ab21d79bddf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa40898a63a4d84f9efeaf2c1bf404ab17cea20c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739552"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642071"
 ---
 # <a name="integration-services-transactions"></a>Транзакции служб Integration Services
   Пакеты используют транзакции для связывания выполняемых в базе данных задачами операций в атомарные объекты, и, таким образом, сохраняют целостность данных. Все типы контейнеров служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (пакеты, контейнеры циклов по элементам и по каждому элементу, контейнеры последовательности, а также серверы задач, которые содержат каждую задачу) могут быть настроены для использования транзакций. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют три параметра для настройки транзакций: **NotSupported**, **Supported**и **Required**.  
@@ -156,10 +156,10 @@ ms.locfileid: "47739552"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Запись в блоге, [Как использовать транзакции в службах SQL Server Integration Services SSIS](http://go.microsoft.com/fwlink/?LinkId=157783), на сайте www.mssqltips.com  
+-   Запись в блоге, [Как использовать транзакции в службах SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783), на сайте www.mssqltips.com  
   
 ## <a name="see-also"></a>См. также:  
- [Наследуемые транзакции](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   
- [Множественные транзакции](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
+ [Наследуемые транзакции](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   
+ [Множественные транзакции](https://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   
   

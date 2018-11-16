@@ -5,8 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -15,31 +14,31 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 21e42bda8955a2235f70790aa14b915b404ac514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703662"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604344"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Новые возможности в ядре СУБД SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 В этом разделе описаны усовершенствования, представленные в выпуске [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  В этом выпуске появились новые средства и усовершенствования, которые расширяют возможности и повышают производительность архитекторов, разработчиков и администраторов, занимающихся проектированием, созданием и обслуживанием систем хранения данных.
 
-Новые возможности других компонентов SQL Server см. в разделе [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
+Новые возможности других компонентов SQL Server см. в разделе [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
 > [!NOTE]
 >  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] — это 64-разрядное приложение. 32-разрядная установка больше не поддерживается, хотя некоторые элементы работают как 32-разрядные.
 
 #### <a name="try-it-out"></a>Попробуйте продукт
 
-- Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![скачать](../analysis-services/media/download.png "скачать").
+- Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![скачать](../analysis-services/media/download.png "скачать").
 
 - Есть учетная запись Azure?  Затем перейдите **[сюда](https://azure.microsoft.com/services/virtual-machines/sql-server/)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .
 
 > [!NOTE]
-> Заметки о текущем выпуске приводятся в разделе [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
+> Текущие заметки о выпуске см. в разделе [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 с пакетом обновления 1 (SP1)  
 -  Синтаксис `CREATE OR ALTER <object>` теперь доступен для [процедур](../t-sql/statements/create-procedure-transact-sql.md), [представлений](../t-sql/statements/create-view-transact-sql.md), [функций](../t-sql/statements/create-function-transact-sql.md) и [триггеров](../t-sql/statements/create-trigger-transact-sql.md).
@@ -50,7 +49,7 @@ ms.locfileid: "47703662"
 - В [sys.dm_server_services](../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) добавлен столбец `instant_file_initialization_enabled`.  
 - В [sys.dm_exec_query_profiles](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) добавлен столбец `estimated_read_row_count`.  
 -  В [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) добавлены столбцы `sql_memory_model` и `sql_memory_model_desc` для предоставления сведений о модели блокировки для страниц памяти.
--  Список выпусков, которые поддерживают ряд функций, был расширен. К ним относятся: безопасность на уровне строк, Always Encrypted, динамическая маскировка данных, аудит базы данных, OLTP в памяти и несколько других функций во всех выпусках. Дополнительные сведения см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md).   
+-  Список выпусков, которые поддерживают ряд функций, был расширен. К ним относятся: безопасность на уровне строк, Always Encrypted, динамическая маскировка данных, аудит базы данных, OLTP в памяти и несколько других функций во всех выпусках. Дополнительные сведения см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md).   
 -  [sp_refresh_parameter_encryption](../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) поддерживает шифрование AlwaysOn для обновления метаданных при переопределении объектов, зашифрованных с помощью AlwaysOn.  
 
 
@@ -177,7 +176,7 @@ ms.locfileid: "47703662"
 
 Общие сведения см. в следующих разделах:
 
-- [Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)
+- [Конструкции языка Transact-SQL, не поддерживаемые в выполняющейся в памяти OLTP](../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)
 - [Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP](~/relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
 
@@ -186,7 +185,7 @@ ms.locfileid: "47703662"
 
 - Больше нет никаких ограничений для размера данных. См. раздел [Оценка требований к объему памяти для таблиц, оптимизированных для памяти](~/relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).
 
-- За [сохранение изменений в таблицах, оптимизированных для памяти, на диске](../relational-databases/in-memory-oltp/scalability.md) теперь отвечают несколько параллельных потоков.
+- За [сохранение изменений в таблицах, оптимизированных для памяти, на диске](../relational-databases/in-memory-oltp/scalability.md)теперь отвечают несколько параллельных потоков.
 
 - Поддержка параллельного плана для [доступа к таблицам, оптимизированным для памяти, с помощью интерпретируемых инструкций Transact-SQL](../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).
 
@@ -244,7 +243,7 @@ ms.locfileid: "47703662"
 В [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] резервное копирование SQL Server по URL-адресу с помощью службы хранилища BLOB-объектов Microsoft Azure теперь поддерживает наборы чередующихся резервных копий с использованием блочных BLOB-объектов. При этом максимальный размер резервных копий составляет 12,8 ТБ. Примеры см. в разделе [Code Examples](../relational-databases/backup-restore/sql-server-backup-to-url.md#Examples).
 
 ### <a name="file-snapshot-backups-to-microsoft-azure-blob-storage"></a>Резервное копирование моментальных снимков файлов в хранилище больших двоичных объектов Microsoft Azure
- В [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] резервное копирование SQL Server по URL-адресу теперь поддерживает использование моментальных снимков Azure для резервного копирования баз данных, в которых все файлы хранятся с помощью службы хранилища BLOB-объектов Microsoft Azure. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).
+ В [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]резервное копирование SQL Server по URL-адресу теперь поддерживает использование моментальных снимков Azure для резервного копирования баз данных, в которых все файлы хранятся с помощью службы хранилища BLOB-объектов Microsoft Azure. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).
 
 ### <a name="managed-backup"></a>Управляемое резервное копирование
 В [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SQL Server управляемое резервное копирование в Microsoft Azure использует новое хранилище блочных BLOB-объектов для файлов резервных копий. Кроме того, представлено несколько изменений и усовершенствований управляемого резервного копирования.
@@ -258,7 +257,7 @@ ms.locfileid: "47703662"
  Дополнительные сведения см. в разделе [SQL Server Managed Backup to Microsoft Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).
 
 > [!NOTE]
->  В [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] эти новые функции управляемого резервного копирования еще не поддерживаются в пользовательском интерфейсе [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+>  В [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]эти новые функции управляемого резервного копирования еще не поддерживаются в пользовательском интерфейсе [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
 ## <a name="tempdb-database"></a>База данных tempdb
  Предоставлено несколько улучшений базы данных TempDB.
@@ -441,17 +440,17 @@ AlwaysOn теперь поддерживает зашифрованные баз
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] поддерживает библиотеку проверки подлинности Active Directory (ADAL), которая находится в стадии разработки для подключения к Microsoft Azure. Она заменяет проверку подлинности на основе сертификатов, используемую в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - Для установки [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] требуется платформа .NET 4.6. Платформа .NET 4.6 устанавливается автоматически, если устанавливается компонент [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .
 - Новый параметр сетки результатов запроса поддерживает сохранение возврата каретки и перевода строки (символов новой строки) при копировании и сохранении текста из сетки результатов. Это можно настроить в меню "Сервис — Параметры".
-- Средства управления SQL Server больше не устанавливаются из дерева основных компонентов. Дополнительные сведения см. в разделе [Установка средств управления SQL Server со средой SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
-- Для установки [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] требуется платформа .NET 4.6.1. Платформа .NET 4.6.1 устанавливается автоматически, если устанавливается компонент [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .
+- Средства управления SQL Server больше не устанавливаются из дерева основных компонентов. Дополнительные сведения см. в разделе [Установка средств управления SQL Server со средой SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
+- Для установки [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] требуется платформа .NET 4.6.1. Платформа .NET 4.6.1 устанавливается автоматически, если устанавливается компонент [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
 ### <a name="upgrade-advisor"></a>Советник по переходу
 SQL Server 2016 Upgrade Advisor Preview — это автономное средство, которое позволяет пользователям предыдущих версий применять набор правил обновления для базы данных SQL Server, чтобы выявить сбои, изменения поведения и нерекомендуемые функции, а также получить справку по внедрению новых функций, таких как Stretch Database.
 
- Вы можете скачать Upgrade Advisor Preview [здесь](https://www.microsoft.com/en-us/download/details.aspx?id=48119) или установить его с помощью установщика веб-платформы.
+ Вы можете скачать Upgrade Advisor Preview [здесь](https://www.microsoft.com/download/details.aspx?id=48119) или установить его с помощью установщика веб-платформы.
 
 ## <a name="see-also"></a>См. также:
 [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
-[Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
+[Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
  
-[Установка средств управления SQL Server со средой SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+[Установка средств управления SQL Server со средой SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)

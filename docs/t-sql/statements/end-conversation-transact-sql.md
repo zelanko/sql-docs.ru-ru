@@ -25,12 +25,12 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 02140750f49c326e7d7da84ffa08b798e0462f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799393"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701299"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +70,9 @@ END CONVERSATION conversation_handle
   
  Если компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] еще не обработал сообщение об окончании диалога или ошибке, то компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] уведомляет удаленного участника, что диалог завершен. Какие именно сообщения компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет удаленной службе, зависит от указанных параметров:  
   
--   Если диалог завершается без ошибок и диалог с удаленной службой еще активен, компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет ей сообщение типа `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] добавляет это сообщение в очередь передачи в порядке создания диалогов. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет все сообщения для этого диалога, уже находящиеся в очереди передачи, прежде чем отправить это сообщение.  
+-   Если диалог завершается без ошибок и диалог с удаленной службой еще активен, компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет ей сообщение типа `https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] добавляет это сообщение в очередь передачи в порядке создания диалогов. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет все сообщения для этого диалога, уже находящиеся в очереди передачи, прежде чем отправить это сообщение.  
   
--   Если диалог завершается с ошибкой и диалог с удаленной службой еще активен, компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет ей сообщение типа `http://schemas.microsoft.com/SQL/ServiceBroker/Error`. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] удаляет все сообщения для этого диалога, уже находящиеся в очереди передачи.  
+-   Если диалог завершается с ошибкой и диалог с удаленной службой еще активен, компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет ей сообщение типа `https://schemas.microsoft.com/SQL/ServiceBroker/Error`. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] удаляет все сообщения для этого диалога, уже находящиеся в очереди передачи.  
   
 -   Предложение WITH CLEANUP позволяет администратору базы данных удалять диалоги, которые не могут быть завершены нормальным способом. Этот параметр удаляет все сообщения и элементы представления каталога для данного диалога. Обратите внимание, что в этом случае удаленная сторона диалога не получает никакого сигнала о том, что диалог завершен, и не сможет получить сообщения, которые были отправлены приложением, но еще не были переданы по сети. Старайтесь не пользоваться этим параметром, если диалог может быть завершен нормально.  
   

@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8e50674429bb332e750222c3b458b53cd339437
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d46e82343f0f145536c38cf7ac457ad39b813d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719562"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672083"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +30,11 @@ ms.locfileid: "47719562"
 |Имя политики|Правило рекомендации|  
 |-----------------|------------------------|  
 |Алгоритм шифрования асимметричных ключей|[Стойкость шифрования асимметричных ключей](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|Размещение резервной копии и файла данных|[Файлы резервной копии и файлы базы данных должны находиться на отдельных устройствах](http://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|Размещение резервной копии и файла данных|[Файлы резервной копии и файлы базы данных должны находиться на отдельных устройствах](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
 |Расположение файлов данных и журнала|[Размещение файлов данных и файлов журнала на различных дисках](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |Автоматическое закрытие базы данных|[Задание значения OFF для параметра базы данных AUTO_CLOSE](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |Автоматическое сжатие базы данных|[Задание значения параметра базы данных AUTO_SHRINK, равного OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|Параметры сортировки базы данных|[Задание параметров сортировки пользовательских баз данных в соответствии с параметрами баз данных master и model](http://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|Параметры сортировки базы данных|[Задание параметров сортировки пользовательских баз данных в соответствии с параметрами баз данных master и model](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
 |Проверка страниц базы данных|[Задание значения CHECKSUM для параметра базы данных PAGE_VERIFY](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |Состояние страницы базы данных|[Проверка целостности базы данных с потенциально поврежденными страницами](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Разрешения гостя|[Разрешения гостя для пользовательских баз данных](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  

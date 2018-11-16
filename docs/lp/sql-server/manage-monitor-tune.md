@@ -6,12 +6,12 @@ description: Ознакомьтесь с функциями, с помощью �
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: ea070c1fbdbeb372bdd04bafb1705e1ad7ea77c4
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 5ea660552e228438dd002ab2d274db280fd90ec6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336143"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698392"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -465,16 +465,16 @@ ms.locfileid: "49336143"
         <h2>Оставайтесь с нами</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">Принять участие</a>
+                <a href="https://aka.ms/editsqldocs" data-linktype="external"> Принять участие </a>
             </li>
            <li>
-                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">Получить справку</a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Получить справку </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">Оставить отзыв</a>
+                <a href="https://aka.ms/sqldocsfeedback" data-linktype="external"> Оставить отзыв </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">Пройти опрос</a>
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external"> Пройти опрос </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">Блог</a>

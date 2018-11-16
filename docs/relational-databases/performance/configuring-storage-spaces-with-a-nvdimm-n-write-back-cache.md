@@ -10,12 +10,12 @@ ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4e9b90ef6a61d080d0a8c36b809a3f695e4fd291
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8bba028ef8c2d0bcc5c3a3c328cc5be0eabab9c2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685532"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665274"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Настройка дисковых пространств с помощью кэша обратной записи NVDIMM-N
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,8 +76,8 @@ New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –Frien
  ![Диск для хранения журнала](../../relational-databases/performance/media/log-space-drive.png "Диск для хранения журнала")  
   
 ## <a name="see-also"></a>См. также:  
- [Дисковые пространства Windows в Windows 10](http://windows.microsoft.com/en-us/windows-10/storage-spaces-windows-10)   
- [Дисковые пространства Windows в Windows 2012 R2](https://technet.microsoft.com/en-us/library/hh831739.aspx)   
+ [Дисковые пространства Windows в Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   
+ [Дисковые пространства Windows в Windows 2012 R2](https://technet.microsoft.com/library/hh831739.aspx)   
  [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [Просмотр или изменение расположения по умолчанию для файлов данных и журнала (среда SQL Server Management Studio)](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)  
   

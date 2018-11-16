@@ -17,12 +17,12 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd50e2c507295921952c549d1eeee869b74e0e7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ef5d2976ede4bf9c96ae109acd921d9fa385f6d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731102"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641461"
 ---
 # <a name="advanced-editor"></a>Расширенный редактор
   Используйте диалоговое окно **Расширенный редактор** для настройки свойств компонентов для выбранного объекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -43,11 +43,11 @@ ms.locfileid: "47731102"
   
  Отображаемые свойства зависят от компонента. Дополнительные сведения о свойствах, которые могут отображаться в компоненте **Расширенный редактор**, см. в следующих разделах:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [Свойства пути](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [Свойства пути](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
   
  Дополнительные сведения о конкретном изменяемом компоненте см. в описании компонента в разделе «Элементы потока данных» документации «Объекты и основные понятия для служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ».  
   

@@ -14,12 +14,12 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74609a50ad4d2f29bbbd7d25cc4cd1a242e64ff4
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: b187fb1d2e5595ef1ec75ed99c9a6e3f85029f3e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071758"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640701"
 ---
 # <a name="cdc-control-task"></a>Задача управления CDC
   Задача «Управление CDC» используется для управления жизненным циклом пакетов системы отслеживания изменений данных (CDC). Эта задача обеспечивает синхронизацию пакета CDC с пакетом начальной загрузки и управление диапазонами регистрационных номеров транзакций в журнале (номеров LSN), которые обрабатываются в прогоне пакета CDC. Дополнительно задача «Управление CDC» связана со сценариями обработки ошибок и с восстановлением.  
@@ -78,11 +78,11 @@ ms.locfileid: "49071758"
   
 ## <a name="related-content"></a>См. также  
   
--   Техническую статью [Установка системы отслеживания измененных данных Microsoft SQL Server 2012 для Oracle компании Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)см. на сайте social.technet.microsoft.com.  
+-   Техническую статью [Установка системы отслеживания измененных данных Microsoft SQL Server 2012 для Oracle компании Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)см. на сайте social.technet.microsoft.com.  
   
--   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](http://go.microsoft.com/fwlink/?LinkId=252960)см. на сайте social.technet.microsoft.com.  
+-   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](https://go.microsoft.com/fwlink/?LinkId=252960)см. на сайте social.technet.microsoft.com.  
   
--   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](http://go.microsoft.com/fwlink/?LinkId=252961)см. на сайте social.technet.microsoft.com.  
+-   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)см. на сайте social.technet.microsoft.com.  
   
 ## <a name="cdc-control-task-editor"></a>Редактор задачи «Выполнение CDC»
   Диалоговое окно **Редактор задачи «Управление CDC»** служит для настройки задачи «Управление CDC». В процессе настройки задачи «Управление CDC» определяется соединение с базой данных CDC, операция задачи CDC и сведения об управлении состояниями.  

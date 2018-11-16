@@ -20,12 +20,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97ab72d572ee533ed43dfde39b362c5bb16120a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f04de3c323f5655e7503d6d375df536897654740
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726672"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641391"
 ---
 # <a name="use-property-expressions-in-packages"></a>Использование выражений свойств в пакетах
   Выражение свойства — это выражение, связанное со свойством для обеспечения динамического обновления во время выполнения. Например, выражение свойства может обновить строку «Кому», в которую задача «Отправка почты» вставляет хранящийся в переменной адрес электронной почты.  
@@ -168,11 +168,11 @@ ms.locfileid: "47726672"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   [Маркер выражения и конфигурации (проект CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [Маркер выражения и конфигурации (проект CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   Техническая статья [Примеры выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
+-   Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
 ## <a name="see-also"></a>См. также:  
- [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

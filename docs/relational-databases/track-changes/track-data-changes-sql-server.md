@@ -1,12 +1,10 @@
 ---
 title: Отслеживание изменений данных (SQL Server) | Документация Майкрософт
-ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], compared to change tracking
@@ -22,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a668e59baa2b412a960447b1fe14c6adf596804e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f757719563cd2f5ba190b3d2d0f0b3b33f38df40
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625392"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666415"
 ---
 # <a name="track-data-changes-sql-server"></a>Отслеживание измененных данных (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -155,7 +153,7 @@ ms.locfileid: "47625392"
   
      Содержит описание отслеживания изменений данных, общие сведения о механизме отслеживания изменений и описывает взаимодействие отслеживания изменений с другими функциями компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
--   [Центр разработки Microsoft Sync Framework](http://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Центр разработки Microsoft Sync Framework](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
      Содержит полную документацию по [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] и [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. В документации по [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]раздел "Как использовать отслеживание изменений SQL Server" содержит подробные сведения и примеры программного кода.  
   
@@ -178,7 +176,7 @@ ms.locfileid: "47625392"
  [Функции отслеживания изменений (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Хранимые процедуры системы отслеживания измененных данных (Transact-SQL)](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [Таблицы системы отслеживания измененных данных (Transact-SQL)](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [Динамические административные представления, связанные с системой отслеживания измененных данных (Transact-SQL)](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [Динамические административные представления, связанные с системой отслеживания измененных данных (Transact-SQL)](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
 

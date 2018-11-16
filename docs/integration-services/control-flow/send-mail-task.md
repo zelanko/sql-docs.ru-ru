@@ -21,12 +21,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 805036ee530834ea2581613578fa0417087def82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2504bc45e358ebbf35b279e07be511f7a6041956
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682506"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641291"
 ---
 # <a name="send-mail-task"></a>Задача «Отправка почты»
   Задача «Отправка почты» производит отправку сообщения электронной почты. Эта задача позволяет пакету отправлять сообщения при успешном или неуспешном завершении задач в рабочем процессе пакета либо в ответ на события, инициируемые при выполнении пакета. Например, задача может уведомить администратора базы данных об успешном или неуспешном завершении задачи резервного копирования базы данных.  
@@ -79,11 +79,11 @@ ms.locfileid: "47682506"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [oтправка электронной почты с уведомлением доставки в C#](http://go.microsoft.com/fwlink/?LinkId=237625)на сайте shareourideas.com  
+-   Техническая статья [oтправка электронной почты с уведомлением доставки в C#](https://go.microsoft.com/fwlink/?LinkId=237625)на сайте shareourideas.com  
   
 ## <a name="send-mail-task-editor-general-page"></a>Редактор задачи «Отправка почты» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Отправка почты»** , чтобы задать имя и описание для задачи «Отправка почты».  
@@ -158,7 +158,7 @@ ms.locfileid: "47682506"
  **MessageSource**  
  Выберите переменную из списка или нажмите кнопку \<**Создать переменную…**>, чтобы создать переменную.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3336112a7b422db606b93cab30b8942839aed862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f511dc6bd39366d8c7706966ec78e36e3ed983b8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674335"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813247"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Доставка библиотек SharePoint в службах Reporting Services
   Сервер отчетов, настроенный на работу в режиме интеграции с SharePoint, располагает модулем доставки, с помощью которого можно отправить отчет в библиотеку SharePoint.  
@@ -72,7 +72,7 @@ ms.locfileid: "47674335"
  Указывает необязательное свойство **Title** для отчета в целевой библиотеке. Это стандартное свойство для всех элементов, хранящихся в библиотеке. Пользователь определяет, отобразить или скрыть это свойство при просмотре содержимого библиотеки на сайте SharePoint.  
   
  Путь  
- Указывает полный URL-адрес библиотеки SharePoint, включая имя сайта и веб-приложения SharePoint. Например, `http://mySharePointWeb/MySite/MyDocLib`, где `http://mySharePointWeb` — веб-приложение, "MySite" — сайт SharePoint, а "MyDocLib" — библиотека SharePoint, в которую должен быть доставлен отчет.  
+ Указывает полный URL-адрес библиотеки SharePoint, включая имя сайта и веб-приложения SharePoint. Например, `https://mySharePointWeb/MySite/MyDocLib`, где `https://mySharePointWeb` — веб-приложение, "MySite" — сайт SharePoint, а "MyDocLib" — библиотека SharePoint, в которую должен быть доставлен отчет.  
   
  Нельзя указать страницу, сайт или список. Целевым контейнером должна быть библиотека, расположенная на том же сайте или в той же ферме.  
   

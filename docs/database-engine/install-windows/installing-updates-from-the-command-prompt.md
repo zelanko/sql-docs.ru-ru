@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 81811251b92f751f9acda8305a4cf89b6da8f18e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c69d17094d5998c0158aeb56d8c14421f6199a4b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764194"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605994"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Установка обновлений из командной строки
 
@@ -90,6 +90,6 @@ ms.locfileid: "47764194"
  * Этот параметр нельзя указать для применения обновления к подготовленному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Вместо этого необходимо указать параметр /instanceID. 
  
 ## <a name="see-also"></a>См. также раздел 
- [Общие сведения об обслуживании установки SQL Server](http://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 
+ [Общие сведения об обслуживании установки SQL Server](https://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 
  
  

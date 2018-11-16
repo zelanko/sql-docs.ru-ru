@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6adbbc3107b21c6bb86d12d249c5fa1f5b01272f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6e679b6c4a7b61e136ba1dcb864ab5bb6a05beb0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028493"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813637"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Тип соединения Hyperion Essbase (службы SSRS)
   Чтобы включить данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] в отчет, пользователь должен иметь набор данных, основанный на источнике данных отчета типа [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных для [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], позволяющего извлекать многомерные данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -24,7 +24,7 @@ ms.locfileid: "50028493"
  Приведенный ниже пример строки соединения указывает источник данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] на сервере, использующем порт 13080 и XML для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (XMLA) при подключении к каталогу образцов через Интернет с использованием протокола SOAP:  
   
 ```  
-Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample  
+Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
  Дополнительные сведения о примерах строки подключения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  

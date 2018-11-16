@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307128"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677144"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Настройка Always Encrypted с безопасными анклавами
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "49307128"
 1. Войдите в систему на компьютере SQL Server от имени администратора.
 2. Запустите оболочку PowerShell от имени администратора.
 3. Выполните команду [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration).
-4. Запишите и сохраните свойство AttestationServerURL. Оно должно выглядеть приблизительно так: `http://x.x.x.x/Attestation`.
+4. Запишите и сохраните свойство AttestationServerURL. Оно должно выглядеть приблизительно так: `https://x.x.x.x/Attestation`.
 
 
 ### <a name="install-tools"></a>Средства установки
@@ -103,7 +103,7 @@ ms.locfileid: "49307128"
 
     | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------|
-    | тип анклава для шифрования столбцов | 0     | 0            |
+    | column encryption enclave type (тип анклава для шифрования столбцов) | 0     | 0            |
 
 3. Установите безопасный тип анклава для анклавов VBS.
 
@@ -112,7 +112,7 @@ ms.locfileid: "49307128"
    RECONFIGURE
    ```
 
-4. Перезапустите экземпляр SQL Server, чтобы предыдущее изменение вступило в силу. Можно перезапустить экземпляр в SSMS, щелкнув его правой кнопкой мыши в обозревателе объектов и выбрав "Перезапустить". После перезагрузки экземпляра повторно подключитесь к нему.
+4. Перезапустите экземпляр SQL Server, чтобы предыдущее изменение вступило в силу. Можно перезапустить этот экземпляр в SSMS, щелкнув его правой кнопкой мыши в обозревателе объектов и выбрав "Перезапуск". После перезагрузки экземпляра снова подключитесь к нему.
 
 5. Убедитесь, что безопасный анклав загружен, выполнив следующий запрос:
 
@@ -125,7 +125,7 @@ ms.locfileid: "49307128"
 
     | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
-    | тип анклава для шифрования столбцов | 1     | 1              |
+    | column encryption enclave type (тип анклава для шифрования столбцов) | 1     | 1              |
 
 6. Чтобы активировать полнофункциональные вычисления в зашифрованных столбцах, выполните следующий запрос:
 
@@ -163,7 +163,7 @@ ms.locfileid: "49307128"
     2. Выберите имя главного ключа столбца.
     3. Убедитесь, что выбрано значение **Хранилище сертификатов Windows (текущий пользователь или локальный компьютер)** или **Azure Key Vault**.
     4. Выберите **Разрешить вычисления анклава**.
-    5. Если вы выбрали Azure Key Vault, войдите в Azure и выберите хранилище ключей. Дополнительные сведения о том, как создать хранилище ключей для Always Encrypted, см. в статье [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/) (Управление хранилищами ключей на портале Azure).
+    5. Если вы выбрали Azure Key Vault, войдите в Azure и выберите хранилище ключей. Дополнительные сведения о создании хранилища ключей для Always Encrypted см. в статье [Управление хранилищами ключей на портале Azure](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
     6. Выберите свой ключ, если он уже существует, или создайте новый ключ, следуя указаниям в форме.
     7. Нажмите кнопку **ОК**.
 
@@ -760,7 +760,7 @@ GO
     1.  В главном меню SSMS выберите **Запрос**.
     2.  Щелкните **Параметры запроса**.
     3.  Выберите **Выполнение** > **Дополнительно**.
-    4.  Установите или снимите флажок "Enable Parameterization for Always Encrypted" (Включить определение параметров для Always Encrypted).
+    4.  Установите или снимите флажок "Enable Parameterization for Always Encrypted" (Включить параметризацию для Always Encrypted).
     5.  Нажмите кнопку «ОК».
 
 3.  Создайте и выполните запросы с использованием полнофункциональных вычислений для зашифрованных столбцов. Необходимо объявить переменную Transact-SQL для каждого значения, предназначенного для зашифрованного столбца в запросе. Переменные должны использовать встроенные инициализации (не могут быть заданы через инструкцию SET).
@@ -853,7 +853,7 @@ GO;
 
 ### <a name="develop-and-test-your-app"></a>Разработка и тестирование приложения 
 
-Чтобы использовать Always Encrypted и вычисления в анклаве, ваше приложение должно подключаться к базе данных с помощью следующих двух ключевых слов в строке подключения: `Column Encryption Setting = Enabled; Enclave Attestation Url=http://x.x.x.x/Attestation` (где xxxx может быть IP-адресом, доменом и т. д).
+Чтобы использовать Always Encrypted и вычисления в анклаве, ваше приложение должно подключаться к базе данных с помощью следующих двух ключевых слов в строке подключения: `Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation` (где xxxx может быть IP-адресом, доменом и т. д).
 
 Кроме того, приложение должно соответствовать общим рекомендациям, применяемых к приложениям, использующим Always Encrypted. Например, приложение должно иметь доступ к главным ключам столбцов, связанным со столбцами базы данных, на которые ссылаются запросы приложения.
 
@@ -905,7 +905,7 @@ namespace ConsoleApp1
       static void Main(string\[\] args)
    {
 
-   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = http://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
+   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = https://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
 
 using (SqlConnection connection = new SqlConnection(connectionString))
 {

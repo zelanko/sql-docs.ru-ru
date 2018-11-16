@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dee2105857392c1083baeca842d59c1c173f36e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52336c3ec3ab0565177f94400fb8320808bc8c90
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670662"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671714"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Выбор алгоритма шифрования
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47670662"
 >   
 >  Многократное использование одного и того же RC4 или RC4_128 KEY_GUID для различных блоков данных приведет к одному и тому же ключу RC4, так как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не предоставляет рассеивание автоматически. Повторное использование ключа RC4 является типичной ошибкой, снижающей надежность шифра. Таким образом, ключевые слова RC4 и RC4_128 являются устаревшими. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- Дополнительные сведения об алгоритмах шифрования и о технологии шифрования см. в разделе [Основные понятия безопасности](http://go.microsoft.com/fwlink/?LinkId=62082) руководства разработчика для платформы .NET Framework в сети MSDN.  
+ Дополнительные сведения об алгоритмах шифрования и о технологии шифрования см. в разделе [Основные понятия безопасности](https://go.microsoft.com/fwlink/?LinkId=62082) руководства разработчика для платформы .NET Framework в сети MSDN.  
   
  **Пояснение к алгоритмам DES:**  
   

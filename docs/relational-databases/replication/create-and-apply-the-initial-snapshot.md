@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6c423333401e9c6a85e94c6e27c49d355d1af6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62abe846572eff13f44658cdea33670ca2b0bf1c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790302"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657553"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Создание и применение исходного моментального снимка
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  После создания публикации агент моментальных снимков создает моментальный снимок. Создание моментального снимка и прямой доступ из управляемого кода к функциям агента репликации могут производиться программным путем с помощью объектов RMO. Какие именно объекты при этом применяются, зависит от типа репликации. Агент моментальных снимков может быть запущен как синхронно с помощью объекта <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> , так и в асинхронном режиме из задания агента. После создания исходного моментального снимка он передается на сервер подписчика и применяется при первом сеансе синхронизации подписки. Когда данные в существующем моментальном снимке устарели, соответствующий ему агент должен быть запущен повторно. Дополнительные сведения см. в статье [Обслуживание публикаций](../../relational-databases/replication/publish/maintain-publications.md).  
   
 > [!IMPORTANT]  
->  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](http://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>Создание исходного моментального снимка для публикации транзакций или моментальных снимков из задания агента моментальных снимков (в асинхронном режиме)  
   

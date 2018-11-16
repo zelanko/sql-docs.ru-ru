@@ -11,15 +11,15 @@ ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 64b93604ae38ed74099d0c291007ecb68a650742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6329a37a23e00753dd32ec43b2ef97915f668993
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728832"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637431"
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>Установка Microsoft Connector для SAP BW
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector для SAP BW для SQL Server 2016 входит в пакет дополнительных компонентов SQL Server 2016. Чтобы установить Connector для SAP BW и сопутствующую документацию, скачайте и запустите установщик [с веб-страницы пакета дополнительных компонентов SQL Server 2016](http://go.microsoft.com/fwlink/?LinkId=746297).  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector для SAP BW для SQL Server 2016 входит в пакет дополнительных компонентов SQL Server 2016. Чтобы установить Connector для SAP BW и сопутствующую документацию, скачайте и запустите установщик [с веб-страницы пакета дополнительных компонентов SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=746297).  
 
 > [!IMPORTANT]
 > Корпорация Майкрософт не планирует предоставлять обновленные версии соединителя для SAP BW. Майкрософт не владеет исходным кодом компонентов SAP BW сторонних разработчиков и не может их обновлять. Вы можете приобрести новейшие компоненты подключения SAP у независимого поставщика программного обеспечения, который является партнером Майкрософт, например у [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html). Независимые поставщики программного обеспечения, являющиеся партнерами Майкрософт, адаптировали свои компоненты подключений SAP под SSIS для установки в Azure.

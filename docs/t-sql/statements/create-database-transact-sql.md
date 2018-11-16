@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5263a785fff56a2f1c375c7615a725f931582cfe
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 95823c0c63e65532213e1a195b978e98df9d9986
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100525"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701052"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -194,7 +194,7 @@ CREATE DATABASE database_snapshot_name
  COLLATE *collation_name*  
  Задает параметры сортировки по умолчанию для базы данных. Именем параметров сортировки может быть либо имя параметров сортировки Windows, либо имя параметров сортировки SQL. Если параметр не указан, базе данных назначаются параметры сортировки по умолчанию для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Имя параметров сортировки не может указываться для моментального снимка базы данных.  
   
- Имя параметров сортировки не может указываться с предложениями FOR ATTACH и FOR ATTACH_REBUILD_LOG. Дополнительные сведения о способах изменения параметров сортировки подсоединенной базы данных см. на [веб-сайте корпорации Майкрософт](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
+ Имя параметров сортировки не может указываться с предложениями FOR ATTACH и FOR ATTACH_REBUILD_LOG. Дополнительные сведения о способах изменения параметров сортировки подсоединенной базы данных см. на [веб-сайте корпорации Майкрософт](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
   
  Дополнительные сведения об именах параметров сортировки Windows и SQL см. в разделе [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md).  
   
@@ -509,7 +509,7 @@ CREATE DATABASE database_snapshot_name
  Если не указан параметр FOR ATTACH, то каждая новая база данных наследует значения параметров из базы данных model. Например, параметру автоматического сжатия базы данных задано значение **true** в базе данных model и во всех вновь создаваемых базах данных. Если изменить параметры в базе данных model, то эти новые параметры будут использоваться во вновь создаваемых базах данных. Операции, вносящие изменения в базу данных model, не влияют на существующие базы данных. Если параметр FOR ATTACH задан в инструкции CREATE DATABASE, то новая база данных наследует значения параметров исходной базы данных.  
   
 ## <a name="viewing-database-information"></a>Просмотр сведений о базе данных  
- Для возврата сведений о базах данных, файлах и файловых группах можно использовать представления каталогов, системные функции и системные хранимые процедуры. Дополнительные сведения см. в разделе [Системные представления (Transact-SQL)](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
+ Для возврата сведений о базах данных, файлах и файловых группах можно использовать представления каталогов, системные функции и системные хранимые процедуры. Дополнительные сведения см. в разделе [Системные представления (Transact-SQL)](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CREATE DATABASE, CREATE ANY DATABASE или ALTER ANY DATABASE.  
@@ -935,13 +935,13 @@ CREATE DATABASE database_name
   
 *database_name* 
  
-Имя новой базы данных. Имя должно быть уникальным в пределах SQL Server и соответствовать правилам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для идентификаторов. Дополнительные сведения: [Идентификаторы](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+Имя новой базы данных. Имя должно быть уникальным в пределах SQL Server и соответствовать правилам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для идентификаторов. Дополнительные сведения: [Идентификаторы](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Задает параметры сортировки по умолчанию для базы данных. Именем параметров сортировки может быть либо имя параметров сортировки Windows, либо имя параметров сортировки SQL. Если параметры не указаны, база данных использует параметры сортировки по умолчанию: SQL_Latin1_General_CP1_CI_AS.  
   
-Дополнительные сведения об именах параметров сортировки Windows и SQL: [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Дополнительные сведения об именах параметров сортировки Windows и SQL: [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 CATALOG_COLLATION  
 
@@ -1097,7 +1097,7 @@ AS COPY OF [имя_исходного_сервера.]имя_исходной_б
   
 - Имя исходного и целевого сервера для копирования могут совпадать или отличаться. Если они совпадают, этот параметр не является обязательным, а по умолчанию используется контекст сервера текущего сеанса.  
   
-- Необходимо указать имена исходной и целевой базы данных. Они должны быть уникальными и соответствовать правилам для идентификаторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения: [Идентификаторы](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+- Необходимо указать имена исходной и целевой базы данных. Они должны быть уникальными и соответствовать правилам для идентификаторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения: [Идентификаторы](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 - Инструкция `CREATE DATABASE` должна выполняться в контексте базы данных master на сервере [!INCLUDE[ssSDS](../../includes/sssds-md.md)], на котором будет создана новая база данных. 
 - После завершения копирования целевой базой данных необходимо управлять как независимой базой данных. Инструкции `ALTER DATABASE` и `DROP DATABASE` для новой базы данных можно выполнять независимо от базы данных-источника. Новую базу данных также можно скопировать в другую новую базу данных.  
@@ -1225,13 +1225,13 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 *database_name* 
  
-Имя новой базы данных. Имя должно быть уникальным в пределах SQL Server и соответствовать правилам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для идентификаторов. Дополнительные сведения: [Идентификаторы](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+Имя новой базы данных. Имя должно быть уникальным в пределах SQL Server и соответствовать правилам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для идентификаторов. Дополнительные сведения: [Идентификаторы](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Задает параметры сортировки по умолчанию для базы данных. Именем параметров сортировки может быть либо имя параметров сортировки Windows, либо имя параметров сортировки SQL. Если параметры не указаны, база данных использует параметры сортировки по умолчанию: SQL_Latin1_General_CP1_CI_AS.  
   
-Дополнительные сведения об именах параметров сортировки Windows и SQL: [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Дополнительные сведения об именах параметров сортировки Windows и SQL: [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 ## <a name="remarks"></a>Remarks
  
@@ -1307,12 +1307,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## <a name="arguments"></a>Аргументы  
 *database_name*  
-Имя новой базы данных. Это имя должно быть уникальным на сервере SQL Server, где могут размещаться базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Кроме того, оно должно соответствовать правилам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для идентификаторов. Дополнительные сведения: [Идентификаторы](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+Имя новой базы данных. Это имя должно быть уникальным на сервере SQL Server, где могут размещаться базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Кроме того, оно должно соответствовать правилам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для идентификаторов. Дополнительные сведения: [Идентификаторы](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *collation_name*  
 Задает параметры сортировки по умолчанию для базы данных. Именем параметров сортировки может быть либо имя параметров сортировки Windows, либо имя параметров сортировки SQL. Если параметры не указаны, базе данных назначаются параметры сортировки по умолчанию — SQL_Latin1_General_CP1_CI_AS.  
   
-Дополнительные сведения об именах параметров сортировки Windows и SQL: [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Дополнительные сведения об именах параметров сортировки Windows и SQL: [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 *EDITION*  
 Указывает уровень службы базы данных. Для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] используйте "datawarehouse".  

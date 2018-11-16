@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e51a9c2ca8dbebe5f807b7e286eaa61242b04332
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85e6537fe5b9df976724d9d2392f14520ccf48d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617652"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657813"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47617652"
 |Тип|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Ожидаемый тип файла на основе канонического типа.|  
 |Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Заголовок элемента. Например, заголовок документа, тема сообщения, подпись к фотографии или название музыкальной композиции.|  
   
- Чтобы обеспечить согласованность между форматами файлов, корпорация Майкрософт выделила подмножество часто используемых свойств документа с повышенным приоритетом для нескольких категорий документов. К таким категориям относятся связь, контакты, документы, музыкальные файлы, изображения и видеоматериалы. Дополнительные сведения о главных свойствах для каждой категории см. в разделе [System-defined properties for custom file formats (на английском языке)](http://go.microsoft.com/fwlink/?LinkId=144336) из набора документации Windows Search.  
+ Чтобы обеспечить согласованность между форматами файлов, корпорация Майкрософт выделила подмножество часто используемых свойств документа с повышенным приоритетом для нескольких категорий документов. К таким категориям относятся связь, контакты, документы, музыкальные файлы, изображения и видеоматериалы. Дополнительные сведения о главных свойствах для каждой категории см. в разделе [System-defined properties for custom file formats (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=144336) из набора документации Windows Search.  
   
  В каждом формате файла могут быть реализованы свойства трех типов.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47617652"
   
  Программа **filtdump.exe** запускается из командной строки с указанием одного аргумента. Такой аргумент является именем отдельного файла с типом, для которого установлен IFilter. Служебная программа отображает список всех свойств, обнаруженных в документе фильтрами IFilter, с идентификаторами GUID набора свойств, целочисленными идентификаторами и дополнительными сведениями.  
   
- Сведения об установке этого программного обеспечения см. на странице [Microsoft Windows SDK for Windows Server 7 and .NET Framework 4 (на английском языке)](http://go.microsoft.com/fwlink/?LinkId=212980). После загрузки и установки пакета SDK перейдите к папкам, где находится служебная программа filtdump.exe.  
+ Сведения об установке этого программного обеспечения см. на странице [Microsoft Windows SDK for Windows Server 7 and .NET Framework 4 (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=212980). После загрузки и установки пакета SDK перейдите к папкам, где находится служебная программа filtdump.exe.  
   
 -   Сведения о 64-разрядной версии см. в каталоге `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   
@@ -84,9 +84,9 @@ propID = 4
 …  
 ```  
   
- Полное описание этого свойства см. в разделе [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337) документации по Windows Search.  
+ Полное описание этого свойства см. в разделе [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) документации по Windows Search.  
   
- Полный список свойств Windows см. в разделе [Windows Properties (на английском языке)](http://go.microsoft.com/fwlink/?LinkId=215013)документации по Windows Search.  
+ Полный список свойств Windows см. в разделе [Windows Properties (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=215013)документации по Windows Search.  
   
 ##  <a name="examples"></a> Добавление свойства в список свойств поиска  
  В следующем примере показано, как добавить свойство в список свойств поиска. В примере инструкция [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) добавляет свойство `System.Author` в список свойств поиска с именем `PropertyList1`и предоставляет понятное имя `Author`для свойства.  
@@ -106,6 +106,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [Настройка поисковых фильтров и управление ими](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
+ [Настройка и управление фильтрами для поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   

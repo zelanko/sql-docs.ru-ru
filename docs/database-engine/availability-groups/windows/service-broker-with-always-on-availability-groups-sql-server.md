@@ -13,12 +13,12 @@ ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdb5eee5e8dc0addd0a15d5fdde98eef6a133913
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f544983e1d34073cfe681a614d7d4808b45cd3c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687842"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607114"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Компонент Service Broker с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "47687842"
     > [!NOTE]  
     >  По умолчанию все пользовательские базы данных, включая **msdb**, содержат маршрут **AutoCreatedLocal**. Он соответствует имени любой службы и любому экземпляру компонента Service Broker и указывает, что сообщение должно быть доставлено внутри текущего экземпляра. Маршрут**AutoCreatedLocal** имеет более низкий приоритет, чем маршруты, в которых явно указывается служба, обменивающаяся данными с удаленным экземпляром.  
   
-     Сведения о создании маршрутов см. в статьях [Примеры маршрутизации для компонента Service Broker](http://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (версия [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] электронной документации) и [CREATE ROUTE (Transact-SQL)](../../../t-sql/statements/create-route-transact-sql.md).  
+     Сведения о создании маршрутов см. в статьях [Примеры маршрутизации для компонента Service Broker](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (версия [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] электронной документации) и [CREATE ROUTE (Transact-SQL)](../../../t-sql/statements/create-route-transact-sql.md).  
   
 ##  <a name="SendRemoteMessages"></a> Требования к отправке сообщений удаленной службе в группе доступности  
   

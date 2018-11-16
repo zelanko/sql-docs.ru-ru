@@ -13,17 +13,17 @@ ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ac1a6b3363b826bab1530fb162ee6c0cb76c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b29eac3b080a78f2552a2558b3ab3278b89a1bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608100"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670472"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Как подключаться к базе данных и просматривать существующие объекты
 Очень часто администраторам баз данных и разработчикам приходится подключаться к действующей базе данных, проектировать или просматривать ее схему, а также выполнять запросы к ее объектам. Теперь обозреватель объектов SQL Server в Visual Studio содержит специальный узел **SQL Server**, в котором все подключенные экземпляры SQL Server и их базы данных сгруппированы так, как это делается в SSMS. Подключенные экземпляры SQL Server могут быть локальными (выполняющийся экземпляр SQL Server 2008) или удаленными (экземпляр SQL Azure).  
   
-Приведенная ниже процедура предполагает, что образец базы данных AdventureWorks уже установлен. На сайте [CodePlex](http://msftdbprodsamples.codeplex.com/) можно найти и установить образцы баз данных для различных версий SQL Server. При желании можно выполнить приведенные ниже инструкции и указать существующую базу данных на вашем сервере.  
+Приведенная ниже процедура предполагает, что образец базы данных AdventureWorks уже установлен. На сайте [CodePlex](https://msftdbprodsamples.codeplex.com/) можно найти и установить образцы баз данных для различных версий SQL Server. При желании можно выполнить приведенные ниже инструкции и указать существующую базу данных на вашем сервере.  
   
 ### <a name="to-connect-to-a-database-instance"></a>Подключение к экземпляру базы данных  
   

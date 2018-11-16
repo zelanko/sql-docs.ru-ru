@@ -15,12 +15,12 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da205f6e24c037eb6fe17601b188d07b66f12d99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07004bdd1285d919f2d7480e6ee0c99573d62732
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810622"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696272"
 ---
 # <a name="create-a-cross-domain-rule"></a>Создание междоменного правила
 
@@ -97,7 +97,7 @@ ms.locfileid: "47810622"
   
     6.  После завершения проверки нажмите **Закрыть** в диалоговом окне **Проверка правила для составного домена** .  
   
-2.  Закончив работу со всеми междоменными правилами, нажмите кнопку **Готово** , чтобы завершить действие управления доменами, как описано в разделе [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+2.  Закончив работу со всеми междоменными правилами, нажмите кнопку **Готово** , чтобы завершить действие управления доменами, как описано в разделе [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После создания междоменного правила  
  Создав перекрестное правило, можно выполнить для этого домена другие задачи управления доменами, провести обнаружение знаний для добавления знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  

@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0e86bec4983dd1f15f4c91fe4ee7a851f8264556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bce46bab220ddda57d18cea6588c35475becd372
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665482"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601894"
 ---
 # <a name="install-sql-server-on-server-core"></a>Установка SQL Server в Server Core
 
@@ -24,7 +24,7 @@ ms.locfileid: "47665482"
 
 Можно установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке Server Core.   
   
-Вариант установки Server Core предусматривает наличие среды, минимально необходимой для запуска конкретных ролей сервера. Это дает возможность снизить требования к обслуживанию и управлению и уменьшить уязвимость для атак со стороны этих ролей сервера. Дополнительные сведения о Server Core см. в разделе [Установка Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Дополнительные сведения о реализации Server Core в операционной системе [!INCLUDE[win8srv](../../includes/win8srv-md.md)] см. в разделе [Server Core для Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
+Вариант установки Server Core предусматривает наличие среды, минимально необходимой для запуска конкретных ролей сервера. Это дает возможность снизить требования к обслуживанию и управлению и уменьшить уязвимость для атак со стороны этих ролей сервера. Дополнительные сведения о Server Core см. в разделе [Установка Server Core](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Дополнительные сведения о реализации Server Core в операционной системе [!INCLUDE[win8srv](../../includes/win8srv-md.md)] см. в разделе [Server Core для Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
  Список текущих поддерживаемых операционных систем см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
@@ -59,7 +59,7 @@ ms.locfileid: "47665482"
 |Контроллер распределенного воспроизведения|нет||  
 |Клиент распределенного воспроизведения|Только удаленные|Установка этих компонентов на Server Core не поддерживается. Эти компоненты могут быть установлены на сервере, отличном от Server Core, и подключены к службам [!INCLUDE[ssDE](../../includes/ssde-md.md)], установленным в Server Core.|  
 |Пакет SDK для подключения клиентов SQL|Да||  
-|Microsoft Sync Framework|Да|Платформа Microsoft Sync Framework не входит в установочный пакет [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Вы можете скачать соответствующую версию Sync Framework в [Центре загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) и установить ее на компьютер, где работает установка Server Core.|  
+|Microsoft Sync Framework|Да|Платформа Microsoft Sync Framework не входит в установочный пакет [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Вы можете скачать соответствующую версию Sync Framework в [Центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) и установить ее на компьютер, где работает установка Server Core.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|нет||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|нет||  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47665482"
   
  Независимо от метода установки, необходимо подтвердить свое согласие с условиями лицензии на использование пакета программ как физического лица или от имени организации, если на используемое программное обеспечение не распространяется отдельное соглашение [!INCLUDE[msCoName](../../includes/msconame-md.md)] , такое как соглашение о корпоративном лицензировании Майкрософт или отдельное соглашение с независимым поставщиком программного обеспечения или изготовителем оборудования (OEM).  
   
- Условия лицензионного соглашения отображаются для ознакомления и принятия в пользовательском интерфейсе программы установки. Автоматические установки (с использованием параметров /Q или /QS) должны включать параметр /IACCEPTSQLSERVERLICENSETERMS. Ознакомиться с условиями лицензии можно на странице [Условия лицензионного соглашения о программном обеспечении Майкрософт](http://go.microsoft.com/fwlink/?LinkId=148209).  
+ Условия лицензионного соглашения отображаются для ознакомления и принятия в пользовательском интерфейсе программы установки. Автоматические установки (с использованием параметров /Q или /QS) должны включать параметр /IACCEPTSQLSERVERLICENSETERMS. Ознакомиться с условиями лицензии можно на странице [Условия лицензионного соглашения о программном обеспечении Майкрософт](https://go.microsoft.com/fwlink/?LinkId=148209).  
   
 > [!NOTE]  
 >  В зависимости от способа получения ПО (например, по [!INCLUDE[msCoName](../../includes/msconame-md.md)] ), на его использование могут распространяться дополнительные условия.  
@@ -331,9 +331,9 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [Установка SQL Server с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
  [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
- [Установка Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
- [Настройка установки Server Core системы Windows Server 2016 с помощью Sconfig.cmd](http://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
- [Командлеты отказоустойчивого кластера в Windows PowerShell](http://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
+ [Установка Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
+ [Настройка установки Server Core системы Windows Server 2016 с помощью Sconfig.cmd](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
+ [Командлеты отказоустойчивого кластера в Windows PowerShell](https://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
 
   
   

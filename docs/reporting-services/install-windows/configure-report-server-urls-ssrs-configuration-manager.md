@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6167e81d5f6d9307101994e687b1ecd353793394
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa67d80d18b6f93393cfccac146765a8df536ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609702"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813347"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
   В [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]URL-адреса используются для доступа к веб-службам сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Прежде чем использовать любое приложение, необходимо настроить по крайней мере по одному URL-адресу для веб-службы и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для URL-адресов обоих приложений предоставляет значения по умолчанию, которые подходят для большинства сценариев развертывания, в том числе развертывания параллельно с другими веб-службами и приложениями.  
@@ -38,9 +38,9 @@ ms.locfileid: "47609702"
 ## <a name="default-urls"></a>URL-адреса по умолчанию  
  При получении доступа к серверу отчетов или [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] посредством соответствующего URL-адреса этот адрес должен содержать имя узла, а не IP-адрес. В сети TCP/IP IP-адрес приводит к имени узла (или сетевому имени компьютера). Если настройка URL-адресов осуществляется при помощи значений по умолчанию, доступ к веб-службе сервера отчетов должен быть возможен при использовании URL-адресов, в которых в качестве имени узла указано имя компьютера или localhost:  
   
--   `http://<computername>/reportserver`  
+-   `https://<computername>/reportserver`  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
  Настройки, благодаря которым доступны такие URL-адреса, отражены в следующей таблице. Эта таблица представляет значения по умолчанию, которые разрешают соединение с сервером отчетов посредством URL-адресов, содержащих имя узла:  
   

@@ -11,12 +11,12 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 826e7ca671272f859cd0d5da7059b34cf4cfedba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee64f342f8ef865d8b264f37c332098b0c2d62cf
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847272"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637628"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Сопоставление типов данных в мастере импорта и экспорта SQL Server
  В мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно задать имя, тип данных и свойства типа данных для столбцов в новых целевых таблицах и файлах, но нельзя указать настраиваемые преобразования для значений столбцов. Поэтому важное значение имеет встроенное сопоставление типов данных из источника с типами данных в назначении.  
@@ -32,7 +32,7 @@ ms.locfileid: "47847272"
 Если требуются различные сопоставления между типами данных, можно обновить файлы сопоставлений, чтобы изменить сопоставления, используемые мастером. Например, если при передаче данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в DB2 необходимо сопоставить тип данных **nchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с типом данных **GRAPHIC** DB2 , а не с типом данных **VARGRAPHIC** DB2, то в файле сопоставления **SqlClientToIBMDB2.xml** необходимо изменить сопоставление **nchar** для использования типа **GRAPHIC** вместо **VARGRAPHIC**.  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>Можно добавить новый файл сопоставления
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливает сопоставления между многими часто используемыми комбинациями источника и назначения. Можно также добавить новые файлы сопоставления в каталог **MappingFiles** для поддержки дополнительных источников и назначений. Новые файлы сопоставления должны быть согласованы с опубликованной XSD-схемой и выполнять сопоставления между уникальными сочетаниями, источниками и назначениями. Схема для файлов сопоставления ( **DataTypeMapping.xsd**) опубликована [здесь](http://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливает сопоставления между многими часто используемыми комбинациями источника и назначения. Можно также добавить новые файлы сопоставления в каталог **MappingFiles** для поддержки дополнительных источников и назначений. Новые файлы сопоставления должны быть согласованы с опубликованной XSD-схемой и выполнять сопоставления между уникальными сочетаниями, источниками и назначениями. Схема для файлов сопоставления (**DataTypeMapping.xsd**) опубликована [здесь](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).
  
 ## <a name="sample-mapping-file"></a>Образец файла сопоставления
 Вот фрагмент XML-файла сопоставления, который сопоставляет типы данных SQL Server (или, точнее, из типов данных, используемых поставщиком данных .Net Framework для SQL Server) с типами данных Oracle. Можно видеть, что тип данных SQL Server **int** сопоставляется с типом данных Oracle **INTEGER** .
@@ -40,8 +40,8 @@ ms.locfileid: "47847272"
 ```xml  
   
 <dtm:DataTypeMappings  
-    xmlns:dtm="http://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:dtm="https://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"  
     SourceType="System.Data.SqlClient.SqlConnection"   
     MinSourceVersion="*"   
     MaxSourceVersion="*"   

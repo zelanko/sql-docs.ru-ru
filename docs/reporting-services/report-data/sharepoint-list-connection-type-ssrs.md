@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 935749fe3bd88171892874b2643c6803a59fde92
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6b3936d04d63f50fb33b2d3d36e080f9a151a186
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029823"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813577"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Тип соединения список SharePoint (службы SSRS)
 
@@ -24,7 +24,7 @@ ms.locfileid: "50029823"
 Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
 
 ##  <a name="Connection"></a> Строка подключения  
- Строка подключения к списку SharePoint — это URL-адрес сайта или дочернего сайта SharePoint, например `http://MySharePointWeb/MySharePointSite` или `http://MySharePointWeb/MySharePointSite/Subsite`.  
+ Строка подключения к списку SharePoint — это URL-адрес сайта или дочернего сайта SharePoint, например `https://MySharePointWeb/MySharePointSite` или `https://MySharePointWeb/MySharePointSite/Subsite`.  
   
  Конструктор запросов автоматически отображает списки SharePoint, для доступа к которым имеются достаточные разрешения.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "50029823"
  **Учетные данные не требуются (не использовать учетные данные).**  
  Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
- Дополнительные сведения о поддержке проверки подлинности на основе утверждений в стеке бизнес-аналитики Майкрософт см. в разделе [Использование проверки подлинности на основе утверждений в стеке бизнес-аналитики Майкрософт](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
+ Дополнительные сведения о поддержке проверки подлинности на основе утверждений в стеке бизнес-аналитики Майкрософт см. в разделе [Использование проверки подлинности на основе утверждений в стеке бизнес-аналитики Майкрософт](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
  Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Указание учетных данных в построителе отчетов](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) и [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   

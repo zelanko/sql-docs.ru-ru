@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce8d405d4ae630f7166389d98086237270333e51
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 7ee293543439436615840e720071d11971aed3dc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252161"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703672"
 ---
 # <a name="restore-statements-transact-sql"></a>Инструкции RESTORE (Transact-SQL)
 Восстанавливает резервные копии баз данных SQL, созданные с помощью команды BACKUP. 
@@ -365,7 +365,7 @@ Note: URL is the format used to specify the location and the file name for the M
 Инструкция RESTORE может также использоваться для восстановления в разные расположения, для разностного восстановления, восстановления файлов и файловых групп, а также для восстановления файлов и файловых групп полнотекстовых данных. Кроме того, инструкция RESTORE может восстанавливать как полнотекстовые файлы, так и файлы с данными базы данных.  
   
 > [!NOTE] 
-> Полнотекстовые каталоги, импортированные из [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], по-прежнему рассматриваются как файлы базы данных. Для них остается применимой процедура [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] по резервному копированию полнотекстовых каталогов, за исключением того, что более нет необходимости использовать паузу и возобновление в процессе выполнения резервного копирования. Дополнительные сведения см. в разделе [Резервное копирование и восстановление полнотекстовых каталогов](http://go.microsoft.com/fwlink/?LinkId=107381).  
+> Полнотекстовые каталоги, импортированные из [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], по-прежнему рассматриваются как файлы базы данных. Для них остается применимой процедура [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] по резервному копированию полнотекстовых каталогов, за исключением того, что более нет необходимости использовать паузу и возобновление в процессе выполнения резервного копирования. Дополнительные сведения см. в разделе [Резервное копирование и восстановление полнотекстовых каталогов](https://go.microsoft.com/fwlink/?LinkId=107381).  
   
 ## <a name="metadata"></a>Метаданные  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включает таблицы журналов резервного копирования и восстановления, в которые заносятся данные слежения за резервным копированием и восстановлением для каждого экземпляра сервера. При выполнении восстановления таблицы журнала резервного копирования также изменяются. Сведения об этих таблицах см. в разделе [Журнал и сведения о заголовке резервной копии (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).  
@@ -707,7 +707,7 @@ RESTORE DATABASE Sales
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\*База данных SQL<br /> — управляемый экземпляр \*_**|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\* База данных SQL<br />Управляемый экземпляр \*_**|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -745,7 +745,7 @@ FROM URL
 Указывает одно устройство резервного копирования или несколько по URL-адресам, которые будут использоваться для операции восстановления. Формат URL-адреса используется для восстановления резервных копий из службы хранилища Microsoft Azure. 
 
 > [!IMPORTANT]  
-> Чтобы выполнить восстановление с нескольких устройств при помощи URL-адреса, необходимо использовать токены подписанных URL-адресов (SAS). Примеры создания подписанного URL-адреса см. в разделах [Резервное копирование SQL Server на URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [Упрощение создания учетных данных SQL с токенами подписанных URL-адресов в хранилище Azure с помощью Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> Чтобы выполнить восстановление с нескольких устройств при помощи URL-адреса, необходимо использовать токены подписанных URL-адресов (SAS). Примеры создания подписанного URL-адреса см. в разделах [Резервное копирование SQL Server на URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [Упрощение создания учетных данных SQL с токенами подписанных URL-адресов в хранилище Azure с помощью Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 *n*  
 Заполнитель, который показывает, что можно указать до 64 устройств резервного копирования через запятую.  
@@ -839,7 +839,7 @@ WHERE r.command = 'RESTORE DATABASE'
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — управляемый экземпляр](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_**
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — управляемый экземпляр](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Параллельное<br />хранилище данных \*_**
 
 &nbsp;
 

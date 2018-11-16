@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c10e012010eb51973f3833573b09f0bb7e5fa18
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: d71290c863f71894632d9092f3c51b2713d8d96f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782333"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696873"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -159,7 +159,7 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 ```  
 
 > [!NOTE]
-> При уровне совместимости базы данных 130 неявные преобразования типов данных из datetime в datetime2 демонстрируют повышенную точность благодаря учету долей миллисекунд. В результате преобразования дают иные значения, как показано в примере выше. Всегда используйте явное приведение к типу данных datetime2, когда имеется сценарий смешанного сравнения типов данных datetime и datetime2. Дополнительные сведения см. в [этой статье](http://support.microsoft.com/help/4010261) на сайте службы поддержки Майкрософт.
+> При уровне совместимости базы данных 130 неявные преобразования типов данных из datetime в datetime2 демонстрируют повышенную точность благодаря учету долей миллисекунд. В результате преобразования дают иные значения, как показано в примере выше. Всегда используйте явное приведение к типу данных datetime2, когда имеется сценарий смешанного сравнения типов данных datetime и datetime2. Дополнительные сведения см. в [этой статье](https://support.microsoft.com/help/4010261) на сайте службы поддержки Майкрософт.
 
 ### <a name="converting-string-literals-to-datetime2"></a>Преобразование строковых литералов в datetime2  
 Преобразование строковых литералов в типы данных даты и времени разрешается, если все части строк записаны в допустимом формате. Иначе возникает ошибка времени выполнения. Явные или скрытые преобразования, в которых не задан стиль преобразования типов данных даты и времени в строковые литералы, будут проведены в формате по умолчанию для текущего сеанса. В таблице ниже приводятся правила преобразования строковых литералов в тип данных **datetime2**.

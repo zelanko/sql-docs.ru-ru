@@ -1,23 +1,21 @@
 ---
 title: Заметки о выпуске SQL Server 2019 | Документация Майкрософт
-ms.custom: ''
 ms.date: 11/06/2018
-ms.prod: sql-server-2018
+ms.prod: sql
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7fba2c4989b6e50fe720a44e127b044dea93876d
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 2c21ac917845b8162348b93fec3b868f1f748592
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269807"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703862"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Заметки о выпуске предварительной версии SQL Server 2019
 
@@ -33,7 +31,7 @@ ms.locfileid: "51269807"
 > - Обновление существующего экземпляра SQL Server с любой версии
 
 **Попробуйте [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].**
-- [![Скачайте из Центра оценки](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Скачайте [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] для установки на компьютерах с Windows](http://go.microsoft.com/fwlink/?LinkID=862101).
+- [![Скачайте из Центра оценки](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Скачайте [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] для установки на компьютерах с Windows](https://go.microsoft.com/fwlink/?LinkID=862101).
 - Установите на компьютерах с Linux для [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) и [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Работайте с SQL Server 2019 в Docker](../linux/quickstart-install-connect-docker.md).
 
@@ -45,12 +43,12 @@ ms.locfileid: "51269807"
 Ограниченную поддержку можно найти в следующих ресурсах:
 
 - Форумы
-  - [Отзывы о SQL Server](http://aka.ms/sqlfeedback).
+  - [Отзывы о SQL Server](https://aka.ms/sqlfeedback).
   - [Начало работы с SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted).
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
   - [Документация по SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
-- Или опубликуйте твит [@SQLServer](http://twitter.com/SQLServer) с [#sqlhelp](https://twitter.com/search?q=%23sqlhelp).
+- Или опубликуйте твит [@SQLServer](https://twitter.com/SQLServer) с [#sqlhelp](https://twitter.com/search?q=%23sqlhelp).
 
 ### <a name="documentation-ctp-21"></a>Документация (CTP 2.1)
 
@@ -69,7 +67,7 @@ ms.locfileid: "51269807"
     - [Linux — требования к системе](../linux/sql-server-linux-setup.md#system).
   - **Программное обеспечение**.
     - Windows Server 2016 или более поздней версии. Дополнительные требования см. в статье [Требования к оборудованию и программному обеспечению для установки SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
-    - Платформа Microsoft .NET Framework 4.6.2. Доступна в [Центре загрузки](http://www.microsoft.com/download/details.aspx?id=53344).
+    - Платформа Microsoft .NET Framework 4.6.2. Доступна в [Центре загрузки](https://www.microsoft.com/download/details.aspx?id=53344).
     - Для Linux обратитесь к разделу [поддерживаемых платформ](../linux/sql-server-linux-setup.md#supportedplatforms).
 
 ### <a name="floating-point-results"></a>Результаты с плавающей запятой

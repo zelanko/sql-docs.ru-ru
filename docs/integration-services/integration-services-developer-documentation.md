@@ -19,12 +19,12 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6412da2497f7201016ddfbb4b81397d769de5032
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99eb1ed68d2af04dce3106b2642fcdb068a55ef5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698842"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641599"
 ---
 # <a name="integration-services-developer-documentation"></a>Документация для разработчиков служб Integration Services
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включают полностью переписанную модель объектов, которая была улучшена многими функциями, позволяющими упростить расширение и программирование пакетов и сделать их более гибкими и более мощными. Разработчики могут расширять и программировать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] почти в любом аспекте.  
@@ -83,9 +83,9 @@ ms.locfileid: "47698842"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Образцы CodePlex, [Образцы продуктов служб Integration Services](http://go.microsoft.com/fwlink/?LinkID=131204)на сайте www.codeplex.com/MSFTISProdSamples  
+-   Образцы CodePlex, [Образцы продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkID=131204)на сайте www.codeplex.com/MSFTISProdSamples  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
+ [службы SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   

@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2556a4b686c14e5a8a4922a22dc2047b0ba88a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a450bd308e412bbfa764cf84cb46b46104ad4ffb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723722"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659228"
 ---
 # <a name="qnparameter-table-event-class"></a>Класс событий QN:Parameter Table
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "47723722"
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего сеанс. Например, если приложение соединяется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Имя_входа1, а выполняет инструкции под именем Имя_входа2, то SessionLoginName содержит значение «Имя_входа1», а LoginName содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  
-|TextData|**ntext**|Возвращает XML-документ, содержащий сведения, специфические для этого события. Этот документ соответствует XML-схеме, доступной на странице [Схема событий приложения SQL Server Query Notification Profiler](http://go.microsoft.com/fwlink/?LinkId=63331) .|1|Да|  
+|TextData|**ntext**|Возвращает XML-документ, содержащий сведения, специфические для этого события. Этот документ соответствует XML-схеме, доступной на странице [Схема событий приложения SQL Server Query Notification Profiler](https://go.microsoft.com/fwlink/?LinkId=63331) .|1|Да|  
   
   

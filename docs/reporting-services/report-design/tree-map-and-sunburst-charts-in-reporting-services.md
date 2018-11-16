@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a004b0d12d6a34b613c710f2018b9151b38f5d84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c255369e8292aa2b7275a58d5e8375890153a5aa
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612863"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814107"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Диаграммы "дерево" и "солнечные лучи" в Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -177,7 +177,7 @@ ms.locfileid: "47612863"
 * [Представление конструктора общих наборов данных (построитель отчетов)](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 * [Учебник. Диаграммы "дерево" в Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
-* [Диаграмма "дерево". Приложения визуализации данных Microsoft Research для Office](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
+* [Диаграмма "дерево". Приложения визуализации данных Microsoft Research для Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
 <br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

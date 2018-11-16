@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7aee55b262ab1a06f99325f977fe5e5be014f5eb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3cb1aef270d2fb512d6234227b5ed6ab8b09a51
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021908"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812867"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)
   Развертывание сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в одной из следующих операционных систем требует дополнительных шагов настройки, если вы желаете управлять экземпляром этого сервера локально. Данная тема объясняет как настроить сервер отчетов для локального администрирования. Если вы еще не установили или не настроили сервер отчетов, см. разделы [Установка SQL Server 2016 из мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) и [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "50021908"
   
 8.  Нажмите кнопку **Сайты**.  
   
-9. Добавьте `http://<your-server-name>`.  
+9. Добавьте `https://<your-server-name>`.  
   
 10. Снимите флажок **Требуется сертификация сервера (https:) для всех сайтов в этой зоне** , если вы не используете HTTPS для сайта по умолчанию.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50021908"
   
 ###  <a name="bkmk_configure_site_settings"></a> Параметры сайта диспетчера отчетов  
   
-1.  Откройте браузер с правами администратора и перейдите к диспетчеру отчетов `http://<server name>/reports`.  
+1.  Откройте браузер с правами администратора и перейдите к диспетчеру отчетов `https://<server name>/reports`.  
   
 2.  В верхнем углу домашней страницы нажмите кнопку **Параметры сайта** .  
   

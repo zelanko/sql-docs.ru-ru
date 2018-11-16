@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 3d9389f515c6e6558a5df2a39a778e24b9179567
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: ba27a8364afc3d006341079a597cc0edcb6131fb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970785"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665613"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Выбор метода обновления компонента Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,17 +30,17 @@ ms.locfileid: "50970785"
   
  **Загрузить**  
   
--   Чтобы скачать [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server)**.  
+-   Чтобы скачать [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)**.  
   
--   Есть учетная запись Azure?  Перейдите **[сюда](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)**, чтобы запустить виртуальную машину с уже установленной версией [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition.  
+-   Есть учетная запись Azure?  Перейдите **[сюда](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)**, чтобы запустить виртуальную машину с уже установленной версией [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition.  
   
 > [!NOTE]  
 >  При составлении плана обновления, кроме того, можно рассмотреть возможность обновления базы данных SQL Azure или виртуализации среды SQL Server. Эти статьи выходят за рамки данной статьи. Дополнительные сведения см. по следующим ссылкам:
 >   - [Обзор SQL Server в виртуальных машинах Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [База данных SQL Azure](https://azure.microsoft.com/en-us/services/sql-database/) 
+>   - [База данных SQL Azure](https://azure.microsoft.com/services/sql-database/) 
 >   - [Выбор варианта SQL Server в Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
   
-##  <a name="UpgradeInPlace"></a> Обновление на месте  
+## <a name="upgrade-in-place"></a>Обновление на месте  
  В этом случае программа установки SQL Server обновляет существующую установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], заменяя существующие биты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] новыми битами [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], а затем обновляет все системные и пользовательские базы данных.  Обновление на месте — это самый простой метод, подразумевающий некоторое время простоя; в случае необходимости отката он занимает больше времени, кроме того, этот вариант поддерживается не для всех сценариев. Дополнительные сведения о поддерживаемых и неподдерживаемых сценариях обновления на месте см. в разделе [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
  Этот подход часто используется в следующих сценариях:  
@@ -61,7 +61,7 @@ ms.locfileid: "50970785"
   
  Дополнительные сведения см. в статье [Обновление SQL Server с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
-##  <a name="NewInstallationUpgrade"></a> Миграция в новую установку  
+## <a name="migrate-to-a-new-installation"></a>Миграция в новую установку  
  В этом случае сохраняется текущая среда и выполняется построение новой среды [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , зачастую на новом оборудовании и с новой версией операционной системы. После установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в новой среде выполняется ряд действий по подготовке новой среды, чтобы можно было перенести имеющиеся пользовательские базы данных из текущей среды в новую среду и свести к минимуму время простоя. Эти действия включают перенос следующих компонентов.  
   
 -   **Системные объекты** . Некоторые приложения зависят от информации, сущностей или объектов, которые находятся вне области однопользовательской базы данных. Как правило, приложение зависит от баз данных master и msdb и пользовательской базы данных. Что-либо сохраненное вне пользовательской базы данных, которая требуется для правильного функционирования другой базы данных, должно быть доступно на экземпляре целевого сервера. Например, имена входа для приложений сохраняются как метаданные в базе данных master и должны быть созданы заново на целевом сервере. Если приложение или план обслуживания базы данных зависит от заданий агента SQL Server, чьи метаданные сохранены в базе данных msdb, необходимо заново создать эти задания в экземпляре целевого сервера. Точно так же метаданные сохраняются в базе данных master для триггера уровня сервера.  
@@ -80,21 +80,18 @@ ms.locfileid: "50970785"
  После переноса пользовательской базы данных перенаправьте новых пользователей в новый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью одного из имеющихся методов (например, переименовав сервер, используя запись DNS или изменив строки подключения).  Метод новой установки сокращает риски и время простоя по сравнению с обновлением на месте и упрощает обновление оборудования и операционной системы, необходимые для обновления до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Если уже имеется решение высокой доступности или какие-либо другие среды с несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], перейдите к разделу [Последовательное обновление](#RollingUpgrade). Если решения высокой доступности нет, можно временно настроить [зеркальное отображение базы данных](../database-mirroring/setting-up-database-mirroring-sql-server.md) , чтобы дополнительно сократить время простоя для упрощения обновления, или воспользоваться этой возможностью для настройки [группы доступности AlwaysOn](http://msdn.microsoft.com/library/hh510260.aspx) в качестве постоянного решения высокой доступности.  
+>  Если уже имеется решение высокой доступности или какие-либо другие среды с несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], перейдите к разделу [Последовательное обновление](#RollingUpgrade). Если решения высокой доступности нет, можно временно настроить [зеркальное отображение базы данных](../database-mirroring/setting-up-database-mirroring-sql-server.md) , чтобы дополнительно сократить время простоя для упрощения обновления, или воспользоваться этой возможностью для настройки [группы доступности AlwaysOn](https://msdn.microsoft.com/library/hh510260.aspx) в качестве постоянного решения высокой доступности.  
   
  Например, этот подход можно использовать для обновления:  
   
--   установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в неподдерживаемой операционной системе;  
+-   установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в неподдерживаемой операционной системе;    
+-   установки SQL Server для архитектуры x86, поскольку [!INCLUDE[ss2016](../../includes/sssql15-md.md)] и более поздних версий не поддерживает установки x86;   
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на новом оборудовании или в новой версии операционной системы.    
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в сочетании с консолидацией серверов;   
+-   SQL Server 2005, поскольку [!INCLUDE[ss2016](../../includes/sssql15-md.md)] и более поздних версий не поддерживает обновление выпуска SQL Server 2005 на месте. Дополнительные сведения см. в статье [Обновление SQL Server 2005](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).
+
   
--   установки SQL Server для архитектуры x86, поскольку [!INCLUDE[ss2016](../../includes/sssql15-md.md)] и более поздних версий не поддерживает установки x86;  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на новом оборудовании или в новой версии операционной системы.  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в сочетании с консолидацией серверов;  
-  
--   SQL Server 2005, поскольку [!INCLUDE[ss2016](../../includes/sssql15-md.md)] и более поздних версий не поддерживает обновление выпуска SQL Server 2005 на месте. Дополнительные сведения см. в статье [Обновление SQL Server 2005](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).  
-  
- Действия, необходимые для обновления методом новой установки, немного различаются в зависимости от того, используется ли подключенное хранилище или хранилище SAN.  
+Действия, необходимые для обновления методом новой установки, немного различаются в зависимости от того, используется ли подключенное хранилище или хранилище SAN.  
   
 -   **Среда с подключенным хранилищем**. При наличии среды [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], использующей подключенное хранилище, ознакомьтесь со следующей схемой и ссылками на схеме, которые описывают действия, необходимые для обновления путем новой установки [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -104,19 +101,14 @@ ms.locfileid: "50970785"
   
      ![Новый метод обновления установки путем отсоединения и прикрепления хранилища SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Новый метод обновления установки путем отсоединения и прикрепления хранилища SAN")  
   
-##  <a name="RollingUpgrade"></a> Последовательное обновление  
+## <a name="rolling-upgrade"></a>Последовательное обновление  
  Последовательное обновление требуется в средах SQL Server с несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые должны быть обновлены в определенном порядке для сокращения времени простоя и рисков и сохранения функциональности среды. Последовательное обновление является, по существу, обновлением нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в определенном порядке путем обновления на месте каждого имеющегося экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или путем новой установки (что упрощает обновление оборудования и операционной системы в рамках проекта обновления среды). Существует ряд сценариев, в которых необходимо использовать метод последовательного обновления. Все они описаны в следующих статьях:  
   
--   Группы доступности AlwaysOn. Подробное описание процедуры последовательного обновления в этой среде см. в разделе [Обновление экземпляров реплики группы доступности AlwaysOn](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
-  
--   Экземпляры отказоустойчивых кластеров. Подробное описание процедуры последовательного обновления в этой среде см. в разделе [Обновление экземпляра отказоустойчивого кластера SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md).  
-  
--   Зеркальные экземпляры. Подробное описание процедуры последовательного обновления в этой среде см. в разделе [Обновление зеркальных экземпляров](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
-  
--   Экземпляры доставки журналов. Подробное описание процедуры последовательного обновления в этой среде см. в разделе [Обновление доставки журналов до SQL Server (Transact-SQL)](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md).  
-  
--   Среда репликации. Подробное описание процедуры последовательного обновления в этой среде см. в статье [Обновление реплицированных баз данных](../../database-engine/install-windows/upgrade-replicated-databases.md).
-  
+-   Группы доступности AlwaysOn. Подробное описание процедуры последовательного обновления в этой среде см. в разделе [Обновление экземпляров реплики группы доступности AlwaysOn](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).    
+-   Экземпляры отказоустойчивых кластеров. Подробное описание процедуры последовательного обновления в этой среде см. в разделе [Обновление экземпляра отказоустойчивого кластера SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md).    
+-   Зеркальные экземпляры. Подробное описание процедуры последовательного обновления в этой среде см. в разделе [Обновление зеркальных экземпляров](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).    
+-   Экземпляры доставки журналов. Подробное описание процедуры последовательного обновления в этой среде см. в разделе [Обновление доставки журналов до SQL Server (Transact-SQL)](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md).    
+-   Среда репликации. Подробное описание процедуры последовательного обновления в этой среде см. в статье [Обновление реплицированных баз данных](../../database-engine/install-windows/upgrade-replicated-databases.md).  
 -   Масштабируемая среда SQL Server Reporting Services. Подробное описание процедуры последовательного обновления в этой среде см. в разделе [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="next-steps"></a>Следующие шаги

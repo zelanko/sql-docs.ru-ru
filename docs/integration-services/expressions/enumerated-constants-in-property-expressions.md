@@ -18,12 +18,12 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5cb3e406f070d9bf527b4f6c8a65fb0dd6e2dda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b035d9f36acfa1f01e7eafdb81d68f647d874db5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736892"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638971"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Констант-перечислителей в выражениях свойств
   Если выражения свойств включают в себя значения из списка элементов-перечислителей, эти выражения должны использовать числовое значение элементов-перечислителей вместо понятного имени элемента. Например, если выражение устанавливает свойство **LoggingMode** , необходимо использовать числовое значение 2 вместо понятного имени «Запрещено».  
@@ -581,7 +581,7 @@ ms.locfileid: "47736892"
 |Failure|1|  
 |Completion|2|  
   
- Свойство**IsolationLevel** устанавливается перечислением **IsolationLevel** платформы .NET Framework. Дополнительные сведения см. в документации по библиотеке классов платформы .NET Framework в [Библиотеке MSDN](http://go.microsoft.com/fwlink?LinkId=17313).  
+ Свойство**IsolationLevel** устанавливается перечислением **IsolationLevel** платформы .NET Framework. Дополнительные сведения см. в документации по библиотеке классов платформы .NET Framework в [Библиотеке MSDN](https://go.microsoft.com/fwlink?LinkId=17313).  
   
  Свойство**LoggingMode** устанавливается с помощью значений перечисления **DTSLoggingMode** .  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67eab65f8ead5fe1cc4934671f8d11be2944044a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30514478f54d71d88245ace385600cb2931101eb
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737742"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814147"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)
 Вы можете узнать, как добавить действия гиперссылок в текстовые поля, изображения, диаграммы и датчики в отчеты с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Ссылки могут указывать на другие отчеты, закладки в отчете либо статические или динамические URL-адреса. 
@@ -73,9 +73,9 @@ ms.locfileid: "47737742"
   
 4.  В поле **Выбор URL-адреса**введите или выберите URL-адрес или выражение, результатом которого является URL-адрес, или нажмите стрелку вниз и щелкните имя содержащего URL-адрес поля. 
 
-    Для элемента, опубликованного на сервере отчетов, который настроен для работы в собственном режиме, указывается полный или относительный путь. Например, `http://<servername>/images/image1.jpg`. 
+    Для элемента, опубликованного на сервере отчетов, который настроен для работы в собственном режиме, указывается полный или относительный путь. Например, `https://<servername>/images/image1.jpg`. 
     
-    Для элемента, опубликованного на сервере отчетов, работающем в режиме интеграции с SharePoint, указывается полный URL-адрес. Например, `http://<SharePointservername>/<site>/Documents/images/image1.jpg`.
+    Для элемента, опубликованного на сервере отчетов, работающем в режиме интеграции с SharePoint, указывается полный URL-адрес. Например, `https://<SharePointservername>/<site>/Documents/images/image1.jpg`.
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

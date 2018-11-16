@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 4283b58d3bdf3b74f663a2a6632d5aa00fba2381
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 9d68be09f17fcb9cbd084c5567c7edae87e0ca5a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100205"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605424"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Обновление Power Pivot для SharePoint
 
@@ -26,7 +26,7 @@ ms.locfileid: "50100205"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
- Сведения о выпуске см. в статье [SQL Server 2016 Release Notes](http://go.microsoft.com/fwlink/?LinkID=398124)(Заметки о выпуске SQL Server 2016).  
+ Сведения о выпуске см. в статье [SQL Server 2016 Release Notes](https://go.microsoft.com/fwlink/?LinkID=398124)(Заметки о выпуске SQL Server 2016).  
   
  **В этой статье:**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "50100205"
   
  **SharePoint 2010.**  
   
--   Если существующая установка выполняет SharePoint 2010, установите пакет обновления 2 (SP2) для SharePoint 2010 перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Дополнительные сведения см. в разделе [Пакет обновления 2 (SP2) для Microsoft SharePoint 2010](http://www.microsoft.com/download/details.aspx?id=39672). Используйте команду PowerShell `(Get-SPfarm).BuildVersion.ToString()` , чтобы проверить версию. Для получения информации о дате выпуска по версии сборки см. раздел [Номера сборок в SharePoint 2010](http://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
+-   Если существующая установка выполняет SharePoint 2010, установите пакет обновления 2 (SP2) для SharePoint 2010 перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Дополнительные сведения см. в разделе [Пакет обновления 2 (SP2) для Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Используйте команду PowerShell `(Get-SPfarm).BuildVersion.ToString()` , чтобы проверить версию. Для получения информации о дате выпуска по версии сборки см. раздел [Номера сборок в SharePoint 2010](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
   
 ##  <a name="bkmk_uprgade_sharepoint2013"></a> Обновление существующей фермы SharePoint 2013  
  Для обновления [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , развернутых в SharePoint 2013, выполните следующие действия.  
@@ -92,7 +92,7 @@ ms.locfileid: "50100205"
   
 2.  Перезапустите сервер.  
   
-3.  Запустите надстройку [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint (**spPowerPivot.msi**) на каждом сервере в ферме SharePoint 2013, чтобы установить поставщики данных. Исключением будут серверы, где вы запустили мастер установки SQL Server, который также обновляет поставщики данных. Дополнительные сведения см. в разделах [Загрузка Microsoft SQL Server 2014 Power Pivot для Microsoft SharePoint 2013](https://www.microsoft.com/en-us/download/details.aspx?id=42300) и [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  Запустите надстройку [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint (**spPowerPivot.msi**) на каждом сервере в ферме SharePoint 2013, чтобы установить поставщики данных. Исключением будут серверы, где вы запустили мастер установки SQL Server, который также обновляет поставщики данных. Дополнительные сведения см. в разделах [Загрузка Microsoft SQL Server 2014 Power Pivot для Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) и [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 4.  **Запустите надстройку [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013** на одном из серверов приложений SharePoint, чтобы настроить ферму SharePoint, используя обновленные файлы решений, которые были установлены надстройкой. На этом шаге нельзя использовать центр администрирования SharePoint. Дополнительные сведения см. в следующих разделах:  
   
@@ -144,7 +144,7 @@ ms.locfileid: "50100205"
   
  ![обновление powerpivot для sharepoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "обновление powerpivot для sharepoint 2010")  
   
-1.  Загрузите [Пакет обновления 2 (SP2) для Microsoft SharePoint 2010](http://www.microsoft.com/download/details.aspx?id=39672) и примените его на всех серверах в ферме. Проверьте успешность установки SharePoint с пакетом обновления 2 (SP2). В центре администрирования на странице «Обновление и миграция» откройте страницу состояния «Проверка установки продукта и обновлений», чтобы просмотреть сообщения о состоянии, относящиеся к пакету обновления 2 (SP2).  
+1.  Загрузите [Пакет обновления 2 (SP2) для Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672) и примените его на всех серверах в ферме. Проверьте успешность установки SharePoint с пакетом обновления 2 (SP2). В центре администрирования на странице «Обновление и миграция» откройте страницу состояния «Проверка установки продукта и обновлений», чтобы просмотреть сообщения о состоянии, относящиеся к пакету обновления 2 (SP2).  
   
 2.  Убедитесь, что служба администрирования Windows SharePoint 2010 запущена.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "50100205"
   
          Нажмите кнопку **Да** для перезаписи книг книгами более новой версии. В противном случае нажмите кнопку **Нет** , чтобы вернуться на главную страницу. Сохраните книги в другой папке, чтобы иметь их копии, и затем вернитесь к этому шагу для продолжения.  
   
-         Дополнительные сведения о настройке книг, используемых на панели управления, см. в статье [Customizing the Power Pivot Management Dashboard](http://go.microsoft.com/fwlink/?linkID=229639)(Настройка панели управления PowerPivot).  
+         Дополнительные сведения о настройке книг, используемых на панели управления, см. в статье [Customizing the Power Pivot Management Dashboard](https://go.microsoft.com/fwlink/?linkID=229639)(Настройка панели управления PowerPivot).  
   
     5.  Просмотрите действия в списке задач и исключите те, которые средство настройки не должно выполнять. По умолчанию в список включены все действия. Чтобы удалить действие, выберите его в списке задач и снимите флажок напротив параметра **Включить это действие в список задач** на странице «Параметры».  
   
@@ -351,15 +351,15 @@ Get-PowerPivotSystemService
 |Проверьте, запущена ли служба на всех компьютерах, где работает [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint.|[Запуск и остановка службы PowerPivot для SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)|  
 |Проверьте активацию компонентов на уровне семейства веб-сайтов.|[Включение интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|  
 |Проверьте, правильно ли загружаются книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , открыв книгу и выбрав фильтры и срезы, чтобы выполнить запрос.|Проверьте наличие кэшированных файлов на жестком диске. Если файл присутствует в кэше, значит этот файл данных загрузился на данном физическом сервере. Кэшированные файлы находятся в расположении C:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\Backup.|  
-|Проверьте функцию обновления данных в выбранных книгах, настроенных для поддержки обновления данных.|Самый простой способ проверки обновления данных заключается в изменении расписания обновления данных с помощью установки флажка **Обновлять при первой возможности** , чтобы операции обновления данных выполнялись немедленно. При помощи этого шага удастся определить успешность обновления данных для текущей книги. Повторите эти шаги для других часто используемых книг, чтобы убедиться, что обновление данных работает. Дополнительные сведения о планировании обновления данных см. в разделе [Планирование обновления данных (Power Pivot для SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
+|Проверьте функцию обновления данных в выбранных книгах, настроенных для поддержки обновления данных.|Самый простой способ проверки обновления данных заключается в изменении расписания обновления данных с помощью установки флажка **Обновлять при первой возможности** , чтобы операции обновления данных выполнялись немедленно. При помощи этого шага удастся определить успешность обновления данных для текущей книги. Повторите эти шаги для других часто используемых книг, чтобы убедиться, что обновление данных работает. Дополнительные сведения о планировании обновления данных см. в разделе [Планирование обновления данных (Power Pivot для SharePoint)](https://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
 |Следите за отчетами об обновлении данных на панели управления для мониторинга [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , чтобы убедиться в отсутствии ошибок обновления данных.|[Информационная панель управления PowerPivot и данные об использовании](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)|  
   
  Дополнительные сведения о настройке параметров и функций [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] см. в разделе [Администрирование и конфигурация сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
- Пошаговые инструкции по выполнению всех задач по настройке системы после установки см. в разделе [Первоначальная настройка (Power Pivot для SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
+ Пошаговые инструкции по выполнению всех задач по настройке системы после установки см. в разделе [Первоначальная настройка (Power Pivot для SharePoint)](https://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   
 ## <a name="see-also"></a>См. также:  
  [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [Установка Power Pivot для SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
+ [Установка Power Pivot для SharePoint 2010](https://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   
   

@@ -16,21 +16,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ad995a0165c02f9af769071b86cea6699ae35f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 450e93877ecabb524e5307a5ec940de32859ead6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659192"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656954"
 ---
 # <a name="event-tracing-for-windows-target"></a>Цель «Средство трассировки событий для Windows»
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Прежде чем использовать средство трассировки событий для Windows (ETW) в качестве назначения, рекомендуется сначала попрактиковаться в работе с данным средством. Трассировка событий Windows используется совместно с расширенными событиями или в качестве потребителя расширенных событий. Следующие внешние ссылки помогут получить начальные сведения о трассировке событий Windows.  
   
--   [События Windows](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [События Windows](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [Усовершенствованные отладка и настройка производительности с помощью приложения ETW](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [Усовершенствованные отладка и настройка производительности с помощью приложения ETW](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  Цель «Трассировка событий Windows» является одноэлементным целевым объектом, хотя она может быть добавлена в несколько сеансов. Если событие происходит в нескольких сеансах, то данное событие будет передано цели трассировки событий Windows по одному разу для каждого произошедшего события. Каждый процесс может иметь только одну подсистему расширенных событий.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47659192"
     > [!IMPORTANT]  
     >  После начала первого сеанса путь к файлу изменить нельзя.  
   
--   MOF-файлы находятся в папке: *\<ваш путь установки>* \Microsoft SQL Server\Shared. Дополнительные сведения см. в разделе [Формат управляющих объектов](http://go.microsoft.com/fwlink/?LinkId=92851) библиотеки MSDN.  
+-   MOF-файлы находятся в папке: *\<ваш путь установки>* \Microsoft SQL Server\Shared. Дополнительные сведения см. в разделе [Формат управляющих объектов](https://go.microsoft.com/fwlink/?LinkId=92851) библиотеки MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Добавление цели к сеансу  
  Для добавления назначения счетчика событий в сеанс расширенных событий следует использовать одну из следующих инструкций при создании или изменении сеанса события:  
@@ -91,7 +91,7 @@ ADD TARGET package0.etw_classic_sync_target
  Дополнительные сведения о полном примере, который показывает, как использовать назначение трассировки событий, включая просмотр данных, см. в разделе [отслеживать активность системы с помощью расширенных событий](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Цели расширенных событий SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [Цели расширенных событий SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)  

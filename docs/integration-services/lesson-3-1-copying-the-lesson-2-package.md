@@ -11,12 +11,12 @@ ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cc63345e757ca07490a6bf365c2523ccda8b0c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae60895da9a461b7bcf7fb8fa034833e39c68e1a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761452"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637791"
 ---
 # <a name="lesson-3-1---copying-the-lesson-2-package"></a>Занятие 3–1. Копирование пакета, созданного на занятии 2
 В этой задаче будет создана копия пакета Lesson 2.dtsx, созданного на занятии 2. Либо можно добавить пакет для занятия 2, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 3.  
@@ -53,7 +53,7 @@ ms.locfileid: "47761452"
   
     Чтобы загрузить все пакеты занятий этого учебника, выполните следующие действия.  
   
-    1.  Перейдите к [образцам продуктов служб Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027).  
+    1.  Перейдите к [образцам продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027).  
   
     2.  Перейдите на вкладку **DOWNLOADS** .  
   

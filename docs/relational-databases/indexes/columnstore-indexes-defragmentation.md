@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d45abb440171cb263cb0b5a1d030ca46dfcf30f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67fe252e91145a427e7bd42064733ae78835d8cc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688852"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667593"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Дефрагментация индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -206,7 +206,7 @@ ms.locfileid: "47688852"
 
 ## <a name="automatic-index-and-statistics-management"></a>Автоматическое управление индексами и статистикой
 
-Используйте такие решения, как [Адаптивная дефрагментация индексов](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), чтобы автоматически управлять дефрагментацией индексов и обновлениями статистики для одной базы данных или нескольких. Эта процедура автоматически выбирает, следует ли перестроить или реорганизовать индекс, сверяясь с уровнем фрагментации и другими параметрами, и обновляет статистику на основе линейных пороговых значений.
+Используйте такие решения, как [Адаптивная дефрагментация индексов](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), чтобы автоматически управлять дефрагментацией индексов и обновлениями статистики для одной базы данных или нескольких. Эта процедура автоматически выбирает, следует ли перестроить или реорганизовать индекс, сверяясь с уровнем фрагментации и другими параметрами, и обновляет статистику на основе линейных пороговых значений.
 
 ## <a name="see-also"></a>См. также:        
 [Новые возможности индексов columnstore](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)    
@@ -214,6 +214,6 @@ ms.locfileid: "47688852"
 [Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
 [Индексы сolumnstore для хранилищ данных](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
 [Архитектура индексов columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)    
-[Адаптивная дефрагментация индексов](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)    
+[Адаптивная дефрагментация индексов](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)    
   
   

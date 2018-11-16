@@ -21,12 +21,12 @@ ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4377510dfc8b5e32c51d27b3f8fc311da7ad7d6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1247bcaa04c14a822a333dc99f5a38e5354b247
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672272"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606194"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Включение или отключение сетевого протокола сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47672272"
 >  Во время установки [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] для группы BUILTIN\Users добавляется имя входа. Благодаря этому все прошедшие проверку подлинности пользователи компьютера получают доступ к экземпляру [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] как члены роли public. Имя входа группы BUILTIN\Users можно удалить, чтобы ограничить доступ к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] только пользователям компьютера, у которых есть отдельные имена входа, или членам других групп Windows с именами входа.  
   
 > [!WARNING]  
->  Поставщики данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] для версий с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по [!INCLUDE[sssql14](../../includes/sssql14-md.md)] по умолчанию поддерживают только TLS 1.0 и SSL 3.0. Если применить другой протокол (например, TLS 1.1 или TLS 1.2), изменив протокол на уровне операционной системы SChannel, то подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может завершиться ошибкой, если не установлено соответствующее обновление для поддержки TLS 1.1 и 1.2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое указано <a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">здесь</a>. Начиная с [!INCLUDE[sssql15](../../includes/sssql15-md.md)] все выпуски SQL Server поддерживают TLS 1.2 без установки дополнительных обновлений.
+>  Поставщики данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] для версий с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по [!INCLUDE[sssql14](../../includes/sssql14-md.md)] по умолчанию поддерживают только TLS 1.0 и SSL 3.0. Если применить другой протокол (например, TLS 1.1 или TLS 1.2), изменив протокол на уровне операционной системы SChannel, то подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может завершиться ошибкой, если не установлено соответствующее обновление для поддержки TLS 1.1 и 1.2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое указано <a href="https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server">здесь</a>. Начиная с [!INCLUDE[sssql15](../../includes/sssql15-md.md)] все выпуски SQL Server поддерживают TLS 1.2 без установки дополнительных обновлений.
   
  **В этом разделе**  
   

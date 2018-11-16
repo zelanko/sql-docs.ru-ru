@@ -16,12 +16,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f25b8dbbbf0bed4b0d8c667dee5aaec705303c95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 338e076b2a95d7086b0acc22dff1d85e4327844d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825022"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665823"
 ---
 # <a name="create-a-publication"></a>Create a Publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47825022"
 -   Названия публикаций и статей не могут содержать следующие символы: %, \*, [ , ], |, :, ", ? , ' , \ , / , < , >. Если в базе данных есть объекты, имена которых содержат любые из этих символов, и их нужно реплицировать, необходимо задать для статьи имя, отличное от имени объекта, в диалоговом окне **Свойства статьи — \<статья>** на странице **Статьи** мастера.  
   
 ###  <a name="Security"></a> безопасность  
- По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](http://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+ По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Создание публикаций и определение статей осуществляется с помощью мастера создания публикаций. После создания публикации вы можете просмотреть и изменить ее свойства в диалоговом окне **Свойства публикации — \<публикация>**. Дополнительные сведения о создании публикаций из базы данных Oracle вы найдете в [этой статье](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  

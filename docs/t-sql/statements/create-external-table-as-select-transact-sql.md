@@ -21,12 +21,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ff275d2aad6d9ccf24ed632a8515e7ce8ea3fc2
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 16d8cdfb5400e213b57dd9f81f85df370662355e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254460"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697212"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -168,7 +168,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   перемещение "внешнее секционирование"  
   
- **ПРИМЕНИМО К:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]В качестве обязательного условия создания внешней таблицы администратор устройства должен настроить подключение Hadoop. Дополнительные сведения см. в разделе "Настройка подключения к внешним данным" (Analytics Platform System) в документации APS, доступной для скачивания [здесь](http://www.microsoft.com/download/details.aspx?id=48241).  
+ **ПРИМЕНИМО К:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]В качестве обязательного условия создания внешней таблицы администратор устройства должен настроить подключение Hadoop. Дополнительные сведения см. в разделе "Настройка подключения к внешним данным" (Analytics Platform System) в документации APS, доступной для скачивания [здесь](https://www.microsoft.com/download/details.aspx?id=48241).  
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  Поскольку данные внешней таблицы находится за пределами базы данных, операции резервного копирования и восстановления будут выполняться только с данными, сохраненными в базе данных. Это означает, что копируются и восстанавливаются только метаданные.  

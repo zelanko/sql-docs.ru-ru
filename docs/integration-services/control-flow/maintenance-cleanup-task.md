@@ -17,12 +17,12 @@ ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8207f406ff99b59aabbccc182c2074a88a8370b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 296055ef99184d1ea38bf4811bc9ec8b9fb6c690
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607802"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640241"
 ---
 # <a name="maintenance-cleanup-task"></a>задача «Очистка после обслуживания»
   Задача «Очистка после обслуживания» удаляет файлы, относящиеся к планам обслуживания, включая файлы резервных копий баз данных и отчеты, созданные планами обслуживания. Дополнительные сведения см. в разделах [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md) и [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "47607802"
 -   [Задача "Очистка после обслуживания" (план обслуживания)](../../relational-databases/maintenance-plans/maintenance-cleanup-task-maintenance-plan.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

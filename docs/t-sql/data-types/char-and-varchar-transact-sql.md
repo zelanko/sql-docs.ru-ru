@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6bba11fe5be282ad804fc6dee03229312ec1d37
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: e3eae62b963843c369731ca0abd800c9552c37d3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970916"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698831"
 ---
 # <a name="char-and-varchar-transact-sql"></a>Типы char и varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50970916"
 > [!div class="nextstepaction"]
 > [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-Типы данных char имеют фиксированную (**char**) или переменную (**varchar**) длину. Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] при использовании параметров сортировки с поддержкой UTF-8 эти типы данных хранят весь диапазон символьных данных [Юникод](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) и используют кодировку [UTF-8](http://www.wikipedia.org/wiki/UTF-8). Если указаны параметры сортировки без поддержки UTF-8, эти типы данных хранят только подмножество символьных данных, поддерживаемых соответствующей кодовой страницей указанных параметров сортировки.
+Типы данных char имеют фиксированную (**char**) или переменную (**varchar**) длину. Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] при использовании параметров сортировки с поддержкой UTF-8 эти типы данных хранят весь диапазон символьных данных [Юникод](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) и используют кодировку [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Если указаны параметры сортировки без поддержки UTF-8, эти типы данных хранят только подмножество символьных данных, поддерживаемых соответствующей кодовой страницей указанных параметров сортировки.
   
 ## <a name="arguments"></a>Аргументы  
 **char** [ ( *n* ) ] — строковые данные фиксированной длины. *n* определяет длину строки в байтах и должно иметь значение от 1 до 8000. Для однобайтовых кодировок, таких как *Latin*, размер при хранении равен *n* байт, а количество хранимых символов — тоже *n*. Для многобайтовых кодировок размер при хранения тоже равен *n* байт, но количество хранимых символов может быть меньше *n*. Синонимом по стандарту ISO для типа **char** является **character**. Дополнительные сведения о кодировках см. в статье [Однобайтовые и многобайтовые кодировки](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).

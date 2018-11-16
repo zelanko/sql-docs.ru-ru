@@ -15,12 +15,12 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e2eb2f1b799773eb0a6a334828573a89b25a08c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3322acb510ffa57582b27a8a0b2efc728459bf53
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664752"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674853"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Управление размером файла журнала транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47664752"
 Для получения сведений о текущем размере файла журнала, его максимальном размере и параметре автоматического увеличения файла вы можете также использовать столбцы **size**, **max_size** и **growth** для данного файла журнала в представлении [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
 > [!IMPORTANT]
-> Избегайте переполнения содержащего журналы диска. Хранилище журналов должно отвечать требованиям к [числу операций ввода-вывода в секунду](http://wikipedia.org/wiki/IOPS) и низкой задержке для транзакционной нагрузки. 
+> Избегайте переполнения содержащего журналы диска. Хранилище журналов должно отвечать требованиям к [числу операций ввода-вывода в секунду](https://wikipedia.org/wiki/IOPS) и низкой задержке для транзакционной нагрузки. 
   
 ##  <a name="ShrinkSize"></a> Уменьшение размера файла журнала  
  Для уменьшения реального размера физического файла журнала необходимо выполнить его сжатие. Это полезно, если файл журнала транзакций содержит неиспользованное пространство. Вы можете сжать файл журнала, только если база данных активна и хотя бы один [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) свободен. В ряде случаев сжатие невозможно до тех пор, пока не выполнена следующая операция усечения журнала.  
@@ -101,9 +101,9 @@ ms.locfileid: "47664752"
       |Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Данные — 1 МБ. Файлы журналов — 10 %.|  
       |До [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Данные — 10 %. Файлы журналов — 10 %.|  
 
--   При небольшом шаге приращения может формироваться слишком много [виртуальных файлов журнала](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) малого размера и снижаться производительность. Чтобы определить оптимальное распределение виртуальных файлов журнала для текущего размера журнала транзакций всех баз данных в определенном экземпляре, а также требуемые приращения для достижения нужного размера, см. следующий [скрипт](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+-   При небольшом шаге приращения может формироваться слишком много [виртуальных файлов журнала](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) малого размера и снижаться производительность. Чтобы определить оптимальное распределение виртуальных файлов журнала для текущего размера журнала транзакций всех баз данных в определенном экземпляре, а также требуемые приращения для достижения нужного размера, см. следующий [скрипт](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
--   При большом шаге приращения может формироваться слишком мало крупных [виртуальных файлов журнала](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch), что также повлияет на производительность. Чтобы определить оптимальное распределение виртуальных файлов журнала для текущего размера журнала транзакций всех баз данных в определенном экземпляре, а также требуемые приращения для достижения нужного размера, см. следующий [скрипт](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
+-   При большом шаге приращения может формироваться слишком мало крупных [виртуальных файлов журнала](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch), что также повлияет на производительность. Чтобы определить оптимальное распределение виртуальных файлов журнала для текущего размера журнала транзакций всех баз данных в определенном экземпляре, а также требуемые приращения для достижения нужного размера, см. следующий [скрипт](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
 
 -   Даже если включено автоматическое увеличение, вы можете получить сообщение, что журнал транзакций заполнен, если его размер не может достаточно быстро увеличиваться под нужды вашего запроса. Дополнительные сведения об изменении шага приращения см. в разделе [Параметры инструкции ALTER DATABASE (Transact-SQL) для файлов и файловых групп](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
 

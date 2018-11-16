@@ -18,12 +18,12 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 136cc16c9a28fbaddeb0ebe655db016697ef3c1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0940bc5266111c55437a5d45ad64595787eace40
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821162"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642281"
 ---
 # <a name="data-conversion-transformation"></a>преобразование «Конвертация данных»
   При преобразовании «Конвертация данных» данные во входном столбце преобразуются в другой тип, а затем копируются в новый выходной столбец. Например, пакет может извлечь данные из нескольких источников, а затем с помощью этого преобразования привести столбцы к типу данных, требуемому целевым хранилищем данных. К одному входному столбцу можно применять несколько преобразований.  
@@ -47,10 +47,10 @@ ms.locfileid: "47821162"
  Это преобразование имеет один вход, один выход и один выход ошибок.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- Свойства могут устанавливаться через конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или с помощью программных средств. Сведения об использовании преобразования "Конвертация данных" в конструкторе SSIS см. в разделе [Преобразование данных в другой тип данных с помощью преобразования "Конвертация данных"](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md). Сведения о настройке свойств этого преобразования программными средствами см. в разделах [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) и [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+ Свойства могут устанавливаться через конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или с помощью программных средств. Сведения об использовании преобразования "Конвертация данных" в конструкторе SSIS см. в разделе [Преобразование данных в другой тип данных с помощью преобразования "Конвертация данных"](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md). Сведения о настройке свойств этого преобразования программными средствами см. в разделах [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) и [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ## <a name="related-content"></a>См. также  
- Запись в блоге [Сравнение производительности между способами преобразования типов данных в службах SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823)на сайте blogs.msdn.com.  
+ Запись в блоге [Сравнение производительности между способами преобразования типов данных в службах SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823)на сайте blogs.msdn.com.  
   
 ## <a name="data-conversion-transformation-editor"></a>редактор преобразования «Конвертация данных»
   Используйте диалоговое окно **Редактор преобразования «Конвертация данных»** , чтобы выбрать столбцы, подлежащие преобразованию, выбрать тип данных, в который должен быть преобразован столбец, и установить атрибуты преобразования.  
@@ -84,10 +84,10 @@ ms.locfileid: "47821162"
  Выберите подходящую кодовую страницу для столбцов типа DT_STR.  
   
  **Настройка вывода ошибок**  
- Укажите способ обработки ошибок уровня строк в диалоговом окне [Настройка вывода ошибок](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
+ Укажите способ обработки ошибок уровня строк в диалоговом окне [Настройка вывода ошибок](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
   
 ## <a name="see-also"></a>См. также:  
- [Быстрый синтаксический анализ](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [Быстрый синтаксический анализ](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

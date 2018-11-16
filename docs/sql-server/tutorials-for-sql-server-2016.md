@@ -10,19 +10,19 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5ad1d1c83e2b736be9ea0dde4067316f08dd0646
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: f1b3d7cf26ad49a690d3c93dcf8b742c28caa303
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419151"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701229"
 ---
 # <a name="tutorials-for-sql-server"></a>Руководства по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] предоставляет руководства, которые помогут вам изучить новые технологии и возможности. Руководства по более ранним версиям обычно подходят и к более поздним. При упоминании новой функции в руководстве также указывается минимальная необходимая версия.  
      
 -   Если в руководстве используется одна из баз данных [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], необходимо загрузить и использовать последнюю версию из CodePlex. Дополнительные сведения см. в статье [Примеры баз данных и сценариев AdventureWorks для SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
--   Чтобы скачать книгу [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] и отчеты [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] для учебников [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , перейдите на страницу [Образцы Power View для SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
+-   Чтобы скачать книгу [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] и отчеты [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] для учебников [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , перейдите на страницу [Образцы Power View для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=220734).  
 - Ознакомьтесь с новым образцом [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) , доступным в репозитории GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples) . 
 
  
@@ -32,7 +32,7 @@ ms.locfileid: "49419151"
 |--------------|---------------|  
 |[Учебники по службам Analysis Services (SSAS)](../analysis-services/analysis-services-tutorials-ssas.md)|Сведения о разработке и развертывании табличных и многомерных моделей служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Также рассказывается об использовании таких средств, как PowerPivot для анализа данных в моделях.|  
 |[Учебники по компоненту ядра СУБД](../relational-databases/database-engine-tutorials.md)|Узнайте, как подключаться к экземпляру ядра СУБД, а затем создавать и выполнять инструкции Transact-SQL.|  
-|[Учебники по информационному менеджменту предприятия](http://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Сведения о том, как осуществляется управление данными на предприятии с использованием технологии Microsoft EIM.|  
+|[Учебники по информационному менеджменту предприятия](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Сведения о том, как осуществляется управление данными на предприятии с использованием технологии Microsoft EIM.|  
 |[Учебники по службам Integration Services](../integration-services/integration-services-tutorials.md)|Узнайте, как создавать и развертывать пакеты [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Учебники по репликации](../relational-databases/replication/replication-tutorials.md)|Сведения об установке и запуске топологий репликации с помощью [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Учебники по службам Reporting Services (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|Научитесь создавать основные отчеты и подписки.|  
@@ -44,7 +44,7 @@ ms.locfileid: "49419151"
   
  - [Учебные материалы по SQL Server 2012](https://msdn.microsoft.com/library/hh231699(v=sql.110).aspx)  
   
- - [Учебные материалы по SQL Server 2008 R2](http://msdn.microsoft.com/library/ms167593.aspx)   
+ - [Учебные материалы по SQL Server 2008 R2](https://msdn.microsoft.com/library/ms167593.aspx)   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

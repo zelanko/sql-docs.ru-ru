@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe36e8787e37bc82336322e67cb59b804d021baf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2589c948149b92541910b68e7da3c6cca414d2b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768902"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667184"
 ---
 # <a name="always-encrypted-cryptography"></a>Системы шифрования c технологиями постоянного шифрования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47768902"
 ## <a name="data-encryption-algorithm"></a>Алгоритм шифрования данных  
  Для шифрования данных в базе данных в технологии постоянного шифрования данных используется алгоритм **AEAD_AES_256_CBC_HMAC_SHA_256** .  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256** является производным от проекта спецификации, расположенного по адресу [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). В нем используется схема аутентифицированного шифрования с присоединенными данными, при которой сначала выполняется шифрование сообщения, а затем проверка подлинности. То есть открытый текст сначала шифруется, а затем на основе полученного зашифрованного текста создается имитовставка MAC.  
+ **AEAD_AES_256_CBC_HMAC_SHA_256** является производным от проекта спецификации, расположенного по адресу [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). В нем используется схема аутентифицированного шифрования с присоединенными данными, при которой сначала выполняется шифрование сообщения, а затем проверка подлинности. То есть открытый текст сначала шифруется, а затем на основе полученного зашифрованного текста создается имитовставка MAC.  
   
- Чтобы скрыть шаблоны, в алгоритме **AEAD_AES_256_CBC_HMAC_SHA_256** используется метод применения блочного шифра, в котором исходные значения шифруются с использованием вектора инициализации (IV). Полное описание режима CBC можно найти по адресу [ http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf ](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
+ Чтобы скрыть шаблоны, в алгоритме **AEAD_AES_256_CBC_HMAC_SHA_256** используется метод применения блочного шифра, в котором исходные значения шифруются с использованием вектора инициализации (IV). Полное описание режима CBC можно найти по адресу [ https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf ](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
   
  Алгоритм**AEAD_AES_256_CBC_HMAC_SHA_256** вычисляет значение зашифрованного текста для заданного значения открытого текста с помощью следующих шагов.  
   
@@ -176,7 +176,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|Не поддерживается.|  
   
 ## <a name="net-reference"></a>Справочник по .NET  
- Дополнительные сведения об алгоритмах, описанных в этой статье, см. в файлах **SqlAeadAes256CbcHmac256Algorithm.cs** и **SqlColumnEncryptionCertificateStoreProvider.cs** в [справочнике по .NET](http://referencesource.microsoft.com/).  
+ Дополнительные сведения об алгоритмах, описанных в этой статье, см. в файлах **SqlAeadAes256CbcHmac256Algorithm.cs** и **SqlColumnEncryptionCertificateStoreProvider.cs** в [справочнике по .NET](https://referencesource.microsoft.com/).  
   
 ## <a name="see-also"></a>См. также:  
  [Постоянное шифрование (компонент Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

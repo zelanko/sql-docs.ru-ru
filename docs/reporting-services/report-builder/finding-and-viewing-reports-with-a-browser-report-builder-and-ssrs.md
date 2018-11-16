@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb30ef71e0467d6f35fdd21cc8a1b1c42eed76fa
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: de8212e368af4af5eea3f0dba358b93d211af539
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031363"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812687"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Поиск и просмотр отчетов с помощью браузера (построитель отчетов и службы SSRS)
   Для просмотра отчета при непосредственном соединении с сервером отчетов можно использовать любой поддерживаемый веб-браузер. Каждому отчету на сервере отчетов соответствует URL-адрес. Предусмотрена возможность ввести веб-адрес отчета, чтобы открыть его в окне браузера независимо от веб-приложения. Отчет открывается в формате HTML и включает панель инструментов отчета, с помощью которых можно переходить по страницам или выполнять поиск значений данных в отчете. Можно задать параметры в URL-адресе, чтобы скрыть панель инструментов, или выбрать выходной формат отчета.  
@@ -49,9 +49,9 @@ ms.locfileid: "50031363"
 ## <a name="typing-the-url-address-of-a-report"></a>Ввод URL-адреса отчета  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают доступ с помощью URL-адреса к конкретным элементам на сервере отчетов. URL-адрес должен включать полный путь к отчету и команды подготовки отчета к просмотру. Если отчет имеет параметры, для открытия отчета необходимо также задать все необходимые значения. Если URL-адрес отчета содержит пробелы, значения параметров или сведения о модуле подготовки отчетов, нужно включить в URL-адрес закодированные символы; в противном случае результаты могут оказаться непредвиденными. В следующем примере показан URL-адрес отчета, включающий закодированные пробелы в разделе пути, параметры и сведения о модуле подготовки отчетов:  
   
- `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
+ `https://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
- Максимальная длина URL-адреса в Internet Explorer составляет 2083 символа. Дополнительные сведения см. в разделе [Максимальная длина URL-адреса в Internet Explorer](http://support.microsoft.com/kb/208427).  
+ Максимальная длина URL-адреса в Internet Explorer составляет 2083 символа. Дополнительные сведения см. в разделе [Максимальная длина URL-адреса в Internet Explorer](https://support.microsoft.com/kb/208427).  
   
  Дополнительные сведения о доступе к отчету по URL-адресу, в том числе правила составления URL-адреса, см. в разделе «Доступ по URL-адресу» [документации по службам Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) , входящей в состав электронной документации по SQL Server.  
   

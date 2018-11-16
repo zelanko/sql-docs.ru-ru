@@ -14,12 +14,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d39af6af5eb04c9e8e8c340a71f0e8b1cb179fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffd79ef6abe6bd0e143d2ec84d72ebcc7476f3df
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790998"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675883"
 ---
 # <a name="install-and-configure-semantic-search"></a>Установка и настройка семантического поиска
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ GO
   
         1.  Найдите пакет установщика Windows с именем файла **SemanticLanguageDatabase.msi** на установочном носителе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-        2.  Скачайте пакет установщика со страницы [Семантическая статистика языка Microsoft® SQL Server® 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52681) в центре загрузки [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+        2.  Скачайте пакет установщика со страницы [Семантическая статистика языка Microsoft® SQL Server® 2016](https://www.microsoft.com/download/details.aspx?id=52681) в центре загрузки [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 2.  Запустите пакет установщика Windows **SemanticLanguageDatabase.msi** , чтобы извлечь базу данных и файл журнала.  
   
@@ -146,6 +146,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>Установка дополнительной поддержки для новых типов документов  
   
 ###  <a name="office"></a> Установка последних фильтров для Microsoft Office и других типов документов Майкрософт  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает самые последние средства разбиения по словам и парадигматические модули [!INCLUDE[msCoName](../../includes/msconame-md.md)] , но не устанавливает последние фильтры для документов [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office и других типов документов [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Эти фильтры необходимы для индексирования документов, созданных в последних версиях программ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office и других приложениях [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Чтобы загрузить последние фильтры, см. раздел [Пакеты фильтров Microsoft Office 2010](http://go.microsoft.com/fwlink/?LinkId=218293). (На данный момент не существует пакета фильтров для Office 2013 или Office 2016).
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает самые последние средства разбиения по словам и парадигматические модули [!INCLUDE[msCoName](../../includes/msconame-md.md)] , но не устанавливает последние фильтры для документов [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office и других типов документов [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Эти фильтры необходимы для индексирования документов, созданных в последних версиях программ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office и других приложениях [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Чтобы загрузить последние фильтры, см. раздел [Пакеты фильтров Microsoft Office 2010](https://go.microsoft.com/fwlink/?LinkId=218293). (На данный момент не существует пакета фильтров для Office 2013 или Office 2016).
   
   

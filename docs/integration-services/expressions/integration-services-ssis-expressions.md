@@ -17,12 +17,12 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b7658c6e3e209956e2e8bb187dda094ea029685
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cf578d21d7a6b67d1c72ee63f5516cd7b29db7d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650492"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638571"
 ---
 # <a name="integration-services-ssis-expressions"></a>Выражения служб Integration Services (SSIS)
   Выражение — это сочетание символов (идентификаторов, литералов, функций и операторов), которое дает одно значение данных. Простые выражения могут включать одну константу, переменную или функцию. Чаще встречаются сложные выражения, включающие несколько операторов и функций и ссылающиеся на несколько столбцов и переменных. В службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выражения могут использоваться для определения условий в инструкциях CASE, создания и обновления значений в столбцах данных, присвоения значений переменным, обновления или заполнения свойств во время выполнения, определения ограничений в управлении очередностью и указания выражений, используемых контейнером «цикл по элементам».  
@@ -64,10 +64,10 @@ ms.locfileid: "47650492"
  У переменных есть область действия, и папка **Переменные** в списке построителя выражений содержит только те переменные, которые находятся в данной области и доступны для использования. Дополнительные сведения см. в разделе [Переменные служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Использование выражения в компоненте потока данных](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Использование выражения в компоненте потока данных](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>См. также  
- Техническая статья [Примеры выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
+ Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
 ## <a name="see-also"></a>См. также:  
  [службы SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

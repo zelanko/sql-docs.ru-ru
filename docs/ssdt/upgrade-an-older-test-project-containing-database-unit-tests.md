@@ -11,12 +11,12 @@ ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02978a329399612e22e952ff6c0be6201c48d32e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4c40f2173ac2ee907aa6999539e83cd4d8eba0a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715072"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661223"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Обновление старого проекта тестов, содержащего модульные тесты базы данных
 Старый тестовый проект, созданный с помощью Visual Studio 2010 и содержащий модульные тесты базы данных, можно обновить, чтобы использовать новую среду выполнения и средства тестирования SQL Server Data Tools. Сразу после обновления старого проекта вы сможете добавлять модульные тесты в проект SQL Server (дополнительные сведения см. в статье[Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)).  
@@ -24,7 +24,7 @@ ms.locfileid: "47715072"
 > [!TIP]  
 > Если вы используете Visual Studio 2010, то после добавления модульных тестов SQL Server не следует добавлять модульные тесты в тестовый проект, используя шаблон старого модульного теста базы данных. В противном случае потребуется снова преобразовывать проект, чтобы обеспечить правильное выполнение тестов.  
   
-Если тестовый проект базы данных был создан в более ранней версии, чем Visual Studio 2010, следуйте указаниям, приведенным в статье [Практическое руководство. Обновление модульных тестов базы данных, созданных в предыдущем выпуске Visual Studio](http://msdn.microsoft.com/library/dd193412(VS.100).aspx), чтобы обновить проект базы данных до версии Visual Studio 2010. Это нужно сделать перед тем, как обновить проект до версии SQL Server Data Tools.  
+Если тестовый проект базы данных был создан в более ранней версии, чем Visual Studio 2010, следуйте указаниям, приведенным в статье [Практическое руководство. Обновление модульных тестов базы данных, созданных в предыдущем выпуске Visual Studio](https://msdn.microsoft.com/library/dd193412(VS.100).aspx), чтобы обновить проект базы данных до версии Visual Studio 2010. Это нужно сделать перед тем, как обновить проект до версии SQL Server Data Tools.  
   
 ### <a name="initiating-an-upgrade"></a>Запуск обновления  
   

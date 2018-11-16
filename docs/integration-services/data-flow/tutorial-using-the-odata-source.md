@@ -11,15 +11,15 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1f668fd09c2eb5bfc796f1fcd74d5f4d8e569ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cda725134aeba441a1cd6a59c7d3e7ae57d76de
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716352"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637761"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Учебник. Использование источника OData
-  Этот учебник содержит процедуру извлечения коллекции **Employees** из образца **Northwind** службы OData (http://services.odata.org/V3/Northwind/Northwind.svc/)) и последующей ее загрузки в неструктурированный файл.  
+  Этот учебник содержит процедуру извлечения коллекции **Employees** из образца **Northwind** службы OData (https://services.odata.org/V3/Northwind/Northwind.svc/)) и последующей ее загрузки в неструктурированный файл.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Создание проекта служб Integration Services  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47716352"
   
 5.  В меню **Создать…** , чтобы добавить новый диспетчера соединений с OData.  
   
-6.  Введите URL-адрес службы OData в поле **Расположение сервисного документа**. Это может быть URL-адрес сервисного документа либо определенный веб-канал или сущность. В целях этого учебника введите URL-адрес сервисного документа: [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Введите URL-адрес службы OData в поле **Расположение сервисного документа**. Это может быть URL-адрес сервисного документа либо определенный веб-канал или сущность. В целях этого учебника введите URL-адрес сервисного документа: [https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/).  
   
 7.  Убедитесь, что выбрано **Проверка подлинности Windows** для **проверки подлинности** для использования для доступа к службе OData. **Проверка подлинности Windows** выбрана по умолчанию.  
   

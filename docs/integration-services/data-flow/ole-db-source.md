@@ -19,12 +19,12 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7e61bde2da60e033d2d57d193eda750813d70f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37c720096cb27f19617744512c212c415373612b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723522"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639621"
 ---
 # <a name="ole-db-source"></a>Источник OLE DB
   Источник OLE DB извлекает сведения из множества поддерживающих технологию OLE DB реляционных баз данных с помощью таблицы базы данных, представления или команды SQL. Например, источник OLE DB может извлекать данные из таблиц [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -97,7 +97,7 @@ ms.locfileid: "47723522"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -112,7 +112,7 @@ ms.locfileid: "47723522"
 -   [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>См. также  
- Статья Wiki [Соединители служб SSIS с Oracle](http://go.microsoft.com/fwlink/?LinkId=220670)на сайте social.technet.microsoft.com.  
+ Статья Wiki [Соединители служб SSIS с Oracle](https://go.microsoft.com/fwlink/?LinkId=220670)на сайте social.technet.microsoft.com.  
   
 ## <a name="ole-db-source-editor-connection-manager-page"></a>Редактор источника OLE DB (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор источника OLE DB** для выбора диспетчера соединений OLE DB для источника. На этой странице также можно выбрать таблицу или представление базы данных.  
@@ -146,7 +146,7 @@ ms.locfileid: "47723522"
 |Параметр|Описание|  
 |------------|-----------------|  
 |Таблица или представление|Получение данных из таблицы или представления в источнике данных OLE DB.|  
-|Переменная, содержащая имя таблицы или представления|Задайте переменную, содержащую имя таблицы или представления.<br /><br /> **См. также:** [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Переменная, содержащая имя таблицы или представления|Задайте переменную, содержащую имя таблицы или представления.<br /><br /> **См. также:** [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Команда SQL|Получение данных из источника данных OLE DB с использованием SQL-запроса.|  
 |Команда SQL из переменной|Задайте текст SQL-запроса в переменную.|  
   

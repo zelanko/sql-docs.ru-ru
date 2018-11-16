@@ -11,21 +11,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d7ac19ce57b32c550c73b3a5de8d8f7f016afa69
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 5ed1c90d0516761b209382321e160ffb0e83237e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419509"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701387"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. Этот раздел содержит сводку о новых возможностях в отдельных функциональных областях, а также ссылки на дополнительные сведения. Дополнительные сведения о SQL Server в Linux см. в [документации по SQL Server в Linux](https://docs.microsoft.com/sql/linux/).
 
-[![Скачать из центра оценки](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Опробуйте сами:** [скачайте выпуск SQL Server 2017 за октябрь 2017 г.:](http://go.microsoft.com/fwlink/?LinkID=829477).
+[![Скачать из центра оценки](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Опробуйте сами:** [скачайте выпуск SQL Server 2017 за октябрь 2017 г.:](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
-> Помимо приведенных ниже изменений следует отметить накопительные обновления, которые регулярно выпускаются после выхода общедоступной версии. Эти накопительные обновления содержат много усовершенствований и исправлений. Сведения о последнем выпуске накопительного обновления см в разделе [Накопительные обновления SQL Server 2017](http://aka.ms/sql2017cu).
+> Помимо приведенных ниже изменений следует отметить накопительные обновления, которые регулярно выпускаются после выхода общедоступной версии. Эти накопительные обновления содержат много усовершенствований и исправлений. Сведения о последнем выпуске накопительного обновления см в разделе [Накопительные обновления SQL Server 2017](https://aka.ms/sql2017cu).
 
 ## <a name="sql-server-2017-database-engine"></a>Ядро СУБД SQL Server 2017
 

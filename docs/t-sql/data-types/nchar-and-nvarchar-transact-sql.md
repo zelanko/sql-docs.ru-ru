@@ -1,5 +1,5 @@
 ---
-title: Типы nchar и nvarchar (Transact-SQL) | Документация Майкрософт
+title: Типы nchar и nvarchar (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 10/22/2018
 ms.prod: sql
@@ -17,24 +17,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 856f26ac921a1bbe4f467cd11b785ee3868eeac2
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ee44e6c7a4ff8befc21b461feab44a07a8658a2f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643892"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696733"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar и nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Типы данных char имеют фиксированную (**nchar**) или переменную (**nvarchar**) длину. Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] при использовании параметров сортировки с поддержкой [дополнительных символов](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) эти типы данных хранят весь диапазон символьных данных [Юникод](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) и используют кодировку [UTF-16](http://www.wikipedia.org/wiki/UTF-16). Если указаны параметры сортировки без поддержки дополнительных символов, эти типы данных хранят только подмножество символьных данных, поддерживаемых кодировкой [UCS-2](http://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms).
+Типы данных char имеют фиксированную (**nchar**) или переменную (**nvarchar**) длину. Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] при использовании параметров сортировки с поддержкой [дополнительных символов](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) эти типы данных хранят весь диапазон символьных данных [Юникод](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) и используют кодировку [UTF-16](https://www.wikipedia.org/wiki/UTF-16). Если указаны параметры сортировки без поддержки дополнительных символов, эти типы данных хранят только подмножество символьных данных, поддерживаемых кодировкой [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms).
   
 ## <a name="arguments"></a>Аргументы  
 **nchar** [ ( n ) ]  
-Строковые данные фиксированной длины. *n* определяет длину строки в парах байтов и должно иметь значение от 1 до 4000. Размер при хранении определяется как дважды *n* байт. В случае с кодировкой [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) размер при хранении определяется как дважды *n* байт, а количество хранимых символов равно *n*. Для кодировки UTF-16 размер при хранении также равен дважды *n* байт, но количество хранимых символов может быть меньше *n*, так как дополнительные символы используют две пары байтов (также называются [суррогатными парами](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Синонимами типа **nchar** по стандарту ISO являются типы **national char** и **national character**.
+Строковые данные фиксированной длины. *n* определяет длину строки в парах байтов и должно иметь значение от 1 до 4000. Размер хранилища — дважды *n* байт. В случае с кодировкой [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) размер при хранении определяется как дважды *n* байт, а количество хранимых символов равно *n*. Для кодировки UTF-16 размер при хранении также равен дважды *n* байт, но количество хранимых символов может быть меньше *n*, так как дополнительные символы используют две пары байтов (также называются [суррогатными парами](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Синонимами типа **nchar** по стандарту ISO являются типы **national char** и **national character**.
   
 **nvarchar** [ ( n | **max** ) ]  
-Строковые данные переменной длины. *n* определяет длину строки в парах байтов и может иметь значение от 1 до 4000. Значение **max** указывает, что максимальный размер при хранении составляет 2^30-1 символов (2 ГБ). Размер при хранении определяется как дважды *n* байт + 2 байта. В случае с кодировкой [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) размер при хранении определяется как дважды *n* байт + 2 байта, а количество хранимых символов равно *n*. Для кодировки UTF-16 размер при хранении также равен дважды *n* байт + 2 байта, но количество хранимых символов может быть меньше *n*, так как дополнительные символы используют две пары байтов (также называются [суррогатными парами](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Синонимами типа **nvarchar** по стандарту ISO являются типы **national char varying** и **national character varying**.
+Строковые данные переменной длины. *n* определяет длину строки в парах байтов и может иметь значение от 1 до 4000. Значение **max** указывает, что максимальный размер при хранении составляет 2^30-1 символов (2 ГБ). Размер при хранении определяется как дважды *n* байт + 2 байта. В случае с кодировкой [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) размер при хранении определяется как дважды *n* байт + 2 байта, а количество хранимых символов равно *n*. Для кодировки UTF-16 размер при хранении также равен дважды *n* байт + 2 байта, но количество хранимых символов может быть меньше *n*, так как дополнительные символы используют две пары байтов (также называются [суррогатными парами](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Синонимами типа **nvarchar** по стандарту ISO являются типы **national char varying** и **national character varying**.
   
 ## <a name="remarks"></a>Remarks  
 Если значение *n* в определении данных или в инструкции объявления переменной не указано, то длина по умолчанию равна 1. Когда *n* не задано функцией CAST, длина по умолчанию равняется 30.
@@ -64,7 +64,7 @@ ms.locfileid: "49643892"
 ## <a name="see-also"></a>См. также раздел
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  

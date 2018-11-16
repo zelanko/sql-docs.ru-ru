@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d44aeec8323578c8867f5978fbc6c5f8b6fa0d0d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 684df573eba24e9e0337f33f17b8507523b199e3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419469"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699451"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Что нового в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -33,7 +33,7 @@ ms.locfileid: "49419469"
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
 
  **Оцените SQL Server уже сегодня!** 
-- Скачайте **бесплатный** [**выпуск SQL Server 2016 Developer Edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
+- Скачайте **бесплатный** [**выпуск SQL Server 2016 Developer Edition**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers).
 - Скачайте последнюю версию [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). 
 - Есть учетная запись Azure? Запустите [виртуальную машину с уже установленным решением SQL Server 2016](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
@@ -60,8 +60,8 @@ ms.locfileid: "49419469"
 - Новое **средство проверки согласованности базы данных (DBCC)** выполняется для внутренних целей при обнаружении возможных проблем с повреждением данных.
 - **Прямой запрос**, выполняющийся перед импортом динамических внешних данных, теперь поддерживает дополнительные источники данных, включая Azure SQL, Oracle и Teradata. 
 - Реализовано множество новых **функций DAX (выражения доступа к данным)**.
-- Новое пространство имен **[Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** управляет экземплярами и моделями в табличном режиме. 
-- [Управляющие объекты службы Analysis Services (AMO)](http://msdn.microsoft.com/library/mt436122.aspx) переработаны и теперь содержат вторую сборку — **Microsoft.AnalysisServices.Core.dll**.
+- Новое пространство имен **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** управляет экземплярами и моделями в табличном режиме. 
+- [Управляющие объекты службы Analysis Services (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) переработаны и теперь содержат вторую сборку — **Microsoft.AnalysisServices.Core.dll**.
 
 См. раздел о [подсистеме служб Analysis Services (SSAS)](../analysis-services/what-s-new-in-analysis-services.md). 
 
@@ -100,11 +100,11 @@ ms.locfileid: "49419469"
 ## <a name="next-steps"></a>Следующие шаги   
 - [Установка SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)   
 - [Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
-- [Таблица SQL Server 2016](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
+- [Таблица SQL Server 2016](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 - [Возможности, поддерживаемые различными выпусками SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
 - [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Установка SQL Server 2016 с помощью мастера установки](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [Настройка и обслуживание установки](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- [Настройка и обслуживание установки](https://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
 - [New SQL PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

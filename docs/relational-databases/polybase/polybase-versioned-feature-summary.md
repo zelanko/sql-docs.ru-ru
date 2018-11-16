@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08d0b31d5ed0be4b3d9a5e766483f14e0653343e
-ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
+ms.openlocfilehash: b2d02e13ea7ad1d74274f4412b6ab2bf476f452c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757969"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665429"
 ---
 # <a name="polybase-features-and-limitations"></a>Возможности и ограничения PolyBase
 
@@ -73,7 +73,7 @@ PolyBase имеет следующие ограничения.
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 || =sqlallproducts-allversions"
 
-- [PolyBase не устанавливается при добавлении узла в отказоустойчивый кластер SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster).
+- [PolyBase не устанавливается при добавлении узла в отказоустойчивый кластер SQL Server 2016](https://support.microsoft.com/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster).
 
 ::: moniker-end
 

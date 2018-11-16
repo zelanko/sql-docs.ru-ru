@@ -17,12 +17,12 @@ ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb638e8bf2715dafa1ae876c227c89f7cd20f7d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: daaf8c7fcd44ac814bceeaba61a6d152e7051d99
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600983"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637501"
 ---
 # <a name="reuse-of-package-objects"></a>Повторное использование объектов пакета
   Функциональные возможности пакетов, которые требуется использовать повторно. Например, создан набор задач, и необходимо повторно совместно использовать элементы как группу, или необходимо повторно использовать отдельный элемент, такой как диспетчер соединений, созданный в другом проекте служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -42,8 +42,8 @@ ms.locfileid: "47600983"
   
 -   [Копирование объектов пакета](../integration-services/copy-package-objects.md)  
   
--   [Копирование элементов проекта](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
+-   [Копирование элементов проекта](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
--   [Сохранение пакета в качестве шаблона пакета](http://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
+-   [Сохранение пакета в качестве шаблона пакета](https://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
   
   

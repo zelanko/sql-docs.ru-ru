@@ -22,12 +22,12 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 14292f4d5f1581d02881d565276422b09166de93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db2feb442aceb42d24757e59245914351e5100dc
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631482"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638081"
 ---
 # <a name="percentage-sampling-transformation"></a>преобразование «Процентная выборка»
   Преобразование «Процентная выборка» создает образец набора данных извлечением некоторого процента входных строк преобразования. Данные выборки извлекаются случайным образом из входа преобразования. За счет этого достигается репрезентативность выборки.  
@@ -52,7 +52,7 @@ ms.locfileid: "47631482"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

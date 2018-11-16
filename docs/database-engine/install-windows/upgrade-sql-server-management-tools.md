@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e967f69b7204fae916cb42ebea2c0c6694ae09fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b15e0448bb230ff209b17cbe5c0bc719686193f5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643822"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600724"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Обновление средств управления SQL Server
 
@@ -52,7 +52,7 @@ ms.locfileid: "47643822"
   
 ## <a name="see-also"></a>См. также:  
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Обратная совместимость_удалено](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)   
+ [Обратная совместимость_удалено](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)   
  [Обновление SQL Server с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

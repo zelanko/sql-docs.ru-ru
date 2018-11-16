@@ -11,12 +11,12 @@ ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a7a60eff70f5457d3ebe494b03ca2375027f54d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79522780a613cea98dcd9c1d9435d376e67c61e7
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620532"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638182"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Общие сведения о консоли конструктора CDC
   В этом разделе описаны процедуры установки конструктора отслеживания измененных данных для Oracle от Attunity.  
@@ -24,7 +24,7 @@ ms.locfileid: "47620532"
 ## <a name="installation"></a>Установка  
  В этом разделе описаны процедуры установки конструктора отслеживания измененных данных для Oracle от Attunity.  
   
- Конструктор и служба системы отслеживания измененных данных Microsoft® для Oracle от Attunity для Microsoft SQL Server® 2016 находятся в составе пакета дополнительных компонентов SQL Server 2016. Скачать компоненты пакета дополнительных компонентов можно со страницы [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).  
+ Конструктор и служба системы отслеживания измененных данных Microsoft® для Oracle от Attunity для Microsoft SQL Server® 2016 находятся в составе пакета дополнительных компонентов SQL Server 2016. Скачать компоненты пакета дополнительных компонентов можно со страницы [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).  
   
 ## <a name="supported-windows-environments"></a>Поддерживаемые среды Windows  
  Консоль конструктора CDC может работать в следующих средах Windows:  

@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 235572bf33c100ecb55fb7ce821f7028b1124595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb9fcf4c03fdf2fb17d69d2d0f0b624d111f7e3f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822422"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639681"
 ---
 # <a name="xml-task"></a>Задача «XML»
   Задача «XML» используется для работы с XML-данными. С помощью этой задачи пакет может получать XML-документы, выполнять операции над документами с помощью преобразований XSLT и выражений XPath, объединять несколько документов, проверять, сравнивать и сохранять обновленные документы в файлы и переменные.  
@@ -127,7 +127,7 @@ ms.locfileid: "47822422"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе.  
   
--   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-xml-task"></a>Программная настройка задачи «XML»  
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе.  
@@ -135,12 +135,12 @@ ms.locfileid: "47822422"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="xml-task-editor-general-page"></a>Редактор задачи «XML» (страница «Общие»)
   Используйте **Узел «Общие»** диалогового окна **Редактор задачи «XML»** для задания типа и настройки операции.  
   
- Сведения об этой задаче см. в разделе [Проверка XML с использованием задачи XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md). Дополнительные сведения о работе с XML-документами и данными см. в разделе «[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)» в библиотеке MSDN.  
+ Сведения об этой задаче см. в разделе [Проверка XML с использованием задачи XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md). Дополнительные сведения о работе с XML-документами и данными см. в разделе «[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)» в библиотеке MSDN.  
   
 ### <a name="static-options"></a>Статические параметры  
  **OperationType**  
@@ -173,7 +173,7 @@ ms.locfileid: "47822422"
   
  Если параметр **Source** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку **\<Создать переменную>**, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 ### <a name="operationtype-dynamic-options"></a>Динамические параметры OperationType  
   
@@ -234,7 +234,7 @@ ms.locfileid: "47822422"
   
  Если параметр **XPathStringSourceType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="operationtype--xslt"></a>OperationType = XSLT  
  Задайте параметры для операции XSLT.  
@@ -252,7 +252,7 @@ ms.locfileid: "47822422"
   
  Если параметр **DestinationType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Выберите тип назначения XML-документа. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -280,7 +280,7 @@ ms.locfileid: "47822422"
   
  Если параметр **XPathStringSourceType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="operationtype--xpath"></a>OperationType = XPATH  
  Задайте параметры для операции XPath.  
@@ -298,7 +298,7 @@ ms.locfileid: "47822422"
   
  Если параметр **DestinationType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Выберите тип назначения XML-документа. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -326,7 +326,7 @@ ms.locfileid: "47822422"
   
  Если параметр **XPathStringSourceType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **PutResultInOneNode**  
  Укажите, записывается ли результат в один узел.  
@@ -361,7 +361,7 @@ ms.locfileid: "47822422"
   
  Если параметр **XPathStringSourceType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  При использовании инструкции XPath для определения места в исходном документе, куда необходимо вставить данные, ожидается, что инструкция возвратит единственный узел. Если инструкция возвращает несколько узлов, то используется только первый узел. Содержимое второго документа добавляется в первый узел, который возвращается запросом XPath.  
   
@@ -378,7 +378,7 @@ ms.locfileid: "47822422"
   
  Если параметр **DestinationType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Выберите тип назначения XML-документа. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -406,7 +406,7 @@ ms.locfileid: "47822422"
   
  Если параметр **SecondOperandType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="operationtype--diff"></a>OperationType = инструмент сравнения  
  Задайте параметры для операции поиска различий.  
@@ -453,7 +453,7 @@ ms.locfileid: "47822422"
   
  Если параметр **DestinationType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Выберите тип назначения XML-документа. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -481,7 +481,7 @@ ms.locfileid: "47822422"
   
  Если параметр **SecondOperandType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="operationtype--patch"></a>OperationType = Patch  
  Задайте параметры для операции обновления.  
@@ -499,7 +499,7 @@ ms.locfileid: "47822422"
   
  Если параметр **DestinationType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Выберите тип назначения XML-документа. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -527,12 +527,12 @@ ms.locfileid: "47822422"
   
  Если параметр **SecondOperandType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>См. также  
   
--   Запись в блоге [Компонент скрипта назначения XML](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)на сайте agilebi.com  
+-   Запись в блоге [Компонент скрипта назначения XML](https://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)на сайте agilebi.com  
   
--   Образец CodePlex [Образец обработки пакета XML-данных](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)на сайте www.codeplex.com  
+-   Образец CodePlex [Образец обработки пакета XML-данных](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)на сайте www.codeplex.com  
   
   

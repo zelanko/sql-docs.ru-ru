@@ -14,12 +14,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ec5760d6f62c045b1985aad534c7447f75f59c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 790c7b1e50b029ab2cf2cbf4ad41bd80cf11cb0c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667282"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641838"
 ---
 # <a name="odata-connection-manager"></a>Диспетчер соединений OData
  Диспетчер подключений OData позволяет подключаться к источнику данных OData. Компонент источника OData подключается к источнику OData с помощью диспетчера подключений OData и использует данные из этой службы. Дополнительные сведения см. в разделе [OData Source](../../integration-services/data-flow/odata-source.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "47667282"
  Имя диспетчера соединений.  
   
  **Расположение сервисного документа**  
- URL-адрес службы OData. Например, http://services.odata.org/V3/Northwind/Northwind.svc/.  
+ URL-адрес службы OData. Например, https://services.odata.org/V3/Northwind/Northwind.svc/.  
   
  **Проверка подлинности**  
 Выберите один из следующих вариантов.

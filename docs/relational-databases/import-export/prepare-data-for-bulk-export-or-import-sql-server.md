@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d53226ef1522c7a540bac027df0c3e45fe4f25ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15d6d10b1bc3345da8c626a3b4d6e842aafaf954
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825092"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664813"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Подготовка данных к массовому экспорту или импорту (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47825092"
   
      Чтобы выполнить массовый импорт данных из файла [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro, таблицы Visual FoxPro (DBF) или листа [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (XLS), данные необходимо преобразовать в CSV-файл, который соответствует описанным ранее ограничениям. Этот файл обычно имеет расширение CSV. Затем его можно использовать как файл данных в операции массового импорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     На 32-разрядных системах возможно импортировать данные CSV в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] без оптимизации массового импорта с помощью параметра [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) с поставщиком OLE DB для Jet. Поставщик Jet обрабатывает текстовые файлы как таблицы со схемой, определенной в файле schema.ini, который расположен в том же каталоге, что и источник данных.  Для CSV-данных одним из параметров в файле schema.ini будет «FORMAT=CSVDelimited». Чтобы использовать такое решение, нужно представлять принципы работы поставщика Jet Test IISAMm: знать синтаксис строки соединения, правила использования schema.ini, параметры реестра и т. д.  Лучшими источниками для получения таких сведений служат справка Microsoft Access и статьи базы знаний. Дополнительные сведения см. в статье [Инициализация драйвера источников текстовых данных](https://msdn.microsoft.com/library/office/ff834391.aspx), [Использование распределенного запроса SQL Server 7.0 со связанным доступом для баз данных с защищенным доступом](http://go.microsoft.com/fwlink/?LinkId=128504), [Инструкции. Использование Jet OLE DB Provider 4.0 для подключения к базам данных ISAM](http://go.microsoft.com/fwlink/?LinkId=128505)и [Как открывать текстовые файлы с разделителями с помощью Text IIsam Jet Provider](http://go.microsoft.com/fwlink/?LinkId=128501).  
+     На 32-разрядных системах возможно импортировать данные CSV в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] без оптимизации массового импорта с помощью параметра [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) с поставщиком OLE DB для Jet. Поставщик Jet обрабатывает текстовые файлы как таблицы со схемой, определенной в файле schema.ini, который расположен в том же каталоге, что и источник данных.  Для CSV-данных одним из параметров в файле schema.ini будет «FORMAT=CSVDelimited». Чтобы использовать такое решение, нужно представлять принципы работы поставщика Jet Test IISAMm: знать синтаксис строки соединения, правила использования schema.ini, параметры реестра и т. д.  Лучшими источниками для получения таких сведений служат справка Microsoft Access и статьи базы знаний. Дополнительные сведения см. в статье [Инициализация драйвера источников текстовых данных](https://msdn.microsoft.com/library/office/ff834391.aspx), [Использование распределенного запроса SQL Server 7.0 со связанным доступом для баз данных с защищенным доступом](https://go.microsoft.com/fwlink/?LinkId=128504), [Инструкции. Использование Jet OLE DB Provider 4.0 для подключения к базам данных ISAM](https://go.microsoft.com/fwlink/?LinkId=128505)и [Как открывать текстовые файлы с разделителями с помощью Text IIsam Jet Provider](https://go.microsoft.com/fwlink/?LinkId=128501).  
   
  Кроме того, для массового импорта данных из файла данных в таблицу необходимо следующее.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47825092"
 >  Массовый импорт в секционированное представление не поддерживается, и попытки массового импорта данных в секционированное представление завершаются неудачно.  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- [Импорт данных из Excel в SQL Server](http://support.microsoft.com/kb/321686)  
+ [Импорт данных из Excel в SQL Server](https://support.microsoft.com/kb/321686)  
   
 ## <a name="change-history"></a>Журнал изменений  
   

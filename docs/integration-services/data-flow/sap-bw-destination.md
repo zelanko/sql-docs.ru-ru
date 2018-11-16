@@ -11,12 +11,12 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12229b018a6b7b2e7908d7d77091ce5caef5fb5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6abb029f20becaac0e3c874202e1788e7bfb3722
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800812"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642091"
 ---
 # <a name="sap-bw-destination"></a>Назначение SAP BW
   Назначение SAP BW — компонент назначения [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW. Таким образом, назначение SAP BW загружает данные из потока данных в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в систему SAP Netweaver BW версии 7.  
@@ -84,7 +84,7 @@ ms.locfileid: "47800812"
   
  Если вы не знаете все значения, необходимые для настройки назначения, может потребоваться связаться с администратором SAP.  
   
- Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW, см. в техническом документе [Использование служб SQL Server 2008 Integration Services с SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
+ Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW, см. в техническом документе [Использование служб SQL Server 2008 Integration Services с SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>Использование конструктора служб SSIS для настройки целевого объекта  
  Дополнительные сведения о свойствах целевого объекта SAP BW, который можно задать в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в одном из следующих разделов.  

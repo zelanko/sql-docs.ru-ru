@@ -17,12 +17,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c965c86385141a589a2de9f815f73ad7f9b5990
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f9ea0da85324aa74b7ce9af17ab64b743a8f031
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854497"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638751"
 ---
 # <a name="debugging-data-flow"></a>Отладка потока данных
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] содержат функции и средства, используемые для исправления ошибок в потоках данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -122,7 +122,7 @@ order by source_component_name desc
   
 #### <a name="to-configure-an-error-output-using-the-configure-error-output-dialog-box"></a>Настройка вывода ошибок с помощью диалогового окна «Настроить вывод ошибок»  
   
-1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
+1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], содержащий необходимый пакет.  
   
 2.  Чтобы открыть пакет, дважды щелкните его в обозревателе решений.  
   
@@ -210,7 +210,7 @@ order by source_component_name desc
 9. В области «Отображаемые столбцы» выберите столбцы, которые нужно отображать в средстве просмотра данных. По умолчанию выбраны все доступные столбцы, их перечень содержится в списке **Отображенные столбцы** . Переместите ненужные столбцы в список **Неиспользуемые столбцы** . Для этого выберите их, а затем нажмите стрелку влево.  
   
     > [!NOTE]  
-    >  Значения типа данных DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 и DT_DBTIMESTAMPOFFSET отображаются в сетке как строки, форматированные по стандарту ISO 8601, а разделитель **T** заменяется пробелом. Значения типов данных DT_DATE и DT_FILETIME имеют семь разрядов для хранения долей секунды. Так как тип данных DT_FILETIME хранит доли секунды только в трех разрядах, в остальных четырех выводятся нули. Значения типа DT_DBTIMESTAMP имеют три разряда для хранения долей секунды. У типов данных DT_DBTIME2, DT_DBTIMESTAMP2 и DT_DBTIMESTAMPOFFSET число разрядов для долей секунды соответствует масштабу, указанному для типа данных столбца. Дополнительные сведения о форматах ISO 8601 см. в разделе [Date and Time Formats](http://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). Дополнительные сведения о типах данных см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+    >  Значения типа данных DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 и DT_DBTIMESTAMPOFFSET отображаются в сетке как строки, форматированные по стандарту ISO 8601, а разделитель **T** заменяется пробелом. Значения типов данных DT_DATE и DT_FILETIME имеют семь разрядов для хранения долей секунды. Так как тип данных DT_FILETIME хранит доли секунды только в трех разрядах, в остальных четырех выводятся нули. Значения типа DT_DBTIMESTAMP имеют три разряда для хранения долей секунды. У типов данных DT_DBTIME2, DT_DBTIMESTAMP2 и DT_DBTIMESTAMPOFFSET число разрядов для долей секунды соответствует масштабу, указанному для типа данных столбца. Дополнительные сведения о форматах ISO 8601 см. в разделе [Date and Time Formats](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). Дополнительные сведения о типах данных см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 10. Нажмите кнопку **ОК**.  
 
@@ -270,7 +270,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  Включение подробного уровня ведения журнала и добавление отводов данных увеличивает количество операций ввода-вывода, выполняемых решением по интеграции данных. Поэтому рекомендуется добавлять отводы данных только для устранения неполадок  
   
 ### <a name="video"></a>Видеоролик  
- Этот [видеоролик в библиотеке TechNet](http://technet.microsoft.com/sqlserver/dn600163) демонстрирует добавление и использование отводов данных в каталоге SQL Server 2012 SSISDB для программной отладки пакетов и получения частичных результатов во время выполнения. Также там обсуждается вопрос перечисления или удаления отводов данных и рекомендации по их применению в пакетах SSIS.  
+ Этот [видеоролик в библиотеке TechNet](https://technet.microsoft.com/sqlserver/dn600163) демонстрирует добавление и использование отводов данных в каталоге SQL Server 2012 SSISDB для программной отладки пакетов и получения частичных результатов во время выполнения. Также там обсуждается вопрос перечисления или удаления отводов данных и рекомендации по их применению в пакетах SSIS.  
  
 ## <a name="see-also"></a>См. также:  
  [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md)  

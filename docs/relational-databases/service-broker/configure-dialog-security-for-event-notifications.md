@@ -5,21 +5,20 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 894ba222854e21a5d02811ca457ffa47184c4431
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca2bbf04ef2132f0bf1250cd6bd5c097a5a7760b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702582"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669373"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Настройка безопасности диалогов для уведомлений о событиях
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "47702582"
 |Исходный сервер|Целевой сервер|  
 |-------------------|-------------------|  
 |[Создайте сертификат](../../t-sql/statements/create-certificate-transact-sql.md) из файла резервной копии целевого сертификата, задав в качестве владельца пользователя целевой базы данных.|Создайте сертификат из файла резервной копии исходного сертификата, задав в качестве владельца пользователя базы данных-источника.|  
-|[Предоставьте разрешение](../../t-sql/statements/grant-transact-sql.md) для создания уведомления о событии пользователю базы данных-источника. Дополнительные сведения об этом разрешении см. в разделе [CREATE EVENT NOTIFICATION (Transact-SQL)](../../t-sql/statements/create-event-notification-transact-sql.md).|Предоставьте разрешение REFERENCES пользователю целевой базы данных на существующий контракт компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] для уведомлений о событиях: `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
+|[Предоставьте разрешение](../../t-sql/statements/grant-transact-sql.md) для создания уведомления о событии пользователю базы данных-источника. Дополнительные сведения об этом разрешении см. в разделе [CREATE EVENT NOTIFICATION (Transact-SQL)](../../t-sql/statements/create-event-notification-transact-sql.md).|Предоставьте разрешение REFERENCES пользователю целевой базы данных на существующий контракт компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] для уведомлений о событиях: `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
 |[Создайте привязку удаленной службы](../../t-sql/statements/create-remote-service-binding-transact-sql.md) к целевой службе и задайте учетные данные пользователя целевой базы данных. Привязка удаленной службы обеспечивает то, что при помощи открытого ключа в сертификате, владельцем которого является пользователь базы данных-источника, будет осуществляться проверка подлинности сообщений, посылаемых на целевой сервер.|[Предоставьте](../../t-sql/statements/grant-transact-sql.md) разрешения CREATE QUEUE, CREATE SERVICE и CREATE SCHEMA пользователю целевой базы данных.|  
 ||Если вы еще не подключены к базе данных в качестве пользователя целевой базы данных, выполните это теперь.|  
 ||[Создайте очередь](../../t-sql/statements/create-queue-transact-sql.md) для приема сообщений с уведомлениями о событиях и [создайте службу](../../t-sql/statements/create-service-transact-sql.md) для доставки сообщений.|  
@@ -68,7 +67,7 @@ ms.locfileid: "47702582"
   
 |Исходный сервер|Целевой сервер|  
 |-------------------|-------------------|  
-|[Создайте маршрут](../../t-sql/statements/create-route-transact-sql.md) к целевой службе и задайте идентификатор компонента Service Broker целевой базы данных, а также согласованный номер порта TCP.|Создайте маршрут к исходной службе и задайте идентификатор компонента service broker базы данных-источника, а также согласованный номер порта TCP. Для задания исходной службы используйте следующую поставляемую службу: `http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
+|[Создайте маршрут](../../t-sql/statements/create-route-transact-sql.md) к целевой службе и задайте идентификатор компонента Service Broker целевой базы данных, а также согласованный номер порта TCP.|Создайте маршрут к исходной службе и задайте идентификатор компонента service broker базы данных-источника, а также согласованный номер порта TCP. Для задания исходной службы используйте следующую поставляемую службу: `https://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
 |Переключитесь на базу данных **master** для настройки проверки подлинности на уровне сервера.|Переключитесь на базу данных **master** для настройки проверки подлинности на уровне сервера.|  
 |Если для базы данных **master** не существует главного ключа, [создайте главный ключ](../../t-sql/statements/create-master-key-transact-sql.md).|Если для базы данных **master** не существует главного ключа, создайте главный ключ.|  
 |[Создайте сертификат](../../t-sql/statements/create-certificate-transact-sql.md) , выполняющий проверку подлинности базы данных.|Создайте сертификат, выполняющий проверку подлинности базы данных.|  
@@ -95,7 +94,7 @@ ms.locfileid: "47702582"
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Реализация уведомлений о событиях](../../relational-databases/service-broker/implement-event-notifications.md)   
  [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)   
- [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   

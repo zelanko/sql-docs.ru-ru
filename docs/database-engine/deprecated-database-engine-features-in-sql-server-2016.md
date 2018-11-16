@@ -5,8 +5,7 @@ ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b476cd8c1579ba519d8f045154be4bd7628badc6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7192dc954337d5c6a1f58b7b444219d022c43f95
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032093"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602644"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Категория|Устаревшая функция|Замена|Имя функции|Идентификатор функции|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Резервное копирование и восстановление|Инструкция RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD остается устаревшей. Поддержка инструкций BACKUP { DATABASE &#124; LOG } WITH PASSWORD и BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD прекращена.|Нет.|BACKUP DATABASE или LOG WITH PASSWORD<br /><br /> BACKUP DATABASE или LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Уровни совместимости|Обновление с версии 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Когда [поддержка](http://aka.ms/sqllifecycle) версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] завершается, соответствующий уровень совместимости базы данных помечается как нерекомендуемый. Однако мы будем как можно дольше поддерживать приложения, сертифицированные для работы на любом соответствующем уровне совместимости, чтобы упростить обновление. Дополнительные сведения об уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Уровень совместимости базы данных 100|108|  
+|Уровни совместимости|Обновление с версии 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Когда [поддержка](https://aka.ms/sqllifecycle) версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] завершается, соответствующий уровень совместимости базы данных помечается как нерекомендуемый. Однако мы будем как можно дольше поддерживать приложения, сертифицированные для работы на любом соответствующем уровне совместимости, чтобы упростить обновление. Дополнительные сведения об уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Уровень совместимости базы данных 100|108|  
 |Объекты базы данных|Возможность возвращать результирующие наборы из триггеров.|None|Возврат результатов из триггера|12|  
 |Шифрование|Шифрование с использованием алгоритмов RC4 и RC4_128 является устаревшим. В следующей версии запланировано удаление его поддержки. Расшифровка с использованием алгоритмов RC4 и RC4_128 не является устаревшей.|Используйте другой алгоритм шифрования, например AES.|Устаревший алгоритм шифрования|253|  
 |Удаленные серверы|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|Замените удаленные серверы связанными серверами. Процедуру sp_addserver можно использовать только с параметром local.|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -123,7 +122,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |безопасность|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
 |безопасность|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
 |безопасность|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|безопасность|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Эти хранимые процедуры возвращают данные, которые были правильными в [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. Выходные данные не отражают изменений в иерархии разрешений, реализованной в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Дополнительные сведения см. в разделе [Разрешения предопределенных ролей сервера](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|безопасность|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Эти хранимые процедуры возвращают данные, которые были правильными в [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. Выходные данные не отражают изменений в иерархии разрешений, реализованной в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Дополнительные сведения см. в разделе [Разрешения предопределенных ролей сервера](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
 |безопасность|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|Специальные разрешения GRANT, DENY и REVOKE.|Разрешение ALL.|35|  
 |безопасность|Внутренняя функция PERMISSIONS.|Запросите sys.fn_my_permissions.|PERMISSIONS|170|  
 |безопасность|SETUSER|EXECUTE AS|SETUSER|165|  

@@ -11,12 +11,12 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c09af6785d83c0e7e953dac6f6fa53120489cc9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 981c573c05b299a1022ac6615dae5de0036c3571
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650342"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638161"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>Занятие 3. Добавление журналов с помощью служб SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] возможно ведение журналов, что позволяет отслеживать и устранять неполадки при выполнении пакетов, обеспечивая трассировку задач и событий контейнеров. Эти возможности очень гибки. Они могут активироваться как на уровне пакетов, так и на уровне отдельных задач или контейнеров в пакете. Можно выбрать события, которые будут заноситься в журнал, а также создать несколько журналов для одного пакета.  
@@ -36,7 +36,7 @@ ms.locfileid: "47650342"
 На этом занятии будет создана копия пакета, созданного на [занятии 2: добавление циклов с помощью служб SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md). При работе с новым пакетом будет добавлено и настроено ведение журнала, позволяющее отслеживать отдельные события при выполнении пакета. Если вы не выполняли ни одно из предыдущих занятий, можно воспользоваться копией пакета из занятия 2, которая включена в учебник.  
   
 > [!IMPORTANT]  
-> Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании **AdventureWorksDW2012**, [Образцы продуктов службы Reporting Services на сайте CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+> Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании **AdventureWorksDW2012** см. в разделе [Образцы продуктов службы Reporting Services на сайте CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## <a name="lesson-tasks"></a>Задачи занятия  
 Это занятие содержит следующие задачи.  

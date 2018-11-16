@@ -14,12 +14,12 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab0bf137663677c3c9cb4087f1705639e0a04419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d070f183fbe5b09016af950cfad9e6da60e90c6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662300"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605744"
 ---
 # <a name="availability-replica-is-disconnected"></a>Реплика доступности отключена
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47662300"
  Эта политика проверяет состояние соединения между репликами доступности. Эта политика находится в нерабочем состоянии, если подключение к реплике доступности имеет состояние DISCONNECTED. В остальном политика находится в рабочем состоянии.  
   
 > [!NOTE]  
->  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблем и решениях доступны в разделе [Реплика доступности отключена](http://go.microsoft.com/fwlink/p/?LinkId=220857) в TechNet Wiki.  
+>  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблем и решениях доступны в разделе [Реплика доступности отключена](https://go.microsoft.com/fwlink/p/?LinkId=220857) в TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Возможные причины  
  Вторичная реплика не подключена к первичной реплике. Состояние соединения — DISCONNECTED. Возможны следующие причины этой проблемы.  

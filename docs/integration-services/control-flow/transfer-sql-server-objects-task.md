@@ -17,12 +17,12 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7175ed9eed05295ec193dcc5f1cbaef287d27f77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7e699eb44ac381fa6cfe5c7dbca857010806753
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826652"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640791"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Задача «Передача объектов SQL Server»
   Задача передачи объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] производит перемещение одного или нескольких типов объектов базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Например, с помощью этой задачи можно выполнить копирование таблиц и хранимых процедур. В зависимости от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , являющейся источником копирования, можно копировать различные типы объектов. Например, схемы и пользовательские статистические функции содержатся только в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -82,7 +82,7 @@ ms.locfileid: "47826652"
  Задача передачи объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сообщает о ходе выполнения передачи, сигнализируя только о 0 % и 100 % готовности.  
   
 ## <a name="execution-value"></a>Значение выполнения  
- Значение выполнения, определяемое свойством **ExecutionValue** задачи, возвращает число перенесенных объектов. При присвоении свойству **ExecValueVariable** задачи "Передача объектов SQL Server" пользовательской переменной сведения о передаче объектов можно сделать доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Значение выполнения, определяемое свойством **ExecutionValue** задачи, возвращает число перенесенных объектов. При присвоении свойству **ExecValueVariable** задачи "Передача объектов SQL Server" пользовательской переменной сведения о передаче объектов можно сделать доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача объектов SQL Server» включает следующие записи журнала:  
@@ -113,7 +113,7 @@ ms.locfileid: "47826652"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>Настройка задачи «Передача объектов SQL Server» программными средствами  
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе.  

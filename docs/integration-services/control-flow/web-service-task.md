@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2d0d31f310ea2a64afe47940ab4d9463fee0a97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757552"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642351"
 ---
 # <a name="web-service-task"></a>Задача «Веб-служба»
   Задача «Веб-служба» выполняет метод веб-службы. Возможно использование задачи «Веб-служба» в следующих целях:  
@@ -38,7 +38,7 @@ ms.locfileid: "47757552"
 > [!IMPORTANT]  
 >  Диспетчер HTTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
   
- Диспетчер HTTP-соединений может указывать на веб-сайт или на файл языка описания веб-служб (язык WSDL). URL-адрес диспетчера HTTP-подключений, указывающий на WSDL-файл, содержит параметр `?WSDL` , например `http://MyServer/MyWebService/MyPage.asmx?WSDL`.  
+ Диспетчер HTTP-соединений может указывать на веб-сайт или на файл языка описания веб-служб (язык WSDL). URL-адрес диспетчера HTTP-подключений, указывающий на WSDL-файл, содержит параметр `?WSDL` , например `https://MyServer/MyWebService/MyPage.asmx?WSDL`.  
   
  Чтобы настроить задачу «Веб-служба», используя диалоговое окно **Редактор задачи «Веб-служба»** , которое предоставляет конструктор [!INCLUDE[ssIS](../../includes/ssis-md.md)] , WSDL-файл должен быть доступен локально.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47757552"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Программная настройка задачи «Веб-служба»  
  Дополнительные сведения о программной настройке этих свойств см. в следующих разделах:  
@@ -178,7 +178,7 @@ ms.locfileid: "47757552"
  **Переменная**  
  Выберите переменную из списка или нажмите кнопку \<**Создать переменную…**>, чтобы создать переменную.  
   
- **См. также**: [Переменные в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также**: [Переменные в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>См. также  
- Видео [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=259642)(Как вызвать веб-службы с помощью задачи "Веб-служба" — видеоматериал SQL Server) на technet.microsoft.com.  
+ Видео [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642)(Как вызвать веб-службы с помощью задачи "Веб-служба" — видеоматериал SQL Server) на technet.microsoft.com.  

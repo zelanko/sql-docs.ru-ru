@@ -14,12 +14,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7e473fcc1298fbaa302cceecc80611938d084f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23c5961e3cc5c194690f99c8e614adf402ef31c7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799402"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701969"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Создание запросов, использующих не только таблицу (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -143,5 +143,5 @@ FROM
      fn_GetWholeTeam ('VPA30890F')  
 ```  
   
-«VPA30890F» представляет код emp_id руководителя, сведения о подчиненных которого требуется получить. Дополнительные сведения о добавлении пользовательской функции в запрос см. в разделе [Добавление таблиц в запросы (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). Подробное описание определяемых пользователем функций см. в разделе [Определяемые пользователем функции](http://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
+«VPA30890F» представляет код emp_id руководителя, сведения о подчиненных которого требуется получить. Дополнительные сведения о добавлении пользовательской функции в запрос см. в разделе [Добавление таблиц в запросы (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). Подробное описание определяемых пользователем функций см. в разделе [Определяемые пользователем функции](https://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
   

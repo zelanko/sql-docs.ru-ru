@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5896643e84782c6b0a36fd4ef6da3e487acdab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691788"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640201"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -185,9 +185,9 @@ ms.locfileid: "47691788"
 ####  <a name="encrypted"></a> Поддержка Always Encrypted в каталоге служб SSIS  
  Службы SSIS уже поддерживают функцию постоянного шифрования в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в следующих записях блога:  
   
--   [SSIS with Always Encrypted](http://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
+-   [SSIS with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx) (Службы SSIS с Always Encrypted)  
   
--   [Lookup transformation with Always Encrypted](http://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
+-   [Lookup transformation with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx) (Преобразование "Уточняющий запрос" с Always Encrypted)  
 
 ### <a name="better-debugging"></a>Улучшенная отладка
 
@@ -213,7 +213,7 @@ ms.locfileid: "47691788"
   
 -   В компоненте скрипта или пользовательского потока данных вызовите новый метод <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> интерфейса IDTSComponentMetadata100.  
   
- Дополнительные сведения об этом улучшении см. в следующей записи блога от разработчика служб SSIS Бо Фэна (Bo Fan): [Error Column Improvements for SSIS Data Flow](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(Улучшения столбцов с ошибками для потока данных SSIS).  
+ Дополнительные сведения об этом улучшении см. в следующей записи блога от разработчика служб SSIS Бо Фэна (Bo Fan): [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(Улучшения столбцов с ошибками для потока данных SSIS).  
   
 > [!NOTE]  
 >  (Эта поддержка была расширена в последующих выпусках. Дополнительные сведения см. в разделе [Расширенная поддержка для имена столбцов ошибок](#getidstring) и [Новый интерфейс IDTSComponentMetaData130 в API](#CMD130).)  
@@ -223,7 +223,7 @@ ms.locfileid: "47691788"
   
  Метод GetIdentificationStringByLineageID был переименован в <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. Дополнительные сведения см. в разделе [Имена столбцов для ошибок в потоке данных](#ErrorColumn).  
   
- Дополнительные сведения об этом изменении, а также об усовершенствовании столбца ошибок см. в следующей обновленной записи блога: [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3))](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ Дополнительные сведения об этом изменении, а также об усовершенствовании столбца ошибок см. в следующей обновленной записи блога: [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3))](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
   
 > [!NOTE]  
 >  (В RC0 этот метод был перемещен в новый интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Дополнительные сведения см. в разделе [Новый интерфейс IDTSComponentMetaData130 в API](#CMD130).)  
@@ -253,11 +253,11 @@ ms.locfileid: "47691788"
 ### <a name="expanded-connectivity-on-premises"></a>Расширенные возможности связи в локальной среде
 
 ####  <a name="ODatav4"></a> Поддержка источников данных OData версии 4  
- Источник OData и диспетчер подключений OData теперь поддерживают протоколы OData v3 и v4.  
+ Источник OData и диспетчер подключений OData теперь поддерживают протоколы OData версии&3; и&4;.  
   
 -   Для протокола OData версии 3 компонент поддерживает форматы данных ATOM и JSON.  
   
--   Для протокола OData версии 4 компонент поддерживает формат данных JSON.  
+-   Для протокола OData версии&4; компонент поддерживает формат данных JSON.  
   
  Дополнительные сведения см. в разделе [OData Source](../integration-services/data-flow/odata-source.md).  
 
@@ -285,10 +285,10 @@ ms.locfileid: "47691788"
  Диспетчер подключений, источник и назначение Excel теперь явным образом поддерживают источники данных Excel 2016.  
 
 ####  <a name="SAPBW"></a> Выпуск соединителя для SAP BW для SQL Server 2016  
- Соединитель Microsoft® для SAP BW для Microsoft SQL Server® 2016 выпущен в составе пакета дополнительных компонентов SQL Server 2016. Чтобы скачать компоненты пакета дополнительных компонентов, см. страницу [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).
+ Соединитель Microsoft® для SAP BW для Microsoft SQL Server® 2016 выпущен в составе пакета дополнительных компонентов SQL Server 2016. Чтобы скачать компоненты пакета дополнительных компонентов, см. страницу [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).
  
 #### <a name="oracleteradata"></a> Выпуск соединителей версии 4.0 для Oracle и Teradata
-Были выпущены соединители Microsoft версии 4.0 для Oracle и Teradata. Чтобы скачать соединители, см. в разделе [соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
+Были выпущены соединители Майкрософт версии&4;.0 для Oracle и Teradata. Чтобы скачать соединители, см. в разделе [соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
 
 ### <a name="pdwau5"></a> Выпуск соединителей для системы платформы аналитики (PDW) с обновлением 5
 Были выпущены адаптеры назначения для загрузки данных в PDW с AU5. Сведения о скачивании адаптеров см. в разделе [Analytics Platform System Appliance Update 5 Documentation and Client Tools](https://www.microsoft.com/download/details.aspx?id=51610).
@@ -346,7 +346,7 @@ ms.locfileid: "47691788"
  Мастер импорта и экспорта SQL Server теперь может импортировать данные из хранилища BLOB-объектов и сохранять их там. Дополнительные сведения см. в разделах [Выбор источника данных (мастер импорта и экспорта SQL Server)](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) и [Выбор назначения (мастер импорта и экспорта SQL Server)](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
 
 ####  <a name="CDCOracle"></a> Выпуск конструктора и службы системы отслеживания измененных данных для Oracle для Microsoft SQL Server 2016  
- Конструктор и служба системы отслеживания измененных данных Microsoft® для Oracle от Attunity для Microsoft SQL Server® 2016 выпущены в составе пакета дополнительных компонентов SQL Server 2016.  Эти компоненты теперь поддерживают Oracle 12c в классической установке. (Мультитенантная установка не поддерживается.) Чтобы скачать компоненты пакета дополнительных компонентов, см. страницу [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).  
+ Конструктор и служба системы отслеживания измененных данных Microsoft® для Oracle от Attunity для Microsoft SQL Server® 2016 выпущены в составе пакета дополнительных компонентов SQL Server 2016.  Эти компоненты теперь поддерживают Oracle 12c в классической установке. (Мультитенантная установка не поддерживается.) Чтобы скачать компоненты пакета дополнительных компонентов, см. страницу [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).  
   
 ####  <a name="cdc2016"></a> Обновление компонентов CDC для SQL Server 2016  
  Компоненты задачи по проверке CDC (отслеживание измененных данных), источника и преобразования разделителя были обновлены для обеспечения полной совместимости с SQL Server 2016. Какие -либо новые функции и изменения в поведении отсутствуют.  
@@ -360,7 +360,7 @@ ms.locfileid: "47691788"
  Назначение обработки измерений не работает для табличных моделей с уровнем совместимости SQL 2016.  Для обработки табличных данных вам требуется только задача обработки служб Analysis Services и назначение обработки секций. 
 
 ####  <a name="builtinR"></a> Поддержка встроенных служб R  
- Службы SQL Server Integration Services (SSIS) уже поддерживают встроенные службы R в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Службы SSIS можно использовать не только для извлечения данных и загрузки выходных данных анализа, но и для сборки, выполнения и периодического повторного обучения моделей R. Дополнительные сведения см. в следующей записи блога: [Ввод в эксплуатацию проекта машинного обучения с помощью SQL Server 2016 SSIS и служб R](http://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)(Operationalize your machine learning project using SQL Server 2016 SSIS and R Services). 
+ Службы SQL Server Integration Services (SSIS) уже поддерживают встроенные службы R в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Службы SSIS можно использовать не только для извлечения данных и загрузки выходных данных анализа, но и для сборки, выполнения и периодического повторного обучения моделей R. Дополнительные сведения см. в следующей записи блога: [Ввод в эксплуатацию проекта машинного обучения с помощью SQL Server 2016 SSIS и служб R](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)(Operationalize your machine learning project using SQL Server 2016 SSIS and R Services). 
 
 ####  <a name="ValidateXML"></a> Подробные данные о проверке XML в задачах XML  
  Активировав в задаче XML свойство **ValidationDetails** , вы сможете получить подробные результаты проверки XML-документа. До появления свойства **ValidationDetails** проверка XML в задачах XML возвращала информацию только о том, есть ошибка в документе или нет. Сведения о самих ошибках и их расположении были недоступны. Теперь, если для свойства **ValidationDetails** задать значение True, выходной файл будет содержать подробные сведения обо всех ошибках, включая номера строк и позиции. Эти сведения можно использовать для анализа, поиска и исправления ошибок в XML-документах. Дополнительные сведения см. в разделе [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
@@ -369,7 +369,7 @@ ms.locfileid: "47691788"
 
 ## <a name="see-also"></a>См. также:  
  [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Возможности, поддерживаемые различными выпусками SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [Возможности, поддерживаемые различными выпусками SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]

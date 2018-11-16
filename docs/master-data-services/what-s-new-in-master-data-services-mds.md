@@ -12,12 +12,12 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 962df1579b7d18bcaaf420a3bf79cfbd29940daa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ba960c94e1620b0381796a2e26112af21a3a9a1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855232"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696843"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Новые возможности служб Master Data Services (MDS)
 
@@ -33,9 +33,9 @@ ms.locfileid: "47855232"
   
  **Скачать**  
   
--   Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
+-   Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
--   Есть учетная запись Azure?  Затем перейдите **[сюда](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
+-   Есть учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
 ##  <a name="improved-performance"></a>Улучшенная производительность  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47855232"
   
     ```  
   
-     Дополнительные сведения см. в статье [Сжатие URL-адреса](http://www.iis.net/configreference/system.webserver/urlcompression).  
+     Дополнительные сведения см. в статье [Сжатие URL-адреса](https://www.iis.net/configreference/system.webserver/urlcompression).  
   
 -   Добавлены следующие задания агента SQL Server для обслуживания индекса и журнала.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47855232"
   
  Индекс с фрагментацией, превышающей 30 %, перестраивается оперативно. Во время перестроения производительность операций CRUD в соответствующей таблице снижается. Если производительность важна, рекомендуется запускать хранимую процедуру в нерабочие часы. Дополнительные сведения о фрагментации индексов см. в разделе [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
- Дополнительные сведения см. в записи [Улучшения производительности и масштабирования в SQL Server 2016](http://go.microsoft.com/fwlink/p/?LinkId=615375)в блоге Master Data Services.  
+ Дополнительные сведения см. в записи [Улучшения производительности и масштабирования в SQL Server 2016](https://go.microsoft.com/fwlink/p/?LinkId=615375)в блоге Master Data Services.  
   
 ##  <a name="improved-security"></a>Улучшенная безопасность  
   

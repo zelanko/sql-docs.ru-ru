@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d31b8d30686e55d97423648e34ea63be653be031
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b1e75eb377a21c8d5192926b2c912ae4da5a0b7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832923"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697432"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ DATABASEPROPERTYEX ( database , property )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*database*  
+*базой данных*  
 Выражение, указывающее имя базы данных, для которой `DATABASEPROPERTYEX` возвращает значение именованного свойства. Аргумент *database* имеет тип данных **nvarchar(128)**.  
 
 Для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] `DATABASEPROPERTYEX` должно быть именем текущей базы данных. Возвращает значение NULL для всех свойств, если указано другое имя базы данных.
@@ -68,7 +68,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsAutoCreateStatisticsIncremental|Автоматические статистики в одном столбце создаются в дополнительном виде везде, где это возможно.|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**|  
 |IsAutoShrink|Файлы базы данных являются кандидатами на автоматическое периодическое сжатие.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**|  
 |IsAutoUpdateStatistics|Оптимизатор запросов обновляет существующую статистику, используемую в запросе, если она может оказаться устаревшей.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**|
-|IsClone|База данных представляет собой копию только схемы и статистики пользовательской базы данных, созданной с помощью DBCC CLONEDATABASE. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](http://support.microsoft.com/help/3177838).|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**| 
+|IsClone|База данных представляет собой копию только схемы и статистики пользовательской базы данных, созданной с помощью DBCC CLONEDATABASE. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](https://support.microsoft.com/help/3177838).|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**| 
 |IsCloseCursorsOnCommitEnabled|Все открытые курсоры закрываются при фиксации транзакции.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**|  
 |IsFulltextEnabled|В базе данных включены полнотекстовое и семантическое индексирование.|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**<br /><br /> **Примечание**. Значение этого свойства сейчас не учитывается. Полнотекстовый поиск всегда включен для пользовательских баз данных. Это свойство будет удалено в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых оно в настоящее время используется.|  
 |IsInStandBy|В режиме «в сети» база данных доступна только для чтения, при этом разрешен журнал восстановления.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**|  
@@ -84,7 +84,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsSubscribed|База данных подписана на публикацию.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**|  
 |IsSyncWithBackup|База данных является опубликованной либо базой данных распространителя и поддерживает восстановление без нарушения репликации транзакций.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**|  
 |IsTornPageDetectionEnabled|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] выявляет незавершенные операции ввода-вывода, вызванные сбоями питания или другими перерывами в работе системы.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**| 
-|IsVerifiedClone|База данных представляет собой копию только схемы и статистики пользовательской базы данных, созданной с помощью параметра WITH VERIFY_CLONEDB функции DBCC CLONEDATABASE. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](http://support.microsoft.com/help/3177838).|**Применимо к** : начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления SP2.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**| 
+|IsVerifiedClone|База данных представляет собой копию только схемы и статистики пользовательской базы данных, созданной с помощью параметра WITH VERIFY_CLONEDB функции DBCC CLONEDATABASE. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](https://support.microsoft.com/help/3177838).|**Применимо к** : начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления SP2.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**| 
 |IsXTPSupported|Указывает, поддерживает ли база данных выполняющуюся в памяти OLTP, то есть создание и использование таблиц, оптимизированных для памяти, и модулей, скомпилированных в собственном коде.<br /><br /> Относится к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported не зависит от наличия файловой группы MEMORY_OPTIMIZED_DATA, которая требуется для создания объектов выполняющейся в памяти OLTP.|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимый ввод, ошибка или неприменимо<br /><br /> Базовый тип данных: **int**|  
 |LastGoodCheckDbTime|Дата и время последней успешной команды DBCC CHECKDB, выполненной в указанной базе данных. <sup>1</sup> Если команда DBCC CHECKDB не была выполнена в базе данных, возвращается 1900-01-01 00:00:00.000.|**Применимо к** : начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления SP2.<br /><br /> Значение datetime<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **datetime**| 
 |LCID|Код языка Windows для параметров сортировки.|Значение кода языка (в десятичном формате).<br /><br /> Базовый тип данных: **int**|  

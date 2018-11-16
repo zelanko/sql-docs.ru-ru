@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: adc3db5b6930cbbc9e3af95aaa2a1245bb40c25a
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: a4d7fa27844de363c2a703a95e20df11277309fa
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383939"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606914"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "49383939"
  
  ## <a name="try-it-out"></a>Попробуйте! 
   
--   Чтобы скачать и установить SQL Server 2016 Express, перейдите на страницу **[загрузок SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB — это компонент, выбираемый и доступный только при скачивании мультимедиа. Если вы скачиваете носитель, выберите **Express Advanced** или пакет **LocalDB** через **Visual Studio Installer**. В **Visual Studio Installer** можно установить SQL Server Express LocalDB как часть рабочей нагрузки **Разработка классических приложений .NET** или в качестве отдельного компонента.
+-   Чтобы скачать и установить SQL Server 2016 Express, перейдите на страницу **[загрузок SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)**. LocalDB — это компонент, выбираемый и доступный только при скачивании мультимедиа. Если вы скачиваете носитель, выберите **Express Advanced** или пакет **LocalDB** через **Visual Studio Installer**. В **Visual Studio Installer** можно установить SQL Server Express LocalDB как часть рабочей нагрузки **Разработка классических приложений .NET** или в качестве отдельного компонента.
 
    > [!TIP]
    > LocalDB можно также установить как часть Visual Studio 2017. Во время установки Visual Studio выберите рабочую нагрузку **Разработка классических приложений .NET**, которая включает SQL Server Express LocalDB.
@@ -51,9 +51,9 @@ ms.locfileid: "49383939"
 ## <a name="description"></a>Описание  
  Программа установки **LocalDB** использует программу SqlLocalDB.msi для установки необходимых файлов на компьютере. После установки **LocalDB** становится экземпляром [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , который способен создавать и открывать базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Файлы системной базы данных, как правило, хранятся в каталоге AppData пользователя, который обычно скрыт. Например, **C:\Users\\<пользователь\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. Файлы пользовательской базы данных хранятся в месте, указанном пользователем, как правило, в папке **C:\Users\\<пользователь\>\Documents\\**.  
   
- Дополнительные сведения о включении **LocalDB** в приложение см. в документации [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Общие сведения о локальных данных](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Пошаговое руководство. Создание базы данных LocalDB SQL Server](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) и [Пошаговое руководство. Подключение к данным в базе данных LocalDB SQL Server (формы Windows)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
+ Дополнительные сведения о включении **LocalDB** в приложение см. в документации [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Общие сведения о локальных данных](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Пошаговое руководство. Создание базы данных LocalDB SQL Server](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) и [Пошаговое руководство. Подключение к данным в базе данных LocalDB SQL Server (формы Windows)](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
   
- Дополнительные сведения об API **LocalDB** см. в разделах [Справочник по API экземпляра SQL Server Express LocalDB](http://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) и [Функция LocalDBStartInstance](http://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx).  
+ Дополнительные сведения об API **LocalDB** см. в разделах [Справочник по API экземпляра SQL Server Express LocalDB](https://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) и [Функция LocalDBStartInstance](https://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx).  
   
  Служебная программа SqlLocalDb позволяет создавать экземпляры **LocalDB**, запускать и останавливать экземпляр **LocalDB**, а также включает параметры для управления **LocalDB**.  Дополнительные сведения о программе SqlLocalDb см. в разделе [Программа SqlLocalDB](../../tools/sqllocaldb-utility.md).  
   
@@ -122,7 +122,7 @@ REM Gather information about the instance of LocalDB
  Чтобы установить соединение с общим экземпляром **LocalDB** , добавьте в строку подключения сочетание **.\\** (точка + обратная косая черта), чтобы указать пространство имен, зарезервированное для общих экземпляров. Например, чтобы соединиться с общим экземпляром **LocalDB** с именем `AppData` , укажите в строке подключения `(localdb)\.\AppData` . Пользователь, устанавливающий соединение с общим экземпляром **LocalDB** , который ему не принадлежит, должен иметь имя входа для проверки подлинности Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  
- Дополнительные сведения по устранению неполадок в работе **LocalDB**см. в разделе [Устранение неполадок в работе SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
+ Дополнительные сведения по устранению неполадок в работе **LocalDB**см. в разделе [Устранение неполадок в работе SQL Server 2012 Express LocalDB](https://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
   
 ## <a name="permissions"></a>Разрешения  
  Экземпляр [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]**LocalDB** является экземпляром, созданным пользователем для собственного использования. Любой пользователь компьютера может создать базу данных в экземпляре **LocalDB**, сохранив файлы в своем пользовательском профиле и запустив процесс со своими учетными данными. По умолчанию доступ к экземпляру **LocalDB** ограничен его владельцем. Данные, содержащиеся в **LocalDB** , защищаются средствами файловой системы. Если файлы пользовательской базы данных хранятся в общей папке, то базу данных может открыть любой пользователь, имеющий доступ к этой папке, с помощью собственного экземпляра **LocalDB** . Если файлы базы данных хранятся в защищенном месте, например в папке пользовательских данных, то базу данных может открыть только сам пользователь, а также администратор, обладающий правами доступа к данной папке. Файлы **LocalDB** могут быть открыты одновременно только одним экземпляром **LocalDB** .  

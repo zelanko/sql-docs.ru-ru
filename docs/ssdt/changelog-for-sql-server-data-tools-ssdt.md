@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216812"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677903"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Журнал изменений для SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -453,7 +453,7 @@ ms.locfileid: "51216812"
 
 **Проекты Integration Services**
 - Исправлена проблема, из-за которой контейнер ForEachLoop ADO/ADO.NET отображался неправильно.
-- Исправлена проблема, которая заключалась в том, что некоторые задачи, компоненты и мастера не были локализованы.
+- Исправлена проблема, которая заключалась в том, что некоторые задачи, компоненты и мастеры не были локализованы.
 - Последняя версия *TargetServerVersion* изменена с "SQL Server vNext" на "SQL Server 2017".
 
 
@@ -534,11 +534,11 @@ ms.locfileid: "51216812"
 - Табличные: различные улучшения и исправления для повышения производительности в модуле синтаксического анализа DAX и строке формул.
 - Табличные: обозреватель табличных моделей больше не отображается, если табличный проект SSAS не открыт.
 - Многомерные: устранена проблема, при которой окно обработки было непригодным для использования на компьютерах с высоким разрешением.
-- Табличные: исправлена ошибка, когда в SSDT возникает сбой при открытии любого проекта бизнес-аналитики, если при этом открыта среда SSMS. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
-- Табличные: исправлена ошибка, при которой иерархия неправильно сохранялась в BIM-файл в модели 1 103. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- Табличные: исправлена ошибка, когда в SSDT возникает сбой при открытии любого проекта бизнес-аналитики, если при этом открыта среда SSMS. [Элемент Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Табличные: исправлена ошибка, при которой иерархия неправильно сохранялась в BIM-файл в модели 1 103. [Элемент Connect](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - Табличные: исправлена ошибка, при которой режим интегрированной рабочей области можно было использовать на 32-разрядных компьютерах, несмотря на то, что этот режим не поддерживается.
 - Табличные: исправлена ошибка, при которой щелчок на любом элементе в режиме частичного выбора (например, при вводе выражения DAX и щелчке на измерении) мог привести к сбою.
-- Табличные: исправлена ошибка, при которой мастер развертывания сбрасывал имя модели (.Name) обратно к значению "Model". [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- Табличные: исправлена ошибка, при которой мастер развертывания сбрасывал имя модели (.Name) обратно к значению "Model". [Элемент Connect](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
 - Табличные: исправлена проблема, при которой при выборе иерархии в TME отображались свойства несмотря на то, что представление диаграммы не было выбрано.
 - Табличные: исправлена ошибка, при которой при вставке текста в строку формулы DAX из определенных приложений помещались изображения или другое содержимое вместо текста.
 - Табличные: исправлена ошибка, при которой в режиме 1 103 некоторые старые модели не открывались из-за наличия в них измерений со специфическим определением.
@@ -569,8 +569,8 @@ ms.locfileid: "51216812"
 - Исправлена проблема, когда во время конструирования отчетов в SSDT древовидное представление параметров, источников данных и наборов данных сворачивалось после внесения большинства изменений. 
 - Исправлена ошибка, в которой при выборе команды "Сохранить" сохранялась текущая версия RDL, а не последняя версия.
 - Исправлена ошибка, при которой SSDT RS выполняет резервное копирование файлов, когда резервное копирование выключено, и другие ошибки.
-- Исправлена ошибка в построителе отчетов, которая появлялась при нажатии кнопки "Разбить ячейки". [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
-- Исправлена проблема, при которой кэширование может привести к неверным данным в отчете. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+- Исправлена ошибка в построителе отчетов, которая появлялась при нажатии кнопки "Разбить ячейки". [Элемент Connect](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- Исправлена проблема, при которой кэширование может привести к неверным данным в отчете. [Элемент Connect](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
 
 **Проекты IS:**
 - Исправлена ошибка, при которой параметр run64bitruntime не сохраняется.
@@ -582,7 +582,7 @@ ms.locfileid: "51216812"
 
 **Проекты базы данных:**
 - При развертывании DACPAC-файла SSDT включается игнорирование порядка столбцов (IgnoreColumnOrder). [Элемент Connect](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
-- Ошибка компиляции SSDT при использовании STRING_SPLIT. [Элемент Connect](http://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
+- Ошибка компиляции SSDT при использовании STRING_SPLIT. [Элемент Connect](https://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
 - Исправлена проблема, при которой DeploymentContributors имели доступ к открытым моделям, но резервная схема еще не была инициализирована. [Проблема GitHub](https://github.com/Microsoft/DACExtensions/issues/8)
 - Временное исправление DacFx для размещения файловой группы.
 - Исправление для ошибки "Неразрешенная ссылка" для внешних синонимов. 
@@ -743,7 +743,7 @@ Console.WriteLine(result.DeploymentReport);
     - **SSDT:**
         - Ошибка подключения 1898001. [Устранена проблема с ограничением до 128 знаков в описании столбца](https://connect.microsoft.com/SQLServer/feedback/details/1898001/column-description-limited-to-128-characters).
         - Устранена проблема, при которой во время публикации базы данных из VS не применялось свойство DatabaseServiceObjective в XML профиля публикации.
-        - Ошибка подключения 2900167. [Устранена проблема с неправильным сохранением временных файлов при модульном тестировании](http://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind).
+        - Ошибка подключения 2900167. [Устранена проблема с неправильным сохранением временных файлов при модульном тестировании](https://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind).
         - Устранена проблема, при которой поле со списком "Срок хранения" в параметрах базы данных усекалось.
         - Устранена проблема, при которой во время изменения пароля не проверялся пустой старый пароль в свойствах проекта SQL CLR.
     - **DACFx:**

@@ -14,17 +14,17 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8205582caebddb941d3c5dc512a3952fbf9f8f3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4404b2af9114da376e007bf91533f9e083dbff10
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750362"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639881"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Параметры пакета и проекта Integration Services (SSIS)
   Параметры служб[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) могут быть использованы для присвоения значений свойствам внутри пакетов во время выполнения пакетов. Можно создать *параметры проекта* на уровне проекта и *параметры пакета* на уровне пакета. Параметры проекта используются для предоставления любых внешних данных, получаемых проектом, одному пакету в проекте или более. Параметры пакета позволяют изменить выполнение пакета. При этом изменять пакет и развертывать его повторно не придется.  
   
- В службах [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] можно создавать, изменять и удалять параметры проекта в окне **Project.params** . Создавать, изменять, удалять и параметров пакета можно с помощью вкладки **Параметры** в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Диалоговое окно **Параметризация** позволяет связать новый или существующий параметр со свойством задачи. Дополнительные сведения об использовании окна **Project.params** и вкладки **Параметры** см. в разделе [Create Parameters](http://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99). Дополнительные сведения о диалоговом окне **Параметризация** см. в разделе [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
+ В службах [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] можно создавать, изменять и удалять параметры проекта в окне **Project.params** . Создавать, изменять, удалять и параметров пакета можно с помощью вкладки **Параметры** в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Диалоговое окно **Параметризация** позволяет связать новый или существующий параметр со свойством задачи. Дополнительные сведения об использовании окна **Project.params** и вкладки **Параметры** см. в разделе [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99). Дополнительные сведения о диалоговом окне **Параметризация** см. в разделе [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
   
 ## <a name="parameters-and-package-deployment-model"></a>Параметры и модель развертывания пакета  
  Как правило, при развертывании пакета с использованием устаревшей модели развертывания пакетов необходимо использовать конфигурации вместо параметров.  
@@ -214,6 +214,6 @@ ms.locfileid: "47750362"
  Чтобы установить параметры по умолчанию сервера с использованием Transact-SQL, используйте хранимую процедуру [catalog.set_object_parameter_value (база данных SSISDB)](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md). Для просмотра текущих значений по умолчанию сервера используйте запрос к представлению [catalog.object_parameters (база данных SSISDB)](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md). Чтобы удалить значение по умолчанию сервера, используйте хранимую процедуру, используйте хранимую процедуру [catalog.clear_object_parameter_value (база данных SSISDB)](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md).  
   
 ## <a name="related-content"></a>См. также  
- Запись в блоге [SSIS Quick Tip: Required Parameters](http://go.microsoft.com/fwlink/?LinkId=239781)(Краткая рекомендация по службам SSIS. Необходимые параметры) на mattmasson.com.  
+ Запись в блоге [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781)(Краткая рекомендация по службам SSIS. Необходимые параметры) на mattmasson.com.  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7bd94456b3e26aa8f8cae5728a3a9af3c3324254
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: eeb22433523d9fef88ab5a32f429ce94aca5cbd0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028653"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813757"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Формирование веб-каналов данных из отчетов (построитель отчетов и службы SSRS)
 
@@ -67,7 +67,7 @@ ms.locfileid: "50028653"
 ### <a name="header-section"></a>Раздел заголовка  
  Следующий код XML иллюстрирует раздел заголовка потока данных.  
   
- `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
+ `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="https://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="https://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="https://www.w3.org/2005/Atom">`  
   
  `<title type="text"></title>`  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50028653"
   
  Строки данных для вложенных областей данных как правило очень длинны, особенно если вложенные таблицы и матрицы включают группы и итоговые значения. Может оказаться полезным экспортировать отчет в поток данных и просмотреть этот поток данных для проверки корректности формирования данных.  
   
- Когда модуль подготовки отчетов Atom создает сервисный документ Atom, для потока данных создается уникальный идентификатор, который упоминается в URL-адресе для доступа к содержимому потока данных. Образец сервисного документа Atom, показанный выше, включает URL-адрес `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. Этот URL-адрес идентифицирует отчет (Product Sales Summary), формат подготовки отчета Atom (ATOM) и название потока данных (xAx0x1).  
+ Когда модуль подготовки отчетов Atom создает сервисный документ Atom, для потока данных создается уникальный идентификатор, который упоминается в URL-адресе для доступа к содержимому потока данных. Образец сервисного документа Atom, показанный выше, включает URL-адрес `https://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. Этот URL-адрес идентифицирует отчет (Product Sales Summary), формат подготовки отчета Atom (ATOM) и название потока данных (xAx0x1).  
   
  Имена элементов отчета по умолчанию совпадают с именами элементов языка определения отчетов (RDL) для элементов отчета, поэтому зачастую они неинтуитивны и трудны для запоминания. Например, первая матрица, помещенная в отчет, будет по умолчанию названа Tablix 1. Потоки данных также будут использовать эти имена.  
   

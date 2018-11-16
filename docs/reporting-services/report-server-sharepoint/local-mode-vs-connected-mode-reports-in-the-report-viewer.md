@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fe66beb328e38a02bf24e9ed6a7ca9349b997781
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: cc0d7ba8aa5261e93f7b291f3e948e0f773c45e5
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029813"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812937"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Отчеты, созданные в локальном и подключенном режимах в средстве просмотра отчетов
 
@@ -55,9 +55,9 @@ ms.locfileid: "50029813"
   
  Дополнительные сведения см. в следующих разделах.  
   
--   [Новые возможности Access 2013](http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx).  
+-   [Новые возможности Access 2013](https://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (https://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx).  
   
--   [Основные задачи для приложения Access](http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
+-   [Основные задачи для приложения Access](https://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (https://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
   
 ## <a name="configure-local-mode-reporting-with-sharepoint-2010"></a>Настройка локального режима отчетности в SharePoint 2010
 
@@ -79,7 +79,7 @@ ms.locfileid: "50029813"
   
 ## <a name="connected-mode"></a>режиме соединения
 
- Последние сведения об использовании расширения ADS в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме соединения см. в разделе [Отчет служб Access на сайте SharePoint выводит ошибку в расширении данных "ADS"](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
+ Последние сведения об использовании расширения ADS в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме соединения см. в разделе [Отчет служб Access на сайте SharePoint выводит ошибку в расширении данных "ADS"](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## <a name="see-also"></a>См. также раздел
 

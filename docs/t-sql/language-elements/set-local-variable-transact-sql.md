@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb3f0a99cea35b02b7aa6dce724c279ff729474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759702"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697333"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -186,7 +186,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Составной оператор присваивания может использоваться везде, где выполняется присваивание с выражением справа от оператора, включающим переменные, или имеется инструкция SET в инструкциях UPDATE, SELECT и RECEIVE.  
   
- Не используйте переменную в инструкции SELECT для сцепления значений (то есть для вычисления статистических значений). Запрос может вернуть непредвиденные результаты. Это связано с тем, что все выражения в списке SELECT (включая назначения) могут быть выполнены не ровно один раз для каждой строки вывода. Дополнительные сведения см. в [этой статье базы знаний](http://support.microsoft.com/kb/287515).  
+ Не используйте переменную в инструкции SELECT для сцепления значений (то есть для вычисления статистических значений). Запрос может вернуть непредвиденные результаты. Это связано с тем, что все выражения в списке SELECT (включая назначения) могут быть выполнены не ровно один раз для каждой строки вывода. Дополнительные сведения см. в [этой статье базы знаний](https://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public. Все пользователи могут использовать SET **@***local_variable*.  

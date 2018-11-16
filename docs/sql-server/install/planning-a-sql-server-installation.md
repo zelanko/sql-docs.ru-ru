@@ -12,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 456458c98ddee8115f715839c6e13c3c3680196a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bad3ae2d22a1aed53cb5da61f631e48bde480d56
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713182"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701922"
 ---
 # <a name="planning-a-sql-server-installation"></a>Планирование установки SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47713182"
   
  Независимо от метода установки, необходимо подтвердить свое согласие с условиями лицензии на использование пакета программ как физического лица или от имени организации, если на используемое программное обеспечение не распространяется отдельное соглашение [!INCLUDE[msCoName](../../includes/msconame-md.md)] , такое как соглашение о корпоративном лицензировании Майкрософт или отдельное соглашение с независимым поставщиком программного обеспечения или изготовителем оборудования (OEM).  
   
- Условия лицензионного соглашения отображаются для ознакомления и принятия в пользовательском интерфейсе программы установки. Автоматические установки (с использованием параметров `/Q` или `/QS`) должны включать параметр `/IAcceptSQLServerLicenseTerms`. Скачайте лицензию и ознакомьтесь с ее условиями в разделе [Условия лицензии и информация по Microsoft SQL Server](http://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). Условия корпоративного лицензирования см. в разделе [Условия лицензии и документация](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Для более старых версий SQL Server см. раздел [Условия лицензионного соглашения на использование программного обеспечения корпорации Майкрософт](http://go.microsoft.com/fwlink/?LinkID=148209).  
+ Условия лицензионного соглашения отображаются для ознакомления и принятия в пользовательском интерфейсе программы установки. Автоматические установки (с использованием параметров `/Q` или `/QS`) должны включать параметр `/IAcceptSQLServerLicenseTerms`. Скачайте лицензию и ознакомьтесь с ее условиями в разделе [Условия лицензии и информация по Microsoft SQL Server](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). Условия корпоративного лицензирования см. в разделе [Условия лицензии и документация](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Для более старых версий SQL Server см. раздел [Условия лицензионного соглашения на использование программного обеспечения корпорации Майкрософт](https://go.microsoft.com/fwlink/?LinkID=148209).  
   
 > [!NOTE]  
 >  В зависимости от способа получения ПО (например, по [!INCLUDE[msCoName](../../includes/msconame-md.md)] ), на его использование могут распространяться дополнительные условия.  

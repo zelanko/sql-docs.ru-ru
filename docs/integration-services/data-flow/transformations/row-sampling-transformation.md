@@ -23,12 +23,12 @@ ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 650e41167a5016a4dc5e0defe03b11520d961c96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60c2615cf141f145f2353df5309105b0ed535fc1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737872"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641271"
 ---
 # <a name="row-sampling-transformation"></a>преобразование «Выборка строк»
   Преобразование «Выборка строк» используется для получения случайно выбранного подмножества входного набора данных. Можно указать точный размер получаемого образца и задать начальное значение для генератора случайных чисел.  
@@ -52,7 +52,7 @@ ms.locfileid: "47737872"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

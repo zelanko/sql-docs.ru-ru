@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c143f1abe85594cc399f19ed9d845c6c01573396
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d98dfd2c96322a2ba1b042a0edfcff8f7e6fb518
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769022"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696682"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ ON SERVER
  Задает параметр целевого объекта. Параметры цели отображаются в представлении sys.dm_xe_object_columns со значением column_type, равным "customizable", и object_name = *target_name*.  
   
 > [!IMPORTANT]  
->  Если используется цель "Кольцевой буфер", рекомендуется установить параметр цели max_memory в значение 2048 килобайт (КБ), чтобы избежать возможного усечения выходных XML-данных. Дополнительные сведения об использовании разных типов целевых объектов см. в статье [Цели расширенных событий SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+>  Если используется цель "Кольцевой буфер", рекомендуется установить параметр цели max_memory в значение 2048 килобайт (КБ), чтобы избежать возможного усечения выходных XML-данных. Дополнительные сведения об использовании разных типов целевых объектов см. в статье [Цели расширенных событий SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
  WITH ( \<event_session_options> [ ,...*n*] ) Задает параметры, используемые с сеансом событий.  
   

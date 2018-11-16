@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7348463fe7fb9f3871ecba06a2be8e768f8e3d51
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029173"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813867"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] получают через модульный и расширяемый уровень данных, где работают модули обработки данных. Для получения данных отчета из источника данных необходимо выбрать модуль обработки данных, поддерживающий как тип источника данных, так и версию программного обеспечения источника данных и его платформу (32-разрядная или 64-разрядная [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -175,7 +175,7 @@ ms.locfileid: "50029173"
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  Модуль обработки данных OLE DB требует выбора дополнительного уровня поставщика данных в зависимости от версии источника данных, который необходимо использовать в отчете. Если конкретный поставщик данных не выбран, предоставляется поставщик по умолчанию. Выберите конкретный поставщик данных в диалоговом окне **Свойства соединения**, открыть которое можно, нажав кнопку **Изменить** в диалоговых окнах "Источник данных" или "Общий источник данных".  
   
- Дополнительные сведения о соответствующем конструкторе запросов OLE DB см. в разделах [Пользовательский интерфейс графического конструктора запросов](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Дополнительные сведения об определенной поддержке поставщиков OLE DB см. в статье [Конструктор Visual Studio .NET поддерживает отдельных поставщиков данных OLE DB](http://support.microsoft.com/default.aspx/kb/811241) базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Дополнительные сведения о соответствующем конструкторе запросов OLE DB см. в разделах [Пользовательский интерфейс графического конструктора запросов](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Дополнительные сведения об определенной поддержке поставщиков OLE DB см. в статье [Конструктор Visual Studio .NET поддерживает отдельных поставщиков данных OLE DB](https://support.microsoft.com/default.aspx/kb/811241) базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  [Назад к таблице источников данных](#DataSourcesTable)  
   
@@ -196,7 +196,7 @@ ms.locfileid: "50029173"
   
  Поддерживаются безымянные параметры, зависящие от позиции. Именованные параметры этим модулем не поддерживаются. Для работы с именованными параметрами используйте модуль обработки данных [Oracle](#OracleClient) .  
   
- Дополнительные сведения о настройке Oracle в качестве источника данных см. в разделе [Как использовать службы Reporting Services для настройки источника данных Oracle и доступа к нему](http://support.microsoft.com/kb/834305). Сведения о дополнительной настройке разрешений см. в статье [Как добавить разрешения для субъекта безопасности NETWORK SERVICE](http://support.microsoft.com/kb/870668) базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Дополнительные сведения о настройке Oracle в качестве источника данных см. в разделе [Как использовать службы Reporting Services для настройки источника данных Oracle и доступа к нему](https://support.microsoft.com/kb/834305). Сведения о дополнительной настройке разрешений см. в статье [Как добавить разрешения для субъекта безопасности NETWORK SERVICE](https://support.microsoft.com/kb/870668) базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  [Назад к таблице источников данных](#DataSourcesTable)  
   
@@ -229,11 +229,11 @@ ms.locfileid: "50029173"
  
 Чтобы установить инструменты клиента Oracle, можно выполнить указанные ниже действия.
  
-1.  Перейдите на [сайт загрузки Oracle](http://www.oracle.com/us/products/tools/index-090165.html).
+1.  Перейдите на [сайт загрузки Oracle](https://www.oracle.com/us/products/tools/index-090165.html).
 2.  Скачайте ODAC 12c 4 выпуска (12.1.0.2.4) для Windows (64-разрядная версия для сервера, 32-разрядная версия для инструментов).
 3.  Установите поставщик данных Oracle для .NET 4.
   
- Этот модуль поддерживает именованные параметры. Oracle версии 11g или более поздней поддерживает параметры с несколькими значениями. Для работы с безымянными параметрами, зависящими от позиции, используйте модуль обработки данных OLE DB с поставщиком данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для Oracle. Дополнительные сведения о настройке Oracle в качестве источника данных см. в разделе [Как использовать службы Reporting Services для настройки источника данных Oracle и доступа к нему](http://support.microsoft.com/kb/834305). Сведения о дополнительной настройке разрешений см. в статье [Как добавить разрешения для субъекта безопасности NETWORK SERVICE](http://support.microsoft.com/kb/870668) базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Этот модуль поддерживает именованные параметры. Oracle версии 11g или более поздней поддерживает параметры с несколькими значениями. Для работы с безымянными параметрами, зависящими от позиции, используйте модуль обработки данных OLE DB с поставщиком данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для Oracle. Дополнительные сведения о настройке Oracle в качестве источника данных см. в разделе [Как использовать службы Reporting Services для настройки источника данных Oracle и доступа к нему](https://support.microsoft.com/kb/834305). Сведения о дополнительной настройке разрешений см. в статье [Как добавить разрешения для субъекта безопасности NETWORK SERVICE](https://support.microsoft.com/kb/870668) базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  Можно получить данные из хранимых процедур с несколькими входными параметрами, но эти процедуры должны возвращать только один выходной курсор. Дополнительные сведения см. в разделе об Oracle статьи [Получение данных с помощью модуля DataReader](https://go.microsoft.com/fwlink/?LinkId=81758).  
   
@@ -270,7 +270,7 @@ ms.locfileid: "50029173"
   
  Дополнительные сведения см. в разделе [Тип соединения Teradata (службы SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
   
- Также можно создавать модели на основе базы данных Teradata. Дополнительные сведения см. в следующем техническом документе на веб-сайте Teradata: [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)(Службы Microsoft SQL Server 2012 Reporting Services и корпорация Teradata).  
+ Также можно создавать модели на основе базы данных Teradata. Дополнительные сведения см. в следующем техническом документе на веб-сайте Teradata: [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)(Службы Microsoft SQL Server 2012 Reporting Services и корпорация Teradata).  
   
  [Назад к таблице источников данных](#DataSourcesTable)  
   

@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b9adedc8637acf84feccd5b24fa540892399ebc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030423"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813027"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Добавление веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на страницу SharePoint
 
@@ -46,7 +46,7 @@ ms.locfileid: "50030423"
 
     ![Добавьте веб-часть "Средство просмотра отчетов".](media/sharepoint-report-viewer-web-part.png)
 
-    Сначала может возникнуть ошибка. Причина в том, что URL-адрес сервера отчетов по умолчанию имеет значение *http://localhost*, но по этому адресу сервер может быть недоступен.
+    Сначала может возникнуть ошибка. Причина в том, что URL-адрес сервера отчетов по умолчанию имеет значение *https://localhost*, но по этому адресу сервер может быть недоступен.
 
 ## <a name="configure-the-report-viewer-web-part"></a>Настройка веб-части "Средство просмотра отчетов"
 
@@ -56,7 +56,7 @@ ms.locfileid: "50030423"
 
     ![Пункт "Изменить веб-часть" в раскрывающемся меню веб-части.](media/sharepoint-edit-web-part.png)
 
-2. Введите **URL-адрес сервера отчетов**, где размещается отчет. Таблица должна выглядеть приблизительно так: *http://myrsserver/reportserver*.
+2. Введите **URL-адрес сервера отчетов**, где размещается отчет. Таблица должна выглядеть приблизительно так: *https://myrsserver/reportserver*.
 
 3. Введите путь и имя отчета, который должен отображаться в веб-части. Он должен выглядеть так: */AdventureWorks Sample Reports/Company Sales*. В этом примере отчет *Company Sales* находится в папке *AdventureWorks Sample Reports*.
 

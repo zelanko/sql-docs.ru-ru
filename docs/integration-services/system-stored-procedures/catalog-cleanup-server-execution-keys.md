@@ -11,12 +11,12 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a39ae6682829121d2471d49c3dd8fd9fdfbfd8d
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 6a1b585c5d4288d05e00d24e0f17b4823899a418
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864208"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640982"
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
      Вы можете указать область действия или уровень (выполнение или проект) и число удаляемых ключей. Размер удаляемого пакета по умолчанию — 1000. Если задан уровень 2, ключи и сертификаты удаляются только при условии, что удалены связанные проекты.  
   
- Дополнительные сведения см. в следующей статье базы знаний: [Устранение проблем с производительностью при использовании базы данных SSISDB в качестве хранилища развертывания в SQL Server 2012](http://support.microsoft.com/kb/2972285)  
+ Дополнительные сведения см. в следующей статье базы знаний: [Устранение проблем с производительностью при использовании базы данных SSISDB в качестве хранилища развертывания в SQL Server 2012](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>Пример  
  В этом примере вызывается хранимая процедура cleanup_server_execution_keys.  

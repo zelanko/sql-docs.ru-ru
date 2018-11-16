@@ -20,12 +20,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce77499661b7b12c5acb010d9a639c2517bef94d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba87cc9564183c45f4c00765f05bbaa363d231ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697089"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673353"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Развертывание базы данных с помощью приложения уровня данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47697089"
   
  Некоторые параметры баз данных, например TRUSTWORTHY, DB_CHAINING и HONOR_BROKER_PRIORITY, нельзя изменить в рамках процедуры развертывания. Физические свойства, например количество файловых групп или количество и размер файлов, нельзя изменять в рамках процедуры развертывания. После завершения развертывания можно настроить базу данных с помощью инструкции ALTER DATABASE, среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]или программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.  
   
-###  <a name="LimitationsRestrictions"></a> ограничения  
+###  <a name="LimitationsRestrictions"></a> Ограничения  
  Мастер **Развертывание базы данных** поддерживает развертывание базы данных:  
   
 -   C экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
@@ -127,7 +127,7 @@ ms.locfileid: "47697089"
 ## <a name="using-a-net-framework-application"></a>Использование приложения .NET Framework  
  **Развертывание базы данных с помощью методов DacStore Export() и Import() в приложении .NET Framework.**  
   
- Чтобы просмотреть пример кода, загрузите пример приложения DAC на сайте [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)  
+ Чтобы просмотреть пример кода, загрузите пример приложения DAC на сайте [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
 1.  Создайте объект SMO и настройте его на работу с экземпляром или сервером, содержащим базу данных, подлежащую развертыванию.  
   

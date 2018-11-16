@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 38fefb6c403008e32d9783ac8a1b2a956a340055
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddee0e6eb08f95b1552ae76291afa22e0d3e171b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691583"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602024"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Настройка SQL Server на установке Server Core
 
@@ -34,15 +34,15 @@ ms.locfileid: "47691583"
   
 Дополнительные сведения о дистанционной настройке установкой Server Core и управлении еюсм. в следующих статьях:  
   
-- [Установка Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
+- [Установка Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
-- [Настройка установки Server Core системы Windows Server 2016 с помощью Sconfig.cmd](http://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
+- [Настройка установки Server Core системы Windows Server 2016 с помощью Sconfig.cmd](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
   
-- [Установка ролей и компонентов в Windows Server 2012 R2 с Server Core](http://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
+- [Установка ролей и компонентов в Windows Server 2012 R2 с Server Core](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Управление установкой Server Core: обзор](http://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Управление установкой Server Core: обзор](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
-- [Администрирование установки Server Core](http://go.microsoft.com/fwlink/?LinkId=245963)
+- [Администрирование установки Server Core](https://go.microsoft.com/fwlink/?LinkId=245963)
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> Установка обновлений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 Этот раздел содержит сведения об установке обновлений для [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] на компьютере под управлением Windows Server Core. Пользователям рекомендуется своевременно оценивать и устанавливать последние обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы обеспечить наличие последних обновлений безопасности для систем. Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] на компьютере под управлением Windows Server Core см. в разделе [Установка SQL Server на Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "47691583"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объединяет последние обновления продукта с установкой основного продукта, чтобы он и применимые обновления устанавливались одновременно.  
   
-Когда программа установки обнаруживает последние версии соответствующих обновлений, эти обновления загружаются и интегрируются в текущую процедуру установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Функция обновления продукта может включить в установку пакет обновления, накопительное обновление или и то и другое.  
+Когда программа установки обнаруживает последние версии соответствующих обновлений, эти обновления загружаются и интегрируются в текущую процедуру установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Функция обновления продукта может включить в установку пакет обновления, накопительное обновление или и то и другое.  
   
 Укажите параметры UpdateEnabled и UpdateSource, чтобы ввести последние обновления продукта в установку основного продукта. В следующем примере показано, как выполнить обновления продукта в процессе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -230,6 +230,6 @@ $Tcp
   
 ## <a name="see-also"></a>См. также:  
  [Установка SQL Server в Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [Инструкции по установке](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [Инструкции по установке](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

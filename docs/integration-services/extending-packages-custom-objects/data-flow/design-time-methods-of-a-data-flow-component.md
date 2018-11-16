@@ -20,12 +20,12 @@ ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4864aedf00d616ee35e551035574430c808bd70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5c45761082fc37846cb732c6130718ba23efee0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806032"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639128"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>Методы времени разработки для компонента потока данных
   Перед выполнением задача потока данных считается находящейся в состоянии времени разработки, поскольку она подвергается добавочным изменениям. К таким изменениям относятся добавление или удаление компонентов, добавление или удаление объектов пути, которые соединяют компоненты, и изменения в метаданных компонентов. При изменении метаданных компонент может отслеживать их и выполнять ответные действия. Например, компонент может не допускать внесения определенных изменений или вносить дополнительные изменения в ответ на изменение. Во время разработки конструктор взаимодействует с компонентом через интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> времени разработки.  
@@ -101,7 +101,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- Дополнительные сведения см. в разделах "Преобразование обобщенного типа" и "Реализация преобразователя типов" [библиотеки MSDN](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ Дополнительные сведения см. в разделах "Преобразование обобщенного типа" и "Реализация преобразователя типов" [библиотеки MSDN](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
  С помощью свойства <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> в качестве значения пользовательского свойства можно указать диалоговое окно пользовательского редактора, как показано в следующем примере. Сначала нужно создать пользовательский редактор типов, наследующий от **System.Drawing.Design.UITypeEditor**, если не удается найти существующий класс редактора типов пользовательских интерфейсов, отвечающий потребностям пользователя.  
   
@@ -135,7 +135,7 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- Дополнительные сведения см. в разделе "Реализация редактора типов пользовательских интерфейсов" [библиотеки MSDN](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ Дополнительные сведения см. в разделе "Реализация редактора типов пользовательских интерфейсов" [библиотеки MSDN](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
 ## <a name="see-also"></a>См. также:  
  [Методы времени выполнения для компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  

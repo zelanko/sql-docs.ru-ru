@@ -19,17 +19,17 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 493e6c7a6cb2f3de0d6e637ece3add31085a8bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38175416fdd47ee50f9bb3aa94b7318b8926317b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742362"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640034"
 ---
 # <a name="ado-net-destination"></a>Назначение «ADO.NET»
   Назначение ADO NET загружает данные в различные базы данных, совместимые с [!INCLUDE[vstecado](../../includes/vstecado-md.md)], которые используют таблицу или представление базы данных. Можно загрузить эти данные в существующую таблицу или представление либо создать новую таблицу и загрузить в нее данные.  
   
- Вы можете использовать назначение "ADO.NET" для соединения с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)]см. в разделе [Общие рекомендации и ограничения (база данных SQL Windows Azure)](http://go.microsoft.com/fwlink/?LinkId=248228).  
+ Вы можете использовать назначение "ADO.NET" для соединения с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)]см. в разделе [Общие рекомендации и ограничения (база данных SQL Windows Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>Устранение неполадок, связанных с назначением «ADO.NET»  
  Вы можете протоколировать вызовы, сделанные назначением «ADO.NET» к внешним поставщикам данных. Эти функции ведения журналов можно использовать для устранения неполадок при сохранении данных во внешних источниках данных, выполняемых назначением ADO NET. Чтобы протоколировать вызовы, выполненные назначением ADO NET к внешнему поставщику данных, необходимо разрешить ведение журнала пакета и выбрать событие **Диагностика** на уровне пакета. Дополнительные сведения см. в разделе [Инструменты устранения неполадок при выполнении пакетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "47742362"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "47742362"
 >  Дополнительные сведения см. в разделе [SET IDENTITY_INSERT (Transact-SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) и [IDENTITY (свойство) (Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Техническая статья [Быстрый способ загрузки данных в базу данных SQL Windows Azure](http://go.microsoft.com/fwlink/?LinkId=244333)на сайте sqlcat.com  
+ Техническая статья [Быстрый способ загрузки данных в базу данных SQL Windows Azure](https://go.microsoft.com/fwlink/?LinkId=244333)на сайте sqlcat.com  
   
 ## <a name="ado-net-destination-editor-mappings-page"></a>Редактор назначения «ADO.NET» (страница «Сопоставления»)
   Страница **Сопоставления** диалогового окна **Редактор назначения «ADO.NET»** используется для сопоставления входных столбцов с целевыми.  

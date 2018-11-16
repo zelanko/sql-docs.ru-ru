@@ -11,12 +11,12 @@ ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a6c5d95e970587625eb9a62f5cc86519466af049
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51e6bc7f3bb1a1326245a4e7cfee67402d816a8e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795752"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638112"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model-in-ssis"></a>Занятие 6. Использование параметров в модели развертывания проекта в службах SSIS
 В SQL Server 2012 была добавлена новая модель развертывания, позволяющая развертывать проекты на сервере служб Integration Services. Сервер служб Integration Services позволяет управлять пакетами, запускать пакеты, а также настраивать значения времени выполнения для пакетов.  
@@ -28,7 +28,7 @@ ms.locfileid: "47795752"
 При повторном выполнении пакета служба Integration Services использует параметр для заполнения значения переменной, а переменная в свою очередь обновит свойство "Каталог". В итоге пакет последовательно проходит все файлы в новой папке данных, определенной значением параметра, а не в папке, заданной в файле конфигурации пакета.  
   
 > [!IMPORTANT]  
-> Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании образца базы данных **AdventureWorksDW2012** см. в разделе [Вопросы установки образцов кода и образцов баз данных SQL Server](http://technet.microsoft.com/library/ms161556%28v=sql.105%29).  
+> Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании образца базы данных **AdventureWorksDW2012** см. в разделе [Вопросы установки образцов кода и образцов баз данных SQL Server](https://technet.microsoft.com/library/ms161556%28v=sql.105%29).  
   
 ## <a name="lesson-tasks"></a>Задачи занятия  
 Это занятие содержит следующие задачи.  

@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f5de46e377b750c26b9a048d63ffec7ae83c6f11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 193794ba5d5553036b6fc2018d3e8d8a5ce4401d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648794"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642171"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Занятие 2–2. Добавление и настройка контейнера "цикл по каждому элементу" | Документы Майкрософт
 В этой задаче будет добавлена возможность выполнить циклическую обработку папки неструктурированных файлов и применить для каждого из этих неструктурированных файлов одинаковое преобразование потока данных, использованное на занятии 1. Это будет выполнено путем добавления в поток управления и настройки контейнера «цикл по каждому элементу».  
@@ -62,11 +62,11 @@ ms.locfileid: "47648794"
   
     Образцы данных включаются в состав пакетов занятий по службам [!INCLUDE[ssIS](../includes/ssis-md.md)] . Чтобы загрузить образцы данных и пакеты занятий выполните следующие действия.  
   
-    1.  Перейдите к [образцам продуктов служб Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027). 
+    1.  Перейдите к [образцам продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027). 
   
     2.  Перейдите на вкладку **DOWNLOADS** .  
   
-    3.  Щелкните файл [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031).  
+    3.  Щелкните файл [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](https://msftisprodsamples.codeplex.com/downloads/get/596031).  
   
 6.  В поле **Файлы** введите **Currency_\*.txt**.  
   
@@ -93,8 +93,8 @@ ms.locfileid: "47648794"
 [Шаг 3. Изменение диспетчера соединений с неструктурированными файлами](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>См. также:  
-[Настройка контейнера «цикл по каждому элементу»](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
-[Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+[Настройка контейнера «цикл по каждому элементу»](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
+[Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
   

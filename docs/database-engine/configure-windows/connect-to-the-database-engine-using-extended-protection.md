@@ -18,19 +18,19 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 638bd8f87293a6d541cbcef7078a6724d6380d33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d03661990e6316b7faa223cac63c8c63939fb998
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700092"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606014"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Соединение с компонентом Database Engine с использованием расширенной защиты
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает **расширенную защиту** , начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Расширенная защита для проверки подлинности** представляет собой функцию сетевых компонентов, реализуемую операционной системой. **Расширенная защита** поддерживается в Windows 7 и Windows Server 2008 R2. **Расширенная защита** входит в пакет обновления для более старых операционных систем [!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи **расширенную защиту**.  
   
 > [!IMPORTANT]  
->  В Windows **Расширенная защита** не включается по умолчанию. Дополнительные сведения о включении функции **Расширенная защита** в Windows см. в разделе [Расширенная защита для проверки подлинности](http://support.microsoft.com/kb/968389).  
+>  В Windows **Расширенная защита** не включается по умолчанию. Дополнительные сведения о включении функции **Расширенная защита** в Windows см. в разделе [Расширенная защита для проверки подлинности](https://support.microsoft.com/kb/968389).  
   
 ## <a name="description-of-extended-protection"></a>Описание расширенной защиты  
  **Расширенная защита** предусматривает привязку служб и каналов для предотвращения релейных атак при проверке подлинности. Во время проведения релейной атаки при проверке подлинности клиент, который может выполнить проверку подлинности NTLM (например, через проводник Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, приложение .NET SqlClient и т. д.), подключается к атакующему (например, злонамеренному файловому серверу CIFS). Атакующий использует учетные данные клиента, чтобы замаскироваться под него и пройти проверку подлинности службы (например, экземпляра службы [!INCLUDE[ssDE](../../includes/ssde-md.md)] ).  
@@ -55,9 +55,9 @@ ms.locfileid: "47700092"
 ### <a name="operating-system-support"></a>Поддержка операционных систем  
  Дополнительные сведения о поддержке **расширенной защиты**в ОС Windows можно найти по следующим ссылкам:  
   
--   [Интегрированная проверка подлинности Windows с расширенной защитой](http://msdn.microsoft.com/library/dd639324.aspx)  
+-   [Интегрированная проверка подлинности Windows с расширенной защитой](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Советы по безопасности от Microsoft (973811), расширенная защита для проверки подлинности](http://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Советы по безопасности от Microsoft (973811), расширенная защита для проверки подлинности](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
   
 ## <a name="settings"></a>Настройки  
  Имеются три параметра соединения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , влияющие на привязку служб и привязку каналов. Эти параметры можно настроить с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или с помощью WMI, для их просмотра можно воспользоваться аспектом **Параметры протокола сервера** управления на основе политик.  
@@ -81,7 +81,7 @@ ms.locfileid: "47700092"
      Переменная **Принятые имена участников-служб NTLM** необходима в том случае, когда для сервера известно более одного имени участника-службы. Когда клиент попытается подключиться к серверу с допустимым именем участника-службы, которое неизвестно серверу, то привязка службы завершится ошибкой. Чтобы избежать этого, пользователь может указать несколько имен участников-служб, представляющих сервер, с помощью параметра **Принятые имена участников-служб NTLM**. Переменная**Принятые имена участников-служб NTLM** содержит последовательность имен участников-служб, перечисленных через точку с запятой. Например, чтобы разрешить имена участников-служб **MSSQLSvc/ HostName1.Contoso.com** и **MSSQLSvc/ HostName2.Contoso.com**, введите **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** в поле **Принятые имена участников-служб NTLM** . Максимальная длина этой переменной 2 048 символов. Параметр**Принятые имена участников-служб NTLM** находится на дополнительной вкладке **Свойства протоколов для MSSQLSERVER** в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>Включение расширенной защиты для компонента Database Engine  
- Чтобы обеспечить **расширенную защиту**, и на клиенте и на сервере должна работать операционная система, поддерживающая **расширенную защиту**. Кроме того, должно быть включено использование **расширенной защиты** . Дополнительные сведения о включении **расширенной защиты** в операционной системе см. в разделе [Расширенная защита при проверке подлинности](http://support.microsoft.com/kb/968389).  
+ Чтобы обеспечить **расширенную защиту**, и на клиенте и на сервере должна работать операционная система, поддерживающая **расширенную защиту**. Кроме того, должно быть включено использование **расширенной защиты** . Дополнительные сведения о включении **расширенной защиты** в операционной системе см. в разделе [Расширенная защита при проверке подлинности](https://support.microsoft.com/kb/968389).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает **расширенную защиту** , начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Расширенная защита** для некоторых предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет доступна в следующих выпусках. После включения параметра **Расширенная защита** на компьютере сервера выполните следующие шаги, чтобы включить **расширенную защиту**.  
   
@@ -100,12 +100,12 @@ ms.locfileid: "47700092"
 ## <a name="configuring-other-sql-server-components"></a>Настройка других компонентов SQL Server  
  Дополнительные сведения о настройке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]см. в разделе [Расширенная защита для проверки подлинности служб Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
- При использовании IIS для получения доступа к данным [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] по соединению с протоколами HTTP или HTTPS службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могут использовать расширенную защиту, реализуемую IIS. Дополнительные сведения о настройке IIS для использования расширенной защиты см. в разделе [Настройка расширенной защиты в IIS 7.5](http://go.microsoft.com/fwlink/?LinkId=181105).  
+ При использовании IIS для получения доступа к данным [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] по соединению с протоколами HTTP или HTTPS службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могут использовать расширенную защиту, реализуемую IIS. Дополнительные сведения о настройке IIS для использования расширенной защиты см. в разделе [Настройка расширенной защиты в IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105).  
   
 ## <a name="see-also"></a>См. также:  
  [Сетевая конфигурация сервера](../../database-engine/configure-windows/server-network-configuration.md)   
  [Конфигурация клиентской сети](../../database-engine/configure-windows/client-network-configuration.md)   
- [Общие сведения о расширенной защите для проверки подлинности](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [Интегрированная проверка подлинности Windows с расширенной защитой](http://go.microsoft.com/fwlink/?LinkId=179922)  
+ [Общие сведения о расширенной защите для проверки подлинности](https://go.microsoft.com/fwlink/?LinkID=177943)   
+ [Интегрированная проверка подлинности Windows с расширенной защитой](https://go.microsoft.com/fwlink/?LinkId=179922)  
   
   

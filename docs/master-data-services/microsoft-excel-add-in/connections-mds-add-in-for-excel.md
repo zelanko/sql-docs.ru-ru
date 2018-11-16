@@ -11,12 +11,12 @@ ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c19314bea6e961c8f4d12dc295b3cc2ea089c7e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4eb84aad1f334d6fc564f07847eb5590201e2077
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646822"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696262"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>Соединения (настройка MDS для Excel)
 
@@ -24,7 +24,7 @@ ms.locfileid: "47646822"
 
   Для скачивания данных в [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]необходимо сначала создать соединение. Соединение — это данные, по которым веб-служба [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] узнает, с какой базой данных MDS нужно устанавливать соединение.  
   
- Строкой подключения обычно является URL-адрес веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], например `http://contoso/mds`.  
+ Строкой подключения обычно является URL-адрес веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], например `https://contoso/mds`.  
   
  При каждом запуске Excel необходимо устанавливать соединение с репозиторием MDS. Единственное исключение — когда активный лист уже содержит данные, управляемые MDS. В этом случае соединение устанавливается автоматически при каждом обновлении и при каждой публикации данных на листе.  
   

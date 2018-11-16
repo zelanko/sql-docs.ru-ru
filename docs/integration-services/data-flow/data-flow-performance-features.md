@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb243fa126fc53282bd310d3bd5d47029e2f4aba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 694f1c2d29ced11a4f66a05bd983fe704e1be241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605843"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642381"
 ---
 # <a name="data-flow-performance-features"></a>Возможности для повышения производительности потока данных
   В этом разделе приведены советы по проектированию пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , помогающие избежать общих проблем с производительностью. Кроме того, в этом разделе содержатся сведения по функциям и средствам, позволяющим устранить неполадки с производительностью пакетов.  
@@ -135,7 +135,7 @@ ms.locfileid: "47605843"
  Если в потоке данных необходимо создать несколько статистических выражений, попробуйте использовать одно преобразование «Статистическая обработка» вместо создания нескольких преобразований. Такой подход, в частности, повысит производительность, если статистическая обработка является подмножеством другой статистической обработки, поскольку преобразование сможет оптимизировать внутреннее хранилище и просматривать входящие данные только один раз. Например, если статистическое выражение использует предложение GROUP BY и статистическое выражение AVG, объединение их в одно преобразование может повысить производительность. Однако выполнение нескольких статистических выражений в пределах одного преобразования «Агрегатная обработка» сериализует операции статистической обработки, и таким образом производительность может не повышаться при независимом вычислении нескольких статистических выражений.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Преобразования «Нечеткий уточняющий запрос» и «Нечеткое группирование»  
- Сведения по оптимизации производительности преобразований «Нечеткий уточняющий запрос» и «Нечеткое группирование» см. в технической документации [Преобразования «Нечеткий уточняющий запрос» и «Нечеткое группирование» в службах SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+ Сведения по оптимизации производительности преобразований «Нечеткий уточняющий запрос» и «Нечеткое группирование» см. в технической документации [Преобразования «Нечеткий уточняющий запрос» и «Нечеткое группирование» в службах SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
 #### <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»  
  Сделайте минимальным объем ссылочных данных в памяти. Для этого введите инструкцию SELECT, которая запрашивает только нужные столбцы. В этом случае производительность будет выше, чем при выборе целой таблицы или представления, поскольку в последнем случае возвращается большой объем ненужных данных.  
@@ -148,7 +148,7 @@ ms.locfileid: "47605843"
   
  Как правило, самые медленные компоненты преобразования «Медленно изменяющееся измерение» — преобразования «Команда OLE DB», выполняющие инструкции UPDATE одновременно только для одной строки. Таким образом, самым эффективным способом повысить производительность преобразования «Медленно изменяющееся измерение» — замена преобразований «Команда OLE DB». Эти преобразования можно заменить целевыми компонентами, сохраняющими все строки для обновления в промежуточной таблице. Затем можно добавить задачу «Выполнение SQL», которая выполняет одну инструкцию Transact-SQL UPDATE одновременно для всех строк.  
   
- Опытные пользователи могут сконструировать пользовательский поток данных для обработки медленно изменяющегося измерения, оптимизированного для больших измерений. Обсуждение и примеры по решению этой задачи см. в разделе "Сценарий уникального измерения" в техническом документе [Проект REAL: методики извлечения, преобразования и загрузки бизнес-аналитики](http://go.microsoft.com/fwlink/?LinkId=96602).  
+ Опытные пользователи могут сконструировать пользовательский поток данных для обработки медленно изменяющегося измерения, оптимизированного для больших измерений. Обсуждение и примеры по решению этой задачи см. в разделе "Сценарий уникального измерения" в техническом документе [Проект REAL: методики извлечения, преобразования и загрузки бизнес-аналитики](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### <a name="destinations"></a>Назначения  
  Чтобы добиться максимальной производительности при работе с назначениями, рассмотрите возможность использовать назначения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и проверьте их производительность.  
@@ -171,38 +171,38 @@ ms.locfileid: "47605843"
 ## <a name="related-content"></a>См. также  
  **Статьи и сообщения в блогах**  
   
--   Техническая статья [Службы SQL Server 2005 Integration Services: стратегия повышения производительности](http://go.microsoft.com/fwlink/?LinkId=98899)на сайте technet.microsoft.com  
+-   Техническая статья [Службы SQL Server 2005 Integration Services: стратегия повышения производительности](https://go.microsoft.com/fwlink/?LinkId=98899)на сайте technet.microsoft.com  
   
--   Техническая статья [Службы Integration Services: методы настройки производительности](http://go.microsoft.com/fwlink/?LinkId=98900)на сайте technet.microsoft.com  
+-   Техническая статья [Службы Integration Services: методы настройки производительности](https://go.microsoft.com/fwlink/?LinkId=98900)на сайте technet.microsoft.com  
   
--   Техническая статья [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks (на английском языке)](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)на сайте sqlcat.com  
+-   Техническая статья [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks (на английском языке)](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)на сайте sqlcat.com  
   
--   Техническая статья [Руководство по производительности загрузки данных](http://go.microsoft.com/fwlink/?LinkId=220816)на сайте msdn.microsoft.com.  
+-   Техническая статья [Руководство по производительности загрузки данных](https://go.microsoft.com/fwlink/?LinkId=220816)на сайте msdn.microsoft.com.  
   
--   Техническая статья [We Loaded 1TB in 30 Minutes with SSIS, and So Can You (на английском языке)](http://go.microsoft.com/fwlink/?LinkId=220817)на сайте msdn.microsoft.com.  
+-   Техническая статья [We Loaded 1TB in 30 Minutes with SSIS, and So Can You (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=220817)на сайте msdn.microsoft.com.  
   
--   Техническая статья [Top 10 SQL Server Integration Services Best Practices (на английском языке)](http://go.microsoft.com/fwlink/?LinkId=220818)на сайте sqlcat.com.  
+-   Техническая статья [Top 10 SQL Server Integration Services Best Practices (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=220818)на сайте sqlcat.com.  
   
--   Техническая статья и образец кода [The «Balanced Data Distributor» for SSIS](http://go.microsoft.com/fwlink/?LinkId=220822)на сайте sqlcat.com.  
+-   Техническая статья и образец кода [The «Balanced Data Distributor» for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822)на сайте sqlcat.com.  
   
--   Сообщение в блоге [Troubleshooting SSIS Package Performance Issues (на английском языке)](http://go.microsoft.com/fwlink/?LinkId=238156)на сайте blogs.msdn.com  
+-   Сообщение в блоге [Troubleshooting SSIS Package Performance Issues (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=238156)на сайте blogs.msdn.com  
   
  **Видеоролики**  
   
--   Серия видеоматериалов [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](http://go.microsoft.com/fwlink/?LinkId=400878)(Проектирование и настройка для повышения производительности пакетов служб SSIS на предприятии (видеоматериалы по SQL Server))  
+-   Серия видеоматериалов [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](https://go.microsoft.com/fwlink/?LinkId=400878)(Проектирование и настройка для повышения производительности пакетов служб SSIS на предприятии (видеоматериалы по SQL Server))  
   
--   Видеоматериал [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](http://technet.microsoft.com/sqlserver/ff686901.aspx)(Настройка потока данных пакетов служб SSIS в выпуске Enterprise (видеоматериал по SQL Server)) на сайте technet.microsoft.com  
+-   Видеоматериал [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686901.aspx)(Настройка потока данных пакетов служб SSIS в выпуске Enterprise (видеоматериал по SQL Server)) на сайте technet.microsoft.com  
   
--   Видеоматериал [Understanding SSIS Data Flow Buffers (SQL Server Video)](http://technet.microsoft.com/sqlserver/ff686905.aspx)(Основные сведения о буферах потока данных служб SSIS (видеоматериал по SQL Server)) на сайте technet.microsoft.com  
+-   Видеоматериал [Understanding SSIS Data Flow Buffers (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686905.aspx)(Основные сведения о буферах потока данных служб SSIS (видеоматериал по SQL Server)) на сайте technet.microsoft.com  
   
--   Видеоматериал [Microsoft SQL Server Integration Services Performance Design Patterns](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)на сайте channel9.msdn.com.  
+-   Видеоматериал [Microsoft SQL Server Integration Services Performance Design Patterns](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)на сайте channel9.msdn.com.  
   
--   Презентация [How Microsoft IT Leverages SQL Server 2008 SSIS Dataflow Engine Enhancements (на английском языке)](http://go.microsoft.com/fwlink/?LinkId=217660)на сайте sqlcat.com.  
+-   Презентация [How Microsoft IT Leverages SQL Server 2008 SSIS Dataflow Engine Enhancements (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=217660)на сайте sqlcat.com.  
   
--   Видеоматериал [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)на сайте technet.microsoft.com.  
+-   Видеоматериал [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)на сайте technet.microsoft.com.  
   
 ## <a name="see-also"></a>См. также:  
  [Инструменты устранения неполадок при разработке пакета](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Инструменты устранения неполадок с выполнением пакетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Устранение неполадок инструментов с помощью отчетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

@@ -25,12 +25,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bed5ac354f31b809f7699cea2e9e09f99158928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e70f5cffad52b660f0006d416dfa027fba355de4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820112"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642131"
 ---
 # <a name="ssis-designer"></a>конструктор служб SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Конструктор служб — это графическое средство, с помощью которого можно создавать и обслуживать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] Конструктор служб доступен из среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] в составе проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -89,7 +89,7 @@ ms.locfileid: "47820112"
 ### <a name="event-handlers-tab"></a>Вкладка «Обработчики событий»  
  События пакета проектируются в области конструктора на вкладке **Обработчики событий** . На вкладке **Обработчики событий** выбирается пакет или его объект, для которого необходимо создать обработчик событий, а затем выбирается событие, которое будет связано с обработчиком. Обработчик событий имеет поток управления и (при необходимости) потоки данных.  
   
- Дополнительные сведения см. в разделе [Добавление обработчика событий к пакету](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ Дополнительные сведения см. в разделе [Добавление обработчика событий к пакету](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
 ### <a name="package-explorer-tab"></a>Вкладка «Обозреватель пакетов»  
  Пакеты могут быть сложными, содержать много задач, диспетчеров соединений, переменных и других элементов. Окно обозревателя пакета позволяет просмотреть полный список элементов пакета.  
@@ -104,7 +104,7 @@ ms.locfileid: "47820112"
 #### <a name="connection-managers-area"></a>Область диспетчеров соединений  
  Добавление и изменение диспетчеров соединений, используемых пакетом, выполняется в области **Диспетчеры соединений** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включает диспетчеры соединений, используемые для подключения к различным источникам данных, например текстовым файлам, базам данных OLE DB и поставщикам .NET.  
   
- Дополнительные сведения см. в разделах [Соединения в службах Integration Services (SSIS)](../integration-services/connection-manager/integration-services-ssis-connections.md) и [Создание диспетчеров соединений](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Дополнительные сведения см. в разделах [Соединения в службах Integration Services (SSIS)](../integration-services/connection-manager/integration-services-ssis-connections.md) и [Создание диспетчеров соединений](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
  
 ## <a name="control-flow-tab"></a>Вкладка «Поток управления»
 Используйте вкладку **Поток управления** конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , чтобы создать поток управления в пакете служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c012c30b200a31c77b62bee12e979bba79e695b7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: eff18cf56e606aa8cea96bd8828a7daaca27c0f4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031553"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813957"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Определение версии схемы определения отчета (SSRS)
 
@@ -30,11 +30,11 @@ ms.locfileid: "50031553"
      XML-элемент Report указывает пространство имен схемы. Например, следующий элемент Report указывает пространство имен для конструктора отчетов и пространство имен для определения отчета.  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     Пространство имен определения отчета указано следующим URL-адресом: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
+     Пространство имен определения отчета указано следующим URL-адресом: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Как определить версию RDL-схемы конструктора отчетов  
   
@@ -53,17 +53,17 @@ ms.locfileid: "50031553"
      XML-элемент Report указывает пространство имен схемы. Например, следующий элемент Report указывает пространство имен для конструктора отчетов и пространство имен для определения отчета.  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     Пространство имен определения отчета указано следующим URL-адресом: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     Пространство имен определения отчета указано следующим URL-адресом: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Инструкции. Определение версии RDL-схемы отчета на сервере отчетов  
   
 -   В диспетчере отчетов введите URL-адрес сервера отчетов. Например, следующий URL-адрес указывает сервер отчетов на локальном компьютере.  
   
-     `http://localhost/reportserver/reportdefinition.xsd`  
+     `https://localhost/reportserver/reportdefinition.xsd`  
   
      XSD-файл открывается в браузере.  
   
@@ -71,13 +71,13 @@ ms.locfileid: "50031553"
   
     ```  
     <xsd:schema   
-    targetNamespace="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    targetNamespace="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     elementFormDefault="qualified">  
     ```  
   
-     Пространство имен определения отчета указано следующим URL-адресом: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     Пространство имен определения отчета указано следующим URL-адресом: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
 
 ## <a name="next-steps"></a>Следующие шаги
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 68c556abb719ba9642e7c1074866235e46c1f1e3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ca366eeee5bbe0e291ccefa140237b9e977a9a90
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029123"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812817"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>опубликовать общий источник данных в библиотеке SharePoint
   Чтобы опубликовать общий источник данных на сервере отчетов, работающем в режиме интеграции с SharePoint, необходимо задать свойства проекта отчета в конструкторе отчетов. В свойствах проекта все ссылки на серверы, отчеты и общие источники данных следует указывать в виде полных URL-адресов.  
@@ -34,13 +34,13 @@ ms.locfileid: "50029123"
   
 4.  Если в проекте публикуются общие источники данных и перезаписываются ранее опубликованные общие источники данных, присвойте свойству **OverwriteDataSources** значение **True**.  
   
-5.  Для значения свойства **TargetDataSourceFolder**введите URL-адрес библиотеки SharePoint или папки библиотеки (необязательно). Например: `http://TestServer/TestSite/Documents/DataSources`.  
+5.  Для значения свойства **TargetDataSourceFolder**введите URL-адрес библиотеки SharePoint или папки библиотеки (необязательно). Например: `https://TestServer/TestSite/Documents/DataSources`.  
   
      Если значение не указано, то будет использовано значение свойства **TargetReportFolder** .  
   
-6.  В качестве значения свойства **TargetReportFolder**введите URL-адрес библиотеки или папки библиотеки. Например: `http://TestServer/TestSite/Documents/Reports`.  
+6.  В качестве значения свойства **TargetReportFolder**введите URL-адрес библиотеки или папки библиотеки. Например: `https://TestServer/TestSite/Documents/Reports`.  
   
-7.  В поле **TargetServerURL**введите URL-адрес сайта SharePoint верхнего уровня или дочернего сайта. Если сайт не указан, то используется сайт верхнего уровня по умолчанию. Например, `http://servername`, `http://servername/site` или `http://servername/site/subsite`.  
+7.  В поле **TargetServerURL**введите URL-адрес сайта SharePoint верхнего уровня или дочернего сайта. Если сайт не указан, то используется сайт верхнего уровня по умолчанию. Например, `https://servername`, `https://servername/site` или `https://servername/site/subsite`.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

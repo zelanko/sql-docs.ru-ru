@@ -11,12 +11,12 @@ ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e0ab2450cca5e32cf1d940f800c20793d41d381
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f64f37b7d07a970d71005ec06a521e67c8a65dc1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628868"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641281"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>Пользовательские свойства назначения «Обработка измерений»
   Назначение «Обработка измерений» обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  
@@ -42,6 +42,6 @@ ms.locfileid: "47628868"
  Дополнительные сведения см. в разделе [Dimension Processing Destination](../../integration-services/data-flow/dimension-processing-destination.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

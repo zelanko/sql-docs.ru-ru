@@ -13,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c046bbc7ac0b1da4c4e3be7c1eef0d7d47ccf9ec
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: a369cf9f73508f5d891b0b2af8807c490eb9fd47
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169344"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672473"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Включение семантического поиска на таблицы и столбцы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>Добавить семантический индекс с помощью среды SQL Server Management Studio  
- Изменение столбцов, для которых включен семантический или полнотекстовый индекс, выполняется на странице **Столбцы полнотекстового индекса** диалогового окна **Свойства полнотекстового индекса** . Дополнительные сведения см. в разделе [Управление полнотекстовыми индексами](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ Изменение столбцов, для которых включен семантический или полнотекстовый индекс, выполняется на странице **Столбцы полнотекстового индекса** диалогового окна **Свойства полнотекстового индекса** . Дополнительные сведения см. в разделе [Управление полнотекстовыми индексами](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
 
 ## <a name="alter-a-semantic-index"></a>Изменение семантического индекса
   
@@ -184,7 +184,7 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>Удалите семантический индекс с помощью среды SQL Server Management Studio  
- Изменение столбцов, для которых включен семантический или полнотекстовый индекс, выполняется на странице **Столбцы полнотекстового индекса** диалогового окна **Свойства полнотекстового индекса** . Дополнительные сведения см. в разделе [Управление полнотекстовыми индексами](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ Изменение столбцов, для которых включен семантический или полнотекстовый индекс, выполняется на странице **Столбцы полнотекстового индекса** диалогового окна **Свойства полнотекстового индекса** . Дополнительные сведения см. в разделе [Управление полнотекстовыми индексами](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 ###  <a name="dropreq"></a> Требования и ограничения для удаления семантического индекса  
   

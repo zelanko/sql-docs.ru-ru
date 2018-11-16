@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce0d82f3c1808f96ce07c949f05cbadaed1cf248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ce64614e3c2f9d27bfafb9101e54ab49df2089e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659141"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672623"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Хранилище данных для индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -125,7 +125,7 @@ END TRAN
 ```  
   
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>Изоляция моментальных снимков и изоляция моментальных снимков с чтением фиксированных данных  
- Изоляция моментальных снимков (SI) позволяет гарантировать согласованность транзакций, а изоляция моментальных снимков с чтением фиксированных данных (RCSI) — согласованность на уровне инструкций для запросов к индексам columnstore. Это позволяет запросам выполняться без блокировки модулей записи данных. Такое неблокирующее поведение также значительно снижает вероятность взаимоблокировок в сложных транзакциях. Дополнительные сведения см. в разделе [Изоляция моментальных снимков в SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) в библиотеке MSDN.  
+ Изоляция моментальных снимков (SI) позволяет гарантировать согласованность транзакций, а изоляция моментальных снимков с чтением фиксированных данных (RCSI) — согласованность на уровне инструкций для запросов к индексам columnstore. Это позволяет запросам выполняться без блокировки модулей записи данных. Такое неблокирующее поведение также значительно снижает вероятность взаимоблокировок в сложных транзакциях. Дополнительные сведения см. в разделе [Изоляция моментальных снимков в SQL Server](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) в библиотеке MSDN.  
   
 ## <a name="see-also"></a>См. также:  
  [Руководство по проектированию индексов columnstore](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

@@ -17,12 +17,12 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 141fd581fc00e60b241fe9f944fab8405426235d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc1d04899bf2b31c5bf4586afb88ed40d2ff8a0c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726273"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641911"
 ---
 # <a name="system-variables"></a>Системные переменные
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют набор системных переменных, в которые записываются данные о запуске пакета и его объектах. Эти переменные можно использовать в выражениях и в выражениях свойств для настройки пакетов, контейнеров, задач и обработчиков событий.  
@@ -105,6 +105,6 @@ ms.locfileid: "47726273"
  Это правило также применяется к определяемым пользователем переменным. Тип данных системных переменных изменить нельзя, но если необходимо изменить их использование, учитывая соответствие типов данных, то определяемые пользователем переменные оказываются более удобным выбором. Определяемые пользователем переменные, используемые в привязках параметров, обычно имеют типы данных, которые совместимы с типами данных параметров, с которыми они сопоставляются.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Сопоставление параметров запроса с переменными в задаче «Выполнение SQL»](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
+ [Сопоставление параметров запроса с переменными в задаче «Выполнение SQL»](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

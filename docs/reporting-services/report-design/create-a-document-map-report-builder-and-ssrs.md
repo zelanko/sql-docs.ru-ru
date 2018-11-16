@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6532a160072e5a285cb5b8687397fd75b4026907
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1c44173f34c1560da036ca1914649774365fdf42
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020238"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812807"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Создание схемы документа (построитель отчетов и службы SSRS)
 
@@ -82,14 +82,14 @@ ms.locfileid: "50020238"
      Например, в образцах отчетов [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] следующий URL-адрес указывает отчет с именем «Каталог продуктов».  
   
     ```  
-    http://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
+    https://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     ```  
   
 2.  Скопируйте путь к отчету на сервере. В приведенном примере путем к отчету является `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`.  
   
 3.  Создайте новый URL-адрес со следующими тремя компонентами:  
   
-    -   Средство просмотра отчетов на сервере отчетов: `http://localhost/ReportServer/Pages/ReportViewer.aspx?`  
+    -   Средство просмотра отчетов на сервере отчетов: `https://localhost/ReportServer/Pages/ReportViewer.aspx?`  
   
     -   Имя отчета, скопированного на шаге 1, например `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`  
   
@@ -98,7 +98,7 @@ ms.locfileid: "50020238"
      Следующий URL-адрес состоит из данных трех компонентов, соединенных в порядке их перечисления.  
   
     ```  
-    http://localhost/ReportServer/Pages/ReportViewer.aspx?  
+    https://localhost/ReportServer/Pages/ReportViewer.aspx?  
     %2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     &rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False  
     ```  

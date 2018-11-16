@@ -18,12 +18,12 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 24815102b3839da21534373d2176259b3b42b73c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24422acdc6ef65bc47594ad18bd31059ebd89077
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710682"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641371"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Запрос Active Directory в задаче «Скрипт»
   Часто задачей корпоративных приложений обработки данных, например, пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], является обработка данных различным образом, в зависимости от категории, названия должности, иных характеристик сотрудников, сведения о которых хранятся в службе каталогов Active Directory. Active Directory — служба каталогов [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, обеспечивающая централизованное хранение метаданных не только о пользователях, но и об используемых ими корпоративных ресурсах, например компьютерах и принтерах. Пространство имен **System.DirectoryServices** платформы Microsoft .NET Framework предоставляет классы для работы со службой каталогов Active Directory, с помощью которых можно управлять рабочим процессом по обработке данных в зависимости от типа данных.  
@@ -109,6 +109,6 @@ public void Main()
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Техническая статья [Обработка данных Active Directory в службах SSIS](http://go.microsoft.com/fwlink/?LinkId=199588) на сайте social.technet.microsoft.com  
+-   Техническая статья [Обработка данных Active Directory в службах SSIS](https://go.microsoft.com/fwlink/?LinkId=199588) на сайте social.technet.microsoft.com  
   
   

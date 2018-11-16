@@ -13,12 +13,12 @@ ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfb567a0e970cdc6f2a1e4b56fd39d39405a84c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a832c9001f60433764a17fbedba0ebb93eb15588
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627594"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681242"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Практическое руководство. Создание пустого модульного теста SQL Server
 Чтобы убедиться, что изменения, внесенные в объекты баз данных, не нарушают работу функций, включите в проект базы данных модульные тесты. Следующие процедуры позволяют создавать модульные тесты SQL Server для любого объекта базы данных. SQL Server Data Tools включает дополнительную поддержку функций базы данных, триггеров и хранимых процедур. См. дополнительные сведения о [создании модульных тестов SQL Server для функций, триггеров и хранимых процедур](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
@@ -96,10 +96,10 @@ ms.locfileid: "47627594"
 -   Добавление тестовых условий или другого оператора контроля для проверки результатов скрипта.  
   
 > [!NOTE]  
-> Условие теста Inconclusive по умолчанию добавляется во все тесты. Оно указывает на то, что проверка теста не выполнена. Удалите это условие из теста после добавления других условий. См. дополнительные сведения о [добавлении условий теста в модульные тесты базы данных](http://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> Условие теста Inconclusive по умолчанию добавляется во все тесты. Оно указывает на то, что проверка теста не выполнена. Удалите это условие из теста после добавления других условий. См. дополнительные сведения о [добавлении условий теста в модульные тесты базы данных](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
   
 ## <a name="see-also"></a>См. также:  
 [Практическое руководство. Выполнение модульных тестов SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Создание модульных тестов](http://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
+[Создание модульных тестов](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
   

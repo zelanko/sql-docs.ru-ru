@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75263ad68af90f0dfd8035cc943a194c344f90fa
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: c8c9e653781b821d3fcc2e7c2e5dd218b329e22c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461039"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675363"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "49461039"
 7. На компьютере SQL Server в консоли Windows PowerShell с повышенными привилегиями выполните следующую команду, чтобы сообщить компьютеру SQL Server, где должна выполняться аттестация. Убедитесь, что указали IP-адрес или DNS-имя своего компьютера HGS. 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
+   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
    ```
 
 Результат приведенной выше команды должен показывать, что аттестация пройдена (AttestationStatus = Passed).

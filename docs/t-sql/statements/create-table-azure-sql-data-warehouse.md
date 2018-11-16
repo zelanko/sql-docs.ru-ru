@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dc5e566ecbb27e88f730af0423d179b8829f51ed
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120431"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703822"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -165,7 +165,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="DataTypes"></a> Типы данных
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] поддерживает наиболее часто используемые типы данных. Ниже приведен список поддерживаемых типов данных, сведения о них и размер при хранении в байтах. Чтобы лучше понять типы данных и способы их использования, обратитесь к разделу [Типы данных таблиц в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
-Таблица преобразования типов данных приведена в разделе "Неявные преобразования" статьи [CAST и CONVERT (Transact-SQL)](http://msdn.microsoft.com/library/ms187928/).
+Таблица преобразования типов данных приведена в разделе "Неявные преобразования" статьи [CAST и CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
 
 `datetimeoffset` [ ( *n* ) ]  
  Значение по умолчанию для *n* равно 7.  
@@ -291,7 +291,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  
 Каждое распределение содержит все секции таблицы. Например, для 60 распределений и четырех секций таблицы мы получим 320 секций. Если в таблице есть кластеризованные индексы columnstore, то в каждой секции будет один индекс columnstore, т. е. в общей сложности в таблице будет 320 индексов columnstore.
 
-Рекомендуется использовать меньшее число секций таблицы, чтобы в каждом индексе columnstore было достаточное количество строк для использования всех преимуществ индексов columnstore. Дополнительные инструкции см. в разделах [Секционирование таблиц в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) и [Индексирование таблиц в хранилище данных SQL](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)  
+Рекомендуется использовать меньшее число секций таблицы, чтобы в каждом индексе columnstore было достаточное количество строк для использования всех преимуществ индексов columnstore. Дополнительные инструкции см. в разделах [Секционирование таблиц в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) и [Индексирование таблиц в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
   
  ### <a name="rowstore-table-heap-or-clustered-index"></a>Таблица rowstore (куча или кластеризованный индекс)  
@@ -304,7 +304,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 
 Дополнительные сведения см. в следующих статьях:
 - [Сводка функций индексов columnstore по версиям](https://msdn.microsoft.com/library/dn934994/)
-- [Индексирование таблиц в хранилище данных SQL](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)
+- [Индексирование таблиц в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Руководство по индексам columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md) 
  
 <a name="LimitationsRestrictions"></a>  

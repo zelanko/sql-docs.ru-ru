@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d514532bc7c3c08a1c31a934c41761ee524c9d7
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827355"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675133"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (ядро СУБД)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -187,7 +187,7 @@ Always Encrypted не поддерживается для столбцов с о
 
 - SQL Server Management Studio может расшифровать результаты, полученные из зашифрованных столбцов, если подключение выполняется с *включенным шифрованием столбцов* на вкладке **Дополнительные свойства** диалогового окна **Подключение к серверу** . Для вставки, обновления или фильтрации зашифрованных столбцов требуется версия SQL Server Management Studio не ниже 17.
 
-- Для использования зашифрованных соединений из `sqlcmd` требуется версия не ниже 13.1, которую можно скачать из [Центра загрузки](http://go.microsoft.com/fwlink/?LinkID=825643).
+- Для использования зашифрованных соединений из `sqlcmd` требуется версия не ниже 13.1, которую можно скачать из [Центра загрузки](https://go.microsoft.com/fwlink/?LinkID=825643).
 
   
 ## <a name="database-permissions"></a>Разрешения базы данных  

@@ -42,19 +42,19 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cee76028cbc0e416b320a8042eaf577dfeb621ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 362d59ff4ba311f4903993cfdb455d0785a912e6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722942"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640741"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   Помимо свойств, общих для большинства объектов потока данных объектной модели служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , многие объекты потока данных обладают настраиваемыми свойствами, специфичными для конкретного объекта. Пользовательские свойства доступны только в среде выполнения и не описаны в справочной документации по программированию служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] для управляемой среды.  
   
- Этот раздел содержит список и описание пользовательских свойств различных преобразований потока данных. Дополнительные сведения о свойствах, общих для большинства объектов потока данных, см. в разделе [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ Этот раздел содержит список и описание пользовательских свойств различных преобразований потока данных. Дополнительные сведения о свойствах, общих для большинства объектов потока данных, см. в разделе [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
- Некоторые свойства преобразований можно устанавливать с помощью выражений свойств. Дополнительные сведения см. в разделе [Свойства потока данных, которые можно задавать с помощью выражений](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
+ Некоторые свойства преобразований можно устанавливать с помощью выражений свойств. Дополнительные сведения см. в разделе [Свойства потока данных, которые можно задавать с помощью выражений](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
   
 ## <a name="transformations-with-custom-properties"></a>Преобразования с пользовательскими свойствами  
   
@@ -184,7 +184,7 @@ ms.locfileid: "47722942"
   
 |Свойство|Тип данных|Описание|  
 |--------------|---------------|-----------------|  
-|FastParse|Логическое значение|Значение, определяющее, использует ли столбец более быстрые, но не зависящие от локали процедуры синтаксического анализа, предоставляемые службами [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , или стандартные процедуры, зависящие от локали. Это свойство имеет значение по умолчанию **False**. Дополнительные сведения см. в разделах [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) и [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Примечание. Это свойство недоступно в **редакторе преобразования "Конвертация данных"**, однако его можно установить при помощи **расширенного редактора**.|  
+|FastParse|Логическое значение|Значение, определяющее, использует ли столбец более быстрые, но не зависящие от локали процедуры синтаксического анализа, предоставляемые службами [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , или стандартные процедуры, зависящие от локали. Это свойство имеет значение по умолчанию **False**. Дополнительные сведения см. в разделах [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) и [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Примечание. Это свойство недоступно в **редакторе преобразования "Конвертация данных"**, однако его можно установить при помощи **расширенного редактора**.|  
 |SourceInputColumnLineageId|Целочисленный|Идентификатор **LineageID** входного столбца, являющегося источником для выходного столбца.|  
   
  Вход, входные столбцы и выход преобразования «Конвертация данных» не имеют пользовательских свойств.  
@@ -629,8 +629,8 @@ ms.locfileid: "47722942"
   
 ## <a name="see-also"></a>См. также:  
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
- [Свойства пути](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [Свойства потока данных, которые можно задавать с помощью выражений](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
+ [Свойства пути](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
+ [Свойства потока данных, которые можно задавать с помощью выражений](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ea464ae0717f69df69af48063499cf3cc8a5c2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9209682962a974e7a8ff6ef6419517416d399d8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718712"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661893"
 ---
 # <a name="views"></a>Представления
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47718712"
  Секционированным называется представление, соединяющее горизонтально секционированные данные набора таблиц-элементов, находящихся на одном или нескольких серверах. При этом данные выглядят так, как будто находятся в одной таблице. Представление, соединяющее таблицы-элементы одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , называется локальным секционированным представлением.  
   
  Системные представления  
- Системные представления предоставляют доступ к метаданным каталога. Системные представления можно использовать для получения сведений об экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объектах, определенных в экземпляре. Например, получить сведения об определяемых пользователем базах данных, доступных в экземпляре, можно через представление каталога sys.databases. Дополнительные сведения см. в разделе [Системные представления (Transact-SQL)](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
+ Системные представления предоставляют доступ к метаданным каталога. Системные представления можно использовать для получения сведений об экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объектах, определенных в экземпляре. Например, получить сведения об определяемых пользователем базах данных, доступных в экземпляре, можно через представление каталога sys.databases. Дополнительные сведения см. в разделе [Системные представления (Transact-SQL)](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
 ## <a name="common-view-tasks"></a>Общие задачи работы с представлениями  
  В следующей таблице приведены ссылки на общие задачи, связанные с созданием или изменением представления.  

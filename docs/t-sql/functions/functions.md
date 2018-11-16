@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307db631ea3d4b803402f11070c5770afe452b0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772572"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701322"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Функции, используемых в базах данных SQL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ ms.locfileid: "47772572"
 |[Функции работы с курсорами](cursor-functions-transact-sql.md)|Возвращают сведения о курсорах.|  
 |[Функции и типы данных даты и времени](date-and-time-data-types-and-functions-transact-sql.md)|Выполняют операции над исходными значениями даты и времени, возвращают строковые и числовые значения, а также значения даты и времени.|  
 |[Функции JSON](json-functions-transact-sql.md)|Проверяют, запрашивают или изменяют данные JSON.|  
-|[Логические функции](http://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Выполнение логических операций.|  
+|[Логические функции](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Выполнение логических операций.|  
 |[Математические функции](mathematical-functions-transact-sql.md)|Выполняют вычисления, основанные на числовых значениях, переданных функции в виде аргументов, и возвращают числовые значения.|  
 |[Функции метаданных](metadata-functions-transact-sql.md)|Возвращают сведения о базах данных и объектах баз данных.|  
 |[Функции безопасности](security-functions-transact-sql.md)|Возвращают данные о пользователях и ролях.|  
 |[Строковые функции](string-functions-transact-sql.md)|Выполняют операции со строковым (**char** или **varchar**) входным значением и возвращают строковое или числовое значение.|  
 |[Системные функции](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Выполняют операции над значениями, объектами и параметрами экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и возвращают сведения о них.|  
 |[Системные статистические функции](system-statistical-functions-transact-sql.md)|Возвращают статистические сведения о системе.|  
-|[Функции обработки текста и изображений](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Выполняют операции над текстовыми или графическими исходными значениями или столбцами и возвращают сведения о значении.|  
+|[Функции обработки текста и изображений](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Выполняют операции над текстовыми или графическими исходными значениями или столбцами и возвращают сведения о значении.|  
   
 ## <a name="function-determinism"></a>Детерминизм функций  
  Различаются детерминированные и недетерминированные встроенные функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Функция является детерминированной, если для определенных входных значений она каждый раз возвращает один и тот же результат. Функция является недетерминированной, если она возвращает различные результаты даже для одних и тех же исходных значений. Дополнительные сведения см. в статье [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  

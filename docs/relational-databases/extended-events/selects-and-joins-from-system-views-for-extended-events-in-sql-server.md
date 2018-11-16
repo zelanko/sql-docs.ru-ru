@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9a99cfe0941bd96ed8d523ed85587f64c482791
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3c4ed3aff940dd68614fd5534302fdfb65d3c59b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906154"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666833"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "48906154"
 
 В этом разделе сопоставляются три разных технологических подхода для одного и того же определенного сеанса событий. Сеанс был определен и отображается в **обозревателе объектов** среды SQL Server Management Studio (SSMS.exe), но сеанс в данный момент не запущен.
 
-Чтобы избежать непредвиденных сбоев, рекомендуется ежемесячно [устанавливать последнее обновление SSMS](http://msdn.microsoft.com/library/mt238290.aspx).
+Чтобы избежать непредвиденных сбоев, рекомендуется ежемесячно [устанавливать последнее обновление SSMS](https://msdn.microsoft.com/library/mt238290.aspx).
 
 
 Справочную документацию по представлениям каталога для расширенных событий можно найти в разделе [Представления каталога расширенных событий (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).

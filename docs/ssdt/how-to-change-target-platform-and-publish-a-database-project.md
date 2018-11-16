@@ -14,12 +14,12 @@ ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9aea64fa39d5089da9e4a97eaffb86ae2a81fa6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7b84f8d8de17b64d99b8e308ab45c36479b4a2b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668542"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668893"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Как изменить целевую платформу и опубликовать проект базы данных
 В качестве целевой версии SQL Server для проекта базы данных SQL Server Data Tools (SSDT) можно указать любой поддерживаемый экземпляр SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 или SQL Azure). Это позволяет сосредоточить разработку базы данных в одном проекте, но при необходимости публиковать ее в нескольких экземплярах SQL Server.  
@@ -43,7 +43,7 @@ ms.locfileid: "47668542"
   
 3.  Обратите внимание, что на панели **Список ошибок** появляется ошибка SQL70015: "Filegroup reference and partitioning scheme" is not supported in SQL Azure (SQL70015: "Ссылка на файловую группу и схема секционирования" не поддерживается в SQL Azure).  
   
-    SSDT автоматически проверяет скрипт с учетом целевой платформы. В этом случае SSDT возвращает ошибку, поскольку файловая группа не поддерживается в SQL Azure. Список неподдерживаемых инструкций Transact\-SQL в SQL Azure см. в статье [Partially Supported Transact-SQL Statements (Microsoft Azure SQL Database)](http://msdn.microsoft.com/library/ee336267.aspx) (Частично поддерживаемые инструкции Transact-SQL в Базе данных SQL Microsoft Azure).  
+    SSDT автоматически проверяет скрипт с учетом целевой платформы. В этом случае SSDT возвращает ошибку, поскольку файловая группа не поддерживается в SQL Azure. Список неподдерживаемых инструкций Transact\-SQL в SQL Azure см. в статье [Partially Supported Transact-SQL Statements (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx) (Частично поддерживаемые инструкции Transact-SQL в Базе данных SQL Microsoft Azure).  
   
 4.  Удалите предложение `ON` . Обратите внимание, что ошибка немедленно исчезнет из области **Список ошибок**.  
   

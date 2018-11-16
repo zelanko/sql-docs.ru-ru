@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9636e10649dc9a8b297e2397e07fbc4629f2cdf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673732"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658353"
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Краткое руководство. Расширенные события в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47673732"
 
 
 > [!NOTE]
-> Сведения об отличиях расширенных событий в Microsoft SQL Server и базе данных SQL Azure см. в разделе [Расширенные события в базе данных SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
+> Сведения об отличиях расширенных событий в Microsoft SQL Server и базе данных SQL Azure см. в разделе [Расширенные события в базе данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
 
 
 ## <a name="preparations-before-demo"></a>Подготовительные действия перед демонстрацией
@@ -56,7 +56,7 @@ ms.locfileid: "47673732"
 
 Для проведения демонстрации необходимо выполнить перечисленные ниже предварительные условия.
 
-1. [Скачивание SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
+1. [Скачивание SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
   - Каждый месяц следует устанавливать последнее ежемесячное обновление для SSMS.
 2. Войдите в Microsoft SQL Server 2014 или более поздней версии либо в базу данных SQL Azure, для которой `SELECT @@version` возвращает значение с первым узлом не меньше 12.
 3. Ваша учетная запись должна иметь [разрешение сервера](../../t-sql/statements/grant-server-permissions-transact-sql.md) **ALTER ANY EVENT SESSION**.
@@ -191,7 +191,7 @@ GO
 > [!NOTE]
 > Для базы данных SQL Azure в предыдущей инструкции CREATE EVENT SESSION вместо предложения ON SERVER будет содержаться предложение ON DATABASE.
 > 
-> Дополнительные сведения об отличиях расширенных событий в Microsoft SQL Server и базе данных SQL Azure см. в разделе [Расширенные события в базе данных SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
+> Дополнительные сведения об отличиях расширенных событий в Microsoft SQL Server и базе данных SQL Azure см. в разделе [Расширенные события в базе данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
 
 
 #### <a name="pre-drop-of-the-event-session"></a>Предварительное выполнение инструкции DROP для сеанса событий
@@ -415,7 +415,7 @@ SELECT
 - [найти объекты, на которые наложено наибольшее число блокировок](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - В этом сценарии используется целевая гистограмма package0.histogram, которая обрабатывает необработанные данные события перед их отображением.
 - [определить запросы, удерживающие блокировки](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - В этом примере используется [целевое сопоставление package0.pair_matching](http://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3), в котором парой событий является is sqlserver.lock_acquire и lock_release.
+  - В этом примере используется [целевое сопоставление package0.pair_matching](https://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3), в котором парой событий является is sqlserver.lock_acquire и lock_release.
 
 
 ## <a name="terms-and-concepts-in-extended-events"></a>Термины и понятия, связанные с расширенными событиями
@@ -647,9 +647,9 @@ SELECT HAS_PERMS_BY_NAME(
 - Подробные сведения о встроенной функции [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [GRANT, предоставление разрешений на сервер (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
-- [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
-- Для базы данных SQL Azure: [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)
-- Блог. [Эффективные разрешения для ядра СУБД](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
+- [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
+- Для базы данных SQL Azure: [sys.database_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms187328.aspx)
+- Блог. [Эффективные разрешения для ядра СУБД](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
 - Масштабируемый [плакат](https://aka.ms/sql-permissions-poster)в формате PDF, на котором показана иерархия всех разрешений SQL Server.
 
 

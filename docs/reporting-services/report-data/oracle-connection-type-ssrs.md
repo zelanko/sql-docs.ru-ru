@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 312d655507d2c7880746cf1f81f61059ddf64de4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 74eb23f2f294995222bcb90a7791f1133179462d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027903"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813427"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Тип соединения Oracle (службы SSRS)
 Чтобы использовать в отчете данные из базы данных Oracle, необходимо иметь набор данных, основанный на источнике данных Oracle. Этот встроенный тип источника данных напрямую использует поставщик .NET Framework для Oracle и требует наличия клиентского программного обеспечения Oracle.
 
 Чтобы установить инструменты клиента Oracle, можно выполнить указанные ниже действия.
  
-1.  Перейдите на [сайт загрузки Oracle](http://www.oracle.com/us/products/tools/index-090165.html).
+1.  Перейдите на [сайт загрузки Oracle](https://www.oracle.com/us/products/tools/index-090165.html).
 2.  Скачайте ODAC 12c 4 выпуска (12.1.0.2.4) для Windows (64-разрядная версия для сервера, 32-разрядная версия для инструментов).
 3.  Установите поставщик данных Oracle для .NET 4.
   
@@ -61,9 +61,9 @@ Data Source="Oracle"; Unicode="True"
   
 -   [Использование поставщика данных .NET Framework для Oracle](https://go.microsoft.com/fwlink/?LinkId=112314) на узле msdn.microsoft.com  
   
--   [Как использовать службы Reporting Services для настройки и доступа к источнику данных Oracle](http://support.microsoft.com/kb/834305)  
+-   [Как использовать службы Reporting Services для настройки и доступа к источнику данных Oracle](https://support.microsoft.com/kb/834305)  
   
--   [Как добавить разрешения для субъекта безопасности NETWORK SERVICE](http://support.microsoft.com/kb/870668)  
+-   [Как добавить разрешения для субъекта безопасности NETWORK SERVICE](https://support.microsoft.com/kb/870668)  
   
 ###### <a name="alternate-data-extensions"></a>Альтернативные модули обработки данных  
  Также данные из базы данных Oracle можно получить с помощью источника данных OLE DB. Дополнительные сведения см. в разделе [Тип соединения OLE DB (службы SSRS)](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  

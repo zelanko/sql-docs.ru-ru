@@ -11,12 +11,12 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77563c8bcd8a2cd60ddcf87c2481057f139236e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8ed30954131f756401f054c35992d3339dfddb5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847352"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638421"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Занятие 1–2. Добавление и настройка диспетчера соединений с неструктурированными файлами
 В этом задании к только что созданному пакету будет добавлен диспетчер соединений с неструктурированными файлами. Диспетчер соединений с неструктурированными файлами позволяет пакету извлекать данные из неструктурированных файлов. С помощью диспетчера соединений с неструктурированными файлами можно указать имя и расположение файла, локали и кодовую страницу, а также формат файла, включая разделители столбцов. Эти данные будут использованы при извлечении пакета из неструктурированного файла. Кроме того, можно вручную указать тип данных для каждого столбца или в диалоговом окне **Предлагаемые типы столбцов** указать автоматическое сопоставление столбцов извлекаемых данных с типами данных в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -43,7 +43,7 @@ ms.locfileid: "47847352"
   
     Образцы данных включаются в состав с пакетами занятий по службам [!INCLUDE[ssIS](../includes/ssis-md.md)] . Чтобы загрузить образцы данных и пакеты занятий выполните следующие действия.  
   
-    1.  Перейдите к [образцам продуктов служб Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027).  
+    1.  Перейдите к [образцам продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027).  
   
     2.  Перейдите на вкладку **DOWNLOADS** .  
   
@@ -86,10 +86,10 @@ ms.locfileid: "47847352"
   
     |Столбец неструктурированных файлов|Предложенный тип|Целевой столбец|Тип назначения|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
+    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Дата|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
+    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|FLOAT|  
   
     Тип данных, предложенный для столбца **CurrencyID** , несовместим с типом данных поля целевой таблицы. Так как типом данных `DimCurrency.CurrencyAlternateKey` является nchar (3), значение **CurrencyID** нужно изменить со строки [DT_STR] на строку Unicode [DT_WSTR]. Кроме того, поле `DimDate.FullDateAlternateKey` определяется в качестве типа данных date, поэтому необходимо изменить тип параметра **CurrencyDate** с типа даты [DT_Date] на тип даты базы данных [DT_DBDATE].  
   

@@ -13,12 +13,12 @@ ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e67b9f7bc040265d770c8eef026cecc49c2c52fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c02298de6521aa2bf5380216862fb30094803115
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765837"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677873"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>Создание учетных данных — проверка подлинности в хранилище Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47765837"
   
 ## <a name="windows-azure-credentials"></a>Учетные данные Windows Azure  
  **Сертификат управления**  
- Используйте этот параметр, чтобы указать сертификат из локального хранилища сертификатов, соответствующий сертификату управления из Windows Azure. Дополнительные сведения по сертификату управления Windows Azure см. в разделе [Создание и передача сертификата для Windows Azure](http://go.microsoft.com/fwlink/?LinkId=320781).  
+ Используйте этот параметр, чтобы указать сертификат из локального хранилища сертификатов, соответствующий сертификату управления из Windows Azure. Дополнительные сведения по сертификату управления Windows Azure см. в разделе [Создание и передача сертификата для Windows Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
   
  **Подписка**  
  Выберите, введите или вставьте идентификатор подписки Windows Azure, который соответствует сертификату управления из локального хранилища сертификатов.  
@@ -40,7 +40,7 @@ ms.locfileid: "47765837"
  Используйте этот параметр, если имеется профиль публикации, загруженный на компьютер. Если воспользоваться этим параметром, идентификатор подписки и сертификат будут заполнены автоматически.  
   
 > [!CAUTION]  
->  SQL Server в настоящий момент поддерживает версию 2.0 профиля публикации. Для загрузки поддерживаемой версии профиля публикации см. раздел [Загрузка профиля публикации 2.0](http://go.microsoft.com/fwlink/?LinkId=396421).  
+>  SQL Server в настоящий момент поддерживает версию 2.0 профиля публикации. Для загрузки поддерживаемой версии профиля публикации см. раздел [Загрузка профиля публикации 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
   
 ## <a name="storage-account"></a>Учетная запись хранения  
  Выберите учетную запись хранения, которую нужно использовать для хранения файлов резервных копий.  

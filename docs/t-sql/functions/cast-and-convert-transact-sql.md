@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 269c024484a16dab24fc1a0ed66a2b13c64595a2
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 81a94dcde2f149ef16b5e1f42428bac706bbfaf5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971095"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697462"
 ---
 # <a name="cast-and-convert-transact-sql"></a>Функции CAST и CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -194,7 +194,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 Для неявных преобразований не требуется указывать функции CAST или CONVERT. Для явных преобразований указывать функции CAST или CONVERT необходимо. На следующей иллюстрации показаны все явные и неявные преобразования типов данных, допустимые для системных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это могут быть типы **bigint**, **sql_variant** и **xml**. При присваивании неявного преобразования из типа **sql_variant** не происходит, но неявное преобразование в тип **sql_variant** производится.
   
 > [!TIP]  
->  В [Центре загрузки Майкрософт](http://www.microsoft.com/download/details.aspx?id=35834) эта диаграмма представлена в виде PDF-файла, который можно скачать.  
+>  В [Центре загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=35834) эта диаграмма представлена в виде PDF-файла, который можно скачать.  
   
 ![Таблица преобразования типов данных](../../t-sql/data-types/media/lrdatahd.png "Таблица преобразования типов данных")
   

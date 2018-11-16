@@ -11,12 +11,12 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d66f118490cf0a665b94f3b0ae64c43f6179243
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f732c4038940ef2ed5ee511e399f3bcf2efae54f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658202"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606894"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47658202"
  Следующие термины относятся к компоненту расширения буферного пула.  
   
  Твердотельный накопитель (SSD)  
- Твердотельные накопители постоянно хранят данные в оперативной памяти (ОЗУ). Дополнительные сведения см. в [этом определении](http://en.wikipedia.org/wiki/Solid-state_drive).  
+ Твердотельные накопители постоянно хранят данные в оперативной памяти (ОЗУ). Дополнительные сведения см. в [этом определении](https://en.wikipedia.org/wiki/Solid-state_drive).  
   
  Буфер  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]буфер — это 8-килобайтовая страница в памяти такого же размера, что и страница данных или индекса. Буферный кэш делится на 8-килобайтовые страницы. Страница остается в буферном кэше, пока диспетчеру буферов требуется область буфера для чтения дополнительных данных. Данные записываются обратно на диск, только если они были изменены. Эти измененные страницы в памяти называют «грязными». Страница чиста, когда она эквивалентна ее образу в базе данных на диске. Данные в буферном кэше могут измениться несколько раз, прежде чем будут сохранены обратно на диске.  

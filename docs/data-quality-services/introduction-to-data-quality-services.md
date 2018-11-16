@@ -14,12 +14,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b235ea1151b99870623dbbea89f83e02150235e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44fc2fd9ff3a47272c031ff71cda6e2a75f59a72
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640858"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700282"
 ---
 # <a name="introduction-to-data-quality-services"></a>Общие сведения о службах Data Quality Services
 
@@ -43,7 +43,7 @@ ms.locfileid: "47640858"
   
 -   **Сопоставление:** выявление семантических дубликатов в процессе, основанном на правилах, который позволяет определить содержание сопоставления и исключение дубликатов. Дополнительные сведения см. в статье [Data Matching](../data-quality-services/data-matching.md).  
   
--   **Службы ссылочных данных:** проверка качества данных с использованием служб поставщика ссылочных данных. Вы можете использовать службы эталонных данных из [Microsoft Azure Marketplace](http://azure.microsoft.com/marketplace/) для очистки, проверки, сопоставления и дополнения данных. Дополнительные сведения см. в статье [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
+-   **Службы ссылочных данных:** проверка качества данных с использованием служб поставщика ссылочных данных. Вы можете использовать службы эталонных данных из [Microsoft Azure Marketplace](https://azure.microsoft.com/marketplace/) для очистки, проверки, сопоставления и дополнения данных. Дополнительные сведения см. в статье [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
 -   **Профилирование:** анализ источника данных для получения представления о качестве данных на каждом этапе процессов обнаружения знаний, управления доменами, сопоставления и очистки данных. Профилирование является мощным средством в решении по обеспечению качества данных DQS. Вы можете создать решение по обеспечению качества данных, где профилирование будет столь же важно, как управление знаниями, сопоставление и очистка данных. Дополнительные сведения см. в статье [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   

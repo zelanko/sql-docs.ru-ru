@@ -11,12 +11,12 @@ ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 789322fa4274c6819fe1f71ac7ae06056fce5a5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b96ff3e9775e38a7eb61449d6a2ed5e9bc4d6db4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785462"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681292"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Практическое руководство. Написание модульного теста SQL Server, который выполняется в области действия одной транзакции
 Можно изменить модульные тесты для запуска в области действия одной транзакции. При использовании этого подхода после завершения теста реализованные им изменения можно будет отменить. Приведенные ниже инструкции показывают, как выполнить следующие задачи.  
@@ -54,7 +54,7 @@ ms.locfileid: "47785462"
     > [!NOTE]  
     > Отменить транзакции после выполнения инструкции COMMIT TRANSACTION нельзя.  
   
-    Дополнительные сведения о том, как инструкция ROLLBACK TRANSACTION работает с хранимыми процедурами и триггерами, см. на следующей странице веб-сайта Майкрософт: [ROLLBACK TRANSACTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115927).  
+    Дополнительные сведения о том, как инструкция ROLLBACK TRANSACTION работает с хранимыми процедурами и триггерами, см. на следующей странице веб-сайта Майкрософт: [ROLLBACK TRANSACTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=115927).  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>Создание транзакции для одного метода теста  
 В этом примере при использовании типа [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) будет задействована внешняя транзакция. По умолчанию соединения для выполнения и привилегированные подключения не используют внешнюю транзакцию, так как они создаются до выполнения этого метода. Соединение SqlConnection имеет метод [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction), который связывает активное подключение с транзакцией. При создании внешняя транзакция автоматически регистрируется в качестве текущей транзакции. К ней можно обратиться через свойство [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current). В этом примере транзакция отменяется при уничтожении внешней транзакции. Чтобы зафиксировать изменения, внесенные при запуске модульного теста, используйте метод [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete).  
@@ -171,7 +171,7 @@ ms.locfileid: "47785462"
     Состояние службы должно смениться на **Запущена**. Теперь можно запускать модульные тесты, использующие System.Transactions.  
   
 > [!IMPORTANT]  
-> Даже если служба контроллера распределенных транзакций запущена, может возникнуть следующая ошибка: `System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`. Если выдается эта ошибка, то необходимо настроить сетевой доступ для службы контроллера распределенных транзакций. Дополнительные сведения см. в статье о [включении сетевого доступа DTC](http://go.microsoft.com/fwlink/?LinkId=193916).  
+> Даже если служба контроллера распределенных транзакций запущена, может возникнуть следующая ошибка: `System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`. Если выдается эта ошибка, то необходимо настроить сетевой доступ для службы контроллера распределенных транзакций. Дополнительные сведения см. в статье о [включении сетевого доступа DTC](https://go.microsoft.com/fwlink/?LinkId=193916).  
   
 ## <a name="see-also"></a>См. также:  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

@@ -18,12 +18,12 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 906d78e42c48443b26d5d600e168dff92a119bd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 977cf906b46ae792bc979c5b6b844dbf6368b40e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667882"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640511"
 ---
 # <a name="recordset-destination"></a>назначение «Набор записей»
   Назначение «Набора записей» создает и заполняет набор записей ADO в памяти. Форма набора записей определяется входными данными назначения «набор записей» во время проектирования.  
@@ -39,7 +39,7 @@ ms.locfileid: "47667882"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства назначения «Набор записей»](../../integration-services/data-flow/recordset-destination-custom-properties.md)  
   

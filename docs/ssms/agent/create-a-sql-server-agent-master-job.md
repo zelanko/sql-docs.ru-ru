@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ac4a9565c21fe00f8f1f744899563794e9335ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b665f3d20d223351b9da207d767cea0015fb94b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739302"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701972"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Создание задания агента главного сервера SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47739302"
 ## <a name="BeforeYouBegin"></a>Перед началом  
   
 ### <a name="Restrictions"></a>Ограничения  
-Изменения задания агента главного сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны распространяться на все связанные целевые серверы. Так как целевые серверы изначально не загружают задание, пока не указаны их цели, [!INCLUDE[msCoName](../../includes/msconame_md.md)] рекомендует завершить все шаги и расписания индивидуального задания перед указанием каких-либо целевых серверов. Иначе необходимо будет вручную запросить повторное скачивание измененного задания целевыми серверами либо с помощью хранимой процедуры **sp_post_msx_operation** , либо путем изменения задания в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [sp_post_msx_operation (Transact-SQL)](http://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) или [Изменение задания](../../ssms/agent/modify-a-job.md).  
+Изменения задания агента главного сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны распространяться на все связанные целевые серверы. Так как целевые серверы изначально не загружают задание, пока не указаны их цели, [!INCLUDE[msCoName](../../includes/msconame_md.md)] рекомендует завершить все шаги и расписания индивидуального задания перед указанием каких-либо целевых серверов. Иначе необходимо будет вручную запросить повторное скачивание измененного задания целевыми серверами либо с помощью хранимой процедуры **sp_post_msx_operation** , либо путем изменения задания в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [sp_post_msx_operation (Transact-SQL)](https://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) или [Изменение задания](../../ssms/agent/modify-a-job.md).  
   
 ### <a name="Security"></a>безопасность  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47739302"
   
 #### <a name="to-create-a-master-sql-server-agent-job"></a>Создание задания агента главного сервера SQL Server  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -137,13 +137,13 @@ ms.locfileid: "47739302"
   
 Дополнительные сведения см. в разделе:  
   
--   [sp_add_job (Transact-SQL)](http://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
+-   [sp_add_job (Transact-SQL)](https://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
   
--   [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)  
+-   [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)  
   
--   [sp_add_schedule (Transact-SQL)](http://msdn.microsoft.com/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7)  
+-   [sp_add_schedule (Transact-SQL)](https://msdn.microsoft.com/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7)  
   
--   [sp_attach_schedule (Transact-SQL)](http://msdn.microsoft.com/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1)  
+-   [sp_attach_schedule (Transact-SQL)](https://msdn.microsoft.com/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1)  
   
--   [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286)  
+-   [sp_add_jobserver (Transact-SQL)](https://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286)  
   

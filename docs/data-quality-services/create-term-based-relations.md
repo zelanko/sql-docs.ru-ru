@@ -14,12 +14,12 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfc10387bbf854b524006b29494d1b879ec2f60f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1d46bc9edd1c907c1d8b13fb5677f1bec5f7c2f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595812"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700872"
 ---
 # <a name="create-term-based-relations"></a>Создание связей на основе термина
 
@@ -102,7 +102,7 @@ ms.locfileid: "47595812"
   
 6.  Нажмите кнопку **Применить изменения** , чтобы применить связи домена на основе термина.  
   
-7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После создания связей на основе термина  
  После создания связей на основе термина можно выполнить другие задачи управления доменами с текущим доменом, выполнить обнаружение набора знаний для добавления набора знаний к домену или добавить политику сопоставления к домену. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  

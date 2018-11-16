@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fdd198e8b5bf23e69d74be057c97b29e229dada
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717892"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641571"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Пошаговое руководство. Публикация пакета служб SSIS в представлении SQL
   В этом пошаговом руководстве приводятся подробные инструкции для публикации пакета служб SSIS в качестве представления SQL в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -252,7 +252,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  Время ожидания указывает число секунд, в течение которых поставщик OLE DB для служб SSIS может ожидать поступления новых данных из пакета служб SSIS. По умолчанию это время составляет 60 секунд. Для времени ожидания можно указать целочисленное значение в диапазоне от 20 до 32 000.  
   
- Параметры содержат значения параметров пакета и параметров проекта. Правила для параметров идентичны параметрам в [DTExec](http://msdn.microsoft.com/library/hh231187.aspx).  
+ Параметры содержат значения параметров пакета и параметров проекта. Правила для параметров идентичны параметрам в [DTExec](https://msdn.microsoft.com/library/hh231187.aspx).  
   
  В следующем списке указаны допустимые специальные символы в предложении запроса.  
   

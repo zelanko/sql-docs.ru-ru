@@ -13,12 +13,12 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f2bfc7d8e3f5782851178667305966cc243d8c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f026b827c510713ac45d11fbfad552b39171163d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602647"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640281"
 ---
 # <a name="expression-task"></a>Задания выражения
   Задача «Выражение» создает и вычисляет выражения, задающие значения переменных во время выполнения, с помощью построителя выражений. При изменении задачи будет запущен [Expression Builder](../../integration-services/expressions/expression-builder.md) .  
@@ -31,9 +31,9 @@ ms.locfileid: "47602647"
  Примеры использования выражений для задания свойств см. в подразделе **Образцы выражений свойств** раздела [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Использование выражения в компоненте потока данных](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Использование выражения в компоненте потока данных](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>См. также  
- Техническая статья [Памятка выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=746575)на сайте pragmaticworks.com  
+ Техническая статья [Памятка выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=746575)на сайте pragmaticworks.com  
   
   

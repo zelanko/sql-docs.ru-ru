@@ -17,12 +17,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43b3ec688f23d1ba50392c09b115301cfa2ae127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707902"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639031"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Устранение неполадок инструментов с помощью отчетов
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают функции и инструменты, которые можно использовать для устранения неполадок пакетов после их завершения и развертывания.  
@@ -82,7 +82,7 @@ ms.locfileid: "47707902"
   
     3.  **Рассмотрите возможность захвата данных счетчика строк**. Создайте отдельную таблицу для данных счетчика строк, в которой каждый экземпляр выполнения пакета определяется идентификатором ExecutionID. Используйте преобразование «Счетчик строк» для сохранения числа строк в последовательность переменных в критических точках потока данных. После окончания потока данных используйте задачу «Выполнение SQL» для вставки этой последовательности значений в строку таблицы для последующего анализа и отчета.  
   
-     Дополнительные сведения об этом подходе см. в статье "ETL Auditing and Logging" (ETL: аудит и ведение журналов), входящей в технический документ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)(Проект REAL: методы разработки бизнес-аналитики ETL).  
+     Дополнительные сведения об этом подходе см. в статье "ETL Auditing and Logging" (ETL: аудит и ведение журналов), входящей в технический документ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (Проект REAL: методы разработки бизнес-аналитики ETL).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Устранение неполадок выполнения пакетов с помощью отладочных файлов дампа  
  Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]позволяют создавать отладочные файлы дампа с информацией о выполнении пакета. Дополнительные сведения см. в статье [Создание файлов дампа для выполнения пакетов](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
@@ -95,7 +95,7 @@ ms.locfileid: "47707902"
      Свойство **DelayValidation** устанавливается в задаче потока данных, но не в отдельных компонентах потока данных. Тех же результатов можно добиться, присвоив свойству <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> отдельного компонента потока данных значение **false**. Однако если значение этого свойства равно **false**, компонент не узнает об изменениях метаданных внешних источников данных. Если свойству **true**присвоено значение <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> , это может помочь избежать критических препятствий, возникающих из-за блокировки базы данных, особенно при использовании пакетом транзакций.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Устранение проблем с разрешениями во время выполнения  
- Если возникают ошибки при попытке выполнения развернутых пакетов с использованием агента служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , их причина может заключаться в отсутствии нужных разрешений у учетных записей агента. Сведения о решении проблем с пакетами, запускаемыми из агента заданий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в статье [Пакет служб SSIS не выполняется при вызове пакета из шага задания агента SQL Server](http://support.microsoft.com/kb/918760). Дополнительные сведения о запуске пакетов из заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Пакеты служб из заданий агента SQL Server](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
+ Если возникают ошибки при попытке выполнения развернутых пакетов с использованием агента служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , их причина может заключаться в отсутствии нужных разрешений у учетных записей агента. Сведения о решении проблем с пакетами, запускаемыми из агента заданий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Пакет служб SSIS не выполняется при вызове пакета из шага задания агента SQL Server](https://support.microsoft.com/kb/918760). Дополнительные сведения о запуске пакетов из заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Пакеты служб из заданий агента SQL Server](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
  Чтобы подключиться к источникам данных Excel или Access, агенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется учетная запись с разрешениями на чтение, запись, создание и удаление временных файлов в папке, заданной переменными среды TEMP и TMP.  
   
@@ -110,4 +110,4 @@ ms.locfileid: "47707902"
  [Отладка потока данных](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>См. также  
- Запись в блоге [Adding the error column name to an error output](http://go.microsoft.com/fwlink/?LinkId=261546)(Добавление имени столбца с ошибкой к выводу ошибок) на сайте dougbert.com.  
+ Запись в блоге [Adding the error column name to an error output](https://go.microsoft.com/fwlink/?LinkId=261546)(Добавление имени столбца с ошибкой к выводу ошибок) на сайте dougbert.com.  

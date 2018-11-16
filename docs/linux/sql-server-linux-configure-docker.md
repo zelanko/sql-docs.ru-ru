@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0dbc72cf39e1dee5abad6ceb961f1b437287e5ba
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 1a4b517374e19ab959a8c00b732d62643c32cff3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270027"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657988"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Настройка образов контейнеров SQL Server в Docker
 
@@ -62,7 +62,7 @@ docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
 
 Краткое руководство, в предыдущем разделе выполняется разработчика бесплатная версия SQL Server из Docker Hub. Большая часть информации по-прежнему применяется, если вы хотите запуске производственных образов контейнера, например выпуски Enterprise, Standard или Web. Тем не менее существует ряд различий, которые здесь описаны.
 
-- SQL Server в рабочей среде можно использовать, только если у вас есть действительная лицензия. Можно получить бесплатную лицензию SQL Server Express рабочей [здесь](https://go.microsoft.com/fwlink/?linkid=857693). Лицензии SQL Server Standard и Enterprise Edition можно приобрести [корпоративного лицензирования Майкрософт](https://www.microsoft.com/en-us/licensing/default.aspx).
+- SQL Server в рабочей среде можно использовать, только если у вас есть действительная лицензия. Можно получить бесплатную лицензию SQL Server Express рабочей [здесь](https://go.microsoft.com/fwlink/?linkid=857693). Лицензии SQL Server Standard и Enterprise Edition можно приобрести [корпоративного лицензирования Майкрософт](https://www.microsoft.com/licensing/default.aspx).
 
 - Образы контейнеров SQL Server в рабочей среде необходимо извлечено из [Docker Store](https://store.docker.com). Если ее еще нет, создайте учетную запись на Docker Store.
 

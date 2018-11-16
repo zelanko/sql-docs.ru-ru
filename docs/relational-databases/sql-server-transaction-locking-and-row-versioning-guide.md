@@ -5,8 +5,7 @@ ms.date: 02/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, transaction locking and row versioning
@@ -18,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c99ea57cbfbf5b24dc94b7827cf958495a759a76
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ef1ca3b64ee0e70dd71bfcea3fc270790343e204
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906534"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661120"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Руководство по блокировке и управлению версиями строк транзакций
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1861,7 +1860,7 @@ GO
  Может потребоваться применить инструкцию KILL. Ее следует использовать с осторожностью, особенно если запущены критические процессы. Дополнительные сведения см. в разделе [KILL (Transact-SQL)](../t-sql/language-elements/kill-transact-sql.md).  
   
 ##  <a name="Additional_Reading"></a> Дополнительные материалы   
-[Издержки управления версиями строк](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+[Издержки управления версиями строк](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
 [Расширенные события](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [Динамические административные представления и функции (Transact-SQL)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      

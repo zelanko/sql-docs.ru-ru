@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028205"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812977"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Установка служб SQL Server Reporting Services (2017 или более поздней версии)
 
@@ -98,15 +98,15 @@ ms.locfileid: "50028205"
 |Часть|Описание|
 |----------|-----------------|
 |Prefix|Префиксом по умолчанию является HTTP. Если сертификат SSL уже установлен, программа установки попытается создать резервирование URL-адресов с префиксом HTTPS.|
-|Имя узла|Именем узла по умолчанию является строгий шаблон (+). Он указывает, что сервер отчетов принимает все HTTP-запросы в заданном порте для любого имени узла, который соответствует компьютеру, включая `http://<computername>/reportserver`, `http://localhost/reportserver` или `http://<IPAddress>/reportserver.`|
+|Имя узла|Именем узла по умолчанию является строгий шаблон (+). Он указывает, что сервер отчетов принимает все HTTP-запросы в заданном порте для любого имени узла, который соответствует компьютеру, включая `https://<computername>/reportserver`, `https://localhost/reportserver` или `https://<IPAddress>/reportserver.`|
 |Порт|По умолчанию используется порт 80. Если используется порт, отличный от 80, то его необходимо явным образом указывать в URL-адресе при открытии веб-портала в окне браузера.|
 |Виртуальный каталог|По умолчанию имена виртуальных каталогов создаются в формате ReportServer — для веб-службы сервера отчетов и в формате Reports — для диспетчера отчетов. Для веб-службы сервера отчетов по умолчанию используется виртуальный каталог **reportserver**. Для веб-портала используется виртуальный каталог по умолчанию **reports**.|
 
 Ниже приведен пример полного URL-адреса.
 
-- `http://+:80/reportserver`, предоставляет доступ к серверу отчетов.
+- `https://+:80/reportserver`, предоставляет доступ к серверу отчетов.
 
-- `http://+:80/reports`, предоставляет доступ к веб-порталу.
+- `https://+:80/reports`, предоставляет доступ к веб-порталу.
 
 ## <a name="firewall"></a>Брандмауэр
 

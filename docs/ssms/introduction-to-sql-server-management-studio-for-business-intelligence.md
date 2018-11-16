@@ -15,12 +15,12 @@ ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8626960b3b5a16a8edc3aed7956799de24e61c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f3ec990e48b6d9913db9e610fee6bfca6b9190a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608792"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701370"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>Введение в среду SQL Server Management Studio для решения задач бизнес-аналитики
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47608792"
   
 Она реализует функции управления общими расписаниями (в папке «Общие расписания») и базами данных сервера отчетов (ReportServer, ReportServerTempdb). Можно также создать роль RSExecRole в системной базе данных Master, когда производится перемещение базы данных сервера отчетов на новое или другое ядро СУБД (компонент[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Дополнительные сведения об этих задачах см. в следующих разделах:  
   
--   [Разделы руководства по использованию среды Management Studio](http://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
+-   [Разделы руководства по использованию среды Management Studio](https://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
   
 -   [Администрирование баз данных сервера отчетов](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)  
   
@@ -52,11 +52,11 @@ ms.locfileid: "47608792"
   
 Позволяет включать и настраивать различные функции, задавать для сервера значения по умолчанию, управлять ролями и заданиями. Дополнительные сведения об этих задачах см. в следующих разделах:  
   
--   [Практическое руководство. Установка свойств сервера отчетов (среда Management Studio)](http://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
+-   [Практическое руководство. Установка свойств сервера отчетов (среда Management Studio)](https://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
   
--   [Практическое руководство. Создание, удаление и изменение ролей (среда Management Studio)](http://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
+-   [Практическое руководство. Создание, удаление и изменение ролей (среда Management Studio)](https://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
   
--   [Разрешение и запрет печати на стороне клиента для служб Reporting Services](http://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
+-   [Разрешение и запрет печати на стороне клиента для служб Reporting Services](https://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
   
 ## <a name="see-also"></a>См. также:  
 [Разработка и реализация с помощью SQL Server Data Tools](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  

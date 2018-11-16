@@ -13,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9c5e845cbe9eb7ea780aa675d021dfdd465327ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d09004ae91d7a30c64413f1f5f426e1c9da9fd07
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674793"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696582"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Диалоговое окно «Полнотекстовые индексы» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47674793"
 > Чтобы создать полнотекстовый индекс, необходимо сначала создать полнотекстовый каталог для базы данных, используя внешнее средство, например среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или программу Enterprise Manager.  
   
 > [!NOTE]  
-> Функциональность полнотекстового индекса доступна не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2012](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4).  
+> Функциональность полнотекстового индекса доступна не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2012](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4).  
   
 ## <a name="options"></a>Параметры  
 **Выбранный полнотекстовый индекс**  
@@ -95,6 +95,6 @@ ms.locfileid: "47674793"
 Отображает список всех имен столбцов в этой базе данных, которые имеют уникальные индексы по одиночному столбцу. Эти столбцы могут быть использованы для создания полнотекстовых индексов.  
   
 ## <a name="see-also"></a>См. также:  
-[Использование мастера полнотекстового индексирования](http://msdn.microsoft.com/3e9d9605-6525-4781-9168-fdaa06db3459)  
-[CREATE FULLTEXT INDEX (Transact-SQL)](http://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)  
+[Использование мастера полнотекстового индексирования](https://msdn.microsoft.com/3e9d9605-6525-4781-9168-fdaa06db3459)  
+[CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)  
   

@@ -13,12 +13,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b907e763afdc26780cd06e24570a45b557678323
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 657118f6b10b32d85f9020f01d95bf12eecb4498
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100154"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701142"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Создание связи между таблицами на диаграмме (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,6 +50,6 @@ ms.locfileid: "50100154"
   
 ## <a name="see-also"></a>См. также:  
 [Диалоговое окно "Таблицы и столбцы" (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md)  
-[Работа с ограничениями (визуальные инструменты для баз данных)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Работа с ограничениями (визуальные инструменты для баз данных)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [Работа с таблицами в диаграммах базы данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

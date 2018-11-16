@@ -22,12 +22,12 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 048465a20f3a665d3199a6382695f14b28d8902d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e63d7e75b0025fb5e23f2d9bc1120d77ff7faa2f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850345"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659412"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Используйте предупреждения для событий агента репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47850345"
 |20578|**Репликация: нестандартное завершение работы агента**|||  
 |22815|**Предупреждение об обнаружении конфликта в одноранговой топологии**|Агент распространителя обнаружил конфликт при попытке применения изменений на одноранговом узле.|Да|  
   
- Наряду с этими предупреждениями монитор репликации предоставляет набор предупреждений и оповещений, относящихся к состоянию и производительности. Дополнительные сведения см. в статье [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md). Можно также определить предупреждения для других событий репликации при помощи инфраструктуры предупреждений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Создание пользовательского события](http://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879).  
+ Наряду с этими предупреждениями монитор репликации предоставляет набор предупреждений и оповещений, относящихся к состоянию и производительности. Дополнительные сведения см. в статье [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md). Можно также определить предупреждения для других событий репликации при помощи инфраструктуры предупреждений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Создание пользовательского события](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879).  
   
  **Настройка стандартных предупреждений репликации**  
   

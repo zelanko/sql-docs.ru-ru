@@ -24,12 +24,12 @@ ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fb8f59bca89bccd40f598bf5788ef3201145e323
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 542bf734722351128136e072222e0c3251e945f7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805582"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700902"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -199,7 +199,7 @@ ALTER ASSEMBLY assembly_name
  На следующем примере показано, как сборка `ComplexNumber` обновляется до последней копии модулей [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], содержащих ее реализацию.  
   
 > [!NOTE]  
->  Сборка `ComplexNumber` может быть создана при выполнении образцов скриптов UserDefinedDataType. Дополнительные сведения см. в статье [Определяемый пользователем тип](http://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
+>  Сборка `ComplexNumber` может быть создана при выполнении образцов скриптов UserDefinedDataType. Дополнительные сведения см. в статье [Определяемый пользователем тип](https://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
   
  ```
  ALTER ASSEMBLY ComplexNumber 

@@ -16,12 +16,12 @@ ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3cb33e3042ced47e0ac1e97377985b20299aa0af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b552b2b5dfa1e53a56d7a012f0f1eb89322f1e83
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595152"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640532"
 ---
 # <a name="datareader-destination"></a>назначение DataReader
   Назначение DataReader извлекает данные из потока данных с помощью интерфейса ADO.NET **DataReader** . Эти данные могут быть впоследствии использованы другими приложениями. Например, можно настроить источник данных из отчета служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на использование результата выполнения пакета служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Для этого нужно создать поток данных, который реализует назначение DataReader.  
@@ -37,7 +37,7 @@ ms.locfileid: "47595152"
   
  Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства назначения «Модуль чтения данных»](../../integration-services/data-flow/datareader-destination-custom-properties.md)  
   

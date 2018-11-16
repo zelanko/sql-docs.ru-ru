@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d3f586e544d87aecf2b5f28d353d73c088f07f7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac18d2a20d6f7f791b14b3e174ce87bef694cd19
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716762"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812190"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Указание путей к внешним элементам (построитель отчетов и службы SSRS)
   В свойствах элемента отчета укажите пути к нужным элементам, таким как детализированные отчеты, вложенные отчеты и файлы изображений, которые являются внешними для файла определения отчета и размещены на сервере отчетов.  
@@ -39,7 +39,7 @@ ms.locfileid: "47716762"
   
     -   **На сервере отчетов** путь начинается с **/**(корневой папки). например /Reports/AllSubreports/Subreport1.  
   
-    -   **На сайте SharePoint** необходимо указать в выражении имя отчета с полным URL-адресом элемента и расширением файла RDL. Например, `="http://server/site/library/folder/Report1.rdl"`.  
+    -   **На сайте SharePoint** необходимо указать в выражении имя отчета с полным URL-адресом элемента и расширением файла RDL. Например, `="https://server/site/library/folder/Report1.rdl"`.  
   
 ## <a name="see-also"></a>См. также:  
  [Добавление внешнего изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   

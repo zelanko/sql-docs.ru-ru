@@ -20,12 +20,12 @@ ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ba4b5ba58034a47f289fb0230dd64cf57e0adcc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96a9ca973b09dbadc4ab59219d8d916953ef318c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793142"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703832"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "47793142"
  Экземпляр отказоустойчивого кластера (FCI) может эффективно использовать [группы доступности](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) для удаленного аварийного восстановления на уровне базы данных. Дополнительные сведения см. в статье [Failover Clustering and Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) (Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)).  
  
  > [!NOTE]  
- > В версии Windows Server 2016 Datacenter добавлена поддержка локальных дисковых пространств (S2D). Экземпляры отказоустойчивого кластера SQL Server поддерживают S2D для ресурсов хранилища кластера. Дополнительные сведения см. в статье [Локальные дисковые пространства в Windows Server 2016](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview).
+ > В версии Windows Server 2016 Datacenter добавлена поддержка локальных дисковых пространств (S2D). Экземпляры отказоустойчивого кластера SQL Server поддерживают S2D для ресурсов хранилища кластера. Дополнительные сведения см. в статье [Локальные дисковые пространства в Windows Server 2016](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview).
  > 
- >Также экземпляры отказоустойчивого кластера поддерживают кластеризованные общие тома (CSV). Дополнительные сведения см. в разделе [Основные сведения о кластерных общих томах в отказоустойчивом кластере](http://technet.microsoft.com/library/dd759255.aspx). 
+ >Также экземпляры отказоустойчивого кластера поддерживают кластеризованные общие тома (CSV). Дополнительные сведения см. в разделе [Основные сведения о кластерных общих томах в отказоустойчивом кластере](https://technet.microsoft.com/library/dd759255.aspx). 
    
  **В этом разделе.**  
   
@@ -157,7 +157,7 @@ ms.locfileid: "47793142"
 |----------------------------|---------------|  
 |Описывает, как установить новый FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Создание отказоустойчивого кластера SQL Server (программа установки)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Описывает, как выполнить обновление до отказоустойчивого кластера [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Обновление экземпляра отказоустойчивого кластера SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Описание основных понятий отказоустойчивых кластеров Windows, а также ссылки на связанные с ними задачи.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [обзор отказоустойчивых кластеров](http://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [обзор отказоустойчивых кластеров](http://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Описание основных понятий отказоустойчивых кластеров Windows, а также ссылки на связанные с ними задачи.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [обзор отказоустойчивых кластеров](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [обзор отказоустойчивых кластеров](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Описывает различия в основных понятиях между узлами в экземпляре отказоустойчивого кластера и репликами внутри группы доступности, а также содержит рекомендации по использованию экземпляра отказоустойчивого кластера для размещения реплики для группы доступности.|[Отказоустойчивая кластеризация и группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

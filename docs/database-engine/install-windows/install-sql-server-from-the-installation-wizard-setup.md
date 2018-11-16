@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1a982b90e9bbbb919e78d77e071ea13a6cff1bd3
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: d706feed2f2826afa6bb975d4ce47170b71126c4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460689"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605334"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Установка SQL Server с помощью мастера установки (программа установки)
 
@@ -69,7 +69,7 @@ ms.locfileid: "49460689"
 4.  На странице «Условия лицензии» просмотрите лицензионное соглашение. Если вы с ним согласны, установите флажок **Я принимаю условия лицензионного соглашения** и нажмите кнопку **Далее**.  
 
   >[!NOTE]
-  > SQL Server передает сведения об установке, а также другие данные об использовании и производительности в Майкрософт, чтобы помочь улучшить продукт. Дополнительные сведения об обработке данных SQL Server и элементах управления конфиденциальностью, см. в [заявлении о конфиденциальности](https://privacy.microsoft.com/en-us/privacystatement) и руководстве по [настройке SQL Server для отправки отзывов в корпорацию Майкрософт](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
+  > SQL Server передает сведения об установке, а также другие данные об использовании и производительности в Майкрософт, чтобы помочь улучшить продукт. Дополнительные сведения об обработке данных SQL Server и элементах управления конфиденциальностью, см. в [заявлении о конфиденциальности](https://privacy.microsoft.com/privacystatement) и руководстве по [настройке SQL Server для отправки отзывов в корпорацию Майкрософт](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
   
 5.  В окне «Глобальные правила» процедура установки автоматически перейдет к окну «Обновления продукта», если ошибок правил нет.  
   

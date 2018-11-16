@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0493fb8952932c688edf7c8ae89385a0363fa3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 292b6a00e92ced31fc57c604c5d614df832dd9fc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612774"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666683"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Мониторинг и устранение неполадок с использованием памяти
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "47612774"
 ##  <a name="bkmk_Monitoring"></a> Наблюдение за использованием памяти  
   
 ###  <a name="bkmk_UsingSSMS"></a> Использование [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] поставляется вместе со встроенными стандартными отчетами для наблюдения за объемом памяти, используемым таблицами, хранимыми в памяти. Доступ к этим отчетам можно получить с помощью обозревателя объектов, как описано [здесь](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). Обозреватель объектов также можно использовать для контроля памяти, занятой отдельными таблицами, оптимизированными для памяти.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] поставляется вместе со встроенными стандартными отчетами для наблюдения за объемом памяти, используемым таблицами, хранимыми в памяти. Доступ к этим отчетам можно получить с помощью обозревателя объектов, как описано [здесь](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). Обозреватель объектов также можно использовать для контроля памяти, занятой отдельными таблицами, оптимизированными для памяти.  
   
 #### <a name="consumption-at-the-database-level"></a>Использование на уровне базы данных  
  Можно отслеживать использование памяти на уровне базы данных следующим образом.  

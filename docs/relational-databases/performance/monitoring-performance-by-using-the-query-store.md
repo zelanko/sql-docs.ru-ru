@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91d662dde7fe35ff74802ac9d899e03baaf8feb2
-ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
+ms.openlocfilehash: 1c8daab3f7a68ee846d8f02012d572a1687058cc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359351"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673333"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "49359351"
  Сведения о работе с хранилищем запросов в Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в разделе [Работа с хранилищем запросов в Базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/).  
  
 > [!IMPORTANT]
-> Если вы используете хранилище запросов для JIT-анализа рабочих нагрузок в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], запланируйте установку исправлений масштабируемости производительности (см. [статью базы знаний 4340759](http://support.microsoft.com/help/4340759)) как можно скорее. 
+> Если вы используете хранилище запросов для JIT-анализа рабочих нагрузок в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], запланируйте установку исправлений масштабируемости производительности (см. [статью базы знаний 4340759](https://support.microsoft.com/help/4340759)) как можно скорее. 
   
 ##  <a name="Enabling"></a> Включение хранилища запросов  
  Хранилище запросов неактивно для новых баз данных по умолчанию.  
@@ -112,7 +112,7 @@ INNER JOIN sys.query_store_query_text AS Txt
  Чтобы принудительно выполнить план, выберите запрос и план, а затем щелкните **Принудительно выполнить план**. Принудительно выполнять можно только те планы, которые были сохранены с помощью функции плана запросов и все еще хранятся в кэше плана запросов.  
 ##  <a name="Waiting"></a> Поиск запросов ожидания
 
-Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] в хранилище запросов доступна статистика ожидания каждого запроса. Типы ожидания в хранилище запросов объединены в **категории ожидания**. Сопоставление категорий ожидания с типами ожидания доступно в [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
+Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 и [!INCLUDE[ssSDS](../../includes/sssds-md.md)], в хранилище запросов доступна статистика ожидания каждого запроса. Типы ожидания в хранилище запросов объединены в **категории ожидания**. Сопоставление категорий ожидания с типами ожидания доступно в [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).
 
 **Категории ожидания** объединяют разные типы ожидания в контейнеры схожего характера. В разных категориях ожидания требуются разные виды последующего анализа для устранения проблемы, но типы ожидания из одной категории имеют очень схожие процедуры устранения неполадок. Определение затронутого запроса с наибольшим уровнем ожидания позволит успешно завершать подобные расследования.
 

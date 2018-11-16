@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 766ae518aad577c4f8a700dbbdd433e1794e9c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05901af8c6f11379b186495d1ae744c5f7598d91
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842252"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814277"
 ---
 # <a name="creating-the-web-service-proxy"></a>Создание учетной записи-посредника веб-службы
   Клиент и веб-служба могут обмениваться данными с помощью сообщений SOAP, в который входные и выходные параметры инкапсулируются в формате XML. Класс-посредник сопоставляет параметры с XML-элементами, а затем отправляет сообщения SOAP по сети. Таким образом класс-посредник устраняет необходимость связываться с веб-службой на уровне SOAP и позволяет вызывать методы веб-службы в любой среде разработки, которая поддерживает протокол SOAP и прокси для веб-служб.  
@@ -36,7 +36,7 @@ ms.locfileid: "47842252"
      Например, следующая инструкция командной строки указывает URL-адрес для конечной точки управления в веб-службе сервера отчетов:  
   
     ```  
-    wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" http://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
+    wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" https://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
     ```  
   
      Программа WSDL принимает ряд аргументов командной строки для создания прокси-класса. В предыдущем примере для использования в классе-посреднике указывается язык C# и рекомендуемое пространство имен (чтобы предотвратить конфликт имен в случае использования нескольких конечных точек веб-службы), а затем создается файл кода C# с именем ReportingService2010.cs. Если в примере указать язык [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], будет создан прокси-файл с именем ReportingService2010.vb. Этот файл создается в каталоге, из которого запущена команда.  
@@ -79,7 +79,7 @@ ReportingService2010 service = new ReportingService2010();
      Упрощенный URL-адрес конечной точки выполнения отчета для веб-службы сервера отчетов может иметь следующий вид:  
   
     ```  
-    http://<Server Name>/reportserver/reportexecution2005.asmx  
+    https://<Server Name>/reportserver/reportexecution2005.asmx  
     ```  
   
      URL-адрес содержит домен, в котором развернута веб-служба сервера отчетов, имя папки, содержащей службу, и имя файла обнаружения для службы. Полное описание различных элементов URL-адреса см. в разделе [Доступ к API-интерфейсу SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
@@ -105,13 +105,13 @@ ReportingService2010 service = new ReportingService2010();
   
 ```vb  
 Dim rs As New myNamespace.myReferenceName.ReportExecutionService()  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
+rs.Url = "https://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
 ```  
   
 ```csharp  
 myNamespace.myReferenceName.ReportExecutionService rs = new myNamespace.myReferenceName.ReportExecutionService();  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
+rs.Url = "https://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
   
 ```  

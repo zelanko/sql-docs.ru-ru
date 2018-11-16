@@ -14,12 +14,12 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7539196c5babc739de529b6241f3f85890ffbce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aff448a0d571ecd5d0eb3ce4ffa60e5a2c5440b5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692712"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638206"
 ---
 # <a name="syntax-ssis"></a>Синтаксис (службы SSIS)
   Синтаксис выражений служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] похож на синтаксис языков C и C#. Выражения содержат элементы, такие как идентификаторы (столбцы и переменные), литералы, операторы и функции. В этом разделе обобщаются особые требования синтаксиса средства оценки выражений с точки зрения различных элементов выражений.  
@@ -77,12 +77,12 @@ ms.locfileid: "47692712"
  Дополнительные сведения см. в статье [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Использование выражения в компоненте потока данных](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Использование выражения в компоненте потока данных](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [Памятка выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=746575)на сайте pragmaticworks.com  
+-   Техническая статья [Памятка выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=746575)на сайте pragmaticworks.com  
   
--   Техническая статья [Примеры выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
+-   Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
   

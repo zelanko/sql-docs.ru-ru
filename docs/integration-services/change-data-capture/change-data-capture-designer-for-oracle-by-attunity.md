@@ -13,12 +13,12 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 020b6dffc01345e63258f2f8f781dfb5aebeb60b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3acfc4beeb64631a1c8bc00fe5e4a6ca2c31f470
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689374"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641241"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Конструктор системы отслеживания измененных данных для Oracle компании Attunity
   Консоль конструктора CDC служит для разработки и обслуживания экземпляров Oracle CDC. Консоль конструктора CDC ― это надстройка консоли управления (MMC), состоящая из следующих элементов.  
@@ -29,7 +29,7 @@ ms.locfileid: "47689374"
   
 -   Редактор свойств экземпляра CDC. В этом диалоговом окне можно изменить любой существующий экземпляр службы CDC Oracle. Дополнительные сведения об изменении свойств экземпляра CDC см. в разделе [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
   
- Конструктор и служба системы отслеживания измененных данных Microsoft® для Oracle от Attunity для Microsoft SQL Server® 2016 находятся в составе пакета дополнительных компонентов SQL Server 2016. Скачать компоненты пакета дополнительных компонентов можно со страницы [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).  
+ Конструктор и служба системы отслеживания измененных данных Microsoft® для Oracle от Attunity для Microsoft SQL Server® 2016 находятся в составе пакета дополнительных компонентов SQL Server 2016. Скачать компоненты пакета дополнительных компонентов можно со страницы [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).  
   
 ## <a name="in-this-documentation"></a>В этой документации  
   

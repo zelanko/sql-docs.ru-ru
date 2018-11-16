@@ -11,12 +11,12 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 49912f010400e81fb120c5f8abd0dbc94718b999
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1bd77fa65a3667bdc06934386b293783270bc1a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773582"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641201"
 ---
 # <a name="sap-bw-source"></a>Источник SAP BW
   Источник SAP BW — это компонент источника Connector 1.1 для SAP BW [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Таким образом, источник SAP BW извлекает данные из системы SAP Netweaver BW версии 7 и делает их доступными для потока данных в пакете [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -115,7 +115,7 @@ ms.locfileid: "47773582"
   
  Если вы не знаете все значения, необходимые для настройки источника, может потребоваться связаться с администратором SAP.  
   
- Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW, см. в техническом документе [Использование служб SQL Server 2008 Integration Services с SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
+ Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW, см. в техническом документе [Использование служб SQL Server 2008 Integration Services с SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Использование конструктора служб SSIS для настройки источника  
  Дополнительные сведения о свойствах источника SAP BW, которые можно задать в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в одном из последующих разделов.  

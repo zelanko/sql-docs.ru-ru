@@ -14,12 +14,12 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 726dbfd9f3c16088af469de9745edfa454c6c00a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aec1a0cc2b6a5f12dce1d8c49c7d2c1b26771e00
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788802"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602824"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>Доступность репликации не имеет исправной роли
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47788802"
  Эта политика проверяет состояние роли реплики доступности. Политика находится в состоянии неисправности, если роль реплики доступности не является первичной или вторичной. В остальном политика находится в рабочем состоянии.  
   
 > [!NOTE]  
->  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблемы и ее решении доступны в разделе [Реплика доступности не имеет исправной роли](http://go.microsoft.com/fwlink/p/?LinkId=220856) в TechNet Wiki.  
+>  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблемы и ее решении доступны в разделе [Реплика доступности не имеет исправной роли](https://go.microsoft.com/fwlink/p/?LinkId=220856) в TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Возможные причины  
  Роль этой реплики доступности неисправна. Реплике не назначена роль первичной или вторичной.  

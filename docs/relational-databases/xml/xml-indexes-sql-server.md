@@ -34,12 +34,12 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfa0e49e09c0cde8283015215aab25ce13a0c50f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dac012727df032d45674add5016782de3ca6ad6a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718592"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669913"
 ---
 # <a name="xml-indexes-sql-server"></a>XML-индексы (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47718592"
  Экземпляры XML хранятся в столбцах типа **xml** в виде больших двоичных объектов (BLOB). Размер экземпляров типа **xml** бывает достаточно велик и в двоичном представлении может достигать 2 ГБ. При отсутствии индекса эти большие двоичные объекты разбираются на этапе выполнения запроса, что может занять некоторое время. Например, рассмотрим следующий запрос:  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -108,7 +108,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
  Например, следующий запрос возвращает сводные данные, содержащиеся в столбце типа данных **xml**`CatalogDescription` таблицы `ProductModel`. Запрос возвращает данные <`Summary`> только для тех изделий, описания каталога которых содержат также описание <`Features`>.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
  При использовании первичного XML-индекса вместо того, чтобы разбирать каждый экземпляр большого двоичного объекта типа данных XML в базовой таблице, методом `exist()` производится последовательный поиск заданного выражения в строках индекса, соответствующих данному объекту типа данных XML. Если в столбце Path индекса путь найден, элемент <`Summary`> вместе со своими поддеревьями извлекается из первичного XML-индекса и преобразуется в большой двоичный объект типа данных XML, возвращаясь в качестве результата метода `query()`.  
@@ -150,7 +150,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
  Следующий запрос демонстрирует, при каких условиях может быть полезен индекс PATH:  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -174,8 +174,8 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
   
 SELECT ContactID   
 FROM   Person.Contact  
@@ -192,7 +192,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  Например, для модели продукта `19`следующий запрос извлекает значения атрибутов `ProductModelID` и `ProductModelName` при помощи метода `value()` . Если вместо первичного или вторичных XML-индексов использовать индекс PROPERTY, это может повысить скорость выполнения запросов.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.value('(/PD:ProductDescription/@ProductModelID)[1]', 'int') as ModelID,  
        CatalogDescription.value('(/PD:ProductDescription/@ProductModelName)[1]', 'varchar(30)') as ModelName          

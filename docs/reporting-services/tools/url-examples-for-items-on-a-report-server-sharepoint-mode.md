@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a21d053818991c19e8b57ce60c11f4766973b6ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839562"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812961"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Примеры URL-адресов для элементов на сервере отчетов в режиме интеграции с SharePoint
   Чтобы опубликовать отчеты и связанные с ними элементы в библиотеке SharePoint, можно опубликовать содержимое с помощью таких средств разработки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , как конструктор отчетов, или передать содержимое средствами сайта SharePoint.  
@@ -47,21 +47,21 @@ ms.locfileid: "47839562"
  Конечная точка-посредник для URL-адреса служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не поддерживается. Конечная точка прокси включает номер порта, например `http:*//servername:8080/reportserver*`.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL-адрес сайта или дочернего сайта SharePoint  
- При развертывании отчета или источника данных необходимо указывать URL-адрес сайта и вложенного сайта SharePoint, если он есть. В URL-адресе имя сайта находится сразу после имени сервера, например `http://*servername/site*` или `http://*servername/site/subsite*`.  
+ При развертывании отчета или источника данных необходимо указывать URL-адрес сайта и вложенного сайта SharePoint, если он есть. В URL-адресе имя сайта находится сразу после имени сервера, например `https://*servername/site*` или `https://*servername/site/subsite*`.  
   
  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 или веб-приложении [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] сайт и дочерний сайт часто соответствуют вкладкам на основном сайте. Чтобы узнать имя сайта, выберите **Корневая папка**, а затем **Все содержимое сайта**. Прокрутите страницу до конца и найдите раздел **Сайты и рабочие области**. В этом разделе отображается список сайтов.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL-адрес библиотеки SharePoint  
  При развертывании отчета или связанного элемента в библиотеке SharePoint необходимо указывать URL-адрес этой библиотеки. Точная структура URL-адреса для библиотеки зависит от версии SharePoint.  
   
- В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 и [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] библиотека указывается сразу после имени сервера, например `http://*servername/*Shared Documents`.  
+ В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 и [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] библиотека указывается сразу после имени сервера, например `https://*servername/*Shared Documents`.  
   
- В [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]библиотека указывается после имени сайта и дочернего сайта. Например, `http://*servername/site/*Documents`.  
+ В [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]библиотека указывается после имени сайта и дочернего сайта. Например, `https://*servername/site/*Documents`.  
   
  Чтобы узнать путь к новой библиотеке SharePoint или к незнакомому сайту, откройте браузер и найдите библиотеку SharePoint, в которой должен быть опубликован отчет. Если библиотека пуста, передайте в нее любой файл. Чтобы открыть окно **Свойства** , щелкните правой кнопкой мыши этот файл и выберите пункт **Свойства** . Адрес файла содержит URL-адрес, который необходим для публикации.  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>Полные URL-адреса для элементов сайта SharePoint  
- К элементам, которые хранятся в библиотеке SharePoint, необходимо обращаться по полным URL-адресам, которые начинаются с веб-приложения (`http://*server*`) как корневого узла и заканчиваются именем файла, к которому вы обращаетесь.  
+ К элементам, которые хранятся в библиотеке SharePoint, необходимо обращаться по полным URL-адресам, которые начинаются с веб-приложения (`https://*server*`) как корневого узла и заканчиваются именем файла, к которому вы обращаетесь.  
   
  Имя файла, указанное в URL-адресе, должно включать расширение.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47839562"
  Чтобы указать детализированные отчеты, включите в выражение URL-адрес. Например, чтобы указать отчет с именем SalesDetails в качестве детализированного, в окне действия для текстового поля или текста-заполнителя установите в параметре ReportName следующее выражение:  
   
 ```  
-="http://site/subsite/documentlibrary/SalesDetails.rdl"  
+="https://site/subsite/documentlibrary/SalesDetails.rdl"  
 ```  
   
 ### <a name="reserved-names-on-sharepoint-sites"></a>Зарезервированные имена на сайтах SharePoint  
@@ -94,11 +94,11 @@ ms.locfileid: "47839562"
   
 |Назначение|Пример URL-адреса|  
 |------------|-----------------|  
-|Сервер SharePoint.|`http://TestServer`|  
-|Сайт или дочерний сайт сервера SharePoint.|`http://TestServer/toplevelsite/subsite`|  
-|Образец отчета Company Sales в папке **Общие документы** в развертывании [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] или [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] .|`http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
-|Образец отчета "Company Sales" (Продажи компании) в папке **Documents/Doc** на экземпляре [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
-|Образец отчета «Продажи компании» в папке **Центр отчетов** на экземпляре [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
+|Сервер SharePoint.|`https://TestServer`|  
+|Сайт или дочерний сайт сервера SharePoint.|`https://TestServer/toplevelsite/subsite`|  
+|Образец отчета Company Sales в папке **Общие документы** в развертывании [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] или [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] .|`https://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
+|Образец отчета "Company Sales" (Продажи компании) в папке **Documents/Doc** на экземпляре [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
+|Образец отчета «Продажи компании» в папке **Центр отчетов** на экземпляре [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
 ##  <a name="publishingToDocLib"></a> Публикация в библиотеке SharePoint из средств разработки  
  Если публикация отчетов и связанных с ними файлов в библиотеке производится при помощи средства разработки отчетов, все файлы перед добавлением проверяются. При передаче отчетов и связанных файлов с помощью действия **Передача** из библиотеки SharePoint никакая проверка не проводится. Является ли файл допустимым, будет неизвестно до тех пор, пока к отчету не будет осуществлен доступ для управления, изменения или запуска.  

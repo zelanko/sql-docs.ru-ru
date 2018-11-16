@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 02f454ba26701263b98ba86d22bb98943ed2a498
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99d1b87ac5584f05911ebfb16387babc408e26f5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613433"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600934"
 ---
 # <a name="upgrade-database-engine"></a>Обновление [компонент ядра СУБД]
 
@@ -36,6 +36,6 @@ ms.locfileid: "47613433"
   
 4.  [Изменение режима совместимости базы данных и использование хранилища запросов](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) . Одно из действий, выполняемых после обновления базы данных до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , — включение новых функций. Для этого следует изменить режим совместимости базы данных, а затем с помощью хранилища запросов наблюдать за производительностью. В этой статье рассматривается этот процесс и приводится рекомендуемый рабочий процесс.  
   
-5.  [Использование преимуществ новых функций SQL Server](http://www.microsoft.com/sql-server/sql-server-2017). Наконец, завершив предыдущие действия, вы будете готовы к изучению преимуществ новых усовершенствований ядра СУБД. В этой статье предлагаются некоторые из этих усовершенствований, а также ссылки на дополнительные сведения.  
+5.  [Использование преимуществ новых функций SQL Server](https://www.microsoft.com/sql-server/sql-server-2017). Наконец, завершив предыдущие действия, вы будете готовы к изучению преимуществ новых усовершенствований ядра СУБД. В этой статье предлагаются некоторые из этих усовершенствований, а также ссылки на дополнительные сведения.  
   
   

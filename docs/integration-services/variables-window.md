@@ -16,12 +16,12 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c21f2d551fbd2de22fd08637b716127ac25d711
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3417b53ba41027b5d629069676818b8f54f13d0b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758403"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640871"
 ---
 # <a name="variables-window"></a>Окно переменных
   Окно **Переменные** используется для создания и изменения переменных, определяемых пользователем, и просмотра системных переменных.  
@@ -112,7 +112,7 @@ ms.locfileid: "47758403"
   
 ## <a name="see-also"></a>См. также:  
  [Переменные в службах Integration Services (SSIS)](../integration-services/integration-services-ssis-variables.md)   
- [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Выражения служб Integration Services (SSIS)](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Создание файлов дампа для выполнения пакетов](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   

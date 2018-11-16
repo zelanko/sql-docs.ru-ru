@@ -13,12 +13,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c8198ea6c27b78125ac9b7c77989bf59fd57e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 921e2883985eed8b3640ef7da9e874b74b30c55f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856112"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638011"
 ---
 # <a name="merge-in-integration-services-packages"></a>Предложение MERGE в пакетах служб Integration Services
   Для текущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]инструкция SQL в задаче "Выполнить SQL" может содержать инструкцию MERGE. Эта инструкция MERGE позволяет выполнять несколько операций INSERT, UPDATE и DELETE в единой инструкции.  
@@ -34,7 +34,7 @@ ms.locfileid: "47856112"
     > [!NOTE]  
     >  Хотя инструкции MERGE в этом случае обычно требуется промежуточная таблица, все равно эта инструкция обычно выполняется быстрее, чем уточняющие запросы для всех строк, выполняемые преобразованием «Уточняющий запрос». Инструкция MERGE полезна также при большом размере таблицы уточняющих запросов. В этом случае преобразованию «Уточняющий запрос» может не хватить памяти для кэширования ссылочной таблицы.  
   
- Образец целевого компонента, который поддерживает использование инструкции MERGE, см. в примере [MERGE Destination](http://go.microsoft.com/fwlink/?LinkId=141215)сообщества CodePlex.  
+ Образец целевого компонента, который поддерживает использование инструкции MERGE, см. в примере [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215)сообщества CodePlex.  
   
 ## <a name="using-merge"></a>Использование инструкции MERGE  
  Обычно инструкция MERGE используется для применения изменений, в том числе операций вставки, редактирования и удаления, выполненных в одной таблице, к другой таблице. До появления [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]для этого процесса было необходимо преобразование «Уточняющий запрос» и несколько преобразований «Команда OLE DB». Преобразование «Уточняющий запрос» выполняло уточняющие запросы к каждой строке, чтобы определить, какие из них были добавлены или изменены. Затем преобразования «Команда OLE DB» выполняли необходимые операции INSERT, UPDATE и DELETE. Начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], и преобразование «Уточняющий запрос», и соответствующие преобразования «Команда OLE DB» заменила единственная инструкция MERGE.  

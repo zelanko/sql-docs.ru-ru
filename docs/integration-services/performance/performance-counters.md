@@ -17,12 +17,12 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d648c8b94efef60cab796f5d36dc9b31378a9e2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 488043cb3ffb4288d8f3b240d4dd78a7c08f6b83
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836312"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641161"
 ---
 # <a name="performance-counters"></a>Счетчики производительности
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают набор счетчиков производительности, предназначенных для наблюдения за производительностью подсистемы обработки потока данных. Например, наблюдая за счетчиком «Выгружено буферов», можно определить, записываются ли временно на диск буфера данных при выполнении пакета. Такая выгрузка снижает производительность и указывает на недостаточный объем памяти компьютера.  
@@ -70,11 +70,11 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>См. также  
   
--   Средство [Визуализация производительности служб SSIS Performance для Business Intelligence Development Studio (проект CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146626)на узле codeplex.com.  
+-   Средство [Визуализация производительности служб SSIS Performance для Business Intelligence Development Studio (проект CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146626) на узле codeplex.com.  
   
--   Видео [Измерение и основные сведения о показателях пакетов служб SSIS на предприятии (видеоматериал SQL Server)](http://go.microsoft.com/fwlink/?LinkId=150497)на сайте msdn.microsoft.com.  
+-   Видео [Измерение и основные сведения о показателях пакетов служб SSIS на предприятии (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497) на сайте msdn.microsoft.com.  
   
--   Статья поддержки [Счетчик производительности служб SSIS больше недоступен в системном мониторе после обновления до Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=235319)на узле support.microsoft.com.  
+-   Статья поддержки [Счетчик производительности служб SSIS больше недоступен в системном мониторе после обновления до Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319)на узле support.microsoft.com.  
 
 ## <a name="add-a-log-for-data-flow-performance-counters"></a>Добавление журнала для счетчиков производительности потока данных
   В этой процедуре описывается добавление журнала для счетчиков производительности, поставляемых подсистемой обработки потока данных.  

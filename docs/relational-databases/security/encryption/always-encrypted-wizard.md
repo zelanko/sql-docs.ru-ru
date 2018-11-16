@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 863c4664560b42103e3ed2ff288bdbcb7d69a52c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630172"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673583"
 ---
 # <a name="always-encrypted-wizard"></a>Мастер постоянного шифрования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47630172"
  
  - Пошаговое руководство по настройке функции постоянного шифрования с помощью мастера и ее использованию в клиентском приложении см. в документе [Учебник по базе данных SQL. Защита конфиденциальных данных с помощью функции постоянного шифрования](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
  
- - Видео, в котором демонстрируется использование мастера, можно просмотреть на странице [Keeping Sensitive Data Secure with Always Encrypted (Безопасное хранение конфиденциальных данных с помощью постоянного шифрования)](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted). Кроме того, в блоге группы безопасности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] есть запись [Мастер шифрования SSMS — несколько простых шагов для включения постоянного шифрования](http://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx).  
+ - Видео, в котором демонстрируется использование мастера, можно просмотреть на странице [Keeping Sensitive Data Secure with Always Encrypted (Безопасное хранение конфиденциальных данных с помощью постоянного шифрования)](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted). Кроме того, в блоге группы безопасности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] есть запись [Мастер шифрования SSMS — несколько простых шагов для включения постоянного шифрования](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx).  
  
  - **Разрешения:** чтобы запросить зашифрованные столбцы и выбрать ключи с использованием этого мастера, необходимо иметь разрешения `VIEW ANY COLUMN MASTER KEY DEFINITION` и `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` . Чтобы создать новые ключи, необходимо также иметь разрешения `ALTER ANY COLUMN MASTER KEY` и `ALTER ANY COLUMN ENCRYPTION KEY` .  
  

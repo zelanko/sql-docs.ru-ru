@@ -22,12 +22,12 @@ ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 515e27ccf0d61edef0f240751226c25ebd8a6977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78b71fea28e31ca6bba5c7c1aa3f65b89a3ed57e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625991"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640901"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>Соединение с источниками данных в пользовательской задаче
   Чтобы получить или сохранить данные, задачи соединяются с внешними источниками данных с помощью диспетчера соединений. Во время разработки диспетчер соединений представляет логическое соединение и описывает основные сведения, например имя сервера и любые свойства проверки подлинности. Во время выполнения задачи вызывают метод <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> диспетчера соединений, чтобы установить физическое соединение с источником данных.  
@@ -138,6 +138,6 @@ End Function
   
 ## <a name="see-also"></a>См. также:  
  [Соединения в службах Integration Services (SSIS)](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Создание диспетчеров соединений](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
+ [Создание диспетчеров соединений](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   

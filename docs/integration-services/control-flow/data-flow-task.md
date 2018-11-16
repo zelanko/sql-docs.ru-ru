@@ -19,12 +19,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 073b16502e725c36b64427514be04074439070bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77947ba03e3f094077c950981a394a3566e24f0e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633632"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639099"
 ---
 # <a name="data-flow-task"></a>Задача потока данных
   В состав задачи потока данных входит подсистема обработки потока данных, перемещающая данные между источником и назначением и позволяющая пользователю преобразовывать, очищать и изменять данные в процессе перемещения. Добавление задачи потока данных в поток управления пакета позволяет пакету извлекать, преобразовывать и загружать данные.  
@@ -104,7 +104,7 @@ ms.locfileid: "47633632"
   
  Дополнительные сведения о настройке этих свойств в окне **Свойства** см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>Настройка задачи «Поток данных» программными средствами  
  Дополнительные сведения о программном добавлении задачи потока данных к пакету и установке свойств потока данных, см. в следующем разделе:  
@@ -112,9 +112,9 @@ ms.locfileid: "47633632"
 -   [Добавление задачи потока данных программным образом](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>См. также  
- Видеоматериал [Распространитель сбалансированных данных](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)на узле Technet.microsoft.com (на английском языке).  
+ Видеоматериал [Распространитель сбалансированных данных](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)на узле Technet.microsoft.com (на английском языке).  
   
   

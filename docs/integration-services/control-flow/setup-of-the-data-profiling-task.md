@@ -13,12 +13,12 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e593351cd5ba5f0aa7efb1ced09af98cc40c3a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 137310a0a8ef7ecf1d76d70b146b1e12ff4a2d5a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652382"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638781"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Установка задачи «Профилирование данных»
   Перед просмотром профиля исходных данных необходимо сначала настроить и выполнить задачу «Профилирование данных». Эта задача создается в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Задача «Профилирование данных» настраивается с помощью редактора задачи «Профилирование данных». Этот редактор позволяет выбрать расположение, в которое будут выводиться профили, в том числе профили, требуемые для вычисления. После настройки задачи запускается пакет, вычисляющий профили данных.  
@@ -98,7 +98,7 @@ ms.locfileid: "47652382"
   
 -   Построение собственных средств, работающих со сведениями о качестве данных.  
   
- Целевое пространство имен определяется в схеме как [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ Целевое пространство имен определяется в схеме как [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="next-step"></a>Следующий шаг  
  [Средство просмотра профиля данных](../../integration-services/control-flow/data-profile-viewer.md)  

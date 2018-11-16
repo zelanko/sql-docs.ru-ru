@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 770929b0838fabaf6a4584c80482a5169befe823
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff6eacea7b67d923100a328f7ee9d4cb0d370a8c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712524"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667126"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47712524"
   
  Класс событий Showplan XML For Query Compile выводит полные данные, относящиеся ко времени компиляции, поэтому трассировки, содержащие этот класс событий, могут повлечь за собой значительные издержки производительности. Чтобы уменьшить этот эффект, используйте данный класс событий только в тех трассировках, которые применяются для наблюдения за конкретными проблемами в течение непродолжительного времени.  
   
- Документы Showplan XML имеют схему, связанную с ними. Эта схема находится на [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkId=41740)или является частью установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Документы Showplan XML имеют схему, связанную с ними. Эта схема находится на [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkId=41740)или является частью установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Столбцы данных класса событий «XML-код инструкции Showplan компиляции запроса»  
   

@@ -16,12 +16,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2763491ea1e6ee9793d2b2641e46d957a0982e0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84016132e2f61816cc392175927296786f27ce24
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763952"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696762"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Обновление экземпляра отказоустойчивого кластера SQL Server (программа установки)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47763952"
   
 10. На странице «Требования к свободному месту на диске» показан расчет требуемого пространства на диске для выбранных компонентов, а также приведено сравнение требуемого и имеющегося свободного места на компьютере, на котором работает программа установки.  
   
-11. На странице «Обновление полнотекстового поиска» укажите параметры обновления для обновляемых баз данных. Дополнительные сведения см. в разделе [Параметры обновления полнотекстового поиска](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+11. На странице «Обновление полнотекстового поиска» укажите параметры обновления для обновляемых баз данных. Дополнительные сведения см. в разделе [Параметры обновления полнотекстового поиска](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
   
 12. На странице **Отчеты об ошибках** укажите сведения, которые будут отправлены в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] и помогут улучшить [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. По умолчанию параметры создания отчетов об ошибках включены.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "47763952"
   
 -   [Изменение режима совместимости базы данных и использование хранилища запросов](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [Использование преимуществ новых функций SQL Server 2016](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
+-   [Использование преимуществ новых функций SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
   
 ## <a name="see-also"></a>См. также:  
  [Обновление экземпляра отказоустойчивого кластера SQL Server](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)   

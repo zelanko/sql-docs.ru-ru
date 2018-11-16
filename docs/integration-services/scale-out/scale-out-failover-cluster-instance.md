@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 1e3aa4a72623e986a4e5a6494829f7e7a53d9cb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 312fff4f7221c7ff7f644933494c71afd76b1136
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668642"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640451"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Поддержка Scale Out для обеспечения высокой доступности с помощью экземпляра отказоустойчивого кластера SQL Server
 
 Чтобы обеспечить высокий уровень доступности на стороне мастера Scale Out с использованием экземпляра отказоустойчивого кластера SQL Server, выполните следующие действия:
 
 ## <a name="1-prerequisites"></a>1. предварительные требования
-Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонента и средств отказоустойчивого кластера для Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Установите компоненты и средства на всех узлах кластера.
+Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонента и средств отказоустойчивого кластера для Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Установите компоненты и средства на всех узлах кластера.
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2. Установка отказоустойчивого кластера SQL Server
 Установите отказоустойчивый кластер SQL Server. Инструкции см. в разделе [Установка отказоустойчивого кластера SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). Во время установки на странице "Выбор компонентов" щелкните "Службы ядра СУБД". Запишите сетевое имя SQL Server для последующей настройки.

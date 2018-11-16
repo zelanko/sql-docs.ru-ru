@@ -17,29 +17,29 @@ ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87698562a4f3e62b804e1fc115b9995e0e620d81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2982a8882fde670fa6a148087885116b3bfaf372
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604463"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677959"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Создание ссылки на встроенную коллекцию XML-схем (sys)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Любая созданная база данных содержит предопределенную коллекцию XML-схем **sys** в реляционной схеме **sys** . Она содержит эти предопределенные схемы, к которым можно получить доступ из любой другой созданной пользователем коллекции XML-схем. В языке XQuery имеют значение префиксы, используемые для предопределенных схем. К зарезервированным относится только префикс **xml** .  
   
 ```  
-xml = http://www.w3.org/XML/1998/namespace  
-xs = http://www.w3.org/2001/XMLSchema  
-xsi = http://www.w3.org/2001/XMLSchema-instance  
-fn = http://www.w3.org/2004/07/xpath-functions  
-sqltypes = http://schemas.microsoft.com/sqlserver/2004/sqltypes  
-xdt = http://www.w3.org/2004/07/xpath-datatypes  
+xml = https://www.w3.org/XML/1998/namespace  
+xs = https://www.w3.org/2001/XMLSchema  
+xsi = https://www.w3.org/2001/XMLSchema-instance  
+fn = https://www.w3.org/2004/07/xpath-functions  
+sqltypes = https://schemas.microsoft.com/sqlserver/2004/sqltypes  
+xdt = https://www.w3.org/2004/07/xpath-datatypes  
 (no prefix) = urn:schemas-microsoft-com:xml-sql  
-(no prefix) = http://schemas.microsoft.com/sqlserver/2004/SOAP  
+(no prefix) = https://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
   
- Заметим, что пространство имен **sqltypes** содержит компоненты, на которые возможны ссылки из любой определенной пользователем коллекции схем XML. Можно загрузить схему **sqltypes** с [сайта Майкрософт](http://go.microsoft.com/fwlink/?linkid=31850). К встроенным компонентам относятся:  
+ Заметим, что пространство имен **sqltypes** содержит компоненты, на которые возможны ссылки из любой определенной пользователем коллекции схем XML. Можно загрузить схему **sqltypes** с [сайта Майкрософт](https://go.microsoft.com/fwlink/?linkid=31850). К встроенным компонентам относятся:  
   
 -   типы XSD;  
   
@@ -64,12 +64,12 @@ GO
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
 <schema   
-   xmlns="http://www.w3.org/2001/XMLSchema"   
+   xmlns="https://www.w3.org/2001/XMLSchema"   
    targetNamespace="myNS"  
    xmlns:ns="myNS"  
-   xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
-   <import namespace="http://www.w3.org/XML/1998/namespace"/>  
-   <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+   xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
+   <import namespace="https://www.w3.org/XML/1998/namespace"/>  
+   <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
    <element name="root">  
       <complexType>  
           <sequence>  
@@ -98,9 +98,9 @@ GO
   
     ```  
     CREATE XML SCHEMA COLLECTION SC AS '  
-    <schema xmlns="http://www.w3.org/2001/XMLSchema"   
+    <schema xmlns="https://www.w3.org/2001/XMLSchema"   
     targetNamespace    
-        ="http://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
+        ="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
           <element name="root" type="string"/>  
     </schema>'  
     GO  
@@ -123,11 +123,11 @@ GO
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"   
+<schema xmlns="https://www.w3.org/2001/XMLSchema"   
         targetNamespace="myNS" xmlns:ns="myNS"  
-        xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+        xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
    <import     
-     namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+     namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
       <simpleType name="myType">  
             <restriction base="s:varchar">  
                   <maxLength value="20"/>  
@@ -143,7 +143,7 @@ go
 ```  
 DECLARE @var XML(SC)  
 SET @var = '<root xmlns="myNS">My data</root>'  
-SELECT @var.query('declare namespace sqltypes = "http://schemas.microsoft.com/sqlserver/2004/sqltypes";  
+SELECT @var.query('declare namespace sqltypes = "https://schemas.microsoft.com/sqlserver/2004/sqltypes";  
 declare namespace ns="myNS";   
 data(/ns:root[1]) instance of sqltypes:varchar?')  
 GO  

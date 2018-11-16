@@ -25,17 +25,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e08cc23d78be8f617d51bd6d8310eaef5aa1f0e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d923536f678884307be526ddebf0f825774c1093
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666602"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699672"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Настраивает определенное поведение баз данных для обеспечения совместимости с указанной версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Другие параметры ALTER DATABASE см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
+Определяет поведение конкретных баз данных для совместимости с указанной версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Другие параметры ALTER DATABASE см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
 
 Дополнительные сведения о соглашениях о синтаксисе см. в статье [Соглашения о синтаксисе в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
   
@@ -72,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > Если в целом вам требуется уровень 140, но по определенной причине вы предпочитаете модель **оценки кратности** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], соответствующую уровню совместимости 110, см. статью [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) и, в частности, ключевое слово `LEGACY_CARDINALITY_ESTIMATION = ON`.
 >  
-> Дополнительные сведения о том, как оценить разницу в производительности наиболее важных запросов в двух уровнях совместимости в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], см. в разделе [Улучшенная производительность запросов для уровня совместимости 130 базы данных SQL Azure](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/). Обратите внимание, что в этой статье описывается уровень совместимости 130 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], однако при переходе на уровень 140 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] применяется та же методология.
+> Дополнительные сведения о том, как оценить разницу в производительности наиболее важных запросов в двух уровнях совместимости в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], см. в разделе [Улучшенная производительность запросов для уровня совместимости 130 базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/). Обратите внимание, что в этой статье описывается уровень совместимости 130 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], однако при переходе на уровень 140 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] применяется та же методология.
 
 Выполните следующий запрос, чтобы определить версию [!INCLUDE[ssDE](../../includes/ssde-md.md)], к которой вы подключены.  
   
@@ -116,7 +116,7 @@ SELECT name, compatibility_level FROM sys.databases;
 >
 > Дополнительные сведения о различиях между уровнями совместимости см. в соответствующих разделах далее в этой статье. 
 
-Чтобы обновить [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] до последней версии с сохранением уровня совместимости базы данных, существовавшего до обновления, и состояния поддержки, рекомендуется выполнить статическую функциональную проверку контактной зоны кода приложения в базе данных посредством [Помощника по миграции данных (Майкрософт)](http://www.microsoft.com/download/details.aspx?id=53595) (DMA). Отсутствие в выходных данных DMA ошибок, связанных с отсутствием или несовместимостью функциональных возможностей, позволит избежать снижения функциональности приложения в новой конечной версии. Дополнительные сведения о средстве DMA см. [здесь](http://blogs.msdn.microsoft.com/datamigration/dma).
+Чтобы обновить [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] до последней версии с сохранением уровня совместимости базы данных, существовавшего до обновления, и состояния поддержки, рекомендуется выполнить статическую функциональную проверку контактной зоны кода приложения в базе данных посредством [Помощника по миграции данных (Майкрософт)](https://www.microsoft.com/download/details.aspx?id=53595) (DMA). Отсутствие в выходных данных DMA ошибок, связанных с отсутствием или несовместимостью функциональных возможностей, позволит избежать снижения функциональности приложения в новой конечной версии. Дополнительные сведения о средстве DMA см. [здесь](https://blogs.msdn.microsoft.com/datamigration/dma).
 
 > [!NOTE] 
 > DMA поддерживает уровень совместимости базы данных 100 и выше. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] как исходная версия не поддерживается. 

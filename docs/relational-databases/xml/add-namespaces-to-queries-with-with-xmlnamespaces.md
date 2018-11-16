@@ -22,12 +22,12 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c732b19c371a48e2bf165a3fe7d326fe8476e045
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9d8b702172a66918bd5fe6a101ddf07b05f6484
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639342"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677893"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Добавление пространств имен в запросы с WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     ```  
     CREATE TABLE T (x xml)  
     go  
-    WITH XMLNAMESPACES ('http://abc' as myNS )  
+    WITH XMLNAMESPACES ('https://abc' as myNS )  
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
@@ -114,7 +114,7 @@ FOR XML RAW, ELEMENTS XSINIL
  Результат:  
   
 ```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
+<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
   <ns1:ProductID>316</ns1:ProductID>  
   <ns1:Name>Blade</ns1:Name>  
   <ns1:Color xsi:nil="true" />  
@@ -181,7 +181,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- Только XML-префикс пространства имен может быть использован без явного задания в предложении WITH XMLNAMESPACES, как показано в следующем примере запроса в режиме PATH. Также при объявлении префикса его необходимо привязать к пространству имен http://www.w3.org/XML/1998/namespace. Имена, указанные в предложении SELECT, ссылаются на XML-префикс пространства имен, который не был явно задан с помощью предложения WITH XMLNAMESPACES.  
+ Только XML-префикс пространства имен может быть использован без явного задания в предложении WITH XMLNAMESPACES, как показано в следующем примере запроса в режиме PATH. Также при объявлении префикса его необходимо привязать к пространству имен https://www.w3.org/XML/1998/namespace. Имена, указанные в предложении SELECT, ссылаются на XML-префикс пространства имен, который не был явно задан с помощью предложения WITH XMLNAMESPACES.  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  
@@ -208,14 +208,14 @@ go
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   
         />  
 ') AS Result  
 FROM Production.ProductModel  
 WHERE CatalogDescription.exist('  
-    declare namespace  pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+    declare namespace  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      /pd:ProductDescription[(pd:Specifications)]'  
     ) = 1  
 ```  
@@ -223,13 +223,13 @@ WHERE CatalogDescription.exist('
  В представленном выше запросе в прологах обоих методов (**query()** и **exist()**) объявляются одинаковые пространства имен. Пример:  
   
 ```  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 ```  
   
  Того же результата можно достичь, если вначале объявить предложение WITH XMLNAMESPACES, а затем использовать указанные в нем префиксы пространства имен в запросе. В таком случае в прологах обоих методов ( **query()** и **exist()** ) пространства имен не объявляются.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
 SELECT ProductModelID, CatalogDescription.query('  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   

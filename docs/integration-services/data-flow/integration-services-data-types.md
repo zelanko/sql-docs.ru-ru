@@ -19,12 +19,12 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fc0c1658ce051aa3e0fa494ef5c1b40d2db8881
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76559f2d4a8c96a64792e4ecf095094c3cb1229e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832530"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641761"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
   Когда данные входят в поток данных в пакете, источник, извлекающий данные, преобразовывает их в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Числовым данным назначается числовой тип данных, строковым — символьный тип данных, а датам — тип даты. Другим данным, таким как идентификатор GUID и BLOB (Binary Large Object Blocks), также назначаются соответствующие типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Если данные имеют тип, не преобразуемый в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , возникает ошибка.  
@@ -254,7 +254,7 @@ ms.locfileid: "47832530"
  Сведения о сопоставлении типов данных в потоке данных см. в разделе [Работа с типами данных в потоке данных](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## <a name="related-content"></a>См. также  
- Запись в блоге [Сравнение производительности между способами преобразования типов данных в службах SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823)на сайте blogs.msdn.com.  
+ Запись в блоге [Сравнение производительности между способами преобразования типов данных в службах SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823)на сайте blogs.msdn.com.  
   
 ## <a name="see-also"></a>См. также:  
  [Данные потоков данных](../../integration-services/data-flow/data-in-data-flows.md)  

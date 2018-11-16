@@ -20,12 +20,12 @@ ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba81057640891eded10eb09cd9d22af9ff2dc8c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9a377c8ba73ed505db56c83704099aa0f7b9aac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779952"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670453"
 ---
 # <a name="create-instances-of-xml-data"></a>Создание экземпляров XML-данных
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутренне представляет XML в эффективном двоичном представлении, использующем кодировку UTF-16. Пользовательская кодировка не сохранена, но она учитывается в процессе синтаксического анализа.  
   
 ### <a name="type-casting-clr-user-defined-types"></a>Приведение определяемых пользователем типов CLR  
- Если определяемый пользователем тип данных CLR имеет XML-сериализацию, экземпляры этого типа могут быть явно приведены к типу данных XML. Более подробные сведения о XML-сериализации определяемого пользователем типа данных CLR см. в статье [Сериализация XML из объектов базы данных CLR](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344).  
+ Если определяемый пользователем тип данных CLR имеет XML-сериализацию, экземпляры этого типа могут быть явно приведены к типу данных XML. Более подробные сведения о XML-сериализации определяемого пользователем типа данных CLR см. в статье [Сериализация XML из объектов базы данных CLR](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344).  
   
 ### <a name="white-space-handling-in-typed-xml"></a>Обработка пробела в типизированном XML  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пробел внутри содержимого элемента считается незначащим, если он появляется внутри последовательности данных, содержащей только пробельные символы, разделенных разметкой, например начальными и конечными тегами. Такой пробел не преобразуется в сущность. (секции CDATA игнорируются). Данная обработка пробела отличается от пробела, описанного в спецификации XML 1.0, опубликованной консорциумом World Wide Web (W3C). Это происходит потому, что в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] средство синтаксического анализа XML распознает только ограниченное число подмножеств DTD, как указано в XML 1.0. Дополнительные сведения об ограниченных подмножествах DTD, поддерживаемых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md).  

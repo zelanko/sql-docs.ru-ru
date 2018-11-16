@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f76e4d18fea335510af20d6101782e1d3463ae2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10f837b2dd53bb84a2c5558d913c00d092a8464a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642448"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659263"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>Сборка мусора модулем In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ ms.locfileid: "47642448"
  После фиксации пользовательской транзакции она определяет все элементы, помещенные в очередь, связанную с их выполнением планировщиком, а затем освобождает память. Если очередь в планировщике сборки мусора пуста, то он выполняет поиск всех непустых очередей в текущем узле NUMA. При низкой активности транзакций или дефиците памяти главный поток сборщика мусора может включить в сбор мусора строки из любой очереди. Если после, например, удаления большого числа строк транзакций нет и память не потребляется, сборщик мусора не будет трогать удаленные строки до возобновления транзакций или формирования потребности в памяти.  
   
 ## <a name="see-also"></a>См. также:  
- [Управление памятью для компонента In-Memory OLTP](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)  
+ [Управление памятью для компонента In-Memory OLTP](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)  
   
   

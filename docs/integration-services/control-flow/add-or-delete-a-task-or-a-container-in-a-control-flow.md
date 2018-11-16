@@ -16,12 +16,12 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5b3fa0a640791f25da1fc16162f097a39502d86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7524bd375dcf2c2d34395a0e87c1b3fe7d08ba63
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765752"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640081"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Добавление задачи или контейнера в поток управления или удалить их из него
   При работе в конструкторе потока управления окно «Область элементов» конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] содержит задачи, которые службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют для построения потока управления в пакете. Дополнительные сведения об области элементов см. в разделе [SSIS Toolbox](../../integration-services/ssis-toolbox.md).  
@@ -96,9 +96,9 @@ ms.locfileid: "47765752"
   
 4.  В области конструктора на вкладке **Поток управления** щелкните правой кнопкой мыши задачу или контейнер, затем выберите пункт **Изменить** , чтобы открыть соответствующий редактор задачи или контейнера.  
   
-     Сведения о настройке контейнера "цикл по элементам" см. в разделе [Настройка контейнера "цикл по элементам"](http://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
+     Сведения о настройке контейнера "цикл по элементам" см. в разделе [Настройка контейнера "цикл по элементам"](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
   
-     Сведения о настройке контейнера "цикл по каждому элементу" см. в разделе [Настройка контейнера "цикл по каждому элементу"](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+     Сведения о настройке контейнера "цикл по каждому элементу" см. в разделе [Настройка контейнера "цикл по каждому элементу"](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
     > [!NOTE]  
     >  У контейнера последовательности нет настраиваемого редактора.  

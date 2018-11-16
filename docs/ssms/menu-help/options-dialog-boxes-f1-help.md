@@ -14,12 +14,12 @@ ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95305b1dd6f164e3d08ca1daa889001cb068a613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f94fbfc6a41baf4431369ee856de50a826e93a29
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611588"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699570"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Справка F1 по диалоговым окнам «Параметры»
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,39 +41,39 @@ ms.locfileid: "47611588"
   
 [Параметры ("Среда" — страница "Клавиатура")](../../ssms/menu-help/options-environment-keyboard-page.md)  
   
-[Параметры ("Выполнение запроса" — "Сервер анализа данных" — страница "Общие")](http://msdn.microsoft.com/456867d0-724c-449c-abf9-013a694d7924)  
+[Параметры ("Выполнение запроса" — "Сервер анализа данных" — страница "Общие")](https://msdn.microsoft.com/456867d0-724c-449c-abf9-013a694d7924)  
   
-[Параметры ("Выполнение запроса" — "SQL Server" — страница "Дополнительно")](http://msdn.microsoft.com/3ec788c7-22c3-4216-9ad0-81a168d17074)  
+[Параметры ("Выполнение запроса" — "SQL Server" — страница "Дополнительно")](https://msdn.microsoft.com/3ec788c7-22c3-4216-9ad0-81a168d17074)  
   
-[Параметры ("Выполнение запроса" — "SQL Server" — страница "ANSI")](http://msdn.microsoft.com/0f4c6887-0562-417e-806c-b5cffb1e7c5c)  
+[Параметры ("Выполнение запроса" — "SQL Server" — страница "ANSI")](https://msdn.microsoft.com/0f4c6887-0562-417e-806c-b5cffb1e7c5c)  
   
-[Параметры ("Выполнение запроса" — "SQL Server" — страница "Общие")](http://msdn.microsoft.com/3f8d59bc-3f97-4e5d-8b86-5ac670d20780)  
+[Параметры ("Выполнение запроса" — "SQL Server" — страница "Общие")](https://msdn.microsoft.com/3f8d59bc-3f97-4e5d-8b86-5ac670d20780)  
   
-[Параметры ("Результаты запроса" — "Сервер анализа данных" — страница "Общие")](http://msdn.microsoft.com/ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9)  
+[Параметры ("Результаты запроса" — "Сервер анализа данных" — страница "Общие")](https://msdn.microsoft.com/ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9)  
   
-[Параметры ("Результаты запроса" — "SQL Server" — страница "Общие")](http://msdn.microsoft.com/d3b31e81-c0b6-4615-8fb3-997edb2acb7a)  
+[Параметры ("Результаты запроса" — "SQL Server" — страница "Общие")](https://msdn.microsoft.com/d3b31e81-c0b6-4615-8fb3-997edb2acb7a)  
   
-[Параметры ("Результаты запроса" — "SQL Server" — страница "В виде сетки")](http://msdn.microsoft.com/f88a0f5c-e800-473b-ae23-c3943de5ed63)  
+[Параметры ("Результаты запроса" — "SQL Server" — страница "В виде сетки")](https://msdn.microsoft.com/f88a0f5c-e800-473b-ae23-c3943de5ed63)  
   
-[Параметры ("Результаты запроса" — "SQL Server" — страница "В виде текста")](http://msdn.microsoft.com/2ccbdf17-e14f-42f1-a836-ca999a3432c9)  
+[Параметры ("Результаты запроса" — "SQL Server" — страница "В виде текста")](https://msdn.microsoft.com/2ccbdf17-e14f-42f1-a836-ca999a3432c9)  
   
-[Параметры ("Результаты запроса" — страница "Службы зависимостей")](http://msdn.microsoft.com/dd7f6c31-7d7f-4972-854a-1419a2826dca)  
+[Параметры ("Результаты запроса" — страница "Службы зависимостей")](https://msdn.microsoft.com/dd7f6c31-7d7f-4972-854a-1419a2826dca)  
   
-[Параметры ("Текстовый редактор" — "Все языки" — страница "Общие")](http://msdn.microsoft.com/bf18907c-94e2-4c09-9b2b-0925ac04c627)  
+[Параметры ("Текстовый редактор" — "Все языки" — страница "Общие")](https://msdn.microsoft.com/bf18907c-94e2-4c09-9b2b-0925ac04c627)  
   
-[Параметры ("Текстовый редактор" — "Все языки" — страница "Вкладки")](http://msdn.microsoft.com/bd715d6b-f873-41d4-aa10-57b7098b61cc)  
+[Параметры ("Текстовый редактор" — "Все языки" — страница "Вкладки")](https://msdn.microsoft.com/bd715d6b-f873-41d4-aa10-57b7098b61cc)  
   
-[Параметры ("Текстовый редактор" — страница "Расширение файла")](http://msdn.microsoft.com/6637bf3f-03c8-4552-ae63-d4896307cf4c)  
+[Параметры ("Текстовый редактор" — страница "Расширение файла")](https://msdn.microsoft.com/6637bf3f-03c8-4552-ae63-d4896307cf4c)  
   
-[Options (Text Editor - Plain Text - General Page)](http://msdn.microsoft.com/53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc)  
+[Options (Text Editor - Plain Text - General Page)](https://msdn.microsoft.com/53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc)  
   
-[Параметры ("Текстовый редактор" — "Обычный текст" — страница "Вкладки")](http://msdn.microsoft.com/07d82d10-bca9-4b37-abbb-58ef9bfb264b)  
+[Параметры ("Текстовый редактор" — "Обычный текст" — страница "Вкладки")](https://msdn.microsoft.com/07d82d10-bca9-4b37-abbb-58ef9bfb264b)  
   
-[Параметры ("Текстовый редактор" — "XML" — страница "Форматирование")](http://msdn.microsoft.com/97373178-d288-4127-af37-d9f5fe1b8607)  
+[Параметры ("Текстовый редактор" — "XML" — страница "Форматирование")](https://msdn.microsoft.com/97373178-d288-4127-af37-d9f5fe1b8607)  
   
-[Options (Text Editor - XML - General Page)](http://msdn.microsoft.com/46a9f913-d0b9-40ff-b382-9bbdec7461a6)  
+[Options (Text Editor - XML - General Page)](https://msdn.microsoft.com/46a9f913-d0b9-40ff-b382-9bbdec7461a6)  
   
-[Параметры ("Текстовый редактор" — "XML" — страница "Разное")](http://msdn.microsoft.com/1a9509f0-c663-4b31-b396-7f5dc4371651)  
+[Параметры ("Текстовый редактор" — "XML" — страница "Разное")](https://msdn.microsoft.com/1a9509f0-c663-4b31-b396-7f5dc4371651)  
   
-[Параметры ("Текстовый редактор" — "XML" — страница "Вкладки")](http://msdn.microsoft.com/13bf5f8c-aba3-4c05-b8bb-eb475797c9bd)  
+[Параметры ("Текстовый редактор" — "XML" — страница "Вкладки")](https://msdn.microsoft.com/13bf5f8c-aba3-4c05-b8bb-eb475797c9bd)  
   

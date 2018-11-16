@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd42cf79d99566f6d3d356d8b96bdb5415dc258c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34aeae9faee8d0818f5a8db3c499850e0e969835
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673391"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676655"
 ---
 # <a name="database-checkpoints-sql-server"></a>Контрольные точки базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "47673391"
   
 -   Перевод экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (FCI) в режим «вне сети».      
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="RelatedTasks"></a> Related tasks  
  **Изменение интервала восстановления на экземпляре сервера**  
   
 -   [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  
@@ -142,6 +142,6 @@ ms.locfileid: "47673391"
   
 ## <a name="see-also"></a>См. также раздел  
 [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)            
-[Физическая архитектура журнала транзакций](http://technet.microsoft.com/library/ms179355.aspx) (из электронной документации [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ; по-прежнему действует)       
+[Физическая архитектура журнала транзакций](https://technet.microsoft.com/library/ms179355.aspx) (из электронной документации [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ; по-прежнему действует)       
   
   

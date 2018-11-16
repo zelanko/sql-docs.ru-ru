@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e242cbd5658b743ac813f4c0f03f1bfc74ad62ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3159cc63badeeec786caaf0c50ac383af029dd6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812844"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674013"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,5 +76,5 @@ ms.locfileid: "47812844"
 Не вносите изменения в системные таблицы вручную. SQL Server не поддерживает внесенных вручную каких-либо изменений в системные базы данных. В случае обновления системной таблицы в базе данных SQL Server в журнале регистрируются два события (идентификаторы событий 17659 и 3859). Дополнительные сведения см. в статье базы знаний 2688307 «При обновлении системных таблиц в базе данных SQL Server регистрируются события с идентификаторами 17659 и 3859».  
   
 ## <a name="see-also"></a>См. также:  
-[При обновлении системных таблиц в базе данных SQL Server в журнале регистрируются события с идентификаторами 17659 и 3859](http://support.microsoft.com/kb/2688307/EN-US).  
+[При обновлении системных таблиц в базе данных SQL Server в журнале регистрируются события с идентификаторами 17659 и 3859](https://support.microsoft.com/kb/2688307/EN-US).  
   

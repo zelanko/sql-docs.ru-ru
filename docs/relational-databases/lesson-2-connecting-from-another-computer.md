@@ -5,19 +5,18 @@ ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dd8d869dd4f53c2628c3154d374a60cc6f40adc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 615aa894b7ceb07d471c281eb6be24db9c0e3a43
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639014"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657574"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Занятие 2. Соединение с другого компьютера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ ms.locfileid: "47639014"
 В целях повышения безопасности в таких системах, как Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]и Windows 7, включен брандмауэр Windows. При подключении к этому экземпляру из другого компьютера необходимо открыть порт соединения в брандмауэре. Экземпляр компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , запускаемый по умолчанию, прослушивает порт 1433, поэтому нет необходимости настраивать фиксированный порт. Однако именованные экземпляры, включая [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , принимают соединения через динамически назначаемые порты. Прежде чем появится возможность открыть порт в брандмауэре, необходимо предварительно настроить компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] для прослушивания конкретного порта, известного как постоянный порт или статический порт; в противном случае компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] может прослушивать другой порт после каждого запуска. Дополнительные сведения о брандмауэрах, настройках брандмауэра Windows по умолчанию и описание портов TCP, влияющих на ядро СУБД, службы Analysis Services, службы Reporting Services и службы Integration Services, см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
-> Присваиванием номеров портов управляет администрация адресного пространства Интернет (IANA), а списки этих номеров находятся по адресу [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844). Портам должны назначаться номера от 49152 до 65535.  
+> Присваиванием номеров портов управляет администрация адресного пространства Интернет (IANA), а списки этих номеров находятся по адресу [https://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844). Портам должны назначаться номера от 49152 до 65535.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Настройка SQL Server для подключения через определенный порт  
   

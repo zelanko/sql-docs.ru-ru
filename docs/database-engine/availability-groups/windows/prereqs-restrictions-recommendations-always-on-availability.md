@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8054c3c985aa83aba25aa40aa40dca8d2923e8f6
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852029"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600954"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "48852029"
   
 ||Зависимый компонент|Исправление|Ссылка|  
 |------|-----------------------|------------|----------|  
-|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Исправление для .Net 3.5 с пакетом обновления 1 (SP1) добавляет в клиент SQL поддержку функций AlwaysOn: Read-intent, readonly и multisubnetfailover. Это исправление необходимо установить на каждом сервере отчетов служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347 [Исправление для .NET 3.5 с пакетом обновления 1 (SP1), добавляющее поддержку функций AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Исправление для .Net 3.5 с пакетом обновления 1 (SP1) добавляет в клиент SQL поддержку функций AlwaysOn: Read-intent, readonly и multisubnetfailover. Это исправление необходимо установить на каждом сервере отчетов служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347 [Исправление для .NET 3.5 с пакетом обновления 1 (SP1), добавляющее поддержку функций AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> Контрольный список: требования (ОС Windows)  
@@ -67,7 +67,7 @@ ms.locfileid: "48852029"
 ###  <a name="PermissionsWindows"></a> Разрешения (ОС Windows)  
  Для администрирования кластера WSFC пользователь должен быть системным администратором на каждом узле кластера.  
   
- Дополнительные сведения об учетной записи для администрирования кластера см. в [Приложении A. Требования к отказоустойчивому кластеру](http://technet.microsoft.com/library/dd197454.aspx).  
+ Дополнительные сведения об учетной записи для администрирования кластера см. в [Приложении A. Требования к отказоустойчивому кластеру](https://technet.microsoft.com/library/dd197454.aspx).  
   
 ###  <a name="RelatedTasksWindows"></a> Связанные задачи (ОС Windows)  
   
@@ -99,17 +99,17 @@ ms.locfileid: "48852029"
   
 ##### <a name="related-content-powershell"></a>См. также (PowerShell)  
   
--   [Кластеризация и высокая доступность](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (блог группы отказоустойчивой кластеризации и балансировки сетевой нагрузки)  
+-   [Кластеризация и высокая доступность](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (блог группы отказоустойчивой кластеризации и балансировки сетевой нагрузки)  
   
--   [Приступая к работе с Windows PowerShell в отказоустойчивом кластере](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [Приступая к работе с Windows PowerShell в отказоустойчивом кластере](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Команды ресурса кластера и соответствующие командлеты Windows PowerShell](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Команды ресурса кластера и соответствующие командлеты Windows PowerShell](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ###  <a name="RelatedContentWS"></a> См. также (система Windows)  
   
--   [Настройка параметров DNS для многосайтового отказоустойчивого кластера](http://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
+-   [Настройка параметров DNS для многосайтового отказоустойчивого кластера](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [Регистрация DNS в ресурсе сетевого имени](http://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [Регистрация DNS в ресурсе сетевого имени](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
 
 ##  <a name="ServerInstance"></a> Предварительные условия и ограничения для экземпляров SQL Server  
@@ -167,7 +167,7 @@ ms.locfileid: "48852029"
   
     -   Резервное копирование на вторичной реплике удерживает поток на первичной реплике на время операции резервного копирования.  
   
- Дополнительные сведения см. в разделе [Обучающая серия AlwaysOn — HADRON: использование рабочего пула для баз данных с поддержкой HADRON](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (блог инженеров CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
+ Дополнительные сведения см. в разделе [Обучающая серия AlwaysOn — HADRON: использование рабочего пула для баз данных с поддержкой HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (блог инженеров CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
 ###  <a name="PermissionsSI"></a> Разрешения (экземпляр сервера)  
   
@@ -186,7 +186,7 @@ ms.locfileid: "48852029"
   
 ###  <a name="RelatedContentSI"></a> См. также (экземпляр сервера)  
   
--   [Обучающая серия AlwaysOn — HADRON: использование рабочего пула для баз данных с поддержкой HADRON](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Обучающая серия AlwaysOn — HADRON: использование рабочего пула для баз данных с поддержкой HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> Рекомендации по сетевым возможностям подключения  
  Настоятельно рекомендуется использовать одни и те же сетевые соединения для обмена данными между узлами WSFC и репликами доступности.  Использование отдельных сетевых соединений может привести к непредвиденному поведению в случае отказа даже некоторых из них.  
@@ -210,7 +210,7 @@ ms.locfileid: "48852029"
 ###  <a name="RestrictionsFCI"></a> Ограничения (экземпляры отказоустойчивого кластера)  
   
 > [!NOTE]  
-> Экземпляры отказоустойчивого кластера поддерживают кластерные общие тома (CSV). Дополнительные сведения о CSV-файле см. в разделе [Основные сведения о кластерных общих томах в отказоустойчивом кластере](http://technet.microsoft.com/library/dd759255.aspx).  
+> Экземпляры отказоустойчивого кластера поддерживают кластерные общие тома (CSV). Дополнительные сведения о CSV-файле см. в разделе [Основные сведения о кластерных общих томах в отказоустойчивом кластере](https://technet.microsoft.com/library/dd759255.aspx).  
   
 -   **На узле кластера FCI может быть размещена только одна реплика для одной группы доступности.** При добавлении в FCI реплики доступности узлы кластера WSFC, которые являются возможными владельцами FCI, не могут содержать другую реплику той же группы доступности.  Чтобы избежать возможных конфликтов, рекомендуется настроить возможных владельцев для экземпляра отказоустойчивого кластера. Это предотвратит потенциальную возможность, что один кластер WSFC попытается разместить две реплики доступности для одной группы доступности.
   
@@ -242,7 +242,7 @@ ms.locfileid: "48852029"
   
 -   [Отказоустойчивая кластеризация и группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Руководство по архитектуре AlwaysOn. Построение решения для обеспечения высокого уровня доступности и аварийного восстановления с помощью экземпляров отказоустойчивого кластера и групп доступности](http://technet.microsoft.com/library/jj215886.aspx)  
+-   [Руководство по архитектуре AlwaysOn. Построение решения для обеспечения высокого уровня доступности и аварийного восстановления с помощью экземпляров отказоустойчивого кластера и групп доступности](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> Обязательные условия и ограничения для группы доступности  
  **В этом разделе.**  
@@ -382,11 +382,11 @@ ms.locfileid: "48852029"
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Обучающая серия AlwaysOn — HADRON: использование рабочего пула для баз данных с поддержкой HADRON](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Обучающая серия AlwaysOn — HADRON: использование рабочего пула для баз данных с поддержкой HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0785cd58ffed215f9cebf29a62e40c70cc96c720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 594dce3e2a973179d3c056fe6c6ff447bd59c844
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850572"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603774"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC служба кластеров работает в режиме вне сети
 
@@ -41,7 +41,7 @@ ms.locfileid: "47850572"
  Эта политика находится в исправном состоянии, если состояние кластера — «нормальный кворум».  
   
 > [!NOTE]  
->  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], сведения о возможных причинах проблем и решениях приведены в разделе [Служба кластера WSFC не в сети](http://go.microsoft.com/fwlink/p/?LinkId=220849) в TechNet Wiki.  
+>  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], сведения о возможных причинах проблем и решениях приведены в разделе [Служба кластера WSFC не в сети](https://go.microsoft.com/fwlink/p/?LinkId=220849) в TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Возможные причины  
  Эта неполадка может возникать из-за неисправности службы кластера либо при потере кворума в кластере.  

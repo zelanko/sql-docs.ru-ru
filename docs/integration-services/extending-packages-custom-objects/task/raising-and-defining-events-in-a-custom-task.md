@@ -25,12 +25,12 @@ ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2ebd7391908190a113689816b09582d4a7992a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f454417b4def127a21888a42f1670cb3606a852a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727272"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640542"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Вызов и определение событий в пользовательской задаче
   Обработчиком среды выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляется коллекция событий, обозначающих состояние обработки задачи в ходе ее проверки и выполнения. Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> определяет эти события. Он передается задачам в качестве параметра методов <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  
@@ -192,6 +192,6 @@ Nothing,  bFireOnBeforeIncrement)
   
 ## <a name="see-also"></a>См. также:  
  [Обработчики событий в службах Integration Services (SSIS)](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [Добавление обработчика событий к пакету](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Добавление обработчика событий к пакету](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   

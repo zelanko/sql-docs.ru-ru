@@ -11,12 +11,12 @@ ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af4c525e2ce481b8053804d49f194449ed6cf58d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95c26215be0cb55c916d7162896ec7651132f13f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728262"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640971"
 ---
 # <a name="building-packages-programmatically"></a>Программное построение пакетов
   Если необходимо динамическое создание пакетов или управление и выполнение пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] вне среды разработки, то можно управлять пакетами программно. Этот подход предлагает следующий набор вариантов.  
@@ -27,7 +27,7 @@ ms.locfileid: "47728262"
   
 -   Создание нового пакета, добавление и настройка компонентов поочередно для каждого объекта и для каждого свойства, сохранение пакета и выполнение пакета.  
   
- Можно использовать модель объектов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], чтобы написать код, который создает, настраивает и выполняет пакеты на любом языке программирования управляемого кода. Например, может потребоваться создать управляемые метаданными пакеты, которые настраивают свои соединения или свои источники данных, преобразования и назначения на основании выбранного источника данных и его таблиц и столбцов.  
+ Можно использовать модель объектов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , чтобы написать код, который создает, настраивает и выполняет пакеты на любом языке программирования управляемого кода. Например, может потребоваться создать управляемые метаданными пакеты, которые настраивают свои соединения или свои источники данных, преобразования и назначения на основании выбранного источника данных и его таблиц и столбцов.  
   
  В этом разделе описывается и демонстрируется пошаговое создание и настройка пакета программным способом. Используя наименее сложный вариант из набора вариантов программирования пакетов, можно просто загрузить и выполнить существующий пакет, не внося в него изменения, как описано в разделе [Выполнение пакетов и управление пакетами программным образом](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md).  
   
@@ -92,9 +92,9 @@ ms.locfileid: "47728262"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Образцы CodePlex, [Образцы продуктов служб Integration Services](http://go.microsoft.com/fwlink/?LinkID=131204)на сайте www.codeplex.com/MSFTISProdSamples  
+-   Образцы CodePlex, [Образцы продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkID=131204)на сайте www.codeplex.com/MSFTISProdSamples  
   
--   Запись в блоге [Профилирование производительности пользовательских расширений](http://go.microsoft.com/fwlink/?LinkId=238831)на сайте blogs.msdn.com.  
+-   Запись в блоге [Профилирование производительности пользовательских расширений](https://go.microsoft.com/fwlink/?LinkId=238831)на сайте blogs.msdn.com.  
 
 ## <a name="see-also"></a>См. также:  
  [службы SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

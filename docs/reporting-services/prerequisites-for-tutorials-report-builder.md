@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 323df59ef7cc0bd257a379fdbec822307532ceb8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ee3cd480edacdaa0283c0862076a9ff20b84ecca
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031943"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813107"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Предварительные условия для использования учебников (построитель отчетов)
 
@@ -29,9 +29,9 @@ ms.locfileid: "50031943"
   
     На сервере отчетов выберите пункт **Создать** > **Отчет с разбивкой на страницы**.
   
-    На сервере отчетов в режиме интеграции с SharePoint на вкладке **Документы** выберите пункт **Создать документ**, а затем в раскрывающемся списке выберите пункт **Отчет в построителе отчетов**. Например, `http://<servername>/sites/mySite/reports`. Администратор сайта SharePoint должен включить функцию «Отчет построителя отчетов» для всех библиотек документов.  
+    На сервере отчетов в режиме интеграции с SharePoint на вкладке **Документы** выберите пункт **Создать документ**, а затем в раскрывающемся списке выберите пункт **Отчет в построителе отчетов**. Например, `https://<servername>/sites/mySite/reports`. Администратор сайта SharePoint должен включить функцию «Отчет построителя отчетов» для всех библиотек документов.  
   
--   URL-адрес сервера отчетов служб [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] или сайта SharePoint, интегрированного с сервером отчетов служб [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Необходимы следующие разрешения: на сохранение и просмотр отчетов, общих источников данных, общих наборов данных, элементов отчетов и моделей. По умолчанию URL-адрес сервера отчетов — `http://<servername>/reportserver`. По умолчанию URL-адрес сайта SharePoint — `http://<sitename>` или `http://<server>/site`.  
+-   URL-адрес сервера отчетов служб [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] или сайта SharePoint, интегрированного с сервером отчетов служб [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Необходимы следующие разрешения: на сохранение и просмотр отчетов, общих источников данных, общих наборов данных, элементов отчетов и моделей. По умолчанию URL-адрес сервера отчетов — `https://<servername>/reportserver`. По умолчанию URL-адрес сайта SharePoint — `https://<sitename>` или `https://<server>/site`.  
   
 -   Имя экземпляра SQL Server и учетные данные, необходимые для доступа только для чтения к базе данных. Запросы набора данных в учебниках используют статические данные, но все запросы должны обрабатываться экземпляром SQL Server для возвращения метаданных, необходимых для набора данных отчета. Например, следующая строка подключения определяет только сервер: `data source=<servername>`. У вас должны быть права на доступ к базе данных по умолчанию, назначенной вам системным администратором, который предоставляет разрешения на доступ к серверу. Также можно указать базу данных, как показано в следующей строке подключения: `data source=<servername>;initial catalog=<database>`.  
   

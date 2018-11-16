@@ -14,12 +14,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0cb8e9f1df15d2bed2409e6ea8f82de4b39042d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 978ec0b00cbb4954a7aa6e50e6d182857ac8338a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642704"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639851"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Типы данных в выражениях служб Integration Services
   Средство оценки выражений использует типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Когда данные впервые попадают в поток данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , подсистема обработки потока данных преобразует все данные столбцов в тип данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а данные столбцов, используемых выражением, уже имеют тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Выражения, используемые в преобразованиях «Условное разбиение» и «Производный столбец», могут ссылаться на столбцы, поскольку являются частью потока данных, включающего данные столбцов.  
@@ -131,12 +131,12 @@ ms.locfileid: "47642704"
  Результаты многих операций и функций имеют предопределенные типы данных. Это может быть тип данных аргумента или тип данных, к которому средство оценки выражений приводит результат. Например, результат логического оператора ИЛИ (||) всегда имеет тип Boolean, результат функции ABS имеет численный тип данных аргумента, результат операции умножения имеет наименьший численный тип, который может представить результат без потери точности. Дополнительные сведения о типах данных результатов см. в разделе [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Использование выражения в компоненте потока данных](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Использование выражения в компоненте потока данных](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [Памятка выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=746575)на сайте pragmaticworks.com  
+-   Техническая статья [Памятка выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=746575)на сайте pragmaticworks.com  
   
--   Техническая статья [Примеры выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
+-   Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
   

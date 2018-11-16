@@ -19,12 +19,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a99a67a8c6ff7a1d774ae5446e7b836908be8f43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 184f3337f706d2a19210a8304d6b351b352ea309
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611402"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639901"
 ---
 # <a name="data-mining-query-task"></a>Задача «Запрос интеллектуального анализа данных»
   Задача «Запрос интеллектуального анализа данных» запускает прогнозирующие запросы, основанных на моделях интеллектуального анализа данных, встроенных в службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Прогнозирующий запрос создает прогноз для новых данных с использованием моделей интеллектуального анализа данных. Например, прогнозирующий запрос может предсказать, сколько яхт может быть продано в летние месяцы, или сформировать список предполагаемых клиентов, которые могут купить яхту.  
@@ -58,7 +58,7 @@ ms.locfileid: "47611402"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-data-mining-query-task"></a>Настройка задачи «Запрос интеллектуального анализа данных» программными средствами  
  Дополнительные сведения о программной настройке этих свойств см. в следующих разделах:  

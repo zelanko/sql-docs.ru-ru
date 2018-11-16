@@ -15,12 +15,12 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 142822158f03c76c1c36f40fa937438c989ec3ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71d7e79a0e941b5f080b033469700e19eaa3241e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811802"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666101"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Создание моментального снимка для публикации слиянием с параметризованными фильтрами
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -275,7 +275,7 @@ PAUSE
 >  Если фильтрация статьи приводит к образованию неперекрывающихся секций, уникальных для каждой подписки (если указано значение F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription для P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption при создании статьи публикации слиянием), метаданные очищаются при запуске агента слияния. Это означает, что срок действия секционированного снимка истекает быстрее. Если выбран этот режим, рекомендуется рассмотреть возможность разрешения подписчикам создания моментальных снимков. Дополнительные сведения см. в подразделе «Использование соответствующих параметров фильтрации» раздела [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 > [!IMPORTANT]  
->  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](http://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Создание публикации, которая позволяет подписчикам инициировать формирование и доставку моментальных снимков  
   

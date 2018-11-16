@@ -12,12 +12,12 @@ ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7bd21f8be841437b15f780001221da72d9f665aa
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: df33f55ce855f45f271235ac5b6ff2a8f305e8d8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030683"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813627"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Диспетчер предупреждений данных для пользователей SharePoint
 
@@ -36,7 +36,7 @@ ms.locfileid: "50030683"
 
  Диспетчер предупреждений об изменении данных можно также открыть непосредственно с помощью URL-адреса. Синтаксис этого URL-адреса является следующим:  
   
- `http://<site name>/_layouts/ReportServer/MyDataAlerts.aspx`  
+ `https://<site name>/_layouts/ReportServer/MyDataAlerts.aspx`  
   
 > [!NOTE]  
 >  Администратор должен предоставить вам разрешения на использование функций предупреждений служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Дополнительные сведения о требуемых разрешениях см. в разделе [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md).  

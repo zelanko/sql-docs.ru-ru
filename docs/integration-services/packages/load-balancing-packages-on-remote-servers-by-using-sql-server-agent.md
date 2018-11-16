@@ -15,12 +15,12 @@ ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5482768506042643a7878d1b2d86d69d7605054d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4c845b6a9c962358b702f4b1609a2567568f3d4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770612"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639841"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Пакеты балансировки нагрузки на удаленном сервере с использованием агента SQL Server
   Если нужно загрузить много пакетов, удобно использовать другие доступные серверы. Балансировка нагрузки — это метод использования других серверов для загрузки пакетов, когда пакеты находятся под контролем родительского пакета. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]балансировка нагрузки — это ручная процедура, которая должна быть разработана владельцами пакетов. Балансировка нагрузки не выполняется серверами автоматически. Кроме того, пакеты, выполняемые на удаленных серверах, должны быть полными, а не отдельными задачами из других пакетов.  
@@ -89,7 +89,7 @@ ms.locfileid: "47770612"
   
 -   выполняя индивидуальное задание агента SQL Server на удаленном компьютере, используя среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], чтобы убедиться в том, что пакет запущен.  
   
- Сведения о решении проблем с пакетами, запускаемыми из заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Пакет служб SSIS не запускается при вызове пакета служб SSIS на шаге задания агента SQL Server](http://support.microsoft.com/kb/918760) в базе знаний поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Сведения о решении проблем с пакетами, запускаемыми из заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Пакет служб SSIS не запускается при вызове пакета служб SSIS на шаге задания агента SQL Server](https://support.microsoft.com/kb/918760) в базе знаний поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  Агент SQL Server проверяет действительность доступа к подсистеме учетной записи-посредника и предоставляет ей доступ при каждом выполнении шага задания.  
   

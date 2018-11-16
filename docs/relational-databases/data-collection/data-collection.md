@@ -14,12 +14,12 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14abdd44fca86401238db0216febb5a6a002ffa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 091c4034071394d03c1548290c5d6eea08d50b8e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596792"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662343"
 ---
 # <a name="data-collection"></a>Сбор данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47596792"
   
  Сборщик данных позволяет задавать область сбора данных в соответствии с требованиями тестовой и рабочей сред. Сборщик данных также использует хранилище данных, реляционную базу данных, которая предоставляет возможность управлять собираемыми данными, задавая различные сроки их хранения.  
   
- Сборщик данных поддерживает динамическую настройку сбора данных и его возможности можно расширить посредством API-интерфейса сборщика данных. Дополнительные сведения см. в статье [Data Collector Programming](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
+ Сборщик данных поддерживает динамическую настройку сбора данных и его возможности можно расширить посредством API-интерфейса сборщика данных. Дополнительные сведения см. в статье [Data Collector Programming](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
   
  Роль сборщика данных в общей стратегии сбора и управления данными в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]показана на следующем рисунке.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47596792"
   
 -   учетные записи-посредники.  
   
- Дополнительные сведения см. в разделе [Задачи автоматизированного администрирования (SQL Server Agent)](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
+ Дополнительные сведения см. в разделе [Задачи автоматизированного администрирования (SQL Server Agent)](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) используется для выполнения пакетов, которые собирают данные от отдельных поставщиков данных. Следует ознакомиться со следующими инструментами и понятиями служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] :  
   

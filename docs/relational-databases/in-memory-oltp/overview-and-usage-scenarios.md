@@ -5,20 +5,19 @@ ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
-ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
+ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150195"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660373"
 ---
 # <a name="overview-and-usage-scenarios"></a>Общие сведения и сценарии использования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "50150195"
 
 ## <a name="in-memory-oltp-overview"></a>Общие сведения о выполняющейся в памяти OLTP
 
-Выполняющаяся в памяти OLTP может существенно повысить производительность соответствующих рабочих нагрузок. Одному клиенту, bwin, удалось [повысить производительность до 1,2 млн запросов в секунду](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/), используя выполняющуюся в памяти OLTP в одной виртуальной машине с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Другой клиент, Quorum, удвоил рабочую нагрузку и [сократил использование ресурсов на 70 %](https://customers.microsoft.com/en-US/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database), применяя выполняющуюся в памяти OLTP в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. В некоторых случаях производительность у клиентов повышалась в 30 раз, но каков будет ваш прирост, зависит от типа и величины рабочей нагрузки.
+Выполняющаяся в памяти OLTP может существенно повысить производительность соответствующих рабочих нагрузок. Одному клиенту, bwin, удалось [повысить производительность до 1,2 млн запросов в секунду](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/), используя выполняющуюся в памяти OLTP в одной виртуальной машине с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Другой клиент, Quorum, удвоил рабочую нагрузку и [сократил использование ресурсов на 70 %](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database), применяя выполняющуюся в памяти OLTP в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. В некоторых случаях производительность у клиентов повышалась в 30 раз, но каков будет ваш прирост, зависит от типа и величины рабочей нагрузки.
 
 Что же влияет на прирост производительности? По сути, выполняющаяся в памяти OLTP позволяет повысить производительность обработки транзакций путем оптимизации доступа к данным и выполнения транзакций, а также за счет устранения конфликтов блокировок и кратковременных блокировок между параллельно выполняемыми транзакциями: производительность повышается не из-за того, что данные находятся в памяти, а из-за оптимизации этих данных. Алгоритмы хранения и обработки данных, а также доступа к ним были полностью изменены с учетом последних улучшений в вычислениях в памяти и вычислениях с высоким уровнем параллелизма.
 
@@ -67,8 +66,8 @@ ms.locfileid: "50150195"
 
 #### <a name="customer-case-studies"></a>Клиентские сценарии
 
-- Компания CMC Markets использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], чтобы обеспечить постоянно низкую задержку: [Because a second is too long to wait, this financial services firm is updating its trading software now](https://customers.microsoft.com/en-us/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software) (Секунда — это слишком долго. Финансовая организация обновила программное обеспечение для торговли).
-- Компания Derivco использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] для поддержки возросшего показателя пропускной способности и обработки пиков рабочей нагрузки: [When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://customers.microsoft.com/en-us/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016) (Компания по разработке сетевых игр сделала ставку на SQL Server 2016, чтобы не рисковать собственным будущим).
+- Компания CMC Markets использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], чтобы обеспечить постоянно низкую задержку: [Because a second is too long to wait, this financial services firm is updating its trading software now](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software) (Секунда — это слишком долго. Финансовая организация обновила программное обеспечение для торговли).
+- Компания Derivco использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] для поддержки возросшего показателя пропускной способности и обработки пиков рабочей нагрузки: [When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016) (Компания по разработке сетевых игр сделала ставку на SQL Server 2016, чтобы не рисковать собственным будущим).
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>Прием данных из разных источников, включая Интернет вещей
@@ -93,9 +92,9 @@ ms.locfileid: "50150195"
  
 #### <a name="customer-case-studies"></a>Клиентские сценарии
 
-- [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](http://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
-- Компания EdgeNet повысила производительность загрузки пакетных данных и избавилась от необходимости поддержки кэша среднего уровня благодаря использованию выполняющейся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/en-us/story/data-services-firm-gains-real-time-access-to-product-d) (Компания по разработке служб данных получила доступ к данным о продуктах в реальном времени, используя технологию в памяти).
-- Больнице Beth Israel Deaconess Medical Center удалось значительно повысить скорость приема данных из контроллеров домена и обрабатывать пики рабочей нагрузки, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/en-us/story/strengthening-data-security-and-creating-more-time-for]
+- [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
+- Компания EdgeNet повысила производительность загрузки пакетных данных и избавилась от необходимости поддержки кэша среднего уровня благодаря использованию выполняющейся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d) (Компания по разработке служб данных получила доступ к данным о продуктах в реальном времени, используя технологию в памяти).
+- Больнице Beth Israel Deaconess Medical Center удалось значительно повысить скорость приема данных из контроллеров домена и обрабатывать пики рабочей нагрузки, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
 
 ### <a name="caching-and-session-state"></a>Кэширование и состояние сеанса
 
@@ -113,7 +112,7 @@ ms.locfileid: "50150195"
 
 #### <a name="customer-case-studies"></a>Клиентские сценарии
 
-- Компании bwin удалось значительно увеличить пропускную способность и сократить площадь, занимаемую оборудованием, для состояния сеанса ASP.NET, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Gaming Site Can Scale to 250 000 Requests Per Second and Improve Player Experience](https://customers.microsoft.com/en-us/story/gaming-site-can-scale-to-250000-requests-per-second-an) (Игорный сайт смог повысить масштаб до 250 000 запросов в секунду и улучшить условия игры для игроков).
+- Компании bwin удалось значительно увеличить пропускную способность и сократить площадь, занимаемую оборудованием, для состояния сеанса ASP.NET, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Gaming Site Can Scale to 250 000 Requests Per Second and Improve Player Experience](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an) (Игорный сайт смог повысить масштаб до 250 000 запросов в секунду и улучшить условия игры для игроков).
 - Благодаря состоянию сеанса ASP.NET компании bwin удалось еще больше повысить пропускную способность и внедрить корпоративную систему кэширования среднего уровня, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: [How bwin is using [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) (Как компания bwin добилась небывалой производительности и масштаба, используя выполняющуюся в памяти OLTP в SQL Server 2016).
 
 ### <a name="tempdb-object-replacement"></a>Замена объекта tempdb
@@ -224,7 +223,7 @@ GO
 
 ## <a name="resources-to-learn-more"></a>Ресурсы с дополнительными сведениями:
 
-[Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](http://msdn.microsoft.com/library/mt694156.aspx)   
+[Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](https://msdn.microsoft.com/library/mt694156.aspx)   
 Демонстрацию производительности с использованием выполняющейся в памяти OLTP см. по адресу [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
 [17-минутный видеоролик, в котором объясняется, что такое выполняющаяся в памяти OLTP, а также показывается демонстрация](https://www.youtube.com/watch?v=l5l5eophmK4) (демонстрация начинается с 8:25)   
 [Скрипт, позволяющий включить выполняющуюся в памяти OLTP и задать рекомендуемые параметры](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
@@ -233,4 +232,4 @@ GO
 [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
 [Оптимизация производительности с помощью технологий обработки в оперативной памяти в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[Выполняющаяся в памяти OLTP — рекомендации по общим шаблонам рабочих нагрузок и миграции](http://msdn.microsoft.com/library/dn673538.aspx) 
+[Выполняющаяся в памяти OLTP — рекомендации по общим шаблонам рабочих нагрузок и миграции](https://msdn.microsoft.com/library/dn673538.aspx) 

@@ -5,8 +5,7 @@ ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
@@ -16,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623832"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669403"
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "47623832"
 <sup>6</sup> При выдаче разрешения на закрепление страниц в памяти (либо в 32-разрядной системе для поддержки AWE-памяти, либо в 64-разрядной системе) рекомендуем выделить максимальный объем серверной памяти. Дополнительные сведения об LPIM см. в статье [Параметры конфигурации сервера Server Memory](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
 
 > [!NOTE]
-> Более старые версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно запустить в 32-разрядной операционной системе. Чтобы охватить свыше 4 ГБ памяти в 32-разрядной операционной системе, требуется использовать расширения AWE для управления памятью. Это необязательно, если [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняется в 64-разрядных операционных системах. Дополнительные сведения о расширениях AWE см. в документации [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]: [Адресное пространство процесса](http://msdn.microsoft.com/library/ms189334.aspx) и [Управление памятью для больших баз данных](http://msdn.microsoft.com/library/ms191481.aspx).   
+> Более старые версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно запустить в 32-разрядной операционной системе. Чтобы охватить свыше 4 ГБ памяти в 32-разрядной операционной системе, требуется использовать расширения AWE для управления памятью. Это необязательно, если [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняется в 64-разрядных операционных системах. Дополнительные сведения о расширениях AWE см. в документации [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]: [Адресное пространство процесса](https://msdn.microsoft.com/library/ms189334.aspx) и [Управление памятью для больших баз данных](https://msdn.microsoft.com/library/ms191481.aspx).   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Изменения управления памятью, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 В более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) память выделялась с помощью пяти разных механизмов.
@@ -188,7 +187,7 @@ FROM sys.dm_os_process_memory;
 
 **Размер сетевого пакета** — это размер пакетов схемы табличных данных, которые используются для обмена данными между приложениями и ядром СУБД [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. По умолчанию размер пакета равен 4 КБ, а его настройка осуществляется с помощью параметра конфигурации network packet size.
 
-Если включено использование режима MARS, подключение пользователя занимает примерно (3+3 \* число_логических_соединений) \* размер_сетевого_пакета + 94 КБ.
+Если включено использование режима MARS, подключение пользователя занимает примерно (3+3 \*число_логических_соединений)\* размер_сетевого_пакета + 94 КБ.
 
 ## <a name="effects-of-min-memory-per-query"></a>Влияние параметра min memory per query
 Параметр конфигурации *min memory per query* определяет минимальный объем памяти (в килобайтах), выделяемый для выполнения запроса. Он также называется минимальным временно предоставляемым буфером памяти. Все запросы должны ожидать выполнения до момента освобождения необходимого объема памяти либо истечения времени ожидания, указанного в параметре конфигурации сервера query wait. Типом ожидания в этом сценарии является RESOURCE_SEMAPHORE.

@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e7a72900cc62e8a517f437975691b858bb1401a5
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: b8b6a33afa780324d6dd3271111a99c4ea68e486
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419499"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699699"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ SQL Server 2014 с пакетом обновления 1 (SP1) включае
 1.  присоединить базу данных версии SQL Server 2014 CTP 2 к экземпляру SQL Server 2014 RTM;    
 2.  восстановить резервную копию базы данных, созданную в версии SQL Server 2014 CTP 2, в экземпляре SQL Server 2014 RTM;    
 3.  обновить до версии SQL Server 2014 RTM на месте;
-4.  последовательно обновить до версии SQL Server 2014 RTM; Необходимо переключиться в режим перехода на другой ресурс вручную перед началом последовательного обновления. Подробные сведения см. в статье [Модернизация или обновление серверов группы доступности при минимальных значениях времени простоя и потери данных](http://msdn.microsoft.com/library/dn178483.aspx).    
+4.  последовательно обновить до версии SQL Server 2014 RTM; Необходимо переключиться в режим перехода на другой ресурс вручную перед началом последовательного обновления. Подробные сведения см. в статье [Модернизация или обновление серверов группы доступности при минимальных значениях времени простоя и потери данных](https://msdn.microsoft.com/library/dn178483.aspx).    
 5.  Данные, собранные наборами элементов сбора данных о производительности транзакций, которые установлены в выпуске SQL Server 2014 CTP 2, нельзя просмотреть с помощью среды SQL Server Management Studio из SQL Server 2014 RTM, и наоборот.
   
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>Переход с версии SQL Server 2014 RTM на более раннюю версию SQL Server 2014 CTP 2  
@@ -114,7 +114,7 @@ SQL Server 2014 с пакетом обновления 1 (SP1) включае
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>Неправильная версия клиента StreamInsight на носителе SQL Server 2014/ISO/CAB  
 На носителе SQL Server/ISO/CAB (StreamInsight\\\<архитектура\>\\\<код языка\>) находится неправильная версия StreamInsight.msi и StreamInsightClient.msi.  
   
-**Решение.** Скачайте и установите правильную версию со [страницы для скачивания файлов пакета дополнительных компонентов SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=306709).  
+**Решение.** Скачайте и установите правильную версию со [страницы для скачивания файлов пакета дополнительных компонентов SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 ### <a name="ProdDoc"></a>Документация по версии RTM
   
@@ -158,7 +158,7 @@ SQL Server 2014 с пакетом обновления 1 (SP1) включае
 -   Максимальный объем памяти увеличен с 64 до 128 ГБ.  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>Помощник по оптимизации памяти помечает ограничения по умолчанию как несовместимые  
-**Проблема.** Помощник, оптимизированный для памяти, из среды SQL Server Management Studio помечает все ограничения по умолчанию как несовместимые. Не все ограничения по умолчанию поддерживаются в оптимизированных для памяти таблицах. Помощник не различает поддерживаемые типы ограничений по умолчанию и те из них, которые не поддерживаются. Среди ограничений по умолчанию поддерживаются все константы, выражения и встроенные функции, которые поддерживаются в скомпилированных в собственном коде хранимых процедурах. Чтобы просмотреть список функций, поддерживаемых в скомпилированных в собственном коде хранимых процедурах, см. статью [Поддерживаемые конструкции для хранимых процедур, скомпилированных в собственном коде](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
+**Проблема.** Помощник, оптимизированный для памяти, из среды SQL Server Management Studio помечает все ограничения по умолчанию как несовместимые. Не все ограничения по умолчанию поддерживаются в оптимизированных для памяти таблицах. Помощник не различает поддерживаемые типы ограничений по умолчанию и те из них, которые не поддерживаются. Среди ограничений по умолчанию поддерживаются все константы, выражения и встроенные функции, которые поддерживаются в скомпилированных в собственном коде хранимых процедурах. Чтобы просмотреть список функций, поддерживаемых в скомпилированных в собственном коде хранимых процедурах, см. статью [Поддерживаемые конструкции для хранимых процедур, скомпилированных в собственном коде](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
   
 **Решение**. Если с помощью помощника требуется определить причины блокировок, то следует пропускать совместимые ограничения по умолчанию. Чтобы использовать помощник по оптимизации памяти для переноса таблиц, в которых есть совместимые ограничения по умолчанию и нет никаких других причин блокировки, выполните следующие действия.  
   
@@ -323,7 +323,7 @@ Keywords:      Classic
 Description:   Report Server (DENALI) cannot connect to the report server database.  
 ```  
   
-Дополнительные сведения см. в разделе [Рекомендации, советы и сведения по устранению неполадок со службами SQL Server 2014 Reporting Services](http://go.microsoft.com/fwlink/?LinkID=391254).  
+Дополнительные сведения см. в разделе [Рекомендации, советы и сведения по устранению неполадок со службами SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>Требуемый порядок обновления для фермы SharePoint с несколькими узлами до служб SQL Server 2014 Reporting Services  
 **Проблема.** Преобразование отчета для просмотра в ферме с несколькими узлами завершается ошибкой, если экземпляры общей службы SharePoint служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обновляются до всех экземпляров надстройки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint.  
@@ -333,7 +333,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 1.  Сначала обновите все экземпляры надстройки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint.    
 2.  Затем обновите все экземпляры общей службы SharePoint служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-Дополнительные сведения см. в разделе [Рекомендации, советы и сведения по устранению неполадок со службами SQL Server 2014 Reporting Services](http://go.microsoft.com/fwlink/?LinkID=391254).  
+Дополнительные сведения см. в разделе [Рекомендации, советы и сведения по устранению неполадок со службами SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
 ### <a name="AzureVM"></a>SQL Server 2014 RTM на виртуальных машинах Microsoft Azure  
   
@@ -348,7 +348,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
     Это решение позволит мастеру завершить добавление реплики в Microsoft Azure.  
   
-2.  Когда мастер завершит работу, необходимо будет закончить настройку прослушивателя в Windows Azure, как описано в разделе [Настройка прослушивателя для групп доступности AlwaysOn в Windows Azure](http://msdn.microsoft.com/library/dn376546.aspx)  
+2.  Когда мастер завершит работу, необходимо будет закончить настройку прослушивателя в Windows Azure, как описано в разделе [Настройка прослушивателя для групп доступности AlwaysOn в Windows Azure](https://msdn.microsoft.com/library/dn376546.aspx)  
   
 ### <a name="SSAS"></a>Службы Analysis Services (RTM)
   
@@ -359,9 +359,9 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **Решение:**  
   
-1.  Загрузите поставщик MSOLAP.5 из пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Установите поставщик на серверах приложений, на которых запущены службы Excel. Дополнительные сведения см. в подразделе «Microsoft Analysis Services OLE DB Provider для Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)» [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](http://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Загрузите поставщик MSOLAP.5 из пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Установите поставщик на серверах приложений, на которых запущены службы Excel. Дополнительные сведения см. в подразделе «Microsoft Analysis Services OLE DB Provider для Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)» [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
 **Дополнительные сведения:**  
   
@@ -374,9 +374,9 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **Решение:**  
   
-1.  Загрузите поставщик MSOLAP.5 из пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Установите поставщик на серверах приложений, на которых запущены службы Excel. Дополнительные сведения см. в подразделе «Microsoft Analysis Services OLE DB Provider для Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)» [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](http://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Загрузите поставщик MSOLAP.5 из пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Установите поставщик на серверах приложений, на которых запущены службы Excel. Дополнительные сведения см. в подразделе «Microsoft Analysis Services OLE DB Provider для Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)» [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
 **Дополнительные сведения:**  
   
@@ -389,7 +389,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **Решение:**  
   
-1.  В Microsoft Excel очистите пользовательские дополнительные свойства. См. раздел "Решение" в статье базы знаний [2927748](http://support.microsoft.com/kb/2927748).  
+1.  В Microsoft Excel очистите пользовательские дополнительные свойства. См. раздел "Решение" в статье базы знаний [2927748](https://support.microsoft.com/kb/2927748).  
   
 **Дополнительные сведения:**  
   
@@ -411,7 +411,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>Помощник по обновлению SQL Server 2014 сообщает о несущественных проблемах с обновлением для служб SQL Server Reporting Services  
 **Проблема.** Помощник по обновлению SQL Server (SSUA), поставляемый с носителем SQL Server 2014, неверно сообщает о разных ошибках при анализе сервера SQL Server Reporting Services.  
   
-**Решение.** Эта проблема исправлена в помощнике по обновлению SQL Server из [пакета дополнительных компонентов SQL Server 2014 для SSUA](http://go.microsoft.com/fwlink/?LinkID=306709).  
+**Решение.** Эта проблема исправлена в помощнике по обновлению SQL Server из [пакета дополнительных компонентов SQL Server 2014 для SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>Помощник по обновлению SQL Server 2014 сообщает об ошибке при анализе сервера служб SQL Server Integration Services  
 **Проблема.** Помощник по обновлению SQL Server (SSUA), поставляемый с носителем SQL Server 2014, сообщает об ошибке при анализе сервера SQL Server Integration Services.  Сообщение, отображаемое пользователю:  
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**Решение.** Эта проблема исправлена в помощнике по обновлению SQL Server из [пакета дополнительных компонентов SQL Server 2014 для SSUA](http://go.microsoft.com/fwlink/?LinkID=306709).  
+**Решение.** Эта проблема исправлена в помощнике по обновлению SQL Server из [пакета дополнительных компонентов SQL Server 2014 для SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

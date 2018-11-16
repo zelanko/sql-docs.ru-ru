@@ -22,12 +22,12 @@ ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e59bea343c8dab06510c2cd2247f49aa171bba73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 311212016f42367f90095bf12858210a580b4798
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712504"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698982"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ SET STATISTICS XML { ON | OFF }
   
  \Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
- Схему для инструкции SHOWPLAN также можно найти на [следующем веб-сайте](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ Схему для инструкции SHOWPLAN также можно найти на [следующем веб-сайте](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  Инструкции SET STATISTICS PROFILE и SET STATISTICS XML являются дубликатами друг друга. Первая выводит данные в текстовом формате, а вторая выводит данные в формате XML. В будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения о плане выполнения новых запросов будут доступны лишь посредством инструкции SET STATISTICS XML, но не посредством инструкции SET STATISTICS PROFILE.  
   

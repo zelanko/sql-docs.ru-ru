@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cc9fbc190645b2f517758b129e92f458dcef316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846602"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661133"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Запуск и использование помощника по настройке ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ ms.locfileid: "47846602"
 >  Временная остановка помощника по настройке ядра СУБД не поддерживается. Если на панели инструментов нажать кнопку **Начать анализ** после кнопки **Остановить анализ** или **Остановить анализ (с рекомендациями)** , то помощник по настройке ядра СУБД начинает новый сеанс настройки.  
   
 ###  <a name="dta"></a> Использование служебной программы dta  
- Программа [dta](../../tools/dta/dta-utility.md) представляет собой программу командной строки, которая может быть использована для настройки баз данных. Она дает доступ к функциональности помощника по настройке ядра СУБД в пакетных файлах и скриптах. Программа **dta** использует в качестве рабочей нагрузки элементы кэша планов, файлы трассировки, таблицы трассировки и скрипты на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] . Она также использует входные XML-данные, соответствующие схеме помощника по настройке ядра СУБД, находящейся на [веб-сайте Microsoft](http://go.microsoft.com/fwlink/?linkid=43100).  
+ Программа [dta](../../tools/dta/dta-utility.md) представляет собой программу командной строки, которая может быть использована для настройки баз данных. Она дает доступ к функциональности помощника по настройке ядра СУБД в пакетных файлах и скриптах. Программа **dta** использует в качестве рабочей нагрузки элементы кэша планов, файлы трассировки, таблицы трассировки и скрипты на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] . Она также использует входные XML-данные, соответствующие схеме помощника по настройке ядра СУБД, находящейся на [веб-сайте Microsoft](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Перед началом настройки рабочей нагрузки при помощи программы **dta** обратите внимание на следующее.  
   
@@ -313,7 +313,7 @@ ms.locfileid: "47846602"
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- Схема XML помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] также доступна в сети на [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ Схема XML помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] также доступна в сети на [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  Этот URL-адрес ведет на страницу с множеством доступных XML-схем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Прокручивайте страницу вниз до тех пор, пока не появится строка с помощником по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   

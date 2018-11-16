@@ -22,12 +22,12 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7bf348d969f3e8ced5b08ae58323e3e698981274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 110c9dea73d84417d54dc99ea946998aea85cfef
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833022"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640231"
 ---
 # <a name="sql-server-destination"></a>назначение «SQL Server»
   Назначение «SQL Server» подключается к локальной базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и производит массовую загрузку данных в таблицы и представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Нельзя использовать назначение «SQL Server» в пакетах, получающих доступ к базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном сервере. Вместо этого пакеты должны использовать назначение «OLE DB». Дополнительные сведения см. в разделе [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
@@ -95,7 +95,7 @@ ms.locfileid: "47833022"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства назначения «SQL Server»](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -113,11 +113,11 @@ ms.locfileid: "47833022"
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [В системах, поддерживающих контроль учетных записей, может быть получена ошибка «Не удалось подготовить массовую вставку данных служб SSIS»](http://go.microsoft.com/fwlink/?LinkId=199482)на сайте support.microsoft.com.  
+-   Техническая статья [В системах, поддерживающих контроль учетных записей, может быть получена ошибка «Не удалось подготовить массовую вставку данных служб SSIS»](https://go.microsoft.com/fwlink/?LinkId=199482)на сайте support.microsoft.com.  
   
--   Техническая статья [Руководство по производительности загрузки данных](http://go.microsoft.com/fwlink/?LinkId=233700)на сайте msdn.microsoft.com.  
+-   Техническая статья [Руководство по производительности загрузки данных](https://go.microsoft.com/fwlink/?LinkId=233700)на сайте msdn.microsoft.com.  
   
--   Техническая статья [Использование служб SQL Server Integration Services для массовой загрузки данных](http://go.microsoft.com/fwlink/?LinkId=233701)размещена на сайте simple-talk.com.  
+-   Техническая статья [Использование служб SQL Server Integration Services для массовой загрузки данных](https://go.microsoft.com/fwlink/?LinkId=233701)размещена на сайте simple-talk.com.  
   
 ## <a name="sql-destination-editor-connection-manager-page"></a>Редактор назначения «SQL» (страница «Диспетчер соединений»)
   Страница **Диспетчер соединений** диалогового окна **Редактор назначения «SQL»** используется для задания сведений об источнике данных и для предварительного просмотра результатов. Назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] загружает данные в таблицы или представления в базе данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

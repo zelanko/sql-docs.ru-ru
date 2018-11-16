@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9939a049b8157b1a9d1aa127cbab18629bc0af03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 992784658a97e938b7793c612d32dfa7fc2a5574
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616303"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696812"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Транзакции (хранилище данных SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Если ошибка делает невозможным успешное выполнение транзакции, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] автоматически выполняет ее откат и освобождает ресурсы, удерживаемые транзакцией. Это не относится к ошибкам во время выполнения инструкции. Например, если сетевое подключение клиента к экземпляру компонента [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] разорвано или клиент выходит из приложения, то после того, как экземпляр получит уведомление от сети о разрыве подключения, выполняется откат всех незафиксированных транзакций для этого подключения.  
   
- Если ошибка во время выполнения инструкции возникает в пакетном режиме, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ведет себя так, будто для параметра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** установлено значение **ON**, и выполняет откат всей транзакции. Дополнительные сведения о параметре **XACT_ABORT** см. в разделе [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx).  
+ Если ошибка во время выполнения инструкции возникает в пакетном режиме, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ведет себя так, будто для параметра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** установлено значение **ON**, и выполняет откат всей транзакции. Дополнительные сведения о параметре **XACT_ABORT** см. в разделе [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Общие замечания  
  Сеанс может одновременно выполнять только одну транзакцию. Точки сохранения и вложенные транзакции не поддерживаются.  

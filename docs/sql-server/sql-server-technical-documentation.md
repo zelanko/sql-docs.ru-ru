@@ -21,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d0a7e900b727f7967ad38c26d40f717d382bfd7f
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 6da677a558c2af47d49fa7c8f957604ab7fc1b78
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970995"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698843"
 ---
 # <a name="sql-server-documentation"></a>Документация по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ SQL Server является центральной частью платформ
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
 **Оцените SQL Server 2016!**
-- [![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server для Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server для Windows](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Скачать SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![Создать виртуальную машину](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Развернуть виртуальную машину с SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
@@ -87,7 +87,7 @@ SQL Server является центральной частью платформ
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 **Оцените SQL Server!**
-- [![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server для Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server для Windows](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Установить SQL Server в Linux](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [Установить SQL Server в Linux](../linux/sql-server-linux-setup.md)
 - [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Скачать SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)

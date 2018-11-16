@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3fc2230d22131da80ee1250c08b19fc16e4aa651
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 62fefedaa417e73820a7e14df9bf90f6215b9161
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909745"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702452"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 Microsoft Analytics Platform System (APS) представляет собой платформу обработки данных, предназначенную для хранения данных и анализа больших объемов данных. Она предлагает возможности глубокой интеграции данных, высокоскоростной обработки запросов, высокомасштабируемого хранения и простого обслуживания комплексных решений в области бизнес-аналитики.  
@@ -51,6 +51,6 @@ Analytics Platform System поддерживает размещение SQL Serv
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о преимуществах PDW см. в документе [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](http://msdn.microsoft.com/library/dn520808.aspx) (Передовая платформа для новейших решений для хранения данных и работы с большими данными) на сайте MSDN.  
+Дополнительные сведения о преимуществах PDW см. в документе [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](https://msdn.microsoft.com/library/dn520808.aspx) (Передовая платформа для новейших решений для хранения данных и работы с большими данными) на сайте MSDN.  
   
 

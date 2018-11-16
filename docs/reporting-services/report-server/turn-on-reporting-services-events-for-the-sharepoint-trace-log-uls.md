@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee9c57eff9572632d40147007b9be8e669702a3a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0f4d8f59821a649214ddc2deda128d801e6ddb7a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020378"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814177"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)
 
@@ -108,7 +108,7 @@ Get-SPDiagnosticConfig
 |Каталог сервера отчетов||  
 |Фрагмент данных сервера отчетов||  
 |Очистка данных сервера отчетов||  
-|Диспетчер конфигурации сервера отчетов|Образцы записей:<br /><br /> Внутренний URL-адрес сервера отчетов MediumUsing `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing или недопустимый параметр ExtendedProtectionLevel|  
+|Диспетчер конфигурации сервера отчетов|Образцы записей:<br /><br /> Внутренний URL-адрес сервера отчетов MediumUsing `https://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing или недопустимый параметр ExtendedProtectionLevel|  
 |Шифрование сервера отчетов||  
 |Модуль обработки данных сервера отчетов||  
 |Опрос базы данных сервера отчетов||  

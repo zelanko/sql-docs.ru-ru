@@ -17,12 +17,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 49c30d7f0d241d61855e50c53a897281b23ff22e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e865ccf2810b9dc701bfe942245d59bcb1ecf9d4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709392"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605494"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Регистрация имени участника-службы для соединений Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ```  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер конфигурации Kerberos для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — это диагностическое средство, которое помогает расследовать проблемы Kerberos со связью при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер конфигурации Kerberos для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — это диагностическое средство, которое помогает расследовать проблемы Kerberos со связью при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 ##  <a name="Role"></a> Роль имени участника-службы при проверке подлинности  
  Когда приложение открывает соединение и использует проверку подлинности Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client передает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя компьютера, имя экземпляра и имя участника-службы (необязательно). Если соединение передает имя участника-службы, то имя используется без изменений.  
@@ -64,9 +64,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!NOTE]  
 >  Если домен Windows настроен для выполнения в режиме работы ниже [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2, то управляемая учетная запись службы не будет иметь необходимых разрешений для регистрации имен участника-службы для службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Если требуется проверка подлинности по протоколу Kerberos, администратор домена должен вручную зарегистрировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имена участников-службы в управляемой учетной записи службы.  
   
- В статье базы знаний [Использование проверки подлинности протокола Kerberos в SQL Server](http://support.microsoft.com/kb/319723)содержатся сведения о том, как предоставить разрешения на чтение или запись имен участника-службы учетным записям, не являющимся администраторами домена.  
+ В статье базы знаний [Использование проверки подлинности протокола Kerberos в SQL Server](https://support.microsoft.com/kb/319723)содержатся сведения о том, как предоставить разрешения на чтение или запись имен участника-службы учетным записям, не являющимся администраторами домена.  
   
- Дополнительные сведения см. в разделе [Реализация ограниченного делегирования Kerberos в SQL Server 2008](http://technet.microsoft.com/library/ee191523.aspx)  
+ Дополнительные сведения см. в разделе [Реализация ограниченного делегирования Kerberos в SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)  
   
 ##  <a name="Formats"></a> Форматы имени участника-службы  
  Начиная с версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], формат имени участника-службы был изменен для обеспечения поддержки проверки подлинности протокола Kerberos для TCP/IP, именованных каналов и общей памяти. Для именованных экземпляров и экземпляров по умолчанию поддерживаются следующие форматы имени участника-службы.  
@@ -113,7 +113,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Если учетная запись службы не обладает разрешениями на регистрацию и отмену регистрации имени участника-службы, возможно, эти действия придется выполнить вручную.  
   
 ##  <a name="Manual"></a> Регистрация имени участника-службы вручную  
-Для регистрации имени участника-службы вручную администратор должен запустить средство Setspn.exe, поставляемое со средствами поддержки Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] . Дополнительные сведения см. в статье базы знаний [Средства поддержки Windows Server 2003 с пакетом обновления 1 (SP1)](http://support.microsoft.com/kb/892777) .  
+Для регистрации имени участника-службы вручную администратор должен запустить средство Setspn.exe, поставляемое со средствами поддержки Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] . Дополнительные сведения см. в статье базы знаний [Средства поддержки Windows Server 2003 с пакетом обновления 1 (SP1)](https://support.microsoft.com/kb/892777) .  
   
 Setspn.exe — это средство командной строки, позволяющее считывать, изменять и удалять свойство каталога имен участников-служб (SPN). Это средство также позволяет просматривать текущие имена участников-служб, устанавливать значения по умолчанию для имен участников-служб учетных записей и добавлять или удалять дополнительные имена участников-служб.  
   
@@ -182,6 +182,6 @@ WHERE session_id = @@SPID;
  [Имена участника-службы (SPN) в клиентских соединениях (OLE DB)](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Имена участника-службы (SPN) в клиентских соединениях (ODBC)](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
  [Компоненты собственного клиента SQL Server](../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Управление проблемами проверки подлинности по протоколу Kerberos в средах служб Reporting Service](http://technet.microsoft.com/library/ff679930.aspx)  
+ [Управление проблемами проверки подлинности по протоколу Kerberos в средах служб Reporting Service](https://technet.microsoft.com/library/ff679930.aspx)  
   
   

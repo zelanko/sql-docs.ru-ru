@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 336b6d329f5c488ac5501627bd8be43974d66be5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 600a120969bc9bd9821738809f8dde1eb6554053
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856722"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665141"
 ---
 # <a name="temporal-tables"></a>Темпоральные таблицы
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47856722"
   
     -   [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)  
   
--   **Видео:** 20-минутное обсуждение темпоральных таблиц см. в ролике [Темпоральные таблицы в SQL Server 2016](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
+-   **Видео:** 20-минутное обсуждение темпоральных таблиц см. в ролике [Темпоральные таблицы в SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>Что такое темпоральная таблица с системным управлением версиями?  
  Темпоральная таблица с системным управлением версиями — это тип пользовательской таблицы. Она ведет журнал всех изменений данных и позволяет легко выполнять анализ для определенной точки во времени. Этот тип темпоральной таблицы называется темпоральной таблицей с системным управлением версиями, так как периодом действия каждой строки управляет система (т. е. ядро СУБД).  

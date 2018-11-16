@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50a5843fb6f96133cbf0af6a8ce8e8a46190eaef
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f7e6bf628b30bedb157e17bd7dc785061dbc2d26
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120451"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665623"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Пример базы данных для выполняющейся в памяти OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "49120451"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Для тестирования производительности требуется сервер, имеющий те же характеристики, что и в рабочей среде. Для этого конкретного примера должно быть доступно по меньшей мере 16 ГБ памяти в SQL Server. Общие рекомендации по выбору оборудования для выполняющейся в памяти OLTP см. в следующей записи блога: [http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Для тестирования производительности требуется сервер, имеющий те же характеристики, что и в рабочей среде. Для этого конкретного примера должно быть доступно по меньшей мере 16 ГБ памяти в SQL Server. Общие рекомендации по выбору оборудования для выполняющейся в памяти OLTP см. в следующей записи блога: [https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Установка образца OLTP в памяти на основе AdventureWorks  
  Чтобы установить образец, выполните следующие действия.  
@@ -183,7 +183,7 @@ ms.locfileid: "49120451"
   
  Для дальнейшей оптимизации рабочей нагрузки можно использовать индексы HASH. Они особенно хорошо подходят для уточняющих запросов и вставки строк. Однако следует учитывать, что они не поддерживают просмотр диапазонов, упорядоченный просмотр или поиск в начальных столбцах ключа индекса. Поэтому при использовании этих индексов требуется соблюдать осторожность. Кроме того, при создании необходимо указать параметр bucket_count. Обычно его значение должно быть в 1–2 раза больше числа значение ключей индекса, однако переоценка редко создает проблему.  
   
- Дополнительные указания по [работе с индексами](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) , а также указания по [выбору правильного значения bucket_count](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)см. в электронной документации.  
+ Дополнительные указания по [работе с индексами](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) , а также указания по [выбору правильного значения bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)см. в электронной документации.  
   
  Индексы в перенесенных таблицах настроены для выполнения демонстрационной рабочей нагрузки по обработке заказов на продажу. Рабочая нагрузка состоит из операций вставки и уточняющих запросов, которые выполняются в таблицах Sales.SalesOrderHeader_inmem и Sales.SalesOrderDetail_inmem, а также операций уточняющих запросов, которые выполняются в столбцах первичного ключа из таблиц Production.Product_inmem и Sales.SpecialOffer_inmem.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "49120451"
   
     -   Обновляет сведения о доставке для данного заказа на продажу. Также обновляются сведения о доставке для всех линейных элементов заказа на продажу.  
   
-    -   Это процедура-оболочка для скомпилированных в собственном коде хранимых процедур Sales.usp_UpdateSalesOrderShipInfo_native, содержащих логику повтора для обработки (непредвиденных) возможных конфликтов, возникающих при обновлении одного заказа выполняющимися одновременно транзакциями. Дополнительные сведения о логике повтора см. в [этом разделе электронной документации](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
+    -   Это процедура-оболочка для скомпилированных в собственном коде хранимых процедур Sales.usp_UpdateSalesOrderShipInfo_native, содержащих логику повтора для обработки (непредвиденных) возможных конфликтов, возникающих при обновлении одного заказа выполняющимися одновременно транзакциями. Дополнительные сведения о логике повтора см. в [этом разделе электронной документации](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -313,7 +313,7 @@ ms.locfileid: "49120451"
   
  Действия по установке  
   
-1.  Скачайте и запустите установочный пакет x64 RML Utilities со следующей страницы: [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  Скачайте и запустите установочный пакет x64 RML Utilities со следующей страницы: [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  Если появится диалоговое окно, в котором будет указано, что некоторые файлы используются, нажмите кнопку «Продолжить»  
   

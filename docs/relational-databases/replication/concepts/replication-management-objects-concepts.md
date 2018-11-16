@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9e682940da2b880265e6d9d9763551bd858339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749672"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672633"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ ms.locfileid: "47749672"
 >  Безусловно, класс <xref:Microsoft.SqlServer.Management.Common.ServerConnection> поддерживает объявление явных транзакций при задании свойств, но такие транзакции могут препятствовать выполнению внутренних транзакций и вырабатывать непредвиденные результаты, поэтому не должны использоваться с объектами RMO.  
 
 ### <a name="enabling-tls-12-support-for-rmo-components"></a>Включение поддержки TLS 1.2 для компонентов RMO 
- Поддержку TLS1.2 для компонентов RMO в Windows 2012 и более ранних версиях можно включить, установив обновление [KB 3140245](http://support.microsoft.com/help/3140245) и создав разделы реестра, описанные в статье. В Windows 2012 R2 и более поздних версиях требуется создать только разделы реестра, приведенные в статье выше.
+ Поддержку TLS1.2 для компонентов RMO в Windows 2012 и более ранних версиях можно включить, установив обновление [KB 3140245](https://support.microsoft.com/help/3140245) и создав разделы реестра, описанные в статье. В Windows 2012 R2 и более поздних версиях требуется создать только разделы реестра, приведенные в статье выше.
  
 ## <a name="example"></a>Пример  
  В этом примере демонстрируется кэширование изменений свойств. Изменения, внесенные в атрибуты публикации транзакций, кэшируются до тех пор, пока не происходит их явная отправка на сервер.  

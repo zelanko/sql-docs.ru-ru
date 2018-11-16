@@ -12,12 +12,12 @@ ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b53c7c52c63fa12b5398b8b09ffeec50262ad9a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6aca1a7488b6767e0259647a320c238ec753836
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730262"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665313"
 ---
 # <a name="mssqlserver3168"></a>MSSQLSERVER_3168
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47730262"
 -   Пользователь пытается восстановить системную базу данных с резервной копии, сделанной на том же сервере. Однако при создании резервной копии на сервере была другая сборка. Это означает, что с момента создания резервной копии сервер был обновлен.  
   
 ## <a name="user-action"></a>Действие пользователя  
-В такой ситуации процесс восстановления является весьма запутанным и используется только в качестве последней меры. Дополнительные сведения см. в статье "[You cannot restore system database backups to a different build of SQL Server](http://support.microsoft.com/kb/264474)" (Невозможно восстановить системную базу данных из резервной копии на другую сборку SQL Server).  
+В такой ситуации процесс восстановления является весьма запутанным и используется только в качестве последней меры. Дополнительные сведения см. в статье "[You cannot restore system database backups to a different build of SQL Server](https://support.microsoft.com/kb/264474)" (Невозможно восстановить системную базу данных из резервной копии на другую сборку SQL Server).  
   
 ## <a name="see-also"></a>См. также:  
 [Резервное копирование и восстановление системных баз данных (SQL Server)](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  

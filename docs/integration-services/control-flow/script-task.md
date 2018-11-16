@@ -19,12 +19,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c484ce29354bc21b1aaa0d5d9b708beb10cc5944
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 872991355d16ccd5dbd237baa4830957483b51ab
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614802"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641968"
 ---
 # <a name="script-task"></a>Задача «Скрипт»
   Задача "Скрипт" представляет код для выполнения функций, недоступных в задачах и преобразованиях, предоставляемых средствами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Задача «Скрипт» также позволяет объединять функции в одном скрипте вместо использования нескольких задач и преобразований. Задачу «Скрипт» следует использовать для выполнения операций над пакетом (или над каждым перечисленным объектом), а не над каждой строкой данных.  
@@ -83,7 +83,7 @@ ms.locfileid: "47614802"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>Программная настройка задачи «Скрипт»  
  Дополнительные сведения о программной установке этих свойств см. в следующем разделе:  
@@ -143,6 +143,6 @@ ms.locfileid: "47614802"
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)на сайте shareourideas.com  
+-   Техническая статья [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)на сайте shareourideas.com  
   
   

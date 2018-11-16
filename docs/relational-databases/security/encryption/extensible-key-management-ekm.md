@@ -16,12 +16,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92e732924f3e5c6d4604ea194330605b2ec86d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531a20353b294d24bee8318da863eec6d05522d9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814052"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675293"
 ---
 # <a name="extensible-key-management-ekm"></a>Расширенное управление ключами (Extensible Key Management)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47814052"
   
  Расширенное управление ключами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет сторонним поставщикам расширенного управления ключами и поставщикам аппаратных модулей безопасности регистрировать свои модули в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. После регистрации пользователи [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут использовать ключи шифрования, хранимые в модулях расширенного управления ключами. Таким образом, в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] доступны расширенные возможности шифрования, поддерживаемые этими модулями, такие как массовое шифрование и расшифровка, а также функции управления ключами, например устаревание или смена ключей.  
   
- При выполнении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на виртуальной машине Azure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может использовать ключи, хранящиеся в [хранилище ключей Azure](http://go.microsoft.com/fwlink/?LinkId=521401). Дополнительные сведения см. в разделе [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+ При выполнении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на виртуальной машине Azure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может использовать ключи, хранящиеся в [хранилище ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521401). Дополнительные сведения см. в разделе [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 ## <a name="ekm-configuration"></a>Конфигурация расширенного управления ключами  
  Расширенное управление ключами поддерживается не во всех выпусках [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  

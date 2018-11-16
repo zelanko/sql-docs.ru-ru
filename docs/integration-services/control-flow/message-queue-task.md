@@ -22,12 +22,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 260512d99817084b6a7cc4af1e39e6557f6fea37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61956bf22dc15c95d986317d3a3cf18e9ca4d58b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720212"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639891"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   Задача "Очередь сообщений" позволяет использовать службу очередей сообщений Майкрософт для отправки и получения сообщений между пакетами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] или для отправления сообщений в очередь приложений, которая обрабатывается пользовательским приложением. Эти сообщения могут принимать форму простого текста, файлов или переменных и их значений.  
@@ -42,7 +42,7 @@ ms.locfileid: "47720212"
   
  При получении или отправке сообщений задача "Очередь сообщений" использует один из следующих типов сообщений: файл данных, строка, строковое сообщение в переменную или переменная. Тип сообщений строковое сообщение в переменную может использоваться только при получении сообщений.  
   
- Задача использует диспетчер соединений MSMQ для подключения к очереди сообщений. Дополнительные сведения см. в статье [Диспетчер соединений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md). Дополнительные сведения о службе очередей сообщений см. в [библиотеке MSDN](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ Задача использует диспетчер соединений MSMQ для подключения к очереди сообщений. Дополнительные сведения см. в статье [Диспетчер соединений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md). Дополнительные сведения о службе очередей сообщений см. в [библиотеке MSDN](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
  Задача «Очередь сообщений» требует установки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Некоторые компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выбранные для установки на странице **Компоненты для установки** и **Выбор компонентов** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , производят установку не всех компонентов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Эти компоненты полезны для определенных задач, но функциональные возможности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] будут ограничены. Например, параметр среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] устанавливает компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , необходимые для разработки пакета, но службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не будут установлены, следовательно, задача «Очередь сообщений» не будет работать. Для обеспечения полной установки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]необходимо выбрать службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на странице **Компоненты для установки** . Дополнительные сведения об установке и запуске задачи "Очередь сообщений" см. в разделе [Установка служб Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47720212"
  Дополнительные сведения о задании этих свойств программными средствами см. в документации по классу **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** в руководстве для разработчиков.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="message-queue-task-editor-general-page"></a>Редактор задачи «Очередь сообщений» (страница «Общие»)
   **Страница «Общие»** диалогового окна **Редактор задачи «Очередь сообщений»** позволяет задавать имя и описывать задачу «Очередь сообщений», определять формат сообщений, а также указывать, будет ли задача отправлять или получать сообщения.  
@@ -229,7 +229,7 @@ ms.locfileid: "47720212"
  **Переменная**  
  Введите имя переменной либо выберите \<**Создать переменную…**> и затем настройте новую переменную.  
   
- **См. также:** [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="filter-dynamic-options"></a>Динамические параметры фильтра  
   
@@ -274,7 +274,7 @@ ms.locfileid: "47720212"
  **Переменная**  
  Введите имя переменной, в которой должно храниться полученное сообщение, либо выберите \<**Создать переменную…**> и затем настройте новую переменную.  
   
- **См. также:** [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="select-variables"></a>Выбор переменных
   Используйте диалоговое окно **Выбор переменных** для указания переменных, которые следует использовать при выполнении операции отправки сообщения в задаче «Очередь сообщений». Список **Доступные переменные** включает системные и пользовательские переменные, находящиеся в области действия задачи "Очередь сообщений" или ее родительского контейнера. Задача использует переменные, перечисленные в списке **Выбранные переменные** .  
@@ -295,7 +295,7 @@ ms.locfileid: "47720212"
  **Создать переменную**  
  Создать новую переменную.  
   
- **См. также:** [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  

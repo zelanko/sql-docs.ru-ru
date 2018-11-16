@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02cd5a093d0af3d325437c77dc07846ee8f6db23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601272"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639182"
 ---
 # <a name="dtexec-utility"></a>Программа dtexec
   Программа командной строки **dtexec** используется для настройки и выполнения пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Служебная программа **dtexec** обеспечивает доступ ко всем функциям настройки и выполнения пакетов, таким как параметры, подключения, свойства, переменные, средства ведения журналов и индикаторы выполнения. Служебная программа **dtexec** позволяет загружать пакеты из следующих источников: сервер [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ISPAC-файл проекта, база данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] и файловая система.  
@@ -172,7 +172,7 @@ dtexec /option [value] [/option [value]]...
   
      Должны быть указаны оба параметра: имя или идентификатор GUID диспетчера соединений в аргументе *id_or_name* и допустимая строка соединения — в аргументе *connection_string*. Дополнительные сведения см. в разделе [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-     Во время выполнения можно использовать параметр **/Connection** для загрузки параметров конфигурации пакета из расположения, отличного от указанного во время разработки. Затем значения этих параметров конфигурации заменяют первоначально указанные значения. При этом параметр **/Connection** можно применять только для параметров конфигурации, использующих диспетчер соединений, например параметров конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о применении конфигурации пакета см. в разделах [Конфигурации пакета](../../integration-services/packages/package-configurations.md) и [Изменения в работе служб Integration Services в SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+     Во время выполнения можно использовать параметр **/Connection** для загрузки параметров конфигурации пакета из расположения, отличного от указанного во время разработки. Затем значения этих параметров конфигурации заменяют первоначально указанные значения. При этом параметр **/Connection** можно применять только для параметров конфигурации, использующих диспетчер соединений, например параметров конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о применении конфигурации пакета см. в разделах [Конфигурации пакета](../../integration-services/packages/package-configurations.md) и [Изменения в работе служб Integration Services в SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]. (необязательный). Показывает в консоли во время выполнения пакета указанные записи журнала. При отсутствии этого параметра записи журнала в консоли не показываются. Если этот параметр указан без задания максимального числа записей, то будут показаны все записи журнала. Для ограничения отображаемых в консоли записей можно указать отображаемые столбцы с помощью параметра *displayoptions* и ограничить типы записей журнала с помощью параметра *list_options* .  
   
@@ -403,7 +403,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     С помощью параметра **/Set** можно изменить расположение, из которого загружаются конфигурации пакетов. Однако параметр **/Set** нельзя использовать для переопределения значения, указанного в конфигурации во время разработки. Сведения о применении конфигурации пакета см. в разделах [Конфигурации пакета](../../integration-services/packages/package-configurations.md) и [Изменения в работе служб Integration Services в SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+     С помощью параметра **/Set** можно изменить расположение, из которого загружаются конфигурации пакетов. Однако параметр **/Set** нельзя использовать для переопределения значения, указанного в конфигурации во время разработки. Сведения о применении конфигурации пакета см. в разделах [Конфигурации пакета](../../integration-services/packages/package-configurations.md) и [Изменения в работе служб Integration Services в SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 -   **/Ser[ver]** *server*(необязательный). Используется при указании параметра **/SQL** или **/DTS** . Этот параметр задает имя сервера, с которого происходит получение пакета. В случае отсутствия параметра **/Server** и указания параметра **/SQL** или **/DTS** производится попытка выполнения пакета на локальном сервере. Значение *server_instance* может быть заключено в кавычки.  
   
@@ -630,6 +630,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-content"></a>См. также  
- См. запись в блоге [Коды завершения, DTEXEC и каталог служб SSIS](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)на сайте www.mattmasson.com.  
+ См. запись в блоге [Коды завершения, DTEXEC и каталог служб SSIS](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)на сайте www.mattmasson.com.  
   
   

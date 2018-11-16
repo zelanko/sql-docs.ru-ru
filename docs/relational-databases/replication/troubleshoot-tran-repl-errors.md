@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0507fd785dfe6eb61993c30c90b116db423548aa
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419459"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675903"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Средство устранения неполадок: поиск ошибок, связанных с репликацией транзакций SQL Server 
 Без понимания того, как работает репликация транзакций, устранение ее ошибок может быть затруднительным. Первым шагом при создании публикации является создание моментального снимка агентом моментальных снимков и его сохранение в папке моментальных снимков. Затем агент распространения применяет моментальный снимок к подписчику. 
@@ -252,7 +252,7 @@ ms.locfileid: "49419459"
     
 1. Чтобы отключить подробное ведение журнала, выполните описанные выше действия, полностью удалив ранее добавленную строку `-Output`. 
 
-Дополнительные сведения см. в статье [Включение подробного ведения журнала для агентов репликации](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
+Дополнительные сведения см. в статье [Включение подробного ведения журнала для агентов репликации](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
 
 
 ## <a name="see-also"></a>См. также раздел

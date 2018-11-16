@@ -5,29 +5,28 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aacf37fc9d3cb7fd4b69b51e3adf115cf53bd6a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc3432906e9d96b10def455aea07d4ef22cfe89d
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779752"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571453"
 ---
 # <a name="sql-trace"></a>Трассировка SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  При трассировке SQL собираются события, классы которых указаны в ее определении. Эти события можно выделить из трассировки или поставить в очередь по своему назначению. В качестве назначения могут выступать файлы и объекты управления (SMO) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , предоставляющие сведения трассировки приложениям, которые управляют сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  При трассировке SQL собираются события, классы которых указаны в ее определении. Эти события можно выделить из трассировки или поставить в очередь по своему назначению. В качестве назначения могут выступать файлы и объекты управления (SMO)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], предоставляющие сведения трассировки приложениям, которые управляют сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте расширенные события.  
   
 ## <a name="benefits-of-sql-trace"></a>Преимущества трассировки SQL  
- Для создания трассировок на экземпляре компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Microsoft [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет системные хранимые процедуры на языке [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Эти системные хранимые процедуры можно использовать для создания трассировок вручную в рамках пользовательских приложений вместо использования приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Это позволяет писать пользовательские приложения, отвечающие конкретным нуждам предприятия.  
+ Для создания трассировок на экземпляре компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Microsoft [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет системные хранимые процедуры на языке [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Эти системные хранимые процедуры можно использовать для создания трассировок вручную в рамках пользовательских приложений вместо использования приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Это позволяет писать пользовательские приложения, отвечающие конкретным нуждам предприятия.  
   
 ## <a name="sql-trace-architecture"></a>Архитектура трассировки SQL  
  Источником событий может быть любой источник, вызывающий события трассировки, в том числе пакеты [!INCLUDE[tsql](../../includes/tsql-md.md)] или события [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например взаимоблокировки. Дополнительные сведения о событиях см. в разделе [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). При возникновении события, класс которого содержится в определении трассировки, сведения о нем регистрируются трассировкой. Если определение трассировки содержит фильтры для класса событий, эти фильтры применяются, и сведения о событиях трассировки передается в очередь. Из очереди сведения о трассировке или записываются в файл, или используются объектами управления (SMO) сервера в таких приложениях, как [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Следующая диаграмма демонстрирует сбор событий трассировкой SQL.  

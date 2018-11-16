@@ -11,18 +11,18 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c312e9b4cf820e247555b668d82834fd804457a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cba1d5551205c1658975943b76612f4e50768c0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620342"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699052"
 ---
 # <a name="sql-server-management-studio---license-terms"></a>Условия лицензионного соглашения на использование SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### <a name="available-languages"></a>Доступные языки:  
-[Китайский (упрощенное письмо)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [китайский (традиционное письмо)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [Английский (США)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [Французский](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
-[Немецкий](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [Итальянский](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [Японский](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [Корейский](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [Португальский (Бразилия)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [Русский](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [Испанский](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
+[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
+[Немецкий](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
   
 ## <a name="microsoft-software-license-terms"></a>УСЛОВИЯ ЛИЦЕНЗИОННОГО СОГЛАШЕНИЯ НА ИСПОЛЬЗОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ КОРПОРАЦИИ МАЙКРОСОФТ  
 **СРЕДА MICROSOFT SQL SERVER MANAGEMENT STUDIO**  
@@ -73,7 +73,7 @@ ms.locfileid: "47620342"
   
 **III.    РАЗМЕЩЕННЫЕ В ИНТЕРНЕТЕ СЛУЖБЫ.** Вместе с программным обеспечением корпорация Майкрософт предоставляет доступ к различным службам Интернета. Корпорация Майкрософт имеет право в любое время изменить или прекратить работу этих служб.  
   
-&nbsp;&nbsp;**а.    Согласие на сбор данных для размещенных в Интернете служб.** Функции программного обеспечения, описанные ниже и в заявлении о конфиденциальности для SQL Server, подключаются к компьютерным системам корпорации Майкрософт или поставщика услуг через Интернет. В некоторых случаях такое подключение происходит без какого-либо уведомления. Вы можете отключить этот компонент или не использовать его. Дополнительные сведения об этом компоненте см. в разделе [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120). **Используя этот компонент, вы выражаете свое согласие на передачу этих сведений**. Корпорация Майкрософт не использует данные сведения для установления вашей личности или связи с вами.  
+&nbsp;&nbsp;**а.    Согласие на сбор данных для размещенных в Интернете служб.** Функции программного обеспечения, описанные ниже и в заявлении о конфиденциальности для SQL Server, подключаются к компьютерным системам корпорации Майкрософт или поставщика услуг через Интернет. В некоторых случаях такое подключение происходит без какого-либо уведомления. Вы можете отключить этот компонент или не использовать его. Дополнительные сведения об этом компоненте см. в разделе [https://go.microsoft.com/fwlink/?LinkID=398120](https://go.microsoft.com/fwlink/?LinkID=398120). **Используя этот компонент, вы выражаете свое согласие на передачу этих сведений**. Корпорация Майкрософт не использует данные сведения для установления вашей личности или связи с вами.  
   
 &nbsp;&nbsp;**i.    Сведения о компьютере.** В следующем компоненте используются протоколы Интернета, по которым в соответствующие системы передаются такие сведения о компьютере, как IP-адрес, тип операционной системы и браузера, название и версия используемого вами программного обеспечения, а также код языка устройства, на котором установлено программное обеспечение. Корпорация Майкрософт использует эту информацию для предоставления вам доступа к службе Интернета.  
   

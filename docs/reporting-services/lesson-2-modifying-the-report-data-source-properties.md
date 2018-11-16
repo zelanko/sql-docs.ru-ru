@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 692ae852147adcf8c51d2ca4c271a20f34baaba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a493772e014445a25b21078ce37ada5585e3226
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847282"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813917"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 На этом занятии учебника по службам [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с помощью веб-портала будет выбран отчет, который необходимо доставить получателям. Управляемая данными подписка, которую вы создадите, будет распространять отчет **Заказ на продажу** , созданный при работе с учебником [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  В последующих шагах будут изменены сведения о соединении с источником данных, используемые в отчете для получения данных. Только отчеты, использующие **сохраненные учетные данные** для доступа к источнику данных для отчета, могут распространяться с помощью управляемой данными подписки. Сохраненные учетные данные нужны для автоматической обработки отчета.  
@@ -25,8 +25,8 @@ ms.locfileid: "47847282"
 1.  Перейдите на веб-портал [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с правами администратора. Например, щелкните значок Internet Explorer правой кнопкой мыши и выберите пункт **Запуск от имени администратора**.  
  
 2.    Перейдите по URL-адресу веб-портала.  Пример:   
-    `http://<server name>/reports`.  
-    `http://localhost/reports`
+    `https://<server name>/reports`.  
+    `https://localhost/reports`
  **Примечание** . URL-адресом веб- *портала* является "Reports", но URL-адресом *сервера* отчетов не является "Reportserver".  
 3.  Перейдите в папку с отчетом **Sales Orders** и в контекстном меню отчета щелкните пункт **Управление**.  
  

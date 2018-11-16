@@ -13,12 +13,12 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a06d6b029a4d64f52d9d939e3935fed32d7b37b
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a115010220a9d98cf861b8e603fee69472f1e305
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120331"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640141"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Задание интервала для информации об изменениях данных
   Первой задачей в потоке управления пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который выполняет добавочную загрузку информации об измененных данных, является вычисление конечных точек интервала изменений. Эти конечные точки имеют значения **datetime** и сохраняются в переменных пакета для дальнейшего использования в пакете.  
@@ -109,7 +109,7 @@ ms.locfileid: "49120331"
  **Следующий раздел:** [Определение готовности информации об изменениях данных](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Задача «Выполнение SQL»](../../integration-services/control-flow/execute-sql-task.md)   
  [Задача «Скрипт»](../../integration-services/control-flow/script-task.md)  

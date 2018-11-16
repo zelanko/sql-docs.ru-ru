@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39775440387b30fcba75248b50b1ae63b84459b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 972e420f75db790321bc8c8eee595f1932e4f451
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639062"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662430"
 ---
 # <a name="extended-events"></a>Расширенные события
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47639062"
 Дополнительные сведения о расширенных событиях см. в следующих источниках:
 
 - [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
-- Блоги. [Расширенные события SQL Server](http://blogs.msdn.com/b/extended_events/)
+- Блоги. [Расширенные события SQL Server](https://blogs.msdn.com/b/extended_events/)
 
   
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Преимущества системы расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
@@ -44,7 +44,7 @@ ms.locfileid: "47639062"
 |Раздел|Описание|  
 |-----------|-----------------|  
 |[Пакеты обработки расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Описывает пакеты расширенных событий, содержащих объекты, которые используются для получения и обработки данных при работе сеанса расширенных событий.|  
-|[Цели расширенных событий SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Описывает объекты-получатели событий, получающие данные во время сеанса событий.|  
+|[Цели расширенных событий SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Описывает объекты-получатели событий, получающие данные во время сеанса событий.|  
 |[Подсистема расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|Описывает подсистему, которая реализует сеанс расширенных событий, а также управляет им.|  
 |[Сеансы расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|Описывает сеанс расширенных событий.|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47639062"
   
 -   Подсистема расширенных событий не зависит от событий. Подсистема может привязать любое событие к любой цели, так как не ограничена содержимым события. Дополнительные сведения о подсистеме расширенных событий см. в разделе [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
   
--   События отделены от объектов-получателей событий, называемых в расширенных событиях *целями* . Это означает, что любая цель может получать любые события. Кроме того, любое возникающее событие может автоматически потребляться целью, которая регистрирует его и предоставляет дополнительный контекст событий. Дополнительные сведения см. в разделе [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+-   События отделены от объектов-получателей событий, называемых в расширенных событиях *целями* . Это означает, что любая цель может получать любые события. Кроме того, любое возникающее событие может автоматически потребляться целью, которая регистрирует его и предоставляет дополнительный контекст событий. Дополнительные сведения см. в разделе [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
 -   События отделены от действий, предпринимаемых при возникновении события. Следовательно, любое действие можно связать с любым событием.  
   
@@ -90,15 +90,15 @@ ms.locfileid: "47639062"
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |**Обозреватель объектов** позволяет управлять сеансами события.|[Управление сеансами событий в обозревателе объектов](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)|  
-|Описано, как создать сеанс расширенных событий.|[Создание сеанса расширенных событий](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)|  
+|Описано, как создать сеанс расширенных событий.|[Создание сеанса расширенных событий](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)|  
 |Описывает, как просматривать и обновлять целевые данные.| [Расширенный просмотр целевых данных из расширенных событий в SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)|  
 |Описывает использование средств расширенной подсистемы событий для создания сеансов и управления сеансами расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Средства расширенных событий](../../relational-databases/extended-events/extended-events-tools.md)|  
 |Описано, как изменить сеанс расширенных событий.|[Изменение сеанса расширенных событий](../../relational-databases/extended-events/alter-an-extended-events-session.md)|  
-|Описывает, как получить информацию о полях, связанных с событиями.|[Получение полей для всех событий](http://msdn.microsoft.com/library/4e4ee03f-5bca-42ed-a37c-db1c82e3aad2)|  
-|Описывает, как узнать, какие события доступны в зарегистрированных пакетах.|[Просмотр событий для зарегистрированных пакетов](http://msdn.microsoft.com/library/9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f)|  
-|Описывает, как определить, какие цели расширенных событий доступны в зарегистрированных пакетах.|[Просмотр целей расширенных событий для зарегистрированных пакетов](http://msdn.microsoft.com/library/4985aa5f-ac99-49f6-852c-9d25916549e9)|  
+|Описывает, как получить информацию о полях, связанных с событиями.|[Получение полей для всех событий](https://msdn.microsoft.com/library/4e4ee03f-5bca-42ed-a37c-db1c82e3aad2)|  
+|Описывает, как узнать, какие события доступны в зарегистрированных пакетах.|[Просмотр событий для зарегистрированных пакетов](https://msdn.microsoft.com/library/9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f)|  
+|Описывает, как определить, какие цели расширенных событий доступны в зарегистрированных пакетах.|[Просмотр целей расширенных событий для зарегистрированных пакетов](https://msdn.microsoft.com/library/4985aa5f-ac99-49f6-852c-9d25916549e9)|  
 |Описывает, как с помощью приведенной ниже процедуры можно просматривать события и действия расширенных событий, аналогичных каждому событию трассировки SQL со связанными столбцами.|[Просмотр эквивалентов расширенных событий для классов событий трассировки SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
-|Описывает, как выяснить, какие параметры можно задать при использовании аргумента ADD TARGET в инструкции CREATE EVENT SESSION или ALTER EVENT SESSION.|[Получение настраиваемых параметров для аргумента ADD TARGET](http://msdn.microsoft.com/library/08454543-c5c8-4ca3-9af9-f1d82264471c)|  
+|Описывает, как выяснить, какие параметры можно задать при использовании аргумента ADD TARGET в инструкции CREATE EVENT SESSION или ALTER EVENT SESSION.|[Получение настраиваемых параметров для аргумента ADD TARGET](https://msdn.microsoft.com/library/08454543-c5c8-4ca3-9af9-f1d82264471c)|  
 |Описано, как преобразовать существующий скрипт приложения трассировки SQL в сеанс расширенных событий.|[Преобразование существующего скрипта трассировки SQL в сеанс расширенных событий](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |Описывает, как определить, какие запросы удерживают данную блокировку и каковы план запроса и стек [!INCLUDE[tsql](../../includes/tsql-md.md)] во время получения блокировки.|[Определение запросов, содержащих блокировки](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |Описывает, как определить источник блокировок, приводящих к ухудшению производительности базы данных.|[найти объекты, на которые наложено наибольшее число блокировок](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  

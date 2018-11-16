@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b167ab02b982688442ef0a580fab344d112f9e75
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8903afa017c51439e023dd40b33abadba5282885
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031013"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657843"
 ---
 # <a name="best-practice-with-the-query-store"></a>Рекомендации по хранилищу запросов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -328,7 +328,7 @@ WHERE is_forced_plan = 1;
 Флаг трассировки 7752 обеспечивает асинхронную загрузку хранилища запросов, а также разрешает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнять запросы до полной загрузки хранилища запросов. Поведение хранилища запросов по умолчанию препятствует запуску запросов до восстановления хранилища запросов.
 
 > [!IMPORTANT]
-> Если вы используете хранилище запросов для JIT-анализа рабочих нагрузок в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], запланируйте установку исправлений масштабируемости производительности (см. [статью базы знаний 4340759](http://support.microsoft.com/help/4340759)) как можно скорее. 
+> Если вы используете хранилище запросов для JIT-анализа рабочих нагрузок в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], запланируйте установку исправлений масштабируемости производительности (см. [статью базы знаний 4340759](https://support.microsoft.com/help/4340759)) как можно скорее. 
 
 ## <a name="see-also"></a>См. также:  
  [Query Store Catalog Views (Transact-SQL) ](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  (Представления каталогов хранилища запросов (Transact-SQL))  

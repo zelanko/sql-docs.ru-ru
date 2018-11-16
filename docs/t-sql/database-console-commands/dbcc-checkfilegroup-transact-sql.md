@@ -26,12 +26,12 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 4ccb7299cd8bc1fc0d764499f783deb88dfdf005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f40aa64f4406c8847870f26cf25d3a059bcbc6e4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716842"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698222"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ DBCC CHECKFILEGROUP
 >  Указание аргумента PHYSICAL_ONLY приводит к пропуску инструкцией DBCC CHECKFILEGROUP всех проверок данных FILESTREAM.  
   
  MAXDOP  
- **Применимо к**: с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 с пакетом обновления 2 (SP2) до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **Применимо к**: с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 с пакетом обновления 2 (SP2) до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  Переопределяет параметр конфигурации, задающий **максимальный уровень параллелизма**, в **sp_configure** для инструкции. Значение MAXDOP может превышать значение, настроенное с помощью sp_configure. Если MAXDOP превышает значение, настроенное с помощью Resource Governor, ядро СУБД использует значение MAXDOP из Resource Governor, как описано в статье "ALTER WORKLOAD GROUP (Transact-SQL)". Все семантические правила, используемые параметром конфигурации max degree of parallelism, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   

@@ -12,12 +12,12 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eda7f99f93bf7837ec253c52588707d86bd0785c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f2d95ea5ad60dda2b9d4e902aae80b0d2c06b9e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753760"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696419"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Включение Stretch Database для базы данных
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47753760"
   
 -   Изучите раздел [Ограничения для Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
   
--   Stretch Database перемещает данные в Azure. Таким образом, необходимо иметь учетную запись Azure и подписку для выставления счетов. Для получения учетной записи Azure [нажмите здесь](http://azure.microsoft.com/en-us/pricing/free-trial/).  
+-   Stretch Database перемещает данные в Azure. Таким образом, необходимо иметь учетную запись Azure и подписку для выставления счетов. Для получения учетной записи Azure [нажмите здесь](https://azure.microsoft.com/pricing/free-trial/).  
   
 -   Убедитесь в наличии информации о подключении и данных входа, необходимых для создания нового сервера Azure или выбора существующего сервера Azure.  
   
@@ -147,6 +147,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Определение баз данных и таблиц для Stretch Database с использованием помощника Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
- [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
+ [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   

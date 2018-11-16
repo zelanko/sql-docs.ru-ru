@@ -23,12 +23,12 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cb3e092e9ea185be0de966c73a5005072b8a70c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c08e1b617755d50b49de7c9286e6f5a512039527
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612214"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641841"
 ---
 # <a name="error-handling-in-data"></a>Обработка ошибок в данных
   Если компонент потока данных применяет преобразование к данным столбца, выделяет данные из источников или загружает данные в назначения, то может возникнуть ошибка. Ошибки часто возникают из-за непредвиденных значений данных. Например, преобразование данных не выполняется, так как столбец вместо числа содержит строку; вставка в столбец базы данных не выполняется, потому что данные имеют тип даты, а столбец содержит числовые данные; наконец, результат выражения не может быть определен, так как значение столбца равно нулю, поэтому математическая операция недопустима.  
@@ -148,7 +148,7 @@ ms.locfileid: "47612214"
 ## <a name="see-also"></a>См. также:  
  [Поток данных](../../integration-services/data-flow/data-flow.md)   
  [Преобразование данных с помощью преобразований](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
- [Соединение компонентов с путями](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Соединение компонентов с путями](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [Задача потока данных](../../integration-services/control-flow/data-flow-task.md)   
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
   

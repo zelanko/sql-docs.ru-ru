@@ -11,15 +11,15 @@ ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c754ce006834a44413d64821ea79349da2e62d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 606b835328f704adcaa282d0a2c4d3984c9ddec0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699922"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655787"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>Общие сведения о расширяемости для правил анализа кода базы данных
-Выпуски Visual Studio, содержащие SQL Server Data Tools, включают правила анализа кода, возвращающие предупреждения о проектировании, именовании и производительности Transact\-SQL в отношении кода базы данных. Дополнительные сведения см. в статье [Analyzing Database Code to Improve Code Quality](http://msdn.microsoft.com/library/dd172133(v=vs.100).aspx) (Анализ кода базы данных для улучшения качества кода).  
+Выпуски Visual Studio, содержащие SQL Server Data Tools, включают правила анализа кода, возвращающие предупреждения о проектировании, именовании и производительности Transact\-SQL в отношении кода базы данных. Дополнительные сведения см. в статье [Analyzing Database Code to Improve Code Quality](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx) (Анализ кода базы данных для улучшения качества кода).  
   
 Если встроенные правила анализа кода не охватывают конкретную проблему Transact\-SQL, которую вы хотите учесть, можно создать настраиваемые правила анализа кода базы данных. Например, вы можете создать настраиваемое правило, позволяющее избежать оператора WAITFORDELAY, как показано в [пошаговом руководстве по созданию сборки настраиваемого правила анализа статического кода для SQL Server](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md). Для создания настраиваемых правил анализа кода базы данных используются классы в пространстве имен [CodeAnalysis](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.aspx).  
   
@@ -30,7 +30,7 @@ ms.locfileid: "47699922"
   
 ![Компоненты правил для анализа кода базы данных](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "Database Code Analysis Rules Components")  
   
-Когда вы используете компонент правил анализа кода базы данных, выполняя анализ статического кода напрямую (дополнительные сведения см. в статье [Практическое руководство. Анализ кода Transact-SQL для поиска дефектов](http://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)), или выполняя сборку, правила загружаются и используются в соответствии с их настройкой в вашем проекте. Дополнительные сведения см. в статье [How to: Enable and Disable Specific Rules for Static Analysis of Database Code](http://msdn.microsoft.com/library/dd172131(v=vs.100).aspx) (Практическое руководство. Включение и отключение определенных правил для статического анализа кода базы данных). Диспетчер расширений также будет загружать все сборки настраиваемых правил, которые вы создали и зарегистрировали. Дополнительные сведения см. в статье [Практическое руководство. Установка расширений компонентов и управление ими](../ssdt/how-to-install-and-manage-feature-extensions.md).  
+Когда вы используете компонент правил анализа кода базы данных, выполняя анализ статического кода напрямую (дополнительные сведения см. в статье [Практическое руководство. Анализ кода Transact-SQL для поиска дефектов](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)), или выполняя сборку, правила загружаются и используются в соответствии с их настройкой в вашем проекте. Дополнительные сведения см. в статье [How to: Enable and Disable Specific Rules for Static Analysis of Database Code](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx) (Практическое руководство. Включение и отключение определенных правил для статического анализа кода базы данных). Диспетчер расширений также будет загружать все сборки настраиваемых правил, которые вы создали и зарегистрировали. Дополнительные сведения см. в статье [Практическое руководство. Установка расширений компонентов и управление ими](../ssdt/how-to-install-and-manage-feature-extensions.md).  
   
 Класс для настраиваемого правила анализа кода наследуется от [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx). Класс настраиваемых правил может обращаться к ряду полезных объектов через свой контекст выполнения правил. К ним относятся следующие объекты.  
   

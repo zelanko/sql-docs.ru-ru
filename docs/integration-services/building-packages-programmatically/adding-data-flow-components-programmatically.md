@@ -18,12 +18,12 @@ ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 852f6e8580b59df5203ce7115c080254b78a7156
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee94fa73cbc7c148574c15ae136e9efaeea1e740
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734662"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639531"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Добавление компонентов потока данных программным образом
   Построение потока данных начинается с добавления компонентов. Затем необходимо настроить эти компоненты и соединить их друг с другом, чтобы образовался поток данных времени выполнения. В этом разделе описывается добавление компонента в задачу потока данных, создание экземпляра компонента времени разработки и последующая настройка компонента. Дополнительные сведения о соединении компонентов см. в статье [Программное соединение компонентов потока данных](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
@@ -281,7 +281,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Запись в блоге [EzAPI — обновление для SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) на сайте blogs.msdn.com.  
+ Запись в блоге [EzAPI — обновление для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) на сайте blogs.msdn.com.  
 
 ## <a name="see-also"></a>См. также:  
  [Программное соединение компонентов потока данных](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  

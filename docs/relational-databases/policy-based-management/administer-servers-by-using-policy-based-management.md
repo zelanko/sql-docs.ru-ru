@@ -5,8 +5,7 @@ ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - facet See facets
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - facets [Policy-Based Management], about facets
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0d19ad0bba4792ab4fc088957570e532fec0c61e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f984cd0e2c01e9a4913387b8266ddc40202e0b13
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601889"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671093"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Администрирование серверов с помощью управления на основе политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47601889"
   
  Для политик, выполненных с ошибкой, обозреватель объектов формирует предупреждение о критическом состоянии в виде красного значка рядом с целью и узлами, расположенными выше в дереве обозревателя объектов.  
   
-> **ПРИМЕЧАНИЕ.** Когда система вычисляет набор объектов для политики, системные объекты исключаются из него по умолчанию.  Например, если набор объектов для политики относится ко всем таблицам, политика будет неприменима к системным таблицам. Если пользователям требуется оценить политику, используя системные объекты, их можно явно добавить в набор объектов. Однако несмотря на то, что все политики поддерживаются режимом оценки **проверка по расписанию** , в режиме **проверка при внесении изменений** по соображениям производительности поддерживаются не все политики с обязательными наборами объектов. Дополнительные сведения см. в разделе [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+> **ПРИМЕЧАНИЕ.** Когда система вычисляет набор объектов для политики, системные объекты исключаются из него по умолчанию.  Например, если набор объектов для политики относится ко всем таблицам, политика будет неприменима к системным таблицам. Если пользователям требуется оценить политику, используя системные объекты, их можно явно добавить в набор объектов. Однако несмотря на то, что все политики поддерживаются режимом оценки **проверка по расписанию** , в режиме **проверка при внесении изменений** по соображениям производительности поддерживаются не все политики с обязательными наборами объектов. Дополнительные сведения см. в разделе [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="three-policy-based-management-components"></a>Три компонента управления на основе политик  
  Управление на основе политик включает три следующих компонента.  

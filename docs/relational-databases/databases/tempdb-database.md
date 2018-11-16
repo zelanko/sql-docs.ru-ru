@@ -5,8 +5,7 @@ ms.custom: P360
 ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -19,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7553be68390c90b2cab8ac55c66bb9ffa47ad88
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3041f983b1d5aec55ac3727c322558ed22e69315
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031271"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658633"
 ---
 # <a name="tempdb-database"></a>База данных tempdb
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "51031271"
  \* Количество файлов зависит от числа (логических) процессоров на компьютере. Как правило, если число логических процессоров меньше или равно восьми, используйте равное ему число файлов данных. Если число логических процессоров больше восьми, используйте восемь файлов данных, а затем, если состязание сохраняется, увеличивайте число файлов данных на значение, кратное 4, пока состязание не уменьшится до приемлемого уровня, или внесите изменения в рабочую нагрузку или код.
 
 > [!NOTE]
-> Количество файлов данных по умолчанию основано на общих рекомендациях, приведенных в статье [KB 2154845](http://support.microsoft.com/kb/2154845/).  
+> Количество файлов данных по умолчанию основано на общих рекомендациях, приведенных в статье [KB 2154845](https://support.microsoft.com/kb/2154845/).  
   
 ### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>Перемещение данных и файлов журналов базы данных tempdb в SQL Server  
  Сведения о перемещении файлов данных и журналов базы данных **tempdb** см. в разделе [Перемещение системных баз данных](../../relational-databases/databases/move-system-databases.md).  
@@ -278,4 +277,4 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Работа с базой данных tempdb в SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
- [Устранение неполадок, связанных с нехваткой места на диске для базы данных tempdb](http://msdn.microsoft.com/library/ms176029.aspx) 
+ [Устранение неполадок, связанных с нехваткой места на диске для базы данных tempdb](https://msdn.microsoft.com/library/ms176029.aspx) 

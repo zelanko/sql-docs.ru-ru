@@ -10,12 +10,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be6ca2af39fecd2ad56f894b18f820137b2e6769
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 1302c9dac8533496582415dd4326a0c1c6f7de23
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051086"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813337"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Где найти надстройку службы Reporting Services для продуктов SharePoint
 
@@ -51,7 +51,7 @@ ms.locfileid: "50051086"
   
  Дополнительные сведения о загрузке и установке надстройки см. в центре загрузки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
--   **Надстройка пакета обновления 1 (SP1).** [Надстройка служб Microsoft® SQL Server® 2012 Reporting Services с пакетом обновления 1 (SP1) для Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
+-   **Надстройка пакета обновления 1 (SP1).** [Надстройка служб Microsoft® SQL Server® 2012 Reporting Services с пакетом обновления 1 (SP1) для Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583).  
   
 -   **Пакет обновления 1 (SP1).** [Microsoft® SQL Server® 2012 с пакетом обновления 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906).  
 
@@ -62,6 +62,6 @@ ms.locfileid: "50051086"
 ## <a name="next-steps"></a>Следующие шаги
 
 [Установка и удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[После удаления надстройки служб Reporting Services в зоне, отличной от зоны по умолчанию, страницы SharePoint будут недоступны для просмотра](http://support.microsoft.com/kb/2009212)  
+[После удаления надстройки служб Reporting Services в зоне, отличной от зоны по умолчанию, страницы SharePoint будут недоступны для просмотра](https://support.microsoft.com/kb/2009212)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

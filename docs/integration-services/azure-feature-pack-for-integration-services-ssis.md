@@ -14,12 +14,12 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cb19d30afa0f1f1a8f5c9a7db6aaa060d7c92f5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4e5bf1999ef81b20d5ae318523891c9ef92326f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686242"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642161"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)
 Пакет дополнительных компонентов Azure для служб SQL Server Integration Services (SSIS) — это дополнение, которое предоставляет перечисленные на этой странице компоненты для подключения служб SSIS к Azure, передачи данных между Azure и локальными источниками данных и обработки данных, хранящихся в Azure.
@@ -78,7 +78,7 @@ ms.locfileid: "47686242"
     
     -   [Цель Azure Data Lake Store](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Перечислитель файлов больших двоичных объектов и Azure Data Lake Store. См. раздел [Контейнер "цикл по каждому элементу"](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296).
+-   Перечислитель файлов больших двоичных объектов и Azure Data Lake Store. См. раздел [Контейнер "цикл по каждому элементу"](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296).
 
 ## <a name="scenario-processing-big-data"></a>Сценарий: обработка больших данных
  Используйте соединитель Azure для выполнения следующих задач по обработке больших данных:

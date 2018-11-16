@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aae75f2f665536336fcf745a86675846249b4ab8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018411"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668033"
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,8 @@ ms.locfileid: "51018411"
 В спецификации "Simple Features for SQL" консорциума OGC обсуждаются внешние и внутренние кольца, но их различие не имеет особого значения для типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** . Любое кольцо многоугольника можно считать внешним кольцом.  
 
 Дополнительные сведения о спецификациях OGC см. в одном из следующих источников:  
--   [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](http://go.microsoft.com/fwlink/?LinkId=93627)  
--   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](https://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Сегменты дуги  
 Три типа, допускающих создание экземпляров, могут принимать сегменты дуги: **CircularString**, **CompoundCurve**и **CurvePolygon**.  Сегмент дуги определяется тремя точками на двумерной плоскости, при этом третья точка не может совпадать с первой.  
@@ -173,7 +173,7 @@ SELECT @g.ToString(), @g.STLength();
 ## <a name="see-also"></a>См. также:  
 - [Пространственные данные (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [Справочник по методам типа данных geometry](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [Справочник по методам типа данных geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+- [Справочник по методам типа данных geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves (тип данных geometry)](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves (тип данных geography)](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText (тип данных geometry)](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   

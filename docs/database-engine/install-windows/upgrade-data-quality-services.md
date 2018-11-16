@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ecedd313044770cd3e8af42c915dc208fa5097cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09651f097f0ae07b41c1c38866b862f73c529486
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629058"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601935"
 ---
 # <a name="upgrade-data-quality-services"></a>Обновление служб Data Quality Services
 
@@ -27,7 +27,7 @@ ms.locfileid: "47629058"
 > [!IMPORTANT]  
 >  -   Необходимо создать резервную копию баз данных DQS, прежде чем обновлять DQS, чтобы предотвратить любую случайную потерю данных при обновлении схемы. Дополнительные сведения о создании резервной копии баз данных DQS см. в разделе [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   Для выполнения задач по обеспечению качества данных вы можете подключиться к серверу DQS [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], используя текущую или более раннюю версию клиента DQS или [преобразование "Очистка DQS"](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) в службах Integration Services.  
-> -   После обновления служб Data Quality Services и Master Data Services более ранние версии надстройки служб Master Data Services для Excel больше не будут работать. Можно скачать надстройку служб Master Data Services для Excel версии [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] по [этой ссылке](http://go.microsoft.com/fwlink/?LinkID=506665).  
+> -   После обновления служб Data Quality Services и Master Data Services более ранние версии надстройки служб Master Data Services для Excel больше не будут работать. Можно скачать надстройку служб Master Data Services для Excel версии [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] по [этой ссылке](https://go.microsoft.com/fwlink/?LinkID=506665).  
   
 ##  <a name="Prerequisites"></a> Предварительные требования  
   

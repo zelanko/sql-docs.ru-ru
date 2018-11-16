@@ -22,12 +22,12 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e61e945523163766a323ec7edb2b40540cb69b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cad1677bccbb6db5516c1c93c79ad493ca8a27e0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853881"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699932"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Требует разрешения CREATE AGGREGATE и разрешения REFERENCES для сборки, указанной в предложении EXTERNAL NAME.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере предполагается, что образец приложения StringUtilities.csproj скомпилирован. Дополнительные сведения см. в разделе [Пример функций программы работы со строками](http://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
+ В следующем примере предполагается, что образец приложения StringUtilities.csproj скомпилирован. Дополнительные сведения см. в разделе [Пример функций программы работы со строками](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
   
  Пример создает статистическое выражение `Concatenate`. Перед созданием статистического выражения в локальной базе данных регистрируется сборка `StringUtilities.dll`.  
   

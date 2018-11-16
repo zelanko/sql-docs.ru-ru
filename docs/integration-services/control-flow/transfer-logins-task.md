@@ -17,12 +17,12 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbbe5f928134a6a759129f3c1639c3dd1984b726
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cea93d9a41b2cd7cbac8f35588ae9c071fbcf0e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625008"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642181"
 ---
 # <a name="transfer-logins-task"></a>Задача «Передача имен входа»
   Задача «Передача имен входа» служит для передачи одного или нескольких имен входа между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "47625008"
  Задача «Передача имен входа» не сообщает о ходе выполнения передачи имен; она сообщает лишь о выполнении 0% и 100%.  
   
 ## <a name="execution-value"></a>Значение выполнения  
- Значение выполнения, определяемое свойством **ExecutionValue** задачи, возвращает число переданных имен входа. Назначив пользовательскую переменную в качестве свойства **ExecValueVariable** задачи "Передача имен входа", можно сделать сведения о передаче имен входа доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Значение выполнения, определяемое свойством **ExecutionValue** задачи, возвращает число переданных имен входа. Назначив пользовательскую переменную в качестве свойства **ExecValueVariable** задачи "Передача имен входа", можно сделать сведения о передаче имен входа доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md) и [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача имен входа» позволяет настраивать запись в журнал следующих событий:  
@@ -75,7 +75,7 @@ ms.locfileid: "47625008"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-transfer-logins-task"></a>Программная настройка задачи «Передача имен входа»  
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе.  

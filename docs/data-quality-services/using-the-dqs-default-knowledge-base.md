@@ -12,12 +12,12 @@ ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf9ada2b925846426df4bbe0b0f630bf1cb9c110
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53b1636c4871e31eac5fe1376d10f84c892b1477
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803203"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695679"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>Использование базы знаний DQS по умолчанию
 
@@ -50,7 +50,7 @@ ms.locfileid: "47803203"
   
 -   Создать новую базу знаний с помощью базы знаний по умолчанию. Сведения о создании базы знаний на основе существующей базы знаний см. в разделе [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md).  
   
--   Использовать базу знаний по умолчанию можно в [компоненте DQS Cleansing  в службах Integration Services](http://go.microsoft.com/fwlink/?LinkId=238830) , а также в [надстройке Master Data Services для Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
+-   Использовать базу знаний по умолчанию можно в [компоненте DQS Cleansing  в службах Integration Services](https://go.microsoft.com/fwlink/?LinkId=238830) , а также в [надстройке Master Data Services для Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Базы знаний и домены DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  

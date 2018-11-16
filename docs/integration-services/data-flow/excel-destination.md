@@ -19,12 +19,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f0818056ed0d8390021189d59fda95a3b7daf27f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 319f9b06605ab95dca6885fc08bbab6b7d5bf9c9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852532"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638461"
 ---
 # <a name="excel-destination"></a>Назначение Excel
   Назначение «Excel» загружает данные в листы или диапазоны в книгах [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -50,7 +50,7 @@ ms.locfileid: "47852532"
   
  Диалоговое окно **Расширенный редактор** содержит все свойства, которые могут устанавливаться программными средствами. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "47852532"
 |Параметр|Описание|  
 |------------|-----------------|  
 |Таблица или представление|Загружает данные в лист или именованный диапазон источника данных Excel.|  
-|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **См. также**: [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **См. также**: [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Команда SQL|Загрузка данных в назначение «Excel» с помощью SQL-запроса.|  
   
  **Имя листа Excel**  

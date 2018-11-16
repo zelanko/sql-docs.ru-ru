@@ -12,18 +12,18 @@ ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb9a34227743550726e93cbd6085088c08cb22d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bcfba99d057c616f279423721cce50bad26638ad
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787481"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695552"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) — это продукт, предназначенный для повышения качества данных на основе знаний. DQS позволяет построить базу знаний и использовать ее для выполнения разнообразных важных задач по обеспечению качества данных, включая исправление, дополнение, стандартизацию и устранение дубликатов данных. DQS позволяет выполнять очистку данных с использованием служб эталонных данных, расположенных в облаке и предоставляемых поставщиками эталонных данных. DQS также предоставляет функции профилирования, встроенные в задачи по обеспечению качества данных, что позволяет анализировать целостность данных.  
+[!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) — это продукт, обеспечивающий качество данных на основе знаний. DQS позволяет построить базу знаний и использовать ее для выполнения разнообразных важных задач по обеспечению качества данных, включая исправление, дополнение, стандартизацию и устранение дубликатов данных. DQS позволяет выполнять очистку данных с использованием служб эталонных данных, расположенных в облаке и предоставляемых поставщиками эталонных данных. DQS также предоставляет функции профилирования, встроенные в задачи по обеспечению качества данных, что позволяет анализировать целостность данных.  
   
  DQS состоит из [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] и [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], которые устанавливаются в составе [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] — это компонент экземпляра SQL Server, состоящий из трех каталогов SQL Server с функциями обеспечения качества данных и хранения. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] — это общий компонент SQL Server, который используется бизнес-пользователями, информационными работниками и ИТ-специалистами для выполнения автоматизированного анализа качества данных и интерактивного управления качеством данных. Также вы можете выполнять процессы обеспечения качества данных с помощью функций, доступных в [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] и службах Master Data Services (MDS), которые основаны на DQS.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47787481"
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о службах Data Quality Services](../data-quality-services/introduction-to-data-quality-services.md)   
  [Основные понятия служб Data Quality Services](../data-quality-services/data-quality-services-concepts.md)   
- [Ресурсы DQS](http://technet.microsoft.com/sqlserver/hh780961)   
- [Центр ресурсов SQL Server](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [Ресурсы DQS](https://technet.microsoft.com/sqlserver/hh780961)   
+ [Центр ресурсов SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

@@ -11,17 +11,17 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7760f09bd6e48732a411f1b58cbc0c8b310bd0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fbb7e2458432bb39ff452b703441fc320d2e645
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767382"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639581"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Соединитель Microsoft Connector для SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector для SAP BW состоит из трех компонентов, позволяющих извлекать данные из системы SAP Netweaver BW версии 7 и загружать их в нее.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector для SAP BW для SQL Server 2016 входит в пакет дополнительных компонентов SQL Server 2016. Чтобы установить Connector для SAP BW и сопутствующую документацию, скачайте и запустите установщик [с веб-страницы пакета дополнительных компонентов SQL Server 2016](http://go.microsoft.com/fwlink/?LinkId=746297).  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector для SAP BW для SQL Server 2016 входит в пакет дополнительных компонентов SQL Server 2016. Чтобы установить Connector для SAP BW и сопутствующую документацию, скачайте и запустите установщик [с веб-страницы пакета дополнительных компонентов SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=746297).  
 
 > [!IMPORTANT]
 > Корпорация Майкрософт не планирует предоставлять обновленные версии соединителя для SAP BW. Майкрософт не владеет исходным кодом компонентов SAP BW сторонних разработчиков и не может их обновлять. Вы можете приобрести новейшие компоненты подключения SAP у независимого поставщика программного обеспечения, который является партнером Майкрософт, например у [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html). Независимые поставщики программного обеспечения, являющиеся партнерами Майкрософт, адаптировали свои компоненты подключений SAP под SSIS для установки в Azure.
@@ -41,7 +41,7 @@ ms.locfileid: "47767382"
   
 -   **Диспетчер соединений SAP BW**подключается к SAP BW Source или SAP BW Destination в системе SAP Netweaver BW версии 7.  
   
- Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW см. в техническом документе [Использование службы SQL Server Integration Services с SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkId=301897). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
+ Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW см. в техническом документе [Использование службы SQL Server Integration Services с SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
   
 ## <a name="documentation"></a>Документация  
  Файл справки по [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector для SAP BW содержит следующие разделы и подразделы:  

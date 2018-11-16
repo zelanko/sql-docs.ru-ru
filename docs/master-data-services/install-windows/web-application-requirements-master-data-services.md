@@ -14,12 +14,12 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c9d5a6651613fe99707e26cdae5fc3410359911d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51cd8e352d5400c012fe8dcfe7e6c4c7f6e4ef9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851078"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696115"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Требования веб-приложений (службы Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "47851078"
 -   [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
- Для работы в веб-приложении [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] на клиентском компьютере необходимо установить Silverlight 5. Если требуемая версия Silverlight отсутствует, то при переходе к той части веб-приложения, которая использует Silverlight, программа предложит установить Silverlight. Вы можете установить Silverlight 5 [с этой веб-страницы](http://go.microsoft.com/fwlink/?LinkId=243096).  
+ Для работы в веб-приложении [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] на клиентском компьютере необходимо установить Silverlight 5. Если требуемая версия Silverlight отсутствует, то при переходе к той части веб-приложения, которая использует Silverlight, программа предложит установить Silverlight. Вы можете установить Silverlight 5 [с этой веб-страницы](https://go.microsoft.com/fwlink/?LinkId=243096).  
   
 ### <a name="role-and-role-services"></a>Роль и службы ролей  
  В Windows Server 2012 или Windows Server 2012 R2 можно использовать **Диспетчер сервера**, доступный в консоли управления (MMC), для установки роли **Веб-сервер (IIS)** и следующих необходимых служб ролей.  

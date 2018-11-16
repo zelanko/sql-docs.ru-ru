@@ -5,20 +5,19 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d3a1899234656f03572d4e5c0d4c54722e8d93d
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 30cce2024ded94131cb8c2067b65ba7d4f980663
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971065"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671973"
 ---
 # <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Руководство по использованию реляционных баз данных Microsoft SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "50971065"
 - [Документация по SQL Server на платформе Linux](../linux/sql-server-linux-overview.md)  
 - [База данных SQL Azure](https://docs.microsoft.com/azure/sql-database/)  
 - [Хранилище данных SQL Azure](https://docs.microsoft.com/azure/sql-data-warehouse/)  
-- [Параллельное хранилище данных](https://www.microsoft.com/en-us/download/details.aspx?id=51610)  
+- [Параллельное хранилище данных](https://www.microsoft.com/download/details.aspx?id=51610)  
 
   
   

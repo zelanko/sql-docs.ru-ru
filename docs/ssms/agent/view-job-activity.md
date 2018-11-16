@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7010649fa7a2c8efbe1f8093fd081897b420e1a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1ce3fe6aec1612eff8d9560801119894de15e16
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608901"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702984"
 ---
 # <a name="view-job-activity"></a>Просмотр активности заданий
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47608901"
   
 #### <a name="to-view-job-activity"></a>Просмотр активности заданий  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -86,5 +86,5 @@ ms.locfileid: "47608901"
     GO  
     ```  
   
-Дополнительные сведения см. в разделе [sp_help_jobactivity (Transact-SQL)](http://msdn.microsoft.com/d344864f-b4d3-46b1-8933-b81dec71f511).  
+Дополнительные сведения см. в разделе [sp_help_jobactivity (Transact-SQL)](https://msdn.microsoft.com/d344864f-b4d3-46b1-8933-b81dec71f511).  
   
