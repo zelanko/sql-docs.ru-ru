@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 36c2ce9cd3faabee34f4c68285ec94b8d8ad11ab
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419079"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659227"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Новые возможности SQL Server в Linux
 
@@ -26,7 +26,7 @@ ms.locfileid: "49419079"
 Предварительная версия SQL Server 2019 была отпущена. В этой статье рассматриваются предварительные выпуски SQL Server 2019. Дополнительные сведения о предварительной версии SQL Server 2019, см. в разделе [новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
 
 > [!NOTE]
-> Помимо этих возможностей в этой статье накопительные обновления выпускаются с регулярными интервалами после выпуска общедоступной версии. Эти накопительные обновления содержат много усовершенствований и исправлений. Сведения о последнем выпуске Накопительного, см. в разделе [ http://aka.ms/sql2017cu ](http://aka.ms/sql2017cu). Загрузка пакетов и известные проблемы, см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
+> Помимо этих возможностей в этой статье накопительные обновления выпускаются с регулярными интервалами после выпуска общедоступной версии. Эти накопительные обновления содержат много усовершенствований и исправлений. Сведения о последнем выпуске Накопительного, см. в разделе [ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu). Загрузка пакетов и известные проблемы, см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
 
 ## <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine
 

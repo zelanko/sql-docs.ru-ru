@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fe44b790fbf99811761041f4b81eeb3b48e96da
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229974"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641541"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
   `sqlcmd` Служебная программа позволяет вводить [!INCLUDE[tsql](../includes/tsql-md.md)] инструкций, системные процедуры и файлы скриптов в командной строке в **редактора запросов** в режиме SQLCMD, в файл скрипта Windows или шаг задания операционной системы (Cmd.exe) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Задание агента. Эта программа использует технологию ODBC для выполнения пакетов [!INCLUDE[tsql](../includes/tsql-md.md)].  
@@ -99,7 +99,7 @@ ms.locfileid: "48229974"
  Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным поддерживаемым в данное время значением является **ReadOnly**. Если параметр **-K** не указан, то программа sqlcmd не будет поддерживать возможность подключения к вторичной реплике в группе доступности AlwaysOn. Дополнительные сведения см. в разделе [активные вторичные реплики: вторичные реплики для чтения](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  `-M` *multisubnet_failover*  
- Всегда указывайте `-M` при соединении с прослушивателем группы доступности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] группы доступности или [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляра отказоустойчивого кластера. `-M` обеспечивает более быстрое обнаружение активного (в данный момент) сервера и соединение с ним. Если параметр `–M` не указан, то режим `-M` отключен. Дополнительные сведения о [!INCLUDE[ssHADR](../includes/sshadr-md.md)], см. в разделе [прослушиватели группы доступности, возможность подключения клиентов и отработка отказа приложений &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [Создание и Настройка групп доступности &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [отказоустойчивая кластеризация и группы доступности AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), и [активные вторичные реплики: вторичные реплики для чтения ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ Всегда указывайте параметр `-M` при соединении с прослушивателем группы доступности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или экземпляром отказоустойчивого кластера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. `-M` обеспечивает более быстрое обнаружение активного (в данный момент) сервера и соединение с ним. Если параметр `–M` не указан, то режим `-M` отключен. Дополнительные сведения о [!INCLUDE[ssHADR](../includes/sshadr-md.md)], см. в разделе [прослушиватели группы доступности, возможность подключения клиентов и отработка отказа приложений &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [Создание и Настройка групп доступности &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [отказоустойчивая кластеризация и группы доступности AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), и [активные вторичные реплики: вторичные реплики для чтения ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
   
  **-N**  
  С помощью этого переключателя клиент запрашивает шифрованное соединение.  
@@ -182,7 +182,7 @@ ms.locfileid: "48229974"
   
 -   Предполагается, что все входные файлы имеют одинаковую кодовую страницу. Входные файлы в Юникоде и не в Юникоде можно обрабатывать вместе.  
   
- Введите `chcp` в командной строке, чтобы проверить кодовую страницу Cmd.exe.  
+ Чтобы проверить кодовую страницу Cmd.exe, введите в командной строке команду `chcp`.  
   
  **-i** *входной_файл*[**, *** input_file2*...]  
  Указывает файл, содержащий пакет инструкций или хранимых процедур SQL. Можно указать несколько файлов, которые будут считываться и обрабатываться в указанном порядке. Не разделяйте имена файлов пробелами. Программа `sqlcmd` сначала производит проверку наличия всех указанных файлов. Если хотя бы один из файлов не найден, программа `sqlcmd` завершит работу. Параметры -i и -Q/-q являются взаимоисключающими.  
@@ -707,7 +707,7 @@ ms.locfileid: "48229974"
   
  `GO`  
   
- При нажатии клавиши ВВОД возвращается следующий результирующий набор:  
+ При нажатии клавиши ВВОД возвращается следующий результирующий набор.  
   
  `BusinessEntityID FirstName    LastName`  
   
@@ -759,6 +759,6 @@ ms.locfileid: "48229974"
  [Подключение к компоненту Database Engine при помощи программы sqlcmd](../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)   
  [Изменение скриптов SQLCMD при помощи редактора запросов](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
  [Управление шагами задания](../ssms/agent/manage-job-steps.md)   
- [Создание шага задания «CmdExec»](../ssms/agent/create-a-cmdexec-job-step.md)  
+ [Create a CmdExec Job Step](../ssms/agent/create-a-cmdexec-job-step.md)  
   
   

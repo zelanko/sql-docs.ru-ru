@@ -16,12 +16,12 @@ ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdbff500a90ab4456b3e9ef252be4407c636cdec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e67ac30883a7665368f6f46045ff61d9375b8cd1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822112"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603024"
 ---
 # <a name="parenturl-property-ado"></a>Свойство ParentURL (ADO)
 Указывает строку абсолютный URL-адрес, указывающий родительский [записи](../../../ado/reference/ado-api/record-object-ado.md) текущего **записи** объекта.  
@@ -35,13 +35,13 @@ ms.locfileid: "47822112"
  Предположим, что «во-вторых» папка содержится в разделе «первый». Откройте **записи** , используя следующий синтаксис:  
   
 ```  
-record.ActiveConnection = "http://first"  
+record.ActiveConnection = "https://first"  
 record.Open "second"  
 ```  
   
- Теперь значение `the` **ParentURL** свойство `"http://first"`, совпадение с кодом **ActiveConnection**.  
+ Теперь значение `the` **ParentURL** свойство `"https://first"`, совпадение с кодом **ActiveConnection**.  
   
- Источник может также быть абсолютный URL-адрес такие как `"http://first/second"`. **ParentURL** свойство будет `"http://first"`, уровнем выше `"second"`.  
+ Источник может также быть абсолютный URL-адрес такие как `"https://first/second"`. **ParentURL** свойство будет `"https://first"`, уровнем выше `"second"`.  
   
  Это свойство может иметь значение null, если:  
   

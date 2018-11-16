@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55b13d7349d58db37dc8f8ec649fec3a06cffcec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613282"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350358"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Поставщик Microsoft OLE DB для индексирования Общие сведения о службе Microsoft
 Поставщик Microsoft OLE DB для службы индексирования Microsoft предоставляет программный доступ только для чтения к файловая система и веб-данных, службой индексирования Microsoft. Приложения ADO можно выполнять запросы SQL для извлечения содержимого и файл сведений.
@@ -30,7 +30,7 @@ ms.locfileid: "47613282"
 ## <a name="connection-string-parameters"></a>Параметры строки соединения
  Чтобы подключиться к этим поставщиком, задайте **поставщика =** аргумент [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства:
 
-```
+```vb
 MSIDXS
 ```
 
@@ -39,7 +39,7 @@ MSIDXS
 ## <a name="typical-connection-string"></a>Типичная строка подключения
  — Строка соединения для данного поставщика:
 
-```
+```vb
 "Provider=MSIDXS;Data Source=myCatalog;Locale Identifier=nnnn;"
 ```
 

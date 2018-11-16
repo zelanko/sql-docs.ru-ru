@@ -19,12 +19,12 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2cbfdd765681f99e50b38efcdb5c7c61c8cbd08b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0157288c21e7b4f9b5d0b06bbf698369a216bf07
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834712"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657253"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>Запрос уведомления - sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47834712"
 |**ИД безопасности**|**varbinary(85)**|Идентификатор безопасности участника [системы безопасности] на уровне сервера, который создал подписку и которому она принадлежит.|  
 |**object_id**|**int**|Идентификатор внутренней таблицы, в которой хранятся данные о параметрах подписки.|  
 |**Создан**|**datetime**|Дата и время создания подписки.|  
-|**время ожидания**|**int**|Время ожидания для подписки в секундах. Уведомление будет снабжено меткой, указывающей на то, что оно должно сработать по истечении этого времени.<br /><br /> Примечание: Время срабатывание может быть больше, чем заданное время ожидания. Однако, если изменение, делающее подписку недействительной, произойдет после указанного времени ожидания, но до срабатывания подписки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечит срабатывание в то время, когда будет производиться это изменение.|  
+|**timeout**|**int**|Время ожидания для подписки в секундах. Уведомление будет снабжено меткой, указывающей на то, что оно должно сработать по истечении этого времени.<br /><br /> Примечание: Время срабатывание может быть больше, чем заданное время ожидания. Однако, если изменение, делающее подписку недействительной, произойдет после указанного времени ожидания, но до срабатывания подписки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечит срабатывание в то время, когда будет производиться это изменение.|  
 |**status**|**int**|Отображает состояние подписки. См. список кодов в таблице под примечаниями.|  
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
@@ -133,7 +133,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Запрос уведомления динамические административные представления &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [Запрос уведомления динамические административные представления &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

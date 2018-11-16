@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: acc30b259a9fa327c7f5d48fb0f77fdc3b8bf110
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8a453fb545fd0a51b7d356c0d855813cea69f272
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040422"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602604"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ FROM <existing model>
  **WITH DRILLTHROUGH** предложение включает детализацию для новой модели интеллектуального анализа данных. Включить детализацию можно только при создании модели.  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>Пример 1: Изменение параметров модели  
- В следующем примере создается новый модели интеллектуального анализа данных, в зависимости от существующей модели интеллектуального анализа данных, `TM_Clustering`, который создается в [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). В новой модели параметр CLUSTER_COUNT изменяется так, чтобы существовало максимум пять кластеров. В существующей модели, напротив, используется значение по умолчанию, равное 10.  
+ В следующем примере создается новый модели интеллектуального анализа данных, в зависимости от существующей модели интеллектуального анализа данных, `TM_Clustering`, который создается в [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). В новой модели параметр CLUSTER_COUNT изменяется так, чтобы существовало максимум пять кластеров. В существующей модели, напротив, используется значение по умолчанию, равное 10.  
   
 ```  
 SELECT * INTO [New_Clustering]  

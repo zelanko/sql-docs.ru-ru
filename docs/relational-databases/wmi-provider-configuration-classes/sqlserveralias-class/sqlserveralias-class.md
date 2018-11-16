@@ -18,12 +18,12 @@ ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 75ca27fc8c035a2b62cc70bbf740dd746f341d45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91c7333f47306da90d634e45f50df44d1b6ae0f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603532"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675333"
 ---
 # <a name="sqlserveralias-class"></a>Класс SqlServerAlias
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,6 +38,6 @@ ms.locfileid: "47603532"
  **Примечание.** [SqlServerAlias Class](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) наследует метод **Put** из класса Provider. Однако он не возвращает результаты, как указано методом **Provider::Put** . Дополнительные сведения см. в документации WMI.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка клиентских протоколов](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

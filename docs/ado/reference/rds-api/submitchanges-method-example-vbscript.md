@@ -14,16 +14,16 @@ ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 521b6945c993aa699c09dc2dfc398ac07d4bde31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b002fb0c6dcfa17a01f42c65f1946536a915c210
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707612"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601485"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>Пример метода SubmitChanges (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  В следующем фрагменте кода показано, как использовать [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) метод с [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47707612"
 <SCRIPT Language="VBScript">  
   
      'set RDS properties for control just created  
-    RDS.Server = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+    RDS.Server = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
     RDS.Connect = "Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind';"  
     RDS.SQL = "Select * from Employees"  
     RDS.Refresh  

@@ -11,12 +11,12 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41c340d2d84e80100788ae2d797a37fd048e4264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 629ba98b4b30f5000cac7366f5b558e925cf20cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735526"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600014"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Шаг 2. Инициализация главного списка
 Чтобы объявить глобальные объекты набора записей и записи, вставьте следующий код в (Общие) (объявления) для Form1:  
@@ -34,19 +34,19 @@ Dim grs As Recordset
   
 ```  
 Private Sub Form_Load()  
-    Set grec = New Record  
-    Set grs = New Recordset  
-    grec.Open "", "URL=http://servername/foldername/", , _  
-        adOpenIfExists Or adCreateCollection  
-    Set grs = grec.GetChildren  
-    While Not grs.EOF  
-        lstMain.AddItem grs(0)  
-        grs.MoveNext  
-    Wend  
+    Set grec = New Record  
+    Set grs = New Recordset  
+    grec.Open "", "URL=https://servername/foldername/", , _  
+        adOpenIfExists Or adCreateCollection  
+    Set grs = grec.GetChildren  
+    While Not grs.EOF  
+        lstMain.AddItem grs(0)  
+        grs.MoveNext  
+    Wend  
 End Sub  
 ```  
   
- Этот код создает экземпляр глобальных объектов набора записей и записи. Объект записи, `grec`, открыт с помощью URL-адрес, заданный как ActiveConnection. Если URL-адрес существует, он открывается; Если он еще не существует, он создается. Обратите внимание, что следует заменить "http://servername/foldername/" с допустимым URL-адресом из среды.  
+ Этот код создает экземпляр глобальных объектов набора записей и записи. Объект записи, `grec`, открыт с помощью URL-адрес, заданный как ActiveConnection. Если URL-адрес существует, он открывается; Если он еще не существует, он создается. Обратите внимание, что следует заменить "https://servername/foldername/" с допустимым URL-адресом из среды.  
   
  Объект Recordset, `grs`, открывается на дочерние элементы записи `grec`. Затем `lstMain` заполняется имена файлов ресурсов, которые опубликованы на URL-адрес.  
   

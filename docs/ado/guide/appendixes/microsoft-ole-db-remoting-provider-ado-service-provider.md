@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,23 +15,23 @@ ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0c58d6c90b67369f969a37cc2ad7e03cc6cad82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65ed1ab997566c44aa67da44c8d14418304eecd0
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624612"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600664"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Общие сведения о поставщике Microsoft OLE DB удаленного взаимодействия
 Поставщик Microsoft OLE DB удаленного взаимодействия позволяет локального пользователя на клиентском компьютере для вызова поставщиков данных на удаленном компьютере. Укажите параметры поставщика данных для удаленного компьютера, как это делается, если локальный пользователь на удаленном компьютере. Затем укажите параметры, используемые поставщиком удаленного взаимодействия для доступа к удаленной машине. Можно затем получить удаленный компьютер, как если бы вы были локального пользователя.
 
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](http://go.microsoft.com/fwlink/?LinkId=199565).
+>  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).
 
 ## <a name="provider-keyword"></a>Ключевое слово службы
  Чтобы вызвать поставщик OLE DB удаленного взаимодействия, укажите следующие слова и значение в строке подключения. (Обратите внимание, свободное место в имя поставщика.)
 
-```
+```vb
 "Provider=MS Remote"
 ```
 
@@ -58,14 +58,14 @@ ms.locfileid: "47624612"
 
  Можно также установить для записи динамические свойства, указав их имена в качестве ключевых слов в строке подключения. Например, задать **время ожидания для Интернета** динамическое свойство пять секунд, указав:
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MS Remote;Internet Timeout=5000"
 ```
 
  Можно также задать или получить динамического свойства, указав его имя в качестве индекса в **свойства** свойство. Приведенный ниже показано, как получить и распечатать текущее значение **время ожидания для Интернета** динамического свойства, а затем установите новое значение:
 
-```
+```vb
 Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
@@ -80,16 +80,16 @@ cn.Properties("Internet Timeout") = 5000
 ## <a name="example"></a>Пример
  Этот пример выполняет запрос на **авторов** таблицы **Pubs** базы данных на сервере с именем *сервер*. Имена удаленного источника данных и удаленного сервера, приведены в [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод[подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта и SQL-запрос указывается в[откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод [Записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта. Объект **записей** объект возвращается, редактировать и используется для обновления источника данных.
 
-```
+```vb
 Dim rs as New ADODB.Recordset
 Dim cn as New ADODB.Connection
-cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
-         "Remote Server=http://YourServer"
+cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
+         "Remote Server=https://YourServer"
 rs.Open "SELECT * FROM authors", cn
-...                'Edit the recordset
-rs.UpdateBatch     'Equivalent of RDS SubmitChanges
+...                'Edit the recordset
+rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
 ## <a name="see-also"></a>См. также
- [Обзор удаленного поставщика OLE DB](http://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)
+ [Обзор удаленного поставщика OLE DB](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24c1012c3eb2bef913667052b00ff44fff95fade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73695ebfc9d2322d57fc3b03a6fe576f90e54554
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821532"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662313"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Схемы XSD с заметками в SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ ms.locfileid: "47821532"
 ## <a name="other-resources"></a>Другие ресурсы  
  Дополнительные сведения о языке XSD, языке XPath и преобразованиях XSLT находятся на следующих веб-сайтах.  
   
--   XML Schema Part 0: Учебник для начинающих, W3C рекомендации (http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Учебник для начинающих, W3C рекомендации (https://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Структуры, W3C рекомендация (http://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Структуры, W3C рекомендация (https://www.w3.org/TR/xmlschema-1/)  
   
--   Схема XML, часть 2: типы данных, W3C рекомендация (http://www.w3.org/TR/xmlschema-2/)  
+-   Схема XML, часть 2: типы данных, W3C рекомендация (https://www.w3.org/TR/xmlschema-2/)  
   
--   FOR XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
+-   FOR XML Path Language (XPath) (https://www.w3.org/TR/xpath)  
   
--   (XSL) преобразований (XSLT) (http://www.w3.org/TR/xslt)  
+-   (XSL) преобразований (XSLT) (https://www.w3.org/TR/xslt)  
   
   

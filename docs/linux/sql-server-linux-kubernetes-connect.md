@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7fcad17522f4372e696a26a99d4ce1a4af92ea15
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6352fc7be129f485175b1144d14aa380b2d99e1f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356105"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672003"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>Подключение к SQL Server Always On Availability Group в Kubernetes
 
-Чтобы подключиться к экземплярам SQL Server в контейнеры в кластере Kubernetes, создайте [служба балансировки нагрузки](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). Подсистема балансировки нагрузки — это конечная точка. Он содержит IP-адресом и перенаправляет запросы для IP-адреса к pod, на котором запущен экземпляр SQL Server.
+Чтобы подключиться к экземплярам SQL Server в контейнеры в кластере Kubernetes, создайте [служба балансировки нагрузки](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). Подсистема балансировки нагрузки — это конечная точка. Он содержит IP-адресом и перенаправляет запросы для IP-адреса к pod, на котором запущен экземпляр SQL Server.
 
 Чтобы подключиться к реплике группы доступности, создайте службу для типов другую реплику. Вы можете ознакомиться с примерами служб для различных типов реплик в [sql-server примеры/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 

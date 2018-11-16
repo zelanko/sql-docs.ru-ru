@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16e7bbd20113c253cbd7a3da183750c8ff566da3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16ece0ae1eee2ed1cc944504af87a74609cba0fe
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758592"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350448"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Поставщик Microsoft OLE DB для службы Microsoft Active Directory
 Поставщик интерфейсы служб Active Directory (ADSI) разрешает ADO для подключения к службам разнородных directory через ADSI. Это дает приложения ADO доступ только для чтения в каталоге служб Microsoft Windows NT 4.0 и Microsoft Windows 2000, а также все службы, совместимой с LDAP directory и служб каталога Novell. Сам интерфейс ADSI основан на модели поставщика, таким образом, если имеется новый предоставить доступ поставщика в другой каталог, приложения ADO будет получить к ним доступ без проблем. Поставщик ADSI является свободнопотоковым и Юникод.  
@@ -29,7 +29,7 @@ ms.locfileid: "47758592"
 ## <a name="connection-string-parameters"></a>Параметры строки соединения  
  Чтобы подключиться к этим поставщиком, задайте **поставщика** аргумент [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) следующие свойства:  
   
-```  
+```vb
 ADSDSOObject  
 ```  
   
@@ -38,7 +38,7 @@ ADSDSOObject
 ## <a name="typical-connection-string"></a>Типичная строка подключения  
  Строка соединения для данного поставщика выглядит следующим образом:  
   
-```  
+```vb
 "Provider=ADSDSOObject;User ID=MyUserID;Password=MyPassword;"  
 ```  
   
@@ -56,7 +56,7 @@ ADSDSOObject
 ## <a name="command-text"></a>Текст команды  
  Команда из четырех частей текстовую строку распознается поставщиком в следующий синтаксис:  
   
-```  
+```vb
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
@@ -65,17 +65,17 @@ ADSDSOObject
 |*Root*|Указывает **ADsPath** объект, из которого следует начать поиск (то есть корень поиска).|  
 |*Фильтр*|Указывает фильтр поиска в формате RFC 1960 года.|  
 |*Атрибуты*|Указывает список атрибутов, возвращаемых с разделителями запятыми.|  
-|*Область*|Необязательный параметр. Объект **строка** , определяющее область поиска. Возможен один из следующих вариантов.<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-Опросы — Поиск только один уровень.<br />-Поддерево, Найдите поддерево целиком.|  
+|*Область действия*|Необязательный параметр. Объект **строка** , определяющее область поиска. Возможен один из следующих вариантов.<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-Опросы — Поиск только один уровень.<br />-Поддерево, Найдите поддерево целиком.|  
   
  Пример:  
   
-```  
+```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
  Поставщик также поддерживает SQL SELECT для текста команды. Пример:  
   
-```  
+```vb
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
 objectClass='user' AND objectCategory='Person'"  
 ```  

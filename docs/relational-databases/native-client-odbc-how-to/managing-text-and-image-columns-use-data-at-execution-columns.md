@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13a8690a7ad088a6b7ecd9c04f71ada9cfc6e62d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 184668ba8dc844be7c0f1eea23ab5f4dfe69843e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846212"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673103"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Управление столбцами text и image — использование столбцов данных времени выполнения
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,20 +34,20 @@ ms.locfileid: "47846212"
   
     -   Для последнего параметра поместите заданный программой идентификатор столбца.  
   
-2.  Вызов функции [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) возвращает SQL_NEED_DATA, что указывает, что столбцы с данными времени выполнения готовы для обработки.  
+2.  Вызов функции [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) возвращает SQL_NEED_DATA, что указывает, что столбцы с данными времени выполнения готовы для обработки.  
   
 3.  Для каждого столбца с данными времени выполнения.  
   
-    -   Вызовите функцию [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) , чтобы вернуть указатель на массив столбцов. Будет возвращено значение SQL_NEED_DATA, если существует другой столбец с данными времени выполнения.  
+    -   Вызовите функцию [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) , чтобы вернуть указатель на массив столбцов. Будет возвращено значение SQL_NEED_DATA, если существует другой столбец с данными времени выполнения.  
   
     -   Вызовите функцию [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) один или более раз, чтобы отправить данные столбца, до тех пор, пока не будет отправлена длина.  
   
-4.  Вызовите функцию [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) , чтобы указать, что данные для конечного столбца с данными времени выполнения отправлены. При этом не будет возвращено значение SQL_NEED_DATA.  
+4.  Вызовите функцию [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) , чтобы указать, что данные для конечного столбца с данными времени выполнения отправлены. При этом не будет возвращено значение SQL_NEED_DATA.  
   
 ## <a name="example"></a>Пример  
  В этом образце показано, как с помощью функции SQLGetData считывать символьные данные из переменной типа SQL_LONG. Этот образец не поддерживается на архитектуре IA64.  
   
- Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать с домашней страницы [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Образцы кода и проекты сообщества Microsoft SQL Server).) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — «SQL Server»). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
+ Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать с домашней страницы [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Образцы кода и проекты сообщества Microsoft SQL Server).) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — «SQL Server»). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
@@ -189,6 +189,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Инструкции по столбцы text и image управлению &#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [Инструкции по столбцы text и image управлению &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

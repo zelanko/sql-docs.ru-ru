@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,14 +16,14 @@ ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca21e976783a10a738488762e382982e4fd8fd8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4432c125b0c860775911aa753984806a472a64ba
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747682"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350189"
 ---
-# <a name="visual-c-extensions"></a>Расширения Visual C++
+# <a name="visual-c-extensions-for-ado"></a>Расширения Visual C++ для ADO
 Предпочтительный способ программирования ADO в Visual C++ использует **#import** директивы, как описано в [Microsoft Visual C++ ADO программирования](../../../ado/guide/appendixes/visual-c-ado-programming.md). Тем не менее, более ранних версиях ADO в состав альтернативный способ программирования на языке Visual C++: расширения Visual C++. В данном разделе описываются эту функцию для тех, кто должен поддерживать код расширений Visual C++, но новый код ADO должны быть написаны с помощью #**импорта**.
 
  Одно из самых трудоемких заданий Visual C++ программистов начертание шрифта при извлечении данных с помощью ADO преобразует данные возвращаются как тип данных VARIANT в тип данных C++ и последующее сохранение преобразованных данных в классе или структуре. Помимо громоздким, извлечение данных C++ с помощью типа данных VARIANT снижает производительность.
