@@ -17,12 +17,12 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0fa7d262017938578162594257deee2a0e79694
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c36cd11c60c3558e6b050de17a517d9feb968d32
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692932"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638632"
 ---
 # <a name="dqs-cleansing-transformation"></a>Преобразование «Очистка DQS»
   Преобразование «Очистка DQS» используется службы Data Quality Services (DQS) для исправления данных из подключенного источника данных путем применения утвержденных правил, созданных для подключенного или аналогичного источника данных. Дополнительные сведения о правилах исправления данных см. в разделе [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md). Дополнительные сведения о службах DQS см. в разделе [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  
@@ -52,9 +52,9 @@ ms.locfileid: "47692932"
   
 ## <a name="related-content"></a>См. также  
   
--   [Открытие, разблокировка, переименование и удаление проекта служб DQS](../../../data-quality-services/open-unlock-rename-and-delete-a-data-quality-project.md)  
+-   [Открытие, разблокировка, переименование и удаление проекта качества данных](../../../data-quality-services/open-unlock-rename-and-delete-a-data-quality-project.md)  
   
--   Статья [Очистка сложных данных с использованием составных доменов](http://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)на сайте social.technet.microsoft.com.  
+-   Статья [Очистка сложных данных с использованием составных доменов](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)на сайте social.technet.microsoft.com.  
   
 ## <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Диалоговое окно редактора преобразования «Очистка DQS»
   Диалоговое окно **Редактор преобразования "Очистка DQS"** служит для исправления данных с помощью служб Data Quality Services (DQS). Дополнительные сведения см. в статье [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  

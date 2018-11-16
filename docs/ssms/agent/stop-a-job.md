@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b89adcf0e1d560e64d2f522f71d8560616c38309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38a3f3cc58f0ddcc9f7864e94466095316cc2e17
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809302"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696332"
 ---
 # <a name="stop-a-job"></a>Остановка задания
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47809302"
   
 #### <a name="to-stop-a-job"></a>Остановка задания  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -86,10 +86,10 @@ ms.locfileid: "47809302"
     GO  
     ```  
   
-Дополнительные сведения см. в разделе [sp_stop_job (Transact-SQL)](http://msdn.microsoft.com/64b4cc75-99a0-421e-b418-94e37595bbb0).  
+Дополнительные сведения см. в разделе [sp_stop_job (Transact-SQL)](https://msdn.microsoft.com/64b4cc75-99a0-421e-b418-94e37595bbb0).  
   
 ## <a name="SMO"></a>Использование управляющих объектов SQL Server  
 **Остановка задания**  
   
-Вызовите метод **Stop** класса **Job** на любом языке программирования, таком как Visual Basic, Visual C# или PowerShell. Дополнительные сведения см. в статье [Управляющие объекты SQL Server (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+Вызовите метод **Stop** класса **Job** на любом языке программирования, таком как Visual Basic, Visual C# или PowerShell. Дополнительные сведения см. в статье [Управляющие объекты SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   

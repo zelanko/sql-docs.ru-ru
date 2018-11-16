@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 936cc6417a1af8b38b548b321486d233fa086363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf79a9f1c6790abfb1a2435e533aa0847abbd3b6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800032"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813987"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>Интеграция службы Reporting Services с использованием URL-адресов — веб-приложения
   Доступ по URL-адресам в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] специально разработан таким образом, чтобы можно было получить доступ по сети к отдельным отчетам. Этот тип доступа наилучшим образом подходит для интеграции средств просмотра и навигации по отчетам в пользовательских веб-приложениях. Использовать доступ по URL-адресам в веб-приложениях можно следующим образом.  
@@ -35,7 +35,7 @@ ms.locfileid: "47800032"
  В следующем примере гиперссылка указывает на фрейм с именем «main», который может отличаться от того фрейма, в котором находится гиперссылка. Гиперссылка может входить в состав веб-портала.  
   
 ```  
-<a href="http://server/reportserver?/SampleReports/Territory Sales   
+<a href="https://server/reportserver?/SampleReports/Territory Sales   
 Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >  
    Click here for the Territory Sales Drilldown sample report  
 </a>  
@@ -60,7 +60,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
  В приведенном ниже образце HTML-кода показана форма, которая позволяет получить доступ к серверу отчетов с помощью конкретного URL-адреса и передать параметры строки запроса в составе полей ввода формы.  
   
 ```  
-<FORM id="frmRender" action="http://server/reportserver?/SampleReports/  
+<FORM id="frmRender" action="https://server/reportserver?/SampleReports/  
    Territory Sales Drilldown" method="post" target="_self">  
    <INPUT type="hidden" name="rs:Command" value="Render">   
    <INPUT type="hidden" name="rc:LinkTarget" value="main">  
@@ -72,7 +72,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
  В предыдущем примере предусмотрено, что при нажатии пользователем кнопки на форме сервер отчетов возвращает отчет, подготовленный в формате HTML, который предназначен для просмотра в текущем фрейме. Сопоставимая строка доступа по URL-адресу может выглядеть примерно таким образом:  
   
 ```  
-http://server/reportserver?/SampleReports/Territory Sales   
+https://server/reportserver?/SampleReports/Territory Sales   
 Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0  
 ```  
   

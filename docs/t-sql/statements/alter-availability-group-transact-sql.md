@@ -23,12 +23,12 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 02ba00fe35a31237ddf86f0782f63f822a0f5935
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 665fd5db9f42f79965c937a60bf3ebfdb729b217
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776962"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703952"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ALTER AVAILABILITY GROUP group_name
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
         [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
      } )  
      | SESSION_TIMEOUT = integer
   
@@ -197,7 +197,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |Level|Условия сбоя|  
 |-----------|-----------------------|  
-|1|Указывает, что следует запустить автоматический переход на другой ресурс при возникновении любой из следующих ситуаций.<br /><br /> Служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановлена.<br /><br /> Аренда группы доступности для подключения к кластеру WSFC истекла, поскольку от экземпляра сервера не было получено сообщение ACK. Дополнительные сведения см. в разделе [Принцип работы. Время ожидания аренды AlwaysOn в SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|1|Указывает, что следует запустить автоматический переход на другой ресурс при возникновении любой из следующих ситуаций.<br /><br /> Служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановлена.<br /><br /> Аренда группы доступности для подключения к кластеру WSFC истекла, поскольку от экземпляра сервера не было получено сообщение ACK. Дополнительные сведения см. в разделе [Принцип работы. Время ожидания аренды AlwaysOn в SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
 |2|Указывает, что следует запустить автоматический переход на другой ресурс при возникновении любой из следующих ситуаций.<br /><br /> Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не подключается к кластеру, а определяемый пользователем порог HEALTH_CHECK_TIMEOUT группы доступности превышен.<br /><br /> Реплика доступности находится в неисправном состоянии.|  
 |3|Указывает, что следует запустить автоматический переход на другой ресурс в случае появления критических внутренних ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], таких как потерянные спин-блокировки, серьезные нарушения доступа для записи или формирование слишком больших дампов.<br /><br /> Это поведение по умолчанию.|  
 |4|Указывает, что следует запустить автоматический переход на другой ресурс в случае появления не столь серьезных внутренних ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например устойчивое состояние нехватки памяти в пуле внутренних ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -361,7 +361,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Номер порта для именованного экземпляра вы можете получить, запросив столбцы **port** и **type_desc** динамического административного представления [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). Экземпляр сервера использует прослушиватель Transact-SQL (**type_desc='TSQL'**).  
   
- Дополнительные сведения о вычислении URL-адреса маршрутизации только для чтения для реплики доступности см. в разделе [Вычисление значения read_only_routing_url для AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
+ Дополнительные сведения о вычислении URL-адреса маршрутизации только для чтения для реплики доступности см. в разделе [Вычисление значения read_only_routing_url для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
 > [!NOTE]  
 >  Для именованного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушиватель Transact-SQL должен быть настроен для использования определенного порта. Дополнительные сведения см. в разделе [Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
@@ -469,7 +469,7 @@ ALTER AVAILABILITY GROUP group_name
  Мы рекомендуем указывать строку, которая поддается толкованию. Например, для группы доступности с именем `AG1`понятным именем узла DNS будет `ag1-listener`.  
   
 > [!IMPORTANT]  
->  NetBIOS распознает только первые 15 символов в dns_name. При наличии двух кластеров WSFC, которые управляются одной службой Active Directory, и попытке создать в обоих кластерах прослушивателей группы доступности с именами, содержащими более 15 символов, и одинаковым префиксом из 15 символов возникнет ошибка, указывающая, что не удалось подключиться к ресурсу с именем виртуальной сети. Дополнительные сведения о правилах именования префиксов для имен DNS см. в разделе [Присвоение имен доменов](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
+>  NetBIOS распознает только первые 15 символов в dns_name. При наличии двух кластеров WSFC, которые управляются одной службой Active Directory, и попытке создать в обоих кластерах прослушивателей группы доступности с именами, содержащими более 15 символов, и одинаковым префиксом из 15 символов возникнет ошибка, указывающая, что не удалось подключиться к ресурсу с именем виртуальной сети. Дополнительные сведения о правилах именования префиксов для имен DNS см. в разделе [Присвоение имен доменов](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
  JOIN AVAILABILITY GROUP ON  
  Присоединение к *распределенной группе доступности*. Когда вы создаете распределенную группу доступности, группа доступности в кластере, где она создана, является первичной группой доступности. Группа доступности, которая соединяется с распределенной группой доступности, является вторичной группой доступности.  

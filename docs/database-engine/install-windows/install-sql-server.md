@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 43458e87144b5903a0d6436d5596bb5c3585d928
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383329"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600894"
 ---
 # <a name="install-sql-server"></a>Установка SQL Server
 
@@ -38,7 +38,7 @@ ms.locfileid: "49383329"
 
 * **Образцы баз данных и примеры кода**: 
     * Они не устанавливаются по умолчанию в ходе установки SQL Server. 
-    * Чтобы установить их для отличных от Express выпусков SQL Server, перейдите на веб-сайт [GitHub](http://github.com/Microsoft/sql-server-samples).
+    * Чтобы установить их для отличных от Express выпусков SQL Server, перейдите на веб-сайт [GitHub](https://github.com/Microsoft/sql-server-samples).
     
 
 ## <a name="get-the-installation-media"></a>Получение установочного носителя
@@ -70,7 +70,7 @@ ms.locfileid: "49383329"
 |[Установка ядра СУБД SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md)|Описывает установку и настройку компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Установка репликации SQL Server](../../database-engine/install-windows/install-sql-server-replication.md)|Описывает установку и настройку репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Установка распределенного воспроизведения — обзор](../../tools/distributed-replay/install-distributed-replay-overview.md)|Содержит список статей, связанных с установкой компонента распределенного воспроизведения.|  
-|[Установка средств управления SQL Server со средой SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|Описывает, как установить и настроить средства управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Установка средств управления SQL Server со средой SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|Описывает, как установить и настроить средства управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Установка компонентов SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|Описывает соображения относительно установки компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.|  
   
 

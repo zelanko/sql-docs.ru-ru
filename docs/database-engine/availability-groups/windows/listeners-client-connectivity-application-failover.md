@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 930835c23ae211b6c909d62c693959bbbe6f2172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662192"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603574"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Прослушиватели, подключение клиентов и отработка отказа приложений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47662192"
  Прослушиватель группы доступности определяется следующими параметрами.  
   
  Уникальное имя DNS  
- Оно известно также как имя виртуальной сети (VNN). Действуют правила именования Active Directory для DNS-имен узла. Дополнительные сведения см. в статье базы знаний [Соглашения о наименовании в Active Directory для компьютеров, доменов, сайтов и подразделений](http://support.microsoft.com/kb/909264) .  
+ Оно известно также как имя виртуальной сети (VNN). Действуют правила именования Active Directory для DNS-имен узла. Дополнительные сведения см. в статье базы знаний [Соглашения о наименовании в Active Directory для компьютеров, доменов, сайтов и подразделений](https://support.microsoft.com/kb/909264) .  
   
  Один или несколько виртуальных IP-адресов (VIP)  
  Виртуальные IP-адреса настраиваются для одной или нескольких подсетей, для которых группа доступности может выполнить отработку отказа.  
@@ -237,7 +237,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Общие сведения о прослушивателях группы доступности](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (блог группы разработчиков SQL Server AlwaysOn)  
   

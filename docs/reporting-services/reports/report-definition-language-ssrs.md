@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 467490b7d02c0712606f1be3cf90da2d5448c6f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8303c08d67a6a18b7dff13db60fccf5653cbae18
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028543"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813517"
 ---
 # <a name="report-definition-language-ssrs"></a>Язык определения отчетов (SSRS)
   Язык определения отчетов — это средство представления определений отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в формате XML. Определение отчета содержит сведения о получении данных и о макете для отчета. Язык определения отчетов состоит из элементов XML, которые соответствуют грамматике XML, созданной для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Предусмотрена возможность добавления пользовательских функций для управления значениями элементов отчета, стилями и форматированием путем обращения к сборкам кода в файлах определения отчета.  
@@ -43,7 +43,7 @@ ms.locfileid: "50028543"
   
  Например, следующая схема включает элемент **ReportParameters**на языке определения отчетов, имеющий сложный тип **ReportParametersType**. В соответствии с принятым соглашением обозначением сложного типа для элемента является имя элемента, за которым следует слово **Type**. Элемент **ReportParameters** может входить в элемент **Report** (сложного типа) и в свою очередь содержать элементы **ReportParameter** . **ReportParameterType** — это простой тип, который может принимать только одно из следующих значений: **Boolean**, **DateTime**, **Integer**, **Float**или **String**. Дополнительные сведения о типах данных схем XML см. в статье [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)(Схема XML, часть 2. Типы данных, второе издание).  
   
- Схема XSD для языка определения отчетов доступна в файле ReportDefinition.xsd, расположенном в папке Extras на компакт-диске продукта. Эта схема также доступна на сервере отчетов по следующему URL-адресу: `http://servername/reportserver/reportdefinition.xsd`.  
+ Схема XSD для языка определения отчетов доступна в файле ReportDefinition.xsd, расположенном в папке Extras на компакт-диске продукта. Эта схема также доступна на сервере отчетов по следующему URL-адресу: `https://servername/reportserver/reportdefinition.xsd`.  
   
 ##  <a name="bkmk_Creating_RDL"></a> Создание RDL  
  Язык определения отчетов характеризуется открытостью и расширяемостью, поэтому обеспечивает возможность построения целого ряда средств и приложений, позволяющих создавать код на языке определения отчетов на основе схемы XML этого языка.  

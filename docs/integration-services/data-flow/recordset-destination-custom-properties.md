@@ -11,12 +11,12 @@ ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51ca2217d9d04cb6d38c493e2199a065720f8c17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4b1bfeea10cf53ae279afac2c457e8fa8f1c6ec
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626052"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641871"
 ---
 # <a name="recordset-destination-custom-properties"></a>Пользовательские свойства назначения «Набор записей»
   Назначение «Набор записей» обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  
@@ -32,6 +32,6 @@ ms.locfileid: "47626052"
  Дополнительные сведения см. в статье [Recordset Destination](../../integration-services/data-flow/recordset-destination.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

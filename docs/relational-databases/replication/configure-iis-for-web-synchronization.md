@@ -15,22 +15,22 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 707ab28617129f16bd3e3bbf142349dcba6ff49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684882"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665743"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>настроить сервер IIS для веб-синхронизации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Описанные в данном разделе процедуры составляют второй этап настройки веб-синхронизации при репликации слиянием. Эти процедуры выполняют после включения веб-синхронизации для публикации. Обзор этого процесса настройки см. в разделе [Настроить веб-синхронизацию](../../relational-databases/replication/configure-web-synchronization.md). После завершения выполнения процедур, описанных в этом разделе, перейдите к третьему этапу — настройке подписки для использования веб-синхронизации. Этот этап описывается в следующих разделах:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Как настроить подписку для использования веб-синхронизации \(среда SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Как настроить подписку для использования веб-синхронизации \(среда SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Программирование репликации [!INCLUDE[tsql](../../includes/tsql-md.md)] : [How to: Configure a Subscription to Use Web Synchronization (Программирование репликации Transact-SQL Programming)](http://msdn.microsoft.com/library/ms345206.aspx).  
+-   Программирование репликации [!INCLUDE[tsql](../../includes/tsql-md.md)] : [How to: Configure a Subscription to Use Web Synchronization (Программирование репликации Transact-SQL Programming)](https://msdn.microsoft.com/library/ms345206.aspx).  
   
--   RMO: [Как настроить подписку для использования веб-синхронизации (программирование объектов RMO)](http://msdn.microsoft.com/library/ms345207.aspx).  
+-   RMO: [Как настроить подписку для использования веб-синхронизации (программирование объектов RMO)](https://msdn.microsoft.com/library/ms345207.aspx).  
   
  Веб-синхронизация использует сервер служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS для синхронизации подписок по запросу на публикации слиянием. Поддерживаются службы IIS версий 5.0, 6.0 и 7.0. Мастер настройки веб-синхронизации не поддерживается в версии служб IIS 7.0.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47684882"
   
 4.  Нажмите кнопку **ОК**.  
   
- Если не удается получить сертификат от центра сертификации, можно указать сертификат для тестирования. Чтобы настроить службы IIS 6.0 для тестирования, установите сертификат с помощью программы SelfSSL. Эта программа доступна в IIS 6.0 Resource Kit. Инструменты можно загрузить в [центре загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=30958). Дополнительные сведения об использовании служб IIS версии 5.0 см. на [веб-сайте справки и поддержки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=46229).  
+ Если не удается получить сертификат от центра сертификации, можно указать сертификат для тестирования. Чтобы настроить службы IIS 6.0 для тестирования, установите сертификат с помощью программы SelfSSL. Эта программа доступна в IIS 6.0 Resource Kit. Инструменты можно загрузить в [центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=30958). Дополнительные сведения об использовании служб IIS версии 5.0 см. на [веб-сайте справки и поддержки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  Сертификат должен быть связан с веб-сайтом, прежде чем этот сайт сможет использовать протокол SSL. Программа SelfSSL автоматически связывает сертификат с веб-сайтом по умолчанию. Если сертификат уже имеется или будет установлен позже из центра сертификации, то необходимо явно связать этот сертификат с веб-сайтом, который используется для веб-синхронизации. Убедитесь, что существует только один сертификат, связанный с веб-сайтом, который используется для синхронизации подписок. Если имеется несколько сертификатов, подписчик будет использовать первый доступный веб-сайт.  

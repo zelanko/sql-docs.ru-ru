@@ -17,12 +17,12 @@ ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7b973d967645b51aafe7e4314b339c5966fa7141
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab3388df365458d7fdc8fcac7692b58c6a2da743
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671592"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701302"
 ---
 # <a name="notifications-master-data-services"></a>Уведомления (службы Master Data Services)
 
@@ -58,6 +58,6 @@ ms.locfileid: "47671592"
   
 -   [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
--   [Устранение неполадок в уведомлениях по электронной почте (службы Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)  
+-   [Устранение неполадок в уведомлениях по электронной почте (службы Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)  
   
   

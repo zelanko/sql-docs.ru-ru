@@ -11,12 +11,12 @@ ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef85a7d5620124ce95c3adf2731248603bde3e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d4b26ccd758bbd7d4a5cbe8959e7939848fd493
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675902"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639831"
 ---
 # <a name="flat-file-custom-properties"></a>Пользовательские свойства неструктурированного файла
   **Пользовательские свойства источника**  
@@ -36,7 +36,7 @@ ms.locfileid: "47675902"
   
 |Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
-|FastParse|Логическое значение|Указывает, используются для столбца более быстрые, но независимые от локали процедуры синтаксического анализа, предоставляемые службами DTS, либо стандартные процедуры, зависимые от локали. Дополнительные сведения см. в разделах [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) и [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). Это свойство имеет значение по умолчанию **False**.<br /><br /> Примечание. Это свойство недоступно в диалоговом окне **Редактор источника "Неструктурированный файл"**, однако его можно установить с помощью окна **Расширенный редактор**.|  
+|FastParse|Логическое значение|Указывает, используются для столбца более быстрые, но независимые от локали процедуры синтаксического анализа, предоставляемые службами DTS, либо стандартные процедуры, зависимые от локали. Дополнительные сведения см. в разделах [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) и [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). Это свойство имеет значение по умолчанию **False**.<br /><br /> Примечание. Это свойство недоступно в диалоговом окне **Редактор источника "Неструктурированный файл"**, однако его можно установить с помощью окна **Расширенный редактор**.|  
   
  Дополнительные сведения см. в статье [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
@@ -56,6 +56,6 @@ ms.locfileid: "47675902"
  Дополнительные сведения см. в статье [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

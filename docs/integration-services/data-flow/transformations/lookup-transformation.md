@@ -24,12 +24,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4621685d69a2bedffd35e1de896712efa40a0335
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730932"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639661"
 ---
 # <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
   Преобразование «Уточняющий запрос» выполняет уточняющие запросы, объединяя данные во входных столбцах со столбцами в ссылочном наборе данных. Уточняющие запросы используются для доступа к дополнительной информации в связанной таблице, основанной на значениях в общих столбцах.  
@@ -131,15 +131,15 @@ ms.locfileid: "47730932"
   
 ## <a name="related-content"></a>См. также  
   
--   Видеоролик [Как реализовать преобразование «Уточняющий запрос» в режиме полного кэширования](http://go.microsoft.com/fwlink/?LinkId=131031)на сайте msdn.microsoft.com  
+-   Видеоролик [Как реализовать преобразование «Уточняющий запрос» в режиме полного кэширования](https://go.microsoft.com/fwlink/?LinkId=131031)на сайте msdn.microsoft.com  
   
--   Запись в блоге, [Рекомендации по использованию режимов кэширования для преобразования «Уточняющий запрос»](http://go.microsoft.com/fwlink/?LinkId=146623), на сайте blogs.msdn.com  
+-   Запись в блоге, [Рекомендации по использованию режимов кэширования для преобразования «Уточняющий запрос»](https://go.microsoft.com/fwlink/?LinkId=146623), на сайте blogs.msdn.com  
   
--   Запись в блоге [Шаблон уточняющего запроса: без учета регистра символов](http://go.microsoft.com/fwlink/?LinkId=157782)на сайте blogs.msdn.com  
+-   Запись в блоге [Шаблон уточняющего запроса: без учета регистра символов](https://go.microsoft.com/fwlink/?LinkId=157782)на сайте blogs.msdn.com  
   
--   Образец, [Преобразование «Уточняющий запрос»](http://go.microsoft.com/fwlink/?LinkId=267528), на сайте msftisprodsamples.codeplex.com.  
+-   Образец, [Преобразование «Уточняющий запрос»](https://go.microsoft.com/fwlink/?LinkId=267528), на сайте msftisprodsamples.codeplex.com.  
   
-     Дополнительные сведения об установке образцов продукта и баз данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] см. в разделе [Образцы продукта служб SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
+     Дополнительные сведения об установке образцов продукта и баз данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] см. в разделе [Образцы продукта служб SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## <a name="lookup-transformation-editor-general-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Общие»)
   Используйте страницу **Общие** в диалоговом окне «Редактор преобразования "Уточняющий запрос"», чтобы выбрать режим кэширования, выбрать тип соединения и указать метод обработки строк без совпадающих записей.  
@@ -168,7 +168,7 @@ ms.locfileid: "47730932"
  При выборе любого другого параметра в списке **Метод обработки строк без совпадающих элементов** , строки будут обрабатываться как ошибки. Параметр **Ошибка** доступен на странице **Вывод ошибок** .  
   
 ### <a name="external-resources"></a>Внешние ресурсы  
- Запись в блоге [Режимы кэша уточняющих запросов](http://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
+ Запись в блоге [Режимы кэша уточняющих запросов](https://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Соединение»)
   Используйте страницу **Соединение** диалогового окна **Редактор преобразования «Уточняющий запрос»** для выбора диспетчера соединения. При выборе диспетчера соединений OLE DB также выбирается и запрос, таблица или представление для формирования эталонного набора данных.  
@@ -215,7 +215,7 @@ ms.locfileid: "47730932"
  Просмотрите предварительные результаты, используя диалоговое окно **Предварительный просмотр результатов запроса** . В окне предварительного просмотра может отображаться до 200 строк.  
   
 ### <a name="external-resources"></a>Внешние ресурсы  
- Запись в блоге [Режимы кэша уточняющих запросов](http://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
+ Запись в блоге [Режимы кэша уточняющих запросов](https://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Столбцы»)
   Используйте страницу **Столбцы** диалогового окна **Редактор преобразования «Уточняющий запрос»** , чтобы указать соединение между исходной и ссылочной таблицами и выбрать уточняющие столбцы из ссылочной таблицы.  
@@ -272,11 +272,11 @@ ms.locfileid: "47730932"
  Сопоставить входные столбцы с параметрами, используя диалоговое окно **Установка параметров запроса** .  
   
 ### <a name="external-resources"></a>Внешние ресурсы  
- Запись в блоге [Режимы кэша уточняющих запросов](http://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
+ Запись в блоге [Режимы кэша уточняющих запросов](https://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
   
 ## <a name="see-also"></a>См. также:  
  [Преобразование «Нечеткий уточняющий запрос»](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
- [Преобразование "Уточняющий запрос термина"](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
+ [Преобразование «Уточняющий запрос термина»](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6487a55cf1c6c336dc1c02c2fe4000dfc843ff82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06df375e2887a58ed00370989921b654497afa84
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773768"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670143"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Использование MSDeploy с поставщиком dbSqlPackage
 **DbSqlPackage** — это поставщик **MSDeploy**, который обеспечивает взаимодействие с базами данных SQL Server и SQL Azure. **DbSqlPackage** поддерживает следующие действия:  
@@ -29,10 +29,10 @@ ms.locfileid: "47773768"
   
 -   **Скрипт** — создает скрипт Transact\-SQL, эквивалентный скрипту, который выполняется действием публикации.  
   
-Дополнительные сведения о DACFx можно найти в разделе документации по управляемому API DACFx по адресу [http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) или описании средства командной строки DACFx [SqlPackage.exe](../tools/sqlpackage.md).  
+Дополнительные сведения о DACFx можно найти в разделе документации по управляемому API DACFx по адресу [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) или описании средства командной строки DACFx [SqlPackage.exe](../tools/sqlpackage.md).  
   
 > [!IMPORTANT]  
-> Компонент поставщика dbSqlPackage будет удален из следующей основной версии Visual Studio. Сведения о публикации базы данных с помощью с веб-развертывания см. в статье [Поставщик dbDacFx для добавочной публикации базы данных](http://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
+> Компонент поставщика dbSqlPackage будет удален из следующей основной версии Visual Studio. Сведения о публикации базы данных с помощью с веб-развертывания см. в статье [Поставщик dbDacFx для добавочной публикации базы данных](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
   
 ## <a name="command-line-syntax"></a>Синтаксис командной строки  
 Программа **MSDeploy**с поставщиком**dbSqlPackage** использует командную строку в следующем формате:  

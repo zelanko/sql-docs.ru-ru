@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ec74bab3523b4e77c1b1c0c9355353c48490140
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 701c91f58f4629385b70ec2abc750f0edb8d8059
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817558"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813727"
 ---
 # <a name="url-access-parameter-reference"></a>Ссылка на параметр доступа по URL-адресу
   Чтобы настроить внешний вид отчетов служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], можно использовать приведенные здесь параметры как часть URL-адреса. В этом разделе перечислены основные параметры. Параметры не учитывают регистр символов и начинаются с префикса параметра *rs:* , если направлены на сервер отчетов, и с префикса параметра *rc:* , если направлены в средство просмотра HTML-страниц. Также можно указать конкретные параметры устройств или модулей подготовки отчетов. Дополнительные сведения о параметрах, определяемых устройством, см. в разделе [Указание настройки сведений об устройстве в URL-адресе](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -48,13 +48,13 @@ ms.locfileid: "47817558"
      Пример в режиме **Native** :  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
+    https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
     ```  
   
      Пример в режиме **SharePoint** :  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
 -   *Zoom* — устанавливает значение масштаба отображения отчета в виде целого числа процентов или строковой константы. Допустимые строковые значения включают **Page Width** и **Whole Page**. Этот параметр не учитывается версиями Internet Explorer, предшествующими Internet Explorer 5.0, и всеми веб-браузерами не от[!INCLUDE[msCoName](../includes/msconame-md.md)] . Значение параметра по умолчанию — **100**.  
@@ -62,13 +62,13 @@ ms.locfileid: "47817558"
      Пример в режиме **Native** .  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
+    https://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
     ```  
   
      Пример в режиме **SharePoint** .  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Zoom=Page Width  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
 -   *Section* — указывает, какую страницу отчета нужно отобразить. Применение любого значения, превышающего число страниц отчета, приводит к отображению последней страницы. Любое значение меньше **0** приводит к отображению страницы 1 отчета. Значение параметра по умолчанию — **1**.  
@@ -76,13 +76,13 @@ ms.locfileid: "47817558"
      Пример в режиме **Native** для отображения второй страницы отчета:  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Section=2  
+    https://myrshost/reportserver?/Sales&rc:Section=2  
     ```  
   
      Пример в режиме **SharePoint** для отображения второй страницы отчета:  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Section=2  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
 -   *FindString*— выполняет поиск заданного текста в отчете.  
@@ -90,13 +90,13 @@ ms.locfileid: "47817558"
      Пример в режиме **Native** .  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
     ```  
   
      Пример в режиме **SharePoint** .  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
     ```  
   
 -   *StartFind* — указывает последний раздел поиска. По умолчанию этот параметр имеет значение последней страницы отчета.  
@@ -104,7 +104,7 @@ ms.locfileid: "47817558"
      Например, в режиме **Native** выполняется поиск первого упоминания текста "Mountain-400" в образце отчета "Каталог продукции", начиная с первой страницы и заканчивая пятой.  
   
     ```  
-    http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
+    https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
 -   *EndFind* — указывает номер последней страницы, используемой при поиске. Например, значение **5** показывает, что последней страницей, на которой осуществляется поиск, является страница 5. Значением по умолчанию является номер текущей страницы. Этот параметр используется совместно с параметром *StartFind* . См. приведенный выше пример.  
@@ -130,19 +130,19 @@ ms.locfileid: "47817558"
          Пример в режиме **Native** .  
   
         ```  
-        http://myrshost/reportserver?/Sales&rs:Command=GetChildren  
+        https://myrshost/reportserver?/Sales&rs:Command=GetChildren  
         ```  
   
          Пример для именованного экземпляра в режиме **Native** :  
   
         ```  
-        http://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
+        https://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
         ```  
   
          Пример в режиме **SharePoint** .  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rs:Command=GetChildren  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren  
         ```  
   
     -   **Render** — преобразует отчет для просмотра в браузере.  
@@ -150,13 +150,13 @@ ms.locfileid: "47817558"
          Пример в режиме **Native** .  
   
         ```  
-        http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
+        https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
          Пример в режиме **SharePoint** .  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
     -   **GetSharedDatasetDefinition** Отображает XML-определение, связанное с общим набором данных. Определение включает свойства общего набора данных, в том числе запрос, параметры набора данных, значения по умолчанию, фильтры набора данных и такие параметры данных, как параметры сортировки и чувствительность к регистру. Чтобы использовать это значение, требуется разрешение **Чтение определения отчета** на общий набор данных.  
@@ -164,7 +164,7 @@ ms.locfileid: "47817558"
          Пример в режиме **Native** .  
   
         ```  
-        http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
+        https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
         ```  
   
     -   **GetDataSourceContents** Отображает свойства данного общего источника данных в виде XML. Если браузер поддерживает XML, то определение источника данных отображается при условии, что текущий пользователь прошел проверку подлинности и обладает разрешением **Read Contents** для источника данных.  
@@ -172,13 +172,13 @@ ms.locfileid: "47817558"
          Пример в режиме **Native** .  
   
         ```  
-        http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
         ```  
   
          Пример в режиме **SharePoint** .  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
         ```  
   
     -   **GetResourceContents** Подготавливает ресурс для просмотра и отображает его на HTML-странице, если ресурс совместим с браузером. В противном случае будет предложено открыть или сохранить файл или ресурс на диск.  
@@ -186,13 +186,13 @@ ms.locfileid: "47817558"
          Пример в режиме **Native** .  
   
         ```  
-        http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
+        https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
         ```  
   
          Пример в режиме **SharePoint** .  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
         ```  
   
     -   **GetComponentDefinition** Выводит XML-определение, связанное с элементом опубликованного отчета. Чтобы использовать это значение, необходимо иметь разрешение **Чтение содержимого** на элемент опубликованного отчета.  
@@ -229,13 +229,13 @@ ms.locfileid: "47817558"
      Пример, как получить копию отчета в формате PDF прямо с сервера отчетов, работающего в режиме **Native** :  
   
     ```  
-    http://myrshost/ReportServer?/myreport&rs:Format=PDF  
+    https://myrshost/ReportServer?/myreport&rs:Format=PDF  
     ```  
   
      Пример, как получить копию отчета в формате PDF прямо с сервера отчетов, работающего в режиме **SharePoint** :  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
     ```  
   
 -   *ParameterLanguage*:  
@@ -244,7 +244,7 @@ ms.locfileid: "47817558"
      Пример, как переопределить язык браузера и задать значение культуры de-DE, в режиме **Native** :  
   
     ```  
-    http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
+    https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
 -   *Snapshot* — преобразование отчета для просмотра на основе моментального снимка журнала отчета. Дополнительные сведения см. в разделе [Обработка моментального снимка журнала отчета с использованием доступа по URL-адресу](../reporting-services/render-a-report-history-snapshot-using-url-access.md).  
@@ -252,7 +252,7 @@ ms.locfileid: "47817558"
      Пример, как получить моментальный снимок журнала отчета, датированный 2003-04-07, с меткой времени 13:40:02, в режиме **Native** :  
   
     ```  
-    http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
+    https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
     ```  
   
 -   *PersistStreams*:  
@@ -289,7 +289,7 @@ ms.locfileid: "47817558"
      Например, в режиме **SharePoint** , чтобы показать на панели инструментов только разбиение на страницы.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
     ```  
   
 -   *HeaderArea*— управляет отображением заголовка веб-части средства просмотра отчетов. Значение по умолчанию — **Full**. Может принимать следующие значения:  
@@ -303,7 +303,7 @@ ms.locfileid: "47817558"
      Например, в режиме **SharePoint** для отображения в заголовке только элементов иерархической навигации.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
     ```  
   
 -   *DocMapAreaWidth*— управляет шириной отображаемой (в пикселях) области параметров в веб-части средства просмотра отчетов. Значение по умолчанию совпадает со значением по умолчанию веб-части средства просмотра отчетов. Значением должно быть неотрицательное целое число.  
@@ -321,7 +321,7 @@ ms.locfileid: "47817558"
      Например, в режиме **SharePoint** , чтобы свернуть область запроса параметров.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
 -   *DocMapMode*— управляет отображением области схемы документа в веб-части средства просмотра отчетов в режиме полностраничного просмотра. Значение по умолчанию — **Full**. Допустимые значения:  
@@ -337,7 +337,7 @@ ms.locfileid: "47817558"
      Например, в режиме **SharePoint** , чтобы закрепить панель инструментов в нижней части.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
 -   *ToolBarItemsDisplayMode*— определяет отображаемые элементы панели инструментов. Значение побитового перечисления. Чтобы включить элемент панели инструментов, добавьте значение элемента к общему значению. Например, чтобы отобразить меню «Действия», укажите rv:ToolBarItemsDisplayMode=63 (или 0x3F), что равно 1+2+4+8+16+32; чтобы отобразить только элементы меню «Действия», укажите rv:ToolBarItemsDisplayMode=960 (или 0x3C0). Значение по умолчанию равно **-1**, что включает все элементы панели инструментов. Допустимые значения:  
@@ -367,11 +367,11 @@ ms.locfileid: "47817558"
      Например, в режиме **SharePoint** для отображения только кнопки **Назад** , элементов управления поиском текста, элементов управления навигацией на странице и кнопки **Обновить** .  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
 ## <a name="see-also"></a>См. также:  
  [Доступ по URL-адресу (службы SSRS)](../reporting-services/url-access-ssrs.md)   
- [Экспорт отчета с помощью URL-адресов](../reporting-services/export-a-report-using-url-access.md)  
+ [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)  
   
   

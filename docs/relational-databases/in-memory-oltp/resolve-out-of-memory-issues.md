@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c8e06e7070491eb608dc315acae235465a802bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b0c54bf494055567e7a8c8fc59fe001ac843cfa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656482"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671693"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Устранение проблем нехватки памяти
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ GO
 > Дополнительные сведения см. в статье [Рекомендации по использованию выполняющейся в памяти OLTP в среде виртуальных машин](#bkmk_VMs).  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Устранение ошибок выделения страниц, возникших из-за нехватки памяти при наличии достаточных ресурсов памяти  
- Если в журнале ошибок появилось сообщение об ошибке `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'http://go.microsoft.com/fwlink/?LinkId=330673' for more information.`, но доступной физической памяти достаточно для выделения страницы, это может быть связано с отключенным Resource Governor. Если регулятор ресурсов отключен, то MEMORYBROKER_FOR_RESERVE вызывает искусственную нагрузку на ресурсы памяти.  
+ Если в журнале ошибок появилось сообщение об ошибке `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.`, но доступной физической памяти достаточно для выделения страницы, это может быть связано с отключенным Resource Governor. Если регулятор ресурсов отключен, то MEMORYBROKER_FOR_RESERVE вызывает искусственную нагрузку на ресурсы памяти.  
   
  Для устранения этой ошибки необходимо включить регулятор ресурсов.  
   
@@ -159,9 +159,9 @@ GO
 Чтобы смягчить этот эффект, заранее выделите достаточную память, чтобы восстановить или перезапустить базу данных, а не минимальное значение, в расчете на то, что динамическая память выделит дополнительную память при необходимости.
   
 ## <a name="see-also"></a>См. также:  
- [Управление памятью для компонента In-Memory OLTP](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
+ [Управление памятью для компонента In-Memory OLTP](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Наблюдение и устранение неисправностей при использовании памяти](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
- [привязать базу данных с таблицами, оптимизированными для памяти, к пулу ресурсов](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [см. в разделе](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Руководство по архитектуре управления памятью](../../relational-databases/memory-management-architecture-guide.md)  
  [Параметры конфигурации сервера «Server Memory»](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 
   

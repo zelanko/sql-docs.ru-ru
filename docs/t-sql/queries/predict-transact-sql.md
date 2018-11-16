@@ -1,7 +1,7 @@
 ---
 title: PREDICT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e9547440f6e6023560fb1c8e2bcefcd57605345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b95f966b27db3638aae6455dc5e7819f07d0ebae
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682322"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695462"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -70,9 +70,6 @@ MODEL = @model | model_literal
 Параметр PARAMETERS используется для указания необязательных определяемых пользователем параметров, используемых для оценки или прогнозирования.
 
 Имя каждого параметра определяется типом модели. Например, функция [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) в RevoScaleR поддерживает параметр `@computeResiduals`, который указывает, необходимо ли вычислять остатки при оценке модели логистической регрессии. При вызове совместимой модели можно передать имя этого параметра и значение TRUE или FALSE функции `PREDICT`.
-
-> [!NOTE]
-> Этот параметр не работает в предварительных версиях SQL Server 2017.
 
 **WITH ( <result_set_definition> )**
 
@@ -121,7 +118,7 @@ DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_
 DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
-FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry
+FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry)
 WITH (class string);
 ```
 
@@ -172,9 +169,6 @@ END;
 ```
 
 ### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>Создание модели R и вычисление оценок с помощью дополнительных параметров модели
-
-> [!NOTE]
-> Использование аргумента параметров не поддерживается в релизе-кандидате 1.
 
 В этом примере предполагается, что вы создали модель логистической регрессии, оснащенную матрицей ковариации, с помощью вызова RevoScaleR, например:
 

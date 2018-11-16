@@ -19,12 +19,12 @@ ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44148396e71f5fe023c58645a434a66ec203733d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d3d209f67fd2a84920d5890baf9112b88d52603
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785502"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696833"
 ---
 # <a name="security-functions-transact-sql"></a>Функции безопасности (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,6 +53,6 @@ ms.locfileid: "47785502"
  [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Криптографические функции (Transact-SQL)](../../t-sql/functions/cryptographic-functions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
- [Инструкции безопасности](http://msdn.microsoft.com/library/aebe2ec7-31bc-4697-a493-dcfcd0903a7b)  
+ [Инструкции безопасности](https://msdn.microsoft.com/library/aebe2ec7-31bc-4697-a493-dcfcd0903a7b)  
   
   

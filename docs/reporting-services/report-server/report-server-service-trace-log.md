@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4367c20c7f673f1075182385de092231ca289c72
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ad166eb92770d133137296d31262d202a540d94f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031073"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813797"
 ---
 # <a name="report-server-service-trace-log"></a>Журнал трассировки службы сервера отчетов
   Журналы трассировки сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] представляют собой текстовый файл ASCII, содержащий подробные сведения об операциях службы сервера отчетов.  Файл содержит сведения об операциях, выполняемых веб-службой сервера отчетов, веб-порталом и процессом фоновой обработки. Файл журнала трассировки содержит избыточные сведения, которые записываются в другие файлы журналов, а также дополнительные сведения, недоступные иным способом. Данные журнала трассировки могут оказаться полезными при отладке приложения, содержащего сервер отчетов, либо при изучении конкретной проблемы, зафиксированной в журнале событий или журнале выполнения. Например, при устранении неполадок с подписками.  
@@ -80,7 +80,7 @@ ms.locfileid: "50031073"
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- Дополнительные сведения см. в статье [913046 базы знаний](http://support.microsoft.com/?kbid=913046) на сайте [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Дополнительные сведения см. в статье [913046 базы знаний](https://support.microsoft.com/?kbid=913046) на сайте [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ##  <a name="bkmk_log_file_fields"></a> Поля файла журнала  
  В журнале трассировки содержатся следующие данные:  

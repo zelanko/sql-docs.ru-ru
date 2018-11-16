@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581da1ec4f3b42a9b71f4f8fedc5a22100d6ff2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70aa8745576c2837d4b957fed9783baa0248f07
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596132"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657613"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Обзор начальных областей в выполняющейся в памяти OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ SQL Server позволяет использовать функции выпол
   
   
 > [!NOTE]
-> Двухминутный видеоролик о функциях выполнения в памяти доступен на странице [Базы данных SQL Azure — технологии выполнения в памяти](http://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). Видеоролик выпущен в декабре 2015 г.  
+> Двухминутный видеоролик о функциях выполнения в памяти доступен на странице [Базы данных SQL Azure — технологии выполнения в памяти](https://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). Видеоролик выпущен в декабре 2015 г.  
 
 
 ### <a name="columnstore"></a>columnstore
@@ -463,7 +463,7 @@ SQL Server позволяет использовать функции выпол
 Данные тестов и сведения о производительности определяемых пользователем функций в собственном коде см. в следующих статьях:  
   
   - [Смягчение последствий RBAR с использованием скомпилированных в собственном коде определяемых пользователем функций в SQL Server 2016](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - Запись [Пользовательские функции, скомпилированные в машинный код](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) в блоге Гейл Шоу (Gail Shaw) за январь 2016 г.  
+  - Запись [Пользовательские функции, скомпилированные в машинный код](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) в блоге Гейл Шоу (Gail Shaw) за январь 2016 г.  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
@@ -475,7 +475,7 @@ SQL Server позволяет использовать функции выпол
   - [Определение, должна ли таблица или хранимая процедура быть перенесена в выполняющуюся в памяти OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - Отчет об анализе производительности транзакции в SQL Server Management Studio позволяет оценить, улучшится ли производительность приложения в базе данных с помощью выполняемой в памяти OLTP.  
   - Инструкции по перемещению таблицы из дисковой базы данных в выполняемую в памяти OLTP см. в [Помощнике по оптимизации памяти](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) .   
-- [Резервное копирование и восстановление оптимизированных для памяти таблиц](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [Резервное копирование и восстановление оптимизированных для памяти таблиц](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - Объем хранилища, используемый оптимизированными для памяти таблицами, может быть значительно больше, чем размер таблиц в памяти. Это оказывает влияние на размер резервной копии базы данных.  
 - [Транзакции с таблицами, оптимизированными для памяти](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - Содержит сведения о логике повторных попыток в T-SQL для транзакций в таблицах, оптимизированных для памяти.  
