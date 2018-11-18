@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a821706126519e5d48026eae834e320f706d2e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9cb0cecaef28d512cf36e694344e62b01df88ebf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176434"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657503"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (изолированный) и сервер машинного обучения (автономный) в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,11 +31,11 @@ SQL Server 2016 — R только. SQL Server 2017 поддерживает R 
 
 | Компонент | Описание |
 |-----------|-------------|
-| Пакеты R | [**RevoScaleR** ](revoscaler-overview.md) является основной библиотекой для масштабируемый R с функциями для преобразования, визуализации, анализа и обработки данных.  <br/>[**MicrosoftML** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) добавляет алгоритмов машинного обучения для создания пользовательских моделей для анализа текста, анализ образов и анализ тональности. <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) предоставляет вспомогательные функции для помещения скриптов R в T-SQL, хранимая процедура, регистрация хранимой процедуры с базой данных и запуск хранимой процедуры из среды разработки R.<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md) предложения веб-развертывание службы (в SQL Server 2017 г. только). <br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md) предназначен для указания запросов многомерных Выражений в R.|
+| Пакеты R | [**RevoScaleR** ](revoscaler-overview.md) является основной библиотекой для масштабируемой R с функциями для преобразования, визуализации, анализа и обработки данных.  <br/>[**MicrosoftML** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) добавляет алгоритмов машинного обучения для создания пользовательских моделей для анализа текста, анализ образов и анализ тональности. <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) предоставляет вспомогательные функции для помещения скриптов R в T-SQL, хранимая процедура, регистрация хранимой процедуры с базой данных и запуск хранимой процедуры из среды разработки R.<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md) предложения веб-развертывание службы (в SQL Server 2017 г. только). <br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md) предназначен для указания запросов многомерных Выражений в R.|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) является открытым исходным кодом корпорации Майкрософт распределение R. Включены пакета и интерпретатор. Всегда используйте версию MRO, объединенными в программе установки. |
 | Инструменты R | Окнах консоли R и Командная строка, стандартные средства в дистрибутив R. Найти их на \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64. |
 | R Примеры и сценарии |  Пакеты с открытым исходным кодом R и RevoScaleR описан встроенных наборов данных, что можно создать и запустить сценарий с помощью предварительно установленных данных. Их можно найти в \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets и \library\RevoScaleR. |
-| Пакеты Python | [**revoscalepy** ](../python/what-is-revoscalepy.md) является основной библиотекой для масштабируемый Python с помощью функций для преобразования, визуализации, анализа и обработки данных. <br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) добавляет алгоритмов машинного обучения для создания пользовательских моделей для анализа текста, анализ образов и анализ тональности.  |
+| Пакеты Python | [**revoscalepy** ](../python/what-is-revoscalepy.md) является основной библиотекой для масштабируемой Python с помощью функций для преобразования, визуализации, анализа и обработки данных. <br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) добавляет алгоритмов машинного обучения для создания пользовательских моделей для анализа текста, анализ образов и анализ тональности.  |
 | Инструменты Python | Встроенное средство командной строки Python полезен для нерегламентированной отладки и задачи. Найти средство в \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
 | Anaconda | Anaconda — дистрибутив открытым исходным кодом Python и основных пакетов. |
 | Примеры Python и сценарии | С помощью R, Python, содержит встроенные наборы данных и сценарии. Найти данные revoscalepy в \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
