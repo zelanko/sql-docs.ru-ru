@@ -20,12 +20,12 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 40e297f748654e809647fb65e7c3b656228b2f64
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 822e8608939d7fb3dbef6872ec92da37e7621865
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030798"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667933"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,6 +87,6 @@ len
  Указатель на оканчивающуюся нулевым байтом строку, содержащую текущее значение указанного поля в процедуре SRV_PROC. Если поле пусто, то возвращается допустимый указатель на пустую строку, а *len* содержит 0. Если поле неизвестно, то возвращается значение NULL, а *len* содержит значение –1.  
   
 > [!IMPORTANT]  
->  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Дополнительные сведения об исследовании и проверке безопасности см. в [Центре разработчиков безопасности](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Дополнительные сведения об исследовании и проверке безопасности см. в [Центре разработчиков безопасности](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
   
