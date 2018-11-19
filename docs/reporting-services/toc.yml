@@ -16,21 +16,21 @@ items:
     items:
     - name: Устаревшие функции
       href: deprecated-features-in-sql-server-reporting-services-ssrs.md
-    - name: Неподдерживаемые возможности в службах SQL Server Reporting Services в версии SQL Server 2016
+    - name: Неподдерживаемые функции в SSRS в SQL Server 2016
       href: discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
-    - name: Критические изменения в службах SQL Server Reporting Services в выпуске SQL Server 2016
+    - name: Критически важные изменения в SSRS в SQL Server 2016
       href: breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
     - name: Изменения в работе служб SQL Server Reporting Services в SQL Server 2016
       href: behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: Планирование
   items:
-  - name: Выбор средства Microsoft Business Intelligence (BI) для анализа и отчетности
+  - name: Выбор средств бизнес-аналитики для анализа и отчетов
     href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
   - name: Поддержка браузера для служб Reporting Services и Power View
     href: browser-support-for-reporting-services-and-power-view.md
-  - name: Планирование создания и развертывания отчетов | Службы Reporting Services
+  - name: Планирование разработки и развертывания отчетов
     href: plan-for-report-design-and-report-deployment-reporting-services.md
-  - name: Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server 2016
+  - name: Возможности служб Reporting Services в различных выпусках SQL Server
     href: reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
 - name: Установить
   href: ../reporting-services/install-windows/install-reporting-services.md
@@ -39,17 +39,17 @@ items:
   items:
   - name: Фирменная символика на веб-портале
     href: branding-the-web-portal.md
-  - name: Работа с общими наборами данных (веб-портал)
+  - name: Работа с общими наборами данных
     href: work-with-shared-datasets-web-portal.md
-  - name: Работа с отчетами с разбивкой на страницы (веб-портал)
+  - name: Работа с отчетами с разбиением на страницы
     href: working-with-paginated-reports-web-portal.md
-  - name: Работа моментальными снимками (веб-портал)
+  - name: Работа с моментальными снимками
     href: working-with-snapshots-web-portal.md
-  - name: Работа с подписками (веб-портал)
+  - name: Работа с подписками
     href: working-with-subscriptions-web-portal.md
-  - name: Работа с ключевыми показателями эффективности в службах Reporting Services
+  - name: Работа с ключевыми показателями эффективности
     href: working-with-kpis-in-reporting-services.md
-  - name: Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)
+  - name: Мои параметры для интеграции с Power BI
     href: my-settings-for-power-bi-integration-web-portal.md
 - name: Сервер отчетов
   href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md
@@ -251,9 +251,9 @@ items:
       href: tutorial-creating-drillthrough-and-main-reports-report-builder.md
     - name: Учебник. Общие сведения о выражениях
       href: tutorial-introducing-expressions.md
-ms.openlocfilehash: 3846d92e32ce762f767407c535a58ebbe2e6bd7f
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: bf39fd7ed94dff4fb4efbbc80f25b954438c5494
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899754"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350588"
