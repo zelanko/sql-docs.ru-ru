@@ -5,8 +5,7 @@ ms.date: 09/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -29,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1b62fe2d79dfa947cb9c8f0f6ebbd0c484960e26
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 9ba83c8913d9e906925986cc07e3a2816c131cc6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461169"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661243"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "49461169"
 Программа использует ODBC для выполнения пакетов Transact-SQL. 
  
 > [!NOTE]
-> Самые последние версии программы sqlcmd доступны в виде веб-выпуска в [Центре загрузки](http://go.microsoft.com/fwlink/?LinkID=825643). Необходим версии 13.1 или более поздней, для поддержки Always Encrypted (`-g`) и проверки подлинности Azure Active Directory (`-G`). (На компьютере можно установить несколько версий sqlcmd.exe. Убедитесь, что используется правильная версия. Чтобы определить версию, выполните `sqlcmd -?`.)
+> Самые последние версии программы sqlcmd доступны в виде веб-выпуска в [Центре загрузки](https://go.microsoft.com/fwlink/?LinkID=825643). Необходим версии 13.1 или более поздней, для поддержки Always Encrypted (`-g`) и проверки подлинности Azure Active Directory (`-G`). (На компьютере можно установить несколько версий sqlcmd.exe. Убедитесь, что используется правильная версия. Чтобы определить версию, выполните `sqlcmd -?`.)
 
 Вы можете попробовать программу sqlcmd из Azure Cloud Shell предварительно устанавливается по умолчанию: [ ![запуска Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "запуска Cloud Shell")](https://shell.azure.com)
 
@@ -142,10 +141,10 @@ sqlcmd
  Параметр **-E** не использует имя пользователя и пароль, указанные в переменных среды, например SQLCMDPASSWORD. Если параметр **-E** используется в сочетании с параметром **-U** или **-P** , выдается сообщение об ошибке.  
 
 **-g**  
-Задает значение `Enabled`для параметра "Шифрование столбцов". Дополнительные сведения см. в разделе [Постоянное шифрование](../relational-databases/security/encryption/always-encrypted-database-engine.md). Поддерживаются только главные ключи, хранящиеся в хранилище сертификатов Windows. Для использования параметра -g требуется версия **sqlcmd** не ниже [13.1](http://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните `sqlcmd -?`.
+Задает значение `Enabled`для параметра "Шифрование столбцов". Дополнительные сведения см. в разделе [Постоянное шифрование](../relational-databases/security/encryption/always-encrypted-database-engine.md). Поддерживаются только главные ключи, хранящиеся в хранилище сертификатов Windows. Для использования параметра -g требуется версия **sqlcmd** не ниже [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните `sqlcmd -?`.
 
  **-G**  
- Клиент использует этот переключатель при подключении к базе данных SQL или хранилищу данных SQL, чтобы указать, что проверка подлинности пользователя выполняется с помощью Azure Active Directory. Этот параметр задает переменную скрипта SQLCMDUSEAAD = true программы **sqlcmd** . Для использования параметра -G требуется версия **sqlcmd** не ниже [13.1](http://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните `sqlcmd -?`. Дополнительные сведения см. в статье [Подключение к базе данных SQL или хранилищу данных SQL с использованием аутентификации Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Параметр - не поддерживается с параметром -G.
+ Клиент использует этот переключатель при подключении к базе данных SQL или хранилищу данных SQL, чтобы указать, что проверка подлинности пользователя выполняется с помощью Azure Active Directory. Этот параметр задает переменную скрипта SQLCMDUSEAAD = true программы **sqlcmd** . Для использования параметра -G требуется версия **sqlcmd** не ниже [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните `sqlcmd -?`. Дополнительные сведения см. в статье [Подключение к базе данных SQL или хранилищу данных SQL с использованием аутентификации Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Параметр - не поддерживается с параметром -G.
 
 > [!IMPORTANT]
 > Параметр **-G** применяется только для базы данных SQL Azure и хранилища данных Azure.
@@ -799,7 +798,7 @@ sqlcmd
   
  `GO`  
   
- При нажатии клавиши ВВОД возвращается следующий результирующий набор:  
+ После нажатия клавиши ВВОД отобразится следующий результирующий набор.  
   
  `BusinessEntityID FirstName    LastName`  
   

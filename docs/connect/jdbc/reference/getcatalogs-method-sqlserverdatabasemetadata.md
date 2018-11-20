@@ -16,12 +16,12 @@ ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e81c905a483972ab0dfe7b03573bc30bf6d474e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2792bd3a13be5ceb4ee8965065f6c6619f389d22
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727192"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601235"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>Метод getCatalogs (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,10 +42,10 @@ public java.sql.ResultSet getCatalogs()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getCatalogs указывается с помощью метода getCatalogs в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод getCatalogs определяется методом getCatalogs в интерфейсе java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
->  В SQL Azure, следует подключиться к базе данных master для вызова **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure не поддерживает возврат всего набора каталогов из пользовательских баз данных. **SQLServerDatabaseMetaData.getCatalogs** использует для получения каталогов представление sys.databases. См. обсуждение разрешений в [sys.databases (база данных SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) для понимания **SQLServerDatabaseMetaData.getCatalogs** поведение в SQL Azure.  
+>  В SQL Azure, следует подключиться к базе данных master для вызова **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure не поддерживает возврат всего набора каталогов из пользовательских баз данных. **SQLServerDatabaseMetaData.getCatalogs** использует для получения каталогов представление sys.databases. См. обсуждение разрешений в [sys.databases (база данных SQL Azure)](https://go.microsoft.com/fwlink/?LinkId=217396) для понимания **SQLServerDatabaseMetaData.getCatalogs** поведение в SQL Azure.  
   
  Результирующий набор, возвращаемый методом getCatalogs, включает следующие данные:  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7e2e9fde43deb3b6efbac62dc39d27897d32c9ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90240caba9bbba0539c2b827d9471b4318592ba6
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783202"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559622"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Поддержка типов параметров OLE DB, возвращающих табличные значения (свойства)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47783202"
   В данном разделе приводятся сведения о свойствах и наборах свойств OLE DB, связанных с объектами наборов строк для возвращающего табличное значение параметра.  
   
 ## <a name="properties"></a>Свойства  
- Далее приводится список свойств, к которым можно получить доступ, применив метод IRowsetInfo::GetPropeties к объектам наборов строк для возвращающего табличное значение параметра. Следует заметить, что все свойства объектов наборов строк для возвращающего табличное значение параметра неизменяемы. Таким образом попытка задать любой из этих свойств с помощью IOpenRowset::OpenRowset или ITableDefinitionWithConstraints::CreateTableWithConstraints способы их значения по умолчанию вызовет ошибку, и объект не будет создан.  
+ Далее приводится список свойств, к которым можно получить доступ, применив метод IRowsetInfo::GetProperties к объектам наборов строк для табличного параметра. Следует заметить, что все свойства объектов наборов строк для возвращающего табличное значение параметра неизменяемы. Таким образом попытка задать любой из этих свойств с помощью IOpenRowset::OpenRowset или ITableDefinitionWithConstraints::CreateTableWithConstraints способы их значения по умолчанию вызовет ошибку, и объект не будет создан.  
   
  Свойства, не реализованные в объекте наборов строк для возвращающего табличное значение параметра, здесь не перечислены. Полный набор свойств можно найти в документации по OLE DB в разделе, посвященном компонентам доступа к данным Windows.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47783202"
 |SSPROP_COL_COMPUTED|И запись: чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Тип: VT_BOOL<br /><br /> Описание: значение VARIANT_TRUE означает, что столбец является вычисляемым. VARIANT_FALSE означает, что столбец не является вычисляемым.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Эти свойства считываются потребителем при обнаружении сведения о типе возвращающего табличное значение параметра в вызовах ISSCommandWithParamters::GetParameterProperties и устанавливаются потребителем в процессе задания отдельных свойств о возвращающих табличные значения параметра через ISSCommandWithParameters::SetParameterProperties.  
+ Эти свойства считываются потребителем при обнаружении сведения о типе возвращающего табличное значение параметра в вызовах ISSCommandWithParameters::GetParameterProperties и устанавливаются потребителем в процессе задания отдельных свойств о возвращающих табличные значения параметра через ISSCommandWithParameters::SetParameterProperties.  
   
  В следующей таблице приводятся подробные описания этих свойств.  
   

@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ce122713ce5d57daa9a7313d8b6d184bd33b850
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842752"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600974"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Использование функции Always Encrypted с драйвером JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "47842752"
 - Убедитесь, что Microsoft JDBC Driver 6.0 (или более поздней версии) для SQL Server должен быть установлен на компьютере разработки. 
 - Скачайте и установите файлы политики юрисдикции неограниченной стойкости Java Cryptography Extension (JCE).  Обязательно прочитайте содержащийся в ZIP-архиве файл сведений, чтобы получить инструкции по установке и сопутствующие сведения о возможных проблемах экспорта и импорта.  
 
-    - При использовании mssql-jdbc-X.X.X.jre7.jar или sqljdbc41.jar файлы политики можно скачать на странице [скачивания файлов политики юрисдикции неограниченной стойкости Java Cryptography Extension (JCE) 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html).
+    - При использовании mssql-jdbc-X.X.X.jre7.jar или sqljdbc41.jar файлы политики можно скачать на странице [скачивания файлов политики юрисдикции неограниченной стойкости Java Cryptography Extension (JCE) 7](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html).
 
-    - При использовании mssql-jdbc-X.X.X.jre8.jar или sqljdbc42.jar файлы политики можно скачать на странице [скачивания файлов политики юрисдикции неограниченной стойкости Java Cryptography Extension (JCE) 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html).
+    - При использовании mssql-jdbc-X.X.X.jre8.jar или sqljdbc42.jar файлы политики можно скачать на странице [скачивания файлов политики юрисдикции неограниченной стойкости Java Cryptography Extension (JCE) 8](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html).
 
     - Если с помощью mssql-jdbc-X.X.X.jre9.jar, нет файл политики необходимо загрузить. Политики юрисдикции в Java 9 неограниченное стойкость шифрования по умолчанию.
 
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 > Пример того, как включить эти зависимости в проект Maven, см. в разделе [загрузить ADAL4J и AKV зависимости с помощью Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
-### <a name="using-windows-certificate-store-provider"></a>С помощью Windows Certificate Store поставщика
+### <a name="using-windows-certificate-store-provider"></a>Использование поставщика хранилища сертификатов Windows
 The SQLServerColumnEncryptionCertificateStoreProvider можно использовать для хранения главных ключей столбцов в хранилище сертификатов Windows. Используйте мастер постоянного шифрования SQL Server Management Studio (SSMS) или других поддерживаемых средств для создания главного ключа столбца и шифрование столбцов определений для ключей в базе данных. Тот же мастер можно использовать для создания самозаверяющего сертификата в Store сертификатов Windows, который может использоваться в качестве главного ключа столбца для постоянного шифрования данных. Дополнительные сведения о главном ключе столбца и синтаксиса T-SQL для ключа шифрования столбца, см. в разделе [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) и [Создание ключа ШИФРОВАНИЯ СТОЛБЦА](../../t-sql/statements/create-column-encryption-key-transact-sql.md) соответственно.
 
 Имя SQLServerColumnEncryptionCertificateStoreProvider является MSSQL_CERTIFICATE_STORE и может запрашиваться getName() API объекта поставщика. Он автоматически регистрируется с помощью драйвера и может использоваться в легко без изменения приложения.
@@ -154,7 +154,7 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 Драйвер JDBC автоматически создает экземпляр SQLServerColumnEncryptionJavaKeyStoreProvider, если эти учетные данные в свойства соединения.
 
 ### <a name="creating-a-column-master-key-for-the-java-key-store"></a>Создание главного ключа столбца для Store ключ Java
-SQLServerColumnEncryptionJavaKeyStoreProvider может использоваться с типами хранилища ключей JKS или PKCS12. Чтобы создать или импортировать ключ, используемый с этим поставщиком используйте Java [keytool](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) служебной программы. Ключ должен иметь тот же пароль, что хранилище ключей, сам. Вот пример того, как создать открытый ключ и связанный с ним закрытый ключ с помощью служебной программы keytool:
+SQLServerColumnEncryptionJavaKeyStoreProvider может использоваться с типами хранилища ключей JKS или PKCS12. Чтобы создать или импортировать ключ, используемый с этим поставщиком используйте Java [keytool](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) служебной программы. Ключ должен иметь тот же пароль, что хранилище ключей, сам. Вот пример того, как создать открытый ключ и связанный с ним закрытый ключ с помощью служебной программы keytool:
 
 ```
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks
