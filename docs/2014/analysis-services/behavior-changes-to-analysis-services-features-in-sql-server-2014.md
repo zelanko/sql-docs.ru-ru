@@ -22,7 +22,7 @@ ms.locfileid: "50145852"
   В этом разделе описаны изменения работы функций [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] для табличной модели, многомерной модели, модели анализа данных и развертываний [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] . Изменения в работе касаются того, как функциональные возможности работают или взаимодействуют в текущей версии в сравнении с предыдущими версиями SQL Server.  
   
 > [!NOTE]  
->  Напротив, критическое изменение — это изменение, которое препятствует работе модели данных или приложения, интегрированного с [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Дополнительные сведения см. в разделе [Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
+>  Напротив, критическое изменение — это изменение, которое препятствует работе модели данных или приложения, интегрированного с [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Дополнительные сведения см. в разделе [Критические изменения функций служб Analysis Services в SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
   
  В этом разделе.  
   
