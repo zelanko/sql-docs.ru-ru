@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90e24f7de0ca9950962cd078c7e7360572de89da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8ed3ce76d449e6e67418a13fe1d61baeed1edf0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673722"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638521"
 ---
 # <a name="modify-a-partition-function"></a>Изменение функции секционирования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47673722"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает репликацию для изменения функций секционирования. Если нужно внести изменения в функцию секционирования в базе данных публикации, необходимо сделать это вручную и в базе данных подписки.  
   
--   Все файловые группы, обрабатываемые ALTER PARITITION FUNCTION, должны находиться в режиме в сети.  
+-   Все файловые группы, обрабатываемые ALTER PARTITION FUNCTION, должны находиться в режиме в сети.  
   
 ###  <a name="Security"></a> безопасность  
   
@@ -90,7 +90,7 @@ ms.locfileid: "47673722"
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>Разбиение одной секции на две  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47673722"
   
 #### <a name="to-merge-two-partitions-into-one-partition"></a>Слияние двух секций в одну  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

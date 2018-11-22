@@ -11,12 +11,12 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c1c48583a37a959a0922dc12ac72ef064e51c91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b140ea28397ace096c5b37db26a661fd7194647
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769502"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629547"
 ---
 # <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>Занятие 1–9. Проверка учебного пакета, созданного на занятии 1
 На этом занятии были выполнены представленные ниже задачи.  
@@ -44,7 +44,7 @@ ms.locfileid: "47769502"
   
 1.  В меню **Отладка** выберите команду **Начать отладку**.  
   
-    В результате запуска пакета к таблице фактов **FactCurrency** в базе данных **AdventureWorksDW2012**будет добавлено 1097 строк.  
+    Пакет будет запущен, и в таблицу фактов **NewFactCurrencyRate** из базы данных **AdventureWorksDW2012** будет добавлено 1097 строк.  
   
 2.  После окончания работы пакета выберите в меню **Отладка** пункт **Остановить отладку**.  
   

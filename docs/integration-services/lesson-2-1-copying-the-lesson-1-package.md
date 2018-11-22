@@ -11,12 +11,12 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29172f4a1abca10e5b2968b77cfdd62ee44810e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7638d36f78853612c312880cd9698625af1ffe3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827112"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640481"
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>Занятие 2–1. Копирование пакета, созданного на занятии 1
 В этой задаче будет создана копия пакета Lesson 1.dtsx, созданного на занятии 1. Если вы не прошли занятие 1, можно добавить пакет задания 1, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 2.  
@@ -39,7 +39,7 @@ ms.locfileid: "47827112"
   
 7.  В окне "Свойства" измените свойство **Name** на **Занятие 2**.  
   
-8.  Установите флажок для свойства **ID** , щелкните стрелку раскрывающегося списка, а затем в списке выберите **<Generate New ID>**.  
+8.  Установите флажок для свойства **ID**, щелкните стрелку раскрывающегося списка, а затем в списке выберите **\<Generate New ID\>**.  
   
 ### <a name="to-add-the-completed-lesson-1-package"></a>Добавление готового пакета занятия 1  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47827112"
   
     Чтобы загрузить все пакеты занятий этого учебника, выполните следующие действия.  
   
-    1.  Перейдите к [образцам продуктов служб Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027).  
+    1.  Перейдите к [образцам продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027).  
   
     2.  Перейдите на вкладку **DOWNLOADS** .  
   

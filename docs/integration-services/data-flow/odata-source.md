@@ -16,12 +16,12 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692132"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638662"
 ---
 # <a name="odata-source"></a>Источник OData
 Компонент источника OData используется в пакете служб SSIS для получения данных от служб OData.
@@ -38,13 +38,13 @@ ms.locfileid: "47692132"
 
 Источник OData поддерживает следующие источники данных:
 -   Microsoft Dynamics AX Online и Microsoft Dynamics CRM Online.
--   Списки SharePoint. Просмотреть все списки на сервере SharePoint можно по следующему URL-адресу: http://\<сервер>/_vti_bin/ListData.svc. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
+-   Списки SharePoint. Просмотреть все списки на сервере SharePoint можно по следующему URL-адресу: https://\<сервер>/_vti_bin/ListData.svc. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## <a name="supported-data-types"></a>Поддерживаемые типы данных
 
 Источник OData поддерживает следующие простые типы данных: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string и TimeSpan.
 
-Чтобы просмотреть типы данных столбцов в источнике данных, проверьте страницу `http://<OData feed endpoint>/$metadata`.
+Чтобы просмотреть типы данных столбцов в источнике данных, проверьте страницу `https://<OData feed endpoint>/$metadata`.
 
 > [!IMPORTANT]
 > Компонент источника OData не поддерживает сложные типы в списках SharePoint, такие как элементы множественного выбора.

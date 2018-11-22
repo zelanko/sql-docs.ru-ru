@@ -1,7 +1,7 @@
 ---
 title: Каталог служб SSIS | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 11/12/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c168338d466273d28f2b8bd9d1f27c71f3a30b31
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864302"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641414"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
   Каталог **SSISDB** служит центральным пунктом для работы с проектами служб [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS), развернутыми на сервере служб [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Например, можно задавать параметры проектов и пакетов, настраивать среды для указания значений времени выполнения для пакетов, выполнять пакеты и проводить устранение неполадок, а также управлять операциями на сервере служб [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.locfileid: "47864302"
   
  Чтобы обеспечить поддержку базы данных **SSISDB** , рекомендуется применять предопределенные политики предприятия для управления пользовательскими базами данных. Дополнительные сведения о создании планов обслуживания см. в разделе [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- Каталог базы данных **SSISDB** и база данных **SSISDB** поддерживают Windows PowerShell. Дополнительные сведения об использовании SQL Server с Windows PowerShell см. в разделе [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md). Примеры использования Windows PowerShell для выполнения задач, например таких как развертывание проекта, см. в записи блога [SSIS и Powershell в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
+ Каталог базы данных **SSISDB** и база данных **SSISDB** поддерживают Windows PowerShell. Дополнительные сведения об использовании SQL Server с Windows PowerShell см. в разделе [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md). Примеры использования Windows PowerShell для выполнения задач, например таких как развертывание проекта, см. в записи блога [SSIS и Powershell в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
   
  Дополнительные сведения о просмотре данных операций см. в разделе [Наблюдение за выполнением пакетов и других операций](../../integration-services/performance/monitor-running-packages-and-other-operations.md).  
   
@@ -356,12 +356,12 @@ ms.locfileid: "47864302"
   
     ```  
   
-     Дополнительные примеры использования Windows PowerShell и пространства имен <xref:Microsoft.SqlServer.Management.IntegrationServices> см. в записи блога [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539) (Службы SSIS и PowerShell в SQL Server 2012) на сайте blogs.msdn.com. Общие сведения о пространстве имен и примеры кода см. в записи блога [Обзор модели управляемых объектов каталога служб SSIS](http://go.microsoft.com/fwlink/?LinkId=254267)на сайте blogs.msdn.com.  
+     Дополнительные примеры использования Windows PowerShell и пространства имен <xref:Microsoft.SqlServer.Management.IntegrationServices> см. в записи блога [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) (Службы SSIS и PowerShell в SQL Server 2012) на сайте blogs.msdn.com. Общие сведения о пространстве имен и примеры кода см. в записи блога [Обзор модели управляемых объектов каталога служб SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)на сайте blogs.msdn.com.  
 
 ## <a name="catalog-properties-dialog-box"></a>Диалоговое окно свойств каталога
   Диалоговое окно свойств каталога служит для настройки каталога SSISDB. Свойства каталога определяют методы шифрования конфиденциальных данных, параметры хранения данных о версиях операций и проектов, а также время ожидания операций проверки. Каталог служб SSISDB представляет собой центральную точку хранения и администрирования проектов, пакетов, параметров и сред служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Свойства каталога можно также просмотреть в представлении catalog.catalog_property и задать эти свойства с помощью хранимой процедуры catalog.configure_catalog. Дополнительные сведения см. в разделах [catalog.catalog_properties (база данных SSISDB)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) и [catalog.configure_catalog (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+ Свойства каталога можно также просмотреть в представлении `catalog.catalog_properties` и задать эти свойства с помощью хранимой процедуры `catalog.configure_catalog`. Дополнительные сведения см. в разделах [catalog.catalog_properties (база данных SSISDB)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) и [catalog.configure_catalog (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
  **Выбор действия**  
   
@@ -380,15 +380,14 @@ ms.locfileid: "47864302"
 ###  <a name="options"></a> Настройка параметров  
   
 #### <a name="options"></a>Параметры  
- В следующей таблице описаны некоторые свойства, определенные в диалоговом окне, а также соответствующие свойства в представлении catalog.catalog_property.  
+ В приведенной ниже таблице описаны некоторые свойства, определенные в диалоговом окне, а также соответствующие свойства в представлении `catalog.catalog_properties`.  
   
-|Имя свойства (диалоговое окно свойств каталога)|Имя свойства (представление catalog.catalog_property)|Описание|  
+|Имя свойства (диалоговое окно свойств каталога)|Имя свойства (представление catalog.catalog_properties)|Описание|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
-|Имя алгоритма шифрования|ENCRYPTION_CLEANUP_ENABLED|Указывает тип шифрования, который используется при шифровании значений конфиденциальных параметров каталога. Допустимы следующие значения:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (по умолчанию)|  
-|Время ожидания проверки (в секундах)|VALIDATION_TIMEOUT|Задайте максимальное время в секундах, в течение которого может выполняться операция проверки проекта или пакета до того, как будет остановлена. Значение по умолчанию — 300 секунд.<br /><br /> Выполнение проверки является асинхронной операцией. Чем больше проект или пакет, тем больше времени необходимо для проверки.<br /><br /> Дополнительные сведения о проверке проектов и пакетов см. в разделе [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).|  
+|Имя алгоритма шифрования|ENCRYPTION_ALGORITHM|Указывает тип шифрования, который используется при шифровании значений конфиденциальных параметров каталога. Допустимы следующие значения:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (по умолчанию)|  
+|Максимальное количество версий в проекте|MAX_PROJECT_VERSIONS|Определяет, сколько версий проекта будет храниться в каталоге. Когда общее количество версий превышает максимальное значение, более ранние версии проектов удаляются при выполнении задания по очистке версий проекта.|  
 |Периодическая очистка журналов|OPERATION_CLEANUP_ENABLED|Установите это свойство в значение True, чтобы указать, что задание агента SQL Server по очистке операций выполняется. В противном случае установите свойство в значение False.|  
 |Срок хранения (в днях)|RETENTION_WINDOW|Задайте максимальный срок хранения данных о допустимых операциях (в днях). Данные, которые хранятся дольше указанного числа дней, удаляются заданием агента SQL по очистке операций.|  
-|Максимальное количество версий в проекте|MAX_PROJECT_VERSIONS|Определяет, сколько версий проекта будет храниться в каталоге. Когда общее количество версий превышает максимальное значение, более ранние версии проектов удаляются при выполнении задания по очистке версий проекта.|  
 
 ## <a name="back-up-restore-and-move-the-ssis-catalog"></a>Резервное копирование, восстановление и перемещение каталога служб SSIS
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -413,7 +412,7 @@ ms.locfileid: "47864302"
   
     ```  
   
-3.  Выполните резервное копирование базы данных SSISDB с помощью диалогового окна **Создание резервной копии базы данных** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Как создать резервную копию базы данных (среда SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Выполните резервное копирование базы данных SSISDB с помощью диалогового окна **Создание резервной копии базы данных** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Как создать резервную копию базы данных (среда SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Создайте скрипт CREATE LOGIN для ## MS_SSISServerCleanupJobLogin ##, выполнив следующие действия. Дополнительные сведения см. в разделе [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md).  
   
@@ -437,7 +436,7 @@ ms.locfileid: "47864302"
   
 ### <a name="to-restore-the-ssis-database"></a>Восстановление базы данных служб SSIS  
   
-1.  Если база данных SSISDB восстанавливается из копии в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], где каталог SSISDB никогда не создавался, включите среду CLR с помощью хранимой процедуры sp_configure. Дополнительные сведения см. в разделах [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) и [Параметр clr enabled](http://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  Если база данных SSISDB восстанавливается из копии в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], где каталог SSISDB никогда не создавался, включите среду CLR с помощью хранимой процедуры sp_configure. Дополнительные сведения см. в разделах [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) и [Параметр clr enabled](https://go.microsoft.com/fwlink/?LinkId=231855).  
   
     ```  
     use master   
@@ -580,7 +579,7 @@ ms.locfileid: "47864302"
 ###  <a name="prereq"></a> Предварительные требования  
 Перед включением поддержки AlwaysOn для базы данных SSISDB выполните указанные далее предварительные действия.  
   
-1.  Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонентов и средств отказоустойчивого кластера для Windows Server 2012)](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Installing the Failover Cluster Feature and Tools for Windows Server 2012). Установите компоненты и средства на всех узлах кластера.  
+1.  Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонентов и средств отказоустойчивого кластера для Windows Server 2012)](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Installing the Failover Cluster Feature and Tools for Windows Server 2012). Установите компоненты и средства на всех узлах кластера.  
   
 2.  Установить SQL Server 2016 с компонентом Integration Services (SSIS) на каждом узле кластера.  
   
@@ -662,8 +661,8 @@ ms.locfileid: "47864302"
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   Запись в блоге [Службы SSIS и Powershell в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
+-   Запись в блоге [Службы SSIS и Powershell в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
   
--   Запись в блоге [Советы по управлению доступом к каталогу служб SSIS](http://go.microsoft.com/fwlink/?LinkId=246669)на сайте blogs.msdn.com.  
+-   Запись в блоге [Советы по управлению доступом к каталогу служб SSIS](https://go.microsoft.com/fwlink/?LinkId=246669)на сайте blogs.msdn.com.  
   
--   Запись [Обзор модели управляемых объектов каталога служб SSIS](http://go.microsoft.com/fwlink/?LinkId=254267)в блоге blogs.msdn.com.  
+-   Запись [Обзор модели управляемых объектов каталога служб SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)в блоге blogs.msdn.com.  

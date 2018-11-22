@@ -12,12 +12,12 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 3d3b048b5aa0c2a2cfd0eaf89e03d49f37152497
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b229fb722c1a6de85e4c26179c776ba605909441
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610942"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269937"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Загрузка данных в Хранилище данных SQL Azure с помощью SQL Server Integration Services (SSIS)
 
@@ -96,7 +96,7 @@ Visual Studio открывает и создает проект служб Integ
 
 1. Используйте задачу передачи BLOB-объектов Azure для размещения данных в хранилище BLOB-объектов Azure. Чтобы получить задачу отправки BLOB-объектов Azure, скачайте [Пакет дополнительных компонентов Microsoft SQL Server Integration Services для Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
-2. После этого используйте задачу "Выполнить SQL" служб SSIS, чтобы запустить скрипт Polybase, который загружает данные в хранилище данных SQL. Пример, который загружает данные из хранилища BLOB-объектов Azure в Хранилище данных SQL (но без использования SSIS), см. в [Руководстве по загрузке данных в Хранилище данных SQL Azure](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
+2. После этого используйте задачу "Выполнить SQL" служб SSIS, чтобы запустить скрипт PolyBase, который загружает данные в хранилище данных SQL. Пример, который загружает данные из хранилища BLOB-объектов Azure в Хранилище данных SQL (но без использования SSIS), см. в [Руководстве по загрузке данных в Хранилище данных SQL Azure](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
 
 ## <a name="option-2---use-a-source-and-destination"></a>Вариант 2. Использование источника и получателя
 

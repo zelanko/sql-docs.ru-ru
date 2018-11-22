@@ -11,22 +11,22 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ff000457e8328864ac8e77c5d21b0048da3b024
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d414f256e0eb06bfe3925b0e8e1a61b4799c3c7c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419409"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703772"
 ---
 # <a name="sql-server-2017-release-notes"></a>Заметки о выпуске SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 В этом разделе описываются ограничения и проблемы, связанные с SQL Server 2017. Дополнительные сведения см. в следующих статьях:
 - [Новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Заметки о выпуске для SQL Server в Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
-- [Накопительные обновления SQL Server 2017](http://aka.ms/sql2017cu) — сведения о последнем выпуске накопительного обновления
+- [Накопительные обновления SQL Server 2017](https://aka.ms/sql2017cu) — сведения о последнем выпуске накопительного обновления
 
 **Оцените SQL Server!**
-- [![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Скачать из Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Создать виртуальную машину](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [ Развернуть виртуальную машину с SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
@@ -44,12 +44,12 @@ ms.locfileid: "49419409"
     3. Снова установите флажок **Разрешить FILESTREAM при потоковом доступе файлового ввода-вывода** для имени исходной общей папки и нажмите кнопку **Применить**.
 
 ### <a name="master-data-services-mds"></a>Службы Master Data Services (MDS)
-- **Проблема и последствия для клиентов:** когда на странице разрешений пользователя предоставляется разрешение для корневого уровня в представлении сущностей в виде дерева, отображается следующая ошибка: `"The model permission cannot be saved. The object guid is not valid"`
+- **Проблема и последствия для клиентов** : когда на странице разрешений пользователя предоставляется разрешение для корневого уровня в представлении сущностей в виде дерева, отображается следующая ошибка: `"The model permission cannot be saved. The object guid is not valid"`
 
 - **Решения.** 
   - Предоставьте разрешение для подузлов в представлении в виде дерева, а не для корневого уровня.
   - или диспетчер конфигурации служб
-  - Запустите скрипт, описанный в блоге команды разработчиков MDS, посвященном [ошибке при применении разрешения на уровне сущности](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx).
+  - Запустите скрипт, описанный в блоге команды разработчиков MDS, посвященном [ошибке при применении разрешения на уровне сущности](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx).
 
 ### <a name="analysis-services"></a>Службы Analysis Services
 - **Проблема и последствия для клиентов.** Соединители данных для приведенных ниже источников еще недоступны для табличных моделей на уровне совместимости 1400.

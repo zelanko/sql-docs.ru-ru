@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e40163fe08b451e59dc28915002079b80e987e6f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9ae23135583dc09db8d8a8b0cfb7d356244fb753
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021188"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812281"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Активация функций интеграции с сервером отчетов и Power View в SharePoint
 
@@ -26,7 +26,7 @@ ms.locfileid: "50021188"
 > [!NOTE]
 > Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
- При установке надстройки служб Reporting Services для продуктов SharePoint 2010 после установки SharePoint функции интеграции с сервером отчетов и Power View будут активированы только для корневых семейств веб-сайтов. Для других семейств веб-сайтов необходимо активировать эти функции вручную. Например, если имеется семейство веб-сайтов **http://[имя_сервера]/sites/[имя_семейства_веб-сайтов]**, то необходимо вручную активировать функции семейства веб-сайтов служб Reporting Services.  
+ При установке надстройки служб Reporting Services для продуктов SharePoint 2010 после установки SharePoint функции интеграции с сервером отчетов и Power View будут активированы только для корневых семейств веб-сайтов. Для других семейств веб-сайтов необходимо активировать эти функции вручную. Например, если имеется семейство веб-сайтов **https://[имя_сервера]/sites/[имя_семейства_веб-сайтов]**, то необходимо вручную активировать функции семейства веб-сайтов служб Reporting Services.  
   
  Когда корневого семейства веб-сайтов нет, надстройка Reporting Services занесет в журнал сообщение, подобное приведенному ниже.  
   

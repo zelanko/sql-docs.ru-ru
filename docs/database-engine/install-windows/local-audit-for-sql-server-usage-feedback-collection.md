@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4b53d5804668a46ade48d0beb41eae8fb7650374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a094030a35acf997186061b752f9b61d8f7b8200
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794392"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601688"
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Локальный аудит для сбора отзывов об использовании SQL Server
 
@@ -27,7 +27,7 @@ ms.locfileid: "47794392"
 
 ## <a name="introduction"></a>Введение
 
-Microsoft SQL Server включает в себя функции, которые могут собирать и отправлять в Майкрософт сведения о компьютере или устройстве пользователя через Интернет. Эти сведения называются *стандартными сведениями о компьютере*. Компонент локального аудита для [сбора отзывов об использовании SQL Server](http://support.microsoft.com/kb/3153756) записывает собранные службой данные в указанную папку, где представлены данные (журналы), которые будет отправляться в корпорацию Майкрософт. Локальный аудит позволяет клиентам просмотреть все данные, которые корпорация Майкрософт собирает с помощью этой функции для обеспечения соответствия, выполнения нормативных требований или соблюдения конфиденциальности.  
+Microsoft SQL Server включает в себя функции, которые могут собирать и отправлять в Майкрософт сведения о компьютере или устройстве пользователя через Интернет. Эти сведения называются *стандартными сведениями о компьютере*. Компонент локального аудита для [сбора отзывов об использовании SQL Server](https://support.microsoft.com/kb/3153756) записывает собранные службой данные в указанную папку, где представлены данные (журналы), которые будет отправляться в корпорацию Майкрософт. Локальный аудит позволяет клиентам просмотреть все данные, которые корпорация Майкрософт собирает с помощью этой функции для обеспечения соответствия, выполнения нормативных требований или соблюдения конфиденциальности.  
 
 Начиная с SQL Server 2016 с накопительным пакетом обновления 2 локальный аудит настраивается на уровне экземпляра для ядра СУБД SQL Server и служб Analysis Services (SSAS). В SQL Server 2016 с накопительным обновлением 4 (CU4) и SQL Server 2016 с пакетом обновления 1 (SP1) локальный аудит также включен для служб SQL Server Integration Services (SSIS). Другие компоненты SQL Server, устанавливаемые во время выполнения программы установки, и средства SQL Server, которые скачиваются или устанавливаются позднее, не имеют функций локального аудита для сбора отзывов об использовании. 
 
@@ -37,7 +37,7 @@ Microsoft SQL Server включает в себя функции, которы�
 
 1. В экземпляре установлены исправления для SQL Server 2016 RTM с накопительным пакетом обновления 2 или более поздней версии. Для служб Integration Services в экземпляре установлены исправления для SQL 2016 RTM с накопительным пакетом обновления 4 или SQL 2016 с пакетом обновления 1 (SP1).
 
-1. Пользователь должен быть системным администратором или использовать роль, позволяющую добавлять и изменять раздел реестра, создавать папки, управлять их безопасностью, а также останавливать и запускать службу Windows.  
+1. Пользователь должен быть системным администратором или использовать роль, позволяющую добавлять и изменять раздел реестра, создавать папки, управлять их безопасностью, а также останавливать и запускать службу Windows.  
 
 ## <a name="pre-configuration-steps-prior-to-turning-on-local-audit"></a>Шаги предварительной настройки перед включением локального аудита 
 
@@ -66,7 +66,7 @@ Microsoft SQL Server включает в себя функции, которы�
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Настроить новую папку для файлов локального аудита.    
 
-Создайте папку (каталог локального аудита), куда функция локального аудита будет записывать журналы. Например, полный путь к каталогу локального аудита для экземпляра ядра СУБД по умолчанию будет иметь вид: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+Создайте папку (каталог локального аудита), куда функция локального аудита будет записывать журналы. Например, полный путь к каталогу локального аудита для экземпляра ядра СУБД по умолчанию будет иметь вид: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
  
   >[!NOTE] 
   >Задайте путь к папке локального аудита за пределами пути установки SQL Server, чтобы избежать потенциальных проблем с SQL Server в результате включения функций аудита и применения соответствующих исправлений.
@@ -127,7 +127,7 @@ Microsoft SQL Server включает в себя функции, которы�
 
 После завершения предварительной настройки вы можете включить локальный аудит. Для этого используйте учетную запись системного администратора или аналогичную роль, позволяющую изменять разделы реестра для включения и отключения локального аудита, выполнив следующие действия. 
 
-1. Запустите программу **regedit**.  
+1. Запустите программу **regedit**.  
 
 1. Перейдите по соответствующему [пути](#create-a-registry-key-setting-to-configure-local-audit-target-directory) CPE. 
 
@@ -162,9 +162,9 @@ Microsoft SQL Server включает в себя функции, которы�
 
 ## <a name="maintenance"></a>Обслуживание 
 
-1. Чтобы ограничить использование дискового пространства файлами, записываемыми функцией локального аудита, настройте политику или регулярное задание очистки каталога локального аудита с целью удаления старых и ненужных файлов.  
+1. Чтобы ограничить использование дискового пространства файлами, записываемыми функцией локального аудита, настройте политику или регулярное задание очистки каталога локального аудита с целью удаления старых и ненужных файлов.  
 
-2. Защитите путь к каталогу локального аудита, чтобы он был доступен только для соответствующих пользователей. Обратите внимание, что файлы журнала содержат сведения, описанные в статье [Настройка SQL Server 2016 для отправки отзывов в корпорацию Майкрософт](http://support.microsoft.com/kb/3153756). Доступ для чтения этого файла должен быть запрещен большинству сотрудников вашей организации.  
+2. Защитите путь к каталогу локального аудита, чтобы он был доступен только для соответствующих пользователей. Обратите внимание, что файлы журнала содержат сведения, описанные в статье [Настройка SQL Server 2016 для отправки отзывов в корпорацию Майкрософт](https://support.microsoft.com/kb/3153756). Доступ для чтения этого файла должен быть запрещен большинству сотрудников вашей организации.  
 
 ## <a name="data-dictionary-of-local-audit-output-data-structure"></a>Словарь данных для структуры выходных данных локального аудита 
 
@@ -177,9 +177,9 @@ Microsoft SQL Server включает в себя функции, которы�
 - **data** содержит выходные данные соответствующего выполнения запроса, занявшего время **queryTimeInTicks**.
 - **queryIdentifiers** для запросов T-SQL имеют определение запроса T-SQL, хранящееся в запросе.
 
-| Логическая иерархия сведений о локальном аудите | Связанные столбцы |
+| Логическая иерархия сведений о локальном аудите | Связанные столбцы |
 | ------ | -------|
-| Заголовок | emitTime, schemaVersion 
+| Заголовок | emitTime, schemaVersion 
 | Компьютер | operatingSystem 
 | Экземпляр | instanceUniqueID, correlationID, clientVersion 
 | Session | sessionID, traceName 
@@ -188,12 +188,12 @@ Microsoft SQL Server включает в себя функции, которы�
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>Определение пары "имя-значение" и примеры 
 
-Указанные ниже столбцы представляют порядок выходных данных файлов для локального аудита. Односторонний хэш-алгоритм SHA 256 используется для анонимизации значений в указанных ниже столбцах.  
+Указанные ниже столбцы представляют порядок выходных данных файлов для локального аудита. Односторонний хэш-алгоритм SHA 256 используется для анонимизации значений в указанных ниже столбцах.  
 
 | Имя | Описание | Примеры значений
 |-------|--------| ----------|
 |instanceUniqueID| Анонимизированный идентификатор экземпляра | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
-|schemaVersion| Версия схемы SQLCEIP |  3 
+|schemaVersion| Версия схемы SQLCEIP |  3 
 |emitTime |Время вывода точки данных в формате UTC | 2016-09-08T17:20:22.1124269Z 
 |sessionID | Идентификатор для обслуживания службы SQLCEIP | 89decf9a-ad11-485c-94a7-fefb3a02ed86 
 |correlationId | Заполнитель для дополнительного идентификатора | 0 
@@ -204,8 +204,8 @@ Microsoft SQL Server включает в себя функции, которы�
 |traceName | Категории трассировки: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Идентификатор запроса | SQLServerProperties.002 
 |.   | Выходные сведения, собранные для queryIdentifier в виде вывода запроса T-SQL, сеанса XE или приложения |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|Запрос| Если это применимо, определение запроса T-SQL, связанное с queryIdentifier, который создает данные.        Этот компонент не отправляется службой CEIP SQL Server. Он включен в локальный аудит только для справки.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolybaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolybaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | Время, затрачиваемое на выполнение запроса в следующей категории трассировки: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
+|Запрос| Если это применимо, определение запроса T-SQL, связанное с queryIdentifier, который создает данные.        Этот компонент не отправляется службой CEIP SQL Server. Он включен в локальный аудит только для справки.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|queryTimeInTicks | Время, затрачиваемое на выполнение запроса в следующей категории трассировки: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>Категории трассировки 
 Сейчас мы собираем следующие категории трассировки. 
@@ -263,7 +263,7 @@ Microsoft SQL Server включает в себя функции, которы�
         "Version": "Microsoft SQL Server 2017 (RTM-CU6) (KB4101464) - 14.0.3025.34 (X64) \n\tApr  9 2018 18:00:41 \n\tCopyright (C) 2017 Microsoft Corporation\n\tEnterprise Edition: Core-based Licensing (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 16299: )\n"
       }
     ],
-    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolybaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolybaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
+    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolyBaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolyBaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
     "queryTimeInTicks": 0
   },
   {
@@ -322,7 +322,7 @@ Microsoft SQL Server включает в себя функции, которы�
 
 **Существует ли клиент или инструмент, который можно использовать для чтения выходных данных JSON?**
 Выходные данные можно прочитать в Блокноте, Visual Studio или любом подходящем средстве чтения JSON.
-Кроме того, прочитать файл JSON и проанализировать данные можно в экземпляре SQL Server 2016, как показано ниже. Дополнительные сведения чтении файла JSON в SQL Server см. в разделе [Импорт файлов JSON в SQL Server с помощью функции OPENROWSET (BULK) и OPENJSON (Transact-SQL)](http://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
+Кроме того, прочитать файл JSON и проанализировать данные можно в экземпляре SQL Server 2016, как показано ниже. Дополнительные сведения чтении файла JSON в SQL Server см. в разделе [Импорт файлов JSON в SQL Server с помощью функции OPENROWSET (BULK) и OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

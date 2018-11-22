@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b279c177a7e5b627c8ead3103cb2bd8ad6a58d78
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b44b5afff54cf0630e3bde1d5668862d1d969133
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031443"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813737"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов
 
@@ -104,7 +104,7 @@ ms.locfileid: "50031443"
   
  В следующем примере выполняется миграция содержимого с **Sourceserver** в собственном режиме на **Targetserver**в собственном режиме.  
   
- `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
+ `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
   
  **Заметки по использованию.**  
   
@@ -187,13 +187,13 @@ ms.locfileid: "50031443"
   
 -   SOURCE_URL и TARGET_URL должны быть действительными URL-адресами серверов отчетов, которые указывают на исходный и целевой сервер отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . В собственном режиме URL-адрес сервера отчетов выглядит следующим образом:  
   
-    -   `http://servername/reportserver`  
+    -   `https://servername/reportserver`  
   
      В режиме интеграции с SharePoint URL-адрес выглядит следующим образом:  
   
-    -   `http://servername/_vti_bin/reportserver`  
+    -   `https://servername/_vti_bin/reportserver`  
   
--   Виртуальная структура папок, представленная пользователю в режиме интеграции с SharePoint, может отличаться от базовой. Откройте в браузере `http://servername/_vti_bin/reportserver` или `http://servername/sites/site_name/_vti_bin/reportserver` , чтобы увидеть физическую структуру папок. Это позволит задать имя, отличное от «/», для исходной и целевой папок на сервере в режиме интеграции с SharePoint.  
+-   Виртуальная структура папок, представленная пользователю в режиме интеграции с SharePoint, может отличаться от базовой. Откройте в браузере `https://servername/_vti_bin/reportserver` или `https://servername/sites/site_name/_vti_bin/reportserver` , чтобы увидеть физическую структуру папок. Это позволит задать имя, отличное от «/», для исходной и целевой папок на сервере в режиме интеграции с SharePoint.  
   
 -   Пароли не переносятся, их нужно вводить повторно, например для источников данных с сохраненными учетными данными.  
   
@@ -217,13 +217,13 @@ ms.locfileid: "50031443"
  В следующем примере выполняется миграция содержимого с **Sourceserver** в собственном режиме на **Targetserver**в собственном режиме.  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"  
 ```  
   
  В следующем примере добавляется параметр безопасности:  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_root"></a> Из собственного режима в режим интеграции с SharePoint — корневой сайт  
@@ -232,14 +232,14 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
  ![ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_with_site"></a> Из собственного режима в режим интеграции с SharePoint — семейство веб-сайтов бизнес-аналитики  
  В следующем примере выполняется миграция содержимого с сервера в собственном режиме на сервер в режиме интеграции с SharePoint, который содержит семейство веб-сайтов, сайтов бизнес-аналитики и библиотеку общих документов. Скрипт создает папки в целевой библиотеке документов. Например, скрипт создает папки «Отчеты» и «Источники данных» в целевой библиотеке документов.  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
 ###  <a name="bkmk_sharepoint_2_sharepoint"></a> С сервера отчетов в режиме интеграции с SharePoint на сервер отчетов в режиме интеграции с SharePoint — семейство веб-сайтов бизнес-аналитики  
@@ -250,7 +250,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 -   На **TargetServer** в режиме интеграции с SharePoint, который содержит семейство веб-сайтов бизнес-аналитики и общую библиотеку документов.  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
 ###  <a name="bkmk_native_to_native_Azure_vm"></a> С сервера отчетов в собственном режиме на другой сервер отчетов в собственном режиме — виртуальная машина Windows Azure  
@@ -261,7 +261,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reports
 -   На сервер отчетов **TargetServer** в собственном режиме, работающий на виртуальной машине Windows Azure. Сервер **TargetServer** не входит в домен **SourceServer**, при этом **User2** является администратором на виртуальной машине Windows Azure, где работает **TargetServer**.  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
 ```  
   
 > [!TIP]  
@@ -275,7 +275,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 -   На сервер отчетов **TargetServer** в собственном режиме, работающий на виртуальной машине Windows Azure. Сервер **TargetServer** не входит в домен **SourceServer**, при этом **User2** является администратором на виртуальной машине Windows Azure, где работает **TargetServer**.  
   
 ```  
-rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
+rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
 ```  
   
 ##  <a name="bkmk_verification"></a> Проверка  
@@ -310,11 +310,11 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ##  <a name="bkmk_troubleshoot"></a> Устранение неполадок  
  Используйте флаг трассировки **–t** для получения дополнительных сведений. Например, если при выполнении скрипта появляется сообщение следующего вида:  
   
--   Не удалось подключиться к серверу: http://\<имя_сервера>/ReportServer/ReportService2010.asmx  
+-   Не удалось подключиться к серверу https://\<имя_сервера>/ReportServer/ReportService2010.asmx  
   
  Запустите скрипт еще раз с флагом **–t**, чтобы просмотреть сообщение следующего вида:  
   
--   System.Exception: не удалось подключиться к серверу: http://\<имя_сервера>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **Запрос завершился ошибкой с кодом состояния HTTP 401: отсутствуют права доступа**.   в System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage сообщение, ответ WebResponse, responseStream потока, логическое asyncCall) на System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (строка имя_метода Object [] parameters) в Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() на Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (URL-адрес строки String userName, строковый пароль Строка домена, время ожидания Int32) в Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---конец трассировки стека внутреннего исключения---  
+-   System.Exception: не удалось подключиться к серверу https://\<имя_сервера>/ReportServer/ReportService2010.asmx ---> System.Net.WebException. **Произошел сбой запроса с кодом состояния HTTP 401: недостаточно прав**.   в System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage сообщение, ответ WebResponse, responseStream потока, логическое asyncCall) на System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (строка имя_метода Object [] parameters) в Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() на Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (URL-адрес строки String userName, строковый пароль Строка домена, время ожидания Int32) в Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---конец трассировки стека внутреннего исключения---  
   
 ## <a name="see-also"></a>См. также:  
  [Служебная программа RS.exe (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

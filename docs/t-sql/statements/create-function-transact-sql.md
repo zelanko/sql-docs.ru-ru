@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,17 +36,20 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 55bbcbb08d9062d4eb8402a8c15dd243aa9b6a98
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 90c31ce4210cb05b205459c63bd616c8bba382d3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864292"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704072"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Создает определяемую пользователем функцию в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Определяемая пользователем функция представляет собой подпрограмму [!INCLUDE[tsql](../../includes/tsql-md.md)] или среды CLR, которая принимает параметры, выполняет действия, такие как сложные вычисления, а затем возвращает результат этих действий в виде значения. Возвращаемое значение может быть скалярным значением или таблицей. При помощи этой инструкции можно создать подпрограмму, которую можно повторно использовать следующими способами.  
+> [!div class="nextstepaction"]
+> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Создает определяемую пользователем функцию в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Определяемая пользователем функция представляет собой подпрограмму [!INCLUDE[tsql](../../includes/tsql-md.md)] или среды CLR, которая принимает параметры, выполняет действия, такие как сложные вычисления, а затем возвращает результат этих действий в виде значения. Возвращаемое значение может быть скалярным значением или таблицей. При помощи этой инструкции можно создать подпрограмму, которую можно повторно использовать следующими способами.  
   
 -   В инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)], например SELECT.  
   
@@ -135,6 +138,7 @@ RETURNS @return_variable TABLE <table_type_definition>
   | [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
   | [ EXECUTE_AS_Clause ]  
+  | [ INLINE = { ON | OFF }]  
 }  
   
 <table_type_definition>:: =   
@@ -367,7 +371,7 @@ RETURNS return_data_type
   
  *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Определяет тип данных таблицы для функции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Объявление таблицы включает определения столбцов, а также ограничений для столбцов и таблиц. Таблица всегда помещается в первичную файловую группу.  
   
- \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([в некоторых регионах доступна предварительная версия](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([в некоторых регионах доступна предварительная версия](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  Определяет табличные типы данных для функции CLR. Объявление таблицы включает только имена столбцов и типы данных. Таблица всегда помещается в первичную файловую группу.  
   
@@ -418,18 +422,21 @@ RETURNS return_data_type
   
 -   Пользователь, выполняющий инструкцию CREATE FUNCTION, имеет разрешение REFERENCES на объекты базы данных, на которые ссылается функция.  
   
- RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
- Указывает атрибут **OnNULLCall** скалярной функции. Если данный аргумент не указан, по умолчанию предполагается CALLED ON NULL INPUT. Это означает, что текст функции выполняется даже в том случае, если в качестве аргумента передано значение NULL.  
+RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
+Указывает атрибут **OnNULLCall** скалярной функции. Если данный аргумент не указан, по умолчанию предполагается CALLED ON NULL INPUT. Это означает, что текст функции выполняется даже в том случае, если в качестве аргумента передано значение NULL.  
   
- Если атрибут RETURNS NULL ON NULL INPUT указан для функции CLR, это означает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может вернуть NULL, не вызывая при этом тело функции в том случае, если в качестве какого-либо из аргументов указано значение NULL. Если метод функции CLR, указанный в \<method_specifier>, уже имеет пользовательский атрибут, определяющий RETURNS NULL ON NULL INPUT, но инструкция CREATE FUNCTION определяет CALLED ON NULL INPUT, то инструкция CREATE FUNCTION имеет больший приоритет. Атрибут **OnNULLCall** не может быть указан для функций CLR с табличным значением. 
+Если атрибут RETURNS NULL ON NULL INPUT указан для функции CLR, это означает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может вернуть NULL, не вызывая при этом тело функции в том случае, если в качестве какого-либо из аргументов указано значение NULL. Если метод функции CLR, указанный в \<method_specifier>, уже имеет пользовательский атрибут, определяющий RETURNS NULL ON NULL INPUT, но инструкция CREATE FUNCTION определяет CALLED ON NULL INPUT, то инструкция CREATE FUNCTION имеет больший приоритет. Атрибут **OnNULLCall** не может быть указан для функций CLR с табличным значением. 
   
- Предложение EXECUTE AS  
- Указывает контекст безопасности, в котором выполняется определяемая пользователем функция. Иными словами, есть возможность управлять тем, какую учетную запись пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует при определении разрешений на объекты базы данных, на которые ссылается функция.  
+Предложение EXECUTE AS  
+Указывает контекст безопасности, в котором выполняется определяемая пользователем функция. Иными словами, есть возможность управлять тем, какую учетную запись пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует при определении разрешений на объекты базы данных, на которые ссылается функция.  
   
 > [!NOTE]  
->  Предложение EXECUTE AS не может быть указано для встроенных пользовательских функций.  
+>  EXECUTE AS недопустимо указывать для встроенных функций с табличным значением.
   
  Дополнительные сведения см. в разделе [Предложение EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+
+INLINE = { ON | OFF }  
+Указывает, должна ли эта скалярная пользовательская функция быть встроенной. Это предложение применяется только к скалярным пользовательским функциям. Предложение `INLINE` не является обязательным. Если предложение `INLINE` не указано, оно автоматически принимает значение ON или OFF в зависимости от возможности встраивания пользовательской функции. Если `INLINE=ON` указано, но функция не может быть встраиваемой, выдается ошибка. Дополнительные сведения: [Встраивание скалярной функции, определяемой пользователем](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
   
  **\< column_definition >::=** 
   
@@ -580,7 +587,7 @@ RETURNS return_data_type
 |**SystemDataAccess**|Функции, производящие доступ к системным данным (системным каталогам или виртуальным системным таблицам) в локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].||  
 |**UserDataAccess**|Функция производит доступ к данным пользователя в локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Сюда входят определяемые пользователем и временные таблицы, но не табличные переменные.|  
   
- Для функций [!INCLUDE[tsql](../../includes/tsql-md.md)] свойства точности и детерминизма [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет автоматически. Свойства доступа к данным и детерминированности функций CLR могут быть указаны пользователем. Дополнительные сведения см. в разделе [Общие сведения о пользовательских атрибутах интеграции со средой CLR](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820).  
+ Для функций [!INCLUDE[tsql](../../includes/tsql-md.md)] свойства точности и детерминизма [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет автоматически. Свойства доступа к данным и детерминированности функций CLR могут быть указаны пользователем. Дополнительные сведения см. в разделе [Общие сведения о пользовательских атрибутах интеграции со средой CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820).  
   
  Для отображения текущих значений этих свойств используйте функцию [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   

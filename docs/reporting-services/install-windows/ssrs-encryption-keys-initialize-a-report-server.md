@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8241807c21ae73430bba98b2cda66d9055064cc2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec32fcd9a05fe0123e25570d47f1d613a6c00502
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774432"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813328"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Ключи шифрования служб SSRS — инициализация сервера отчетов
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]инициализированный сервер — это сервер, способный шифровать и дешифровать данные в базе данных сервера отчетов. Инициализация является необходимым условием функционирования сервера отчетов. Инициализация происходит, когда служба сервера отчетов запускается впервые. Она также происходит, когда сервер отчетов соединяется с уже развернутой системой или когда вручную повторно создаются ключи как часть процесса восстановления. Дополнительные сведения о том, как и почему использовать ключи шифрования, см. в разделах [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) и [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Ключи шифрования частично основываются на данных профиля в службе сервера отчетов. Если изменяется удостоверение пользователя, которое применяется для запуска службы сервера отчетов, необходимо соответствующим образом обновить ключи. Если используется программа настройки служб Reporting Services для изменения удостоверения пользователя, этот шаг выполняется автоматически.  
   
- Если инициализация по какой-либо причине прошла неудачно, сервер отчетов возвращает ошибку **RSReportServerNotActivated** в ответ на запросы пользователя и службы. В такой ситуации, вероятно, потребуется произвести диагностику и устранение неисправностей в системе или конфигурации сервера. Дополнительные сведения см. в руководстве по [устранению неполадок со службами Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) вики-статья Technet.  
+ Если инициализация по какой-либо причине прошла неудачно, сервер отчетов возвращает ошибку **RSReportServerNotActivated** в ответ на запросы пользователя и службы. В такой ситуации, вероятно, потребуется произвести диагностику и устранение неисправностей в системе или конфигурации сервера. Дополнительные сведения см. в руководстве по [устранению неполадок со службами Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) вики-статья Technet.  
   
 ## <a name="overview-of-the-initialization-process"></a>Общие сведения о процессе инициализации  
  Процесс инициализации создает и хранит симметричный ключ, используемый для шифрования. Симметричный ключ создается службами криптографии [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows и впоследствии используется службой сервера отчетов для шифрования и дешифрования данных. Сам симметричный ключ зашифрован при помощи асимметричного ключа.  
@@ -65,7 +65,7 @@ ms.locfileid: "47774432"
 >  Можно также воспользоваться поставщиком инструментария управления Windows (WMI) для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы программными средствами инициализировать сервер отчетов. Дополнительные сведения об этом подходе см. в статье [Доступ к поставщику WMI для служб Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>Как подтвердить инициализацию сервера отчетов  
- Для подтверждения инициализации сервера отчетов обратитесь к веб-службе сервера отчетов, введя в командной строке **http://\<имя_сервера>/reportserver**. Если получена ошибка **RSReportServerNotActivated** , инициализация прошла неудачно.  
+ Для подтверждения инициализации сервера отчетов обратитесь к веб-службе сервера отчетов, введя в командной строке **https://\<имя_сервера>/reportserver**. Если получена ошибка **RSReportServerNotActivated** , инициализация прошла неудачно.  
   
 ## <a name="see-also"></a>См. также:
 [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)

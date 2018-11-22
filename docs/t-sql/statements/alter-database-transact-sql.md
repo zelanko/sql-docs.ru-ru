@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ece0ca36756e233412d2befcc7246504d1c2aa23
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 41d256aa69778804f637b2e380383d29552efc98
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252141"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571473"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -143,6 +143,9 @@ MODIFY NAME **=***new_database_name*
   
 COLLATE *collation_name*  
 Задает параметры сортировки для базы данных. Аргументом *collation_name* может быть либо имя параметров сортировки Windows, либо имя параметров сортировки SQL. Если аргумент не указан, базе данных будут назначены параметры сортировки экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+> [!NOTE]
+> После создания базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] параметры сортировки невозможно изменить.
   
 При создании баз данных с параметрами сортировки, отличными от параметров сортировки по умолчанию, данные в базе данных всегда учитывают указанные параметры сортировки. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при создании автономной базы данных сведения внутреннего каталога поддерживаются с использованием параметров сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию **Latin1_General_100_CI_AS_WS_KS_SC**.  
   

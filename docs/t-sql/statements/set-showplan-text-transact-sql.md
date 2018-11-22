@@ -27,12 +27,12 @@ ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2fd5f24cf6effcac0682026ae49b933256176afe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b01cdf350983bc24d6dda6efb8d6911027021264
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834792"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558671"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  Если выполнена инструкция SET SHOWPLAN_TEXT ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сведения для каждой инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], не выполняя ее. Когда параметру присвоено значение ON, возвращаются сведения по планам выполнения всех последующих инструкций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], пока параметру не будет снова присвоено значение OFF. Например, если инструкция CREATE TABLE будет выполнена при выполненной инструкции SET SHOWPLAN_TEXT ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вернет сообщение об ошибке в последующей инструкции SELECT, относящейся к той же таблице, сообщая пользователю, что указанная таблица не существует. Следовательно, последующие ссылки на эту таблицу не действуют. Если выполнена инструкция SET SHOWPLAN_TEXT OFF, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкции, не создавая отчет с информацией по плану выполнения.  
   
- Инструкция SET SHOWPLAN_TEXT предназначена для возврата доступного для чтения вывода для приложений командной строки Microsoft Win32, таких как служебная программа **osql**. Инструкция SET SHOWPLAN_ALL возвращает более подробные данные, предназначенные для обработки программами, специально ориентированными на этот формат вывода.  
+ Инструкция SET SHOWPLAN_TEXT предназначена для возврата доступного для чтения вывода для приложений командной строки Microsoft Win32, таких как служебная программа **sqlcmd**. Инструкция SET SHOWPLAN_ALL возвращает более подробные данные, предназначенные для обработки программами, специально ориентированными на этот формат вывода.  
   
  Инструкции SET SHOWPLAN_TEXT и SET SHOWPLAN_ALL нельзя указывать в хранимой процедуре. Их можно указывать только как инструкции в пакете.  
   

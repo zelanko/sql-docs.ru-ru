@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e42aec0a8630d26b7831217418f35197bc338567
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 15b4e8094c5d45c5001002edfcf4e2202c09576f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030613"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814267"
 ---
 # <a name="start-report-builder"></a>Запуск построителя отчетов
 
@@ -36,7 +36,7 @@ ms.locfileid: "50030613"
   
 ## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>Запуск [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-1.  В веб-браузере введите в адресной строке URL-адрес для сервера отчетов. URL-адрес по умолчанию — http://\<*имя_сервера*>/reports.  
+1.  В веб-браузере введите в адресной строке URL-адрес для сервера отчетов. URL-адрес по умолчанию — https://\<*имя_сервера*>/reports.  
   
 2.  На верхней панели веб-портала выберите **Создать** > **Отчет с разбиением на страницы**.  
   

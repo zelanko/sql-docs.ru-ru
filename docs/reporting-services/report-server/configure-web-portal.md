@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f37cb519981b0f3ac0be532ad82e6ed74d073d8f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 606b6fa37f5dc067cdf134792215fd7c2cd09067
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031710"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813217"
 ---
 # <a name="configure-the-web-portal"></a>Настройка веб-портала
 
@@ -80,7 +80,7 @@ ms.locfileid: "50031710"
 
 2. Откройте обозреватель Internet Explorer.
 
-3. Введите URL-адрес веб-портала. По умолчанию это http://\<**имя_сервера**>/reports, но если службы Reporting Services установлены в качестве именованного экземпляра, URL-адрес по умолчанию будет иметь такой вид: http://\<**имя_сервера**>/reports\<**_имя_экземпляра**>.
+3. Введите URL-адрес веб-портала. По умолчанию это https://\<**имя_сервера**>/reports, но если службы Reporting Services установлены в качестве именованного экземпляра, URL-адрес по умолчанию будет иметь такой вид: https://\<**имя_сервера**>/reports\<**_имя_экземпляра**>.
 
 4. Выберите пункт **Настройки сайта**.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021178"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813767"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильные отчеты SQL Server: руководство по использованию
 Используйте пошаговые инструкции по созданию мобильных отчетов для экрана любого размера с помощью [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и по просмотру отчетов в мобильных приложениях Power BI.
@@ -37,7 +37,7 @@ ms.locfileid: "50021178"
 *  ИЛИ образец базы данных World Wide Importers, доступный на странице [Образцы Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Для просмотра результата: 
   *   [зарегистрируйтесь в службе Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) и
-  *  [скачайте мобильное приложение Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) на устройство под управлением iOS, Windows 10 или телефон с Android.  
+  *  [скачайте мобильное приложение Power BI](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) на устройство под управлением iOS, Windows 10 или телефон с Android.  
 
   
 ## <a name="create-a-shared-data-source"></a>Создание общего источника данных  
@@ -76,7 +76,7 @@ ms.locfileid: "50021178"
    
 4. В поле "Имя" введите имя сервера, на котором сохранен источник данных в таком формате:   
    
-   Имя: http://*localhost*/ReportServer  
+   Имя: https://*localhost*/ReportServer  
    Элементы типа: источники данных (*.rsds)  
    
 5. Нажмите кнопку **Открыть**и перейдите к источнику данных, созданному на этом сервере.  
@@ -260,7 +260,7 @@ ms.locfileid: "50021178"
 Чтобы просмотреть отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , сначала необходимо:
 
 *  [зарегистрироваться в службе Power BI](https://go.microsoft.com/fwlink/?LinkID=513879), если у вас еще нет учетной записи;
-*  [скачать мобильное приложение Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) на мобильное устройство.  
+*  [скачать мобильное приложение Power BI](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) на мобильное устройство.  
 
 ### <a name="view-your-mobile-report"></a>Просмотр мобильного отчета
   

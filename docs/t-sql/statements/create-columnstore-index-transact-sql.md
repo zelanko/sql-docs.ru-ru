@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 11/13/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8780fd5714af5acb0405592f1700ab19004fd0b
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: fadf7f7a73edc0ce50dfe00c95747deeff0395bf
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336303"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699412"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -369,12 +369,15 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 **Некластеризованные индексы columnstore:**
 -   Не более 1024 столбцов.
 -   Невозможно создать как индексы на основе ограничений. Таблица с индексом columnstore может иметь ограничения уникальности, ограничения первичного ключа и ограничения внешнего ключа. Ограничения всегда применяются с помощью индекса row-store. Ограничения невозможно применить с помощью индекса columnstore (кластеризованного или некластеризованного).
--   Не может быть создан для представления или индексированного представления.  
 -   Не может содержать разреженный столбец.  
 -   Не может быть изменено с использованием инструкции **ALTER INDEX**. Чтобы изменить некластеризованный индекс, следует удалить и повторно создать индекс columnstore. Инструкция **ALTER INDEX** позволяет отключить и перестроить индекс columnstore.  
 -   Не может быть создано с использованием ключевого слова **INCLUDE**.  
 -   Нельзя включать ключевые слова **ASC** и **DESC** для сортировки индексов. Индексы columnstore упорядочены в соответствии с алгоритмами сжатия. В результате сортировки можно потерять многие преимущества в производительности.  
 -   Нельзя включать столбцы больших объектов (LOB) типа nvarchar(max), varchar(max) и varbinary(max) в некластеризованные индексы columnstore. Только кластеризованные индексы columnstore поддерживают типы больших объектов, начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и базы данных SQL Azure на уровне "Премиум", уровне "Стандартный" (S3 и выше) и всех уровнях предложений виртуальных ядер. Обратите внимание, что предыдущие версии не поддерживают типы больших объектов в кластеризованных и некластеризованных индексах columnstore.
+
+
+> [!NOTE]  
+> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], вы можете создавать некластеризованный индекс columnstore для индексированного представления.  
 
 
  **Индексы columnstore нельзя использовать вместе со следующими функциями:**  
@@ -392,6 +395,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   Система отслеживания измененных данных. Невозможно использовать систему отслеживания измененных данных с некластеризованными индексами columnstore (NCCI), так как они доступны только для чтения. Это возможно с кластеризованными индексами columnstore (CCI).  
 -   Вторичные реплики для чтения. Невозможно получить доступ к кластеризованному индексу columnstore (CCI) из вторичной реплики для чтения группы доступности AlwaysOn.  К некластеризованному индексу columnstore (NCCI) можно получить доступ из вторичной реплики для чтения.  
 -   Множественный активный результирующий набор (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] использует функцию MARS для установки подключений с доступом только для чтения с использованием таблиц с индексом columnstore. При этом [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] не поддерживает функцию MARS для параллельного выполнения операций DML в таблице с индексом columnstore. В этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] завершает подключения и прерывает выполнение транзакций.  
+-  Некластеризованные индексы columnstore недопустимо создавать для представления или индексированного представления.
   
  Сведения о преимуществах в производительности и ограничениях индексов columnstore см. в статье [Общие сведения об индексах columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
@@ -731,7 +735,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>Д. Преобразование таблицы columnstore обратно в кучу rowstore  
- Используйте [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32), чтобы удалить кластеризованный индекс columnstore и преобразовать таблицу в кучу rowstore. В этом примере таблица cci_xDimProduct преобразуется в кучу rowstore. Таблица остается распределенной, но хранится в виде кучи.  
+ Используйте [DROP INDEX (SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32), чтобы удалить кластеризованный индекс columnstore и преобразовать таблицу в кучу rowstore. В этом примере таблица cci_xDimProduct преобразуется в кучу rowstore. Таблица остается распределенной, но хранится в виде кучи.  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

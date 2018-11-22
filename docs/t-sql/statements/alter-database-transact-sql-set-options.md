@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 096948b417e29b073ecc30abd9831c62ef520646
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252201"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814357"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL) 
 
@@ -668,7 +668,7 @@ DIRECTORY_NAME = *\<directory_name>*
   
 **\<mixed_page_allocation_option> ::=**  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } управляет возможностью базы данных создавать начальные страницы с использованием смешанного экстента для первых восьми страниц таблицы или индекса.  
  
@@ -682,7 +682,7 @@ ON
   
 **\<PARAMETERIZATION_option> ::=**  
   
-Управляет параметром параметризации.  
+Управляет параметром параметризации. Дополнительные сведения о параметризации: [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md#SimpleParam). 
   
 PARAMETERIZATION { SIMPLE | FORCED }  
 SIMPLE  
@@ -698,13 +698,13 @@ FORCED
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
-Указывает, включено ли хранилище запросов в этой базе данных, а также управляет удалением содержимого хранилища запросов.  
+Указывает, включено ли хранилище запросов в этой базе данных, а также управляет удалением содержимого хранилища запросов. Дополнительные сведения: [Сценарии использования хранилища запросов](../../relational-databases/performance/query-store-usage-scenarios.md). 
   
 ON  
 Включает хранилище запросов.  
   
 OFF  
-Отключает хранилище запросов.  Это значение по умолчанию.   
+Отключает хранилище запросов. Это значение по умолчанию.   
   
 CLEAR  
 Удаляет содержимое хранилища запросов.  
@@ -809,7 +809,7 @@ NONE
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повторяет любую операцию считывания, которая закончилась ошибкой контрольной суммы, разрыва страницы или другой ошибкой ввода-вывода, четыре раза. Если считывание закончится успешно в любой из попыток, то в журнал ошибок будет записано сообщение и команда, вызвавшая считывание, продолжится. Если все повторные попытки закончатся ошибкой, команда закончит работу с сообщением об ошибке 824.  
   
-Дополнительные сведения о сообщениях об ошибках 823 и 824 825 см. в разделах [Устранение ошибки Msg 823 в SQL Server](http://support.microsoft.com/help/2015755), [Устранение ошибки Msg 824 в SQL Server](http://support.microsoft.com/help/2015756) и [Устранение ошибки Msg 825 (повтор чтения) в SQL Server](http://support.microsoft.com/help/2015757).
+Дополнительные сведения о сообщениях об ошибках 823 и 824 825 см. в разделах [Устранение ошибки Msg 823 в SQL Server](https://support.microsoft.com/help/2015755), [Устранение ошибки Msg 824 в SQL Server](https://support.microsoft.com/help/2015756) и [Устранение ошибки Msg 825 (повтор чтения) в SQL Server](https://support.microsoft.com/help/2015757).
   
 Состояние этого параметра можно определить с помощью проверки значения столбца *page_verify_option* в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) или свойства *IsTornPageDetectionEnabled* функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   

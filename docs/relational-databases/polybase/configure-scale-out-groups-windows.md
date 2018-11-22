@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b9294d9208b9cafc3610a9682c13cebcc970669e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905138"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672943"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Улучшение масштабируемых групп PolyBase в Windows
 
@@ -52,7 +52,7 @@ ms.locfileid: "48905138"
   
    - PQTH4A-CMP02  
   
-2. Учетная запись домена: *PQTH4A\PolybaseUser*  
+2. Учетная запись домена: *PQTH4A\PolyBaseUser*  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>Установка SQL Server с PolyBase на всех компьютерах
 
@@ -60,7 +60,7 @@ ms.locfileid: "48905138"
   
 2. На странице выбора компонентов выберите пункт **Служба запросов PolyBase для внешних данных**.
   
-3. На странице "Конфигурация сервера" настройте ядро SQL Server PolyBase и службы перемещения данных SQL Server PolyBase для запуска под **доменной учетной записью** PQTH4A\PolybaseUser.
+3. На странице "Конфигурация сервера" настройте ядро SQL Server PolyBase и службу перемещения данных SQL Server PolyBase для запуска под **доменной учетной записью** PQTH4A\PolyBaseUser.
   
 4. На странице настройки PolyBase включите параметр **Использовать экземпляр SQL Server как часть масштабируемой группы PolyBase**. Это позволит открыть брандмауэр для входящих подключений к службе PolyBase.
   
@@ -106,6 +106,6 @@ ms.locfileid: "48905138"
   
 ## <a name="next-steps"></a>Следующие шаги  
 
-Дополнительные сведения об устранении неполадок см. в статье [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
+Дополнительные сведения об устранении неполадок см. в статье [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
   
 Дополнительные сведения см. в статье [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md).

@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6208a06f94b84fb145cd3fa1c4f2eef0e428f915
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: f5145db044f618727144dba0eae86ac4643f0a2d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461089"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704142"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -144,7 +144,7 @@ ASYMMETRIC KEY *asym_key_name*
 >  Параметры CHECK_EXPIRATION и CHECK_POLICY принудительно применяются только в Windows Server 2003 и более поздних версиях. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md). 
   
 - Имена входа, созданные из сертификатов или асимметричных ключей, используются только для подписи кода. Они не могут использоваться для подключения к SQL Server. Имя входа можно создать на основе сертификата или ассиметричного ключа только в том случае, если сертификат или асимметричный ключ уже существуют в базе данных master. 
-- Скрипт для передачи имен входа см. в разделе [Способы передачи имен входа и паролей между экземплярами SQL Server 2005 и SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Скрипт для передачи имен входа см. в разделе [Способы передачи имен входа и паролей между экземплярами SQL Server 2005 и SQL Server 2008](https://support.microsoft.com/kb/918992).
 - При создании имени входа оно автоматически включается, и ему предоставляется разрешение **CONNECT SQL** уровня сервера. 
 - Для разрешения доступа [режим проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md) сервера должен соответствовать типу имени входа.
 - Сведения о проектировании системы разрешений см. в статье [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -262,7 +262,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* База данных SQL<br /> —логический сервер \*_**|[База данных SQL<br /> — управляемый экземпляр](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* База данных SQL<br />логический сервер \*_**|[База данных SQL<br /> — управляемый экземпляр](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -294,7 +294,7 @@ SID = *sid*
   
 ## <a name="remarks"></a>Remarks  
 - В паролях учитывается регистр символов.
-- Скрипт для передачи имен входа см. в разделе [Способы передачи имен входа и паролей между экземплярами SQL Server 2005 и SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Скрипт для передачи имен входа см. в разделе [Способы передачи имен входа и паролей между экземплярами SQL Server 2005 и SQL Server 2008](https://support.microsoft.com/kb/918992).
 - При создании имени входа оно автоматически включается, и ему предоставляется разрешение **CONNECT SQL** уровня сервера. 
 - Для разрешения доступа [режим проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md) сервера должен соответствовать типу имени входа.
     - Сведения о проектировании системы разрешений см. в статье [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -378,7 +378,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|**_\*База данных SQL<br /> — управляемый экземпляр \*_**|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|**_\* База данных SQL<br />Управляемый экземпляр \*_**|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -412,7 +412,7 @@ SID = *sid*
   
 ## <a name="remarks"></a>Remarks  
 - В паролях учитывается регистр символов.
-- Скрипт для передачи имен входа см. в разделе [Способы передачи имен входа и паролей между экземплярами SQL Server 2005 и SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Скрипт для передачи имен входа см. в разделе [Способы передачи имен входа и паролей между экземплярами SQL Server 2005 и SQL Server 2008](https://support.microsoft.com/kb/918992).
 - При создании имени входа оно автоматически включается, и ему предоставляется разрешение **CONNECT SQL** уровня сервера. 
 - Для разрешения доступа [режим проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md) сервера должен соответствовать типу имени входа.
     - Сведения о проектировании системы разрешений см. в статье [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -498,7 +498,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр]()|**_\* Хранилище данных<br />SQL\*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр]()|**_\* Хранилище данных<br />SQL \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -530,7 +530,7 @@ PASSWORD **='** password**'*
   
 ## <a name="remarks"></a>Remarks  
 - В паролях учитывается регистр символов.
-- Скрипт для передачи имен входа см. в разделе [Способы передачи имен входа и паролей между экземплярами SQL Server 2005 и SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Скрипт для передачи имен входа см. в разделе [Способы передачи имен входа и паролей между экземплярами SQL Server 2005 и SQL Server 2008](https://support.microsoft.com/kb/918992).
 - При создании имени входа оно автоматически включается, и ему предоставляется разрешение **CONNECT SQL** уровня сервера. 
 - Для разрешения доступа [режим проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md) сервера должен соответствовать типу имени входа.
     - Сведения о проектировании системы разрешений см. в статье [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -610,7 +610,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр]()|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр]()|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Параллельное<br />хранилище данных \*_**
 
 &nbsp;
 
@@ -667,7 +667,7 @@ WINDOWS
 > [!IMPORTANT]  
 >  Параметры CHECK_EXPIRATION и CHECK_POLICY принудительно применяются только в Windows Server 2003 и более поздних версиях. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md). 
   
-- Скрипт для передачи имен входа см. в разделе [Способы передачи имен входа и паролей между экземплярами SQL Server 2005 и SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Скрипт для передачи имен входа см. в разделе [Способы передачи имен входа и паролей между экземплярами SQL Server 2005 и SQL Server 2008](https://support.microsoft.com/kb/918992).
 - При создании имени входа оно автоматически включается, и ему предоставляется разрешение **CONNECT SQL** уровня сервера. 
 - Сведения о проектировании системы разрешений см. в статье [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 

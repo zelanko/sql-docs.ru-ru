@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6096869fb812034dbcd313cfbe0ab95373d27f23
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8c4dd4b79881160f5fdfe61a7c60f76ce0ae2cf0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100295"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703962"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,7 +142,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  *database_name* . [ schema_name ] . | schema_name. ] *table_name*  
  Имя создаваемой таблицы, состоящее из одной, двух или трех частей. Если речь идет о внешней таблице, в SQL хранятся только метаданные таблицы, а также базовая статистика о файле или папке, на которые ссылается Hadoop и хранилище больших двоичных объектов Azure. Никакие данные не перемещаются и не хранятся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE допускает одно или несколько определений столбцов. CREATE EXTERNAL TABLE и CREATE TABLE используют одинаковый синтаксис для определения столбца. Исключение — параметр DEFAULT CONSTRAINT, который нельзя использовать с внешними таблицами. Подробную информацию об определениях столбцов и их типах данных см. в разделах [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) и [CREATE TABLE в базе данных SQL Azure](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
+ \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE допускает одно или несколько определений столбцов. CREATE EXTERNAL TABLE и CREATE TABLE используют одинаковый синтаксис для определения столбца. Исключение — параметр DEFAULT CONSTRAINT, который нельзя использовать с внешними таблицами. Подробную информацию об определениях столбцов и их типах данных см. в разделах [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) и [CREATE TABLE в базе данных SQL Azure](https://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
  Определения столбцов, включая типы данных и количество столбцов, должны соответствовать данным во внешних файлах. В случае несоответствия при запросе данных строки файла будут отклонены.  
   
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  Указывает путь к папке или файлу и имя файла для фактических данных в хранилище больших двоичных объектов Azure или Hadoop. Расположение начинается с корневой папки. Корневая папка — это расположение данных, указанное во внешнем источнике данных.  
 
 
-В SQL Server инструкция CREATE EXTERNAL TABLE создает путь к папке и саму папку, если она еще не существует. Затем вы можете использовать инструкцию INSERT INTO, чтобы экспортировать данные из локальной таблицы SQL Server во внешний источник данных. Дополнительные сведения см. в разделе [Запросы PolyBase](/sql/relational-databases/polybase/polybase-queries). 
+В SQL Server инструкция CREATE EXTERNAL TABLE создает путь к папке и саму папку, если она еще не существует. Затем вы можете использовать инструкцию INSERT INTO, чтобы экспортировать данные из локальной таблицы SQL Server во внешний источник данных. Дополнительные сведения: [Запросы PolyBase](/sql/relational-databases/polybase/polybase-queries). 
 
 В хранилище данных SQL и в системе платформы Analytics инструкция [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) создает путь к папке и саму папку, если она еще не существует. В этих двух продуктах инструкция CREATE EXTERNAL TABLE не создает путь к папке и саму папку.
 
@@ -161,7 +161,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  ![Рекурсивные данные для внешних таблиц](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Рекурсивные данные для внешних таблиц")  
   
- Чтобы изменить значение по умолчанию и только для чтения в корневой папке, установите для атрибута \<polybase.recursive.traversal> значение 'false' в файле конфигурации core-site.xml. Этот файл находится в папке `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Например, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
+ Чтобы изменить значение по умолчанию и только для чтения в корневой папке, установите для атрибута \<polybase.recursive.traversal> значение 'false' в файле конфигурации core-site.xml. Этот файл находится в папке `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Например, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
   
  DATA_SOURCE = *external_data_source_name*  
  Задает имя внешнего источника данных, содержащего расположение внешних данных. Это расположение находится не в хранилище больших двоичных объектов Azure или Hadoop. Для создания внешнего источника данных используйте инструкцию [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).  
@@ -265,7 +265,7 @@ REJECTED_ROW_LOCATION = *расположение каталога*
 ## <a name="general-remarks"></a>Общие замечания  
  Если используются нерегламентированные запросы, т. е. SELECT FROM EXTERNAL TABLE, PolyBase сохраняет строки, полученные из внешнего источника данных, во временной таблице. После выполнения запроса PolyBase удаляет временную таблицу. В таблицах SQL не сохраняются постоянные данные.  
   
- Если выполняется импорт, т. е. SELECT INTO FROM EXTERNAL TABLE, PolyBase сохраняет строки, полученные из внешнего источника данных, в виде постоянных данных в таблице SQL. Новая таблица создается во время выполнения запроса, когда Polybase извлекает внешние данные.  
+ Если выполняется импорт, т. е. SELECT INTO FROM EXTERNAL TABLE, PolyBase сохраняет строки, полученные из внешнего источника данных, в виде постоянных данных в таблице SQL. Новая таблица создается при выполнении запросов, когда PolyBase извлекает внешние данные.  
   
  PolyBase может передать некоторые вычисления запросов в Hadoop для повышения производительности запросов. Это называется включением предиката. Для этого задайте параметр расположения диспетчера ресурсов Hadoop в [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
@@ -553,7 +553,7 @@ FROM ClickStream
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Общие примеры запросов метаданных (SQL Server PDW)](http://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
+ [Общие примеры запросов метаданных (SQL Server PDW)](https://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

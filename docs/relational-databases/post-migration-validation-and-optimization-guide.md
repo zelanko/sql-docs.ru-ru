@@ -1,12 +1,10 @@
 ---
 title: Руководство по оптимизации и проверке после миграции | Документация Microsoft
-ms.custom: ''
 ms.date: 5/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - post-migration validation and optimization
@@ -14,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-manager: ''
-ms.openlocfilehash: fe6ebb9967a3f1569db605a17b8f48b2a82a0470
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 897f8affc74e764b19457aec84bfff21b867895e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662952"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658530"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Руководство по оптимизации и проверке после миграции
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "47662952"
 
 Это объясняется тем, что, начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], все изменения в оптимизаторе запросов привязаны к последнему [уровню совместимости базы данных](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), поэтому планы изменяются не в момент обновления, а когда пользователь изменяет параметр базы данных `COMPATIBILITY_LEVEL` на последнюю версию. В сочетании с хранилищем запросов эта возможность обеспечивает высокий уровень контроля над производительностью запросов в процессе обновления. 
 
-Дополнительные сведения об изменениях оптимизатора запросов, появившихся в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], см. в документе [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx) (Оптимизация планов запросов с помощью модуля оценки кратности SQL Server 2014).
+Дополнительные сведения об изменениях оптимизатора запросов, появившихся в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], см. в документе [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Оптимизация планов запросов с помощью модуля оценки кратности SQL Server 2014).
 
 ### <a name="steps-to-resolve"></a>Действия по устранению
 
@@ -53,7 +51,7 @@ ms.locfileid: "47662952"
 **Область применения:** внешняя платформа (например, Oracle, DB2, MySQL или Sybase) для миграции [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Если при миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] подобная проблема возникнет в источнике [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], миграция на новую версию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] без изменений будет проходить без учета этого сценария. 
+> При миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], если подобная проблема имелась в исходном [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], переход на новую версию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] без изменений будет проходить без учета этого сценария. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] компилирует планы запросов для хранимых процедур, используя перехват входных параметров во время первой компиляции и создавая параметризованный план с возможностью повторного использования, оптимизированный для распространения этих параметров. Даже если хранимых процедур нет, большинство операторов, создающий простые планы, будет параметризовано. После первого кэширования плана любое выполнение сопоставляется с кэшированным ранее планом.
 Проблемы могут возникнуть, если в первой компиляции не использовались наборы параметров, наиболее типичные для обычной рабочей нагрузки. С другими параметрами план выполнения будет неэффективным. Дополнительные сведения по этой теме см. в разделе [Сканирование параметров](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
@@ -81,7 +79,7 @@ ms.locfileid: "47662952"
 
 1.  Использование графического плана выполнения для отсутствующих ссылок на индексы.
 2.  Индексирование предложений, созданных [помощником по настройке ядра СУБД](../tools/dta/tutorial-database-engine-tuning-advisor.md).
-3.  Использование [динамического административного представления отсутствующих индексов ](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) или [панели мониторинга производительности SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+3.  Использование [динамического административного представления отсутствующих индексов ](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) или [панели мониторинга производительности SQL Server](https://www.microsoft.com/download/details.aspx?id=29063).
 4.  Использование существующих сценариев, которые могут обращаться к существующим динамическим административным представлениям для получения представления об отсутствующих, повторяющихся, избыточных, редко применяемых и абсолютно неиспользуемых индексах, а также в случае, если какая-либо ссылка на индекс указана в подсказке или прописана в коде процедур или функций, существующих в вашей базе данных. 
 
 > [!TIP] 

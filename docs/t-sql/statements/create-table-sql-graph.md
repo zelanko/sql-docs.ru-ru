@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a143011f3fb93c9aeef6d699e89e0d12b664409c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b4efb9168f49b6c574b3358cba6dadb6d5896af
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855732"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269897"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (граф SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ CREATE TABLE
 
 Stretch Database не поддерживается для таблицы узлов или граничной таблицы.
 
-Таблицы узлов или граничные таблицы не могут быть внешними (поддержка polybase для графовых таблиц отсутствует). 
+Таблицы узлов или граничные таблицы не могут быть внешними (поддержка PolyBase для графовых таблиц отсутствует). 
   
  
 ## <a name="examples"></a>Примеры  

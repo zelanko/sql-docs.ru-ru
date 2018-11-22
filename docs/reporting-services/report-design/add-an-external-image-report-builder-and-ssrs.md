@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e7f83a95102716547e14b7bea10d5f05a9277ec4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c42c413e235abd758d51a76b1726e0c35e3ff758
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031193"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812297"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Добавление внешнего изображения (построитель отчетов и службы SSRS)
   Внешние изображения могут находиться на сервере отчетов в собственном режиме или в режиме интеграции с SharePoint либо находиться на любом другом веб-сайте. При включении внешних изображений в отчет необходимо проверить, что изображение существует и читатель отчета имеет разрешения на доступ к изображению. Дополнительные сведения см. в разделе [Изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "50031193"
   
      Для изображения, расположенного на сервере отчетов в собственном режиме, введите относительный путь к изображению в поле **Использовать это изображение** , например ../images/image1.jpg.  
   
-     Для изображения на сервере отчетов в режиме интеграции с SharePoint или на любом другом веб-сайте укажите полный URL-адрес изображения в окне **Использовать это изображение**, например http://\<имя_сервера_SharePoint>/\<сайт>/Documents/images/image1.jpg.  
+     Для изображения на сервере отчетов в режиме интеграции с SharePoint или на любом другом веб-сайте укажите полный URL-адрес изображения в окне **Использовать это изображение**, например https://\<имя_сервера_SharePoint>/\<сайт>/Documents/images/image1.jpg.  
   
      Дополнительные сведения см. в разделе [Указание путей к внешним элементам (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   

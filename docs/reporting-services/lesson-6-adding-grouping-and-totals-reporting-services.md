@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051017"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813677"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 На этом занятии вы добавите группирование и итоги к отчету [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для организации и суммирования данных.  
@@ -115,7 +115,7 @@ ms.locfileid: "50051017"
 3.  В поле **TargetServerURL** введите имя сервера отчетов, например:   
     - `http:/<servername>/reportserver`  
    
-    - `http://localhost/reportserver` работает, если отчет создается на сервере отчетов.  
+    - `https://localhost/reportserver` работает, если отчет создается на сервере отчетов.  
   
   
 4. Обратите внимание на то, что TargetReportFolder — это имя проекта, используемое в учебнике.  Это имя папки, в которой отчет будет развернут в следующих шагах.  
@@ -129,7 +129,7 @@ ms.locfileid: "50051017"
     > Пропускается "Sales Orders.rdl". Элемент имеет актуальную версию.  
     > Построение завершено — 0 ошибок, 0 предупреждений  
     > ------ Развертывание начато: проект: учебник, Конфигурация: отладка ------  
-    > Развертывание в http://[имя сервера]/reportserver  
+    > Развертывание в https://[имя сервера]/reportserver  
     > Развертывание отчета "/tutorial/Sales Orders".  
     > Развертывание завершено -- 0 ошибок, 0 предупреждений  
     > ========== Сборка: успешно и без изменений: 1, с ошибками: 0, пропущено: 0 ==========  
@@ -143,8 +143,8 @@ ms.locfileid: "50051017"
   
     Перейдите по URL-адресу веб-портала [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
     **Примечание** . URL-адресом *портала* является "Reports", но URL-адресом *сервера* отчетов не является "Reportserver".  Пример:   
-    `http://<server name>/reports`.  
-    `http://localhost/reports` работает, если отчет создается на сервере отчетов.  
+    `https://<server name>/reports`.  
+    `https://localhost/reports` работает, если отчет создается на сервере отчетов.  
   
 8.  Перейдите в папку, которая содержит отчет. Имя по умолчанию — *tutorial*, то есть имя проекта или имя, которые вы ввели в поле TargetReportFolder в свойствах проекта.   
 Щелкните имя отчета **Заказы на продажу** , чтобы отобразить этот отчет в браузере.  

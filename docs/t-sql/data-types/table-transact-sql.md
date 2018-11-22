@@ -16,12 +16,12 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba13a096eac5b83a9bc094a2017ddde3cf6d8f81
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 7e4844a9bf0e265f52db634400383452cc99a5d9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100465"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703842"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "49100465"
 Специальный тип данных, который может быть использован для хранения результирующего набора для обработки в будущем. Тип **table** используется в первую очередь для временного хранения набора строк, возвращаемых как результирующий набор функции с табличным значением. Функции и переменные могут быть объявлены как имеющие тип **table**. Переменные **table** могут использоваться в функциях, хранимых процедурах и пакетах. Для объявления переменных типа **table** используйте инструкцию [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -116,7 +116,7 @@ SELECT select_list INTO table_variable;
 **Отложенная компиляция табличных переменных** позволяет оптимизировать план и повысить общую производительность для запросов, ссылающихся на табличные переменные. Во время оптимизации и первичной компиляции плана эта функция будет распространять оценки кратности, основанные на фактическом числе строк табличных переменных. Эти точные сведения о числе строк затем будут использоваться для оптимизации последующих операций планирования.
 
 > [!NOTE]
-> Отложенная компиляция табличных переменных предоставляется в Базе данных SQL Azure в режиме общедоступной предварительной версии.  
+> Функция "Отложенная компиляция табличных переменных" предоставляется в режиме общедоступной предварительной версии в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
 
 При отложенной компиляции табличных переменных компиляция инструкции со ссылкой на табличную переменную откладывается до момента первого фактического выполнения инструкции. Такое поведение при отложенной компиляции идентично поведению временных таблиц. В результате вместо исходного однострочного предположения используется фактическое значение кратности. 
 
@@ -231,7 +231,7 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 ```  
   
 ## <a name="see-also"></a>См. также раздел
-[COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)  
 [Определяемые пользователем функции](../../relational-databases/user-defined-functions/user-defined-functions.md)  
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  

@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07dadc3a5268ab45d54c234b51e89905767b80bd
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411774"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639131"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Настройка группы доступности для распределенных транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "50411774"
 Для выполнения распределенных транзакций группу доступности необходимо настроить таким образом, чтобы базы данных регистрировались как диспетчеры ресурсов распределенных транзакций.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и более поздние версии включают полную поддержку распределенных транзакций в группах доступности. В версиях [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] до пакета обновления 2 (SP2) распределенные транзакции между базами данных (т. е. транзакции между базами данных в одном экземпляре SQL Server), включающие базу данных в группе доступности, не поддерживаются. В [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] подобного ограничения нет. 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и более поздние версии включают полную поддержку распределенных транзакций в группах доступности. В версиях [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] до пакета обновления 2 (SP2) распределенные транзакции между базами данных (т. е. транзакции между базами данных в одном экземпляре SQL Server), включающие базу данных в группе доступности, не поддерживаются. В [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] подобного ограничения нет. 
 >
 >Конфигурация [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] настраивается точно так же, как и конфигурация [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
@@ -45,7 +45,7 @@ ms.locfileid: "50411774"
 
 * Все экземпляры [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)], участвующие в распределенной транзакции, должны иметь версию [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] или более позднюю.
 
-* Группы доступности должны быть запущены на Windows Server 2016 или Windows Server 2012 R2. Для Windows Server 2012 R2 необходимо установить обновление KB3090973, доступное по адресу [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
+* Группы доступности должны быть запущены на Windows Server 2016 или Windows Server 2012 R2. Для Windows Server 2012 R2 необходимо установить обновление KB3090973, доступное по адресу [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  
 
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>Создание группы доступности для распределенных транзакций
 
@@ -180,16 +180,16 @@ following the guideline for Troubleshooting DTC Transactions.
    ALTER DATABASE [DB1] SET ONLINE
    ```
 
-Дополнительные сведения об обработке сомнительных транзакций см. в статье [Обработка транзакций вручную](http://technet.microsoft.com/library/cc754134.aspx).
+Дополнительные сведения об обработке сомнительных транзакций см. в статье [Обработка транзакций вручную](https://technet.microsoft.com/library/cc754134.aspx).
 
 ## <a name="next-steps"></a>Next Steps  
 
-[Распределенные транзакции](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
+[Распределенные транзакции](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
 [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [Транзакции — группы доступности AlwaysOn и зеркальное отображение баз данных](transactions-always-on-availability-and-database-mirroring.md)  
 
-[Поддержка транзакций XA](http://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
+[Поддержка транзакций XA](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[Как это работает: сеанс/SPID (–2) для транзакций DTC](http://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[Как это работает: сеанс/SPID (–2) для транзакций DTC](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

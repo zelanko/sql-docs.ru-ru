@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7c7dd4137517f9ad4ec97dda1b0fa948f40feb4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021898"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814337"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Веб-портал (основной режим служб SSRS)
 
@@ -75,9 +75,9 @@ ms.locfileid: "50021898"
 
 2. В адресной строке браузера введите URL-адрес веб-портала.
 
-    URL-адрес по умолчанию — *http://[ИмяКомпьютера]/reports*.
+    URL-адрес по умолчанию — *https://[ИмяКомпьютера]/reports*.
 
-    Сервер отчетов может быть настроен для использования определенного порта. Например, *http://[ИмяКомпьютера]:80/reports* или *http://[ИмяКомпьютера]:8080/reports*;
+    Сервер отчетов может быть настроен для использования определенного порта. Например, *https://[ИмяКомпьютера]:80/reports* или *https://[ИмяКомпьютера]:8080/reports*.
 
 ## <a name="grouping-by-categories"></a>Группировка по категориям
 

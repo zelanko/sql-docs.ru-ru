@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b11acfb91190aa4f6d1b49e603954c53bbcd86e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd1990fcb8a8637a120a35e2f8809d7bf48b1ecf
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737682"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812767"
 ---
 # <a name="helplink-element"></a>Элемент HelpLink
   Элемент **HelpLink** свойства **Detail** представляет строку с URL-адресом, которая создается сервером отчетов. Этот URL-адрес ссылается на веб-страницу, управляемую центром справки и поддержки [!INCLUDE[msCoName](../../../includes/msconame-md.md)], которая предоставляет дополнительную справку и статьи базы значений, посвященные ошибкам, происходящим в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. URL-адрес имеет следующий синтаксис:  
   
- **http://** www.microsoft.com**/** products**/** ee**/** transform.aspx **?EvtSrc**=v*alue***&EvtID**=* value ***&ProdName**=* value***&ProdVer**=* value*  
+ **https://** www.microsoft.com**/** products**/** ee**/** transform.aspx **?EvtSrc**=з*начение***&EvtID**=* значение ***&ProdName**=* значение***&ProdVer**=* значение*  
   
  В следующей таблице перечислены аргументы URL-адреса **HelpLink**.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47737682"
  В следующем примере показан URL-адрес **HelpLink**, который возвращается для кода ошибки **rsReservedItem**. Эта ошибка происходит, когда пользователь выполняет попытку изменить или удалить зарезервированный элемент в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]:  
   
 ```  
-http://www.microsoft.com/products/ee/transform.aspx?  
+https://www.microsoft.com/products/ee/transform.aspx?  
 EvtSrc=Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings  
 &EvtID=rsReservedItem&ProdName=Microsoft%20SQL%20Server%20Reporting%20Services&ProdVer=8.00  
 ```  

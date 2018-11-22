@@ -14,19 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46b9a1a8be87c54858c760f4b53d30a83799ec84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62ac97c76f3b08a7dc13258fe2d45e88c9f5500a
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767082"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571333"
 ---
 # <a name="set-or-change-the-database-collation"></a>Установка и изменение параметров сортировки базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В этом разделе описано, как задать и изменить параметры сортировки базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если параметры сортировки не указаны, используются параметры сортировки сервера.  
  
 > [!NOTE]
-> Невозможно изменить параметры сортировки базы данных SQL Azure после ее создания.
+> После создания базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] параметры сортировки невозможно изменить.
 
  **В этом разделе**  
   
@@ -51,6 +51,8 @@ ms.locfileid: "47767082"
 -   Параметры сортировки Windows только для Юникода могут использоваться лишь с предложением COLLATE для применения параметров сортировки к данным типов **nchar**, **nvarchar**и **ntext** на уровне столбца и на уровне выражения. Их нельзя использовать с предложением COLLATE для изменения параметров сортировки базы данных или экземпляра сервера.  
   
 -   Если указанные или используемые объектом по ссылке параметры сортировки используют кодовую страницу, не поддерживаемую Windows, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выдаст ошибку.  
+
+-   После создания базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] параметры сортировки невозможно изменить.
   
 ###  <a name="Recommendations"></a> Рекомендации  
   

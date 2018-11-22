@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030623"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813177"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Развертывание веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на сайте SharePoint
 
@@ -79,7 +79,7 @@ ms.locfileid: "50030623"
 
     ![Параметры сайта в меню со значком шестеренки.](media/sharepoint-site-settings.png)
 
-    По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что часто к сайту SharePoint можно получить доступ, введя *http://<computer name>*, чтобы открыть корневое семейство веб-сайтов.
+    По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что часто к сайту SharePoint можно получить доступ, введя *https://<computer name>*, чтобы открыть корневое семейство веб-сайтов.
 
 3. В области **Администрирование семейства веб-сайтов** щелкните ссылку **Возможности семейства веб-сайтов**.
 
@@ -119,7 +119,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
     ![Параметры сайта в меню со значком шестеренки.](media/sharepoint-site-settings.png)
 
-    По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что часто к сайту SharePoint можно получить доступ, введя *http://<computer name>*, чтобы открыть корневое семейство веб-сайтов.
+    По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что часто к сайту SharePoint можно получить доступ, введя *https://<computer name>*, чтобы открыть корневое семейство веб-сайтов.
 
 2. В разделе **Коллекции веб-дизайнера** выберите **веб-части**.
 

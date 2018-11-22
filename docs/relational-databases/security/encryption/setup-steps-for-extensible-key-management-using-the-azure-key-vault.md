@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 646d0cd8cb030e2e848ce5bd56b7b3ee228db449
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817696"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663363"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Расширенное управление ключами SQL Server TDE с помощью Azure Key Vault (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47817696"
   
 -   Наличие подписки Azure  
   
--   Установка последней версии [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) (5.2.0 или более поздней).  
+-   Установка последней версии [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 или более поздней).  
 
 -   Создание Azure Active Directory  
 
@@ -239,10 +239,13 @@ ms.locfileid: "47817696"
    
   
 ## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>Часть III. Установка Соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- Скачайте Соединитель SQL Server из [Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/p/?LinkId=521700). (Это должен сделать администратор компьютера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .)  
+ Скачайте Соединитель SQL Server из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/p/?LinkId=521700). (Это должен сделать администратор компьютера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .)  
 
 > [!NOTE]  
 >  Версии 1.0.0.440 и старше были заменены и больше не поддерживаются в рабочих средах. Выполните обновление до версии 1.0.1.0 или более поздней, посетив [Центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=45344) и используя инструкции на странице [Соединитель SQL Server, приложение](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) в разделе "Обновление соединителя SQL Server".
+
+> [!NOTE]  
+> В версии 1.0.5.0 внесено критическое изменение, касающееся алгоритма отпечатков. После обновления до версии 1.0.5.0 восстановление базы данных может завершаться сбоем. См. статью базы знаний [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
   
  ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
   

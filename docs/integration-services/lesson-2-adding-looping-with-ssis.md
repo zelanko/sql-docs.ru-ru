@@ -11,15 +11,15 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b26f7b7a36d024ec18de617b08fdefe2d352083
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed4b198ab8f0582f3e01cfaca957af4f72e343e2
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686202"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641221"
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>Занятие 2. Добавление циклов с помощью служб SSIS
-При работе над разделом [Занятие 1. Создание проекта и основного пакета с помощью служб SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)был создан пакет, в котором данные извлекались из отдельного источника неструктурированного файла, преобразовывались с помощью преобразований "Уточняющий запрос" и затем загружались в таблицу фактов **FactCurrency** образца базы данных **AdventureWorksDW2012** .  
+В работе над разделом [Занятие 1. Создание проекта и основного пакета с помощью служб SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md) вы создали пакет, который извлекал данные из отдельного источника неструктурированных файлов, преобразовали данные с помощью преобразований поиска, а затем загрузили эти данные в копию таблицы фактов **FactCurrencyRate** из примера базы данных **AdventureWorksDW2012**.  
   
 Однако в процессе извлечения, преобразования и загрузки (ETL) редко используется отдельный неструктурированный файл. Как правило, в процессе ETL данные извлекаются из нескольких источников неструктурированного файла. Извлечение данных из нескольких источников требует итеративного потока управления. Одной из самых ожидаемых возможностей служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] является способность легко добавлять повторения или циклы в пакеты.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47686202"
 На этом занятии будет изменяться только поток управления, поток данных не рассматривается.  
   
 > [!IMPORTANT]  
-> Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании **AdventureWorksDW2012**см. в разделе [Проект образцов продуктов службы Reporting Services на сайте CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+> Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании **AdventureWorksDW2012**см. в разделе [Проект образцов продуктов службы Reporting Services на сайте CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## <a name="lesson-tasks"></a>Задачи занятия  
 Это занятие содержит следующие задачи.  
