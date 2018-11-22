@@ -45,7 +45,7 @@ ms.locfileid: "47796431"
   
 1.  Чтобы определить, включена ли компенсация ошибок для статьи, выполните хранимую процедуру [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) и в полученных результатах проверьте значение параметра **delete_tracking**. Если это значение равно **0**, то команды удаления уже не обрабатываются.  
   
-2.  Если на шаге 1 получено значение [1](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), в базе данных публикации на издателе выполните процедуру **sp_changemergearticle &#1;Transact-SQL&#1;**. Укажите значение **delete_tracking** для **@property**и значение **false** для **@value**.  
+2.  Если на шаге 1 получено значение **1**, в базе данных публикации на издателе выполните процедуру [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Укажите значение **delete_tracking** для **@property**и значение **false** для **@value**.  
   
     > [!NOTE]  
     >  Если исходная таблица для статьи уже опубликована в другой публикации, значение **delete_tracking** должно быть одинаковым для обеих статей.  
