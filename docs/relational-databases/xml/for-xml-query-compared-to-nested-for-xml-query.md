@@ -14,12 +14,12 @@ ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12ad145e68eb3766bc58f7df7e0d0908b8af0622
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52e2475748a96d8be757890552225061a241d32a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664522"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539087"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Сравнение запросов FOR XML и вложенных запросов FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -195,9 +195,9 @@ FOR XML AUTO, TYPE
                 ProductName="Mountain-100 Silver, 42" Color="Silver" />  
       <Production.Product ProductID="773"   
                 ProductName="Mountain-100 Silver, 44" Color="Silver" />  
-        …  
+        ...  
     </ProductModel>  
-     …  
+     ...  
 ```  
   
  Если удалить директиву `ELEMENTS` из вложенного запроса `FOR XML` , который создает подкатегории продуктов, то весь результат будет создан по атрибутивной модели. Этот запрос можно составить без вложений. Добавление директивы `ELEMENTS` приводит к созданию XML-документа как по атрибутивной, так и по элементной модели. Этот результат нельзя сформировать с помощью одноуровневого запроса FOR XML.  

@@ -10,12 +10,12 @@ ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae11b65eab37e07286b5d06a7c09305ba5020095
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16a9770c05ecbc81b0fc5696f83285127ca7d8a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819412"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528382"
 ---
 # <a name="remove-data-quality-server-objects"></a>Удаление объектов служб Data Quality Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47819412"
  Эти объекты можно удалить в среде SQL Server Management Studio, щелкнув правой кнопкой мыши объект и выбрав в контекстном меню пункт **Удалить** .  
   
 > [!IMPORTANT]  
->  Если сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] удаляется с экземпляра SQL Server с помощью параметра командной строки `–uninstall` , то в рамках процесса удаления будут удалены все объекты служб DQS. Удалять данные объекты вручную после удаления сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]не потребуется. Для удаления [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] из командной строки введите следующую команду в командной строке и нажмите клавишу ВВОД:   
+>  Если сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] удаляется с экземпляра SQL Server с помощью параметра командной строки `-uninstall` , то в рамках процесса удаления будут удалены все объекты служб DQS. Удалять данные объекты вручную после удаления сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]не потребуется. Для удаления [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] из командной строки введите следующую команду в командной строке и нажмите клавишу ВВОД:   
 > `dqsinstaller.exe -uninstall`  
   
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>Удаление экземпляра SQL Server, содержащего сервер DQS  

@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677303"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711595"
 ---
 # <a name="the-transaction-log-sql-server"></a>Журнал транзакций (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,9 +114,9 @@ ms.locfileid: "51677303"
 |7|DATABASE_SNAPSHOT_CREATION|Создается моментальный снимок базы данных. (Все модели восстановления)<br /><br /> Это очень распространенная (и обычно кратковременная) причина задержки усечения журнала транзакций.|  
 |8|LOG_SCAN|Производится просмотр журнала. (Все модели восстановления)<br /><br /> Это очень распространенная (и обычно кратковременная) причина задержки усечения журнала транзакций.|  
 |9|AVAILABILITY_REPLICA|Вторичная реплика группы доступности применяет записи журнала транзакций этой базы данных к соответствующей базе данных-получателю. (Модель полного восстановления)<br /><br /> Дополнительные сведения см. в статье [Обзор групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
-|10|—|Только для внутреннего применения|  
-|11|—|Только для внутреннего применения|  
-|12|—|Только для внутреннего применения|  
+|10|-|Только для внутреннего применения|  
+|11|-|Только для внутреннего применения|  
+|12|-|Только для внутреннего применения|  
 |13|OLDEST_PAGE|Если в базе данных настроено использование косвенных контрольных точек, самая старая страница в базе может быть старше [регистрационного номера транзакции в журнале (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) для контрольной точки. В этом случае самая старая страница может задержать усечение журнала. (Все модели восстановления)<br /><br /> Сведения о косвенных контрольных точках см. в статье [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Эта значение сейчас не используется.|  
   
@@ -158,17 +158,17 @@ ms.locfileid: "51677303"
     -   Перестроение новой кучи [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (если применимо). Освобождение страниц индексов при выполнении операции `DROP INDEX` **всегда** протоколируется полностью.
   
 ##  <a name="RelatedTasks"></a> Related tasks  
- **Управление журналом транзакций**  
+**Управление журналом транзакций**  
   
 -   [Управление размером файла журнала транзакций](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
   
 -   [Устранение неполадок при переполнении журнала транзакций (ошибка SQL Server 9002)](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **Резервное копирование журнала транзакций (модель полного восстановления)**  
+**Резервное копирование журнала транзакций (модель полного восстановления)**  
   
 -   [Создание резервной копии журнала транзакций &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **Восстановление журнала транзакций (модель полного восстановления)**  
+**Восстановление журнала транзакций (модель полного восстановления)**  
   
 -   [Восстановление резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

@@ -16,12 +16,12 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0225c5cf3e2b8109ac9d85e00133e9a1b8b79367
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5eb84d88bf2f20a688b09f8c1951045793234f38
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602574"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413761"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Настройка доступа только для чтения в реплике доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
  Если имеются триггеры и задания, которые не могут выполняться в недоступной или доступной для чтения базы данных-получателе, то в скриптах триггеров и заданий следует проверять, какой базой данных является искомая реплика, базой данных-источником или базой данных-получателем, доступной для чтения. Для получения этих сведений используйте функцию [DATABASEPROPERTYEX](../../../t-sql/functions/databasepropertyex-transact-sql.md), возвращающую свойство **Updateability** базы данных. Чтобы определить базу данных, доступную только для чтения, задайте в качестве значения READ_ONLY, как в примере ниже:  
   
 ```  
-DATABASEPROPERTYEX([db name],’UpdateAbility’) = N’READ_ONLY’  
+DATABASEPROPERTYEX([db name],'UpdateAbility') = N'READ_ONLY'  
 ```  
   
  Чтобы определить базу данных для чтения и записи, укажите в качестве значения READ_WRITE.  

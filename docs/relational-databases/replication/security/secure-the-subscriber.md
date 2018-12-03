@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a36049bcbd2d5c043320f3e10d06005bf2f70b2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d410a838083aeb52c090dee0f9878a8baa52cca3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671222"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504048"
 ---
 # <a name="secure-the-subscriber"></a>Организация безопасности подписчика
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47671222"
  Дополнительные сведения см. в статьях [Создание обновляемых подписок для публикаций транзакций](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) и [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления, которые имеют имена в виде **syncobj_***\<шестнадцатеричный_номер>*, для учетной записи, настроенной на каждом подписчике.  
+>  Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления, которые имеют имена в виде **syncobj_**_\<<шестнадцатеричный_номер>_, для учетной записи, настроенной на каждом подписчике.  
   
 ## <a name="queued-updating-subscriptions"></a>Подписки, обновляемые посредством очередей  
  При настройке обновляемых посредством очередей подписок необходимо учитывать два аспекта, касающихся безопасности:  

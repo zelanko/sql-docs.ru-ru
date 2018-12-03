@@ -21,12 +21,12 @@ ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 40d8904952530525ccebb7f97dd6deba00ff9071
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82c14fd14460f3b134441931493357a33a2cacf4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508672"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ALTER SERVICE service_name
  *service_name*  
  Имя службы, которую необходимо изменить. Не могут быть указаны имена сервера, базы данных и схемы.  
   
- ON QUEUE [ *schema_name***.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Указывает новую очередь для этой службы. [!INCLUDE[ssSB](../../includes/sssb-md.md)] перемещает все сообщения этой службы из текущей очереди в новую очередь.  
   
  ADD CONTRACT *contract_name*  

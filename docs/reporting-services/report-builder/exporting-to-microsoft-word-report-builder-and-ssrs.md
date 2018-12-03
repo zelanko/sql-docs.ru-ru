@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814097"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393341"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Экспорт в Microsoft Word (построитель отчетов и службы SSRS)
 
@@ -179,7 +179,7 @@ ms.locfileid: "51814097"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- Расширение WORDOPENXML определяет модуль подготовки отчетов Word для файлов DOCX [!INCLUDE[ofprword](../../includes/ofprword-md.md)] . Расширение WORD определяет версию [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` указывает, что модуль подготовки отчетов Word 2003 скрыт. Дополнительные сведения см. в разделах [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) и [Файл конфигурации RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ Расширение WORDOPENXML определяет модуль подготовки отчетов Word для файлов DOCX [!INCLUDE[ofprword](../../includes/ofprword-md.md)] . Расширение WORD определяет версию [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = "false"` указывает, что модуль подготовки отчетов Word 2003 скрыт. Дополнительные сведения см. в разделах [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) и [Файл конфигурации RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-word-and-word-2003-renderers"></a>Различия между модулями подготовки Word и Word 2003  
  Отчеты, подготовленные к просмотру с использованием модулей подготовки Word или Word 2003, как правило, визуально неразличимы. Но можно заметить небольшие различия между двумя форматами Word или Word 2003.  

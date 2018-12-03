@@ -1,32 +1,33 @@
-- name: "Установка помощника по миграции SQL\_Server\_(SSMA)"
+items:
+- name: Установка помощника по миграции SQL Server (SSMA)
   href: installing-sql-server-migration-assistant-for-access-accesstosql.md
-- name: "Начало работы с консолью SSMA для\_Access"
+- name: Начало работы с консолью SSMA для Access
   href: getting-started-with-ssma-for-access-console-accesstosql.md
-- name: "Новые возможности в SSMA для\_Access"
+- name: Новые возможности в SSMA для Access
   href: what-s-new-in-ssma-for-access-accesstosql.md
-- name: "Подготовка баз данных\_Access к миграции"
+- name: Подготовка баз данных Access к миграции
   href: preparing-access-databases-for-migration-accesstosql.md
-- name: "Несовместимые компоненты\_Access"
+- name: Несовместимые компоненты Access
   href: incompatible-access-features-accesstosql.md
-- name: "Новые возможности графического пользовательского интерфейса в\_SSMA"
+- name: Новые возможности графического пользовательского интерфейса в SSMA
   href: new-gui-features-in-ssma-for-access-to-sql.md
-- name: "Схемы инвентаризации\_Access"
+- name: Схемы инвентаризации Access
   href: access-inventory-schemas-accesstosql.md
 - name: Сохранение метаданных
-  href: save-metadata-acesstosql.md
-- name: "Подключение к SQL\_Server"
+  href: save-metadata-accesstosql.md
+- name: Подключение к SQL Server
   href: connecting-to-sql-server-accesstosql.md
-- name: "Миграция данных\_Access в базу данных\_SQL Azure"
+- name: Миграция данных Access в базу данных SQL Azure
   href: migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
 - name: Создание и использование проекта
   href: creating-and-managing-projects-accesstosql.md
-- name: "Работа с консолью SSMA для\_Access"
+- name: Работа с консолью SSMA для Access
   href: working-with-ssma-for-access-console-accesstosql.md
 - name: Добавление и удаление файлов базы данных
   href: adding-and-removing-access-database-files-accesstosql.md
 - name: Параметры проекта (графический пользовательский интерфейс)
   href: project-settings-gui-accesstosql.md
-- name: "Преобразование объектов базы данных\_Access"
+- name: Преобразование объектов базы данных Access
   href: converting-access-database-objects-accesstosql.md
 - name: Юридическая информация
   href: legal-notice-ssma-for-access.md
@@ -34,15 +35,15 @@
   href: connect-to-sql-server-accesstosql.md
 - name: Глобальные параметры
   href: global-settings-output-window-accesstosql.md
-- name: "Создание проекта\_(SSMA)"
+- name: Создание проекта (SSMA)
   href: new-project-ssma-accesstosql.md
-- name: "Параметры командной строки в консоли\_SSMA"
+- name: Параметры командной строки в консоли SSMA
   href: command-line-options-in-ssma-console-accesstosql.md
-- name: "Подключение к базе данных\_SQL Azure"
+- name: Подключение к базе данных SQL Azure
   href: connect-to-azure-sql-db-accesstosql.md
 - name: Параметры проекта (преобразование)
   href: project-settings-conversion-accesstosql.md
-- name: "Параметры проекта (база данных\_SQL Azure)"
+- name: Параметры проекта (база данных SQL Azure)
   href: project-settings-azure-sql-db-accesstosql.md
 - name: Отчет об оценке
   href: assessment-report-accesstosql.md
@@ -60,25 +61,25 @@
   href: working-sample-console-script-filesexecuting-ssma-console-accesstosql.md
 - name: Создание отчетов
   href: generating-reports-accesstosql.md
-- name: "Выполнение команд консоли\_SSMA"
+- name: Выполнение команд консоли SSMA
   href: executing-the-ssma-console-accesstosql.md
 - name: Параметры проекта (загрузка объектов)
   href: project-settings-loading-objects-accesstosql.md
-- name: "Оценка объектов базы данных\_Access для преобразования"
+- name: Оценка объектов базы данных Access для преобразования
   href: assessing-access-database-objects-for-conversion-accesstosql.md
 - name: Глобальные параметры (ведение журнала)
   href: global-settings-logging-accesstosql.md
 - name: Создание файлов подключения к серверу
   href: creating-the-server-connection-files-accesstosql.md
-- name: "Связь приложений\_Access с базой данных\_SQL Azure"
+- name: Связь приложений Access с базой данных SQL Azure
   href: linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
 - name: Создание файлов переменных значений
   href: creating-variable-value-files-accesstosql.md
 - name: Изменение сопоставления типов
   href: edit-type-mapping-accesstosql.md
-- name: "Экспорт инвентаризации\_Access"
+- name: Экспорт инвентаризации Access
   href: exporting-an-access-inventory-accesstosql.md
-- name: "Миграция баз данных\_Access в базу данных\_SQL Azure"
+- name: Миграция баз данных Access в базу данных SQL Azure
   href: migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
 - name: Глобальные параметры
   href: global-settings-dialogs-accesstosql.md
@@ -92,15 +93,15 @@
   href: migration-wizard-accesstosql.md
 - name: Глобальные параметры (редактор)
   href: global-settings-editor-accesstosql.md
-- name: 'Преобразование, загрузка и миграция'
+- name: Преобразование, загрузка и миграция
   href: convert-load-and-migrate-accesstosql.md
-- name: "Загрузка преобразованных объектов базы данных в SQL\_Server"
+- name: Загрузка преобразованных объектов базы данных в SQL Server
   href: loading-converted-database-objects-into-sql-server-accesstosql.md
 - name: Расширенный выбор объектов
   href: advanced-object-selection-accesstosql.md
 - name: Параметры проекта (миграция)
   href: project-settings-migration-accesstosql.md
-- name: "Начало работы с помощником по миграции SQL\_Server\_(SSMA)"
+- name: Начало работы с помощником по миграции SQL Server (SSMA)
   href: getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md
 - name: Помощник миграции SQL Server
   href: sql-server-migration-assistant-for-access-accesstosql.md
@@ -110,7 +111,7 @@
   href: find-databases-wizard-select-files-accesstosql.md
 - name: Сочетания клавиш
   href: shortcut-keys-accesstosql.md
-- name: "Подключение к базе данных\_SQL Azure"
+- name: Подключение к базе данных SQL Azure
   href: connecting-to-azure-sql-db-accesstosql.md
 - name: Задание параметров преобразования и миграции
   href: setting-conversion-and-migration-options-accesstosql.md
@@ -120,5 +121,11 @@
   href: menu-commands-and-other-shortcut-keys-accesstosql.md
 - name: Мастер поиска баз данных (выбор расположений)
   href: find-databases-wizard-select-locations-accesstosql.md
-- name: "Приложение\_1"
+- name: Приложение 1
   href: appendix-1-accesstosql.md
+ms.openlocfilehash: 31527936a79f48cbdfbb8f8bd0a069c2a9baffe1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617504"

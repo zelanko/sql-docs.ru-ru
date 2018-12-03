@@ -14,12 +14,12 @@ ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f5b77195b24c4b60b2ad11fc19e8557aec220d1e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 466786158509916d8f71f00eb9809d4753ee3dd9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658533"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543838"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Директива TYPE в запросах FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- В следующем внутреннем запросе `SELECT … FOR XML` возвращается результат типа **xml**, к которому внешняя инструкция `SELECT` применяет метод `query()` к типу **xml**. Обратите внимание на указанную директиву `TYPE` .  
+ В следующем внутреннем запросе `SELECT ... FOR XML` возвращается результат типа **xml**, к которому внешняя инструкция `SELECT` применяет метод `query()` к типу **xml**. Обратите внимание на указанную директиву `TYPE` .  
   
  Результат:  
   
@@ -105,7 +105,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- В следующем запросе метод `value()` для типа данных **xml** используется с целью извлечения значения из результирующего XML-документа, возвращенного запросом `SELECT…FOR XML`. Дополнительные сведения см. в разделе [Метод value (тип данных xml)](../../t-sql/xml/value-method-xml-data-type.md).  
+ В следующем запросе метод `value()` для типа данных **xml** используется с целью извлечения значения из результирующего XML-документа, возвращенного запросом `SELECT...FOR XML`. Дополнительные сведения см. в разделе [Метод value (тип данных xml)](../../t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  

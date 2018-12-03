@@ -16,12 +16,12 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b735de61b88a5b33c6dd8174a3e0bd6cf3b9dece
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b063396b2dc55636f85b6884206c1a5a1d6e6109
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628662"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509222"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»
   Можно настроить преобразование «Уточняющий запрос», чтобы использовать частичный кэш или не использовать режим кэша.  
@@ -61,11 +61,11 @@ ms.locfileid: "47628662"
   
     -   Выберите параметр **Использовать результаты SQL-запроса**, а затем создайте запрос в окне **Команда SQL** .  
   
-         —или—  
+         -или-  
   
          Нажмите кнопку **Создать запрос** , чтобы создать запрос с помощью графических средств, предоставляемых **Построителем запросов** .  
   
-         —или—  
+         -или-  
   
          Нажмите кнопку **Обзор** , чтобы выполнить импорт инструкции SQL из файла.  
   

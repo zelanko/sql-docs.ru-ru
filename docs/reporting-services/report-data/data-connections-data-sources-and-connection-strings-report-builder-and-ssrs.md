@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76d770e5a6e01707eaebef67a1db147719395f64
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e9294579f338034ae7082f8fe05960af4e3a4fc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814017"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394036"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)
 
@@ -107,7 +107,7 @@ ms.locfileid: "51814017"
 |База данных SQL Azure|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Задайте тип источника данных **База данных SQL Microsoft Azure**. Дополнительные сведения см. в разделе [Тип соединения SQL Azure (службы SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |Параллельное хранилище данных SQL Server|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Задайте тип источника данных **Microsoft SQL Server Parallel Data Warehouse**. Дополнительные сведения см. в разделе [Тип соединения с параллельным хранилищем данных SQL Server (службы SSRS)](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |База данных служб Analysis Services на локальном сервере|`data source=localhost;initial catalog=Adventure Works DW`|Задайте тип источника данных **Microsoft SQL Server Analysis Services**. Дополнительные сведения см. в разделе [Тип соединения служб Analysis Services для многомерных выражений (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) или [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Табличный шаблон базы данных служб Analysis Services с торговым представителем|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|Задайте тип источника данных **Microsoft SQL Server Analysis Services**. Укажите имя перспективы в параметре cube=. Дополнительные сведения см. в разделе [Перспективы (табличные службы SSAS)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
+|Табличный шаблон базы данных служб Analysis Services с торговым представителем|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Задайте тип источника данных **Microsoft SQL Server Analysis Services**. Укажите имя перспективы в параметре cube=. Дополнительные сведения см. в разделе [Перспективы (табличные службы SSAS)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
 |Источник данных — модель отчета на сервере отчетов, сконфигурированном в собственном режиме|`Server=https://myreportservername/reportserver; datasource=/models/Adventure Works`|Укажите URL-адрес сервера отчетов или библиотеки документов, а также путь к опубликованной модели в пространстве имен папки сервера отчетов или папки библиотеки документов. Дополнительные сведения см. в разделе [Соединение с моделью отчета (службы SSRS)](../../reporting-services/report-data/report-model-connection-ssrs.md).|  
 |Источник данных — модель отчета на сервере отчетов, сконфигурированном в режиме интеграции с SharePoint|`Server=https://server; datasource=https://server/site/documents/models/Adventure Works.smdl`|Укажите URL-адрес сервера отчетов или библиотеки документов, а также путь к опубликованной модели в пространстве имен папки сервера отчетов или папки библиотеки документов.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Сервер служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2000|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Задайте тип источника данных **Поставщик OLE DB для служб OLAP 8.0**.<br /><br /> Задав для свойства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ConnectTo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] значение **8.0** , можно добиться более быстрого соединения с источниками данных служб **2000**. Чтобы установить это свойство, воспользуйтесь диалоговым окном **Свойства соединения** на вкладке **Дополнительные свойства** .|  

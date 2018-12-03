@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ecd386a4fe3004e36d5039a2fe8e98dfcc185033
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907e3eaa4852979797395317a2db93276c551965
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816512"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712155"
 ---
 # <a name="schedule-properties-general-page"></a>Свойства расписания (страница «Общие»)
   Создать или изменить общее расписание можно с помощью страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] . Общие расписания могут использоваться вместо расписаний отчетов или подписок. Изменения, внесенные в расписания, применяются после сохранения расписания. Изменение расписания не оказывает воздействия на выполняемые задания. Если какое-то расписание изменяется во время его использования, всем выполняемым в данный момент отчетам и подпискам, запущенным на основе этого расписания, будет разрешено завершение.  
@@ -31,7 +31,7 @@ ms.locfileid: "47816512"
  4) Щелкните расписание правой кнопкой мыши и выберите параметр **Свойства**.  
   
 > [!NOTE]  
->Эта функция доступна не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и данная страница не открывается при работе с выпуском, в котором отсутствует эта функция. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>Эта функция доступна не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и данная страница не открывается при работе с выпуском, в котором отсутствует эта функция. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 ## <a name="options"></a>Параметры  
  **Название**  

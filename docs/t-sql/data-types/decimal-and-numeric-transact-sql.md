@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c56435e2b0b576ae33ddb00f631fde8dee608ff7
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 0e487b66d13b4dcaba83219cc1fa6edf8eadc37d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970458"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530021"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal и numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "50970458"
 Типы числовых данных с фиксированными точностью и масштабом. Типы decimal и numeric являются взаимозаменяемыми синонимами.
   
 ## <a name="arguments"></a>Аргументы  
-**decimal**[ **(***p*[ **,***s*] **)**] и **numeric**[ **(***p*[ **,***s*] **)**]  
-Числа с фиксированной точностью и масштабом. При использовании максимальной точности числа могут принимать значения в диапазоне от -10^38+1 до 10^38-1. Синонимами типа **decimal** по стандарту ISO являются типы **dec** и **dec(***p*, *s***)**. Тип **numeric** функционально эквивалентен типу **decimal**.
+**decimal**[ **(**_p_[ **,**_s_] **)**] и **numeric**[ **(**_p_[ **,**_s_] **)**]  
+Числа с фиксированной точностью и масштабом. При использовании максимальной точности числа могут принимать значения в диапазоне от -10^38+1 до 10^38-1. Синонимами типа **decimal** по стандарту ISO являются типы **dec** и **dec(**_p_, _s_**)**. Тип **numeric** функционально эквивалентен типу **decimal**.
   
 p (точность)  
 Максимальное количество десятичных разрядов числа (как слева, так и справа от десятичной запятой), которые будут храниться. Точность должна быть значением в диапазоне от 1 до максимум 38. Точность по умолчанию составляет 18.

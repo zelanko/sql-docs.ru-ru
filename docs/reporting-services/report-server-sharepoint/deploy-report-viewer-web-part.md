@@ -1,22 +1,22 @@
 ---
 title: Развертывание веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на сайте SharePoint | Документы Майкрософт
-ms.date: 10/05/2017
+ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e9b2d920b55e412f3b9fa119db0a7cf893659fca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813177"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502820"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Развертывание веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на сайте SharePoint
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 Веб-часть "Средство просмотра отчетов" — это настраиваемая веб-часть, которую можно использовать для просмотра отчетов служб SQL Server Reporting Services в собственном режиме на сайте SharePoint. Эту веб-часть можно использовать для просмотра, печати и экспорта отчетов на сервере отчетов, а также перемещения по ним. Веб-часть "Средство просмотра отчетов" связана с файлами определения отчетов (RDL), которые обрабатываются сервером отчетов служб SQL Server Reporting Services или Сервером отчетов Power BI. Эту веб-часть нельзя использовать с отчетами Power BI, размещенными на Сервере отчетов Power BI.
 
@@ -54,7 +54,7 @@ ms.locfileid: "51813177"
 2. Выполните командлет [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx), чтобы добавить решение в ферму.
 
     ```
-    Add-SPSolution –LiteralPath "{path to file}\ReportViewerWebPart.wsp"
+    Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
     ```
 
     Командлет возвратит имя решения, его идентификатор, а также атрибут Deployed=False. На следующем шаге будет выполнено развертывание решения.
@@ -64,13 +64,13 @@ ms.locfileid: "51813177"
     **SharePoint 2013**
 
     ```
-    Install-SPSolution –Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
+    Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
     **SharePoint 2016**
 
     ```
-    Install-SPSolution –Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
+    Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
     ```
 
 ## <a name="activate-feature"></a>Активация компонента

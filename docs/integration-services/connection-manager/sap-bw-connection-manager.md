@@ -13,12 +13,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d891d0e4168274d796ca96227802a76c50bf0942
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 38482743b988419f2aa16d874bed5fdc7a60286d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641991"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528430"
 ---
 # <a name="sap-bw-connection-manager"></a>Диспетчер соединений SAP BW
   Диспетчер соединений SAP BW — это компонент диспетчера соединений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW. Таким образом, диспетчер соединений SAP BW обеспечивает подключение к системе SAP Netweaver BW версии 7, необходимое компонентам источника и назначения [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW. (Источник и назначение SAP BW, входящие в состав пакета [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW, являются единственными компонентами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , которые используют диспетчер соединений SAP BW.)  
@@ -69,7 +69,7 @@ ms.locfileid: "51641991"
   
     -   Дважды щелкните диспетчер соединений SAP BW.  
   
-         —или—  
+         -или-  
   
     -   Щелкните правой кнопкой мыши диспетчер соединений SAP BW, а затем выберите **Изменить**.  
   

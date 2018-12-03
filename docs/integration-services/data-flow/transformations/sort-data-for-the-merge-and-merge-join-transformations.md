@@ -14,12 +14,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d71d22599d95cb55f1d7ca6f916987c6a462cda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5826cdd783e7dd50a80d3e3a495dfffd16144f53
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641642"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503263"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Сортировка данных для преобразований «Слияние» и «Соединение слиянием»
   В службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]для преобразований «Слияние» и «Соединение слиянием» необходимы отсортированные входные данные. Входные данные должны быть отсортированы физически, а параметры сортировки должны быть установлены на выходы и выходные столбцы источника или вышестоящего преобразования. Если параметры сортировки определяют, что данные отсортированы, но данные в действительности не отсортированы, операция слияния или соединения слиянием может дать непредвиденные результаты.  
@@ -39,7 +39,7 @@ ms.locfileid: "47641642"
   
      Преобразование «Сортировка» использует параметры сортировки Windows для упорядочения строковых значений.  
   
-     —или—  
+     -или-  
   
 -   Используйте оператор языка Transact-SQL CAST для преобразования значений **varchar** в значения **nvarchar** , а затем с помощью предложения языка Transact-SQL ORDER BY отсортируйте эти данные.  
   

@@ -19,12 +19,12 @@ ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64f79767c9ee4d77c1ed7fba2aea6c7908d7075d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14f0c0a28ca4ecd6b8a58576b46add9b4009bcb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670702"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502493"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Восстановление базы данных без восстановления данных (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ RESTORE DATABASE AdventureWorks2012
   
  Синтаксис инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) для восстановления файлов только по журналу транзакций:  
   
- RESTORE DATABASE *database_name* { FILE **=***logical_file_name* | FILEGROUP **=***logical_filegroup_name* }[ **,**...* n* ] WITH RECOVERY  
+ RESTORE DATABASE *database_name* { FILE **=**_логическое_имя_файла_ | FILEGROUP **=**_логическое_имя_файловой_группы_ }[ **,**...*n* ] WITH RECOVERY  
   
  **Пример**  
   
@@ -94,7 +94,7 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
  [Восстановление в сети (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Поэтапное восстановление (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [Восстановление файлов (простая модель восстановления)](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
- [Файлы из резервных копий (модель полного восстановления)](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
+ [Восстановления файлов (модель полного восстановления)](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

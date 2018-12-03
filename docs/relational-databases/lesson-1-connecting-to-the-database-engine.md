@@ -11,12 +11,12 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 963ea851b052d3a460aad1bbfd6e59051ecc6f7d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571214"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302688"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51571214"
 - [Разрешение дополнительных соединений](#additional) 
 
 ## <a name="tools">Средства для начала работы</a> 
- — Компонент [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] поставляется с разнообразными средствами. В этом разделе описываются первые необходимые средства и то, как выбрать правильное средство для работы. Все средства доступны из меню **Пуск** . Такие средства, как среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], не устанавливаются по умолчанию. Их нужно выбрать во время установки. Дополнительные сведения о средствах, описанных ниже, см. в электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] содержит только подмножество средств.  
+- Компонент [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] поставляется с разнообразными средствами. В этом разделе описываются первые необходимые средства и то, как выбрать правильное средство для работы. Все средства доступны из меню **Пуск** . Такие средства, как среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], не устанавливаются по умолчанию. Их нужно выбрать во время установки. Дополнительные сведения о средствах, описанных ниже, см. в электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] содержит только подмножество средств.  
 
 ### <a name="basic-tools"></a>Основные средства
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) является основным средством администрирования компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] и написания кода на языке [!INCLUDE[tsql](../includes/tsql-md.md)] . Она расположена в оболочке [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . SSMS предоставляется для бесплатного скачивания из [Центра загрузки Майкрософт](https://msdn.microsoft.com/library/mt238290.aspx). Последнюю версию можно использовать с более старыми версиями [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
@@ -45,10 +45,10 @@ ms.locfileid: "51571214"
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>Запуск диспетчера конфигурации SQL Server  
 - В текущих версиях Windows на **Пуск** странице введите **диспетчер конфигурации**и выберите пункт **Диспетчер конфигурации SQL Server *версия* диспетчер конфигурации**.   
- — В более старых версиях Windows в меню **Пуск** наведите указатель на пункт **Все программы**, затем на пункт [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Средства настройки** и выберите **Диспетчер конфигурации SQL Server**.  
- -  
+- В более старых версиях Windows в меню **Пуск** последовательно наведите указатель на пункты **Все программы**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Средства настройки**, а затем выберите пункт **Диспетчер конфигурации SQL Server**.  
+
 ## <a name="connect"></a>Соединение с помощью среды Management Studio  
- — Если известно имя экземпляра или подключение выполняется членом локальной группы "Администраторы", подключиться к компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)] с помощью средств, выполняемых на этом же компьютере, не составляет труда. Следующие процедуры должны исполняться на том же компьютере, на котором находится [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+- Если известно имя экземпляра или подключение выполняется членом локальной группы "Администраторы", соединиться с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] с помощью средств, выполняемых на этом же компьютере, не составляет труда. Следующие процедуры должны исполняться на том же компьютере, на котором находится [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 > [!NOTE]  
 > В этом разделе рассматривается подключение к локальному экземпляру SQL Server. Инструкции по подключению к базе данных SQL Azure см. в разделе [Подключение к базе данных SQL с помощью SQL Server Management Studio и выполнение пробного запроса T-SQL](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/).  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8682e9016830309f7f8a0ce43d8dd72f6192e35f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92156defdf08b3828fde898c7043a941bbd7326b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738312"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394017"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Область выражения для суммирования, агрегатных функций и встроенных коллекций
   Термин *область* используется в нескольких контекстах, что становится понятно при написании выражений. Область может указывать на данные, используемые для вычисления выражений, набор текстовых полей на подготавливаемой странице, набор элементов отчета, которые могут отображаться или быть скрытыми. Термин *область* используется в разделах о вычислении выражений, синтаксисе агрегатных функций, условной видимости и в сообщениях об ошибках, связанных с этими темами. Ниже приводится описание различий в употреблении термина *область* .  
@@ -68,7 +68,7 @@ ms.locfileid: "47738312"
      Следующее выражение создает годы интервала между SellStartDate и LastReceiptDate. Эти поля находятся в разных наборах данных — DataSet1 и DataSet2. [Функция First (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-first-function.md), являющаяся агрегатной функцией, возвращает первое значение SellStartDate в DataSet1 и первое значение LastReceiptDate в DataSet2.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **Доменная область** . Область синхронизации. Тип области данных, применяемой к вычислению выражения для вложенных областей данных. Доменная область используется для указания агрегатов среди всех экземпляров группы, что позволяет легко выравнивать и сравнивать вложенные экземпляры. Например, можно выровнять диапазон и высоту для sparkline-графиков в таблице так, что значения будут идти параллельно.  

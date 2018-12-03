@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2638e15f21d21563d639b2597ad30b6597f9ecd1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509517"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Настройка URL-адреса (диспетчер конфигурации служб SSRS)
   Приступать к использованию [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] или веб-службы сервера отчетов можно лишь после настройки как минимум одного URL-адреса для каждого приложения. Настройка URL-адресов является обязательной в случае установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме "только файлы" (иначе говоря, если на странице "Параметры установки" сервера отчетов в мастере установки выбран параметр **Установить, но не настраивать сервер** ). При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию URL-адреса настраиваются автоматически для каждого приложения.  
@@ -76,7 +76,7 @@ ms.locfileid: "51813357"
   
     -   В командной строке введите следующие команды для возвращения списка используемых портов TCP:  
   
-         `netstat –anp tcp`  
+         `netstat -anp tcp`  
   
     -   Просмотрите статью службы технической поддержки Майкрософт [Сведения о назначении портов TCP/IP](https://support.microsoft.com/kb/174904), обращая внимание на порядок назначения портов TCP и на различия между известными портами (от 0 до 1023), зарегистрированными портами (от 1024 до 49151) и динамическими, или частными, портами (от 49152 до 65535).  
   

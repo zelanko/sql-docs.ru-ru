@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0dd324cfbe9fbac48c85c31cea20887d650014c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813117"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402119"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Параметры подписки и учетная запись общей папки (диспетчер конфигураций)
   На странице **Параметры подписки** диспетчера конфигураций [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно настроить учетную запись общей папки для серверов отчетов, работающих в основном режиме, и подписки на общую папку. Учетная запись общей папки позволяет использовать один набор учетных данных в нескольких подписках, доставляющих отчеты в общую папку. Когда требуется изменить учетные данные, достаточно настроить изменение учетной записи общей папки, и вам не придется обновлять каждую подписку по отдельности.  
@@ -43,7 +43,7 @@ ms.locfileid: "51813117"
 > [!IMPORTANT]
 > Учетная запись служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] контролирует доставку подписок и взаимодействует с учетной записью, используемой для подписок на общую папку. Функции безопасности Windows ограничивают сочетания 1) учетной записи служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и 2) учетной записи, используемой для учетных записей общих папок. Например, если для общей папки используется встроенная учетная запись операционной системы, то учетной записью служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] должна быть другая учетная запись с разрешениями на олицетворение. Если настроены явная учетная запись общей папки и пароль, то для учетной записи общей папки требуется право на вход на компьютер, где работают службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Если у учетной записи общей папки нет необходимых разрешений, произойдет сбой использующих ее подписок с сообщением об ошибке следующего вида:  
 >   
->  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
+>  `"Failure writing file {file} : An impersonation error occurred using the security context of the current user."`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>Пример скрипта PowerShell для аудита использования учетной записи общей папки  
  Чтобы получить список всех подписок [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , настроенных на использование **учетной записи общей папки**, выполните приведенный ниже скрипт Windows PowerShell. Замените `SERVERNAME` соответствующим значением для сервера отчетов.  

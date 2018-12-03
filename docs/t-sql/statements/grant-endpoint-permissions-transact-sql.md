@@ -18,12 +18,12 @@ ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e9057d518c736f0e7722829febdaaf3c0f782151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e33f7df043083a205754ee78b6b1ce67131d59d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619842"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508889"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT, предоставление разрешений на конечные точки (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  Определяет разрешения, на конечную точку, которые могут быть предоставлены. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  Указывает конечную точку, на которую предоставляется разрешение. Квалификатор области (**::**) является обязательным.  
   
  TO \<server_principal>  

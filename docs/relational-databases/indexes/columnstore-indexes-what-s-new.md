@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bb8822d29e2dd3270d5947e62bab6fe498f86c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd38e30039ee174ed2558a88c1ddc1e3785238d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629512"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514550"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Новые возможности индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47629512"
   
 -   Индексы columnstore поддерживают уровень изоляции моментальных снимков read committed (RCSI) и изоляцию моментальных снимков (SI). Это позволяет выполнять запросы аналитики, согласованные с транзакциями, без блокировки.  
   
--   Индекс columnstore поддерживает дефрагментацию индексов путем удаления удаленных строк без необходимости явного перестроения индекса. Инструкция `ALTER INDEX … REORGANIZE` удаляет удаленные строки (на основе внутренней политики) из индекса columnstore в оперативном режиме.  
+-   Индекс columnstore поддерживает дефрагментацию индексов путем удаления удаленных строк без необходимости явного перестроения индекса. Инструкция `ALTER INDEX ... REORGANIZE` удаляет удаленные строки (на основе внутренней политики) из индекса columnstore в оперативном режиме.  
   
 -   Вторичная реплика для чтения AlwaysOn может получать доступ к индексам columnstore. За счет переноса запросов аналитики во вторичную реплику AlwaysOn можно повысить производительность оперативной аналитики.  
   

@@ -18,12 +18,12 @@ ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7c7a1d742e76f9825986fbaba0e12278974006fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 932080377094ae17767856a9ced0256e05e0fe81
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744102"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544057"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY, запрет разрешений на конечную точку (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  Разрешение на выполнение операций над конечной точкой, которое может быть запрещено. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  Конечная точка, разрешение на работу с которой блокируется. Квалификатор области (**::**) является обязательным.  
   
  TO \<server_principal>  

@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce3b05fb49206be29106bb84b2e4291f337aa261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635442"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537605"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Просмотр эквивалентов расширенных событий для классов событий трассировки SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47635442"
   
 -   В редакторе запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]выполните следующий запрос:  
   
-    ```  
+    ```sql  
     USE MASTER;  
     GO  
     SELECT DISTINCT  
@@ -62,7 +62,7 @@ ms.locfileid: "47635442"
     -   Столбец трассировки SQL сопоставлен с одним из полей данных, связанных с событием расширенных событий.  
   
         > [!NOTE]  
-        >  Каждое событие расширенных событий имеет набор полей данных по умолчанию, автоматически включаемых в результирующий набор.  
+        > Каждое событие расширенных событий имеет набор полей данных по умолчанию, автоматически включаемых в результирующий набор.  
   
     -   Столбец действий не имеет эквивалента в расширенных событиях. Примером этого является столбец класса событий в трассировке SQL. Этот столбец не нужен в расширенных событиях, поскольку достаточно имени события.  
   

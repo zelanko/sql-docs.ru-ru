@@ -11,12 +11,12 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c01f4ad93f36874e70352b6efa6c5592c71d6bf8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8eab3ceeb9ace557f7e7f34b4bb267d6269d7fdc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671773"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521384"
 ---
 # <a name="create-an-encrypted-backup"></a>Создание зашифрованной резервной копии
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,8 +86,8 @@ ms.locfileid: "51671773"
   
     ```  
     CREATE CREDENTIAL mycredential   
-    WITH IDENTITY= 'mystorageaccount' – this is the name of the storage account you specified when creating a storage account    
-    , SECRET = '<storage account access key>' – this should be either the Primary or Secondary Access Key for the storage account  
+    WITH IDENTITY= 'mystorageaccount' - this is the name of the storage account you specified when creating a storage account    
+    , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
 2.  **Создание главного ключа базы данных.** Выберите пароль для шифрования копии главного ключа базы данных, которая будет храниться в базе данных. Подключитесь к ядру СУБД, откройте новое окно запроса, скопируйте в него следующий пример и нажмите кнопку **Выполнить**.  
@@ -119,7 +119,7 @@ ms.locfileid: "51671773"
     BACKUP DATABASE [MyTestDB]  
     TO URL = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
     WITH  
-      CREDENTIAL 'mycredential' – this is the name of the credential created in the first step.  
+      CREDENTIAL 'mycredential' - this is the name of the credential created in the first step.  
       ,COMPRESSION  
       ,ENCRYPTION   
        (  

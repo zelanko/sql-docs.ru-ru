@@ -9,17 +9,17 @@ ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.parameter.f1
-- sql13.dts.designer.paramterwindow.f1
+- sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4404b2af9114da376e007bf91533f9e083dbff10
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 27af358d3d6fb5feb1bd5d10fb194beb52df011e
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639881"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858704"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Параметры пакета и проекта Integration Services (SSIS)
   Параметры служб[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) могут быть использованы для присвоения значений свойствам внутри пакетов во время выполнения пакетов. Можно создать *параметры проекта* на уровне проекта и *параметры пакета* на уровне пакета. Параметры проекта используются для предоставления любых внешних данных, получаемых проектом, одному пакету в проекте или более. Параметры пакета позволяют изменить выполнение пакета. При этом изменять пакет и развертывать его повторно не придется.  

@@ -16,12 +16,12 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5d1a7e6361fad5d7e37ca624b98c7220e622d398
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae0482258aeb628e608666ee61f796f2a20157a9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714012"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616944"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Служба обозревателя SQL Server (компонент Database Engine и SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,5 +131,5 @@ ms.locfileid: "47714012"
   
 ## <a name="see-also"></a>См. также:  
  [Сетевые протоколы и библиотеки](../../sql-server/install/network-protocols-and-network-libraries.md)  
-  
+ [Скрытие экземпляра компонента SQL Server Database Engine](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md)  
   

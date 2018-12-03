@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2d8e7232-42f4-41b6-98eb-c856f6c85d8c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f6c17915293ec2ad654c6d8574d94623d6a16ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49fd82957893f0394081da0de5303ee689857ce5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615542"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407905"
 ---
 # <a name="configurationsetting-method---setextendedprotectionsettings"></a>Метод ConfigurationSetting — SetExtendedProtectionSettings
   Метод SetExtendedProtectionSettings устанавливает значения для свойств RSWindowsExtendedProtectionLevel и RSWindowsExtendedProtectionScenario в RSReportServer.config в файле конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -44,14 +44,14 @@ public void SetExtendedProtectionSettings(
   
  Допустимые значения приведены в следующем списке.  
   
- `”Off | Allow | Require”`  
+ `"Off | Allow | Require"`  
   
  *ExtendedProtectionScenario*  
  Устанавливает свойство RSWindowsExtendedProtectionScenario в файле RSReportserver.config. Значение является обязательным и не зависит от регистра.  
   
  Допустимые значения приведены в следующем списке.  
   
- `”Any” | “Proxy” | “Direct”`  
+ `"Any" | "Proxy" | "Direct"`  
   
 ## <a name="remarks"></a>Remarks  
  Свойства RSWindowsExtendedProtectionLevel и RSWindowsExtendedProtectionScenario используются в том случае, если параметр AuthenticationTypes в файле RSReportServer.config имеет значение RSWindowNTLM, RSWindowsNegotiate или RSWindowsKerberos. Настройка этих свойств влияет на проверку подлинности пользователей и клиентского программного обеспечения на сервере отчетов. Рекомендуется ознакомиться с документацией по расширенной защите, прежде чем устанавливать ExtendedProtectionLevel в значение **Allow** или **Require**.  
@@ -64,7 +64,7 @@ public void SetExtendedProtectionSettings(
 ## <a name="see-also"></a>См. также:  
  [Свойство RSWindowsExtendedProtectionScenario (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionscenario-property.md)   
  [Свойство RSWindowsExtendedProtectionLevel (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionlevel-property.md)   
- [Расширенная защита для проверки подлинности с использованием служб Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)   
+ [Расширенная защита для проверки подлинности служб Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)   
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   

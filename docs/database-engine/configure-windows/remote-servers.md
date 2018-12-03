@@ -17,12 +17,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a18484c470c3485fca750e1f6986702a9c37ff7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 975423cab6fb7b00baf279a9a4186336120e08c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612463"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537928"
 ---
 # <a name="remote-servers"></a>Удаленные серверы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47612463"
 >  По возможности используйте аутентификацию Windows.  
   
 ### <a name="remote-server-security-example"></a>Пример системы безопасности удаленного сервера  
- Проверьте следующие установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** и **serverReceive**. Метод**serverReceive** настраивается для сопоставления имени входа **serverSend**, поступающего от **serverSend**, с прошедшим проверку в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **serverReceive**, поступающего от **Alice**. Другое входное имя входа из **serverSend**, с именем **Joe**, сопоставлено с именем входа **Joe**, прошедшим проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в **serverReceive****.  
+ Проверьте следующие установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** и **serverReceive**. Метод**serverReceive** настраивается для сопоставления имени входа **serverSend**, поступающего от **serverSend**, с прошедшим проверку в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **serverReceive**, поступающего от **Alice**. Другое входное имя входа из **serverSend**, с именем **Joe**, сопоставлено с именем входа, прошедшим проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в **serverReceive**_,_ с именем **Joe**.  
   
  В следующем примере кода Transact-SQL `serverSend` настраивается на выполнение вызовов RPC по отношению к `serverReceive`.  
   

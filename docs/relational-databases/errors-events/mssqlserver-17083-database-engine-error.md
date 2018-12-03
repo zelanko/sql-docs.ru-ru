@@ -12,12 +12,12 @@ ms.assetid: 6c83737d-0531-4fd9-88f6-2da5a150532d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 917a7b70b8ba4808d1698a6fa2d566c5f399b9d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 029850c1902ebd2a5997175875c2ff0b59285f6f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748362"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402319"
 ---
 # <a name="mssqlserver17083"></a>MSSQLSERVER_17083
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47748362"
 Скомпилированная в собственном коде хранимая процедура должна содержать блок ATOMIC. Пример:  
   
 ```  
-BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N’us_english’)  
+BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  
 ```  
   
 Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  

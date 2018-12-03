@@ -20,12 +20,12 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7b68a59129df88c1ea40736ec90a73d0b7e1c5ae
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5a3b7faea7ae15a1927309bcb0463a10efe74bd1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673623"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534629"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Восстановления файлов (простая модель восстановления)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +69,13 @@ ms.locfileid: "51673623"
   
  Последовательность восстановления содержит только две инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Первая инструкция восстанавливает вторичный файл `A`, который восстанавливается с параметром WITH NORECOVERY. Вторая операция восстанавливает файлы `B` и `C` , которые восстанавливаются с другого устройства резервного копирования с параметром WITH RECOVERY:  
   
-1.  RESTORE DATABASE *база_данных* FILE **=***имя_файла_A*  
+1.  RESTORE DATABASE *база_данных* FILE **=**_имя_файла_A_  
   
      FROM *резервная_копия_файла_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *база_данных* FILE **=***имя_файла_Б***,***имя_файла_В*  
+2.  RESTORE DATABASE *база_данных* FILE **=**_имя_файла_Б_**,**_имя_файла_В_  
   
      FROM *резервная_копия_файлов_Б_и_В*  
   

@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 583f00394043b93eb81d9717d771ea087ce2f21c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cd03ba4b9b0363ef1d8ebe9c3ff0721fc08e3f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714005"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542266"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ ALTER USER userName
   
 -- SQL Database syntax when connected to a federation member  
 ALTER USER userName  
-     WITH <set_item> [ ,… n ]   
+     WITH <set_item> [ ,... n ]   
 [;]  
   
 <set_item> ::=   
@@ -109,12 +109,12 @@ ALTER USER userName
  *userName*  
  Указывает имя, по которому пользователь идентифицируется в этой базе данных.  
   
- LOGIN **=***loginName*  
+ LOGIN **=**_loginName_  
  Сопоставляет пользователя с другим именем входа, заменив идентификатор безопасности пользователя для соответствия идентификатору безопасности имени входа.  
   
  Если инструкция ALTER USER — единственная в пакете SQL, то база данных SQL Windows Azure поддерживает предложение WITH LOGIN. Если инструкция ALTER USER не единственная в пакете SQL или выполняется в динамическом коде SQL, предложение WITH LOGIN не поддерживается.  
   
- NAME **=***newUserName*  
+ NAME **=**_newUserName_  
  Задает новое имя для этого пользователя. Аргумент *newUserName* еще не должен существовать в текущей базе данных.  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -128,7 +128,7 @@ ALTER USER userName
 > [!NOTE]  
 >  Данный параметр доступен только для содержащихся пользователей. Дополнительные сведения см. в разделах [Автономные базы данных](../../relational-databases/databases/contained-databases.md) и [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- OLD_PASSWORD **=***'oldpassword'*  
+ OLD_PASSWORD **=**_'oldpassword'_  
  **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Текущий пароль пользователя, который будет заменен на "*password*". В паролях учитывается регистр символов. Параметр *OLD_PASSWORD* является обязательным для изменения пароля. Изменить пароль без этого параметра можно только при наличии разрешения **ALTER ANY USER**. Необходимость указать *OLD_PASSWORD* не позволит пользователям с разрешением **IMPERSONATION** изменить пароль.  
@@ -136,7 +136,7 @@ ALTER USER userName
 > [!NOTE]  
 >  Данный параметр доступен только для содержащихся пользователей.  
   
- DEFAULT_LANGUAGE **=***{ NONE | \<lcid> | \<language name> | \<language alias> }*  
+ DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<language name> | \<language alias> }_  
  **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает язык по умолчанию, присвоенный пользователю. Если этот параметр установлен в значение NONE, то в качестве языка по умолчанию выбирается текущий язык по умолчанию для базы данных. При последующей смене языка по умолчанию для базы данных язык по умолчанию для пользователя не меняется. Аргумент *DEFAULT_LANGUAGE* может быть идентификатором локали (lcid), названием языка или псевдонимом языка.  
@@ -228,7 +228,7 @@ GO
 ALTER USER Philip   
 WITH  NAME = Philipe   
     , DEFAULT_SCHEMA = Development   
-    , PASSWORD = 'W1r77TT98%ab@#’ OLD_PASSWORD = 'New Devel0per'   
+    , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per'   
     , DEFAULT_LANGUAGE  = French ;  
 GO  
 ```  

@@ -21,12 +21,12 @@ ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b649bb7aceb199906c29ced140c566e944de6384
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24c1d81d9bdeb290c95a8675b39964b8232d923d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687242"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506366"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Программная загрузка и запуск локального пакета
   Пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно выполнять по мере необходимости или в заранее определенное время с помощью методов, описанных в разделе [Выполнение пакетов](../packages/run-integration-services-ssis-packages.md). Однако с помощью всего нескольких строк кода можно выполнить пакет из пользовательского приложения, такого как приложение Windows Forms, приложение командной строки, веб-форма ASP.NET, веб-служба или служба Windows.  
@@ -174,7 +174,7 @@ Class EventListener
     ByVal helpFile As String, ByVal helpContext As Integer, _  
     ByVal idofInterfaceWithError As String) As Boolean  
   
-    ' Add application–specific diagnostics here.  
+    ' Add application-specific diagnostics here.  
     Console.WriteLine("Error in {0}/{1} : {2}", source, subComponent, description)  
     Return False  
   

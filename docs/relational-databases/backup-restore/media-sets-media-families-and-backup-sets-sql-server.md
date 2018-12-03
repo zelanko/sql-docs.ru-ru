@@ -24,12 +24,12 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8135737f7abe250bfcd29b080b6875efad6286db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8023d72b28ec3ff9e9bafe2423b26620a5046ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676759"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534109"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ WITH
   
  ![Второй набор резервных копий, распределенный между 3 лентами набора носителей](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "Второй набор резервных копий, распределенный между 3 лентами набора носителей")  
   
- При восстановлении резервных копий можно использовать параметр FILE, чтобы указать, какие резервные копии использовать. В следующем примере показано, как использовать предложения FILE **=***номер_файла_резервного_набора* при восстановлении полной резервной копии базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], за которой следует разностная резервная копия на том же наборе носителей. Этот набор содержит три ленточных носителя, находящихся в накопителях на магнитной ленте `\\.\tape0`, `tape1`и `tape2`.  
+ При восстановлении резервных копий можно использовать параметр FILE, чтобы указать, какие резервные копии использовать. В следующем примере показано, как использовать предложения FILE **=**_номер_файла_резервного_набора_ при восстановлении полной резервной копии базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , за которой следует разностная резервная копия на том же наборе носителей. Этот набор содержит три ленточных носителя, находящихся в накопителях на магнитной ленте `\\.\tape0`, `tape1`и `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
@@ -302,6 +302,6 @@ GO
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

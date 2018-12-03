@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e91e3572d962ec9c819aae7f501b7b274f5c452
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 10bdfa7e45324e845019e6b670321e56839a79bd
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029573"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711475"
 ---
 # <a name="schedules"></a>Расписания
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют **общие расписания** и **расписания отчетов** , что позволяет управлять обработкой и распространением отчетов. Различие между двумя типами расписаний состоит в том, как они определяются, хранятся и управляются. Внутреннее строение обоих типов расписаний одинаково. В каждом расписании указывается тип повторения: ежемесячно, еженедельно или ежедневно. В пределах одного типа повторений можно указать интервалы и диапазон, определяющий частоту повторения события. Шаблон типа повторения и способ его задания одинаков при создании как общих расписаний, так и расписаний для отчетов.
@@ -54,7 +54,7 @@ ms.locfileid: "50029573"
  Подробные сведения о том, как создавать расписания и управлять ими, см. в разделе [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
->  Операции планирования доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](https://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454).  
+>  Операции планирования доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 ##  <a name="bkmk_compare"></a> Сравнение общих расписаний и расписаний для отчетов  
  Оба типа расписаний формируют одинаковый вывод:  

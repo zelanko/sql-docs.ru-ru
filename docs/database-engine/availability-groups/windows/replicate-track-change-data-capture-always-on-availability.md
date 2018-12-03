@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc5770d8390c7a7014eec86e7b576d1c64deec23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8738e882455cfdb05630754e94f349d2e5f0204a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596093"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512110"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Репликация, отслеживание изменений, изменение данных в группах доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -207,7 +207,7 @@ ms.locfileid: "47596093"
   
 |||||  
 |-|-|-|-|  
-||**Издатель**|**Распространитель***\*|**Подписчик**|  
+||**Издатель**|**Распространитель**|**Подписчик**|  
 |**Транзакционная**|Да<br /><br /> Примечание. Не включает поддержку двунаправленной и возвратной репликации транзакций.|Да|Да| 
 |**P2P**|нет|нет|нет|  
 |**Объединить**|Да|нет|нет|  

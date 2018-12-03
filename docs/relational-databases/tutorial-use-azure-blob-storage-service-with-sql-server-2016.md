@@ -3,26 +3,24 @@ title: Учебник. Использование службы хранилищ�
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
+ms.technology: ''
 ms.prod_service: database-engine
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6cba97149bde173d7cac233f3bc5742b710ce5d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: abbccb66ca86fb80991c6f0733e1cbfa0ee8a8e8
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571383"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302847"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Учебник. Использование службы хранилища больших двоичных объектов Azure с базами данных SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,6 +55,7 @@ ms.locfileid: "51571383"
 -   Учетная запись хранения  
 -   Контейнер BLOB-объектов Azure   
 -   Политика SAS    
+
 Выполнение скрипта начинается с объявления ряда переменных для указания имен перечисленных выше ресурсов и имен следующих обязательных входных значений:  
   
 -   имя префикса, используемое для именования других объектов ресурсов;    
