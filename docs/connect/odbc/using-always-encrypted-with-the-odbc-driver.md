@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 6f51baee10a0f9b9cbb3595be816b2928f5bc0b0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604723"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506830"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Использование функции Always Encrypted с драйвером ODBC для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -365,9 +365,9 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 Драйвер поддерживает проверку подлинности в хранилище ключей Azure, используя следующие типы учетных данных:
 
-- Имя пользователя и пароль — в этом случае учетные данные — это имя пользователя Azure Active Directory и пароль.
+- Имя пользователя и пароль — с помощью этого метода указаны учетные данные имени пользователя Azure Active Directory и его пароль.
 
-- Идентификатор и секрет клиента — в этом случае учетные данные являются идентификатор клиента приложения и секрет приложения.
+- Идентификатор и секрет клиента — с помощью этого метода указаны учетные данные идентификатора клиента приложения и секрет приложения.
 
 Чтобы разрешить драйвер на использование ключей CMK, хранящимся в AKV для шифрования столбца, используйте следующие ключевые слова только на строку подключения:
 

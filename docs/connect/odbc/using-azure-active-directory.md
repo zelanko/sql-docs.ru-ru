@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 949ae2e19279db895ca9bca1441f06c2b2d8948f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7273baec814905d86e431c5a6a8f13313b9743e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604104"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536653"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Использование Azure Active Directory с драйвером ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -88,9 +88,9 @@ ms.locfileid: "51604104"
 Эти параметры соответствуют свойствам же пять в настройки имени источника данных выше пользовательского интерфейса.
 
 ### <a name="example-connection-strings"></a>Примеры строк подключения
-1. Проверка подлинности SQL Server — синтаксис в предыдущих версиях. Сертификат сервера не проверяется, а шифрование применяется только в том случае, если сервер инициирует его. Имя пользователя и пароль передаются в строке подключения.
+1. Проверка подлинности SQL Server - синтаксис в предыдущих версиях. Сертификат сервера не проверяется, а шифрование применяется только в том случае, если сервер инициирует его. Имя пользователя и пароль передаются в строке подключения.
 `server=Server;database=Database;UID=UserName;PWD=Password;`
-2. Проверка подлинности SQL — новый синтаксис. Клиент запрашивает шифрование (значение по умолчанию `Encrypt` — `true`) и сертификат сервера получает проверенный, независимо от того, параметр шифрования (если не `TrustServerCertificate` присваивается `true`). Имя пользователя и пароль передаются в строке подключения.
+2. Проверка подлинности SQL - новый синтаксис. Клиент запрашивает шифрование (значение по умолчанию `Encrypt` — `true`) и сертификат сервера получает проверенный, независимо от того, параметр шифрования (если не `TrustServerCertificate` присваивается `true`). Имя пользователя и пароль передаются в строке подключения.
  `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=SqlPassword;`
 3. Встроенная проверка подлинности Windows (Kerberos в Linux и macOS) с помощью интерфейса SSPI (SQL Server или SQL IaaS) — текущего синтаксиса. Сертификат сервера не проверяется, если не используется шифрование. 
 `server=Server;database=Database;Trusted_Connection=yes;`

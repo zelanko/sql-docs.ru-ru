@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 2d16e9c805f9979a53a9e8bc8c2e265e06ccbab9
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: 8d06e0f985a9e50d1eee0a7e6c96f440d8ef7dcd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528574"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -273,7 +273,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
   
 ## <a name="import-parameters-and-properties"></a>Параметры и свойства импорта
 
-Действие SqlPackage.exe импорта импортирует данные схемы и таблицы из пакета BACPAC - файл bacpac — в новой или пустой базы данных в SQL Server или базы данных SQL Azure. Во время операции импорта в существующую базу данных в целевой базе данных не могут находиться никакие определяемые пользователем объекты схемы.  
+Действие SqlPackage.exe импорта импортирует данные схемы и таблицы из пакета BACPAC - файл bacpac - в новый или пустой базы данных в SQL Server или базы данных SQL Azure. Во время операции импорта в существующую базу данных в целевой базе данных не могут находиться никакие определяемые пользователем объекты схемы.  
   
 ### <a name="help-for-command-actions"></a>Справка по действиям команд
 
