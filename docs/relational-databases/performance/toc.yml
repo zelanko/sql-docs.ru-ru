@@ -1,32 +1,119 @@
 items:
 - name: Центр производительности для базы данных Azure SQL и SQL Server Database Engine
   href: performance-center-for-sql-server-database-engine-and-azure-sql-database.md
-- name: Настройка дисковых пространств с помощью кэша обратной записи NVDIMM-N
-  href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
 - name: Автоматическая настройка
   href: ../automatic-tuning/automatic-tuning.md
-- name: Оценка количества элементов
-  href: cardinality-estimation-sql-server.md
+- name: Настройка дисковых пространств с помощью кэша обратной записи NVDIMM-N
+  href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
+- name: Планы выполнения
+  href: execution-plans.md
+  items:
+  - name: Инфраструктура профилирования запросов
+    href: query-profiling-infrastructure.md
+  - name: Отображение и сохранение планов выполнения
+    href: display-and-save-execution-plans.md
+    items:
+    - name: Отображение предполагаемого плана выполнения
+      href: display-the-estimated-execution-plan.md
+    - name: Отображение действительного плана выполнения
+      href: display-an-actual-execution-plan.md
+    - name: Сохранение плана выполнения в формате XML
+      href: save-an-execution-plan-in-xml-format.md
+  - name: Сравнение и анализ планов выполнения
+    href: compare-and-analyze-execution-plans.md
+    items:
+    - name: Сравнение планов выполнения
+      href: compare-execution-plans.md
+    - name: Анализ действительного плана выполнения
+      href: analyze-an-actual-execution-plan.md
+  - name: Руководства планов
+    href: plan-guides.md
+    items:
+    - name: Создание структуры плана
+      href: create-a-new-plan-guide.md
+    - name: Создание руководства плана для параметризованных запросов
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: Указание механизма параметризации запросов с помощью структур плана
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: Применение фиксированного плана запроса к структуре плана
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: Присоединение указаний запросов к структуре плана
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: Просмотр свойств структуры плана
+      href: view-plan-guide-properties.md
+    - name: Использование приложения SQL Server Profiler для создания и проверки руководств планов
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: Проверка структур плана после обновления
+      href: validate-plan-guides-after-upgrade.md
+    - name: Удаление структуры плана
+      href: delete-a-plan-guide.md
+    - name: Включение или отключение структуры плана.
+      href: enable-or-disable-a-plan-guide.md
 - name: Интеллектуальная обработка запросов
   href: intelligent-query-processing.md
   items:
   - name: Адаптивная обработка запросов
     href: adaptive-query-processing.md
+  - name: Встраивание скалярной функции, определяемой пользователем
+    href: ../user-defined-functions/scalar-udf-inlining.md
 - name: Наблюдение и настройка производительности
   href: monitor-and-tune-for-performance.md
   items:
   - name: Наблюдение за компонентами SQL Server
     href: monitor-sql-server-components.md
+    items:
+    - name: Монитор активности
+      href: ../performance-monitor/activity-monitor.md
+    - name: динамических административных представлений и функций.
+      href: ../system-dynamic-management-views/system-dynamic-management-views.md
+    - name: Расширенные события
+      href: ../extended-events/extended-events.md
+    - name: Приложение SQL Server Profiler
+      href: ../../tools/sql-server-profiler/sql-server-profiler.md
+    - name: Трассировка SQL
+      href: ../sql-trace/sql-trace.md
   - name: Средства контроля и настройки производительности
     href: performance-monitoring-and-tuning-tools.md
+    items:
+    - name: Динамическая статистика запросов
+      href: live-query-statistics.md
+    - name: .
+      href: database-engine-tuning-advisor.md
+      items:
+      - name: Запуск и использование помощника по настройке ядра СУБД
+        href: start-and-use-the-database-engine-tuning-advisor.md
+      - name: Уменьшение настроечной загрузки рабочего сервера
+        href: reduce-the-production-server-tuning-load.md
+        items:
+        - name: Вопросы использования тестовых серверов
+          href: considerations-for-using-test-servers.md
+      - name: Просмотр и работа с выходными данными помощника по настройке ядра СУБД
+        href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
+      - name: Рекомендации по индексам сolumnstore в помощнике по настройке ядра СУБД
+        href: columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
+      - name: Настройка базы данных с помощью рабочей нагрузки из хранилища запросов
+        href: tuning-database-using-workload-from-query-store.md
+      - name: Повышение производительности с помощью рекомендаций помощника по настройке ядра СУБД (DTA)
+        href: performance-improvements-using-dta-recommendations.md
+  - name: Обновление баз данных с помощью помощника по настройке запросов
+    href: upgrade-dbcompat-using-qta.md
+  - name: Мониторинг производительности с использованием хранилища запросов
+    href: monitoring-performance-by-using-the-query-store.md
+    items:
+    - name: Использование хранилища запросов с выполняющейся в памяти OLTP
+      href: using-the-query-store-with-in-memory-oltp.md
+    - name: Рекомендации по хранилищу запросов
+      href: best-practice-with-the-query-store.md
+    - name: Сценарии использования хранилища запросов
+      href: query-store-usage-scenarios.md
+    - name: Сбор данных в хранилище запросов
+      href: how-query-store-collects-data.md
   - name: Формирование базовых показателей производительности
     href: establish-a-performance-baseline.md
   - name: Локализация проблем производительности
     href: isolate-performance-problems.md
   - name: Выявление узких мест
     href: identify-bottlenecks.md
-  - name: Встраивание скалярной функции, определяемой пользователем
-    href: ../user-defined-functions/scalar-udf-inlining.md
   - name: Определения использования и производительности представлений с помощью динамических административных представлений
     href: use-dmvs-determine-usage-performance-views.md
   - name: Производительность сервера и мониторинг активности
@@ -48,77 +135,47 @@ items:
       href: save-showplan-xml-events-separately-sql-server-profiler.md
     - name: раздельно сохранить события «Профиль статистики Showplan XML» (приложение SQL Server Profiler)
       href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
-  - name: Отображение и сохранение планов выполнения
-    href: display-and-save-execution-plans.md
-    items:
-    - name: Отображение предполагаемого плана выполнения
-      href: display-the-estimated-execution-plan.md
-    - name: Отображение действительного плана выполнения
-      href: display-an-actual-execution-plan.md
-    - name: Сохранение плана выполнения в формате XML
-      href: save-an-execution-plan-in-xml-format.md
-  - name: Динамическая статистика запросов
-    href: live-query-statistics.md
-  - name: Monitoring Performance By Using the Query Store
-    href: monitoring-performance-by-using-the-query-store.md
-  - name: Использование хранилища запросов с выполняющейся в памяти OLTP
-    href: using-the-query-store-with-in-memory-oltp.md
-  - name: Рекомендации по хранилищу запросов
-    href: best-practice-with-the-query-store.md
-  - name: Сценарии использования хранилища запросов
-    href: query-store-usage-scenarios.md
-  - name: Сбор данных в хранилище запросов
-    href: how-query-store-collects-data.md
-- name: .
-  href: database-engine-tuning-advisor.md
+    - name: Использование сеанса system_health
+      href: ../extended-events/use-the-system-health-session.md
+  - name: Наблюдение за использованием ресурсов (системный монитор)
+    href: ../performance-monitor/monitor-resource-usage-system-monitor.md
+- name: Внутренние компоненты и архитектура
+  href: ../sql-server-guides.md
   items:
-  - name: Запуск и использование помощника по настройке ядра СУБД
-    href: start-and-use-the-database-engine-tuning-advisor.md
-  - name: Уменьшение настроечной загрузки рабочего сервера
-    href: reduce-the-production-server-tuning-load.md
+  - name: Оценка количества элементов
+    href: cardinality-estimation-sql-server.md
+  - name: Курсоры
+    href: ../cursors.md
+  - name: Процесс очистки фантомных записей
+    href: ../ghost-record-cleanup-process-guide.md
+  - name: Архитектура и проектирование индексов
+    href: ../sql-server-index-design-guide.md
+  - name: Соединения
+    href: joins.md
+  - name: Архитектура управления памятью
+    href: ../memory-management-architecture-guide.md
     items:
-    - name: Вопросы использования тестовых серверов
-      href: considerations-for-using-test-servers.md
-  - name: Просмотр и работа с выходными данными помощника по настройке ядра СУБД
-    href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
-  - name: Рекомендации по индексам сolumnstore в помощнике по настройке ядра СУБД
-    href: columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
-  - name: Настройка базы данных с помощью рабочей нагрузки из хранилища запросов
-    href: tuning-database-using-workload-from-query-store.md
-  - name: Повышение производительности с помощью рекомендаций помощника по настройке ядра СУБД (DTA)
-    href: performance-improvements-using-dta-recommendations.md
-- name: Руководства планов
-  href: plan-guides.md
-  items:
-  - name: Создание структуры плана
-    href: create-a-new-plan-guide.md
-  - name: Создание руководства плана для параметризованных запросов
-    href: create-a-plan-guide-for-parameterized-queries.md
-  - name: Указание механизма параметризации запросов с помощью структур плана
-    href: specify-query-parameterization-behavior-by-using-plan-guides.md
-  - name: Применение фиксированного плана запроса к структуре плана
-    href: apply-a-fixed-query-plan-to-a-plan-guide.md
-  - name: Присоединение указаний запросов к структуре плана
-    href: attach-query-hints-to-a-plan-guide.md
-  - name: Просмотр свойств структуры плана
-    href: view-plan-guide-properties.md
-  - name: Использование приложения SQL Server Profiler для создания и проверки руководств планов
-    href: use-sql-server-profiler-to-create-and-test-plan-guides.md
-  - name: Проверка структур плана после обновления
-    href: validate-plan-guides-after-upgrade.md
-  - name: Удаление структуры плана
-    href: delete-a-plan-guide.md
-  - name: Включение или отключение структуры плана.
-    href: enable-or-disable-a-plan-guide.md
-- name: Наблюдение за использованием ресурсов (системный монитор)
-  href: ../performance-monitor/monitor-resource-usage-system-monitor.md
-- name: Соединения
-  href: joins.md
-- name: Вложенные запросы
-  href: subqueries.md
-ms.openlocfilehash: c1a06a77f377871a652f8295897e8e912ef353f2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+    - name: Чтение страниц
+      href: ../reading-pages.md
+    - name: Запись страниц
+      href: ../writing-pages.md
+  - name: Архитектура страниц и экстентов
+    href: ../pages-and-extents-architecture-guide.md
+  - name: Архитектура обработчика запросов
+    href: ../query-processing-architecture-guide.md
+  - name: Справочник по логическим и физическим операторам Showplan
+    href: ../showplan-logical-and-physical-operators-reference.md
+  - name: Вложенные запросы
+    href: subqueries.md
+  - name: Архитектура задач и потоков
+    href: ../thread-and-task-architecture-guide.md
+  - name: Архитектура журнала транзакций и управление им
+    href: ../sql-server-transaction-log-architecture-and-management-guide.md
+  - name: Блокировка версий строк транзакций и управление ими
+    href: ../sql-server-transaction-locking-and-row-versioning-guide.md
+ms.openlocfilehash: 2bf87948dbeb01794c7af547586e1204613994be
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221530"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586227"

@@ -6,12 +6,12 @@ description: Сведения о том, как установить или об
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: be4c1d4fed73718c0a2aa7e5d386613444c3072d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 729759ad9e60f5ec45845545f7b81e1cbc1bae73
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697942"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402088"
 ---
 <div id="main" class="v2">
     <div class="container">
