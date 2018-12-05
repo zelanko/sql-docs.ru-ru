@@ -11,12 +11,12 @@ ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2ddf8f5c03d6f4c6724075e7209d800e10f7e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afced2ca67c104b0bb01ccfe57fee2e309cc1b08
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724302"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410171"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Требования к системе для драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47724302"
   
  Начиная с версии Microsoft JDBC Driver 4.1 для SQL Server, поддерживается пакет SDK для Sun Java SE (JDK) 7.0 и среда выполнения Java (JRE) 7.0.  
   
- Начиная с [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] поддержка спецификации API Java Database Connectivity (JDBC) была расширена до API JDBC 4.0. Версия API JDBC 4.0 впервые появилась в составе комплекта разработчика Sun Java SE (JDK) 6.0 и среды выполнения Java (JRE) 6.0. JDBC 4.0 является супермножеством API JDBC 3.0.  
+ Начиная с [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], поддержка спецификации API Java Database Connectivity (JDBC) была расширена до API JDBC 4.0. Версия API JDBC 4.0 впервые появилась в составе комплекта разработчика Sun Java SE (JDK) 6.0 и среды выполнения Java (JRE) 6.0. JDBC 4.0 является супермножеством API JDBC 3.0.  
   
  При развертывании [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] в операционных системах Windows и UNIX необходимо использовать пакеты установки *sqljdbc_\<версия>_enu.exe* и *sqljdbc_\<версия>_enu.tar.gz* соответственно. Дополнительные сведения о развертывании драйвера JDBC см. в разделе [развертывание драйвера JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md) раздела.  
   

@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838502"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509964"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ OPENROWSET
 |ACP|Столбцы типа **char**, **varchar** или **text** преобразуются из кодовой страницы ANSI или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |OEM (по умолчанию)|Столбцы типа **char**, **varchar** или **text** преобразуются из системной кодовой страницы OEM в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |RAW|Преобразование из одной кодовой страницы в другую не выполняется. Это наиболее быстрый параметр.|  
-|*code_page*|Показывает исходную кодовую страницу, в которой представлены символы в файле данных, например 850.<br /><br /> ****Важно! **** Версии до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживают кодовую страницу 65001 (кодировка UTF-8).|  
+|*code_page*|Показывает исходную кодовую страницу, в которой представлены символы в файле данных, например 850.<br /><br />  ****Важно! **** Версии до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживают кодовую страницу 65001 (кодировка UTF-8).|  
   
  ERRORFILE ='*file_name*'  
  Указывает файл, используемый для сбора строк, которые имеют ошибки форматирования и не могут быть преобразованы в набор строк OLE DB. Эти строки без изменений копируются из файла данных в файл ошибок.  
@@ -253,7 +253,7 @@ FIELDQUOTE **=** 'field_quote'
 >    сообщение 491, уровень 16, состояние 1, строка 20    
 >    Корреляционное имя должно быть указано для группового набора строк в предложении FROM.    
   
--   Инструкция `SELECT...FROM OPENROWSET(BULK...)` запрашивает данные в файле напрямую, не импортируя их в таблицу. Кроме того, инструкции `SELECT…FROM OPENROWSET(BULK...)` могут перечислять псевдонимы массовых столбцов, используя файл форматирования для указания имен столбцов и типов данных.  
+-   Инструкция `SELECT...FROM OPENROWSET(BULK...)` запрашивает данные в файле напрямую, не импортируя их в таблицу. Кроме того, инструкции `SELECT...FROM OPENROWSET(BULK...)` могут перечислять псевдонимы массовых столбцов, используя файл форматирования для указания имен столбцов и типов данных.  
   
 -   Использование `OPENROWSET(BULK...)` в качестве исходной таблицы в инструкции `INSERT` или `MERGE` обеспечивает массовый импорт данных из файла в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...) (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   

@@ -1,7 +1,7 @@
 ---
 title: Программа bcp | Документы Майкрософт
 ms.custom: ''
-ms.date: 02/12/2018
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -29,17 +29,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 51c510345b83f7dcf9279692b30de639af64a2fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 777fb26703b4582662748a15d4ac6ed6e0fdfae0
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675383"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712505"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > Последнюю версию служебной программы bcp, см. в разделе [14.0 служебные программы командной строки Microsoft для SQL Server ](https://go.microsoft.com/fwlink/?LinkID=825643)
 
  > С помощью программы bcp на платформе Linux, см. в разделе [Установка sqlcmd и bcp в Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -50,10 +48,31 @@ ms.locfileid: "51675383"
  ![Topic link icon](../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел")Сведения о синтаксических обозначениях в программе **bcp** см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 > [!NOTE]
-> При использовании программы **bcp** для резервного копирования данных создайте файл форматирования для записи формата данных. Файлы данных**bcp**  **не включают** сведения о схеме или формате, поэтому при удалении таблицы или представления, если отсутствует файл форматирования, импорт данных будет невозможен.  
-  
+> При использовании программы **bcp** для резервного копирования данных создайте файл форматирования для записи формата данных. Файлы данных**bcp**  **не включают** сведения о схеме или формате, поэтому при удалении таблицы или представления, если отсутствует файл форматирования, импорт данных будет невозможен.
+
+## <a name="download-the-latest-version-of-bcp-utility"></a>Загрузите последнюю версию служебной программы bcp
+
+**[![download](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15.0 для SQL Server(х64)](https://go.microsoft.com/fwlink/?linkid=2043518)**
+<br>**[![download](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15.0 для SQL Server(х86)](https://go.microsoft.com/fwlink/?linkid=2043622)**
+
+Программы командной строки по общей доступности (GA), однако они выпускаются с помощью пакета установщика для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+
+**Сведения о версии**
+
+Номер выпуска: 15.0 <br>
+Номер сборки: 15.0.1000.34<br>
+Дата выпуска: 18 октября 2018 г.
+
+Новая версия SQLCMD поддерживает аутентификацию Azure AD, включая многофакторную идентификацию (MFA) поддержку функций базы данных SQL, хранилище данных SQL и постоянного шифрования.
+Новый BCP поддерживает аутентификацию Azure AD, включая поддержку многофакторной идентификации (MFA) для базы данных SQL и хранилища данных SQL.
+
+**Требования к системе** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 этот компонента необходимы [установщика Windows 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [17.2 драйвер Microsoft ODBC для SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+ 
+Чтобы проверить выполнение версии BCP `bcp /v` команду и убедитесь, что 15.0.1000.34 или более поздней версии используется.
+
+
 <table><th>Синтаксис</th><tr><td><pre>
-bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>
+bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
     {<a href="#in">in</a> <a href="#data_file">data_file</a> | <a href="#out">out</a> <a href="#data_file">data_file</a> | <a href="#qry_out">queryout</a> <a href="#data_file">data_file</a> | <a href="#format">format</a> <a href="#format">nul</a>}
 <a>                                                                                                         </a>
     [<a href="#a">-a packet_size</a>]
@@ -185,6 +204,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 **-G**<a name="G"></a>  
  Клиент использует этот переключатель при подключении к базе данных SQL Azure или хранилищу данных SQL Azure, чтобы указать, что проверка подлинности пользователя выполняется с помощью Azure Active Directory. Параметра -G требуется [версии 14.0.3008.27 или более поздней версии](https://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните команду bcp -v. Дополнительные сведения см. в разделе [использование аутентификации Azure Active Directory для аутентификации с помощью базы данных SQL или хранилище данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
 
+> [!IMPORTANT]
+> Параметр **-G** применяется только для базы данных SQL Azure и хранилища данных Azure.
+> Встроенная AAD и интерактивной проверки подлинности не поддерживается в Linux или macOS.
+
 > [!TIP]
 >  Для проверки, если ваша версия bcp поддерживает для типа проверки подлинности Active Directory Azure (AAD) **bcp--** (bcp\<пространства >\<dash >\<dash >) и убедитесь, что вы видите - G в списке Доступные аргументы.
 
@@ -220,6 +243,29 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
+- **Интерактивная проверка подлинности Azure Active Directory**  
+
+   Интерактивная проверка подлинности Azure AD для базы данных SQL Azure и хранилище данных SQL позволяет использовать интерактивный метод, поддерживающий многофакторную проверку подлинности. Дополнительные сведения см. в разделе [интерактивная проверка подлинности Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
+
+   Интерактивный Azure AD требует **bcp** [версии 15.0.1000.34](#download-the-latest-version-of-bcp-utility) или более поздней версии, а также [ODBC версии 17.2 или более поздней](https://www.microsoft.com/download/details.aspx?id=56567).  
+
+   Чтобы включить интерактивную проверку подлинности, укажите параметр -G с именем пользователя (-U), без пароля.   
+
+   В следующем примере экспортируется данных с помощью Azure AD интерактивный режим, указывающее имя пользователя, где пользователь представляет учетную запись AAD. Это тот же пример, используемый в предыдущем разделе: *Azure Active Directory, имя пользователя и пароль*.  
+
+   Интерактивный режим требуется пароль вводиться вручную, или для учетных записей с многофакторной проверкой подлинности включена, выполните настроенный метод проверки подлинности многофакторной проверки Подлинности. 
+
+   ``` 
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
+   ``` 
+
+   На случай, если пользователь Azure AD федеративного домена, один с помощью учетной записи Windows, в командной строке требуется имя пользователя содержит свою учетную запись домена (например, joe@contoso.com см. ниже):   
+
+   ```
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
+   ```
+
+   Если гостевых пользователей существуют в определенной Azure AD и являются частью группы, которые существуют в базе данных SQL с разрешениями базы данных, чтобы выполнить команду bcp, псевдонима гостевой используется (например, *keith0@adventureworks.com*).
   
 **-h** _**"load hints**_[ ,... *n*]**"**<a name="h"></a> — определяет одно или несколько указаний для использования во время массового импорта данных в таблицу или представление.  
   
@@ -257,21 +303,21 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 * **FIRE_TRIGGERS**  
 Применяется вместе с аргументом **in** и указывает, что в течение операции массового копирования будут работать триггеры Insert, определенные в целевой таблице. Если параметр FIRE_TRIGGERS не указан, то триггеры Insert выполняться не будут. Параметр FIRE_TRIGGERS для аргументов **out**, **queryout**и **format** не учитывается.  
   
- **-i** _**вставка\_файла**_<a name="i"></a>  
- Указывает имя файла ответов, содержащего ответы на вопросы командной строки для каждого поля данных при выполнении массового копирования в интерактивном режиме, когда не указаны параметры (**-n**, **-c**, **-w**или **-N** ).  
+**-i** _**вставка\_файла**_<a name="i"></a>  
+Указывает имя файла ответов, содержащего ответы на вопросы командной строки для каждого поля данных при выполнении массового копирования в интерактивном режиме, когда не указаны параметры (**-n**, **-c**, **-w**или **-N** ).  
   
- Если параметр *input_file* начинается с дефиса (-) или косой черты (/), не ставьте пробел между **-e** и значением *input_file* .  
+Если параметр *input_file* начинается с дефиса (-) или косой черты (/), не ставьте пробел между **-e** и значением *input_file* .  
   
- **-k**<a name="k"></a>  
- Указывает, что пустые столбцы во время данной операции должны сохранить значение NULL вместо любых вставляемых значений столбцов по умолчанию. Дополнительные сведения см. в разделе [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
+**-k**<a name="k"></a>  
+Указывает, что пустые столбцы во время данной операции должны сохранить значение NULL вместо любых вставляемых значений столбцов по умолчанию. Дополнительные сведения см. в разделе [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- **-K** _**намерение\_приложения**_<a name="K"></a>   
- Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным возможным значением является **ReadOnly**. Если параметр **-K** не указан, программа bcp не будет поддерживать соединение с вторичной репликой в группе доступности AlwaysOn. Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+**-K** _**намерение\_приложения**_<a name="K"></a>   
+Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным возможным значением является **ReadOnly**. Если параметр **-K** не указан, программа bcp не будет поддерживать соединение с вторичной репликой в группе доступности AlwaysOn. Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- **-L** _**последний\_ряд**_<a name="L"></a>  
- Указывает номер последней строки для экспорта из таблицы или импорта из файла данных. Значение параметра должно быть больше (>) 0, но меньше (<) или равно (=) номеру последней строки. Если параметр отсутствует, по умолчанию используется последняя строка файла.  
+**-L** _**последний\_ряд**_<a name="L"></a>  
+Указывает номер последней строки для экспорта из таблицы или импорта из файла данных. Значение параметра должно быть больше (>) 0, но меньше (<) или равно (=) номеру последней строки. Если параметр отсутствует, по умолчанию используется последняя строка файла.  
   
- Параметр*last_row* может иметь положительное целое значение до 2^63-1.  
+Параметр*last_row* может иметь положительное целое значение до 2^63-1.  
   
 **-m** _**максимальное_количество\_ошибок**_<a name="m"></a>  
 Указывает максимальное количество синтаксических ошибок, которые могут произойти до отмены операции **bcp** . Синтаксическая ошибка подразумевает ошибку преобразования данных в целевой тип данных. В общее количество ошибок *max_errors* не включаются ошибки, которые могут быть обнаружены только на сервере, например нарушения ограничений.  
@@ -313,7 +359,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-q**<a name="q"></a>  
  Выполняет инструкцию SET QUOTED_IDENTIFIERS ON в соединении между служебной программой **bcp** и экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Используйте этот параметр для указания базы данных, владельца, таблицы или имени представления, содержащих пробел или одинарную кавычку. Заключите все имя таблицы или представления, состоящее из трех частей, в кавычки ("").  
   
- Чтобы указать имя базы данных, содержащее пробел или одинарные кавычки, следует использовать параметр **-q** .  
+ Чтобы указать имя базы данных, содержащее пробел или одинарные кавычки, следует использовать параметр **-q**.  
   
  **-q** не применяется к значениям, переданным в **-d**.  
   
@@ -661,3 +707,8 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
  [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
+## <a name="feedback"></a>Отзывы
+
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Форум клиентских средств SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

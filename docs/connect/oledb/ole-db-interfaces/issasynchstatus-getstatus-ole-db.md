@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c8b7efac3068cc95af65e13db1492f935871bf66
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 1920ce001879baf01a337898c452493dccd430f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031066"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505066"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>Функция ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ HRESULT GetStatus(
  *eOperation*[in]  
  Операция, для которой запрашивается асинхронное состояние. Следует учитывать следующее значение.  
   
- DBASYNCHOP_OPEN — пользователь запрашивает сведения об асинхронном открытии или заполнении набора строк или асинхронной инициализации объекта источника данных. Если поставщик совместим с OLE DB 2.5 и поддерживает прямую привязку URL-адресов, то потребитель запрашивает сведения об асинхронной инициализации или заполнении объекта источника данных, набора строк, строки или потока.  
+ DBASYNCHOP_OPEN — пользователь запрашивает сведения об асинхронном открытии или заполнении набора строк, или асинхронной инициализации объекта источника данных. Если поставщик соответствует OLE DB 2.5 и поддерживает прямую привязку URL-адресов, то потребитель запрашивает сведения об асинхронной инициализации или заполнении объекта источника данных, набора строк, строки или потока.  
   
  *pulProgress*[out]  
  Указатель на буфер, в который будет возвращаться текущий ход выполнения асинхронной операции относительно ожидаемого максимума, указанного в параметре *pulProgressMax* . Дополнительные сведения о значении параметра *pulProgress*см. в описании параметра *peAsynchPhase*.  

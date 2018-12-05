@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 039b47f1a2affd12f53a8c45c931348eb4a2077e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604764"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512540"
 ---
 # <a name="connecting-with-sqlcmd"></a>Соединение с помощью sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "51604764"
 Следующие команды демонстрируют использование проверки подлинности Windows (Kerberos) и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверки подлинности, соответственно:
   
 ```  
-sqlcmd –E –Sxxx.xxx.xxx.xxx  
-sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx  
+sqlcmd -E -Sxxx.xxx.xxx.xxx  
+sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
   
 ## <a name="available-options"></a>Доступные параметры
@@ -58,7 +58,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -H — указать имя рабочей станции.  
   
-- -i *файл_ввода*[,*файл_ввода*[,…]] — указать файл, содержащий пакет инструкций или хранимых процедур SQL.  
+- -i *файл_ввода*[,*файл_ввода*[,…]] — указать файл, содержащий пакет инструкций или хранимых процедур SQL.  
   
 - -I Set `SET QUOTED_IDENTIFIER` параметр соединения в значение ON.  
   
@@ -184,7 +184,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 Запустите `sqlcmd` и использовать `c.sql` как входной файл:  
   
-    slqcmd -S<…> -P<..> –U<..> -I c.sql  
+    slqcmd -S<...> -P<..> -U<..> -I c.sql  
 
 - -z *пароль* изменить пароль.  
   
@@ -224,7 +224,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 Если указать один и тот же параметр и в имени DSN, и в командной строке `sqlcmd` или `bcp`, значение в командной строке имеет приоритет перед значением DSN. Например, если имя DSN содержит запись DATABASE, а командная строка `sqlcmd` включает параметр **-d**, используется значение, передаваемое в **-d**. Если в имени DSN указано **Trusted_Connection=yes**, используется проверка подлинности Kerberos, а имя пользователя (**–U**) и пароль (**–P**), если они заданы, игнорируются.
 
-Существующие сценарии, вызывающие `isql`, можно изменить для использования `sqlcmd`, определив следующий псевдоним: `alias isql="sqlcmd –D"`.  
+Существующие сценарии, вызывающие `isql`, можно изменить для использования `sqlcmd`, определив следующий псевдоним: `alias isql="sqlcmd -D"`.  
 
 ## <a name="see-also"></a>См. также:  
 [Подключение с помощью **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  

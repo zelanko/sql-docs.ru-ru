@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd0f0157f1f3f0c684dcb8f07af725b97929c10f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906024"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509055"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT — GROUP BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -334,7 +334,7 @@ GROUP BY ALL
   
 -   Применение группирующих наборов в предложении GROUP BY недопустимо, если они не составляют часть явного списка GROUPING SETS. Например, предложение `GROUP BY Column1, (Column2, ...ColumnN`) допускается в этом стандарте, но не в Transact-SQL.  Transact-SQL поддерживает `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` и `GROUP BY Column1, Column2, ... ColumnN`, которые семантически эквивалентны. Эти инструкции семантически эквивалентны предыдущему примеру предложения `GROUP BY`. Это позволяет избежать возможности неправильной интерпретации предложения `GROUP BY Column1, (Column2, ...ColumnN`) как `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`, не являющихся семантически эквивалентными.  
   
--   Применение группирующих наборов внутри группирующих наборов не допускается. Например, предложение `GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))` допускается в стандарте SQL-2006, но не в Transact-SQL. Transact-SQL поддерживает `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` и `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, которые семантически эквивалентны первому примеру предложения GROUP BY и имеют более понятный синтаксис.  
+-   Применение группирующих наборов внутри группирующих наборов не допускается. Например, предложение `GROUP BY GROUPING SETS (A1, A2,...An, GROUPING SETS (C1, C2, ...Cn))` допускается в стандарте SQL-2006, но не в Transact-SQL. Transact-SQL поддерживает `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` и `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, которые семантически эквивалентны первому примеру предложения GROUP BY и имеют более понятный синтаксис.  
   
 -   GROUP BY [ALL/DISTINCT] используется только в простом предложении GROUP BY, которое содержит выражения столбцов. Это предложение не может использоваться с конструкциями GROUPING SETS, ROLLUP, CUBE, WITH CUBE или WITH ROLLUP. Ключевое слово ALL применяется по умолчанию и задано неявно. Оно допускается только в синтаксисе обратной совместимости.
   

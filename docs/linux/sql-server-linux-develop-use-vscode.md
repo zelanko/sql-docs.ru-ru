@@ -23,7 +23,7 @@ ms.locfileid: "51033631"
 
 В этой статье показано, как использовать **mssql** расширение для Visual Studio Code (VS Code) для разработки баз данных SQL Server.
 
-Visual Studio Code — графический редактор кода для Linux, macOS и Windows, который поддерживает расширения. [ **Mssql** расширения для VS Code] позволяет подключиться к SQL Server, запрос с помощью Transact-SQL (T-SQL) и просмотреть результаты.
+Visual Studio Code — графический редактор кода для Linux, macOS и Windows, который поддерживает расширения. [**Mssql** расширения для VS Code] позволяет подключиться к SQL Server, запрос с помощью Transact-SQL (T-SQL) и просмотреть результаты.
 
 ## <a name="install-vs-code"></a>Установка VS Code
 1. Если вы еще не установили VS Code, [Скачайте и установите Visual STUDIO Code] на вашем компьютере.

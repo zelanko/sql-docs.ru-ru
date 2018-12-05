@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6b7a27d9358d6f7f5719aaf1fea1fb292b2db1af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600864"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545291"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Устойчивость подключения в драйвере ODBC в Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51600864"
 > [!IMPORTANT]  
 >  Функция устойчивости подключений поддерживается в Базах данных SQL Microsoft Azure и SQL Server 2014 (и более поздних версий).  
   
- Дополнительные сведения об устойчивости неактивных подключений см. в статье [Техническая статья — устойчивость неактивных подключений](https://go.microsoft.com/fwlink/?LinkId=393996).  
+ Дополнительные сведения об устойчивости неактивных подключений см. в технической статье [Устойчивость неактивных подключений](https://go.microsoft.com/fwlink/?LinkId=393996).  
   
  Драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows имеет два параметра для управления поведением повторного подключения.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51600864"
   
 -   Интервал повтора подключения.  
   
-     Интервал повтора подключения указывает количество секунд между попытками подключения. Допустимы значения от 1 до 60. Общее время для повторного подключения не может превышать время ожидания подключения (SQL_ATTR_QUERY_TIMEOUT в SQLSetStmtAttr). Значение по умолчанию — 10 секунд.  
+     Интервал повтора подключения указывает количество секунд между попытками подключения. Допустимые значения: 1–60. Общее время для повторного подключения не может превышать время ожидания подключения (SQL_ATTR_QUERY_TIMEOUT в SQLSetStmtAttr). Значение по умолчанию — 10 секунд.  
   
      Можно изменить интервал повтора подключения, когда вы:  
   

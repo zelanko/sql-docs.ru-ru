@@ -12,12 +12,12 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a966bec7dc015bf29d8a8ae2e2a217f3b7bf7402
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 900fdcafe18c2a885ea7191ce8619e46e8f0f963
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656703"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531818"
 ---
 # <a name="sql-server-distributed-replay"></a>Распределенное воспроизведение SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51656703"
   
  В следующей таблице описывается, когда нужно использовать каждое средство.  
   
-|Инструмент|Используется, когда|  
+|Инструмент|Применение|  
 |----------|---------------|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|Нужно использовать обычный механизм воспроизведения на одном компьютере. В частности, если необходимы возможности построчной отладки, такие как команды **По шагам**, **Выполнить до текущей позиции**и **Точка останова** .<br /><br /> Необходимо воспроизвести трассировку служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |Распределенное воспроизведение|Необходимо оценить совместимость приложений. Например, нужно протестировать варианты обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и операционной системы, модернизацию оборудования или настройку индекса.<br /><br /> Уровень параллелизма в записанной трассировке настолько высок, что один клиент воспроизведения не сможет ее смоделировать.|  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695682"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403429"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Использование функции Always Encrypted с драйверами PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -155,7 +155,7 @@ $stmt->execute();
 В следующих примерах демонстрируется фильтрации данных на основе зашифрованных значений и получение данных открытого текста из зашифрованных столбцов, использующих драйверы SQLSRV и PDO_SQLSRV. Обратите внимание на следующие моменты:
  -   Значение, используемое в предложении WHERE для фильтрации по столбцу SSN, необходимо передавать, используя параметр bind, чтобы перед отправкой на сервер драйвер мог его прозрачно зашифровать.
  -   При выполнении запроса со связанными параметрами, драйверами PHP автоматически определяет тип SQL для пользователя, если пользователь явно не указывает тип SQL при использовании драйвера SQLSRV.
- -   Все значения, выводимые программой, в виде обычного текста, так как драйвер прозрачно расшифровывает данные, полученные из столбцов SSN и BirthDate.
+ -   Все значения, выводимые программой, будут представлены в открытом тексте, так как драйвер прозрачно расшифровывает данные, полученные из столбцов SSN и BirthDate.
  
 Примечание: Запросы могут выполнять сравнения на равенство по зашифрованным столбцам только в том случае, если шифрование является детерминированным. Дополнительные сведения см. в разделе [Выбор детерминированного или случайного шифрования](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 

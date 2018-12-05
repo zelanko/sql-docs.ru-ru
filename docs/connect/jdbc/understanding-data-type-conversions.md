@@ -11,12 +11,12 @@ ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e46023a364a39950a2fe82fef0cc8357bed6d601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e3d8b002df2f939528bef8d4faa39d3a5c72f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762412"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520201"
 ---
 # <a name="understanding-data-type-conversions"></a>Общие сведения о преобразованиях типов данных
 
@@ -26,7 +26,7 @@ ms.locfileid: "47762412"
 
 ## <a name="getter-method-conversions"></a>Преобразование метода считывания
 
-Исходя из типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на следующей диаграмме показана схема преобразования для драйвера JDBC для методов get\<Type>() класса [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), а также поддерживаемое преобразование для методов get\<Type> класса [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
+На следующей диаграмме показана схема преобразования для драйвера JDBC, основанная на типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для методов get\<Type>() класса [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), а также поддерживаемое преобразование для методов get\<Type> класса [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
@@ -74,7 +74,7 @@ ms.locfileid: "47762412"
 
 В случае использования **строка** тип данных, если значение превышает длину **VARCHAR**, он сопоставляется **LONGVARCHAR**. Аналогичным образом **NVARCHAR** сопоставляется **LONGNVARCHAR** если его длина превышает поддерживаемую длину **NVARCHAR**. То же относится и к **byte[]**. Значения длиннее **VARBINARY** становятся **LONGVARBINARY**.
 
-Преобразования, поддерживаемые методами задания драйвера JDBC, делятся на три категории.
+Преобразования, поддерживаемые методами задания драйвера JDBC, делятся на две категории.
 
 - **Без потерь (x)**. Преобразования для числовых случаев, когда тип задания является таким же или меньшим, чем базовый тип сервера. Например, при вызове метода setBigDecimal для базового **десятичного** столбца сервера преобразование не потребуется. В случае преобразования числовых данных в символьные тип данных Java **numeric** преобразуется в **String**. Например, вызов метода setDouble со значением "53" относительно столбца varchar(50) формирует символьное значение "53" в целевом столбце.
 
@@ -107,7 +107,7 @@ ms.locfileid: "47762412"
 
 - **Без потерь (x)**. Преобразования для числовых случаев, когда тип задания является таким же или меньшим, чем базовый тип сервера. Например, при вызове метода setBigDecimal для базового **десятичного** столбца сервера преобразование не потребуется. В случае преобразования числовых данных в символьные тип данных Java **numeric** преобразуется в **String**. Например, вызов метода setDouble со значением "53" относительно столбца varchar(50) формирует символьное значение "53" в целевом столбце.
 
-- **С преобразованием (y)**. Преобразования из типа Java **numeric** в базовый тип сервера **numeric**, меньший по размеру. Такое преобразование выполняется обычным образом и следует соглашениям о преобразованиях в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точные значения всегда усекаются и никогда не округляются, а при переполнении возникает ошибка неподдерживаемого преобразования. Например, вызов метода updateDecimal со значением "1,9999" для базового целочисленного столбца приводит к сохранению в целевом столбце значения "1", но, если будет передано значение "3000000000", драйвер вызовет исключение.
+- **С преобразованием (y)**. Преобразования из типа Java **numeric** в базовый тип сервера **numeric**, меньший по размеру. Такое преобразование выполняется обычным образом и следует соглашениям о преобразованиях в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точные значения всегда усекаются (никогда не округляются), а переполнение выводит ошибку неподдерживаемого преобразования. Например, вызов метода updateDecimal со значением "1,9999" для базового целочисленного столбца приводит к сохранению в целевом столбце значения "1", но, если будет передано значение "3000000000", драйвер вызовет исключение.
 
 - **В зависимости от данных (z)**. Преобразования из типа Java **String** в базовый тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависят от следующих условий. Драйвер отправляет значение **String** на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при необходимости выполняет преобразование. Если свойство подключения sendStringParametersAsUnicode имеет значение true, а базовым типом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является **image**, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выполнит преобразование **nvarchar** в **image** и вызовет исключение SQLServerException. Если параметр sendStringParametersAsUnicode установлен в значение false и базовый тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — **image**, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет преобразование **varchar** в **image**, а исключение не вызывается.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 539c9ffd8d7447761a2331d4895aec0f1de2544d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 466f2b5b8b84519d8b4d9c98ad324b3e4187ac61
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634242"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396697"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Выполняет команды, содержащие возвращающие табличное значение параметры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47634242"
 ## <a name="table-valued-parameter-specification"></a>Спецификация возвращающих табличные значения параметров  
  Потребитель может указать тип возвращающего табличные значения параметра. В эту информацию входит имя возвращающего табличное значение параметра. Кроме того, в нее входит имя схемы, если тип определенной пользователем таблицы для возвращающего табличное значение параметра не входит в текущую используемую по умолчанию схему подключения. В зависимости от поддержки на сервере потребитель может также задать необязательную информацию о метаданных (например, упорядочение столбцов) и указать, что все строки конкретных столбцов имеют значения по умолчанию.  
   
- Чтобы задать параметр, возвращающие табличные значения, потребитель вызывает ISSCommandWithParamter::SetParameterInfo и при необходимости вызывает ISSCommandWithParameters::SetParameterProperties. Для возвращающего табличное значение параметра поле *pwszDataSourceType* структуры DBPARAMBINDINFO имеет значение DBTYPE_TABLE. Полю *ulParamSize* присваивается значение ~0, которое указывает, что длина неизвестна. Конкретные свойства параметров, возвращающих табличные значения, таких как имя схемы, имя типа, порядок столбцов и столбцы по умолчанию, можно задать через ISSCommandWithParameters::SetParameterProperties.  
+ Чтобы задать параметр, возвращающие табличные значения, потребитель вызывает ISSCommandWithParameter::SetParameterInfo и при необходимости вызывает ISSCommandWithParameters::SetParameterProperties. Для возвращающего табличное значение параметра поле *pwszDataSourceType* структуры DBPARAMBINDINFO имеет значение DBTYPE_TABLE. Полю *ulParamSize* присваивается значение ~0, которое указывает, что длина неизвестна. Конкретные свойства параметров, возвращающих табличные значения, таких как имя схемы, имя типа, порядок столбцов и столбцы по умолчанию, можно задать через ISSCommandWithParameters::SetParameterProperties.  
   
 ## <a name="table-valued-parameter-binding"></a>Привязка возвращающих табличные значения параметров  
  Возвращающий табличное значение параметр может представлять собой любой объект — набор рядов. Поставщик читает этот объект при отправке возвращающих табличное значение параметров на сервер во время выполнения.  

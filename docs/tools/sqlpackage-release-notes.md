@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 69b3b5c9574578b286b882b7d2125b0bb984759b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050856"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413753"
 ---
 # <a name="sqlpackage-release-notes"></a>заметки о выпуске sqlpackage
 
@@ -76,20 +76,22 @@ ms.locfileid: "50050856"
 - Добавить /DiagnosticsFile:"C:\Temp\sqlpackage.log» параметра командной строки укажите путь к файлу для сохранения диагностических сведений.
 - Добавлены/Diagnostics параметра командной строки в журнал диагностических данных в консоль.
 
-## <a name="sqlpackage-on-macos-and-linux-001-preview"></a>sqlpackage в macOS и Linux 0.0.1 (Предварительная версия)
+## <a name="sqlpackage-on-macos-and-linux-net-core-preview"></a>sqlpackage в macOS и Linux .NET Core (Предварительная версия)
 
-Дата выпуска: 9 мая 2018 г.  
-Сборка: 15.0.4057.1
+Дата выпуска: 15 ноября 2018 г.  
+Сборка: 15.0.4240.1
 
-Этот выпуск содержит предварительной версии кросс платформенные сборки sqlpackage, предназначенной для .NET Core 2.0, а также можно запустить в macOS и Linux. 
+Этот выпуск содержит предварительной версии кросс платформенные сборки sqlpackage, предназначенный для .NET Core 2.1, а также можно запустить в macOS и Linux. 
+
+Выпуск включает в себя следующие исправления:
+
+- Переместить в .NET Core 2.1 
+- Поддержка типов определяемого пользователем ТИПА CLR, включая типы определяемого пользователем ТИПА SQL CLR: SqlHierarchyId, SqlGeometry и SqlGeography.
 
 Этот выпуск является ранней предварительной версии с описанные ниже известные проблемы:
 
 - Параметр /p:CommandTimeout закодирована на 120.
 - Участники сборки и развертывания не поддерживаются.
-  - Будет исправлено после перехода на .NET Core 2.1, где поддерживается System.ComponentModel.Composition.dll.
-  - Нужно обрабатывать пути с учетом регистра.
-- Определяемый пользователем тип SQL CLR типы не поддерживаются, включая типы определяемого пользователем ТИПА CLR для SQL Server: SqlHierarchyId, SqlGeometry и SqlGeography.
 - Старые файлы DACPAC и bacpac, использующих сериализацию данных json, не поддерживаются.
 - На который указывает ссылка .dacpacs (например master.dacpac) не может разрешить из-за проблем с системами файлов с учетом регистра.
   - Правильным решением будет использовать имя файла ссылки (например, MASTER. BACPAC-ФАЙЛ).

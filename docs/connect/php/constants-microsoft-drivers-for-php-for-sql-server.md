@@ -13,12 +13,12 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f391f25c6a8dc4914e0bb50362ef284ab9a1b4d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 94be5540c0fedcf3449b8ac41398ab3f08abbd32
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603754"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409531"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Константы (драйверы Майкрософт для PHP для SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51603754"
 |PDO::SQLSRV_ENCODING_BINARY|Данные представляют собой поток необработанных байтов с сервера без применения кодировки или преобразования.<br /><br />Не является допустимым для PDO::setAttribute.|  
 |PDO::SQLSRV_ENCODING_SYSTEM|Данные представлены 8-битными символами, как указано в кодовой странице языкового стандарта Windows, установленного в системе. Для всех многобайтовых символов или символов, не соответствующих этой кодовой странице, подставляется однобайтовый символ вопросительного знака (?).|  
 |PDO::SQLSRV_ENCODING_UTF8|Данные имеют кодировку UTF-8. Эта кодировка используется по умолчанию.|  
-|PDO::SQLSRV_ENCODING_DEFAULT|Использует PDO::SQLSRV_ENCODING_SYSTEM, если указано во время соединения.<br /><br />Используйте кодировку соединения, если указано в инструкции prepare.|  
+|PDO::SQLSRV_ENCODING_DEFAULT|Использует PDO::SQLSRV_ENCODING_SYSTEM, если указано во время соединения.<br /><br />Используйте кодирование соединения, если указано в подготовленной инструкции.|  
   
 ### <a name="query-timeout"></a>Время ожидания запроса  
 Атрибут PDO::SQLSRV_ATTR_QUERY_TIMEOUT — это неотрицательное целое число, представляющее время ожидания в секундах. По умолчанию использует нуль (0), означающий отсутствие времени ожидания.  

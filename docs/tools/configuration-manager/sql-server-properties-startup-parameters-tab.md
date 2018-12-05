@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e28be468ff1c8e4f7248f0a6296ca9ca2476a63d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81a0a2e9d5201943cc6b04ac4b931d1e8a9a561e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602892"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540672"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Свойства SQL Server (вкладка «Параметры запуска»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47602892"
   
 -   Начальные и конечные пробелы любого параметра запуска отсекаются.  
   
--   Каждый параметр запуска начинается с символа «тире» (–), вторым символом является буква.  
+-   Каждый параметр запуска начинается с символа "—" (тире), вторым символом является буква.  
   
 ## <a name="required-parameters"></a>Обязательные параметры  
  Следующие параметры обязательны: Их можно изменять, но не удалять.  
