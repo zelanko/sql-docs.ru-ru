@@ -52,7 +52,7 @@ ms.locfileid: "51605824"
   
 5.  Когда все готово к установке, а ваш компьютер имеет доступ к внешнему сайту по протоколу FTP, выполните следующую команду: **./build_dm.sh**.
 
-Если компьютер не может получить доступ к внешнему сайту по протоколу FTP, получите `unixODBC-2.3.0.tar.gz`. Вы можете получить `unixODBC-2.3.0.tar.gz` из [ https://www.unixodbc.org ](https://www.unixodbc.org/). Щелкните ссылку Скачать** в левой части страницы, чтобы перейти на страницу скачивания. Щелкните соответствующую ссылку для скачивания unixODBC-2.3.0 (не unixODBC-2.3.1). В этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версия UnixODBC-2.3.1 не поддерживается. Выполните следующую команду, чтобы начать установки диспетчера драйверов unixODBC: **./build_dm.sh--URL-адрес загрузки = file://unixODBC-2.3.0.tar.gz**.  
+Если компьютер не может получить доступ к внешнему сайту по протоколу FTP, получите `unixODBC-2.3.0.tar.gz`. Вы можете получить `unixODBC-2.3.0.tar.gz` из [ https://www.unixodbc.org ](https://www.unixodbc.org/). Щелкните ссылку Скачать** в левой части страницы, чтобы перейти на страницу скачивания. Щелкните соответствующую ссылку для скачивания unixODBC-2.3.0 (не unixODBC-2.3.1). В этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версия UnixODBC-2.3.1 не поддерживается. Выполните следующую команду, чтобы начать установки диспетчера драйверов unixODBC: **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**.  
 
 6.  Введите **YES**, чтобы приступить к распаковке файлов. Эта часть процесса может занять около 5 минут.  
 
@@ -74,9 +74,9 @@ ms.locfileid: "51605824"
   
 5.  В командной строке выполните команду: **CPPFLAGS = "-DSIZEOF_LONG_INT = 8»**.  
   
-6.  В командной строке выполните команду: **Экспорт CPPFLAGS**.  
+6.  В командной строке выполните команду: **export CPPFLAGS**.  
   
-7.  В командной строке выполните команду: **«. / configure--prefix = / usr--libdir = / usr/lib64--sysconfdir = и т. д--enable-графического интерфейса пользователя = нет--enable драйверы = нет--enable-iconv с iconv-char-enc = UTF8 - с iconv-ucode-enc = UTF16LE»**.  
+7.  В командной строке выполните команду: **"./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE"**.  
   
 8.  В командной строке (выполнив вход в корень) выполните команду: **make**.  
   
