@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa047ea7506c4fd9111345e0b5cbb6beca877356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815410"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712525"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Создание управляемой данными подписки (учебник по службам SSRS)
 В этом учебнике по [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] рассматриваются концепции управляемых данными подписок на основе простого примера, в котором создается управляемая данными подписка для создания и сохранения отфильтрованных выходных данных отчета в общую папку. 
@@ -56,7 +56,7 @@ ms.locfileid: "47815410"
   
 Чтобы использовать этот учебник, в операционной системе компьютера должны присутствовать следующие компоненты:  
   
--   Выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживающий управляемые данными подписки. Дополнительные сведения см. в статье [Выпуски и компоненты SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md).  
+-   Выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживающий управляемые данными подписки. Дополнительные сведения см. в статье [Выпуски и поддерживаемые функции SQL Server 2017](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 -   Сервер отчетов должен работать в собственном режиме. Пользовательский интерфейс, описанный в этом учебнике, основан на сервере отчетов, работающем в собственном режиме. Подписки поддерживаются сервером отчетов, работающим в режиме интеграции с SharePoint, но в этом случае пользовательский интерфейс будет отличаться от описанного в этом учебнике.  
   

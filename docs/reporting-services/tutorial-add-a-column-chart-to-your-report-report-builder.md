@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d2aaa46b763e58cff11fec353a46745cb4065325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802992"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711490"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Учебник. Добавление гистограммы к отчету (построитель отчетов)
 В этом учебнике вы создадите отчет [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы, содержащий гистограмму с рядом в виде набора вертикальных столбцов, сгруппированных по категории. 
@@ -302,6 +302,6 @@ ms.locfileid: "47802992"
   
 ## <a name="see-also"></a>См. также:  
 -    [Учебники по построителю отчетов](../reporting-services/report-builder-tutorials.md) 
--    [Построитель отчетов в SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+-    [Построитель отчетов в SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

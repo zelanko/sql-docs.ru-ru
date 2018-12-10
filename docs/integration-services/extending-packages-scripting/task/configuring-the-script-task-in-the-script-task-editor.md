@@ -17,12 +17,12 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87c6ae53c34ab0c960efc1a5347c6ff01c74f0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ecf4ed7f81f4d490f9f5c966627377f93acaeb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805522"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542049"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Настройка задачи «Скрипт» в редакторе задачи «Скрипт»
   Прежде чем писать пользовательский код задачи "Скрипт", настройте ее основные свойства на трех страницах окна **Редактор задачи "Скрипт"**. Дополнительные свойства задачи, не уникальные для задачи «Скрипт», можно настроить в окне «Свойства».  

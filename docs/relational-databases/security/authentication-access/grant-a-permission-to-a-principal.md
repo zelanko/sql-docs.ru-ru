@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a22a07d05fa6286eb88089393d563e746ee9def5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb89c5bd1d3c1f40e03de60041dc3d22cc56f661
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787182"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540410"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Предоставление разрешения для участника
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47787182"
   
 4.  Щелкните правой кнопкой мыши хранимую процедуру и выберите **Свойства**.  
   
-5.  В разделе выбора страницы диалогового окна **Свойства хранимой процедуры —**_имя\_хранимой\_процедуры_ щелкните **Разрешения**. Данная страница используется для добавления пользователей или ролей к хранимым процедурам и для назначения разрешений этим пользователям и ролям.  
+5.  В разделе выбора страницы диалогового окна **Свойства хранимой процедуры —** _имя\_хранимой\_процедуры_ щелкните **Разрешения**. Данная страница используется для добавления пользователей или ролей к хранимым процедурам и для назначения разрешений этим пользователям и ролям.  
   
 6.  После завершения нажмите кнопку **ОК**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47787182"
   
 #### <a name="to-grant-permission-to-a-principal"></a>Предоставление разрешения участнику  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

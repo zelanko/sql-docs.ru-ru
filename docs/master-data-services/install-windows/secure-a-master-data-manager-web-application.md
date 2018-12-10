@@ -10,12 +10,12 @@ ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6aa72013df7e229c76154b6de1839c2ff0e0f0dc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a51b4a791de70421a80f7a62a1ab13b865688529
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701252"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641490"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Обеспечение безопасности веб-приложения диспетчера основных данных
 
@@ -59,8 +59,11 @@ ms.locfileid: "51701252"
 10. Теперь откройте файл web.config, который находится в папке *диск*:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication.  
   
 11. Найдите строку `<security mode="Message">` и измените ее на строку `<security mode="Transport">`.  
-  
-12. Сохраните файл и закройте его. Если возникает ошибка, это происходит из-за включенного контроля учетных записей. Дополнительные сведения см. в разделе [Отключение контроля учетных записей](https://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Теперь пользователи могут использовать для доступа к сайту протокол HTTPS.  
+
+12. Измените `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` на `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">`, чтобы предотвратить проблемы, которые могут появиться в клиенте Silverlight.
+
+13. Сохраните файл и закройте его. Если возникает ошибка, это происходит из-за включенного контроля учетных записей. Дополнительные сведения см. в разделе [Отключение контроля учетных записей](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Теперь пользователи могут использовать для доступа к сайту протокол HTTPS.  
+
   
 ## <a name="see-also"></a>См. также:  
  [Создание веб-приложения мастера основных данных (службы Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  

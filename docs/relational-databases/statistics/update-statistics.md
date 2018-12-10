@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1841f9ac3408726bd54817c2f59291261a5fc641
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e3017d2f90f1b9ef7988b110e6767864924217c
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788482"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586287"
 ---
 # <a name="update-statistics"></a>Обновить статистику
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,13 +60,13 @@ ms.locfileid: "47788482"
   
 5.  Щелкните правой кнопкой мыши объект статистики, который нужно обновить, и выберите пункт **Свойства**.  
   
-6.  В диалоговом окне ***Свойства статистики —**_имя\_статистики_ установите флажок **Обновить статистику для этих столбцов** и нажмите кнопку **ОК**.  
+6.  В диалоговом окне **Свойства статистики —** _имя\_статистики_ установите флажок **Обновить статистику для этих столбцов** и затем нажмите кнопку **ОК**.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### <a name="to-update-a-specific-statistics-object"></a>Обновление указанного объекта статистики  
+### <a name="to-update-a-specific-statistics-object"></a>Обновление указанного объекта статистики  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "47788482"
     GO  
     ```  
   
-#### <a name="to-update-all-statistics-in-a-table"></a>Обновление всей статистики в таблице  
+### <a name="to-update-all-statistics-in-a-table"></a>Обновление всей статистики в таблице  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "47788482"
     GO  
     ```  
   
- Дополнительные сведения см. в статье [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md).  
+Дополнительные сведения см. в статье [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md).  
   
-#### <a name="to-update-all-statistics-in-a-database"></a>Обновление всей статистики в базе данных  
+### <a name="to-update-all-statistics-in-a-database"></a>Обновление всей статистики в базе данных  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -112,7 +112,9 @@ ms.locfileid: "47788482"
     -- The following example updates the statistics for all tables in the database.   
     EXEC sp_updatestats;  
     ```  
-  
- Дополнительные сведения см. в статье [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).  
-  
-  
+
+Дополнительные сведения см. в статье [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).   
+
+### <a name="automatic-index-and-statistics-management"></a>Автоматическое управление индексами и статистикой
+Используйте такие решения, как [Адаптивная дефрагментация индексов](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), чтобы автоматически управлять дефрагментацией индексов и обновлениями статистики для одной базы данных или нескольких. Эта процедура автоматически выбирает, следует ли перестроить или реорганизовать индекс, сверяясь с уровнем фрагментации и другими параметрами, и обновляет статистику на основе линейных пороговых значений.
+

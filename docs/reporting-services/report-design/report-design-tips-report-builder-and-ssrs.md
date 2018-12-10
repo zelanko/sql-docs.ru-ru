@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51983605c640bddafae41463c27843282820041e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a68a953609b8f76b4ea441d3d35fbf04a72af7a
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764082"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711245"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Советы по конструированию отчетов (построитель отчетов и службы SSRS)
   Следуйте приведенным ниже советам при разработке отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы.  
@@ -156,7 +156,7 @@ ms.locfileid: "47764082"
  В совокупности это поведение, свойства ширины и высоты элементов отчета, размер текста отчета, определения высоты и ширины страницы, параметры размера полей родительского отчета и метод разбиения на страницы, связанный с модулем подготовки отчетов, определяют то, какие элементы отчета поместятся на страницу, готовую к просмотру. Дополнительные сведения см. в статье [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Учебники по службам Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)  
   

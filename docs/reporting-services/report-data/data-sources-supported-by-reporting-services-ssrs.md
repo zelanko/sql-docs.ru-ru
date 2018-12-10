@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 13e03572ee4ce886288f1c72b89a97b476d3b35c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813867"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712575"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] получают через модульный и расширяемый уровень данных, где работают модули обработки данных. Для получения данных отчета из источника данных необходимо выбрать модуль обработки данных, поддерживающий как тип источника данных, так и версию программного обеспечения источника данных и его платформу (32-разрядная или 64-разрядная [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -68,7 +68,7 @@ ms.locfileid: "51813867"
  Дополнительные сведения о развертывании специализированных модулей обработки данных см. в разделе [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Дополнительные сведения о стандартных поставщиках данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе по пространству имен <xref:System.Data> .   
   
 ## <a name="platform-support-for-report-data-sources"></a>Поддержка платформ источников данных отчета  
- Источники данных, которые вы можете использовать в развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , различаются в зависимости от выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и платформы. Дополнительные сведения о компонентах см. в статье [Компоненты Reporting Services, поддерживаемые выпусками SQL Server 2016](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). Приведенная далее в разделе таблица содержит сведения о поддерживаемых источниках данных в зависимости от версии и платформы.  
+ Источники данных, которые вы можете использовать в развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , различаются в зависимости от выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и платформы. Дополнительные сведения о компонентах см. в статье [Компоненты Reporting Services, поддерживаемые выпусками SQL Server](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). Приведенная далее в разделе таблица содержит сведения о поддерживаемых источниках данных в зависимости от версии и платформы.  
   
  Требования к платформам для источников данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] различаются для системы клиента, создающего отчеты, и сервера отчетов.  
   

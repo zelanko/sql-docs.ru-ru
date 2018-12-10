@@ -15,12 +15,12 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3cd37fbe598fe93f5c5af5a63789511d667162ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787e034767e419cd5f3b41b07364c6a11d908244
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701242"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543921"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications"></a>Просмотр и разрешение конфликтов данных для публикаций слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47701242"
   
     -   Выберите одну или более строк в верхней сетке, щелкните **Удалить**, что эквивалентно нажатию кнопки **Отправить выигравший** (без внесения каких-либо изменений в данные).  
   
-    -   Нажать кнопку свойств **…**) для просмотра дополнительной информации о столбце, вовлеченном в конфликт.  
+    -   Нажать кнопку свойств (**...**) для просмотра дополнительной информации о столбце, вовлеченном в конфликт.  
   
     -   Измените данные в столбце **Выигравший вариант** или **Проигравший вариант** до отправки данных (данные доступны только для чтения, если столбец окрашен в серый цвет).  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814337"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711225"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Веб-портал (основной режим служб SSRS)
 
@@ -54,7 +54,7 @@ ms.locfileid: "51814337"
 
 Используйте веб-портал только для сервера отчетов, работающего в основном режиме. Он не поддерживается для сервера отчетов, настроенного для работы в режиме интеграции с SharePoint.
 
-Некоторые функции веб-портала доступны только в определенных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Функции, поддерживаемые выпусками SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Некоторые функции веб-портала доступны только в определенных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Функции, поддерживаемые выпусками SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
 При новой установке только у локальных администраторов есть достаточные разрешения для работы с содержимым и параметрами. Для предоставления разрешений другим пользователям локальный администратор должен создать назначения ролей, которые обеспечат доступ к серверу отчетов. Страницы приложения и задачи, к которым пользователь впоследствии сможет получить доступ, зависят от назначений ролей этому пользователю. Дополнительные сведения см. в статье [Предоставление пользователям доступа к серверу отчетов](security/grant-user-access-to-a-report-server-report-manager.md).
 
@@ -126,6 +126,6 @@ ms.locfileid: "51814337"
 [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Инструментальные средства служб Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Планирование поддержки служб Reporting Services в браузерах](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
-[Функции, поддерживаемые различными выпусками SQL Server 2016 служб Reporting Services](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

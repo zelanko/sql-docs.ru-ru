@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.administration.rdsconfiguration.f1
@@ -16,12 +15,12 @@ ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23a2f4a8b3c9af1918e0d4e34f2525204846a7ad
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bd0987cfe98f8cb72531bf807494af1867646dcf
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701442"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617240"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Настройка служб DQS для использования справочных данных
 
@@ -74,7 +73,7 @@ ms.locfileid: "51701442"
   
     4.  В поле «Схема» укажите схему, определяющую строку полей (имен столбцов), которые будут получаться от поставщика служб ссылочных данных с прямой ссылкой для подключения. Имя поля не должно содержать пробелов, а поля должны разделяться запятыми. Например: `FirstName, LastName, City, State`.  
   
-    5.  В поле **URI** введите URI нового поставщика служб ссылочных данных с прямой ссылкой для подключения. В службах DQS разрешены только безопасные идентификаторы URI (адрес начинается с « https://»).  
+    5.  В поле **URI** введите URI нового поставщика служб ссылочных данных с прямой ссылкой для подключения. В службах DQS разрешены только безопасные идентификаторы URI (адрес начинается с "https://").  
   
     6.  В поле **Максимальный размер пакета** введите максимальное число записей в пакете, отправляемом поставщику служб ссылочных данных для очистки. Для действия по очистке можно указать до 100 записей в пакете включительно.  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da0c23b3fcc746fa2ad8614f88ce539386e71b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42fdd43e7e535452d01701fd7d230484ae30fcae
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775322"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712165"
 ---
 # <a name="report-design-view-report-builder"></a>Представление конструктора отчетов (построитель отчетов)
   Окно построителя отчетов предназначено для упрощения организации ресурсов отчета и быстрого построения нужных отчетов с разбиением на страницы. В центре окна расположена область конструктора, в верхней части — лента, а слева, внизу и справа находятся панели. В области конструктора добавляются и организовываются элементы отчета. В этой статье содержатся сведения о панелях, используемых для добавления, выбора и организации ресурсов отчета и изменения свойств элементов отчета.  
@@ -170,6 +170,6 @@ ms.locfileid: "47775322"
   
 ## <a name="see-also"></a>См. также:  
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+ [Построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd0827109cff1cda866ed8a0d85f9cb37ab54f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021588"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712495"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Работа с ключевыми показателями эффективности в службах Reporting Services
 
@@ -21,7 +21,7 @@ ms.locfileid: "50021588"
 
 Ключевой показатель эффективности (KPI) — это визуальная подсказка, которая позволяет определить степень продвижения в направлении цели.  Ключевые показатели эффективности представляют большую ценность для групп организации, менеджеров и компаний, так как позволяют быстро оценить прогресс на пути к достижению измеримых целей.   
   
-С помощью ключевых показателей эффективности в SQL Server 2016 Reporting Services можно легко получить ответы на следующие вопросы:  
+С помощью ключевых показателей эффективности в SQL Server Reporting Services можно легко получить ответы на следующие вопросы:  
   
 -   области, в которых компания преуспевает и отстает на основе показателей;  
   

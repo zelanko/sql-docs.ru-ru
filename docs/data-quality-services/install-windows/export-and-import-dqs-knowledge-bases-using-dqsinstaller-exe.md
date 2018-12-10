@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e1f999908a0cf5ed006c651da31701cb4aa93ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b76eca15b4c435230c2449d79dd892fd9bd736a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772182"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617454"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
 
@@ -33,7 +32,7 @@ ms.locfileid: "47772182"
 -   Для экспорта всех баз знаний на сервере [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] в файл резервной копии DQS (.dqsb) запустите программу DQSInstaller.exe с параметром `exportkbs` из командной строки, введя полный путь к файлу и имя файла, в который будут экспортированы базы знаний. Например, для экспорта всех баз знаний в файл DQSBackup.dqsb на диске C: выполните следующую команду:  
   
     ```  
-    dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb  
+    dqsinstaller.exe -exportkbs c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -42,7 +41,7 @@ ms.locfileid: "47772182"
 -   Для экспорта всех баз знаний в файл резервной копии DQS при удалении [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]запустите программу DQSInstaller.exe с параметром `uninstall` из командной строки, задав полный путь к файлу и имя файла, в который следует экспортировать базы знаний. Например, для экспорта всех баз знаний в файл DQSBackup.dqsb на диске C: и последующего удаления [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]выполните следующую команду:  
   
     ```  
-    dqsinstaller.exe –uninstall c:\DQSBackup.dqsb  
+    dqsinstaller.exe -uninstall c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -54,15 +53,15 @@ ms.locfileid: "47772182"
  Запустите программу DQSInstaller.exe с параметром `importkbs` из командной строки, задав полный путь к файлу и имя файла, из которого следует импортировать базы знаний. Например, для импорта всех баз знаний из файла DQSBackup.dqsb на диске C: выполните следующую команду:  
   
 ```  
-dqsinstaller.exe –importkbs c:\DQSBackup.dqsb  
+dqsinstaller.exe -importkbs c:\DQSBackup.dqsb  
 ```  
   
- Если в [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] имеются существующие базы знаний с теми же именами, что и у импортируемых баз данных, к именам импортируемых баз данных будет добавлен символ подчеркивания (_) и целочисленное значение, отсчитываемое от единицы. Например, если повторяется домен «CompanyName», то импортируемый домен получит имя «CompanyName_1».  
+ Если в [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] имеются существующие базы знаний с теми же именами, что и у импортируемых баз данных, к именам импортируемых баз данных будет добавлен символ подчеркивания (_) и целочисленное значение, отсчитываемое от единицы. Например, если повторяется домен "CompanyName", то импортируемый домен получит имя "CompanyName_1".  
   
 ## <a name="see-also"></a>См. также:  
  [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Экспорт базы знаний в файл DQS](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
- [Импорт базы знаний из файла DQS](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
+ [Экспорт базы знаний в файл .dqs](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
+ [Импорт базы знаний из файла .dqs](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
   
   

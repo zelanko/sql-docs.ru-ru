@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3a171b8a55394ae974cdc9e891e94bd84c9511f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc197fdb8571df79e1ea39cf49086a1cea68b4f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653372"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543796"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Определение признаков конца поля и строки (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47653372"
 |Обратная косая черта*|\\\|  
 |Знак завершения NULL (невидимый знак завершения)**|\0|  
 |Любой печатаемый символ (управляющие символы, за исключением символа NULL, символов табуляции, перевода строки и возврата каретки, являются непечатными)|(*, A, t, l и т. д.)|  
-|Строка, которая может содержать до десяти печатных символов, включая некоторые или все указанные выше признаки конца|(**\t\*\*, end, !!!!!!!!!!, \t—\n и т. д.)|  
+|Строка, которая может содержать до десяти печатных символов, включая некоторые или все указанные выше признаки конца|(**\t\*\*, end, !!!!!!!!!!, \t-\n и т. д.)|  
   
  *Для обозначения управляющего символа с escape-символом обратной косой черты используются только знаки t, n, r, 0 и "\0".  
   

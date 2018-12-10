@@ -1,6 +1,6 @@
 ---
 title: Настройка масштабного развертывания сервера отчетов, работающего в собственном режиме | Документы Майкрософт
-ms.date: 05/24/2018
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b026e4e361ff6664dfdc78d0215ec3ed723fe93
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021648"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710645"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Настройка масштабного развертывания сервера отчетов, работающего в собственном режиме
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
 
 Службы Reporting Services в собственном режиме поддерживают модель масштабного развертывания, которая позволяет запускать несколько экземпляров сервера отчетов, совместно использующих одну базу данных сервера отчетов. Масштабное развертывание позволяет увеличить масштабируемость сервера отчетов, чтобы обслуживать одновременно больше пользователей и повысить нагрузочную способность сервера отчетов. Масштабное развертывание также может быть использовано для выделения отдельных серверов для обработки интерактивных или запланированных отчетов.
 
 Для оптимизации производительности любой масштабируемой среды на сервере отчетов Power BI необходимо настроить сходство клиента (иногда называемое прикрепленными сеансами) в подсистеме балансировки нагрузки.  
   
-В случае служб SQL Server 2016 Reporting Services серверы отчетов в режиме интеграции с SharePoint для масштабного развертывания используют инфраструктуру продуктов SharePoint. Масштабное развертывание в режиме интеграции с SharePoint выполняется за счет добавления новых серверов отчетов в режиме интеграции с SharePoint в ферму SharePoint. Сведения о масштабном развертывании в режиме интеграции с SharePoint см. в статье [Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+В случае служб SQL Server 2016 Reporting Services и более ранних версий серверы отчетов в режиме интеграции с SharePoint для масштабного развертывания используют инфраструктуру продуктов SharePoint. Масштабное развертывание в режиме интеграции с SharePoint выполняется за счет добавления новых серверов отчетов в режиме интеграции с SharePoint в ферму SharePoint. Сведения о масштабном развертывании в режиме интеграции с SharePoint см. в статье [Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
  
   *Масштабное развертывание* используется в следующих ситуациях:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "50021648"
   
  **Чтобы произвести планирование, установку и настройку масштабного развертывания, выполните следующие шаги.**  
   
--   Инструкции по установке экземпляров сервера отчетов см. в статье [Установка SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Инструкции по установке экземпляров сервера отчетов см. в статье [Установка SQL Server с помощью мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 -   Если планируется выполнить масштабное развертывание на NLB-кластере, следует настроить NLB-кластер перед настройкой масштабного развертывания. Дополнительные сведения см. в статье [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   

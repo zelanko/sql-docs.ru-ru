@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1056992fea4b9b1ee7bcd0857ca566d67cab40
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2a720f17e43dc22c5bb554c1e7a83cc7e845b835
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813857"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711305"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)
 
@@ -132,7 +132,7 @@ ms.locfileid: "51813857"
  Чтобы приступить к работе над первым отчетом, см. раздел [Создание простого табличного отчета &#40;учебник по службам SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Дополнительные сведения о конструкторах запросов, которые можно использовать в конструкторе отчетов, см. в разделе [Средства проектирования запросов (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
- [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) — это автономное приложение, с помощью которого можно создавать отчеты с разбиением на страницы вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Существующие отчеты можно настраивать и обновлять независимо от того, были ли они созданы в конструкторе отчетов или в предыдущих версиях [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Его можно установить с веб-портала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или из Центра загрузки Майкрософт.  
+ [Построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) — это автономное приложение, с помощью которого можно создавать отчеты с разбиением на страницы вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Существующие отчеты можно настраивать и обновлять независимо от того, были ли они созданы в конструкторе отчетов или в предыдущих версиях [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Его можно установить с веб-портала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или из Центра загрузки Майкрософт.  
   
  [Построитель отчетов можно скачать](https://go.microsoft.com/fwlink/?LinkID=219138) из Центра загрузки Майкрософт.  
   

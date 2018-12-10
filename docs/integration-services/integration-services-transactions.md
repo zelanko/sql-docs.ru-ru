@@ -16,12 +16,12 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa40898a63a4d84f9efeaf2c1bf404ab17cea20c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 47bca5d52c23a51177e9fe2492dfe1e001a2f807
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642071"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539177"
 ---
 # <a name="integration-services-transactions"></a>Транзакции служб Integration Services
   Пакеты используют транзакции для связывания выполняемых в базе данных задачами операций в атомарные объекты, и, таким образом, сохраняют целостность данных. Все типы контейнеров служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (пакеты, контейнеры циклов по элементам и по каждому элементу, контейнеры последовательности, а также серверы задач, которые содержат каждую задачу) могут быть настроены для использования транзакций. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют три параметра для настройки транзакций: **NotSupported**, **Supported**и **Required**.  

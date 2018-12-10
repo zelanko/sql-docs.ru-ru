@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eba94f256e5b8a9f8d335076e65765d507622cea
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 05f63018eb5af5ec4c3a12c9bce14b550512471e
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030173"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711946"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Включение и отключение печати на стороне клиента для служб Reporting Services
 
   Кнопка печати на панели инструментов средства просмотра отчетов позволяет использовать формат PDF для печати отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , просматриваемых в браузере, на стороне клиента. В новой функции удаленной печати для преобразования отчета в формат PDF используется модуль подготовки отчетов, который входит в состав [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Вы можете скачать отчет в формате PDF. А если у вас есть установленное приложение для просмотра PDF-файлов, с помощью кнопки печати можно отобразить диалоговое окно со стандартными средствами для настройки параметров страницы, включая ее размер и ориентацию, а также возможность предварительного просмотра PDF-файла. Хотя по умолчанию клиентская печать допускается, эту функцию можно отключить.  
   
- В предыдущих версиях [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использовался элемент управления ActiveX, который приходилось скачивать с сервера отчетов на клиентский компьютер. Если вы обновите сервер отчетов до версии SQL Server 2016, элемент управления печатью не будет автоматически удален с сервера отчетов или клиентских компьютеров.  
+ В предыдущих версиях [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использовался элемент управления ActiveX, который приходилось скачивать с сервера отчетов на клиентский компьютер. Если вы обновите сервер отчетов до версии SQL Server 2016 или более поздней, элемент управления печатью не будет автоматически удален с сервера отчетов или клиентских компьютеров.  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> Процесс печати  
  Когда вы нажимаете кнопку печати ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") на панели инструментов средства просмотра отчетов, запускаются разные процессы. Они зависят от используемого браузера и установленных на клиентском компьютере приложений для просмотра PDF-файлов.   Учитывая конфигурацию клиентского компьютера, вы сможете скачать PDF-файл, настроить в диалоговом окне параметры печати или выбрать оба варианта.  
@@ -98,7 +98,7 @@ Dim rs As New ReportingService()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  

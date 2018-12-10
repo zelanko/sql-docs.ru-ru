@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 584f35564e25026553f189e9048137c73ba1b64e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 68297156870ac3eefc5b532b7e15f253064e4608
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021638"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711663"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Учебник. Форматирование текста (построитель отчетов)
 
@@ -359,6 +359,6 @@ ms.locfileid: "50021638"
 
 [Учебники построителя отчетов](../reporting-services/report-builder-tutorials.md) 
 [Форматирование элементов отчета](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
-[Построитель отчетов в SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Построитель отчетов в SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

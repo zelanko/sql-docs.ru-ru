@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a51c8ac3fce465e6742001eb884332d2eb1e4309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fab47f8994be4500cca49bc427aa7ec7292be2a2
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800582"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710995"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Основные понятия разработки отчетов (построитель отчетов и службы SSRS)
   В этом разделе кратко определены некоторые основные понятия, используемые в документации по построителю отчетов и конструктору отчетов для описания отчетов с разбиением на страницы. Определения отдельных слов и терминов см. в разделе [Глоссарий (построитель отчетов)](../../reporting-services/report-builder/glossary-report-builder.md).  
@@ -34,10 +34,10 @@ ms.locfileid: "47800582"
  [Области данных и карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Описывает типы областей данных, которые можно добавить в макет отчета. Области данных определяют внешний вид отчета: таблица, матрица, список или диаграмма.  
   
- [Понятия параметров отчета (построитель отчетов и службы SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
+ [Концепция параметров отчета (построитель отчетов и службы SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  Описывает способы определения и использования параметров отчета, а также порядок независимого управления параметрами отчета из определения отчета на сервере отчетов.  
   
 ## <a name="see-also"></a>См. также:  
- [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+ [Построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

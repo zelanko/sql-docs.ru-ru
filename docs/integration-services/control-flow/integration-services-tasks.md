@@ -27,12 +27,12 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5b7675748ba110d19147750133bf3252ba3c29e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 656a25127299bedc122a38aafa4534adbe181ccf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640941"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545268"
 ---
 # <a name="integration-services-tasks"></a>Задачи служб Integration Services
   Задачами называются элементы потока управления, которые определяют рабочие модули, выполняющиеся в потоке управления пакета. Пакет служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] состоит из одной или более задач. Если в пакете несколько задач, они связаны и упорядочены в потоке управления с помощью управления очередностью.  
@@ -75,7 +75,7 @@ ms.locfileid: "51640941"
   
  Дополнительные сведения о программном добавлении задач в пакет см. в разделе [Программное добавление задач](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md).  
   
- Каждая задача может быть настроена отдельно с помощью собственных диалоговых окон, предоставляемых конструктором служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , или в окне «Свойства» среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. В пакете может храниться несколько задач одного типа (например шесть задач «Выполнение SQL»), и каждая из них может быть настроена по-разному. Дополнительные сведения см. в разделе [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Каждая задача может быть настроена отдельно с помощью собственных диалоговых окон, предоставляемых конструктором служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , или в окне «Свойства» среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. В пакете может храниться несколько задач одного типа (например, шесть задач "Выполнение SQL"), и каждая из них может быть настроена по-разному. Дополнительные сведения см. в разделе [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="tasks-connections-and-groups"></a>Подключения и группы задач  
  Если задача содержит несколько задач, они связаны и упорядочены в потоке управления с помощью ограничений очередностью. Дополнительные сведения см. в статье [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  

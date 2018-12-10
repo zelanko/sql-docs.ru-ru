@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f89e3d512c76557548ef3fc707861e708a28dc64
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 8e65d1f965b45d808ba68a9cdffc87fad6f08814
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814137"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712315"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Установка первого сервера отчетов в режиме интеграции с SharePoint
 
@@ -108,7 +108,7 @@ ms.locfileid: "51814137"
   
 2.  Выберите пункт **Установка** в левой части мастера, затем пункт **Новая изолированная установка SQL Server или добавление функций в существующую установку**.  
 
-3.  Если отображается страница **Ключ продукта** , введите ключ или примите выбранный по умолчанию вариант «Ознакомительный выпуск Enterprise Evaluation Edition».  
+3.  Если отображается страница **Ключ продукта**, введите ключ или примите выбранный по умолчанию вариант "Enterprise (ознакомительная версия)".  
   
      Выберите **Далее**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "51814137"
   
 6.  В зависимости от продуктов, уже установленных на компьютере, на странице **Установка файлов установки** может появиться следующее сообщение:  
   
-    -   «Для одного или нескольких необходимых файлов существуют незавершенные операции. После завершения процесса установки следует перезагрузить компьютер».  
+    -   "Для одного или нескольких необходимых файлов существуют незавершенные операции. После завершения процесса установки следует перезагрузить компьютер".  
   
     -   Выберите **Далее**.  
   
@@ -289,9 +289,9 @@ ms.locfileid: "51814137"
   
 -   Устанавливает службы Reporting Services и прокси-сервер служб, а затем запускает службы.  
   
--   Создает прокси-сервер службы с именем «Reporting Services».  
+-   Создает прокси-сервер службы с именем Reporting Services.  
   
--   Создает приложение служб Reporting Services с именем "Reporting Services Application".  
+-   Создает приложение служб Reporting Services с именем Reporting Services Application.  
   
 -   Включает компонент [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] для семейства веб-сайтов.  
   
@@ -299,9 +299,9 @@ ms.locfileid: "51814137"
   
 -   Обновите параметр **-Account** для прокси-сервера службы. В качестве учетной записи необходимо использовать управляемую учетную запись службы на ферме SharePoint. Дополнительные сведения см. в разделе, посвященном SharePoint, [Планирование учетных записей администрирования и служб в SharePoint 2013](https://technet.microsoft.com/library/cc263445.aspx).  
   
--   Обновляет параметр **–DatabaseServer** для приложения службы. Этот параметр является экземпляром компонента Database Engine.  
+-   Изменяет параметр **-DatabaseServer** для приложения службы. Этот параметр является экземпляром компонента Database Engine.  
   
--   Обновляет параметр **–url** сайта, на котором необходимо включить функцию [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
+-   Изменяет параметр **-url** сайта, на котором необходимо включить функцию [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
  **Использование скрипта.**  
   
@@ -318,7 +318,7 @@ $starttime=Get-Date
 write-host -foregroundcolor DarkGray StartTime>> $starttime   
   
 Write-Host -ForegroundColor Green "Import the SharePoint PowerShell snappin"  
-Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0  
+Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0  
   
 Write-Host -ForegroundColor Green "Install SSRS Service and Service Proxy, and start the service"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
@@ -428,7 +428,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
 
 [Командлеты PowerShell для режима служб SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
 [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+[Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   
 [Служба SharePoint и Служебные приложения службы Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

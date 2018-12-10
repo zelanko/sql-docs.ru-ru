@@ -5,8 +5,7 @@ ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
@@ -15,12 +14,12 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07004bdd1285d919f2d7480e6ee0c99573d62732
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ca00ce6884ca1e36d25a7c593b0f65ac6b5c2809
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696272"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617404"
 ---
 # <a name="create-a-cross-domain-rule"></a>Создание междоменного правила
 
@@ -30,7 +29,7 @@ ms.locfileid: "51696272"
   
  Каждое предложение If и Then в междоменном правиле определяется для одного из доменов составного домена. Каждое предложение должно быть определено для своего домена. Междоменное правило должно связывать несколько отдельных доменов; в составном домене нельзя определить простое доменное правило (только для одного домена). Это следует делать путем определения доменного правила для отдельного домена. Предложения If и Then могут содержать одно или несколько условий.  
   
- Междоменное правило, содержащее определительные условия, будет применять логику правила к синонимам значений в условиях, в также к самим значениям. Определительными условиями для предложений If и Then являются Значение равно, Значение не равно, Значение в наборе или Значение не в наборе. Например, предположим, что имеется следующее междоменное правило для составного домена: если для «City» значение равно «Los Angeles», то для «State» значение равно «CA». «Если "Los Angeles" и "LA" являются синонимами, это правило воспримет правильно "Los Angeles CA" и "LA CA", но возвратит ошибку для "Los Angeles WA" и "LA WA".  
+ Междоменное правило, содержащее определительные условия, будет применять логику правила к синонимам значений в условиях, в также к самим значениям. Определительными условиями для предложений If и Then являются Значение равно, Значение не равно, Значение в наборе или Значение не в наборе. Например, предположим, что имеется следующее междоменное правило для составного домена: если для City значение равно Los Angeles, то для State значение равно CA. Если Los Angeles и LA являются синонимами, это правило воспримет правильно Los Angeles CA и LA CA, но возвратит ошибку для Los Angeles WA и LA WA.  
   
  Помимо информирования о выполнении междоменного правила определительное предложение *Then* в междоменном правиле, **Значение равно**, также исправляет данные во время проведения очистки данных. Дополнительные сведения см. в подразделе [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) раздела [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
   

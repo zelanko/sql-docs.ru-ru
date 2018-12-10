@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23938f5885fd207aed8143686f7b762d81fc8130
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 92655853880919ba29b4736404fe1637471e8f15
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813897"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712635"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 В файле [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** хранятся параметры, которые используются веб-службой сервера отчетов и для фоновой обработки. Все приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] работают в одном процессе, который считывает параметры конфигурации, хранящиеся в файле RSReportServer.config. Серверы отчетов, работающие в собственном режиме и в режиме интеграции с SharePoint, используют файл RSReportServer.config, однако в этих режимах используются разные параметры из этого файла конфигурации. Версия файла для режима интеграции с SharePoint имеет меньший размер, поскольку многие параметры для этого режима хранятся не в файле, а в базах данных конфигурации SharePoint. В этом разделе описывается файл конфигурации по умолчанию, который устанавливается для собственного режима и для режима интеграции с SharePoint, а также некоторые важные параметры и варианты работы, которые управляются файлом конфигурации.  
@@ -29,20 +29,22 @@ ms.locfileid: "51813897"
 
 
   
-### <a name="native-mode-report-server"></a>Сервер отчетов в собственном режиме  
+### <a name="native-mode-report-server"></a>Сервер отчетов в собственном режиме 
 
  
-**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
 ```
 
-**[!INCLUDE[applies](../../includes/applies-md.md)]** Техническая версия отчетов Power BI в службах SQL Server Reporting Services (январь 2017 г.)
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
 ```  
   
-### <a name="sharepoint-mode-report-server"></a>Сервер отчетов режима SharePoint
+### <a name="sharepoint-mode-report-server"></a>Сервер отчетов режима SharePoint 
 
 > [!NOTE]
 > Интегрированный режим SharePoint недоступен в технической версии отчетов Power BI (январь 2017 г.) в SQL Server Reporting Services.
@@ -57,7 +59,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  В следующей таблице представлены сведения об общих параметрах конфигурации в первой части файла. Параметры представлены в том порядке, в котором они следуют в файле конфигурации. В последнем столбце таблицы указывается, к какому режиму работы сервера отчетов относится данный параметр: основному режиму **(N)** , режиму интеграции с SharePoint **(S)** или к обоим режимам.  
   
 > [!NOTE]  
->  В этом разделе «максимальное целое число» соответствует значению INT_MAX, равному 2147483647.  См. дополнительные сведения об [ограничении ресурсов](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  В этом разделе максимальное целое число соответствует значению INT_MAX, равному 2147483647.  См. дополнительные сведения об [ограничении ресурсов](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Настройка|Описание|Режим|  
 |-------------|-----------------|----------|  

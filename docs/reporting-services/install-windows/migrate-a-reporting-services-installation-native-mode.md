@@ -7,12 +7,12 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 67866bf7c201d9a00eb56195d3db10cdf272ef2b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2e7c5d6ecaebcdad5b3e2d9d23b4660f12e0bad7
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602944"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712425"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Перенос установки служб Reporting Services (собственный режим)
 
@@ -147,9 +147,9 @@ ms.locfileid: "51602944"
   
  Перейдите по одной из следующих ссылок для просмотра инструкций по установке нового экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-* [Установка SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+* [Установка SQL Server с помощью мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
-* [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
+* [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
 
 ## <a name="bkmk_move_database"></a> Перемещение базы данных сервера отчетов
 

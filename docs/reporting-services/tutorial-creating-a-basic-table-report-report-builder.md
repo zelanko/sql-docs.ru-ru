@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a241d0c1bde3eea57c21ca8a14b465a79aa89c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627892"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712355"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Учебник. Создание простого табличного отчета (построитель отчетов)
 Это учебник поможет создать простой табличный отчет на основе образца данных по продажам. На приведенной ниже иллюстрации показан отчет, который предстоит создать.  
@@ -312,7 +312,7 @@ ms.locfileid: "47627892"
 4.  Нажмите кнопку **Сохранить**.  
   
 ## <a name="Export"></a>7. Экспорт отчета  
-Отчеты можно экспортировать в различные форматы, например Microsoft Excel и CSV. Дополнительные сведения см. в разделе [Export Reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+Отчеты можно экспортировать в различные форматы, например Microsoft Excel и CSV. Дополнительные сведения см. в разделе [Экспорт отчетов (построитель отчетов и службы SSRS)](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 В этом учебнике описан экспорт отчета в формат Excel и задание свойства отчета, позволяющего присваивать пользовательские имена вкладкам книги.  
   
@@ -355,6 +355,6 @@ ms.locfileid: "47627892"
   
 ## <a name="see-also"></a>См. также:  
 [Учебники по построителю отчетов](../reporting-services/report-builder-tutorials.md)  
-[Построитель отчетов в SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Построитель отчетов в SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 
