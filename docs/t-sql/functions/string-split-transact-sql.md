@@ -1,7 +1,7 @@
 ---
 title: STRING_SPLIT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 11/28/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: daad1b738030efa48d5a85f91b70ebf747d4702c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 5fb13510e4894e3f2bc77293a1f4aac0b186f1f0
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812529"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586257"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,13 +31,15 @@ ms.locfileid: "51812529"
 > [!div class="nextstepaction"]
 > [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-Разделяет символьное выражение с использованием указанного разделителя.  
-  
-> [!NOTE]  
-> Функция **STRING_SPLIT** доступна только при уровне совместимости 130 и выше. Если уровень совместимости базы данных меньше 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сможет найти и выполнить функцию **STRING_SPLIT**. Сведения об изменении уровня совместимости базы данных см. в статье [Просмотр или изменение уровня совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
-> Имейте в виду, что уровень совместимости 120 может использоваться по умолчанию даже в новых [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
-  
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+Функция с табличным значением, которая разбивает строку на строки подстрок в зависимости от указанного знака разделения.
+
+#### <a name="compatibility-level-130"></a>Уровень совместимости 130
+
+STRING_SPLIT требует уровня совместимости не ниже 130. При уровне меньше 130 SQL Server не может найти функцию STRING_SPLIT.
+
+Сведения об изменении уровня совместимости базы данных см. в статье [Просмотр или изменение уровня совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
+
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,26 +52,37 @@ STRING_SPLIT ( string , separator )
  [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа (например, **nvarchar**, **varchar**, **nchar** или **char**).  
   
  *separator*  
- Отдельное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа (например, **nvarchar(1)**, **varchar(1)**, **nchar(1)** или **char(1)**), которое используется в качестве разделителя сцепленных строк.  
+ Отдельное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа (например, **nvarchar(1)**, **varchar(1)**, **nchar(1)** или **char(1)**), которое используется в качестве разделителя сцепленных подстрок.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- Возвращает состоящую из одного столбца таблицу с фрагментами. Имя столбца — **value**. Возвращает значение типа **nvarchar**, если любой из входных аргументов имеет тип **nvarchar** или **nchar**. В противном случае возвращает значение типа **varchar**. Длина типа возвращаемого значения равна длине аргумента string.  
+
+Возвращает состоящую из одного столбца таблицу, строки которой являются подстроками. Имя столбца — **value**. Возвращает значение типа **nvarchar**, если любой из входных аргументов имеет тип **nvarchar** или **nchar**. В противном случае возвращает значение типа **varchar**. Длина типа возвращаемого значения равна длине аргумента string.  
   
 ## <a name="remarks"></a>Remarks  
-Функция **STRING_SPLIT** принимает строку, которую следует разделить, и разделитель, с помощью которого строка будет разделена. Она возвращает состоящую из одного столбца таблицу с подстроками. Например, приведенная ниже инструкция `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');`, в которой в качестве разделителя используется символ пробела, возвращает следующую результирующую таблицу:  
+
+**STRING_SPLIT** вводит строку с разделенными подстроками и один символ для использования в качестве разделителя. STRING_SPLIT выводит таблицу с одним столбцом, строки которого содержат подстроки. Имя выходного столбца — **value**.
+
+Выходные строки могут быть расположены в любом порядке. Порядок _не_ обязательно совпадает с порядком подстрок во входной строке. Окончательный порядок сортировки можно переопределить с помощью предложения ORDER BY в инструкции SELECT (`ORDER BY value`).
+
+Пустые строки нулевой длины присутствуют в том случае, если входная строка содержит два или несколько последовательных вхождений знака разделителя. Пустые подстроки обрабатываются так же, как и обычные подстроки. Можно отфильтровать строки, содержащие пустые подстроки, используя предложение WHERE (`WHERE value <> ''`). Если входная строка равна NULL, функция STRING_SPLIT с табличным значением возвращает пустую таблицу.  
+
+Например, следующая инструкция SELECT использует символ пробела в качестве разделителя:
+
+```sql
+SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
+```
+
+В пробном запуске предыдущая инструкция SELECT вернула следующую результирующую таблицу:  
   
 |value|  
-|-----------|  
+| :-- |  
 |Lorem|  
 |ipsum|  
 |dolor|  
 |sit|  
 |amet.|  
-  
-Если входная строка равна **NULL**, функция **STRING_SPLIT** с табличным значением возвращает пустую таблицу.  
-  
-Для функции **STRING_SPLIT** требуется режим совместимости не ниже 130.  
-  
+| &nbsp; |
+
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-split-comma-separated-value-string"></a>A. Разделение строки значений с разделителями-запятыми  
@@ -157,9 +170,9 @@ FROM Product
 JOIN STRING_SPLIT('1,2,3',',')   
     ON value = ProductId;  
 ```  
-  
-Это альтернатива распространенному антишаблону, заключающемуся в создании динамической строки SQL на прикладном уровне или в [!INCLUDE[tsql](../../includes/tsql-md.md)] либо использовании оператора LIKE:  
-  
+
+Предыдущее использование STRING_SPLIT является заменой распространенного антишаблона. Такой антишаблон может включать создание динамической строки SQL на прикладном уровне или в Transact-SQL. Или антишаблон может осуществляться с помощью оператора LIKE. Смотрите следующий пример инструкции SELECT.
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  

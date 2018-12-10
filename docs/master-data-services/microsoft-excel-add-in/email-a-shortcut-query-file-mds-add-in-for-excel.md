@@ -11,18 +11,18 @@ ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6361994dfc613ef3a3d9367574047b92555bfe3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed28d44aaa89e89ca4769007a5057a97577d2a05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854362"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419305"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Отправка файла ярлыка запроса по электронной почте (надстройка MDS для Excel)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно отправить кому-либо файл ярлыка запроса по электронной почте, если адресат должен иметь возможность работать с теми же данными, что и вы. Вместо сохранения и отправки листа по электронной почте следует предоставлять общий доступ к запросу.  
+  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] можно отправить кому-либо файл ярлыка запроса по электронной почте, если адресат должен иметь возможность работать с теми же данными, что и вы. Вместо сохранения и отправки листа по электронной почте следует предоставлять общий доступ к запросу.  
   
 ## <a name="prerequisites"></a>предварительные требования  
  Для выполнения этой процедуры:  

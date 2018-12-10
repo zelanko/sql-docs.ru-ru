@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99f6a05b3d033a32b9a45ec305faa92f214e59e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668033"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535819"
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,8 @@ ms.locfileid: "51668033"
 В спецификации "Simple Features for SQL" консорциума OGC обсуждаются внешние и внутренние кольца, но их различие не имеет особого значения для типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** . Любое кольцо многоугольника можно считать внешним кольцом.  
 
 Дополнительные сведения о спецификациях OGC см. в одном из следующих источников:  
--   [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](https://go.microsoft.com/fwlink/?LinkId=93627)  
--   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](https://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Сегменты дуги  
 Три типа, допускающих создание экземпляров, могут принимать сегменты дуги: **CircularString**, **CompoundCurve**и **CurvePolygon**.  Сегмент дуги определяется тремя точками на двумерной плоскости, при этом третья точка не может совпадать с первой.  
@@ -124,7 +124,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 Этот фрагмент выдает следующие результаты:  
 ```
 LS LengthCS Length
-5.65685…6.28318…
+5.65685...6.28318...
 ```
 
 Экземпляры **CircularString** используют меньшее число точек для хранения границ кривой и обеспечивают большую точность, чем экземпляры **LineString**. Объекты**CircularString** полезны для хранения круговых границ, например область поиска радиусом в двадцать миль от указанной точки. Объекты**LineString** хорошо подходят для хранения линейных границ, например городского квартала.  

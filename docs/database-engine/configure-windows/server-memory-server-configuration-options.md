@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 95cda6788643ac19fd21c2838f10c8a3c3e54f8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2b85546e79e426f078ff77ab11b4eb9eb076aea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828736"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519517"
 ---
 # <a name="server-memory-server-configuration-options"></a>Параметры конфигурации сервера «Server Memory»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47828736"
 Минимальный объем памяти для **max server memory** составляет 128 МБ.
   
 > [!IMPORTANT]  
-> Если вы зададите слишком высокое значение **Макс. памяти сервера**, одному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], возможно, придется конкурировать с другими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], размещенными на том же узле, за память. Если же задать слишком низкое значение, может возникнуть значительный дефицит памяти или проблемы с производительностью. Если присвоить параметру **Макс. памяти сервера** минимальное значение, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может не запуститься. Если не удается запустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после изменения этого параметра, запустите его с использованием параметра запуска ***–f*** и верните параметр **max server memory** к предыдущему значению. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+> Если вы зададите слишком высокое значение **Макс. памяти сервера**, одному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], возможно, придется конкурировать с другими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], размещенными на том же узле, за память. Если же задать слишком низкое значение, может возникнуть значительный дефицит памяти или проблемы с производительностью. Если присвоить параметру **Макс. памяти сервера** минимальное значение, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может не запуститься. Если не удается запустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после изменения этого параметра, запустите его с использованием параметра запуска ***-f*** и верните параметр **max server memory** к предыдущему значению. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использовать память динамически; но можно установить параметры памяти вручную и ограничить объем памяти, доступный для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перед настройкой объема памяти для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определите подходящее значение путем вычитания из общего объема физической памяти того объема, который требуется операционной системе, выделениям памяти, не управляемым параметром max_server_memory, и другим экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (и для других нужд, если компьютер не выделен полностью под сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Разница — максимальный объем памяти, который можно выделить текущему экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  

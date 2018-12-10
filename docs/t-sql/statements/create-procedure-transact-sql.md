@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32f201e6eb386119fd61aa9fb34fdc90a7ab4b25
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559457"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512120"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -498,7 +498,7 @@ GO
 |[Базовый синтаксис](#BasicSyntax)|CREATE PROCEDURE|  
 |[Передача параметров](#Parameters)|@parameter <br> &nbsp;&nbsp; • значение по умолчанию <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • тип возвращающего табличное значение параметра <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[Изменение данных с помощью хранимой процедуры](#Modify)|UPDATE|  
-|[Обработка ошибок](#Error)|TRY…CATCH|  
+|[Обработка ошибок](#Error)|TRY...CATCH|  
 |[Запутывание определений процедур](#Encrypt)|WITH ENCRYPTION|  
 |[Принудительная перекомпиляция хранимой процедуры](#Recompile)|WITH RECOMPILE|  
 |[Задание контекста безопасности](#Security)|EXECUTE AS|  
@@ -797,7 +797,7 @@ EXEC HumanResources.Update_VacationHours 40;
 ###  <a name="Error"></a> Обработка ошибок  
  Примеры в этом разделе показывают, как производится обработка ошибок, которые могут возникнуть при выполнении хранимых процедур.  
   
-#### <a name="j-using-trycatch"></a>К. Использование TRY…CATCH  
+#### <a name="j-using-trycatch"></a>К. Использование конструкции TRY...CATCH  
  В следующем примере конструкция TRY…CATCH используется для возврата сведений об ошибках во время выполнения хранимой процедуры.  
   
 ```sql  

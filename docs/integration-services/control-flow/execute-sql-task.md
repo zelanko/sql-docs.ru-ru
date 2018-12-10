@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641835"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504066"
 ---
 # <a name="execute-sql-task"></a>Задача "Выполнение SQL"
   Задача «Выполнение SQL» выполняет инструкции SQL или хранимые процедуры из пакета. Задача может содержать одну инструкцию SQL или несколько инструкций, запускаемых последовательно. Задача «Выполнение SQL» может быть использована для следующих целей:  
@@ -181,7 +181,7 @@ ms.locfileid: "51641835"
   
 #### <a name="sqlsourcetype--direct-input"></a>WQLQuerySource = Прямой ввод  
  **SQLStatement**  
- Введите инструкцию SQL для выполнения в окне параметров или нажмите кнопку обзора (...) для ввода инструкции SQL в диалоговом окне **Ввод SQL-запроса** , либо нажмите кнопку **Создать запрос** для составления инструкции при помощи диалогового окна **Построитель запросов** .  
+ Введите инструкцию SQL для выполнения в окне параметров или нажмите кнопку обзора (...) для ввода инструкции SQL в диалоговом окне **Ввод SQL-запроса**, либо нажмите кнопку **Создать запрос** для составления инструкции при помощи диалогового окна **Построитель запросов**.  
   
  **См. также:** [Построитель запросов](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
@@ -280,8 +280,8 @@ ms.locfileid: "51641835"
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<имя параметра>|\@\<имя параметра>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|интерфейс ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL и OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|интерфейс ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL и OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Использование параметров с диспетчерами подключений ADO и ADO.NET  
  Диспетчеры подключений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] и ADO предъявляют особые требования к командам SQL, использующим параметры:  
@@ -442,8 +442,8 @@ ms.locfileid: "51641835"
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
     |ADO.NET и SQLMOBILE|\@\<имя параметра>|  
-    |интерфейс ODBC|1, 2, 3, …|  
-    |EXCEL и OLE DB|0, 1, 2, 3, …|  
+    |интерфейс ODBC|1, 2, 3, ...|  
+    |EXCEL и OLE DB|0, 1, 2, 3, ...|  
   
 10. Выберите переменную из списка **Имя переменной** . Дополнительные сведения см. в разделе [Добавление, удаление и изменение области определяемой пользователем переменной в пакете](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
@@ -464,7 +464,7 @@ ms.locfileid: "51641835"
 ##  <a name="Return_codes"></a> Возвращение значений кодов возврата  
  Хранимая процедура может возвращать целочисленное значение, называемое кодом возврата, чтобы указать состояние выполнения процедуры. Чтобы реализовать коды возврата в задаче «Выполнение SQL», используйте параметры типа **ReturnValue** .  
   
- В следующей таблице приведен список типов соединений с примерами команды EXEC, которая реализует коды возврата. Все примеры используют входной параметр **input** . Правила использования маркеров параметров и имен параметров одинаковые для всех типов параметров:**Input**, **Output**и **ReturnValue**.  
+ В следующей таблице приведен список типов соединений с примерами команды EXEC, которая реализует коды возврата. Все примеры используют входной параметр **input** . Правила использования маркеров параметров и имен параметров одинаковы для всех типов параметров: **Input**, **Output** и **ReturnValue**.  
   
  Некоторые типы синтаксиса не поддерживают литералы параметров. В этом случае необходимо предоставить значение параметра с помощью переменной.  
   

@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -16,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 179829be2e7aed6e6e71d31c5baadc57bfeb1e38
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665413"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523344"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, объект Deprecated Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,9 +134,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |PERMISSIONS|Обнаружены ссылки на встроенную функцию PERMISSIONS. Запросите sys.fn_my_permissions. Происходит один раз для каждого запроса.|  
 |ProcNums|Обнаружен устаревший синтаксис ProcNums. Перепишите инструкции, чтобы удалить эти ссылки. Происходит один раз на каждую компиляцию.|  
 |READTEXT|Обнаружен синтаксис READTEXT. Перепишите приложения так, чтобы в них использовался тип данных **varchar(max)** , и удалите тип данных **text** . Происходит один раз для каждого запроса.|  
-|RESTORE DATABASE или LOG WITH DBO_ONLY|Обнаружен синтаксис RESTORE … WITH DBO_ONLY. Вместо этого используйте синтаксис RESTORE … RESTRICTED_USER.|  
-|RESTORE DATABASE или LOG WITH MEDIAPASSWORD|Обнаружен синтаксис RESTORE … WITH MEDIAPASSWORD. Параметр WITH MEDIAPASSWORD не обеспечивает должную безопасность, поэтому его следует удалить.|  
-|RESTORE DATABASE или LOG WITH PASSWORD|Обнаружен синтаксис RESTORE … WITH PASSWORD. Параметр WITH PASSWORD не обеспечивает должную безопасность, поэтому его следует удалить.|  
+|RESTORE DATABASE или LOG WITH DBO_ONLY|Обнаружен синтаксис RESTORE ... WITH DBO_ONLY. Вместо него используйте синтаксис RESTORE … RESTRICTED_USER.|  
+|RESTORE DATABASE или LOG WITH MEDIAPASSWORD|Обнаружен синтаксис RESTORE ... WITH MEDIAPASSWORD. Параметр WITH MEDIAPASSWORD не обеспечивает должную безопасность, поэтому его следует удалить.|  
+|RESTORE DATABASE или LOG WITH PASSWORD|Обнаружен синтаксис RESTORE ... WITH PASSWORD. Параметр WITH PASSWORD не обеспечивает должную безопасность, поэтому его следует удалить.|  
 |Возврат результатов из триггера|Это событие происходит один раз на каждый вызов триггера. Перепишите триггер таким образом, чтобы он не возвращал результирующий набор.|  
 |ROWGUIDCOL|Обнаружен синтаксис ROWGUIDCOL. Перепишите инструкции для использования синтаксиса $rowguid. Происходит один раз на каждую компиляцию.|  
 |SET ANSI_NULLS OFF|Обнаружен синтаксис SET ANSI_NULLS OFF. Удалите этот устаревший синтаксис. Происходит один раз на каждую компиляцию.|  
@@ -173,13 +173,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_configure 'ft notify bandwidth (min)'|Обнаружен параметр «ft notify bandwidth (min)» хранимой процедуры sp_configure. Не используйте. Происходит один раз для каждого запроса.|  
 |sp_configure 'locks'|Обнаружен параметр «locks» хранимой процедуры sp_configure. Блокировки больше не настраиваются. Не используйте. Происходит один раз для каждого запроса.|  
 |sp_configure 'open objects'|Обнаружен параметр «open objects» хранимой процедуры sp_configure. Количество открытых объектов больше не настраивается. Не используйте. Происходит один раз для каждого запроса.|  
-|sp_configure 'priority boost'|Обнаружен параметр «повышение приоритета» хранимой процедуры sp_configure. Не используйте. Происходит один раз для каждого запроса. Используйте вместо него параметр Windows start /high … program.exe.|  
+|sp_configure 'priority boost'|Обнаружен параметр «повышение приоритета» хранимой процедуры sp_configure. Не используйте. Происходит один раз для каждого запроса. Используйте вместо него параметр Windows start /high ... program.exe.|  
 |sp_configure 'remote proc trans'|Обнаружен параметр «remote proc trans» хранимой процедуры sp_configure. Не используйте. Происходит один раз для каждого запроса.|  
 |sp_configure 'set working set size'|Обнаружен параметр «set working set size» хранимой процедуры sp_configure. Размер рабочего множества больше не настраивается. Не используйте. Происходит один раз для каждого запроса.|  
 |sp_control_dbmasterkey_password|Хранимая процедура sp_control_dbmasterkey_password не проверяет наличие главного ключа. Это разрешено для обратной совместимости, но при этом отображается предупреждение. Такое поведение является устаревшим. В следующем выпуске главный ключ должен существовать, а пароль из хранимой процедуры sp_control_dbmasterkey_password должен совпадать с одним из паролей, которые используются для шифрования главного ключа базы данных.|  
 |sp_create_removable|Обнаружена хранимая процедура sp_create_removable. Вместо нее используйте инструкцию CREATE DATABASE. Происходит один раз для каждого запроса.|  
 |sp_db_vardecimal_storage_format|Обнаружено использование формата хранения **vardecimal** . Используйте вместо него сжатие данных.|  
-|sp_dbcmptlevel|Обнаружена хранимая процедура sp_dbcmptlevel. Вместо этого используйте синтаксис ALTER DATABASE … SET COMPATIBILITY_LEVEL. Происходит один раз для каждого запроса.|  
+|sp_dbcmptlevel|Обнаружена хранимая процедура sp_dbcmptlevel. Используйте параметр ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Происходит один раз для каждого запроса.|  
 |sp_dbfixedrolepermission|Обнаружена хранимая процедура sp_dbfixedrolepermission. Не используйте. Происходит один раз для каждого запроса.|  
 |sp_dboption|Обнаружена хранимая процедура sp_dboption. Вместо этого следует использовать инструкции ALTER DATABASE и DATABASEPROPERTYEX. Происходит один раз на каждую компиляцию.|  
 |sp_dbremove|Обнаружена хранимая процедура sp_dbremove. Вместо этого используйте инструкцию DROP DATABASE. Происходит один раз для каждого запроса.|  

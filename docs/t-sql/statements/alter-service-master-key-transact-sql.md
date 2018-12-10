@@ -25,12 +25,12 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e93a5f78129b0d3ca9d687600a99b35dbf2be203
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4580926a6aff40e5c2d4b7da588cf394b6bdfcda
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651782"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516169"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ALTER SERVICE MASTER KEY
 > [!CAUTION]  
 >  Главный ключ службы является корнем иерархии шифрования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Главный ключ службы прямо или непрямо защищает все другие ключи и секретные данные в иерархии шифрования. Если зависящий от него ключ не удастся расшифровать во время принудительного повторного создания главного ключа, то защищаемые этим ключом данные будут потеряны.  
   
- При перемещении SQL на другой компьютер следует использовать одну и ту же учетную запись службы для дешифрования главного ключа службы — SQL Server фиксирует шифрование учетной записи компьютера автоматически.  
+ При перемещении SQL на другой компьютер следует использовать одну и ту же учетную запись службы для дешифрования главного ключа службы — SQL Server фиксирует шифрование учетной записи компьютера автоматически.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL SERVER на сервер.  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e20440d6b70a4e70bf92d1789ef944f332d3dafc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 35273d3b60abf328f916907a0a6cfeb8b6a206c6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021248"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405720"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Резервное копирование и восстановление приложений служб Reporting Services для SharePoint
 

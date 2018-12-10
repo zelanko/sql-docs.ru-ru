@@ -15,12 +15,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e22a148595e8aac059193a21a1b5d4688f5d6f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686562"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542374"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Создание, изменение и удаление таблиц FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ GO
   
 -   Поскольку таблица FileTable содержит столбец FILESTREAM, требуется действующая файловая группа FILESTREAM. При необходимости можно указать действующую файловую группу FILESTREAM в команде **CREATE TABLE** для создания таблицы FileTable. Если файловая группа не указана, то таблица FileTable использует файловую группу FILESTREAM по умолчанию для базы данных. Если база данных не содержит файловую группу FILESTREAM, то возникнет ошибка.  
   
--   Невозможно создать ограничение таблицы в составе инструкции **CREATE TABLE…AS FILETABLE** . Однако можно добавить ограничение позже с помощью инструкции **ALTER TABLE** .  
+-   Невозможно создать ограничение таблицы в составе инструкции **CREATE TABLE…AS FILETABLE**. Однако можно добавить ограничение позже с помощью инструкции **ALTER TABLE** .  
   
 -   Невозможно создать FileTable в базе данных **tempdb** или любой другой системной базе данных.  
   

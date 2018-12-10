@@ -14,12 +14,12 @@ ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e8d82ed31033d32c714889a2835df95a70bf589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d49a3b4de2edfb3dc0c027ce54b5f6677d00abb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808552"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535506"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Получение суммарных или статистических значений для всех строк в таблице (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ FROM titles
   
 Если в запросе указано статистическое выражение, то для всех строк в таблице отображается только само это статистическое значение. Например, при подсчете итогового значения столбца `price` в таблице `titles` названия, имена издателей и другие столбцы не отображаются.  
  
- **!** При создании подытогов (например групп) можно выводить значения столбцов для каждой группы. Дополнительные сведения см. в разделе [Группирование строк в результатах запроса (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
+ **!** При создании подытогов (например, групп) можно выводить значения столбцов для каждой группы. Дополнительные сведения см. в разделе [Группирование строк в результатах запроса (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
 
 ## <a name="aggregate-values-for-all-rows"></a>Статистическая обработка значений по всем строкам  
   

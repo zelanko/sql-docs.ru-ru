@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ca94f7ef5ed0c6f070424c47aee10c7848a061d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822452"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503618"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47822452"
 |Компонент|Неконстантные значения по умолчанию для параметров|При использовании значений по умолчанию с параметрами для скомпилированных хранимых процедур эти значения должны быть константами. Удалите все шаблоны из определений параметров.|  
 |Компонент|EXTERNAL|Хранимые процедуры CLR нельзя скомпилировать в собственном коде. Удалите предложение AS EXTERNAL или параметр NATIVE_COMPILATION в инструкции CREATE PROCEDURE.|  
 |Компонент|Нумерованные хранимые процедуры|Изначально скомпилированные хранимые процедуры нельзя пронумеровать. Удаление **;***номер* из инструкции **CREATE PROCEDURE**.|  
-|Компонент|Многостроковые инструкции INSERT … VALUES|Нельзя вставить несколько строк с использованием одной и той же инструкции **INSERT** в скомпилированной хранимой процедуре. Создайте инструкции **INSERT** для каждой строки.|  
+|Компонент|Многостроковые инструкции INSERT ... INSERT … VALUES|Нельзя вставить несколько строк с использованием одной и той же инструкции **INSERT** в скомпилированной хранимой процедуре. Создайте инструкции **INSERT** для каждой строки.|  
 |Компонент|Обобщенные табличные выражения|Обобщенные табличные выражения (CTE) не поддерживаются в скомпилированных хранимых процедурах. Заново составить запрос.|  
 |Компонент|COMPUTE|Предложение **COMPUTE** не поддерживается. Удалите его из запроса.|  
 |Компонент|SELECT INTO|Предложение **INTO** в инструкции **SELECT** не поддерживается. Перепишите запрос в следующей форме: **INSERT INTO** *Таблица* **SELECT**.|  

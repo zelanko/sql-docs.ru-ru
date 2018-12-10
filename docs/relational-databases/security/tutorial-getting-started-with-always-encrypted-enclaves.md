@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c8c9e653781b821d3fcc2e7c2e5dd218b329e22c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523550"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -228,7 +228,7 @@ ms.locfileid: "51675363"
 1. Подключитесь к базе данных с помощью SSMS.
 2. В **обозревателе объектов** разверните базу данных и перейдите к пункту **Безопасность** > **Ключи Always Encrypted**.
 3. Подготовьте новый главный ключ столбца с поддержкой анклава:
-    1. Щелкните правой кнопкой мыши **Ключи Always Encrypted** и выберите **Создать главный ключ столбца...**
+    1. Щелкните правой кнопкой мыши **Ключи Always Encrypted** и выберите **Создать главный ключ столбца...**.
     2. Выберите имя главного ключа столбца: CMK1.
     3. Убедитесь, что выбрано значение **Хранилище сертификатов Windows (текущий пользователь или локальный компьютер)** или **Azure Key Vault**.
     4. Выберите **Разрешить вычисления анклава**.
@@ -295,7 +295,7 @@ ms.locfileid: "51675363"
 
 1. Включите параметризацию для Always Encrypted.
     1. В главном меню SSMS выберите **Запрос**.
-    2. Щелкните **Параметры запроса**.
+    2. Щелкните **Параметры запроса...**.
     3. Выберите **Выполнение** > **Дополнительно**.
     4. Установите или снимите флажок "Enable Parameterization for Always Encrypted" (Включить параметризацию для Always Encrypted).
     5. Нажмите кнопку "ОК".

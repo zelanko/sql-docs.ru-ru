@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Документация Майкрософт
 description: Создание синтаксиса базы данных для SQL Server, Базы данных SQL Azure, Хранилища данных SQL Azure и Parallel Data Warehouse
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 11/16/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95823c0c63e65532213e1a195b978e98df9d9986
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5642af0a47cff5ffa7c45aa910fb3101ad831df0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701052"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532560"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -898,7 +898,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 <edition_options> ::= 
 {  
 
-  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
+  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }  
   | ( EDITION = {  'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' } 
   | SERVICE_OBJECTIVE = 
     {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
@@ -1075,10 +1075,7 @@ AS COPY OF [имя_исходного_сервера.]имя_исходной_б
 Базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] используют несколько параметров по умолчанию, устанавливаемых при создании базы данных. Дополнительные сведения об этих параметрах по умолчанию см. в списке значений в разделе [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
 Параметр MAXSIZE позволяет ограничить размер базы данных. Если размер базы данных достигает ее значения MAXSIZE, выдается ошибка с кодом 40544. В этом случае данные нельзя вставить или обновить данные и создать новые объекты (например, таблицы, представления, хранимые процедуры и функции). Однако можно по-прежнему читать и удалять данные, усекать и удалять таблицы и индексы, а также выполнять перестроение индексов. Затем можно изменить значение MAXSIZE на значение, превышающее текущий размер базы данных, или удалить некоторые данные, чтобы освободить место в хранилище. Перед возобновлением возможности вставлять новые данные может пройти до 15 минут.  
-  
-> [!IMPORTANT]  
->  Инструкция `CREATE DATABASE` должна быть единственной инструкцией в пакете [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
-  
+   
 Используйте [ALTER DATABASE &#40;База данных SQL Azure&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbls), чтобы в дальнейшем изменять значения размера, выпуска или целевого уровня службы.  
 
 Аргумент CATALOG_COLLATION доступен только во время создания базы данных. 
@@ -1186,7 +1183,7 @@ CREATE DATABASE db_copy
 В следующем примере во время создания базы данных параметрам сортировки каталога задается значение DATABASE_DEFAULT, за счет чего параметры сортировки каталога совпадают с параметрами сортировки базы данных.
 
 ```sql
-CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
+CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 'basic')  
   WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```
   
@@ -1320,11 +1317,11 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 *MAXSIZE*  
 Значение по умолчанию — 245 760 ГБ (240 ТБ).  
 
-**Область применения:** уровень производительности "Оптимизация под гибкость"
+**Область применения:** оптимизация для вычислений Gen1
 
 Максимально допустимый размер базы данных. Размер базы данных не может превышать MAXSIZE. 
 
-**Область применения:** уровень производительности "Оптимизация под вычисление"
+**Область применения:** оптимизация для вычислений Gen2
 
 Максимально допустимый размер данных rowstore в базе данных. Размер данных, хранящихся в таблицах rowstore, разностном хранилище индекса columnstore или некластеризованном индексе на базе кластеризованного индекса columnstore, не может превышать MAXSIZE.  Данные, сжатые в формат columnstore, не имеют ограничений на размер и не ограничивается значением MAXSIZE.
   

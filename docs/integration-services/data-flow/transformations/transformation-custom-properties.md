@@ -42,12 +42,12 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 362d59ff4ba311f4903993cfdb455d0785a912e6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 69dda6d5c0fbe7f8b66bf453b5f240588ad878ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640741"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507711"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   Помимо свойств, общих для большинства объектов потока данных объектной модели служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , многие объекты потока данных обладают настраиваемыми свойствами, специфичными для конкретного объекта. Пользовательские свойства доступны только в среде выполнения и не описаны в справочной документации по программированию служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] для управляемой среды.  

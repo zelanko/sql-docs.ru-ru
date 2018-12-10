@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65d7ed2f7b7639ae2b92222ad97af6edba873f6c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 773edf9a47ab10af5a1b00ee7f64b27f60c14191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671873"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522250"
 ---
 # <a name="database-object-extended-properties-page"></a>Объект базы данных (страница «Расширенные свойства»)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51671873"
  Просмотрите или укажите расширенные свойства объекта. Каждое расширенное свойство состоит из пары имя/значение метаданных, связанных с объектом.  
   
  **Кнопка обзора**  
- Нажмите кнопку обзора (...) после поля **Значение** , чтобы открыть диалоговое окно **Значение расширенного свойства** . Введите или просмотрите значение расширенного свойства в этом более просторном окне.  
+ Нажмите кнопку обзора (...) после поля **Значение**, чтобы открыть диалоговое окно **Значение расширенного свойства**. Введите или просмотрите значение расширенного свойства в этом более просторном окне.  
   
  **Удаление**  
  Удаляет выбранное расширенное свойство.  

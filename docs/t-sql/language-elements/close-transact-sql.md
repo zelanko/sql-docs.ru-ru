@@ -20,24 +20,23 @@ ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 778c3bdb9fc17a27af4fbc3a7b0fd6e2aa89f402
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c98cff1909bc74ff550ea9d68359d7a845d04d7
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629118"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586237"
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Закрывает открытый курсор, высвобождая текущий результирующий набор и снимая блокировки курсоров для строк, на которых установлен курсор. Инструкция CLOSE оставляет структуры данных доступными для повторного открытия, но выборки и позиционированные обновления не разрешаются до повторного открытия курсора. Инструкция CLOSE должна выдаваться применительно к открытому курсору; CLOSE не применима к только что объявленным или уже закрытым курсорам.  
+  Закрывает открытый курсор, высвобождая текущий результирующий набор и снимая блокировки курсоров для строк, на которых установлен курсор. Инструкция `CLOSE` оставляет структуры данных доступными для повторного открытия, но выборки и позиционированные обновления не разрешаются до повторного открытия курсора. Инструкция CLOSE должна выдаваться применительно к открытому курсору; `CLOSE` не применима к только что объявленным или уже закрытым курсорам.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   
@@ -54,7 +53,7 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 ## <a name="examples"></a>Примеры  
  В следующем примере показано правильное размещение инструкции `CLOSE` в процессе на основе курсора.  
   
-```  
+```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT EmployeeID, Title FROM AdventureWorks2012.HumanResources.Employee;  
 OPEN Employee_Cursor;  

@@ -14,12 +14,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db2423abafdc0ae9e3949e1cac55d0b963a4fc3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c2f0a9a77b3cbcd4dd1ecc652b78f2bd2909bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754362"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505983"
 ---
 # <a name="add-or-change-a-property-expression"></a>Добавление или изменение выражение свойства
   Пользователь может создать выражения свойств для пакетов, задач, контейнеров «цикл по каждому элементу», контейнеров «цикл по элементам», контейнеров последовательности, обработчиков событий, диспетчеров соединений на уровне пакетов и проектов и регистраторов.  
@@ -44,7 +44,7 @@ ms.locfileid: "47754362"
   
     -   Введите или измените выражение свойства непосредственно в столбце **Выражение** и нажмите кнопку **ОК**.  
   
-         —или—  
+         -или-  
   
     -   Нажмите кнопку с многоточием (...) в строке выражения свойства, чтобы открыть **построитель выражений**.  
   

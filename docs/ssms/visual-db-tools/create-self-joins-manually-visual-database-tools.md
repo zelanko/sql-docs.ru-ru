@@ -15,12 +15,12 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afedc37f2ee6b2b6b1eb87b7e3a024e51697a724
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd175d4d66cfea79f1449ae7da9d06d5c9f247c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603901"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542282"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Создание самосоединения вручную (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -118,7 +118,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  Щелкните правой кнопкой мыши указанное соединение и в контекстном меню выберите **Свойства** .  
   
-4.  В окне "Свойства" выберите вкладку **Условие и тип соединения** и нажмите кнопку с многоточием **(...)** справа от нужного свойства.  
+4.  В окне свойств выберите вкладку **Условие и тип соединения** и нажмите кнопку с многоточием **(...)** справа от нужного свойства.  
   
 5.  В [диалоговом окне "Соединение"](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md) измените оператор сравнения первичных ключей. Например, можно выбрать оператор «меньше» (<).  
   

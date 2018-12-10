@@ -1,7 +1,7 @@
 ---
 title: Производительность сервера и мониторинг активности | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -20,12 +20,12 @@ ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 579601ec5a7a3a9890c38d8f4883779d07e2a135
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e36e25728079412e483a96702db3fed3d60c16b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747262"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513671"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Производительность сервера и мониторинг активности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,30 +33,50 @@ ms.locfileid: "47747262"
   
  Далее приведены разделы, объясняющие использование средств наблюдения за производительностью и активностью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows. Занятие содержит следующие разделы:  
   
-## <a name="in-this-section"></a>в этом разделе  
- **Выполнение задач наблюдения с помощью средств Windows**  
+## <a name="to-perform-monitoring-tasks-with-windows-tools"></a>Выполнение задач наблюдения с помощью средств Windows 
   
 -   [Запуск системного монитора (Windows)](../../relational-databases/performance/start-system-monitor-windows.md)  
   
 -   [Просмотр журнала приложений Windows (Windows)](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
- **Создание предупреждений базы данных SQL Server с помощью инструментов Windows**  
+## <a name="to-create-sql-server-database-alerts-with-windows-tools"></a>Создание предупреждений базы данных SQL Server с помощью инструментов Windows  
   
 -   [Настройка оповещения базы данных SQL Server (Windows)](../../relational-databases/performance/set-up-a-sql-server-database-alert-windows.md)  
 
- **Выполнение задач наблюдения с помощью расширенных событий**  
+## <a name="to-perform-monitoring-tasks-with-extended-events"></a>Выполнение задач наблюдения с помощью расширенных событий  
  
  -   [Расширенные события](../../relational-databases/extended-events/extended-events.md)
  
-  -   [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ -   [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ 
+ -   [Управление сеансами событий в обозревателе объектов](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
+ 
+ -   [Изменение сеанса расширенных событий](../../relational-databases/extended-events/alter-an-extended-events-session.md)
+ 
+ -   [Преобразование существующего скрипта трассировки SQL в сеанс расширенных событий](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)
+ 
+ -   [Просмотр эквивалентов расширенных событий для классов событий трассировки SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
    
- **Выполнение задач наблюдения в среде SQL Server Management Studio**  
+## <a name="to-perform-monitoring-tasks-with-sql-server-management-studio"></a>Выполнение задач наблюдения в среде SQL Server Management Studio  
   
 -   [Просмотр журнала ошибок SQL Server (среда SQL Server Management Studio)](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)  
   
 -   [Открытие монитора активности (среда SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)  
-  
- **Выполнение задач наблюдения с помощью трассировки SQL с использованием хранимых процедур Transact-SQL**  
+
+-   [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+
+## <a name="to-perform-monitoring-tasks-with-sql-trace-and-sql-server-profiler"></a>Выполнение задач наблюдения с трассировкой SQL и SQL Server Profiler
+
+> [!IMPORTANT]
+> В следующих разделах описываются методы использования трассировки SQL и [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+> Трассировка SQL и [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] являются устаревшими. Пространство имен *Microsoft.SqlServer.Management.Trace*, которое содержит объекты трассировки Microsoft SQL Server и Replay, также устаревшее.   
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> Вместо этого используйте расширенные события. Дополнительные сведения о [расширенных событиях](../../relational-databases/extended-events/extended-events.md) см. в статьях [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) и [Использование профилировщика XEvent для SSMS](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+
+> [!NOTE] 
+> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для рабочей нагрузки служб Analysis Services не устарел и будет по-прежнему поддерживаться.
+
+### <a name="to-perform-monitoring-tasks-with-sql-trace-by-using-transact-sql-stored-procedures"></a>Выполнение задач наблюдения с помощью трассировки SQL с использованием хранимых процедур Transact-SQL  
   
 -   [Создание трассировки (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)  
   
@@ -70,7 +90,7 @@ ms.locfileid: "47747262"
   
 -   [Удаление трассировки (Transact-SQL)](../../relational-databases/sql-trace/delete-a-trace-transact-sql.md)  
   
- **Создание и изменения трассировок с помощью приложения SQL Server Profiler**  
+### <a name="to-create-and-modify-traces-by-using-sql-server-profiler"></a>Создание и изменения трассировок с помощью приложения SQL Server Profiler  
   
 -   [Создание трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -102,7 +122,7 @@ ms.locfileid: "47747262"
   
 -   [Упорядочивание столбцов, отображаемых в трассировке (приложение SQL Server Profiler)](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)  
   
- **Запуск, приостановка и полная остановка трассировок с помощью приложения SQL Server Profiler**  
+### <a name="to-start-pause-and-stop-traces-by-using-sql-server-profiler"></a>Запуск, приостановка и полная остановка трассировок с помощью приложения SQL Server Profiler  
   
 -   [Автоматический запуск трассировки после соединения с сервером (приложение SQL Server Profiler)](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)  
   
@@ -112,7 +132,7 @@ ms.locfileid: "47747262"
   
 -   [Проведение трассировки после паузы или остановки (SQL Server Profiler)](../../tools/sql-server-profiler/run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
- **Открытие трассировок и конфигурации их отображения с помощью приложения SQL Server Profiler**  
+### <a name="to-open-traces-and-configure-how-traces-are-displayed-by-using-sql-server-profiler"></a>Открытие трассировок и конфигурации их отображения с помощью приложения SQL Server Profiler  
   
 -   [Открыть файл трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
@@ -126,7 +146,7 @@ ms.locfileid: "47747262"
   
 -   [Настройка параметров отображения трассировки по умолчанию (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)  
   
- **Воспроизведение трассировок с помощью приложения SQL Server Profiler**  
+### <a name="to-replay-traces-by-using-sql-server-profiler"></a>Воспроизведение трассировок с помощью приложения SQL Server Profiler  
   
 -   [Воспроизведение файла трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)  
   
@@ -140,7 +160,7 @@ ms.locfileid: "47747262"
   
 -   [Воспроизведение скрипта на языке Transact-SQL (приложение SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)  
   
- **Создание, изменение и использование шаблонов трассировок с помощью приложения SQL Server Profiler**  
+### <a name="to-create-modify-and-use-trace-templates-by-using-sql-server-profiler"></a>Создание, изменение и использование шаблонов трассировок с помощью приложения SQL Server Profiler  
   
 -   [Создание шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)  
   
@@ -154,7 +174,7 @@ ms.locfileid: "47747262"
   
 -   [Импорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
- **Использование приложения SQL Server Profiler с целью сбора данных о производительности сервера мониторинга**  
+### <a name="to-use-sql-server-profiler-traces-to-collect-and-monitor-server-performance"></a>Использование приложения SQL Server Profiler с целью сбора данных о производительности сервера мониторинга  
   
 -   [Поиск значения или столбца данных во время трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)  
   

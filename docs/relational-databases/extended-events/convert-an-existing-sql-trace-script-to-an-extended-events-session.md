@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95cf78e827e2f1d7fcb3fa99c096f3184b1cb0d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 855a61fe37f6b5d347e050687e73c894c227d1b6
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834824"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321740"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Преобразование существующего скрипта трассировки SQL в сеанс расширенных событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47834824"
   
 2.  Получите идентификатор трассировки. Для этого выполните следующий запрос:  
   
-    ```  
+    ```sql
     SELECT * FROM sys.traces;  
     GO  
     ```  
@@ -58,7 +58,7 @@ ms.locfileid: "47834824"
     > [!NOTE]  
     >  В этом примере используется код идентификатор для трассировки по умолчанию (1).  
   
-    ```  
+    ```sql
     USE MASTER;  
     GO  
     DECLARE @trace_id int;  
@@ -85,7 +85,7 @@ ms.locfileid: "47834824"
   
     3.  Следующий запрос используется для определения правильных полей данных для событий, определенных в предыдущем шаге. Запрос отображает поля данных расширенных событий в столбце «event_field». В запросе замените *<имя_события>* именем события, указанным в предыдущем шаге.  
   
-        ```  
+        ```sql
         SELECT xp.name package_name, xe.name event_name  
            ,xc.name event_field, xc.description  
         FROM sys.trace_xe_event_map AS em  
@@ -104,9 +104,9 @@ ms.locfileid: "47834824"
 ## <a name="to-create-the-extended-events-session"></a>Создание сеанса расширенных событий  
  Воспользуйтесь редактором запросов для создания сеанса расширенных событий и записи выходных данных в целевой файл. Следующие шаги описывают один запрос, там же объясняется, как строить запрос. Полный пример запроса см. в подразделе «Пример» этого раздела.  
   
-1.  Добавьте инструкции для создания сеанса событий, заменив*имя_сеанса* нужным именем сеанса расширенных событий.  
+1.  Добавьте инструкции для создания сеанса событий, заменив *имя_сеанса* нужным именем сеанса расширенных событий.  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [Session_Name] ON SERVER;  
     CREATE EVENT SESSION [Session_Name]  
@@ -133,7 +133,7 @@ ms.locfileid: "47834824"
   
      Для преобразования его в эквивалент расширенных событий добавляются события sqlserver.sp_statement_starting и sqlserver.sp_statement_completed со списком действий. Инструкции-предикаты включены в качестве предложений WHERE.  
   
-    ```  
+    ```sql
     ADD EVENT sqlserver.sp_statement_starting  
        (ACTION  
           (  
@@ -161,7 +161,7 @@ ms.locfileid: "47834824"
   
 3.  Добавьте целевой асинхронный файл, заменив путь к файлу расположением, в котором требуется сохранить выходные данные. При использовании целевого файла следует включить путь к файлу журнала и метаданных.  
   
-    ```  
+    ```sql
     ADD TARGET package0.asynchronous_file_target(  
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
@@ -170,7 +170,7 @@ ms.locfileid: "47834824"
   
 1.  Просмотреть выходные данные можно с помощью функции sys.fn_xe_file_target_read_file. Для этого запустите следующий запрос, заменив пути к файлам указанными путями:  
   
-    ```  
+    ```sql
     SELECT *, CAST(event_data as XML) AS 'event_data_XML'  
     FROM sys.fn_xe_file_target_read_file('c:\temp\ExtendedEventsStoredProcs*.xel', 'c:\temp\ExtendedEventsStoredProcs*.xem', NULL, NULL);  
   
@@ -181,7 +181,7 @@ ms.locfileid: "47834824"
   
      Дополнительные сведения о функции sys.fn_xe_file_target_read_file см. в разделе [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [session_name] ON SERVER;  
     CREATE EVENT SESSION [session_name]  
@@ -217,7 +217,7 @@ ms.locfileid: "47834824"
   
 ## <a name="example"></a>Пример  
   
-```  
+```sql
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
    DROP EVENT SESSION [session_name] ON SERVER;  
 CREATE EVENT SESSION [session_name]  

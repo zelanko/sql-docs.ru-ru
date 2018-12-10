@@ -16,17 +16,17 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3417b53ba41027b5d629069676818b8f54f13d0b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: eaa6caf40a44ba8579b5e5cff31f0c4c10f2eb4a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640871"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420515"
 ---
 # <a name="variables-window"></a>Окно переменных
   Окно **Переменные** используется для создания и изменения переменных, определяемых пользователем, и просмотра системных переменных.  
   
- По умолчанию окно **Переменные** располагается ниже области **Диспетчеры соединений** конструктора служб SSIS в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Если окно **Переменные** не отображается, выберите пункт **Переменные** в меню **Службы SSIS** , чтобы отобразить его.  
+ По умолчанию окно **Переменные** располагается ниже области **Диспетчеры соединений** конструктора служб SSIS в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Если окно **Переменные** не отображается, выберите пункт **Переменные** в меню **Службы SSIS**, чтобы отобразить его.  
   
  При необходимости окно **Переменные** можно открыть, назначив команде View.Variables нужное сочетание клавиш на странице **Клавиатура** диалогового окна **Параметры** .  
   

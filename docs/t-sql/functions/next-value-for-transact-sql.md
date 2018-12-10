@@ -23,12 +23,12 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2ad33a42cc05644fa2ce56836361fe8fee56324
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc8631d234fae86010d7f94028fc962947561ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800341"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525734"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **SELECT** — для каждого указанного объекта последовательности новое значение формируется один раз для каждой строки результата выполнения инструкции.  
   
--   **INSERT** … **VALUES** — для каждого указанного объекта последовательности новое значение формируется один раз для каждой вставленной строки в инструкции.  
+-   **INSERT** ... **VALUES** — для каждого указанного объекта последовательности новое значение формируется один раз для каждой вставленной строки в инструкции.  
   
 -   **UPDATE** — для каждого указанного объекта последовательности новое значение формируется один раз для каждой строки, обновляемой в инструкции.  
   
@@ -93,7 +93,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   В инструкциях с операторами **DISTINCT**, **UNION**, **UNION ALL**, **EXCEPT** или **INTERSECT**.  
   
--   В инструкциях с предложением **ORDER BY**, если не используется **NEXT VALUE FOR** ... **OVER** (**ORDER BY** …).  
+-   В инструкциях с предложением **ORDER BY**, если не используется **NEXT VALUE FOR** ... **OVER** (**ORDER BY** ...).  
   
 -   В следующих предложениях: **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY** или **FOR XML**.  
   
@@ -130,7 +130,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Объект последовательности, указанный в ограничении по умолчанию, может быть изменен.  
   
--   В инструкциях `INSERT … SELECT` и `INSERT … EXEC`, где вставляемые данные поступают из запроса с предложением **ORDER BY**, значения, возвращаемые функцией **NEXT VALUE FOR**, будут формироваться в порядке, указанном в предложении **ORDER BY**.  
+-   В инструкциях `INSERT ... SELECT` и `INSERT ... EXEC`, где вставляемые данные поступают из запроса с предложением **ORDER BY**, значения, возвращаемые функцией **NEXT VALUE FOR**, будут формироваться в порядке, указанном в предложении **ORDER BY**.  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>Использование объекта последовательности с предложением OVER ORDER BY  
  Функция **NEXT VALUE FOR** поддерживает формирование отсортированных значений последовательности при указании предложения **OVER** в вызове **NEXT VALUE FOR**. При использовании предложения **OVER** пользователю гарантированно будут возвращены значения, сформированные в порядке, который определен вложенным предложением **ORDER BY** предложения **OVER**. При использовании функции **NEXT VALUE FOR** в предложении **OVER** действуют следующие дополнительные правила:  
@@ -143,7 +143,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Если во всех вызовах функции **NEXT VALUE FOR** в инструкции **SELECT** указано предложение **OVER**, то предложение **ORDER BY** можно использовать в инструкции **SELECT**.  
   
--   Предложение **OVER** допустимо для функции **NEXT VALUE FOR** только в инструкциях **SELECT** или `INSERT … SELECT …`. Использование предложения **OVER** в функции **NEXT VALUE FOR** не допускается в инструкции **UPDATE** или **MERGE**.  
+-   Предложение **OVER** допустимо для функции **NEXT VALUE FOR** только в инструкциях **SELECT** или `INSERT ... SELECT ...`. Использование предложения **OVER** в функции **NEXT VALUE FOR** не допускается в инструкции **UPDATE** или **MERGE**.  
   
 -   Если доступ к объекту последовательности в то же самое время производится и из другого процесса, то в возвращаемых номерах могут быть пропуски.  
   
@@ -278,8 +278,8 @@ GO
   
 ```  
   
-### <a name="e-using-the-next-value-for-function-with-select--into"></a>Д. Использование функции NEXT VALUE FOR с SELECT… INTO  
- В следующем примере инструкция `SELECT … INTO` создает таблицу `Production.NewLocation` и вставляет в нее строки с использованием функции `NEXT VALUE FOR`.  
+### <a name="e-using-the-next-value-for-function-with-select--into"></a>Д. Использование функции NEXT VALUE FOR с SELECT ... INTO  
+ В следующем примере инструкция `SELECT ... INTO` создает таблицу `Production.NewLocation` и вставляет в нее строки с использованием функции `NEXT VALUE FOR`.  
   
 ```  
 USE AdventureWorks2012 ;   

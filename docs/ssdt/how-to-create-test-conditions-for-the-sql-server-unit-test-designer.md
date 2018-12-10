@@ -11,12 +11,12 @@ ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfb25121dcc417f2ead0d85bc723bc7b402cebab
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0b58d17340eeee18fdda5b6ea56f9aebd291ba1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675074"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400038"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Практическое руководство. Создание условия теста для конструктора модульных тестов SQL Server
 Создавать условия теста можно с помощью расширяемого класса [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Например, можно создать новое условие теста, которое проверяет число столбцов или значений в результирующем наборе.  
@@ -178,7 +178,7 @@ namespace Ssdt.Samples.SqlUnitTesting
   
 |Параметр атрибута|Положение|Описание|  
 |-----------------------|------------|---------------|  
-|DisplayName|1|Определяет строку в поле со списком «Условия теста». Имя должно быть уникальным. Если у двух условий одинаковое отображаемое имя, пользователю будет показано первое условие, при этом в диспетчере ошибок Visual Studio будет показано предупреждение.|  
+|DisplayName|1|Определяет строку в поле со списком "Условия теста". Имя должно быть уникальным. Если у двух условий одинаковое отображаемое имя, пользователю будет показано первое условие, при этом в диспетчере ошибок Visual Studio будет показано предупреждение.|  
 |ImplementingType|2|Используется для уникального определения расширения. Это значение необходимо изменить, чтобы оно совпадало с типом, которому задается этот атрибут. В этом примере используется тип **ResultSetColumnCountCondition**, поэтому нужно указать **typeof(ResultSetColumnCountCondition)**. Если вы используете тип **NewTestCondition**, укажите вместо этого **typeof(NewTestCondition)**.|  
   
 В этом примере добавляются два свойства. Пользователи нестандартного условия теста могут использовать свойство ResultSet, чтобы указать, для какого результирующего набора следует выполнять проверку числа столбцов. Затем с помощью свойства Count пользователи могут указать ожидаемое число столбцов.  

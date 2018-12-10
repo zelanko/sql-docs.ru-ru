@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 66a1663a0411f91dcf89c294f10f087704ec96e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604954"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418679"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "51604954"
   
  Чтобы использовать [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в связке с  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 или более ранней версии, следует загрузить и установить исправление для .Net 3.5 SP1. Это исправление добавляет в клиент SQL Server поддержку компонентов групп доступности, а также поддержку свойств строки подключения **ApplicationIntent** и **MultiSubnetFailover**. Если не установить это исправление на все компьютеры, на которых размещен сервер отчетов, то пользователи, пытающиеся просмотреть отчеты, будут видеть сообщение об ошибке примерно следующего содержания, которое также будет записываться в журнал трассировки сервера отчетов.  
   
-> **Сообщение об ошибке.** «Ключевое слово "applicationintent" не поддерживается»  
+> **Сообщение об ошибке.** "Ключевое слово applicationintent не поддерживается"  
   
- Это сообщение выдается в том случае, когда в строке подключения служб [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] указано одно из свойств [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , которое сервер не распознает. Указанное сообщение об ошибке отображается при нажатии кнопки «Проверка подключения» в пользовательском интерфейсе служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , а также при просмотре отчета, если на сервере отчета включено отслеживание удаленных ошибок.  
+ Это сообщение выдается в том случае, когда в строке подключения служб [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] указано одно из свойств [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , которое сервер не распознает. Указанное сообщение об ошибке отображается при нажатии кнопки "Проверка подключения" в пользовательском интерфейсе служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], а также при просмотре отчета, если на сервере отчета включено отслеживание удаленных ошибок.  
   
  Дополнительные сведения о необходимом исправлении см. в разделе [Исправление КБ 2654347A добавляет поддержку функций AlwaysOn из SQL Server 2012 в платформу .NET Framework 3.5 с пакетом обновления 1 (SP1)](https://go.microsoft.com/fwlink/?LinkId=242896).  
   
@@ -88,7 +88,7 @@ ms.locfileid: "51604954"
   
 -   **Режим SharePoint.** Для отчетов, которые уже опубликованы на сервере SharePoint, пользуйтесь страницами конфигурации SharePoint в библиотеках документов.  
   
--   **Конструирование отчетов:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] или [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения приведены в разделе «Конструирование отчетов» этой главы.  
+-   **Конструирование отчетов:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] или [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения приведены в разделе "Конструирование отчетов" этой главы.  
   
  **Дополнительные ресурсы**  
   
@@ -115,7 +115,7 @@ ms.locfileid: "51604954"
   
 -   **Удаленный или серверный режим просмотра.** После публикации отчета на сервере отчетов или при просмотре в [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]вы можете увидеть приведенное ниже сообщение об ошибке. Это означает, что вы просматриваете отчет на сервере отчетов, и на этом сервере не установлено исправление платформы .Net Framework 3.5 с пакетом обновления 1 (SP1) для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
-> **Сообщение об ошибке.** «Ключевое слово "applicationintent" не поддерживается»  
+> **Сообщение об ошибке.** "Ключевое слово applicationintent не поддерживается"  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Базы данных сервера отчетов и группы доступности  
  Службы Reporting Services и Сервер отчетов Power BI имеют ограниченную поддержку использования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с базами данных сервера отчетов. В группе доступности базы данных сервера отчетов можно настроить так, чтобы они были частью реплики. Однако при отработке отказа службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] не будут автоматически использовать другую реплику баз данных сервера отчетов. Использование MultiSubnetFailover не поддерживается для баз данных сервера отчетов.  

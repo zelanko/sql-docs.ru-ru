@@ -18,12 +18,12 @@ ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4be4d925cb90cf02161e71c4797a22e2149b03dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42d3976cabcfc231079f5b3b0c8cf9cbd1dcde94
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807092"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524328"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>REVOKE (отзыв) разрешений группы доступности (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ GO
 ```  
   
 ### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>В. Отмена ранее предоставленного разрешения с предложением WITH GRANT OPTION  
- Если разрешение было предоставлено с предложением WITH GRANT OPTION, используйте REVOKE GRANT OPTION FOR… для удаления параметра WITH GRANT OPTION. В следующем примере предоставляется разрешение, из которого затем удаляется параметр WITH GRANT OPTION.  
+ Если разрешение было предоставлено с предложением WITH GRANT OPTION, для удаления параметра WITH GRANT OPTION используйте REVOKE GRANT OPTION FOR… В следующем примере предоставляется разрешение, из которого затем удаляется параметр WITH GRANT OPTION.  
   
 ```  
 USE master;  

@@ -24,12 +24,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb8aaaabd83d6e5f5f234c58f3c9dcfab1ee7fa
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640142"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525319"
 ---
 # <a name="ole-db-destination"></a>Назначение «OLE DB»
   Назначение «OLE DB» загружает данные в различные OLE DB-совместимые базы данных при помощи таблицы базы данных или представления, или команды SQL. Например, источник OLE DB может загрузить данные в таблицы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access и базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -161,7 +161,7 @@ ms.locfileid: "51640142"
 > [!NOTE]  
 >  При нажатии кнопки **Создать**службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] по умолчанию формируют инструкцию CREATE TABLE на основе подключенного источника данных. Эта инструкция CREATE TABLE не включает атрибут FILESTREAM, даже если исходная таблица содержит столбец, для которого объявлен атрибут FILESTREAM. Чтобы запустить компонент служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с атрибутом FILESTREAM, сначала следует создать хранилище FILESTREAM в целевой базе данных. Затем добавьте атрибут FILESTREAM к инструкции CREATE TABLE в диалоговом окне **Создание таблицы** . Дополнительные сведения см. в разделе [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-#### <a name="data-access-mode--table-or-view--fast-load"></a>Режим доступа к данным = Таблица или представление — быстрая загрузка  
+#### <a name="data-access-mode--table-or-view---fast-load"></a>Режим доступа к данным = таблица или представление — быстрая загрузка  
  **Имя таблицы или представления**  
  Выберите из этого списка таблицу или представление базы данных или создайте новую таблицу, нажав кнопку **Создать**.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51640142"
  **Имя переменной**  
  Выберите переменную, содержащую имя таблицы или представления.  
   
-#### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>Режим доступа к данным = переменная, содержащая имя таблицы или представления (быстрая загрузка)  
+#### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>Режим доступа к данным = переменная, содержащая имя таблицы или представления (быстрая загрузка)  
  **Имя переменной**  
  Выберите переменную, содержащую имя таблицы или представления.  
   

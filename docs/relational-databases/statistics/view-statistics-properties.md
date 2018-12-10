@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e69ce37e35b259ff44d1f1d1ddb064894729adf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d205f913127fa598ba3d2d2d75f2a1eb3f1303
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800712"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406691"
 ---
 # <a name="view-statistics-properties"></a>Просмотр свойств статистики
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47800712"
   
 2.  Чтобы развернуть папку **Таблицы** , щелкните значок «плюс».  
   
-3.  Щелкните значок «плюс», чтобы развернуть таблицу, в которой нужно просмотреть свойства статистики.  
+3.  Щелкните значок плюса, чтобы развернуть таблицу, в которой нужно просмотреть свойства статистики.  
   
 4.  Щелкните значок «плюс», чтобы развернуть папку **Статистика** .  
   
@@ -139,7 +139,7 @@ ms.locfileid: "47800712"
   
 #### <a name="to-view-statistics-properties"></a>Просмотр свойств статистики  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

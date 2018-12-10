@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db904742a73ec3837bfffe1eaecffbe37ca5c154
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a63512de9229f26e6e04ad5f44c5dd1c757cb881
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763252"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391697"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>Метод ConfigurationSetting — SetWindowsServiceIdentity
   Обеспечивает запуск службы Windows сервера отчетов в качестве заданного пользователя Windows, а также предоставляет этой учетной записи достаточные разрешения, необходимые для работы сервера отчетов.  
@@ -56,7 +56,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="remarks"></a>Remarks  
  Если параметру *UseBuiltInAccount* присвоено значение **true** , а сервер отчетов работает под управлением Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] или Windows XP, то значения параметров *Имя*, *Домен*и *Пароль* не учитываются, и используется учетная запись "Local System".  
   
- Если параметру *UseBuiltInAccount* присвоено значение **true** и сервер отчетов работает под управлением Windows Server 2003, то свойства *Домен* и *Пароль* не учитываются, а в поле имени должно быть значение "Builtin\NetworkService", "Builtin\System" или "Builtin\LocalService".  
+ Если параметру *UseBuiltInAccount* присвоено значение **true** и сервер отчетов работает под управлением Windows Server 2003, то свойства *Домен* и *Пароль* не учитываются, а в поле имени должно быть значение Builtin\NetworkService, Builtin\System или Builtin\LocalService.  
   
  Метод SetWindowsServiceIdentity задает разрешения для файлов и папок в установочном каталоге сервера отчетов.  
   

@@ -11,12 +11,12 @@ ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: deed72fce55d5e80f54ba53596c213288aae249d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664633"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512612"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Пошаговое руководство. Расширение процесса развертывания проекта базы данных для анализа плана развертывания
 Можно создать участников развертывания для выполнения специализированных действий при развертывании проекта SQL. Предусмотрена возможность создать участников DeploymentPlanModifier и DeploymentPlanExecutor. Используйте DeploymentPlanModifier для изменения плана до его выполнения и DeploymentPlanExecutor для осуществления операций в ходе выполнения плана. В данном пошаговом руководстве будет создан DeploymentPlanExecutor с именем DeploymentUpdateReportContributor, который будет формировать отчет о действиях, выполненных при развертывании проекта. Поскольку данный участник сборки принимает параметр, управляющий формированием отчета, необходимо выполнить дополнительное действие.  
@@ -92,7 +92,7 @@ ms.locfileid: "51664633"
         /// passed as an additional argument to the DacServices API. To set in a project file, add the following:  
         ///   
         /// <PropertyGroup>  
-        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug’”>  
+        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
         /// $(ContributorArguments);DeploymentUpdateReportContributor.GenerateUpdateReport=true;  
         ///     </ContributorArguments>  
         /// <PropertyGroup>  
@@ -114,7 +114,7 @@ ms.locfileid: "51664633"
   
     ```  
   
-    В данном случае первый параметр атрибута должен быть уникальным идентификатором — он будет использоваться для идентификации участника в файлах проекта. Мы рекомендуем при создании идентификатора объединить пространство имен библиотеки (MyDeploymentContributor в нашем примере) с именем класса (DeploymentUpdateReportContributor).  
+    В данном случае первый параметр атрибута должен быть уникальным идентификатором — он будет использоваться для идентификации участника в файлах проекта. Мы рекомендуем при создании идентификатора объединить пространство имен библиотеки (MyDeploymentContributor в нашем примере) с именем класса (DeploymentUpdateReportContributor).  
   
 3.  Далее добавьте следующий член, который позволит поставщику принимать параметр командной строки:  
   
@@ -526,7 +526,7 @@ ms.locfileid: "51664633"
     |-----------------|--------------------|  
     |Члены класса|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |Метод WriteReport|XmlWriter и XmlWriterSettings|  
-    |Метод ReportPlanOperations|Интересующие нас типы: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Есть и некоторые другие действия — см. полный список в документации API.|  
+    |Метод ReportPlanOperations|Интересующие нас типы: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Есть и некоторые другие действия — см. полный список в документации по API.|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -613,7 +613,7 @@ ms.locfileid: "51664633"
 > Необходимо всегда обновлять свойство DeploymentContributors для указания идентификатора применяемого участника. Это тот же идентификатор, который используется в атрибуте ExportDeploymentPlanExecutor в файле исходного кода участника. Без этого требуемый участник не будет вызываться на выполнение при сборке проекта. Свойство ContributorArguments необходимо обновлять, только если для вызова участника на выполнение требуются аргументы.  
   
 ### <a name="deploy-the-database-project"></a>Развертывание проекта базы данных  
-Как правило, проект может быть опубликован или развернут в Visual Studio. Просто откройте решение, содержащее ваш проект SQL, и выберите пункт "Опубликовать..." контекстного меню для проекта или используйте клавишу F5 для отладки развертывания в LocalDB. В этом примере мы будем использовать диалоговое окно «Опубликовать...» для создания скрипта развертывания.  
+Как правило, проект может быть опубликован или развернут в Visual Studio. Откройте решение, содержащее проект SQL, и выберите пункт "Опубликовать…" в контекстном меню проекта или воспользуйтесь клавишей F5 для отладки развертывания в LocalDB. В этом примере для создания скрипта развертывания используется диалоговое окно "Опубликовать…".  
   
 ##### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>Развертывание проекта SQL и создание отчета о развертывании  
   

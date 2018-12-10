@@ -13,22 +13,23 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], creating
 - CREATE FUNCTION statement
 - valid statements [SQL Server]
+- UDF
+- TVF
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98be7e368a48c495d65f44d01e1e2e4b15e23a4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b2ff8188f2733fd0467ac39266bc9f0510de621
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738422"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515483"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Создание определяемых пользователем функций (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   В этом разделе описывается создание определяемой пользователем функции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -36,42 +37,42 @@ ms.locfileid: "47738422"
   
 -   Определяемые пользователем функции не могут выполнять действия, изменяющие состояние базы данных.  
   
--   Определяемые пользователем функции не могут содержать предложение OUTPUT INTO, целью которого является таблица.  
+-   Определяемые пользователем функции не могут содержать предложение `OUTPUT INTO`, целью которого является таблица.  
   
 -   Определяемые пользователем функции не могут возвращать несколько результирующих наборов. Используйте хранимую процедуру, если нужно возвращать несколько результирующих наборов.  
   
--   Обработка ошибок в функциях, определяемых пользователем, ограниченна. UDF не поддерживает инструкции TRY…CATCH, @ERROR и RAISERROR.  
+-   Обработка ошибок в функциях, определяемых пользователем, ограниченна. UDF не поддерживает тип `TRY...CATCH`, `@ERROR` и `RAISERROR`.  
   
 -   Определяемые пользователем функции не могут вызывать хранимую процедуру, но могут вызывать расширенную хранимую процедуру.  
   
 -   Определяемые пользователем функции не могут использовать динамический SQL и временные таблицы. Табличные переменные разрешены к использованию.  
   
--   Инструкцию SET нельзя использовать в определяемых пользователем функциях.  
+-   Инструкцию `SET` нельзя использовать в определяемых пользователем функциях.  
   
--   Предложение FOR XML не допускается к использованию.  
+-   Пустое предложение `FOR XML` запрещено.  
   
 -   Определяемые пользователем функции могут быть вложенными, то есть из одной функции может быть вызвана другая. Уровень вложенности увеличивается на единицу каждый раз, когда начинается выполнение вызванной функции и уменьшается на единицу, когда ее выполнение завершается. Вложенность определяемых пользователем функций не может превышать 32 уровней. Превышение максимального уровня вложенности приводит к ошибке выполнения для всей цепочки вызываемых функций. Каждый вызов управляемого кода из определяемой пользователем функции Transact-SQL считается одним уровнем вложенности из 32 возможных. Методы, вызываемые из управляемого кода, под это ограничение не подпадают.  
   
--   Следующие инструкции компонента Service Broker **не могут быть включены** в определение определяемой пользователем функции Transact-SQL:  
+-   Следующие инструкции компонента Service Broker **не могут быть включены** в определение пользовательской функции [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-    -   BEGIN DIALOG CONVERSATION  
+    -   `BEGIN DIALOG CONVERSATION`  
   
-    -   END CONVERSATION  
+    -   `END CONVERSATION`  
   
-    -   GET CONVERSATION GROUP  
+    -   `GET CONVERSATION GROUP`  
   
-    -   MOVE CONVERSATION  
+    -   `MOVE CONVERSATION`  
   
-    -   RECEIVE  
+    -   `RECEIVE`  
   
-    -   SEND  
+    -   `SEND`  
   
-###  <a name="Security"></a> Разрешения 
+###  <a name="Security"></a> Permissions 
 
-Требуется разрешение CREATE FUNCTION на базу данных и разрешение ALTER на схему, в которой создается функция. Если в функции указан определяемый пользователем тип, требуется разрешение EXECUTE на этот тип.  
+Требуется разрешение `CREATE FUNCTION` на базу данных и разрешение `ALTER` для схемы, в которой создается функция. Если в функции указан определяемый пользователем тип, требуется разрешение `EXECUTE` на этот тип.  
   
 ##  <a name="Scalar"></a> Скалярные функции  
- В следующем примере создается скалярная функция из нескольких инструкций в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Функция имеет один входной параметр `ProductID`и возвращает одно значение — количество указанного товара на складе.  
+ В следующем примере создается **скалярная функция (скалярная UDF)** из нескольких инструкций в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Функция имеет один входной параметр `ProductID`и возвращает одно значение — количество указанного товара на складе.  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
@@ -100,9 +101,12 @@ SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID)AS CurrentSupply
 FROM Production.Product  
 WHERE ProductModelID BETWEEN 75 and 80;  
 ```  
-  
+
+> [!NOTE]  
+> Дополнительные сведения см. в разделе [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md). 
+
 ##  <a name="TVF"></a> Функции с табличными значениями  
- Результатом следующего примера является встроенная функция, создающая табличное значение в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Функция имеет один входной параметр — идентификатор клиента (магазина) — и возвращает столбцы `ProductID`, `Name`и столбец `YTD Total` со сведениями о продажах продукта за текущий год.  
+Результатом следующего примера является **встроенная функция, возвращающая табличное значение (TVF)**, в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Функция имеет один входной параметр — идентификатор клиента (магазина) — и возвращает столбцы `ProductID`, `Name`и столбец `YTD Total` со сведениями о продажах продукта за текущий год.  
   
 ```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
@@ -123,13 +127,13 @@ RETURN
 );  
 ```  
   
- В следующем примере функция вызывается с идентификатором 602.  
+В следующем примере функция вызывается с идентификатором 602.  
   
 ```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
- В следующем примере создается функция с табличным значением в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Функция имеет один входной параметр `EmployeeID` и возвращает список всех сотрудников, которые напрямую или косвенно отчитываются перед заданным сотрудником. Затем функция вызывается с указанием идентификатора сотрудника 109.  
+Результатом следующего примера является **многооператорная встроенная функция, возвращающая табличное значение (MSTVF)**, в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Функция имеет один входной параметр `EmployeeID` и возвращает список всех сотрудников, которые напрямую или косвенно отчитываются перед заданным сотрудником. Затем функция вызывается с указанием идентификатора сотрудника 109.  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
@@ -170,16 +174,42 @@ ON p.BusinessEntityID = e.BusinessEntityID
    RETURN  
 END;  
 GO  
--- Example invocation  
+```  
+  
+В следующем примере функция вызывается с идентификатором сотрудника 1.  
+  
+```sql  
 SELECT EmployeeID, FirstName, LastName, JobTitle, RecursionLevel  
 FROM dbo.ufn_FindReports(1);  
 ```  
+
+> [!NOTE]  
+> Дополнительные сведения и примеры встроенных функций с табличными значениями (встроенные TVF) или многооператорных функций с табличными значениями (MSTVF) см. в разделе [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md). 
+
+## <a name="best-practices"></a>Рекомендации  
+Если определяемая пользователем функция (UDF) создана без применения предложения `SCHEMABINDING`, то изменения базовых объектов могут повлиять на определение функции и привести к непредвиденным результатам при вызове функции. Рекомендуется реализовать один из следующих методов, чтобы обеспечить, что функция не устареет из-за изменения ее базовых объектов.  
   
-## <a name="more-examples"></a>Другие примеры  
- - [Определяемые пользователем функции](../../relational-databases/user-defined-functions/user-defined-functions.md)   
- - [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 
- - [ALTER FUNCTION (Transact-SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md) 
- - [DROP FUNCTION (Transact-SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md)
- - [DROP PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/drop-partition-function-transact-sql.md)
- - Другие примеры ( [сообщество](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712))
+-   Укажите при создании функции UDF предложение `WITH SCHEMABINDING`. Это обеспечит невозможность изменения объектов, на которые ссылается определение функции, если при этом не изменяется сама функция.  
+  
+-   Выполняйте хранимую процедуру [sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) после изменения любого объекта, указанного в определении функции UDF.  
+
+Если вы создаете определяемую пользователем функцию, не имеющую доступа к данным, укажите параметр `SCHEMABINDING`. Это не позволит оптимизатору запросов создавать ненужные операторы очередей для планов запроса, содержащих такие определяемые пользователем функции. Дополнительные сведения об очередях см. в [справочнике по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md). Дополнительные сведения о создании функций, привязанных к схеме, см. в [соответствующем разделе](../../relational-databases/user-defined-functions/user-defined-functions.md#SchemaBound).
+
+Присоединение к MSTVF в предложении `FROM` возможно, но может привести к снижению производительности. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может использовать все оптимизированные методы для некоторых инструкций, которые можно включить в функцию MSTVF, и в результате план запроса оказывается неоптимальным. Чтобы получить наилучшую производительность, по возможности задавайте соединения не между функциями, а между базовыми таблицами.  
+
+> [!IMPORTANT]
+> Функции MSTVF имеют фиксированное предполагаемое значение кратности 100 начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и 1 в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
+> Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] для оптимизации плана выполнения, который использует функции MSTVF, можно использовать выполнение с чередованием, что обеспечивает фактическую кратность вместо приведенной выше эвристики.     
+> Дополнительные сведения см. в разделе [Выполнение с чередованием для функций с табличным значением с несколькими инструкциями](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+
+> [!NOTE]  
+> Параметры ANSI_WARNINGS не годятся для передачи в хранимые процедуры, пользовательские функции и при объявлении и установке переменных в пакетных инструкциях. Например, если объявить переменную как **char(3)**, а затем присвоить ей значение длиннее трех символов, данные будут усечены до размера переменной, а инструкция `INSERT` или `UPDATE` завершится без ошибок.
+
+## <a name="see-also"></a>См. также:  
+ [Определяемые пользователем функции](../../relational-databases/user-defined-functions/user-defined-functions.md)     
+ [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)    
+ [ALTER FUNCTION (Transact-SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md)    
+ [DROP FUNCTION (Transact-SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md)     
+ [DROP PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/drop-partition-function-transact-sql.md)    
+ Другие примеры ( [сообщество](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712))   
   

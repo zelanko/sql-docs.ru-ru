@@ -1,22 +1,22 @@
 ---
 title: Добавление веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на страницу SharePoint | Документы Майкрософт
-ms.date: 09/26/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 39379fa6d6471f9d0d624dbbd2b05331c7e7a36a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813027"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398356"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Добавление веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на страницу SharePoint
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 Чтобы отобразить отчет из служб SQL Server Reporting Services или с Сервера отчетов Power BI, можно добавить веб-часть "Средство просмотра отчетов" на страницу SharePoint.
 
@@ -46,7 +46,7 @@ ms.locfileid: "51813027"
 
     ![Добавьте веб-часть "Средство просмотра отчетов".](media/sharepoint-report-viewer-web-part.png)
 
-    Сначала может возникнуть ошибка. Причина в том, что URL-адрес сервера отчетов по умолчанию имеет значение *https://localhost*, но по этому адресу сервер может быть недоступен.
+    Изначально может появиться сообщение об ошибке. Причина в том, что URL-адрес сервера отчетов по умолчанию имеет значение *https://localhost*, но по этому адресу сервер может быть недоступен.
 
 ## <a name="configure-the-report-viewer-web-part"></a>Настройка веб-части "Средство просмотра отчетов"
 
@@ -56,7 +56,7 @@ ms.locfileid: "51813027"
 
     ![Пункт "Изменить веб-часть" в раскрывающемся меню веб-части.](media/sharepoint-edit-web-part.png)
 
-2. Введите **URL-адрес сервера отчетов**, где размещается отчет. Таблица должна выглядеть приблизительно так: *https://myrsserver/reportserver*.
+2. Введите **URL-адрес сервера отчетов**, где размещается отчет. URL-адрес должен выглядеть приблизительно так: *https://myrsserver/reportserver*.
 
 3. Введите путь и имя отчета, который должен отображаться в веб-части. Он должен выглядеть так: */AdventureWorks Sample Reports/Company Sales*. В этом примере отчет *Company Sales* находится в папке *AdventureWorks Sample Reports*.
 

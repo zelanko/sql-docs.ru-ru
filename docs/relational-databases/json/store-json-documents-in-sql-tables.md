@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 608021d678f57bda86b1fc77950e029efceea7ad
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ef9d3882a00792606daa357508677b1af6fbe570
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663613"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502782"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Хранение документов JSON в SQL Server или базе данных SQL
 SQL Server и база данных SQL Azure имеют собственные функции JSON, позволяющие анализировать документы JSON с помощью стандартного языка SQL. Теперь вы можете хранить документы JSON в SQL Server или базе данных SQL и запрашивать данные JSON так же, как в базе данных NoSQL. Эта статья описывает возможности хранения документов JSON в SQL Server или базе данных SQL.
@@ -48,17 +48,17 @@ ALTER TABLE WebSite.Logs
 При хранении в таблице документов JSON вы можете выполнять запросы к документам с помощью стандартного языка Transact-SQL. Пример:
 
 ```sql
-SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$.duration’) as float))
+SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.duration') as float))
  FROM WebSite.Logs
- WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
- GROUP BY JSON_VALUE(log, ‘$.severity’)
- HAVING AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) > 100
- ORDER BY AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
+ WHERE CAST( JSON_VALUE(log,'$.date') as datetime) > @datetime
+ GROUP BY JSON_VALUE(log, '$.severity')
+ HAVING AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) > 100
+ ORDER BY AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) DESC
 ```
 
 Возможность использования *любой* функции и предложения запроса T-SQL для запросов к документам JSON является существенным преимуществом. SQL Server и база данных SQL не вводят никаких ограничений к запросам, используемым для анализа документов JSON. Вы можете извлекать из документа JSON значения с помощью функции `JSON_VALUE` и использовать их в запросе, как любые другие значения.
 
-Наличие полнофункционального синтаксиса запросов T-SQL является ключевым отличием SQL Server и базы данных SQL от классических баз данных NoSQL: в Transact-SQL вам скорее всего доступны все необходимые функции для обработки данных JSON.
+Наличие полнофункционального синтаксиса запросов T-SQL является ключевым отличием SQL Server и базы данных SQL от классических баз данных NoSQL: в Transact-SQL вам, скорее всего, доступны все необходимые функции для обработки данных JSON.
 
 ## <a name="indexes"></a>Индексы
 
@@ -107,7 +107,7 @@ create table WebSite.Logs (
 
 ## <a name="frequently-changing-documents--memory-optimized-tables"></a>Часто изменяемые документы и таблицы, оптимизированные для памяти
 
-Если в коллекциях ожидается множество операций изменения, вставки и удаления, вы можете хранить документы JSON в таблицах, оптимизированных для памяти. Оптимизированные для памяти коллекции JSON всегда хранят данные в памяти, что позволяет избежать нагрузки, связанной с операциями ввода-вывода в хранилище. Кроме того, эти коллекции абсолютно неблокируемые, то есть, действия с документами не препятствуют никаким другим операциям.
+Если в коллекциях ожидается множество операций изменения, вставки и удаления, вы можете хранить документы JSON в таблицах, оптимизированных для памяти. Оптимизированные для памяти коллекции JSON всегда хранят данные в памяти, что позволяет избежать нагрузки, связанной с операциями ввода-вывода в хранилище. Кроме того, эти коллекции абсолютно неблокируемые, то есть действия с документами не препятствуют никаким другим операциям.
 
 Единственное, что вам нужно сделать для преобразования классической коллекции в коллекцию, оптимизированную для памяти, — это указать параметр **with (memory_optimized=on)** после определения таблицы, как показано в следующем примере. После этого вы получите оптимизированную для памяти версию коллекции JSON.
 

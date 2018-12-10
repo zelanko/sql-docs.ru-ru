@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c6c7dd24c716849d6d36ca28908d57c0e715f17c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81bfdfb8d622096b30ea76a7632c5fd61ac833e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645102"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514995"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Ключи шифрования служб SSRS — резервное копирование и восстановление ключей шифрования
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "47645102"
   
 5.  Нажмите кнопку **ОК**.  
   
-###  <a name="bkmk_backup_rskeymgmt"></a> Резервное копирование ключей шифрования — rskeymgmt (собственный режим)  
+###  <a name="bkmk_backup_rskeymgmt"></a> Резервное копирование ключей шифрования — rskeymgmt (собственный режим)  
   
 1.  На компьютере, на котором выполняется сервер отчетов, запустите программу **rskeymgmt.exe** . Укажите аргумент **-e** для копирования ключа, задайте имя файла и пароль. Аргументы, которые необходимо задать, приведены в следующем примере.  
   

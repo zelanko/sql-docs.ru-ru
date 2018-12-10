@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cc0d7ba8aa5261e93f7b291f3e948e0f773c45e5
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 1083c87475c27e33dccd069149e240098d187473
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812937"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418805"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Отчеты, созданные в локальном и подключенном режимах в средстве просмотра отчетов
 
@@ -79,7 +79,7 @@ ms.locfileid: "51812937"
   
 ## <a name="connected-mode"></a>режиме соединения
 
- Последние сведения об использовании расширения ADS в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме соединения см. в разделе [Отчет служб Access на сайте SharePoint выводит ошибку в расширении данных "ADS"](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
+ Последние сведения об использовании расширения ADS в режиме соединения [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в статье [Отчет служб Access на сайте SharePoint выводит ошибку в расширении данных "ADS"](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## <a name="see-also"></a>См. также раздел
 

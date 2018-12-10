@@ -13,12 +13,12 @@ ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7386a1bceed8ed79dddf2636ae152d79c460a5ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed6f127b8f1a692f1cd71839570cd38d21213482
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675060"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396925"
 ---
 # <a name="analyze-script-performance"></a>Анализ производительности скрипта
 Средства в составе SQL Server Data Tools помогут вам определить, можно ли повысить производительность запроса, хранимых процедур или скриптов. Например, выполняя мониторинг статистики клиента (времени отклика для часто используемых запросов и т. п.), можно определить, требуется ли изменить текст запроса или индексы таблицы. К таким статистическим данным может относиться время выполнения клиента, профиль запроса, количество отправленных и принятых пакетов или байтов и т. п.  

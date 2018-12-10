@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 511436c7c6c5fc73f3bb8a5c02a91ea01f3e8791
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2736c3cf0d8373b80a41277a6b80b4b12b0ecd3a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670565"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510705"
 ---
 # <a name="sql-server-audit-database-engine"></a>Подсистема аудита SQL Server (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -114,9 +114,9 @@ ms.locfileid: "51670565"
  Дополнительные сведения об аудите см. в разделах [Создание аудита сервера и спецификации аудита сервера](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) и [Создание спецификации аудита для сервера и базы данных](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ## <a name="considerations"></a>Замечания  
- В случае ошибки при инициализации аудита сервер не будет запущен. В этом случае его можно запустить, если в командную строку включить параметр **-f** .  
+ В случае ошибки при инициализации аудита сервер не будет запущен. В этом случае его можно запустить, если в командную строку включить параметр **-f**.  
   
- Если ошибка аудита вызывает отключение сервера или не дает ему запуститься, поскольку для аудита был задан режим ON_FAILURE=SHUTDOWN, то в журнал будет записано событие MSG_AUDIT_FORCED_SHUTDOWN. Поскольку выключение происходит при первом возникновении этого события, это событие будет записано один раз. Это событие записывается после получения сообщения об ошибке, означающего, что аудит вызвал отключение. Администратор может обойти завершения работы, вызываемые аудитом, запустив [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в однопользовательском режиме с использованием флага **–m** . При запуске в однопользовательском режиме будет произведено изменение настроек любого аудита, запускающегося в этом сеансе, для которого было задано условие ON_FAILURE=SHUTDOWN. Такие аудиты будут запускаться с условием ON_FAILURE=CONTINUE. Если [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] запускается с использованием флага **–m** , то в журнал ошибок будет записано сообщение MSG_AUDIT_SHUTDOWN_BYPASSED.  
+ Если ошибка аудита вызывает отключение сервера или не дает ему запуститься, поскольку для аудита был задан режим ON_FAILURE=SHUTDOWN, то в журнал будет записано событие MSG_AUDIT_FORCED_SHUTDOWN. Поскольку выключение происходит при первом возникновении этого события, это событие будет записано один раз. Это событие записывается после получения сообщения об ошибке, означающего, что аудит вызвал отключение. Администратор может обойти завершения работы, вызываемые аудитом, запустив [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в однопользовательском режиме с использованием флага **-m**. При запуске в однопользовательском режиме будет произведено изменение настроек любого аудита, запускающегося в этом сеансе, для которого было задано условие ON_FAILURE=SHUTDOWN. Такие аудиты будут запускаться с условием ON_FAILURE=CONTINUE. Если [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] запускается с использованием флага **-m**, то в журнал ошибок будет записано сообщение MSG_AUDIT_SHUTDOWN_BYPASSED.  
   
  Дополнительные сведения о параметрах запуска службы см. в разделе [Параметры запуска службы Database Engine](../../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   

@@ -15,12 +15,12 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1089176ed6b47ab7001f0a505b7d475bf1241c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 179c3418f6d8c13c4974d6b5b023e1905140c6a3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662392"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410211"
 ---
 # <a name="configure-dialog-box"></a>Диалоговое окно «Настройка»
   Диалоговое окно **Настройка** используется для настройки параметров, диспетчеров соединений и ссылок на среды для пакетов и проектов.  
@@ -37,7 +37,7 @@ ms.locfileid: "47662392"
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]установите соединение с сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-     Устанавливается соединение с экземпляром компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , в котором размещена база данных SSISDB.  
+     Устанавливается соединение с экземпляром [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], в котором размещена база данных SSISDB.  
   
 2.  В обозревателе объектов разверните дерево для отображения узла **Каталоги служб Integration Services** .  
   
@@ -80,7 +80,7 @@ ms.locfileid: "47662392"
 ##  <a name="references"></a> Задание параметров на странице «Ссылки»  
  Используйте страницу **Ссылки** , чтобы добавлять и удалять ссылки на среды, а также для доступа к свойствам среды.  
   
- Среда указывает значения времени выполнения для пакетов, содержащихся в проекте, который развернут на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ Среда указывает значения времени выполнения для пакетов, содержащихся в проектах, которые развернуты на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  **Среда**  
  Перечисляет среду.  

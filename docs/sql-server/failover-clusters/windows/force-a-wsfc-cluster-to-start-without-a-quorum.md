@@ -13,12 +13,12 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4cde2a5c082da3c87684ff6a32a12feb171c70ef
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697582"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520223"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Принудительный запуск кластера WSFC без кворума
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51697582"
   
 1.  Откройте диспетчер отказоустойчивого кластера и подключитесь к требуемому узлу кластера в режиме «в сети».  
   
-2.  На панели **Действия** выберите **Принудительный запуск кластера**, затем **Да, запустить кластер принудительно**.  
+2.  На панели **Действия** выберите **Принудительный запуск кластера**, а затем — **Да, запустить кластер принудительно**.  
   
 3.  На левой панели в дереве **Диспетчер отказоустойчивого кластера** щелкните имя кластера.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "51697582"
   
 3.  С помощью `Stop-ClusterNode` обеспечьте остановку службы кластеров.  
   
-4.  Принудительный запуск службы кластеров с помощью `Start-ClusterNode` с `–FixQuorum` .  
+4.  Принудительный запуск службы кластеров с помощью `Start-ClusterNode` с `-FixQuorum` .  
   
-5.  С помощью `Get-ClusterNode` с `–Propery NodeWieght = 1` установите значение, которое гарантирует для узла право голоса в кворуме.  
+5.  С помощью `Get-ClusterNode` с `-Propery NodeWieght = 1` установите значение, которое гарантирует для узла право голоса в кворуме.  
   
 6.  Выведите свойства узла кластера в удобном для чтения формате.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "51697582"
 Import-Module FailoverClusters  
   
 $node = "Always OnSrv02"  
-Stop-ClusterNode –Name $node  
-Start-ClusterNode –Name $node -FixQuorum  
+Stop-ClusterNode -Name $node  
+Start-ClusterNode -Name $node -FixQuorum  
   
 (Get-ClusterNode $node).NodeWeight = 1  
   

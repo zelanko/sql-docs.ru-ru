@@ -11,12 +11,12 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fbb7e2458432bb39ff452b703441fc320d2e645
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a06dcac3487220a84d8a22f6c92e02859e91a6f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639581"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510060"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Соединитель Microsoft Connector для SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector для SAP BW состоит из трех компонентов, позволяющих извлекать данные из системы SAP Netweaver BW версии 7 и загружать их в нее.  
@@ -35,11 +35,11 @@ ms.locfileid: "51639581"
 ## <a name="components"></a>Components  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector для SAP BW состоит из следующих компонентов:  
   
--   **SAP BW Source**— это компонент потока данных, который позволяет извлекать данные из системы SAP Netweaver BW версии 7.  
+-   **SAP BW Source** — это компонент потока данных, который позволяет извлекать данные из системы SAP Netweaver BW версии 7.  
   
--   **SAP BW Destination**— это компонент потока данных, позволяющий загружать данные в систему SAP Netweaver BW версии 7.  
+-   **SAP BW Destination** — это компонент потока данных, позволяющий загружать данные в систему SAP Netweaver BW версии 7.  
   
--   **Диспетчер соединений SAP BW**подключается к SAP BW Source или SAP BW Destination в системе SAP Netweaver BW версии 7.  
+-   **Диспетчер соединений SAP BW** подключает источник SAP BW или назначение SAP BW к системе SAP Netweaver BW версии 7.  
   
  Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW см. в техническом документе [Использование службы SQL Server Integration Services с SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
   

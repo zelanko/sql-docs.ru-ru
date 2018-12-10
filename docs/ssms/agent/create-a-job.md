@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ad60bf9002b6346df85bb007969d056a6ab10f1d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f323a029e881da8a6b2ef681cacc3bb12b118d51
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697842"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541969"
 ---
 # <a name="create-a-job"></a>Создание задания
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "51697842"
   
 2.  Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
   
-3.  Щелкните правой кнопкой мыши папку **Задания** и выберите пункт **Создать задание…**  
+3.  Щелкните правой кнопкой мыши папку **Задания** и выберите пункт **Создать задание…**.  
   
 4.  На странице **Общие** в диалоговом окне **Создание задания** измените общие свойства задания. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [Свойства задания — создание задания (страница "Общие")](../../ssms/agent/job-properties-new-job-general-page.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: Создание индексированных представлений | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c37482e2adb298af1c2d650c5a6c0e5d06ece2b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650972"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191054"
 ---
 # <a name="create-indexed-views"></a>Создание индексированных представлений
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,8 @@ ms.locfileid: "47650972"
 |ARITHABORT|ON|ON|OFF|OFF|  
 |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF| 
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
   
 <sup>1</sup> Если параметру `ANSI_WARNINGS` присвоить значение ON, то для параметра `ARITHABORT` будет неявно задано значение ON.  
   
@@ -107,6 +108,7 @@ ms.locfileid: "47650972"
     |PRECISE = TRUE|Должно быть объявлено явно в качестве атрибута метода .NET Framework.|  
     |DATA ACCESS = NO SQL|Определяется установкой атрибута DataAccess в DataAccessKind.None и атрибута SystemDataAccess в SystemDataAccessKind.None.|  
     |EXTERNAL ACCESS = NO|Для процедур CLR значением свойства по умолчанию является NO.|  
+    |&nbsp;|&nbsp;|
   
 -   Представления должны быть созданы с параметром `WITH SCHEMABINDING`.  
   
@@ -126,6 +128,7 @@ ms.locfileid: "47650972"
     |Табличные переменные|`OUTER APPLY` или `CROSS APPLY`|`PIVOT`, `UNPIVOT`|  
     |Наборы разреженных столбцов|Встроенные функции (TVF) или функции с табличным значением с несколькими инструкциями (MSTVF)|`OFFSET`|  
     |`CHECKSUM_AGG`|||  
+    |&nbsp;|&nbsp;|&nbsp;|
   
      <sup>1</sup> Индексированное представление может содержать столбцы типа **float**, но они не могут включаться в ключ кластеризованного индекса.  
   
@@ -152,8 +155,9 @@ ms.locfileid: "47650972"
   
  Индексы таблиц и представлений могут быть отключены. При отключении кластеризованного индекса таблицы индексы представлений, связанных с ней, также отключаются.  
  
-<a name="nondeterministic"></a> Выражения, включающие неявные преобразования символьных строк в типы **datetime** или **smalldatetime**, считаются недетерминированными. Это связано с тем, что результаты зависят от значений параметров LANGUAGE и DATEFORMAT, определенных для сеанса сервера. Например, результат выражения `CONVERT (datetime, '30 listopad 1996', 113)` зависит от значения параметра LANGUAGE, поскольку строка`listopad`в различных языках обозначает разные месяцы. Аналогичным образом, вычисляя выражение `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует строку `'2000-12-01'` в соответствии со значением параметра DATEFORMAT. Неявное преобразование символьных данных между различными параметрами сортировки не в Юникоде также считается недетерминированным.  
-  
+<a name="nondeterministic"></a> Выражения, включающие неявные преобразования символьных строк в типы **datetime** или **smalldatetime**, считаются недетерминированными. Дополнительные сведения см. в статье [Недетерминированное преобразование строк дат литералов в значения DATE](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
+
+
 ###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
@@ -163,7 +167,7 @@ ms.locfileid: "47650972"
   
 #### <a name="to-create-an-indexed-view"></a>Создание индексируемого представления  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

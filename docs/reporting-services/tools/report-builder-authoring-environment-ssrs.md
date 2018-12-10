@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3ea8e6931ef27faf80d1bd5f2aa23c9e5499266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed90c887a9aeaeca9939511e215464b0b51ba226
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699752"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711675"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Среда разработки построителя отчетов (службы SSRS)
   Построитель отчетов [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] — изолированная среда разработки для создания отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы вне Visual Studio. При создании отчета задается, откуда брать данные, какие данные брать и как их отображать. При запуске отчета обработчик получает все указанные сведения, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Его можно установить с веб-портала [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или из Центра загрузки Майкрософт.  
@@ -41,7 +41,7 @@ ms.locfileid: "47699752"
   
 -   Сохранять отчеты и связанные с ними элементы в библиотеке SharePoint, на сервере отчетов или на локальном компьютере.  
   
- У построителя отчетов и конструктора отчетов много общего. Подробнее см. в разделе [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
+ У построителя отчетов и конструктора отчетов много общего. Подробнее см. в разделе [Построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   

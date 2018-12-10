@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b41f81a9a42ca572633d858fd22113d8a6d718a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 992239e7b2e07ac555eb2c474716f341bf4d7870
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031613"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617804"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимают запросы, в которых определена проверка подлинности Negotiate или NTLM. Если в развертывание входят клиентские приложения и браузеры, в которых используются поставщики безопасности, то можно использовать значения по умолчанию без дополнительной настройки. Если нужно использовать другого поставщика безопасности для встроенной безопасности Windows (например, требуется применять протокол Kerberos напрямую) или если значения по умолчанию были изменены, и нужно восстановить первоначальные настройки, то можно использовать сведения данного раздела, чтобы указать настройки проверки подлинности на сервере отчетов.  
@@ -168,7 +168,7 @@ ms.locfileid: "50031613"
   
 -   Значения в столбце \<Явные> — это имена субъектов-служб, настроенные в Active Directory для учетной записи службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Если дальнейшей необходимости в использовании расширенной защиты нет, восстановите параметры по умолчанию и перезапустите учетную запись службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Если дальнейшей необходимости в использовании расширенной защиты нет, восстановите параметры по умолчанию и перезапустите учетную запись службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ```  
 <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>  

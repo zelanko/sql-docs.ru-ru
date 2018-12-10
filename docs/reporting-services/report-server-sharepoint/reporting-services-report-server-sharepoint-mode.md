@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029803"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529742"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Сервер отчетов служб Reporting Services (режим SharePoint)
 
@@ -80,11 +80,11 @@ ms.locfileid: "50029803"
   
 -   Возможность персонализации SharePoint также не поддерживается на страницах служб Reporting Services. Интеграция с сервером отчетов невозможна, если веб-приложение SharePoint включено для анонимного доступа.  
   
--   Службы SQL Server Reporting Services **не** поддерживают управление версиями библиотеки документов SharePoint. Если сохранить элементы отчета в библиотеке документов, для которой включена функция «История версий документов», то функции службы Reporting Services будут работать неправильно и в журнале ULS будут формироваться ошибки. В следующем примере показана ошибка в журнале ULS:  
+-   Службы SQL Server Reporting Services **не** поддерживают управление версиями библиотеки документов SharePoint. Если сохранить элементы отчета в библиотеке документов, для которой включена функция "История версий документов", то функции службы Reporting Services будут работать неправильно и в журнале ULS будут формироваться ошибки. В следующем примере показана ошибка в журнале ULS:  
   
-    -   «...отключен источник данных, связанный с отчетом».  
+    -   "...отключен источник данных, связанный с отчетом".  
   
-     История версий документов библиотеки настраивается на странице «Параметры версий» окна «Настройки библиотеки».  
+     История версий документов библиотеки настраивается на странице "Параметры версий" окна "Параметры библиотеки".  
   
 ## <a name="supported-combinations-of-the-sharepoint-add-in-and-report-server"></a>Поддерживаемые сочетания надстройки SharePoint и сервера отчетов
 

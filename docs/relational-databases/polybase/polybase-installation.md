@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d786294fb6f5c6c60243912d31bb9339a079a12e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674233"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523480"
 ---
 # <a name="install-polybase-on-windows"></a>Установка PolyBase на компьютере по управлением Windows
 
@@ -184,7 +184,7 @@ SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;
    
 - SQL Server PolyBase — службы PolyBase — \<имя_экземпляра_SQL_Server> (входящие TCP-соединения);  
 
-- SQL Server PolyBase — обозреватель SQL — (входящие UDP-подключения)  
+- SQL Server PolyBase — обозреватель SQL — (UDP вход.).  
    
 Эти правила активируются во время установки, если экземпляр SQL Server входит в масштабируемую группу PolyBase. Брандмауэр будет открыт для входящих подключений. Будут разрешены подключения к ядру СУБД SQL Server, SQL Server PolyBase Engine, службе перемещения данных SQL Server PolyBase и обозревателю SQL. Но если во время установки служба брандмауэра на компьютере не запущена, программа установки SQL Server не сможет включить эти правила. В этом случае запустите службу брандмауэра и включите эти правила после установки.  
    

@@ -21,12 +21,12 @@ ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f1247bcaa04c14a822a333dc99f5a38e5354b247
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f0818c47f0b62240786e76b7e35fc7ea6db2dfd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606194"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534016"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Включение или отключение сетевого протокола сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "51606194"
   
 4.  В области консоли выберите **Службы SQL Server**.  
   
-5.  В области сведений щелкните правой кнопкой мыши **SQL Server (***\<имя экземпляра>***)**, а затем нажмите кнопку **Перезапустить**, чтобы остановить и перезагрузить службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  В области сведений щелкните правой кнопкой мыши **SQL Server (**_\<имя экземпляра>_**)**, а затем нажмите кнопку **Перезапустить**, чтобы остановить и перезагрузить службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="PowerShellProcedure"></a> Использование SQL Server PowerShell  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51606194"
   
 2.  Запустите Windows PowerShell из панели задач или нажмите кнопку "Пуск", а затем последовательно выберите "Все программы", "Стандартные", "Windows PowerShell" и "Windows PowerShell".  
   
-3.  Импортируйте модуль **sqlps** , введя команду **Import-Module "sqlps"**  
+3.  Импортируйте модуль **sqlps**, введя команду **Import-Module "sqlps"**.  
   
 4.  Выполните следующие инструкции, чтобы включить протокол TCP и протокол именованных каналов. Замените `<computer_name>` именем компьютера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если настраивается именованный экземпляр, замените `MSSQLSERVER` именем экземпляра.  
   

@@ -10,18 +10,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a1ae0aac049fef58d8007c26dce6ce355344a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700532"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514536"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Автономная справка SQL Server и окно справки
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 С помощью окна справки в SQL Server Management Studio (SSMS) или Visual Studio можно скачать и установить пакеты справки SQL Server из Интернета или с диска и просматривать их в автономном режиме. В этой статье описываются средства, устанавливающие окно справки, а также порядок установки автономного содержимого справки и просмотра справки для [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 и SQL Server 2017.
+
+После скачивания содержимого в систему с доступом к Интернету можно перенести содержимое в систему без доступа к Интернету. 
 
 > [!NOTE]
 > Сведения о версиях справки для SQL Server 2016 и SQL Server 2017 объединены, хотя некоторые разделы (где это указано) относятся только к одной из версий. Большинство разделов относятся к обеим версиям.
@@ -125,7 +127,8 @@ ms.locfileid: "51700532"
    ![Просмотр справки](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
    Слева отображается содержание справки, а справа — выбранный раздел справки. 
-   
+
+  
 ## <a name="use-help-viewer-v1x"></a>Использование окна справки версии 1.x
 
 В более ранних версиях SQL Server Management Studio и Visual Studio используется окно справки версии 1.x, которое поддерживает справку SQL Server 2014. 
@@ -165,13 +168,15 @@ ms.locfileid: "51700532"
    
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
    
+
+
 ## <a name="view-online-help"></a>Просмотр справки в Интернете
 
 Справка в Интернете содержит наиболее актуальную информацию. 
 
 **Просмотр справки SQL Server в Интернете с помощью SQL Server Management Studio 17.x**
 
-- В меню **Справка** выберите пункт **Просмотр справки**. В окне браузера отобразится последняя версия документации по SQL Server 2016 и SQL Server 2017 ([https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)). 
+- В меню **Справка** выберите пункт **Просмотр справки**. В окне браузера отобразится последняя версия документации по SQL Server 2016 и SQL Server 2017 ( [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) ). 
 
    ![Просмотр справки](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -204,6 +209,22 @@ ms.locfileid: "51700532"
 
 >  [!NOTE]
 >  Справка F1 работает только при наличии подключения к Интернету. Автономных источников для справки F1 нет. 
+
+## <a name="systems-without-internet-access"></a>Системы без доступа к Интернету
+Когда вы выполните все [действия, описанные ранее](#use-help-viewer-v2x), чтобы загрузить автономное содержимое с помощью средства просмотра справки SQL Server в систему с доступом к Интернету, перенесите это содержимое в систему без доступа к Интернету. Для этого выполните следующие шаги. 
+
+  >[!NOTE]
+  >В автономной системе должно быть установлено программное обеспечение, поддерживающее средство просмотра справки, например SQL Server Management Studio. 
+
+1. Откройте средство просмотра справки (CTRL + ALT + F1).
+1. Выберите документацию, которая вас интересует. Например, отфильтруйте список по SQL и выберите техническую документацию по SQL Server. 
+1. Определите физический путь к файлам на диске, который можно найти в разделе **Путь к локальному хранилищу**.
+1. Перейдите к этому расположению в проводнике файловой системы. 
+    1.  Расположение по умолчанию — `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
+1. Выберите три папки — **ContentStore**, **Incoming**, **IndexStore** — и скопируйте их в то же расположение в автономной системе. Может потребоваться промежуточный носитель, например накопитель USB или компакт-диск. 
+1. Как только вы переместите эти файлы, запустите средство просмотра справки в автономной системе, и техническая документация по SQL Server будет доступна для просмотра.
+
+![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
    
 
 ## <a name="next-steps"></a>Следующие шаги

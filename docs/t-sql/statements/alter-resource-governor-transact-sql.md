@@ -21,12 +21,12 @@ ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: afac7a2ed586f53994bc60ea89e323389c979714
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c3b106d89db436ebf2a2d60abe7f5eee5fca2f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635782"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514724"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  Чтобы любые изменения конфигурации вступили в силу, необходимо вызвать инструкцию ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
- CLASSIFIER_FUNCTION = { *schema_name ***.*** function_name* | NULL }  
+ CLASSIFIER_FUNCTION = { _schema_name_**.**_function_name_ | NULL }  
  Регистрирует функцию классификации, указанную *schema_name.function_name*. Эта функция классифицирует каждый новый сеанс и назначает запросы сеанса в группу рабочей нагрузки. При использовании значения NULL новые сеансы автоматически назначаются в группу рабочей нагрузки по умолчанию.  
   
  RESET STATISTICS  
@@ -197,7 +197,7 @@ WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);
  [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+ [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
   

@@ -3,7 +3,7 @@ title: Автоматическое заполнение для вторичны
 description: Использование автоматического заполнения для инициализации вторичных реплик.
 services: data-lake-analytics
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b519e70c46f697c4ef819f59c122fba6c4e40ea2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603624"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506692"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Автоматическое заполнение для вторичных реплик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,16 +117,14 @@ WITH (
 
 После присоединения экземпляра, который стал вторичной репликой, в журнал SQL Server добавляется следующее сообщение:
 
->Локальной реплике доступности для группы доступности "AGName" не было предоставлено разрешение на создание баз данных, но параметр `SEEDING_MODE` был установлен равным `AUTOMATIC`. Используйте `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE`, чтобы разрешить создание баз данных, которые заполняются первичной репликой доступности.
+>Локальной реплике доступности для группы доступности "AGName" не было предоставлено разрешение на создание баз данных, но параметр `SEEDING_MODE` был установлен равным `AUTOMATIC`. Используйте `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE`, чтобы разрешить создание баз данных, которые заполняются первичной репликой доступности.
 
 ### <a name = "grantCreate"></a> Предоставление группе доступности разрешения на создание базы данных во вторичной реплике
 
 После соединения предоставьте группе доступности разрешение на создание баз данных в экземпляре вторичной реплики SQL Server. Для работы автоматического заполнения группе доступности необходимо предоставить разрешение на создание базы данных. 
 
 >[!TIP]
->Когда группа доступности создает базу данных во вторичной реплике, она устанавливает в качестве владельца базы данных учетную запись, от имени которой была выполнена инструкция `ALTER AVAILABILITY GROUP`, предоставляя этой учетной записи разрешение на создание любых баз данных. Для большинства приложений владелец базы данных для вторичной реплики должен совпадать с владельцем первичной реплики.
->
->Чтобы все базы данных создавались с тем же владельцем, что и владелец первичной реплики, выполните пример команды, указанный ниже, в контексте безопасности пользователя, который является владельцем базы данных в первичной реплике. Обратите внимание, что этот пользователь должен иметь разрешение `ALTER AVAILABILITY GROUP`. 
+>Когда группа доступности создает базу данных во вторичной реплике, она задает sa (а именно учетную запись с идентификатором безопасности 0x01) как владелец владельца базы данных. 
 >
 >Чтобы изменить владельца базы данных после того, как вторичная реплика автоматически создает базу данных, используйте `ALTER AUTHORIZATION`. См. раздел [ALTER AUTHORIZATION (Transact-SQL)](../../../t-sql/statements/alter-authorization-transact-sql.md).
  
@@ -221,7 +219,7 @@ CREATE EVENT SESSION [AG_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
     ADD TARGET package0.event_file(
-        SET filename=N’autoseed.xel’,
+        SET filename=N'autoseed.xel',
         max_file_size=(5),
         max_rollover_files=(4)
         )

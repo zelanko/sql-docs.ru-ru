@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a45460437b050275e2f679d64a5bd6a3fd5c4534
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812827"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390487"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
   Чтобы передать параметры в отчет, можно включить их в URL-адрес отчета. Такие параметры URL-адреса не снабжаются префиксами, поскольку они передаются непосредственно в подсистему обработки отчетов.  
@@ -81,23 +81,23 @@ SalesOrderNumber:isnull=true
 ##  <a name="bkmk_examples"></a> Дополнительные примеры  
  В следующем примере URL-адрес содержит пробелы и многозначные параметры.  
   
--   Имя папки «Группы образования пользователя SQL Server» содержит пробелы, которые заменяются знаком «+».  
+-   Имя папки "Группы образования пользователя SQL Server" содержит пробелы, которые заменяются знаком "+".  
   
--   Имя отчета «Отчет по командному проекту» содержит пробелы, которые заменяются знаком «+».  
+-   Имя отчета "Отчет по командному проекту" содержит пробелы, которые заменяются знаком "+".  
   
--   Передает два параметра: «teamgrouping2» со значением «xgroup» и «teamgrouping1» со значением «ygroup».  
+-   Передает два параметра: teamgrouping2 со значением xgroup и teamgrouping1 со значением ygroup.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup  
 ```  
   
- В следующем примере URL-адрес содержит многозначный параметр «OrderID». Формат многозначного параметра должен повторять имя параметра для каждого значения.  
+ В следующем примере URL-адрес содержит многозначный параметр OrderID. Формат многозначного параметра должен повторять имя параметра для каждого значения.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- В следующем примере URL-адреса передается один параметр *SellStartDate* со значением "1.7.2005" для сервера отчетов, работающего в основном режиме.  
+ В следующем примере URL-адреса передается один параметр *SellStartDate* со значением 1.7.2005 для сервера отчетов, работающего в основном режиме.  
   
 ```  
 https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  

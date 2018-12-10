@@ -1,7 +1,7 @@
 ---
 title: Центр производительности для базы данных SQL Azure и ядра СУБД SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/08/2016
+ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -20,15 +20,15 @@ ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cd4ba3f1606c1d62a0cd85760213552770f6e94e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6211647a58035ef4ef9ca38ed6ca5c51ce5d419c
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665593"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302861"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Центр производительности для базы данных Azure SQL и SQL Server Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   На этой странице представлены ссылки, помогающие найти сведения, касающиеся производительности в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  **Условные обозначения**  
@@ -47,7 +47,12 @@ ms.locfileid: "51665593"
 |**Параметры оптимизации конфигурации базы данных**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Сжатие данных](../../relational-databases/data-compression/data-compression.md)<br />![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [Просмотр или изменение уровня совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)<br />![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |**Оптимизация конфигурации таблицы**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Секционированные таблицы и индексы](../../relational-databases/partitions/partitioned-tables-and-indexes.md)|  
 |**Производительность компонента Database Engine в виртуальной машине Azure**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Краткий контрольный список](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Соображения относительно размера виртуальной машины и учетной записи хранения](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Соображения относительно дисков и вопросы производительности](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Вопросы производительности операций ввода-вывода](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Вопросы производительности, касающиеся определенных функций и компонентов](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)|  
-  
+
+> [!IMPORTANT]
+> Дополнительные сведения доступны в указанных далее статьях.    
+> -  [Рекомендуемые обновления и параметры конфигурации для SQL Server 2012 и SQL Server 2014 с высокопроизводительными рабочими нагрузками](https://support.microsoft.com/help/2964518)
+> -  [Рекомендуемые обновления и параметры конфигурации для SQL Server 2017 и SQL Server 2016 с высокопроизводительными рабочими нагрузками](https://support.microsoft.com/help/4465518)
+
 ## <a name="query-performance-options"></a>Оптимизация производительности запросов  
   
 |||  
@@ -57,11 +62,12 @@ ms.locfileid: "51665593"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Соединения](../../relational-databases/performance/joins.md)**|[Основные принципы соединения](../../relational-databases/performance/joins.md#fundamentals)<br />[Соединение вложенными циклами](../../relational-databases/performance/joins.md#nested_loops)<br />[Соединение слиянием](../../relational-databases/performance/joins.md#merge)<br />[Хэш-соединение](../../relational-databases/performance/joins.md#hash)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Вложенные запросы](../../relational-databases/performance/subqueries.md)**|[Основы вложенных запросов](../../relational-databases/performance/subqueries.md#fundamentals)<br />[Коррелированные вложенные запросы](../../relational-databases/performance/subqueries.md#correlated)<br />[Типы вложенных запросов](../../relational-databases/performance/subqueries.md#types)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Хранимые процедуры](../stored-procedures/stored-procedures-database-engine.md)**|[CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md#best-practices)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Определяемые пользователем функции](../user-defined-functions/user-defined-functions.md)**|[CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md#best-practices)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Определяемые пользователем функции](../user-defined-functions/user-defined-functions.md)**|[CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md#best-practices)<br />[Создание определяемых пользователем функций (ядро СУБД)](../user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Оптимизация параллелизма**|[Настройка параметра конфигурации сервера max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Оптимизация оптимизатора запросов**|[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Оптимизация оптимизатора запросов**|[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)<br />[Указание запроса USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Статистика](../../relational-databases/statistics/statistics.md)**|[Условия обновления статистики](../statistics/statistics.md)<br />[Обновить статистику](../../relational-databases/statistics/update-statistics.md)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)** (Выполняющаяся в памяти OLTP (оптимизация в памяти))|[Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[Создание таблиц в базе данных TempDB и обращение к ним из скомпилированных в собственном коде хранимых процедур](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Диагностика общих проблем с производительностью хэш-индексов для оптимизированных для памяти таблиц](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[Демонстрация повышения производительности выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)** (Выполняющаяся в памяти OLTP (оптимизация в памяти))|[Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[Создание таблиц в базе данных TempDB и обращение к ним из скомпилированных в собственном коде хранимых процедур](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Диагностика общих проблем с производительностью хэш-индексов для оптимизированных для памяти таблиц](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[Демонстрация повышения производительности выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Интеллектуальная обработка запросов](../../relational-databases\performance\intelligent-query-processing.md)**|[Адаптивная обработка запросов](../../relational-databases/performance/adaptive-query-processing.md)|
   
 ## <a name="see-also"></a>См. также:  
  [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)   

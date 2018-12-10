@@ -1,7 +1,7 @@
 ---
 title: База данных model | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/04/2016
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf51363b4dc2e09e0a86de1d02be5bc60de5a318
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 9febf511aef30bde1b01a5cad8eba3e3f8845b2f
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558831"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191034"
 ---
 # <a name="model-database"></a>База данных model
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "51558831"
 |----------|------------------|-------------------|-----------------|  
 |Первичные данные|modeldev|model.mdf|Автоматическое увеличение на 64 МБ до заполнения диска.|  
 |Журнал|modellog|modellog.ldf|Автоматическое увеличение на 64 МБ до максимального размера в 2 ТБ.|  
-  
- Для более ранних версий, чем [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], см. статью о [шаблоне базы данных](../../2014/relational-databases/databases/model-database.md) со значениями увеличения файла по умолчанию.  
-  
+
+Для SQL Server 2014 см. статью о [шаблоне базы данных](https://docs.microsoft.com/sql/relational-databases/databases/model-database?view=sql-server-2014) со значениями увеличения файла по умолчанию.  
+
  Сведения о перемещении файлов базы данных и журналов **model** см. в разделе [Перемещение системных баз данных](../../relational-databases/databases/move-system-databases.md).  
   
 ### <a name="database-options"></a>Параметры базы данных  

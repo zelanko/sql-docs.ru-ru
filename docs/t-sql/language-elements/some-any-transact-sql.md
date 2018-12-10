@@ -22,12 +22,12 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ea622a882d0c9ff45680c0ee5b975a08c780ce9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70907736aab1cdcf628f763209b39e88f1a2bf6f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597942"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511623"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Boolean**  
   
 ## <a name="result-value"></a>Значение результата  
- При использовании ключевого слово SOME или ANY значение **TRUE** возвращается, если указанное сравнение имеет значение TRUE для любой пары (*scalar_expression ***,*** x*), где *x* является одним из значений набора из одного столбца; иначе возвращается значение **FALSE**.  
+ При использовании ключевого слова SOME или ANY значение **TRUE** возвращается, если указанное сравнение имеет значение TRUE для любой пары (_scalar_expression_**,**_x_), где *x* является одним из значений набора из одного столбца; иначе возвращается значение **FALSE**.  
   
 ## <a name="remarks"></a>Remarks  
  Для ключевого слова SOME необходим аргумент *scalar_expression*, чтобы провести непосредственное сравнение по крайней мере одного значения, возвращенного вложенным запросом. Инструкции, которым необходим аргумент *scalar_expression* для сравнения каждого значения, возвращенного вложенным запросом, перечислены в разделе [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md). Например, если вложенный запрос возвращает значения 2 и 3, то при значении *scalar_expression* = SOME (subquery) для выражения *scalar_express*, равного 2, будет возвращаться TRUE. Если вложенный запрос возвращает значения 2 и 3, то при *scalar_expression* = ALL (subquery) будет возвращаться FALSE, так как некоторые значения вложенного запроса (значение 3) не отвечают критериям этого выражения.  

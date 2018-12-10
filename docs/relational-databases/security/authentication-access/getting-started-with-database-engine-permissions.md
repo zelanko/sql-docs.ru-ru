@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c73e625f6447d5afd1e60acf8ec0e9159dcdb04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849592"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410861"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Приступая к работе с разрешениями Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   Предложение `PERMISSION` определяет, какое действие разрешено или запрещено. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] можно указать 230 разрешений. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] предусмотрено меньше разрешений, так как некоторые действия не относятся к Azure. Разрешения перечисляются в разделе [Разрешения (компонент Database Engine)](../../../relational-databases/security/permissions-database-engine.md) и на схеме, упоминаемой ниже.  
   
--   `ON SECURABLE::NAME` представляет тип защищаемого объекта (сервер, объект сервера, база данных или объект базы данных) и его имя. Некоторые разрешения не требуют указания `ON SECURABLE::NAME` , так как оно может быть однозначным или недопустимым в контексте. Например, для разрешения `CREATE TABLE` не требуется предложение `ON SECURABLE::NAME` (Инструкция `GRANT CREATE TABLE TO Mary;` позволяет пользователю Mary создавать таблицы.)  
+-   `ON SECURABLE::NAME` представляет тип защищаемого объекта (сервер, объект сервера, база данных или объект базы данных) и его имя. Некоторые разрешения не требуют указания `ON SECURABLE::NAME` , так как оно может быть однозначным или недопустимым в контексте. Например, для разрешения `CREATE TABLE` не требуется предложение `ON SECURABLE::NAME`. (Инструкция `GRANT CREATE TABLE TO Mary;` позволяет пользователю Mary создавать таблицы.)  
   
 -   `PRINCIPAL` представляет субъект безопасности (имя входа, пользователя или роль), который получает или утрачивает разрешение. Рекомендуется по возможности предоставлять разрешения для ролей.  
   

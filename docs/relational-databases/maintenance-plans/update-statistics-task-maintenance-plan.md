@@ -15,18 +15,18 @@ ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 732cc1fb83248104d7f7487855961bf7969d7fae
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: c0b900cc31b9bacf0658422c9953dedec4ee9659
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217125"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517463"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Задача «Обновление статистики» (план обслуживания)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Диалоговое окно **Задача «Обновление статистики»** служит для обновления сведений [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] о данных в таблицах и индексах. Эта задача осуществляет повторную выборку статистики распределения каждой пользовательской таблицы или индекса. При помощи статистики распределения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирует перемещение по таблицам во время обработки инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Для автоматического сбора статистики распределения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] периодически осуществляет выборку данных в соответствующей таблице по каждому индексу. Размер выборки зависит от количества строк в таблице и частоты изменения данных. Данный параметр используется для дополнительной выборки с использованием заданного процента данных в таблице. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эти сведения используются для оптимизации планов запросов.  
   
- Данная задача использует инструкцию UPDATE STATISTICS.  
+Эта задача выполняет инструкцию `UPDATE STATISTICS`.  
   
 ## <a name="options"></a>Параметры  
  **Соединение**  
@@ -54,7 +54,8 @@ ms.locfileid: "51217125"
   
      Создается план обслуживания, по которому задачи обслуживания должны выполняться только для указанных баз данных. Если выбран этот параметр, необходимо выбрать в списке хотя бы одну базу данных.  
   
- **Примечание** .   Планы обслуживания выполняются только для баз данных с уровнем совместимости 80 или выше. Базы данных с уровнем совместимости 70 или ниже не отображаются.  
+ > [!NOTE]
+ > Планы обслуживания выполняются только для баз данных, уровень совместимости которых 80 или выше. Базы данных с уровнем совместимости 70 или ниже не отображаются.  
   
  **Объект**  
  Ограничьте сетку **Выбор** для отображения таблиц, представлений или обоих элементов.  
@@ -84,7 +85,7 @@ ms.locfileid: "51217125"
  Просмотрите инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемые для данной задачи по отношению к серверу, на основе выбранных параметров.  
   
 > [!NOTE]  
->  Если количество затронутых объектов велико, построение этого отображения может занять значительное время.  
+> Если количество затронутых объектов велико, построение этого отображения может занять значительное время.  
   
 ## <a name="new-connection-dialog-box"></a>Диалоговое окно «Создание соединения»  
  **Имя соединения**  
@@ -112,6 +113,6 @@ ms.locfileid: "51217125"
  Укажите используемый при проверке подлинности пароль. Этот параметр недоступен.  
   
 ## <a name="see-also"></a>См. также:  
- [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)  
-  
-  
+ [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)    
+ [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)    
+ [Адаптивная дефрагментация индексов](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

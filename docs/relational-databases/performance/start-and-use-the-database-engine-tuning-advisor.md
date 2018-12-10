@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 926b099e6cadadb130717159188f2fcc87dbc218
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661133"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517675"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Запуск и использование помощника по настройке ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -245,16 +245,16 @@ ms.locfileid: "51661133"
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  Чтобы изменить количество событий для анализа, задайте параметр **–n** . В следующем примере увеличивается число элементов кэша до 2 000.  
+2.  Чтобы изменить количество событий для анализа, задайте параметр **–n**. В следующем примере увеличивается число элементов кэша до 2 000.  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  В целях анализа событий для всех баз данных в экземпляре укажите параметр **-ipf** .  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Настройка базы данных при помощи рабочей нагрузки и параметров программы dta по умолчанию  

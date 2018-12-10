@@ -15,12 +15,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 290008818b5cd486535e9b14f437729e4cab07e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3fc363a3ea7922c6c486f250222b5ce62da8e6e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731402"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514267"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Настройка и управление файлами тезауруса для полнотекстового поиска
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47731402"
 2.  Затем эти шаги повторяются для глобального тезауруса. Но если термин уже входит в состав соответствий в файле конкретного языка, он используется в глобальном тезаурусе.  
 
 ##  <a name="structure"></a> Структура файла тезауруса  
- Каждый файл тезауруса определяет XML-контейнер, идентификатор которого — `Microsoft Search Thesaurus`, и комментарий, `<!--` … `-->`, который содержит образец тезауруса. Тезаурус определен в элементе `<thesaurus>`, содержащем образцы дочерних элементов, которые определяют настройку диакритических знаков, расширяющие наборы и заменяющие наборы.
+ Каждый файл тезауруса определяет XML-контейнер, идентификатор которого — `Microsoft Search Thesaurus`, и комментарий, `<!--` ... `-->`, который содержит образец тезауруса. Тезаурус определен в элементе `<thesaurus>`, содержащем образцы дочерних элементов, которые определяют настройку диакритических знаков, расширяющие наборы и заменяющие наборы.
 
 Типичный пустой файл тезауруса содержит следующий XML-текст:  
   

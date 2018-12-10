@@ -11,12 +11,12 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 040fea749664fb63fa2911a2d4fcaab5185af912
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2dc364cc2665d800e311625d754716e4582b6b65
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638911"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392867"
 ---
 # <a name="the-oracle-cdc-databases"></a>Базы данных CDC Oracle
   Экземпляр CDC Oracle связан с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тем же именем на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта база данных называется базой данных Oracle (или базой данных CDC).  
@@ -115,7 +115,7 @@ ms.locfileid: "51638911"
 |target_max_batched_transactions|100|1|1000|True|Максимальное количество транзакций Oracle, которые могут быть обработаны в виде одной транзакции в рамках обновления таблиц SQL Server CT.|  
 |target_idle_lsn_update_interval|10|0|1|False|Интервал (в секундах) обновления таблицы **lsn_time_mapping** , когда отслеживаемые таблицы неактивны.|  
 |trace_retention_period|24|1|24*31|False|Время (в часах), в течение которого сообщения хранятся в таблице трассировки).|  
-|sql_reconnect_interval|2|2|3600|False|Время (в секундах), в течение которого ожидается повторное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот интервал используется в дополнение ко времени ожидания соединения клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|sql_reconnect_interval|2|2|3600|False|Время (в секундах), в течение которого ожидается повторное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот интервал используется в дополнение ко времени ожидания соединения клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |sql_reconnect_limit|-1|-1|-1|False|Максимальное число попыток повторного соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . По умолчанию значение -1 означает, что процесс пытается установить повторное соединение до тех пор, пока он не будет остановлен.|  
 |cdc_restart_limit|6|-1|3600|False|В большинстве случаев служба CDC автоматически перезапускает экземпляр CDC, работа которого завершилась аварийно. Это свойство определяет, через какое количество сбоев в час служба перестанет перезапускать экземпляр. Значение -1 означает, что экземпляр следует перезапускать всегда.<br /><br /> Служба снова начинает перезапускать экземпляр после любого обновления таблицы конфигурации.|  
 |cdc_memory_report|0|0|1000|False|Если значение параметра было изменено, то экземпляр CDC печатает его отчет о памяти в таблицу трассировки.|  

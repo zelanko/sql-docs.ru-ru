@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d129704681c308c093033ff69e1f1e3ec2bc5fb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 2273d2c0108d96478aa5f5645abcb0034f6c89e5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021838"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710785"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Отчеты с дополнительной информацией (SSRS)
   Отчетом с дополнительной информацией называется отчет, в котором есть подробные сведения о данных, содержащихся в основном отчете. Отчет с дополнительной информацией выводится, когда пользователь щелкает интерактивные данные в основном отчете. Такие отчеты автоматически создаются сервером отчетов. Конструктор моделей определяет, что должно отображаться в отчетах с дополнительной информацией, устанавливая свойства **DefaultDetailAttribute** и **DefaultAggregateAttribute** сущности в модели отчета.  
   
 > [!NOTE]  
->  Отчеты с дополнительной информацией доступны не в каждом выпуске [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Если используемый выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] неизвестен, обратитесь к администратору базы данных.  
+>  Отчеты с дополнительной информацией доступны не в каждом выпуске [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md). Если используемый выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] неизвестен, обратитесь к администратору базы данных.  
   
 ## <a name="using-default-templates"></a>Использование шаблонов по умолчанию  
  По умолчанию сервер отчетов создает два типа шаблонов для каждой сущности: шаблон одного экземпляра и шаблон нескольких экземпляров. Тип шаблона определяется выбранным элементом. Если щелчок мышью выполняется на скалярном атрибуте, то используется шаблон одного экземпляра. Если щелчок мышью выполняется на статистическом атрибуте, то используется шаблон нескольких экземпляров.  

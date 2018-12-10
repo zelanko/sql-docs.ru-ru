@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665524"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409621"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Создание темпоральной таблицы с системным управлением версиями
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51665524"
 -   Темпоральная таблица с пользовательской таблицей журнала, созданной заранее. Создайте таблицу журнала, соответствующую вашим потребностям, а затем укажите эту таблицу во время создания темпоральной таблицы.  
   
 ## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>Создание темпоральной таблицы с анонимной таблицей журнала  
- Темпоральная таблица с "анонимной" таблицей журнала удобна при быстром создании объектов, особенно в прототипах и тестовых средах. Это самый простой способ создания темпоральной таблицы, так как он не требует указания параметров в предложении **SYSTEM_VERSIONING** . В приведенном ниже примере таблица создается с включенным системным управлением версиями без задания имени таблицы журнала.  
+ Темпоральная таблица с "анонимной" таблицей журнала удобна при быстром создании объектов, особенно в прототипах и тестовых средах. Это самый простой способ создания темпоральной таблицы, так как он не требует указания параметров в предложении **SYSTEM_VERSIONING**. В приведенном ниже примере таблица создается с включенным системным управлением версиями без задания имени таблицы журнала.  
   
 ```  
 CREATE TABLE Department   

@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5145db044f618727144dba0eae86ac4643f0a2d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d15863bfeb814d88d3971b0cb3a957abee947c47
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704142"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516092"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -158,7 +158,7 @@ ASYMMETRIC KEY *asym_key_name*
   
  - Чтобы подключиться к базе данных, создайте пользователя базы данных для имени входа. Дополнительные сведения см. в статье об инструкции [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
   
- - Создайте определяемую пользователем роль сервера с помощью [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md). Воспользуйтесь инструкциями **ALTER SERVER ROLE** … **ADD MEMBER** для добавления нового имени входа к определяемой пользователем роли сервера. Дополнительные сведения см. в статьях [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). 
+ - Создайте определяемую пользователем роль сервера с помощью [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md). Воспользуйтесь инструкциями **ALTER SERVER ROLE** ... **ADD MEMBER** для добавления нового имени входа к определяемой пользователем роли сервера. Дополнительные сведения см. в статьях [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). 
   
  - Воспользуйтесь процедурой **sp_addsrvrolemember** для добавления имени входа к предопределенной роли сервера. Дополнительные сведения см. в разделе [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md) и [sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md). 
   
@@ -679,7 +679,7 @@ WINDOWS
   
  - Чтобы подключиться к базе данных, создайте пользователя базы данных для имени входа. Дополнительные сведения см. в статье об инструкции [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
   
- - Создайте определяемую пользователем роль сервера с помощью [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md). Воспользуйтесь инструкциями **ALTER SERVER ROLE** … **ADD MEMBER** для добавления нового имени входа к определяемой пользователем роли сервера. Дополнительные сведения см. в статьях [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). 
+ - Создайте определяемую пользователем роль сервера с помощью [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md). Воспользуйтесь инструкциями **ALTER SERVER ROLE** ... **ADD MEMBER** для добавления нового имени входа к определяемой пользователем роли сервера. Дополнительные сведения см. в статьях [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). 
   
  - Воспользуйтесь процедурой **sp_addsrvrolemember** для добавления имени входа к предопределенной роли сервера. Дополнительные сведения см. в разделе [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md) и [sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md). 
   

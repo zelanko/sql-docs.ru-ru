@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7dd2bd8733c3de4a7ca14000fb56f11e9a63780
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0730dc681a4faa61425803f98dc091a0fb745b1e
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643628"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617882"
 ---
 # <a name="sqlcmd---use-the-utility"></a>Использование программы sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -479,7 +479,7 @@ ms.locfileid: "51643628"
   
 -   Ключ -N используется клиентом для запроса зашифрованного соединения. Этот параметр аналогичен параметру ADO.net `ENCRYPT = true`.  
   
--   C помощью ключа -C клиент настраивает неявное доверие к сертификату сервера без проверки. Этот параметр аналогичен параметру ADO.net `TRUSTSERVERCERTIFICATE = true`.  
+-   C помощью переключателя -C клиент настраивает неявное доверие к сертификату сервера без проверки. Этот параметр аналогичен параметру ADO.net `TRUSTSERVERCERTIFICATE = true`.  
   
  Служба [!INCLUDE[ssSDS](../../includes/sssds-md.md)] не поддерживает все параметры `SET` , которые доступны в экземпляре SQL Server. Следующие параметры вызывают ошибку, если соответствующий параметр `SET` имеет значение `ON` или `OFF`:  
   
@@ -505,21 +505,21 @@ ms.locfileid: "51643628"
  Подключение с использованием учетных данных Windows и шифрование соединения:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Подключение с использованием учетных данных Windows и доверие сертификату сервера:  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  Подключение с использованием учетных данных Windows, шифрование соединения и доверие сертификату сервера:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -528,28 +528,28 @@ SQLCMD –E –N –C
  Подключение с использованием учетных данных Windows, шифрование соединения и доверие сертификату сервера:  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  Подключение с использованием учетных данных Windows, шифрование соединения и доверие сертификату сервера:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Подключение с использованием учетных данных Windows, шифрование соединения и доверие сертификату сервера:  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -C  
   
 ```  
   
  Подключение с использованием учетных данных Windows, шифрование соединения и доверие сертификату сервера:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

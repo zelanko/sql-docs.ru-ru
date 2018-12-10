@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 092b497ba4c42d563abce997a50b965b727bd72c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0d40fe3cece9f2f8ae290e09e4b722fdfc3873a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020688"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412091"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)
 
@@ -88,7 +88,7 @@ ms.locfileid: "50020688"
   
 ## <a name="set-database-timeout"></a>Задать время ожидания базы данных
   
-*  Задать время ожидания базы данных сервера отчетов SharePoint с помощью Windows PowerShell. Дополнительные сведения см. в подразделе "Свойства get и set базы данных приложения службы отчетов" раздела [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+*  Задать время ожидания базы данных сервера отчетов SharePoint с помощью Windows PowerShell. Дополнительные сведения см. в разделе "Получение и задание свойств базы данных приложения Reporting Service" статьи [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) (Командлеты PowerShell для режима совместимости с SharePoint служб Reporting Services).  
   
 ## <a name="next-steps"></a>Следующие шаги
 

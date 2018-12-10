@@ -12,12 +12,12 @@ ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4f691fa89bf3d6db014542088fdd127e344a8346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cfadca5d9bbdeecf582c5cff67b499dc1172297
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690702"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545364"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>Повышение производительности с помощью рекомендаций DTA
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ ms.locfileid: "47690702"
 
 **Эффективность рекомендаций индекса columnstore.** Четвертая гистограмма, соответствующая запросу 2 второго клиента, рассматривает случай, когда запрос просматривает большие таблицы, получающие преимущества от индексов columnstore. DTA (только rowstore) формирует рекомендацию, обеспечивающую большее время ЦП по сравнению с тем, когда также используются индексы columnstore. Таким образом, DTA (rowstore и columnstore) рекомендует подходящие индексы columnstore, обеспечивая ту же производительность выполнения запроса, что и при использовании параметра "только columnstore".
 
-**Эффективность рекомендаций для рабочей нагрузки с несколькими запросами.** Конечный набор столбцов, соответствующий полной рабочей нагрузке для второго клиента, служит примером возможности DTA анализировать несколько запросов рабочей нагрузки для рекомендации подходящего набора индексов rowstore и columnstore, который может снизить затраты на выполнение общей рабочей нагрузки. DTA (rowstore и columnstore) рекомендует использовать набор из четырех индексов columnstore и десяти rowstore, в результате чего на порядок будет улучшена производительность рабочей нагрузки в сравнении с параметром, который создает только индексы columnstore, и в 4–5 раза в сравнении с DTA (только rowstore).
+**Эффективность рекомендаций для рабочей нагрузки с несколькими запросами.** Конечный набор столбцов, соответствующий полной рабочей нагрузке для второго клиента, служит примером возможности DTA анализировать несколько запросов рабочей нагрузки для рекомендации подходящего набора индексов rowstore и columnstore, который может снизить затраты на выполнение общей рабочей нагрузки. DTA (rowstore и columnstore) рекомендует использовать набор из четырех индексов columnstore и десяти rowstore, в результате чего на порядок будет улучшена производительность рабочей нагрузки в сравнении с параметром, который создает только индексы columnstore, и в 4–5 раз в сравнении с DTA (только rowstore).
 
 Таким образом, в приведенных выше примерах показана возможность DTA правильно использовать индексы rowstore и columnstore, поддерживаемая в ядре СУБД SQL Server, и рекомендуется подходящая комбинация индексов, которая сможет существенно снизить время ЦП для рабочей нагрузки. 
 
 <a name="see-also"></a>См. также:
 ---
-[помощник по настройке ядра СУБД](../../relational-databases/performance/database-engine-tuning-advisor.md)
+[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)
 
 [Рекомендации по индексам сolumnstore в помощнике по настройке ядра СУБД](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
 

@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: ad05cbe7415aed8c821664082fcd557d48f3582f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 680c7e782a37ab9fe5e0096fff71d805239dc4e4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600906"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397852"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Создание или настройка прослушивателя группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ ms.locfileid: "51600906"
   
     ```  
     ALTER AVAILABILITY GROUP MyAg2   
-          ADD LISTENER ‘MyAg2ListenerIvP6’ ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
+          ADD LISTENER 'MyAg2ListenerIvP6' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
     GO  
   
     ```  
@@ -279,7 +279,7 @@ ms.locfileid: "51600906"
   
      **Недостатки.** Установление 50 % соединений клиентов потребует более 20 секунд.  
   
--   При наличии разрешений на работу с ресурсами кластера рекомендуется задать `RegisterAllProvidersIP=0`в качестве сетевого имени прослушивателя группы доступности. Дополнительные сведения см. в подразделе «Установка значения RegisterAllProvidersIP» далее в этом разделе.  
+-   При наличии разрешений на работу с ресурсами кластера рекомендуется задать `RegisterAllProvidersIP=0`в качестве сетевого имени прослушивателя группы доступности. Дополнительные сведения см. в подразделе "Установка значения RegisterAllProvidersIP" далее в этом разделе.  
   
      **Преимущества** . Не потребуется увеличивать значение времени ожидания подключения клиента.  
   

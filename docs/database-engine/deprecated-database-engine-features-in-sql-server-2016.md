@@ -15,12 +15,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7192dc954337d5c6a1f58b7b444219d022c43f95
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ec49399b46b39217a41ee1c18f0475bf2f64ffd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602644"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537743"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |Категория|Устаревшая функция|Замена|Имя функции|Идентификатор функции|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Уровни совместимости|sp_dbcmptlevel|ALTER DATABASE… SET COMPATIBILITY_LEVEL. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
+|Уровни совместимости|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
 |Уровни совместимости|Уровень совместимости базы данных 110 и 120|Запланируйте обновление базы данных и приложения для следующего выпуска. Однако мы будем как можно дольше поддерживать приложения, сертифицированные для работы на любом соответствующем уровне совместимости, чтобы упростить обновление. Дополнительные сведения об уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Уровень совместимости базы данных 110<br /><br /> Уровень совместимости базы данных 120||  
 |XML|Создание встроенных схем XDR|Директива XMLDATA для параметра XML FOR является устаревшей. В режимах RAW и AUTO следует использовать создание XSD-схем. В режиме EXPLICT для директивы XMLDATA замены нет.|XMLDATA|181|  
 |Резервное копирование и восстановление|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE или LOG TO TAPE|235|  
@@ -102,7 +102,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Параметры индекса|Синтаксис CREATE TABLE, ALTER TABLE или CREATE INDEX без заключения параметров в скобки.|Перепишите инструкции для использования текущего синтаксиса.|INDEX_OPTION|33|  
 |Параметры экземпляра|Параметр 'allow updates' хранимой процедуры sp_configure.|Системные таблицы теперь недоступны для обновления. Параметр не делает ничего.|sp_configure 'allow updates'|173|  
 |Параметры экземпляра|Параметры хранимой процедуры sp_configure:<br /><br /> 'locks'<br /><br /> 'open objects'<br /><br /> 'set working set size'|Теперь настраивается автоматически. Параметр не делает ничего.|sp_configure 'locks'<br /><br /> sp_configure 'open objects'<br /><br /> sp_configure 'set working set size'|174<br /><br /> 175<br /><br /> 176|  
-|Параметры экземпляра|Параметр 'priority boost' хранимой процедуры sp_configure.|Системные таблицы теперь недоступны для обновления. Параметр не делает ничего. Используйте вместо него параметр Windows start /high … program.exe.|sp_configure 'priority boost'|199|  
+|Параметры экземпляра|Параметр 'priority boost' хранимой процедуры sp_configure.|Системные таблицы теперь недоступны для обновления. Параметр не делает ничего. Используйте вместо него параметр Windows start /high ... program.exe.|sp_configure 'priority boost'|199|  
 |Параметры экземпляра|Параметр 'remote proc trans' хранимой процедуры sp_configure.|Системные таблицы теперь недоступны для обновления. Параметр не делает ничего.|sp_configure 'remote proc trans'|37|  
 |Связанные серверы|Указание поставщика SQLOLEDB для связанных серверов.|Собственный клиент SQL Server (SQLNCLI)|SQLOLEDDB для связанных серверов|19|  
 |Блокировка|sp_lock|sys.dm_tran_locks|sp_lock|99|  

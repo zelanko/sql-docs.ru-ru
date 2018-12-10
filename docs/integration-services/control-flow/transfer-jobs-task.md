@@ -17,12 +17,12 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73236a13046257caabc572de24957524d1cb41ea
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d247df4047b95456fb5ccdf1fe8bc1940909388e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639024"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502741"
 ---
 # <a name="transfer-jobs-task"></a>Задача «Передача заданий»
   Задача «Передача заданий» служит для передачи одного или нескольких заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -116,7 +116,7 @@ ms.locfileid: "51639024"
 |**False**|Копировать только выбранные задания.|  
   
  **JobsList**  
- Нажмите кнопку обзора **(…)** , чтобы выбрать задания для копирования. Необходимо выбрать хотя бы одно задание.  
+ Нажмите кнопку обзора **(…)**, чтобы выбрать задания для копирования. Необходимо выбрать хотя бы одно задание.  
   
 > [!NOTE]  
 >  Прежде чем выбирать задания для копирования, укажите свойство **SourceConnection** .  

@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f2c1c9c494afd89627e397347870db2d1604886a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1d1b2e646eb12fbfb1b0226cb20a8a97bf92b5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696803"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508550"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47696803"
   
 2.  Щелкните правой кнопкой мыши элемент **Агент SQL Server** и выберите пункт **Свойства**.  
   
-3.  В области **Журнал ошибок** диалогового окна **Свойства агента SQL Server —** _имя\_сервера_ на странице **Общие** установите флажок **Включить трассировочные сообщения**.  
+3.  В области **Журнал ошибок** диалогового окна **Свойства агента SQL Server —** _имя\_сервера_ на странице **Общие** установите флажок **Включить трассировочные сообщения**.  
   
 4.  Нажмите кнопку **ОК**.  
   

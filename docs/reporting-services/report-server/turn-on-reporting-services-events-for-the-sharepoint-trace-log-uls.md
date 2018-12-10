@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f4d8f59821a649214ddc2deda128d801e6ddb7a
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 96e3049ecb5e222b6ced7fc6a2202c80e25a7028
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814177"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409541"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)
 
@@ -85,9 +85,9 @@ Get-SPDiagnosticConfig
   
 1.  **Продукт: службы SQL Server Reporting Services**  
   
-2.  **Категория:** события, связанные с сервером, будут иметь символы «Report Server» в начале их имени. Например, «Report Server Alerting Runtime». Эти события также протоколируются в файлах журнала сервера отчета.  
+2.  **Категория:** события, связанные с сервером, будут иметь символы Report Server в начале имени. Например, Report Server Alerting Runtime. Эти события также регистрируются в файлах журнала сервера отчета.  
   
-3.  **Категория:** события, связанные или переданные от клиентской веб-части, не содержащие символы "Report Server". Например, «Service Application Proxy» (в отличие от «Report Server Alerting Runtime»). Записи WFE содержат идентификатор CorrelationID; записи сервера его не содержат.  
+3.  **Категория:** события, связанные клиентской веб-частью или полученные от нее, не содержащие символы Report Server. Например, Service Application Proxy (в отличие от Report Server Alerting Runtime). Записи WFE содержат идентификатор CorrelationID; записи сервера его не содержат.  
   
 ##  <a name="bkmk_list"></a> Список событий служб SQL Server Reporting Services  
  В следующей таблице приведен список событий в категории служб SQL Server Reporting Services.  
@@ -100,7 +100,7 @@ Get-SPDiagnosticConfig
 |Подготовка локального режима||  
 |Прокси-сервер клиента SOAP||  
 |Страницы пользовательского интерфейса||  
-|Power View|Записи журналов, занесенные в **LogClientTraceEvents** API. Эти записи берутся из клиентских приложений, включая Power View, компонент надстройки SQL Server Reporting Services.<br /><br /> Все записи журнала от API-интерфейса LogClientTraceEvents заносятся в **категорию** «Службы SQL Server Reporting Services» и в **область** «Power View».<br /><br /> Содержание записей, занесенных в область «Power View», определяется клиентским приложением.|  
+|Power View|Записи журналов, занесенные в **LogClientTraceEvents** API. Эти записи берутся из клиентских приложений, включая Power View, компонент надстройки SQL Server Reporting Services.<br /><br /> Все записи журнала от API-интерфейса LogClientTraceEvents заносятся в **категорию** SQL Server Reporting Services и в **область** Power View.<br /><br /> Содержание записей, занесенных в область Power View, определяется клиентским приложением.|  
 |Среда выполнения системы предупреждений сервера отчетов||  
 |Диспетчер домена приложений сервера отчетов||  
 |Буферизованный ответ сервера отчетов||  
@@ -138,10 +138,10 @@ Get-SPDiagnosticConfig
 |Общая служба|Образцы записей:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Доступ MediumGranting к базам данных содержимого.<br /><br /> Экземпляры MediumProvisioning для ReportingWebServiceApplication<br /><br /> Изменение учетной записи службы MediumProcessing для ReportingWebServiceApplication<br /><br /> Разрешения базы данных MediumSetting.|  
   
 ##  <a name="bkmk_powershell"></a> Просмотр файла журнала с помощью PowerShell  
- ![Связанное содержимое PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Связанное содержимое PowerShell")PowerShell можно использовать для возвращения списка связанных событий служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из файла журнала ULS. Введите следующую команду в консоли управления SharePoint 2010, чтобы получить из файла журнала ULS "UESQL11SPOINT-20110606-1530.log" отфильтрованный список строк, содержащих подстроку "**sql server reporting services**":  
+ ![Связанное содержимое PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Связанное содержимое PowerShell")PowerShell можно использовать для возвращения списка связанных событий служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из файла журнала ULS. Введите следующую команду в консоли управления SharePoint 2010, чтобы получить из файла журнала ULS UESQL11SPOINT-20110606-1530.log отфильтрованный список строк, содержащих подстроку **sql server reporting services**:  
   
 ```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
+Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
 ```  
   
  Также существуют средства, доступные для скачивания, которые позволяют читать журналы ULS. Например, это средство [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), доступное в GitHub. 

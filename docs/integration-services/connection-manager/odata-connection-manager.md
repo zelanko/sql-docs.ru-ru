@@ -14,12 +14,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 790c7b1e50b029ab2cf2cbf4ad41bd80cf11cb0c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: aa18c7b1a6aeaccb448c7006e8d4430d436a2516
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641838"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511266"
 ---
 # <a name="odata-connection-manager"></a>Диспетчер соединений OData
  Диспетчер подключений OData позволяет подключаться к источнику данных OData. Компонент источника OData подключается к источнику OData с помощью диспетчера подключений OData и использует данные из этой службы. Дополнительные сведения см. в разделе [OData Source](../../integration-services/data-flow/odata-source.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "51641838"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>Добавление диспетчера соединений OData в пакет SSIS  
  Новый диспетчер подключений OData можно добавить в пакет служб SSIS тремя способами:  
   
--   Нажмите кнопку **Создать…** в **редакторе источника OData**  
+-   Нажмите кнопку **Создать…** в **редакторе источника OData**.  
   
 -   Щелкните правой кнопкой мыши папку **Диспетчеры соединений** в **обозревателе решений**и выберите команду **Новый диспетчер соединений**. Для параметра **Тип диспетчера соединений** выберите **ODATA**.  
   

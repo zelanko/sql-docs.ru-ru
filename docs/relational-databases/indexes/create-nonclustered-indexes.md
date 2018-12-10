@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1c6d278e421003b9a7c5db927d8c0d5d9e23343
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e73ff25f7de2ce3dcaffa962025ef8d93e535e75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639929"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527060"
 ---
 # <a name="create-nonclustered-indexes"></a>Создание некластеризованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,11 +82,11 @@ ms.locfileid: "47639929"
   
 3.  Разверните таблицу, для которой необходимо создать некластеризованный индекс.  
   
-4.  Щелкните правой кнопкой мыши папку **Индексы** , выберите **Создать индекс**и **Некластеризованный индекс…**  
+4.  Щелкните правой кнопкой мыши папку **Индексы**, выберите **Создать индекс** и **Некластеризованный индекс...**  
   
 5.  В диалоговом окне **Создание индекса** на странице **Общие** введите имя нового индекса в поле **Имя индекса** .  
   
-6.  В разделе **Ключевые столбцы индекса**щелкните **Добавить…**  
+6.  В разделе **Ключевые столбцы индекса** щелкните **Добавить...**  
   
 7.  В диалоговом окне **Выбор столбцов из***имя_таблицы* установите флажки для столбцов таблицы, добавляемых к некластеризованному индексу.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47639929"
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>Создание некластеризованного индекса для таблицы  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

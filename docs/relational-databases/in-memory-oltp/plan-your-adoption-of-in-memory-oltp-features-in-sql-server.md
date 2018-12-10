@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e8ebbbd4b9b507e8f41af26be70c676afe61c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803492"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519560"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Планирование освоения возможностей выполняющейся в памяти OLTP в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -216,7 +216,7 @@ ms.locfileid: "47803492"
 
 Иногда хэш-индексы — это самый быстрый способ получить доступ к конкретной строке, указав точное значение первичного ключа в операторе**=**.
 
-- Неточные операторы, такие как **!=**,**>** или**BETWEEN**, могут снизить производительность при использовании совместно с хэш-индексом.
+- Неточные операторы, такие как **!=**, **>** или **BETWEEN**, могут снизить производительность при использовании совместно с хэш-индексом.
 
 - Возможно, хэш-индекс не лучший выбор, если скорость дублирования значений ключа становится слишком высокой.
 
@@ -297,7 +297,7 @@ ms.locfileid: "47803492"
 Скрипты Transact-SQL можно сделать более устойчивыми к ошибкам, связанным с транзакциями, добавив в скрипты *логику повторных попыток* . Логика повторных попыток окажется полезной, если вызовы UPDATE и DELETE выполняются часто или если на оптимизированную для обработки в памяти таблицу ссылается внешний ключ другой таблицы. Подробная информация доступна в следующих статьях:
 
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [Transaction dependency limits with memory optimized tables — Error 41839 (Ограничения, связанные с зависимостями транзакций в оптимизированных для обработки в памяти таблицах, — ошибка 41839)](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
+- [Transaction dependency limits with memory optimized tables — Error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/) (Ограничения, связанные с зависимостями транзакций в оптимизированных для обработки в памяти таблицах, — ошибка 41839)
 
 
 

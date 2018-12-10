@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639131"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513683"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Настройка группы доступности для распределенных транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51639131"
 Для выполнения распределенных транзакций группу доступности необходимо настроить таким образом, чтобы базы данных регистрировались как диспетчеры ресурсов распределенных транзакций.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и более поздние версии включают полную поддержку распределенных транзакций в группах доступности. В версиях [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] до пакета обновления 2 (SP2) распределенные транзакции между базами данных (т. е. транзакции между базами данных в одном экземпляре SQL Server), включающие базу данных в группе доступности, не поддерживаются. В [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] подобного ограничения нет. 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и более поздние версии включают полную поддержку распределенных транзакций в группах доступности. В версиях [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] до пакета обновления 2 (SP2) распределенные транзакции между базами данных (т. е. транзакции между базами данных в одном экземпляре SQL Server), включающие базу данных в группе доступности, не поддерживаются. В [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] подобного ограничения нет. 
 >
 >Конфигурация [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] настраивается точно так же, как и конфигурация [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 

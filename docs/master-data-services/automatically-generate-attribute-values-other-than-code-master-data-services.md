@@ -12,18 +12,18 @@ ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 279198ba384acf33656d7567ed417a633eae7266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e607136bf7e13994e931166831b68d531d229dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826412"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404529"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Автоматическое формирование значений атрибута отличного от Code (службы Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]значения для атрибутов сущности можно формировать автоматически, если каждый раз при применении бизнес-правил необходимо автоматически задавать целое число в качестве значения.  
+  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] значения для атрибутов сущности можно формировать автоматически, если каждый раз при применении бизнес-правил необходимо автоматически задавать целое число в качестве значения.  
   
 ## <a name="prerequisites"></a>предварительные требования  
  Для выполнения этой процедуры:  
@@ -54,7 +54,7 @@ ms.locfileid: "47826412"
   
 9. На панели **Компоненты** разверните узел **Действия** .  
   
-10. В узле «Значение по умолчанию» щелкните **По умолчанию имеет сформированное значение** и перетащите его на значок **Действия** панели **ТО** .  
+10. В узле "Значение по умолчанию" щелкните **По умолчанию имеет сформированное значение** и перетащите его на значок **Действия** панели **ТО**.  
   
 11. На панели **Атрибуты** щелкните атрибут со значением, которое необходимо сформировать, и перетащите его на значок **Выбор атрибута** панели **Изменение действия** .  
   

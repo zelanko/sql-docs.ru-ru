@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98a4d2d4bcc7faeb18352360b51b5fe4dcf722c1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030833"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711146"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Учебник. Добавление спарклайна в отчет (построитель отчетов)
 
@@ -220,7 +220,7 @@ ms.locfileid: "50030833"
   
     Обратите внимание на то, что столбцы в диаграммах не соответствуют друг другу. Во второй строке данных представлено только четыре столбца, поэтому столбцы шире, чем в первой строке, в которой представлено шесть столбцов. Нельзя сравнить значения по каждому продукту в день. Их нужно выровнять.  
   
-    Кроме того, для каждой строки самый высокий столбец имеет высоту строки. Это тоже неправильно, так как наибольшие значения для каждой строки не равны между собой: наибольшее значение для недорогой видеокамеры равно $10 400, а для категории Slim Digital — $26 576, то есть более чем в два раза больше. Тем не менее наибольшие столбцы в этих двух строках имеют примерно одинаковую высоту. Все спарклайны должны иметь одинаковый масштаб.  
+    Кроме того, для каждой строки самый высокий столбец имеет высоту строки. Это тоже неправильно, так как наибольшие значения для каждой строки не равны между собой: наибольшее значение для недорогой видеокамеры равно USD10 400, а для категории Slim Digital — USD26 576, то есть более чем в два раза больше. Тем не менее наибольшие столбцы в этих двух строках имеют примерно одинаковую высоту. Все спарклайны должны иметь одинаковый масштаб.  
   
      ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
@@ -319,6 +319,6 @@ ms.locfileid: "50030833"
 На этом заканчивается учебник по созданию табличного отчета со спарклайн графиками. Дополнительные сведения о спарклайнах см. в разделе [Спарклайны и гистограммы](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 [Учебники по построителю отчетов](../reporting-services/report-builder-tutorials.md) 
-[Построитель отчетов в SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Построитель отчетов в SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

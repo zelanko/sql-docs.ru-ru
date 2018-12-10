@@ -11,12 +11,12 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7cda725134aeba441a1cd6a59c7d3e7ae57d76de
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 841892faace82677df0bbd8939a147d2c65b363f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637761"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512998"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Учебник. Использование источника OData
   Этот учебник содержит процедуру извлечения коллекции **Employees** из образца **Northwind** службы OData (https://services.odata.org/V3/Northwind/Northwind.svc/)) и последующей ее загрузки в неструктурированный файл.  
@@ -43,7 +43,7 @@ ms.locfileid: "51637761"
   
 4.  Дважды щелкните компонент **Источник OData**, чтобы открыть диалоговое окно **Редактор источника OData**.  
   
-5.  В меню **Создать…** , чтобы добавить новый диспетчера соединений с OData.  
+5.  Щелкните **Создать…**, чтобы добавить новый диспетчера соединений OData.  
   
 6.  Введите URL-адрес службы OData в поле **Расположение сервисного документа**. Это может быть URL-адрес сервисного документа либо определенный веб-канал или сущность. В целях этого учебника введите URL-адрес сервисного документа: [https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/).  
   

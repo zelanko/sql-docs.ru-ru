@@ -22,12 +22,12 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79e015043fe256037e808d68a4188e1091780797
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14b512a4ec1260c188752869d887e8e8d6ee8ff9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629192"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528767"
 ---
 # <a name="developing-a-custom-source-component"></a>Разработка пользовательского компонента источника
   Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют разработчикам возможность создавать компоненты источника, которые могут подключаться к пользовательским источникам данных и предоставлять данные из этих источников другим компонентам в задаче потока данных. Возможность создавать пользовательские источники становится полезной, если возникает необходимость подключаться к источникам данных, доступ к которым нельзя получить с помощью одного из существующих источников служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "47629192"
  Реализация функциональных возможностей времени разработки для компонента источника включает указание соединения с внешним источником данных, добавление и настройку выходных столбцов, которые отражают источник данных, а также проверку готовности компонента к выполнению. По определению, компонент источника не имеет входов и один или несколько асинхронных выходов.  
   
 ### <a name="creating-the-component"></a>Создание компонента  
- Компоненты источника подключаются к внешним источникам данных с помощью объектов <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, определенных в пакете. Они указывают свои требования для диспетчера соединений, добавляя элемент к коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> свойства <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Эта коллекция предназначена для двух целей: хранение ссылок на диспетчеры соединений в пакете, используемом компонентом, и объявление необходимости диспетчера соединений для конструктора. При добавлении объекта <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> к коллекции в окне **Расширенный редактор** отображается вкладка **Свойства соединения**, которая позволяет пользователям выбрать или создать соединение в пакете.  
+ Компоненты источника подключаются к внешним источникам данных с помощью объектов <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, определенных в пакете. Они указывают свои требования для диспетчера соединений, добавляя элемент к коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> свойства <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Эта коллекция предназначена для двух целей: хранение ссылок на диспетчеры подключений в пакете, используемом компонентом, и объявление необходимости диспетчера подключений для конструктора. При добавлении объекта <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> к коллекции в окне **Расширенный редактор** отображается вкладка **Свойства соединения**, которая позволяет пользователям выбрать или создать соединение в пакете.  
   
  В следующем примере кода показана реализация метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>, который добавляет выход, а также добавляет объект <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> к коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>.  
   

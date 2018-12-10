@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1e0f1af0b3dff47607960d8c2d37af84f4b00fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71ba67e4abb97a0de9ed4143adcd072b2f3eef8a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663122"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400028"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel подготавливает отчет [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в формате [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (XLSX). Благодаря модулю для подготовки отчетов, ширина столбцов в Excel более аккуратно отражает ширину столбцов в отчете.  
@@ -67,7 +67,7 @@ ms.locfileid: "47663122"
   
 -   Текстовый эффект «Надчеркивание» в Excel не поддерживается.  
   
--   Excel добавляет отступы с левой и правой стороны ячейки, по умолчанию равные 3,75 пункта. Если в настройках полей установлено значение меньше 3,75 пунктов и места едва хватает для размещения текста, это может вызвать перенос по словам.  
+-   Excel добавляет отступы с левой и правой стороны ячейки, по умолчанию равные 3,75 пункта. Если в настройках полей установлено значение меньше 3,75 пункта и места едва хватает для размещения текста, это может вызвать перенос по словам.  
   
     > [!NOTE]  
     >  Эту проблему можно обойти, увеличив ширину текстового поля в отчете.  
@@ -161,7 +161,7 @@ ms.locfileid: "47663122"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- Расширение EXCELOPENXML определяет модуль подготовки отчетов Excel для текущих файлов Excel (XLSX). Расширение EXCEL определяет версию Excel 2003. `Visible = “false”` указывает, что модуль подготовки отчетов Excel 2003 скрыт. Дополнительные сведения см. в разделах [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) и [Файл конфигурации RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ Расширение EXCELOPENXML определяет модуль подготовки отчетов Excel для текущих файлов Excel (XLSX). Расширение EXCEL определяет версию Excel 2003. `Visible = "false"` указывает, что модуль подготовки отчетов Excel 2003 скрыт. Дополнительные сведения см. в разделах [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) и [Файл конфигурации RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>Различия между модулями подготовки Excel (XLSX) и Excel 2003  
  Отчеты, подготовленные с использованием модулей подготовки Excel (XLSX) или Excel 2003, обычно совпадают, различия между двумя форматами можно заметить только в нескольких случаях. Следующая таблица сравнивает модули подготовки отчетов Excel и Excel 2003.  
@@ -270,6 +270,6 @@ ms.locfileid: "47663122"
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Таблицы, матрицы, списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

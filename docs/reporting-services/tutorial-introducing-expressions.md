@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bed1d8109d49b7c6f2ba57734f2daa1a5eb056d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800578"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410711"
 ---
 # <a name="tutorial-introducing-expressions"></a>Учебник. Общие сведения о выражениях
 В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] вы научитесь использовать выражения со стандартными функциями и операторами для создания эффективных и гибких отчетов [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы. 
@@ -422,7 +422,7 @@ ms.locfileid: "47800578"
 ## <a name="Indicator"></a>7. Отображение сравнения цен с помощью индикатора  
 В этом разделе вы добавите новый столбец и индикатором покажете, превышают ли покупки определенного человека за последний год (YTD) среднее значение YTD. Функция **Round** округляет значения до целого числа.  
   
-Настройка индикатора и его состояний осуществляется в несколько шагов. При необходимости инструкции в разделе "Настройка индикатора" можно пропустить, скопировав и вставив готовые выражения из этого руководства в диалоговое окно **Выражение** .  
+Настройка индикатора и его состояний осуществляется в несколько шагов. При необходимости инструкции в разделе "Настройка индикатора" можно пропустить, скопировав и вставив готовые выражения из этого руководства в диалоговое окно **Выражение**.  
   
 ### <a name="to-add-the--or---avg-sales-column"></a>Добавление столбца «+ or - AVG Sales»  
   
@@ -587,9 +587,9 @@ ms.locfileid: "47800578"
   
 8. Щелкните **Параметры** и в списке **Значения** дважды щелкните **RowColor**.  
   
-22. Сразу же после `Parameters!RowColor.Value`введите **, "White")**  
+22. Сразу же после `Parameters!RowColor.Value` введите **, "White")**  
   
-    Законченное выражение выглядит следующим образом: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`  
+    Законченное выражение выглядит следующим образом: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
     ![руководство-по-выражениям-построителя-отчетов-чередование-цветов](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   

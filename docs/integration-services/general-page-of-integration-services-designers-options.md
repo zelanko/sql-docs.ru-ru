@@ -13,12 +13,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bd6d830a2c8fc612a7b9030de60e9c8ff458301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5ae792d2237e1c2eaafddfe78cc0314f1240bd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649042"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526916"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Параметры конструкторов служб Integration Services: страница "Общие"
   Страница **Общие** страницы **Конструкторы служб Integration Services** диалогового окна **Параметры** позволяет указать параметры загрузки, отображения и обновления пакетов.  
@@ -37,7 +37,7 @@ ms.locfileid: "47649042"
  Выберите этот параметр, чтобы отображать предупреждение при загрузке неподписанного пакета.  
   
  **Отобразить метки элементов управления очередностью**  
- Выберите метку «Успешно», «Ошибка» или «Завершение» для отображения объектов управления очередностью при просмотре пакетов в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+ Выберите метку "Успешно", "Ошибка" или "Завершение" для отображения объектов управления очередностью при просмотре пакетов в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  **Язык сценария**  
  Выберите значение по умолчанию для языка скрипта новых задач «Скрипт» и компонентов скрипта.  

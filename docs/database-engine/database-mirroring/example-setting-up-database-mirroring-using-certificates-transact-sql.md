@@ -16,12 +16,12 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e320f6f0194f37a6836fd964bf69405bb01cf526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e095d56a6b68e581a7d6f9184581575fac9f6c4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803598"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542735"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Пример. Настройка зеркального отображения базы данных с помощью сертификатов (язык Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47803598"
   
  Начальная основная роль принимается узлом HOST_A, а зеркальная роль — узлом HOST_B.  
   
- Настройка зеркального отображения базы данных с помощью сертификатов состоит из четырех основных этапов, три из которых — 1, 2 и 4 — показаны в этом примере. Ниже приведены эти этапы.  
+ Настройка зеркального отображения базы данных с помощью сертификатов состоит из четырех основных этапов, три из которых — 1, 2 и 4 — показаны в этом примере. Ниже приведены эти этапы.  
   
 1.  [Настройка исходящих соединений](#ConfiguringOutboundConnections)  
   

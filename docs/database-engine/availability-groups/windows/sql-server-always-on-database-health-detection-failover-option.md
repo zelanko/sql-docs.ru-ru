@@ -16,12 +16,12 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 649ebf4f39013ccc44b26c74acd311fe4f712f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04f1834ebc282044164b2e1d2b77e784b3260973
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730879"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525112"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Параметр определения уровня работоспособности базы данных группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ GO
 |database_name  |Имя базы данных, сообщившей о сбое.
 |database_replica_id    |Идентификатор реплики базы данных доступности.
 |failover_ready_replicas    |Количество синхронизируемых вторичных реплик файлов для автоматического перехода в случае сбоя.
-|fault_type     | Идентификатор сообщенного сбоя. Возможные значения:  <br/> 0 — отсутствует <br/>1 — неизвестно<br/>2 — завершение работы
+|fault_type     | Идентификатор сообщенного сбоя. Возможные значения:  <br/> 0 — отсутствует <br/>1 — неизвестно<br/>2 — завершение работы
 |is_critical    | Это значение всегда должно возвращать true для XEvent, начиная с SQL Server 2016.
 
 

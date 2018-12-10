@@ -22,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c13158bf5790af4603f691936a0599ddef3c4deb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 58fa8d8009806f22153a22d63ea83b238140d431
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820250"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517443"
 ---
 # <a name="deploy-a-data-tier-application"></a>Развертывание приложения уровня данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "43820250"
   
 1.  В **обозревателе объектов**раскройте узел экземпляра, в котором нужно развернуть приложение уровня данных.  
   
-2.  Щелкните правой кнопкой мыши узел **Базы данных** и выберите **Развернуть приложение уровня данных…**  
+2.  Щелкните правой кнопкой мыши узел **Базы данных** и выберите **Развернуть приложение уровня данных…**.  
   
 3.  Укажите сведения в диалоговых окнах мастера и нажмите кнопку "Готово".
 Дополнительные сведения о некоторых диалоговых окнах мастера см. ниже. 

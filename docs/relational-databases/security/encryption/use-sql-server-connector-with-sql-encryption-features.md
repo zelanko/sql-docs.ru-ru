@@ -14,12 +14,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 15b8c62e501e13ce0145524c140a1c24deb2bcc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653802"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401087"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Использование Соединителя SQL Server с компонентами шифрования SQL
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ ms.locfileid: "47653802"
     
     Чтобы восстановить резервную копию базы данных, зашифрованную методом TDE, целевой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должен иметь копию асимметричного ключа Key Vault, используемого для шифрования. Это можно сделать так:  
     
-    - Если исходный асимметричный ключ, используемый для TDE, больше не находится в Key Vault, восстановите резервную копию ключа Key Vault или повторно импортируйте ключ из локального модуля HSM. **Важно!** Чтобы отпечаток ключа совпал с записанным в резервной копии базы данных,ключ должен иметь **изначальное имя ключа Key Vault**.
+    - Если исходный асимметричный ключ, используемый для TDE, больше не находится в Key Vault, восстановите резервную копию ключа Key Vault или повторно импортируйте ключ из локального модуля HSM. **Важно!** Чтобы отпечаток ключа совпал с записанным в резервной копии базы данных, ключ должен иметь **исходное имя ключа Key Vault**.
     
     - Выполните шаги 1 и 2 на целевом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
     
@@ -282,6 +282,6 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Расширенное управление ключами с помощью хранилища ключей Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [Включенный параметр конфигурации сервера поставщика расширенного управления ключами](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Обслуживание и устранение неполадок соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
+ [Соединитель SQL Server, приложение](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   

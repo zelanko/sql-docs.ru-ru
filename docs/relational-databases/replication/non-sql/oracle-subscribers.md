@@ -17,12 +17,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 647828d7e0e78b7faa6abb2ce1a7ca8102490d67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab63604cbaad009cd92825df1f252a95c1f4e0fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842452"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525630"
 ---
 # <a name="oracle-subscribers"></a>Подписчики Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "47842452"
   
     -   Убедиться в том, что пустые строки не вставляются в опубликованную таблицу в качестве значений столбцов.  
   
-    -   Использовать параметр **–SkipErrors** для агента распространителя, если желательно получать уведомления об ошибках в журнал агента распространителя и продолжать обработку. Задать код ошибки Oracle 1400 (**-SkipErrors1400**).  
+    -   Использовать параметр **-SkipErrors** для агента распространителя, если желательно получать уведомления об ошибках в журнал агента распространителя и продолжать обработку. Задать код ошибки Oracle 1400 (**-SkipErrors1400**).  
   
     -   Измените сформированный скрипт создания таблицы, удалив атрибут NOT NULL из любого символьного столбца, с которым могут быть связаны пустые строки, и предоставьте измененный скрипт в качестве пользовательского скрипта создания для статьи, используя параметр @creation_script хранимой процедуры [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   

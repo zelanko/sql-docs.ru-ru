@@ -13,12 +13,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0304d7e1a27d9ff31be603ee4d3248f9b4c472eb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 621d19785793115c924243fd750b2d78c503c1ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638803"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545787"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Включение задачи «Профилирование данных» в рабочий процесс пакета
   Профилирование и очистка данных на ранних стадиях не подходят для автоматизации. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выходные данные задачи профилирования данных обычно требуют визуального анализа и вмешательства человека, чтобы определить, являются ли зафиксированные нарушения реальными. Для очистки данных, даже после обнаружения проблем с их качеством, нужен хорошо продуманный план.  
@@ -264,7 +264,7 @@ ms.locfileid: "51638803"
   
 8.  Закройте среду разработки скриптов и редактор задачи «Скрипт».  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Альтернативный образец программного кода — чтение выхода задачи профилирования из переменной  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>Альтернативный образец программного кода — чтение выхода задачи профилирования из переменной  
  В предыдущей процедуре описана загрузка выходных данных задачи "Профилирование данных" из файла. Другой вариант — загрузить эти выходные данные из переменной пакета. Чтобы загрузить эти выходные данные из переменной пакета, нужно внести в образец кода следующие изменения.  
   
 -   Вызовите метод **LoadXml** класса **XmlDocument** вместо метода **Load** .  

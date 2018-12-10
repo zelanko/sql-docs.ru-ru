@@ -20,12 +20,12 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6fb0c0e35b2350bf3b1753434425389eb8f3503d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6f55b028c8fa1506bd6076bf5bdad2f90e074727
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696802"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392857"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "51696802"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 ALTER EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -143,21 +142,21 @@ ON SERVER
 |TRACK_CAUSALITY = { ON &#124; **OFF** }|Указывает, будут ли отслеживаться причинно-следственные связи. Если отслеживание включено, то причинность позволяет коррелировать связанные события в различных серверных соединениях.|  
 |STARTUP_STATE = { ON &#124; **OFF** }|Указывает, необходимо ли запустить данный сеанс событий автоматически при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Если STARTUP_STATE = ON, то сеанс событий будет запущен, только если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановлен, а затем перезапущен.<br /><br /> ON — сеанс событий запускается при начальном запуске.<br /><br /> **OFF** — сеанс событий не запускается при начальном запуске.|  
   
-## <a name="remarks"></a>Примечания  
- Аргументы ADD и DROP нельзя использовать в одной инструкции.  
+## <a name="remarks"></a>Remarks  
+ Аргументы `ADD` и `DROP` нельзя использовать в одной инструкции.  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо разрешение ALTER ANY EVENT SESSION.  
+ Требуется разрешение `ALTER ANY EVENT SESSION`.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример запускает сеанс событий, получает динамическую статистику сеанса, а затем добавляет два события в существующий сеанс.  
   
-```  
+```sql  
 -- Start the event session  
-ALTER EVENT SESSION test_session  
-ON SERVER  
+ALTER EVENT SESSION test_session ON SERVER  
 STATE = start;  
 GO  
+
 -- Obtain live session statistics   
 SELECT * FROM sys.dm_xe_sessions;  
 SELECT * FROM sys.dm_xe_session_events;  

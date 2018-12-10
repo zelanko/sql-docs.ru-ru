@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a3f79fd96bdfb51bb9ca0301552876a536336df7
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812977"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712655"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Установка служб SQL Server Reporting Services (2017 или более поздней версии)
 
@@ -124,7 +124,7 @@ ms.locfileid: "51812977"
 
 ## <a name="related-information"></a>Дополнительные сведения
 
-Сведения об установке служб SQL Server 2016 Reporting Services см. в разделе [Установка сервера отчетов служб Reporting Services в собственном режиме](install-reporting-services-native-mode-report-server.md). Сведения об установке SQL Server 2016 Reporting Services в режиме интеграции с SharePoint см. в разделе [Установка первого сервера отчетов в режиме интеграции с SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
+Сведения об установке служб SQL Server Reporting Services см. в разделе [Установка сервера отчетов служб Reporting Services в собственном режиме](install-reporting-services-native-mode-report-server.md). Сведения об установке SQL Server 2016 Reporting Services (и более ранних версий) в режиме интеграции с SharePoint см. в разделе [Установка первого сервера отчетов в режиме интеграции с SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
 
 ## <a name="next-steps"></a>Следующие шаги
 

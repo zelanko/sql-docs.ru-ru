@@ -1,7 +1,7 @@
 ---
 title: Сценарии использования хранилища запросов | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/02/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,30 +14,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673833"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711205"
 ---
 # <a name="query-store-usage-scenarios"></a>Сценарии использования хранилища запросов
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Хранилище запросов можно использовать в самых разных ситуациях, где требуется отслеживание и прогнозируемая рабочая нагрузка. Рассмотрим несколько примеров.  
   
 -   Выявление и фиксация запросов с регрессией в выборе плана  
-  
 -   Выявление и настройка запросов, потребляющих больше всего ресурсов  
-  
 -   Тестирование А/Б  
-  
 -   Поддержание стабильной производительности во время обновления до новой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
-  
 -   Определение и улучшение нерегламентированных рабочих нагрузок  
   
 ## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>Выявление и фиксация запросов с регрессией в выборе плана  
- Во время выполнения обычных запросов оптимизатор запросов может принять решение о выборе другого плана в связи с получением иных исходных данных: изменилась кратность данных, созданы, изменены или удалены индексы, обновлена статистика и т. д. В большинстве случаев новый план будет более эффективен, чем план, который использовался до него. Тем не менее в некоторых случаях выбирается гораздо менее эффективный план — подобные ситуации называются регрессией в выборе плана. До появления хранилища запросов выявлять и устранять эту проблему было очень сложно, так как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не включал встроенное хранилище данных, в котором пользователи могли бы искать информацию о том, какие планы выполнения использовались раньше.  
+ Во время выполнения обычных запросов оптимизатор запросов может принять решение о выборе другого плана в связи с получением иных исходных данных: изменилась кратность данных, созданы, изменены или удалены индексы, обновлена статистика и т. д. В большинстве случаев новый план будет более эффективен, чем план, который использовался до него. Тем не менее в некоторых случаях выбирается гораздо менее эффективный план — подобные ситуации называются регрессией в выборе плана. До появления хранилища запросов выявлять и устранять эту проблему было сложно, так как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не включал встроенное хранилище данных, в котором пользователи могли бы искать информацию о том, какие планы выполнения использовались раньше.  
   
  С помощью хранилища запросов можно быстро:  
   
@@ -60,7 +56,7 @@ ms.locfileid: "51673833"
   
  Сводка планов справа позволяет анализировать историю выполнения и узнавать о различных планах и статистике времени их выполнения. Нижняя область позволяет изучать различные планы или визуально их сравнивать при параллельной обработке (используйте кнопку Compare (Сравнить)).  
   
-После обнаружения запроса с недостаточной производительностью действие зависит от природы проблемы.  
+При указании запроса с недостаточной производительностью необходимые действия будут зависеть от характера проблемы.  
   
 1.  Если запрос выполнялся с несколькими планами и последний план оказался значительно хуже, чем предыдущий, вы можете использовать механизм принудительного плана, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовал оптимальный план при последующих выполнениях.  
   
@@ -148,7 +144,7 @@ ms.locfileid: "51673833"
 Кроме того, вы можете выполнить скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)], чтобы получить общее число текстов запросов, запросов и планов в системе и определить, насколько они отличаются, сравнив значения query_hash и plan_hash.  
   
 ```sql  
-/*Do cardinality analysis when suspect on ad hoc workloads*/  
+--Do cardinality analysis when suspect on ad hoc workloads
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
 SELECT COUNT(DISTINCT query_hash) AS CountDifferentQueryRows FROM  sys.query_store_query;  
@@ -169,7 +165,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
 В случае с отдельными шаблонами запросов требуется создание структуры плана:  
   
 ```sql  
-/*Apply plan guide for the selected query template*/  
+--Apply plan guide for the selected query template 
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
@@ -191,7 +187,7 @@ EXEC sp_create_plan_guide
 Если все запросы (или большинство из них) являются кандидатами для автоматической параметризации, оптимальным решением станет изменение `FORCED PARAMETERIZATION` для всей базы данных.  
   
 ```sql  
-/*Apply forced parameterization for entire database*/  
+--Apply forced parameterization for entire database  
 ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;  
 ```  
 

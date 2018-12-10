@@ -13,12 +13,12 @@ ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b49e683b948443533019ce23c91bacfc04165c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c265d14a78f89cf90e7aaa572fa584a5aa69f96f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689342"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520225"
 ---
 # <a name="print-dialog-box"></a>Диалоговое окно «Печать»
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47689342"
 Задает принтер. Выберите принтер из списка. Выбранный принтер становится принтером по умолчанию до тех пор, пока не будет закрыта среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или выбран другой принтер. Сведения, отображаемые в полях под списком, относятся к выбранному принтеру.  
   
 **Состояние**  
-Описывает состояние выбранного принтера, например, занят или готов к работе.  
+Описывает состояние выбранного принтера, например занят или готов к работе.  
   
 **Тип**  
 Определяет выбранный принтер.  

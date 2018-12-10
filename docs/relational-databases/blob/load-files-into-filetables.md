@@ -15,12 +15,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 894570fc0f262c499bcadffc5c8d6d4bf6549b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674962"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526712"
 ---
 # <a name="load-files-into-filetables"></a>выполнить загрузку файлов в таблицу FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT с предложением CHECK_CONSTRAINTS;  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) без предложения IGNORE_CONSTRAINTS.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) без предложения IGNORE_CONSTRAINTS.  
   
 -   Операции массовой загрузки, не применяющие принудительно ограничения, завершаются неуспешно, если системные ограничения для таблицы FileTable не были отключены. В эту категорию входят следующие операции:  
   
@@ -97,7 +97,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT без предложения CHECK_CONSTRAINTS;  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) с предложением IGNORE_CONSTRAINTS.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) с предложением IGNORE_CONSTRAINTS.  
   
 ###  <a name="HowToBulkLoad"></a> Практическое руководство. Массовая загрузка файлов в таблицу FileTable  
  Для массовой загрузки файлов в таблицу FileTable можно использовать различные способы.  
@@ -114,7 +114,7 @@ UPDATE PhotoMetadata
   
     -   Отключить пространство имен FileTable и вызвать без предложения **CHECK_CONSTRAINTS** . Затем снова включить пространство имен FileTable.  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK ...)**  
   
     -   Вызвать с предложением **IGNORE_CONSTRAINTS** .  
   

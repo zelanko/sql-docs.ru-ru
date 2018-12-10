@@ -15,12 +15,12 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 170b40c086e3fe2c9d3ec7fbf3278a5ceeabe080
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d269e2e18c7c098e5f4149f4083d81a228b89da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783992"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527929"
 ---
 # <a name="select-a-package"></a>Выбор пакета
   Используйте диалоговое окно **Выбор пакета** , чтобы указать пакет, из которого задача «Очередь сообщений» может получать сообщения.  
@@ -57,7 +57,7 @@ ms.locfileid: "47783992"
   
 ### <a name="location--dtsx-file"></a>Местонахождение = файл DTSX  
  **Имя файла**  
- Укажите путь к пакету или нажмите кнопку обзора **(…)** и определите его расположение.  
+ Укажите путь к пакету или нажмите кнопку обзора **(...)** и определите его расположение.  
   
 ## <a name="see-also"></a>См. также:  
  [Задача «Очередь сообщений»](../../integration-services/control-flow/message-queue-task.md)  

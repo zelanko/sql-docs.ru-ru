@@ -11,17 +11,17 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c89486bb4d33ba52d1e0516d51eede715ddd9987
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808672"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405652"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Задает значение параметра для экземпляра выполнения в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Задает значение параметра для экземпляра выполнения в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Значение параметра нельзя изменить после запуска выполнения экземпляра.  
   
@@ -89,7 +89,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |---------------|-----------|  
 |*execution_id*|Уникальный идентификатор для экземпляра выполнения|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_ERROR|  
+|*parameter_name*|'DUMP_ON_ERROR|  
 |*parameter_value*|1|  
   
  Чтобы указать, что сервер служб Integration Services создает файлы дампа при возникновении событий в ходе выполнения пакета, установите следующие значения параметров для экземпляра выполнения, который не запускался.  
@@ -98,7 +98,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |---------------|-----------|  
 |*execution_id*|Уникальный идентификатор для экземпляра выполнения|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_EVENT|  
+|*parameter_name*|'DUMP_ON_EVENT|  
 |*parameter_value*|1|  
   
  Чтобы указать события в ходе выполнения пакета, в результате которых сервер служб Integration Services создает файлы дампа, установите следующие значения параметров для экземпляра выполнения, который не запускался. Разделите несколько кодов событий, используя точку с запятой.  

@@ -11,12 +11,12 @@ ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ced46d8239c18a91963f4834f49dd4f36cc032c8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 073d32e69df1ab852271b1c921f1f3e99bae92c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681352"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531565"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Пошаговое руководство. Расширение процесса развертывания проекта базы данных для изменения плана развертывания
 Можно создать участников развертывания для выполнения специализированных действий при развертывании проекта SQL. Возможные типы участников — [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) и [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Используйте [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) для изменения плана до его выполнения и [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) для осуществления операций в ходе выполнения плана. В этом пошаговом руководстве показано, как создать [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) с именем SqlRestartableScriptContributor, чтобы добавлять инструкции IF к пакетам в скрипте развертывания. Таким образом можно разрешить в скрипте повторный запуск пакетов, пока они не будут успешно завершены, если в ходе выполнения возникает ошибка.  
@@ -191,7 +191,7 @@ ms.locfileid: "51681352"
     // user's project does not have a pre/post deployment script  
     if (currentStep is BeginPreDeploymentScriptStep)  
     {  
-        // This step marks the begining of the predeployment script.  
+        // This step marks the beginning of the predeployment script.  
         // Save the step and move on.  
         beforePreDeploy = (BeginPreDeploymentScriptStep)currentStep;  
         continue;  
@@ -703,11 +703,11 @@ ms.locfileid: "51681352"
   
 #### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>Развертывание проекта SQL и создание отчета о развертывании  
   
--   Как правило, проект может быть опубликован или развернут в Visual Studio. Просто откройте решение, содержащее ваш проект SQL, и выберите пункт «Опубликовать...» контекстного меню для проекта или используйте клавишу F5 для отладки развертывания в LocalDB. В этом примере мы будем использовать диалоговое окно «Опубликовать...» для создания скрипта развертывания.  
+-   Как правило, проект может быть опубликован или развернут в Visual Studio. Достаточно открыть решение, содержащее проект SQL, и выбрать параметр "Опубликовать…" в открывающемся щелчком правой кнопкой мыши контекстном меню проекта или воспользоваться клавишей F5 для отладки развертывания в LocalDB. В этом примере для создания скрипта развертывания используется диалоговое окно "Опубликовать…".  
   
     1.  Откройте Visual Studio и вызовите решение, содержащее проект SQL.  
   
-    2.  Щелкните правой кнопкой мыши проект в обозревателе решений и выберите параметр **Опубликовать…** .  
+    2.  Щелкните правой кнопкой мыши проект в обозревателе решений и выберите параметр **Опубликовать...**.  
   
     3.  Задайте имя сервера и имя базы данных для публикации в них.  
   

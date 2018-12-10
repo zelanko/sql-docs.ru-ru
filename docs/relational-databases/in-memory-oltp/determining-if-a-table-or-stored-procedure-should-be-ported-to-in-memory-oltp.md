@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8042627fcc85cf6b9418f7a0b16eae9255441a57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684062"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531623"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Отчет об анализе производительности транзакции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет оценить, улучшится ли производительность приложения базы данных с помощью выполняющейся в памяти OLTP. В отчете также показано, сколько работы необходимо выполнить, чтобы включить выполняющуюся в памяти OLTP в приложении. После определения дисковой таблицы, которая переносится в In-Memory OLTP, можно для упрощения миграции таблицы использовать [советник по оптимизации для выполнения в памяти](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md). Аналогичным образом [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) позволяет перенести хранимую процедуру в изначально скомпилированную хранимую процедуру. Дополнительные сведения о методологиях миграции см. в разделе [In-Memory OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
+  Отчет об анализе производительности транзакции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет оценить, улучшится ли производительность приложения базы данных с помощью выполняющейся в памяти OLTP. В отчете также показано, сколько работы необходимо выполнить, чтобы включить выполняющуюся в памяти OLTP в приложении. После определения дисковой таблицы, которая переносится в In-Memory OLTP, можно для упрощения миграции таблицы использовать [советник по оптимизации для выполнения в памяти](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md). Аналогичным образом [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) позволяет перенести хранимую процедуру в изначально скомпилированную хранимую процедуру. Дополнительные сведения о методологиях миграции см. в разделе [Выполняемая в памяти OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  Отчет об анализе производительности транзакции выполняется непосредственно через рабочую базу данных или тестовую базу данных с активной рабочей нагрузкой, которая аналогична рабочей нагрузке.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47684062"
     > [!IMPORTANT]  
     >  Производительность системы базы данных зависит от многих факторов, которые не все могут отслеживаться и измеряться сборщиком данных о производительности транзакции. Поэтому отчет анализа производительности транзакции не гарантирует, что фактическое улучшение производительности будет соответствовать прогнозируемому, если были сделаны какие-либо прогнозы.  
   
- Отчет об анализе производительности транзакции и помощники миграции устанавливаются в составе SQL Server Management Studio (SSMS) при выборе **Средства управления — основные** или **Средства управления — расширенные** при установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]либо при [скачивании SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
+ Отчет об анализе производительности транзакции и помощники миграции устанавливаются в составе SQL Server Management Studio (SSMS) при выборе **Средства управления — основные** или **Средства управления — расширенные** при установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] либо при [скачивании SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
   
 ## <a name="transaction-performance-analysis-reports"></a>Отчеты об анализе производительности транзакции  
  Отчеты об анализе производительности транзакции можно создать в **обозревателе объектов** , щелкнув правой кнопкой мыши базу данных и выбрав пункт **Отчеты**, затем — **Стандартные отчеты**и **Обзор анализа производительности транзакций**. Для создания эффективного отчета об анализе у базы данных должна быть активная или недавно выполненная рабочая нагрузка.  
@@ -137,12 +137,12 @@ ms.locfileid: "47684062"
 2.  Введите следующую команду.  
   
     ```  
-    Save-SqlMigrationReport –FolderPath “<folder_path>”  
+    Save-SqlMigrationReport -FolderPath "<folder_path>"  
     ```  
   
 3.  Убедитесь, что выполняются следующие условия.  
   
-    -   Создается путь к папке, если его еще не существует.  
+    -   Создается путь к папке, если он еще не существует.  
   
     -   Отчет о миграции контрольного списка создается для всех таблиц и хранимых процедур в базе данных и сохраняется в расположении, указанном с помощью параметра folder_path.  
   
@@ -158,12 +158,12 @@ ms.locfileid: "47684062"
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
   
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
   
     ```  
   

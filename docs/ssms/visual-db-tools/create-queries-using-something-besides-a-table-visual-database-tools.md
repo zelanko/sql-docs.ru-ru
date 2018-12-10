@@ -14,12 +14,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23c5961e3cc5c194690f99c8e614adf402ef31c7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 86bd76e7d1e4cfce15343355a915d5d1bf5a0d9d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701969"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504084"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Создание запросов, использующих не только таблицу (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ FROM sales
 Дополнительные сведения о добавлении представления в запрос см. в разделе [Добавление таблиц в запросы (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md).  
   
 ## <a name="using-a-query-in-place-of-a-table"></a>Использование запроса вместо таблицы  
-Допускается выбор строк из запроса. Предположим, что имеется запрос, возвращающий названия и идентификаторы для книг, написанных соавторами, т.е. имеющих более одного автора. Код SQL может выглядеть следующим образом:  
+Допускается выбор строк из запроса. Предположим, что имеется запрос, возвращающий названия и идентификаторы для книг, написанных соавторами, т. е. имеющих более одного автора. Код SQL может выглядеть следующим образом:  
   
 ```  
 SELECT   

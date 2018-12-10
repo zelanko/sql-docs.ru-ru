@@ -13,12 +13,12 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c657e42e1e754ca843a40967221512f55c9c9c9f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7a11a699a9bba7f04459bbcc39ef6fcf085cbed1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675343"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539687"
 ---
 # <a name="sql-server-audit-records"></a>Записи подсистемы аудита SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51675343"
 |**action_id**|Идентификатор действия.<br /><br /> Совет. Для использования значения **action_id** в качестве предиката его следует преобразовать из строки символов в числовое значение. Дополнительные сведения см. в статье [Фильтрация подсистемы аудита SQL Server по предикату action_id / class_type](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|Да|  
 |**succeeded**|Указывает, была ли проверка разрешений для действия, инициировавшего событие аудита, пройдена успешно. |**bit**<br /> –1 = успешное завершение. <br />0 = неуспешное завершение.|Да|  
 |**permission_bitmask**|Когда применимо, отображаются предоставленные, запрещенные или отмененные разрешения.|**bigint**|нет|  
-|**is_column_permission**|Флаг, обозначающий разрешение уровня столбца.|**bit** <br />–1 = True <br />0 = False.|нет|  
+|**is_column_permission**|Флаг, обозначающий разрешение уровня столбца.|**bit** <br />–1 = True. <br />0 = False.|нет|  
 |**session_id**|Идентификатор сеанса, в котором произошло событие.|**int**|Да|  
 |**server_principal_id**|Идентификатор контекста имени входа, в котором выполнено действие.|**int**|Да|  
 |**database_principal_id**|Идентификатор контекста пользователя базы данных, в котором выполнено действие.|**int**|нет|  

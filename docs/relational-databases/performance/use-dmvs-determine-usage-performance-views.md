@@ -9,25 +9,22 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 05a02bae41ff2d39d9415154fd1aeabeee065c82
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668553"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586317"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Использование динамических административных представлений для определения статистики использования и производительности представлений
+В этой статье рассматриваются методы и скрипты, используемые для получения информации о **производительности запросов, которые используют представления**. Цель этих скриптов — предоставить показатели использования и производительности различных представлений, найденных в базе данных. 
 
-В этой статье рассматриваются методы и скрипты, используемые для получения информации о **производительности запросов, которые используют представления** в объекте базы данных. Цель этих скриптов — предоставить показатели использования и производительности различных представлений, найденных в базе данных. 
+## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+Динамическое административное представление [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) предоставляет статистику об оптимизации, выполняемой оптимизатором запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти значения являются накопительными. Их запись начинается при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об оптимизации запросов: [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md).   
 
-## <a name="sysdmexecqueryoptimizerinfo"></a>Sys.dm_exec_query_optimizer_info
+Приведенное ниже обобщенное табличное выражение (CTE) common_table_expression использует это динамическое административное представление, чтобы предоставить сведения о рабочей нагрузке, например долю запросов, которые ссылаются на представление. Результаты, возвращенные этим запросом, сами по себе не указывают на проблему производительности, но помогают выявлять исходные проблемы в сочетании с жалобами пользователей на запросы с низкой производительностью. 
 
-Динамическое административное представление [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) предоставляет статистику об оптимизации, выполняемой оптимизатором запросов SQL Server. Эти значения являются накопительными. Их запись начинается при запуске SQL Server.  
-
-Приведенное ниже обобщенное табличное выражение (CTE) common_table_expression использует это динамическое административное представление, чтобы предоставить сведения о рабочей нагрузке, например, процент запросов, которые ссылаются на представление. Результаты, возвращенные этим запросом, сами по себе не указывают на проблему производительности, но помогают выявлять исходные проблемы в сочетании с жалобами пользователей на запросы с низкой производительностью. 
-
-
-```SQL
+```sql
 WITH CTE_QO AS
 (
   SELECT
@@ -104,17 +101,17 @@ PIVOT (MAX([%]) FOR [counter]
       ,[fast forward cursor request])) AS p;
 GO
 ```
-Объедините результаты этого запроса с результатами системного представления [sys.views](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-views-transact-sql), чтобы определить статистику запросов, текст запроса и кэшированный план выполнения. 
 
-## <a name="sysviews"></a>Sys.views
+Объедините результаты этого запроса с результатами системного представления [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), чтобы определить статистику запросов, текст запроса и кэшированный план выполнения. 
 
+## <a name="sysviews"></a>sys.views
 В приведенном ниже обобщенном табличном выражении предоставляются сведения о количестве выполнений, общем времени работы и количестве прочитанных страниц из памяти. На основе результатов можно определить запросы, требующие оптимизации. 
   
-  >[!NOTE]
-  > Результаты этого запроса могут различаться в зависимости от используемой версии SQL Server.  
+> [!NOTE]
+> Результаты этого запроса могут различаться в зависимости от используемой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 
-```SQL
+```sql
 WITH CTE_VW_STATS AS
 (
   SELECT
@@ -168,12 +165,10 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>Sys.dmv_exec_cached_plans
+## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+Окончательный запрос предоставляет сведения о неиспользуемых представлениях при помощи динамического административного представления [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md). Однако кэшированный план выполнения динамический и результаты могут различаться. Таким образом, необходимо использовать этот запрос через какое-то время, чтобы определить, используется ли представление. 
 
-Окончательный запрос предоставляет сведения о неиспользуемых представлениях при помощи динамического административного представления [sys.dmv_exec_cached_plans](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql). Однако кэшированный план выполнения динамический и результаты могут различаться. Таким образом, необходимо использовать этот запрос через какое-то время, чтобы определить, используется ли представление. 
-
-
-```SQL
+```sql
 SELECT
   SCHEMA_NAME(vw.schema_id) AS schemaname
   ,vw.name AS name
@@ -198,11 +193,11 @@ WHERE
 GO
 ```
 
-## <a name="related-external-resources"></a>Связанные внешние ресурсы
-
-- [Динамические административные представления для настройки производительности (видео — SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)
-- [Динамические административные представления для настройки производительности (слайды и демоверсия — SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
-- [Видео о настройке SQL Server в форме капсулы (SQL Saturday Parma)](https://vimeo.com/200980883)
-- [Настройка SQL Server в двух словах (слайды и демоверсия — SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
-- [Книга о настройке производительности с помощью динамических административных представлений SQL Server](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)
-- [Видео о важнейших типах ожидания в SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)
+## <a name="see-also"></a>См. также раздел
+[Динамические административные представления и функции](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Динамические административные представления для настройки производительности (видео — SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)   
+[Динамические административные представления для настройки производительности (слайды и демоверсия — SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)   
+[Видео о настройке SQL Server в форме капсулы (SQL Saturday Parma)](https://vimeo.com/200980883)    
+[Настройка SQL Server в двух словах (слайды и демоверсия — SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)   
+[Книга о настройке производительности с помощью динамических административных представлений SQL Server](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)   
+[Видео о важнейших типах ожидания в SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)   

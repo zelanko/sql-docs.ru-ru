@@ -10,12 +10,12 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13c981282065d8d18e1eb8be19157e0f9d691ba0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2acb1b560e6a1399751e263f1437f5da1c85aeb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711314"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415890"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Шифрование и расшифровка идентификаторов SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47711314"
   
  Командлет **Encode-SqlName** принимает в качестве входных данных идентификатор [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Он возвращает строку, в которой все символы, не поддерживаемые языком Windows PowerShell, закодированы в виде «%xx». Командлет **Decode-SqlName** принимает в качестве входных данных закодированный идентификатор [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и возвращает исходный идентификатор.  
   
-##  <a name="LimitationsRestrictions"></a> ограничения  
+##  <a name="LimitationsRestrictions"></a> Ограничения  
  Командлеты **Encode-Sqlname** и **Decode-Sqlname** обеспечивают только кодирование или декодирование символов, допустимых в идентификаторах SQL Server с разделителями, но не поддерживаемых в путях PowerShell. Символы, кодируемые командлетом **Encode-SqlName** и декодируемые командлетом **Decode-SqlName**, перечислены ниже.  
   
 |||||||||||||  
@@ -68,7 +68,7 @@ Set-Location (Encode-SqlName "Table:Test")
  Используйте командлет **Decode-Sqlname** для замены шестнадцатеричных кодов символами, представленными этими кодами.  
   
 ### <a name="examples-decoding"></a>Примеры (декодирование)  
- В этом примере происходит возврат строки «Table:Test»:  
+ В этом примере происходит возврат строки Table:Test:  
   
 ```  
 Decode-SqlName "Table%3ATest"  

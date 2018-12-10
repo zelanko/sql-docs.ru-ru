@@ -25,12 +25,12 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b52f9aa0131639bdfe68222bba42eae774d2b18f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f3b97043a2f9c348da76b8d0c15a448bf8106011
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698333"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510794"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ CREATE AVAILABILITY GROUP group_name
    FOR [ DATABASE database_name [ ,...n ] ]  
    REPLICA ON <add_replica_spec> [ ,...n ]  
    AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
-   [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
+   [ LISTENER 'dns_name' ( <listener_option> ) ]  
 [ ; ]  
   
 <with_option_spec>::=   
@@ -83,8 +83,8 @@ CREATE AVAILABILITY GROUP group_name
      } )  
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+        [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer  
   
@@ -104,12 +104,12 @@ CREATE AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+     'four_part_ipv4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-      | ‘ipv6_address’  
+        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+      | 'ipv6_address'  
      }  
   
 ```  
@@ -297,7 +297,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Дополнительные сведения см. в статье [Активные вторичные реплики, резервное копирование во вторичных репликах (группы доступности Always On)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
- SECONDARY_ROLE **(** … **)**  
+ SECONDARY_ROLE **(** ... **)**  
  Задает параметры роли, которые будут действовать, если эта реплика доступности в данный момент имеет вторичную роль (то есть когда реплика является вторичной). В скобках укажите один или два параметра вторичной роли. Если указываются оба параметра, используйте список с разделителями-запятыми.  
   
  Параметры вторичной роли:  
@@ -326,7 +326,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Для именованного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушиватель Transact-SQL должен быть настроен для использования определенного порта. Дополнительные сведения см. в разделе [Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
- PRIMARY_ROLE **(** … **)**  
+ PRIMARY_ROLE **(** ... **)**  
  Задает параметры роли, которые будут действовать, если эта реплика доступности в данный момент имеет первичную роль (то есть когда реплика является первичной). В скобках укажите один или два параметра первичной роли. Если указываются оба параметра, используйте список с разделителями-запятыми.  
   
  Параметры первичной роли:  
@@ -340,7 +340,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Разрешаются все соединения с базами данных в первичной реплике. Это поведение по умолчанию.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } Задает список экземпляров сервера (с разделителями-запятыми), на которых будут размещаться реплики доступности для этой группы доступности, удовлетворяющие следующим требованиям при работе во вторичной роли:  
+ READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE } Задает список экземпляров сервера (с разделителями-запятыми), на которых будут размещаться реплики доступности для этой группы доступности, удовлетворяющие следующим требованиям при работе во вторичной роли:  
   
 -   Настроены для разрешения всех соединений или соединений только для чтения (см. выше аргумент ALLOW_CONNECTIONS параметра SECONDARY_ROLE).  
   
@@ -414,7 +414,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  Указывает на присвоение начальных значений вручную (по умолчанию). В этом методе вы создаете резервную копию базы данных на первичной реплике и вручную восстанавливаете эту резервную копию на репликах вторичной группы доступности.  
   
- LISTENER **‘**_dns\_name_**’(** \<listener_option\> **)** Определяет новый прослушиватель для этой группы доступности. Аргумент LISTENER является необязательным.  
+ LISTENER **'**_dns\_name_**'(** \<listener_option\> **)** Определяет новый прослушиватель для этой группы доступности. Аргумент LISTENER является необязательным.  
   
 > [!IMPORTANT]  
 >  Перед созданием первого прослушивателя настоятельно рекомендуется ознакомиться со статьей [Создание или настройка прослушивателя группы доступности (SQL Server)](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -436,7 +436,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option> Аргумент LISTENER принимает один из следующих параметров \<listener_option>: 
   
- WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
+ WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
  Указывает, что прослушиватель группы доступности использует протокол DHCP.  Дополнительно можно использовать предложение ON, чтобы определить сеть, для которой создается прослушиватель. Протокол DHCP имеет ограничение на работу только с одной подсетью для каждого экземпляра сервера, на котором размещается реплика в группе доступности.  
   
 > [!IMPORTANT]  
@@ -446,7 +446,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
  Указывает, что вместо использования протокола DHCP прослушиватель группы доступности использует один или несколько статических IP-адресов. Чтобы создать группу доступности, охватывающую несколько подсетей, в конфигурации прослушивателя должен присутствовать один статический IP-адрес для каждой подсети. Для конкретной подсети статический IP-адрес может иметь формат IPv4 или IPv6. Свяжитесь с администратором сети, чтобы получить статический IP-адрес для каждой подсети, в которой будет размещена реплика для новой группы доступности.  
   
  Пример:  
@@ -555,7 +555,7 @@ CREATE AVAILABILITY GROUP MyAg
          );
 GO  
 ALTER AVAILABILITY GROUP [MyAg]
-  ADD LISTENER ‘MyAgListenerIvP6’ ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
+  ADD LISTENER 'MyAgListenerIvP6' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
 GO  
 ```  
   

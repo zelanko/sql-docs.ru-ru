@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a48d24c6250160fe5ade5a941c5591c358fc1908
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 945ee262e8d507a62aa954eec847e3b7bd4ac308
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031695"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524497"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Добавление привязанного к данным изображения (построитель отчетов и службы SSRS)
   Отчет может включать ссылку на изображение, хранящееся в базе данных. Такое изображение называется *изображением, привязанным к данным*. Примерами изображений, привязанных к данным, служат картинки, выводящиеся вместе с наименованиями товаров в списке товаров.  
@@ -39,7 +39,7 @@ ms.locfileid: "50031695"
   
 7.  В списке **Использовать это поле**выберите поле, содержащее изображения в отчете.  
   
-8.  В списке **Использовать этот тип MIME**выберите тип MIME или формат файла, соответствующий изображению, например BMP.  
+8.  В списке **Использовать этот тип MIME** выберите тип MIME или формат файла, соответствующий изображению, например BMP.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

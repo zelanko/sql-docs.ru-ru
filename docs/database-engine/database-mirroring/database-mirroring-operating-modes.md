@@ -13,12 +13,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b302626d3a1f13a2be13d0da77f2f3aca684b83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a7449f51121491025d662fde50eaa548602cd41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772012"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503461"
 ---
 # <a name="database-mirroring-operating-modes"></a>Режимы работы зеркального отображения базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "47772012"
   
  В отличие от двух участников зеркального отображения, следящий сервер не обслуживает базу данных. Следящий сервер только поддерживает автоматическую отработку отказа, проверяя готовность и функциональность основного сервера. Зеркальный сервер запускает автоматический переход на другой ресурс только в случае сохранения связи между зеркальным и следящим серверами после отключения обоих серверов от основного сервера.  
   
- При наличии следящего сервера для сеанса должен быть установлен *кворум*— связь между как минимум двумя экземплярами сервера, которая позволяет перевести базу данных в доступный режим. Дополнительные сведения см. в разделах [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md) и [Кворум: как следящий сервер влияет на доступность базы данных (зеркальное отображение базы данных)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ При наличии следящего сервера для сеанса должен быть установлен *кворум* — связь между как минимум двумя экземплярами сервера, которая позволяет перевести базу данных в доступный режим. Дополнительные сведения см. в разделах [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md) и [Кворум: как следящий сервер влияет на доступность базы данных (зеркальное отображение базы данных)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Чтобы произвести автоматический переход на другой ресурс, необходимо выполнение следующих условий.  
   

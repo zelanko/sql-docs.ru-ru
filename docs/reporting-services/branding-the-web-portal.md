@@ -7,18 +7,18 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd469eb38d23a72037ab34dc6cceb45da39411a6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812997"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397712"
 ---
 # <a name="branding-the-web-portal"></a>Фирменная символика на веб-портале
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Вы можете добавить на свой веб-портал элементы фирменного стиля организации. Для этого существуют пакеты фирменной символики. Для работы с пакетами фирменной символики углубленное знание CSS не требуется.  
+Вы можете добавить на свой веб-портал элементы фирменного стиля организации. Для этого существуют пакеты фирменной символики. Для работы с пакетами фирменной символики углубленное знание каскадных таблиц стилей (CSS) не требуется.  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    

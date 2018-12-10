@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 983078a8dc713af70fb57fab655ff7eed9acad35
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0881a8939788215d9d2f59c71b6f9c9aa44fe243
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601004"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526969"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Использование пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "51601004"
     |[sp_dbmmonitordropalert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)|Удаляет предупреждение для указанной метрики производительности.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Пороговые события производительности, отправляемые в журнал событий Windows  
- Если для метрики производительности определено пороговое значение предупреждения, то при обновлении таблицы состояния последнее значение сравнивается с пороговым. Если оно достигнуто, процедура обновления **sp_dbmmonitorupdate**создает для метрики информационное событие — *пороговое событие производительности*— и записывает его в журнал событий [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. В следующей таблице приведены идентификаторы пороговых событий производительности.  
+ Если для метрики производительности определено пороговое значение предупреждения, то при обновлении таблицы состояния последнее значение сравнивается с пороговым. Если оно достигнуто, процедура обновления **sp_dbmmonitorupdate** создает для метрики информационное событие — *пороговое событие производительности* — и записывает его в журнал событий [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. В следующей таблице приведены идентификаторы пороговых событий производительности.  
   
 |Метрика производительности|Идентификатор события|  
 |------------------------|--------------|  

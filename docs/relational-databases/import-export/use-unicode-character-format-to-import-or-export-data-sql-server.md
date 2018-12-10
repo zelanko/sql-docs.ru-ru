@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f52b1a60ebc5fc456b0b90b998c173356c5c7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f81e94012e4c976dc1d4fdb1013ec34e22ff51d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809642"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413311"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата Юникода для импорта и экспорта данных (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 |OPENROWSET|Недоступно|Требуется использовать файл форматирования.|
   
 > [!NOTE]
->  Также в файле форматирования можно указать форматирование для каждого поля. Дополнительные сведения см. в статье [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
+>  Также в файле форматирования можно указать форматирование для каждого поля. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
   
 ## Пример условий теста<a name="etc"></a>  
 Примеры в этой статье основаны на таблице и файле форматирования, которые определены ниже.
@@ -163,7 +163,7 @@ REM Review results is SSMS
 ```
 
 ### **Использование bcp и символьного формата Юникода для импорта данных с файлом форматирования, не являющимся XML**<a name="bcp_widechar_import_fmt"></a>
-Параметры **-w** и **-f** switches и **IN** commи.  Так как этот пример включает bcp, файл форматирования, символ Юникода, а первое поле данных в файле данных не содержит символы, потребуется использовать обходной путь.  См. раздел [Особые рекомендации по использованию символьного формата Юникода, bcp и файла форматирования](#special_considerations)выше.  Файл данных `myWidechar.bcp` будет изменен: в него будет добавлена дополнительная фиктивная запись, которая затем будет пропущена по параметру `-F 2` .
+Параметры **-w** и **-f** switches и **IN** commи.  Так как этот пример включает bcp, файл форматирования, символ Юникода, а первое поле данных в файле данных не содержит символы, потребуется использовать обходной путь.  См. раздел [Особые рекомендации по использованию символьного формата Юникода, bcp и файла форматирования](#special_considerations)выше.  Файл данных `myWidechar.bcp` будет изменен: в него будет добавлена дополнительная фиктивная запись, которая затем будет пропущена по параметру `-F 2`.
 
 В командной строке введите следующие команды и внесите требуемые изменения:
 ```

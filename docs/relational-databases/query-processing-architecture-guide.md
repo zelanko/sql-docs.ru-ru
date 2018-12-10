@@ -1,7 +1,7 @@
 ---
 title: Руководство по архитектуре обработки запросов | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701482"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542523"
 ---
 # <a name="query-processing-architecture-guide"></a>Руководство по архитектуре обработки запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -350,16 +350,19 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-При выполнении любой инструкции SQL в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] реляционное ядро сначала просматривает кэш планов, проверяя, нет ли в нем плана выполнения для такой же инструкции SQL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] повторно использует все найденные планы, что позволяет избежать перекомпиляции инструкций SQL. Если не найдено ни одного существующего плана, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] формирует для этого запроса новый план.
+При выполнении любой инструкции SQL в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] реляционное ядро сначала просматривает кэш планов, проверяя, нет ли в нем плана выполнения для такой же инструкции SQL. Инструкция SQL считается существующей, если она точно соответствует выполнявшейся ранее инструкции SQL с кэшированным планом, символ за символом. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] повторно использует все найденные планы, что позволяет избежать перекомпиляции инструкций SQL. Если не найдено ни одного существующего плана, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] формирует для этого запроса новый план.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] реализует эффективный алгоритм поиска существующих планов выполнения для любой инструкции SQL. В большинстве систем ресурсы, затрачиваемые на поиск готового плана, всегда меньше ресурсов, затрачиваемых на повторную компиляцию каждой инструкции SQL.
 
-Алгоритмы поиска соответствия инструкции SQL существующему неиспользуемому плану выполнения в кэше требуют, чтобы все ссылки на объекты были полными. Например, для первой из следующих инструкций `SELECT` соответствие существующему плану не будет найдено, а для второго — будет:
+Алгоритмы поиска соответствия инструкции SQL существующему неиспользуемому плану выполнения в кэше требуют, чтобы все ссылки на объекты были полными. Например, предположим, что `Person` является схемой по умолчанию для пользователя, выполняющего инструкции `SELECT` ниже. Хотя в этом примере для выполнения не обязательно, чтобы таблица `Person` была полной, это означает, что вторая инструкция не соответствует существующему плану, однако третья инструкция соответствует:
 
 ```sql
 SELECT * FROM Person;
-
+GO
 SELECT * FROM Person.Person;
+GO
+SELECT * FROM Person.Person;
+GO
 ```
 
 ### <a name="removing-execution-plans-from-the-plan-cache"></a>Удаление планов выполнения из кэша планов
@@ -637,7 +640,6 @@ WHERE ProductID = 63;
 * приложение может управлять временем создания и повторного использования плана выполнения;
 * Модель подготовки и выполнения можно переносить в другие базы данных, включая более ранние версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
- 
 ### <a name="ParamSniffing"></a> Сканирование параметров
 Сканирование параметров — это процесс, посредством которого [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "сканирует" текущие значения параметров во время компиляции или перекомпиляции и передает их оптимизатору запросов для создания более эффективных планов запросов.
 
@@ -655,6 +657,24 @@ WHERE ProductID = 63;
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] обеспечивает параллельную обработку запросов, оптимизирующую выполнение запросов и операции с индексами на компьютерах, где установлено несколько микропроцессоров (ЦП). Благодаря параллельной обработке запросов и параллельному выполнению операций с индексами с помощью нескольких рабочих потоков операционной системы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняет эти операции быстрее и эффективнее.
 
 Во время оптимизации запроса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пытается обнаружить запросы и операции с индексами, которые можно ускорить за счет параллельного выполнения. Для таких запросов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] вставляет в план выполнения операторы обмена, чтобы подготовить запрос к параллельной обработке. Операторы обмена служат для управления процессом, перераспределения данных и управления потоком. К ним относятся логические операторы `Distribute Streams`, `Repartition Streams`и `Gather Streams` (в качестве подтипов), один или несколько из которых появляются в выводе инструкции Showplan плана запроса для параллельного запроса. 
+
+> [!IMPORTANT]
+> Определенные конструкции блокируют для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] возможность использования параллелизма для всего плана выполнения или его частей.
+
+Конструкции, которые блокируют параллелизм, включают перечисленные ниже.
+>
+> - **Определяемые пользователем скалярные функции**    
+>   Дополнительные сведения об определяемых пользователем скалярных функциях см. в разделе [Создание определяемых пользователем функций](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Начиная с [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] включает возможность встраивать эти функции и разблокировать использование параллелизма во время обработки запросов. Дополнительные сведения о встраивании скалярных пользовательских функций см. в разделе [Интеллектуальная обработка запросов в базах данных SQL](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+> - **Remote Query**    
+>   Дополнительные сведения о Remote Query см. в разделе [Справочник по логическим и физическим операторам Showplan](../relational-databases/showplan-logical-and-physical-operators-reference.md).
+> - **Динамические курсоры**    
+>   Дополнительные сведения о курсорах см. в описании [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
+> - **Рекурсивные запросы**    
+>   Дополнительные сведения о рекурсии см. в разделах [Рекомендации по созданию и использованию рекурсивных обобщенных табличных выражений](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) и [Рекурсия в T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
+> - **Функции с табличным значением (TVF)**    
+>   Дополнительные сведения о функциях TVF см. в разделе [Создание определяемых пользователем функций (ядро СУБД)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+> - **Ключевое слово TOP**    
+>   Дополнительные сведения см. в разделе [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
 
 После вставки операторов обмена получается план параллельного выполнения запроса. План параллельного выполнения запроса может использовать несколько рабочих потоков. План последовательного выполнения, который используется для обработки непараллельных запросов, использует только один рабочий поток. Фактическое количество рабочих потоков для параллельного выполнения запроса определяется при инициализации плана выполнения запроса и зависит от сложности и степени параллелизма плана. Степень параллелизма определяет максимальное количество используемых ЦП, а не количество используемых рабочих потоков. Степень параллелизма устанавливается на уровне сервера и изменяется системной хранимой процедурой sp_configure. Это значение можно переопределить для отдельных инструкций запроса или индекса при помощи указания запроса `MAXDOP` или параметра индекса `MAXDOP` . 
 
@@ -1098,4 +1118,6 @@ GO
  [Рекомендации по хранилищу запросов](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Оценка количества элементов](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [Адаптивная обработка запросов](../relational-databases/performance/adaptive-query-processing.md)   
- [Приоритет операторов](../t-sql/language-elements/operator-precedence-transact-sql.md)
+ [Приоритет операторов](../t-sql/language-elements/operator-precedence-transact-sql.md)    
+ [Планы выполнения](../relational-databases/performance/execution-plans.md)    
+ [Центр производительности для базы данных SQL Azure и ядра СУБД SQL Server](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

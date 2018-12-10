@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41a03695526a669f33b74833137415a35db02929
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: d4872ffea819c23ca27ec0d01e4709a231f95cf5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812748"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514399"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Разработка с помощью API REST для служб Reporting Services
 
@@ -55,7 +55,7 @@ API REST обеспечивает программный доступ к объ�
 
 ## <a name="api-documentation"></a>Документирование API
 
-Современный API REST требуется для современного документирования API. API-интерфейс REST основан на спецификации OpenAPI (также известной как спецификация swagger), а соответствующая документация доступна на сайте [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Помимо документирования API SwaggerHub помогает создать клиентскую библиотеку на нужном языке — JavaScript, TypeScript, C#, Java, Python, Ruby и т. д.
+Современный API REST требуется для современного документирования API. API-интерфейс REST основан на спецификации OpenAPI (также известной как спецификация swagger), а соответствующая документация доступна на сайте [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Помимо документирования API, SwaggerHub помогает создать клиентскую библиотеку на нужном языке — JavaScript, TypeScript, C#, Java, Python, Ruby и т. д.
 
 ## <a name="testing-api-calls"></a>Тестирование вызовов API
 

@@ -21,12 +21,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2504bc45e358ebbf35b279e07be511f7a6041956
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2bb26e75401f7dfd93e23c197a8e1419ad21cb2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641291"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528447"
 ---
 # <a name="send-mail-task"></a>Задача «Отправка почты»
   Задача «Отправка почты» производит отправку сообщения электронной почты. Эта задача позволяет пакету отправлять сообщения при успешном или неуспешном завершении задач в рабочем процессе пакета либо в ответ на события, инициируемые при выполнении пакета. Например, задача может уведомить администратора базы данных об успешном или неуспешном завершении задачи резервного копирования базы данных.  
@@ -146,17 +146,17 @@ ms.locfileid: "51641291"
   
 #### <a name="messagesourcetype--direct-input"></a>MessageSourceType = Прямой ввод  
  **MessageSource**  
- Введите текст сообщения или нажмите кнопку обзора (…), а затем введите сообщение в диалоговом окне **Источник сообщения** .  
+ Введите текст сообщения или нажмите кнопку обзора (...), а затем введите сообщение в диалоговом окне **Источник сообщения**.  
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Соединение с файлом  
  **MessageSource**  
- Выберите диспетчер подключений файлов из списка или щелкните \<**Создать соединение…**>, чтобы создать его.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
  **См. также:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = Переменная  
  **MessageSource**  
- Выберите переменную из списка или нажмите кнопку \<**Создать переменную…**>, чтобы создать переменную.  
+ Выберите переменную в списке или щелкните \<**Создать переменную...**>, чтобы создать ее.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 193794ba5d5553036b6fc2018d3e8d8a5ce4401d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 492691c3fd6c8cd9206b591aa2302bc62a658daa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642171"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527129"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Занятие 2–2. Добавление и настройка контейнера "цикл по каждому элементу" | Документы Майкрософт
 В этой задаче будет добавлена возможность выполнить циклическую обработку папки неструктурированных файлов и применить для каждого из этих неструктурированных файлов одинаковое преобразование потока данных, использованное на занятии 1. Это будет выполнено путем добавления в поток управления и настройки контейнера «цикл по каждому элементу».  

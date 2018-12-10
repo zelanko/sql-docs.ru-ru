@@ -15,12 +15,12 @@ ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b3a57de7e071a66fa1b8a6091d51fb4d799f2cbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dc91a21f83283a78e5d47e49dbe1a36ec166e05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610312"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419965"
 ---
 # <a name="navigational-access-master-data-services"></a>Навигационный доступ (службы Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47610312"
 
   Навигационный доступ применяется к модели объекта безопасности, которая назначается на вкладке **Модель** .  
   
- Навигационный доступ — это доступ к уровням выше того, который был назначен системой безопасности.  
+ Навигационный доступ — это доступ к уровням выше того, который был назначен системой безопасности.  
   
  В этом примере разрешения назначаются на сущность, поэтому навигационный доступ предоставляется на уровне модели.  
   

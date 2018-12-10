@@ -11,12 +11,12 @@ ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0c9ddcd2fecd498e6bb00458bfde1e07b1d431b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747442"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532742"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Сценарии использования темпоральных таблиц
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ FROM Employee
   
 > [!TIP]  
 >  Условия фильтрации, указанные в темпоральных предложениях с FOR SYSTEM_TIME, поддерживают SARG (т. е. SQL Server может использовать соответствующий базовый кластеризованный индекс для выполнения поиска вместо операции сканирования.   
-> При выполнении прямого запроса к таблице журнала важно, чтобы используемое условие фильтра поддерживало SARG. Для этого указывайте фильтры в формате \<столбец периода> {< | > | =, ...} date_condition AT TIME ZONE ‘UTC’.  
+> При выполнении прямого запроса к таблице журнала важно, чтобы используемое условие фильтра поддерживало SARG. Для этого указывайте фильтры в формате \<столбец периода> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.  
 > Если применить AT TIME ZONE к столбцам периода, то SQL Server будет выполнять сканирование таблицы или индекса, что может обходиться очень дорого. Избегайте подобных условий в запросах:  
 > \<столбец периода> AT TIME ZONE ‘\<ваш часовой пояс>’  >  {< | > | =, …} date_condition.  
   
@@ -446,7 +446,7 @@ FROM CTE
  В следующем примере показан этот процесс и предполагается, что таблица измерения DimLocation уже имеет столбцы ValidFrom и ValidTo с типом datetime2, не допускающие значения NULL, которые заполняются процессом ETL:  
   
 ```  
-/*Move “closed” row versions into newly created history table*/  
+/*Move "closed" row versions into newly created history table*/  
 SELECT * INTO  DimLocationHistory  
     FROM DimLocation  
         WHERE ValidTo < '9999-12-31 23:59:59.99';  

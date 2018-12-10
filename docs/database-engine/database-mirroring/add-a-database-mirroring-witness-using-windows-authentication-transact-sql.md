@@ -15,12 +15,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ca1ecc06039f8bdfbf4516778a04f9c191544e45
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 4cf7b351726ab07313dff9272bd4411957f05cb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168906"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507104"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (язык Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "49168906"
   
      Здесь \<*системный_адрес>*  — строка, однозначно идентифицирующая целевой компьютер, а \<*порт>*  — номер порта, используемого конечной точкой зеркального отображения экземпляра сервера-партнера. Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-     Например, на экземпляре основного сервера следующая инструкция ALTER DATABASE установит следящий сервер. Имя базы данных — **AdventureWorks**, адрес системы — DBSERVER3 (имя следящей системы), а порт, используемый конечной точкой зеркального отображения базы данных на следящем сервере — `7022`:  
+     Например, на экземпляре основного сервера следующая инструкция ALTER DATABASE установит следящий сервер. Имя базы данных — **AdventureWorks**, адрес системы — DBSERVER3 (имя следящей системы), а порт, используемый конечной точкой зеркального отображения базы данных на следящем сервере, — `7022`:  
   
     ```  
     ALTER DATABASE AdventureWorks   

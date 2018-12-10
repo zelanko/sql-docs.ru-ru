@@ -11,12 +11,12 @@ ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8158439e20b5f841c01914f83490b8d9ab128fbb
-ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
+ms.openlocfilehash: 5b9e328f3abd3a53bfb4764470138d6d6b966236
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50965972"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617604"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Надстройка Master Data Services для Microsoft Excel
 
@@ -29,7 +29,7 @@ ms.locfileid: "50965972"
  В [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно с помощью служб Data Quality Services (DQS) сопоставить данные, прежде чем загружать их в MDS. Это поможет предотвратить дублирование данных в MDS.  
 
 ## <a name="downloads"></a>Файлы для загрузки 
->*  Скачайте надстройку служб Master Data Services для Excel для пакета обновления 1 (SP1) SQL Server 2016 с [этой страницы Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=836866). 
+>*  Скачайте надстройку служб Master Data Services для Excel для пакета обновления 2 (SP2) SQL Server 2016 с [этой страницы Центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=56838). 
 >* Скачайте [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] для SQL Server 2017 с [этой страницы Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=836867).
  
   

@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 694f1c2d29ced11a4f66a05bd983fe704e1be241
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642381"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411991"
 ---
 # <a name="data-flow-performance-features"></a>Возможности для повышения производительности потока данных
   В этом разделе приведены советы по проектированию пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , помогающие избежать общих проблем с производительностью. Кроме того, в этом разделе содержатся сведения по функциям и средствам, позволяющим устранить неполадки с производительностью пакетов.  
@@ -183,7 +183,7 @@ ms.locfileid: "51642381"
   
 -   Техническая статья [Top 10 SQL Server Integration Services Best Practices (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=220818)на сайте sqlcat.com.  
   
--   Техническая статья и образец кода [The «Balanced Data Distributor» for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822)на сайте sqlcat.com.  
+-   Техническая статья и образец кода [The "Balanced Data Distributor" for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822) (Сбалансированный распределитель данных для служб SSIS) на сайте sqlcat.com.  
   
 -   Сообщение в блоге [Troubleshooting SSIS Package Performance Issues (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=238156)на сайте blogs.msdn.com  
   

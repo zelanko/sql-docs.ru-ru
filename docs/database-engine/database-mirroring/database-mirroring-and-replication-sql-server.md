@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88bb5e660d992139ed9bf748544a52ed9839b0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637492"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534437"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Зеркальное отображение и репликация баз данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47637492"
   
     -   установите значение параметра **@working_directory** равным имени папки моментальных снимков, используемой основной базой данных.  
   
-4.  Укажите имя зеркала в параметре агента **–PublisherFailoverPartner** . Этот параметр требуется следующим агентам для определения зеркала после отработки отказа:  
+4.  Укажите имя зеркала в параметре агента **–PublisherFailoverPartner**. Этот параметр требуется следующим агентам для определения зеркала после отработки отказа:  
   
     -   агенту моментальных снимков (для всех публикаций);  
   
@@ -97,7 +97,7 @@ ms.locfileid: "47637492"
   
     -   [Просмотр и изменение параметров командной строки агента репликации (среда SQL Server Management Studio)](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Основные понятия исполняемых файлов агента репликации](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
      Рекомендуется добавить параметр **–PublisherFailoverPartner** в профиль агента, а затем указать в профиле имя зеркала. Например, если настраивается репликация с помощью хранимых процедур:  
   

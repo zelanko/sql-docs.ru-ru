@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ce8d3928a59acfb2c3b53e19b50934b8f30a0eda
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c35e10e3ac81468a6add4bc1674fc6e56e126d42
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605991"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617734"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Настройка учетных записей службы Windows и разрешений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "51605991"
 
 В качестве стартовых учетных записей автоматического запуска, используемых для запуска и выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , могут использоваться [учетные записи пользователей домена](#Domain_User), [учетные записи локальных пользователей](#Local_User), [управляемые учетные записи служб](#MSA), [виртуальные учетные записи](#VA_Desc)или [встроенные системные учетные записи](#Local_Service). Для запуска и выполнения каждая служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна иметь стартовую учетную запись автоматического запуска, настраиваемую во время установки.
   
- В этом разделе описываются учетные записи, которые могут быть настроены для запуска служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , значения, используемые при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию, понятие удостоверений безопасности служб, параметры запуска и настройка брандмауэра.  
+ В этом разделе описываются учетные записи, которые могут быть настроены для запуска служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], значения, используемые при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию, понятие удостоверений безопасности служб, параметры запуска и настройка брандмауэра.  
   
 -   [Учетные записи служб по умолчанию](#Default_Accts)  
   
@@ -247,7 +247,7 @@ ms.locfileid: "51605991"
   
 ##  <a name="Serv_Perm"></a> Разрешения службы
 
-В этом разделе описаны разрешения, которые настраивает программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для удостоверений безопасности служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+В этом разделе описаны разрешения, которые настраивает программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для удостоверений безопасности служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   [Настройка служб и управление доступом](#Serv_SID)  
   
@@ -291,7 +291,7 @@ ms.locfileid: "51605991"
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\MSSQLSERVER**. Именованный экземпляр: **NT SERVICE\MSSQL$** имя_экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> Разрешение на запуск модуля записи SQL Writer<br /><br /> Разрешение на чтение службы журнала событий<br /><br /> Разрешение на чтение службы удаленного вызова процедур (RPC)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :** \*<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT Service\SQLSERVERAGENT**. Именованный экземпляр: **NT Service\SQLAGENT$**_имя_экземпляра_.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Все права предоставляются локальной группе Windows. Экземпляр по умолчанию: **SQLServerMSASUser$**_имя_компьютера_**$MSSQLSERVER**. Именованный экземпляр: **SQLServerMSASUser$**_имя_компьютера_**$**_имя_экземпляра_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] : **SQLServerMSASUser$**_имя_компьютера_**$**_PowerPivot_.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Только для табличного режима:<br /><br /> **Увеличение рабочего набора процесса** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> **Блокировка страниц в памяти** (SeLockMemoryPrivilege) — это право доступа требуется только в случае полного отключения функции разбиения по страницам.<br /><br /> Только для установок отказоустойчивого кластера:<br /><br /> **Увеличение приоритета планирования** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Все права предоставляются локальной группе Windows. Экземпляр по умолчанию: **SQLServerMSASUser$**_имя_компьютера_**$MSSQLSERVER**. Именованный экземпляр: **SQLServerMSASUser$**_имя_компьютера_**$**_имя_экземпляра_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] : **SQLServerMSASUser$**_имя_компьютера_**$**_PowerPivot_.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Только для табличного режима:<br /><br /> **Увеличение рабочего набора процесса** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> **Блокировка страниц в памяти** (SeLockMemoryPrivilege) — это право доступа требуется только в случае полного отключения функции разбиения по страницам.<br /><br /> Только для установок отказоустойчивого кластера:<br /><br /> **Увеличение приоритета планирования** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\ReportServer**. Именованный экземпляр: **NT SERVICE\\ReportServer$**_имя_экземпляра_.)|**Вход в систему в качестве службы** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию и именованный экземпляр: **NT SERVICE\MsDtsServer130**. У служб[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] нет отдельного процесса для именованного экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Разрешение на запись в журнал событий приложений<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Олицетворение клиента после проверки подлинности** (SeImpersonatePrivilege)|  
 |**Полнотекстовый поиск:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT Service\MSSQLFDLauncher**. Именованный экземпляр: **NT Service\ MSSQLFDLauncher$**_имя_экземпляра_.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)|  
@@ -562,13 +562,13 @@ ms.locfileid: "51605991"
   
     -   Удостоверение безопасности службы компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] предоставляется компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] в качестве члена предопределенной роли сервера **sysadmin** .  
   
-    -   Удостоверение безопасности службы добавляется к локальным группам Windows для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не является экземпляром отказоустойчивого кластера.  
+    -   Удостоверение безопасности службы добавляется к локальным группам Windows для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не является экземпляром отказоустойчивого кластера.  
   
     -   Ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остаются предоставленными локальным группам Windows для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   Локальная группа Windows для служб переименовывается с **SQLServer2005MSSQLUser$**_<имя_компьютера>_**$**_<имя_экземпляра>_ на **SQLServerMSSQLUser$**_<имя_компьютера>_**$**_<имя_экземпляра>_. Расположения файлов перенесенных баз данных будут иметь записи управления доступом (ACE) для локальных групп Windows. Расположения файлов для новых баз данных будут иметь записи ACE для удостоверения безопасности службы.  
   
--   Во время обновления с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохранит записи ACE для удостоверения безопасности службы [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
+-   Во время обновления с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохранит записи ACE для удостоверения безопасности службы [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 -   Для экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запись ACE учетной записи домена, настроенной для службы, будет сохранена.  
   
@@ -647,7 +647,7 @@ ms.locfileid: "51605991"
 |Французский|AUTORITE NT\SERVICE LOCAL|AUTORITE NT\SERVICE RЙSEAU|AUTORITE NT\SYSTEM|BUILTIN\Administrators|  
 |Итальянский|NT AUTHORITY\SERVIZIO LOCALE|NT AUTHORITY\SERVIZIO DI RETE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  
 |Испанский|NT AUTHORITY\SERVICIO LOC|NT AUTHORITY\SERVICIO DE RED|NT AUTHORITY\SYSTEM|BUILTIN\Administradores|  
-|Русский|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Администраторы|  
+|Русский|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\СИСТЕМА|BUILTIN\Администраторы|  
   
 ## <a name="related-content"></a>См. также  
  [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

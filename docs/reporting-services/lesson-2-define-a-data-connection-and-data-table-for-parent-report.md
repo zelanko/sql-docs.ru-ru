@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d284bc507c3398c85cf823528f17fdbd671e96a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 43cd64469ef5a1cf08b1c99e42ee5f6dd20ab85b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021778"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391727"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета
 После создания нового проекта веб-сайта с использованием шаблона веб-сайта ASP.NET для Visual C# далее необходимо создать подключение к данным и таблицу данных для родительского отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2014.  
@@ -30,7 +30,7 @@ ms.locfileid: "50021778"
   
 4.  На странице **Выбор подключения к данным** щелкните **Новое подключение**.  
   
-5.  Если источник данных в Visual Studio создается впервые, откроется страница **Выбор источника данных** . В поле **Источник данных** выберите **Microsoft SQL Server**.  
+5.  Если источник данных в Visual Studio создается впервые, откроется страница **Выбор источника данных**. В поле **Источник данных** выберите **Microsoft SQL Server**.  
   
 6.  В диалоговом окне **Добавление подключения** выполните указанные ниже действия.  
   

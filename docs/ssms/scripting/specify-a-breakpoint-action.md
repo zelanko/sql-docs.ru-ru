@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cb85fe53517bcbed16ff86be801578c6d80d21d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4c69b0ebfe9750d904e46ee3e6bdc7665ef5d0b7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643896"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398837"
 ---
 # <a name="specify-a-breakpoint-action"></a>Задание действия в точке останова
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51643896"
   
  Сообщение указывается в параметре **Вывод сообщения** в виде текстовой строки, которая включает выражения с данными из кода [!INCLUDE[tsql](../../includes/tsql-md.md)] , отладка которого выполняется. Выражения могут включать следующие элементы.  
   
--   Выражение [!INCLUDE[tsql](../../includes/tsql-md.md)] , заключенное в фигурные скобки ({}). В выражении могут использоваться переменные, параметры и встроенные функции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Например: {@MyVariable}, {@NameParameter}, {@@SPID} или {SERVERPROPERTY('ProcessID')}.  
+-   Выражение [!INCLUDE[tsql](../../includes/tsql-md.md)] , заключенное в фигурные скобки ({}). В выражении могут использоваться переменные, параметры и встроенные функции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Например: {@MyVariable}, {@NameParameter}, {@@SPID} или {SERVERPROPERTY(ProcessID)}.  
   
 -   Одно из следующих ключевых слов:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51643896"
   
     4.  $FUNCTION возвращает имя хранимой процедуры или определяемой пользователем функции, для которой установлена точка останова. Если точка останова задана в окне редактора, $FUNCTION возвращает имя редактируемого файла скрипта.  
   
-    5.  $PID и $PNAME возвращают идентификатор и имя процесса операционной системы, выполняющего экземпляр компонента Database Engine, где выполняется [!INCLUDE[tsql](../../includes/tsql-md.md)] . $PID возвращает такой же идентификатор, что и SERVERPROPERTY("ProcessID"), за исключением того, что $PID имеет шестнадцатеричное, а SERVERPROPERTY("ProcessID") — десятичное значение.  
+    5.  $PID и $PNAME возвращают идентификатор и имя процесса операционной системы, выполняющего экземпляр компонента Database Engine, где выполняется [!INCLUDE[tsql](../../includes/tsql-md.md)] . $PID возвращает такой же идентификатор, что и SERVERPROPERTY(ProcessID), за исключением того, что $PID имеет шестнадцатеричное, а SERVERPROPERTY(ProcessID) — десятичное значение.  
   
     6.  $TID и $TNAME возвращают идентификатор и имя потока операционной системы, в котором выполняется пакет [!INCLUDE[tsql](../../includes/tsql-md.md)] . Этот поток связан с процессом, в котором выполняется экземпляр ядра СУБД. $TID возвращает такое же значение, как и инструкция SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID, за одним исключением: $TID содержит шестнадцатеричное значение, а kpid — десятичное.  
   

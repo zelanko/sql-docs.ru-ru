@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20ce7b15fcfedfe77ff3a03a4dfde1e47969ffad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c004a991872257baa045be6e0253d7d63979f2f7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701932"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542437"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...) (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,12 +68,12 @@ ms.locfileid: "47701932"
   
 -   [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>Функция OPENROWSET(BULK…)  
- Доступ к поставщику больших наборов строк OPENROWSET осуществляется путем вызова функции OPENROWSET и задания параметра BULK. Функция OPENROWSET(BULK…) обеспечивает доступ к удаленным данным, производя соединение с удаленным источником данных, например файлу данных, через поставщик OLE DB.  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...) Компонент  
+ Доступ к поставщику больших наборов строк OPENROWSET осуществляется путем вызова функции OPENROWSET и задания параметра BULK. Функция OPENROWSET(BULK...) обеспечивает доступ к удаленным данным, производя соединение с удаленным источником данных, например файлом данных, через поставщик OLE DB.  
 
 **Применимо к:** `OPENROWSET` недоступно в [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
   
- Чтобы импортировать групповые данные, вызовите функцию OPENROWSET(BULK…) из предложения SELECT…FROM инструкции INSERT. Основной синтаксис массового импорта данных:  
+ Чтобы импортировать групповые данные, вызовите функцию OPENROWSET(BULK...) из предложения SELECT...FROM инструкции INSERT. Основной синтаксис массового импорта данных:  
   
  Инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "47701932"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows могут быть настроены таким образом, чтобы экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мог выполнять соединение с другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посредством переадресации учетных данных пользователя Windows, прошедшего проверку подлинности. Такой подход называется *олицетворением* или *делегированием*. При использовании инструкции BULK INSERT или OPENROWSET очень важно понимать, каким образом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и более поздних версиях обеспечивается безопасность при олицетворении пользователя. Это позволяет хранить файл данных не на том компьютере, на котором вошел пользователь или работает процесс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Например, если пользователь на **компьютере_A** имеет доступ к файлу данных на **компьютере_B**и делегирование учетных данных было соответствующим образом настроено, этот пользователь может подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенному на **компьютере_C**, получить доступ к файлу данных на **компьютере_B**и выполнить массовый импорт данных из этого файла в таблицу на **компьютере_C**.  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>Массовый импорт из удаленного файла данных  
- Чтобы использовать инструкции BULK INSERT или INSERT...SELECT \* FROM OPENROWSET(BULK...) для массового импорта данных с другого компьютера, необходимо, чтобы файл данных был доступен на обоих компьютерах. Укажите общий файл данных в формате UNC, то есть в следующем формате: **\\\\***Имя сервера***\\***общая папка***\\***путь***\\***имя файла*. Кроме того, используемая учетная запись должна обладать разрешениями, необходимыми для чтения этого файла на удаленном диске.  
+ Чтобы использовать инструкции BULK INSERT или INSERT...SELECT \* FROM OPENROWSET(BULK...) для массового импорта данных с другого компьютера, необходимо, чтобы файл данных был доступен на обоих компьютерах. Укажите общий файл данных в формате UNC, то есть в следующем формате: **\\\\**_Имя сервера_**\\**_Общая папка_**\\**_Путь_**\\**_Имя файла_. Кроме того, используемая учетная запись должна обладать разрешениями, необходимыми для чтения этого файла на удаленном диске.  
   
  Например, инструкция `BULK INSERT` производит массовый импорт в таблицу `SalesOrderDetail` базы данных `AdventureWorks` из файла данных с именем `newdata.txt`. Этот файл данных находится в общей папке `\dailyorders`, расположенной в общем сетевом каталоге `salesforce` компьютера с именем `computer2`.  
   

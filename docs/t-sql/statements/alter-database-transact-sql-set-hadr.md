@@ -24,12 +24,12 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4563eec091c31f879df497c4803f56ff8e3b61f4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 040c30ce4c48ce8d1fc596b88bae4bc1fec242aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696212"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533356"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ALTER DATABASE database_name
  SET HADR  
  Выполняет указанную команду [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] в указанной базе данных.  
   
- { AVAILABILITY GROUP **=***group_name* | OFF }  
+ { AVAILABILITY GROUP **=**_group_name_ | OFF }  
  Присоединяет базу данных доступности к указанной группе доступности или исключает ее из группы, как показано ниже.  
   
  *group_name*  
@@ -82,7 +82,7 @@ ALTER DATABASE database_name
  OFF  
  Удаляет указанную базу данных-получатель из группы доступности.  
   
- Удаление базы данных-получателя может быть полезным в случае, если ее состояние значительно отстает от состояния основной базы данных, и ожидать длительной синхронизации состояния нежелательно. После удаления базы данных-получателя ее можно обновить, восстановив последовательность резервных копий, которая заканчивается недавней резервной копией журнала (с помощью инструкции RESTORE… WITH NORECOVERY).  
+ Удаление базы данных-получателя может быть полезным в случае, если ее состояние значительно отстает от состояния основной базы данных, и ожидать длительной синхронизации состояния нежелательно. После удаления базы данных-получателя ее можно обновить, восстановив последовательность резервных копий, которая заканчивается недавней резервной копией журнала (с помощью инструкции RESTORE ... WITH NORECOVERY).  
   
 > [!IMPORTANT]  
 >  Чтобы полностью удалить базу данных доступности из группы доступности, подключитесь к экземпляру сервера, на котором размещена первичная реплика, и воспользуйтесь инструкцией [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name* REMOVE DATABASE *availability_database_name*. Дополнительные сведения см. в разделе [Удаление базы данных-источника из группы доступности (SQL Server)](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  

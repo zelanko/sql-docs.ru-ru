@@ -15,12 +15,12 @@ ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c53884f814f60ff208dd066daf6c396a819e0a2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e086006cf53efe9a462fe9d21ff36377915c92b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724442"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398327"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Создать и проверить определяемую пользователем функцию-классификатор
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "47724442"
     go  
     ```  
   
-4.  Создайте функцию-классификатор, использующую функции и значения времени, которые можно оценить со временем в таблице подстановки. Дополнительные сведения об использовании таблиц подстановки в функции-классификаторе см. в подразделе «Рекомендации по использованию таблиц подстановки в функции-классификаторе» данного раздела.  
+4.  Создайте функцию-классификатор, использующую функции и значения времени, которые можно оценить со временем в таблице подстановки. Дополнительные сведения об использовании таблиц подстановки в функции-классификаторе см. в разделе "Рекомендации по использованию таблиц подстановки в функции-классификаторе" этой статьи.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] представлен расширенный набор типов данных и функций даты и времени. Дополнительные сведения см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
@@ -269,7 +269,7 @@ ms.locfileid: "47724442"
         >  Рекомендуется использовать именно эти методы. Если что-то не позволяет использовать эти методы, рекомендуем связаться со службой технической поддержки Майкрософт для эффективного устранения возможных проблем.  
   
 ## <a name="see-also"></a>См. также:  
- [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+ [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Группа рабочей нагрузки регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

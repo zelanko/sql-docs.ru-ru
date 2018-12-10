@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 283ed465cf38b0653e24dfc8503a1dd98e4df9f9
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bfb9b14f518b20cd318cd6a532ca96787bfbfe31
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021710"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711363"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)
 
   В этом руководстве с помощью мастера будет создана круговая диаграмма в отчете с разбивкой на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Затем вы добавите значения в процентах и немного измените круговую диаграмму. 
   
-Задания этого учебника вы можете выполнить двумя различными способами. При использовании любого из этих методов будет получен один и тот же результат — круговая диаграмма, похожая на изображенную на рисунке.  
+Задания этого учебника вы можете выполнить двумя различными способами. При использовании любого из этих методов будет получен один и тот же результат — круговая диаграмма, похожая на изображенную на рисунке.  
   
  ![Стандартная круговая диаграмма в построителе отчетов](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Стандартная круговая диаграмма в построителе отчетов")  
   
@@ -231,6 +231,6 @@ ms.locfileid: "50021710"
 ## <a name="next-steps"></a>Следующие шаги
 
 [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)   
-[Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

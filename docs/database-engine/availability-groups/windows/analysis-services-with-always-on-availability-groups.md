@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83aa8029ce66db969256ee672ae9418d1bc48a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 252353bd71cbbc5d3cdeb18ae0bcf49b7be440b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635022"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395457"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Службы Analysis Services с группами доступности AlwaysOn
 
@@ -120,11 +120,11 @@ ms.locfileid: "47635022"
   
 3.  Измените скрипт, заменив заполнители значениями для вашей установки.  
   
-    -   Замените заполнитель «Computer01» именем экземпляра сервера, на котором находится первичная реплика.  
+    -   Замените заполнитель Computer01 именем экземпляра сервера, на котором находится первичная реплика.  
   
-    -   Замените заполнитель «Computer02» именем экземпляра сервера, на котором находится вторичная реплика.  
+    -   Замените заполнитель Computer02 именем экземпляра сервера, на котором находится вторичная реплика.  
   
-    -   Замените «contoso.com» именем домена или удалите его из скрипта, если все компьютеры находятся в одном и том же домене. Сохраните номер порта, если прослушиватель использует порт по умолчанию. Порт, фактически используемый прослушивателем, указан на странице свойств [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+    -   Замените contoso.com именем домена или удалите его из скрипта, если все компьютеры находятся в одном и том же домене. Сохраните номер порта, если прослушиватель использует порт по умолчанию. Порт, фактически используемый прослушивателем, указан на странице свойств [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
 4.  Выполните скрипт.  
   
@@ -212,9 +212,9 @@ ms.locfileid: "47635022"
 9. Повторите команду обработки или запроса в решении Analysis Services и просматривайте трассировку параллельно в приложении SQL Server Profiler. Вы должны видеть свидетельство обработки на другом экземпляре, который стал новой вторичной репликой.  
   
 ##  <a name="bkmk_whathappens"></a> Что происходит после отработки отказа  
- Во время отработки отказа вторичная реплика принимает первичную роль, а прежняя первичная реплика — вторичную роль. Все клиентские соединения прерываются, владение прослушивателем группы доступности переходит к роли первичной реплики на новый экземпляр SQL Server, а конечная точка прослушивателя привязана к виртуальным IP-адресам и TCP-портам нового экземпляра. Дополнительные сведения см. в статье [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+ Во время отработки отказа вторичная реплика принимает первичную роль, а прежняя первичная реплика — вторичную роль. Все клиентские соединения прерываются, владение прослушивателем группы доступности переходит к роли первичной реплики на новый экземпляр SQL Server, а конечная точка прослушивателя привязана к виртуальным IP-адресам и TCP-портам нового экземпляра. Дополнительные сведения см. в разделе [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Если отработка отказа происходит во время обработки, в файле журнала или выходном окне служб Analysis Services появляется следующая ошибка: "Ошибка OLE DB или ODBC: сбой связи; 08S01; поставщик TPC: существующее подключение было принудительно разорвано удаленным узлом. ; 08S01» («Ошибка OLE DB: ошибка OLE DB или ODBC: отказ линии связт; 08S01; TPC-провайдер: существующее соединение принудительно закрыто удаленным узлом»).  
+ Если отработка отказа происходит во время обработки, в файле журнала или выходном окне служб Analysis Services появляется следующая ошибка: "Ошибка OLE DB или ODBC: сбой связи; 08S01; поставщик TPC: существующее подключение было принудительно разорвано удаленным узлом. ; 08S01."  
   
  Эта ошибка может исчезнуть, если подождать минуту и попробовать еще раз. Если группа доступности настроена правильно для вторичной реплики, доступной для чтения, при повторной попытке обработка возобновится на новой вторичной реплике.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "47635022"
   
 ## <a name="see-also"></a>См. также:  
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Активные вторичные реплики. Доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Создание источника данных (многомерные службы SSAS)](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Включение обратной записи в измерение](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  

@@ -1,7 +1,7 @@
 ---
 title: Трассировка SQL | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,30 +11,32 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc3432906e9d96b10def455aea07d4ef22cfe89d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: de20ad37cf5393f2498f00b7d5b1e78bd5285b34
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571453"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439806"
 ---
 # <a name="sql-trace"></a>Трассировка SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  При трассировке SQL собираются события, классы которых указаны в ее определении. Эти события можно выделить из трассировки или поставить в очередь по своему назначению. В качестве назначения могут выступать файлы и объекты управления (SMO)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], предоставляющие сведения трассировки приложениям, которые управляют сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+При трассировке SQL собираются события, классы которых указаны в ее определении. Эти события можно выделить из трассировки или поставить в очередь по своему назначению. В качестве назначения могут выступать файлы и объекты управления (SMO) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , предоставляющие сведения трассировки приложениям, которые управляют сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте расширенные события.  
-  
+> [!IMPORTANT]
+> Трассировка SQL и [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] являются устаревшими. Пространство имен *Microsoft.SqlServer.Management.Trace*, которое содержит объекты трассировки Microsoft SQL Server и Replay, также устаревшее. 
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
+> Вместо этого используйте расширенные события. Дополнительные сведения о [расширенных событиях](../../relational-databases/extended-events/extended-events.md) см. в статьях [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) и [Использование профилировщика XEvent для SSMS](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+
 ## <a name="benefits-of-sql-trace"></a>Преимущества трассировки SQL  
- Для создания трассировок на экземпляре компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Microsoft [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет системные хранимые процедуры на языке [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Эти системные хранимые процедуры можно использовать для создания трассировок вручную в рамках пользовательских приложений вместо использования приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Это позволяет писать пользовательские приложения, отвечающие конкретным нуждам предприятия.  
+Для создания трассировок на экземпляре компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Microsoft [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет системные хранимые процедуры на языке [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Эти системные хранимые процедуры можно использовать для создания трассировок вручную в рамках пользовательских приложений вместо использования приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Это позволяет писать пользовательские приложения, отвечающие конкретным нуждам предприятия.  
   
 ## <a name="sql-trace-architecture"></a>Архитектура трассировки SQL  
- Источником событий может быть любой источник, вызывающий события трассировки, в том числе пакеты [!INCLUDE[tsql](../../includes/tsql-md.md)] или события [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например взаимоблокировки. Дополнительные сведения о событиях см. в разделе [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). При возникновении события, класс которого содержится в определении трассировки, сведения о нем регистрируются трассировкой. Если определение трассировки содержит фильтры для класса событий, эти фильтры применяются, и сведения о событиях трассировки передается в очередь. Из очереди сведения о трассировке или записываются в файл, или используются объектами управления (SMO) сервера в таких приложениях, как [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Следующая диаграмма демонстрирует сбор событий трассировкой SQL.  
+Источником событий может быть любой источник, вызывающий события трассировки, в том числе пакеты [!INCLUDE[tsql](../../includes/tsql-md.md)] или события [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например взаимоблокировки. Дополнительные сведения о событиях см. в разделе [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md). При возникновении события, класс которого содержится в определении трассировки, сведения о нем регистрируются трассировкой. Если определение трассировки содержит фильтры для класса событий, эти фильтры применяются, и сведения о событиях трассировки передается в очередь. Из очереди сведения о трассировке или записываются в файл, или используются объектами управления (SMO) сервера в таких приложениях, как [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Следующая диаграмма демонстрирует сбор событий трассировкой SQL.  
   
- ![Процесс трассировки событий для ядра СУБД](../../relational-databases/sql-trace/media/tracarch.gif "Процесс трассировки событий для ядра СУБД")  
+![Процесс трассировки событий для ядра СУБД](../../relational-databases/sql-trace/media/tracarch.gif "Процесс трассировки событий для ядра СУБД")  
   
 ## <a name="sql-trace-terminology"></a>Терминология, связанная с трассировкой SQL  
- Основные понятия трассировки SQL описываются в следующих терминах.  
+Основные понятия трассировки SQL описываются в следующих терминах.  
   
  **Событие**  
  Возникновение действия в экземпляре компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -70,7 +72,7 @@ ms.locfileid: "51571453"
  В приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]таблица, создаваемая при сохранении трассировки в таблицу.  
   
 ## <a name="use-data-columns-to-describe-returned-events"></a>Использование столбцов данных для описания возвращаемых событий  
- Приложение трассировки SQL использует столбцы данных в результатах трассировки для описания событий, возвращенных во время работы трассировки. В следующей таблице приводится описание столбцов данных приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , совпадающих со столбцами данных, используемыми приложением трассировки SQL, а также описание столбцов по умолчанию.  
+Приложение трассировки SQL использует столбцы данных в результатах трассировки для описания событий, возвращенных во время работы трассировки. В следующей таблице приводится описание столбцов данных приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , совпадающих со столбцами данных, используемыми приложением трассировки SQL, а также описание столбцов по умолчанию.  
   
 |Столбец данных|Номер столбца|Описание|  
 |-----------------|-------------------|-----------------|  

@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 374b59460313afaaeb670c8926f215580f7d11de
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641151"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534385"
 ---
 # <a name="change-data-capture-ssis"></a>Система отслеживания измененных данных (SSIS)
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]система отслеживания измененных данных предоставляет эффективное решение для проблемы проведения добавочных загрузок из исходных таблиц в киоски и хранилища данных.  
@@ -119,6 +119,6 @@ ms.locfileid: "51641151"
 -   [Выполнение добавочной загрузки нескольких таблиц](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>См. также  
- Запись блога [SSIS Design Pattern — Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679)(на английском языке) на сайте sqlblog.com  
+ Запись блога [SSIS Design Pattern — Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679) (Шаблон разработки SSIS — добавочная загрузка) на сайте sqlblog.com  
   
   

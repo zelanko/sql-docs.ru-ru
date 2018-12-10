@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bddc53e898acd23ab0f29902703ea53c74987730
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b21a93ad09aecc13842f37b488a8230347cab283
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854822"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514771"
 ---
 # <a name="modify-views"></a>Изменение представлений
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47854822"
   
     1.  Установите или снимите флажки элементов, которые необходимо добавить или удалить.  
   
-    2.  Щелкните правой кнопкой мыши на панели диаграмм, выберите **Добавить таблицу…**, а затем выберите дополнительные столбцы, которые необходимо добавить к представлению в диалоговом окне **Добавить таблицу** .  
+    2.  Щелкните правой кнопкой мыши на панели диаграмм, выберите **Добавить таблицу…**, а затем выберите дополнительные столбцы, которые необходимо добавить к представлению, в диалоговом окне **Добавить таблицу**.  
   
     3.  Щелкните правой кнопкой мыши строку заголовка таблицы, которую необходимо удалить, и выберите **Удалить**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47854822"
   
 #### <a name="to-modify-a-view"></a>Изменение представления  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

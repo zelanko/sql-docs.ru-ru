@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4e48ba424b9c9c8ef56d1280d774c7ee3120ffe
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4eb0d351eeb3555f9f0162670209a9c15af6d964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698232"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531493"
 ---
 # <a name="sql-server-help-and-feedback"></a>Справка и отзывы по SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +28,12 @@ ms.locfileid: "51698232"
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>Я хочу внести предложение по SQL Server Management Studio
 Группа SQL Server Management Studio (SSMS) также следит за [User Voice](https://feedback.azure.com/forums/908035-sql-server) по SQL Server User Voice. Это лучший вариант сообщить о проблемах или внести предложения. 
+
+## <a name="i-want-to-access-the-sql-server-technical-documentation-offline"></a>Мне нужен доступ к технической документации по SQL Server без подключения к сети
+Если вам требуется просматривать документацию по SQL Server в системе, не подключенной к сети, это можно сделать двумя способами. Можно создать PDF-файл нужного раздела технической документации по SQL Server или скачать автономное содержимое с помощью [автономного средства просмотра справки SQL Server](sql-server-help-installation.md). 
+
+Если вы хотите создать PDF-файл, щелкните ссылку **Скачать в формате PDF**, которая находится в нижней части каждого оглавления.
+![Скачать в формате PDF](media/sql-server-get-help/download-pdf.png)
 
 ## <a name="i-want-to-contact-microsoft-support"></a>Я хочу связаться со службой поддержки Майкрософт
 Если вы бизнес-пользователь, изучите [варианты поддержки](https://support.microsoft.com/gp/support-options-for-business?forceorigin=esmc).
@@ -77,12 +83,14 @@ ms.locfileid: "51698232"
 - [Twitter MashaMSFT](https://twitter.com/mashamsft);
 - [Twitter MikeRayMSFT](https://twitter.com/mncray).
 
+## <a name="i-want-to-contribute-to-sql-server-documentation"></a>Я хочу принять участие в работе над документацией по SQL Server
+
+###<a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![изменить содержимое](../includes/media/edit-topic-pencil.png) Редактирование содержимого
+Предположим, вы нашли неточности в нашей документации. Или у вас есть материалы, которые помогут ее улучшить. Что же, вы можете изменять содержимое на сайте docs.microsoft.com самостоятельно. Это не только улучшит нашу документацию, но и даст вам статус участника в создании этой страницы! Дополнительные сведения см. на странице [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
+
+Рабочая группа по содержимому SQL проверяет все общедоступные публикации на предмет технической точности и согласованности. 
+
 ## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>Я хочу оставить отзыв о содержимом документации по SQL
-
-### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![изменить содержимое](../includes/media/edit-topic-pencil.png) Редактирование содержимого
-Предположим, вы нашли неточности в нашей документации. Знаете ли вы, что это содержимое вы можете изменить самостоятельно? Это не только улучшит нашу документацию, но и даст вам статус участника в создании этой страницы! Дополнительные сведения см. на странице [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
-
-### <a name="surveys"></a>Опросы
 Если у вас есть немного свободного времени и желание поделиться мыслями об использовании документации по SQL, примите участие в опросе! Он размещен на странице [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) и займет у вас около 10–15 минут. 
 
 У вас есть чем поделиться с командой разработки содержимого по SQL? Идеи, предложения, отзывы, что угодно еще! Вы сможете это сделать на странице [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 

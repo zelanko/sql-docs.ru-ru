@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdf0e6510d566fbf2ad31ebf9996ca27ad444eda
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7130114f33159290dd6917db87638140838ee8c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677133"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538068"
 ---
 # <a name="create-a-format-file-sql-server"></a>Создание файла форматирования (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 ```  
   
- При попытке импорта данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью `bcp in –c –C65001 –f format_file` … или "`BULK INSERT`/`OPENROWSET` … `FORMATFILE='format_file' CODEPAGE=65001` …", сведения о параметрах сортировки или кодовой странице имеют приоритет над параметром 65001.  
+ Если вы пытаетесь импортировать данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью `bcp in -c -C65001 -f format_file` …" или "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ...", сведения о параметрах сортировки или кодовой странице имеют приоритет над параметром 65001.  
 Таким образом, после создания из файла форматирования необходимо вручную удалить сведения о параметрах сортировки перед началом импорта данных обратно в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 Ниже приведен пример файла форматирования без сведений о параметрах сортировки.  
   
@@ -203,7 +203,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  В командной строке Windows введите следующую команду `bcp` :  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  Созданный файл форматирования `Department-c.xml`содержит следующие XML-элементы:  

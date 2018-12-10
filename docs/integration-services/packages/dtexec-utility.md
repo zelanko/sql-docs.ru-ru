@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bcbef7c771d402d1532ecaece4426666920f785b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639182"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513394"
 ---
 # <a name="dtexec-utility"></a>Программа dtexec
   Программа командной строки **dtexec** используется для настройки и выполнения пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Служебная программа **dtexec** обеспечивает доступ ко всем функциям настройки и выполнения пакетов, таким как параметры, подключения, свойства, переменные, средства ведения журналов и индикаторы выполнения. Служебная программа **dtexec** позволяет загружать пакеты из следующих источников: сервер [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ISPAC-файл проекта, база данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] и файловая система.  
@@ -168,7 +168,7 @@ dtexec /option [value] [/option [value]]...
   
      С помощью параметра **/ConfigFile** можно загрузить во время выполнения дополнительные параметры конфигурации, не указанные во время разработки. Однако с помощью параметра **/ConfigFile** нельзя изменить параметры настройки, которые были заданы во время разработки. Сведения о применении параметров конфигурации пакета см. в разделе [Package Configurations](../../integration-services/packages/package-configurations.md).  
   
--   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]…]*(необязательный). Указывает, что диспетчер соединений с указанным именем или идентификатором GUID находится в данном пакете и задает строку соединения.  
+-   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]...]*: (необязательный). Указывает, что диспетчер соединений с указанным именем или идентификатором GUID находится в данном пакете и задает строку соединения.  
   
      Должны быть указаны оба параметра: имя или идентификатор GUID диспетчера соединений в аргументе *id_or_name* и допустимая строка соединения — в аргументе *connection_string*. Дополнительные сведения см. в разделе [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
@@ -222,7 +222,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/De[crypt]**  *password*(необязательный). Задает пароль для расшифровки, используемый при загрузке пакета с шифрованием пароля.  
   
--   (Необязательно) Создает отладочные файлы дампа MDMP и TMP, если во время работы пакета происходит одно или несколько указанных событий. Аргумент *error code* указывает тип кода события — ошибка, предупреждение или информация, — при наступлении которого система создаст отладочные файлы дампа. Чтобы задать несколько кодов событий, отделите каждый аргумент *error code* точкой с запятой (;). Не используйте кавычки с аргументом *error code* .  
+-   (Необязательно) Создает отладочные файлы дампа MDMP и TMP, если во время работы пакета происходит одно или несколько указанных событий. Аргумент *error code* указывает тип кода события (ошибка, предупреждение или информация), при наступлении которого система создаст отладочные файлы дампа. Чтобы задать несколько кодов событий, отделите каждый аргумент *error code* точкой с запятой (;). Не используйте кавычки с аргументом *error code* .  
   
      В следующем примере формируются отладочные файлы при возникновении ошибки DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER.  
   
@@ -333,7 +333,7 @@ dtexec /option [value] [/option [value]]...
   
      Ниже представлен пример выполнения пакета и предоставления значения myvalue параметру проекта (myparam) и целочисленного значения 12 для другого параметра пакета (anotherparam).  
   
-     `Dtexec /isserver “SSISDB\MyFolder\MyProject\MyPackage.dtsx” /server “.” /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
+     `Dtexec /isserver "SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "." /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
   
      С помощью параметров также можно установить свойства диспетчера соединений. Для обозначения параметра диспетчера соединений используется префикс CM.  
   
@@ -625,7 +625,7 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  В следующем примере показано, как использовать параметр **/ISServer** и устанавливать параметры пакета и диспетчера соединений.  
   
 ```  
-/Server localhost /ISServer “\SSISDB\MyFolder\Integration Services Project1\Package.dtsx” /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
+/Server localhost /ISServer "\SSISDB\MyFolder\Integration Services Project1\Package.dtsx" /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
   
 ```  
   

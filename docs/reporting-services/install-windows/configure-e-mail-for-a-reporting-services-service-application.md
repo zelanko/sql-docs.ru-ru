@@ -8,12 +8,12 @@ ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29b5ba7b28781351232ba1a51ad20b6b84fbfce7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 26c28f65737fe989b416078e609f7742cfcf07b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050866"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410371"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Настройка электронной почты для приложения служб Reporting Services
 
@@ -52,16 +52,16 @@ ms.locfileid: "50050866"
   
     -   Сбой при отправке электронной почты: SMTP-серверу требуется безопасное соединение или клиент не прошел проверку подлинности. Получен ответ сервера. 5.7.1 Клиент не прошел проверку подлинности. Повторная отправка почты произведена не будет.  
   
-     Укажите для параметра **SMTPAuthenticate** значение «2». Это значение нельзя изменить через пользовательский интерфейс. Следующий пример скрипта PowerShell обновляет полную конфигурацию расширения сервера отчетов для доставки электронной почты приложением службы с именем «SSRS_TESTAPPLICATION». Обратите внимание, что некоторые перечисленные в скрипте узлы (например, адрес отправителя) можно также задать через пользовательский интерфейс.  
+     Укажите для параметра **SMTPAuthenticate** значение "2". Это значение нельзя изменить через пользовательский интерфейс. Следующий пример скрипта PowerShell обновляет полную конфигурацию расширения сервера отчетов для доставки электронной почты приложением службы с именем SSRS_TESTAPPLICATION. Обратите внимание, что некоторые перечисленные в скрипте узлы (например, адрес отправителя) можно также задать через пользовательский интерфейс.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION *"}  
     $emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
     $emailXml = [xml]$emailCfg   
-    $emailXml.SelectSingleNode("//SMTPServer").InnerText = “your email server name"  
+    $emailXml.SelectSingleNode("//SMTPServer").InnerText = "your email server name"  
     $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
     $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
-    $emailXml.SelectSingleNode("//From").InnerText = “your FROM email address”  
+    $emailXml.SelectSingleNode("//From").InnerText = "your FROM email address"  
     Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
     ```  
   
@@ -71,14 +71,14 @@ ms.locfileid: "50050866"
     get-sprsserviceapplication  
     ```  
   
-3.  Следующий пример возвращает текущие значения модуля доставки электронной почты для приложения службы с именем «SSRS_TESTAPPLICATION».  
+3.  Следующий пример возвращает текущие значения модуля доставки электронной почты для приложения службы с именем SSRS_TESTAPPLICATION.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRSTEST_APPLICATION*"}  
     Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
     ```  
   
-4.  Следующий пример создает новый файл с именем «emailconfig.txt», содержащий текущие значения модуля доставки электронной почты для приложения службы с именем «SSRS_TESTAPPLICATION».  
+4.  Следующий пример создает новый файл с именем emailconfig.txt, содержащий текущие значения модуля доставки электронной почты для приложения службы с именем SSRS_TESTAPPLICATION.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION*"}  

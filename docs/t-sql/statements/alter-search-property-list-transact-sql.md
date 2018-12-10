@@ -24,12 +24,12 @@ ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 652603c40a2d38381441ea27e96e9b22525ea969
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d35982c6c1b26b957f1aa59b934106f4c09edc8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708922"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529306"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -176,7 +176,7 @@ GO
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-adding-a-property"></a>A. Добавление свойства  
- В следующем примере добавляется несколько свойств — `Title`, `Author` и `Tags` — к списку свойств с именем `DocumentPropertyList`.  
+ В следующем примере добавляется несколько свойств (`Title`, `Author` и `Tags`) к списку свойств с именем `DocumentPropertyList`.  
   
 > [!NOTE]  
 >  Пример создания такого списка свойств `DocumentPropertyList` см. в разделе [CREATE SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/create-search-property-list-transact-sql.md).  

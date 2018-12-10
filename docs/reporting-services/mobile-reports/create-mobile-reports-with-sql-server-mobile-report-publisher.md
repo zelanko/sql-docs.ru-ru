@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a9aaa281d1d91c8031182133976f1395417c4502
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a57b58490f6a2bfd8f0d5e8880402f1e136abd7e
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812597"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710865"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server
 Ознакомьтесь со сведениями о мобильных отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , оптимизированных для мобильных устройств, подключенных к локальным данным и содержащих различные визуализации данных. 
 
 >[!NOTE]
->  Нужно ли вам переносить содержимое сервера Datazen, например панели мониторинга и ключевые показатели эффективности, на сервер SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]? Воспользуйтесь [помощником по миграции SQL Server для Datazen](https://www.microsoft.com/download/details.aspx?id=53128). 
+>  Нужно ли вам переносить содержимое сервера Datazen, например панели мониторинга и ключевые показатели эффективности, на сервер SQL Server [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]? Воспользуйтесь [помощником по миграции SQL Server для Datazen](https://www.microsoft.com/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -34,8 +34,8 @@ ms.locfileid: "51812597"
   
 Эти статьи помогут вам приступить к работе.
 -  Загрузить [издатель мобильных отчетов SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527)  
--  [Создание мобильных отчетов служб Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [End-to-end walkthrough: Create mobile reports and KPIs in SQL Server 2016 Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Пошаговое руководство. Создание мобильных отчетов и определение ключевых показателей эффективности в SQL Server 2016 Reporting Services) (Статья блога Кристофера Финлана (Christopher Finlan))  
+-  [Создание мобильных отчетов Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
+-  [Пошаговое руководство. Создание мобильных отчетов и определение ключевых показателей эффективности в SQL Server Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Статья блога Кристофера Финлана (Christopher Finlan))  
 - [Design first, or data first](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md)(Проектирование отчетов на основе смоделированных или собственных данных). Вы можете выбрать, на основе каких данных будет спроектирован ваш отчет: смоделированных или собственных.  
 - [Data for Reporting Services mobile reports](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)(Данные для мобильных отчетов служб Reporting Services). Используйте данные из общих наборов данных или подготавливайте данные из книг Excel для включения в мобильные отчеты.
 - [How data refresh works in mobile reports and KPIs in Reporting Services](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Как происходит обновление данных мобильных отчетов и ключевых показателей эффективности в службах Reporting Services). Запись блога Кристофера Финлана (Christopher Finlan).

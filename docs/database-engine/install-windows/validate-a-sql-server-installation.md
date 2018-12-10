@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 3d223ce438087e4fdc017f09b9cdcabfde4a7fc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b29230d0224ecae384626d9d78ea5c60f37ac226
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599144"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394797"
 ---
 # <a name="validate-a-sql-server-installation"></a>Проверка установки SQL Server
 
@@ -32,7 +32,7 @@ ms.locfileid: "47599144"
   
  Отчет об обнаруженных компонентах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохраняется в папке %ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<последний_сеанс_программы_установки\>.  
   
- Его создание можно запустить из командной строки. Выполните команду "Setup.exe /Action=RunDiscovery" из командной строки. Если добавить к ней параметр "/q", то пользовательский интерфейс не отобразится, но отчет все равно будет создан в каталоге %ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<последний_сеанс_программы_установки\>.  
+ Его создание можно запустить из командной строки. Выполните команду Setup.exe/Action=RunDiscovery из командной строки. Если добавить к ней параметр /q, то пользовательский интерфейс не отобразится, но отчет все равно будет создан в каталоге %ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<последний_сеанс_программы_установки\>.  
   
 ## <a name="see-also"></a>См. также раздел  
  [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

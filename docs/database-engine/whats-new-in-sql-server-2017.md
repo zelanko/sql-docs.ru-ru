@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e00e45f15923955d7ae4e65e8d39e92121a33a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a0c98bc640a28642277ad16ca3ec209ddaaf0c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838682"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541393"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Новые возможности в ядре СУБД SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47838682"
 - Повышение производительности для сборки некластеризованных индексов в таблицах, оптимизированных для памяти. Значительно оптимизирована производительность (некластеризованного) перестроения индекса в таблицах MEMORY_OPTIMIZED во время восстановления базы данных. Это усовершенствование значительно сокращает время восстановления базы данных при использовании некластеризованных индексов.  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) содержит три новых столбца: socket_count cores_per_socket, numa_node_count. Это полезно при запуске сервера в виртуальной машине, так как превышение NUMA может привести к перегрузке узлов и последующим проблемам с производительностью.
 - Новый столбец modified_extent_page_count\,, представленный в [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md), отслеживает разностные изменения в каждом файле базы данных. Новый столбец modified_extent_page_count позволяет использовать интеллектуальные решения для полного или разностного резервного копирования, основываясь на проценте измененных страниц базы данных. Если процент ниже порогового значения (например, 70–80 %), выполняется полное резервное копирование базы данных.
-- SELECT INTO … ON в файловой группе Синтаксис [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) теперь поддерживает загрузку таблицы в файловую группу, отличную от файловой группы по умолчанию для пользователя, с помощью ключевого слова **ON**, добавленного в синтаксис SELECT INTO TSQL.
+- SELECT INTO ... ON в файловой группе Синтаксис [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) теперь поддерживает загрузку таблицы в файловую группу, отличную от файловой группы по умолчанию для пользователя, с помощью ключевого слова **ON**, добавленного в синтаксис SELECT INTO TSQL.
 - Усовершенствования установки базы данных tempdb. Программа установки позволяет указать размер файла начальной базы данных tempdb до **256 ГБ (262 144 МБ)** каждого файла с выводом предупреждения для клиентов, если для размера файла задано значение больше 1 ГБ и если IFI не включена. Очень важно понять суть невключения мгновенной инициализации файлов (IFI), где время установки может увеличиваться экспоненциально в зависимости от исходного размера указанного файла данных tempdb. IFI неприменима к размеру журнала транзакций, поэтому при указании большего значения для журнала транзакций неизменно может увеличить время установки во время запуска базы данных tempdb независимо от параметра IFI для учетной записи службы SQL Server.
 - Новое динамическое административное представление [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) отслеживает использование хранилища версии для каждой базы данных. Это новое динамическое административное представление полезно для наблюдения за базой данных tempdb в отношении использования хранилища версий, так как оно позволяет заранее планировать изменения размера базы данных tempdb согласно требованиям к использованию хранилища версии каждой базы данных без снижения производительности и расходов на ее работу на производственных серверах.
 - Новая функция динамического управления [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) предоставляет сведения о виртуальных файлах журнала (аналогично DBCC LOGINFO) для отслеживания возможных проблем с журналами транзакций, оповещения об этих проблемах и их предотвращения. Эти проблемы возникают из-за количества файлов VLF, размеров файлов VLF или ошибок shrinkfile.
@@ -56,7 +56,7 @@ ms.locfileid: "47838682"
 - В помощнике по настройке ядра СУБД (DTA) выпущенном в составе SQL Server Management Studio версии 16.4, реализованы дополнительные возможности для анализа SQL Server 2016 и более поздних версий.    
    - Повышенная производительность. Дополнительные сведения см. в статье [Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations](../relational-databases/performance/performance-improvements-using-dta-recommendations.md) (Повышение производительности с помощью рекомендаций помощника по настройке ядра СУБД (DTA)).
    - Параметр `-fc` , с помощью которого можно разрешить рекомендации индексов columnstore. Дополнительные сведения см. в статьях [dta, программа](../tools/dta/dta-utility.md) и [Columnstore index recommendations in Database Engine Tuning Advisor (DTA)](../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md) (Рекомендации по индексам сolumnstore в помощнике по настройке ядра СУБД (DTA)).  
-   - Параметр `-iq` , с помощью которого можно разрешить DTA просматривать рабочую нагрузку хранилища запросов. Дополнительные сведения см. в статье [Tuning Database Using Workload from Query Store](../relational-databases/performance/tuning-database-using-workload-from-query-store.md) (Настройка базы данных с помощью рабочей нагрузки из хранилища запросов).  
+   - Параметр `-iq` , с помощью которого можно разрешить DTA просматривать рабочую нагрузку хранилища запросов. Дополнительные сведения см. в статье [Tuning Database Using Workload from Query Store](../relational-databases/performance/tuning-database-using-workload-from-query-store.md)(Настройка базы данных с помощью рабочей нагрузки из хранилища запросов).  
 - Далее перечислены дополнительные улучшения оптимизированных для памяти таблиц и функций, скомпилированных в машинном коде, которые необходимы для работы в памяти. Примеры кода, иллюстрирующие эти улучшения, см. в статье [Оптимизация обработки JSON с помощью выполняющейся в памяти OLTP](../relational-databases/json/optimize-json-processing-with-in-memory-oltp.md).
     - Добавлена поддержка вычисляемых столбцов в таблицы, оптимизированные для работы памяти, включая индексы в вычисляемых столбцах.
     - Добавлена полная поддержка JSON-функций в модули, скомпилированные в машинном коде, и проверочные ограничения.  
@@ -67,7 +67,7 @@ ms.locfileid: "47838682"
 - Новые параметры группового доступа ([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) и [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)) обеспечивают доступ к данным непосредственно из CSV-файлов и из файлов в хранилище BLOB-объектов Azure посредством нового параметра `BLOB_STORAGE` [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 - Добавлен уровень совместимости базы данных **COMPATIBILITY_LEVEL** 140.   Клиенты, использующие его, получат доступ к самым новым возможностям языков и режимам оптимизатора запросов. Сюда входят изменения, вносимые корпорацией Майкрософт в каждую предварительную версию.
 - Улучшен способ вычисления пороговых значений для обновления добавочной статистики (требуется режим совместимости 140).
-- Добавлен [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md).
+- Добавлен[sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) .
 - Мы внесли несколько улучшений производительности и языка для оптимизированных для памяти объектов.
     - `sp_spaceused` теперь поддерживается для таблиц, оптимизированных для памяти.
     - `sp_rename` теперь поддерживается для таблиц, оптимизированных для памяти и скомпилированных в собственном коде модулей T-SQL.
@@ -80,6 +80,6 @@ ms.locfileid: "47838682"
 - Кластеризованные индексы Columnstore теперь поддерживают столбцы типа LOB (nvarchar(max), varchar(max), varbinary(max)).
 - Добавлена агрегатная функция [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md).  
 - Новые разрешения: `DATABASE SCOPED CREDENTIAL` теперь является классом защищаемого объекта, поддерживающим разрешения `CONTROL`, `ALTER`, `REFERENCES`, `TAKE OWNERSHIP`и `VIEW DEFINITION` . `ADMINISTER DATABASE BULK OPERATIONS`, который ограничен базой данных SQL, теперь отображается в `sys.fn_builtin_permissions`.   
-- Добавлено динамическое административное представление [sys.dm_os_host_info](../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md), предоставляющее сведения об операционной системе как для Windows, так и для Linux.   
+- Добавлено динамическое административное представление [sys.dm_os_host_info](../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md) , предоставляющее сведения об операционной системе как для Windows, так и для Linux.   
 - Роли базы данных создаются с помощью служб R Services для управления разрешениями, связанными с пакетами. Дополнительные сведения см. в разделе [Управление пакетами R для SQL Server](../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
 

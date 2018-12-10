@@ -1,7 +1,7 @@
 ---
 title: Функции CAST и CONVERT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/13/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81a94dcde2f149ef16b5e1f42428bac706bbfaf5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 267e1c145a6a67976f1d057c0c98186f192f9247
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697462"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191074"
 ---
 # <a name="cast-and-convert-transact-sql"></a>Функции CAST и CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -325,7 +325,9 @@ SELECT  CAST(10.6496 AS int) as trunc1,
 |113|130|  
   
 <sup>1</sup> За исключением стилей 20 и 21.
-  
+
+Дополнительные сведения см. в статье [Недетерминированное преобразование строк дат литералов в значения DATE](../data-types/nondeterministic-convert-date-literals.md).
+
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)
 Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] при использовании параметров сортировки дополнительных символов (SC) операция CAST из типа **nchar** или **nvarchar** в тип **nchar** или **nvarchar** с меньшей длиной не будет выполнять усечение внутри суррогатной пары. Вместо этого усечение происходит перед дополнительным символом. Например, выполнение следующего фрагмента кода приведет к тому, что в `@x` останется лишь `'ab'`. Места недостаточно для размещения дополнительного символа.
   

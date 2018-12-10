@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 61d4d29b0dfc7fe67097c6cb61547c1c65dd79f1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119981"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411881"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Подключение к источникам данных и общим папкам с помощью проверки подлинности Windows в пакетах MSSQL Integration Services в Azure
 С помощью проверки подлинности Windows можно подключаться к источникам данных и общим файловым ресурсам в той же виртуальной сети, в которой размещена среда выполнения интеграции Azure —SSI. Источники могут находиться в локальной среде, в виртуальных машинах Azure и (или) службе файлов Azure. Есть три способа подключения к источникам данных и общим папкам с помощью проверки подлинности Windows из пакетов служб MSSQL Integration Services, выполняющихся в среда выполнения интеграции Azure — SSI:

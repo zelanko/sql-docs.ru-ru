@@ -11,12 +11,12 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97d46e8f04afac405e625952b077a00abb29415d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9cca20997ed2bfe8b32d09376186691253d6e90
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607238"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528603"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Занятие 1–3. Добавление пакетов и других файлов
 В этой задаче к проекту, созданному в предыдущей задаче учебника по развертыванию, добавляются существующие пакеты, вспомогательные файлы для поддержки отдельных пакетов, а также файл сведений. Например, будет добавлен файл XML-данных, содержащий данные для пакета, и текстовый файл Readme с данными о всех пакетах проекта.  
@@ -52,7 +52,7 @@ ms.locfileid: "47607238"
   
 4.  В диалоговом окне **Добавление копии существующего пакета** в разделе **Расположение пакета**выберите пункт **Файловая система**.  
   
-5.  Нажмите кнопку обзора **(…)** , перейдите к папке C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, выберите файл **DataTransfer.dtsx**и нажмите кнопку **Открыть**.  
+5.  Нажмите кнопку обзора **(...)**, перейдите к папке C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, выберите файл **DataTransfer.dtsx** и нажмите кнопку **Открыть**.  
   
 6.  Нажмите кнопку **ОК**.  
   

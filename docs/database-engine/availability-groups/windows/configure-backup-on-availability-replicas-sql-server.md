@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 791253a685908baf69fe789aabd199a5cad7e921
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0775eb7bd5cb87c902a6871eeebd4409dbe0cf2f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600754"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531529"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Настройка резервного копирования в репликах доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -188,8 +188,8 @@ ms.locfileid: "51600754"
 ```  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
-      Select ‘This is not the preferred replica, exiting with success’;  
-      RETURN 0 – This is a normal, expected condition, so the script returns success  
+      Select 'This is not the preferred replica, exiting with success';  
+      RETURN 0 - This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  
@@ -198,7 +198,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  Написание скрипта с подобной логикой для задания резервного копирования позволяет планировать запуск задания на каждой реплике доступности по одинаковому расписанию. Каждое из данных заданий обращается к одним и тем же данным для определения того, какие задания следует выполнить, поэтому для создания резервной копии фактически обрабатывается только одно запланированное задание.  В случае отработки отказа не приходится изменять ни один из скриптов или заданий. Кроме того, если перенастроить группу доступности для добавления реплики доступности, то для управления заданиями резервного копирования потребуется просто скопировать или запланировать задание. В случае удаления реплики доступности просто удалите задание резервного копирования с экземпляра сервера, на котором размещалась эта реплика.  
   
 > [!TIP]  
->  Если задание резервного копирования создается в[мастере планов обслуживания](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md), то в это задание автоматически включается логика скрипта, которая вызывает и проверяет функцию **sys.fn_hadr_backup_is_preferred_replica** . Однако задание резервного копирования не будет возвращать сообщение «Это не предпочтительная реплика». Необходимо создать задания для каждой базы данных доступности на каждом экземпляре сервера, на котором размещена реплика доступности этой группы доступности.  
+>  Если задание резервного копирования создается в[мастере планов обслуживания](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md), то в это задание автоматически включается логика скрипта, которая вызывает и проверяет функцию **sys.fn_hadr_backup_is_preferred_replica** . Однако задание резервного копирования не будет возвращать сообщение "Это не предпочтительная реплика...". Необходимо создать задания для каждой базы данных доступности на каждом экземпляре сервера, на котором размещена реплика доступности этой группы доступности.  
   
 ##  <a name="ForInfoAboutBuPref"></a> Получение сведений о параметрах настройки резервного копирования  
  Ниже приводятся способы получения информации, имеющей отношение к резервному копированию во вторичных репликах.  

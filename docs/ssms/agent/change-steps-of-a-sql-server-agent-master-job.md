@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7802eb9297a21e41c5cfdac5b5f1ab380df15ba3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bcb614a09b3c2313bdceeb9cc10c20ba4e17db8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698882"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537074"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,13 +63,13 @@ ms.locfileid: "51698882"
   
 4.  Щелкните правой кнопкой мыши задание, шаги которого требуется изменить, и выберите пункт **Свойства**.  
   
-5.  В диалоговом окне **Свойства задания —**_имя\_задания_ в разделе **Выберите страницу** выберите пункт **Шаги**.  
+5.  В диалоговом окне **Свойства задания —** _имя\_задания_ в разделе **Выберите страницу** выберите пункт **Шаги**.  
   
-6.  Нажмите кнопку **Изменить**, чтобы открыть диалоговое окно **Свойства шага задания —**_имя\_шага\_задания_. Дополнительные сведения о доступных параметрах данного диалогового окна см. в разделах [Свойства шага задания — создание шага задания (страница "Общие")](../../ssms/agent/job-step-properties-new-job-step-general-page.md) и [Свойства шага задания — создание шага задания (страница "Дополнительно")](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
+6.  Нажмите кнопку **Изменить**, чтобы открыть диалоговое окно **Свойства шага задания —** _имя\_шага\_задания_. Дополнительные сведения о доступных параметрах данного диалогового окна см. в разделах [Свойства шага задания — создание шага задания (страница "Общие")](../../ssms/agent/job-step-properties-new-job-step-general-page.md) и [Свойства шага задания — создание шага задания (страница "Дополнительно")](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
   
 7.  После завершения нажмите кнопку **ОК**.  
   
-8.  В диалоговом окне **Свойства задания —**_имя\_задания_ нажмите кнопку **ОК**.  
+8.  В диалоговом окне **Свойства задания —** _имя\_задания_ нажмите кнопку **ОК**.  
   
 ## <a name="TsqlProcedure"></a>Использование Transact-SQL  
   

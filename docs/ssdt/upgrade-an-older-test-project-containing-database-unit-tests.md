@@ -11,15 +11,15 @@ ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4c40f2173ac2ee907aa6999539e83cd4d8eba0a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c2006cad1fd9ef8708257c331c2411fa916cca89
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661223"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616231"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Обновление старого проекта тестов, содержащего модульные тесты базы данных
-Старый тестовый проект, созданный с помощью Visual Studio 2010 и содержащий модульные тесты базы данных, можно обновить, чтобы использовать новую среду выполнения и средства тестирования SQL Server Data Tools. Сразу после обновления старого проекта вы сможете добавлять модульные тесты в проект SQL Server (дополнительные сведения см. в статье[Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)).  
+Старый тестовый проект, созданный с помощью Visual Studio 2010 и содержащий модульные тесты базы данных, можно обновить, чтобы использовать новую среду выполнения и средства тестирования SQL Server Data Tools. Сразу после обновления старого проекта вы сможете добавлять модульные тесты в проект SQL Server (дополнительные сведения см. в статье [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)).  
   
 > [!TIP]  
 > Если вы используете Visual Studio 2010, то после добавления модульных тестов SQL Server не следует добавлять модульные тесты в тестовый проект, используя шаблон старого модульного теста базы данных. В противном случае потребуется снова преобразовывать проект, чтобы обеспечить правильное выполнение тестов.  

@@ -14,12 +14,12 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8799fe2cd73aea2fc2ae1a799e6bda634b8e6763
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 232514d75f55f8f3105fe87e2f3f4ecac9f38805
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700403"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503485"
 ---
 # <a name="before-installing-failover-clustering"></a>Подготовка к установке отказоустойчивого кластера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ms.locfileid: "51700403"
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise x64 (64-разрядная)|Да|Да|Да**|Да**|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-разрядная)|Да|Да|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -разрядная) Developer (64|Да|Да|Да**|Да**|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]-разрядная) Developer (64|Да|Да|Да**|Да**|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32-разрядная)|Да|Да|||  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64-разрядная)|Да|Да|Да|Да|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32-разрядная)|Да|Да|||  

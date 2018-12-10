@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9cfffb3e3df68d28fc7798461f1f45133f47148e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785653"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712445"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов)
 В этом учебнике с помощью мастера в [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] будет создана линейчатая диаграмма в отчете [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы. Затем вы добавите фильтр и расширите возможности диаграммы. 
@@ -298,6 +298,6 @@ ms.locfileid: "47785653"
   
 ## <a name="see-also"></a>См. также:  
 [Учебники по построителю отчетов](../reporting-services/report-builder-tutorials.md)  
-[Построитель отчетов в SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Построитель отчетов в SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

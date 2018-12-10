@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 71e15d2c5bec349b20a87023912a80864563e8ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 61b886408c25f2200140609879421623f25cb81b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696173"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521671"
 ---
 # <a name="implement-sql-server-agent-security"></a>Обеспечение безопасности агента SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,13 +72,13 @@ ms.locfileid: "51696173"
   
 -   ACE зависит от следующих библиотек конфигурации DLL, принадлежащих SSDP, поскольку эти API библиотек DLL вызываются ACE:  
   
-    -   **SCO** — Microsoft.SqlServer.Configuration.Sco.dll, содержащий новые проверки SCO для виртуальных учетных записей  
+    -   **SCO** — Microsoft.SqlServer.Configuration.Sco.dll, содержащий новые проверки SCO для виртуальных учетных записей;  
   
-    -   **Кластер** — Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Кластер** — Microsoft.SqlServer.Configuration.Cluster.dll;  
   
-    -   **SFC** — Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC** — Microsoft.SqlServer.Configuration.SqlConfigBase.dll;  
   
-    -   **Расширение** — Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Расширение** — Microsoft.SqlServer.Configuration.ConfigExtension.dll.  
   
 ## <a name="see-also"></a>См. также:  
 [Использование стандартных ролей](../../reporting-services/security/role-definitions-predefined-roles.md)  

@@ -20,15 +20,15 @@ ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 961e5bccc9dac041104280e3186ba6a767db588f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bdac01fd13da7f1662e8f8292a31a3412fcf5e7e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693542"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511200"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>Создание пользовательского компонента потока данных
-  В службах [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] задача потока данных предоставляет доступ к объектной модели, позволяющей разработчикам создавать пользовательские компоненты потока данных (источники, преобразования и назначения) с помощью платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] и управляемого кода.  
+  В службах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] задача потока данных предоставляет доступ к объектной модели, позволяющей разработчикам создавать пользовательские компоненты потока данных (источники, преобразования и назначения) с помощью платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] и управляемого кода.  
   
  Задача потока данных состоит из компонентов, содержащих интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> и коллекцию объектов <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100>, которыми определяется движение данных между компонентами.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47693542"
  Во время выполнения задача потока данных исследует последовательность компонентов, подготавливает план выполнения и управляет пулом рабочих потоков, выполняющих план работы. Хотя каждый рабочий поток выполняет некоторую работу, являющуюся внутренней для задачи потока данных, основной задачей рабочего потока является вызов методов компонента через интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> времени выполнения.  
   
 ## <a name="creating-a-component"></a>Создание компонента  
- Чтобы создать компонент потока данных, необходимо создать производный класс от базового класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>, применить класс <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>, а затем переопределить соответствующие методы базового класса. Класс <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> реализует интерфейсы <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> и предоставляет доступ к их методам для переопределения в пользовательском компоненте.  
+ Чтобы создать компонент потока данных, необходимо создать производный класс от базового класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>, применить класс <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>, а затем переопределить соответствующие методы базового класса. Класс <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> реализует интерфейсы <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100>, а также предоставляет доступ к их методам для переопределения в пользовательском компоненте.  
   
  В зависимости от объектов, используемых компонентом, для проекта могут потребоваться ссылки на некоторые (или все) из следующих сборок.  
   

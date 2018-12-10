@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: adb9e24e86f6552c9d08a5c495f4e04283eaa7f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51485f1d1bbe120b42371c9d04a9d4576ac8d0d4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628432"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391547"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47628432"
 |-------------------------|-------------------------|  
 |Сжатие данных для оптимизированных для памяти таблиц.|Функцию сжатия данных можно использовать для сжатия данных внутри базы данных, а также уменьшения размера базы данных. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 |Секционирование оптимизированных для памяти таблиц и хэш-индексов, а также некластеризованных индексов.|Данные секционированных таблиц и индексов подразделяются на блоки, которые могут быть распределены по нескольким файловым группам в базе данных. Дополнительные сведения см. в разделе [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).|  
-| Репликация | За исключением репликации транзакций для подписчиков в таблицы, оптимизированные для памяти, конфигурации репликации несовместимы с таблицами и представлениями, ссылающимися на оптимизированные для памяти таблицы.<br /><br />Если существует файловая группа, оптимизированная для памяти, репликация с помощью sync_mode="database snapshot" не поддерживается.<br /><br />Дополнительные сведения см. в разделе [Репликация на подписчиков оптимизированных для памяти таблиц](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|
+| Репликация | За исключением репликации транзакций для подписчиков в таблицы, оптимизированные для памяти, конфигурации репликации несовместимы с таблицами и представлениями, ссылающимися на оптимизированные для памяти таблицы.<br /><br />Если существует файловая группа, оптимизированная для памяти, репликация с помощью sync_mode='database snapshot' не поддерживается.<br /><br />Дополнительные сведения см. в разделе [Репликация на подписчиков оптимизированных для памяти таблиц](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|
 |Зеркальное отображение|Зеркальное отображение не поддерживается для баз данных с файловой группой MEMORY_OPTIMIZED_DATA. Дополнительные сведения о зеркальном отображении базы данных см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Повторная сборка журнала|Повторная сборка журнала с помощью прикрепления или ALTER DATABASE не поддерживается базами данных с файловой группой MEMORY_OPTIMIZED_DATA.|  
 |Linked Server|Нельзя получить доступ к связанным серверам в том же запросе или транзакции, в которой используются оптимизированные для памяти таблицы. Дополнительные сведения см. в разделе [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  

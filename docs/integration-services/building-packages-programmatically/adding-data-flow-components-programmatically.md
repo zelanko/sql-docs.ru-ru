@@ -18,12 +18,12 @@ ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee94fa73cbc7c148574c15ae136e9efaeea1e740
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: aa96f8071ba6331dbfab8b708cd023f40f8a52cb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639531"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506184"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Добавление компонентов потока данных программным образом
   Построение потока данных начинается с добавления компонентов. Затем необходимо настроить эти компоненты и соединить их друг с другом, чтобы образовался поток данных времени выполнения. В этом разделе описывается добавление компонента в задачу потока данных, создание экземпляра компонента времени разработки и последующая настройка компонента. Дополнительные сведения о соединении компонентов см. в статье [Программное соединение компонентов потока данных](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  

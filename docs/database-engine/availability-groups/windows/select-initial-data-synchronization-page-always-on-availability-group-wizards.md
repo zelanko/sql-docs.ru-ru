@@ -14,17 +14,17 @@ ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9ff20c6ea926a20d0637f5d62add4bec0a9d475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a06a4f8bf7474cd2379886dc78cbdddc6a05cab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684822"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545394"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Выбор страницы начальной синхронизации данных (мастера группы доступности AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Используйте страницу AlwaysOn **Выбор начальной синхронизации данных** , чтобы указать требуемые параметры начальной синхронизации данных в новых базах данных-получателях. Эта страница используется тремя мастерами — [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]и [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
+  Используйте страницу AlwaysOn **Выбор начальной синхронизации данных** , чтобы указать требуемые параметры начальной синхронизации данных в новых базах данных-получателях. Эта страница используется тремя мастерами — [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] и [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
   
  Возможные варианты: **Автоматическое заполнение**, **Полная архивация базы данных и журналов**, **Только присоединение** или **Пропустить начальную синхронизацию данных**. Прежде чем выбрать значение **Автоматическое заполнение**, **Полная** или **Только присоединение**, удостоверьтесь в том, что среда соответствует обязательным условиям.  
     

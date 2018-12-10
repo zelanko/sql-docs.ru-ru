@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db55a3bdbe795b027d7f46a6eff541d0a49060c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 646a0e6b7885c2b220d7ea5c0165dbcd5a3c4de4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812082"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517082"
 ---
 # <a name="modify-foreign-key-relationships"></a>Изменение связей по внешнему ключу
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47812082"
      Проверяет все существующие данные в таблице перед созданием или возобновлением ограничения относительно этого ограничения.  
   
      **Категория спецификации таблиц и столбцов**  
-     Разверните, чтобы увидеть, какие столбцы, из каких таблиц действуют как внешний и первичный (или уникальный) ключ в данной связи. Для изменения или задания этих значений нажмите кнопку с многоточием (**…**) справа от поля свойства.  
+     Разверните, чтобы увидеть, какие столбцы, из каких таблиц действуют как внешний и первичный (или уникальный) ключ в данной связи. Для изменения или задания этих значений нажмите кнопку с многоточием (**...**) справа от поля свойства.  
   
      **Базовая таблица внешнего ключа**  
      Показывает, какая таблица содержит столбец, действующий как внешний ключ в выбранной связи.  

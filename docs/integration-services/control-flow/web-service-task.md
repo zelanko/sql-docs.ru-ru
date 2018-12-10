@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502610"
 ---
 # <a name="web-service-task"></a>Задача «Веб-служба»
   Задача «Веб-служба» выполняет метод веб-службы. Возможно использование задачи «Веб-служба» в следующих целях:  
@@ -84,7 +84,7 @@ ms.locfileid: "51642351"
   
 ### <a name="options"></a>Параметры  
  **HTTPConnection**  
- Выберите диспетчер соединений из списка или щелкните \<**Создать соединение…**>, чтобы создать его.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
 > [!IMPORTANT]  
 >  Диспетчер HTTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
@@ -92,7 +92,7 @@ ms.locfileid: "51642351"
  **См. также**: [Диспетчер HTTP-соединений](../../integration-services/connection-manager/http-connection-manager.md), [Редактор диспетчера HTTP-соединений](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- Введите полный путь к локальному WSDL-файлу на компьютере или нажмите кнопку обзора **(…)** и выберите файл.  
+ Введите полный путь к локальному WSDL-файлу на компьютере или нажмите кнопку обзора **(...)** и выберите файл.  
   
  Если WSDL-файл был загружен на компьютер вручную, выберите этот файл. Однако, если WSDL-файл еще не был загружен, выполните следующие действия.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "51642351"
  Чтобы выполнить задачу, выберите веб-метод из списка.  
   
  **WebMethodDocumentation**  
- Введите описание веб-метода или нажмите кнопку обзора **(…)** , а затем введите описание в диалоговом окне **Документация веб-метода** .  
+ Введите описание веб-метода или нажмите кнопку обзора **(...)**, а затем введите описание в диалоговом окне **Документация веб-метода**.  
   
  **Название**  
  Перечисляет имена входных данных веб-метода.  
@@ -170,13 +170,13 @@ ms.locfileid: "51642351"
   
 #### <a name="outputtype--file-connection"></a>OutputType = Соединение с файлом  
  **Файл**  
- Выберите диспетчер подключений файлов из списка или щелкните \<**Создать соединение…**>, чтобы создать его.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
  **См. также:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Переменная  
  **Переменная**  
- Выберите переменную из списка или нажмите кнопку \<**Создать переменную…**>, чтобы создать переменную.  
+ Выберите переменную в списке или щелкните \<**Создать переменную...**>, чтобы создать ее.  
   
  **См. также**: [Переменные в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

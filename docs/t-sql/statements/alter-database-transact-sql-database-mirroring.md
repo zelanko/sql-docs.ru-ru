@@ -18,12 +18,12 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5fcda605644c29f21b6fd9f71578a4d860f59619
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9378663dbe37bb6e00602cc34bc42c4a5bd4e08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817492"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530495"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Зеркальное отображение базы данных ALTER DATABASE (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,11 +92,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **'** *partner_server* **'**  
  Указывает сетевой адрес сервера экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы задействовать его как партнера по обеспечению отработки отказа в новом сеансе зеркального отображения базы данных. Для каждого сеанса необходимы два участника: один запускается как основной сервер, второй — как зеркальный сервер. Рекомендуется, чтобы эти партнеры находились на разных компьютерах.  
   
- Этот параметр указывается один раз для сеанса на каждом участнике. Для инициализации сеанса зеркального отображения базы данных необходимо выполнить две инструкции ALTER DATABASE *database* SET PARTNER **='***partner_server***'**. Их порядок важен. Вначале подключитесь к зеркальному серверу и укажите основной экземпляр сервера как *partner_server* (SET PARTNER **='***principal_server***'**). Затем подключитесь к основному серверу и укажите зеркальный экземпляр сервера как *partner_server* (SET PARTNER **='***mirror_server***'**); в результате запустится сеанс зеркального отображения базы данных между этими двумя партнерами. Дополнительные сведения см. в подразделе [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ Этот параметр указывается один раз для сеанса на каждом участнике. Для инициализации сеанса зеркального отображения базы данных необходимо выполнить две инструкции ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'**. Их порядок важен. Вначале подключитесь к зеркальному серверу и укажите основной экземпляр сервера как *partner_server* (SET PARTNER **='**_principal_server_**'**). Затем подключитесь к основному серверу и укажите зеркальный экземпляр сервера как *partner_server* (SET PARTNER **='**_mirror_server_**'**); в результате запустится сеанс зеркального отображения базы данных между этими двумя партнерами. Дополнительные сведения см. в подразделе [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
  Значением аргумента *partner_server* является сетевой адрес сервера. Оно имеет следующий синтаксис:  
   
- TCP**://***\<адрес_системы>***:***\<порт>*  
+ TCP **://**_\<системный_адрес>_**:**_\<порт>_  
   
  где  
   
@@ -106,7 +106,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
- В следующем примере показано предложение SET PARTNER **='***partner_server***'**:  
+ В следующем примере показано предложение SET PARTNER **='**_partner_server_**'**:  
   
 ```  
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'  
@@ -198,7 +198,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **'** *witness_server* **'**  
  Указывает экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы задействовать его в качестве следящего сервера для сеанса зеркального отображения базы данных. Инструкции SET WITNESS можно указывать только на основном сервере.  
   
- В инструкции SET WITNESS **='***witness_server***'** синтаксис параметра *witness_server* такой же, как синтаксис параметра *partner_server*.  
+ В инструкции SET WITNESS **='**_witness_server_**'** statement, the syntax of *witness_server* такой же, как синтаксис параметра *partner_server*.  
   
  OFF  
  Удаляет свидетеля из сеанса зеркального отображения базы данных. При установке свидетеля в состояние OFF отключается автоматическая отработка отказа. Если база данных установлена в состояние FULL SAFETY, а свидетель установлен в состояние OFF, отказ зеркального сервера заставит основной сервер сделать базу данных недоступной.  

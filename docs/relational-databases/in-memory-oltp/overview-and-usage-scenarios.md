@@ -12,12 +12,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660373"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533405"
 ---
 # <a name="overview-and-usage-scenarios"></a>Общие сведения и сценарии использования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "51660373"
 
 Именно для этого сценария мы создали выполняющуюся в памяти OLTP: поддержка больших объемов транзакций и обеспечение постоянно низкой задержки для отдельных транзакций.
 
-Общие сценарии рабочей нагрузки включают торговлю финансовыми инструментами, ставки на спортивные мероприятия, мобильные игры и доставку рекламных сообщений. Еще один распространенный шаблон — "каталог", который часто считывается и (или) обновляется. В качестве примера можно привести большие файлы, распределенные по узлам в кластере. Вы помещаете в каталог расположение каждого сегмента каждого файла в таблице, оптимизированной для памяти.
+Общие сценарии рабочей нагрузки включают торговлю финансовыми инструментами, ставки на спортивные мероприятия, мобильные игры и доставку рекламных сообщений. Еще один распространенный шаблон — "каталог", который часто считывается и (или) обновляется. В качестве примера можно привести большие файлы, распределенные по узлам в кластере. Вы помещаете в каталог расположение каждого сегмента каждого файла в таблице, оптимизированной для памяти.
 
 #### <a name="implementation-considerations"></a>Рекомендации по реализации
 
@@ -83,7 +83,7 @@ ms.locfileid: "51660373"
 Используйте таблицу, оптимизированную для памяти, чтобы принимать данные. Если прием состоит в основном из вставок (а не обновлений), а объем данных, хранимых в выполняющейся в памяти OLTP, играет важную роль, примените одну из следующих рекомендаций:
 
 - Используйте задание для регулярной разгрузки пакетов данных в дисковую таблицу с [кластеризованным индексом columnstore](../indexes/columnstore-indexes-overview.md)с помощью задания, выполняющего операции `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`.
-- Используйте [временную таблицу, оптимизированную для памяти](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) , для управления статистическими данными. В этом режиме статистические данные находятся на диске, а перемещением данных управляет система.
+- Используйте [временную таблицу, оптимизированную для памяти](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), для управления статистическими данными. В этом режиме статистические данные находятся на диске, а перемещением данных управляет система.
 
 Репозиторий примеров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит приложение интеллектуальной сетки, которое использует временную таблицу, оптимизированную для памяти, табличный тип, оптимизированный для памяти, и скомпилированную в машинный код хранимую процедуру для повышения скорости приема данных, а также управляет объемом хранилища выполняющейся в памяти OLTP для данных датчиков: 
 
@@ -92,7 +92,7 @@ ms.locfileid: "51660373"
  
 #### <a name="customer-case-studies"></a>Клиентские сценарии
 
-- [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
+- [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database) (Благодаря использованию выполняющейся в памяти OLTP в базе данных SQL Azure компания Quorum удваивает количество основных рабочих нагрузок базы данных и сокращает использование DTU на 70 %)
 - Компания EdgeNet повысила производительность загрузки пакетных данных и избавилась от необходимости поддержки кэша среднего уровня благодаря использованию выполняющейся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d) (Компания по разработке служб данных получила доступ к данным о продуктах в реальном времени, используя технологию в памяти).
 - Больнице Beth Israel Deaconess Medical Center удалось значительно повысить скорость приема данных из контроллеров домена и обрабатывать пики рабочей нагрузки, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
 
@@ -232,4 +232,4 @@ GO
 [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
 [Оптимизация производительности с помощью технологий обработки в оперативной памяти в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[Выполняющаяся в памяти OLTP — рекомендации по общим шаблонам рабочих нагрузок и миграции](https://msdn.microsoft.com/library/dn673538.aspx) 
+[In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (Выполняющаяся в памяти OLTP — рекомендации по общим шаблонам рабочих нагрузок и миграции) 

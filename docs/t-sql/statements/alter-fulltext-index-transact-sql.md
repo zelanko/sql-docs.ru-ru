@@ -22,12 +22,12 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f824f7fec40cf99b55ff97382269413ae82b5c83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2db3b6241096501190e2d1c8e3978bd349fed7a3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662102"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526199"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Создает дополнительные индексы ключевых фраз и подобия документов, которые являются частью статистического семантического индексирования. Дополнительные сведения см. в разделе [Семантический поиск (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,***...n*]  
+ [ **,**_...n_]  
  Указывает, что для предложений ADD, ALTER и DROP можно задать несколько столбцов. Если указано несколько столбцов, то эти столбцы следует разделить запятыми.  
   
  WITH NO POPULATION  
@@ -136,7 +136,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Если указан параметр NO POPULATION, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не заполняет индекс. Индекс заполняется только после того, как пользователь выдает команду ALTER FULLTEXT INDEX...START POPULATION. Если параметр NO POPULATION не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заполняет индекс.  
   
- Если состояние CHANGE_TRACKING включено и указано предложение WITH NO POPULATION, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку. Если состояние CHANGE_TRACKING включено и предложение WITH NO POPULATION не указано, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет полное заполнение индекса.  
+ Если состояние CHANGE_TRACKING включено и указано предложение WITH NO POPULATION, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку. Если состояние CHANGE_TRACKING включено и не предложение WITH NO POPULATION не указано, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет полное заполнение индекса.  
   
 > [!NOTE]  
 >  Дополнительные сведения о взаимодействии между отслеживанием изменений и предложением WITH NO POPULATION см. в подразделе "Примечания" далее в этом разделе.  
@@ -274,7 +274,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 3.  Полнотекстовый индекс снова связывается либо с тем же, либо с другим списком свойств поиска.  
   
-     Например, следующая инструкция связывает полнотекстовый индекс с первоначальным списком свойств поиска — `spl_1`:  
+     Например, следующая инструкция связывает полнотекстовый индекс с первоначальным списком свойств поиска — `spl_1`:  
   
     ```  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
@@ -283,7 +283,7 @@ ALTER FULLTEXT INDEX ON table_name
      Эта инструкция запускает полное заполнение (действие по умолчанию).  
   
     > [!NOTE]  
-    >  Перестроение потребуется также и для другого списка свойств поиска — `spl_2`.  
+    >  Перестроение потребуется также и для другого списка свойств поиска — `spl_2`.  
   
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен иметь разрешение ALTER на таблицу или индексированное представление, быть членом предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_ddladmin** или **db_owner**.  

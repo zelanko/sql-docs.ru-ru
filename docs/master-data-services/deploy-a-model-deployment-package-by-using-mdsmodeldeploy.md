@@ -12,12 +12,12 @@ ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41d20108ae2fd1c8060627ae09b150e2b1bab9b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656772"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398209"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Развертывание пакета развертывания модели при помощи MDSModelDeploy
 
@@ -94,7 +94,7 @@ ms.locfileid: "47656772"
   
      Здесь *PackageName* — имя файла пакета (PKG), *ModelName* — имя новой модели, *VersionName* — имя версии, а *ServiceName* — полученное на предыдущем шаге имя службы. Убедитесь, что имена модели и версии в точности соответствуют заданным названиям с учетом регистра.  
   
-6.  После успешного развертывания пакета отображается сообщение «Операция MDSModelDeploy успешно завершена».  
+6.  После успешного развертывания пакета отображается сообщение "Операция MDSModelDeploy успешно завершена".  
   
  **Примечания.**  
   

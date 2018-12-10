@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522921"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Расширенное управление ключами SQL Server TDE с помощью Azure Key Vault (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,7 +147,7 @@ ms.locfileid: "51663363"
 4.  **Предоставление субъекту-службе Azure Active Directory разрешений для доступа к хранилищу ключей**  
   
      Вы можете разрешить другим пользователям или приложениям использовать хранилище ключей.   
-    В этом случае воспользуемся субъектом-службой Azure Active Directory, созданным в части I для авторизации экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+    В этом случае воспользуемся субъектом-службой Azure Active Directory, созданным в части I для авторизации экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
     > [!IMPORTANT]  
     >  Субъект-служба Azure Active Directory должен иметь для хранилища ключей по меньшей мере разрешения `get`, `wrapKey` и `unwrapKey`.  
@@ -160,7 +160,7 @@ ms.locfileid: "51663363"
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     Вызовите командлет `Get-AzureRmKeyVault` , чтобы подтвердить разрешения. В разделе Access Policies (Политики доступа) выходных данных инструкции должно присутствовать имя приложения AAD, указанное как другой клиент, имеющий доступ к этому хранилищу ключей.  
+     Вызовите командлет `Get-AzureRmKeyVault` , чтобы подтвердить разрешения. В разделе "Политики доступа" выходных данных инструкции должно присутствовать имя приложения AAD, указанное как другой клиент, имеющий доступ к этому хранилищу ключей.  
   
        
 5.  **Создание асимметричного ключа в хранилище ключей**  
@@ -190,16 +190,16 @@ ms.locfileid: "51663363"
     -   **Защищенные с помощью HSM:** создаются и защищаются аппаратным модулем безопасности HSM для обеспечения дополнительной безопасности. Стоят около 1 доллара США за версию ключа.  
   
         > [!IMPORTANT]  
-        >  Соединителю SQL Server требуется, чтобы имя ключа содержало только символы a–z, A–Z, 0–9 и "-" и имело длину не более 26 знаков.   
-        > Разные версии ключа, имеющие одинаковое имя в хранилище ключей Azure, не будут работать с Соединителем [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы сменить ключ хранилища ключей Azure, используемый [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], обратитесь к инструкциям по смене ключей в статье [Соединитель SQL Server, приложение](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
+        >  Соединителю SQL Server требуется, чтобы имя ключа содержало только символы a–z, A–Z, 0–9 и "-" и имело длину не более 26 знаков.   
+        > Разные версии ключа, имеющие одинаковое имя в хранилище ключей Azure, не будут работать с Соединителем [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы сменить ключ Azure Key Vault, используемый [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], обратитесь к инструкциям по смене ключей в статье [Соединитель SQL Server, приложение](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
 
     ### <a name="import-an-existing-key"></a>Импорт существующего ключа   
   
     Если у вас есть 2048-битный RSA-ключ, защищенный программным обеспечением, можно отправить его в хранилище ключей Azure. Например, при наличии PFX-файла, сохраненного на диске `C:\\` в файле с именем `softkey.pfx` , который необходимо отправить в хранилище ключей Azure, чтобы задать для переменной `securepfxpwd` пароль `12987553` для PFX-файла, введите следующую команду:  
   
     ``` powershell  
-    $securepfxpwd = ConvertTo-SecureString –String '12987553' `  
-      –AsPlainText –Force  
+    $securepfxpwd = ConvertTo-SecureString -String '12987553' `  
+      -AsPlainText -Force  
     ```  
   
     Затем, чтобы импортировать ключ из PFX-файла, который защищает его с помощью аппаратных средств (рекомендуется) в службе хранилища ключей, введите следующую команду:  
@@ -242,7 +242,7 @@ ms.locfileid: "51663363"
  Скачайте Соединитель SQL Server из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/p/?LinkId=521700). (Это должен сделать администратор компьютера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .)  
 
 > [!NOTE]  
->  Версии 1.0.0.440 и старше были заменены и больше не поддерживаются в рабочих средах. Выполните обновление до версии 1.0.1.0 или более поздней, посетив [Центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=45344) и используя инструкции на странице [Соединитель SQL Server, приложение](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) в разделе "Обновление соединителя SQL Server".
+>  Версии 1.0.0.440 и старше были заменены и больше не поддерживаются в рабочих средах. Выполните обновление до версии 1.0.1.0 или более поздней, посетив [Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=45344) и используя инструкции на странице [Обслуживание соединителя SQL Server и устранение неполадок](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) в разделе "Обновление соединителя SQL Server".
 
 > [!NOTE]  
 > В версии 1.0.5.0 внесено критическое изменение, касающееся алгоритма отпечатков. После обновления до версии 1.0.5.0 восстановление базы данных может завершаться сбоем. См. статью базы знаний [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 89bed7eb00e04a354b1dd1fd59b0c36899aed044
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 3415084fcc93098f77ea367217b74ae2df7729f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814327"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393227"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Примеры выражений (построитель отчетов и службы SSRS)
 Выражения часто используются в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы для управления содержимым и внешним видом отчета. Выражения записываются на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], и в них можно использовать встроенные функции, пользовательский код, переменные отчета, групповые переменные и определяемые пользователем переменные. Выражения начинаются со знака равенства (=). Дополнительные сведения о редакторе выражений и типах ссылок, которые могут быть включены, см. в разделах [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) и [Добавление выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -165,7 +165,7 @@ ms.locfileid: "51814327"
 -   Следующее выражение создает годы интервала между SellStartDate и LastReceiptDate. Эти поля находятся в разных наборах данных — DataSet1 и DataSet2. [Функция First (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-first-function.md), являющаяся агрегатной функцией, возвращает первое значение SellStartDate в DataSet1 и первое значение LastReceiptDate в DataSet2.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   Функция **DatePart** возвращает значение Integer с указанным компонентом заданного значения Date. Следующее выражение возвращает год первого значения SellStartDate в DataSet1. Область набора данных заданы из-за наличия нескольких наборов данных в отчете.  
@@ -229,7 +229,7 @@ ms.locfileid: "51814327"
      В следующем примере производится то же, что и в приведенном выше примере, а перед списком выбранных значений отображается строка текста.  
   
     ```  
-    =”Report for “ & JOIN(Parameters!MySelection.Value, “ & “)  
+    ="Report for " & JOIN(Parameters!MySelection.Value, " & ")  
   
     ```  
   
@@ -244,7 +244,7 @@ ms.locfileid: "51814327"
   
 ### <a name="lookup"></a>Уточняющий запрос  
   
--   При указании ключевого поля можно использовать функцию **Lookup** для извлечения значения из набора данных со связью "один к одному", например для пары "ключ-значение". Следующее выражение отображает из набора данных («Product») название продукта по его идентификатору.  
+-   При указании ключевого поля можно использовать функцию **Lookup** для извлечения значения из набора данных со связью "один к одному", например для пары "ключ-значение". Следующее выражение отображает из набора данных (Product) название продукта по его идентификатору:  
   
     ```  
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
@@ -543,7 +543,7 @@ ms.locfileid: "51814327"
     End Function  
     ```  
   
-     Следующее выражение показывает, как вызвать этот пользовательский код из текстового поля для контейнера «ColumnGroupByYear» (области данных или группы).  
+     Следующее выражение показывает, как вызвать этот пользовательский код из текстового поля для контейнера ColumnGroupByYear (области данных или группы).  
   
     ```  
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  

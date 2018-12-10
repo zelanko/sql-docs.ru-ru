@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 403f29c972b8137a7f2181962ce48a796ac4c753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817610"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513751"
 ---
 # <a name="control-transaction-durability"></a>Управление устойчивостью транзакций
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,14 +95,14 @@ ms.locfileid: "47817610"
  Администратор базы данных управляет тем, могут ли пользователи использовать отложенные устойчивые транзакции в базе данных, с помощью следующей инструкции. Необходимо использовать для настройки параметра отложенной устойчивости инструкцию ALTER DATABASE.    
     
 ```sql    
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
  **ВЫКЛЮЧЕНО**    
  [по умолчанию] При использовании этой настройки все фиксируемые в базе данных транзакции являются полностью устойчивыми независимо от настроек уровня фиксации (DELAYED_DURABILITY= [ON | OFF]). Изменение и повторная компиляция хранимых процедур не требуются. Это позволяет гарантировать, что данные не будут подвергаться рискам из-за отложенной устойчивости.    
     
  **РАЗРЕШЕНО**    
- При использовании этой настройки устойчивость каждой транзакции определяется на уровне транзакций — DELAYED_DURABILITY = { *OFF* | ON }. См. дополнительные сведения в разделах [Управление на уровне блока Atomic — скомпилированные в собственном коде хранимые процедуры](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) и [Управление на уровне ФИКСАЦИИ —Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl) .    
+ При использовании этой настройки устойчивость каждой транзакции определяется на уровне транзакций — DELAYED_DURABILITY = { *OFF* | ON }. Дополнительные сведения см. в разделах [Управление на уровне блока Atomic — скомпилированные в собственном коде хранимые процедуры](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) и [Управление на уровне ФИКСАЦИИ —Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl).    
     
  **ПРИНУДИТЕЛЬНО**    
  Если выбран этот параметр, все транзакции, которые фиксируются в базе данных, являются отложенными устойчивыми. Независимо от того, указана ли транзакция как полностью устойчивая (DELAYED_DURABILITY = OFF) или данные не указаны, транзакция является отложенной устойчивой. Этот параметр полезен, если отложенная устойчивая транзакция используется для баз данных и не следует изменять код приложения.    
@@ -123,14 +123,14 @@ DELAYED_DURABILITY = { OFF | ON }
  **Пример кода**    
     
 ```sql    
-CREATE PROCEDURE <procedureName> …    
+CREATE PROCEDURE <procedureName> ...    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
 (    
     DELAYED_DURABILITY = ON,    
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,    
     LANGUAGE = N'English'    
-    …    
+    ...    
 )    
 END    
 ```    
@@ -142,7 +142,7 @@ END
 |**DELAYED_DURABILITY = OFF**|Блок ATOMIC инициирует новую полностью устойчивую транзакцию.|Блок ATOMIC создает точку сохранения в существующей транзакции, а затем начинает новую транзакцию.|    
 |**DELAYED_DURABILITY = ON**|Блок ATOMIC инициирует новую отложенную устойчивую транзакцию.|Блок ATOMIC создает точку сохранения в существующей транзакции, а затем начинает новую транзакцию.|    
     
-###  <a name="bkmk_T-SQLControl"></a> Управление на уровне ФИКСАЦИИ —[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> Управление на уровне ФИКСАЦИИ — [!INCLUDE[tsql](../../includes/tsql-md.md)]    
  Синтаксис фиксации расширен, что обеспечивает возможность принудительной реализации отложенной устойчивости транзакций. Если для DELAYED_DURABILITY задано DISABLED или FORCED на уровне базы данных (см. выше), то этот параметр фиксации не учитывается.    
     
 ```sql    

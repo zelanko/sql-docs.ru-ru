@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d98dfd2c96322a2ba1b042a0edfcff8f7e6fb518
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696682"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401329"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "51696682"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```    
 CREATE EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -230,7 +229,7 @@ ON SERVER
  Указывает, необходимо ли запустить данный сеанс событий автоматически при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Если STARTUP_STATE = ON, то сеанс событий будет запущен, только если SQL Server остановлен, а затем перезапущен.  
+> Если `STARTUP_STATE = ON`, то сеанс событий будет запущен, только если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановлен, а затем перезапущен.  
   
  ON  
  Сеанс событий запускается при начальном запуске.  
@@ -239,15 +238,15 @@ ON SERVER
  Сеанс событий не запускается при начальном запуске.  
   
 ## <a name="remarks"></a>Remarks  
- Приоритеты выполнения логических операторов распределяются следующим образом: NOT (наивысший приоритет), AND, OR (низший приоритет).  
+Приоритеты выполнения логических операторов распределяются следующим образом: `NOT` (наивысший приоритет), `AND`, `OR` (низший приоритет).  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо разрешение ALTER ANY EVENT SESSION.  
+Требуется разрешение `ALTER ANY EVENT SESSION`.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере демонстрируется, как создать сеанс событий с именем `test_session`. В этом примере добавляются два события, а также используется цель средства отслеживания событий для Windows.  
   
-```  
+```sql  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='test_session')  
     DROP EVENT session test_session ON SERVER;  
 GO  

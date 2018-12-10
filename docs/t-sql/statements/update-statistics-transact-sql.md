@@ -22,21 +22,21 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd501cd54a4726033b8c2a1b746148ec17f3dc8a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 877fbd597ce603427c9bdcca00b2ecdeffbb2180
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701761"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586297"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Обновляет статистику оптимизации запросов для таблицы или индексированного представления. По умолчанию оптимизатор запросов обновляет статистику по мере необходимости для усовершенствования плана запроса. В некоторых случаях можно повысить производительность запроса, выполняя обновление статистики с помощью инструкции UPDATE STATISTICS или хранимой процедуры [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) чаще, чем это происходит по умолчанию.  
+Обновляет статистику оптимизации запросов для таблицы или индексированного представления. По умолчанию оптимизатор запросов обновляет статистику по мере необходимости для усовершенствования плана запроса. В некоторых случаях можно повысить производительность запроса, выполняя обновление статистики с помощью инструкции `UPDATE STATISTICS` или хранимой процедуры [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) чаще, чем это происходит по умолчанию.  
   
- Обновление статистики гарантирует, что запросы будут компилироваться с актуальной статистикой. Однако обновление статистики вызывает перекомпиляцию запросов. Рекомендуется не обновлять статистику слишком часто, поскольку необходимо найти баланс между выигрышем в производительности за счет усовершенствованных планов запросов и потерей времени на перекомпиляцию запросов. Критерии выбора компромиссного решения зависят от приложения. UPDATE STATISTICS может использовать базу данных tempdb для сортировки образцов строк для построения статистики.  
+Обновление статистики гарантирует, что запросы будут компилироваться с актуальной статистикой. Однако обновление статистики вызывает перекомпиляцию запросов. Рекомендуется не обновлять статистику слишком часто, поскольку необходимо найти баланс между выигрышем в производительности за счет усовершенствованных планов запросов и потерей времени на перекомпиляцию запросов. Критерии выбора компромиссного решения зависят от приложения. `UPDATE STATISTICS` может использовать базу данных tempdb для сортировки образцов строк для построения статистики.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,7 +57,7 @@ UPDATE STATISTICS table_or_indexed_view_name
             | SAMPLE number { PERCENT | ROWS }   
               [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
             | RESAMPLE   
-              [ ON PARTITIONS ( { <partition_number> | <range> } [, …n] ) ]  
+              [ ON PARTITIONS ( { <partition_number> | <range> } [, ...n] ) ]  
             | <update_stats_stream_option> [ ,...n ]  
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
@@ -131,7 +131,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  
  **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
- ON PARTITIONS ( { \<partition_number> | \<range> } [, …n] ) ] Задает принудительное повторное вычисление статистик конечного уровня, посвященных секциям в предложении ON PARTITIONS, с последующим их объединением для создания глобальных статистик. WITH RESAMPLE обязательно, потому что статистики секции, построенные с различной частотой выборки, нельзя объединить.  
+ ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] задает принудительное повторное вычисление статистик конечного уровня по секциям в предложении ON PARTITIONS, с последующим их объединением для создания глобальных статистик. WITH RESAMPLE обязательно, потому что статистики секции, построенные с различной частотой выборки, нельзя объединить.  
   
 **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -183,25 +183,28 @@ MAXDOP = *max_degree_of_parallelism*
 
 ## <a name="remarks"></a>Remarks  
   
-## <a name="when-to-use-update-statistics"></a>Условия использования инструкции UPDATE STATISTICS  
- Дополнительные сведения об условиях использования UPDATE STATISTICS см. в разделе [Статистика](../../relational-databases/statistics/statistics.md).  
+### <a name="when-to-use-update-statistics"></a>Условия использования инструкции UPDATE STATISTICS  
+ Дополнительные сведения об условиях использования `UPDATE STATISTICS` см. в разделе [Статистика](../../relational-databases/statistics/statistics.md).  
 
-## <a name="limitations-and-restrictions"></a>Ограничения  
+### <a name="limitations-and-restrictions"></a>Ограничения  
 * Обновление статистики во внешних таблицах не поддерживается. Для обновления статистики во внешней таблице удалите и повторно создайте статистику.  
-* Параметр MAXDOP несовместим с параметрами STATS_STREAM, ROWCOUNT и PAGECOUNT.
-* Параметр MAXDOP ограничивается параметром MAX_DOP группы рабочей нагрузки Resource Governor (если применимо).
+* Параметр `MAXDOP` несовместим с параметрами `STATS_STREAM`, `ROWCOUNT` и `PAGECOUNT`.
+* Параметр `MAXDOP` ограничивается параметром `MAX_DOP` группы рабочей нагрузки Resource Governor (если применимо).
 
-## <a name="updating-all-statistics-with-spupdatestats"></a>Обновление всей статистики с помощью процедуры sp_updatestats  
- Сведения об обновлении статистики по всем определяемым пользователем таблицам и внутренним таблицам в базе данных см. в описании хранимой процедуры [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Например, следующая команда вызывает процедуру sp_updatestats для обновления всей статистики для базы данных.  
+### <a name="updating-all-statistics-with-spupdatestats"></a>Обновление всей статистики с помощью процедуры sp_updatestats  
+Сведения об обновлении статистики по всем определяемым пользователем таблицам и внутренним таблицам в базе данных см. в описании хранимой процедуры [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Например, следующая команда вызывает процедуру sp_updatestats для обновления всей статистики для базы данных.  
   
 ```sql  
 EXEC sp_updatestats;  
 ```  
+
+### <a name="automatic-index-and-statistics-management"></a>Автоматическое управление индексами и статистикой
+Используйте такие решения, как [Адаптивная дефрагментация индексов](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), чтобы автоматически управлять дефрагментацией индексов и обновлениями статистики для одной базы данных или нескольких. Эта процедура автоматически выбирает, следует ли перестроить или реорганизовать индекс, сверяясь с уровнем фрагментации и другими параметрами, и обновляет статистику на основе линейных пороговых значений.
   
-## <a name="determining-the-last-statistics-update"></a>Определение времени последнего обновления статистики  
+### <a name="determining-the-last-statistics-update"></a>Определение времени последнего обновления статистики  
  Чтобы определить время последнего обновления статистики, используйте функцию [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) .  
   
-## <a name="pdw--sql-data-warehouse"></a>PDW / Хранилище данных SQL  
+### <a name="pdw--sql-data-warehouse"></a>PDW / Хранилище данных SQL  
  Следующий синтаксис не поддерживается в PDW или хранилище данных SQL  
   
 ```sql  
@@ -225,7 +228,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ```  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо разрешение ALTER для таблицы или представления.  
+ Необходимо разрешение `ALTER` для таблицы или представления.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -306,8 +309,5 @@ UPDATE STATISTICS Customer;
  [sp_autostats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE (Transact-SQL)](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
-  
-
-
-
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
+ [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

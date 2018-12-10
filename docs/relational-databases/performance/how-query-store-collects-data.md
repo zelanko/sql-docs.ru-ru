@@ -1,7 +1,7 @@
 ---
 title: Как хранилище запросов собирает данные | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb78849cf72f9cb38a6d99082e21e8c4d0c6b4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775062"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711076"
 ---
 # <a name="how-query-store-collects-data"></a>Сбор данных в хранилище запросов
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Хранилище запросов работает подобно **бортовому регистратору данных в самолете** , непрерывно собирая сведения о компиляции и времени выполнения, связанные с запросами и планами. Связанные с запросами данные сохраняются во внутренних таблицах и предоставляются пользователям с помощью набора представлений.  
   
@@ -30,8 +30,7 @@ ms.locfileid: "47775062"
  На схеме ниже показаны представления хранилища запросов и их логические связи. Сведения о времени компиляции показаны в виде элементов синего цвета.  
   
  ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
-  
- **Описания представлений**  
+**Описания представлений**  
   
 |Представление|Описание|  
 |----------|-----------------|  
@@ -63,10 +62,10 @@ ms.locfileid: "47775062"
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
- В случае сбоя системы хранилище запросов может потерять данные среды выполнения в объеме, определенном параметром `DATA_FLUSH_INTERVAL_SECONDS`. Значение по умолчанию — 900 секунд (15 минут) — представляет собой оптимальное соотношение между эффективностью отслеживания запросов и доступностью данных.  
-В случае нехватки памяти статистика времени выполнения может быть сохранена на диске до наступления времени, определенного параметром `DATA_FLUSH_INTERVAL_SECONDS`.  
+ Если происходит сбой системы, хранилище запросов может потерять данные среды выполнения в объеме, определенном параметром `DATA_FLUSH_INTERVAL_SECONDS`. Значение по умолчанию — 900 секунд (15 минут) — представляет собой оптимальное соотношение между эффективностью отслеживания запросов и доступностью данных.  
+Если система испытывает недостаток памяти, статистика времени выполнения может быть сохранена на диске до наступления времени, определенного параметром `DATA_FLUSH_INTERVAL_SECONDS`.  
 Во время чтения данных хранилища запросов данные из памяти и с диска прозрачно объединяются.
-В случае прекращения сеанса либо перезапуска или сбоя клиентского приложения статистика запросов записываться не будет.  
+Если сеанс прерывается или клиентское приложение перезапускается или аварийно завершает работу, статистика запросов не будет записана.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

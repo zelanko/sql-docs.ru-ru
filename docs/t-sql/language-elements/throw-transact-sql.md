@@ -19,17 +19,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7aff73be9d9213cea3c9336a926a0ad0de0a3c80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a9c57b68a7aabc2d275dd5fa64c7e7cb00c3969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803262"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505912"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Вызывает исключение и передает выполнение блоку CATCH конструкции TRY…CATCH в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Вызывает исключение и передает выполнение блоку CATCH конструкции TRY...CATCH в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ THROW [ { error_number | @local_variable },
 ## <a name="remarks"></a>Remarks  
  В инструкции, выполняемой до инструкции THROW, должен использоваться признак конца инструкции — точка с запятой (;).  
   
- Если конструкция TRY…CATCH недоступна, то пакет инструкций завершается. Задаются номер строки и процедура, где вызывается исключение. Серьезности задается значение 16.  
+ Если конструкция TRY...CATCH недоступна, то пакет инструкций завершается. Задаются номер строки и процедура, где вызывается исключение. Серьезности задается значение 16.  
   
  Если инструкция THROW указана без параметров, то она должна находиться внутри блока CATCH. Результатом этого будет вызов возникшего исключения. Любая ошибка, возникающая в инструкции THROW, приводит к завершению пакета инструкций.  
   

@@ -19,12 +19,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7de1896d8c94113070dbfc57e31e7af8851b5ce0
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 48881cbff003b37e0a58dd7d6eb3c11c220ed268
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560199"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507722"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Добавление файлов данных или журналов в базу данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "51560199"
   
 8.  Укажите исходный размер файла. Файл данных следует делать как можно большего размера, в соответствии с максимальным предполагаемым объемом данных в базе данных.  
   
-9. Укажите, как должен расширяться файл, нажав кнопку (**...**) в столбце **Авторасширение** . Выберите один из следующих параметров.  
+9. Укажите, как должен расширяться файл, нажав кнопку (**...**) в столбце **Авторасширение**. Выберите один из следующих параметров.  
   
     1.  Чтобы разрешить выбранному файлу расти по мере необходимости, установите флажок **Разрешить авторасширение** и выберите один из следующих параметров.  
   
