@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85fbcf7fdf8a15f9705c9b27ba838b41911f31db
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48113594"
@@ -48,9 +48,9 @@ ms.locfileid: "48113594"
   
 > [!NOTE]  
 >  Для коллекции Power Pivot требуется Microsoft Silverlight.  Браузер Microsoft Edge не поддерживает Silverlight.   
-> Чтобы просмотреть содержание библиотеки в Edge, щелкните вкладку **Библиотека** в коллекции Power Pivot, а затем измените представление библиотеки документов на **Все документы**.    
+> Чтобы просмотреть содержание библиотеки в Microsoft Edge, щелкните вкладку **Библиотека** в коллекции Power Pivot, а затем измените представление библиотеки документов на **Все документы**.    
 > Чтобы изменить представление по умолчанию, щелкните вкладку **Библиотека** и щелкните "Изменить представление". Щелкните "Сделать представлением по умолчанию", а затем "ОК", чтобы сохранить представление по умолчанию.  
->  Дополнительную информацию о том, что поддерживается в Edge, см. в статье блога Windows [Побег из прошлого, часть 2: прощание с ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Дополнительную информацию о том, что поддерживается в Microsoft Edge, см. в статье блога Windows [Побег из прошлого, часть 2: прощание с ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Полный список необходимых компонентов, см. в разделе [Создание и настройка галереи PowerPivot](create-and-customize-power-pivot-gallery.md).  
   

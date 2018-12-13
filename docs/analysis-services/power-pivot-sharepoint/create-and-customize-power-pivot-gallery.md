@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3c705a54d24b358593b1f1fafec328e3d2fa6fd9
 ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34025981"
@@ -40,9 +40,9 @@ ms.locfileid: "34025981"
   
     > [!NOTE]  
     >  Для коллекции Power Pivot требуется Microsoft Silverlight.  Браузер Microsoft Edge не поддерживает Silverlight.   
-    > Чтобы просмотреть содержание библиотеки в Edge, щелкните вкладку **Библиотека** в коллекции Power Pivot, а затем измените представление библиотеки документов на **Все документы**.    
+    > Чтобы просмотреть содержание библиотеки в Microsoft Edge, щелкните вкладку **Библиотека** в коллекции Power Pivot, а затем измените представление библиотеки документов на **Все документы**.    
     > Чтобы изменить представление по умолчанию, щелкните вкладку **Библиотека** и щелкните "Изменить представление". Щелкните "Сделать представлением по умолчанию", а затем "ОК", чтобы сохранить представление по умолчанию.  
-    >  Дополнительную информацию о том, что поддерживается в Edge, см. в статье блога Windows [Побег из прошлого, часть 2: прощание с ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Дополнительную информацию о том, что поддерживается в Microsoft Edge, см. в статье блога Windows [Побег из прошлого, часть 2: прощание с ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Для создания библиотеки необходимо быть владельцем сайта, на котором она создается.  
   
