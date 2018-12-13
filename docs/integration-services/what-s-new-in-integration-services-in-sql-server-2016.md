@@ -200,7 +200,7 @@ ms.locfileid: "51640201"
  Новый уровень ведения журнала **RuntimeLineage** в каталоге служб SSIS собирает данные, необходимые для отслеживания сведений о журнале преобразований в потоке данных. Вы можете проанализировать эти сведения журнала преобразований, чтобы сопоставить отношение преобразований между задачами. С помощью этой информации независимые поставщики программного обеспечения и разработчики могут создавать пользовательские средства сопоставления для журнала преобразований. 
 
 ####  <a name="CustomLogging"></a> Новый настраиваемый уровень ведения журнала в каталоге служб SSIS  
- Предыдущие версии каталога служб SSIS позволяют выбрать один из четырех встроенных уровней ведения журнала при выполнении пакета: **None, Basic, Performance или Verbose**. В SQL Server 2016 добавлен уровень **RuntimeLineage**. Кроме того, теперь можно создавать и сохранять несколько настроенных уровней ведения журнала в каталоге служб SSIS, а также выбрать уровень, используемый при каждом запуске пакета. Для каждого настроенного уровня ведения журнала можно выбрать те статистические данные и события, которые необходимо регистрировать. При необходимости укажите контекст событий для просмотра значений переменных, строк подключения и свойств задачи. Дополнительные сведения см. в разделе [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+ Предыдущие версии каталога служб SSIS позволяют выбрать один из четырех встроенных уровней ведения журнала при выполнении пакета: **None, Basic, Performance или Verbose**. В SQL Server 2016 добавлен уровень **RuntimeLineage**. Кроме того, теперь можно создавать и сохранять несколько настроенных уровней ведения журнала в каталоге служб SSIS, а также выбрать уровень, используемый при каждом запуске пакета. Для каждого настроенного уровня ведения журнала можно выбрать те статистические данные и события, которые необходимо регистрировать. При необходимости укажите контекст событий для просмотра значений переменных, строк подключения и свойств задачи. Дополнительные сведения см. в разделе [Включение ведения журналов при выполнении пакета на сервере служб SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="ErrorColumn"></a> Имена столбцов для ошибок в потоке данных  
  Когда перенаправления строк в потоке данных, содержащих ошибки в вывод ошибок, результат содержит числовой идентификатор столбца, в котором произошла ошибка, но не отображает имя столбца. Теперь существует несколько способов для поиска или отображения имени столбца, где произошла ошибка.  
@@ -291,7 +291,7 @@ ms.locfileid: "51640201"
 Были выпущены соединители Майкрософт версии&4;.0 для Oracle и Teradata. Чтобы скачать соединители, см. в разделе [соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
 
 ### <a name="pdwau5"></a> Выпуск соединителей для системы платформы аналитики (PDW) с обновлением 5
-Были выпущены адаптеры назначения для загрузки данных в PDW с AU5. Сведения о скачивании адаптеров см. в разделе [Analytics Platform System Appliance Update 5 Documentation and Client Tools](https://www.microsoft.com/download/details.aspx?id=51610).
+Были выпущены адаптеры назначения для загрузки данных в PDW с AU5. Сведения о скачивании адаптеров см. в разделе [Analytics платформы System Appliance Update 5 Documentation и клиентские средства](https://www.microsoft.com/download/details.aspx?id=51610).
 
 ### <a name="expanded-connectivity-to-the-cloud"></a>Расширенные возможности связи в облаке
 
@@ -327,7 +327,7 @@ ms.locfileid: "51640201"
  ![Свойство TargetServerVersion в диалоговом окне свойств проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне свойств проекта")  
 
 >   [!IMPORTANT]
-> При разработке пользовательских расширений для служб SSIS см. разделы [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) (Поддержка нескольких версий в настраиваемых компонентах) и [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(Получение пользовательских расширений служб SSIS, поддерживаемых несколькими версиями SSDT 2015 для SQL Server 2016).  
+> При разработке пользовательских расширений для служб SSIS см. разделы [Поддержка нескольких версий в настраиваемых компонентах](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) и [Получение пользовательских расширений служб SSIS, поддерживаемых несколькими версиями SSDT 2015 для SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>Улучшение функций управления в SQL Server Management Studio
 
