@@ -53,7 +53,7 @@ ms.locfileid: "51600284"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает проверку подлинности Kerberos. Дополнительные сведения о регистрации SPN для SQL Server вручную см. в разделах [Регистрация имени участника-службы для соединений Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) и [Диспетчер конфигураций Microsoft Kerberos для SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 ### <a name="registering-a-server-principal-name-spn"></a>Регистрация имени участника-службы сервера (SPN)  
- Служба проверки подлинности протокола Kerberos использует имя участника-службы для проверки подлинности служб. Дополнительные сведения см. в разделе [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+ Служба проверки подлинности протокола Kerberos использует имя участника-службы для проверки подлинности служб. Дополнительные сведения см. в разделе [Регистрация имени участника-службы для соединений Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
  Для повышения защищенности проверки подлинности пользователя при соединении с NTLM можно также использовать SPN. Дополнительные сведения см. в разделе [Соединение с компонентом Database Engine с использованием расширенной защиты](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   
