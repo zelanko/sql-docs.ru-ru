@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9176be66c987d3ff4f7cdf09ac8dd70fc1447273
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba07558d4b85fabf1388f2fcafd26b3638b80f79
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411861"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979860"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ SHUTDOWN
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-changing-a-server-audit-name"></a>A. Изменение имени аудита сервера  
- В данном примере показано изменение имени аудита базы данных с `HIPPA_Audit` на `HIPAA_Audit_Old`.  
+ В данном примере показано изменение имени аудита базы данных с `HIPAA_Audit` на `HIPAA_Audit_Old`.  
   
 ```  
 USE master  
@@ -168,7 +168,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-server-audit-target"></a>Б. Изменение цели аудита сервера  
- В следующем примере аудит сервера с именем `HIPPA_Audit` изменяется на целевой файл.  
+ В следующем примере аудит сервера с именем `HIPAA_Audit` изменяется на целевой файл.  
   
 ```  
 USE master  

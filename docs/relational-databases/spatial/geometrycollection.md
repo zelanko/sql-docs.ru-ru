@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fb46d979990977865bbd47d8c1ba1c7960a1b34
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: e8f911859b90077e07bbbc13a40a29952fbce07c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018489"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978971"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51018489"
 ### <a name="accepted-instances"></a>Принимаемые экземпляры  
  Чтобы экземпляр **GeometryCollection** был принимаемым, он должен быть пустым экземпляром **GeometryCollection** или все экземпляры, составляющие экземпляр **GeometryCollection** , должны быть принимаемыми экземплярами. В следующем примере показаны принимаемые экземпляры.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  
 DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
@@ -38,14 +38,14 @@ DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, 
   
  В следующем примере возникает исключение `System.FormatException` , так как экземпляр **LinesString** в экземпляре **GeometryCollection** не является принимаемым.  
   
-```  
+```sql  
 DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
 ### <a name="valid-instances"></a>Допустимые экземпляры  
  Экземпляр **GeometryCollection** является допустимым, если допустимы все экземпляры, составляющие экземпляр **GeometryCollection** . В следующем примере показаны три допустимых экземпляра **GeometryCollection** и один недопустимый экземпляр.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  
 DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
@@ -60,7 +60,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
 ## <a name="examples"></a>Примеры  
  В следующем примере создается коллекция экземпляров `geometry``GeometryCollection` ; значения по оси Z в объекте с идентификатором SRID 1 содержат один экземпляр `Point` и один экземпляр `Polygon` .  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION(POINT(3 3 1), POLYGON((0 0 2, 1 10 3, 1 0 4, 0 0 2)))', 1);  
 ```  

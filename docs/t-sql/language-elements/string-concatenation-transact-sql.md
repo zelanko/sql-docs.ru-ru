@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e15f069c14131f6e75c1062e981b04aa6ef93a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a23f24cc0ad15ab217f328a1a2dd42737e7c6b57
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835925"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991797"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (объединение строк) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ expression + expression
   
  При сцеплении двоичных строк с любыми символами между двоичными строками необходимо использовать явное преобразование в символьные данные. В следующем примере показано, когда `CONVERT` или `CAST` должны использоваться с двоичной конкатенацией и когда `CONVERT` или `CAST` не нужно использовать.  
   
-```  
+```sql
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
 SET @mybin1 = 0xFF  
 SET @mybin2 = 0xA5  
@@ -78,7 +78,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ### <a name="a-using-string-concatenation"></a>A. Использование объединения строк  
  В следующем примере создается единственный столбец с заголовком `Name` из нескольких символьных столбцов, где за фамилией лица следуют запятая, один пробел и имя того же лица. Результирующий набор сортируется в алфавитном порядке по возрастанию, сначала по фамилии, а затем по имени.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + FirstName) AS Name  
@@ -89,7 +89,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ### <a name="b-combining-numeric-and-date-data-types"></a>Б. Объединение числовых типов данных и дат  
  В приведенном ниже примере функция `CONVERT` используется для объединения типов данных **numeric** и **date**.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-multiple-string-concatenation"></a>В. Использование объединения нескольких строк  
  Следующий пример сцепляет несколько строк в одну длинную строку для отображения фамилии и первой буквы инициалов вице-президентов в [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. После фамилии ставится запятая, а после первой буквы инициалов — точка.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ',' + SPACE(1) + SUBSTRING(FirstName, 1, 1) + '.') AS Name, e.JobTitle  
@@ -136,7 +136,7 @@ GO
 ### <a name="d-using-large-strings-in-concatenation"></a>Г. Использование больших строк при объединении
 В приведенном ниже примере выполняется объединение нескольких строк в одну длинную строку, а затем предпринимается попытка вычислить длину итоговой строки. Итоговая длина результирующего набора равна 16 000, так как вычисление выражения начинается слева, то есть @x + @z + @y => (@x + @z) + @y. В этом случае результат (@x + @z) усекается до 8000 байт, а затем в результирующий набор добавляется значение @y, из-за чего длина итоговой строки становится равна 16 000. Так как @y — это строка типа с большим значением, усечения не происходит.
 
-```
+```sql
 DECLARE @x varchar(8000) = replicate('x', 8000)
 DECLARE @y varchar(max) = replicate('y', 8000)
 DECLARE @z varchar(8000) = replicate('z',8000)
@@ -159,7 +159,7 @@ GO
 ### <a name="e-using-multiple-string-concatenation"></a>Д. Использование объединения нескольких строк  
  В приведенном ниже примере несколько строк сцепляются в одну длинную строку для отображения фамилий и инициалов имен вице-президентов из образца базы данных. После фамилии ставится запятая, а после первой буквы инициалов — точка.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + SUBSTRING(FirstName, 1, 1) + '.') AS Name, Title  
