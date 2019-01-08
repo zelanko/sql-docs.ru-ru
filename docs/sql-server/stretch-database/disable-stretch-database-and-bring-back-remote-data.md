@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, disabling
 - disabling Stretch Database
 ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbfe0a9f6927e1dd62469c8d3e7c3be542cbda76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb71506fabe25de06e991574bcdf013e3c111d19
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794812"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596776"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Отключение Stretch Database и возврат удаленных данных
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "47794812"
 ## <a name="disable-stretch-database-for-a-database"></a>Отключение Stretch Database для базы данных  
  Прежде чем отключить Stretch Database для базы данных, вам потребуется отключить Stretch Database для всех отдельных таблиц, для которых она включена.  
   
-### <a name="use-sql-server-management-studio-to-disable-stretch-database-for-a-database"></a>Отключение базы данных Stretch для базы данных с помощью Management Studio для SQL Server  
+### <a name="use-sql-server-management-studio-to-disable-stretch-database-for-a-database"></a>Отключение Stretch Database для базы данных с помощью Management Studio для SQL Server  
   
 1.  В обозревателе объектов SQL Server Management Studio выберите базу данных, для которой нужно отключить Stretch Database.  
   

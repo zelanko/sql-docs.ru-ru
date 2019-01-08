@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2101d73b7e76cbc842277980b22c239dc826233c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4fdb8995798b408e0418e2170631f3b331acff0
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824222"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596695"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47824222"
   
  **Разрешения**. Чтобы настроить Stretch Database для таблицы или базы данных, требуются разрешения db_owner. Чтобы включить Stretch Database в таблице, нужно обладать правами на изменение таблицы.  
 
- >   [!NOTE]
+ > [!NOTE]
  > Если позднее вы решите отключить Stretch Database, помните, что ее отключение для таблицы или базы данных не ведет к удалению удаленного объекта. Если вы хотите удалить удаленную таблицу или базу данных, это нужно сделать с помощью портала управления Azure. Пока удаленные объекты не будут удалены вручную, их хранение будет сопровождаться затратами в Azure.
  
 ##  <a name="EnableWizardTable"></a> Настройка Stretch Database для таблицы в с помощью мастера  
@@ -48,7 +48,7 @@ ms.locfileid: "47824222"
  **Выбор таблиц из базы данных**  
  Убедитесь, что выбрана нужная таблица.  
   
- Можно перенести таблицу полностью или указать простую функцию фильтров в мастере. Если требуется использовать другой тип функции фильтров, чтобы выбрать строки для переноса, выполните одно из следующих действий.  
+ Можно перенести таблицу полностью или указать простую функцию фильтров в мастере. Если вы хотите использовать другой тип функции фильтров, чтобы выбрать строки для переноса, выполните одно из следующих действий.  
   
 -   Закройте мастер и выполните инструкцию ALTER TABLE, чтобы включить растяжение для таблицы и указать функцию фильтров.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47824222"
 -   Если в таблице содержатся горячие и холодные данные, можно использовать предложение `FILTER_PREDICATE = <function>` , чтобы задать функцию для выбора переносимых строк. Этот предикат должен вызывать встроенную функцию с табличным значением. Дополнительные сведения см. в разделе [Выбор строк для миграции с использованием функции фильтров](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Если функция фильтров не указана, переносится вся таблица.  
   
     > [!IMPORTANT]  
-    >  Если указать плохо оптимизированную функцию фильтров, перенос данных будет выполняться медленно. Stretch Database применяет функцию фильтров к таблице с помощью оператора CROSS APPLY.  
+    > Если указать плохо оптимизированную функцию фильтров, перенос данных будет выполняться медленно. Stretch Database применяет функцию фильтров к таблице с помощью оператора CROSS APPLY.  
   
 -   Укажите `MIGRATION_STATE = OUTBOUND` , чтобы немедленно запустить перенос данных, либо  `MIGRATION_STATE = PAUSED` , чтобы отложить его.  
   

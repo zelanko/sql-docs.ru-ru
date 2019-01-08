@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e4fad8c85b620b817439529bfabd65361ed0207
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8521fb6bb67f79ae88e026a3231d733490c5719
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536135"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626348"
 ---
 # <a name="sql-injection"></a>Атака путем внедрения кода SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52536135"
   
  Следующий скрипт показывает простую атаку SQL Injection. Скрипт формирует SQL-запрос, выполняя объединение жестко запрограммированных строк со строкой, введенной пользователем:  
   
-```  
+```csharp
 var Shipcity;  
 ShipCity = Request.form ("ShipCity");  
 var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";  
@@ -40,19 +40,19 @@ var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";
   
  Пользователю выводится запрос на ввод названия города. Если пользователь вводит `Redmond`, то запрос, построенный с помощью скрипта, выглядит приблизительно так:  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond'  
 ```  
   
  Предположим, однако, что пользователь вводит следующее:  
   
-```  
+```sql
 Redmond'; drop table OrdersTable--  
 ```  
   
  В этом случае запрос, построенный скриптом, будет следующим:  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'  
 ```  
   
@@ -86,7 +86,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   Никогда не объединяйте введенные пользователем данные без проверки. Объединение строк является основной точкой входа для внедрения скрипта.  
   
--   Не допускайте использование в полях следующих строк, из которых можно создать имена файлов: AUX, CLOCK$, COM1–COM8, CON, CONFIG$, LPT1–LPT8, NUL и PRN.  
+-   Не допускайте использование в полях следующих строк, из которых могут быть созданы имена файлов: AUX, CLOCK$, COM1–COM8, CON, CONFIG$, LPT1–LPT8, NUL и PRN.  
   
  По возможности отклоняйте вводимые данные, содержащие следующие символы:  
   
@@ -101,7 +101,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 ### <a name="use-type-safe-sql-parameters"></a>Использование SQL-параметров безопасных типов  
  Коллекция **Parameters** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает проверку длины и контроль соответствия типов. Если используется коллекция **Parameters** , то вводимые данные обрабатываются как буквенное значение, а не исполняемый код. Дополнительное преимущество использования коллекции **Parameters** состоит в том, что можно использовать принудительные проверки типа и длины данных. Если значение выходит за рамки диапазона, будет вызвано исключение. В следующем фрагменте кода демонстрируется использование коллекции **Parameters** :  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
 myCommand.SelectCommand.CommandType = CommandType.StoredProcedure;  
 SqlParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",  
@@ -114,7 +114,7 @@ parm.Value = Login.Text;
 ### <a name="use-parameterized-input-with-stored-procedures"></a>Использование параметризованного ввода с хранимыми процедурами  
  Хранимые процедуры могут быть подвержены атакам SQL Injection, если они используют нефильтрованные входные данные. Например, следующий код является уязвимым:  
   
-```  
+```csharp
 SqlDataAdapter myCommand =   
 new SqlDataAdapter("LoginStoredProcedure '" +   
                                Login.Text + "'", conn);  
@@ -125,7 +125,7 @@ new SqlDataAdapter("LoginStoredProcedure '" +
 ### <a name="use-the-parameters-collection-with-dynamic-sql"></a>Использование коллекции Parameters с динамическим SQL  
  Если невозможно использовать хранимые процедуры, сохраняется возможность использования параметров, как показано в следующем примере кода:  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter(  
 "SELECT au_lname, au_fname FROM Authors WHERE au_id = @au_id", conn);  
 SQLParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",   
@@ -136,7 +136,7 @@ Parm.Value = Login.Text;
 ### <a name="filtering-input"></a>Фильтрация ввода  
  Для защиты от атак SQL injection посредством удаления escape-символов можно также использовать фильтрацию ввода. Однако этот метод защиты не является надежным в связи с тем, что проблемы может создавать большое число символов. В следующем примере производится поиск разделителей символьных строк:  
   
-```  
+```csharp
 private string SafeSqlLiteral(string inputSQL)  
 {  
   return inputSQL.Replace("'", "''");  
@@ -146,7 +146,7 @@ private string SafeSqlLiteral(string inputSQL)
 ### <a name="like-clauses"></a>Предложения LIKE  
  Обратите внимание, что при использовании предложения `LIKE` подстановочные знаки по-прежнему нужно выделять escape-символами:  
   
-```  
+```csharp
 s = s.Replace("[", "[[]");  
 s = s.Replace("%", "[%]");  
 s = s.Replace("_", "[_]");  
@@ -155,7 +155,7 @@ s = s.Replace("_", "[_]");
 ## <a name="reviewing-code-for-sql-injection"></a>Просмотр кода на предмет возможности атаки SQL Injection  
  Необходимо просматривать все фрагменты кода, вызывающие инструкции `EXECUTE`, `EXEC`или `sp_executesql`. Чтобы выявить процедуры, содержащие эти инструкции, можно использовать запросы, подобные следующему. Этот запрос проверяет наличие 1, 2, 3 или 4 пробелов после слов `EXECUTE` и `EXEC`.  
   
-```  
+```sql
 SELECT object_Name(id) FROM syscomments  
 WHERE UPPER(text) LIKE '%EXECUTE (%'  
 OR UPPER(text) LIKE '%EXECUTE  (%'  
@@ -179,12 +179,12 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
   
  При использовании этого метода инструкция SET может быть исправлена следующим образом:  
   
-```  
---Before:  
+```sql
+-- Before:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname ='''   
  + @au_lname + N'''';  
   
---After:  
+-- After:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname = '''   
  + REPLACE(@au_lname,'''','''''') + N'''';  
 ```  
@@ -192,7 +192,7 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
 ### <a name="injection-enabled-by-data-truncation"></a>Атака Injection, проводимая с помощью усечения данных  
  Любое присваивАՐܐސпеременной диݐАܐؑǐՑPڐސзначение [!INCLUDE[tsql](../../includes/tsql-md.md)] усекается, если оно не вмещается в буфер, назначенный для этой переменной. Если организатор атаки способен обеспечить усечение инструкции, передавая хранимой процедуре непредвиденно длинные строки, он получает возможность манипулировать результатом. Так, хранимая процедура, создаваемая с помощью следующего скрипта, уязвима для атаки Injection, проводимой методом усечения.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
 @loginname sysname,  
 @old sysname,  
@@ -222,7 +222,7 @@ GO
   
  Передавая 154 знака в буфер, рассчитанный на 128 знаков, злоумышленник может установить новый пароль для sa, не зная старого пароля.  
   
-```  
+```sql
 EXEC sp_MySetPassword 'sa', 'dummy',   
 '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''   
 ```  
@@ -232,7 +232,7 @@ EXEC sp_MySetPassword 'sa', 'dummy',
 ### <a name="truncation-when-quotenamevariable--and-replace-are-used"></a>Усечение при использовании функций QUOTENAME(@variable, '''') и REPLACE()  
  Если строки, возвращаемые функциями QUOTENAME() и REPLACE(), не умещаются в выделенном пространстве, они усекаются без взаимодействия с пользователем. Хранимая процедура, создаваемая в следующем примере, показывает, что может произойти.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -269,13 +269,13 @@ GO
   
  Таким образом, следующая инструкция установит для паролей всех пользователей значение, переданное предыдущим фрагментом кода.  
   
-```  
+```sql
 EXEC sp_MyProc '--', 'dummy', '12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678'  
 ```  
   
  Возможно выполнить принудительное усечение строки, для чего нужно превысить выделенное для буфера пространство при использовании функции REPLACE(). Хранимая процедура, создаваемая в следующем примере, показывает, что может произойти.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -314,7 +314,7 @@ GO
   
  Следующий расчет применим ко всем случаям.  
   
-```  
+```sql
 WHILE LEN(@find_string) > 0, required buffer size =  
 ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)   
  + (LEN(@input) % LEN(@find_string))  
@@ -323,7 +323,7 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
 ### <a name="truncation-when-quotenamevariable--is-used"></a>Усечение при использовании функции QUOTENAME(@variable, ']')  
  Усечение может произойти, когда имя защищаемого объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] передается инструкциям, которые используют форму функции `QUOTENAME(@variable, ']')`. В следующем примере приведена иллюстрация этого.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MyProc  
     @schemaname sysname,  
     @tablename sysname,  
