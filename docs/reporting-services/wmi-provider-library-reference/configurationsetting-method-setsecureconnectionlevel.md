@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 88db44f4ee7acd3ae5ca43b73b79ee397514ef52
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 9d28e2a460340985d771924d1c8c88559dfd08cf
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812607"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983955"
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>Метод ConfigurationSetting — SetSecureConnectionLevel
   Задает уровень безопасных соединений для сервера отчетов.  
@@ -50,7 +50,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="remarks"></a>Remarks  
  При вызове метода свойство SecureConnectionLevel сервера отчетов получает заданное значение. Значение 0 указывает на то, что протокол SSL отключен. Значение, которое больше или равно 1, указывает на то, что протокол SSL включен.  
   
--   Если значение задано, то элемент SecureConnectionLevel в файле конфигурации сервера отчетов изменился, а к элементу **URLRoot** в файле конфигурации добавляется "https://", если указанное значение параметра *Level* больше или равно 1, либо "https://", если указанное значение параметра *Level* равно 0.  
+-   Если значение задано, то элемент SecureConnectionLevel в файле конфигурации сервера отчетов изменился, а к элементу **URLRoot** в файле конфигурации добавляется "https://", если указанное значение параметра *Level* больше или равно 1, либо "http://", если указанное значение параметра *Level* равно 0.  
   
  В [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]элемент SecureConnectionLevel является двухфазным переключателем. Значение по умолчанию равно 0. Для любого значения, которое больше или равно 1, переданного через API метода SetSecureConnectionLevel, SSL считается включенным, а свойство конфигурации SecureConnectionLevel в файле rsreportserver.config задается соответственно. Значения 2 и 3 по-прежнему разрешены для обеспечения обратной совместимости.  
   
