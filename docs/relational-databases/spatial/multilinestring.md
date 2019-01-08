@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5190e1b6fdcd83719b84142bee49dff55c824c55
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 04fdc9eb5b22a9c3f88ab635c456e3fa81cf88e4
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018239"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979539"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,29 +47,29 @@ ms.locfileid: "51018239"
 ### <a name="accepted-instances"></a>Правильные экземпляры  
  Чтобы экземпляр **MultiLineString** был принят, он должен либо быть пустым, либо содержать только принимаемые экземпляры **LineString** . Дополнительные сведения о принимаемых экземплярах **LineString** см. в разделе [LineString](../../relational-databases/spatial/linestring.md). В следующих примерах показаны принятые экземпляры **MultiLineString** .  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- Приведенный ниже пример вызывает исключение `System.FormatException` , так как второй экземпляр **LineString** недействителен.  
+Приведенный ниже пример вызывает исключение `System.FormatException` , так как второй экземпляр **LineString** недействителен.  
   
-```  
+```sql  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
 ```  
   
 ### <a name="valid-instances"></a>Допустимые экземпляры  
- Чтобы экземпляр **MultiLineString** был действителен, он должен соответствовать следующим критериям.  
+Чтобы экземпляр **MultiLineString** был действителен, он должен соответствовать следующим критериям.  
   
 1.  Все экземпляры, составляющие экземпляр **MultiLineString** , должны быть действительными экземплярами **LineString** .  
   
 2.  Никакие два экземпляра **LineString** , составляющие экземпляр **MultiLineString** , не могут перекрывать сами себя на интервале. Экземпляры **LineString** могут взаимодействовать или соприкасаться только с собой или с другими экземплярами **LineString** в конечном числе точек.  
   
- В следующем примере показаны три действительных экземпляра **MultiLineString** и один экземпляр **MultiLineString** , который недействителен.  
+В следующем примере показаны три действительных экземпляра **MultiLineString** и один экземпляр **MultiLineString** , который недействителен.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
@@ -77,19 +77,19 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` является недопустимым, так как второй экземпляр **LineString** пересекается с первым экземпляром **LineString** в интервале. Они соприкасаются в бесконечном количестве точек.  
+`@g4` является недопустимым, так как второй экземпляр **LineString** пересекается с первым экземпляром **LineString** в интервале. Они соприкасаются в бесконечном количестве точек.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается простой экземпляр `geometry``MultiLineString` , содержащий два элемента `LineString` со значением SRID 0.  
+В следующем примере создается простой экземпляр `geometry``MultiLineString` , содержащий два элемента `LineString` со значением SRID 0.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 ```  
   
- Чтобы создать экземпляр с другим значением SRID, используйте функции `STGeomFromText()` или `STMLineStringFromText()`. Можно также использовать функцию `Parse()` , а затем изменить SRID, как показано в следующем примере.  
+Чтобы создать экземпляр с другим значением SRID, используйте функции `STGeomFromText()` или `STMLineStringFromText()`. Можно также использовать функцию `Parse()` , а затем изменить SRID, как показано в следующем примере.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 SET @g.STSrid = 13;  

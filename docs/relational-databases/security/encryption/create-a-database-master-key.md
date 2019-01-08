@@ -1,7 +1,7 @@
 ---
 title: Создание главного ключа базы данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: vanto
@@ -14,45 +14,35 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7e908f096b923deb54dc39c7ef73c3a78740b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3034dc76a64e25b614b1871247369214199c36b
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650522"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997496"
 ---
 # <a name="create-a-database-master-key"></a>Создание главного ключа базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  В этом разделе описывается создание главного ключа базы данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  В этом разделе описывается создание главного ключа базы данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи [!INCLUDE[tsql](../../../includes/tsql-md.md)].
   
- **В этом разделе**  
+## <a name="security"></a>безопасность  
   
--   **Перед началом работы**  
+### <a name="permissions"></a>Разрешения  
+Требует разрешения CONTROL для базы данных.  
   
-     [безопасность](#Security)  
+## <a name="using-transact-sql"></a>Использование Transact-SQL  
   
--   [Создание главного ключа базы данных с помощью Transact-SQL](#TsqlProcedure)  
+### <a name="to-create-a-database-master-key"></a>Создание главного ключа базы данных  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+1. Выберите пароль для шифрования копии главного ключа базы данных, которая будет храниться в базе данных.  
   
-###  <a name="Security"></a> безопасность  
+2. В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-####  <a name="Permissions"></a> Permissions  
- Требует разрешения CONTROL для базы данных.  
+3. На стандартной панели выберите пункт **Создать запрос**.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+4. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-#### <a name="to-create-a-database-master-key"></a>Создание главного ключа базы данных  
-  
-1.  Выберите пароль для шифрования копии главного ключа базы данных, которая будет храниться в базе данных.  
-  
-2.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
-  
-3.  На стандартной панели выберите пункт **Создать запрос**.  
-  
-4.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
-  
-    ```  
+    ```sql
     -- Creates a database master key for the "AdventureWorks2012" database.   
     -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe."  
     USE AdventureWorks2012;  
@@ -62,5 +52,3 @@ ms.locfileid: "47650522"
     ```  
   
  Дополнительные сведения см. в разделе [CREATE MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-master-key-transact-sql.md).  
-  
-  

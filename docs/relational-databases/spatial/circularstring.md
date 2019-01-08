@@ -12,19 +12,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32d5372f66881b130de832b8457e0618fc4d7364
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3964fc0563ae31fa5966b0652389a4b0deb41b88
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666183"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979130"
 ---
 # <a name="circularstring"></a>CircularString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Объект **CircularString** — это коллекция, состоящая из нуля или большего количества непрерывных круговых сегментов дуги. Сегмент дуги — это сегмент кривой, определяемый тремя точками на двумерной плоскости; первая точка не может совпадать с третьей. Если все три точки сегмента дуги лежат на одной прямой, сегмент дуги считается линейным сегментом.  
   
 > [!IMPORTANT]  
->  Подробное описание и примеры использования новых возможностей обработки пространственных данных, добавленных в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в том числе подтипа **CircularString** , можно получить, загрузив технический документ [Новые возможности обработки пространственных данных в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+> Подробное описание и примеры использования новых возможностей обработки пространственных данных, добавленных в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в том числе подтипа **CircularString** , можно получить, загрузив технический документ [Новые возможности обработки пространственных данных в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>Экземпляры CircularString  
  На следующем рисунке показаны допустимые экземпляры **CircularString** .  
@@ -34,7 +34,7 @@ ms.locfileid: "51666183"
 ### <a name="accepted-instances"></a>Правильные экземпляры  
  Экземпляр **CircularString** принимается, если он пуст или содержит нечетное количество точек, n, где n > 1. Следующие экземпляры **CircularString** правильные.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
@@ -42,7 +42,7 @@ DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
   
  `@g3` показывает, что экземпляр **CircularString** может быть правильным, но недопустимым. Следующее объявление экземпляра CircularString неверно. Это объявление вызывает исключение `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
@@ -50,18 +50,14 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
  Допустимый экземпляр **CircularString** должен быть пуст или иметь следующие атрибуты:  
   
 -   Он должен содержать хотя бы один сегмент дуги (то есть не менее трех точек).  
-  
 -   Последняя конечная точка каждого из отрезков дуги в последовательности, кроме последнего, должна совпадать с первой конечной точкой следующего сегмента в последовательности.  
-  
 -   Количество точек должно быть нечетным.  
-  
 -   Он не должен перекрываться собой.  
-  
 -   Хотя экземпляры **CircularString** могут содержать линейные сегменты, эти линейные сегменты должны определяться тремя лежащими на одной прямой точками.  
   
- В следующем примере показаны допустимые экземпляры **CircularString** .  
+В следующем примере показаны допустимые экземпляры **CircularString** .  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1, 0 1)';  
@@ -69,23 +65,21 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();  
 ```  
   
- Для определения окружности экземпляр **CircularString** должен содержать как минимум два сегмента дуги. Для определения окружности экземпляр **CircularString** не может содержать один сегмент дуги (например, (1 1, 3 1, 1 1)). Для определения окружности используйте (1 1, 2 2, 3 1, 2 0, 1 1).  
+Для определения окружности экземпляр **CircularString** должен содержать как минимум два сегмента дуги. Для определения окружности экземпляр **CircularString** не может содержать один сегмент дуги (например, (1 1, 3 1, 1 1)). Для определения окружности используйте (1 1, 2 2, 3 1, 2 0, 1 1).  
   
- В следующем примере показаны недопустимые экземпляры CircularString.  
+В следующем примере показаны недопустимые экземпляры CircularString.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CIRCULARSTRING(1 1, 2 0, 1 1)';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(0 0, 0 0, 0 0)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
 ### <a name="instances-with-collinear-points"></a>Экземпляры с точками, лежащими на прямой  
- Сегмент дуги будет считаться линейным сегментом в следующих случаях.  
+Сегмент дуги будет считаться линейным сегментом в следующих случаях.  
   
 -   Когда все три точки лежат на одной прямой (например, (1 3, 4 4, 7 5)).  
-  
 -   Когда первая и средняя точки совпадают, а третья точка отличается от них (например, (1 3, 1 3, 7 5)).  
-  
 -   Когда средняя и последняя точки совпадают, а первая точка отличается от них (например, (1 3, 4 4, 4 4)).  
   
 ## <a name="examples"></a>Примеры  
@@ -116,13 +110,13 @@ SET @g = geometry::Parse('CIRCULARSTRING(2 1, 1 2, 0 1, 1 0, 2 1)');
 SELECT 'Circumference = ' + CAST(@g.STLength() AS NVARCHAR(10));    
 ```  
   
- Получается следующий вывод.  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 Circumference = 6.28319  
 ```  
   
- Сравните вывод, получаемый при использовании **LineString** вместо **CircularString**:  
+Сравните вывод, получаемый при использовании **LineString** вместо **CircularString**:  
   
 ```sql  
 DECLARE @g geometry;  
@@ -130,13 +124,13 @@ SET @g = geometry::STGeomFromText('LINESTRING(2 1, 1 2, 0 1, 1 0, 2 1)', 0);
 SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));  
 ```  
   
- Получается следующий вывод.  
-  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```  
 Perimeter = 5.65685  
 ```  
   
- Обратите внимание, что значение в примере **CircularString** близко к 2∏, то есть действительному углу для окружности.  
+Обратите внимание, что значение в примере **CircularString** близко к 2∏, то есть действительному углу для окружности.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>Г. Объявление и создание экземпляра Geometry с экземпляром CircularString в одной инструкции  
  В этом фрагменте кода показывается объявление и создание экземпляра **geometry** с экземпляром **CircularString** в одной инструкции:  
