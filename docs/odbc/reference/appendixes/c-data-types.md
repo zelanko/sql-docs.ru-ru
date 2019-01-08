@@ -16,12 +16,12 @@ ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1372b868499bc6b903dd7fb6c4022e724870b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782202"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208466"
 ---
 # <a name="c-data-types"></a>Типы данных C
 Типы данных ODBC C указывают тип данных C буферов, используемых для хранения данных в приложении.  
@@ -109,7 +109,7 @@ struct tagSQL_NUMERIC_STRUCT {
    SQLCHAR precision;  
    SQLSCHAR scale;  
    SQLCHAR sign[g];  
-   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
+   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
 } SQL_NUMERIC_STRUCT;  
 ```  
   
@@ -138,7 +138,7 @@ struct tagSQLGUID {
   
  [e] A номер хранится в *val* помощью SQL_NUMERIC_STRUCT структуры как масштабированное значение типа integer, в режиме прямым порядком байтов (крайнего левого байта, что младший байт). Например номер 10.001 основание 10, с масштабом 4, масштабируется до целого числа 100010. Так как это 186AA в шестнадцатеричном формате, то значение в помощью SQL_NUMERIC_STRUCT должно быть «AA 86 01 00 00... 00", с числом байтов, определяется SQL_MAX_NUMERIC_LEN **#define**.  
   
- Дополнительные сведения о **помощью SQL_NUMERIC_STRUCT**, см. в разделе [HOWTO: получение числовых данных с помощью SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
+ Дополнительные сведения о **помощью SQL_NUMERIC_STRUCT**, см. в разделе [HOWTO: Получение числовых данных с помощью SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
  [f] точность и Масштаб поля данных SQL_C_NUMERIC введите areused для входных данных из приложения, а также для вывода от драйвера в приложение. При драйвер записывает числовое значение в помощью SQL_NUMERIC_STRUCT, свои собственные специфические для драйвера по умолчанию будет использоваться как значение для *точности* поля и он будет использовать значение в поле SQL_DESC_SCALE (дескриптор) приложения которое по умолчанию равно 0) для *масштабирования* поля. Приложение может предоставлять собственные значения для точности и масштаба, задав SQL_DESC_PRECISION и SQL_DESC_SCALE поля дескриптора приложения.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.snapshotformat.f1
@@ -13,12 +12,12 @@ ms.assetid: 8e9133b1-fc37-4a85-8a7c-d5eaf172fbef
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ebf115466a916922444818d11ccd3855c49f825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7d94874d03c05fffbc62743b5337649a3e228a2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214124"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804406"
 ---
 # <a name="publication-properties-snapshot"></a>Свойства публикаций, моментальный снимок
   Страница **Моментальный снимок** диалогового окна **Свойства публикации** позволяет настраивать формат моментальных снимков, указывать месторасположение папки моментальных снимков и скрипты, исполняемые до и после выполнения приложения моментальных снимков. Папка моментальных снимков должна быть в общем доступе и иметь достаточные разрешения для чтения и записи в нее файлов агентами. Дополнительные сведения о надлежащей защите папок см. в статье [Организация безопасности папки моментальных снимков](security/secure-the-snapshot-folder.md).  

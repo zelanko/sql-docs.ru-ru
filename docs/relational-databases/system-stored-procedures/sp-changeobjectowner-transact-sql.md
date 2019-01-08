@@ -18,22 +18,22 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 30ae865060ff3d667de8f18c6d73f4b7087f0780
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: 16ba2e0130c766763c554d6ec256a8858db3373b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707702"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204933"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Изменяет владельца объекта в текущей базе данных.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Эта хранимая процедура работает только с объектами, доступными в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) или [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) вместо этого. **sp_changeobjectowner** изменяет как схему, так и владельца. Для сохранения совместимости с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эта хранимая процедура изменит только владельцев объекта, если и текущий владелец, и новый владелец владеют схемами, которые имеют такое же имя, как и имена пользователей базы данных.  
-  
-> [!IMPORTANT]  
+> 
+> [!IMPORTANT]
 >  К этой хранимой процедуре было добавлено требование новых разрешений.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

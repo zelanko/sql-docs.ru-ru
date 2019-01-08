@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 1: Определение представления источника данных в Analysis Services проекта | Документация Майкрософт'
+title: Урок 1. Определение представления источника данных в Analysis Services Project | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9fe97795be77255412ecac2dbcda11214369c9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a34938d97b26691dad0f1c4800b98af48434d7f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218714"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365173"
 ---
-# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Занятие 1. Определение представления источников данных в проекте служб Analysis Services
+# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Урок 1. Определение представления источников данных в проекте служб Analysis Services
   Разработка приложения бизнес-аналитики в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] начинается с создания проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В этом проекте будут определены все элементы решения, начиная с представления источников данных.  
   
  Это занятие содержит следующие задачи.  
@@ -35,16 +35,16 @@ ms.locfileid: "48218714"
  [Изменение имен таблиц по умолчанию](lesson-1-4-modifying-default-table-names.md)  
  В этой задаче будут изменены имена таблиц в представлении источников данных, чтобы сделать имена последующих определяемых объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] более понятными для пользователей.  
   
- Сравните свои результаты с образцом файла проекта, созданным на этом занятии. Дополнительные сведения о скачивании образцов проектов для этого учебника см. в разделе [Проекты многомерных моделей служб SSAS для SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) на странице образцов продуктов на сайте CodePlex.  
+ Сравните свои результаты с образцом файла проекта, созданным на этом занятии. Дополнительные сведения о скачивании образцов проектов для этого учебника см. в разделе [Проекты многомерных моделей служб SSAS для SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866) на странице образцов продуктов на сайте CodePlex.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 2. Определение и развертывание куба](lesson-2-defining-and-deploying-a-cube.md)  
+ [Занятие 2. Определение и развертывание куба](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>См. также  
- [Создание проекта служб Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
+ [Создание проекта служб Analysis Services (среда SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [Источники данных, поддерживаемые &#40;многомерные службы SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Представления источников данных в многомерных моделях](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Сценарий учебника по службам Analysis Services](analysis-services-tutorial-scenario.md)   
- [Многомерное моделирование &#40;руководством по Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Многомерное моделирование (учебник по Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

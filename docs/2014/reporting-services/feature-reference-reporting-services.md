@@ -16,20 +16,20 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a2cfa74b5f85b17c8f4dca36884943ad283422ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9306340695cffd621335d094e182898512c757c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081012"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367836"
 ---
 # <a name="feature-reference-reporting-services"></a>Справочник по функциям (службы Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включают несколько средств и приложений, которые могут использоваться для создания, управления и просмотра отчетов. В этом разделе приводятся конкретные подразделы, описывающие диалоговые окна, веб-страницы и мастера этих инструментальных средств и приложений.  
   
- Чтобы получить доступ к разделу пользовательского интерфейса во время работы средства или приложения, нажмите клавишу F1 или кнопку **Справка** в открытом диалоговом окне, веб-странице или мастере. Дополнительные сведения о запуске средств [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] см. в разделе [Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)](tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ Чтобы получить доступ к разделу пользовательского интерфейса во время работы средства или приложения, нажмите клавишу F1 или кнопку **Справка** в открытом диалоговом окне, веб-странице или мастере. Дополнительные сведения о запуске [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] средства, см. в разделе [руководства: Инструкции по поиску и запуску Reporting средств служб Services &#40;SSRS&#41;](tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Справка F1 по использованию конструктора отчетов](tools/report-designer-f1-help.md)  
+ [Справка F1 конструктора отчетов](tools/report-designer-f1-help.md)  
  Предоставляет справку для конструктора отчетов и его диалоговых окон, мастера отчетов и мастера изображений.  
   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
@@ -41,14 +41,14 @@ ms.locfileid: "48081012"
  [Справка F1 по использованию сервера отчетов среде Management Studio](tools/report-server-in-management-studio-f1-help.md)  
  Справка по диалоговым окнам, используемым для управления отчетами и серверами отчетов в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
- [Просмотра HTML-страниц и панель инструментов отчета](html-viewer-and-the-report-toolbar.md)  
+ [Средство просмотра HTML-страниц и панель инструментов отчета](html-viewer-and-the-report-toolbar.md)  
  Предоставляет справку для компонента средств просмотра HTML-страниц для просмотра отчетов в веб-браузере.  
   
 ## <a name="see-also"></a>См. также  
  [Основные понятия служб Reporting Services (SSRS)](reporting-services-concepts-ssrs.md)   
  [Отчеты служб Reporting Services (службы SSRS)](reports/reporting-services-reports-ssrs.md)   
  [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Приступая к работе с построителем отчетов](http://www.microsoft.com/download/en/details.aspx?id=29072)   
- [Проектирование и реализация отчетов с помощью построителя отчетов 1.0](http://go.microsoft.com/fwlink/?LinkId=142601)  
+ [Приступая к работе с построителем отчетов](https://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [Проектирование и реализация отчетов с помощью построителя отчетов 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

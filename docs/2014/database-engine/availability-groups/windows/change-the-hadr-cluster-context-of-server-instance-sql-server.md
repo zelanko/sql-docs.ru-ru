@@ -13,17 +13,17 @@ ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3309d3754d8d4842ed238a54f0120b54bba1d596
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219184"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361356"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Смена контекста кластера HADR экземпляра сервера (SQL Server)
   В этом разделе описывается переключение контекста кластера HADR экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] в [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] и более поздних версий. *Контекст кластера HADR* определяет кластер отказоустойчивой кластеризации Windows Server (WSFC), который управляет метаданными для реплик доступности, размещенных в экземпляре сервера.  
   
- Переключать контекст кластера HADR следует только во время миграции с кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] на экземпляр [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] в новом кластере WSFC. Миграция с кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] поддерживает обновление операционной системы до [!INCLUDE[win8](../../../includes/win8-md.md)] или [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] с минимальным временем простоя групп доступности. Дополнительные сведения см. в документе [Миграция между кластерами групп доступности AlwaysOn для обновления ОС](http://msdn.microsoft.com/library/jj873730.aspx).  
+ Переключать контекст кластера HADR следует только во время миграции с кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] на экземпляр [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] в новом кластере WSFC. Миграция с кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] поддерживает обновление операционной системы до [!INCLUDE[win8](../../../includes/win8-md.md)] или [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] с минимальным временем простоя групп доступности. Дополнительные сведения см. в документе [Миграция между кластерами групп доступности AlwaysOn для обновления ОС](https://msdn.microsoft.com/library/jj873730.aspx).  
   
 
   
@@ -52,7 +52,7 @@ ms.locfileid: "48219184"
   
     |Роль реплики|Действие|Ссылка|  
     |------------------|------------|----------|  
-    |Первичная|Перевод группы доступности в режим «вне сети».|[Перевод группы доступности в режим "вне сети" (SQL Server)](../../take-an-availability-group-offline-sql-server.md)|  
+    |Первичный|Перевод группы доступности в режим «вне сети».|[Перевод группы доступности в режим "вне сети" (SQL Server)](../../take-an-availability-group-offline-sql-server.md)|  
     |Вторичная|Удалить реплику из ее группы доступности|[Удаление вторичной реплики из группы доступности (SQL Server)](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
   
 -   Перед тем как станет возможным переключение с удаленного кластера на локальный кластер, все локальные реплики с синхронной фиксацией должны перейти в состояние SYNCHRONIZED.  
@@ -117,7 +117,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;
   
 
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После переключения контекста кластера реплики доступности  
+##  <a name="FollowUp"></a> Дальнейшие действия: После переключения контекста кластера реплики доступности  
  Новый контекст кластера HADR вступает в силу сразу, без перезапуска экземпляра сервера. Настройка контекста кластера HADR является постоянной установкой уровня экземпляра, которая остается неизменной при перезапуске экземпляра сервера.  
   
  Проверить новый контекст кластера HADR можно, выполнив запрос к динамическому административному представлению [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql) следующим образом:  
@@ -154,9 +154,9 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Технические статьи по SQL Server 2012](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
+-   [Технические статьи по SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [Блог группы AlwaysOn SQL Server: Официальный блог SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Блог группы AlwaysOn SQL Server: Официальный блог по SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
   
   

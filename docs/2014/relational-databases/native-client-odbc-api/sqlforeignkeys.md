@@ -14,12 +14,12 @@ ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e81a2099cb06be63b6684f223277dcc127eab75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8481b0f19566ed0e55f31480f9ab8be0c9441c7d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145544"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360446"
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает каскадные обновления и удаления через механизм ограничения внешнего ключа. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает значение SQL_CASCADE для столбцов, имеющих признак UPDATE_RULE и DELETE_RULE, если параметр CASCADE задан в предложении ON UPDATE или ON DELETE ограничения FOREIGN KEY. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает значение SQL_NO_ACTION для столбцов, имеющих признак UPDATE_RULE и DELETE_RULE, если параметр NO ACTION задан в предложении ON UPDATE или ON DELETE ограничения FOREIGN KEY.  
@@ -28,10 +28,10 @@ ms.locfileid: "48145544"
   
  Функцию**SQLForeignKeys** можно выполнять в статическом серверном курсоре. При попытке выполнить функцию **SQLForeignKeys** для обновляемого курсора (динамического или набора ключей) будет возвращено значение SQL_SUCCESS_WITH_INFO, которое указывает на то, что тип курсора был изменен.  
   
- Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает выдачу сведений о таблицах, находящихся на связанных серверах, принимая двухкомпонентное имя в параметрах *FKCatalogName* и *PKCatalogName* : *Имя_Связанного_Сервера.Имя_Каталога*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента поддерживает выдачу сведений о таблицах на связанных серверах, принимая двухкомпонентное имя для *FKCatalogName* и *PKCatalogName* параметры: *Имя_связанного_сервера.имя_каталога*.  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLForeignKeys](http://go.microsoft.com/fwlink/?LinkId=59344)   
+ [Функция SQLForeignKeys](https://go.microsoft.com/fwlink/?LinkId=59344)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

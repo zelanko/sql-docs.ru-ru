@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,15 +14,15 @@ ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee308c9cb55fc851809a713f1cf052b69206c8d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 534379a9ae5ea7150348bb345c59083c3392155f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160294"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799566"
 ---
 # <a name="using-synonyms"></a>Использование синонимов
-  Синоним — это альтернативное имя, которое дается объекту в области схемы. В SMO синонимы представлены <xref:Microsoft.SqlServer.Management.Smo.Synonym> объекта. Объект <xref:Microsoft.SqlServer.Management.Smo.Synonym> является дочерним для объекта <xref:Microsoft.SqlServer.Management.Smo.Database>. Это означает, что синонимы действительны только в пределах базы данных, в которой они определены. Однако синоним может относиться к объектам на другую базу данных или на удаленном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Синоним — это альтернативное имя, которое дается объекту в области схемы. В SMO синонимы представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Synonym>. Объект <xref:Microsoft.SqlServer.Management.Smo.Synonym> является дочерним для объекта <xref:Microsoft.SqlServer.Management.Smo.Database>. Это означает, что синонимы действительны только в пределах базы данных, в которой они определены. Однако синоним может относиться к объектам другой базы данных или к удаленному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Объект, которому дано альтернативное имя, известен как базовый объект. Свойство имени объекта <xref:Microsoft.SqlServer.Management.Smo.Synonym> служит альтернативным именем базового объекта.  
   

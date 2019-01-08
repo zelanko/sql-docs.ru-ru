@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58c86f9eed16b83d9cc63c54f907f50dda1aab4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd6b9c144df14f9480ff825726fc918deb86f6cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702722"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516289"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "47702722"
 |data_source_id|**int**|Идентификатор объекта для внешнего источника данных.||  
 |file_format_id|**int**|Для внешних таблиц на внешнем источнике данных HADOOP это идентификатор объекта для формата внешнего файла.||  
 |location|**nvarchar(4000)**|Для внешних таблиц на внешнем источнике данных HADOOP это путь к внешним данным в HDFS.||  
-|Если задано reject_type|**tinyint**|Для внешних таблиц на внешнем источнике данных HADOOP это способ, отклоненных строк учитываются при запросе внешних данных.|ЗНАЧЕНИЕ — число отклоненных строк.<br /><br /> ПРОЦЕНТ — процент отклоненных строк.|  
+|Если задано reject_type|**tinyint**|Для внешних таблиц на внешнем источнике данных HADOOP это способ, отклоненных строк учитываются при запросе внешних данных.|ЗНАЧЕНИЕ — число отклоненных строк.<br /><br /> ПРОЦЕНТ - процент отклоненных строк.|  
 |reject_value|**float**|Для внешних таблиц на внешнем источнике данных HADOOP:<br /><br /> Для *reject_type =* значение, это количество отклонений строки, чтобы разрешить до ошибок в запросе.<br /><br /> Для *reject_type* = percentage, это процент отклонения строки, чтобы прежде чем он остановит запрос.||  
 |reject_sample_value|**int**|Для *reject_type* = percentage, это число строк, загружаемых, успешного или неуспешного входа, до расчета Процент отклоненных строк.|Значение NULL, если reject_type = VALUE.|  
-|distribution_type|**int**|Для внешних таблиц через источник внешних данных SHARD_MAP_MANAGER это распределение данных строк для базовых таблиц.|0 — Sharded<br /><br /> 1 — репликация<br /><br /> 2 — циклический перебор|  
+|distribution_type|**int**|Для внешних таблиц через источник внешних данных SHARD_MAP_MANAGER это распределение данных строк для базовых таблиц.|0 — сегментированных<br /><br /> 1 — репликация<br /><br /> 2 - циклический перебор|  
 |distribution_desc|**nvarchar(120)**|Для внешних таблиц через источник внешних данных SHARD_MAP_MANAGER это тип распределения, отображаемый в виде строки.||  
 |sharding_column_id|**int**|Для внешних таблиц через источник внешних данных SHARD_MAP_MANAGER и сегментированную распространения это идентификатор столбца, столбца, который содержит значения ключа сегментирования.||  
 |remote_schema_name|**sysname**|Для внешних таблиц через источник внешних данных SHARD_MAP_MANAGER это схема, где находится базовая таблица к удаленным базам данных (если он отличается от схемы, в которой определена внешняя таблица).||  

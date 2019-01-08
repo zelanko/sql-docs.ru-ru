@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c793124ad2bf503a231d46335aa06be0fa2a872
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b49f6b4ae3ec88339927f083b58e016dbc38639b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162084"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370426"
 ---
 # <a name="building-packages-programmatically"></a>Программное построение пакетов
   Если необходимо динамическое создание пакетов или управление и выполнение пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] вне среды разработки, то можно управлять пакетами программно. Этот подход предлагает следующий набор вариантов.  
@@ -28,7 +26,7 @@ ms.locfileid: "48162084"
   
 -   Создание нового пакета, добавление и настройка компонентов поочередно для каждого объекта и для каждого свойства, сохранение пакета и выполнение пакета.  
   
- Можно использовать модель объектов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], чтобы написать код, который создает, настраивает и выполняет пакеты на любом языке программирования управляемого кода. Например, может потребоваться создать управляемые метаданными пакеты, которые настраивают свои соединения или свои источники данных, преобразования и назначения на основании выбранного источника данных и его таблиц и столбцов.  
+ Можно использовать модель объектов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , чтобы написать код, который создает, настраивает и выполняет пакеты на любом языке программирования управляемого кода. Например, может потребоваться создать управляемые метаданными пакеты, которые настраивают свои соединения или свои источники данных, преобразования и назначения на основании выбранного источника данных и его таблиц и столбцов.  
   
  В этом разделе описывается и демонстрируется пошаговое создание и настройка пакета программным способом. Используя наименее сложный вариант из набора вариантов программирования пакетов, можно просто загрузить и выполнить существующий пакет, не внося в него изменения, как описано в разделе [Выполнение пакетов и управление пакетами программным образом](../run-manage-packages-programmatically/running-and-managing-packages-programmatically.md).  
   
@@ -77,7 +75,7 @@ ms.locfileid: "48162084"
  [Сохранение пакета программным образом](../building-packages-programmatically/saving-a-package-programmatically.md)  
  Описывает сохранение пакета программным образом.  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Ссылка  
  [Справочник по сообщениям об ошибках служб Integration Services](../integration-services-error-and-message-reference.md)  
  Содержится список стандартных кодов ошибок служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с символическими именами и описаниями.  
   
@@ -93,13 +91,13 @@ ms.locfileid: "48162084"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Образцы CodePlex, [Образцы продуктов служб Integration Services](http://go.microsoft.com/fwlink/?LinkID=131204)на сайте www.codeplex.com/MSFTISProdSamples  
+-   Образцы CodePlex, [Образцы продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkID=131204)на сайте www.codeplex.com/MSFTISProdSamples  
   
--   Запись в блоге [Профилирование производительности пользовательских расширений](http://go.microsoft.com/fwlink/?LinkId=238831)на сайте blogs.msdn.com.  
+-   Запись в блоге [Профилирование производительности пользовательских расширений](https://go.microsoft.com/fwlink/?LinkId=238831)на сайте blogs.msdn.com.  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
- [SQL Server Integration Services](../sql-server-integration-services.md)  
+ [службы SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

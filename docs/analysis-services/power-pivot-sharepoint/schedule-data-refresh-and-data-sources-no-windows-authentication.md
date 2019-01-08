@@ -1,5 +1,5 @@
 ---
-title: Обновление данных расписания и источники данных - без проверки подлинности Windows | Документы Microsoft
+title: Планирование обновления данных и источники данных — без проверки подлинности Windows | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4c7a5a66ff831c94129c2833d74d0eeeb65de30
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 316fe295473d106d0bea8150deed6a19c07bc3bc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027774"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408564"
 ---
-# <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Обновление данных расписания и источники данных - без проверки подлинности Windows
+# <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Планирование обновления данных и источники данных — без проверки подлинности Windows
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   В этом разделе рассматривается рабочий процесс планирования обновления данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, в котором могут использоваться источники данных, **НЕ** поддерживающие аутентификацию Windows. В качестве примера можно назвать источники данных Oracle или IDM DB2. На рисунках и в процедурах, которые приведены в этом разделе, речь идет об источниках данных Oracle, но тот же рабочий процесс применим к другим источникам данных.  
   
@@ -24,15 +24,15 @@ ms.locfileid: "34027774"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010 &#124; SharePoint 2013.|  
   
- **Обзор** . Создание двух целевых приложений Secure Store. Настройка использования учетных данных Windows в первом целевом приложении (PowerPivotDataRefresh). Настройка во втором целевом приложении учетных данных для источника данных, который не поддерживает проверку подлинности Windows, например для базы данных Oracle. Кроме того, во втором целевом приложении используется первое целевое приложение в качестве учетной записи автоматического обновления данных.  
+ **Обзор:** Создание двух целевых приложений Secure Store. Настройка использования учетных данных Windows в первом целевом приложении (PowerPivotDataRefresh). Настройка во втором целевом приложении учетных данных для источника данных, который не поддерживает проверку подлинности Windows, например для базы данных Oracle. Кроме того, во втором целевом приложении используется первое целевое приложение в качестве учетной записи автоматического обновления данных.  
   
  ![as_powerpivot_refresh_no_windows_auth](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh** : идентификатор целевого приложения Secure Store, в котором настроена аутентификация Windows.  
+-   **(1) PowerPivotDatarefresh:** идентификатор целевого приложения Secure Store, в котором настроена проверка подлинности Windows.  
   
--   **(2) OracleAuthentication**: идентификатор целевого приложения Secure Store, в котором заданы учетные данные Oracle.  
+-   **(2) OracleAuthentication:** идентификатор целевого приложения Secure Store, в котором заданы учетные данные Oracle.  
   
--   **(3)[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] В приложении службы**  настраивается использование целевого приложения PowerPivotDataRefresh в качестве **учетной записи автоматического обновления данных**.  
+-   **(3)**  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Приложение службы настраивается использование целевого приложения «PowerPivotDataRefresh» для **учетная**.  
   
 -   **(4)** В книге PowerePivot используются данные Oracle. Настройки обновления книги указывают, что при соединении с источником данных следует использовать целевое приложение **(2)** в качестве учетных данных.  
   
@@ -54,15 +54,15 @@ ms.locfileid: "34027774"
   
 4.  На странице **Создание нового целевого приложения Secure Store** задайте следующие значения.  
   
-    -   **Идентификатор целевого приложения** : PowerPivotDataRefresh.  
+    -   **Идентификатор целевого приложения:** PowerPivotDataRefresh.  
   
-    -   **Отображаемое имя** : PowerPivotDataRefresh.  
+    -   **Отображаемое имя:** PowerPivotDataRefresh.  
   
     -   **Адрес электронной почты для связи** : ?  
   
-    -   **Тип целевого приложения** : группа.  
+    -   **Тип целевого приложения:** группа.  
   
-    -   **URL-адрес страницы целевого приложения** : нет.  
+    -   **АДРЕС страницы целевого приложения:** Нет.  
   
 5.  Нажмите кнопку **Далее**.  
   
@@ -88,15 +88,15 @@ ms.locfileid: "34027774"
   
 4.  На странице **Создание нового целевого приложения Secure Store** задайте следующие значения.  
   
-    -   **Идентификатор целевого приложения** : OracleAuthentication.  
+    -   **Идентификатор целевого приложения:** OracleAuthentication.  
   
-    -   **Отображаемое имя** : OracleAuthentication.  
+    -   **Отображаемое имя:** OracleAuthentication.  
   
     -   **Адрес электронной почты для связи** : ?  
   
-    -   **Тип целевого приложения** : группа.  
+    -   **Тип целевого приложения:** группа.  
   
-    -   **URL-адрес страницы целевого приложения** : нет.  
+    -   **АДРЕС страницы целевого приложения:** Нет.  
   
 5.  Нажмите кнопку **Далее**.  
   
@@ -114,13 +114,13 @@ ms.locfileid: "34027774"
   
 11. Введите идентификатор пользователя Oracle и пароль Oracle, затем нажмите кнопку **ОК**.  
   
- Дополнительные сведения см в разделе «Создание целевого приложения для проверки подлинности SQL Server» [использование службы Secure Store с проверкой подлинности SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Дополнительные сведения см в разделе «Создание целевого приложения для проверки подлинности SQL Server» [используйте Secure Store с помощью проверки подлинности SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-power-pivot-service-application"></a>Настройка приложения службы Power Pivot  
   
 1.  В центре администрирования SharePoint нажмите кнопку «Управление приложениями служб».  
   
-2.  Щелкните имя своего приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , например "Приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] по умолчанию".  
+2.  Щелкните имя вашей [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] приложения службы, например «по умолчанию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] приложение службы».  
   
 3.  Нажмите кнопку **Настройка параметров приложения службы** в разделе «Действия».  
   
@@ -130,7 +130,7 @@ ms.locfileid: "34027774"
   
 ## <a name="to-configure-the-workbook"></a>Настройка книги  
   
-1.  Перейдите к своей книге в [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] коллекции и нажмите кнопку **Управление обновлением данных**![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
+1.  Перейдите к своей книге в [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] коллекции и нажимаете **Управление обновлением данных**![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
   
 2.  Если откроется страница **Журнал обновления данных** , нажмите кнопку **Настройка расписания**.  
   
@@ -167,6 +167,6 @@ ms.locfileid: "34027774"
   
 -   [Настройка службы Secure Store в SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
   
--   См. подраздел "Плановое обновление данных" раздела [Обновление данных PowerPivot с SharePoint 2013 и SQL Server 2012 SP1 (службы Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
+-   См. в разделе «Плановое обновление данных» [обновление данных Power Pivot в SharePoint 2013 и SQL Server 2012 SP1 (службы Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   
   

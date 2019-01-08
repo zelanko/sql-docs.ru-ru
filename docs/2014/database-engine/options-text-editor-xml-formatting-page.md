@@ -7,24 +7,23 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bc45797c7978e1b851078b1644c4a14e31d04bbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c792bc2b37bbaae5161b856a7423adb4b707228
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154244"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328665"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Параметры ("Текстовый редактор" — "XML" — страница "Форматирование")
-  При помощи этого диалогового окна можно задать настройки форматирования для XML-редактора. Диалоговое окно **Параметры** можно открыть из меню **Сервис**.  
+
+При помощи этого диалогового окна можно задать настройки форматирования для XML-редактора. Диалоговое окно **Параметры** можно открыть из меню **Сервис**.  
   
 > [!NOTE]  
->  Эти настройки доступны при выборе папки **Текстовый редактор**, папки **XML** и параметра **Форматирование** в диалоговом окне **Параметры**.  
+> Эти настройки доступны при выборе папки **Текстовый редактор**, папки **XML** и параметра **Форматирование** в диалоговом окне **Параметры**.  
   
 ## <a name="attributes"></a>Атрибуты  
  **Сохранить ручное форматирование атрибутов**  
@@ -66,5 +65,3 @@ ms.locfileid: "48154244"
   
 ## <a name="see-also"></a>См. также  
  [Редактор XML (среда SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md)  
-  
-  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - permissions [WMI]
@@ -21,12 +19,12 @@ ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2722d608b4f373de92c49f1d75b887c658417e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183250"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351793"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Работа с поставщиком WMI для управления конфигурацией
   Перед тем как приступить к программированию с помощью поставщика WMI для управления компьютером, примите во внимание следующие сведения.  
@@ -34,7 +32,7 @@ ms.locfileid: "48183250"
 ## <a name="binding"></a>Binding  
  Поставщик WMI для управления компьютером является моделью объектов COM, он поддерживает раннее и позднее связывания. В случае позднего связывания при помощи таких языков скриптов, как VBScript, можно программно управлять службами, параметрами сети и псевдонимами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Дополнительные сведения о программировании реализаций поставщика WMI при помощи языков скриптов см. в разделе [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [веб-сайт](http://go.microsoft.com/fwlink/?linkid=15426).  
+ Дополнительные сведения о программировании реализаций поставщика WMI при помощи языков скриптов см. в разделе [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [веб-сайт](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="specifying-a-connection-string"></a>Задание строки соединения  
  Приложения направляют поставщика WMI для управления конфигурацией к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] путем соединения с пространством имен WMI, определенным поставщиком. Служба Windows WMI сопоставляет это пространство имен с файлом DLL поставщика и загружает его в память. Все экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представлены одним пространством имен WMI. Значение по умолчанию этого пространства имен:  
@@ -45,7 +43,7 @@ ms.locfileid: "48183250"
   
  где `instance_name` в установке по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет значение по умолчанию `MSSQLSERVER`.  
   
- **Примечание:** при подключении через брандмауэр Windows, необходимо будет убедитесь, что компьютеры настроены правильно. См. в статье «Подключение через Windows Firewall» в документации по инструментарию управления Windows на [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [веб-сайт](http://go.microsoft.com/fwlink/?linkid=15426).  
+ **Примечание.** При установлении соединения через брандмауэр Windows необходимо будет настроить компьютеры соответствующим образом. См. в статье «Подключение через Windows Firewall» в документации по инструментарию управления Windows на [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [веб-сайт](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="permissions-and-server-authentication"></a>Разрешения и проверка подлинности сервера  
  Чтобы получить доступ к поставщику WMI для управления конфигурацией, скрипт управления WMI клиента должен выполняться на целевом компьютере в контексте администратора. Необходимо членство в локальной группе администраторов Windows на компьютере, которым требуется управлять.  

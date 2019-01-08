@@ -1,5 +1,5 @@
 ---
-title: Определение секций в моделях DirectQuery | Документы Microsoft
+title: Определение секций в моделях Analysis Services DirectQuery | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 599e2f97991bc6256132861f335ac7bd0b0aa592
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f6de0417055adc506fc6d9940aa3fa349f59c658
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072281"
 ---
 # <a name="define-partitions-in-directquery-models"></a>Определение секций в моделях DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  В этом разделе объясняется использование секций в моделях DirectQuery. Дополнительные общие сведения о секциях в табличных моделях см. в разделе [секций](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+  В этом разделе объясняется использование секций в моделях DirectQuery. Более общие сведения о секциях в табличных моделях, см. в разделе [секций](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Хотя у таблицы может быть несколько секций, в режиме DirectQuery только одну из них можно назначить для выполнения запроса. Требование использовать одну секцию относится к моделям DirectQuery на всех уровнях совместимости.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/10/2018
 |DataView=Sample<br /><br /> Применяется к табличным моделям, использующим представления образцов данных|Разрешить обработку секции|Если модель использует образец данных, вы можете обработать таблицу, чтобы вернуть отфильтрованный набор данных, который обеспечивает визуальные подсказки во время разработки модели.|  
 |DirectQueryUsage=InMemory With DirectQuery<br /><br /> Применяется к табличным моделям 1100 или 1103, использующим сочетание режима выполнения в памяти и режима DirectQuery.|Разрешить обработку секции|Если модель использует гибридный режим, то для запросов к источнику данных в памяти и источнику данных DirectQuery следует использовать одну и ту же секцию.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Секции](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   

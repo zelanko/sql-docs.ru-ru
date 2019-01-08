@@ -17,12 +17,12 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3a241cc086ae7f1558f9899295496395b4959b74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c3747149b23c6217f321eff9d19621189b89b66
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147087"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541219"
 ---
 # <a name="create-a-database-schema"></a>Создание схемы базы данных
   В этом разделе описывается создание схемы в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "48147087"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Дополнительные параметры  
- Диалоговое окно **Схема — Создать** также содержит параметры на двух дополнительных страницах: **Разрешения** и **Расширенные свойства**.  
+ **Схема-создать** диалоговое окно также предлагает варианты на двух дополнительных страницах: **Разрешения** и **расширенные свойства**.  
   
 -   На странице **Разрешения** перечислены все возможные защищаемые объекты и разрешения на эти объекты, которые могут быть предоставлены для имени входа.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48147087"
   
 #### <a name="to-create-a-schema"></a>Создание схемы  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

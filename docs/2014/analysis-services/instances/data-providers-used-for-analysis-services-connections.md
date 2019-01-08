@@ -11,12 +11,12 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145230"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368516"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Поставщики данных, используемые для соединений со службами Analysis Services
   Службы Analysis Services предоставляют 3 поставщика данных для сервера и доступа к данным. Все приложения подключаются к службам Analysis Services с помощью одного из следующих поставщиков. Два из этих поставщиков, ADOMD.NET и управляющие объекты AMO служб Analysis Services, — управляемые поставщики данных. Поставщик OLE DB для служб Analysis Services (MSOLAP DLL) является собственным поставщиком данных.  
@@ -44,7 +44,7 @@ ms.locfileid: "50145230"
   
  Номер основной сборки первоначального выпуска [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] — 12.0.2000.9.  
   
- Дополнительные сведения о получении данных о версии и сборке см. в разделе [Определение версий и выпусков SQL Server и его компонентов](http://support.microsoft.com/kb/321185).  
+ Дополнительные сведения о получении данных о версии и сборке см. в разделе [Определение версий и выпусков SQL Server и его компонентов](https://support.microsoft.com/kb/321185).  
   
 ##  <a name="bkmk_LibUpdate"></a> Как определить версию поставщиков данных служб Analysis Services  
  Поставщики данных устанавливаются со службами Analysis Services, а также клиентскими приложениями, которые регулярно подключаются к базам данных служб Analysis Services, таким как Excel.  
@@ -74,7 +74,7 @@ ms.locfileid: "50145230"
   
 #### <a name="find-the-data-providers-on-the-download-site"></a>Поиск поставщиков данных на сайте загрузок  
   
-1.  Перейдите в [центр загрузки Майкрософт](http://go.microsoft.com/fwlink/p/?LinkID=296473).  
+1.  Перейдите в [центр загрузки Майкрософт](https://go.microsoft.com/fwlink/p/?LinkID=296473).  
   
 2.  Разверните **инструкции по установке**.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "50145230"
   
  MSOLAP130.dll — это версия поставщика OLE DB служб Analysis Services, которая поставляется в составе [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. К другим более ранним версиям относятся MSOLAP10.dll (для SQL Server 2008 и 2008 R2) и MSOLAP90.dll (для SQL Server 2005).  
   
- Поставщики OLE DB часто указываются в строках подключения. Строки подключения к Analysis Services используется другая спецификация для ссылки на поставщик OLE DB: MSOLAP. \<версия > .dll  
+ Поставщики OLE DB часто указываются в строках подключения. В строке подключения к службам Analysis Services используется другая спецификация для ссылки на поставщик OLE DB: MSOLAP. \<версия > .dll  
   
  MSOLAP.5.dll — это текущий поставщик Analysis Services OLE DB, устанавливаемый в составе Excel 2013. На рабочих станциях, где работают более старые версии Excel, часто можно найти предыдущие версии, например MSOLAP.4.dll или MSOLAP.3.dll. Для некоторых компонентов служб Analysis Services, таких как надстройка PowerPivot, требуются определенные версии поставщика OLE DB. Дополнительные сведения см. в разделе [Свойства строки подключения (службы Analysis Services)](connection-string-properties-analysis-services.md).  
   

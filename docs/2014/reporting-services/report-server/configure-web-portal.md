@@ -13,12 +13,12 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 279c83692b507c3031d3fbe638ad2e8dee4f591a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81be4bb3802888a8471308135775723c9ba0fd9e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184954"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419865"
 ---
 # <a name="configure-report-manager-native-mode"></a>Настройка диспетчера отчетов (собственный режим)
   Диспетчер отчетов — клиентский веб-интерфейс, используемый для просмотра отчетов, управления содержимым сервера отчетов и для предоставления пользователям доступа к серверу отчетов в собственном режиме. Диспетчер отчетов устанавливается вместе с веб-службой сервера отчетов внутри того же экземпляра сервера отчетов и при необходимости настраивается, если в программе установки пользователь выбирает параметр **Установить конфигурацию по умолчанию для работы в собственном режиме** . Кроме того, диспетчер отчетов можно настроить как задачу, которая будет выполняться после установки. В этом разделе содержатся сведения о следующих сценариях настройки диспетчера отчетов.  
@@ -50,7 +50,7 @@ ms.locfileid: "48184954"
   
      При установке экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , использующего собственный режим, диспетчер отчетов включен по умолчанию. Однако можно выключить диспетчер отчетов, если имеется пользовательское клиентское приложение, обеспечивающее эквивалентную функциональность, необходимо использовать только интерфейс SOAP или интерфейс доступа по URL-адресу для доступа к серверу отчетов либо диспетчер отчетов использует другой экземпляр сервера отчетов.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Чтобы использовать диспетчер отчетов, должны быть выполнены следующие предварительные условия.  
   
 -   Необходим минимально настроенный сервер отчетов. Дополнительные сведения о минимальной настройке сервера отчетов см. в статье [Настройка сервера отчетов (службы Reporting Services в собственном режиме)](configure-a-report-server-reporting-services-native-mode.md).  
@@ -81,7 +81,7 @@ ms.locfileid: "48184954"
   
 1.  Откройте файл **RSReportServer.config** в текстовом редакторе. По умолчанию он находится в каталоге \Program Files\Microsoft SQL Server\MSRS12.\<*имя_экземпляра*>\Reporting Services\ReportServer.  
   
-2.  Найти `ReportServerURL`.  
+2.  Найдите параметр `ReportServerURL`.  
   
 3.  Замените его URL-адресом экземпляра сервера отчетов.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48184954"
   
     1.  Откройте файл конфигурации RSReportServer.config в текстовом редакторе. По умолчанию он находится в \Program Files\Microsoft SQL Server\MSRS11. \< *instancename*> \Reporting Services\ReportServer.  
   
-    2.  Найти `ReportServerURL`.  
+    2.  Найдите параметр `ReportServerURL`.  
   
     3.  Замените его URL-адресом удаленного экземпляра сервера отчетов.  
   
@@ -131,9 +131,9 @@ ms.locfileid: "48184954"
   
 8.  Отключите те функции сервера, которые не используются.  
   
-    -   На компьютере диспетчера отчетов, отключите `WebServiceAndHTTPAccessEnabled` и `ScheduleEventsAndReportDeliveryEnabled`.  
+    -   На компьютере диспетчера отчетов отключите `WebServiceAndHTTPAccessEnabled` и `ScheduleEventsAndReportDeliveryEnabled`.  
   
-    -   На компьютере сервера отчетов, отключите `ReportManagerEnabled`.  
+    -   На компьютере сервера отчетов отключите `ReportManagerEnabled`.  
   
  Дополнительные сведения об отключении функций см. в разделе [Включение и отключение компонентов служб Reporting Services](turn-reporting-services-features-on-or-off.md).  
   
@@ -172,14 +172,14 @@ ms.locfileid: "48184954"
  Дополнительные сведения об изменении файлов конфигурации см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md). Дополнительные сведения об отключении функций в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Включение и отключение компонентов служб Reporting Services](turn-reporting-services-features-on-or-off.md).  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)   
  [Планирование служб Reporting Services и поддержки Power View в браузерах &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
- [Настройка URL-адрес &#40;диспетчер конфигурации служб SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Проверка установки служб Reporting Services](../install-windows/verify-a-reporting-services-installation.md)   
- [Настройка таблицы стилей для просмотра HTML-СТРАНИЦ и диспетчера отчетов](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
- [Включение и отключение служб Reporting Services функции](turn-reporting-services-features-on-or-off.md)   
- [Управление сервером отчетов служб собственный режим Reporting Services](manage-a-reporting-services-native-mode-report-server.md)   
+ [Настройка таблицы стилей для средства просмотра HTML-страниц и диспетчера отчетов](../customize-style-sheets-for-html-viewer-and-report-manager.md)   
+ [Включение и отключение компонентов служб Reporting Services](turn-reporting-services-features-on-or-off.md)   
+ [Управление сервером отчетов служб Reporting Services в собственном режиме](manage-a-reporting-services-native-mode-report-server.md)   
  [Файл конфигурации RSReportServer](rsreportserver-config-configuration-file.md)   
- [Настройка сервера отчетов в собственном режиме для локального администрирования &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+ [Настройка сервера отчетов, работающего в основном режиме, для локального администрирования (службы SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   
   

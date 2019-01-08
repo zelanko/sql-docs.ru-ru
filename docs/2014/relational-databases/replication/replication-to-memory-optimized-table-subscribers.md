@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f1ec48661147c78449e7767e87bafd475bb7819
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2409c993aad299551dcaf97e11c99fe032a96f1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128654"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800666"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Репликация на подписчиков оптимизированных для памяти таблиц
   Таблицы, выступающие в качестве подписчиков репликации транзакций, за исключением одноранговой репликации транзакций, можно настроить как оптимизированные для памяти таблицы. Другие конфигурации репликации несовместимы с таблицами, оптимизированными для памяти.  
@@ -242,7 +241,7 @@ ms.locfileid: "48128654"
     GO  
     ```  
   
-6.  Примените схему к базе данных подписчика и сохраните схему для последующего использования.  
+6.  Примените схему к базе данных подписчика и сохраните схему для использования в будущем.  
   
 7.  Загрузка данных издателя (источник) на подписчик. Данные на издателе не должны изменяться до тех пор, пока не будет добавлена подписка.  Можно использовать BCP, как показано ниже.  
   
@@ -302,7 +301,7 @@ GO
   
 -   Имеются ограничения на обновление первичного ключа таблиц, которые реплицируются в оптимизированную для памяти таблицу на подписчике. Дополнительные сведения см. в разделе [репликации изменений в первичный ключ](#PrimaryKey).  
   
--   Внешний ключ, ограничение уникальности, триггеры, изменения схемы, ROWGUIDCOL, вычисляемые столбцы, сжатие данных, псевдонимы типов данных, управление версиями и блокировки не поддерживаются в оптимизированных для памяти таблицах. См. в разделе [Transact-SQL Constructs Not Supported в In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) сведения.  
+-   Внешний ключ, ограничение уникальности, триггеры, изменения схемы, ROWGUIDCOL, вычисляемые столбцы, сжатие данных, псевдонимы типов данных, управление версиями и блокировки не поддерживаются в оптимизированных для памяти таблицах. Сведения см. в разделе [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
 ##  <a name="Schema"></a> Изменение файла схемы  
   

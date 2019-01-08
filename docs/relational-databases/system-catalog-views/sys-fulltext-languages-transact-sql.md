@@ -22,21 +22,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f77ccdfc7c236d1f009ff872712991a4c104fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3fac82c2fd669bb1a7dd3f45b5a614738fdf189
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779692"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529887"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Это представление каталога содержит одну строку для каждого языка, средства разбиения по словам которого зарегистрированы с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждая строка отображает код и имя языка. Если для языка зарегистрированы средства разбиения по словам, все его прочие лингвистические ресурсы, в том числе парадигматические модули, пропускаемые слова (стоп-слова) и файлы тезауруса, становятся доступными для полнотекстовой индексации и выполнения запросов. Значение **имя** или **lcid** можно указать в запросах полнотекстового поиска и полнотекстовый индекс [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций.  
+  Это представление каталога содержит одну строку для каждого языка, средства разбиения по словам которого зарегистрированы с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждая строка отображает код и имя языка. Когда средства разбиения по словам зарегистрированы для языка, его других лингвистических ресурсов парадигматические модули, пропускаемые слова (Стоп-слова) и файлы становятся тезауруса для полнотекстового индексирования и выполнения запросов. Значение **имя** или **lcid** можно указать в запросах полнотекстового поиска и полнотекстовый индекс [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций.  
    
 |Столбец|Data type|Описание|  
 |------------|---------------|-----------------|  
-|**код языка**|**int**|Код локали [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для языка.|  
+|**lcid**|**int**|Код локали [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для языка.|  
 |**name**|**sysname**|Значение псевдонима в [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) соответствующее значение **lcid** или строковое представление числового значения кода языка.|  
   
 ## <a name="values-returned-for-default-languages"></a>Значения, возвращаемые для языков по умолчанию  
@@ -50,18 +50,18 @@ ms.locfileid: "47779692"
 |Болгарский|1026|  
 |Каталонский|1027|  
 |Китайский (Гонконг, КНР)|3076|  
-|Китайский (Макао SAR)|5124|  
-|Китайский (Сингапур)|4100|  
+|Chinese (Macao SAR)|5124|  
+|Chinese (Singapore)|4100|  
 |Хорватский|1050|  
-|Чешский|1029|  
+|Czech|1029|  
 |Danish|1030|  
 |Нидерландский|1043|  
 |Английский|1033|  
 |Французский|1036|  
-|German|1031|  
+|Немецкий|1031|  
 |**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Greek|1032|  
 |Гуджарати|1095|  
-|Hebrew|1037|  
+|Иврит|1037|  
 |Hindi|1081|  
 |Исландский|1039|  
 |Индонезийский|1057|  
@@ -82,7 +82,7 @@ ms.locfileid: "47779692"
 |Панджабский|1094|  
 |Румынский|1048|  
 |Русский|1049|  
-|Сербский (кириллица)|3098|  
+|Serbian (Cyrillic)|3098|  
 |Serbian (Latin)|2074|  
 |Китайский (упрощенный)|2052|  
 |Словацкий|1051|  

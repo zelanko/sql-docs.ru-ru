@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -14,12 +13,12 @@ ms.assetid: 73fa339f-b71a-4be4-97ca-d4ae84c8b90b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a485167af34cabca8d616c758e6415117d900f1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2dd2fe9f5e4e2a5b41c9951b1a38dd819a15aa35
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125714"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770036"
 ---
 # <a name="considerations-for-replaying-traces-sql-server-profiler"></a>Вопросы воспроизведения трассировки (приложение SQL Server Profiler)
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] не может воспроизводить следующие виды трассировки.  
@@ -39,7 +38,7 @@ ms.locfileid: "48125714"
   
 ## <a name="see-also"></a>См. также  
  [bcp Utility](../bcp-utility.md)   
- [Справочник по классам событий SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
+ [Руководство по классам событий SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_getbindtoken (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql)   
  [sp_bindsession (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-bindsession-transact-sql)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   

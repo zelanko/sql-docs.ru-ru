@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
@@ -15,12 +14,12 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f5ae5a48b7ace7d0c8e9fffe1e5993bfd232da8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e3422e1fc41069bcb1f5f88c841212b5415cacd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777566"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Доставка моментального снимка через FTP
   В этом разделе описывается доставка моментального снимка по протоколу FTP в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -140,11 +139,11 @@ ms.locfileid: "48192584"
   
 1.  На издателе в базе данных публикации выполните процедуру [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Выберите одно из следующих значений в параметре **@property** и укажите новое значение этого параметра в параметре **@value**:  
   
-    -   `ftp_address` — адрес FTP-сервер, используемый для доставки моментального снимка.  
+    -   `ftp_address` — адрес FTP-сервера, который используется для доставки моментального снимка;  
   
-    -   `ftp_port` — порт, используемый FTP-сервера.  
+    -   `ftp_port` — порт FTP-сервера;  
   
-    -   `ftp_subdirectory` — подкаталог FTP-каталога по умолчанию, используемый моментальный снимок.  
+    -   `ftp_subdirectory` — подкаталог FTP-каталога по умолчанию, в котором хранится моментальный снимок;  
   
     -   `ftp_login` — имя входа для подключения к FTP-серверу;  
   
@@ -158,11 +157,11 @@ ms.locfileid: "48192584"
   
 1.  В базе данных публикации на издателе выполните процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Выберите одно из следующих значений в параметре **@property** и укажите новое значение этого параметра в параметре **@value**:  
   
-    -   `ftp_address` — адрес FTP-сервер, используемый для доставки моментального снимка.  
+    -   `ftp_address` — адрес FTP-сервера, который используется для доставки моментального снимка;  
   
-    -   `ftp_port` — порт, используемый FTP-сервера.  
+    -   `ftp_port` — порт FTP-сервера;  
   
-    -   `ftp_subdirectory` — подкаталог FTP-каталога по умолчанию, используемый моментальный снимок.  
+    -   `ftp_subdirectory` — подкаталог FTP-каталога по умолчанию, в котором хранится моментальный снимок;  
   
     -   `ftp_login` — имя входа для подключения к FTP-серверу;  
   

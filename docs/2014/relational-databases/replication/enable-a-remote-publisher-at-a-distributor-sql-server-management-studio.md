@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - remote Distributors [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb756cb171c3fe8a1d2d54bbd790ce86a96e4f7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7b554dc39832a834ebe1bc2ac2d4bfefa21721a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131674"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753056"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>включить удаленный издатель на распространителе (среда SQL Server Management Studio)
   Предоставьте издателю разрешение использовать удаленный распространитель на странице **Издатели** . Эта страница доступна в мастере настройки распространителя и в диалоговом окне **Свойства распространителя — \<распространитель>**. Дополнительные сведения об использовании мастера и о доступе к этому диалоговому окну см. в статьях [Настройка публикации и распространения](configure-publishing-and-distribution.md) и [Просмотр и изменение свойств издателя и распространителя](view-and-modify-distributor-and-publisher-properties.md).  
@@ -34,7 +33,7 @@ ms.locfileid: "48131674"
   
 4.  На странице **Пароль распространителя** в текстовых полях **Пароль** и **Подтверждение пароля** укажите надежный пароль для учетной записи **distributor_admin** , используемой системой репликации, чтобы подключить издателя к распространителю для выполнения административных задач.  
   
-5.  Для просмотра и изменения параметров издателя нажмите кнопку с многоточием (**…**).  
+5.  Для просмотра и изменения параметров издателя нажмите кнопку свойств с многоточием (**…**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -48,11 +47,11 @@ ms.locfileid: "48131674"
   
 4.  На странице **Издатели** в текстовых полях **Пароль** и **Подтверждение пароля** укажите надежный пароль для учетной записи **distributor_admin** , используемой системой репликации, чтобы подключить издатель к распространителю для выполнения административных задач.  
   
-5.  Для просмотра и изменения параметров издателя нажмите кнопку с многоточием (**…**).  
+5.  Для просмотра и изменения параметров издателя нажмите кнопку свойств с многоточием (**…**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка публикации и распространения](configure-publishing-and-distribution.md)   
  [Настройка распространения](configure-distribution.md)   
  [Защита распространителя](security/secure-the-distributor.md)  

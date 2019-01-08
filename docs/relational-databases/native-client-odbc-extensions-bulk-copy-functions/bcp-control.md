@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c15063ef190c3858007e7d64bc0e4d7ebf0d5b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3df6609af185d09c01641de495ae23687a083e07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761762"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210463"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: данные в файле хранятся в кодовой странице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- Номер версии для формата файла данных. Может иметь значение 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) или 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 используется по умолчанию. Это может оказаться полезным при экспорте или импорте данных в форматах, которые поддерживались прежними версиями сервера. Например, для импорта данных, который был получен из текстового столбца в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] сервера в **varchar(max)** столбца в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии, следует указать значение 80. Аналогично при указании значения 80 при экспорте данных из **varchar(max)** столбец, он будет сохранен так же, как сохраняются текстовые столбцы в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] форматирования и можно импортировать в текстовый столбец [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] сервера.  
+ Номер версии для формата файла данных. Может иметь значение 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), или 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 используется по умолчанию. Это может оказаться полезным при экспорте или импорте данных в форматах, которые поддерживались прежними версиями сервера. Например, для импорта данных, который был получен из текстового столбца в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] сервера в **varchar(max)** столбца в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии, следует указать значение 80. Аналогично при указании значения 80 при экспорте данных из **varchar(max)** столбец, он будет сохранен так же, как сохраняются текстовые столбцы в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] форматирования и можно импортировать в текстовый столбец [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] сервера.  
   
  BCPFIRST  
  Первая строка данных, копируемых в файл или таблицу. Значение по умолчанию равно 1. Если задать для этого параметра значение меньше 1, то будет установлено значение по умолчанию.  
@@ -99,7 +99,7 @@ RETCODE bcp_control (
  Когда *iValue* имеет значение TRUE, указывает, что функции массового копирования вставляют значения данных, предоставленные для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбцов, определенных с ограничением identity. Входной файл должен содержать значения для столбцов идентификаторов. Если эти значения не заданы, то для вставляемых строк создаются новые значения идентификаторов. Данные в файле, предназначенные для столбцов идентификаторов, не учитываются.  
   
  BCPKEEPNULLS  
- Указывает, будут ли пустые значения данных в файле преобразовываться в значения NULL в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда *iValue* имеет значение TRUE, пустые значения будут преобразовываться в значение NULL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы. По умолчанию пустые значения преобразовываются в значения по умолчанию для столбца в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если значение по умолчанию существует.  
+ Указывает, будут ли пустые значения данных в файле преобразовываться в значения NULL в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Когда *iValue* имеет значение TRUE, пустые значения будут преобразовываться в значение NULL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы. По умолчанию пустые значения преобразовываются в значения по умолчанию для столбца в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если значение по умолчанию существует.  
   
  BCPLAST  
  Последняя строка для копирования. По умолчанию установлено копирование всех строк; если задать для этого параметра значение меньше 1, то ему будет установлено значение по умолчанию.  

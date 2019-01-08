@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1df7792f5850ad9d312baefc374bcb9f99e904c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 685e8e2147066e8bdb1f34de3d5271bc56c7aac3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618272"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206643"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Выполнение добавочной отправки и получение данных с помощью FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "47618272"
 ## <a name="example"></a>Пример  
  Перед компиляцией и запуском этого образца, включите поддержку FILESTREAM ([Включение и настройка FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает базу данных, которая используется в этом образце. Для выполнения этого скрипта экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь доступ с возможностью (например, войдите в систему с учетной записью Local System).  
+ Первый ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) пример кода создает базу данных, используемую данным образцом. Для выполнения этого скрипта экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь доступ с возможностью (например, войдите в систему с учетной записью Local System).  
   
  Вторым листингом кода является код на C++. Необходимо указать сервер, для этого в листинге кода C++ измените значение «MyServer» на допустимое имя сервера. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h. Скомпилируйте листинг кода на C++ с параметрами odbc32.lib, user32.lib, /D "_UNICODE", /D "UNICODE", odbc32.lib и /EHsc.  
   
- Третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) удаляет базу данных, используемую в этом образце.  
+ Третий ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) пример кода удаляет базу данных, используемую данным образцом.  
   
 ```  
 USE master  

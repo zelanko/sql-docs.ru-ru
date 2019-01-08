@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0926afa9cb434f105dfbd817f5c6bac9663fa5d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9f8ded0dfc540ab695342fc1765bf53e880ec0e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644153"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538058"
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
  Если текущему пользователю принадлежит таблица с указанным именем, возвращаются столбцы этой таблицы. Если *table_owner* не задан и текущий пользователь не является владельцем таблицы с указанным *table_name*, хранимая процедура sp_column privileges выполняет поиск таблицы с указанным *table_name* принадлежат владельцу базы данных. Если такая таблица существует, возвращаются ее столбцы.  
   
  [ @table_qualifier=] '*table_qualifier*"  
- Имя квалификатора таблицы. *table_qualifier* — *sysname*, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (*квалификатор ***.*** владелец ***.*** имя*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
+ Имя квалификатора таблицы. *table_qualifier* — *sysname*, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (_квалификатор_**.** _владельца_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
   
  [ @column_name=] '*столбец*"  
  Единственный столбец, который используется при получении только одного столбца сведений о каталоге. *столбец* — **nvarchar (** 384 **)**, значение по умолчанию NULL. Если *столбец* является не указан, возвращаются все столбцы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *столбец* представляет имя столбца, как показано в таблице sys.columns. *столбец* может включать символы-шаблоны, используя шаблоны совпадения базовой СУБД. Для максимальной совместимости клиент шлюза должен использовать только согласование установленного образца ISO (символы-шаблоны % и _).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -14,12 +13,12 @@ ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22b0fb207a837407752a6356c452e215980bea24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 503f7a3eeeeeee36893231c48b330a099a5adc61
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171014"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779466"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>воспроизвести файл трассировки (приложение SQL Server Profiler)
   Воспроизведением называется возможность открывать сохраненную трассировку и снова ее воспроизводить. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] содержит в себе многопоточный модуль воспроизведения, который имитирует соединения пользователей и проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Воспроизведение хорошо помогает при диагностике ошибок приложений и процессов. Отыскав и исправив ошибку, запустите трассировку, обнаружившую эту ошибку, в отношении исправленной версии приложения или процесса. а затем, после воспроизведения исходной трассировки, сравнить результаты.  
@@ -60,7 +59,7 @@ ms.locfileid: "48171014"
     -   Чтобы контролировать, как SQL Server управляет процессами в ходе воспроизведения, настройте **Параметры монитора исправности**.  
   
 ## <a name="see-also"></a>См. также  
- [Разрешения, необходимые для запуска SQL Server Profiler](sql-server-profiler.md)   
+ [Разрешения, необходимые для запуска приложения SQL Server Profiler](sql-server-profiler.md)   
  [Воспроизведение трассировок](replay-traces.md)   
  [Открытие файла трассировки (приложение SQL Server Profiler)](open-a-trace-file-sql-server-profiler.md)   
  [Приложение SQL Server Profiler](sql-server-profiler.md)  

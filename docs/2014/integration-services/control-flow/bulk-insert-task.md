@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.f1
@@ -16,12 +15,12 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 806752a22315586ecd730dad89761a079dc7038e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463dd8395fd8cd4b696ef54c0a4b0523da0fadd8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064184"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360376"
 ---
 # <a name="bulk-insert-task"></a>задача «Массовая вставка»
   Задача «Массовая вставка» обеспечивает наиболее эффективный способ копирования больших объемов данных в таблицу или представление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Предположим, что компания хранит список продуктов объемом в миллион строк в головном компьютере, но система электронной коммерции компании использует для заполнения веб-страниц сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Необходимо обновлять таблицу продуктов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по ночам в соответствии с главным списком продуктов, хранящимся в головном компьютере. Для обновления таблицы список продуктов сохраняется в формате с символами табуляции в качестве разделителей и используется задача «Массовая вставка» для копирования данных напрямую в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -90,13 +89,13 @@ ms.locfileid: "48064184"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Массовая вставка редактор задачи &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "Массовая вставка" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
--   [Массовая вставка редактор задачи &#40;страница "подключения"&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [Редактор задачи "Массовая вставка" (страница "Соединение")](../bulk-insert-task-editor-connection-page.md)  
   
--   [Массовая вставка редактор задачи &#40;страница параметров&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [Редактор задачи "Массовая вставка" (страница "Параметры")](../bulk-insert-task-editor-options-page.md)  
   
--   [Страница "Выражения"](../expressions/expressions-page.md)  
+-   [Страница «Выражения»](../expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
@@ -112,10 +111,10 @@ ms.locfileid: "48064184"
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [В системах, поддерживающих контроль учетных записей, может быть получена ошибка «Не удалось подготовить массовую вставку данных служб SSIS»](http://go.microsoft.com/fwlink/?LinkId=233693)на сайте support.microsoft.com.  
+-   Техническая статья [В системах, поддерживающих контроль учетных записей, может быть получена ошибка «Не удалось подготовить массовую вставку данных служб SSIS»](https://go.microsoft.com/fwlink/?LinkId=233693)на сайте support.microsoft.com.  
   
--   Техническая статья [Руководство по производительности загрузки данных](http://go.microsoft.com/fwlink/?LinkId=233700)на сайте msdn.microsoft.com.  
+-   Техническая статья [Руководство по производительности загрузки данных](https://go.microsoft.com/fwlink/?LinkId=233700)на сайте msdn.microsoft.com.  
   
--   Техническая статья [Использование служб SQL Server Integration Services для массовой загрузки данных](http://go.microsoft.com/fwlink/?LinkId=233701)размещена на сайте simple-talk.com.  
+-   Техническая статья [Использование служб SQL Server Integration Services для массовой загрузки данных](https://go.microsoft.com/fwlink/?LinkId=233701)размещена на сайте simple-talk.com.  
   
   

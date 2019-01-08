@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - foreign keys [SMO]
@@ -14,19 +12,19 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 546fc65d29447119ad40593e016dc4db60f598d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f8c7474d645de0ba8b8c94beed44ee7c02d33de
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121704"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789546"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Создание, изменение и удаление внешних ключей
   В иерархии управляющих объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO) внешние ключи представлены объектом <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>.  
   
- Чтобы создать в SMO внешний ключ, необходимо указать таблицу, в которой внешний ключ определен в конструкторе класса <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> объекта. В этой таблице надо выбрать хотя бы один столбец, который будет внешним ключом. Для этого создайте объектную переменную <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> и укажите имя столбца, который станет внешним ключом. Теперь укажите таблицу и столбец, на которые будут выполняться ссылки. Используйте <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> метод для добавления столбца `Columns` свойство объекта.  
+ Чтобы создать в SMO внешний ключ, необходимо указать таблицу, в которой внешний ключ определен в конструкторе объекта <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. В этой таблице надо выбрать хотя бы один столбец, который будет внешним ключом. Для этого создайте объектную переменную <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> и укажите имя столбца, который станет внешним ключом. Теперь укажите таблицу и столбец, на которые будут выполняться ссылки. Воспользуйтесь методом <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> для добавления столбца в свойство объекта `Columns`.  
   
- Столбцы, представляющие внешний ключ, перечислены в свойстве `Columns` объекта <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. Первичный ключ, на который ссылается внешний ключ представленного <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> свойство, которое находится в таблице, указанной в <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> свойство.  
+ Столбцы, представляющие внешний ключ, перечислены в свойстве `Columns` объекта <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. Первичный ключ, на который ссылается внешний ключ, представлен свойством <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>, которое находится в таблице, указанной в свойстве <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>.  
   
 ## <a name="example"></a>Пример  
  Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.tsxwiz.msx.f1
@@ -19,12 +19,12 @@ ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a9531e5395e22737365810906b793f0f38b06b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a001509cba1ef02182963fd8d8f8946f95321ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065954"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823668"
 ---
 # <a name="make-a-target-server"></a>Создание целевого сервера
   В этом разделе описывается создание целевого сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server (SMO).  
@@ -63,7 +63,7 @@ ms.locfileid: "48065954"
      Чтобы устранить эту ошибку, убедитесь, что на целевом сервере есть учетная запись-посредник, имя которой совпадает с именем посреднической учетной записи на главном сервере, под которой выполняется шаг задания.  
   
 ####  <a name="Permissions"></a> Permissions  
- Разрешения на выполнение этой процедуры по умолчанию членами `sysadmin` предопределенной роли сервера.  
+ По умолчанию разрешения на выполнение этой процедуры предоставляются членам предопределенной роли сервера `sysadmin`.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   

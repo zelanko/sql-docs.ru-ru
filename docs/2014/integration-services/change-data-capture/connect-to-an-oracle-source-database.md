@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - oraDb
@@ -13,12 +12,12 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 565f88565a797c2f902b2df4f42deea631b34bb4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f22b5d71aa2d6d4ac63fe597e9da6b9dfb0a15c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114224"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202193"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Соединение с базой данных-источником Oracle
   На странице «Источник Oracle» указываются сведения, необходимые для соединения с базой данных-источником Oracle. Экземпляр CDC считывает журналы повторов базы данных Oracle, с которой установлено соединение.  
@@ -35,13 +34,13 @@ ms.locfileid: "48114224"
  **Проверка подлинности интеллектуального анализа журналов Oracle**  
  Чтобы ввести учетные данные проверки подлинности для пользователя базы данных Oracle, который имеет право выполнять интеллектуальный анализ журналов, выберите один из следующих вариантов.  
   
--   **Проверка подлинности Windows**. Выберите этот параметр, чтобы использовать текущие учетные данные домена Windows. Этот параметр можно использовать только в том случае, если в базе данных Oracle настроено использование проверки подлинности Windows.  
+-   **Проверка подлинности Windows**: Выберите этот параметр, чтобы использовать учетные данные текущего пользователя Windows. Этот параметр можно использовать только в том случае, если в базе данных Oracle настроено использование проверки подлинности Windows.  
   
--   **Проверка подлинности Oracle**. При выборе этого варианта необходимо ввести **Имя пользователя** и **Пароль** пользователя в базе данных Oracle, с которой устанавливается соединение.  
+-   **Проверка подлинности Oracle**: Если этот флажок установлен, необходимо ввести **имя пользователя** и **пароль** для пользователя в базе данных Oracle, необходимо соединиться.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Для выполнения интеллектуального анализа журналов пользователь должен иметь следующие права доступа, предоставленные в базе данных Oracle.  
->   
+> 
 >  -   SELECT на \<любая-отслеживаемая-таблица>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE на DBMS LOGMNR  
@@ -55,7 +54,7 @@ ms.locfileid: "48114224"
 > -   SELECT на ALL OBJECTS  
 > -   SELECT на DBA OBJECTS  
 > -   SELECT на ALL TABLES  
->   
+> 
 >  Если какое-либо из этих прав доступа нельзя предоставить V$xxx, предоставьте его V_S$xxx.  
   
  **Проверка соединения**  
@@ -67,7 +66,7 @@ ms.locfileid: "48114224"
  Завершив ввод данных на этой странице, нажмите кнопку **Далее** , чтобы перейти на страницу [Select Oracle Tables and Columns](select-oracle-tables-and-columns.md).  
   
 ## <a name="see-also"></a>См. также  
- [Как создать экземпляр базы данных изменения SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Как создать экземпляр изменения базы данных SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Изменение свойств экземпляра](edit-instance-properties.md)  
   
   

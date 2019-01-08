@@ -18,17 +18,17 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cfa444356e2fbefe0e6fad2333b8e565257b3992
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192524"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359566"
 ---
 # <a name="securing-sql-server"></a>Обеспечение безопасности SQL Server
   Защиту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно рассматривать как последовательность шагов, затрагивающих четыре области: платформу, проверку подлинности, объекты (включая данные) и приложения, получающие доступ к системе. В приведенных ниже разделах описано создание и реализация эффективного плана обеспечения безопасности.  
   
- Дополнительные сведения о безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. на веб-сайте [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) . Они включают руководство с рекомендациями и контрольный список безопасности. Кроме того, этот веб-сайт содержит сведения о пакетах обновлений и файлы для загрузки.  
+ Дополнительные сведения о безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. на веб-сайте [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) . Они включают руководство с рекомендациями и контрольный список безопасности. Кроме того, этот веб-сайт содержит сведения о пакетах обновлений и файлы для загрузки.  
   
 ## <a name="platform-and-network-security"></a>Безопасность платформы и сети  
  Платформа для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включает в себя физическое оборудование и сетевые компьютеры, с помощью которых клиенты соединяются с серверами базы данных, а также двоичные файлы, применяемые для обработки запросов базы данных.  
@@ -76,7 +76,7 @@ ms.locfileid: "48192524"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программные файлы|[Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяют повысить безопасность. Для определения новейшего доступного пакета обновления для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]перейдите на веб-сайт [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяют повысить безопасность. Для определения новейшего доступного пакета обновления для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]перейдите на веб-сайт [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) .  
   
  С помощью приведенного ниже скрипта можно определить установленный в системе пакет обновления.  
   
@@ -86,7 +86,7 @@ GO
 ```  
   
 ## <a name="principals-and-database-object-security"></a>Безопасность участников и объектов базы данных  
- Участники — это отдельные пользователи, группы и процессы, которым предоставлен доступ к ресурсам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Защищаемые объекты — это сервер, база данных и объекты, которые содержит база данных. У каждого из них существует набор разрешений, с помощью которых можно уменьшить контактную зону [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Следующая таблица содержит сведения об участниках и защищаемых объектах.  
+ Участники — это отдельные пользователи, группы и процессы, которым предоставлен доступ к ресурсам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Защищаемые объекты — это сервер, база данных и объекты, которые содержит база данных. У каждого из них существует набор разрешений, с помощью которых можно уменьшить контактную зону [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Следующая таблица содержит сведения об участниках и защищаемых объектах.  
   
 |Сведения о|См.|  
 |---------------------------|---------|  
@@ -135,7 +135,7 @@ GO
 |Сведения о|См.|  
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представления каталога безопасности, которые возвращают сведения о разрешениях, участниках, ролях и других сущностях уровня базы данных и сервера. Кроме того, существуют представления каталога, содержащие сведения о ключах шифрования, сертификатах и учетных данных.|[Представления каталога безопасности (Transact-SQL)](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые возвращают сведения о текущем пользователе, разрешениях и схемах.|[Функции безопасности &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые возвращают сведения о текущем пользователе, разрешениях и схемах.|[Функции безопасности (Transact-SQL)](/sql/t-sql/functions/security-functions-transact-sql)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Динамические представления управления и функции, связанные с безопасностью (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql)|  
   
 ## <a name="related-content"></a>См. также  

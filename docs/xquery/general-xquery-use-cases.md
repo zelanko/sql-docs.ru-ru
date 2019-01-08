@@ -15,12 +15,12 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cdfb1bf06bd7b1157525ffd2beed10c4c3daf2be
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a3f3e2b41dcda79c21d3b7b4f3dc6ab7ed6573ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659383"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539846"
 ---
 # <a name="general-xquery-use-cases"></a>Общие способы применения запросов XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "51659383"
  Следующий запрос возвращает идентификаторы моделей продукции и их вес (если указан) из описания в каталоге продукции. Запрос формирует XML следующей структуры:  
   
 ```  
-<Product ProductModelID="…">  
-  <Weight>…</Weight>  
+<Product ProductModelID="...">  
+  <Weight>...</Weight>  
 </Product>  
 ```  
   
@@ -61,7 +61,7 @@ WHERE CatalogDescription is not null
   
 -   В предложении WHERE **exist()** метод используется для нахождения только тех строк, которые содержат описания каталога продукции. То есть XML-данные, которые содержат элемент <`ProductDescription`>.  
   
- Результат:  
+ Это результат:  
   
 ```  
 <Product ProductModelID="19"/>  
@@ -95,7 +95,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
  Для тех моделей продукции,описания которых в каталоге содержат фронтальные и малоразмерные изображения, запрос формирует XML со следующей структурой:  
   
 ```  
-< Product ProductModelID="…">  
+< Product ProductModelID="...">  
   <Picture>  
     <Angle>front</Angle>  
     <Size>small</Size>  
@@ -306,7 +306,7 @@ WHERE CatalogDescription.value('
   
 -   **Value()** метод **xml** тип данных сравнивает значение, возвращаемое **contains()** 1.  
   
- Результат:  
+ Это результат:  
   
 ```  
 ProductModelID Result        

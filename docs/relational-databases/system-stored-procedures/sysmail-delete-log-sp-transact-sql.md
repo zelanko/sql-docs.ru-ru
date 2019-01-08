@@ -18,12 +18,12 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a61fa55fc9f2b1209d0f7da7f483c0fedce07f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb2db3e60d416324a413bf9d6eb69f6125bc00b5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649213"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588467"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@logged_before** =] **"***logged_before***"**  
+ [ **@logged_before** =] **"**_logged_before_**"**  
  Удаляет записи до даты и времени, заданного параметром *logged_before* аргумент. *logged_before* — **datetime** и значение по умолчанию NULL. Значение NULL соответствует всем датам.  
   
- [ **@event_type** =] **"***event_type***"**  
+ [ **@event_type** =] **"**_event_type_**"**  
  Удаляет журнальные записи определенного типа, заданного аргументом *event_type*. *event_type* — **varchar(15)** не имеет значения по умолчанию. Допустимыми значениями являются **успех**, **предупреждение**, **ошибка**, и **Информационное**. NULL соответствует всем типам событий.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

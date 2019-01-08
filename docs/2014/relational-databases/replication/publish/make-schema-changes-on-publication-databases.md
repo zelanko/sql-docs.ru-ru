@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
@@ -18,12 +17,12 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd2ea10d145e52150d3a34a8f1b668152922ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203034"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815436"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений в схемы баз данных публикации
   Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. Когда вы вносите любое из следующих изменений схемы в соответствующий опубликованный объект в издателе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], это изменение распространяется по умолчанию на всех подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -58,7 +57,7 @@ ms.locfileid: "48203034"
   
 -   Изменения схемы подвержены любым ограничениям, накладываемым языком [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Например, ALTER TABLE не позволяет изменять первичные ключевые столбцы.  
   
--   Сопоставление типов данных выполняется только для исходного моментального снимка. Изменения схемы не сопоставляются с предыдущими версиями типов данных. Например если инструкция `ALTER TABLE ADD datetime2 column` используется в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], тип данных не преобразуется в `nvarchar` для [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] подписчиков. В некоторых случаях изменения схемы блокируются на издателе.  
+-   Сопоставление типов данных выполняется только для исходного моментального снимка. Изменения схемы не сопоставляются с предыдущими версиями типов данных. Например, если инструкция `ALTER TABLE ADD datetime2 column` используется в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], тип данных не преобразуется в `nvarchar` для подписчиков [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. В некоторых случаях изменения схемы блокируются на издателе.  
   
 -   Если в публикации разрешено распространение изменений схемы, то изменения схемы распространяются независимо от того, как установлен соответствующий параметр схемы для статьи в публикации. Например, если вы указываете не реплицировать ограничения внешних ключей для статьи таблицы, а затем выполняете команду ALTER TABLE, которая добавляет внешний ключ в таблицу на издателе, внешний ключ будет добавлен в таблицу на подписчике. Чтобы предотвратить это, отключите распространение изменений схемы перед выполнением команды ALTER TABLE.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48203034"
   
 -   Чтобы включить имеющийся столбец в существующую публикацию, используйте [sp_articlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) или диалоговое окно **Свойства публикации — \<публикация>**.  
   
-     Дополнительные сведения см. в статье [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Это потребует повторной инициализации подписок.  
+     Дополнительные сведения см. в разделе [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Это потребует повторной инициализации подписок.  
   
 -   Добавление столбца идентификаторов в опубликованную таблицу не поддерживается, поскольку это может привести к расхождению данных при репликации столбца на подписчик. Значения в столбце идентификаторов на издателе зависят от порядка, в котором строки изменяемой таблицы хранятся физически. Строки могут храниться по-разному на подписчике. Поэтому значение для столбца идентификаторов может быть разным для одинаковых строк.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48203034"
   
 -   Чтобы удалить столбец из имеющейся публикации, но сохранить его в таблице на издателе, используйте [sp_articlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) или диалоговое окно **Свойства публикации — \<публикация>**.  
   
-     Дополнительные сведения см. в статье [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Это потребует создания нового моментального снимка.  
+     Дополнительные сведения см. в разделе [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Это потребует создания нового моментального снимка.  
   
 -   Удаляемый столбец не может использоваться в предложениях фильтра любой статьи любой публикации в базе данных.  
   

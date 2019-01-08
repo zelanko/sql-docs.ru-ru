@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659227"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160532"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Новые возможности SQL Server в Linux
 
@@ -34,7 +34,7 @@ ms.locfileid: "51659227"
 - Поддержка собственных путей Linux.
 - Поддержка IPv6.
 - Поддержку файлов баз данных в NFS.
-- Включить [прозрачный слой безопасности](sql-server-linux-encrypted-connections.md) шифрования (TLS).
+- Включить [Transport Layer Security](sql-server-linux-encrypted-connections.md) шифрования (TLS).
 - Включить [проверки подлинности Active Directory](sql-server-linux-active-directory-authentication.md).
 - [Функции групп доступности](sql-server-linux-availability-group-overview.md) для обеспечения высокой доступности.
 - [Компонент Full-text Search](sql-server-linux-setup-full-text-search.md) поддержки.

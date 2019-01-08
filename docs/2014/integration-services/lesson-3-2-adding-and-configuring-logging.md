@@ -1,24 +1,23 @@
 ---
-title: Шаг 2. Добавление и настройка ведения журнала | Документы Майкрософт
+title: Этап 2. Добавление и настройка ведения журнала | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5fdbbc852790446560b127411120709f05f513bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e14cbca906a57f7b15da719a79b45a2291a38d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128302"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780276"
 ---
-# <a name="step-2-adding-and-configuring-logging"></a>Шаг 2. Добавление и настройка ведения журнала
+# <a name="step-2-adding-and-configuring-logging"></a>Этап 2. Добавление и настройка ведения журнала
   В этой задаче будет включена запись в журнал потоков данных для пакета «Урок 3.dtsx». Затем предстоит настроить регистратор для текстовых файлов, чтобы записать в журнал события PipelineExecutionPlan и PipelineExecuteTrees. Регистратор текстовых файлов создает журналы, которые легко просматривать и пересылать. Простота этих файлов журнала делает их особенно полезными во время базового тестирования пакета. Для просмотра журнала приложений можно использовать окно «Регистрация событий» конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ### <a name="to-add-logging-to-the-package"></a>Добавление ведения журнала в пакет  
@@ -59,6 +58,6 @@ ms.locfileid: "48128302"
 14. Нажмите кнопку **ОК**.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- [Шаг 3. Проверка учебного пакета, созданного на занятии 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+ [Шаг 3. Проверка учебного пакета занятия 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
   

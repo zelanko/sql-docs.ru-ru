@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addcopyexistingpackage.f1
@@ -15,12 +14,12 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2de0accc6822eb5d7e30191bee5dc2f5d850720
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b96a0f6639764299ba38293ddb059aa09da48ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195374"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779996"
 ---
 # <a name="add-copy-of-existing-package"></a>Добавление копии существующего пакета
   Используйте диалоговое окно **Добавление копии существующего пакета** для добавления копии пакета из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], файловой системы или хранилища пакетов служб SSIS к проекту служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -35,7 +34,7 @@ ms.locfileid: "48195374"
  **Тип проверки подлинности**  
  При копировании из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]выберите тип проверки подлинности.  
   
- **Имя пользователя**  
+ **User name**  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] укажите имя пользователя.  
   
  **Пароль**  
@@ -44,11 +43,11 @@ ms.locfileid: "48195374"
  **Путь пакета**  
  Укажите путь к пакету или нажмите кнопку обзора **(…)** и укажите копируемый пакет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сохранение копии пакета](../../2014/integration-services/save-copy-of-package.md)   
- [Импорт пакета диалогового окна пользовательского интерфейса в справочник](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
- [Экспорт пакета диалоговое окно пользовательского интерфейса в справочник](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ [Диалоговое окно «Импорт пакета» справочника по пользовательскому интерфейсу](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Диалоговое окно «Экспорт пакета» справочника по пользовательскому интерфейсу](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Сохранение пакетов](save-packages.md)   
- [Импорт и экспорт пакетов &#40;службы SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [Импорт и экспорт пакетов (службы SSIS)](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bf104479ab03525ed648d73911931263206d07b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af2f56c92947cd8e210b8532cb6899c52486707e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063094"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349813"
 ---
 # <a name="cdc-source"></a>CDC-источник
   Источник CDC считывает диапазон информации об изменениях из таблиц изменений [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и доставляет изменения другим нижестоящим компонентам SSIS.  
@@ -46,11 +45,11 @@ ms.locfileid: "48063094"
 ## <a name="error-handling"></a>Обработка ошибок  
  Источник CDC имеет вывод ошибок. Вывод ошибок компонента включает следующие выходные столбцы.  
   
--   **Код ошибки**. Значение всегда равно -1.  
+-   **Код ошибки**: Значение всегда равно -1.  
   
--   **Столбец с ошибкой**. Входной столбец, вызывающий ошибку (это относится к ошибкам преобразования).  
+-   **Столбец с ошибкой**: Входной столбец, вызывающий ошибку (это относится к ошибкам преобразования).  
   
--   **Столбцы строки с ошибкой**. Данные записи, которые вызывают ошибку.  
+-   **Столбцы строки с ошибкой**: Данные записи, которые вызывают ошибку.  
   
  В зависимости от настройки поведения в случае ошибки, источник CDC поддерживает возврат ошибок (преобразование данных, усечение), которые обнаруживаются в процессе извлечения в выводе ошибок. Дополнительные сведения см. в разделе [CDC Source Editor &#40;Error Output Page&#41;](../cdc-source-editor-error-output-page.md).  
   
@@ -98,11 +97,11 @@ use <cdc-enabled-database-name>
   
  Дополнительные сведения см. в одном из следующих разделов:  
   
--   [Редактор источника CDC &#40;страницы диспетчера соединений&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [Редактор источника "CDC" (страница "Диспетчер соединений")](../cdc-source-editor-connection-manager-page.md)  
   
--   [Редактор источника CDC &#40;страница "столбцы"&#41;](../cdc-source-editor-columns-page.md)  
+-   [Редактор источника "CDC" (страница "Столбцы")](../cdc-source-editor-columns-page.md)  
   
--   [Редактор источника CDC &#40;странице вывода ошибок&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Редактор источника "CDC" (страница "Вывод ошибок")](../cdc-source-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые могут быть заданы программным путем.  
   
@@ -114,18 +113,18 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Редактор источника CDC &#40;страницы диспетчера соединений&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [Редактор источника "CDC" (страница "Диспетчер соединений")](../cdc-source-editor-connection-manager-page.md)  
   
--   [Редактор источника CDC &#40;страница "столбцы"&#41;](../cdc-source-editor-columns-page.md)  
+-   [Редактор источника "CDC" (страница "Столбцы")](../cdc-source-editor-columns-page.md)  
   
--   [Редактор источника CDC &#40;странице вывода ошибок&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Редактор источника "CDC" (страница "Вывод ошибок")](../cdc-source-editor-error-output-page.md)  
   
--   [Пользовательские свойства источника «CDC»](cdc-source-custom-properties.md)  
+-   [CDC Source Custom Properties](cdc-source-custom-properties.md)  
   
--   [Извлечение информации об изменениях данных с помощью источника «CDC»](cdc-source.md)  
+-   [Извлечение информации об изменениях данных с помощью источника CDC](cdc-source.md)  
   
 ## <a name="related-content"></a>См. также  
   
--   Запись в блоге [Режимы обработки для источника CDC](http://go.microsoft.com/fwlink/?LinkId=242541)на сайте mattmasson.com.  
+-   Запись в блоге [Режимы обработки для источника CDC](https://go.microsoft.com/fwlink/?LinkId=242541)на сайте mattmasson.com.  
   
   

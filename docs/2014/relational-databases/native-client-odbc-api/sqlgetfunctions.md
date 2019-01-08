@@ -14,18 +14,18 @@ ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4909def4a556c76c777fc3240695b3376c529346
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7dbd69379bd59e75ac39fc5765514ab8e1b4151
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198073"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358026"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
   Интерфейс ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует трем определенным уровням соответствия ODBC (ISO, Open Group и ODBC уровня 2). Функция**SQLGetFunctions** сообщает, что все функции ODBC поддерживаются для ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLGetFunctions](http://go.microsoft.com/fwlink/?LinkId=59353)   
+ [Функция SQLGetFunctions](https://go.microsoft.com/fwlink/?LinkId=59353)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

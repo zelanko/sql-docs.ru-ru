@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting project items
@@ -14,12 +14,12 @@ ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e26ac98ff981476b9555e0138842d161e57861f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd6d04b186c68b128ad35ec5e5bd8b92ad1541c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181104"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795706"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>Перемещение или удаление элемента или проекта
   Элементами проекта в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] являются очереди, соединения и различные файлы. Запросы и прочие файлы проектов можно удалять из решения без удаления соответствующих им файлов из хранилища. Переместите проект или элемент, если он не нужен в текущем решении, но его надо использовать в другом решении.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
@@ -16,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5008096ef5c10dbd3f14198194cec4e7795d9f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9177aa0abe0a5f2a3746486c5cf71163bcd1e1be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202314"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791306"
 ---
 # <a name="instance-configuration"></a>Конфигурация экземпляра
   На странице **Конфигурация экземпляра** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно выбрать создание экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию или именованного экземпляра. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] еще не установлен и не указано создание именованного экземпляра, то будет создан экземпляр по умолчанию.  
@@ -38,9 +37,9 @@ ms.locfileid: "48202314"
  Дополнительные сведения см. в разделе [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ## <a name="options"></a>Параметры  
- Только экземпляр отказоустойчивого кластера: укажите сетевое имя отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это имя идентифицирует экземпляр отказоустойчивого кластера в сети.  
+ Только экземпляры отказоустойчивого кластера: укажите сетевое имя отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это имя идентифицирует экземпляр отказоустойчивого кластера в сети.  
   
- Экземпляр по умолчанию или именованный экземпляр: принимая решение о типе устанавливаемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует руководствоваться следующими соображениями.  
+ Экземпляр по умолчанию или именованный экземпляр: принимая решение о типе устанавливаемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует руководствоваться приведенными далее соображениями.  
   
 -   Если планируется установить один экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервере базы данных, то это должен быть экземпляр по умолчанию.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48202314"
   
 -   Если в качестве имени экземпляра указано значение «MSSQLServer», то будет создан экземпляр по умолчанию.  
   
--   Установка [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] всегда устанавливается как именованный экземпляр «PowerPivot». Нельзя указать другое имя экземпляра для этой роли компонента.  
+-   [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] всегда устанавливается как именованный экземпляр «PowerPivot». Нельзя указать другое имя экземпляра для этой роли компонента.  
   
 -   Длина имени экземпляра ограничена шестнадцатью символами.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "48202314"
 -   **Можно использовать только символы, которые являются допустимыми в текущей кодовой странице Windows в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имен экземпляров. При использовании неподдерживаемого символа Юникода возникает ошибка установки.**  
   
  **Обнаруженные экземпляры и компоненты**  
- Просмотр перечня установленных экземпляров и компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере, где запущена настройка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Просмотр перечня установленных экземпляров и компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере, где запущена настройка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Идентификатор экземпляра** — по умолчанию в качестве идентификатора экземпляра используется его имя. Предназначен для идентификации каталогов установки и разделов реестра для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Действует как для экземпляров по умолчанию, так и для именованных экземпляров. Для экземпляра по умолчанию именем и идентификатором экземпляра является «MSSQLSERVER». Чтобы использовать идентификатор, отличный от значения по умолчанию, укажите его в поле **Идентификатор экземпляра** .  
   

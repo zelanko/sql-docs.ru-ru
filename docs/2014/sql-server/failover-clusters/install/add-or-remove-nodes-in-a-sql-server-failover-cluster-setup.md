@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
@@ -19,12 +18,12 @@ ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 111d5b219280537d72e21873091a591634b8afa8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b6298020c1aa39f2c5c319efa492f6832c301f9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082215"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751616"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки)
   С помощью данной процедуры осуществляется управление узлами в существующем экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -66,7 +65,7 @@ ms.locfileid: "48082215"
   
 8.  При помощи раскрывающегося списка на странице «Конфигурация узла кластера» укажите имя экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который будет изменен во время работы программы установки.  
   
-9. На странице «Конфигурация сервера: учетные записи служб» укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке. На этой странице имя учетной записи и сведения о типе запуска для отказоустойчивых кластеров будут указаны автоматически в соответствии с параметрами, заданными для активного узла. Необходимо указать пароли для каждой учетной записи. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](../../install/server-configuration-service-accounts.md) и [Настройка учетных записей службы Windows и разрешений](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. На странице «Конфигурация сервера — Учетные записи служб» укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке. На этой странице имя учетной записи и сведения о типе запуска для отказоустойчивых кластеров будут указаны автоматически в соответствии с параметрами, заданными для активного узла. Необходимо указать пароли для каждой учетной записи. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](../../install/server-configuration-service-accounts.md) и [Настройка учетных записей службы Windows и разрешений](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Примечание по безопасности.** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   

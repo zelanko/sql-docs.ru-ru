@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - annotations [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4abd5c3c645d7941d242b16790109bdf719351dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73be214576870a13b37b16c0774e645e77518bea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213074"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778516"
 ---
 # <a name="annotations-master-data-services"></a>Заметки (службы Master Data Services)
   Заметки в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]представляют собой комментарии, вводимые для указания подробных сведений о транзакциях.  
@@ -36,7 +35,7 @@ ms.locfileid: "48213074"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Добавление заметки к транзакции.|[Добавление заметки для транзакции &#40;службы Master Data Services&#41;](annotate-a-transaction-master-data-services.md)|  
+|Добавление заметки к транзакции.|[Добавление заметки для транзакции (службы Master Data Services)](annotate-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   

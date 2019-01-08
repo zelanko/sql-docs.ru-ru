@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttosqlserver.connectionproperties.f1
@@ -12,12 +12,12 @@ ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e16253ed789cb0bc362052fbd51b91a42f2d5c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0774c99f1610f87abc08b69e6ef5333c97bec95
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059074"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350123"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Соединение с сервером (страница "Свойства подключения") ядра СУБД
   Данная вкладка позволяет просмотреть или указать параметры при соединении с экземпляром компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] или регистрации компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в списке **Зарегистрированные серверы**. Кнопки**Соединить** и **Параметры** появляются в этом диалоговом окне только при соединении с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Кнопки**Проверить** и **Сохранить** появляются в этом диалоговом окне только при регистрации компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "48059074"
   
  При соединении с экземпляром ядра СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]необходимо использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указать базу данных в диалоговом окне **Соединение с сервером** на вкладке **Свойства соединения** . Обязательно установите флажок **Шифрование соединения** .  
   
- По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединяется с базой данных **master**. Если указать пользовательскую базу данных, то в обозревателе объектов будет видна только эта база данных и ее объекты. Если соединиться с базой данных **master**, будут видны все базы данных. Дополнительные сведения см. в разделе [Общие сведения о базе данных SQL Windows Azure](http://go.microsoft.com/fwlink/?LinkId=163948).  
+ По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединяется с базой данных **master**. Если указать пользовательскую базу данных, то в обозревателе объектов будет видна только эта база данных и ее объекты. Если соединиться с базой данных **master**, будут видны все базы данных. Дополнительные сведения см. в разделе [Общие сведения о базе данных SQL Windows Azure](https://go.microsoft.com/fwlink/?LinkId=163948).  
   
  **Сетевой протокол**  
  Выберите протокол из списка. Доступны те клиентские протоколы, которые настроены с помощью «Настройки сети клиента» в меню «Управление компьютером».  

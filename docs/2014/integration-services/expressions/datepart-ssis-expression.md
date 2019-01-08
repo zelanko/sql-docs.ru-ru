@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEPART
@@ -14,12 +13,12 @@ ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e5a5a8b8d9cb15761a35bc01e9d8fe80153b288
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33935997c2c53867555001fa93ba9973257650d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189064"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793696"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (выражение служб SSIS)
   Возвращает целое число, обозначающее раздел даты.  
@@ -44,7 +43,7 @@ DATEPART(datepart, date)
 ## <a name="remarks"></a>Примечания  
  DATEPART возвращает NULL при аргументе NULL.  
   
- Литерал даты должен быть явно приведен к одному из типов данных даты. Дополнительные сведения см. в статье [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Литерал даты должен быть явно приведен к одному из типов данных даты. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  В следующей таблице перечислены части дат и сокращения, распознаваемые средством оценки выражений. Имена частей даты обрабатываются без учета регистра.  
   
@@ -82,11 +81,11 @@ DATEPART("yy",GETDATE())
 ```  
   
 ## <a name="see-also"></a>См. также  
- [DATEADD &#40;выражение служб SSIS&#41;](dateadd-ssis-expression.md)   
- [DATEDIFF &#40;выражение служб SSIS&#41;](datediff-ssis-expression.md)   
+ [DATEADD (выражение служб SSIS)](dateadd-ssis-expression.md)   
+ [DATEDIFF (выражение служб SSIS)](datediff-ssis-expression.md)   
  [DAY (выражение служб SSIS)](day-ssis-expression.md)   
  [MONTH (выражение служб SSIS)](month-ssis-expression.md)   
  [YEAR (выражение служб SSIS)](year-ssis-expression.md)   
- [Функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md)  
+ [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   
   

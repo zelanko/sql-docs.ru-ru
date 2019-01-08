@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
@@ -14,12 +13,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8bd30b84643032cf68796b9ebc14bf0407d76427
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215634"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358196"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Создание и применение исходного моментального снимка
   В данном разделе описывается процесс создания и применения исходного моментального снимка в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Публикации слиянием, использующие параметризованные фильтры, требуют моментальных снимков, состоящих из двух частей. Дополнительные сведения см. в статье [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
@@ -148,7 +147,7 @@ ms.locfileid: "48215634"
  После создания публикации агент моментальных снимков создает моментальный снимок. Создание моментального снимка и прямой доступ из управляемого кода к функциям агента репликации могут производиться программным путем с помощью объектов RMO. Какие именно объекты при этом применяются, зависит от типа репликации. Агент моментальных снимков может быть запущен как синхронно с помощью объекта <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> , так и в асинхронном режиме из задания агента. После создания исходного моментального снимка он передается на сервер подписчика и применяется при первом сеансе синхронизации подписки. Когда данные в существующем моментальном снимке устарели, соответствующий ему агент должен быть запущен повторно. Дополнительные сведения см. в статье [Обслуживание публикаций](publish/maintain-publications.md).  
   
 > [!IMPORTANT]  
->  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](http://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>Создание исходного моментального снимка для публикации транзакций или моментальных снимков из задания агента моментальных снимков (в асинхронном режиме)  
   
@@ -156,13 +155,13 @@ ms.locfileid: "48215634"
   
 2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication> . Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> , чтобы загрузить оставшиеся свойства объекта. Если этот метод возвращает `false`, либо на публикации на шаге 2 были неверно определены свойства, либо публикация не существует.  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> , чтобы загрузить оставшиеся свойства объекта. Если этот метод возвращает `false`, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
-4.  Если значение <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> — `false`, вызовите <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> для создания задания агента моментальных снимков для этой публикации.  
+4.  Если значение <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> равно `false`, то для создания задания агента моментальных снимков для этой публикации вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>.  
   
 5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> , чтобы запустить задание агента, которое создает моментальный снимок для этой публикации.  
   
-6.  (Необязательно) Если значение <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> является `true`, моментальный снимок доступен для подписчиков.  
+6.  Если параметр <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> имеет значение `true`, моментальный снимок доступен для подписчиков (необязательно).  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>Создание исходного моментального снимка для публикации транзакций или моментальных снимков запуском агента моментальных снимков (в синхронном режиме)  
   
@@ -182,7 +181,7 @@ ms.locfileid: "48215634"
   
 2.  Укажите значение <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> или <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> в параметре <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> .  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A>.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>Создание исходного моментального снимка для публикации слиянием из задания агента моментальных снимков (в асинхронном режиме)  
   
@@ -190,13 +189,13 @@ ms.locfileid: "48215634"
   
 2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> , чтобы загрузить оставшиеся свойства объекта. Если этот метод возвращает `false`, либо на публикации на шаге 2 были неверно определены свойства, либо публикация не существует.  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> , чтобы загрузить оставшиеся свойства объекта. Если этот метод возвращает `false`, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
-4.  Если значение <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> — `false`, вызовите <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> для создания задания агента моментальных снимков для этой публикации.  
+4.  Если значение <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> равно `false`, то для создания задания агента моментальных снимков для этой публикации вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>.  
   
 5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> , чтобы запустить задание агента, которое создает моментальный снимок для этой публикации.  
   
-6.  (Необязательно) Если значение <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> является `true`, моментальный снимок доступен для подписчиков.  
+6.  Если параметр <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> имеет значение `true`, моментальный снимок доступен для подписчиков (необязательно).  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>Создание исходного моментального снимка для публикации слиянием запуском агента моментальных снимков (в синхронном режиме)  
   

@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_dropsubscription
@@ -17,12 +16,12 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8af8a4fc4572389bfaca7d1c678de8ec95641e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08e25ee6f2de589c3d7367c140bd0ea63d4cec1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687482"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812975"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +43,22 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=** ] **"***публикации***"**  
+ [  **@publication=** ] **"**_публикации_**"**  
  Имя связанной публикации. *Публикация* — **sysname**, значение по умолчанию NULL. Если **все**, все подписки для всех публикаций для указанного подписчика будут отменены. *Публикация* является обязательным параметром.  
   
- [  **@article=** ] **"***статье***"**  
+ [  **@article=** ] **"**_статье_**"**  
  Имя статьи. *статья* — **sysname**, со значением по умолчанию NULL. Если **все**, указанные подписки на все статьи для каждой публикации и подписчика будут удалены. Используйте **все** для публикаций, которые разрешено немедленное обновление.  
   
- [  **@subscriber=** ] **"***подписаться*r**" **  
+ [  **@subscriber=** ] **"**_subscribe_r **"**  
  Имя подписчика, подписки которого будут удалены. *подписчик* — **sysname**, не имеет значения по умолчанию. Если **все**, удаляются все подписки для всех подписчиков.  
   
- [  **@destination_db=** ] **"***destination_db***"**  
+ [  **@destination_db=** ] **"**_destination_db_**"**  
  Имя целевой базы данных. *destination_db* — **sysname**, значение по умолчанию NULL. Если имеет значение NULL, то все подписки от этого подписчика удаляются.  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@reserved=** ] **"***зарезервированные***"**  
+ [  **@reserved=** ] **"**_зарезервированные_**"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

@@ -17,12 +17,12 @@ ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 919f77d0f2295091133203de2474cf81a070d956
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ca26d9b4af7adebda9f5bf0021ba7871f8425aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162194"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358298"
 ---
 # <a name="implementing-a-data-processing-extension"></a>Реализация модуля обработки данных
   Модули обработки данных в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют соединяться с источником данных и получать данные. Они также служат мостом между источником данных и набором данных. Модули обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] построены на наборе интерфейсов поставщиков данных платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
@@ -58,7 +58,7 @@ ms.locfileid: "48162194"
  [Удаление модуля обработки данных](removing-a-data-processing-extension.md)  
  Описывается процесс удаления модуля обработки данных из сервера отчетов или из конструктора отчетов.  
   
- Образец полностью реализованного модуля обработки данных см. на странице [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Образец полностью реализованного модуля обработки данных см. на странице [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>См. также  
  [Модули служб Reporting Services](../reporting-services-extensions.md)   

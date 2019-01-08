@@ -10,12 +10,12 @@ ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad9e70e78229821197fdd80724d8e0924818bb30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103284"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408911"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Использование In-Memory OLTP в среде ВМ
   Виртуализация серверов позволяет не только снизить расходы на приобретение и эксплуатацию, но и добиться большей эффективности ИТ-процессов благодаря оптимизации подготовки, обслуживания, доступности и операций резервного копирования или восстановления приложений. В результате недавних успехов в развитии технологий стало проще консолидировать сложные рабочие нагрузки базы данных с применением виртуализации. В этой статье приведены рекомендации по использованию [!INCLUDE[hek_1](../includes/hek-1-md.md)] в виртуализированной среде.  

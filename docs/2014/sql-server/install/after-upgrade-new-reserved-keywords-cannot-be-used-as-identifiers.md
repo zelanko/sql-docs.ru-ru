@@ -15,12 +15,12 @@ ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a4078161203f335c295a660e7bd4e8e3e18ea0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8db9bcef48b28594187aab34fb0049689d907a47
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150444"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376236"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>После обновления новые зарезервированные ключевые слова не могут быть использованы в качестве идентификаторов
   Советник по переходу обнаружил использование слов, зарезервированных в качестве ключевых. Зарезервированное ключевое слово нельзя использовать в качестве идентификатора или имени объекта, если только имя не заключено в разделители.  
@@ -57,7 +57,7 @@ ms.locfileid: "48150444"
   
  [MERGE (Transact-SQL)](/sql/t-sql/statements/merge-transact-sql)  
   
- [Идентификаторы с разделителями (компонент Database Engine)](http://go.microsoft.com/fwlink/?LinkId=112509)  
+ [Идентификаторы с разделителями (компонент Database Engine)](https://go.microsoft.com/fwlink/?LinkId=112509)  
   
  [Уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   

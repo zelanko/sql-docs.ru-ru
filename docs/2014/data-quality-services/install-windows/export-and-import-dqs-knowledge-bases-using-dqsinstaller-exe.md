@@ -10,12 +10,12 @@ ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e324435b6b67574a111f9cd95671f5b2aa6824d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 79f3ac8efa0e629ddfd82d5945973c86a661fe75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032431"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52576793"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
   Для существующей установки DQS все базы знаний на сервере [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] вы можете экспортировать в файл резервной копии DQS (DQSB) одновременно, а затем использовать файл DQSB для одновременного импорта всех баз знаний на другой сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] посредством запуска файла DQSInstaller.exe из командной строки. Дополнительные сведения о запуске DQSInstaller.exe из командной строки см. в подразделе [Запуск DQSInstaller.exe из командной строки](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) раздела [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "51032431"
 -   Для экспорта всех баз знаний на сервере [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] в файл резервной копии DQS (.dqsb) запустите программу DQSInstaller.exe с параметром `exportkbs` из командной строки, введя полный путь к файлу и имя файла, в который будут экспортированы базы знаний. Например, для экспорта всех баз знаний в файл DQSBackup.dqsb на диске C: выполните следующую команду:  
   
     ```  
-    dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb  
+    dqsinstaller.exe -exportkbs c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "51032431"
 -   Для экспорта всех баз знаний в файл резервной копии DQS при удалении [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]запустите программу DQSInstaller.exe с параметром `uninstall` из командной строки, задав полный путь к файлу и имя файла, в который следует экспортировать базы знаний. Например, для экспорта всех баз знаний в файл DQSBackup.dqsb на диске C: и последующего удаления [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]выполните следующую команду:  
   
     ```  
-    dqsinstaller.exe –uninstall c:\DQSBackup.dqsb  
+    dqsinstaller.exe -uninstall c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -49,12 +49,12 @@ ms.locfileid: "51032431"
  Запустите программу DQSInstaller.exe с параметром `importkbs` из командной строки, задав полный путь к файлу и имя файла, из которого следует импортировать базы знаний. Например, для импорта всех баз знаний из файла DQSBackup.dqsb на диске C: выполните следующую команду:  
   
 ```  
-dqsinstaller.exe –importkbs c:\DQSBackup.dqsb  
+dqsinstaller.exe -importkbs c:\DQSBackup.dqsb  
 ```  
   
- Если в [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] имеются существующие базы знаний с теми же именами, что и у импортируемых баз данных, к именам импортируемых баз данных будет добавлен символ подчеркивания (_) и целочисленное значение, отсчитываемое от единицы. Например, если повторяется домен «CompanyName», то импортируемый домен получит имя «CompanyName_1».  
+ Если в [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] имеются существующие базы знаний с теми же именами, что и у импортируемых баз данных, к именам импортируемых баз данных будет добавлен символ подчеркивания (_) и целочисленное значение, отсчитываемое от единицы. Например, если повторяется домен "CompanyName", то импортируемый домен получит имя "CompanyName_1".  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Установка служб Data Quality Services](install-data-quality-services.md)   
  [Экспорт базы знаний в файл .dqs](../export-a-knowledge-base-to-a-dqs-file.md)   

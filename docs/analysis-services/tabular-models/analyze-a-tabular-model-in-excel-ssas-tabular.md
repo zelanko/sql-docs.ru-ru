@@ -1,5 +1,5 @@
 ---
-title: Анализ табличной модели в Excel | Документы Microsoft
+title: Анализ табличной модели служб Analysis Services в Excel | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1db764052a9c3370554a6456dc005612a2e8b95
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a3cd28375a60dc2cbf7447068fde8c5a1c7dba07
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072231"
 ---
 # <a name="analyze-a-tabular-model-in-excel"></a>Анализ табличной модели в Excel  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 > [!NOTE]  
 >  Список полей сводной таблицы в Excel не обновляется автоматически при внесении изменений в проект модели в конструкторе моделей. Чтобы обновить список полей сводной таблицы в Excel, нажмите кнопку **Обновить** на ленте **Параметры**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Анализ в Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   

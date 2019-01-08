@@ -13,12 +13,12 @@ ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9226df03f6d1ef018991d4d958430a315ac81cd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb93cd75ea407576b8b466defa48171e4d94a1ac
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140754"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361396"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Редактор циклов по каждому элементу (страница «Коллекция»)
   Страница **Коллекция** в диалоговом окне **Редактор циклов по каждому элементу** используется для указания типа перечислителя и его настройки.  
@@ -44,7 +44,7 @@ ms.locfileid: "48140754"
  **Выражения**  
  Щелкните или разверните узел **Выражения** , чтобы посмотреть список существующих выражений свойств. Нажмите кнопку с многоточием **(…)**, чтобы добавить выражение свойства для свойства перечислителя или изменить и оценить существующее выражение свойства.  
   
- **См. также:** [Выражения служб Integration Services (SSIS)](expressions/integration-services-ssis-expressions.md), [Редактор выражений свойств](expressions/property-expressions-editor.md), [Построитель выражений](expressions/expression-builder.md)  
+ **См. также:**  [Службы Integration Services &#40;SSIS&#41; выражения](expressions/integration-services-ssis-expressions.md), [редактор выражений свойств](expressions/property-expressions-editor.md), [построитель выражений](expressions/expression-builder.md)  
   
 ## <a name="enumerator-dynamic-options"></a>Динамические параметры перечислителя  
   
@@ -69,11 +69,11 @@ ms.locfileid: "48140754"
  Укажите файлы для перечисления.  
   
 > [!NOTE]  
->  Используйте символы-шаблоны (*), чтобы указать файлы, которые необходимо включить в коллекцию. Например, чтобы включить файлы с именами, содержащими "abc", используйте фильтр \*abc\*.  
+>  Используйте символы-шаблоны (*), чтобы указать файлы, которые необходимо включить в коллекцию. Например, чтобы включить файлы с именами, содержащими abc, используйте фильтр \*abc\*.  
 >   
 >  При указании расширения имени файла перечислитель возвращает также файлы, имеющие такое же расширение и добавленные в конец символы (Точно так же себя ведет команда **dir** операционной системы, которая также проверяет имена файлов в формате 8.3 на предмет обратной совместимости.) Это поведение перечислителя может привести к непредвиденным результатам. Например, при перечислении только файлов Excel 2003 указывается «*.xls». Однако перечислитель возвратит также файлы Excel 2007, поскольку они имеют расширение XLSX.  
 >   
->  Можно указать файлы, включаемые в коллекцию, с помощью выражения. Для этого разверните узел **Выражения** на странице **Коллекция** , выберите свойство **FileSpec** и нажмите кнопку с многоточием (…), чтобы добавить выражение свойства. Дополнительные сведения о динамическом выборе указываемых файлов см. в записи блога [SSIS–Dynamically set File Mask: FileSpec](http://go.microsoft.com/fwlink/?LinkId=238154)(SSIS — динамическое задание маски файлов: спецификация файлов).  
+>  Можно указать файлы, включаемые в коллекцию, с помощью выражения. Для этого разверните узел **Выражения** на странице **Коллекция**, выберите свойство **FileSpec** и нажмите кнопку с многоточием (…), чтобы добавить выражение свойства. Дополнительные сведения о динамическом выборе указываемых файлов см. в разделе [SSIS — динамическое задание маски файлов: FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154)  
   
  **Полностью заданный**  
  Выберите этот параметр, чтобы получить путь с полной спецификацией к именам файлов. Если в параметрах файлов заданы символы-шаблоны, возвращаемый полный путь соответствует этому фильтру.  
@@ -110,7 +110,7 @@ ms.locfileid: "48140754"
  **Столбцы**  
  Нажмите, чтобы настроить тип данных столбца в элементе.  
   
- **См. также:** [Справочник по пользовательскому интерфейсу для диалогового окна "Столбцы For Each Item"](../../2014/integration-services/for-each-item-columns-dialog-box-ui-reference.md)  
+ **См. также:** [Справочник по пользовательскому интерфейсу диалогового окна "Столбцы For Each Item"](../../2014/integration-services/for-each-item-columns-dialog-box-ui-reference.md)  
   
 ### <a name="enumerator--foreach-ado-enumerator"></a>Перечислитель = перечислитель ADO по каждой строке  
  Перечислитель ADO по каждой строке можно использовать для перечисления строк или таблиц в объекте ADO или ADO.NET, который хранится в переменной. Например: если цикл по каждому элементу включает задачу «Скрипт», которая записывает набор данных в переменную, можно использовать перечислитель ADO по каждой строке для перечисления строк в наборе данных. Если переменная содержит набор данных ADO.NET, то перечислитель может быть настроен на перечисление строк в нескольких таблицах или на перечисление самих таблиц.  
@@ -121,7 +121,7 @@ ms.locfileid: "48140754"
 > [!NOTE]  
 >  Переменная должна иметь тип данных Object; в противном случае возникнет ошибка.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md)  
+ **См. также:** [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [добавить переменную](../../2014/integration-services/add-variable.md)  
   
  **Строки в первой таблице**  
  Выберите для перечисления только строк в первой таблице.  
@@ -141,7 +141,7 @@ ms.locfileid: "48140754"
 > [!IMPORTANT]  
 >  Диспетчер соединений ADO.NET должен использовать поставщика данных .NET для OLE DB. При соединении с SQL Server рекомендуемым поставщиком данных является собственный клиент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , находящийся в области **Поставщики .NET для OleDb** диалогового окна **Диспетчер соединений** .  
   
- **См. также:** [ADO Connection Manager](connection-manager/ado-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
+ **См. также:** [Диспетчер соединений ADO](connection-manager/ado-connection-manager.md), [Настройка диспетчера соединений ADO.NET](configure-ado-net-connection-manager.md)  
   
  **Схема**  
  Выберите схему для перечисления.  
@@ -157,14 +157,14 @@ ms.locfileid: "48140754"
  **Переменная**  
  Выберите переменную в списке или щелкните \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md)  
+ **См. также:** [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [добавить переменную](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Перечислитель = перечислитель по набору узлов  
  Перечислитель по набору узлов можно использовать для перечисления набора XML-узлов, которые являются результатом применения выражения XPath к XML-файлу. Например: если цикл по каждому элементу включает задачу «Скрипт», то перечислитель по набору узлов можно использовать для передачи от XML-файла к задаче «Скрипт» значения, которое удовлетворяет критерию выражения XPath.  
   
  Выражение XPath, применяемое к XML-файлу, является внешней операцией XPath, сохраненной в свойстве OuterXPathString. Если тип перечисления XPath присвоено `ElementCollection`, то перечислитель Foreach NodeList может применять внутреннее выражение XPath, сохраненное в свойстве InnerXPathString, к коллекции элементов.  
   
- Дополнительные сведения по работе с XML-документами и данными см. в разделе «[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)» в библиотеке MSDN.  
+ Дополнительные сведения по работе с XML-документами и данными см. в разделе «[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)» в библиотеке MSDN.  
   
  **DocumentSourceType**  
  Выберите тип источника XML-документа. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -180,11 +180,11 @@ ms.locfileid: "48140754"
   
  Если **DocumentSourceType** имеет значение **Соединение с файлом**, выберите диспетчер подключения файлов или нажмите кнопку \<**Создать подключение...**>, чтобы создать его.  
   
- **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
   
  Если **DocumentSourceType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md).  
+ **См. также:** [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [Добавьте переменную](../../2014/integration-services/add-variable.md).  
   
  **EnumerationType**  
  Выберите тип перечисления из списка. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -210,11 +210,11 @@ ms.locfileid: "48140754"
   
  Если **OuterXPathStringSourceType** имеет значение **Соединение с файлом**, выберите диспетчер подключения файлов или нажмите кнопку \<**Создать подключение...**>, чтобы создать его.  
   
- **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
   
  Если **OuterXPathStringSourceType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md).  
+ **См. также:** [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [Добавьте переменную](../../2014/integration-services/add-variable.md).  
   
  **InnerElementType**  
  Если **EnumerationType** присваивается `ElementCollection`, выберите тип внутреннего элемента в списке.  
@@ -233,11 +233,11 @@ ms.locfileid: "48140754"
   
  Если **InnerXPathStringSourceType** имеет значение **Соединение с файлом**, выберите диспетчер подключения файлов или нажмите кнопку \<**Создать подключение...**>, чтобы создать его.  
   
- **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
   
  Если **InnerXPathStringSourceType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md).  
+ **См. также:** [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [Добавьте переменную](../../2014/integration-services/add-variable.md).  
   
 ### <a name="enumerator--foreach-smo-enumerator"></a>Перечислитель = перечислитель по объектам SMO  
  Перечислитель по объектам SMO используется для перечисления объектов SMO. Например: если цикл по каждому элементу включает задачу «Выполнение SQL», то перечислитель по объектам SMO можно использовать для перечисления таблиц в базе данных **AdventureWorks** и выполнения запросов, которые подсчитывают количество строк в каждой таблице.  
@@ -245,7 +245,7 @@ ms.locfileid: "48140754"
  **Соединение**  
  Выберите существующий диспетчер подключения файлов ADO.NET или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- См. также: [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
+ См. также: [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md), [Настройка диспетчера соединений ADO.NET](configure-ado-net-connection-manager.md)  
   
  **Перечислить**  
  Укажите объект SMO для перечисления.  
@@ -261,7 +261,7 @@ ms.locfileid: "48140754"
  **Диспетчер подключений службы хранилища Azure**  
  Выберите существующий диспетчер подключений службы хранилища Azure или создайте новый, который ссылается на учетную запись хранения Azure.  
   
- См. также: [Azure Storage Connection Manager](connection-manager/azure-storage-connection-manager.md).  
+ См. также: [Диспетчер подключений службы хранилища Azure](connection-manager/azure-storage-connection-manager.md).  
   
  **Имя контейнера больших двоичных объектов**  
  Укажите имя контейнера больших двоичных объектов, который содержит перечисляемые файлы больших двоичных объектов.  
@@ -291,15 +291,15 @@ ms.locfileid: "48140754"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Запись в блоге [Службы SSIS для перечислителя по набору узлов](http://go.microsoft.com/fwlink/?LinkId=220671)на сайте bidn.com.  
+-   Запись в блоге [Службы SSIS для перечислителя по набору узлов](https://go.microsoft.com/fwlink/?LinkId=220671)на сайте bidn.com.  
   
--   Запись в блоге [SSIS–Dynamically set File Mask: FileSpec](http://go.microsoft.com/fwlink/?LinkId=238154)(SSIS — динамическое задание маски файлов: спецификация файла) на сайте beyondrelational.com.  
+-   Запись в блоге [SSIS — динамическое задание маски файлов: FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154), на сайте beyondrelational.com.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор циклов по каждому элементу &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Редактор циклов по каждому элементу &#40;странице сопоставления переменной&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
- [Страница «выражения»](expressions/expressions-page.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)   
  [Контейнер «цикл по элементам»](control-flow/for-loop-container.md)  
   
   

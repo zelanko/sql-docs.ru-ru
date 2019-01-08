@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectapackage.f1
@@ -15,12 +14,12 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52f40a4729e0d4a76eae340fdc964f28283908bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78e8c773792e762c39f65fc10a12c4e3a6b5eec2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092762"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779256"
 ---
 # <a name="select-a-package"></a>Выбор пакета
   Используйте диалоговое окно **Выбор пакета** , чтобы указать пакет, из которого задача «Очередь сообщений» может получать сообщения.  
@@ -49,7 +48,7 @@ ms.locfileid: "48092762"
  **Использовать проверку подлинности SQL Server**  
  Выберите для использования проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Имя пользователя**  
+ **User name**  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] введите имя пользователя, которое необходимо использовать для входа на сервер.  
   
  **Пароль**  
@@ -57,9 +56,9 @@ ms.locfileid: "48092762"
   
 ### <a name="location--dtsx-file"></a>Местонахождение = файл DTSX  
  **Имя файла**  
- Укажите путь к пакету или нажмите кнопку обзора **(…)** и определите его расположение.  
+ Укажите путь к пакету или нажмите кнопку обзора **(...)** и определите его расположение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задача «Очередь сообщений»](message-queue-task.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
@@ -22,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ed7ab99c94a2b6618a97d4e167344b0ca2cb0f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4649f6a5abd9726a1b01e3ed30d6cabf88aef9e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056336"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371826"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Сетевые протоколы и библиотеки
   Сервер может одновременно прослушивать или отслеживать работу нескольких сетевых протоколов. Однако каждый из этих протоколов должен быть настроен. Если какой-нибудь из протоколов не настроен, сервер не сможет его прослушивать. После установки можно изменить конфигурации протоколов при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,16 +34,16 @@ ms.locfileid: "48056336"
 ## <a name="default-sql-server-network-configuration"></a>Сетевая конфигурация SQL Server по умолчанию  
  В экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию настроен порт TCP/IP 1433 и именованный канал \\\\.\pipe\sql\query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задаются динамические порты TCP, при этом номер порта назначается операционной системой.  
   
- Если использование динамических номеров портов невозможно (например, если соединения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны проходить через брандмауэр, настроенный на пропуск пакетов через конкретные номера портов). Выберите незанятый номер порта. Присваиванием номеров портов управляет администрация адресного пространства Интернет (IANA), а списки этих номеров находятся по адресу [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844).  
+ Если использование динамических номеров портов невозможно (например, если соединения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны проходить через брандмауэр, настроенный на пропуск пакетов через конкретные номера портов). Выберите незанятый номер порта. Присваиванием номеров портов управляет администрация адресного пространства Интернет (IANA), а списки этих номеров находятся по адресу [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844).  
   
  В целях повышения безопасности при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сетевой обмен данными включен не полностью. Чтобы включить, отключить или настроить сетевые протоколы после завершения программы установки, используется область «Конфигурация сети [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="server-message-block-protocol"></a>Протокол SMB  
  На серверах в демилитаризованной зоне сети необходимо отключить все ненужные протоколы, в том числе протокол SMB. Веб-серверам и DNS-серверам не нужен протокол SMB. Этот протокол необходимо отключить, чтобы противостоять угрозе сбора сведений о пользователях.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Отключение протокола SMB заблокирует доступ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или службы кластеров Windows к удаленной общей папке. Не отключайте протокол SMB, если выполняется или планируется одно из следующих действий:  
->   
+> 
 >  -   Использование режима кворума большинства общих папок и узлов кластера Windows  
 > -   Указание общей папки SMB в качестве каталога данных во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 > -   Создание файла базы данных в общей папке SMB  

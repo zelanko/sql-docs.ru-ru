@@ -14,17 +14,17 @@ ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 02e923299ba7a82f2af27395bc55ae15de4bb1d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a5c489125d4a35b5c886ba6d6304b22ceec5c4a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164954"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375356"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Создание компонента времени выполнения пользовательского элемента отчета
   Компонент времени выполнения пользовательского элемента отчета реализуется как компонент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] с помощью любого CLS-совместимого языка и вызывается обработчиком отчетов во время выполнения. Свойства компонента времени выполнения в среде разработки задаются настройкой соответствующего компонента времени разработки пользовательского элемента отчета.  
   
- Образец полностью реализованного пользовательского элемента отчета см. на странице [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Образец полностью реализованного пользовательского элемента отчета см. на странице [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="definition-and-instance-objects"></a>Объекты определения и объекты экземпляра  
  При разработке пользовательских элементов отчета важно понимать разницу между *объектами определения* и *объектами экземпляра*. Объекты определения обеспечивают представление пользовательских элементов отчета на языке определения отчетов, а объекты экземпляра являются версиями объектов определения с вычисленными выражениями. У каждого элемента отчета есть только один объект определения. При доступе к свойствам объекта определения, содержащего выражения, возвращается невычисленная строка выражения. Объекты экземпляра содержат вычисленные версии объектов определения и могут находиться в связи «один ко многим» с объектом определения элемента. Например, если в отчете есть область данных <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix>, которая содержит элемент <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> в строке детализации, объект определения будет только один, но у каждой строки в этой области данных будет свой объект экземпляра.  
@@ -137,6 +137,6 @@ namespace Microsoft.Samples.ReportingServices
  [Архитектура пользовательских элементов отчета](custom-report-item-architecture.md)   
  [Создание компонента времени разработки пользовательского элемента отчета](creating-a-custom-report-item-design-time-component.md)   
  [Библиотеки классов пользовательских элементов отчета](custom-report-item-class-libraries.md)   
- [Развертывание пользовательского элемента отчета](how-to-deploy-a-custom-report-item.md)  
+ [Как Развертывание пользовательского элемента отчета](how-to-deploy-a-custom-report-item.md)  
   
   

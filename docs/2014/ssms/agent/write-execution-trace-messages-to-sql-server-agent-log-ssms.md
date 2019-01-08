@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -16,12 +16,12 @@ ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a58590fe431fa898c617f9d1fd552aa131678b89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 57117e531714e93000fef6beefefffc2ef210c80
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217274"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823178"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server (среда SQL Server Management Studio)
   В данном разделе содержатся инструкции по настройке агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для включения сообщений трассировки выполнения в журнал ошибок агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "48217274"
   
 2.  Щелкните правой кнопкой мыши элемент **Агент SQL Server** и выберите пункт **Свойства**.  
   
-3.  В области **Журнал ошибок** диалогового окна **Свойства агента SQL Server —***имя_сервера* на странице **Общее** установите флажок **Включить трассировочные сообщения**.  
+3.  В **свойства агента SQL Server — *** имя_сервера* диалогового **журнал ошибок** на **Общие** выберите **включения трассировки выполнения сообщения** "флажок".  
   
 4.  Нажмите кнопку **ОК**.  
   

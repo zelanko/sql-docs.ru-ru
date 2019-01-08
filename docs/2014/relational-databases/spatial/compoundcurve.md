@@ -10,18 +10,18 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6f109dcab6d7cf6280e15cdfb1bb2f5ad3b2f041
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: d8afb24373cf62d4b9f8696d9c2d9370ad665796
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018149"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352299"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Объект `CompoundCurve` — это набор из нуля или большего количества непрерывных экземпляров `CircularString` или `LineString` геометрического или географического типов.  
   
 > [!IMPORTANT]  
->  Подробное описание и примеры использования новых функций обработки в этом выпуске включая `CompoundCurve` подтипа, загрузив Технический документ, [новые функции обработки пространственных в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Подробное описание и примеры использования новых функций обработки в этом выпуске включая `CompoundCurve` подтипа, загрузив Технический документ, [новые функции обработки пространственных в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Можно создать пустой экземпляр `CompoundCurve`, но, чтобы экземпляр `CompoundCurve` был допустимым, он должен удовлетворять следующим требованиям.  
   
@@ -90,7 +90,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- Экземпляр `@g1` недопустим, поскольку второй экземпляр не является допустимым LineString. Экземпляр `@g2` недопустим, поскольку экземпляр `LineString` является недопустимым. Экземпляр `@g3` недопустим, поскольку экземпляр `CircularString` является недопустимым. Дополнительные сведения о допустимых `CircularString` и `LineString` экземпляров, см. в разделе [CircularString](circularstring.md) и [LineString](linestring.md).  
+ `@g1` недопустим, поскольку второй экземпляр не является допустимым LineString. Экземпляр `@g2` недопустим, поскольку экземпляр `LineString` является недопустимым. Экземпляр `@g3` недопустим, поскольку экземпляр `CircularString` является недопустимым. Дополнительные сведения о допустимых `CircularString` и `LineString` экземпляров, см. в разделе [CircularString](circularstring.md) и [LineString](linestring.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -137,7 +137,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- Получается следующий вывод: 12.566370… что эквивалентно 4∏. Экземпляр `CompoundCurve` в этом примере хранит окружность с радиусом 2. В двух предыдущих примерах кода использование экземпляра `CompoundCurve`не требовалось. В первом примере было бы проще использовать экземпляр `LineString` , а во втором было бы проще использовать экземпляр `CircularString` . В следующем примере показано, когда следует использовать экземпляр `CompoundCurve` .  
+ Получается следующий вывод. 12.566370 … что эквивалентно 4 код. Экземпляр `CompoundCurve` в этом примере хранит окружность с радиусом 2. В двух предыдущих примерах кода использование экземпляра `CompoundCurve`не требовалось. В первом примере было бы проще использовать экземпляр `LineString` , а во втором было бы проще использовать экземпляр `CircularString` . В следующем примере показано, когда следует использовать экземпляр `CompoundCurve` .  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>Е. Использование экземпляра CompoundCurve для хранения полуокружности  
  В следующем примере экземпляр `CompoundCurve` используется для хранения полукруга.  
@@ -176,16 +176,16 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULAR
 SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amount  
 ```  
   
- Вывод выглядит следующим образом.  
+ Выходные данные выглядят следующим образом:  
   
 ```  
-Circle One11.940039…  
-Circle Two12.566370…  
+Circle One11.940039...  
+Circle Two12.566370...  
 ```  
   
- Периметр окружности 2 равен примерно 4∏и, что является фактическим значением для периметра. Напротив, значение периметра окружности 1 очень неточное. Экземпляр `CompoundCurve` окружности 1 хранит один сегмент окружности (ABC) и два линейных сегмента (CD, DA). Экземпляр `CompoundCurve` должен хранить два сегмента окружности (ABC, CDA), чтобы определять окружности. Экземпляр `LineString` определяет второй набор точек (4 2, 2 4, 0 2) в экземпляре `CompoundCurve` окружности 1. Необходимо явно объявить экземпляр `CircularString` в экземпляре `CompoundCurve`.  
+ Периметр окружности 2 равен примерно 4 код, который является фактическим значением для периметра. Напротив, значение периметра окружности 1 очень неточное. Экземпляр `CompoundCurve` окружности 1 хранит один сегмент окружности (ABC) и два линейных сегмента (CD, DA). Экземпляр `CompoundCurve` должен хранить два сегмента окружности (ABC, CDA), чтобы определять окружности. Экземпляр `LineString` определяет второй набор точек (4 2, 2 4, 0 2) в экземпляре `CompoundCurve` окружности 1. Необходимо явно объявить экземпляр `CircularString` в экземпляре `CompoundCurve`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [STIsValid (тип данных geometry)](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   
  [STLength (тип данных geometry)](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STStartPoint (тип данных geometry)](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   

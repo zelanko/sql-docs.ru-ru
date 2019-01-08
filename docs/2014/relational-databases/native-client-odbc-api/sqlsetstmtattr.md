@@ -14,12 +14,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edd96f9927a5fe698dd47489beffc738b5456708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208532"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361293"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает смешанную (динамическую и с набором ключей) модель курсора. Попытки установить размер набора ключей с помощью атрибута SQL_ATTR_KEYSET_SIZE завершатся неудачей, если задаваемое значение не равно 0.  
@@ -64,7 +64,7 @@ ms.locfileid: "48208532"
   
 |*ValuePtr* значение|Описание|  
 |----------------------|-----------------|  
-|SQL_DP_ON|По умолчанию. После вызова метода [функция SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360), Подготовка инструкции откладывается до **SQLExecute** вызывается или выполнения операции метасвойства (**SQLDescribeCol** или **SQLDescribeParam**) выполняется.|  
+|SQL_DP_ON|По умолчанию. После вызова метода [функция SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), Подготовка инструкции откладывается до **SQLExecute** вызывается или выполнения операции метасвойства (**SQLDescribeCol** или **SQLDescribeParam**) выполняется.|  
 |SQL_DP_OFF|Инструкция подготавливается сразу же **SQLPrepare** выполняется.|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -122,7 +122,7 @@ ms.locfileid: "48208532"
   
  Атрибут SQL_SOPT_SS_PARAM_FOCUS принадлежит к типу SQLULEN.  
   
- По умолчанию он имеет значение 0; это означает, что вызовы относятся к параметрам, соответствующим маркерам параметров в инструкции SQL. Если задать для атрибута значение, равное порядковому номеру возвращающего табличное значение параметра, вызовы будут относиться к столбцам этого параметра. Если задано значение, которое не является номер возвращающего табличное значение параметра, вызовы будут возвращать ошибку IM020: «фокус параметра не ссылается на табличное значение параметра».  
+ По умолчанию он имеет значение 0; это означает, что вызовы относятся к параметрам, соответствующим маркерам параметров в инструкции SQL. Если задать для атрибута значение, равное порядковому номеру возвращающего табличное значение параметра, вызовы будут относиться к столбцам этого параметра. Если задать для атрибута значение, не равное порядковому номеру возвращающего табличное значение параметра, вызовы будут возвращать ошибку IM020: «Фокус параметра не ссылается на возвращающий табличное значение параметр».  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  Атрибут SQL_SOPT_SS_NAME_SCOPE задает область действия имени для последующих вызовов функций работы с каталогами. Результирующий набор, возвращаемый SQLColumns зависит от настройки SQL_SOPT_SS_NAME_SCOPE.  
@@ -146,7 +146,7 @@ ms.locfileid: "48208532"
  Если каталог функция SQLTables, SQLColumns или SQLPrimaryKeys вызывается, если SQL_SOPT_SS_NAME_SCOPE имеет значение, отличное от SQL_SS_NAME_SCOPE_TABLE, SQL_ERROR возвращается. Создается диагностическая запись с параметром SQLSTATE HY010 и сообщением «Ошибочная последовательность функций (значение атрибута SQL_SOPT_SS_NAME_SCOPE не равно SQL_SS_NAME_SCOPE_TABLE)».  
   
 ## <a name="see-also"></a>См. также  
- [SQLGetStmtAttr, функция](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr, функция](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

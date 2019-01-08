@@ -7,21 +7,20 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2a87635bedba24e440dd2d6c5b7a2c48c7408a9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70689ff767661409dce982d7bb294d0b620838e2
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126674"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328434"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Параметры ("Текстовый редактор" — "XML" — страница "Разное")
-  Диалоговое окно **Параметры** позволяет изменять параметры автозаполнения и схемы для редактора XML. Для доступа к этим параметрам в меню **Сервис** щелкните пункт **Параметры**, разверните папку **Редактор текстов** , щелкните пункт **XML** , затем — пункт **Разное** .  
+
+Диалоговое окно **Параметры** позволяет изменять параметры автозаполнения и схемы для редактора XML. Для доступа к этим параметрам в меню **Сервис** щелкните пункт **Параметры**, разверните папку **Редактор текстов** , щелкните пункт **XML** , затем — пункт **Разное** .  
   
 ## <a name="auto-insert"></a>Автоматическая вставка  
  **Закрывать теги**  
@@ -47,5 +46,3 @@ ms.locfileid: "48126674"
 ## <a name="caching"></a>Caching  
  **Схемы**  
  Определяет местоположение кэша схемы. Кнопка обзора (...) открывает текущее расположение кэша схемы в новом окне. Расположение по умолчанию —  *\<каталог установки Management Studio >* \Xml\Schemas.  
-  
-  

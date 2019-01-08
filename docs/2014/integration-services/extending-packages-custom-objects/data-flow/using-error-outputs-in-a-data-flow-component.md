@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,12 +23,12 @@ ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b892fda3a54752cdd7e11e758a5e4ad58a330eb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e264922c991b3c8297838d920961cd390ee0eabc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089294"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357554"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Использование выводов ошибок в компоненте потока данных
   Специальные объекты <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>, именуемые выводами ошибок, можно добавлять в компоненты, чтобы позволить компоненту перенаправлять строки, которые он не может обработать во время выполнения. Проблемы, с которыми компонент может столкнуться, обычно упорядочиваются по категориям как ошибки или усечения. Они специфичны для каждого компонента. Компоненты, предоставляющие выводы ошибок, дают пользователям компонента гибкие возможности по обработке ошибок путем фильтрации строк ошибок в результирующем наборе, обеспечивая завершение работы компонента с ошибкой при возникновении проблемы или не обрабатывая ошибки и продолжая работу.  
@@ -432,7 +430,7 @@ Public  Overrides Sub PrimeOutput(ByVal outputs As Integer, ByVal outputIDs As I
 End Sub  
 ```  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Обработка ошибок в данных](../../data-flow/error-handling-in-data.md)   

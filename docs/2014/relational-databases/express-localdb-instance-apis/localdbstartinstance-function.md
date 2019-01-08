@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBStartInstance
@@ -18,12 +16,12 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 99bec66e77a8ac5fd742ffb85b6f87dfefe88510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159564"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799646"
 ---
 # <a name="localdbstartinstance-function"></a>Функция LocalDBStartInstance
   Запускает экземпляр SQL Server Express LocalDB.  
@@ -111,10 +109,10 @@ HRESULT LocalDBStartInstance(
   
 |Буфер|Размер буфера|Правильно|Действие|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|Пользователь хочет запустить экземпляр и не нуждается в имени канала.|Запускает экземпляр (имя канала и необходимый размер буфера не возвращаются).|  
+|NULL|NULL|Пользователь хочет запустить экземпляр и не обязательно канала имя.|Запускает экземпляр (имя канала и необходимый размер буфера не возвращаются).|  
 |NULL|Существует|Пользователь запрашивает размер выходного буфера. (При следующем вызове пользователь скорее всего запросит запуск).|Возвращает требуемый размер буфера (без запуска и возврата канала). Результат равен S_OK.|  
 |Существует|NULL|Недопустимо; неверный вход.|Возвращаемый результат — LOCALDB_ERROR_INVALID_PARAMETER.|  
-|Существует|Существует|Пользователь хочет запустить экземпляр и нуждается в имени канала для подключения к нему после запуска.|Проверяет размер буфера, запускает экземпляр и возвращает имя канала в буфере. <br />Аргумент размера буфера возвращает длину строки «server=», не включая завершающие значения null.|  
+|Существует|Существует|Пользователь хочет запустить экземпляр и нуждается в имени канала для подключения к нему после запуска.|Проверяет размер буфера, запускает экземпляр и возвращает имя канала в буфере. <br />Аргумент размера буфера возвращает длину «server =» строки, не включая завершающие значения NULL.|  
   
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   

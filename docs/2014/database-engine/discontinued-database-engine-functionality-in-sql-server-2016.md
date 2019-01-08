@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
@@ -34,12 +33,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d5d292421616d9c3d6043cf792345a8de0d8840
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27eb70cb687553b11fefae423a7544609836c5c8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135294"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357022"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Неподдерживаемые функции ядра СУБД в SQL Server 2014
   В этом разделе описаны функции компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , которые больше не доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -49,7 +48,7 @@ ms.locfileid: "48135294"
   
 |Категория|Неподдерживаемая функция|Замена|  
 |--------------|--------------------------|-----------------|  
-|Уровень совместимости|Уровень совместимости 90|Уровень совместимости базы данных должен быть не менее 100. При обновлении базы данных с уровнем совместимости менее 100 до версии [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] во время операции обновления для этой базы данных устанавливается уровень совместимости 100.|  
+|Уровень совместимости|Уровень совместимости 90|Уровень совместимости базы данных должен быть не менее 100. При обновлении базы данных с уровнем совместимости менее 100 до версии [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]во время операции обновления для этой базы данных устанавливается уровень совместимости 100.|  
   
 ## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Неподдерживаемые функции в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  В следующей таблице перечислены функции, которые были исключены из [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
@@ -63,20 +62,20 @@ ms.locfileid: "48135294"
 |Протоколы соединений|Прекращена поддержка протокола VIA.|Используйте вместо него протокол TCP.|  
 |Объекты базы данных|Предложение `WITH APPEND` в триггерах|Создайте заново весь триггер.|  
 |Параметры базы данных|`sp_dboption`|`ALTER DATABASE`|  
-|Mail|Служба SQL Mail|Использование компонента Database Mail. Дополнительные сведения см. в разделе [компонента Database Mail](../relational-databases/database-mail/database-mail.md) и [Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
+|Mail|Служба SQL Mail|Использование компонента Database Mail. Подробные сведения см. в разделах [Database Mail](../relational-databases/database-mail/database-mail.md) и  [Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
 |Управление памятью|Поддержка 32-разрядных расширений AWE и памяти с «горячей» заменой в 32-разрядных системах.|Используйте 64-разрядную операционную систему.|  
 |Метаданные|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |Программирование|Объекты SQL-DMO|Управляющие объекты SQL Server (SMO)|  
 |Указания запросов|Подсказка `FASTFIRSTROW`|`OPTION (FAST` *n* `)`.|  
 |Удаленные серверы|Пользователям больше не предоставляется возможность создавать новые удаленные серверы с помощью хранимой процедуры `sp_addserver`. Хранимая процедура `sp_addserver` с параметром local остается доступной. Можно использовать удаленные серверы, которые сохраняются при обновлении или были созданы при репликации.|Замените удаленные серверы связанными серверами.|  
-|безопасность|`sp_dropalias`|Псевдонимы заменены сочетанием учетных записей пользователей и ролями базы данных. Используйте `sp_dropalias` удалите псевдонимы в обновленных базах данных.|  
-|безопасность|Параметр версии **PWDCOMPARE** представляющий значение имени входа из более ранней, чем [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 более не поддерживается.|None|  
+|безопасность|`sp_dropalias`|Псевдонимы заменены сочетанием учетных записей пользователей и ролями базы данных. Удалите псевдонимы в обновленных базах данных с помощью хранимой процедуры `sp_dropalias`.|  
+|безопасность|Параметр версии **PWDCOMPARE** , представляющий значение имени входа из более ранних версий, чем [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, более не поддерживается.|None|  
 |Возможности объектов SMO по программированию компонента Service Broker|Класс **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** больше не реализует интерфейс **Microsoft.SqlServer.Management.Smo.IObjectPermission** .||  
 |Параметры SET|`SET DISABLE_DEF_CNST_CHK`|Нет.|  
 |Системные таблицы|sys.database_principal_aliases|Использование ролей вместо псевдонимов.|  
-|Transact-SQL|Параметр `RAISERROR`, представленный в формате `RAISERROR integer 'string'`, более не поддерживается.|Перепишите инструкцию с использованием текущего синтаксиса **RAISERROR(…)** .|  
+|Transact-SQL|Параметр `RAISERROR`, представленный в формате `RAISERROR integer 'string'`, более не поддерживается.|Перепишите инструкцию с использованием текущего **RAISERROR(...)**  синтаксис.|  
 |синтаксис Transact-SQL|`COMPUTE / COMPUTE BY`|Используйте `ROLLUP`.|  
-|синтаксис Transact-SQL|Использование **\* =** и **=\***|Использование синтаксиса соединения ANSI. Дополнительные сведения см. в разделе [FROM (Transact-SQL).](http://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|синтаксис Transact-SQL|Использование **\* =** и **=\***|Использование синтаксиса соединения ANSI. Дополнительные сведения см. в разделе [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Заменены событие database_file_size_change, database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Дополнительные изменения XEvent**  

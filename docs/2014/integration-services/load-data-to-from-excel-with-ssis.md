@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 90accbf1e7d5cc683b862707e0688c5b32d86242
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991257"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778316"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Импорт данных из Excel или экспорт данных в Excel с помощью служб SQL Server Integration Services (SSIS)
 
@@ -41,7 +41,7 @@ ms.locfileid: "49991257"
 
 Прежде чем импортировать данные из приложения Excel или экспортировать данные в него, вам может потребоваться скачать компоненты подключений для Excel, если они еще не установлены. По умолчанию компоненты подключений для Excel не устанавливаются.
 
-Скачать последнюю версию компонентов подключения для Excel можно на следующей странице: [Распространяемый пакет ядра СУБД Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920).
+Скачайте последнюю версию компонентов подключения для Excel здесь: [Microsoft Access Database Engine 2016 распространяемый](https://www.microsoft.com/download/details.aspx?id=54920).
   
 Последняя версия компонентов позволяет открывать файлы, созданные в более ранних версиях Excel.
 
@@ -53,7 +53,7 @@ ms.locfileid: "49991257"
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-При возникновении проблем с установкой распространяемого пакета версии 2016 установите вместо него распространяемый пакет версии 2010 со следующей страницы: [Распространяемый пакет ядра СУБД Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=13255). (Для Excel 2013 распространяемый пакет не предусмотрен.)
+При наличии трудности с установкой распространяемого пакета версии 2016, вместо этого установите распространяемый пакет 2010 отсюда: [Microsoft Access Database Engine 2010 распространяемый](https://www.microsoft.com/download/details.aspx?id=13255). (Для Excel 2013 распространяемый пакет не предусмотрен.)
 
 ## <a name="specify-excel"></a> Указание Excel
 
@@ -167,7 +167,7 @@ ms.locfileid: "49991257"
 
 -   Логический — логический (DT_BOOL)
 
--   Дата/время — datetime (DT_DATE)
+-   Дата и время — datetime (DT_DATE)
 
 -   Строковый — строка в Юникоде длиной в 255 символов (DT_WSTR)
 

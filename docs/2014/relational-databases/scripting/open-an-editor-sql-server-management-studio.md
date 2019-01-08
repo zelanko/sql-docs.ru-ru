@@ -11,12 +11,12 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9791e381b9233137055c680efb8bdfcad62929a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110704"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513011"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Открытие редактора (среда SQL Server Management Studio)
   В этом разделе описывается, как открыть редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , редактор многомерных выражений, редактор расширений интеллектуального анализа данных или редактор XML/A в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. После открытия каждое окно редактора отображается в виде вкладки на центральной панели среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "48110704"
 ### <a name="permissions"></a>Разрешения  
  Операции, выполняемые в редакторе кода, контролируются разрешениями, предоставленными учетной записи проверки подлинности, которая использовалась для входа. Например, если открыть окно редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , используя проверку подлинности Windows, то будет невозможно выполнять инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , ссылающиеся на объекты, для которых у учетной записи входа Windows нет разрешений на доступ.  
   
-## <a name="how-to-open-editors"></a>Инструкции. Открытие редакторов  
+## <a name="how-to-open-editors"></a>Как открыть редакторы  
  В этом разделе объясняется, как открыть различные редакторы в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>С помощью меню «Файл/Создать»  

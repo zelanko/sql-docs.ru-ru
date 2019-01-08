@@ -1,5 +1,6 @@
 ---
-title: Начало работы с SQL Server в SUSE Linux Enterprise Server | Документация Майкрософт
+title: Начало работы с SQL Server в SUSE Linux Enterprise Server
+titleSuffix: SQL Server
 description: В этом кратком руководстве показано, как установить SQL Server 2017 или SQL Server 2019 в SUSE Linux Enterprise Server, а затем создать и запрос к базе данных с помощью sqlcmd.
 author: rothja
 ms.author: jroth
@@ -7,17 +8,17 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: e1ba97ce7b3499671f3c3bc840560e9dc7ab98c4
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: d73a1a3b75bbdce6604677464b6947c789bedbac
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269627"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160562"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Краткое руководство: Установка SQL Server и создать базу данных на базе SUSE Linux Enterprise Server
+# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Краткое руководство. Установка SQL Server и создать базу данных на базе SUSE Linux Enterprise Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -89,7 +90,7 @@ ms.locfileid: "51269627"
    ```
 
    > [!TIP]
-   > В следующих выпусках SQL Server 2017 свободно лицензируются: Evaluation, Developer и Express.
+   > Свободно лицензируются следующих выпусков SQL Server 2017: Evaluation, Developer и Express.
 
    > [!NOTE]
    > Не забудьте указать надежный пароль для учетной записи SA (минимум длина 8 символов, заглавные и строчные буквы, десятичные цифры и не буквенно-цифровых символов).

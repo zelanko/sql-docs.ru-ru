@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169144"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521253"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "49169144"
 |**runtime_stats_interval_id**|**bigint**|Внешний ключ. Присоединяет к [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Типы ожидания классифицируются по таблице, приведенной ниже, и затем время ожидания вычисляется по их категории ожидания. Разных категориях ожидания требуются разные обработки результатов анализа для устранения проблемы, но типы из одной категории интереса к сходные возможности по устранению неполадок ожидания и определение затронутого запроса в дополнение к ожиданий является то, что для завершения большинства подобные расследования успешно.|
 |**wait_category_desc**|**nvarchar(128)**|Текстовое описание поля категории ожидания см. в следующей таблице.|
-|**execution_type**|**tinyint**|Определяет тип выполнения запроса.<br /><br /> 0 — обычное выполнение (успешно завершено)<br /><br /> 3 — клиент прервал выполнение<br /><br /> 4 - исключение прервал выполнение|  
+|**execution_type**|**tinyint**|Определяет тип выполнения запроса.<br /><br /> 0 — обычное выполнение (успешно завершено)<br /><br /> 3 - клиент прервал выполнение<br /><br /> 4 - исключение прервал выполнение|  
 |**execution_type_desc**|**nvarchar(128)**|Текстовое описание выполнения тип поля:<br /><br /> 0 — обычный<br /><br /> 3 — прервано<br /><br /> 4 - исключение|  
 |**total_query_wait_time_ms**|**bigint**|Общее `CPU wait` время для плана запроса в пределах интервала статистической обработки, и категория (указывается в миллисекундах) ожидания.|
 |**avg_query_wait_time_ms**|**float**|Длительность для плана запроса на выполнение в категории статистической обработки интервала и ожидания (указывается в миллисекундах) ожидания среднее значение.|
