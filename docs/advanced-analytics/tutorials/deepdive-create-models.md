@@ -1,51 +1,56 @@
 ---
-title: Создание моделей R (SQL и R глубокое погружение) | Документы Microsoft
+title: Учебник по RevoScaleR моделей R - созданию машинного обучения SQL Server
+description: Руководство по созданию модели с помощью языка R на SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a2f6e9b23e1592073c1b21bc41e4975ffaf17075
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 88e2dd9e50ca79136e4082cab30bba4a0e961531
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32446848"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645073"
 ---
-# <a name="create-r-models-sql-and-r-deep-dive"></a>Создание моделей R (SQL и R глубокое погружение)
+# <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Создание модели R (руководство по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье является частью учебника по глубокое погружение обработки и анализа данных, о том, как использовать [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
+Это занятие является частью [руководстве RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
 
-Теперь, когда вы расширили данные обучения, пора проанализировать их с помощью линейной регрессии. Линейные модели — важный инструмент в области прогнозирующего анализа, и пакет **RevoScaleR** в службах [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] содержит масштабируемый алгоритм с высокой производительностью.
+Теперь, когда вы обогатили обучающих данных, настала пора проанализировать их с помощью регрессии. Линейные модели — важный инструмент в мире прогнозной аналитики и **RevoScaleR** пакет включает алгоритмы регрессии, можно разделить рабочую нагрузку и запустить его в параллельном режиме.
+
+> [!div class="checklist"]
+> * создание модели линейной регрессии;
+> * создание модели логистической регрессии;
 
 ## <a name="create-a-linear-regression-model"></a>создание модели линейной регрессии;
 
-На этом шаге создания простой линейной модели, которая оценивает баланс кредитной карты для клиентов, используя как независимые переменные значения в *Пол* и *creditLine* столбцы.
+На этом шаге создайте простую линейную модель, которая оценивает баланс кредитной карты для клиентов, используя в качестве независимых переменных значения в *Пол* и *creditLine* столбцы.
   
-Чтобы сделать это, используйте [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) функции, которая поддерживает контекстах удаленных вычислений.
+Чтобы сделать это, используйте [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) функция, которая поддерживает контексты удаленных вычислений.
   
-1. Создайте переменную R для хранения завершенный модель и вызвать метод **rxLinMod**, передавая соответствующие формулы.
+1. Создайте переменную R для хранения завершенные модели и вызовите метод **rxLinMod**, передав соответствующий формулу.
   
     ```R
     linModObj <- rxLinMod(balance ~ gender + creditLine,  data = sqlFraudDS)
     ```
   
-2. Чтобы просмотреть сводку результатов, вызовите стандартный R `summary` функции объекта модели.
+2. Чтобы просмотреть сводку результатов, вызовите стандартный R **сводки** функции применительно к объекту модели.
   
      ```R
      summary(linModObj)
      ```
 
-Может показаться необычные plain функцию R, такие как `summary` будет работать, поскольку на предыдущем шаге был переключен контекст вычислений на сервер. Однако даже если функция **rxLinMod** использует контекст удаленных вычислений для создания модели, она также возвращает объект, который содержит модель для локальной рабочей станции, и сохраняет его в общем каталоге.
+Вам может показаться странным, что обыкновенная функция R, такая как **summary** , будет здесь работать, поскольку на предыдущем шаге контекст вычислений был переключен на серверный. Однако даже если функция **rxLinMod** использует контекст удаленных вычислений для создания модели, она также возвращает объект, который содержит модель для локальной рабочей станции, и сохраняет его в общем каталоге.
 
 Таким образом, для модели можно выполнять стандартные команды R, как если бы она была создана с помощью контекста local.
 
 **Результаты**
 
-```
+```R
 Linear Regression Results for: balance ~ gender + creditLineData: sqlFraudDS (RxSqlServerData Data Source)
 Dependent variable(s): balance
 Total independent variables: 4 (Including number dropped: 1)
@@ -58,7 +63,7 @@ Estimate Std. Error t value Pr(>|t|) (Intercept)
 gender=Male -88.813 78.360 -1.133 0.257
 gender=Female Dropped Dropped Dropped Dropped
 creditLine 95.379 3.862 24.694 2.22e-16
-Signif. codes: 0  0.001  0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes: 0  0.001  0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 3812 on 9997 degrees of freedom
 Multiple R-squared: 0.05765
@@ -69,11 +74,11 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>создание модели логистической регрессии;
 
-Создайте модель логистической регрессии, который указывает, является ли конкретный заказчик риск мошенничества. Вы воспользуетесь **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) функции, какие подгонки поддерживает моделей логистической регрессии в удаленных контекстов вычислений.
+Создайте модель логистической регрессии, указывающее, является ли конкретный заказчик риск мошенничества. Вы будете использовать **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) функция, которая поддерживает размещение моделей логистической регрессии в удаленных контекстах вычисления.
 
-1.  Не меняйте контекст вычисления. Кроме того, по-прежнему будет использоваться тот же источник данных.
+Не меняйте контекст вычисления. Вы также будете продолжать использовать тот же источник данных также.
 
-2.  Вызовите функцию **rxLogit** и передайте формулу, необходимую для определения модели.
+1. Вызовите функцию **rxLogit** и передайте формулу, необходимую для определения модели.
 
     ```R
     logitObj <- rxLogit(fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS, dropFirst = TRUE)
@@ -83,7 +88,7 @@ Condition number: 1.0184
     
     Причина такого большого размера модели в том, что в языке R (и в пакете **RevoScaleR** ) каждый уровень категориальной факторной переменной автоматически обрабатывается как отдельная фиктивная переменная.
   
-3.  Чтобы просмотреть сводные данные, возвращенные модели, вызовите R `summary` функции.
+2. Чтобы просмотреть сводку по полученной модели, вызовите функцию R **summary** .
   
     ```R
     summary(logitObj)
@@ -91,7 +96,7 @@ Condition number: 1.0184
   
 **Частичные результаты**
 
-```
+```R
 Logistic Regression Results for: fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine
 Data: sqlFraudDS (RxSqlServerData Data Source)
 Dependent variable(s): fraudRisk
@@ -117,15 +122,12 @@ numTrans              4.950e-02  2.202e-03  22.477 2.22e-16
 numIntlTrans          3.414e-02  5.318e-03   6.420 1.36e-10
 creditLine            1.042e-01  4.705e-03  22.153 2.22e-16
 
-Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 '\*\*\*' 0.001 '\*\*' 0.01 '\*' 0.05 '.' 0.1 ' ' 1
 Condition number of final variance-covariance matrix: 3997.308
 Number of iterations: 15
 ```
 
-## <a name="next-step"></a>Следующий шаг
+## <a name="next-steps"></a>Следующие шаги
 
-[Оценка новых данных](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
-
-## <a name="previous-step"></a>Предыдущий шаг
-
-[Визуализация данных SQL Server с помощью языка R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+> [!div class="nextstepaction"]
+> [Оценка новых данных](../../advanced-analytics/tutorials/deepdive-score-new-data.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Задача 4: Создание проекта служб SSIS с помощью SQL Server Data Tools | Документация Майкрософт'
+title: Задача 4. Создание проекта служб SSIS с помощью SQL Server Data Tools | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 584ba08e49efaf0dc3a8de2a1fa8fd34ac20bfe3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0a4532b99c63a778c8c6751471b2a30e0ff7186
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113284"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390507"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Задача 4. Создание проекта служб SSIS с помощью SQL Server Data Tools
   В этой задаче вы Создание проекта служб SSIS с помощью **SQL Server Data Tools** для автоматизации очистки и сопоставления данных поставщика.  

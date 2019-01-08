@@ -1,5 +1,5 @@
 ---
-title: Свойства компонента | Документация Майкрософт
+title: Свойства функций служб аналитики | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8ee5a58d5c04cbfbb1f47f0d073ba6614490970c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2ae8636ce7f7dc25a99fde8ade52ca58c7786395
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033322"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072349"
 ---
-# <a name="feature-properties"></a>Свойства функций
+# <a name="feature-properties"></a>Свойства компонента
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
   Свойства функций служат для настройки возможностей продуктов, большинство из них являются расширенными, включая свойства, которые управляют связями между экземплярами сервера.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Область применения:** только в многомерном режиме сервера  
+ **Применимо к:** Только многомерный режим сервера  
   
 ## <a name="properties"></a>Свойства  
   

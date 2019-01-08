@@ -11,12 +11,12 @@ ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 606d597bd539da9e50b1c0452d9126e2f4671731
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054374"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371316"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   В этом разделе описаны типы источников данных, которые могут использоваться в табличной модели.  
@@ -34,7 +34,7 @@ ms.locfileid: "48054374"
   
 |||||  
 |-|-|-|-|  
-|Source|Версии|Тип файла|Поставщики <sup>1</sup>|  
+|Исходный код|Версии|Тип файла|Поставщики <sup>1</sup>|  
 |Базы данных Access|Microsoft Access 2003, 2007, 2010.|ACCDB или MDB|Поставщик OLE DB для ACE 14|  
 |Реляционные базы данных SQL Server|Microsoft SQL Server 2005, 2008, 2008 R2; SQL Server 2012, Microsoft SQL Azure Database <sup>2</sup>|(неприменимо)|Поставщик OLE DB для SQL Server<br /><br /> Поставщик OLE DB для собственного клиента SQL Server<br /><br /> Поставщик OLE DB для клиента SQL Server Native Client 10.0<br /><br /> Поставщик данных .NET Framework для клиента SQL|  
 |SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|2008 R2|(неприменимо)|Поставщик OLE DB для SQL Server PDW|  
@@ -53,9 +53,9 @@ ms.locfileid: "48054374"
   
  <sup>1</sup> также можно использовать поставщик OLE DB для ODBC.  
   
- <sup>2</sup> Дополнительные сведения о SQL Azure, см. в разделе веб-сайт [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> Дополнительные сведения о SQL Azure, см. в разделе веб-сайт [SQL Azure](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> Дополнительные сведения о SQL Server PDW см. в разделе веб-сайт [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> Дополнительные сведения о SQL Server PDW см. в разделе веб-сайт [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
  <sup>4</sup> в некоторых случаях использование поставщика MSDAORA OLE DB может привести к ошибкам соединения, особенно в новых версиях Oracle. Если возникают ошибки, рекомендуется использовать один из других поставщиков для Oracle.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48054374"
 4.  Поставщики OLE DB иногда обеспечивают повышенную производительность для данных большого объема. Если нужно выбрать один из нескольких поставщиков, подходящих для некоторого источника данных, вначале следует проверить работу поставщика OLE DB.  
   
 ## <a name="see-also"></a>См. также  
- [Источники данных &#40;табличные службы SSAS&#41;](../data-sources-ssas-tabular.md)   
- [Импорт данных &#40;табличные службы SSAS&#41;](../import-data-ssas-tabular.md)  
+ [Источники данных (табличные службы SSAS)](../data-sources-ssas-tabular.md)   
+ [Импорт данных (табличные службы SSAS)](../import-data-ssas-tabular.md)  
   
   

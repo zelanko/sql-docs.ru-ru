@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 12/18/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e52c264de3e7e2e9e7de8a96f3ad0cdf8dd04066
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8df3c13b42df1b842d784fedd1720d2e9bfc258
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843572"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626393"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47843572"
 |**min_physical_reads**|**bigint**|Минимальное количество операций физического считывания за одно выполнение плана.<br /><br /> Значение всегда равно 0 при запросе оптимизированной для памяти таблицы.|  
 |**max_physical_reads**|**bigint**|Максимальное количество операций физического считывания за одно выполнение плана.<br /><br /> Значение всегда равно 0 при запросе оптимизированной для памяти таблицы.|  
 |**total_logical_writes**|**bigint**|Общее количество операций логической записи при выполнении плана с момента его компиляции.<br /><br /> Значение всегда равно 0 при запросе оптимизированной для памяти таблицы.|  
-|**last_logical_writes**|**bigint**|Количество страниц в буферном пуле, загрязненных во время последнего выполнения плана. Если страница уже является «грязной» (т. е. измененной), операции записи не учитываются.<br /><br /> Значение всегда равно 0 при запросе оптимизированной для памяти таблицы.|  
+|**last_logical_writes**|**bigint**|Количество страниц в буферном пуле, измененных во время последнее выполнение плана.<br /><br />После чтения страницы, страница становится "грязных" только в первый раз, его изменения. Когда страница становится "грязные", этот номер увеличивается. Последующие изменения уже "грязные" страницы не влияют на этот номер.<br /><br />Это число всегда будет равно 0, при запросе оптимизированной для памяти таблицы.|  
 |**min_logical_writes**|**bigint**|Минимальное количество операций логической записи за одно выполнение плана.<br /><br /> Значение всегда равно 0 при запросе оптимизированной для памяти таблицы.|  
 |**max_logical_writes**|**bigint**|Максимальное количество операций логической записи за одно выполнение плана.<br /><br /> Значение всегда равно 0 при запросе оптимизированной для памяти таблицы.|  
 |**total_logical_reads**|**bigint**|Общее количество операций логического считывания при выполнении плана с момента его компиляции.<br /><br /> Значение всегда равно 0 при запросе оптимизированной для памяти таблицы.|  
@@ -66,7 +66,7 @@ ms.locfileid: "47843572"
 |**min_logical_reads**|**bigint**|Минимальное количество операций логического считывания за одно выполнение плана.<br /><br /> Значение всегда равно 0 при запросе оптимизированной для памяти таблицы.|  
 |**max_logical_reads**|**bigint**|Максимальное количество операций логического считывания за одно выполнение плана.<br /><br /> Значение всегда равно 0 при запросе оптимизированной для памяти таблицы.|  
 |**total_clr_time**|**bigint**|Время, в микросекундах (но с точностью до миллисекунды), внутри [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] общеязыковая среда выполнения (CLR) объекты при выполнении плана с момента его компиляции. Объекты среды CLR могут быть хранимыми процедурами, функциями, триггерами, типами и статистическими выражениями.|  
-|**last_clr_time**|**bigint**|Время, в микросекундах (но с точностью до миллисекунды), затраченное внутри [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] объекты среды CLR во время последнего выполнения плана. Объекты среды CLR могут быть хранимыми процедурами, функциями, триггерами, типами и статистическими выражениями.|  
+|**last_clr_time**|**bigint**|Время, затраченное на последнее выполнение плана внутри объектов [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] среды CLR в микросекундах (но с точностью до миллисекунды). Объекты среды CLR могут быть хранимыми процедурами, функциями, триггерами, типами и статистическими выражениями.|  
 |**min_clr_time**|**bigint**|Минимальное время, когда-либо затраченное на выполнение плана внутри объектов [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] среды CLR, в микросекундах (но с точностью до миллисекунды). Объекты среды CLR могут быть хранимыми процедурами, функциями, триггерами, типами и статистическими выражениями.|  
 |**max_clr_time**|**bigint**|Максимальное время, когда-либо затраченное на выполнение плана внутри среды CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], в микросекундах (но с точностью до миллисекунды). Объекты среды CLR могут быть хранимыми процедурами, функциями, триггерами, типами и статистическими выражениями.|  
 |**total_elapsed_time**|**bigint**|Общее время, затраченное на выполнение плана, в микросекундах (но с точностью до миллисекунды).|  
@@ -105,18 +105,18 @@ ms.locfileid: "47843572"
 |**last_used_threads**|**bigint**|Число используемых параллельных потоков, когда время последнего выполнения этого плана. Он всегда будет равно 0, для запроса к таблице, оптимизированной для памяти.<br /><br /> **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_used_threads**|**bigint**|Минимальное число используемых параллельных потоков, этот план когда-либо используется во время одного выполнения. Он всегда будет равно 0, для запроса к таблице, оптимизированной для памяти.<br /><br /> **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**max_used_threads**|**bigint**|Максимальное число используемых параллельных потоков, этот план когда-либо используется во время одного выполнения. Он всегда будет равно 0, для запроса к таблице, оптимизированной для памяти.<br /><br /> **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**total_columnstore_segment_reads**|**bigint**|Общая сумма сегментов columnstore, считанных запросом. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_reads**|**bigint**|Число сегментов columnstore прочитан последнего выполнения запроса. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_reads**|**bigint**|Минимальное количество сегментов columnstore, когда-либо считанных запросом, во время одного выполнения. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_reads**|**bigint**|Максимальное количество сегментов columnstore, когда-либо считанных запросом, во время одного выполнения. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**total_columnstore_segment_skips**|**bigint**|Общая сумма сегментов columnstore пропущена по запросу. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_skips**|**bigint**|Количество сегментов columnstore, пропущенных последнего выполнения запроса. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_skips**|**bigint**|Минимальное количество сегментов columnstore, когда-либо пропущена по запросу во время одного выполнения. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_skips**|**bigint**|Максимальное количество сегментов columnstore, когда-либо пропущена по запросу во время одного выполнения. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
-|**total_spills**|**bigint**|Общее число страниц, сброшенных при выполнении этого запроса с момента его компиляции.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|Число страниц, сброшенных последнего выполнения запроса.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|Минимальное число страниц, которые когда-либо этот запрос вытеснены за одно выполнение.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|Максимальное число страниц, которые когда-либо этот запрос вытеснены за одно выполнение.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_columnstore_segment_reads**|**bigint**|Общая сумма сегментов columnstore, считанных запросом. Не может иметь значение null.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_reads**|**bigint**|Число сегментов columnstore прочитан последнего выполнения запроса. Не может иметь значение null.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_reads**|**bigint**|Минимальное количество сегментов columnstore, когда-либо считанных запросом, во время одного выполнения. Не может иметь значение null.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_reads**|**bigint**|Максимальное количество сегментов columnstore, когда-либо считанных запросом, во время одного выполнения. Не может иметь значение null.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**total_columnstore_segment_skips**|**bigint**|Общая сумма сегментов columnstore пропущена по запросу. Не может иметь значение null.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_skips**|**bigint**|Количество сегментов columnstore, пропущенных последнего выполнения запроса. Не может иметь значение null.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_skips**|**bigint**|Минимальное количество сегментов columnstore, когда-либо пропущена по запросу во время одного выполнения. Не может иметь значение null.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_skips**|**bigint**|Максимальное количество сегментов columnstore, когда-либо пропущена по запросу во время одного выполнения. Не может иметь значение null.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
+|**total_spills**|**bigint**|Общее число страниц, сброшенных при выполнении этого запроса с момента его компиляции.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Число страниц, сброшенных последнего выполнения запроса.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Минимальное число страниц, которые когда-либо этот запрос вытеснены за одно выполнение.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Максимальное число страниц, которые когда-либо этот запрос вытеснены за одно выполнение.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|Идентификатор для узла, это распределение является на.<br /><br /> **Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 
 > [!NOTE]

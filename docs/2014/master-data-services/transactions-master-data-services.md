@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
@@ -14,12 +13,12 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 33b5bab2bb9d812686b6afbc65e0a8292247634b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b309669027da801681c1386abe604fce2f915f3d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129054"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798126"
 ---
 # <a name="transactions-master-data-services"></a>Транзакции (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]транзакция регистрируется при каждом выполнении действия с элементом. Все пользователи могут просматривать транзакции, а администраторы также могут их обращать (отменять). Транзакции отображают дату, время и пользователя, выполнившего действие, а также другие сведения. Пользователь может добавить к транзакции заметку, чтобы указать причину выполнения транзакции.  
@@ -57,12 +56,12 @@ ms.locfileid: "48129054"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Отмена действия путем обращения транзакции (только администраторы).|[Отмена транзакции &#40;службы Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
+|Отмена действия путем обращения транзакции (только администраторы).|[Отмена транзакции (службы Master Data Services)](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Администраторы &#40;службы Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+-   [Администраторы (службы Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)  
   
--   [Заметки &#40;службы Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [Заметки (службы Master Data Services)](../../2014/master-data-services/annotations-master-data-services.md)  
   
   

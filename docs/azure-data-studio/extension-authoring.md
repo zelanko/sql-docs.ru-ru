@@ -1,7 +1,8 @@
 ---
-title: Создание расширений для Azure Data Studio | Документация Майкрософт
-description: Добавляйте расширения в Azure Data Studio
-ms.custom: tools|sos
+title: Создание расширений
+titleSuffix: Azure Data Studio
+description: Дополнительные сведения о создании и добавлении расширения в студию данных Azure
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7d778eb4df52d28a44ec8127ebc9f657a9f0dde
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: a939770ba7b362e2601ecb45b126066341c7c34e
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355886"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030525"
 ---
-# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>Расширения функциональности [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Расширить функциональные возможности путем создания расширений Studio данных Azure
 
 Расширения в [!INCLUDE[name-sos](../includes/name-sos-short.md)] предоставляют простой способ для добавления дополнительных функций к базовому [!INCLUDE[name-sos](../includes/name-sos-short.md)] установки.
 

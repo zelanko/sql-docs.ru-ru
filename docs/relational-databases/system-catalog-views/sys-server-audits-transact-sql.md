@@ -20,12 +20,12 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c89ec6b6054f6a681550fa3fb12aa925476bc0c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf8e911f8b8e871cf7389bf40d6a84bc455bffa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742682"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506356"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "47742682"
 |**principal_id**|**int**|Идентификатор владельца аудита, зарегистрированного на сервере.|  
 |**type**|**char(2)**|Тип аудита:<br /><br /> SL — журнал событий безопасности NT<br /><br /> AL — журнал событий приложений NT<br /><br /> FL — файл в файловой системе|  
 |**type_desc**|**nvarchar(60)**|ЖУРНАЛ БЕЗОПАСНОСТИ<br /><br /> ЖУРНАЛ ПРИЛОЖЕНИЙ<br /><br /> FILE|  
-|**ON_FAILURE**|**tinyint**|В случае ошибки записи данных о действии:<br /><br /> 0 — продолжить;<br /><br /> 1 — завершить работу экземпляра сервера;<br /><br /> 2 — ошибка операции.|  
+|**ON_FAILURE**|**tinyint**|В случае ошибки записи данных о действии:<br /><br /> 0 — продолжить<br /><br /> 1 — завершить работу экземпляра сервера<br /><br /> 2 — Ошибка операции|  
 |**on_failure_desc**|**nvarchar(60)**|В случае ошибки записи данных о действии:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
-|**is_state_enabled**|**tinyint**|0 — отключено;<br /><br /> 1 — включено.|  
+|**is_state_enabled**|**tinyint**|0 — отключено<br /><br /> 1 — включено.|  
 |**queue_delay**|**int**|Максимальное время ожидания перед записью на диск, в миллисекундах. Если 0, то аудит гарантирует запись, прежде чем событие может быть продолжено.|  
 |**предикат**|**nvarchar(3000)**|Выражение предиката, применяемое к событию.|  
   

@@ -20,16 +20,16 @@ ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6aabd945e25211f969ceac17c4d56baff98edd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f1c5bbfd2e2fbf91fd9e91acafe0bc72d006d3f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692842"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209323"
 ---
 # <a name="sqlgettranslator-function"></a>Функция SQLGetTranslator
 **Соответствие стандартам**  
- Версия была введена: ODBC 2.0  
+ Представленные версии: ODBC 2.0  
   
  **Сводка**  
  **SQLGetTranslator** отображает диалоговое окно, из которого пользователь может выбрать переводчика.  

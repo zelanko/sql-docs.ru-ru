@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsynctriggers_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c69681e396065f1881ff9ea81468ef85c8b26da4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89a6a997fd272985bd60d0b5d574fea07463f54d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799724"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588290"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,46 +58,46 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@sub_table=**] **"***sub_table***"**  
+ [  **@sub_table=**] **"**_sub_table_**"**  
  Имя таблицы подписчика. *sub_table* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@sub_table_owner=**] **"***sub_table_owner***"**  
+ [  **@sub_table_owner=**] **"**_sub_table_owner_**"**  
  Имя владельца таблицы подписчика. *sub_table_owner* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publisher=**] **"***издателя***"**  
+ [  **@publisher=**] **"**_издателя_**"**  
  Имя сервера издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publisher_db=**] **"***publisher_db***"**  
+ [  **@publisher_db=**] **"**_publisher_db_**"**  
  Имя базы данных издателя. *publisher_db* — **sysname**, не имеет значения по умолчанию. Если значение равно NULL, используется текущая база данных.  
   
- [  **@publication=**] **"***публикации***"**  
+ [  **@publication=**] **"**_публикации_**"**  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@ins_proc=**] **"***ins_proc***"**  
+ [  **@ins_proc=**] **"**_ins_proc_**"**  
  Имя хранимой процедуры, которая поддерживает синхронные вставки транзакций на издателе. *ins_proc* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@upd_proc=**] **"***upd_proc***"**  
+ [  **@upd_proc=**] **"**_upd_proc_**"**  
  Имя хранимой процедуры, которая поддерживает синхронные обновления транзакций на издателе. *ins_proc* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@del_proc=**] **"***del_proc***"**  
+ [  **@del_proc=**] **"**_del_proc_**"**  
  Имя хранимой процедуры, которая поддерживает синхронные удаления транзакций на издателе. *ins_proc* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@cftproc =** ] **"***cftproc***"**  
+ [  **@cftproc =** ] **"**_cftproc_**"**  
  Имя автоматически формируемой процедуры, используемой публикациями, поддерживающими обновление посредством очереди. *cftproc* — **sysname**, не имеет значения по умолчанию. Для публикаций, поддерживающих немедленное обновление, значением этого аргумента является NULL. Этот параметр относится к публикациям, поддерживающим обновление посредством очередей (обновление посредством очередей и немедленное обновление с переходом на обновление посредством очередей при отработке отказа).  
   
- [  **@proc_owner =** ] **"***proc_owner***"**  
+ [  **@proc_owner =** ] **"**_proc_owner_**"**  
  Указывает учетную запись пользователя на издателе, от имени которой создаются все автоматически формируемые хранимые процедуры для обновления публикации (посредством очереди или немедленно). *proc_owner* — **sysname** не имеет значения по умолчанию.  
   
- [  **@identity_col=**] **"***identity_col***"**  
+ [  **@identity_col=**] **"**_identity_col_**"**  
  Имя столбца идентификаторов на издателе. *identity_col* — **sysname**, значение по умолчанию NULL.  
   
- [  **@ts_col=**] **"***timestamp_col***"**  
+ [  **@ts_col=**] **"**_timestamp_col_**"**  
  Имя **timestamp** столбца на издателе. *timestamp_col* — **sysname**, значение по умолчанию NULL.  
   
- [  **@filter_clause=**] **"***filter_clause***"**  
+ [  **@filter_clause=**] **"**_filter_clause_**"**  
  Предложение ограничения (WHERE), которое задает горизонтальный фильтр. При вводе предложения ограничения опустите ключевое слово WHERE. *filter_clause*— **nvarchar(4000)**, значение по умолчанию NULL.  
   
- [  **@primary_key_bitmap =**] **"***primary_key_bitmap***"**  
+ [  **@primary_key_bitmap =**] **"**_primary_key_bitmap_**"**  
  Битовая схема столбцов первичного ключа в таблице. *primary_key_bitmap* — **varbinary(4000)**, не имеет значения по умолчанию.  
   
  [  **@identity_support =** ] *identity_support*  
@@ -107,7 +106,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@independent_agent =** ] *independent_agent*  
  Указывает, используется ли для данной публикации отдельный агент распространителя (независимый агент) или используется один агент распространителя для каждой пары базы данных публикации и базы данных подписки (общий агент). Это значение отражает значение свойства independent_agent для публикации, определенной на издателе. *independent_agent* имеет тип bit и значение по умолчанию **0**. Если **0**, агент является общим. Если **1**, агент является независимым.  
   
- [  **@distributor =** ] **"***распространителя***"**  
+ [  **@distributor =** ] **"**_распространителя_**"**  
  Имя распространителя. *распространитель* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@pubversion**=] *pubversion*  

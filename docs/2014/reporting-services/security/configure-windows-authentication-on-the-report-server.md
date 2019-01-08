@@ -14,12 +14,12 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b0ce020f0d3df8b91591daf083748f909edbb1e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e2359a87dab19356f87574f9444962b5440c71b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116354"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359258"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимают запросы, в которых определена проверка подлинности Negotiate или NTLM. Если в развертывание входят клиентские приложения и браузеры, в которых используются поставщики безопасности, то можно использовать значения по умолчанию без дополнительной настройки. Если нужно использовать другого поставщика безопасности для встроенной безопасности Windows (например, требуется применять протокол Kerberos напрямую) или если значения по умолчанию были изменены, и нужно восстановить первоначальные настройки, то можно использовать сведения данного раздела, чтобы указать настройки проверки подлинности на сервере отчетов.  
@@ -28,10 +28,10 @@ ms.locfileid: "48116354"
   
  Должны выполняться также следующие дополнительные условия.  
   
--   Файлов Seportserver.config должно быть `AuthenticationType` присвоено `RSWindowsNegotiate`, `RSWindowsKerberos`, или `RSWindowsNTLM`. По умолчанию файл конфигурации RSReportServer.config включает настройку `RSWindowsNegotiate`, если учетной записью службы сервера отчетов является учетная запись NetworkService или LocalSystem. В противном случае используется настройка `RSWindowsNTLM`. Можно добавить `RSWindowsKerberos`, если имеются приложения, в которых используется только проверка подлинности протокола Kerberos.  
+-   Свойству атрибута `AuthenticationType` файлов SeportServer.config должно быть задано значение `RSWindowsNegotiate`, `RSWindowsKerberos` или `RSWindowsNTLM`. По умолчанию файл конфигурации RSReportServer.config включает настройку `RSWindowsNegotiate`, если учетной записью службы сервера отчетов является учетная запись NetworkService или LocalSystem. В противном случае используется настройка `RSWindowsNTLM`. Можно добавить `RSWindowsKerberos`, если имеются приложения, в которых используется только проверка подлинности протокола Kerberos.  
   
     > [!IMPORTANT]  
-    >  С помощью `RSWindowsNegotiate` приведет к ошибке проверки подлинности Kerberos, если служба настроена на сервере отчетов для запуска под учетной записью пользователя домена и не зарегистрировано имя участника-службы (SPN) для учетной записи. Дополнительные сведения см. в разделе [Разрешение ошибок проверок подлинности протокола Kerberos при соединении с сервером отчетов](#proxyfirewallRSWindowsNegotiate) в этом разделе.  
+    >  Использование `RSWindowsNegotiate` приведет к ошибке проверки подлинности протокола Kerberos, если служба сервера отчетов настроена на запуск с доменной учетной записью пользователя и для учетной записи не зарегистрировано имя участника-службы (SPN). Дополнительные сведения см. в разделе [Разрешение ошибок проверок подлинности протокола Kerberos при соединении с сервером отчетов](#proxyfirewallRSWindowsNegotiate) в этом разделе.  
   
 -   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] должна быть настроена для проверки подлинности Windows. По умолчанию файлы Web.config для сервера веб-службы отчетов и диспетчера отчетов содержат \<режим проверки подлинности = «Windows» > параметр. Если изменить его на \<authentication mode="Forms">, проверка подлинности Windows для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] завершится ошибкой.  
   
@@ -41,12 +41,12 @@ ms.locfileid: "48116354"
   
  Чтобы изменить настройки проверки подлинности сервера отчетов, измените XML-элементы и значения в файле RSReportServer.config. Чтобы реализовать определенные сочетания, можно копировать и вставить примеры из этого раздела.  
   
- Настройки по умолчанию работают лучше всего, если клиентский и серверный компьютер находятся в одном и том же домене или в доверенном домене, а сервер отчетов разворачивается для доступа из внутренней сети, защищенной корпоративным брандмауэром. Для передачи учетных данных Windows необходимо использовать доверенные и одиночные домены. Учетные данные можно передавать несколько раз в том случае, если для серверов включен протокол Kerberos версии 5. В противном случае учетные данные можно передать только один раз до истечения срока их действия. Дополнительные сведения о настройке учетных данных для нескольких подключений компьютера, см. в разделе [задание учетных данных и сведений о соединении для источников данных отчета](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+ Настройки по умолчанию работают лучше всего, если клиентский и серверный компьютер находятся в одном и том же домене или в доверенном домене, а сервер отчетов разворачивается для доступа из внутренней сети, защищенной корпоративным брандмауэром. Для передачи учетных данных Windows необходимо использовать доверенные и одиночные домены. Учетные данные можно передавать несколько раз в том случае, если для серверов включен протокол Kerberos версии 5. В противном случае учетные данные можно передать только один раз до истечения срока их действия. Дополнительные сведения о настройке учетных данных для нескольких подключений к компьютерам см. в разделе [Задание учетных данных и сведений о соединении для источников данных отчета](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Следующие параметры настраиваются для сервера отчетов, работающего в собственном режиме. Если развертывание сервера отчетов производилось в режиме интеграции с SharePoint, то необходимо пользоваться настройками проверки подлинности по умолчанию, в которых задана встроенная безопасность Windows. Сервер отчетов использует внутренние функции модуля проверки подлинности Windows по умолчанию для поддержки серверов отчетов в режиме интеграции с SharePoint.  
   
 ## <a name="extended-protection-for-authentication"></a>Расширенная защита для проверки подлинности  
- Начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], доступна поддержка расширенной защиты для проверки подлинности. Функция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует привязку каналов и служб для повышения уровня защиты проверки подлинности. Функции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать в ОС, поддерживающей расширенную защиту. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] определяется параметрами в файле RSReportServer.config. Это можно сделать как в текстовом редакторе, так и при помощи средств WMI API. Дополнительные сведения см. в разделе [расширенная защита для проверки подлинности со службами Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
+ Начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], доступна поддержка расширенной защиты для проверки подлинности. Функция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует привязку каналов и служб для повышения уровня защиты проверки подлинности. Функции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать в ОС, поддерживающей расширенную защиту. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] определяется параметрами в файле RSReportServer.config. Это можно сделать как в текстовом редакторе, так и при помощи средств WMI API. Дополнительные сведения см. в статье [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Настройка сервера отчетов на использование встроенной безопасности Windows  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48116354"
   
 2.  Найдите <`Authentication`>.  
   
-3.  Выберите и скопируйте наиболее подходящую из следующих XML-структур. Можно указать `RSWindowsNegotiate`, `RSWindowsNTLM`, и `RSWindowsKerberos` в любом порядке. Включите сохраняемость проверки подлинности, если нужно проверить подлинность соединений, а не каждого отдельного запроса. При сохраняемости проверки подлинности все запросы, для которых требуется проверка подлинности, разрешены в продолжение существования соединения.  
+3.  Выберите и скопируйте наиболее подходящую из следующих XML-структур. `RSWindowsNegotiate`, `RSWindowsNTLM` и `RSWindowsKerberos` можно указывать в любом порядке. Включите сохраняемость проверки подлинности, если нужно проверить подлинность соединений, а не каждого отдельного запроса. При сохраняемости проверки подлинности все запросы, для которых требуется проверка подлинности, разрешены в продолжение существования соединения.  
   
      Первая XML-структура является настройкой по умолчанию, если учетной записью службы сервера отчетов является учетная запись NetworkService или LocalSystem:  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48116354"
           </AuthenticationTypes>  
     ```  
   
-4.  Вставьте его на место существующих элементов для <`Authentication`>.  
+4.  Вставьте его на место существующих элементов <`Authentication`>.  
   
      Также невозможно использование синтаксиса `Custom` с типами `RSWindows`.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48116354"
   
 -   Измените учетную запись службы для запуска под встроенной учетной записью, такой как сетевая служба. Встроенные учетные записи сопоставляют имя участника-службы HTTP с именем участника-службы Host, которое определяется при соединении компьютера с сетью. Дополнительные сведения см. в разделе [Настройка учетной записи службы (диспетчер конфигураций служб SSRS)](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
   
--   Используйте NTLM. Как правило, NTLM функционирует в случаях, когда проверка подлинности протокола Kerberos заканчивается неуспешно. Чтобы использовать NTLM, удалите `RSWindowsNegotiate` из файла RSReportServer.config и убедитесь, что только `RSWindowsNTLM` указан. Если выбран этот подход, то можно продолжить использовать учетную запись пользователя домена для службы сервера отчетов, даже если для него не определено имя участника-службы (SPN).  
+-   Используйте NTLM. Как правило, NTLM функционирует в случаях, когда проверка подлинности протокола Kerberos заканчивается неуспешно. Чтобы задействовать NTLM, удалите `RSWindowsNegotiate` из файла RSReportServer.config и проверьте, что указан только `RSWindowsNTLM`. Если выбран этот подход, то можно продолжить использовать учетную запись пользователя домена для службы сервера отчетов, даже если для него не определено имя участника-службы (SPN).  
   
 #### <a name="logging-information"></a>Информация в журнале  
  Имеется несколько источников информации, включаемой в журнал, которые могут помочь в решении проблем, связанных с протоколом Kerberos.  
@@ -149,12 +149,12 @@ ms.locfileid: "48116354"
   
 -   Например, десятичное значение можно преобразовать в шестнадцатеричный формат с помощью калькулятора [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Калькулятор поддерживает несколько режимов, где имеются переключатели «Dec» и «Hex». Установите переключатель в положение «Dec», вставьте или введите десятичное значение из файла журнала и переведите переключатель в положение «Hex».  
   
--   Откройте раздел [Атрибут управления учетными записями](http://go.microsoft.com/fwlink/?LinkId=183366) , чтобы получить атрибут для учетной записи службы.  
+-   Откройте раздел [Атрибут управления учетными записями](https://go.microsoft.com/fwlink/?LinkId=183366) , чтобы получить атрибут для учетной записи службы.  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>Имена участников-служб, настроенные в Active Directory для учетной записи служб Reporting Services  
  Чтобы включить имя участника зеркального отображения в файл журнала трассировки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , можно временно включить функцию расширенной защиты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   Измените файл конфигурации `rsreportserver.config` , задав следующие:  
+-   Внесите изменения в файл конфигурации `rsreportserver.config`, задав следующие параметры:  
   
     ```  
     <RSWindowsExtendedProtectionLevel>Allow</RSWindowsExtendedProtectionLevel>   
@@ -176,7 +176,7 @@ ms.locfileid: "48116354"
 <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>  
 ```  
   
- Дополнительные сведения см. [расширенная защита для проверки подлинности со службами Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+ Дополнительные сведения см. в разделе [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
 #### <a name="how-the-browser-chooses-negotiated-kerberos-or-negotiated-ntlm"></a>Как браузер выбирает Negotiated Kerberos или Negotiated NTLM  
  При использовании браузера Internet Explorer для подключения к серверу отчетов, он указывает Negotiated Kerberos или NTLM в заголовке проверки подлинности. NTLM используется вместо протокола Kerberos, когда:  
@@ -203,14 +203,14 @@ ms.locfileid: "48116354"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Дополнительные сведения о Kerberos и серверах отчетов см. на странице [Развертывание решений бизнес-аналитики с помощью SharePoint, служб Reporting Services и сервера мониторинга PerformancePoint с Kerberos.](http://go.microsoft.com/fwlink/?LinkID=177751)  
+-   Дополнительные сведения о Kerberos и серверах отчетов см. на странице [Развертывание решений бизнес-аналитики с помощью SharePoint, служб Reporting Services и сервера мониторинга PerformancePoint с Kerberos.](https://go.microsoft.com/fwlink/?LinkID=177751)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проверка подлинности с использованием сервера отчетов](authentication-with-the-report-server.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](granting-permissions-on-a-native-mode-report-server.md)   
  [Файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Настройка обычной проверки подлинности на сервере отчетов](configure-basic-authentication-on-the-report-server.md)   
- [Настройка нестандартной проверки подлинности или проверки подлинности с помощью форм на сервере отчетов](configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Расширенная защита для аутентификации с использованием служб Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+ [Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов](configure-custom-or-forms-authentication-on-the-report-server.md)   
+ [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c459fcb3efc86566eef046df30d2d8ad9ea601b4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6a7a72e385dd6cfb4d0d83d3afab346dab8c85ef
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145855"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367346"
 ---
 # <a name="merging-partitions-xmla"></a>Слияние секций (XMLA)
   Если секции имеют одинаковые статистические схемы и структуры, можно объединить секции с помощью [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) в XML для аналитики (XMLA) команду. При управлении секциями их слияние является важным действием, особенно для тех секций, в которых содержатся исторические данные, секционированные по дате.  
@@ -53,7 +53,7 @@ ms.locfileid: "50145855"
 ### <a name="code"></a>Код  
   
 ```  
-<MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<MergePartitions xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Sources>  
     <Source>  
       <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  

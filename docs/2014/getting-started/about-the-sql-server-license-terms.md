@@ -14,31 +14,31 @@ ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 348ee13872db0ae6e9900290404d8db88122b123
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4271188149c8bafaaf256fa5056dd25ffc39aa38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194534"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354598"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Об условиях лицензионного соглашения SQL Server
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Условия лицензионного соглашения, копируются на локальный компьютер при [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] установлен. Если на один компьютер устанавливаются нескольких экземпляров одного выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на одном языке, то ко всем экземплярам выпуска на этом языке будет применена одна копия лицензионного соглашения. Файлы записываются в: % ProgramFiles %\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ или % ProgramFiles(x86) % \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License условия\\.  
+  Условия лицензирования программного обеспечения Майкрософт [!INCLUDE[msCoName](../includes/msconame-md.md)] копируются на локальный компьютер во время установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Если на один компьютер устанавливаются нескольких экземпляров одного выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на одном языке, то ко всем экземплярам выпуска на этом языке будет применена одна копия лицензионного соглашения. Файлы записываются в: % ProgramFiles %\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ или % ProgramFiles(x86) % \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License условия\\.  
   
  Если на один компьютер устанавливаются несколько экземпляров одного выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на одном языке, то ко всем экземплярам выпуска на этом языке будет применена одна копия лицензионного соглашения.  
   
- В имени файла лицензионного соглашения указывается установленный выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и языковой выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Имя файла лицензионного соглашения имеет формат: SQLServer2014_License_Edition_\<тип > _\<LCID > .rtf. Пример:  
+ В имени файла лицензионного соглашения указывается установленный выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и языковой выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Имя файла лицензионного соглашения имеет следующий формат: SQLServer2014_License_Edition_\<тип > _\<LCID > .rtf. Пример:  
   
 -   SQLServer2014_License_DEV_1033.rtf для разработчика [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], на английском языке.  
   
--   SQLServer2014_License_EXPR_1033.rtf для [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Express, на английском языке.  
+-   SQLServer2014_License_EXPR_1033.rtf для [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Express (на английском языке).   
   
  TYPE обозначает выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Для обозначения выпусков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] используются следующие фрагменты имен файлов:  
   
--   ENT — выпуск Enterprise: Server/клиентская лицензия (CAL) лицензирования  
+-   ENT — Enterprise Edition: лицензирование для доступа сервера или клиента  
   
--   ENTCORE — выпуск Enterprise: Лицензирование  
+-   ENTCORE — выпуск Enterprise Edition: ядро на основе лицензирования  
   
--   BI — Business Intelligence  
+-   BI — бизнес-аналитики  
   
 -   DEV — Developer  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48194534"
 |Французский|FRA|1036|  
 |Итальянский|ITA|1040|  
 |Корейский|KOR|1042|  
-|German|DEU|1031|  
+|Немецкий|DEU|1031|  
 |Испанский|ESN|3082|  
 |Китайский (упрощенный)|CHS|2052|  
 |Китайский (традиционный)|CHT|1028|  
@@ -65,7 +65,7 @@ ms.locfileid: "48194534"
 |Русский|RUS|1049|  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>Варианты лицензирования[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
- Дополнительные сведения о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ценах и вариантах лицензирования, см. в разделе [Microsoft SQL Server](http://www.microsoft.com/sqlserver/sql-server-2014.aspx) (http://www.microsoft.com/sqlserver/sql-server-2014.aspx) веб-сайта.  
+ Дополнительные сведения о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ценах и вариантах лицензирования, см. в разделе [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (https://www.microsoft.com/sqlserver/sql-server-2014.aspx) веб-сайта.  
   
 ## <a name="see-also"></a>См. также  
  [Сведения о лицензировании для SQL Server](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   

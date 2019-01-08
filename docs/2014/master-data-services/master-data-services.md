@@ -11,33 +11,33 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cc6765ae4fe00fd2f17317c62a5569825f8b973
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3794e92f2463ed82e19f5ba8a80c6df483e9ade5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174634"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369046"
 ---
 # <a name="master-data-services"></a>Службы Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) — это решение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по управлению основными данными. Управление основными данными (master data management, MDM) включает в себя действия, предпринимаемые организацией для нахождения и определения нетранзакционных списков данных с целью компиляции управляемых главных списков. Проект MDM в основном предусматривает оценку и реструктуризацию внутренних бизнес-процессов, наряду с реализацией технологии MDM. Результатом успешно реализованного решения MDM становится получение надежных, централизованных данных, доступных для анализа, что влечет за собой принятие лучших бизнес-решений.  
   
- После правильного обучения большинство бизнес-пользователей должны приобрести способность реализовать решение [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Кроме того, можно использовать MDS для управления любым доменом; это не ограничивается управлением списками клиентов, продуктов или учетных записей. Службы MDS не содержат структур для каких-либо доменов непосредственно после установки — необходимые для себя домены определяет сам пользователь, создавая для них модели.  
+ После правильного обучения большинство бизнес-пользователей должны приобрести способность реализовать решение [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Кроме того, можно использовать MDS для управления любым доменом; это не ограничивается управлением списками клиентов, продуктов или учетных записей. При первой установке MDS не включает структуру для всех доменов-определяют домены, вам потребуется, создавая для них модели.  
   
  В число других функциональных возможностей служб Master Data Services входят иерархии, детализированная безопасность, транзакции, поддержка версий данных и бизнес-правила.  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает в себя следующие компоненты и средства:  
   
--   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], средство, используемое для создания и настройки [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] баз данных и веб-приложений.  
+-   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] — средство, используемое для создания и настройки баз данных и веб-приложений служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], веб-приложение, используемое для выполнения административных задач (таких как создание модели или бизнес-правила), к которому обращаются пользователи для обновления данных.  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] — веб-приложение, используемое для выполнения административных задач (таких как создание модели или бизнес-правила), к которому обращаются пользователи для обновления данных.  
   
 -   MDSModelDeploy.exe — средство, которое используется для создания пакетов объектов моделей и данных для последующего развертывания в других средах.  
   
--   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] веб-служба, которой разработчик может расширять или создавать пользовательские решения [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   Веб-служба [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], с помощью которой разработчик может расширять или создавать пользовательские решения [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 -   Средство [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], используемое для управления данными и создания новых сущностей и атрибутов.  
   
- Обзор MDS ресурсов, см. в разделе [портал SQL Server Master Data Services](http://go.microsoft.com/fwlink/?LinkID=214272).  
+ Обзор MDS ресурсов, см. в разделе [портал SQL Server Master Data Services](https://go.microsoft.com/fwlink/?LinkID=214272).  
   
 |||  
 |-|-|  

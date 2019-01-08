@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying replication security settings
@@ -17,12 +16,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ffe50320214f9d2d21c28612d5ac3ffb348dda6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c4fd9221e363cb869f01c525a7f4b63b91132ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163764"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375636"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Просмотр и изменение параметров безопасности репликации
   В данном разделе описывается процесс просмотра и изменения параметров безопасности репликации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Например, может потребоваться изменение подключения агента чтения журнала к издателю для использования проверки подлинности SQL Server вместо встроенной проверки подлинности Windows, или может потребоваться изменение учетных данных для запуска задания агента при изменении пароля учетной записи Windows. Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в статье [Replication Agent Security Model](replication-agent-security-model.md) (Модель безопасности агента репликации).  
@@ -43,7 +42,7 @@ ms.locfileid: "48163764"
   
      [объекты RMO;](#RMOProcedure)  
   
--   **Дальнейшие действия:** [После изменения параметров безопасности репликации](#FollowUp)  
+-   **Дальнейшие действия.**  [После изменения параметров безопасности репликации](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -143,9 +142,9 @@ ms.locfileid: "48163764"
   
 1.  В диалоговом окне **Свойства подписки — \<подписка>** на издателе можно внести следующие изменения:  
   
-    -   Чтобы изменить учетную запись, под которой агент распространителя запускается и устанавливает соединение с распространителем, щелкните строку **Учетная запись процесса агента** , а затем нажмите кнопку свойств (**…**) в строке. Задайте учетную запись и пароль в диалоговом окне **Безопасность агента распространителя** .  
+    -   Чтобы изменить учетную запись, от имени которой агент распространителя запускается и устанавливает соединение с распространителем, щелкните строку **Учетная запись процесса агента**, а затем нажмите кнопку свойств (**...**) в строке. Задайте учетную запись и пароль в диалоговом окне **Безопасность агента распространителя** .  
   
-    -   Чтобы изменить контекст, под которым агент распространителя подключается к подписчику, щелкните строку **Соединение с подписчиком** , а затем нажмите кнопку свойств (**…**) в строке. Задайте контекст в диалоговом окне **Ввод сведений о соединении** .  
+    -   Чтобы изменить контекст, в котором агент распространителя подключается к подписчику, щелкните строку **Соединение с подписчиком**, а затем нажмите кнопку свойств (**...**) в строке. Задайте контекст в диалоговом окне **Ввод сведений о соединении** .  
   
          При использовании подписок, обновляемых посредством очередей, заданный здесь контекст используется также агентом чтения очереди для подключений к подписчику.  
   
@@ -155,11 +154,11 @@ ms.locfileid: "48163764"
   
 1.  В диалоговом окне **Свойства подписки — \<подписка>** на подписчике можно внести следующие изменения:  
   
-    -   Чтобы изменить учетную запись, под которой агент распространителя запускается и устанавливает соединения с подписчиком, щелкните строку **Учетная запись процесса агента** , а затем нажмите кнопку свойств (**…**) в строке. Задайте учетную запись и пароль в диалоговом окне **Безопасность агента распространителя** .  
+    -   Чтобы изменить учетную запись, от имени которой агент распространителя запускается и устанавливает соединения с подписчиком, щелкните строку **Учетная запись процесса агента**, а затем нажмите кнопку свойств (**...**) в строке. Задайте учетную запись и пароль в диалоговом окне **Безопасность агента распространителя** .  
   
          При использовании подписок, обновляемых посредством очередей, заданный здесь контекст используется также агентом чтения очереди для подключений к подписчику.  
   
-    -   Чтобы изменить контекст, под которым агент распространителя соединяется с распространителем, щелкните строку **Соединение с распространителем** , а затем нажмите кнопку свойств (**…**) в строке. Задайте контекст в диалоговом окне **Ввод сведений о соединении** .  
+    -   Чтобы изменить контекст, в котором агент распространителя соединяется с распространителем, щелкните строку **Соединение с распространителем**, а затем нажмите кнопку свойств (**...**) в строке. Задайте контекст в диалоговом окне **Ввод сведений о соединении** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -167,9 +166,9 @@ ms.locfileid: "48163764"
   
 1.  В диалоговом окне **Свойства подписки — \<подписка>** на издателе можно внести следующие изменения:  
   
-    -   Чтобы изменить учетную запись, под которой агент слияния запускается и устанавливает соединения с издателем и распространителем, щелкните строку **Учетная запись процесса агента** , а затем нажмите кнопку свойств (**…**) в строке. Задайте учетную запись и пароль в диалоговом окне **Безопасность агента слияния** .  
+    -   Чтобы изменить учетную запись, от имени которой агент слияния запускается и устанавливает соединения с издателем и распространителем, щелкните строку **Учетная запись процесса агента**, а затем нажмите кнопку свойств (**...**) в строке. Задайте учетную запись и пароль в диалоговом окне **Безопасность агента слияния** .  
   
-    -   Чтобы изменить контекст, под которым агент слияния соединяется с подписчиком, щелкните строку **Соединение с подписчиком** , а затем нажмите кнопку свойств (**…**) в строке. Задайте контекст в диалоговом окне **Ввод сведений о соединении** .  
+    -   Чтобы изменить контекст, в котором агент слияния соединяется с подписчиком, щелкните строку **Соединение с подписчиком**, а затем нажмите кнопку свойств (**...**) в строке. Задайте контекст в диалоговом окне **Ввод сведений о соединении** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -177,9 +176,9 @@ ms.locfileid: "48163764"
   
 1.  В диалоговом окне **Свойства подписки — \<подписка>** на подписчике можно внести следующие изменения:  
   
-    -   Чтобы изменить учетную запись, под которой агент слияния запускается и устанавливает соединения с подписчиком, щелкните строку **Учетная запись процесса агента** , а затем нажмите кнопку свойств (**…**) в строке. Задайте учетную запись и пароль в диалоговом окне **Безопасность агента слияния** .  
+    -   Чтобы изменить учетную запись, от имени которой агент слияния запускается и устанавливает соединения с подписчиком, щелкните строку **Учетная запись процесса агента**, а затем нажмите кнопку свойств (**...**) в строке. Задайте учетную запись и пароль в диалоговом окне **Безопасность агента слияния** .  
   
-    -   Чтобы изменить контекст, под которым агент слияния подключается к издателю и распространителю, щелкните строку **Соединение с издателем** , а затем нажмите кнопку свойств (**…**) в строке. Задайте контекст в диалоговом окне **Ввод сведений о соединении** .  
+    -   Чтобы изменить контекст, в котором агент слияния подключается к издателю и распространителю, щелкните строку **Соединение с издателем**, а затем нажмите кнопку свойств (**...**) в строке. Задайте контекст в диалоговом окне **Ввод сведений о соединении** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -217,7 +216,7 @@ ms.locfileid: "48163764"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Изменение настроек безопасности для подписки по запросу, обновляемой немедленно  
   
-1.  В диалоговом окне **Свойства подписки — \<подписка>** на подписчике щелкните строку **Соединение с издателем**, а затем нажмите кнопку свойств (**…**) в этой строке.  
+1.  В диалоговом окне **Свойства подписки — \<подписка>** в разделе подписчика щелкните строку **Соединение с издателем**, а затем нажмите кнопку свойств (**…**) в этой строке.  
   
 2.  В диалоговом окне **Ввод сведений о соединении** выберите один из следующих параметров:  
   
@@ -416,7 +415,7 @@ ms.locfileid: "48163764"
 ##  <a name="RMOProcedure"></a> При помощи объектов RMO  
   
 > [!IMPORTANT]  
->  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](http://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+>  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-change-all-instances-of-a-password-stored-on-a-replication-server"></a>Изменение всех экземпляров пароля, хранящихся на сервере репликации  
   
@@ -433,7 +432,7 @@ ms.locfileid: "48163764"
     -   *password* — новое значение пароля.  
   
         > [!IMPORTANT]  
-        >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](http://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой Windows .NET Framework.  
+        >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой Windows .NET Framework.  
   
         > [!NOTE]  
         >  Только члены предопределенной роли сервера `sysadmin` могут вызвать этот метод.  
@@ -448,7 +447,7 @@ ms.locfileid: "48163764"
   
 3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>и <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> , а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
   
-4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, либо на подписку на шаге 3 были неверно определены свойства, либо подписка не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение `false`, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
   
 5.  В экземпляре <xref:Microsoft.SqlServer.Replication.TransSubscription>задайте одно или несколько из следующих свойств безопасности.  
   
@@ -461,17 +460,17 @@ ms.locfileid: "48163764"
         > [!NOTE]  
         >  Агент всегда соединяется с распространителем с учетными данными Windows, указанными в свойстве <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
   
-6.  (Необязательно) Если указано значение `true` для <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, вызовите <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> для фиксирования изменений на сервере. Если указано значение `false` для <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
+6.  Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `true`, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `false` (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription-to-a-transactional-publication"></a>Изменение параметров безопасности агента распространителя для подписки по запросу на публикацию транзакций  
   
 1.  Создайте соединение с подписчиком с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
   
 3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>и <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> , а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
   
-4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, либо на подписку на шаге 3 были неверно определены свойства, либо подписка не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение `false`, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
   
 5.  В экземпляре <xref:Microsoft.SqlServer.Replication.TransPullSubscription>задайте одно или несколько из следующих свойств безопасности.  
   
@@ -484,17 +483,17 @@ ms.locfileid: "48163764"
         > [!NOTE]  
         >  Агент всегда соединяется с подписчиком с учетными данными Windows, указанными в <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
   
-6.  (Необязательно) Если указано значение `true` для <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, вызовите <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> для фиксирования изменений на сервере. Если указано значение `false` для <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
+6.  Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `true`, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `false` (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription-to-a-merge-publication"></a>Изменение параметров безопасности агента слияния для подписки по запросу на публикацию слиянием  
   
 1.  Создайте соединение с подписчиком с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePullSubscription> .  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
   
 3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>и <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> , а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
   
-4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, либо на подписку на шаге 3 были неверно определены свойства, либо подписка не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение `false`, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
   
 5.  В экземпляре <xref:Microsoft.SqlServer.Replication.MergePullSubscription>задайте одно или несколько из следующих свойств безопасности.  
   
@@ -504,14 +503,14 @@ ms.locfileid: "48163764"
   
     -   Чтобы указать проверку подлинности SQL Server в качестве типа проверки подлинности, используемый агентом при соединении с распространителем, задайте <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> поле <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> свойства `false`и укажите учетные данные входа распространителя для <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> поля.  
   
-    -   Чтобы указать встроенную проверку подлинности Windows в качестве типа проверки подлинности, используемый агентом при соединении с издателем, задайте <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> поле <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> свойства `true`.  
+    -   Чтобы при соединении агента с издателем использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> значение `true`.  
   
     -   Чтобы указать проверку подлинности SQL Server в качестве типа проверки подлинности, используемый агентом при соединении с издателем, задайте <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> поле <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> свойства `false`и укажите учетные данные входа издателя для <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> поля.  
   
         > [!NOTE]  
         >  Агент всегда соединяется с подписчиком с учетными данными Windows, указанными в <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
   
-6.  (Необязательно) Если указано значение `true` для <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, вызовите <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> для фиксирования изменений на сервере. Если указано значение `false` для <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
+6.  Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `true`, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `false` (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription-to-a-merge-publication"></a>Изменение параметров безопасности агента слияния для принудительной подписки на публикацию слиянием  
   
@@ -521,7 +520,7 @@ ms.locfileid: "48163764"
   
 3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>и <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> , а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
   
-4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, либо на подписку на шаге 3 были неверно определены свойства, либо подписка не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение `false`, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
   
 5.  В экземпляре <xref:Microsoft.SqlServer.Replication.MergeSubscription>задайте одно или несколько из следующих свойств безопасности.  
   
@@ -531,14 +530,14 @@ ms.locfileid: "48163764"
   
     -   Чтобы указать проверку подлинности SQL Server в качестве типа проверки подлинности, используемый агентом при соединении с подписчиком, задайте <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> поле <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> свойства `false`и укажите учетные данные входа подписчика для <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> поля.  
   
-    -   Чтобы указать встроенную проверку подлинности Windows в качестве типа проверки подлинности, используемый агентом при соединении с издателем, задайте <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> поле <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> свойства `true`.  
+    -   Чтобы при соединении агента с издателем использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> значение `true`.  
   
     -   Чтобы указать проверку подлинности SQL Server в качестве типа проверки подлинности, используемый агентом при соединении с издателем, задайте <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> поле <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> свойства `false`и укажите учетные данные входа издателя для <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A>и <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> поля.  
   
         > [!NOTE]  
         >  Агент всегда соединяется с распространителем с учетными данными Windows, указанными в свойстве <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
   
-6.  (Необязательно) Если указано значение `true` для <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, вызовите <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> для фиксирования изменений на сервере. Если указано значение `false` для <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
+6.  Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `true`, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `false` (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 #### <a name="to-change-the-login-information-used-by-an-immediate-updating-subscriber-when-it-connects-to-the-transactional-publisher"></a>Изменение сведений об имени входа, используемых немедленно обновляемым подписчиком при подключении к издателю транзакций  
   
@@ -546,7 +545,7 @@ ms.locfileid: "48163764"
   
 2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> для базы данных подписки. Укажите значения <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> и <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1 в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, на базу данных на шаге 2 были неверно определены свойства или базе данных подписки не существует.  
+3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение `false`, значит, в шаге 2 были неправильно определены свойства базы данных либо база данных подписки не существует.  
   
 4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> , передав следующие параметры.  
   
@@ -567,10 +566,10 @@ ms.locfileid: "48163764"
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После изменения параметров безопасности репликации  
+##  <a name="FollowUp"></a> Дальнейшие действия: После изменения параметров безопасности репликации  
  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
  [Обновление скриптов репликации (программирование репликации на языке Transact-SQL)](../administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
  [Управление именами для входа и паролями при репликации](manage-logins-and-passwords-in-replication.md)   

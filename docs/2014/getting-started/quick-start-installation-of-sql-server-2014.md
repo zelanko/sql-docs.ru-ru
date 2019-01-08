@@ -22,12 +22,12 @@ ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c682b29a4265b9c6955b440dc45e4920ca87d081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f70b3367d2ca0b6c896c970f29b179dc969640c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223384"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366646"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Быстрая установка SQL Server 2014
     
@@ -82,7 +82,7 @@ ms.locfileid: "48223384"
   
      См. в разделе [Установка отказоустойчивого кластера SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) методические сведения об установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отказоустойчивого кластера.  
   
- По умолчанию при установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] образцы баз данных и образцы кода не устанавливаются. Чтобы установить образцы баз данных и образцы кода для выпусков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], кроме выпуска Express, посетите [веб-сайт CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Сведения о поддержке образцов баз данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и образцы кода для [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]см. в разделе [Обзор баз данных и образцов](http://go.microsoft.com/fwlink/?LinkId=110391).  
+ По умолчанию при установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] образцы баз данных и образцы кода не устанавливаются. Чтобы установить образцы баз данных и образцы кода для выпусков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], кроме выпуска Express, посетите [веб-сайт CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843). Сведения о поддержке образцов баз данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и образцы кода для [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]см. в разделе [Обзор баз данных и образцов](https://go.microsoft.com/fwlink/?LinkId=110391).  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-installation"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Установка  
  Независимо от того, используется для установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] мастер установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или командная строка, процесс установки включает один или несколько шагов.  
@@ -145,7 +145,7 @@ ms.locfileid: "48223384"
   
 |Описание|Раздел|  
 |-----------------|-----------|  
-|Приведенные в этом разделе сведения помогут определить, требуется ли разблокировать порты брандмауэра для доступа к службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или PowerPivot для SharePoint. Выполнив шаги, приведенные в этом разделе, можно настроить как параметры порта, так и брандмауэра.|[Настройка брандмауэра Windows для разрешения доступа к службам Analysis Services](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|Приведенные в этом разделе сведения помогут определить, требуется ли разблокировать порты брандмауэра для доступа к службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или PowerPivot для SharePoint. Выполнив шаги, приведенные в этом разделе, можно настроить как параметры порта, так и брандмауэра.|[Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |В разделе содержатся общие сведения о настройке брандмауэра и сводные сведения, представляющие интерес для администратора [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |В этом разделе описываются настройки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и брандмауэра Windows в режиме повышенной безопасности для предоставления сетевого подключения экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в многосетевой среде.|[Настройка многосетевого компьютера для доступа к SQL Server](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
   

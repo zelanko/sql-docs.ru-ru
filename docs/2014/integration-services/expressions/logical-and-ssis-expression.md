@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - '&& (logical AND)'
@@ -15,12 +14,12 @@ ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a59545c26427afa1677eca78e4c00263e663dded
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0482db6754777c2501e776a166f4d385e86900a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065539"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780196"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (логическое И) (выражение служб SSIS)
   Выполняет логическую операцию И. Выражение принимает значение TRUE, если все условия имеют значение TRUE.  
@@ -65,8 +64,8 @@ StandardCost < @SPrice && ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>См. также  
- [& &#40;Побитовое и&#41; &#40;выражение служб SSIS&#41;](bitwise-and-ssis-expression.md)   
- [Приоритет и ассоциативность операторов](operator-precedence-and-associativity.md)   
- [Операторы &#40;выражение служб SSIS&#41;](operators-ssis-expression.md)  
+ [& (битовое И) (выражение служб SSIS)](bitwise-and-ssis-expression.md)   
+ [Очередность и ассоциативность операторов](operator-precedence-and-associativity.md)   
+ [Операторы (выражение служб SSIS)](operators-ssis-expression.md)  
   
   

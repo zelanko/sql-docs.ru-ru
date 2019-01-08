@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.derivedcolumntrans.f1
@@ -19,12 +18,12 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06ba255f88c0938fab80c12e3f520ba418b996f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5575991201f48c48fee1b27ad95b6d07de6251ba
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204054"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373896"
 ---
 # <a name="derived-column-transformation"></a>Преобразование «Производный столбец»
   Преобразованием «Производный столбец» создаются новые значения столбцов путем применения выражений к входным столбцам преобразования. Выражения могут содержать любые сочетания переменных, функций, операторов и столбцов из входа преобразования. Результат добавляется в новый столбец или вставляется в существующий как замещающее значение. При преобразовании «Производный столбец» может быть определено несколько производных столбцов, и любая переменная или входные столбцы могут присутствовать в нескольких выражениях.  
@@ -51,7 +50,7 @@ ms.locfileid: "48204054"
     > [!NOTE]  
     >  Если выражение ссылается на входной столбец, перезаписанный преобразованием «Производный столбец», то выражение использует первоначальное, а не производное значение столбца.  
   
--   Добавляя результаты в новые столбцы с типом данных `string`, укажите кодовую страницу. Дополнительные сведения см. в разделе [Comparing String Data](../comparing-string-data.md).  
+-   Добавляя результаты в новые столбцы с типом данных `string`, укажите кодовую страницу. Дополнительные сведения см. в статье [Comparing String Data](../comparing-string-data.md).  
   
  Преобразование "Производный столбец" содержит пользовательское свойство FriendlyExpression. Это свойство может быть обновлено выражением свойства при загрузке пакета. Дополнительные сведения см. в разделах [Использование выражений свойств в пакетах](../../expressions/use-property-expressions-in-packages.md)и [Пользовательские свойства преобразований](transformation-custom-properties.md).  
   
@@ -76,8 +75,8 @@ ms.locfileid: "48204054"
 -   [Получение значений столбцов с помощью преобразования "Производный столбец"](derived-column-transformation.md)  
   
 ## <a name="related-content"></a>См. также  
- Техническая статья [Примеры выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
+ Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
- Курируемый ответ [Разбиение данных столбца с помощью SSIS](http://go.microsoft.com/fwlink/?LinkId=321995)на curatedviews.cloudapp.net.  
+ Курируемый ответ [Разбиение данных столбца с помощью SSIS](https://go.microsoft.com/fwlink/?LinkId=321995)на curatedviews.cloudapp.net.  
   
   

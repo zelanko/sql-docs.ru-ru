@@ -1,5 +1,6 @@
 ---
-title: Командная строка установки SQL Server в машинном обучении компоненты R и Python | Документация Майкрософт
+title: Командная строка установки компонентов R и Python — машинного обучения SQL Server
+description: Запустите программу установки командной строки SQL Server, добавляемый экземпляр ядра СУБД SQL Server поддерживает язык R и Python интеграции.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/21/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 77b68c6206e069a29821549998714a671239ca56
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 8e3c101eae8e02446a9e47b17255e2ca2b501774
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40434874"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645530"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Установка SQL Server в машинном обучении компоненты R и Python из командной строки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,11 +48,11 @@ ms.locfileid: "40434874"
 
 | Аргументы | Описание |
 |-----------|-------------|
-| / ФУНКЦИИ = AdvancedAnalytics | Устанавливает версию в базе данных: служб SQL Server 2017 машинного обучения (в базе данных) или SQL Server 2016 R Services (в базе данных).  |
+| / ФУНКЦИИ = AdvancedAnalytics | Устанавливает версию в базе данных: Службы машинного обучения из состава SQL Server 2017 (в базе данных) или SQL Server 2016 R Services (в базе данных).  |
 | / ФУНКЦИИ = SQL_INST_MR | Применимо к SQL Server 2017 только. Для сопоставления с AdvancedAnalytics. Устанавливает компонент (в базе данных) R, включая Microsoft R Open и собственные пакеты R. Компонент SQL Server 2016 R Services R только, поэтому параметр для этого выпуска не существует.|
 | / ФУНКЦИИ = SQL_INST_MPY | Применимо к SQL Server 2017 только. Для сопоставления с AdvancedAnalytics. Устанавливает функцию Python (в базе данных), в том числе Anaconda и частные пакеты Python. |
-| / ФУНКЦИИ = SQL_SHARED_MR | Устанавливает службы R для автономной версии: сервер SQL Server 2017 машинного обучения (автономный) или SQL Server 2016 R Server (изолированную версию). Изолированный сервер — это «общий компонент» не привязан к экземпляру ядра базы данных.|
-| / ФУНКЦИИ = SQL_SHARED_MPY | Применимо к SQL Server 2017 только. Устанавливает компонент Python для автономной версии: сервер SQL Server 2017 машинного обучения (автономный). Изолированный сервер — это «общий компонент» не привязан к экземпляру ядра базы данных.|
+| / ФУНКЦИИ = SQL_SHARED_MR | Устанавливает службы R для автономной версии: Сервер SQL Server 2017 машинного обучения (автономный) или SQL Server 2016 R Server (изолированный). Изолированный сервер — это «общий компонент» не привязан к экземпляру ядра базы данных.|
+| / ФУНКЦИИ = SQL_SHARED_MPY | Применимо к SQL Server 2017 только. Устанавливает компонент Python для автономной версии: SQL Server 2017 Machine Learning Server (изолированную версию). Изолированный сервер — это «общий компонент» не привязан к экземпляру ядра базы данных.|
 | /IACCEPTROPENLICENSETERMS  | Указывает, что вы приняли условия лицензионного соглашения по использованию компонентов R с открытым исходным. |
 | /IACCEPTPYTHONLICENSETERMS | Указывает, что вы приняли условия лицензионного соглашения по использованию компонентов Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Указывает, что вы приняли условия лицензионного соглашения по использованию SQL Server.|
@@ -72,7 +73,7 @@ ms.locfileid: "40434874"
 
 Для параллельной установки экземпляра ядра СУБД укажите имя экземпляра и учетная запись администратора (Windows). Включить функции для установки основных компонентов языка, а также принятие всех условий лицензирования.
 
-```  
+```cmd
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<Windows-username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
@@ -80,7 +81,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,
 
 Этот же команду, с учетом имени входа SQL Server для ядра базы данных с помощью смешанного проверки подлинности.
 
-```
+```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY
 /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<sql-username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
@@ -88,7 +89,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 
 Данный пример является Python, показывающий, можно добавить один язык, опустив компонент.
 
-```  
+```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTPYTHONLICENSETERMS
@@ -98,7 +99,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 
 Эта команда идентична SQL Server 2017, но без элементов, Python, которые доступны не в программе установки SQL Server 2016.
 
-```  
+```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<Windows-username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS 
@@ -122,7 +123,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 
 При добавлении расширенной аналитики в базе данных в существующий экземпляр ядра базы данных, введите имя экземпляра. Например если вы ранее установили ядро СУБД SQL Server 2017 и Python, можно использовать эту команду для добавления R.
 
-```  
+```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
@@ -133,7 +134,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 Автоматическая установка подавляет поиск расположения файлов .cab. По этой причине необходимо указать расположение, куда должны быть распакованы CAB-файлы. Для этого можно временный каталог.
  
-```  
+```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
@@ -146,21 +147,21 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 
 SQL Server 2017 поддерживает Python и R на изолированном сервере:
 
-```
+```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY  
 /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
 SQL Server 2016 — только для R:
 
-```
+```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR 
 /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
 По завершении установки у вас есть сервер, пакеты Microsoft, распределение открытым исходным кодом R и Python, средства, примеры и сценарии, которые являются частью распределение. 
 
-Чтобы открыть окно консоли R, \R_SERVER\bin\x64 go \Program files\Microsoft SQL server\140; (или 130) и дважды щелкните **RGui.exe**. Не знакомы с R? Пройти обучение: [R основных команд и функций RevoScaleR: 25 наиболее распространенные](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler).
+Чтобы открыть окно консоли R, \R_SERVER\bin\x64 go \Program files\Microsoft SQL server\140; (или 130) и дважды щелкните **RGui.exe**. Не знакомы с R? Пройти обучение: [Основные команды R и функциях RevoScaleR: 25 наиболее распространенные](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler).
 
 Чтобы открыть команду Python, перейдите к \Program files\Microsoft SQL Server\140\PYTHON_SERVER\bin\x64 и дважды щелкните **python.exe**.
 
@@ -178,12 +179,12 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 Разработчики R можно приступить к работе с простыми примерами и ознакомиться с основами как R работает с SQL Server. Следующий шаг см. следующие ссылки:
 
-+ [Руководство: Запуск R в T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Учебник: Анализ в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Учебник. Запуск R в T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Учебник. Аналитика в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Разработчики Python рассказывается, как использовать Python с SQL Server с помощью этих учебных материалов:
 
-+ [Руководство: Запуск Python в T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Учебник: Анализ в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Учебник. Запустите Python в T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Учебник. Аналитика в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 Чтобы просмотреть примеры машинного обучения, которые основаны на реальных сценариев, см. в разделе [машинного обучения учебники](../tutorials/machine-learning-services-tutorials.md).

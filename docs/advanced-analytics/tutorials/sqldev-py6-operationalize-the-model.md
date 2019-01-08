@@ -1,5 +1,5 @@
 ---
-title: Предсказания возможных результатов, с помощью моделей Python (машинного обучения SQL Server) | Документация Майкрософт
+title: Предсказания возможных результатов, с помощью модели Python — машинного обучения SQL Server
 description: Руководство, описывающее для ввода в эксплуатацию внедренного скрипта PYthon в SQL Server хранимые процедуры с помощью функций T-SQL
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3d1466fba7c659887578bf349a07968bfb580158
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9a75c25528003d0133cfd33c3eaddc20a8241692
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033681"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644773"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Запустите прогнозы с помощью Python, внедренных в хранимую процедуру
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,8 +26,8 @@ ms.locfileid: "51033681"
 
 На этом занятии рассматривается два метода для создания прогнозов на основе модели Python: пакетной оценки и оценки по строкам.
 
-- **Пакетная оценка:** чтобы предоставить несколько строк входных данных, передать запрос SELECT в качестве аргумента хранимой процедуры. Результатом является таблица наблюдений, соответствующую входным вариантам.
-- **Отдельные оценки:** передать набор отдельных значений параметров в качестве входных данных.  Хранимая процедура возвращает одну строку или значение.
+- **Пакетная оценка:** Чтобы предоставить несколько строк входных данных, следует передайте запрос SELECT в качестве аргумента хранимой процедуры. Результатом является таблица наблюдений, соответствующую входным вариантам.
+- **Отдельные оценки:** Передайте набор отдельных значений параметров в качестве входных данных.  Хранимая процедура возвращает одну строку или значение.
 
 Весь код Python, необходимые для оценки предоставляется как часть хранимой процедуры.
 
@@ -48,7 +48,7 @@ ms.locfileid: "51033681"
 
 + Передаваемые данные рамку, содержащую входные данные `predict_proba` функция модели логистической регрессии, `mod`. `predict_proba` Функция (`probArray = mod.predict_proba(X)`) возвращает **float** , представляет вероятность того, что получит чаевые (для любой суммы).
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
 GO
 
@@ -92,7 +92,7 @@ GO
 
 Эта хранимая процедура использует такие входные и создает тот же тип оценки как предыдущих хранимой процедуры, но использует функции из **revoscalepy** указан с помощью машинного обучения SQL Server пакет.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
 GO
 
@@ -142,7 +142,7 @@ GO
 
 1. Чтобы использовать **scikit-Узнайте** модель для оценки, вызовите хранимую процедуру **PredictTipSciKitPy**, передав имя модели и строку запроса в качестве входных данных.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -157,7 +157,7 @@ GO
 
 2. Чтобы использовать **revoscalepy** модель для оценки, вызовите хранимую процедуру **PredictTipRxPy**, передав имя модели и строку запроса в качестве входных данных.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -188,7 +188,7 @@ GO
 
 Внимательно изучите код хранимой процедуры, которая выполняет оценку **scikit-Узнайте** модели.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
 GO
 
@@ -255,7 +255,7 @@ GO
 
 Следующая хранимая процедура выполняет оценку **revoscalepy** модели.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
 GO
 
@@ -297,7 +297,7 @@ X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "dire
 probArray = rx_predict(mod, X)
 
 probList = []
-prob_list = prob_array["tipped_Pred"].values
+probList = probArray["tipped_Pred"].values
 
 # Create output data frame
 OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
@@ -335,14 +335,14 @@ GO
 
 1. Для создания прогноза с помощью **revoscalepy** модели, выполните следующую инструкцию:
   
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 2. Для создания оценки с помощью **scikit-Узнайте** модели, выполните следующую инструкцию:
 
-    ```SQL
-    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'ScitKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 В результате обе процедуры — вероятность суммы чаевых за поездки такси с указанными параметрами или функции.

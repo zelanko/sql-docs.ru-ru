@@ -22,22 +22,22 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a79eed306e8920ece4cc6ea1de97352c4706622
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afab607b547302d3f24f3bb64060757bfa76495a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604622"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209913"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Этот компонент доступен в состоянии предварительной версии. Не полагайтесь на конкретную реализацию этого компонента, так как он может быть изменен или удален в следующей версии.  
->   
+> 
 >  В предварительной версии группа эксплуатации [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] может отключать и включать сбор данных для данного динамического административного представления:  
->   
+> 
 >  -   Если сбор данных включен, представление DMV возвращает текущие данные в том виде, в каком они были собраны.  
 > -   Если сбор данных включен, представление DMV возвращает данные предыстории, которые могут устареть.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47604622"
 |time|**datetime**|Время (UTC) в почасовых приращениях.|  
 |database_name|**nvarchar**|Имя пользовательской базы данных.|  
 |sku|**nvarchar**|Имя SKU. Допустимы следующие значения:<br /><br /> Web Edition<br /><br /> Business Edition<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
-|usage_in_seconds|**int**|Время ЦП, использованное в течение часа.<br /><br /> Примечание: Этот столбец является устаревшим для версии 11 и не относится к версии 12. **Значение всегда имеет значение 0.**|  
+|usage_in_seconds|**int**|Время ЦП, использованное в течение часа.<br /><br /> Примечание. Этот столбец является устаревшим для версии 11 и не относится к версии 12. **Значение всегда имеет значение 0.**|  
 |storage_in_megabytes|**decimal**|Максимальный объем хранилища в течение часа, включающий данные базы данных, индексы, хранимые процедуры и метаданные.|  
   
 ## <a name="permissions"></a>Разрешения  

@@ -17,15 +17,15 @@ ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc448704ef0362c70a957a4e5a1574cd92df3578
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0772ab148c413d685f046a5a238761edf647641b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116464"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363887"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Использование мастера групп доступности (SQL Server Management Studio)
-  В этом разделе описывается использование мастера создания групп доступности (в [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) для создания и настройки группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
+  В этом разделе описывается использование мастера создания групп доступности (в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) для создания и настройки группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
   
 > [!NOTE]  
 >  Базовые сведения о группах доступности см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](overview-of-always-on-availability-groups-sql-server.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "48116464"
   
      [безопасность](#Security)  
   
--   **Создание и настройки группы доступности с помощью**  [мастера создания группы доступности (SQL Server Management Studio)](#RunAGwiz)  
+-   **Создание и настройка группы доступности группы, с использованием:**  [Мастер создания группы доступности (SQL Server Management Studio)](#RunAGwiz)  
   
 > [!NOTE]  
 >  Вместо мастера создания групп доступности можно использовать [!INCLUDE[tsql](../../../includes/tsql-md.md)] или командлеты [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Создание группы доступности (Transact-SQL)](create-an-availability-group-transact-sql.md) или командлеты [Создание группы доступности (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md).  
@@ -111,12 +111,12 @@ ms.locfileid: "48116464"
   
      После изменения базы данных для обеспечения соответствия требованиям щелкните **Обновить** , чтобы обновить сетку баз данных.  
   
-7.  На странице **Выбор реплик** укажите и настройте одну или несколько реплик для новой группы доступности. Страница содержит четыре вкладки. Эти вкладки представлены в следующей таблице. Дополнительные сведения см. в разделе [Укажите страницу реплик (мастер создания группы доступности: мастер добавления реплики)](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
+7.  На странице **Выбор реплик** укажите и настройте одну или несколько реплик для новой группы доступности. Страница содержит четыре вкладки. Эти вкладки представлены в следующей таблице. Дополнительные сведения см. в разделе [укажите страницу реплик &#40;мастера создания группы доступности: Мастер добавления реплики&#41; ](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) раздела.  
   
     |Вкладка|Краткое описание|  
     |---------|-----------------------|  
     |**Реплики**|На этой вкладке можно задать каждый экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , где будет размещена вторичная реплика. Обратите внимание, что первичная реплика должна быть размещена на экземпляре сервера, с которым в данный момент установлено соединение.|  
-    |**Конечные точки**|Эту вкладку можно использовать для проверки существующих конечных точек зеркального отображения баз данных, а также для их автоматического создания в случае, если они отсутствуют на экземпляре сервера, служба которого использует проверку подлинности Windows. **Примечание:** Если любой экземпляр сервера работает под учетной записью пользователя домена, необходимо сделать вручную перейти на свой экземпляр сервера, прежде чем перейти в мастере. Дополнительные сведения см. в подразделе [Предварительные условия](#PrerequisitesRestrictions)ранее в этом разделе.|  
+    |**Конечные точки**|Эту вкладку можно использовать для проверки существующих конечных точек зеркального отображения баз данных, а также для их автоматического создания в случае, если они отсутствуют на экземпляре сервера, служба которого использует проверку подлинности Windows. **Примечание.**  Если какой-либо экземпляр сервера запускается под учетной записью, которая не является учетной записью пользователя домена, то необходимо вручную перейти на свой экземпляр сервера до продолжения работы с мастером. Дополнительные сведения см. в подразделе [Предварительные условия](#PrerequisitesRestrictions)ранее в этом разделе.|  
     |**Параметры резервного копирования**|Эту вкладку можно использовать для задания настроек резервного копирования для группы доступности в целом, а также для задания приоритетов резервного копирования для отдельных реплик доступности.|  
     |**Средство прослушивания**|Эта вкладка используется для создания прослушивателя группы доступности. По умолчанию мастер не создает прослушиватель.|  
   
@@ -196,27 +196,27 @@ ms.locfileid: "48116464"
   
 -   **Блоги**  
   
-     [-Обучающая серия AlwaysON HADRON: Использование рабочего пула для HADRON баз данных с поддержкой](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON — HADRON обучающая серия. Использование рабочего пула для HADRON баз данных с поддержкой](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Блоги группы AlwaysOn SQL Server: Официальный блог SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги группы AlwaysOn SQL Server: Официальный блог по SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Блоги инженеров CSS SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Видеоролики**  
   
      [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 1: Представляем решение высокого уровня доступности следующего поколения](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Серия AlwaysOn Microsoft SQL Server с кодовым названием «Denali», часть 2: Создание критически важных высокого уровня доступности с помощью AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 2: Создание решения критически важных высокого уровня доступности с помощью AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Технические документы**  
   
-     [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Технические документы Майкрософт Microsoft по SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Технические документы Майкрософт Microsoft по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Технические документы группы консультантов по SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  

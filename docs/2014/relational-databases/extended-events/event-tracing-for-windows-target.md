@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - event tracing for windows target
@@ -15,19 +14,19 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64ae07c8f8ac258730ea5de04dd0e1f304b79bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175164"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355988"
 ---
 # <a name="event-tracing-for-windows-target"></a>Цель «Средство трассировки событий для Windows»
   Прежде чем использовать средство трассировки событий для Windows (ETW) в качестве назначения, рекомендуется сначала попрактиковаться в работе с данным средством. Трассировка событий Windows используется совместно с расширенными событиями или в качестве потребителя расширенных событий. Следующие внешние ссылки помогут получить начальные сведения о трассировке событий Windows.  
   
--   [События Windows](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [События Windows](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [Усовершенствованные отладка и настройка производительности с помощью приложения ETW](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [Усовершенствованные отладка и настройка производительности с помощью приложения ETW](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  Цель «Трассировка событий Windows» является одноэлементным целевым объектом, хотя она может быть добавлена в несколько сеансов. Если событие происходит в нескольких сеансах, то данное событие будет передано цели трассировки событий Windows по одному разу для каждого произошедшего события. Каждый процесс может иметь только одну подсистему расширенных событий.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "48175164"
  Назначение трассировки событий Windows не может управляться внешними контроллерами трассировки событий Windows, например Logman.exe. Для трассировки событий Windows нужно создать сеанс события с назначением трассировки событий Windows. Дополнительные сведения см. в разделе [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql).  
   
 > [!NOTE]  
->  При включении назначения ETW создается сеанс ETW с именем XE_DEFAULT_ETW_SESSION. Если сеанс с именем XE_DEFAULT_ETW_SESSION уже существует, то он используется как есть, без изменения свойств. Сеанс XE_DEFAULT_ETW_SESSION используется совместно всеми экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После запуска сеанса XE_DEFAULT_ETW_SESSION необходимо остановить его с помощью контроллера ETW, например инструмента Logman. Например, можно выполните следующую команду в командной строке: `logman stop XE_DEFAULT_ETW_SESSION -ets`.  
+>  При включении назначения ETW создается сеанс ETW с именем XE_DEFAULT_ETW_SESSION. Если сеанс с именем XE_DEFAULT_ETW_SESSION уже существует, то он используется как есть, без изменения свойств. Сеанс XE_DEFAULT_ETW_SESSION используется совместно всеми экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После запуска сеанса XE_DEFAULT_ETW_SESSION необходимо остановить его с помощью контроллера ETW, например инструмента Logman. Например, можно выполнить в командной строке следующую команду: `logman stop XE_DEFAULT_ETW_SESSION -ets`.  
   
  В следующей таблице описаны доступные параметры для настройки назначения ETW.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48175164"
     > [!IMPORTANT]  
     >  После начала первого сеанса путь к файлу изменить нельзя.  
   
--   MOF-файлы находятся в папке: *\<ваш путь установки>* \Microsoft SQL Server\Shared. Дополнительные сведения см. в разделе [Формат управляющих объектов](http://go.microsoft.com/fwlink/?LinkId=92851) библиотеки MSDN.  
+-   MOF-файлы находятся в папке: *\<ваш путь установки>* \Microsoft SQL Server\Shared. Дополнительные сведения см. в разделе [Формат управляющих объектов](https://go.microsoft.com/fwlink/?LinkId=92851) библиотеки MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Добавление цели к сеансу  
  Для добавления назначения счетчика событий в сеанс расширенных событий следует использовать одну из следующих инструкций при создании или изменении сеанса события:  

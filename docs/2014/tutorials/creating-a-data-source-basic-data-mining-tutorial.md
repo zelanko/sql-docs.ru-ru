@@ -11,18 +11,18 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f576ceb6b465dd8238972d29456300a01837df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e216aa5da4ef837da632ba83d4cf6e14edb40b1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128174"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376456"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Создание источника данных (учебник по интеллектуальному анализу данных — начальный уровень)
   Объект *источника данных* является подключение к данным, которая сохраняется и управляется из проекта и развернуть ваш [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базы данных. Источник данных содержит, кроме обязательных свойств соединения, имя сервера и базы данных, где находится этот источник.  
   
 > [!IMPORTANT]  
->  Имя базы данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Если вы еще не установили эту базу данных, см. в разделе [образцы баз данных SQL Microsoft](http://go.microsoft.com/fwlink/?LinkId=88417) страницы.  
+>  Имя базы данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Если вы еще не установили эту базу данных, см. в разделе [образцы баз данных SQL Microsoft](https://go.microsoft.com/fwlink/?LinkId=88417) страницы.  
   
 ### <a name="to-create-a-data-source"></a>Создание источника данных  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48128174"
 ## <a name="see-also"></a>См. также  
  [Создание источника данных (многомерные службы SSAS)](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Определение источника данных](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Задание параметров олицетворения &#40;службы SSAS — многомерные&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
+ [Задание параметров олицетворения (службы SSAS — многомерные)](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
   
   

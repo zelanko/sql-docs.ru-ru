@@ -1,22 +1,24 @@
 ---
-title: Как запрос HDFS в кластере SQL Server больших данных | Документация Майкрософт
+title: Запрашивать данные из HDFS в пуле носителей
+titleSuffix: SQL Server 2019 big data clusters
 description: Этом руководстве показано, как запросить данные из HDFS в кластере SQL Server 2019 больших данных (Предварительная версия). Создайте внешнюю таблицу данных в пуле носителей и затем выполнить запрос.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/11/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: c6f0f01936d5b6e570c2bff53d19ae7a64f151ab
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 78b78fafa8b2dce197fae98ef42b763cc0fa2f4e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644247"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432177"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Руководство: Выполнение запросов HDFS в кластере SQL Server больших данных
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Учебник. Запрос HDFS в кластере SQL Server больших данных
 
-Этом руководстве показано, как запросить данные из HDFS в кластере SQL Server 2019 больших данных.
+Этом руководстве показано, как запросить данные из HDFS в кластере SQL Server 2019 больших данных (Предварительная версия).
 
 В этом руководстве вы узнаете, как:
 
@@ -27,19 +29,19 @@ ms.locfileid: "49644247"
 > [!TIP]
 > При желании можно загрузить и запустить сценарий для команды в этом руководстве. Инструкции см. в разделе [образцы данных виртуализации](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) на сайте GitHub.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a id="prereqs"></a> Предварительные требования
 
-- [Развертывание кластера больших данных в Kubernetes](deployment-guidance.md).
-- [Установка Studio данных Azure и расширение SQL Server 2019](deploy-big-data-tools.md).
-- [Загрузка образца данных в кластере](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Средства работы с большими данными](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **Расширение SQL Server 2019**
+- [Загрузка образца данных в кластере больших данных](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>Создайте внешнюю таблицу в HDFS
 
 Пул носителей содержит веб-маршрута перемещения данных в CSV-файле, хранящихся в HDFS. Выполните следующие действия для определения внешней таблицы, могут обращаться к данным в этом файле.
 
-1. В Azure Data Studio подключитесь к основной экземпляр SQL Server кластера больших данных. Дополнительные сведения см. в разделе [подключение к экземпляру SQL Server master](deploy-big-data-tools.md#master).
+1. В Azure Data Studio подключитесь к основной экземпляр SQL Server кластера больших данных. Дополнительные сведения см. в разделе [подключение к экземпляру SQL Server master](connect-to-big-data-cluster.md#master).
 
 2. Дважды щелкните подключение в **серверы** окно для отображения панели мониторинга сервера для главного экземпляра SQL Server. Выберите **новый запрос**.
 

@@ -21,12 +21,12 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d94d3127a5957b1684133019cf4991cba7adbff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e8e2af3150b6c0e8663c28a1342b68be57e043d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769450"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409803"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|URL-адрес файла резервной копии.|  
-|backup_type|NVARCHAR(6)|«DB» для резервной копии базы данных; «LOG» для резервной копии журналов|  
+|backup_type|NVARCHAR(6)|Резервное копирование «DB» для базы данных «LOG» для резервной копии журнала|  
 |expiration_date|DATETIME|Дата, в которую ожидается удаление этого файла. Эта настройка основывается на возможности восстановить базу данных до определенного момента времени внутри заданного срока хранения.|  
 |database_guid|UNIQUEIDENTIFIER|Значение GUID для указанной базы данных.  GUID однозначно определяет базу данных.|  
 |first_lsn|NUMERIC(25, 0)|Регистрационный номер транзакции в журнале для первой или самой ранней записи журнала в резервном наборе данных. Может иметь значение NULL.|  
@@ -75,7 +75,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
  Требуется **ВЫБЕРИТЕ** разрешения для данной функции.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере перечисляются все доступные резервные копии, созданные посредством [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных «MyDB».  
+ В следующем примере перечисляются все доступные резервные копии, созданные через [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных «MyDB»  
   
 ```  
 SELECT *   

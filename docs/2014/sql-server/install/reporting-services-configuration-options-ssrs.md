@@ -17,19 +17,19 @@ ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9afc4e179807d6cc10925d4fb4964cea857427d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1819fe94f3fac39d1697f2d4ee08738020e57d17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185344"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375686"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>параметры конфигурации служб Reporting Services (SSRS)
   Для задания параметров, определяющих способ установки и настройки сервера отчетов, служит страница **Настройка служб Reporting Services** мастера установки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Доступность того или иного параметра установки зависит от того, какие параметры были выбраны на странице **Выбор компонентов** , а также от того, устанавливается ли одновременно с сервером отчетов также и локальный экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
- В некоторых случаях, если сертификат протокола SSL установлен на компьютер и привязан к строгому шаблону, программа установки создает URL-адреса служб Reporting Services с префиксом HTTPS. Дополнительные сведения о сопоставлении сертификатов с URL-адреса служб отчетов, см. в разделе [Настройка сервера отчетов для подключения Secure Sockets Layer (SSL)](http://go.microsoft.com/fwlink/?LinkId=199089) (http://go.microsoft.com/fwlink/?LinkId=199089) в электронной документации по SQL Server.  
+ В некоторых случаях, если сертификат протокола SSL установлен на компьютер и привязан к строгому шаблону, программа установки создает URL-адреса служб Reporting Services с префиксом HTTPS. Дополнительные сведения о сопоставлении сертификатов с URL-адреса служб отчетов, см. в разделе [Настройка сервера отчетов для подключения Secure Sockets Layer (SSL)](https://go.microsoft.com/fwlink/?LinkId=199089) (https://go.microsoft.com/fwlink/?LinkId=199089) в электронной документации по SQL Server.  
   
- Для получения последних сведений о [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и установке и настройке этого выпуска см. в разделе [Дополнительные сведения об установке](http://go.microsoft.com/fwlink/?LinkId=207425) (http://go.microsoft.com/fwlink/?LinkId=207425).  
+ Для получения последних сведений о [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и установке и настройке этого выпуска см. в разделе [Дополнительные сведения об установке](https://go.microsoft.com/fwlink/?LinkId=207425) (https://go.microsoft.com/fwlink/?LinkId=207425).  
   
 ## <a name="options"></a>Параметры  
   
@@ -44,23 +44,23 @@ ms.locfileid: "48185344"
   
  Этот параметр доступен, только если значения по умолчанию, использованные при установке сервера отчетов, допустимы для системы. Этот вариант мы рекомендуем разработчикам, которые хотят установить все компоненты локально, и пользователям, оценивающим программное обеспечение.  
   
- Чтобы просмотреть сведения об используемых программой установки настройках по умолчанию или выяснить, почему невозможно установить конфигурацию по умолчанию, нажмите кнопку **Подробности**. Дополнительные сведения о конфигурации по умолчанию для сервера отчетов в собственном режиме, см. в разделе [конфигурация по умолчанию для установки в собственном режиме (службы Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199091) (http://go.microsoft.com/fwlink/?LinkId=199091).  
+ Чтобы просмотреть сведения об используемых программой установки настройках по умолчанию или выяснить, почему невозможно установить конфигурацию по умолчанию, нажмите кнопку **Подробности**. Дополнительные сведения о конфигурации по умолчанию для сервера отчетов в собственном режиме, см. в разделе [конфигурация по умолчанию для установки в собственном режиме (службы Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199091) (https://go.microsoft.com/fwlink/?LinkId=199091).  
   
 #### <a name="install-only"></a>Установить только  
- Устанавливает программные файлы сервера отчетов, создает учетную запись службы сервера отчетов и регистрирует поставщик данных инструментария управления Windows (WMI) сервера отчетов. Этот параметр установки называется «Только файлы». Выберите этот параметр, если использование конфигурации по умолчанию нежелательно. Это единственный доступный параметр, если невозможно установить конфигурацию по умолчанию или устанавливается кластер отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включающий службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения об установке только файлов см. в разделе [режиме установки (службы Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199093) (http://go.microsoft.com/fwlink/?LinkId=199093).  
+ Устанавливает программные файлы сервера отчетов, создает учетную запись службы сервера отчетов и регистрирует поставщик данных инструментария управления Windows (WMI) сервера отчетов. Этот параметр установки называется «Только файлы». Выберите этот параметр, если использование конфигурации по умолчанию нежелательно. Это единственный доступный параметр, если невозможно установить конфигурацию по умолчанию или устанавливается кластер отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включающий службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения об установке только файлов см. в разделе [режиме установки (службы Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093).  
   
- После завершения программы установки, прежде чем сервер отчетов можно будет использовать, следует создать базу данных сервера отчетов и настроить сервер отчетов. Чтобы настроить сервер отчетов и создать базу данных, воспользуйтесь диспетчером конфигурации служб Reporting Services. Дополнительные сведения см. в разделе [как: Создание базы данных сервера отчетов (настройки служб Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199094) (http://go.microsoft.com/fwlink/?LinkId=199094) и [Настройка подключения к базе данных сервера отчетов](http://go.microsoft.com/fwlink/?LinkId=199095) (http://go.microsoft.com/fwlink/?LinkId=199095).  
+ После завершения программы установки, прежде чем сервер отчетов можно будет использовать, следует создать базу данных сервера отчетов и настроить сервер отчетов. Чтобы настроить сервер отчетов и создать базу данных, воспользуйтесь диспетчером конфигурации служб Reporting Services. Дополнительные сведения см. в разделе [как: Создать базу данных сервера отчетов (Настройка служб Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) и [Настройка подключения к базе данных сервера отчетов](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095).  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Службы Reporting Services в режиме SharePoint  
   
 #### <a name="install-only"></a>Установить только  
  Устанавливает программные файлы сервера отчетов и командлеты PowerShell. После завершения установки необходимо запустить службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint и создать приложение служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в следующих разделах:  
   
--   [Установка служб Reporting Services сервера отчетов в режиме интеграции с SharePoint для Power View и предупреждений об изменении данных](http://go.microsoft.com/fwlink/?LinkId=207543) (http://go.microsoft.com/fwlink/?LinkId=207543).  
+-   [Установка служб Reporting Services сервера отчетов в режиме интеграции с SharePoint для Power View и предупреждений об изменении данных](https://go.microsoft.com/fwlink/?LinkId=207543) (https://go.microsoft.com/fwlink/?LinkId=207543).  
   
--   [Установка служб Reporting Services режиме интеграции с SharePoint как фермы одного сервера](http://go.microsoft.com/fwlink/?LinkId=207544) (http://go.microsoft.com/fwlink/?LinkId=207544).  
+-   [Установка служб Reporting Services режиме интеграции с SharePoint как фермы одного сервера](https://go.microsoft.com/fwlink/?LinkId=207544) (https://go.microsoft.com/fwlink/?LinkId=207544).  
   
--   [Reporting Services на сервере отчетов (SSRS)](http://go.microsoft.com/fwlink/?LinkID=207244) (http://go.microsoft.com/fwlink/?LinkID=207244).  
+-   [Reporting Services на сервере отчетов (SSRS)](https://go.microsoft.com/fwlink/?LinkID=207244) (https://go.microsoft.com/fwlink/?LinkID=207244).  
   
 ## <a name="installing-the-reporting-services-add-in-for-sharepoint-technologies"></a>Установка надстройки служб Reporting Services для технологий SharePoint  
  Начиная с версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , надстройку можно установить в составе установки SQL Server на странице выбора компонентов мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -71,12 +71,12 @@ ms.locfileid: "48185344"
   
 -   Установите с установочного носителя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . После завершения работы программы установки **запустите файл** rsSharePoint.msi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из папки «Setup», расположенной на установочном носителе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Загрузите и установите надстройку. Дополнительные сведения см. в разделе [где найти надстройку служб Reporting Services для продуктов SharePoint](http://go.microsoft.com/fwlink/?LinkID=208634) (http://go.microsoft.com/fwlink/?LinkID=208634).  
+-   Загрузите и установите надстройку. Дополнительные сведения см. в разделе [где найти надстройку служб Reporting Services для продуктов SharePoint](https://go.microsoft.com/fwlink/?LinkID=208634) (https://go.microsoft.com/fwlink/?LinkID=208634).  
   
 ## <a name="see-also"></a>См. также  
- [Запустите диспетчер конфигурации служб отчетов](http://go.microsoft.com/fwlink/?LinkId=199096)   
- [Создать базу данных сервера отчетов (Настройка служб Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199094)   
- [Обновление и перенос служб Reporting Services](http://go.microsoft.com/fwlink/?LinkID=245628)   
- [Установка режима интеграции с SharePoint и собственного режима для служб Reporting Services из командной строки](http://go.microsoft.com/fwlink/?LinkId=217620)  
+ [Запустите диспетчер конфигурации служб отчетов](https://go.microsoft.com/fwlink/?LinkId=199096)   
+ [Создать базу данных сервера отчетов (Настройка служб Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094)   
+ [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)   
+ [Установка режима интеграции с SharePoint и собственного режима для служб Reporting Services из командной строки](https://go.microsoft.com/fwlink/?LinkId=217620)  
   
   

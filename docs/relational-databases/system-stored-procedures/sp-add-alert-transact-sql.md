@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 924c6ccdcd5d6e2c5529c3967c2943ec6349fe19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12c44c565e6e867c2fde6a99d770c2b083e3d6f9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610768"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203285"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_add_alert [ @name = ] 'name'
  [  **@include_event_description_in =** ] *include_event_description_in*  
  Указывает, следует ли включить в текст сообщения уведомления с описанием ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *include_event_description_in*— **tinyint**, значение по умолчанию **5** (по электронной почте и **команды net send**) и может иметь одно или несколько из следующих значений в сочетании с **Или** логический оператор.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Режимы отправки уведомлений с помощью пейджера и команды **net send** будут удалены из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
   
 |Значение|Описание|  
@@ -119,7 +119,7 @@ sp_add_alert [ @name = ] 'name'
 |--------------------|-----------------|  
 |*Элемент*|Объект производительности, счетчик производительности или именованный экземпляр счетчика.|  
 |*Оператор сравнения*|Один из этих операторов: >, <, или =|  
-|*Value*|Числовое значение счетчика|  
+|*Значение*|Числовое значение счетчика|  
   
  [  **@category_name =** ] **"***категории***"**  
  Имя категории предупреждения. *Категория* — **sysname**, значение по умолчанию NULL.  

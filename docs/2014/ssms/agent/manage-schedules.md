@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.manageschedules.f1
@@ -12,12 +12,12 @@ ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b0322dec826c7ecd45c31680320db199ae9bc32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213004"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794076"
 ---
 # <a name="manage-schedules"></a>Управление расписаниями
   Позволяет просматривать и изменять свойства расписаний заданий агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -26,7 +26,7 @@ ms.locfileid: "48213004"
  **Доступные расписания**  
  Приводит список расписаний, доступных пользователю. Обратите внимание, что у задания и у расписания должен быть один владелец. Следовательно, в этом списке приводятся только расписания, которые принадлежат владельцу задания.  
   
- **Название**  
+ **Name**  
  Отображает имя расписания.  
   
  **Enabled**  

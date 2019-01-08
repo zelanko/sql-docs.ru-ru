@@ -18,12 +18,12 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7224a4e301565dc1bc6f6968da3477792b8cfc22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf644b6a8795e9c68e0053eaed0023c4b9299b6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781495"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588408"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +45,22 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@table_server =** ] **"***table_server***"**  
+ [  **@table_server =** ] **"**_table_server_**"**  
  Имя связанного сервера, для которого возвращаются сведения о столбцах. *table_server* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@table_name =** ] **"***table_name***"**  
+ [  **@table_name =** ] **"**_table_name_**"**  
  Имя таблицы, для которой возвращаются сведения о столбцах. *TABLE_NAME* — **sysname**, значение по умолчанию NULL.  
   
- [  **@table_schema =** ] **"***table_schema***"**  
+ [  **@table_schema =** ] **"**_table_schema_**"**  
  Имя схемы таблицы, для которой возвращаются сведения о столбцах. *table_schema* — **sysname**, значение по умолчанию NULL.  
   
- [  **@table_catalog =** ] **"***значениям table_catalog***"**  
+ [  **@table_catalog =** ] **"**_значениям table_catalog_**"**  
  Имя каталога таблицы, для которой возвращаются сведения о столбцах. *значениям table_catalog* — **sysname**, значение по умолчанию NULL.  
   
- [  **@column_name =** ] **"***столбец***"**  
+ [  **@column_name =** ] **"**_столбец_**"**  
  Имя столбца базы данных, для которого возвращаются сведения. *столбец* — **sysname**, значение по умолчанию NULL.  
   
- [  **@ODBCVer =** ] **"***Аргумент ODBCVer***"**  
+ [  **@ODBCVer =** ] **"**_Аргумент ODBCVer_**"**  
  Версия используемого протокола ODBC. *Аргумент ODBCVer* — **int**, значение по умолчанию 2. Это значение соответствует ODBC версии 2. Допустимы значения 2 или 3. Сведения о различиях между версиями 2 и 3 см. в спецификации ODBC SQLColumns.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -70,7 +70,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Имя квалификатора таблицы или представления. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (*квалификатор ***.*** владелец ***.*** имя*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица. Это поле может иметь значение NULL.|  
+|**TABLE_CAT**|**sysname**|Имя квалификатора таблицы или представления. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (_квалификатор_**.** _владельца_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица. Это поле может иметь значение NULL.|  
 |**ПО ЗНАЧЕНИЯМ TABLE_SCHEM**|**sysname**|Имя владельца таблицы или представления. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, который создал таблицу. Это поле всегда возвращает значение.|  
 |**ИМЯ_ТАБЛИЦЫ**|**sysname**|Имя таблицы или представления. Это поле всегда возвращает значение.|  
 |**COLUMN_NAME**|**sysname**|Имя столбца для каждого столбца **TABLE_NAME** возвращается. Это поле всегда возвращает значение.|  

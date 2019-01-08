@@ -1,62 +1,53 @@
 ---
-title: Учебники по SQL Server Python | Документация Майкрософт
+title: Обзор SQL Server 2017 Python tutorial - машинного обучения SQL Server
+description: Общие сведения о пособия для аналитики в базе данных SQL Server 2017.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 12/18/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5cafb253cea118148bd654ea770234843f742838
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 9101471c53ea1e253f7a6eb13e0c2cb2bc137ed3
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383339"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046464"
 ---
-# <a name="sql-server-python-tutorials"></a>Учебники по SQL Server Python
+# <a name="sql-server-2017-python-tutorials"></a>Учебники по SQL Server 2017 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье список руководств и примеров, демонстрирующих использование Python с SQL Server 2017. Через эти примеры и образцы вы узнаете:
+В этой статье описывается в руководствах Python для анализа в базе данных на [службы машинного обучения SQL Server 2017](../install/sql-machine-learning-services-windows-install.md). 
 
-+ Как запустить Python из T-SQL
-+ Что такое удаленных и локальных вычислительных контекстов и как могут выполнять код Python, с помощью имени компьютера SQL Server
-+ Создание программы-оболочки кода Python в хранимой процедуре
-+ Оптимизация кода Python для рабочей среды SQL
-+ Сценарии из реальной жизни для внедрения в приложения машинного обучения
++ Узнайте, как переносить и выполнять код Python в хранимых процедурах.
++ Сериализации и сохранения моделей на основе Python к базам данных SQL Server.
++ Дополнительные сведения об удаленных и локальных вычислительных контекстов и когда их следует использовать.
++ Изучите модули Microsoft Python для обработки и анализа данных и задач машинного обучения.
 
-Сведения о требованиях и установки, см. в разделе [предварительные требования](#bkmk_Prerequisites).
+<a name="bkmk_pythontutorials"></a>
 
-## <a name="bkmk_pythontutorials"></a>Учебники по Python
+## <a name="python-quickstarts-and-tutorials"></a>Python краткие руководства и учебники
 
-+ [С языком Python в T-SQL](run-python-using-t-sql.md)
+| Ссылка | Описание |
+|------|-------------|
+| [Краткое руководство. Скрипт Python «Hello world» в SQL Server](quickstart-r-run-using-tsql.md) | Основы вызова Python в T-SQL. |
+| [Краткое руководство. Создавать, обучать и использовать модели Python с хранимыми процедурами в SQL Server](quickstart-python-train-score-in-tsql.md) | Описывает механизм встраивания кода Python в хранимую процедуру, предоставляя входных данных и выполнение хранимой процедуры. |
+| [Учебник. Создание модели с помощью revoscalepy](use-python-revoscalepy-to-create-model.md) | Показано, как выполнять код из удаленного терминала Python, используя контекст вычислений SQL Server. Можно немного знаком с Python инструменты и среды. Образец кода находится, создающий модель с помощью **rxLinMod**, из новой **revoscalepy** библиотеки. |
+| [Учебник. Дополнительные аналитические функции Python в базе данных для разработчиков SQL](sqldev-in-database-python-for-sql-developers.md) | В этом пошаговом руководстве end-to-end демонстрирует процесс создания полного решения Python с помощью T-SQL хранимой процедуры. Включается весь код Python.|
 
-   Основы вызова Python в T-SQL, используя механизм расширяемости, впервые введены в SQL Server 2016.
+<a name ="bkmk_samples"></a>
 
-+ [Создание модели на языке Python с помощью revoscalepy машинного обучения](use-python-revoscalepy-to-create-model.md)
-
-   На этом занятии рассматривается, как выполнить код из удаленного терминала Python, используя контекст вычислений SQL Server. Можно немного знаком с Python инструменты и среды. Образец кода находится, создающий модель с помощью **rxLinMod**, из новой **revoscalepy** библиотеки. 
-
-+ [Python в базе данных аналитики для разработчиков SQL](sqldev-in-database-python-for-sql-developers.md)
-
-    В этом пошаговом руководстве end-to-end демонстрирует процесс создания полного решения Python с помощью T-SQL хранимой процедуры. Включается весь код Python.
-
-
-## <a name="python-samples"></a>Примеры для Python
+## <a name="code-samples"></a>Примеры кода
 
 Эти примеры и образцы, предоставляемые группой разработки SQL Server особенно пристально, внедренной аналитики можно использовать в реальных приложениях.
 
-+ [Создание прогнозной модели с помощью Python и SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
-
-  Узнайте, как ski использование машинного обучения для прогнозирования будущих проката, что позволяет бизнес-плана и сотрудников для удовлетворения будущего спроса.
-
-  > [!TIP]
-  > Теперь включает собственной оценки на основе моделей Python!
-
-+ [Выполнение клиента кластеризации с помощью Python и SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
-
-    Узнайте, как использовать алгоритм методом k-средних для выполнения без учителя кластеризации клиентов.
+| Ссылка | Описание |
+|------|-------------|
+| [Создание прогнозной модели с помощью Python и SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Узнайте, как ski использование машинного обучения для прогнозирования будущих проката, что позволяет бизнес-плана и сотрудников для удовлетворения будущего спроса. |
+| [Выполнение клиента кластеризации с помощью Python и SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Узнайте, как использовать алгоритм методом k-средних для выполнения без учителя кластеризации клиентов. |
 
 ## <a name="see-also"></a>См. также
 
-[Учебные материалы по R в SQL Server](sql-server-r-tutorials.md)
++ [Расширения Python для SQL Server](../concepts/extension-python.md)
++ [Учебники службы машинного обучения SQL Server](machine-learning-services-tutorials.md)

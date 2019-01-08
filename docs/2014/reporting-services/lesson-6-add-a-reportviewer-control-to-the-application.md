@@ -1,5 +1,5 @@
 ---
-title: Занятие 6. Добавление в приложение элемента управления ReportViewer | Документы Майкрософт
+title: Урок 6. Добавить элемент управления ReportViewer в приложение | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: afb73e5dc93efdadb0754072d652b7328aaa2151
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf11d44179dadbc3362c2fcf6f946c30d6856a56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104004"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361126"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Урок 6. Добавление в приложение элемента управления ReportViewer
   После завершения проектирования дочернего отчета с помощью мастера отчетов далее необходимо добавить в приложение веб-сайта элемент управления ReportViewer.  
@@ -33,9 +33,9 @@ ms.locfileid: "48104004"
   
 5.  В поле **Выбор отчета** выберите созданный ранее родительский отчет.  
   
-     После выбора отчета экземпляры источников данных, используемых в отчете, будут созданы автоматически. Будет сформирован код для создания экземпляра каждого объекта DataTable (и его контейнера [DataSet](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) ). В область конструктора будут добавлены элементы управления [ObjectDataSource](http://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) , соответствующие каждому источнику данных, который используется в отчете. Настройка этих элементов управления источником данных осуществляется автоматически.  
+     После выбора отчета экземпляры источников данных, используемых в отчете, будут созданы автоматически. Будет сформирован код для создания экземпляра каждого объекта DataTable (и его контейнера [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) ). В область конструктора будут добавлены элементы управления [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) , соответствующие каждому источнику данных, который используется в отчете. Настройка этих элементов управления источником данных осуществляется автоматически.  
   
-     При использовании Microsoft Visual Studio 2012 убедитесь в том, что элемент управления ObjectDataSource привязан к набору данных DataSet1, имя которого полностью определено в пространстве имен проекта. Это полное имя должно содержаться в раскрывающемся списке **Выбор бизнес-объекта** (например, Projectnamespace.DataSet1TableAdapters.ProductTableAdapter). Доступ к этому списку можно получить, щелкнув правой кнопкой мыши ObjectDataSource и выбрав пункт **Настройка источника данных**.  
+     Если вы используете Microsoft Visual Studio 2012, убедитесь, что элемент управления ObjectDataSource привязан к набору данных DataSet1, в пространстве имен проекта. это полное доменное имя должно содержаться в **выберите бизнес-объекта**стрелку раскрывающегося списка (например, projectnamespace.dataset1tableadapters.ProductTableAdapter). Доступ к этому списку можно получить, щелкнув правой кнопкой мыши ObjectDataSource и выбрав пункт **Настройка источника данных**.  
   
 6.  В меню «Построение» выберите команду «Построить веб-сайт».  
   

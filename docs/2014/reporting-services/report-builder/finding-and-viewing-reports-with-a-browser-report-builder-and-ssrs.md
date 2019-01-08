@@ -11,12 +11,12 @@ ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8813dba9c266c6a7930a636da27015c300426c79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c91d12665ac8637f9de407896aed435a02af6940
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220094"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365176"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Поиск и просмотр отчетов с помощью браузера (построитель отчетов и службы SSRS)
   Для просмотра отчета при непосредственном соединении с сервером отчетов можно использовать любой поддерживаемый веб-браузер. Каждому отчету на сервере отчетов соответствует URL-адрес. Предусмотрена возможность ввести веб-адрес отчета, чтобы открыть его в окне браузера независимо от веб-приложения. Отчет открывается в формате HTML и включает панель инструментов отчета, с помощью которых можно переходить по страницам или выполнять поиск значений данных в отчете. Можно задать параметры в URL-адресе, чтобы скрыть панель инструментов, или выбрать выходной формат отчета.  
@@ -31,7 +31,7 @@ ms.locfileid: "48220094"
 > [!NOTE]  
 >  При обращении к отчету с карманного устройства для открытия отчета нужно использовать браузер. Диспетчер отчетов не поддерживает карманные устройства.  
   
- Дополнительные сведения о типах браузеров, доступных для использования, см. в разделе «Типы браузеров, поддерживаемых службами Reporting Services» [документации по службам Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) , входящей в состав электронной документации по SQL Server.  
+ Дополнительные сведения о типах браузеров, доступных для использования, см. в разделе «Типы браузеров, поддерживаемых службами Reporting Services» [документации по службам Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) , входящей в состав электронной документации по SQL Server.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -54,9 +54,9 @@ ms.locfileid: "48220094"
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
- Максимальная длина URL-адреса в Internet Explorer составляет 2083 символа. Дополнительные сведения см. в разделе [Максимальная длина URL-адреса в Internet Explorer](http://support.microsoft.com/kb/208427).  
+ Максимальная длина URL-адреса в Internet Explorer составляет 2083 символа. Дополнительные сведения см. в разделе [Максимальная длина URL-адреса в Internet Explorer](https://support.microsoft.com/kb/208427).  
   
- Дополнительные сведения о доступе к отчету по URL-адресу, в том числе правила составления URL-адреса, см. в разделе «Доступ по URL-адресу» [документации по службам Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) , входящей в состав электронной документации по SQL Server.  
+ Дополнительные сведения о доступе к отчету по URL-адресу, в том числе правила составления URL-адреса, см. в разделе «Доступ по URL-адресу» [документации по службам Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) , входящей в состав электронной документации по SQL Server.  
   
 ## <a name="see-also"></a>См. также  
  [Поиск и просмотр отчетов в диспетчере отчетов &#40;построитель отчетов и службы SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  

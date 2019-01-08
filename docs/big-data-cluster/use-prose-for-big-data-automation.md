@@ -1,18 +1,20 @@
 ---
-title: Wrangling данных с помощью ускорителя кода PROSE | Документация Майкрософт
-description: ''
+title: Создать код для задачи по структурированию данных
+titleSuffix: Azure Data Studio
+description: В этой статье описывается использование сочетаний клавиш кода PROSE студии данных Azure для автоматического создания кода для распространенные задачи по структурированию данных.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3a247cd33a4fdf2df35359db953e8d14444ace88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.custom: seodec18
+ms.openlocfilehash: a42820199c2a481e490b510e3fd00f9dc765cb27
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796424"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030528"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>С помощью ускорителя кода PROSE Wrangling данных
 
@@ -41,7 +43,7 @@ import prose.codeaccelerator as cx
 
 PROSE код ускорителя решает эту проблему путем анализа структура файла данных и автоматическим созданием кода для загрузки файла. В большинстве случаев созданный код правильно анализирует данные. В некоторых случаях может потребоваться изменить код в соответствии с требованиями.
 
-Рассмотрим следующий пример:
+Рассмотрим следующий пример.
 
  ```python
 import prose.codeaccelerator as cx

@@ -11,12 +11,12 @@ ms.assetid: 8223c19b-4b0d-4b1d-a042-9a726c18e708
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15e4e4a90232f4db1b83b3a09d45589e6fcdeb8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06a517f2444c032e52b72f86f115167a0151fea2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226884"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371096"
 ---
 # <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>Что&#39;возможности построителя отчетов для SQL Server 2014
   В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] появилось несколько функций служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -24,7 +24,7 @@ ms.locfileid: "48226884"
  Сведения о возможностях этой версии для других [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] продуктов и технологий, см. в разделе [новые возможности в SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
 > [!TIP]  
->  Последние сведения и ресурсы, относящиеся к новым функциям в этом выпуске, см. в разделе [Дополнительные сведения о новинках в SQL Server Reporting Services (SSRS)](http://go.microsoft.com/fwlink/?LinkId=207147).  
+>  Последние сведения и ресурсы, относящиеся к новым функциям в этом выпуске, см. в разделе [Дополнительные сведения о новинках в SQL Server Reporting Services (SSRS)](https://go.microsoft.com/fwlink/?LinkId=207147).  
   
 ##  <a name="ExcelRenderer"></a> Модуль подготовки отчетов Excel для Microsoft Excel 2007 – 2010 и Microsoft Excel 2003  
  Модуль подготовки отчетов Excel для служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], который впервые появился в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], подготавливает к просмотру отчет как документ Excel, совместимый с [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2007–2010, а также [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2003 с установленным пакетом совместимости Microsoft Office для Word, Excel и PowerPoint. Это формат Office Open XML, а соответствующие файлы имеют расширение XLSX.  

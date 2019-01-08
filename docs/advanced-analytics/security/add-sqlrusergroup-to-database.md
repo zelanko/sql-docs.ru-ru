@@ -1,5 +1,5 @@
 ---
-title: Добавление SQLRUserGroup в качестве пользователя базы данных (машинного обучения SQL Server) | Документация Майкрософт
+title: Добавление SQLRUserGroup в качестве пользователя базы данных - службы машинного обучения SQL Server
 description: Для замыкания соединений с помощью неявной проверки подлинности Добавление SQLRUserGroup в качестве пользователя базы данных, чтобы с рабочей учетной записью можно войти на сервер, для преобразования идентификаторов для вызывающего пользователя.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4685288eb383c486556efba1eb4861ca9d708c0f
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419089"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432357"
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>Добавление SQLRUserGroup в качестве пользователя базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -14,12 +14,12 @@ ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1e8025af41a876926273c3134deebf46766fb9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76517ac2ded567877d542be688aa47abeca21c1c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752894"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528927"
 ---
 # <a name="sqlgetinfo-paradox-driver"></a>SQLGetInfo (драйвер для Paradox)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47752894"
   
  **SQLGetInfo** поддерживает тип SQL_FILE_USAGE сведения. Возвращаемое значение равно 16-разрядное целое число, которое указывает, как драйвер напрямую обрабатывает файлы в источнике данных:  
   
--   SQL_FILE_NOT_SUPPORTED — Драйвер не драйвер среднего уровня.  
+-   SQL_FILE_NOT_SUPPORTED - драйвер не драйвер среднего уровня.  
   
--   SQL_FILE_TABLE — Драйвер одноуровневых считает файлы в источнике данных таблицы.  
+-   SQL_FILE_TABLE - драйвер одноуровневых считает файлы в источнике данных таблицы.  
   
--   SQL_FILE_QUALIFIER — Драйвер среднего уровня обрабатывает файлы в источнике данных как квалификатор.  
+-   SQL_FILE_QUALIFIER - драйвер среднего уровня обрабатывает файлы в источнике данных как квалификатор.  
   
  Поскольку каждый файл представляет собой таблицу, драйвер ODBC возвращает SQL_FILE_TABLE.  
   

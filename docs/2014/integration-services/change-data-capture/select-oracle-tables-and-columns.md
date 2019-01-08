@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - selTabCol
@@ -13,12 +12,12 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c02f4a98ad0ee4d7b73fe20041a03b53b34b2b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7f97d7d1671aada299b685981e81d62010df24
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051380"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788348"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Выберите столбцы и таблицы Oracle
   Страница «Выбор столбцов и таблиц Oracle» используется для выбора таблиц из базы данных-источника Oracle, изменения в которых будут отслеживаться. Эта страница содержит следующие элементы:  
@@ -27,15 +26,15 @@ ms.locfileid: "48051380"
  **Список «Таблица»**  
  Список таблиц состоит из трех столбцов:  
   
--   **Имя таблицы Oracle**: имя таблицы с указанием схемы.  
+-   **Имя таблицы Oracle**: Имя таблицы с указанием схемы таблицы.  
   
--   **Экземпляр отслеживания**: имя экземпляра отслеживания, используемое для именования объектов отслеживания изменений данных по экземплярам. Значение экземпляра отслеживания не может быть равно NULL.  
+-   **Экземпляр системы отслеживания**: Имя экземпляра системы отслеживания, используемого для внутреннего именования объектов системы отслеживания измененных данных. Значение экземпляра отслеживания не может быть равно NULL.  
   
      Если это имя не задано, то оно является производным от имени схемы источника и имени исходной таблицы в формате `<schema-name>_<table-name>`. Длина имени экземпляра отслеживания не может превышать 100 символов, оно должно быть уникальным в пределах базы данных.  
   
      Щелкните любую ячейку в этом столбце, чтобы изменить **capture_instance**вручную.  
   
--   **Роль безопасности**. Имя шлюзовой роли базы данных, используемой для управления доступом к информации об изменениях.  
+-   **Роль безопасности**: Имя шлюзовой роли базы данных, используемой для управления доступом к информации об изменениях.  
   
      Щелкните любую ячейку в этом столбце, чтобы изменить **security_role**вручную.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48051380"
  После [выбора таблиц Oracle для отслеживания изменений](select-oracle-tables-for-capturing-changes.md) и (или) [внесения изменений в выбранные для отслеживания изменений таблицы](make-changes-to-the-tables-selected-for-capturing-changes.md) с помощью соответствующих диалоговых окон нажмите кнопку **Далее** , чтобы [создать и запустить скрипт дополнительного журналирования](generate-and-run-the-supplemental-logging-script.md).  
   
 ## <a name="see-also"></a>См. также  
- [Как создать экземпляр базы данных изменения SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Как создать экземпляр изменения базы данных SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Редактирование таблиц](edit-tables.md)   
  [Добавление таблиц в экземпляр CDC](add-tables-to-a-cdc-instance.md)   
  [Изменение свойств таблицы](edit-the-table-properties.md)  

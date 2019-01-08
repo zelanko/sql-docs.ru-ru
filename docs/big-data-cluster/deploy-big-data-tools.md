@@ -1,67 +1,59 @@
 ---
-title: Подключиться к серверу SQL кластера больших данных с помощью Azure Data Studio | Документация Майкрософт
-description: Узнайте, как подключиться к кластеру больших данных SQL Server 2019 с помощью Azure Data Studio.
+title: Установите средства работы с большими данными
+titleSuffix: SQL Server 2019 big data clusters
+description: Сведения об установке средств, используемых с кластерами SQL Server 2019 больших данных (Предварительная версия).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 18df937cfed15d7302a58267eb392a1933d73052
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 2327b7db3b21c972a98719a1126c46011bd9691a
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643792"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431308"
 ---
-# <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio
+# <a name="install-sql-server-2019-big-data-tools"></a>Установка средств SQL Server 2019 больших данных
 
-В этой статье описывается, как установить Azure Data Studio, расширение SQL Server 2019 (Предварительная версия), и подключитесь к кластеру больших данных. Новое расширение SQL Server 2019 включает в себя поддержку предварительной версии [кластеров SQL Server 2019 больших данных](big-data-cluster-overview.md), интегрированное [записная книжка](notebooks-guidance.md)и PolyBase [мастера Create External Table](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
+В этой статье описываются клиентские средства, которые должны быть установлены для создания, управления, и больших данных с помощью SQL Server 2019 кластеров (Предварительная версия).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="install-azure-data-studio"></a>Установить центр данных Azure
+## <a name="big-data-cluster-tools"></a>Средства кластера больших данных
 
-Чтобы установить центр данных Azure, см. в разделе [скачайте и установите последнюю версию Azure Data Studio](../azure-data-studio/download.md).
+В следующей таблице перечислены общие средства кластера больших данных и способах их установки:
 
-## <a name="install-the-sql-server-2019-extension-preview"></a>Установите расширение SQL Server 2019 (Предварительная версия)
+| Инструмент | Обязательно | Описание | Установка |
+|---|---|---|---|
+| **mssqlctl** | Да | Средство командной строки для установки и управления ими кластерам больших данных. | [Установка](deploy-install-mssqlctl.md) |
+| **kubectl**<sup>1</sup> | Да | Средство командной строки для мониторинга базового кластера Kuberentes ([сведения](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
+| **Azure Data Studio** | Да | Кросс платформенных графическое средство для выполнения запросов к SQL Server ([сведения](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Установка](../azure-data-studio/download.md) |
+| **Расширение SQL Server 2019** | Да | Расширение для Azure Data Studio, которая поддерживает подключение к кластеру больших данных. Также предоставляет мастер виртуализации данных. | [Установка](../azure-data-studio/sql-server-2019-extension.md) |
+| **Azure CLI**<sup>2</sup> | Для AKS | Современный интерфейс командной строки для управления службами Azure. Используется при развертывании кластера AKS больших данных ([сведения](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Установка](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **mssql-cli** | Необязательно | Современный интерфейс командной строки для выполнения запросов к SQL Server ([сведения](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
+| **sqlcmd** | Для некоторых сценариев | Устаревшие средства командной строки для выполнения запросов к SQL Server ([сведения](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **curl** <sup>3</sup> | Для некоторых сценариев | Программа командной строки для передачи данных с URL-адреса. | [Windows](https://curl.haxx.se/windows/) \| Linux: пакет установки curl |
 
-Чтобы установить расширение, см. в разделе [установить расширение SQL Server 2019 (Предварительная версия)](../azure-data-studio/sql-server-2019-extension.md).
+<sup>1</sup> необходимо использовать версию kubectl 1,10 или более поздней версии. Кроме того версия Kubectl должна быть, плюс или минус один дополнительный номер версии кластера Kubernetes. Если вы хотите установить конкретную версию на клиент kubectl, см. в разделе [установки kubectl двоичных с помощью curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (на Windows 10 с помощью cmd.exe и не Windows PowerShell для выполнения curl).
 
-## <a name="connect-to-the-cluster"></a>Подключитесь к кластеру
+<sup>2</sup> необходимо использовать Azure CLI версии 2.0.4 или более поздней версии. Запустите `az --version` чтобы узнать версию, при необходимости.
 
-При подключении к кластеру больших данных, у вас есть возможность подключения к SQL Server [главного экземпляра](concept-master-instance.md) или к шлюзу HDFS или Spark. Ниже показано, как подключиться к каждому.
+<sup>3</sup> при запуске в Windows 10, **curl** уже указан в пути, при запуске из командной строки. Для других версий Windows, скачайте **curl** по ссылке и поместите его в свой путь.
 
-## <a id="master"></a> Основной экземпляр
+## <a name="which-tools-are-required"></a>Какие инструменты требуются?
 
-1. В Azure данных Studio нажмите клавишу **F1** > **новое подключение**.
+В предыдущей таблице приводятся все распространенных средств, которые используются с кластерами больших данных. Какие инструменты требуются зависит от сценария. Но в общем случае следующие средства наиболее важны для управления, запросы и подключение к кластеру:
 
-1. В **тип подключения**выберите **Microsoft SQL Server**.
+- **mssqlctl**
+- **kubectl**
+- **Azure Data Studio**
+- **Расширение SQL Server 2019**
 
-1. Введите IP-адрес главного экземпляра SQL Server в **имя_сервера** (например:  **\<IP-адрес\>, 31433**).
-
-1. Введите имя входа SQL **имя пользователя** и **пароль**.
-
-1. Изменение **имя базы данных** для **high_value_data** базы данных.
-
-   ![Подключиться к основной экземпляр](./media/deploy-big-data-tools/connect-to-cluster.png)
-
-1. Нажмите клавишу **Connect**и **панель мониторинга сервера** должен отображаться.
-
-## <a id="hdfs"></a> Шлюз HDFS и Spark
-
-1. В Azure данных Studio нажмите клавишу **F1** > **новое подключение**.
-
-1. В **тип подключения**выберите **кластера больших данных в SQL Server**.
-
-1. Введите IP-адрес кластера больших данных в **имя сервера**.
-
-1. Введите `root` для **пользователя** и укажите **пароль** к кластеру больших данных.
-
-   ![Подключение к шлюзу HDFS и Spark](./media/deploy-big-data-tools/connect-to-cluster-hdfs-spark.png)
-
-1. Нажмите клавишу **Connect**и **панель мониторинга сервера** должен отображаться.
+Другие средства необходимы только в определенных сценариях. **Azure CLI** можно использовать для управления службами Azure, связанные с развертыванием AKS. **MSSQL-cli** — это необязательно, но полезные средство, которое позволяет подключиться к основной экземпляр SQL Server в кластере и выполнения запросов из командной строки. И **sqlcmd** и **curl** необходимы, если вы планируете установить образец данных с помощью сценария GitHub.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Чтобы запустить записных книжек в Azure Data Studio, см. в разделе [использованию записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md).
+Дополнительные сведения о кластерах большие данные см. в разделе [Каковы кластеров SQL Server 2019 больших данных?](big-data-cluster-overview.md).

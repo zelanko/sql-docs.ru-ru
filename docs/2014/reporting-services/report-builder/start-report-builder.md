@@ -16,24 +16,24 @@ ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 30fef45662f5cfa81e88ce740e556cdc0e66cf39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57231f0455a4dafbe7dccf5eac74325411cdfdc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192504"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375326"
 ---
 # <a name="start-report-builder-report-builder"></a>Запуск построителя отчетов (построитель отчетов)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] включает в себя автономный и [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] версий построителя отчетов. Версию [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] можно использовать со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], установленными в собственном режиме или в режиме интеграции с SharePoint.  
   
 > [!NOTE]  
->  Построитель отчетов нельзя устанавливать на компьютеры с процессорами Itanium 64. Это относится к [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] и к изолированной версии построителя отчетов.  
+>  Построитель отчетов нельзя устанавливать на компьютеры с процессорами Itanium 64. Это относится и к версии [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] , и к изолированной версии построителя отчетов.  
   
  Если открывается версия [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] для построителя отчетов предыдущей версии, обратитесь к администратору, который может обновить диспетчер отчетов и сайт SharePoint для использования версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] построителя отчетов.  
   
- Версию [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] построителя отчетов можно также использовать для создания отчетов по книге [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], опубликованной в SharePoint. Дополнительные сведения об использовании построителя отчетов с [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], см. в разделе [создание отчетов служб Reporting Services с данными PowerPivot](http://go.microsoft.com/fwlink/?LinkId=185238) на сайте technet.microsoft.com.  
+ Версию [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] построителя отчетов можно также использовать для создания отчетов по книге [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], опубликованной в SharePoint. Дополнительные сведения об использовании построителя отчетов с [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], см. в разделе [создание отчетов служб Reporting Services с данными PowerPivot](https://go.microsoft.com/fwlink/?LinkId=185238) на сайте technet.microsoft.com.  
   
- Запуск построителя отчетов, изолированный от **запустить** меню на локальном компьютере, пользователь или администратор необходимо установить построитель отчетов непосредственно на компьютере, прежде чем она доступна для использования. Изолированная версия не устанавливается вместе с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ее необходимо загрузить и установить отдельно. Чтобы загрузить построитель отчетов, см. в разделе [построитель отчетов Microsoft® SQL Server® 2012](http://go.microsoft.com/fwlink/?LinkId=401502).  
+ Запуск построителя отчетов, изолированный от **запустить** меню на локальном компьютере, пользователь или администратор необходимо установить построитель отчетов непосредственно на компьютере, прежде чем она доступна для использования. Изолированная версия не устанавливается вместе с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ее необходимо загрузить и установить отдельно. Чтобы загрузить построитель отчетов, см. в разделе [построитель отчетов Microsoft® SQL Server® 2012](https://go.microsoft.com/fwlink/?LinkId=401502).  
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>Запуск версии ClickOnce построителя отчетов из диспетчера отчетов  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48192504"
   
      Откроется построитель отчетов, и можно будет приступить к созданию отчета или открыть отчет на сервере отчетов.  
   
-     **Примечание** Если **новый документ** не отображаются в меню **отчет в построителе отчетов**, **модель построителя отчетов**, и **источник данных отчета** параметры "," типы их содержимого должны быть добавлены в библиотеку SharePoint. Дополнительные сведения см. в разделе [Добавление типов сервера отчетов содержимого в библиотеку &#40;служб Reporting Services в режиме интеграции с SharePoint&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [документации](http://go.microsoft.com/fwlink/?LinkId=154888) на MSDN.Microsoft.com.  
+     **Примечание** Если **новый документ** не отображаются в меню **отчет в построителе отчетов**, **модель построителя отчетов**, и **источник данных отчета** параметры "," типы их содержимого должны быть добавлены в библиотеку SharePoint. Дополнительные сведения см. в разделе [Добавление типов сервера отчетов содержимого в библиотеку &#40;служб Reporting Services в режиме интеграции с SharePoint&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [документации](https://go.microsoft.com/fwlink/?LinkId=154888) на MSDN.Microsoft.com.  
   
 ### <a name="to-start-report-builder-stand-alone-from-the-start-menu"></a>Запуск изолированной версии построителя отчетов из меню «Пуск»  
   

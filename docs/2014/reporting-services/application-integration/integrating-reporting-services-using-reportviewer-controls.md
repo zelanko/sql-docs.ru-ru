@@ -15,12 +15,12 @@ ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ddefd0e0096748f6a333313881fdc7ba25f6e3fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 230ee06508cf5dab0a89371202b8e7623f7652dc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117934"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373166"
 ---
 # <a name="integrating-reporting-services-using-the-reportviewer-controls"></a>Интеграция служб Reporting Services с помощью элементов управления ReportViewer
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] предоставляет два элемента управления ReportViewer для внедрения в приложения функциональности просмотра отчетов. К ним относятся версия для приложений на базе Windows Forms, а также версия для приложений Web Forms. Эти элементы управления предоставляют одинаковые функциональные возможности, однако каждый из них разработан с учетом особенностей соответствующей среды. Оба элемента управления обрабатывают отчеты, развернутые на сервере отчетов (режим удаленной обработки) или скопированные на компьютер, где еще не установлены службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (режим локальной обработки).  
@@ -44,6 +44,6 @@ ms.locfileid: "48117934"
   
 ## <a name="see-also"></a>См. также  
  [Интеграция служб Reporting Services в приложения](../application-integration/integrating-reporting-services-into-applications.md)   
- [Создание отчетов служб SSRS с помощью Visual Studio (курируемый ответ)](http://go.microsoft.com/fwlink/?LinkId=321991)  
+ [Создание отчетов служб SSRS с помощью Visual Studio (курируемый ответ)](https://go.microsoft.com/fwlink/?LinkId=321991)  
   
   

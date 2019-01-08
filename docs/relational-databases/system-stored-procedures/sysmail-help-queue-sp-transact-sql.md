@@ -18,12 +18,12 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76f51489a449c44dd7d43bab75d504f68e946374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ee5620aecfc4e263c16fb9c710b7a41e1564f6e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796524"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590598"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@queue_type** = ] **'***queue_type***'**  
+ [ **@queue_type** =] **"**_queue_type_**"**  
  Дополнительный аргумент удаляет сообщения электронной почты типа, указанного как *queue_type*. *queue_type* — **nvarchar(6)** не имеет значения по умолчанию. Допустимыми значениями являются **mail** и **состояние**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -51,7 +51,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar(6)**|Тип очереди. Возможные значения: **mail** и **состояние**.|  
-|**Длина**|**int**|Номер почтового сообщения в указанной очереди.|  
+|**length**|**int**|Номер почтового сообщения в указанной очереди.|  
 |**state**|**Nvarchar(64)**|Состояние монитора. Возможные значения: **НЕАКТИВНО** (очередь неактивна), **уведомления об** (очередь уведомление запроса о получении возникает), и **RECEIVES_OCCURRING** (очередь получения).|  
 |**last_empty_rowset_time**|**ДАТЫ И ВРЕМЕНИ**|Дата и время, когда очередь в последний раз была пуста. Указывается в военном формате времени относительно часового пояса GMT.|  
 |**last_activated_time**|**ДАТЫ И ВРЕМЕНИ**|Дата и время, когда очередь в последний раз была активирована. Указывается в военном формате времени относительно часового пояса GMT.|  

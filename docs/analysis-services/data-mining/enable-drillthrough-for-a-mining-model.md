@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0de38435c74f68e2558f0b6893324bc431dc32ed
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ec6d880c6b32a092f6d4da8b85dfd6693280da7d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145399"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535221"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>включить детализацию для модели интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "50145399"
   
 -   Разрешения на детализацию модели позволяют проводить детализацию на основе модели даже при отсутствии разрешений на детализацию структуры.  
   
--   Разрешения на детализацию структуры предоставляют дополнительную возможность включать столбцы структуры в запросы детализации с помощью функции [StructureColumn (DMX)](../../dmx/structurecolumn-dmx.md). Можно также создавать запросы к обучающим и тестовым вариантам структуры с помощью синтаксиса SELECT… ИЗ \<структуры >. ВАРИАНТЫ синтаксиса.  
+-   Разрешения на детализацию структуры предоставляют дополнительную возможность включать столбцы структуры в запросы детализации с помощью функции [StructureColumn (DMX)](../../dmx/structurecolumn-dmx.md). Также можно запрашивать обучения и тестовые случаи в структуре с помощью SELECT... ИЗ \<структуры >. ВАРИАНТЫ синтаксиса.  
   
  **Кэширование обучающих вариантов** . Детализация работает посредством получения информации об обучающих вариантах в структуре интеллектуального анализа данных. При обработке структуры эта информация кэшируется. Поэтому, если произвести удаление всех кэшированных данных путем изменения свойства <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> на **ClearAfterProcessing**, детализация работать не будет.  
   

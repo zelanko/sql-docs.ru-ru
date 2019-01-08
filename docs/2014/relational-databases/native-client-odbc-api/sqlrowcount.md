@@ -14,12 +14,12 @@ ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9858619250b5f71e973e4af8eb92868f094e2193
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165034"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354745"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   Если для выполнения инструкции привязаны массивы значений параметров `SQLRowCount` возвращает SQL_ERROR, если любую строку значений параметров создаст ошибочное условие при выполнении инструкции. Через аргумент *RowCountPtr* функции значение возвращено не будет.  
@@ -31,7 +31,7 @@ ms.locfileid: "48165034"
  Когда [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняется инструкция INSERT, UPDATE, DELETE или MERGE с предложением OUTPUT, то эта функция не возвращает число строк, затронутых пока не обработаны все строки результирующего набора, формируемого предложение OUTPUT. К строкам эти строки осуществляется вызовом SQLFetch или SQLFetchScroll. SQLResultCols возвращает -1, пока не обработаны все результирующие строки. После SQLFetch или SQLFetchScroll вернет значение SQL_NO_DATA, приложение должно вызвать SQLRowCount, чтобы определить количество строк, затронутых перед вызовом SQLMoreResults для перемещения к следующему результату.  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLRowCount](http://go.microsoft.com/fwlink/?LinkId=59367)   
+ [Функция SQLRowCount](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

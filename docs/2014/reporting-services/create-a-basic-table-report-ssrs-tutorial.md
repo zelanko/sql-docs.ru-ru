@@ -15,12 +15,12 @@ ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2c2c31258da39fa8aa7481432dad1286c8278bf7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab5e18825ec9a328db926829355b706cff2a58d8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184374"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366716"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Создание простого табличного отчета (учебник по службам SSRS)
   Этот учебник предназначен для создания простой табличный отчет на основе [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных с помощью конструктора отчетов. Для создания отчетов также можно использовать построитель отчетов и мастер отчетов. В этом учебнике требуется создать проект отчета, указать сведения о соединении, определить запрос, добавить область данных таблицы и выполнить предварительный просмотр отчета.  
@@ -33,7 +33,7 @@ ms.locfileid: "48184374"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Компонент Database Engine  
   
--   База данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  Дополнительные сведения см. в разделе [Adventure Works для SQL Server 2012 (Adventure Works для SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).. Дополнительные сведения о поддержке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] образцы баз данных и образцы кода для [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], см. в разделе [баз данных и общие сведения об образцах](http://go.microsoft.com/fwlink/?LinkId=110391) на сайте CodePlex.  
+-   База данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  Дополнительные сведения см. в разделе [Adventure Works для SQL Server 2012 (Adventure Works для SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).. Дополнительные сведения о поддержке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] образцы баз данных и образцы кода для [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], см. в разделе [баз данных и общие сведения об образцах](https://go.microsoft.com/fwlink/?LinkId=110391) на сайте CodePlex.  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
@@ -42,20 +42,20 @@ ms.locfileid: "48184374"
     > [!NOTE]  
     >  [!INCLUDE[ssNote64Samp](../includes/ssnote64samp-md.md)]  
   
- Также необходимо иметь разрешения только для чтения для получения данных из [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных.  
+ Для получения данных из базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] необходимо иметь разрешения только на чтение.  
   
 ## <a name="tasks"></a>Задания  
- [Урок 1: Создание проекта сервера отчетов &#40;службы Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  
+ [Занятие 1. Создание проекта сервера отчетов &#40;службы Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  
   
- [Занятие 2: Задание информации о соединении &#40;службы Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
+ [Занятие 2. Задание информации о соединении &#40;службы Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
   
- [Занятие 3: Определение набора данных для табличного отчета &#40;службы Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
+ [Занятие 3. Определение набора данных для табличного отчета &#40;службы Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
   
- [Занятие 4: Добавление таблицы в отчет &#40;службы Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
+ [Занятие 4. Добавление таблицы в отчет &#40;службы Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
   
- [Занятие 5: Форматирование отчета &#40;службы Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)  
+ [Занятие 5. Форматирование отчета &#40;службы Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)  
   
- [Занятие 6: Добавление группирования и итогов &#40;службы Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
+ [Занятие 6. Добавление группирования и итогов &#40;службы Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
 >  При просмотре учебников рекомендуется добавить **Далее** и **Назад** кнопок панели инструментов средства просмотра документов. Дополнительные сведения см. в разделе  

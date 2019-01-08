@@ -24,12 +24,12 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3ac773ea8c68be65a0b60aaff3d542df0b6dc6e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c95d86b64c28bbf78b111f21de7afd58b44616f
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662884"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858669"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>Итерация и инструкция FLWOR (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "51662884"
   
  Например, следующий запрос выполняет итерацию элементов <`Step`> первого производства и возвращает строковое значение узлов <`Step`>:  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -74,7 +74,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
@@ -82,7 +82,7 @@ Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1
   
  Следующий запрос похож на предыдущий, за тем исключением, что он применяется к типизированному XML-столбцу Instructions в таблице ProductModel. Запрос перебирает все производственные шаги, то есть элементы <`step`>, выполняемые в первом цехе для заданного изделия.  
   
-```  
+```sql
 SELECT Instructions.query('  
    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $Step in //AWMI:root/AWMI:Location[1]/AWMI:step  
@@ -115,7 +115,7 @@ the aluminum sheet. ....
   
  Ниже приведены примеры других допустимых входных последовательностей:  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 SELECT @x.query('  
@@ -146,7 +146,7 @@ SELECT @x.query('
   
  В образце базы данных AdventureWorks производственные инструкции хранятся в **инструкции** столбец **Production.ProductModel** таблица имеет следующую форму:  
   
-```  
+```xml
 <Location LocationID="10" LaborHours="1.2"   
             SetupHours=".2" MachineHours=".1">  
   <step>describes 1st manu step</step>  
@@ -158,11 +158,11 @@ SELECT @x.query('
   
  Следующий запрос создает новый XML-документ, содержащий элементы <`Location`> с атрибутами цеха в качестве дочерних элементов:  
   
-```  
+```xml
 <Location>  
    <LocationID>10</LocationID>  
    <LaborHours>1.2</LaborHours>  
-   <SetupHours>.2</SteupHours>  
+   <SetupHours>.2</SetupHours>  
    <MachineHours>.1</MachineHours>  
 </Location>  
 ...  
@@ -170,7 +170,7 @@ SELECT @x.query('
   
  Запрос является таковым:  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $WC in /AWMI:root/AWMI:Location  
@@ -196,7 +196,7 @@ where ProductModelID=7
   
  Частичный результат:  
   
-```  
+```xml
 <Location>  
   <LocationID>10</LocationID>  
   <LaborHours>2.5</LaborHours>  
@@ -214,7 +214,7 @@ where ProductModelID=7
   
  В производственных инструкциях в базе данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] хранятся сведения о необходимых инструментах и о местах их применения. В следующем запросе, чтобы составить список инструментов, необходимых для постройки производственной модели, а также мест, где будет нужен каждый инструмент, применяется предложение `let`.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $T in //AWMI:tool  
@@ -227,11 +227,11 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-where-clause"></a>Применение предложения where  
- Предложение `where` может использоваться для фильтрации результатов итерации. Это продемонстрировано в следующем примере.  
+ Можно использовать `where` предложение для фильтрации результатов итерации. Это продемонстрировано в следующем примере.  
   
  При изготовлении велосипеда производственный процесс проходит через цепочку цехов. Для каждого цеха определена последовательность производственных операций. Следующий запрос получает только те цеха, которые занимаются изготовлением модели велосипеда и включают менее трех производственных операций, то есть содержат менее трех элементов <`step`>.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location  
@@ -251,7 +251,7 @@ where ProductModelID=7
   
 -   Выражение `return` конструирует XML-документ на основании результатов итерации.  
   
- Результат:  
+ Это результат:  
   
 ```  
 <Location LocationID="30"/>   
@@ -270,7 +270,7 @@ where ProductModelID=7
 ## <a name="multiple-variable-binding-in-flwor"></a>Множественная привязка переменных в инструкции FLWOR  
  В одном выражении инструкции FLWOR можно привязывать к входным последовательностям несколько переменных. В следующем примере выполняется запрос к нетипизированной переменной типа xml. Выражение FLOWR возвращает первый дочерний элемент <`Step`> в каждом элементе <`Location`>.  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -302,7 +302,7 @@ SELECT @x.query('
   
 -   переменная `$Loc` указана в выражении, связанном с переменной `$FirstStep`.  
   
- Результат:  
+ Это результат:  
   
 ```  
 Manu step 1 at Loc 1   
@@ -311,7 +311,7 @@ Manu step 1 at Loc 2
   
  Следующий запрос аналогичен, за исключением того, что он указан для столбца Instructions, типизированного **xml** столбца, из **ProductModel** таблицы. [Построение XML (XQuery)](../xquery/xml-construction-xquery.md) используется для создания XML-документ.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /root/Location,  
@@ -335,7 +335,7 @@ WHERE ProductModelID=7
   
  Частичный результат:  
   
-```  
+```xml
 <Step xmlns=  
     "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"     
   LocationID="10">  
@@ -360,7 +360,7 @@ WHERE ProductModelID=7
   
  Следующий запрос получает все телефонные номера указанного заказчика из столбца AdditionalContactInfo. Результат сортируется по номеру телефона.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT AdditionalContactInfo.query('  
@@ -380,9 +380,9 @@ WHERE BusinessEntityID=291;
 order by data($a/act:number[1]) descending  
 ```  
   
- Результат:  
+ Это результат:  
   
-```  
+```xml
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3334</act:number>  
 </act:telephoneNumber>  
@@ -393,7 +393,7 @@ order by data($a/act:number[1]) descending
   
  Вместо объявления пространства имен в прологе запроса можно объявить его с помощью предложения WITH XMLNAMESPACES.  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo'  AS aci)  
@@ -409,7 +409,7 @@ WHERE BusinessEntityID=291;
   
  Сортировка может также выполняться по значению атрибута. Например: следующий запрос получает вновь созданные элементы <`Location`>, имеющие атрибуты LocationID и LaborHours, сортируя результат по атрибуту LaborHours в убывающем порядке. В результате цеха, имеющие максимальное число рабочих часов, будут возвращены первыми.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location   
@@ -424,7 +424,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 <Location LocationID="60" LaborHours="4"/>  
@@ -437,7 +437,7 @@ WHERE ProductModelID=7;
   
  В следующем запросе результат сортируется по имени элемента. Запрос получает характеристики указанного продукта из каталога продукции. Характеристики являются дочерними элементами элемента <`Specifications`>.  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace  
  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -455,9 +455,9 @@ where ProductModelID=19;
   
 -   Выражение `order by (local-name($a))` сортирует последовательность по локальной части имени элемента.  
   
- Результат:  
+ Это результат:  
   
-```  
+```xml
 <Color>Available in most colors</Color>  
 <Material>Almuminum Alloy</Material>  
 <ProductLine>Mountain bike</ProductLine>  
@@ -467,7 +467,7 @@ where ProductModelID=19;
   
  Узлы, в которых сортируемые выражения возвращают пустую последовательность, будут помещены в начало, как показано в следующем примере:  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Person Name="A" />  
@@ -482,9 +482,9 @@ select @x.query('
 ')  
 ```  
   
- Результат:  
+ Это результат:  
   
-```  
+```xml
 <Person />  
 <Person Name="A" />  
 <Person Name="B" />  
@@ -492,7 +492,7 @@ select @x.query('
   
  Следующий пример показывает, каким образом можно указать несколько критериев сортировки. Запрос в этом примере сортирует элементы <`Employee`> сначала по значению атрибута Title, а затем по значению атрибута Administrator.  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Employee ID="10" Title="Teacher"        Gender="M" />  
@@ -511,9 +511,9 @@ order by $e/@Title ascending, $e/@Gender descending
 ')  
 ```  
   
- Результат:  
+ Это результат:  
   
-```  
+```xml
 <Employee ID="8" Title="Administrator" Gender="M" />  
 <Employee ID="4" Title="Administrator" Gender="F" />  
 <Employee ID="125" Title="Administrator" Gender="F" />  

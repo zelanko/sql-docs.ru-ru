@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_mergearticlecolumn
@@ -17,12 +16,12 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 479ac5e7d9a1d451ea489a3a43c0ff481a6a121f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d28c8da014a3922a9dbd1cba533b4cbf1d7a9215
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837030"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590078"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +44,19 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication =**] **"***публикации***"**  
+ [  **@publication =**] **"**_публикации_**"**  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article =**] **"***статье***"**  
+ [  **@article =**] **"**_статье_**"**  
  Имя статьи в публикации. *статья* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@column =**] **"***столбец***"**  
+ [  **@column =**] **"**_столбец_**"**  
  Определяет столбцы, по которым создается вертикальная секция. *столбец* — **sysname**, значение по умолчанию NULL. Если значение равно NULL и `@operation = N'add'`, все столбцы исходной таблицы по умолчанию добавятся к статье. *столбец* не может иметь значение NULL, если *операции* присваивается **drop**. Чтобы исключить столбцы из статьи, выполните **sp_mergearticlecolumn** и укажите *столбец* и `@operation = N'drop'` для каждого столбца, удаляемый из указанного *статье*.  
   
- [  **@operation =**] **"***операции***"**  
+ [  **@operation =**] **"**_операции_**"**  
  Состояние репликации. *Операция* — **nvarchar(4)**, значение по умолчанию ADD. **Добавление** столбец для репликации. **DROP** очищает столбец.  
   
- [  **@schema_replication=**] **"***schema_replication***"**  
+ [  **@schema_replication=**] **"**_schema_replication_**"**  
  Этот аргумент определяет, будут ли распространены изменения схемы при запуске агента слияния. *schema_replication* — **nvarchar(5)**, значение по умолчанию FALSE.  
   
 > [!NOTE]  
@@ -70,7 +69,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
  **1** изменения статьи слияния могут привести к недействительности моментального снимка; Если это происходит, значение **1** дает разрешение нового моментального снимка.  
   
- [* *@force_reinit_subscription =] *** этот*  
+ [  **@force_reinit_subscription =]**_этот_  
  Включает или отключает возможность повторной инициализации подписки. *Этот* имеет тип bit и значение по умолчанию **0**.  
   
  **0** указывает, что изменения статьи слияния не приведут к повторной инициализации подписки.  

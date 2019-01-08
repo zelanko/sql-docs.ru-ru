@@ -11,24 +11,24 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0e040fe0b31f9cead8843987199164e45767db82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc149e8d8af6b2b5f08d849f3fda261849ff9d8f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224704"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361096"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Экспорт в Microsoft Word (построитель отчетов и службы SSRS)
-  Модуль подготовки отчетов Word подготавливает отчеты в собственном формате [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007 – 2010. Используется формат Office Open XML.  
+  Модуль подготовки отчетов Word подготавливает отчеты в собственном формате [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007–2010. Используется формат Office Open XML.  
   
- Модуль подготовки отчетов Word является совместимым с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007–2010, а также с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 с установленным пакетом совместимости [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office для Word, Excel и PowerPoint. Дополнительные сведения о пакете совместимости см. в разделе [Пакет совместимости Microsoft Office для Word, Excel и PowerPoint](http://go.microsoft.com/fwlink/?LinkID=205622).  
+ Модуль подготовки отчетов Word является совместимым с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007–2010, а также с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 с установленным пакетом совместимости [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office для Word, Excel и PowerPoint. Дополнительные сведения о пакете совместимости см. в разделе [Пакет совместимости Microsoft Office для Word, Excel и PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
   
  Содержимое файлов, создаваемых этим модулем подготовки, имеет тип **application/vnd.openxmlformats-officedocument.wordprocessingml.document** , а имена файлов имеют расширение DOCX.  
   
  Предыдущая версия модуля подготовки отчетов Word, совместимая с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, переименована в Word 2003. По умолчанию доступен только модуль подготовки отчетов Word. Чтобы получить доступ к модулю подготовки отчетов Word 2003, необходимо обновить файлы конфигурации служб Reporting Services. Модуль подготовки Word 2003 создает содержимое файлов типа **application/vnd.ms-word** , имена файлов имеют расширение DOC.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Модуль подготовки отчетов 2003 устарел. Дополнительные сведения см. в разделе [устаревшие функции служб SQL Server Reporting Services в SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
+>  Модуль подготовки отчетов [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 устарел. Дополнительные сведения см. в разделе [устаревшие функции служб SQL Server Reporting Services в SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  После экспорта отчета в документ Word можно изменить содержимое отчета и спроектировать отчеты в стиле документа, такие как наклейки для почтовой рассылки, заказы на покупку или стандартные письма.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48224704"
   
 |Свойства элемента отчета|Описание|  
 |-------------------------------|-----------------|  
-|Report Title (заголовок отчета)|Title|  
+|Report Title (заголовок отчета)|Заголовок|  
 |Report.Author|Автор|  
 |Report.Description|Комментарии|  
   
@@ -77,9 +77,9 @@ ms.locfileid: "48224704"
   
  Это происходит потому, что модуль подготовки отчетов Word анализирует отчет для определения наличия таких полей, относящихся к разбиению на страницы, как **PageNumber** и **TotalPages** , и обрабатывает только простые ссылки, а не вызовы функций. В данном случае в выражении вызывается функция **ToString** . Следующие два выражения являются эквивалентными, и оба обеспечивают правильную подготовку к просмотру при предварительном просмотре отчета в построителе отчетов или конструкторе отчетов либо при подготовке к просмотру опубликованного отчета в диспетчере отчетов или библиотеке SharePoint. Но модуль подготовки отчетов Word успешно выполняет синтаксический анализ только второго выражения и правильно подготавливает к просмотру номера страниц.  
   
--   **Сложное выражение:**  выражением является `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Сложное выражение:**  Выражение `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Выражение с отрезками текста** : текст **Средний объем продаж**, выражение  `=Avg(Fields!YTDPurchase.Value, "Sales)`, текст **Номер страницы**, выражение `=Globals!PageNumber`  
+-   **Выражение с отрезками текста:** Текст, **средний объем продаж**и выражение, `=Avg(Fields!YTDPurchase.Value, "Sales)`и текст, **номер страницы**и выражение `=Globals!PageNumber`  
   
  Чтобы избежать этой проблемы, при включении выражений в колонтитулы используйте несколько отрезков текста вместо одного сложного выражения. Следующие два выражения эквивалентны. Первое выражение является сложным, а второй использует отрезки текста. Модуль подготовки отчетов Word успешно выполняет синтаксический анализ только второго выражения.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "48224704"
 -   При экспорте текста в Word применение текста с художественным оформлением шрифта может для некоторых шрифтов привести к выпадению или образованию непредвиденных глифов в подготовленном для просмотра отчете.  
   
 ##  <a name="WordBenefits"></a> Преимущества использования модуля подготовки Word  
- Кроме того, что функции, которые появились в [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007 – 2010, можно экспортировать отчеты, файл с расширением DOCX обычно файлы экспортированных отчетов часто требует меньше места. Отчеты, экспортированные с использованием модуля подготовки отчетов Word, обычно намного меньше, чем такие же отчеты, экспортированные с использованием модуля подготовки отчетов Word 2003.  
+ В дополнение к тому, что для экспортированных отчетов стали доступными новые средства [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007–2010, файлы экспортированных отчетов с расширением DOCX, как правило, имеют меньший размер. Отчеты, экспортированные с использованием модуля подготовки отчетов Word, обычно намного меньше, чем такие же отчеты, экспортированные с использованием модуля подготовки отчетов Word 2003.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Обратная совместимость экспортированных отчетов.  
  Предусмотрена возможность выбирать режим совместимости Word и задавать параметры совместимости. Модуль подготовки отчетов Word создает документы с включенным режимом совместимости. Повторное сохранение документов с выключенным режимом совместимости может привести к нарушению макета документа.  
@@ -152,11 +152,11 @@ ms.locfileid: "48224704"
  После отключения режима совместимости и повторного сохранения отчета в макете отчета могут произойти непредвиденные изменения.  
   
 ##  <a name="AvailabilityWord"></a> Доступность модуля подготовки Word 2003  
- В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], модуль подготовки отчетов Word по умолчанию имеет версию, которая создает собственный формат [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007 – 2010. Это параметр **Word** , содержащийся в меню **Экспорт** диспетчера отчетов и в списке SharePoint. Более ранняя версия, совместимая только с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, теперь называется Word 2003 и содержится в меню под этим именем. Пункт меню **Word 2003** не отображается по умолчанию, но администратор может сделать его видимым, обновив файл конфигурации RSReportServer. Для экспорта отчетов из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с помощью модуля подготовки отчетов Word 2003 необходимо обновить файл конфигурации RSReportDesigner. Однако настройка видимости модуля подготовки отчетов Word 2003 не обеспечивает его доступность во всех сценариях. Поскольку файл конфигурации RSReportServer хранится на сервере отчетов, для обеспечения возможности чтения файла конфигурации средства и продукты, хранящиеся в целевом местоположении экспорта отчетов, должны быть подключены к серверу отчетов. При использовании средств или продуктов в отключенном или локальном режиме модуль подготовки отчетов Word 2003 недоступен. Пункт меню **Word 2003** по-прежнему будет недоступен. Если сделать модуль подготовки отчетов Word 2003 видимым, изменив файл конфигурации RSReportDesigner, пункт меню **Word 2003** будет всегда доступен в режиме предварительного просмотра отчета в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
+ В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] стандартный модуль подготовки отчетов Word имеет версию, которая создает собственный формат [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007–2010. Это параметр **Word** , содержащийся в меню **Экспорт** диспетчера отчетов и в списке SharePoint. Более ранняя версия, совместимая только с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, теперь называется Word 2003 и содержится в меню под этим именем. Пункт меню **Word 2003** не отображается по умолчанию, но администратор может сделать его видимым, обновив файл конфигурации RSReportServer. Для экспорта отчетов из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с помощью модуля подготовки отчетов Word 2003 необходимо обновить файл конфигурации RSReportDesigner. Однако настройка видимости модуля подготовки отчетов Word 2003 не обеспечивает его доступность во всех сценариях. Поскольку файл конфигурации RSReportServer хранится на сервере отчетов, для обеспечения возможности чтения файла конфигурации средства и продукты, хранящиеся в целевом местоположении экспорта отчетов, должны быть подключены к серверу отчетов. При использовании средств или продуктов в отключенном или локальном режиме модуль подготовки отчетов Word 2003 недоступен. Пункт меню **Word 2003** по-прежнему будет недоступен. Если сделать модуль подготовки отчетов Word 2003 видимым, изменив файл конфигурации RSReportDesigner, пункт меню **Word 2003** будет всегда доступен в режиме предварительного просмотра отчета в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  Пункт меню **Word 2003** не отображается в следующих случаях.  
   
--   Построитель отчетов работает в отключенном режиме и используется для предварительного просмотра отчетов. Это относится как [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] и к изолированной версии построителя отчетов.  
+-   Построитель отчетов работает в отключенном режиме и используется для предварительного просмотра отчетов. Это относится как к версии [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] , так и к изолированной версии построителя отчетов.  
   
 -   Веб-часть средства просмотра отчетов работает в локальном режиме, а ферма SharePoint не интегрирована с сервером отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Отчеты, созданные в локальном режиме и Отчеты, созданные в подключенном режиме, в средстве просмотра отчетов &#40;службы Reporting Services в режиме интеграции с SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
@@ -168,7 +168,7 @@ ms.locfileid: "48224704"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и вы просматриваете отчеты.  
   
--   Построитель отчетов подключен к серверу отчетов. Это может быть [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] или изолированной версии построителя отчетов.  
+-   Построитель отчетов подключен к серверу отчетов. Это может быть версия [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] или изолированная версия построителя отчетов.  
   
 -   Веб-часть средства просмотра отчетов в удаленном режиме.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "48224704"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- Расширение WORDOPENXML определяет модуль подготовки отчетов Word для [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007–2010. Расширение WORD определяет версию [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` указывает, что модуль подготовки отчетов Word 2003 скрыт. Дополнительные сведения см. в разделе [файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md) и [файл конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md).  
+ Расширение WORDOPENXML определяет модуль подготовки отчетов Word для [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007–2010. Расширение WORD определяет версию [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = "false"` указывает, что модуль подготовки отчетов Word 2003 скрыт. Дополнительные сведения см. в разделах [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) и [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
 ##  <a name="Differences"></a> Различия между модулями подготовки отчетов Word 2003 и Word  
  Отчеты, подготовленные к просмотру с использованием модулей подготовки Word или Word 2003, как правило, визуально неразличимы. Но можно заметить небольшие различия между двумя форматами Word или Word 2003.  
@@ -189,8 +189,8 @@ ms.locfileid: "48224704"
 ## <a name="see-also"></a>См. также  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов &#40;построитель отчетов и службы SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Таблицы, матрицы, списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

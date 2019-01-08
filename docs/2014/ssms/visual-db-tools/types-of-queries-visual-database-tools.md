@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -16,12 +16,12 @@ ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e12595ddb5074ac780e997f2d0255e57c4470aa8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165234"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807116"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Типы запросов (визуальные инструменты для баз данных)
   Конструктор запросов и представлений располагает встроенными функциональными возможностями для запросов некоторых типов — Select, Insert Results, Insert Values, Update, Delete и Make Table, а также поддерживает запросы UNION, полнотекстового поиска и с выражением CASE.  
@@ -51,7 +51,7 @@ ms.locfileid: "48165234"
  [Создание запросов на обновление (визуальные инструменты для баз данных)](create-update-queries-visual-database-tools.md)  
  Описывает, как создать запрос, обновляющий таблицу.  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Ссылка  
  [Свойства запроса (визуальные инструменты для баз данных)](query-properties-visual-database-tools.md)  
  Описывает свойства, доступные пользователю при проектировании запросов.  
   

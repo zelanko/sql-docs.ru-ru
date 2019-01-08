@@ -1,6 +1,6 @@
 ---
-title: С помощью T-SQL (CREATE EXTERNAL LIBRARY) установка пакетов R на службы машинного обучения SQL Server | Документация Майкрософт
-description: Добавление новых пакетов R для служб SQL Server 2017 машинного обучения (в базе данных)
+title: Использовать T-SQL (CREATE EXTERNAL LIBRARY), чтобы установить пакеты R - служб машинного обучения SQL Server
+description: Добавление новых пакетов R в SQL Server 2016 R Services или служб SQL Server 2017 машинного обучения (в базе данных).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/30/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 897bafaaf5ec32c417bb5d9625ce6cef22d6e783
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6e910f1c3b29522b11f1faa83db890d399bf3680
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699392"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645053"
 ---
-# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server-2017-machine-learning-services"></a>С помощью T-SQL (CREATE EXTERNAL LIBRARY) установка пакетов R на службы машинного обучения SQL Server 2017
+# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Использование T-SQL (CREATE EXTERNAL LIBRARY) для установки пакетов R на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье описывается установка новых пакетов R в экземпляре SQL Server, где включена машинного обучения. Существует несколько подходов для выбора. С помощью T-SQL лучше всего подходит для администраторов сервера, кто не знаком с R.
@@ -48,7 +48,7 @@ ms.locfileid: "51699392"
 
 Например, следующая инструкция имена как источник типа, содержащее репозитория miniCRAN **randomForest** пакет, вместе с зависимостями. 
 
-```SQL
+```sql
 CREATE EXTERNAL LIBRARY randomForest
 FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
@@ -60,7 +60,7 @@ WITH (LANGUAGE = 'R');
 
 Если библиотека создана успешно, при запуске пакета в SQL Server, путем ее вызова внутри хранимой процедуры.
     
-```SQL
+```sql
 EXEC sp_execute_external_script
 @language =N'R',
 @script=N'library(randomForest)'

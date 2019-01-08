@@ -11,12 +11,12 @@ ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8171edaa6e2265191ae4611fea79dd018b43022c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b325a96c096f0e49f3bbfb2961d0de6cac387a3e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117884"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355075"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services
   Используйте указания и ссылки, приведенные в этом разделе, для установки всех файлов данных и проектов, используемых в учебниках по службам Analysis Services.  
@@ -30,7 +30,7 @@ ms.locfileid: "48117884"
   
      Службы Analysis Services доступны только в следующих выпусках: Evaluation, Enterprise, Business Intelligence, Standard.  
   
-     Обратите внимание, что выпуски SQL Server Express не включают службы Analysis Services. [Скачайте ознакомительный выпуск](http://go.microsoft.com/fwlink/?LinkId=392824) , если хотите опробовать программное обеспечение бесплатно.  
+     Обратите внимание, что выпуски SQL Server Express не включают службы Analysis Services. [Скачайте ознакомительный выпуск](https://go.microsoft.com/fwlink/?LinkId=392824), если хотите опробовать программное обеспечение бесплатно.  
   
      По умолчанию службы Analysis Services устанавливаются как многомерный экземпляр, но это можно переопределить, выбрав табличный режим сервера на странице настройки сервера мастера установки. Если необходимо запускать оба режима сервера, перезапустите программу установки SQL Server на том же компьютере, чтобы установить второй экземпляр служб Analysis Services в другом режиме.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "48117884"
   
  Кроме того, данные можно просматривать с помощью конструктора запросов многомерных выражений, который встроен в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Конструктор запросов возвращает те же данные, только представленные в виде плоского набора строк.  
   
-## <a name="step-2-download-sql-server-data-tools--business-intelligence-for-visual-studio-2012"></a>Шаг 2. Скачивание SQL Server Data Tools — Business Intelligence для Visual Studio 2012  
+## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>Этап 2. Скачать SQL Server Data Tools — бизнес-аналитика для Visual Studio 2012  
  В этом выпуске средства SQL Server Data Tools загружаются и устанавливаются отдельно от других компонентов SQL Server. Конструкторы и шаблоны проектов, используемых для создания моделей и отчетов бизнес-аналитики, доступны для бесплатной загрузки в сети.  
   
--   [Скачайте версию Business Intelligence средств SQL Server Data Tools](http://go.microsoft.com/fwlink/p/?LinkID=322038). Файл будет сохранен в папке «Загрузки». Запустите программу установки средства.  
+-   [Скачайте версию Business Intelligence средств SQL Server Data Tools](https://go.microsoft.com/fwlink/p/?LinkID=322038). Файл будет сохранен в папке «Загрузки». Запустите программу установки средства.  
   
      Перезагрузите компьютер, чтобы завершить установку.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48117884"
   
  Для установки этой базы данных выполните следующие действия.  
   
-1.  Скачайте базу данных [AdventureWorkDW2012](http://go.microsoft.com/fwlink/p/?LinkID=221770) на странице образцов продуктов на сайте CodePlex.  
+1.  Скачайте базу данных [AdventureWorkDW2012](https://go.microsoft.com/fwlink/p/?LinkID=221770) на странице образцов продуктов на сайте CodePlex.  
   
      Имя файла базы данных AdvntureWorksDW2012_Data.mdf. Файл должен находиться в папке «Загрузки» на компьютере.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "48117884"
   
  Файл проекта для занятия 4 особенно важен, так как он используется не только в этом занятии, но и во всех последующих занятиях. В отличие от предыдущих файлов проектов, в которых в результате выполнения шагов занятия создается точная копия файлов выполненных проектов, в образце проекта для занятия 4 содержится новая информация модели, отсутствующая в моделях, которые создаются на занятиях с 1 по 3. В занятии 4 предполагается, что вы начинаете работать с файлом образца проекта, который можно загрузить по следующей ссылке.  
   
-1.  Скачайте [Учебник по службам SQL Server 2012 Analysis Services](http://go.microsoft.com/fwlink/p/?LinkID=221866) на странице образцов продуктов на сайте codeplex.  
+1.  Скачайте [Учебник по службам SQL Server 2012 Analysis Services](https://go.microsoft.com/fwlink/p/?LinkID=221866) на странице образцов продуктов на сайте codeplex.  
   
      Учебники 2012 года действительны для версии [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
-     Файл «Analysis Services Tutorial SQL Server 2012.zip» будет сохранен в папке «Загрузки» на компьютере.  
+     Файл «Analysis Services Tutorial SQL Server 2012.ZIP»» будет сохраняться в папке «загрузки» на компьютере.  
   
-2.  Переместите этот ZIP-файл в папку, расположенную в корне диска (например, C:\Tutorial). Это позволяет избежать ошибки «Слишком длинный путь», которая иногда возникает при попытке извлечь файлы из папки «Загрузки».  
+2.  Переместите этот ZIP-файл в папку, расположенную в корне диска (например, C:\Tutorial). Это позволяет избежать ошибки «Слишком длинный путь», которая иногда возникает при попытке распаковать файлы в папке «загрузки».  
   
 3.  Извлеките образцы проектов. Щелкните файл правой кнопкой мыши и выберите команду **Извлечь все**. После извлечения файлов на компьютере должны быть установлены следующие проекты:  
   
@@ -150,7 +150,7 @@ ms.locfileid: "48117884"
   
 ## <a name="see-also"></a>См. также  
  [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [Настройка брандмауэра Windows для разрешения доступа к службам Analysis Services](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

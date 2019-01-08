@@ -20,16 +20,16 @@ ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd3604b6de03d6344470758c4de14c15ad47e572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602682"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212440"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Соответствие стандартам**  
- Версия была введена: ODBC 2.0  
+ Представленные версии: ODBC 2.0  
   
  **Сводка**  
  **SQLManageDataSources** отображает диалоговое окно, с помощью которого пользователи могут настроить, добавлять и удалять источники данных в сведения о системе.  
@@ -39,7 +39,7 @@ ms.locfileid: "47602682"
 ```  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -64,7 +64,7 @@ BOOL SQLManageDataSources(
   
  ![Диалоговое окно администратора источника данных ODBC](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
- В диалоговом окне отображается источников данных, перечисленных в сведениях о системе трех вкладках: **DSN пользователя**, **системный DSN**, и **файловый DSN**. Если пользователь дважды щелкает источника данных или выбирает источник данных и нажимает **Настройка**, **SQLManageDataSources** вызовы **ConfigDSN** в программе установки библиотеки DLL с ODBC_CONFIG_ Параметр имени DSN.  
+ В диалоговом окне отображается источников данных, перечисленных в сведениях о системе трех вкладках: **DSN пользователя**, **системное имя DSN**, и **файл DSN**. Если пользователь дважды щелкает источника данных или выбирает источник данных и нажимает **Настройка**, **SQLManageDataSources** вызовы **ConfigDSN** в программе установки библиотеки DLL с ODBC_CONFIG_ Параметр имени DSN.  
   
  Если пользователь нажимает кнопку **добавить**, **SQLManageDataSources** отображает **Создание нового источника данных** диалоговое окно, показанное на следующем рисунке.  
   

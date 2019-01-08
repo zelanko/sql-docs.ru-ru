@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
@@ -17,12 +16,12 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bedd4c228f540cd4277b4f77750e797b70424c30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155364"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356661"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает принудительные подписки на IBM DB2/AS 400, DB2/MVS и DB2/Universal Database через поставщики OLE DB, включенные в состав [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
@@ -32,11 +31,11 @@ ms.locfileid: "48155364"
   
 1.  Установите последнюю версию поставщика [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB для DB2 на распространитель:  
   
-    -   Если вы используете [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]на [загрузки SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=149256) веб-странице в **связанных файлов для загрузки** щелкните ссылку на последнюю версию Microsoft SQL Server 2008 Feature Pack. На веб-странице **Пакет дополнительных компонентов Microsoft SQL Server 2008** найдите раздел **Поставщик данных OLE DB для DB2 (Майкрософт)**.  
+    -   Если используется выпуск [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)], на веб-странице [Загрузки SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=149256) в разделе **Загружаемые файлы, относящиеся к CTP-версии** щелкните ссылку на последнюю версию пакета дополнительных компонентов Microsoft SQL Server 2008. На веб-странице **Пакет дополнительных компонентов Microsoft SQL Server 2008** найдите раздел **Поставщик данных OLE DB для DB2 (Майкрософт)**.  
   
     -   При использовании выпуска [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard установите последнюю версию сервера служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS), содержащего этот поставщик.  
   
-     В дополнение к установке поставщика рекомендуется установить средство доступа к данным, который используется на следующем шаге (он устанавливается по умолчанию в файлы для загрузки [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Дополнительные сведения об установке и использовании инструмента доступа к данным см. в документации поставщика или в документации по HIS.  
+     В дополнение к установке поставщика рекомендуется установить инструмент доступа к данным, который применяется на следующем шаге (он устанавливается по умолчанию вместе с загрузкой [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Дополнительные сведения об установке и использовании инструмента доступа к данным см. в документации поставщика или в документации по HIS.  
   
 2.  Создайте строку соединения для подписчика. Строку соединения можно создавать в любом текстовом редакторе, однако рекомендуется использовать средство доступа к данным. Чтобы создать строку с помощью средства доступа к данным, выполните следующие действия:  
   
@@ -131,7 +130,7 @@ ms.locfileid: "48155364"
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|Недоступно|  
+|`sql_variant`|Н/Д|  
 |`sysname`|VARCHAR(128)|  
 |`text`|VARCHAR(0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.distproperties.publishers.f1
@@ -15,12 +14,12 @@ ms.assetid: 31c81898-11ca-4d2f-afea-2fbc71e19ce4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3c8f572b45154b76f711ab61fe35be339429ed83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ee329a923bf0b3c3c08b23fb6071a773dc16400
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123714"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816446"
 ---
 # <a name="distributor-properties-publishers"></a>Свойства распространителя, страница «Издатели»
   Страница **Издатели** диалогового окна **Свойства распространителя** позволяет включить использование издателями данного распространителя. Также можно устанавливать свойства, связанные с этими издателями. Учтите, что разрешение для издателя использовать данный сервер в качестве своего удаленного распространителя не превращает данный сервер в издатель. Необходимо подключиться к издателю, настроить его для публикации и выбрать этот сервер в качестве распространителя. Возможна настройка издателя и выбор распространителя с помощью мастера создания публикаций.  

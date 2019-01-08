@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replmonitorhelppublicationthresholds
@@ -17,12 +16,12 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9e2ecc46c668f8c9cb3bd8d9a2fb21d0c9787a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99b577b27b8edd2f37f1af3a13162f1b1aaa8c42
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803212"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747656"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|Идентификатор метрики быстродействия репликации, который может иметь одно из таких значений.<br /><br /> **1expiration** -следит за приближающимся истечением срока подписки на публикации транзакций.<br /><br /> **2latency** -следит за производительностью подписки на публикации транзакций.<br /><br /> **4mergeexpiration** -следит за приближающимся истечением срока подписки на публикации слиянием.<br /><br /> **5mergeslowrunduration** -следит за продолжительностью синхронизаций слиянием через соединения с низкой пропускной способностью (коммутируемое).<br /><br /> **6mergefastrunduration** -следит за продолжительностью синхронизаций слиянием через соединения с высокой пропускной способностью (локальная сеть).<br /><br /> **7mergefastrunspeed** -следит за частотой синхронизаций слиянием через соединения с высокой пропускной способностью (локальная сеть).<br /><br /> **8mergeslowrunspeed** -следит за частотой синхронизации слиянием через соединения с низкой пропускной способностью (коммутируемое).|  
 |**title**|**sysname**|Имя метрики производительности репликации.|  
-|**Значение**|**int**|Пороговое значение метрики производительности.|  
+|**value**|**int**|Пороговое значение метрики производительности.|  
 |**shouldalert**|**bit**|— Должно быть создано оповещение при превышении порогового значения для этой публикации; значение **1** указывает, что оповещение должно вызываться.|  
 |**IsEnabled**|**bit**|— Если мониторинг включен для этой метрики производительности репликации для данной публикации; значение **1** указывает, что наблюдение включено.|  
   

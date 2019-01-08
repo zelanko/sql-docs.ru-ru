@@ -17,12 +17,12 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbcbf7f2e0a6423e9e2ea918d5bb561a9ec1c97c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e38ceb561c2b0d66cbf274e09d61fc327d8543f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076802"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372606"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Ограничение однозначного соответствия примитивов
   В XSD сложные модели содержимого ограничены правилом ограничения однозначного соответствия примитивов. Это правило требует, чтобы каждый элемент в экземпляре документа однозначно соответствовал единственному примитиву `<xsd:element>` или `<xsd:any>` в родительской модели содержимого. Любая схема, которая содержит тип с потенциально неоднозначной моделью содержимого, отклоняется.  
@@ -80,13 +80,13 @@ ms.locfileid: "48076802"
 ## <a name="finding-more-information"></a>Дополнительные сведения  
  Следующий документ опубликован консорциумом World Wide Web (W3C) и содержит техническое описание ограничения однозначного соответствия примитивов:  
   
- «XML-схема. Часть 1, структуры, второе издание, W3C Proposed Edited Recommendation»:  
+ «Схема XML. Часть 1: структуры, второе издание, W3C Proposed Edited Recommendation»:  
   
--   Раздел 3.8.6. Ограничения компонентов схемы для группы моделей  
+-   Раздел 3.8.6: Ограничения компонентов схемы группы моделей  
   
--   Приложение H. Анализ ограничения однозначного соответствия примитивов (не нормативный)  
+-   Приложение H: Анализ ограничения однозначного соответствия примитивов (не нормативный)  
   
- Чтобы просмотреть документ, перейдите по адресу [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881).  
+ Чтобы просмотреть документ, перейдите по адресу [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   
 ## <a name="see-also"></a>См. также  
  [Коллекции XML-схем (SQL Server)](xml-schema-collections-sql-server.md)  

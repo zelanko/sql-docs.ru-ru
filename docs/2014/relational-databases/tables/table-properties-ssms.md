@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
@@ -17,12 +16,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b518a0044c4d4778fa2b94a6643c805e7c19ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096664"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356281"
 ---
 # <a name="table-properties"></a>Свойства таблицы
   Данный раздел описывает свойства таблицы, отображаемые в диалоговом окне «Свойства таблицы» в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения по отображению этих свойств см. в разделе [Просмотр определения таблицы](view-the-table-definition.md).  
@@ -50,7 +49,7 @@ ms.locfileid: "48096664"
  **Дата создания**  
  Дата и время создания таблицы.  
   
- **Название**  
+ **Name**  
  Имя таблицы.  
   
  **Схема**  
@@ -66,7 +65,7 @@ ms.locfileid: "48096664"
  Показывает, был ли объект создан с параметром «заключенный в кавычки идентификатор» в значении ON. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](/sql/t-sql/statements/set-quoted-identifier-transact-sql).  
   
  **Укрупнение блокировки**  
- Указывает укрупнение блокировки гранулярности таблицы. Дополнительные сведения о блокировке в компоненте Database Engine см. в разделе [Руководство по блокировке транзакций и управлению версиями строк SQL Server](http://msdn.microsoft.com/library/jj856598.aspx). Возможны следующие значения:  
+ Указывает укрупнение блокировки гранулярности таблицы. Дополнительные сведения о блокировке в компоненте Database Engine см. в разделе [Руководство по блокировке транзакций и управлению версиями строк SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). Возможны следующие значения:  
   
  AUTO  
  Этот параметр позволяет [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] выбрать степень детализации укрупнения блокировки, подходящую для данной схемы таблицы.  
@@ -136,7 +135,7 @@ ms.locfileid: "48096664"
  Возможные значения: `True` и `False`.  
   
  **Файловая группа файлового потока**  
- Укажите имя файловой группы данных FILESTREAM, если таблица имеет `varbinary(max)` столбец, в котором есть атрибут FILESTREAM. Значение по умолчанию — файловая группа данных FILESTREAM.  
+ Укажите имя файловой группы данных FILESTREAM, если таблица содержит столбец `varbinary(max)`, в котором есть атрибут FILESTREAM. Значение по умолчанию — файловая группа данных FILESTREAM.  
   
  Если таблица не содержит данных FILESTREAM, то это поле пусто.  
   

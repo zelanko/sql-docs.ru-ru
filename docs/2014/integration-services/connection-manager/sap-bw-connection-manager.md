@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b780558fc41394d0da8949d33896e5409fbec5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbff810eadb2a070cc6df7dec6985e21f50e9eb4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112244"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369716"
 ---
 # <a name="sap-bw-connection-manager"></a>Диспетчер соединений SAP BW
   Диспетчер соединений SAP BW — это компонент диспетчера соединений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW. Таким образом, диспетчер соединений SAP BW обеспечивает подключение к системе SAP Netweaver BW версии 7, необходимое компонентам источника и назначения [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW. (Источник и назначение SAP BW, входящие в состав пакета [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW, являются единственными компонентами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , которые используют диспетчер соединений SAP BW.)  
@@ -24,7 +23,7 @@ ms.locfileid: "48112244"
 > [!IMPORTANT]  
 >  Документация по Microsoft Connector 1.1 для SAP BW предполагает, что читатель знаком со средой SAP Netweaver BW. Дополнительные сведения о SAP Netweaver BW или сведения о настройке объектов и процессов SAP Netweaver BW см. в документации SAP.  
   
- При добавлении к пакету диспетчер соединений SAP BW `ConnectionManagerType` свойства диспетчера соединений присваивается `SAPBI`.  
+ При добавлении диспетчера соединений SAP BW в пакет свойству `ConnectionManagerType` диспетчера соединений присваивается значение `SAPBI`.  
   
 ## <a name="configuring-the-sap-bw-connection-manager"></a>Настройка диспетчера соединений SAP BW  
  Диспетчер соединений SAP BW можно настроить следующими способами.  
@@ -44,12 +43,12 @@ ms.locfileid: "48112244"
   
  Если вы не знаете все значения, необходимые для настройки диспетчера соединений, запросите их у администратора SAP.  
   
- Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW, см. в техническом документе [Использование служб SQL Server 2008 Integration Services с SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
+ Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW, см. в техническом документе [Использование служб SQL Server 2008 Integration Services с SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Использование конструктора служб SSIS для настройки источника  
  Дополнительные сведения о свойствах диспетчера соединений SAP BW, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующем разделе:  
   
--   [Редактор диспетчера подключений SAP BW](../sap-bw-connection-manager-editor.md)  
+-   [Редактор диспетчера соединений SAP BW](../sap-bw-connection-manager-editor.md)  
   
 ## <a name="see-also"></a>См. также  
  [Компоненты Microsoft Connector 1.1 для SAP BW](../microsoft-connector-for-sap-bw-components.md)  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 168e98315469da3daba8d228b69fe0ee10794e4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 263bc590c43899c3b9531549f4e73eefbde81c9c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097155"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792976"
 ---
 # <a name="model-deployment-options-master-data-services"></a>Варианты развертывания модели (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]при развертывании файла пакета модели необходимо решить, следует ли развернуть новую или клонированную модель либо обновить модель, клонированную ранее.  
@@ -39,9 +38,9 @@ ms.locfileid: "48097155"
 |Клонировать|Создание новой модели, которая является точным клоном модели в пакете. Это работает, только если модель (с таким же именем или идентификатором) в целевой среде не существует. Используйте клонирование, если нужно иметь одну модель в различных средах и периодически обновлять эту клонированную модель.|Это поведение по умолчанию мастера в веб-приложении. Если модель с таким же именем или идентификатором уже существует, появится запрос о создании новой модели.|  
 |Update|Обновление существующей модели моделью из пакета. Идентификаторы в обеих моделях должны быть одинаковыми. Этот вариант используется для обновления ранее клонированной модели.|Обновлять можно только ранее клонированные модели. (Имена и идентификаторы должны совпадать.)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
  [Развертывание пакета развертывания модели с помощью мастера](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
- [Развертывание моделей &#40;службы Master Data Services&#41;](deploying-models-master-data-services.md)  
+ [Развертывание моделей (службы Master Data Services)](deploying-models-master-data-services.md)  
   
   

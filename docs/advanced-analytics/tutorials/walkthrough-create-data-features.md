@@ -1,56 +1,65 @@
 ---
-title: Создание компонентов данных, с помощью R и SQL (Пошаговое руководство) | Документы Microsoft
+title: Создание функций данных с помощью функции R и SQL Server — машинного обучения SQL Server
+description: Учебник, в котором показано, как создание функций данных с помощью функции SQL Server для аналитики в базе данных.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/26/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 226b8f2977f527d22a09fcbb4ab460e05285f858
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 40bd2140ba28307cca30befb7cdad8b180cc856a
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203306"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645143"
 ---
-# <a name="create-data-features-using-r-and-sql-walkthrough"></a>Создание компонентов данных, с помощью R и SQL (Пошаговое руководство)
+# <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Создание функций данных с помощью R и SQL Server (Пошаговое руководство)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Проектирование данных — это важная составляющая машинного обучения. Данные часто требуют преобразования, прежде чем можно будет использовать для прогнозирующего моделирования. Если данные не имеют требуемых характеристик, их необходимо создать на основе существующих значений.
+Проектирование данных — это важная составляющая машинного обучения. Данные часто требуется преобразование, прежде чем можно будет использовать для прогнозирующего моделирования. Если данные не имеют требуемых характеристик, их необходимо создать на основе существующих значений.
 
-Для этой задачи моделирования вместо необработанных значений широты и долготы мест посадки и высадки желательно использовать значения расстояния в километрах между этими двумя местами. Чтобы создать эту функцию, вычислений прямой линейное расстояние между двумя точками, с помощью [Формула гаверсинуса](https://en.wikipedia.org/wiki/Haversine_formula).
+Для этой задачи моделирования вместо необработанных значений широты и долготы мест посадки и высадки желательно использовать значения расстояния в километрах между этими двумя местами. Чтобы создать эту функцию, вычислить прямое линейное расстояние между двумя точками, с помощью [Формула гаверсинуса](https://en.wikipedia.org/wiki/Haversine_formula).
 
-На этом шаге мы сравнить две различные методы для создания компонентов на основе данных:
+На этом шаге дополнительные два метода создания характеристик на основе данных:
 
-- С помощью пользовательской функции R
-- С помощью пользовательской функции в T-SQL [!INCLUDE[tsql](../../includes/tsql-md.md)]
+> [!div class="checklist"]
+> * С помощью пользовательской функции R
+> * С помощью пользовательской функции T-SQL в [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
-Предназначена для того, чтобы создать новую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набор данных, который содержит исходные столбцы, а также новый числовых признаков *direct_distance*.
+Целью является создание нового [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набор данных, который включает исходные столбцы, а также новый числовой признак, *direct_distance*.
 
-## <a name="featurization-using-r"></a>Featurization с помощью R
+## <a name="prerequisites"></a>предварительные требования
+
+Этот шаг предполагает выполняющимся R сеансом, в зависимости от предыдущего шага в этом пошаговом руководстве. Он использует соединение строк и данных источника объекты, созданные в этих шагах. Для запуска сценария используются следующие средства и пакеты.
+
++ RGUI.exe для выполнения команд R
++ Management Studio для выполнения T-SQL
+
+## <a name="featurization-using-r"></a>Добавление признаков с помощью R
 
 Язык R известен своими статистическими библиотеками с широкими и разнообразными возможностями, но вам все еще нужно создавать пользовательские преобразования данных.
 
-Во-первых, приступим привыкшим пользователей R: получение данных на вашем ноутбуке, а затем запустите пользовательскую функцию R, *ComputeDist*, которая вычисляет линейную расстояние между двумя точками, заданные значения широты и долготы.
+Во-первых, давайте сделаем его привыкли пользователей R: данные на ноутбуке, а затем запустите пользовательской функции R, *ComputeDist*, которая вычисляет линейное расстояние между двумя точками, которые заданы посредством широты и долготы.
 
-1. Помните, что объект источника данных, созданную ранее возвращает только первые 1000 строк. Итак, давайте определить запрос, который получает все данные.
+1. Помните, что объект источника данных, созданную ранее возвращает только первые 1000 строк. Так что давайте определим запрос, который получает все данные.
 
     ```R
     bigQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,  pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude FROM nyctaxi_sample";
     ```
 
-2. Создание источника данных SQL Server с помощью запроса.
+2. Создайте объект источника данных с помощью запроса.
 
     ```R
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) можно выполнить запрос, состоящий из допустимый запрос SELECT, предоставленных в качестве аргумента для _sqlQuery_ параметр или имя объекта таблицы, как _таблицы_ параметр.
+    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) можно выполнить запрос, состоящий из допустимого запроса SELECT, предоставленный в качестве аргумента для _sqlQuery_ параметр или имя объекта таблицы, как _таблицы_ параметр.
     
-    - Если вы хотите образец данных из таблицы, необходимо использовать _SQL-запрос_ параметра, определить параметры выборки данных с помощью предложения TABLESAMPLE T-SQL, а также задать _rowBuffering_ аргумента значение FALSE.
+    - Если вы хотите демонстрационные данные из таблицы, необходимо использовать _sqlQuery_ параметра, определение параметров выборки с помощью предложения TABLESAMPLE T-SQL и настройка _rowBuffering_ аргумента значение false.
 
-3. Выполните следующий код, чтобы создать пользовательскую функцию R. ComputeDist отображаются две пары значений широты и долготы, а также вычисляет линейную расстояния между ними возвращает расстояние в милях.
+3. Выполните следующий код для создания пользовательской функции R. ComputeDist принимает две пары значений широты и долготы и вычисляет линейное расстояние между ними, возвращая расстояние в милях.
 
     ```R
     env <- new.env();
@@ -72,21 +81,21 @@ ms.locfileid: "31203306"
     }
     ```
   
-    + В первой строке определяется новая среда. В R среду можно использовать для инкапсуляции пространств имен в пакетах и отдельно.  С помощью функции `search()` можно просмотреть среды, имеющиеся в рабочем пространстве. Чтобы просмотреть объекты в определенной среде, введите `ls(<envname>)`.
-    + Строки начиная с `$env.ComputeDistance` содержат код, который определяет формулу гаверсинуса, вычисляющую *ортодромическое расстояние* между двумя точками на сфере.
+    + В первой строке определяется новая среда. В R среду можно использовать для инкапсуляции пространств имен в пакетах и отдельно. С помощью функции `search()` можно просмотреть среды, имеющиеся в рабочем пространстве. Чтобы просмотреть объекты в определенной среде, введите `ls(<envname>)`.
+    + Строки начиная с `$env.ComputeDist` содержат код, который определяет формулу гаверсинуса, вычисляющую *ортодромическое расстояние* между двумя точками на сфере.
 
-4. После определения функции, можно применить его к данным, чтобы создать новый столбец признаков *direct_distance*. Однако перед запуском преобразования, изменить контекст вычислений к локальным.
+4. Определив функцию, можно применить ее к данным, чтобы создать столбец характеристик, *direct_distance*. но прежде чем выполнять преобразование, меняет контекст вычисления для локальных.
 
     ```R
     rxSetComputeContext("local");
     ```
 
-5. Вызовите [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) функции для функции, инженерных данных и применить `env$ComputeDist` функцию для данных в памяти.
+5. Вызовите [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) функцию для получения данных конструирования признаков и применить `env$ComputeDist` функцию данных в памяти.
 
     ```R
     start.time <- proc.time();
   
-    changed_ds <- rxDataStep(inData = featureEngineeringQuery,
+    changed_ds <- rxDataStep(inData = featureDataSource,
     transforms = list(direct_distance=ComputeDist(pickup_longitude,pickup_latitude, dropoff_longitude, dropoff_latitude),
     tipped = "tipped", fare_amount = "fare_amount", passenger_count = "passenger_count",
     trip_time_in_secs = "trip_time_in_secs",  trip_distance="trip_distance",
@@ -99,15 +108,15 @@ ms.locfileid: "31203306"
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + Функция rxDataStep поддерживает различные методы для изменения данных на месте. Дополнительные сведения см. в разделе этой статьи: [преобразования и подмножество данных в R произведите](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + Функции rxDataStep поддерживает различные методы для изменения данных на месте. Дополнительные сведения см. в статье:  [Преобразование и набор данных в Microsft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
     
-    Однако моментов заметить относительно rxDataStep: 
+    Тем не менее несколько точек следует отметить в отношении rxDataStep: 
     
-    В других источниках данных, можно использовать аргументы *varsToKeep* и *varsToDrop*, но они не поддерживаются для источников данных SQL Server. Таким образом, в этом примере мы используем _преобразует_ для указания сквозные столбцы и столбцы преобразованный аргумент. Кроме того, когда работает в SQL Server контекста вычислений, _inData_ аргумент может принимать только из источника данных SQL Server.
+    В других источниках данных, можно использовать аргументы *varsToKeep* и *varsToDrop*, но они не поддерживаются для источников данных SQL Server. Таким образом, мы использовали в этом примере _преобразует_ аргумент, чтобы указать сквозные столбцы и преобразованными столбцами. Кроме того, когда работает в SQL Server контекст вычислений, _inData_ аргумент может принимать только источник данных SQL Server.
 
-    Приведенный выше код можно также создавать предупреждение при запуске на более крупных наборов данных. При истечении времени число строк, число столбцов создаваемого превышает заданное значение (значение по умолчанию — 3,000,000), rxDataStep возвращает предупреждение и количество строк в фрейме, возвращаемые данные будут усечены. Чтобы устранить это предупреждение, можно изменить _maxRowsByCols_ аргумент в функции rxDataStep. Однако если _maxRowsByCols_ слишком велик, могут возникнуть проблемы при загрузке кадров данных в памяти.
+    Приведенный выше код также позволяет создавать предупреждение при запуске на более крупных наборов данных. Число строк времени число столбцов создаваемой превышает заданное значение (по умолчанию — 3,000,000), rxDataStep возвращает предупреждение и количество строк в кадре возвращаемые данные будут усечены. Чтобы устранить это предупреждение, можно изменить _maxRowsByCols_ аргумент в функции rxDataStep. Тем не менее если _maxRowsByCols_ слишком велик, могут возникнуть проблемы при загрузке кадр данных в памяти.
 
-7. Кроме того, можно вызвать [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) для проверки схемы источника преобразованные данные.
+7. При необходимости можно вызвать [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) для проверки схемы источника преобразованные данные.
 
     ```R
     rxGetVarInfo(data = changed_ds);
@@ -115,11 +124,13 @@ ms.locfileid: "31203306"
 
 ## <a name="featurization-using-transact-sql"></a>Добавление признаков с помощью Transact-SQL
 
-Теперь создайте пользовательскую функцию SQL, *ComputeDist*, для выполнения этой задачи пользовательскую функцию R.
+В этом упражнении вы научитесь выполнения той же задачи, с помощью функций SQL вместо пользовательских функций R. 
 
-1. Задайте новую пользовательскую функцию SQL с именем *fnCalculateDistance*. Код этой пользовательской функции SQL предоставлен в скрипте PowerShell, который вы выполняли для создания и настройки базы данных.  Функция уже должна существовать в вашей базе данных.
+Переключиться в режим [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) или другого редактора запросов, чтобы запустить сценарий T-SQL.
 
-    Если она не существует, создайте функцию в той же базе данных, где хранятся данные по работе такси, используя SQL Server Management Studio.
+1. С помощью функции SQL с именем *fnCalculateDistance*. Функция должна уже существовать в базе данных NYCTaxi_Sample. В обозревателе объектов убедитесь, что функция существует, перейдя по этому пути: Базы данных > NYCTaxi_Sample > программирования > функции > скалярные функции > dbo.fnCalculateDistance.
+
+  Если функция не существует, используйте SQL Server Management Studio, создайте функцию в базе данных NYCTaxi_Sample.
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -144,25 +155,29 @@ ms.locfileid: "31203306"
     END
     ```
 
-2. Чтобы увидеть только работу функции, выполните следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] из любого приложения, которое поддерживает [!INCLUDE[tsql](../../includes/tsql-md.md)].
+2. В среде Management Studio в новом окне запроса выполните следующую команду, [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции из любого приложения, который поддерживает [!INCLUDE[tsql](../../includes/tsql-md.md)] чтобы увидеть, как работает функция.
 
     ```sql
+    USE nyctaxi_sample
+    GO
+
     SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,
-    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance,
-    pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
+    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) as direct_distance, pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude 
     FROM nyctaxi_sample
     ```
-3. После определения этой функции, могут быть легко создать с помощью SQL требуемые компоненты и затем вставить значения непосредственно в новую таблицу:
+3. Чтобы вставить значения непосредственно в таблицу (необходимо сначала создать), можно добавить **INTO** предложение, указав имя таблицы.
 
-    ```
-    SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,
-    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance,
-    pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
+    ```sql
+    USE nyctaxi_sample
+    GO
+
+    SELECT tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance, pickup_datetime, dropoff_datetime,
+    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) as direct_distance, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude
     INTO NewFeatureTable
     FROM nyctaxi_sample
     ```
 
-4. Тем не менее давайте посмотрим, как вызвать пользовательскую функцию SQL из кода R. Во-первых можно храните featurization SQL-запроса в переменную R.
+4. Можно также вызвать функцию SQL из кода R. Вернитесь в Rgui и хранить в переменной r. Добавление признаков SQL-запроса.
 
     ```R
     featureEngineeringQuery = "SELECT tipped, fare_amount, passenger_count,
@@ -174,28 +189,28 @@ ms.locfileid: "31203306"
     ```
   
     > [!TIP]
-    > Этот запрос был изменен для получения более мелкие образец данных, чтобы ускорить в данном пошаговом руководстве. Предложение TABLESAMPLE можно удалить, если требуется получить все данные; Тем не менее в зависимости от среды, не можно загрузить полный набором данных в R, что приводит к ошибке.
+    > Этот запрос был изменен, чтобы уменьшить выборку данных, чтобы быстрее принимать в этом пошаговом руководстве. Предложение TABLESAMPLE можно удалить, если вы хотите получить все данные; Тем не менее в зависимости от среды, не возможно для загрузки полного набора данных в R, что приводит к ошибке.
   
 5. Используйте приведенные ниже строки кода, чтобы вызвать функцию [!INCLUDE[tsql](../../includes/tsql-md.md)] из среды R и применить ее к данным, определенным в *featureEngineeringQuery*.
   
     ```R
     featureDataSource = RxSqlServerData(sqlQuery = featureEngineeringQuery,
       colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric",
-             dropoff_longitude = "numeric", dropoff_latitude = "numeric",
-             passenger_count  = "numeric", trip_distance  = "numeric",
-              trip_time_in_secs  = "numeric", direct_distance  = "numeric"),
+        dropoff_longitude = "numeric", dropoff_latitude = "numeric",
+        passenger_count  = "numeric", trip_distance  = "numeric",
+        trip_time_in_secs  = "numeric", direct_distance  = "numeric"),
       connectionString = connStr)
     ```
   
-6.  Теперь, когда создается новая функция, вызовите **rxGetVarsInfo** Создание сводку данных в таблице feature.
+6.  Теперь, когда создается новая функция, вызовите **rxGetVarsInfo** для создания сводки по данным в таблице feature.
   
     ```R
     rxGetVarInfo(data = featureDataSource)
     ```
 
-    *Результаты*
+    **Результаты**
 
-    ```
+    ```R
     Var 1: tipped, Type: integer
     Var 2: fare_amount, Type: numeric
     Var 3: passenger_count, Type: numeric
@@ -211,12 +226,12 @@ ms.locfileid: "31203306"
     ```
 
     > [!NOTE]
-    > В некоторых случаях может появиться ошибка такого рода: *запрещено разрешение EXECUTE на объект «fnCalculateDistance»* в этом случае убедитесь, что используется имя входа имеет разрешения на выполнение сценариев и создания объектов в базе данных не только на экземпляре.
-    > Проверка схемы для объекта fnCalculateDistance. Если объект был создан владелец базы данных и имя входа принадлежит роли db_datareader, нужно предоставить имя входа явные разрешения для выполнения скрипта.
+    > В некоторых случаях может возникнуть ошибка следующего вида: *Запрещено разрешение EXECUTE на объекте «fnCalculateDistance»* Если это так, убедитесь, что вы используете имя входа имеет разрешения на запуск сценариев и создания объектов в базе данных, не только на экземпляре.
+    > Проверьте схему для объекта, fnCalculateDistance. Если объект был создан владелец базы данных, а имя входа принадлежит роли db_datareader, необходимо предоставить имя входа явные разрешения для выполнения скрипта.
 
-## <a name="comparing-r-functions-and-sql-functions"></a>Сравнение функций R и функции SQL
+## <a name="comparing-r-functions-and-sql-functions"></a>Сравнение функций R с функциями SQL
 
-Запоминать эту часть кода, использованной для код R времени?
+Помните, этот фрагмент кода, используемый для раз код R?
 
 ```R
 start.time <- proc.time()
@@ -225,18 +240,15 @@ used.time <- proc.time() - start.time
 print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""))
 ```
 
-Попробуйте использовать это показано в примере пользовательская функция SQL, чтобы увидеть, как долго выполняет преобразование данных, при вызове функции SQL. Кроме того попробуйте переключиться контекстов вычислений с rxSetComputeContext и сравните затраты времени.
+Попробуйте использовать это в примере пользовательская функция SQL, чтобы увидеть, как долго выполняет преобразование данных, при вызове функции SQL. Кроме того попробуйте переключиться контекстов вычислений с rxSetComputeContext и сравните затраты времени.
 
-Ваш раз может сильно различаться, в зависимости от скорости сети и конфигурации оборудования. В конфигурациях, мы протестировали [!INCLUDE[tsql](../../includes/tsql-md.md)] функция подход был быстрее, чем с помощью пользовательской функции R. Таким образом, что мы познакомились с использование [!INCLUDE[tsql](../../includes/tsql-md.md)] функция эти вычисления в последующих шагах.
+Ваши время может существенно зависит от скорости сети и конфигурации оборудования. В конфигурациях, мы протестировали [!INCLUDE[tsql](../../includes/tsql-md.md)] функция подход был быстрее, чем с помощью пользовательской функции R. Таким образом, мы включили [!INCLUDE[tsql](../../includes/tsql-md.md)] функция для этих вычислений в последующих шагах.
 
 > [!TIP]
-> Очень часто компонентов проектирование с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] будет выполняться быстрее, чем R. Например, T-SQL включает быстрого управления окнами и Ранжирующие функции, которые могут быть применены к общие вычисления обработки и анализа данных, например чередующихся скользящих средних и *n*-плитки. Выберите наиболее эффективный способ в зависимости от особенностей данных и поставленной задачи.
+> Зачастую формирование признаков с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] будет быстрее, чем R. Например, T-SQL включает в себя быстрое Управление окнами и Ранжирующие функции, которые могут применяться для общих вычислений обработки и анализа данных, например вычисление скользящих средних и *n*-плитки. Выберите наиболее эффективный способ в зависимости от особенностей данных и поставленной задачи.
 
-## <a name="next-lesson"></a>Следующее занятие
+## <a name="next-steps"></a>Следующие шаги
 
-[Построить модель R и сохранить в SQL](walkthrough-build-and-save-the-model.md)
-
-## <a name="previous-lesson"></a>Предыдущее занятие
-
-[Просмотр и сведение данных с помощью R](walkthrough-view-and-summarize-data-using-r.md)
+> [!div class="nextstepaction"]
+> [Создание модели R и сохранение to SQL](walkthrough-build-and-save-the-model.md)
 

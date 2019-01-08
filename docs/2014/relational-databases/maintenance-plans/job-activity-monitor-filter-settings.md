@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.jobactivitymon.filter.f1
@@ -13,12 +12,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 285d4863cfb3b3ccd812d7e0b4894d4446257562
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: b6c7b5cff8b288e688f2744c615d62bd8417acf5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168825"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801256"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Монитор активности заданий (настройки фильтра)
   Эта страница используется для уменьшения числа строк, видимых в мониторе активности заданий. Введите критерии в одно или несколько из доступных полей для отображения только строк, удовлетворяющих заданным условиям. Для некоторых полей, например **Состояние** или **Тип блокировки** , имеется ограниченное количество возможных значений, представленных в раскрывающемся списке. Другие, например **Приложение** , позволяют вводить не только любое значение, но и любое их количество в виде списка, разделенного запятыми. Значки панели инструментов позволяют сортировать доступные поля по категориям или в алфавитном порядке. Щелкните каждый из критериев для просмотра краткого его описания.  
@@ -65,7 +64,7 @@ ms.locfileid: "49168825"
  **Clear**  
  Позволяет вернуть настройки фильтра к установленным по умолчанию.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за активностью заданий](../../ssms/agent/monitor-job-activity.md)  
   
   

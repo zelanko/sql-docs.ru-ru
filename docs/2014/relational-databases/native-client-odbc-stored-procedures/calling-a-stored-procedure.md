@@ -18,18 +18,18 @@ ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 02109baf2edfe26280ad773d90426181ccf4ffc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04b6717a2bab3d8a370ed50cacdce935526cb628
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052544"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354960"
 ---
 # <a name="calling-a-stored-procedure"></a>Вызов хранимой процедуры
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC для собственного клиента поддерживает оба управляющая последовательность ODBC CALL и [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) инструкции для выполнения хранимых процедур; предпочтительным методом является управляющая последовательность ODBC CALL. Использование синтаксиса ODBC позволяет приложению получать коды возврата хранимых процедур, а драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирован в целях использования протокола, первоначально разработанного для отправки вызовов удаленных процедур (RPC) между компьютерами, на которых выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
   
 > [!NOTE]  
->  При вызове [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимые процедуры с именованными параметрами ODBC (Дополнительные сведения см. в разделе [привязка параметров по имени (именованные параметры)](http://go.microsoft.com/fwlink/?LinkID=209721)), имена параметров должны начинаться с "\@" символов. Это ограничение, характерное для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это ограничение контролируется строже, чем в компонентах доступа к данным MDAC.  
+>  При вызове [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимые процедуры с именованными параметрами ODBC (Дополнительные сведения см. в разделе [привязка параметров по имени (именованные параметры)](https://go.microsoft.com/fwlink/?LinkID=209721)), имена параметров должны начинаться с "\@" символов. Это ограничение, характерное для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это ограничение контролируется строже, чем в компонентах доступа к данным MDAC.  
   
  Управляющая последовательность ODBC CALL для вызова процедуры такова:  
   

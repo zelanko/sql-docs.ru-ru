@@ -11,12 +11,12 @@ ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8778beb7a62fed255d0e3ce754679b2a03b6f163
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3b5e15b229f36f24da2aa9b49c6316cf379939f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179314"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350514"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>зарегистрировать имя участника-службы для сервера отчетов
   При развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в сети, где для взаимной проверки подлинности используется протокол Kerberos, а сервер отчетов настроен для запуска от учетной записи пользователя домена, необходимо создать для службы сервера отчетов имя участника-службы (SPN).  
@@ -26,9 +26,9 @@ ms.locfileid: "48179314"
   
  Чтобы создать имя субъекта-службы, можно воспользоваться программой командной строки **SetSPN** . Дополнительные сведения см. в следующих разделах:  
   
--   [Setspn](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (http://technet.microsoft.com/library/cc731241(WS.10).aspx).  
+-   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
   
--   [Синтаксис имен субъектов-служб (SPN) SetSPN (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
+-   [Синтаксис имен субъектов-служб (SPN) SetSPN (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
  Для ее запуска на контроллере домена необходимо быть администратором домена.  
   
@@ -41,7 +41,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
  **SetSPN** входит в комплект Windows Server. Аргумент `-s` добавляет имена участников-служб после проверки на отсутствие дубликатов. **Примечание. -s** доступен в Windows Server, начиная с Windows Server 2008.  
   
- `HTTP` — класс службы. Веб-служба сервера отчетов работает в компоненте HTTP.SYS. Создание имени участника-службы для компонента HTTP имеет один побочный эффект: всем веб-приложениям, запускаемым компонентом HTTP.SYS (включая размещенные в службе IIS), будут предоставляться билеты на основе учетной записи пользователя домена. Если эти службы запускаются от имени других учетных записей, то запросы на проверку подлинности будут завершаться ошибкой. Чтобы избежать этой проблемы, необходимо настроить все HTTP-приложения для запуска от одной и той же учетной записи либо назначить для каждого из приложений заголовок, а для каждого из узлов создать отдельное имя участника-службы. При настройке заголовков узлов изменения в DNS придется вносить вне зависимости от настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ `HTTP`— класс службы. Веб-служба сервера отчетов работает в компоненте HTTP.SYS. Создание имени участника-службы для компонента HTTP имеет один побочный эффект: всем веб-приложениям, запускаемым компонентом HTTP.SYS (включая размещенные в службе IIS), будут предоставляться билеты на основе учетной записи пользователя домена. Если эти службы запускаются от имени других учетных записей, то запросы на проверку подлинности будут завершаться ошибкой. Чтобы избежать этой проблемы, необходимо настроить все HTTP-приложения для запуска от одной и той же учетной записи либо назначить для каждого из приложений заголовок, а для каждого из узлов создать отдельное имя участника-службы. При настройке заголовков узлов изменения в DNS придется вносить вне зависимости от настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Значения, указанные для \<*имя_компьютера*>, \<*имя_домена*> и \<*порт*>, определяют уникальный сетевой адрес компьютера, на котором размещен сервер отчетов. Это может быть как локальное имя узла, так и полное доменное имя. Если у вас единственный домен и используется порт 80, то \<*имя_домена*> и \<*порт*> можно не указывать в команде. \<*учетная_запись_пользователя_домена*> — это учетная запись пользователя, с которой будет выполняться служба сервера отчетов; для нее должно быть зарегистрировано имя субъекта-службы.  
   
@@ -70,8 +70,8 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
 7.  Добавьте `<RSWindowsNegotiate/>` в качестве первой записи этого раздела для включения NTLM.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка учетной записи службы &#40;диспетчер конфигурации служб SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
- [Настройка учетной записи службы сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Управление сервером отчетов Reporting Services в собственном режиме](manage-a-reporting-services-native-mode-report-server.md)  
   
   

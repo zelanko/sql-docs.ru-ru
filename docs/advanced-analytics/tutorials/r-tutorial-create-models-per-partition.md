@@ -1,5 +1,5 @@
 ---
-title: Руководство по создания, обучения и оценки моделей на основе секций в R (SQL Server служб машинного обучения) | Документация Майкрософт
+title: Руководство по созданию, обучение и оценку моделей на основе секций в R - служб машинного обучения SQL Server
 description: Узнайте, как модели, обучения и использования секционированных данных, которая динамически создается при использовании возможности моделирования на основе раздела машинного обучения SQL Server.
 ms.custom: sqlseattle
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 4c60a50f5a0f1c1831a4831d1f93ddf7d81a11d9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462010"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596465"
 ---
-# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Руководство По созданию моделей на основе секций на R в SQL Server
+# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Учебник. Создание моделей на основе секций на R в SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В 2019 SQL Server моделирования на основе раздела является возможность создания и обучения моделей по секционированных данных. Для стратифицированной данных, которые естественным образом сегменты в классификации схемы - например географических регионах, даты и времени, возраста или пола — вы можете выполнить скрипт по всему набору данных, с возможностью модели, обучение и Оценка секций, которые остаются без изменений за все эти операции. 

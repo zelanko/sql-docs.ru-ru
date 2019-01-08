@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1ada8f652b88e0cb3570f1fada7f4f50d28e35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7494577b9af11f8000fd2676dd56ee3b8c960756
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756242"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213463"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>Функция динамического управления sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "47756242"
   
 -   определяемые пользователем типы (псевдонимы и типы CLR);  
   
--   коллекции схем XML  
+-   коллекции XML-схем  
   
 -   функции секционирования  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -97,7 +97,7 @@ sys.dm_sql_referenced_entities (
 |is_select_all|**bit**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект используется в предложении SELECT* (только на уровне объектов).|  
 |is_all_columns_found|**bit**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = все зависимости столбца для объекта удалось обнаружить.<br /><br /> 0 = зависимости столбца для объекта не удалось обнаружить.|
 |is_insert_all|**bit**|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект используется в инструкции INSERT без списка столбцов (только уровень объектов).|  
-|is_incomplete|**bit**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> 1 = объект или столбец имеет ошибку привязки и является неполной.|
+|is_incomplete|**bit**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] С пакетом обновления 2 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект или столбец имеет ошибку привязки и является неполной.|
   
 ## <a name="exceptions"></a>Исключения  
  Возвращает пустой результирующий набор, если выполняется любое из следующих условий.  
@@ -266,7 +266,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>Е. Использование возвращения объекта или столбца  
- В следующем примере возвращаются зависимости объекта и столбца хранимой процедуры `HumanResources.uspUpdateEmployeePersonalInfo`. Эта процедура обновляет столбцы `NationalIDNumber`, `BirthDate,``MaritalStatus`, и `Gender` из `Employee` таблицы на основе указанного `BusinessEntityID` значение. Другая хранимая процедура `upsLogError` определяется в блоке TRY…CATCH для отслеживания любых ошибок при выполнении. Столбцы `is_selected`, `is_updated` и `is_select_all` возвращают сведения о способе использования этих объектов и столбцов в рамках ссылающегося объекта. Измененная таблица и столбцы в обновленном столбце помечаются единицей. Единственный выбранный столбец — `BusinessEntityID`, а хранимая процедура `uspLogError` не выбрана и не изменена.  
+ В следующем примере возвращаются зависимости объекта и столбца хранимой процедуры `HumanResources.uspUpdateEmployeePersonalInfo`. Эта процедура обновляет столбцы `NationalIDNumber`, `BirthDate,``MaritalStatus`, и `Gender` из `Employee` таблицы на основе указанного `BusinessEntityID` значение. Другой хранимой процедуры, `upsLogError` определяется в блок TRY... CATCH для регистрировать ошибки выполнения. Столбцы `is_selected`, `is_updated` и `is_select_all` возвращают сведения о способе использования этих объектов и столбцов в рамках ссылающегося объекта. Измененная таблица и столбцы в обновленном столбце помечаются единицей. Единственный выбранный столбец — `BusinessEntityID`, а хранимая процедура `uspLogError` не выбрана и не изменена.  
   
 **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

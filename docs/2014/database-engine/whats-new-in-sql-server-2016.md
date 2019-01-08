@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -14,28 +13,28 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac9a6a1b2d4107d420bab68659b6d05f25805a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067034"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371556"
 ---
 # <a name="what39s-new-database-engine"></a>Что&#39;s (ядро СУБД)
-  В этом последнем выпуске [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] появились новые средства и усовершенствования, которые расширяют возможности и повышают производительность архитекторов, разработчиков и администраторов, занимающихся проектированием, созданием и обслуживанием систем хранения данных. Ниже перечислены улучшения, внесенные в компонент [!INCLUDE[ssDE](../includes/ssde-md.md)].  
+  В этом последнем выпуске [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] появились новые средства и усовершенствования, которые расширяют возможности и повышают производительность архитекторов, разработчиков и администраторов, занимающихся проектированием, созданием и обслуживанием систем хранения данных. Ниже перечислены улучшения, внесенные в компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] .  
   
 ##  <a name="Feature"></a> Усовершенствования функций ядра базы данных  
   
 ###  <a name="MemoryOpt"></a> Оптимизированные для памяти таблицы  
- In-Memory OLTP — это оптимизированное для памяти ядро СУБД, встроенное в модуль [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ядро In-Memory OLTP оптимизировано для OLTP. Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
+ In-Memory OLTP — это оптимизированное для памяти ядро СУБД, встроенное в модуль [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Ядро In-Memory OLTP оптимизировано для OLTP. Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
  
   
 ###  <a name="DataFiles"></a> SQL Server Data Files в Windows Azure  
- [SQL Server Data Files в Windows Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) включает встроенную поддержку [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хранятся в виде больших двоичных объектов Windows Azure файлов базы данных. Эта функция позволяет создать базу данных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], выполняемом локально, или на виртуальной машине в Windows Azure, с выделенным местом хранения для данных в службе хранилища больших двоичных объектов Windows Azure.  
+ [Файлы данных SQL Server в Windows Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) включает собственную поддержку для файлов баз данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , хранимых в виде больших двоичных объектов Windows Azure. Эта функция позволяет создать базу данных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , выполняемом локально, или на виртуальной машине в Windows Azure, с выделенным местом хранения для данных в службе хранилища больших двоичных объектов Windows Azure.  
   
   
 ###  <a name="AzureVM"></a> Размещение базы данных SQL Server в Windows Azure виртуальной машины  
- Используйте [развертывания базы данных SQL Server к виртуальной машине Windows Azure](http://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) мастера для размещения базы данных для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на виртуальной машине Windows Azure.  
+ Использование [мастера развертывания базы данных SQL Server на виртуальной машине Windows Azure](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) для размещения базы данных из экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на виртуальной машине Windows Azure.  
   
   
 ###  <a name="Backup"></a> Резервное копирование и улучшения механизма восстановления  
@@ -43,19 +42,19 @@ ms.locfileid: "48067034"
   
 -   **Резервное копирование в SQL Server по URL-адресу**  
   
-     Возможность резервного копирования на URL-адрес для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] была введена в версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2, поддерживаемой только в [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell и SMO. В версии [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] можно использовать для выполнения резервного копирования или восстановления из службы хранилища больших двоичных объектов Windows Azure. Новый параметр доступен как для задачи резервного копирования, так и для планов обслуживания. Дополнительные сведения см. в разделе [Using Backup Task in SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Backup to URL Using Maintenance Plan Wizard](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz), и [восстановление из хранилища Windows Azure с помощью SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
+     Возможность резервного копирования на URL-адрес для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] была введена в версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2, поддерживаемой только в [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell и SMO. В версии [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] можно использовать для выполнения резервного копирования или восстановления из службы хранилища больших двоичных объектов Windows Azure. Новый параметр доступен как для задачи резервного копирования, так и для планов обслуживания. Дополнительные сведения см. в разделах [Using Backup Task in SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Backup to URL Using Maintenance Plan Wizard](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)и [Restoring from Windows Azure storage Using SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
 -   **Управляемое резервное копирование SQL Server в Microsoft Azure**  
   
-     Служба [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] построена на основе функции резервного копирования на URL-адрес для [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] она применяется для управления и планирования операций резервного копирования баз данных и журналов. В этой версии в хранилище резервных только Windows Azure поддерживает. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] можно настроить и в базе данных и на уровне экземпляра и что для детального элемента управления на уровне базы данных и автоматизируя на уровне экземпляра. Службу [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] можно настраивать как на экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], работающих локально, так и на экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], работающих на виртуальных машинах Windows Azure. Рекомендуется для экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], работающих на виртуальных машинах Windows Azure. Дополнительные сведения см. в разделе [SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+     Служба [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] построена на основе функции резервного копирования на URL-адрес для [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] она применяется для управления и планирования операций резервного копирования баз данных и журналов. В этой версии в хранилище резервных только Windows Azure поддерживает. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] можно настроить и в базе данных и на уровне экземпляра и что для детального элемента управления на уровне базы данных и автоматизируя на уровне экземпляра. Службу [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] можно настраивать как на экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], работающих локально, так и на экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], работающих на виртуальных машинах Windows Azure. Рекомендуется для экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , работающих на виртуальных машинах Windows Azure. Дополнительные сведения см. в разделе [SQL Server Managed  Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
 -   **Шифрование для резервного копирования**  
   
-     Теперь можно выбрать, чтобы зашифровать файл резервной копии во время операции резервного копирования.  Она поддерживает несколько алгоритмов шифрования AES, включая 128 192, алгоритм AES 256 и Triple DES. Необходимо использовать сертификат или асимметричный ключ для шифрования во время резервного копирования. Дополнительные сведения см. в разделе [шифрование резервной копии](../relational-databases/backup-restore/backup-encryption.md).  
+     Теперь можно выбрать, чтобы зашифровать файл резервной копии во время операции резервного копирования.  Она поддерживает несколько алгоритмов шифрования AES, включая 128 192, алгоритм AES 256 и Triple DES. Необходимо использовать сертификат или асимметричный ключ для шифрования во время резервного копирования. Дополнительные сведения можно найти в статье [Шифрование резервной копии](../relational-databases/backup-restore/backup-encryption.md).  
   
   
 ###  <a name="CE"></a> Новый дизайн для оценки количества элементов  
- Логика оценки количества элементов, вызывается механизмом оценки количества элементов, переработана в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] для повышения качества планов запросов и, следовательно, чтобы повысить производительность запросов. Новый механизм оценки количества элементов состоит из предположений и алгоритмов, которые отлично подходят для современных рабочих нагрузок OLTP и хранилища данных. Он основан на глубоком исследовании оценки количества элементов для современных рабочих нагрузок и нашем опыте усовершенствования этого механизма, накопленном за последние 15 лет. Отзывы от клиентов свидетельствуют, что эти изменения положительно сказываются на большинстве запросов либо все остается по прежнему, хотя производительность небольшого числа запросов может снизиться по сравнению с использованием предыдущего механизма оценки количества элементов. Для повышения производительности, настройке и проверке рекомендации, см. в разделе [оценки количества элементов &#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md).  
+ Логика оценки количества элементов, называемая механизмом оценки количества элементов, переработана в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] в целях улучшения качества планов запросов и тем самым повышения производительности запросов. Новый механизм оценки количества элементов состоит из предположений и алгоритмов, которые отлично подходят для современных рабочих нагрузок OLTP и хранилища данных. Он основан на глубоком исследовании оценки количества элементов для современных рабочих нагрузок и нашем опыте усовершенствования этого механизма, накопленном за последние 15 лет. Отзывы от клиентов свидетельствуют, что эти изменения положительно сказываются на большинстве запросов либо все остается по прежнему, хотя производительность небольшого числа запросов может снизиться по сравнению с использованием предыдущего механизма оценки количества элементов. Для повышения производительности, настройке и проверке рекомендации, см. в разделе [оценки количества элементов &#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md).  
    
   
 ###  <a name="Durability"></a> Отложенная устойчивость  
@@ -75,9 +74,9 @@ ms.locfileid: "48067034"
   
 -   Теперь в экземплярах отказоустойчивого кластера (FCI) могут использоваться общие тома кластера как общие диски кластера. Дополнительные сведения см. в разделе [всегда экземпляры отказоустойчивого кластера](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
--   Новая системная функция, [sys.fn_hadr_is_primary_replica](/sql/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql)и новое динамическое административное Представление [sys.dm_io_cluster_valid_path_names](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql), доступен.  
+-   Доступна новая системная функция [sys.fn_hadr_is_primary_replica](/sql/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql)и новое динамическое административное представление [sys.dm_io_cluster_valid_path_names](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql).  
   
--   Следующие динамические административные представления были улучшены и теперь возвращают данные FCI: [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql), и [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql).  
+-   Следующие динамические административные представления были улучшены и теперь возвращают данные FCI: [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)и [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql).  
   
   
 ###  <a name="OIR"></a> Переключение секций и индексирование  
@@ -97,15 +96,15 @@ ms.locfileid: "48067034"
   
 -   **ИНСТРУКЦИИ SHOWPLAN**  
   
-     Инструкция SHOWPLAN отображает сведения об индексах columnstore. Свойства **EstimatedExecutionMode** и **ActualExecutionMode** имеют два возможных значения: **Batch** и **Row**.  Свойство **Storage** имеет два возможных значения: **RowStore** и **ColumnStore**.  
+     Инструкция SHOWPLAN отображает сведения об индексах columnstore. **EstimatedExecutionMode** и **ActualExecutionMode** свойства имеют два возможных значения: **Пакет** или **строки**.  **Хранения** имеет два возможных значения: **RowStore** и **ColumnStore**.  
   
 -   **Сжатие архивных данных**  
   
-     ALTER INDEX … REBUILD имеет новый параметр сжатия данных COLUMNSTORE_ARCHIVE, который еще больше сжимает указанные секции индекса columnstore. Это может использоваться для архивации или в других ситуациях, где требуется уменьшение размера хранилища данных и допускается увеличение затрат времени на сохранение и выборку. Дополнительные сведения см. в разделе [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql).  
+     ALTER INDEX ... REBUILD имеет новый параметр сжатия данных COLUMNSTORE_ARCHIVE, который еще больше сжимает указанные секции индекса columnstore. Это может использоваться для архивации или в других ситуациях, где требуется уменьшение размера хранилища данных и допускается увеличение затрат времени на сохранение и выборку. Дополнительные сведения см. в разделе [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
 ###  <a name="Buffer"></a> Расширение буферного пула  
- [Расширение буферного пула](configure-windows/buffer-pool-extension.md) обеспечивает сквозную интеграцию твердотельных накопителей (SSD) как расширение энергонезависимого ОЗУ (NvRAM) для [!INCLUDE[ssDE](../includes/ssde-md.md)] буферного пула значительно повысить пропускную способность ввода-вывода.  
+ Параметр [Расширение буферного пула](configure-windows/buffer-pool-extension.md) обеспечивает безукоризненную интеграцию твердотельных накопителей (SSD) в качестве расширения энергонезависимого ОЗУ (NvRAM) для буферного пула компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , что способствует значительному повышению пропускной способности ввода-вывода.  
    
   
 ###  <a name="Stats"></a> Добавочные статистические данные  
@@ -119,7 +118,7 @@ ms.locfileid: "48067034"
   
   
 ###  <a name="OnlineEvent"></a> Класс событий Online Index Operation  
- Отчет о состоянии для класса событий «операции с индексами в сети» теперь содержит 2 новых столбца данных: **идентификатор_секции** и **номер_секции**. Дополнительные сведения см. в разделе [Progress Report: Online Index Operation Event Class](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
+ Отчет о состоянии для класса событий «операции с индексами в сети» теперь содержит 2 новых столбца данных: **PartitionId** и **PartitionNumber**. Дополнительные сведения см. в разделе [Progress Report: Класс событий Online Index Operation](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
   
   
 ###  <a name="Compat"></a> Уровень совместимости базы данных  
@@ -130,11 +129,11 @@ ms.locfileid: "48067034"
 ### <a name="inline-specification-of-clustered-and-nonclustered"></a>Встроенная спецификация CLUSTERED и NONCLUSTERED  
  Теперь для таблиц, находящихся на диске, применима встроенная спецификация индексов `CLUSTERED` и `NONCLUSTERED`. Создание таблицы со встроенными индексами эквивалентно выполнению инструкции создания таблицы, за которой следуют соответствующие инструкции `CREATE INDEX`. Для таблиц со встроенными индексами не поддерживаются включенные столбцы и условия фильтра.  
   
-### <a name="select--into"></a>SELECT … INTO  
- Инструкция `SELECT … INTO` усовершенствована и теперь может быть выполнена параллельно. Уровню совместимости базы данных должно быть присвоено значение не менее 110.  
+### <a name="select--into"></a>ВЫБЕРИТЕ... INTO  
+ Инструкция `SELECT ... INTO` усовершенствована и теперь может быть выполнена параллельно. Уровню совместимости базы данных должно быть присвоено значение не менее 110.  
   
 ### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>Улучшения [!INCLUDE[tsql](../includes/tsql-md.md)] для In-Memory OLTP  
- Сведения о [!INCLUDE[tsql](../includes/tsql-md.md)] изменения для поддержки In-Memory OLTP см. в разделе [поддержка Transact-SQL для In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md).  
+ Дополнительные сведения об изменениях [!INCLUDE[tsql](../includes/tsql-md.md)] для поддержки In-Memory OLTP см. в разделе [Transact-SQL Support for In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md).  
   
   
 ##  <a name="SystemTable"></a> Улучшения системного представления  

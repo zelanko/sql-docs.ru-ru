@@ -1,5 +1,5 @@
 ---
-title: Часто задаваемые вопросы о машинного обучения SQL Server обновлению и установке | Документация Майкрософт
+title: Обновление и установка часто задаваемые вопросы (FAQ) - службы машинного обучения SQL Server
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: 37cd28b895c66d6ddcf1517e79ef6bf4537e2a96
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: dd92ba0e080da0dd8ed387ae0a9f3d431232c896
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712306"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432857"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Часто задаваемые вопросы о машинного обучения SQL Server или R Server обновлению и установке
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "46712306"
 + Некоторые проблемы возникают только с помощью обновления с предварительных версий. Поэтому рекомендуется определить версию и выпуск сначала перед чтением эти заметки. Чтобы получить сведения о версии, выполните `@@VERSION` в запрос из SQL Server Management Studio.
 + Обновление до последней версии или выпуска службы, как можно скорее, чтобы устранить все проблемы, которые были исправлены в последних выпусках.
 
-**Применяется к:** служб R SQL Server 2016, SQL Server 2017 службы машинного обучения (в базе данных)
+**Применимо к:** SQL Server 2016 R Services, служб SQL Server 2017 машинного обучения (в базе данных)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>Требования и ограничения для более старых версий SQL Server 2016 
 

@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpushsubscription_agent_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f037d88ed536cf3fecc0b658dcba3f62d1e1bd47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e438e8584312964d3d16651cb5551a4fb949597d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832322"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209811"
 ---
 # <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -188,19 +187,19 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Имя издателя. *издатель* — **sysname**, со значением по умолчанию NULL.  
   
  [  **@subscriber_provider=** ] **"***subscriber_provider***"**  
- Уникальный программный идентификатор (PROGID), с которым зарегистрирован поставщик OLE DB для источника данных, не относящихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *subscriber_provider* — **sysname**, значение по умолчанию NULL. *subscriber_provider* должно быть уникальным для поставщика OLE DB, установленного на распространителе. *subscriber_provider* поддерживается только для не -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
+ Уникальный программный идентификатор (PROGID) с помощью которого поставщик OLE DB, являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зарегистрировать источник данных. *subscriber_provider* — **sysname**, значение по умолчанию NULL. *subscriber_provider* должно быть уникальным для поставщика OLE DB, установленного на распространителе. *subscriber_provider* поддерживается только для не - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
   
  [  **@subscriber_datasrc=** ] **"***subscriber_datasrc***"**  
- Имя источника данных, понятное поставщику OLE DB. *subscriber_datasrc* — **nvarchar(4000)**, со значением по умолчанию NULL. *subscriber_datasrc* передается как свойство DBPROP_INIT_DATASOURCE для инициализации поставщика OLE DB. *subscriber_datasrc* поддерживается только для не -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
+ Имя источника данных, понятное поставщику OLE DB. *subscriber_datasrc* — **nvarchar(4000)**, со значением по умолчанию NULL. *subscriber_datasrc* передается как свойство DBPROP_INIT_DATASOURCE для инициализации поставщика OLE DB. *subscriber_datasrc* поддерживается только для не - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
   
  [  **@subscriber_location=** ] **"***subscriber_location***"**  
- Расположение базы данных, подразумевается поставщик OLE DB. *subscriber_location* — **nvarchar(4000)**, со значением по умолчанию NULL. *subscriber_location* передается как свойство DBPROP_INIT_LOCATION для инициализации поставщика OLE DB. *subscriber_location* поддерживается только для не -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
+ Расположение базы данных, подразумевается поставщик OLE DB. *subscriber_location* — **nvarchar(4000)**, со значением по умолчанию NULL. *subscriber_location* передается как свойство DBPROP_INIT_LOCATION для инициализации поставщика OLE DB. *subscriber_location* поддерживается только для не - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
   
  [  **@subscriber_provider_string=** ] **"***subscriber_provider_string***"**  
- Идентифицирующая источник данных строка соединения, зависящая от поставщика OLE DB. *subscriber_provider_string* — **nvarchar(4000)**, со значением по умолчанию NULL. *subscriber_provider_string* передается IDataInitialize или задается как свойство DBPROP_INIT_PROVIDERSTRING для инициализации поставщика OLE DB. *subscriber_provider_string* поддерживается только для не -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
+ Идентифицирующая источник данных строка соединения, зависящая от поставщика OLE DB. *subscriber_provider_string* — **nvarchar(4000)**, со значением по умолчанию NULL. *subscriber_provider_string* передается IDataInitialize или задается как свойство DBPROP_INIT_PROVIDERSTRING для инициализации поставщика OLE DB. *subscriber_provider_string* поддерживается только для не - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
   
  [  **@subscriber_catalog=** ] **"***subscriber_catalog***"**  
- Каталог, используемый при соединении с поставщиком OLE DB. *subscriber_catalog* — **sysname**, значение по умолчанию NULL. *subscriber_catalog* передается как свойство DBPROP_INIT_CATALOG для инициализации поставщика OLE DB. *subscriber_catalog* поддерживается только для не -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
+ Каталог, используемый при соединении с поставщиком OLE DB. *subscriber_catalog* — **sysname**, значение по умолчанию NULL. *subscriber_catalog* передается как свойство DBPROP_INIT_CATALOG для инициализации поставщика OLE DB. *subscriber_catalog* поддерживается только для не - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

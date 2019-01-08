@@ -11,12 +11,12 @@ ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c09c3d61cb371e314d511754498f65919d85b507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7026a1fcdfa3a030761d11c2f8d763220fd436d8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161524"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375226"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Списки (построитель отчетов и службы SSRS)
   Область списка данных повторяется с каждой группой или строкой набора данных отчета. Список может использоваться для создания отчетов произвольного формата, таких как счета, либо совместно с другими областями данных. Можно определять списки, содержащие любое количество элементов отчета. Список может быть вложен в другой список, образуя несколько групп данных.  
@@ -24,9 +24,9 @@ ms.locfileid: "48161524"
 > [!NOTE]  
 >  Списки можно публиковать отдельно от отчета как элементы отчета. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Чтобы быстро приступить к работе со списками, см. раздел [Учебник. Создание отчета в свободной форме (построитель отчетов)](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Чтобы быстро приступить к работе со списками, см. в разделе [руководства: Создание отчета в свободной форме &#40;построитель отчетов&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
- Образцы отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержат отчет, использующий список. Получить сведения о списках можно, открыв определение образца отчета в построителе или конструкторе отчетов или просмотрев подготовленный отчет в построителе или конструкторе отчетов. Дополнительные сведения о загрузке образцов отчетов см. на странице [(SSRS) Образцы служб Reporting Services](http://go.microsoft.com/fwlink/?LinkID=198283).  
+ Образцы отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержат отчет, использующий список. Получить сведения о списках можно, открыв определение образца отчета в построителе или конструкторе отчетов или просмотрев подготовленный отчет в построителе или конструкторе отчетов. Дополнительные сведения о загрузке образцов отчетов см. на странице [(SSRS) Образцы служб Reporting Services](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -74,7 +74,7 @@ ms.locfileid: "48161524"
 
   
 ## <a name="see-also"></a>См. также  
- [Справочник по агрегатным функциям &#40;построитель отчетов и службы SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](report-builder-functions-aggregate-functions-reference.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)  
   
   

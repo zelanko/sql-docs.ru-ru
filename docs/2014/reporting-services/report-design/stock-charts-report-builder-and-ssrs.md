@@ -11,19 +11,19 @@ ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c559c9bf22cc5aff2ce75ba255055c18af649976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e7b05abcff2b5f7eae6fabb936447dd37ee6306
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096744"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377414"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>Биржевые диаграммы (построитель отчетов и службы SSRS)
   Биржевая диаграмма — это диаграмма, специально созданная для работы с финансовыми или научными данными, в которой на каждую точку данных приходится до четырех значений. Эти значения сравниваются со значениями максимума, минимума, открытия и закрытия, используемыми для отображения биржевых данных. В этом типе диаграммы значения открытия и закрытия отображаются с помощью маркеров (обычно это линии или треугольники). В следующем примере значения открытия помечены маркерами слева, а значения закрытия — маркерами справа.  
   
  ![Биржевая диаграмма](../media/rs-stockchart.gif "Биржевая диаграмма")  
   
- Пример биржевой диаграммы доступен в виде образца отчета построителя отчетов [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] . Дополнительные сведения о скачивании этого и других образцов отчетов см. в статье [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][(Примеры отчетов построителя отчетов и конструктора отчетов)](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Пример биржевой диаграммы доступен в виде образца отчета построителя отчетов [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] . Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,9 +41,9 @@ ms.locfileid: "48096744"
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют множество вычисляемых формул для работы с биржевыми диаграммами, включая «Индикатор цен», «Индекс относительной силы», «Схождение/расхождение скользящего среднего» и т.п.  
   
 ## <a name="see-also"></a>См. также  
- [Диаграммы диапазонов &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Диаграммы диапазонов (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [Диалоговое окно «Свойства оси», параметры оси &#40;построитель отчетов и службы SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
+ [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

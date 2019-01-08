@@ -22,12 +22,12 @@ ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109907"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376746"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Отзывы по SQL Server 2014
   Корпорация [!INCLUDE[msCoName](../includes/msconame-md.md)] ценит, что вы уделили часть своего времени, чтобы помочь в улучшении продуктов и документации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Можно предоставлять отчеты об ошибках и выдвигать предложения, касающиеся характеристик продуктов или пользовательского интерфейса, предоставлять отзывы о документации; кроме того, можно разрешить автоматическую отправку отчетов об ошибках и данных об использовании продуктов в [!INCLUDE[msCoName](../includes/msconame-md.md)] для дальнейшего анализа. Каждый из трех методов обратной связи описывается в этом разделе.  
@@ -37,7 +37,7 @@ ms.locfileid: "48109907"
   
  Открыть страницу обратной связи [!INCLUDE[msCoName](../includes/msconame-md.md)] на веб-узле [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Connect можно одним из следующих способов.  
   
--   Перейдите на [веб-страницу](http://go.microsoft.com/fwlink/?linkid=34178) отзывов о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect.  
+-   Перейдите на [веб-страницу](https://go.microsoft.com/fwlink/?linkid=34178) отзывов о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect.  
   
 -   Нажмите кнопку **Отправить отзыв** на панели инструментов "Справка" среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] или выберите в меню пункт **Сообщество/Отправить отзыв**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48109907"
   
 -   вызвана справка из программы;  
   
--   установлен флажок **Справка** на вкладке **Панели инструментов** в меню **Сервис/Настройка...** команда.  
+-   Выберите **помочь** флажок на **панелей инструментов** вкладке **Сервис/Настройка...**  команды.  
   
 ## <a name="automatic-error-and-usage-reporting"></a>Автоматические отчеты об ошибках и использовании  
  Можно включить автоматическую отправку отчетов об ошибках и сведений об использовании программного обеспечения и служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В [!INCLUDE[msCoName](../includes/msconame-md.md)] эти сведения используются для улучшения [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Все данные являются конфиденциальными.  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdistributor_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a73e458f6ecdab249ea0aae1301dd2d5ee0e6c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63441a20a5ac4f6faed366c06fc55638073b09f4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790273"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591398"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,43 +50,43 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@distributor=**] **"***распространителя***"** выходных данных  
+ [  **@distributor=**] **"**_распространителя_**"** выходных данных  
  Имя распространителя. Распространитель — **sysname**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
   
- [  **@distribdb=**] **"***distribdb***"** выходных данных  
+ [  **@distribdb=**] **"**_distribdb_**"** выходных данных  
  Имя базы данных распространителя. *distribdb* — **sysname**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
   
- [  **@directory=**] **"***directory***"** выходных данных  
+ [  **@directory=**] **"**_directory_**"** выходных данных  
  Рабочий каталог. *каталог* — **nvarchar(255)**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
   
- [  **@account=**] **"***учетной записи***" выходные данные**  
+ [  **@account=**] **"**_учетной записи_**" выходные данные**  
  Учетная запись пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *Учетная запись*— **nvarchar(255)**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
   
- [  **@min_distretention=**] *min_distretention *** выходных данных**  
+ [  **@min_distretention=**] _min_distretention_**выходных данных**  
  Минимальный срок хранения распространения в часах. *min_distretention* — **int**, значение по умолчанию **-1**.  
   
- [  **@max_distretention=**] *max_distretention *** выходных данных**  
+ [  **@max_distretention=**] _max_distretention_**выходных данных**  
  Максимальный срок хранения распространения в часах. *max_distretention* — **int**, значение по умолчанию **-1**.  
   
- [  **@history_retention=**] *history_retention *** выходных данных**  
+ [  **@history_retention=**] _history_retention_**выходных данных**  
  Срок хранения истории в часах. *history_retention* — **int**, значение по умолчанию **-1**.  
   
- [  **@history_cleanupagent=**] **"***history_cleanupagent***" выходные данные**  
+ [  **@history_cleanupagent=**] **"**_history_cleanupagent_**" выходные данные**  
  Имя агента очистки журнала. *history_cleanupagent* — **nvarchar(100)**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
   
- [  **@distrib_cleanupagent =**] **"***distrib_cleanupagent***" выходные данные**  
+ [  **@distrib_cleanupagent =**] **"**_distrib_cleanupagent_**" выходные данные**  
  Имя агента очистки распространения. *distrib_cleanupagent* — **nvarchar(100)**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
   
- [  **@publisher=**] **"***издателя***"**  
+ [  **@publisher=**] **"**_издателя_**"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
- [  **@local=**] **"***локального***"**  
+ [  **@local=**] **"**_локального_**"**  
  Указывает, должен ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получать значения локального сервера. *локальный* — **nvarchar(5)**, значение по умолчанию NULL.  
   
- [  **@rpcsrvname=**] **"***rpcsrvname***" выходные данные**  
+ [  **@rpcsrvname=**] **"**_rpcsrvname_**" выходные данные**  
  Имя сервера, инициирующего удаленные вызовы процедуры. *rpcsrvname* — **sysname**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
   
- [ **@publisher_type**=] **"***publisher_type***" выходные данные**  
+ [ **@publisher_type**=] **"**_publisher_type_**" выходные данные**  
  Тип издателя. *publisher_type* — **sysname**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
   
 ## <a name="result-sets"></a>Результирующие наборы  

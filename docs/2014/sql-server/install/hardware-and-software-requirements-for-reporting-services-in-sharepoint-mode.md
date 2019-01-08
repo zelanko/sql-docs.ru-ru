@@ -11,12 +11,12 @@ ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27ca12268f34f116b4158533a12b75920265d179
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6ee2cbd875416e1b981d2dfa6006e42529fcf679
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210534"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362606"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Требования к оборудованию и программному обеспечению для служб Reporting Services в режиме интеграции с SharePoint
   В этом разделе описываются предварительные требования, требования к оборудованию и рекомендации по установке для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , работающего в режиме интеграции с SharePoint. Поскольку для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint требуется сервер SharePoint, большинство требований основаны на среде SharePoint. Для серверов отчетов, работающих в собственном режиме, оборудование должно соответствовать минимальным требованиям для работы [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
@@ -33,19 +33,19 @@ ms.locfileid: "48210534"
   
 -   Для локальных установок учетная запись, в которую был выполнен вход при установке SharePoint, и службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] должны быть членами группы администраторов локальной операционной системы. Учетной записи установки не обязательно быть членом группы администраторов фермы SharePoint.  
   
-     Дополнительные сведения см. в разделе [Разрешения и параметры безопасности учетной записи в SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx).  
+     Дополнительные сведения см. в разделе [Разрешения и параметры безопасности учетной записи в SharePoint 2013](https://technet.microsoft.com/library/cc678863.aspx).  
   
 -   Для работы служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции SharePoint требуется сервер SharePoint. Дополнительные сведения о требованиях и конфигурациях SharePoint см. в следующих разделах:  
   
-    -   [Требования к оборудованию и программному обеспечению (SharePoint 2013)](http://go.microsoft.com/fwlink/p/?LinkId=256365) ()http://go.microsoft.com/fwlink/p/?LinkId=256365)  
+    -   [Требования к оборудованию и программному обеспечению (SharePoint 2013)](https://go.microsoft.com/fwlink/p/?LinkId=256365) ()https://go.microsoft.com/fwlink/p/?LinkId=256365)  
   
-    -   [Управление емкостью и изменение размеров в SharePoint Server 2013](http://technet.microsoft.com/library/cc261700.aspx)  
+    -   [Управление емкостью и изменение размеров в SharePoint Server 2013](https://technet.microsoft.com/library/cc261700.aspx)  
   
-    -   [Требования к программному обеспечению для бизнес-аналитики в SharePoint Server 2013](http://go.microsoft.com/fwlink/p/?LinkId=256367)  
+    -   [Требования к программному обеспечению для бизнес-аналитики в SharePoint Server 2013](https://go.microsoft.com/fwlink/p/?LinkId=256367)  
   
-    -   [Требования к оборудованию и программному обеспечению (SharePoint Server 2010)](http://technet.microsoft.com/library/cc262485\(v=office.14\))  
+    -   [Требования к оборудованию и программному обеспечению (SharePoint Server 2010)](https://technet.microsoft.com/library/cc262485\(v=office.14\))  
   
-    -   [Capacity management and sizing for SharePoint Server 2010](http://technet.microsoft.com/library/cc261700.aspx\(v=office.14\)) (Управление емкостью и изменение размеров в SharePoint Server 2010)  
+    -   [Capacity management and sizing for SharePoint Server 2010](https://technet.microsoft.com/library/cc261700.aspx\(v=office.14\)) (Управление емкостью и изменение размеров в SharePoint Server 2010)  
   
 -   Если требуется обновить существующую установку служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], см. раздел [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
@@ -65,8 +65,8 @@ ms.locfileid: "48210534"
  Ознакомьтесь с новейшей [документацией по Power View](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) на сайте Office.Microsoft.com. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] входит в состав Microsoft Excel 2013 и является частью надстройки служб Reporting Services [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для выпусков Microsoft SharePoint Server 2010 и 2013 Enterprise.  
   
 ##  <a name="bkmk_more_information"></a> Дополнительные сведения  
- Сведения об изменениях SharePoint см. в разделе [изменения с SharePoint 2010 до SharePoint 2013](http://technet.microsoft.com/library/ff607742\(office.15\).aspx) (http://technet.microsoft.com/en-us/library/ff607742(office.15).aspx).  
+ Сведения об изменениях SharePoint см. в разделе [изменения с SharePoint 2010 до SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/en-us/library/ff607742(office.15).aspx).  
   
- [Заметки о выпуске SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
+ [Заметки о выпуске SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
   

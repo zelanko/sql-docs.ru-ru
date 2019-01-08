@@ -4,28 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
-f1_keywords:
-- vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 869bbc88b10c5b1c561dd7fa9f085c5296aaf16f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103181"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328944"
 ---
 # <a name="toolbox-component-f1-help"></a>Справка F1 компонента «Область элементов»
-  В окне**Область элементов** отображаются разнообразные элементы, используемые в проектах среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Окно **Область элементов** может быть открыто из меню **Вид** , после чего это окно может быть расположено в любом удобном месте. Для пристыкованного окна **Область элементов** можно указать — сохранять открытое окно или **Скрывать автоматически** , когда оно не используется.  
+
+В окне**Область элементов** отображаются разнообразные элементы, используемые в проектах среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Окно **Область элементов** может быть открыто из меню **Вид** , после чего это окно может быть расположено в любом удобном месте. Для пристыкованного окна **Область элементов** можно указать — сохранять открытое окно или **Скрывать автоматически** , когда оно не используется.  
   
- Значки окна**Область элементов** можно перетаскивать, копировать и вставлять в редакторы кода или размещать в областях конструирования в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Значки окна**Область элементов** можно перетаскивать, копировать и вставлять в редакторы кода или размещать в областях конструирования в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="using-the-toolbox"></a>Применение области элементов  
  Область элементов является элементом управления структуры дерева с перемещаемыми элементами, действующим подобно проводнику [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer, но не имеющим сетки или линий соединения. Несколько сегментов **области элементов** (называемые вкладками) могут быть раскрыты одновременно, и в окне **Область элементов** производится прокрутка всего дерева. Чтобы раскрыть любую вкладку окна **Область элементов**, щелкните значок плюс (**+**), находящийся рядом с именем вкладки. Чтобы свернуть раскрытую вкладку, щелкните знак минус (**-**) рядом с именем вкладки.  
@@ -40,5 +38,3 @@ ms.locfileid: "48103181"
 ## <a name="see-also"></a>См. также  
  [Использование панели элементов](../../ssms/use-the-toolbox.md)   
  [Выбор элементов инструментария (страница "Задачи обслуживания")](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
-  
-  

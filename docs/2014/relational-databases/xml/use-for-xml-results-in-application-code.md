@@ -18,12 +18,12 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d19c14bcda351be4f061964132f00227d3fdd40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43b7fb86b7529de3629d07d294f0fd663b93561d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206074"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368676"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Использование результатов FOR XML в коде приложений
   При помощи предложения FOR XML в SQL-запросах можно получать и даже преобразовывать результаты запросов в формат XML. Если приложение способно обрабатывать XML-данные, эта возможность позволяет выполнять следующие задачи:  
@@ -35,9 +35,9 @@ ms.locfileid: "48206074"
  В этом подразделе содержатся примеры, демонстрирующие перечисленные возможности.  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Получение данных FOR XML при использовании ADO и островов XML-данных  
- ADO `Stream` объекта или других объектов, поддерживающих COM `IStream` интерфейса, такие как Active Server Pages (ASP) `Request` и `Response` объектов, можно использовать для хранения результатов при работе с запросами FOR XML.  
+ Результаты, возвращаемые запросами FOR XML, могут быть сохранены объектом `Stream` ADO или другим объектом, поддерживающим COM-интерфейс `IStream` (например, объектами ASP `Request` и `Response`).  
   
- Например, следующий код ASP отображает результаты запроса к `xml` данных тип столбца Demographics таблицы Sales.Store в образце базы данных AdventureWorks. В частности, запрос производит поиск значения столбца для строки, в которой значение CustomerID равно 3.  
+ Например, следующий код ASP отображает результаты запроса к столбцу Demographics типа `xml` таблицы Sales.Store в образце в базе данных AdventureWorks. В частности, запрос производит поиск значения столбца для строки, в которой значение CustomerID равно 3.  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -163,13 +163,13 @@ ms.locfileid: "48206074"
   
 -   **YearOpened:** 1974  
   
--   **Specialty:** Road  
+-   **Специальные:** Road  
   
 -   **SquareFeet:** 38000  
   
--   **Brands:** 3  
+-   **Торговые марки:** 3  
   
--   **Internet:** DSL  
+-   **Интернет:** DSL  
   
 -   **NumberEmployees:** 40  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48206074"
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
   <Sales.Store>  
     <Demographics>  
-      <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+      <StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
         <AnnualSales>1500000</AnnualSales>  
         <AnnualRevenue>150000</AnnualRevenue>  
         <BankName>Primary International</BankName>  
@@ -201,13 +201,13 @@ ms.locfileid: "48206074"
   
  В этом примере применяются следующие управляемые интерфейсы прикладных программ (API) Microsoft .NET Framework для возврата и подготовки просмотра результатов запроса FOR XML:  
   
-1.  `SqlConnection` используется для подключения к SQL Server, на основе содержимого указанного подключения строковой переменной, strConn.  
+1.  Соединение с SQL Server производится через `SqlConnection` по строке соединения, содержащейся в символьной переменной, strConn.  
   
 2.  После этого `SqlDataAdapter`, используя соединение SQL и указанную строку SQL-запроса, выполняет запрос FOR XML.  
   
-3.  После выполнения запроса, `SqlDataAdapter.Fill` затем вызывается метод и экземпляр объекта `DataSet,` MyDataSet, чтобы заполнить набор данных с выводом запроса FOR XML.  
+3.  После выполнения запроса вызывается метод `SqlDataAdapter.Fill`, который передает экземпляр `DataSet,` MyDataSet, чтобы заполнить набор данных результатами выполнения запроса FOR XML.  
   
-4.  `DataSet.GetXml` Затем вызывается метод для возврата результатов запроса как строка, которая может отображаться на странице HTML, формируемых сервером.  
+4.  Затем вызывается метод `DataSet.GetXml`, чтобы вернуть результаты запроса в виде строки, отображаемой на странице HTML, формируемой на сервере.  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -284,7 +284,7 @@ Page Generated @ 3/11/2006 3:36:02 PM
   
 SqlConnection opened.  
   
-<Sales.Store><Demographics><StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
+<Sales.Store><Demographics><StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
   
 SqlConnection closed.  
 ```  

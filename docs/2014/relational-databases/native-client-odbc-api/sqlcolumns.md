@@ -14,12 +14,12 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f4398efa6d8132800926c18d74bbcd7b9a524e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181324"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360956"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns` Возвращает значение SQL_SUCCESS независимо от наличия значения существуют для *CatalogName*, *TableName*, или *ColumnName* параметров. Функция**SQLFetch** возвращает значение SQL_NO_DATA, если в этих параметрах заданы недопустимые значения.  
@@ -29,7 +29,7 @@ ms.locfileid: "48181324"
   
  Метод `SQLColumns` может быть выполнен для статического серверного курсора. При попытке выполнить метод `SQLColumns` для обновляемого (динамического или набора ключей) курсора будет возвращено значение SQL_SUCCESS_WITH_INFO, которое указывает на то, что тип курсора был изменен.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента поддерживает выдачу сведений о таблицах на связанных серверах, принимая двухкомпонентное имя для *CatalogName* параметр: *имя_связанного_сервера.имя_каталога*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента поддерживает выдачу сведений о таблицах на связанных серверах, принимая двухкомпонентное имя для *CatalogName* параметр: *Имя_связанного_сервера.имя_каталога*.  
   
  Для ODBC 2. *x* приложений не с помощью подстановочных знаков в *TableName*, `SQLColumns` возвращает сведения обо всех таблицах, имена которых соответствуют параметру *TableName* и которые принадлежат текущего пользователь. Если текущему пользователю принадлежит таблица, имя которого соответствует *TableName* параметра `SQLColumns` возвращает сведения обо всех таблицах, принадлежащих другим пользователям, в которых соответствует имени таблицы *TableName* параметр. Для ODBC 2. *x* приложений с использованием подстановочных знаков, `SQLColumns` возвращает все таблицы, имена которых соответствуют параметру *TableName*. Для ODBC 3. *x* приложений `SQLColumns` возвращает все таблицы, имена которых соответствуют параметру *TableName* независимо от владельца или же используются подстановочные знаки.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48181324"
  Дополнительные сведения о разреженных столбцах в ODBC см. в разделе [Поддержка разреженных столбцов &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLColumns](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [Функция SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

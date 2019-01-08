@@ -1,5 +1,5 @@
 ---
-title: Просмотр данных и прогнозное моделирование с помощью R в SQL Server машинного обучения | Документация Майкрософт
+title: Просмотр данных и прогнозное моделирование с помощью R - служб машинного обучения SQL Server
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 60a899de027f2e9de591a70971dbee3f4300d87d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c6c0e07f48dee271fee61bc59b47f49683ff8832
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984716"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432347"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Просмотр данных и прогнозное моделирование с помощью R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье описаны усовершенствования процесса обработки и анализа данных, которые возможны благодаря интеграции с SQL Server.
 
-Применяется к: SQL Server 2016 R Services, воспользоваться Machine Services для SQL Server 2017
+Применимо для следующих объектов: SQL Server 2016 R Services, воспользоваться Machine Services для SQL Server 2017
 
 ## <a name="the-data-science-process"></a>Процесс обработки и анализа данных
 
@@ -30,7 +30,7 @@ ms.locfileid: "38984716"
 + Перемещение данных может быть медленным, неэффективным или небезопасным
 + Сам язык R имеет ограничения по производительности и масштабируемости
 
-Эти недостатки становятся более очевидными, когда требуется переместить и проанализировать большие объемы данных или использовать наборы данных, которые не помещаются в доступную на компьютере память.
+Эти недостатки становятся более очевидными, если вам нужно переместить и анализировать большие объемы данных или использовать наборы данных, которые не помещаются в памяти, доступной на компьютере.
 
 Новые и масштабируемых пакетов и функций R, в состав [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] помочь преодолеть множество из этих проблем. 
 
@@ -62,15 +62,15 @@ ms.locfileid: "38984716"
   
      Дополнительные сведения об этих пакетах и их использовании см. в разделе [Какова RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) и [начало работы с RevoPemaR](https://msdn.microsoft.com/microsoft-r/pemar-getting-started). 
 
-+ **MicrosoftML** содержит коллекцию алгоритмы оптимизированную машинного обучения и преобразования данных из группы обработки и анализа данных Microsoft. Многие алгоритмы используются также в машинном обучении Azure. Дополнительные сведения см. в разделе [использование пакета MicrosoftML](../../advanced-analytics/using-the-microsoftml-package.md).
++ **MicrosoftML** содержит коллекцию алгоритмы оптимизированную машинного обучения и преобразования данных из группы обработки и анализа данных Microsoft. Многие алгоритмы используются также в машинном обучении Azure. Дополнительные сведения см. в разделе [MicrosoftML в SQL Server](ref-r-microsoftml.md).
 
 ### <a name="r-development-tools"></a>Средства разработки R
 
 При разработке решения R, необходимо загрузить Microsoft R Client. Бесплатно загрузите этот продукт включает библиотеки, необходимые для поддержки удаленных контекстов вычислений и масштабируемых alorithms:
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)].** Распространение среды выполнения R и набор пакетов, таких как библиотека математического ядра Intel, для повышения производительности стандартных операций R.  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** Распространение среды выполнения R и набор пакетов, таких как библиотека математического ядра Intel для повышения производительности стандартных операций R.  
   
-+ **RevoScaleR.** Пакет R, позволяющий принудительно отправлять вычисления в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. содержит набор общих функций R, переработанных в целях повышения производительности и масштабируемости. Такие усовершенствованные функции имеют префикс **rx** . Он также включает поставщиков расширенных данных для различных источников. Эти функции начинаются с префикса **Rx**.
++ **RevoScaleR:** Пакет R, который позволяет принудительно отправлять вычисления в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. содержит набор общих функций R, переработанных в целях повышения производительности и масштабируемости. Такие усовершенствованные функции имеют префикс **rx** . Он также включает поставщиков расширенных данных для различных источников. Эти функции начинаются с префикса **Rx**.
 
 Можно использовать любой редактор кода на основе Windows, которая поддерживает R, например [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] или RStudio. Кроме того, скачиваемые файлы [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] включают общие программы командной строки для R, например RGui.exe.
 
@@ -103,4 +103,4 @@ ms.locfileid: "38984716"
 
 [Сравнение базовых функций R с функциями ScaleR](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
-[ScaleR Functions for Working with SQL Server Data](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md) (Функции ScaleR для работы с данными SQL Server)
+[Библиотеки RevoScaleR в SQL Server](ref-r-revoscaler.md)

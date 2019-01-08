@@ -17,12 +17,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: edb2632b0c523bb1ecf49eef767ff3540694f2af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167946"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352312"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — решение высокого уровня доступности и аварийного восстановления, появившееся в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Требует наличия отказоустойчивого кластера Windows Server (WSFC). Кроме того, хотя [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] не зависит от отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на экземпляре отказоустойчивого кластера (FCI) можно размещать реплику для группы доступности. При проектировании среды [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] важно знать роль каждой из технологий кластеризации, а также иметь представления о необходимых требованиях.  
@@ -49,7 +49,7 @@ ms.locfileid: "48167946"
 ### <a name="cross-cluster-migration-of-alwayson-availability-groups-for-os-upgrade"></a>Миграция между кластерами групп доступности AlwaysOn для обновления ОС  
  Начиная с версии [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] поддерживает миграцию групп доступности между кластерами для развертывания в новый кластер отказоустойчивой кластеризации Windows Server (WSFC). При выполнении миграции между кластерами одна или несколько групп доступности переносятся в новый, целевой кластер WSFC с минимальным временем простоя. Процесс миграции между кластерами позволяет выполнять соглашения об уровне обслуживания при переходе на версию кластера [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] . В целевом кластере WSFC должен быть установлен компонент [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (или более поздней версии), в котором должно быть включено использование AlwaysOn. Для успешной миграции между кластерами необходимо тщательно спланировать и подготовить целевой кластер WSFC.  
   
- Дополнительные сведения см. в документе [Миграция между кластерами групп доступности AlwaysOn для обновления ОС](http://msdn.microsoft.com/library/jj873730.aspx).  
+ Дополнительные сведения см. в документе [Миграция между кластерами групп доступности AlwaysOn для обновления ОС](https://msdn.microsoft.com/library/jj873730.aspx).  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Экземпляры отказоустойчивого кластера (FCI) и группы доступности  
  Можно настроить второй уровень отказоустойчивости на уровне экземпляра сервера путем реализации отказоустойчивой кластеризации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] совместно с кластером WSFC. Реплика доступности может размещаться либо с помощью отдельного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или экземпляра FCI. Только партнер FCI может размещать реплику для данной группы доступности. Во время работы реплики доступности на экземплярах отказоустойчивого кластера (FCI) список возможных владельцев для группы доступности будет содержать только активный узел FCI.  
@@ -68,7 +68,7 @@ ms.locfileid: "48167946"
 |**Тип хранилища**|Shared|Не общее<br /><br /> Обратите внимание, что хотя реплики в группе доступности не используют общее хранилище, реплика, размещенная FCI, использует решение общего хранилища в соответствии с требованиями этого FCI. Решение хранения данных совместно используется только узлами в FCI, но не между репликами группы доступности.|  
 |**Решения хранения данных**|Прямое подключение, SAN, точки подключения, SMB|Зависит от типа узла|  
 |**Доступные для чтения вторичные**|Нет*|Да|  
-|**Применимые параметры политики отработки отказа**|Кворум WSFC<br /><br /> Связанный с FCI<br /><br /> Параметры группы доступности*|Кворум WSFC<br /><br /> Настройки группы доступности|  
+|**Применимые параметры политики отработки отказа**|Кворум WSFC<br /><br /> Связанный с FCI<br /><br /> Параметры группы доступности**|Кворум WSFC<br /><br /> Настройки группы доступности|  
 |**Ресурсы для перехода в случае сбоя**|Сервер, экземпляр и база данных|Только база данных|  
   
  *Хотя синхронные вторичные реплики в группе доступности всегда запускаются в соответствующих экземплярах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , соответствующие экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на вторичных узлах в FCI не запущены и, следовательно, недоступны для чтения. В FCI вторичный узел запускает экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] только при передаче группы ресурсов во владение при отработке отказа FCI. Однако на активном узле FCI в случаях, когда база данных, размещенная FCI, принадлежит группе доступности, если локальная реплика доступности запускается как вторичная реплика, доступная для чтения, база данных также доступна для чтения.  
@@ -76,7 +76,7 @@ ms.locfileid: "48167946"
  **Параметры политики перехода на другой ресурс для группы доступности применимы ко всем репликам, независимо от того, размещаются ли они в автономном экземпляре или экземпляре FCI.  
   
 > [!NOTE]  
->  Дополнительные сведения о **количество узлов** в отказоустойчивом кластере и **группы доступности AlwaysOn** для различных выпусков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в разделе [функции, поддерживаемые различными Выпуски SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Дополнительные сведения о **количество узлов** в отказоустойчивом кластере и **группы доступности AlwaysOn** для различных выпусков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в разделе [функции, поддерживаемые различными Выпуски SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Рекомендации для размещения реплики доступности на FCI  
   
@@ -112,19 +112,19 @@ ms.locfileid: "48167946"
   
 -   **Блоги**  
   
-     [Настроить отказоустойчивую кластеризацию Windows для SQL Server (группы доступности или экземпляр отказоустойчивого кластера) с ограниченной безопасностью](http://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
+     [Настроить отказоустойчивую кластеризацию Windows для SQL Server (группы доступности или экземпляр отказоустойчивого кластера) с ограниченной безопасностью](https://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
   
-     [Блоги группы AlwaysOn SQL Server: Официальный блог SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги группы AlwaysOn SQL Server: Официальный блог по SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Блоги инженеров CSS SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Технические документы**  
   
-     [Руководство по архитектуре AlwaysOn: Построение высокого уровня доступности и аварийного восстановления с помощью экземпляров отказоустойчивого кластера и групп доступности](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [Руководство по архитектуре AlwaysOn. Построение высокого уровня доступности и аварийного восстановления с помощью экземпляров отказоустойчивого кластера и групп доступности](https://msdn.microsoft.com/library/jj215886.aspx)  
   
-     [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Технические документы Майкрософт Microsoft по SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Технические документы Майкрософт Microsoft по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Технические документы группы консультантов по SQL Server](http://sqlcat.com/)  
   

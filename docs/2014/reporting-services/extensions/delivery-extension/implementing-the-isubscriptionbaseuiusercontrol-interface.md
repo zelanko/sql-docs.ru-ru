@@ -16,12 +16,12 @@ ms.assetid: a1e9122c-aa0b-45de-b536-4f1202875ab1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7885f486ef19b0fa5424857bc03146f5d0b1c8bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f87046df4e41f40bc5de5f2a720247738841ff24
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220774"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376346"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>Реализация интерфейса ISubscriptionBaseUIUserControl для модуля доставки
   Модули доставки служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] могут содержать реализацию пользовательского интерфейса подписки для сбора сведений, относящихся к модулю, в диспетчере отчетов. Пользовательский интерфейс вызывается, когда пользователь создает новую подписку или изменяет существующую подписку. Когда создается новая подписка, в пользовательском интерфейсе выводятся походящие значения по умолчанию, а пользователи получают возможность взаимодействовать с поставщиком доставки. Когда подписка изменяется, пользовательский интерфейс заранее заполняется сведениями, содержащимися в текущей подписке.  
@@ -35,7 +35,7 @@ ms.locfileid: "48220774"
   
  Интерфейс <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> служит расширением интерфейса <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Пользовательский элемент управления, реализующий интерфейс <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl>, также должен наследовать от класса **System.Web.UI.WebControls.WebControl**. Дополнительные сведения о классе **WebControl** см. в руководстве разработчика [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- Пример использования интерфейса <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> см. на странице [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Пример использования интерфейса <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> см. на странице [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>См. также  
  [Реализация модуля доставки](implementing-a-delivery-extension.md)   

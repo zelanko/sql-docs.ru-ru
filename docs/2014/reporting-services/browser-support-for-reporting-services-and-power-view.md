@@ -20,17 +20,17 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 975c396eb3c0bfa7414e3af4249338d2790754b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: c1f1b4d74d7ad7f34254a5c56c6dafc5fd2fb829
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157044"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350494"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Планирование служб Reporting Services и поддержки Power View в браузерах (Reporting Services 2014)
-  В [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], использовать веб-браузер для просмотра отчетов и запуска диспетчера отчетов. Не все браузеры поддерживают полную функциональность отчетов. Этот раздел содержит справочные сведения и требования для функций управления диспетчером отчетов, просмотра отчетов и элементов управления средства просмотра отчетов в Visual Studio. В этом разделе также указаны доступные функции для поддерживаемых браузеров, требования к проверке подлинности и написанию скриптов.  
+  В [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] для просмотра отчетов и запуска диспетчера отчетов используется веб-браузер. Не все браузеры поддерживают полную функциональность отчетов. Этот раздел содержит справочные сведения и требования для функций управления диспетчером отчетов, просмотра отчетов и элементов управления средства просмотра отчетов в Visual Studio. В этом разделе также указаны доступные функции для поддерживаемых браузеров, требования к проверке подлинности и написанию скриптов.  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в собственном режиме  
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в собственном режиме  
   
  **В этом разделе.**  
   
@@ -45,23 +45,23 @@ ms.locfileid: "48157044"
 -   [Поддержка браузеров для серверных элементов управления в ReportViewer Web в Visual Studio](#bkmk_controls)  
   
 ##  <a name="bkmk_powerview"></a> Сценарии браузера Power View  
- Список поддерживаемых браузеров и версий браузеров, [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , зависит от того, какой тип документа открыт. В книгах Excel 2013 и файлах «**.rdlx**» используются различные компоненты.  
+ Список браузеров и версий браузеров, поддерживаемых [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , зависит от типа открытого документа. Книги Excel 2013 и "**.rdlx**" файлов используются различные компоненты.  
   
 |Тип документа|Среда|Поддержка браузеров|  
 |-------------------|-----------------|---------------------|  
-|Отчет Power View (RDLX)|**Сервер SharePoint:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] на [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] интеграции с SharePoint mode и веб-приложение Power View.|См. раздел [Power View в SharePoint и режим интеграции с SharePoint для служб Reporting Services](#bkmk_powerview_on_SSRS).|  
-|Книга Excel 2013 с листами Power View|**Сервер SharePoint:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] в службах Excel.<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] в Excel Web App.|См. раздел [Power View в службах Excel или Excel Web App в SharePoint Online](#bkmk_powerview_on_ExcelServices).|  
+|Отчет Power View (RDLX)|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] в режиме интеграции с SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и веб-приложением Power View.|См. раздел [Power View в SharePoint и режим интеграции с SharePoint для служб Reporting Services](#bkmk_powerview_on_SSRS).|  
+|Книга Excel 2013 с листами Power View|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] в службах Excel.<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] в Excel Web App.|См. раздел [Power View в службах Excel или Excel Web App в SharePoint Online](#bkmk_powerview_on_ExcelServices).|  
   
 ###  <a name="bkmk_powerview_on_SSRS"></a> Power View в SharePoint и Reporting Services режиме интеграции с SharePoint  
  В следующей таблице перечислены версии поддерживаемых браузеров для [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] при открытии отчета Power View (RDLX) в ферме SharePoint, имеющей приложение службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и надстройку [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для установленного и настроенного SharePoint.  
   
 -   Таблица относится к SharePoint 2010 и SharePoint 2013.  
   
--   Дополнительные сведения о поддержке браузеров SharePoint 2013 см. в разделе [Планирование поддержки браузеров в SharePoint 2013](http://technet.microsoft.com//library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
+-   Дополнительные сведения о поддержке браузеров SharePoint 2013 см. в разделе [Планирование поддержки браузеров в SharePoint 2013](https://technet.microsoft.com//library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
--   Дополнительные сведения о поддержке браузеров SharePoint 2010 см. в разделе [Планирование поддержки браузеров (SharePoint Server 2010)](http://technet.microsoft.com/library/cc263526\(office.14\).aspx) (http://technet.microsoft.com/library/cc263526(office.14).aspx).  
+-   Дополнительные сведения о поддержке браузеров SharePoint 2010 см. в разделе [Планирование поддержки браузеров (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Браузер**|**Windows 8 и 8.1**|**Windows 7**|**Windows Server 2012 и 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Браузер**|**Windows 8 и 8.1**|**Windows 7**|**Windows Server 2012 и 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (для настольных компьютеров)**|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|Не поддерживается|Не поддерживается|  
 |**Internet Explorer 10 (для настольных компьютеров)**|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|Не поддерживается|Не поддерживается|  
@@ -77,11 +77,11 @@ ms.locfileid: "48157044"
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] не поддерживает функцию InPrivate в браузерах [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 и Internet Explorer 9. Дополнительные сведения о функции InPrivate см. в разделе [что такое функция InPrivate?](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
   
 ###  <a name="bkmk_powerview_on_ExcelServices"></a> Power View в службах Excel или Excel Web App в SharePoint Online  
- В следующей таблице перечислены версии поддерживаемых браузеров для [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] при открытии пользователем книги Excel 2013 с листами Power View на серверах SharePoint с работающими службами Excel:  
+ В следующей таблице перечислены версии поддерживаемых браузеров для [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] при открытии пользователем книги Excel 2013 с листами Power View на серверах SharePoint с работающими службами Excel.  
   
--   Дополнительные сведения о поддержке браузеров SharePoint 2013 см. в разделе [Планирование поддержки браузеров в SharePoint 2013](http://technet.microsoft.com/library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
+-   Дополнительные сведения о поддержке браузеров SharePoint 2013 см. в разделе [Планирование поддержки браузеров в SharePoint 2013](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
-|**Браузер**|**Windows 8 и 8.1**|**Windows 7**|**Windows Server 2012 и 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Браузер**|**Windows 8 и 8.1**|**Windows 7**|**Windows Server 2012 и 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (для настольных компьютеров)**|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|Не поддерживается|Не поддерживается|  
 |**Internet Explorer 10 (для настольных компьютеров)**|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|Не поддерживается|Не поддерживается|  
@@ -94,7 +94,7 @@ ms.locfileid: "48157044"
  **(\*)** Chrome прекращает поддержку Netscape Plug-in API (NPAPI), используемый в Silverlight. Power View зависит от Silverlight.  Подробнее см. в разделе [Прекращение поддержки NPAPI](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html).  
   
 ##  <a name="bkmk_reportmanager"></a> Требования к браузеру диспетчера отчетов (собственный режим)  
- Ниже приведен текущий список поддерживаемых браузеров, которые можно использовать для запуска [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] собственный режим для управления отчетами и сервером отчетов в диспетчере отчетов.  
+ Далее приводится текущий список поддерживаемых браузеров, которые можно использовать для запуска диспетчера отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , работающих в собственном режиме, для управления отчетами и сервером отчетов.  
   
 |Браузер|  
 |-------------|  
@@ -104,9 +104,9 @@ ms.locfileid: "48157044"
 |Google Chrome (последняя выпущенная версия)|  
   
 ##  <a name="bkmk_reportviewer"></a> Требования к браузеру для просмотра отчетов  
- Далее приведен текущий список поддерживаемых браузеров и компонентов для работы со средством просмотра отчетов. Средство просмотра отчетов поддерживает просмотр отчетов из [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчетов диспетчера и библиотек SharePoint.  
+ Далее приведен текущий список поддерживаемых браузеров и компонентов для работы со средством просмотра отчетов. Средство просмотра отчетов поддерживает просмотр отчетов из диспетчера отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и библиотек SharePoint.  
   
-|**Браузер**|**Windows 8 и 8.1**|**Windows 7**|**Windows Server 2012 и 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|**iOS 6 -7 для iPad**|  
+|**Браузер**|**Windows 8 и 8.1**|**Windows 7**|**Windows Server 2012 и 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|**iOS 6 -7 для iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (для настольных компьютеров)**|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|Не поддерживается|Не поддерживается|Не поддерживается|Не поддерживается|  
 |**Internet Explorer 10 (для настольных компьютеров)**|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|32-разрядная версия, 64-разрядная версия|Не поддерживается|Не поддерживается|Не поддерживается|Не поддерживается|  
@@ -117,7 +117,7 @@ ms.locfileid: "48157044"
 |**Apple Safari (последняя выпущенная версия)**|Не поддерживается|Не поддерживается|Не поддерживается|Не поддерживается|Не поддерживается|32-разрядная версия, 64-разрядная версия|Поддерживается с ограниченными возможностями <sup>(1)</sup>|  
 |**Google Chrome (последняя выпущенная версия)**|32-разрядная версия|32-разрядная версия|32-разрядная версия|32-разрядная версия|32-разрядная версия|Не поддерживается|Не поддерживается|  
   
- **<sup>(1) </sup>**  Поддерживаются следующие возможности:  
+ **<sup>(1)</sup>**  Поддерживаются следующие возможности:  
   
 -   Экспорт в формат PDF и TIFF.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48157044"
   
 -   Дополнительные сведения см. в разделе [Просмотр отчетов служб Reporting Services на устройствах Microsoft Surface и Apple iOS](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md).  
   
- **Примечание.** Для доступа к серверу отчетов с компьютера Macintosh рекомендуется пользоваться браузером Safari. Если вы используете продукт SharePoint, интегрированного с [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], см. в разделе [Планирование поддержки браузеров (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583).  
+ **Примечание.** Для доступа к серверу отчетов с компьютера Macintosh рекомендуется пользоваться браузером Safari. Если вы используете продукт SharePoint, интегрированного с [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], см. в разделе [Планирование поддержки браузеров (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkId=183583).  
   
 ### <a name="url-access-for-viewing-reports"></a>Доступ по URL-адресу для просмотра отчетов  
  Для просмотра отчетов непосредственно, без помощи диспетчера отчетов, можно использовать доступ по URL-адресу, чтобы связаться с отчетом и средством просмотра отчетов. Доступ по URL-адресу обеспечивается браузерами многих типов.  
@@ -169,7 +169,7 @@ ms.locfileid: "48157044"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Браузер**|**Windows 8** и **Windows 8.1**|**Windows 7**|**Windows Server 2012** и **2012 R2**|**Windows Server 2008** и **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 – 10.9**|**Примечания**|  
+|**Браузер**|**Windows 8** и **Windows 8.1**|**Windows 7**|**Windows Server 2012** и **2012 R2**|**Windows Server 2008** и **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 10.9**|**Примечания**|  
 |**Internet Explorer 11 (для настольных систем**|Да|Да|Да|Не поддерживается|Не поддерживается|Не поддерживается|Internet Explorer поддерживает полный набор функций ReportViewer.|  
 |**Internet Explorer 10 (для настольных компьютеров)**|Да|Да|Да|Не поддерживается|Не поддерживается|Не поддерживается|Internet Explorer поддерживает полный набор функций ReportViewer.|  
 |**Internet Explorer 9**|Не поддерживается|Да|Не поддерживается|Да|Да|Да|Internet Explorer поддерживает полный набор функций ReportViewer.|  
@@ -191,13 +191,13 @@ ms.locfileid: "48157044"
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```  
   
- Дополнительные сведения о режимах совместимости в Internet Explorer см. в разделе [Определение совместимости документов](http://go.microsoft.com/fwlink/?LinkId=180380) (http://go.microsoft.com/fwlink/?LinkId=180380).  
+ Дополнительные сведения о режимах совместимости в Internet Explorer см. в разделе [Определение совместимости документов](https://go.microsoft.com/fwlink/?LinkId=180380) (https://go.microsoft.com/fwlink/?LinkId=180380).  
   
- Дополнительные сведения об использовании элементов управления ReportViewer см. в разделе [развертывание отчетов и элементы управления ReportViewer](http://msdn.microsoft.com/library/ms251723.aspx) (http://msdn.microsoft.com/library/ms251723.aspx).  
+ Дополнительные сведения об использовании элементов управления ReportViewer см. в разделе [развертывание отчетов и элементы управления ReportViewer](https://msdn.microsoft.com/library/ms251723.aspx) (https://msdn.microsoft.com/library/ms251723.aspx).  
   
 ## <a name="see-also"></a>См. также  
  [Инструментальные средства служб Reporting Services](tools/reporting-services-tools.md)   
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Просмотра HTML-СТРАНИЦ и панель инструментов отчета](html-viewer-and-the-report-toolbar.md)   
  [Ссылка на параметр доступа по URL-адресу](url-access-parameter-reference.md)  
   

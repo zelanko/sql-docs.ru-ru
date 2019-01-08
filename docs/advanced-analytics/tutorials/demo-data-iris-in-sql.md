@@ -1,5 +1,5 @@
 ---
-title: Набор данных IRIS Демонстрация учебники Python и R в SQL Server | Документация Майкрософт
+title: Набор данных IRIS Демонстрация учебники Python и R - машинного обучения SQL Server
 Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2fbe5915f7b135882bbbefbb83b572d2cd640837
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: ce0469b5625af3f38047233737f3afbd209e11b9
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216688"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046574"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Демонстрационных данных IRIS учебники Python и R в SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "50216688"
 
 Учебники и примеры использования, с помощью этого набора данных включают следующее:
 
-+  [Использовать модели Python в SQL Server для обучения и оценки](train-score-using-python-in-tsql.md)
++  [Краткое руководство. Создавать, обучать и использовать модели Python с хранимыми процедурами в SQL Server](quickstart-python-train-score-in-tsql.md)
 
 ## <a name="create-the-database"></a>Создайте базу данных
 
@@ -154,6 +154,6 @@ ms.locfileid: "50216688"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-На следующем занятии будет создать модель машинного обучения и сохраните его в таблицу и затем использовать модели для создания прогнозируемых выходных данных.
+В следующем кратком руководстве будет создать модель машинного обучения и сохранить его в таблице и использовать модели для создания прогнозируемых выходных данных.
 
-+ [Использовать модели Python в SQL Server для обучения и оценки](train-score-using-python-in-tsql.md)
++ [Краткое руководство. Создавать, обучать и использовать модели Python с хранимыми процедурами в SQL Server](quickstart-python-train-score-in-tsql.md)

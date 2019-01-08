@@ -14,12 +14,12 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af539339b2a0a2792fa5ac9838eb7ed297fa29f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8653161775a35e326a7ed85ed982f1cb75bee03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062234"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361497"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Управление именами входа и заданиями для баз данных группы доступности (SQL Server)
   Необходимо постоянно поддерживать одинаковый набор имен входа пользователей и заданий агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в каждой базе данных-источнике группы доступности AlwaysOn и соответствующих баз данных-получателей. Имена входа и задания необходимо воспроизвести на каждом экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , на котором размещается реплика доступности для группы доступности.  
@@ -30,7 +30,7 @@ ms.locfileid: "48062234"
   
      Экземпляры серверов, на которых размещены реплики доступности для группы доступности, могут быть настроены по-разному, например с использованием других букв дисков ленточных накопителей и т. д. Задания для каждой группы доступности должны допускать подобные различия.  
   
-     Обратите внимание, что задания резервного копирования могут использовать функцию [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) , чтобы определить, является ли локальная реплика предпочтительной для выполнения резервного копирования согласно настройкам резервного копирования группы доступности. Задания резервного копирования, созданные с помощью [мастера планов обслуживания](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) , изначально используют эту функцию. Для других заданий резервного копирования рекомендуется использовать эту функцию в качестве условия в заданиях резервного копирования, чтобы они выполнялись только для предпочитаемой реплики. Дополнительные сведения см. в разделе [ активные вторичные реплики: резервное копирование на вторичных репликах (группы доступности AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Обратите внимание, что задания резервного копирования могут использовать функцию [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) , чтобы определить, является ли локальная реплика предпочтительной для выполнения резервного копирования согласно настройкам резервного копирования группы доступности. Задания резервного копирования, созданные с помощью [мастера планов обслуживания](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) , изначально используют эту функцию. Для других заданий резервного копирования рекомендуется использовать эту функцию в качестве условия в заданиях резервного копирования, чтобы они выполнялись только для предпочитаемой реплики. Дополнительные сведения см. в разделе [ активные вторичные реплики: Резервного копирования во вторичных репликах (группы доступности AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Имена входа**  
   
@@ -48,16 +48,16 @@ ms.locfileid: "48062234"
 ##  <a name="SSauthentication"></a> Имена входа для приложений, использующих проверку подлинности SQL Server или локальное имя входа Windows  
  Если приложение использует проверку подлинности SQL Server или локальное имя входа Windows, то несоответствие идентификаторов безопасности может привести к ошибке входа на удаленный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Несоответствие идентификаторов безопасности вызывает утрату связи с учетной записью на удаленном экземпляре сервера. Эта проблема может возникать при подключении приложения к зеркальной базе данных или базе данных доставки журналов после отработки отказа либо к базе данных подписчика репликации, которая была инициализирована из резервной копии.  
   
- Во избежание этой проблемы рекомендуется предпринять профилактические меры во время настройки такого приложения на использование базы данных, размещенной на удаленном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Среди таких мер — перенос имен входа и паролей с локального экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на удаленный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения о том, как предотвратить возникновение этой проблемы см. в статье базы знаний 918992 —[Как передавать имена входа и пароли между экземплярами SQL Server](http://support.microsoft.com/kb/918992/)).  
+ Во избежание этой проблемы рекомендуется предпринять профилактические меры во время настройки такого приложения на использование базы данных, размещенной на удаленном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Среди таких мер — перенос имен входа и паролей с локального экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на удаленный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения о том, как предотвратить возникновение этой проблемы, см. в статье базы знаний 918992 [Перемещение имен входа и паролей между экземплярами SQL Server](https://support.microsoft.com/kb/918992/).  
   
 > [!NOTE]  
 >  Эта проблема затрагивает локальные учетные записи Windows на разных компьютерах. Для доменных учетных записей эта проблема не возникает, поскольку идентификатор безопасности там один для всех компьютеров.  
   
- Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (блог Database Engine).  
+ Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (блог Database Engine).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Создание имени для входа](../relational-databases/security/authentication-access/create-a-login.md)  
+-   [Создание имени входа](../relational-databases/security/authentication-access/create-a-login.md)  
   
 -   [Create a Database User](../relational-databases/security/authentication-access/create-a-database-user.md).  
   

@@ -11,12 +11,12 @@ ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e3eff042078ad7dde6352c3826103bc680da432
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068942"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374866"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Планирование обновления данных и источники данных, которые не поддерживают проверку подлинности Windows (PowerPivot для SharePoint)
   В этом разделе рассматривается рабочий процесс планирования обновления данных PowerPivot для SharePoint, в котором могут использоваться источники данных, **НЕ** поддерживающие проверку подлинности Windows. В качестве примера можно назвать источники данных Oracle или IDM DB2. На рисунках и в процедурах, которые приведены в этом разделе, речь идет об источниках данных Oracle, но тот же рабочий процесс применим к другим источникам данных.  
@@ -25,15 +25,15 @@ ms.locfileid: "48068942"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010 &#124; SharePoint 2013.|  
   
- **Обзор** . Создание двух целевых приложений Secure Store. Настройка использования учетных данных Windows в первом целевом приложении (PowerPivotDataRefresh). Настройка во втором целевом приложении учетных данных для источника данных, который не поддерживает проверку подлинности Windows, например для базы данных Oracle. Кроме того, во втором целевом приложении используется первое целевое приложение в качестве учетной записи автоматического обновления данных.  
+ **Обзор:** Создание двух целевых приложений Secure Store. Настройка использования учетных данных Windows в первом целевом приложении (PowerPivotDataRefresh). Настройка во втором целевом приложении учетных данных для источника данных, который не поддерживает проверку подлинности Windows, например для базы данных Oracle. Кроме того, во втором целевом приложении используется первое целевое приложение в качестве учетной записи автоматического обновления данных.  
   
  ![as_powerpivot_refresh_no_windows_auth](../media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh** : идентификатор целевого приложения Secure Store, в котором настроена аутентификация Windows.  
+-   **(1) PowerPivotDatarefresh:** идентификатор целевого приложения Secure Store, в котором настроена проверка подлинности Windows.  
   
--   **(2) OracleAuthentication** : идентификатор целевого приложения Secure Store, в котором заданы учетные данные Oracle.  
+-   **(2) OracleAuthentication:** идентификатор целевого приложения Secure Store, в котором заданы учетные данные Oracle.  
   
--   **(3)** В приложении службы PowerPivot настраивается использование целевого приложения "PowerPivotDataRefresh" в качестве **учетной записи автоматического обновления данных**.  
+-   **(3)**  В приложении службы PowerPivot настраивается использование целевого приложения «PowerPivotDataRefresh» для **учетная**.  
   
 -   **(4)** В книге PowerePivot используются данные Oracle. Настройки обновления книги указывают, что при соединении с источником данных следует использовать целевое приложение **(2)** в качестве учетных данных.  
   
@@ -55,15 +55,15 @@ ms.locfileid: "48068942"
   
 4.  На странице **Создание нового целевого приложения Secure Store** задайте следующие значения.  
   
-    -   **Идентификатор целевого приложения** : PowerPivotDataRefresh.  
+    -   **Идентификатор целевого приложения:** PowerPivotDataRefresh.  
   
-    -   **Отображаемое имя** : PowerPivotDataRefresh.  
+    -   **Отображаемое имя:** PowerPivotDataRefresh.  
   
     -   **Адрес электронной почты для связи** : ?  
   
-    -   **Тип целевого приложения** : группа.  
+    -   **Тип целевого приложения:** группа.  
   
-    -   **URL-адрес страницы целевого приложения** : нет.  
+    -   **АДРЕС страницы целевого приложения:** Нет.  
   
 5.  Нажмите кнопку **Далее**.  
   
@@ -89,15 +89,15 @@ ms.locfileid: "48068942"
   
 4.  На странице **Создание нового целевого приложения Secure Store** задайте следующие значения.  
   
-    -   **Идентификатор целевого приложения** : OracleAuthentication.  
+    -   **Идентификатор целевого приложения:** OracleAuthentication.  
   
-    -   **Отображаемое имя** : OracleAuthentication.  
+    -   **Отображаемое имя:** OracleAuthentication.  
   
     -   **Адрес электронной почты для связи** : ?  
   
-    -   **Тип целевого приложения** : группа.  
+    -   **Тип целевого приложения:** группа.  
   
-    -   **URL-адрес страницы целевого приложения** : нет.  
+    -   **АДРЕС страницы целевого приложения:** Нет.  
   
 5.  Нажмите кнопку **Далее**.  
   
@@ -115,13 +115,13 @@ ms.locfileid: "48068942"
   
 11. Введите идентификатор пользователя Oracle и пароль Oracle, затем нажмите кнопку **ОК**.  
   
- Дополнительные сведения см в разделе «Создание целевого приложения для проверки подлинности SQL Server» [используйте Secure Store с помощью проверки подлинности SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Дополнительные сведения см в разделе «Создание целевого приложения для проверки подлинности SQL Server» [используйте Secure Store с помощью проверки подлинности SQL Server (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>Настройка приложения службы PowerPivot  
   
 1.  В центре администрирования SharePoint нажмите кнопку «Управление приложениями служб».  
   
-2.  Щелкните имя своего приложения службы PowerPivot, например «Приложение службы PowerPivot по умолчанию».  
+2.  Щелкните имя приложения службы PowerPivot, например «по умолчанию приложение службы PowerPivot».  
   
 3.  Нажмите кнопку **Настройка параметров приложения службы** в разделе «Действия».  
   
@@ -166,8 +166,8 @@ ms.locfileid: "48068942"
   
 ## <a name="more-information"></a>Дополнительные сведения  
   
--   [Настройка службы Secure Store в SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
+-   [Настройка службы Secure Store в SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
   
--   См. подраздел "Плановое обновление данных" раздела [Обновление данных PowerPivot с SharePoint 2013 и SQL Server 2012 с пакетом обновления 1 (SP1) (службы Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
+-   См. в разделе «Плановое обновление данных» [обновления данных PowerPivot с SharePoint 2013 и SQL Server 2012 SP1 (службы Analysis Services)](https://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   
   

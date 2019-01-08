@@ -1,6 +1,6 @@
 ---
-title: Установка новых пакетов Python в SQL Server машинного обучения | Документация Майкрософт
-description: Добавление новых пакетов Python для служб SQL Server 2017 машинного обучения (в базе данных) и сервер машинного обучения (автономный)
+title: Установка новых пакетов языка Python - машинного обучения SQL Server
+description: Добавление новых пакетов Python для служб SQL Server 2017 машинного обучения (в базе данных) и сервер машинного обучения (автономный).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/10/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4e7ad9382f1e85bd5f816065116b5a52c6745c8b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fc038f94fc24b8c0f795efc18c62acc1656877a7
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697647"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432317"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Установка новых пакетов Python в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51697647"
 
 + [Служб SQL Server 2017 машинного обучения (в базе данных)](../install/sql-machine-learning-services-windows-install.md) с параметром языка Python. 
 
-+ Пакеты должно быть Python 3.5 соответствующие и выполнения в Windows. 
++ Пакеты должны быть Python 3.5-совместимым и выполнения в Windows. 
 
 + Чтобы установить пакеты требуется административный доступ к серверу.
 
@@ -45,13 +45,6 @@ ms.locfileid: "51697647"
 Установка пакета находится на один экземпляр. Если у вас есть несколько экземпляров служб машинного обучения, необходимо добавить пакет для каждого из них.
 
 Пакет, установленный в этом примере является [CNTK](https://docs.microsoft.com/cognitive-toolkit/), это платформа для глубокого обучения от Майкрософт, которая поддерживает настройку, обучение и совместное использование различных типов нейронных сетей.
-
-> [!TIP]
-> Нужна помощь с настройкой ваши средства Python? См. Эти блогах:
-> 
-> [Приступая к работе с Python веб-служб с помощью Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
-> 
-> [Дэвид Крук: Microsoft Cognitive Toolkit и VS Code](https://dacrook.com/cntk-vs-code-awesome/)
 
 ### <a name="step-1-download-the-windows-version-of-the-python-package"></a>Шаг 1. Скачать Windows пакета Python
 
@@ -116,7 +109,7 @@ Successfully installed cntk-2.1
 
 По завершении установки можно немедленно начать с помощью пакета, как описано в следующем шаге.
 
-Примеры глубокого обучения с использованием CNTK, см. в этих учебниках: [API Python для CNTK](https://cntk.ai/pythondocs/tutorials.html)
+Примеры глубокого обучения с использованием CNTK см. в этих учебниках: [API Python для CNTK](https://cntk.ai/pythondocs/tutorials.html)
 
 Чтобы использовать функции из пакета в сценарии, вставить стандартные `import <package_name>` инструкции в начальной строки скрипта:
 

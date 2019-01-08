@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee92cd702b716ea79f05adaf35f775927710411f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4b42f0a70765744147a44c8b4d274b87cc00ca43
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672453"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215430"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Развертывать группу доступности SQL Server Always On, в кластере Kubernetes
 
@@ -35,12 +35,12 @@ ms.locfileid: "51672453"
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - Доступ к [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) репозитория GitHub
 
->[!NOTE]
->Можно использовать любой тип кластера Kubernetes. Чтобы создать кластер Kubernetes в службе Azure Kubernetes (AKS), см. в разделе [создание кластера AKS](https://docs.microsoft.com/azure/aks/create-cluster).
+> [!NOTE]
+> Можно использовать любой тип кластера Kubernetes. Чтобы создать кластер Kubernetes в службе Azure Kubernetes (AKS), см. в разделе [создание кластера AKS](https://docs.microsoft.com/azure/aks/create-cluster).
 > Следующий скрипт создает четырех узлов кластера Kubernetes в Azure.
->```azure-cli
-az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
->```
+> ```azure-cli
+> az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
+> ```
 
 ## <a name="deploy-the-operator-sql-server-containers-and-load-balancing-services"></a>Развертывание оператор, контейнеры SQL Server и службы балансировки нагрузки
 

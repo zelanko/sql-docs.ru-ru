@@ -1,22 +1,21 @@
 ---
-title: Шаг 2. Создание поврежденного файла | Документы Майкрософт
+title: Этап 2. Создание поврежденного файла | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4134a1bc773a27c71eda472cb502e26cd22b152
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96690ca99a03c8e6d5cd8c6fefb9760ed3f6e71e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226604"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366816"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Этап 2. Создание поврежденного файла
   Для демонстрации настройки и обработки ошибок преобразования необходимо создать образец неструктурированного файла, который при обработке вызовет сбой в работе компонента.  
@@ -29,7 +28,7 @@ ms.locfileid: "48226604"
   
      Образцы данных включаются в пакеты занятий по службам SSIS. Чтобы загрузить образцы данных и пакеты занятий выполните следующие действия.  
   
-    1.  Перейдите к [образцам продуктов служб Integration Services](http://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Перейдите к [образцам продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
     2.  Перейдите на вкладку **DOWNLOADS** .  
   

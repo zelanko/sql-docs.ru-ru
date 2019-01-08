@@ -1,6 +1,6 @@
 ---
-title: Урок 1 изучение и визуализация данных с помощью R и T-SQL (машинного обучения SQL Server) | Документация Майкрософт
-description: Учебник, в котором показано, как внедрить R в SQL Server хранимых процедур и функций T-SQL
+title: 'Урок 1 изучение и визуализация данных с помощью R и T-SQL: машинного обучения SQL Server'
+description: Учебник, в котором показано, как анализ и визуализация данных SQL Server с помощью функций R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032221"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645503"
 ---
-# <a name="lesson-1-explore-and-visualize-the-data"></a>Занятие 1: Анализ и визуализация данных
+# <a name="lesson-1-explore-and-visualize-the-data"></a>Урок 1. Анализ и визуализация данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Эта статья входит руководства для разработчиков SQL по использованию R в SQL Server.
@@ -38,7 +38,7 @@ ms.locfileid: "51032221"
 
 **Идентификаторы такси**
   
--   В столбце _medallion_ представлены уникальные идентификационные номера такси.
+-   _Medallion_ столбец представляет уникальные идентификационные номера такси.
   
 -   _Hack\_лицензии_ столбец содержит драйвера такси номера лицензий (таксистов).
   
@@ -67,7 +67,7 @@ ms.locfileid: "51032221"
 
 2. Вставьте следующий скрипт, чтобы создать хранимую процедуру, которая отображает гистограмму. В этом примере называется **RPlotRxHistogram*.
 
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
@@ -108,7 +108,7 @@ ms.locfileid: "51032221"
   
 1.  В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]выполните следующую инструкцию:
   
-    ```SQL
+    ```sql
     EXEC [dbo].[RxPlotHistogram]
     ```
   
@@ -119,7 +119,7 @@ ms.locfileid: "51032221"
   
 2.  Откройте командную строку PowerShell и выполните следующую команду, указав соответствующее имя экземпляра, имя базы данных, имя пользователя и учетные данные в качестве аргументов. Для тех, с помощью удостоверений Windows, можно заменить **- U** и **-P** с **-T**.
   
-     ```text
+     ```powershell
      bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
@@ -134,7 +134,7 @@ ms.locfileid: "51032221"
   
     -   Введите **Y** , если необходимо сохранить выходные параметры для повторного использования в будущем.
   
-    ```
+    ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
@@ -146,7 +146,7 @@ ms.locfileid: "51032221"
   
     **Результаты**
     
-    ```
+    ```powershell
     Starting copy...
     1 rows copied.
     Network packet size (bytes): 4096
@@ -170,7 +170,7 @@ ms.locfileid: "51032221"
 
 2. Вставьте следующий скрипт, чтобы создать хранимую процедуру, которая отображает гистограмму. В этом примере называется **RPlotHist** .
   
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
@@ -244,13 +244,13 @@ ms.locfileid: "51032221"
 
 Выполните следующую инструкцию, чтобы экспортировать двоичный отобразить данные в форматах PDF и JPEG.
 
-```SQL
+```sql
 EXEC RPlotHist
 ```
 
 **Результаты**
     
-```
+```sql
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
 
@@ -279,7 +279,7 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>Следующее занятие
 
-[Занятие 2: Создание функций данных с помощью T-SQL](sqldev-create-data-features-using-t-sql.md)
+[Занятие 2. Создание функций данных с помощью T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 

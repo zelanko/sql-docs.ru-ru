@@ -1,20 +1,22 @@
 ---
-title: Запуск записной книжки образец в кластере SQL Server 2019 больших данных | Документация Майкрософт
+title: Запуск записной книжки образец | Документация Майкрософт
+titleSuffix: SQL Server 2019 big data clusters
 description: В этом руководстве показано, как загрузить образец notebook Spark в кластере SQL Server 2019 больших данных (Предварительная версия) выполнения.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 811c94615f0d69886f0f538357529ad3125e2925
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 55d37969ec3e03a635e948cdafb73eb1922a1795
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644234"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432557"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>Руководство: Запуск образец notebook в кластере SQL Server 2019 больших данных
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>Учебник. Запуск записной книжки образец в кластере SQL Server 2019 больших данных
 
 Этом руководстве показано, как загрузить и выполнить записную книжку в студии данных Azure в кластере SQL Server 2019 больших данных (Предварительная версия). Благодаря этому специалисты по анализу данных и инженеры данных, для выполнения кода Python, R или Scala для кластера.
 
@@ -23,11 +25,11 @@ ms.locfileid: "49644234"
 
 ## <a id="prereqs"></a> Предварительные требования
 
-* [Развертывание кластера больших данных в Kubernetes](deployment-guidance.md).
-* [Установка Studio данных Azure и расширение SQL Server 2019](deploy-big-data-tools.md).
-* [Загрузка образца данных в кластере](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Средства работы с большими данными](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **Расширение SQL Server 2019**
+- [Загрузка образца данных в кластере больших данных](tutorial-load-sample-data.md)
 
 ## <a name="download-the-sample-notebook-file"></a>Скачать пример файла записной книжки
 
@@ -47,7 +49,7 @@ ms.locfileid: "49644234"
 
 Ниже показано, как открыть файл записной книжки в Azure Data Studio:
 
-1. В студии данных Azure подключения к шлюзу HDFS/Spark кластера больших данных. Дополнительные сведения см. в разделе [подключиться к шлюзу HDFS/Spark](deploy-big-data-tools.md#hdfs).
+1. В студии данных Azure подключения к шлюзу HDFS/Spark кластера больших данных. Дополнительные сведения см. в разделе [подключиться к шлюзу HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
 
 1. Дважды щелкните подключение шлюза HDFS или Spark в **серверы** окна. Затем выберите **открыть записную книжку**.
 

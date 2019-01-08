@@ -18,15 +18,15 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03233cc3a35818352c3a8875f62610b5a0814522
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050484"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362816"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Развертывание базы данных с помощью приложения уровня данных
-  С помощью мастера **Развертывание базы данных в SQL Azure** разверните базу данных между экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и сервером [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] либо между двумя серверами [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+  С помощью мастера **развертывания базы данных в SQL Azure** разверните базу данных между экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и сервером [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] либо между двумя серверами [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="BeforeBegin"></a> Перед началом  
  Мастер использует архивный файл приложения уровня данных (DAC) BACPAC для развертывания как данных, так и определений объектов базы данных. Он выполняет операцию экспорта приложения уровня данных из базы данных-источника и импорт приложения уровня данных в место назначения.  
@@ -36,7 +36,7 @@ ms.locfileid: "48050484"
   
  Некоторые параметры баз данных, например TRUSTWORTHY, DB_CHAINING и HONOR_BROKER_PRIORITY, нельзя изменить в рамках процедуры развертывания. Физические свойства, например количество файловых групп или количество и размер файлов, нельзя изменять в рамках процедуры развертывания. После завершения развертывания можно настроить базу данных с помощью инструкции ALTER DATABASE, среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]или программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.  
   
-###  <a name="LimitationsRestrictions"></a> ограничения  
+###  <a name="LimitationsRestrictions"></a> Ограничения  
  Мастер **Развертывание базы данных** поддерживает развертывание базы данных:  
   
 -   C экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "48050484"
   
 3.  Разверните узел **Базы данных** .  
   
-4.  Щелкните правой кнопкой мыши базу данных, которую необходимо развернуть, выберите **Задачи**, а затем **Развертывание базы данных в SQL Azure…**  
+4.  Щелкните правой кнопкой мыши базу данных, которую необходимо развернуть, выберите **Задачи**, а затем **Развертывание базы данных в SQL Azure…**.  
   
 5.  Выполните шаги в диалоговых окнах мастера.  
   
@@ -122,21 +122,21 @@ ms.locfileid: "48050484"
 ## <a name="using-a-net-framework-application"></a>Использование приложения .NET Framework  
  **Развертывание базы данных с помощью методов DacStore Export() и Import() в приложении .NET Framework.**  
   
- Чтобы просмотреть пример кода, загрузите пример приложения DAC на сайте [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)  
+ Чтобы просмотреть пример кода, загрузите пример приложения DAC на сайте [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
 1.  Создайте объект SMO и настройте его на работу с экземпляром или сервером, содержащим базу данных, подлежащую развертыванию.  
   
-2.  Откройте `ServerConnection` и подключитесь к тому же экземпляру.  
+2.  Откройте объект `ServerConnection` и подключитесь к тому же экземпляру.  
   
-3.  Используйте `Export` метод `Microsoft.SqlServer.Management.Dac.DacStore` для экспорта базы данных в bacpac-файл. Укажите имя экспортируемой базы данных и путь к папке, в которой будет размещен файл BACPAC.  
+3.  Используйте метод `Export` типа `Microsoft.SqlServer.Management.Dac.DacStore` для экспорта базы данных в файл BACPAC. Укажите имя экспортируемой базы данных и путь к папке, в которой будет размещен файл BACPAC.  
   
 4.  Создайте объект SMO Server и задайте для него целевой экземпляр или сервер.  
   
-5.  Откройте `ServerConnection` и подключитесь к тому же экземпляру.  
+5.  Откройте объект `ServerConnection` и подключитесь к тому же экземпляру.  
   
-6.  Используйте `Import` метод `Microsoft.SqlServer.Management.Dac.DacStore` для импорта bacpac-ФАЙЛ. Укажите файл BACPAC, созданный при экспорте.  
+6.  Вызовите метод `Import` типа `Microsoft.SqlServer.Management.Dac.DacStore` для импорта BACPAC. Укажите файл BACPAC, созданный при экспорте.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Приложения уровня данных](data-tier-applications.md)   
  [Экспорт приложения уровня данных](export-a-data-tier-application.md)   
  [Импорт файла BACPAC для создания новой пользовательской базы данных](import-a-bacpac-file-to-create-a-new-user-database.md)  

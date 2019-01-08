@@ -14,12 +14,12 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f2d6612b50fc3bd9b07231c42363a8e1e6889e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148724"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359716"
 ---
 # <a name="availability-group-is-offline"></a>Группа доступности в режиме вне сети
     
@@ -38,7 +38,7 @@ ms.locfileid: "48148724"
  Политика находится в рабочем состоянии, если кластерный ресурс группы доступности находится в режиме «в сети», а у группы доступности имеется первичная реплика.  
   
 > [!NOTE]  
->  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблем и решениях доступны в разделе [Группа доступности в режиме "вне сети"](http://go.microsoft.com/fwlink/p/?LinkId=220850) в TechNet Wiki.  
+>  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблем и решениях доступны в разделе [Группа доступности в режиме "вне сети"](https://go.microsoft.com/fwlink/p/?LinkId=220850) в TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Возможные причины  
  Эта проблема могла быть вызвана сбоем в работе экземпляра сервера, на котором размещается первичная реплика, или переходом в режим «вне сети» ресурса группы доступности отказоустойчивого кластера Windows Server. Ниже перечислены возможные причины работы группы доступности в режиме «вне сети»:  

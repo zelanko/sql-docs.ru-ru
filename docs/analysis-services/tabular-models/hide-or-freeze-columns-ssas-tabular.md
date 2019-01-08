@@ -1,5 +1,5 @@
 ---
-title: Скрытие или закрепление столбцов | Документы Microsoft
+title: Скрытие или закрепление столбцов в табличных моделях служб Analysis Services | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e588e16549a609fe15f0f7d7eaf89a010a5bde2c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 624216b190b0a408305c90224087b1f65a4a8286
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071971"
 ---
 # <a name="hide-or-freeze-columns"></a>Скрытие или закрепление столбцов 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -25,7 +26,7 @@ ms.lasthandoff: 05/10/2018
  Можно выбрать скрытие столбца во время работы в конструкторе моделей или в отчетах. Если скрыть все столбцы, то вся таблица в конструкторе моделей будет выглядеть пустой.  
   
 > [!NOTE]  
->  Если необходимо скрыть много столбцов, то вместо этого можно создать перспективу. Перспектива — это пользовательское представление данных, упрощающее работу с подмножествами взаимосвязанных данных. Дополнительные сведения см. в разделе [Создание перспектив и управление ими](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)  
+>  Если необходимо скрыть много столбцов, то вместо этого можно создать перспективу. Перспектива — это пользовательское представление данных, упрощающее работу с подмножествами взаимосвязанных данных. Дополнительные сведения см. в разделе [Создание и управление перспективами](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)  
   
 ### <a name="to-hide-an-individual-column"></a>Скрытие отдельного столбца  
   

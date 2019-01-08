@@ -1,5 +1,5 @@
 ---
-title: Собственная Оценка в службе машинного обучения SQL Server | Документация Майкрософт
+title: Собственная Оценка с помощью инструкции T-SQL, ПРОГНОЗИРОВАНИЯ - службы машинного обучения SQL Server
 description: Создание прогнозов с помощью функции ПРОГНОЗИРОВАНИЯ T-SQL, количественная оценка входных данных dta к предварительно обученной модели на языке R или Python на сервере SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: a14a4b188aa27acdef0bc836e939a7df0021e522
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713156"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645133"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Собственная Оценка с помощью функции ПРОГНОЗИРОВАНИЯ T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "46713156"
 + PMML модели
 + Модели, созданные с помощью других библиотек с открытым исходным кодом или сторонние
 
-## <a name="example-predict-t-sql"></a>Пример: ПРОГНОЗИРОВАНИЯ (T-SQL)
+## <a name="example-predict-t-sql"></a>Пример ПРОГНОЗИРОВАНИЕ (T-SQL)
 
 В этом примере создания модели и затем вызвать в режиме реального времени прогнозирующую функцию из T-SQL.
 
@@ -78,7 +78,7 @@ ms.locfileid: "46713156"
 
 Выполните следующий код для создания образца базы данных и обязательными таблицами.
 
-```SQL
+```sql
 CREATE DATABASE NativeScoringTest;
 GO
 USE NativeScoringTest;
@@ -95,7 +95,7 @@ GO
 
 Используйте следующую инструкцию для заполнения таблицы данных с данными из **iris** набора данных.
 
-```SQL
+```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -107,7 +107,7 @@ GO
 
 Теперь создайте таблицу для хранения моделей.
 
-```SQL
+```sql
 DROP TABLE IF EXISTS ml_models;
 GO
 CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
@@ -118,7 +118,7 @@ GO
 
 Следующий код создает модель на основе **iris** набора данных и сохраняет его в таблицу с именем **моделей**.
 
-```SQL
+```sql
 DECLARE @model varbinary(max);
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -138,7 +138,7 @@ EXECUTE sp_execute_external_script
 
 Можно выполнить инструкцию, такую как следующую команду, чтобы просмотреть сохраненную модель в двоичном формате:
 
-```SQL
+```sql
 SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
@@ -147,7 +147,7 @@ FROM ml_models;
 
 Следующая инструкция простой ПРОГНОЗ Возвращает классификацию из модели дерева принятия решений с помощью **собственной оценки** функции. Она предсказывает виды цветов ириса на основе атрибутов, которые вы предоставляете, длина лепестка и ширина.
 
-```SQL
+```sql
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
@@ -168,5 +168,5 @@ go
 
 Для формирования комплексного решения, включающий собственной оценки см. в этих примерах от команды разработчиков SQL Server:
 
-+ Развертывание скрипта машинного Обучения: [с помощью модели Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ Развертывание скрипта машинного Обучения: [с помощью R-модели](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ Развертывание скрипта машинного Обучения: [С помощью модели Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ Развертывание скрипта машинного Обучения: [С помощью R-модели](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)

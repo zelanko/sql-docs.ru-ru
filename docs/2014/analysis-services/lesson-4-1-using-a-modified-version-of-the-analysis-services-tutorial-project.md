@@ -11,12 +11,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70b4a8bedc86023c9eaf1304e61573c4840a62bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194714"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368886"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Использование измененной версии проекта Analysis Services Tutorial
   Оставшиеся занятия этого учебника основаны на улучшенной версии проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, с которым велась работа на первых трех занятиях. В представление источника данных **Adventure Works DW 2012** были добавлены некоторые таблицы и именованные вычисления, в проект были добавлены дополнительные измерения, которые также были добавлены в куб учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Кроме того, была добавлена вторая группа мер, которая содержит меры из второй таблицы фактов. Улучшенная версия проекта позволит продолжить изучение добавления новых функций в приложение бизнес-аналитики без необходимости повторного применения полученных навыков.  
@@ -25,7 +25,7 @@ ms.locfileid: "48194714"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Загрузка и извлечение файла проекта  
   
-1.  [Щелкните здесь](http://go.microsoft.com/fwlink/?LinkID=221866) , чтобы перейти на страницу загрузки, где представлены образцы проектов, прилагаемых к этому учебнику. Образцы проектов включены в состав пакета для скачивания **Учебник по службам SQL Server 2012 Analysis Services** .  
+1.  [Щелкните здесь](https://go.microsoft.com/fwlink/?LinkID=221866), чтобы перейти на страницу загрузки, где представлены образцы проектов, прилагаемых к этому учебнику. Образцы проектов включены в состав пакета для скачивания **Учебник по службам SQL Server 2012 Analysis Services** .  
   
 2.  Щелкните **Учебник по службам SQL Server 2012 Analysis Services** , чтобы скачать пакет, содержащий проекты для этого учебника.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48194714"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Загрузка и обработка улучшенной версии проекта  
   
-1.  В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]в меню **Файл** щелкните команду **Закрыть решение** , чтобы закрыть файлы, которые не будут использоваться.  
+1.  В [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]на **файл** меню, щелкните **закрыть решение** закрыть файлы, которые не будут использоваться.  
   
 2.  В меню **Файл** выберите пункт **Открыть**, затем выберите **Проект/Решение**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48194714"
  Куб **учебника по службам Analysis Services** теперь содержит две группы мер: исходную группу мер, основанную на таблице **InternetSales** , и вторую группу мер, основанную на таблице **ResellerSales** в представлении источников данных **Adventure Works DW 2012** .  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Определение свойств родительского атрибута в иерархии "родители-потомки"](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
+ [Определение свойств родительского атрибута в иерархии «родители-потомки»](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## <a name="see-also"></a>См. также  
  [Развертывание проекта служб Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  

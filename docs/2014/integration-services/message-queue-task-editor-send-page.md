@@ -15,12 +15,12 @@ ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97abb785026fa4709e08526e8fb033e97120c97f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaadce1425de4468056f0df5e3d7106432ca804
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095944"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516099"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Редактор задачи «Очередь сообщений» (страница «Отправка»)
   Используйте страницу **Отправить** диалогового окна **Редактор задачи «Очередь сообщений»** , чтобы настроить задачу «Очередь сообщений» для отправки сообщений от пакета служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -53,22 +53,22 @@ ms.locfileid: "48095944"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Сообщение файла данных  
  **DataFileMessage**  
- Введите путь к файлу данных или нажмите кнопку с многоточием **(…)** , а затем найдите файл.  
+ Введите путь к файлу данных или нажмите кнопку с многоточием **(…)**, а затем найдите файл.  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Сообщение с переменными  
  **VariableMessage**  
- Введите имена переменных или нажмите кнопку с многоточием **(…)** , а затем выберите переменные. Переменные разделяются запятыми.  
+ Введите имена переменных или нажмите кнопку с многоточием **(…)**, а затем выберите переменные. Переменные разделяются запятыми.  
   
  **См. также:** Выбор переменных  
   
 ### <a name="messagetype--string-message"></a>MessageType = Строковое сообщение  
  **StringMessage**  
- Введите строковое сообщение или нажмите кнопку с многоточием **(…)** , а затем введите сообщение в диалоговом окне **Введите строковое сообщение** .  
+ Введите строковое сообщение или нажмите кнопку с многоточием **(…)**, а затем введите сообщение в диалоговом окне **Введите строковое сообщение**.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи очереди сообщений &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
- [Редактор задачи очереди сообщений &#40;страница «получение»&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
- [Страница "Выражения"](expressions/expressions-page.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Очередь сообщений" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "Очередь сообщений" (страница "Получение")](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)  
   
   

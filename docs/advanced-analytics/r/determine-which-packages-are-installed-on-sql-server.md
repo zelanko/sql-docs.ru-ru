@@ -1,5 +1,5 @@
 ---
-title: Получить сведения о пакете R и Python для машинного обучения SQL Server | Документация Майкрософт
+title: Получить сведения для пакета R и Python — службы машинного обучения SQL Server
 description: Определить версию пакета R и Python, проверка установки и получить список установленных пакетов на SQL Server R Services или служб машинного обучения.
 ms.custom: ''
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 96cda599e260982b26e6c565bd38c5097fc01763
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 47badb15b5f5a2d0eabc63b8fd1be3e83a0caffb
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291541"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645373"
 ---
 #  <a name="get-r-and-python-package-information"></a>Получить сведения о пакете R и Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,9 +91,9 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 
 ### <a name="r"></a>Чтение
 
-В следующем примере используется функция R `installed.packages()` в [!INCLUDE [tsql](..\..\includes\tsql-md.md)] хранимую процедуру, чтобы получить таблицу пакетов, которые были установлены в библиотеке R_SERVICES для текущего экземпляра. Этот скрипт возвращает поля имени и версии пакета в файле DESCRIPTION, возвращается только имя.
+В следующем примере используется функция R `installed.packages()` в [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимую процедуру, чтобы получить таблицу пакетов, которые были установлены в библиотеке R_SERVICES для текущего экземпляра. Этот скрипт возвращает поля имени и версии пакета в файле DESCRIPTION, возвращается только имя.
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
   @language=N'R',
   @script = N'str(OutputDataSet);
@@ -142,7 +142,7 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-+ Если пакет найден, выдается сообщение: «Команд успешно завершено».
++ Если пакет найден, возвращается сообщение: «Выполнение команд успешно завершено».
 
 + Если пакет не может быть расположен или загружен, вы получите ошибку, содержащая текст: «есть пакет с именем «MissingPackageName»»
 

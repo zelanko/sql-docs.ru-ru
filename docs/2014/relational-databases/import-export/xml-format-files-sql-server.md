@@ -14,12 +14,12 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a6dee085342d800caf2cf7353d28a6813d8b74b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29da5204dc5bd88ed2c92b93347358b9860fc5c4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201044"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373876"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-файлы форматирования (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет схему XML, которая определяет синтаксис для написания *XML-файлов форматирования* в целях использования при массовом импорте данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . XML-файлы форматирования должны придерживаться этой схемы, которая определена при помощи языка XML Schema Definition Language (XSDL). XML-файлы форматирования поддерживаются только при установке средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вместе с собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -89,7 +89,7 @@ ms.locfileid: "48201044"
  Чтобы узнать, как этот синтаксис соответствует реальным XML-файлам форматирования, см. далее раздел [Образец XML-файлов форматирования](#SampleXmlFFs).  
   
 > [!NOTE]  
->  Можно изменить файл форматирования, чтобы обеспечить возможность массового импорта данных из файла данных, в котором количество или порядок полей отличаются от количества или порядка столбцов таблицы. Дополнительные сведения см. в статье [Файлы форматирования для импорта или экспорта данных (SQL Server)](format-files-for-importing-or-exporting-data-sql-server.md).  
+>  Можно изменить файл форматирования, чтобы обеспечить возможность массового импорта данных из файла данных, в котором количество или порядок полей отличаются от количества или порядка столбцов таблицы. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](format-files-for-importing-or-exporting-data-sql-server.md).  
   
   
   
@@ -176,7 +176,7 @@ ms.locfileid: "48201044"
 |ИДЕНТИФИКАТОР **=»*`fieldID`*"**|Задает логическое имя поля в файле данных. Идентификатор поля является ключом, используемым для обращения к полю.<br /><br /> < FIELD ID **=»*`fieldID`*"**/ > сопоставляется < COLUMN SOURCE **=»*`fieldID`*"**/>|Обязательно|  
 |xsi: Type **=»*`fieldType`*"**|Это конструкция XML (используется как атрибут), которая указывает тип экземпляра элемента. Значение атрибута *fieldType* определяет, какой из необязательных атрибутов (см. ниже) необходим в данном экземпляре.|Обязательный (в зависимости от типа данных)|  
 |LENGTH **="*`n`*"**|Этот атрибут определяет длину для экземпляра типа данных фиксированной длины.<br /><br /> Значение *n* должно быть положительным целым числом.|Необязательный, когда не требуется значением xsi:type|  
-|PREFIX_LENGTH **=»*`p`*"**|Этот атрибут определяет длину префикса для двоичного представления данных. Значение PREFIX_LENGTH, *p*, должно быть равно 1, 2, 4 или 8.|Необязательный, когда не требуется значением xsi:type|  
+|PREFIX_LENGTH **=»*`p`*"**|Этот атрибут определяет длину префикса для двоичного представления данных. Значение PREFIX_LENGTH, *p*, должно быть одно из следующих: 1, 2, 4 или 8.|Необязательный, когда не требуется значением xsi:type|  
 |MAX_LENGTH **=»*`m`*"**|Этот атрибут является максимальным числом байтов, которые могут храниться в данном поле. Без целевой таблицы максимальная длина столбца неизвестна. Атрибут MAX_LENGTH ограничивает максимальную длину выходного столбца символов, ограничивая хранилище, выделенное для значения столбца. Это особенно удобно при использовании параметра BULK функции OPENROWSET в предложении SELECT FROM.<br /><br /> Значение *m* должно быть положительным целым числом. По умолчанию максимальная длина 8000 символов для столбца типа **char** и 4000 символов для столбца типа **nchar** .|Необязательно|  
 |ПАРАМЕТРЫ СОРТИРОВКИ **=»*`collationName`*"**|Аргумент COLLATION допустим только для символьных полей. Список имен параметров сортировки SQL см. в разделе [Имя параметров сортировки SQL Server (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql)|Необязательно|  
 |ПРИЗНАК КОНЦА **= "*`terminator`*"**|Этот атрибут задает признак конца поля данных. Признаком конца может быть любой символ. Признак конца должен быть уникальным символом, который не является частью данных.<br /><br /> По умолчанию признаком конца поля является символ табуляции (представленный как «\t»). Чтобы указать знак абзаца, используйте сочетание символов «\r\n».|Используется только со значением xsi:type символьных данных, которые требуют наличия этого атрибута|  
@@ -228,7 +228,7 @@ ms.locfileid: "48201044"
 |----------------------|-----------------|------------------------------|  
 |ИСТОЧНИК **=»*`fieldID`*"**|Задает идентификатор поля, сопоставляемого со столбцом.<br /><br /> < COLUMN SOURCE **=»*`fieldID`*"**/ > сопоставляется < FIELD ID **=»*`fieldID`*"**/>|Обязательно|  
 |NAME = "*columnName*"|Задает имя столбца в наборе строк, представленном файлом форматирования. Это имя столбца используется для идентификации столбца в результирующем наборе, и оно не обязательно должно соответствовать имени столбца целевой таблицы.|Обязательно|  
-|xsi **:** тип **=»*`ColumnType`*"**|Это конструкция XML (используется как атрибут), которая указывает тип данных экземпляра элемента. Значение атрибута *ColumnType* определяет, какой из необязательных атрибутов (см. ниже) необходим в данном экземпляре.<br /><br /> Примечание: Возможные значения *ColumnType* и связанные с ними атрибуты перечислены в следующей таблице.|Необязательно|  
+|xsi **:** тип **=»*`ColumnType`*"**|Это конструкция XML (используется как атрибут), которая указывает тип данных экземпляра элемента. Значение атрибута *ColumnType* определяет, какой из необязательных атрибутов (см. ниже) необходим в данном экземпляре.<br /><br /> Примечание. Возможные значения *ColumnType* и связанные с ними атрибуты перечислены в следующей таблице.|Необязательно|  
 |LENGTH **="*`n`*"**|Определяет длину для экземпляра типа данных фиксированной длины. Атрибут LENGTH используется только в том случае, если значение xsi:type является строковым типом данных.<br /><br /> Значение *n* должно быть положительным целым числом.|Необязательный (доступен только в том случае, если значение xsi:type является строковым типом данных)|  
 |PRECISION **="*`n`*"**|Указывает количество цифр в числе. Например, число 123,45 имеет точность 5.<br /><br /> Значение должно быть положительным целым числом.|Необязательный (доступен только в том случае, если значение xsi:type является переменным числовым типом данных)|  
 |МАСШТАБ **=»*`int`*"**|Указывает количество цифр справа от десятичной запятой в числе. Например, число 123,45 имеет масштаб 2.<br /><br /> Значением должно быть целое число.|Необязательный (доступен только в том случае, если значение xsi:type является переменным числовым типом данных)|  
@@ -241,7 +241,7 @@ ms.locfileid: "48201044"
   
 |Категория типа|Типы данных \<COLUMN>|Обязательные XML-атрибуты<br /><br /> для типа данных|Необязательные XML-атрибуты<br /><br /> для типа данных|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|Фиксированный|`SQLBIT`, `SQLTINYINT`, `SQLSMALLINT`, `SQLINT`, `SQLBIGINT`, `SQLFLT4`, `SQLFLT8`, `SQLDATETIME`, `SQLDATETIM4`, `SQLDATETIM8`, `SQLMONEY`, `SQLMONEY4`, `SQLVARIANT`, и `SQLUNIQUEID`|Нет.|NULLABLE|  
+|Фиксированный|`SQLBIT`, `SQLTINYINT`, `SQLSMALLINT`, `SQLINT`, `SQLBIGINT`, `SQLFLT4`, `SQLFLT8`, `SQLDATETIME`, `SQLDATETIM4`, `SQLDATETIM8`, `SQLMONEY`, `SQLMONEY4`, `SQLVARIANT` и `SQLUNIQUEID`|Нет.|NULLABLE|  
 |Переменное число|`SQLDECIMAL` и `SQLNUMERIC`|Нет.|NULLABLE, PRECISION, SCALE|  
 |Большой объект (LOB)|`SQLIMAGE`, `CharLOB`, `SQLTEXT` и `SQLUDT`|Нет.|NULLABLE|  
 |Большой символьный объект (CLOB)|`SQLNTEXT`|Нет.|NULLABLE|  
@@ -249,7 +249,7 @@ ms.locfileid: "48201044"
 |Строка символов|`SQLCHAR`, `SQLVARYCHAR`, `SQLNCHAR` и `SQLNVARCHAR`|Нет.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Для массового экспорта или импорта данных SQLXML используйте один из следующих типов данных в файле форматирования: SQLCHAR или SQLVARYCHAR (данные отправляются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные отправляются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные отправляются без преобразования).  
+>  Для массового экспорта или импорта данных SQLXML используется один из следующих типов данных в файле форматирования. SQLCHAR или SQLVARYCHAR (данные посылаются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные посылаются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные посылаются без преобразования).  
   
  Дополнительные сведения о типах значений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).  
   
@@ -310,7 +310,7 @@ for(int i=0;i<ColumnList.Count;i++)
   
  **Таблица (строка):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Файл данных (запись):** Age\<tab>Firstname\<tab>Lastname\<return>  
+ **Файл данных (запись):** Возраст\<tab > Firstname\<вкладке > Lastname\<возвращают >  
   
  Следующий XML-файл форматирования считывает данные из файла данных в таблицу.  
   
@@ -321,7 +321,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -348,7 +348,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  **Таблица (строка):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Файл данных (запись):** Age\<tab>Lastname\<tab>Firstname\<return>  
+ **Файл данных** (запись): Возраст\<вкладке > Lastname\<tab > Firstname\<возвращают >  
   
  В элементе `<RECORD>` файл форматирования представляет значения во всех трех полях в символьном виде.  
   
@@ -357,7 +357,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -383,7 +383,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  **Таблица (строка):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
- **Файл данных (запись):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
+ **Файл данных (запись):** Возраст\<вкладку > employeeID\<tab > Firstname\<вкладку > Lastname\<возвращают >  
   
  В элементе `<RECORD>` файла форматирования значения данных представлены во всех четырех полях как символьные данные. Для каждого поля атрибут TERMINATOR указывает признак конца, следующий за значением данных.  
   
@@ -391,7 +391,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 ```  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -423,7 +423,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version = "1.0"?>  
 <BCPFORMAT  
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
@@ -465,7 +465,7 @@ CREATE TABLE t_xml (c1 int, c2 xml)
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
@@ -484,7 +484,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT  
-       xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
+       xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  
@@ -505,7 +505,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [Использование файла форматирования для пропуска поля данных (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Использование файла форматирования для сопоставления столбцов таблицы полям файла данных (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -517,7 +517,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [Использование файла форматирования для пропуска поля данных (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Использование файла форматирования для сопоставления столбцов таблицы полям файла данных (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
  Нет.  

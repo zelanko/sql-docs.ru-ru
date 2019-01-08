@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], processing order
@@ -14,19 +13,19 @@ ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 569767e74c6666a68b41b5af9914a5a028522bc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb5506a4279ecd11c31d860f68d4c3736425298b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174054"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788536"
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>Указание порядка обработки статей публикации слиянием
   Начиная с версии [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], порядок обработки статей для публикаций слиянием, принятый по умолчанию, можно переопределять. Это полезно, например, при определении ссылочной целостности с помощью триггеров и при этом триггеры должны запускаться в конкретном порядке.  
   
  **Указание порядка обработки статей**  
   
--   Программирование репликации на Transact-SQL: [Определение порядка обработки для статей таблиц слияния (программирование репликации на языке Transact-SQL)](../publish/specify-the-processing-order-of-merge-table-articles.md)  
+-   Программирование репликации на Transact-SQL: [Specify the Processing Order of Merge Table Articles](../publish/specify-the-processing-order-of-merge-table-articles.md) (Определение порядка обработки для статей таблиц слияния)  
   
 ## <a name="how-processing-order-is-determined"></a>Как определяется порядок обработки  
  Во время синхронизации слияния статьи по умолчанию обрабатываются в том порядке, который требуют зависимости между объектами, в том числе ограничения декларативной ссылочной целостности (DRI), определенные для базовых таблиц. Обработка включает нумерацию изменений в таблице и применение этих изменений. Если DRI отсутствуют, но для статей таблиц имеются фильтры соединения или логические записи, то статьи обрабатываются в том порядке, который требуют эти фильтры и логические записи. Статьи, не связанные с какой-либо другой статьей через DRI, фильтры соединения, логические записи и другие зависимости обрабатываются в соответствии с псевдонимами в системной таблице [sysmergearticles (Transact-SQL)](/sql/relational-databases/system-tables/sysmergearticles-transact-sql).  

@@ -1,5 +1,6 @@
 ---
-title: Ввод в эксплуатацию кода R в службах машинного обучения SQL Server | Документация Майкрософт
+title: Ввод в эксплуатацию кода R с помощью хранимых процедур — службы машинного обучения SQL Server
+description: Внедрите код на языке R в хранимую процедуру SQL Server чтобы сделать его доступным для любого клиентского приложения, имеющие доступ к базе данных SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 41da5cfe2e545bdcbc59f8d557afc599177c9d5e
-ms.sourcegitcommit: f083867f97bb740caa211ca37cb046641172b8c0
+ms.openlocfilehash: 3fc96e57fffb3e000a7e1a19887ed27651df9009
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38952467"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432187"
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>Ввод в эксплуатацию кода R (служб машинного обучения)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "38952467"
 
 + [Преобразование кода R для использования в службах R](converting-r-code-for-use-in-sql-server.md)
 
-+ [Создание R хранимой процедуры с помощью sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
++ [Использование вспомогательных функций sqlrutils](ref-r-sqlrutils.md)
 
 ## <a name="integrate-r-and-python-with-applications"></a>Интеграция R и Python с приложениями
 
@@ -63,7 +64,7 @@ ms.locfileid: "38952467"
 См. в статье эти шаблоны решений примеры того, как интегрировать оценки в приложении:
 
 + [Прогнозирование в розничной](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md)
-+ [Обнаружение мошенничества](https://github.com/Microsoft/r-server-fraud-detection)
++ [обнаружение мошенничества;](https://github.com/Microsoft/r-server-fraud-detection)
 + [Кластеризация клиента](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering)
 
 ## <a name="boost-performance-and-scale"></a>Повышение производительности и масштабируемости

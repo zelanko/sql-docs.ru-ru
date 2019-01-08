@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - table aliases [SQL Server]
@@ -13,19 +13,19 @@ ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88b3bf7552d40fb914150b8cdc5cf6d53d22ab22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e7172a7b9b17dfa4553d3179d8cc1a880040f13
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227317"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821808"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>Создание псевдонимов таблицы (визуальные инструменты для баз данных)
   Псевдонимы облегчают работу с именами таблиц. Использование псевдонимов полезно в следующих случаях.  
   
 -   Нужно сделать инструкцию на [панели SQL](visual-database-tools.md) более короткой и удобочитаемой.  
   
--   Запрос часто ссылается на имя таблицы — например на квалификаторы имен столбцов, — и при этом нужно сохранить определенную длину запроса. (В некоторых базах данных имеется ограничение на длину запроса).  
+-   Запрос часто ссылается на имя таблицы (например, на квалификаторы имен столбцов), и при этом нужно сохранить определенную длину запроса. (В некоторых базах данных имеется ограничение на длину запроса).  
   
 -   Обрабатывается несколько экземпляров одной таблицы (например при самосоединении), и нужно иметь возможность ссылаться на тот или иной экземпляр.  
   

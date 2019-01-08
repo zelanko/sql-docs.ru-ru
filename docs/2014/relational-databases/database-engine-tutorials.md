@@ -4,33 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c68b00c636d338fdcf507d300c4f6f272da58004
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1a6158dca30d6419be59cf5eb68dff9892cc2dc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069914"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360706"
 ---
 # <a name="database-engine-tutorials"></a>Учебники по компоненту ядра СУБД
   В этом разделе приведены учебники по [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
- [Учебник. Приступая к работе с компонентом Database Engine](tutorial-getting-started-with-the-database-engine.md)  
+ [Учебник. Начало работы с ядром СУБД](tutorial-getting-started-with-the-database-engine.md)  
  В этом учебнике описывается установление подключения к экземпляру [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
- [Руководство: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+ [Учебник. SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
  В этом учебнике описывается интегрированная среда для управления инфраструктурой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] представляет собой графический интерфейс для настройки экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], наблюдения за ними и управления ими. Такая среда также позволяет развертывать, наблюдать и обновлять компоненты уровня данных, используемых приложениями, например базами и хранилищами данных. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] также предоставляет редакторы [!INCLUDE[tsql](../includes/tsql-md.md)], языка многомерных выражений, расширений интеллектуального анализа данных и XML для изменения и отладки скриптов.  
   
- [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Учебник. Написание инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
  В этом учебнике описываются основополагающие навыки по написанию инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] для создания объектов в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и управления этими объектами.  
   
- [Учебник. помощник по настройке ядра СУБД](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
+ [Учебник. Помощник по настройке ядра СУБД](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
  В этом учебнике описывается использование помощника для проверки обработки запросов и рекомендаций по повышению их производительности.  
   
  [Учебник. Использование типа данных hierarchyid](tables/tutorial-using-the-hierarchyid-data-type.md)  
@@ -39,7 +38,7 @@ ms.locfileid: "48069914"
  [Учебник. Подписывание хранимых процедур с помощью сертификата](tutorial-signing-stored-procedures-with-a-certificate.md)  
  В этом учебнике демонстрируется подписание хранимых процедур с помощью сертификата, созданного [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Tutorial: Ownership Chains and Context Switching](tutorial-ownership-chains-and-context-switching.md)  
+ [Учебник. Цепочки владения и переключение контекста](tutorial-ownership-chains-and-context-switching.md)  
  В этом учебнике приведен пример, в котором рассматриваются основные понятия безопасности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , включая цепочки владения и переключение контекста.  
   
  [Учебник. Администрирование серверов с помощью управления на основе политик](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
@@ -48,14 +47,14 @@ ms.locfileid: "48069914"
  [Учебник. Выполнение политик рекомендаций с помощью управления на основе политик](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  В этом учебнике показано, как создавать политики, которые могут использоваться для анализа экземпляров компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] в поисках известных проблем.  
   
- [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Учебник. SQL Server Backup and Restore для Windows Azure Blob Storage Service](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  В этом учебнике показано, как выполнять резервное копирование и восстановление в SQL Server для службы хранения больших двоичных объектов в Windows Azure.  
   
- [Учебник. Файлы данных SQL Server в службе хранилища Microsoft Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Учебник. SQL Server Data Files в службе хранилища Windows Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
  С помощью этого учебника вы научитесь напрямую сохранять файлы данных SQL Server в службе хранилища больших двоичных объектов Windows Azure.  
   
 ## <a name="see-also"></a>См. также  
  [Учебные материалы по SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
- [TechNet WIKI: образцы SQL Server 2012](http://go.microsoft.com/fwlink/?linkID=220734)  
+ [Вики-сайте TechNet: Образцы SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

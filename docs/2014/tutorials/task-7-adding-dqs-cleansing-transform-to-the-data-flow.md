@@ -1,5 +1,5 @@
 ---
-title: 'Задача 7: Добавление преобразования к потоку данных очистки DQS | Документация Майкрософт'
+title: Задача 7. Добавление преобразования к потоку данных очистки DQS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63af147462b9414bd85d0a301e908df4c774c7b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaa36e392046abca935a1b67c4ee459a8b15939e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138204"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376876"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Задача 7. Добавление преобразования «Очистка DQS» в поток данных
-  В этой задаче вы добавите преобразование очистки DQS в поток данных для очистки входных данных о поставщиках с помощью служб DQS. См. в разделе **[преобразование очистки DQS](http://msdn.microsoft.com/library/ee677619.aspx)** Дополнительные сведения о преобразовании.  
+  В этой задаче вы добавите преобразование очистки DQS в поток данных для очистки входных данных о поставщиках с помощью служб DQS. См. в разделе **[преобразование очистки DQS](https://msdn.microsoft.com/library/ee677619.aspx)** Дополнительные сведения о преобразовании.  
   
 1.  Щелкните правой кнопкой мыши **очистки DQS** в **потока данных** , а щелкните **Переименовать**. Тип **Очистка данных о поставщике**и нажмите клавишу **ввод**.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "48138204"
     |ContactEmailAddress|Адрес электронной почты|  
     |Строка адреса|Строка адреса|  
     |Город|Город|  
-    |Состояние|Состояние|  
+    |Штат|Штат|  
     |Country|Country|  
     |Почтовый индекс|Почтовый индекс|  
   
 12. Нажмите кнопку **ОК** закрыть **редактор преобразования очистки DQS** диалоговое окно.  
   
 ## <a name="next-step"></a>Следующий шаг  
- [Задача 8. Добавление преобразования "Условное разбиение" к выводу "Очистка разбиения"](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [Задача 8. Добавление преобразования «Условное разбиение» для разбиения выходных данных очистки](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

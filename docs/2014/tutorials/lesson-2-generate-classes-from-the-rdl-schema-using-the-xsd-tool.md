@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 2: Создание классов из RDL-схемы с помощью инструмента xsd | Документация Майкрософт'
+title: Занятие 2. Создания классов из RDL-схемы с помощью инструмента xsd | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: a81c87f1-7977-4b30-b6ac-b38b3e2b6398
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34c279f44df33bddf12b3fd9ec3e128514d1f50c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 818400a678b16f524e79da607a25775ad756ca5d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065984"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374496"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Урок 2. Формирование классов из RDL-схемы с помощью инструмента xsd
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Занятие 2. Формирование классов из RDL-схемы с помощью инструмента xsd
   После создания проекта в среде [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] следующим шагом является получение локальной копии схемы определения отчета и запуск средства определения XML-схемы (Xsd.exe).  
   
 ### <a name="to-generate-the-rdl-classes"></a>Формирование RDL-классов  
@@ -26,7 +26,7 @@ ms.locfileid: "48065984"
 1.  Откройте экземпляр [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer (или эквивалентный веб-браузер) и перейдите к следующему URL-АДРЕСУ:  
   
     ```  
-    http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
+    https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
     ```  
   
 2.  После открытия RDL-схемы в браузере перейдите к **файл** меню и выберите **Сохранить как**.  

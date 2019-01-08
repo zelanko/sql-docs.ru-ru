@@ -11,12 +11,12 @@ ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebaafa4b25c4bd4847af24a36462e15d04d7774a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 792e3e8eb7e27f41aa03523d93dba02379213a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148004"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372976"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Создание прогнозов для моделей Call Center (учебник по интеллектуальному анализу данных — средний уровень)
   Когда выявлены некоторые взаимосвязи между сменами, числом операторов, звонками и качеством обслуживания, можно создавать прогнозирующие запросы, которые будут использоваться в бизнес-аналитике и планировании. Вначале будут созданы прогнозы на исследовательской модели, чтобы проверить некоторые предположения. Затем с помощью модели логистической регрессии будут созданы массовые прогнозы.  
@@ -184,9 +184,9 @@ ms.locfileid: "48148004"
 ## <a name="remarks"></a>Примечания  
  В надстройках интеллектуального анализа данных для Excel 2007 имеются мастера логистической регрессии, которые помогают получить ответы на сложные вопросы, например определение числа операторов второго уровня, требуемого для повышения показателя обслуживания до заданного уровня для определенной смены. Надстройки интеллектуального анализа данных загружаются бесплатно и содержат мастера на базе алгоритмов нейронной сети или логистической регрессии. Дополнительные сведения см. в следующих разделах.  
   
--   [SQL Server 2005 Data Mining Add-Ins для Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx): гипотетических и что делать, если анализ сценария  
+-   [SQL Server 2005 Data Mining Add-Ins для Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): Анализ сценария поиска решения и анализ гипотетических вариантов  
   
--   [SQL Server 2008 Data Mining Add-Ins для Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790): что делать, если анализ сценария поиска решения анализ сценария и калькулятор прогнозов  
+-   [SQL Server 2008 Data Mining Add-Ins для Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Анализ сценария поиска решения, анализ гипотетических вариантов и калькулятор прогнозов  
   
 ## <a name="conclusion"></a>Заключение  
  Рассмотрены создание, настройка и интерпретация моделей интеллектуального анализа данных, основанных на алгоритме нейронной сети (Майкрософт) и алгоритме логистической регрессии (Майкрософт). Эти типы моделей являются сложными и дают практически безграничное разнообразие возможностей анализа, поэтому могут оказаться трудны в освоении.  
@@ -196,7 +196,7 @@ ms.locfileid: "48148004"
 ## <a name="see-also"></a>См. также  
  [Примеры запросов модели логистической регрессии](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Алгоритм логистической регрессии (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Алгоритм нейронной сети (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Примеры запросов к модели нейронной сети](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

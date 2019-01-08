@@ -13,12 +13,12 @@ ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc684002c4ebc7f7ced43c6aa3f706b62fc82fa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 752796caafa86ece1b471beb25a77ea381497409
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097564"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588606"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
   В этом разделе описано, как задать псевдоним [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для использования при соединении с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. По умолчанию служба агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] соединяется с экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] через именованные каналы по динамическим именам серверов, которые не требуют дополнительной настройки клиента. Необходимо настроить только псевдоним соединения сервера, если не используется установленный по умолчанию сетевой механизм передачи данных или если происходит подключение к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , прослушивающему по альтернативному именованному каналу.  
@@ -64,7 +64,7 @@ ms.locfileid: "48097564"
   
 2.  Щелкните правой кнопкой мыши **агент SQL Server**, затем выберите **Свойства**.  
   
-3.  В диалоговом окне **Свойства агента SQL***имя_сервера* в разделе **Выберите страницу** выберите **Соединение** и  
+3.  В диалоговом окне **Свойства агента SQL**_имя_сервера_ в разделе **Выберите страницу**выберите **Соединение**и  
   
 4.  в поле **Псевдоним локального хоста сервера** введите псевдоним сервера, с которым должен соединяться агент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   

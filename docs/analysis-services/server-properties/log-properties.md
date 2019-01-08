@@ -1,4 +1,5 @@
 ---
+title: Свойства журналов служб Analysis Services | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: db79a57c3e63cf09f36cd1b9af2d529811b67ea0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999346"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071931"
 ---
 # <a name="log-properties"></a>Свойства журнала
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -131,7 +132,7 @@ ms.locfileid: "37999346"
  Значением по умолчанию для этого свойства является пустая строка, что по умолчанию соответствует файлу FlightRecorderTraceDef.xml.  
   
 ## <a name="query-log"></a>Журнал запросов  
- **Область применения:** только в многомерном режиме сервера  
+ **Применимо к:** Только многомерный режим сервера  
   
  **QueryLog\QueryLogFileName**  
  Строковое свойство, задающее имя файла журнала запросов. Данное свойство применяется только в том случае, когда для ведения журнала используется дисковый файл, а не таблица базы данных (настройка по умолчанию).  
@@ -156,9 +157,6 @@ ms.locfileid: "37999346"
  Логическое свойство, задающее необходимость создания таблицы журнала запросов.  
   
  Значение этого свойства по умолчанию равно false, что указывает на то, что сервер не будет автоматически создавать таблицу журнала и не будет записывать в журнал события запросов.  
-  
-> [!NOTE]  
->  Дополнительные сведения о настройке журнала запросов см. в разделе [Настройка журнала запросов в службах Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81890).  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

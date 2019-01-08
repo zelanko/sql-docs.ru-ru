@@ -11,12 +11,12 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0aec881fd3257a42151338953015a0d88b56ea8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 028d14230f0f48f04bd94f327c1e46c5bee42b56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063844"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351017"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Функции SQL Server, больше не поддерживаемые в SQL Server 2014
   В этом разделе описаны функции, которые становятся недоступными после обновления до [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -36,12 +36,12 @@ ms.locfileid: "48063844"
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>Функции, неподдерживаемые в SQL Server 2008 R2  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Поддержка 64-разрядной платформы в службах Reporting Services  
- Начиная с версии [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] больше не поддерживают серверы на основе Itanium под управлением Windows Server 2003 или Windows Server 2003 R2. Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] по-прежнему поддерживают другие 64-разрядные ОС, в том числе Windows Server 2008 и Windows Server 2008 R2 для систем на основе процессоров Itanium. Чтобы обновить установленный экземпляр [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] со службами [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], работающий под управлением Windows Server 2003 или Windows Server 2003 R2 для систем на основе процессоров Itanium, до выпуска [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], необходимо предварительно обновить операционную систему.  
+ Начиная с выпуска [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] компонент служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] не поддерживает серверы на основе процессоров Itanium под управлением Windows Server 2003 или Windows Server 2003 R2. Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] по-прежнему поддерживают другие 64-разрядные ОС, в том числе Windows Server 2008 и Windows Server 2008 R2 для систем на основе процессоров Itanium. Чтобы обновить установленный экземпляр [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] со службами [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], работающий под управлением Windows Server 2003 или Windows Server 2003 R2 для систем на основе процессоров Itanium, до выпуска [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], необходимо предварительно обновить операционную систему.  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>Функции, неподдерживаемые в SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Неподдерживаемые функции SQL-DMO при установке SQL Server Express  
- Распределенные управляющие объекты SQL (SQL-DMO) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] были удалены из [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Рекомендуется как можно скорее внести изменения в приложения, которые пользуют эти компоненты. Если требуется поддержка объектов SQL-DMO для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] необходима, установите компоненты обратной совместимости из [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] пакета возможностей [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=51230). В дальнейшем для разработки пользуйтесь объектами SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects).  
+ Распределенные управляющие объекты SQL (SQL-DMO) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] были удалены из [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Рекомендуется как можно скорее внести изменения в приложения, которые пользуют эти компоненты. Если требуется поддержка объектов SQL-DMO для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] необходима, установите компоненты обратной совместимости из [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] пакета возможностей [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=51230). В дальнейшем для разработки пользуйтесь объектами SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects).  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Неподдерживаемый параметр для помощника Web Assistant  
  Параметр `sp_configure` для включения помощника Web Assistant удален из [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Вместо этого рекомендуется использовать [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

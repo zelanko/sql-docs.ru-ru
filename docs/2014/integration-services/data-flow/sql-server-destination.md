@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdest.f1
@@ -19,12 +18,12 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ad8750547ff9744b525d8d6d234f02f0bb78375
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c8e1d7c41e2caf1a3e3bc03e8278c21e4fe7b79
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159894"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375726"
 ---
 # <a name="sql-server-destination"></a>назначение «SQL Server»
   Назначение «SQL Server» подключается к локальной базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и производит массовую загрузку данных в таблицы и представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Нельзя использовать назначение «SQL Server» в пакетах, получающих доступ к базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном сервере. Вместо этого пакеты должны использовать назначение «OLE DB». Дополнительные сведения см. в разделе [OLE DB Destination](ole-db-destination.md).  
@@ -33,7 +32,7 @@ ms.locfileid: "48159894"
  Пользователям, выполняющим пакеты, которые содержат назначение «SQL Server», необходимо разрешение на «Создание глобальных объектов». Предоставить это разрешение пользователям можно с помощью средства политики локальной безопасности, доступного в меню **Администрирование** . Если при выполнении пакета, который использует назначение «SQL Server», получено сообщение об ошибке, убедитесь, что учетная запись, под которой был запущен пакет, имеет разрешение на «Создание глобальных объектов».  
   
 ## <a name="bulk-inserts"></a>Массовые вставки  
- При попытке использовать назначение «SQL Server» для массовой загрузки данных в удаленную базу данных SQL Server может появиться сообщение об ошибке, которое будет иметь следующий вид: «Доступна запись OLE DB». Источник: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Описание: "Не удалось выполнить массовую загрузку, поскольку невозможно открыть объект сопоставления файлов служб "Global\DTSQLIMPORT". Код ошибки операционной системы 2 (система не может найти указанный файл). Убедитесь, что доступ к локальному серверу осуществляется через систему безопасности Windows"».  
+ При попытке использовать назначение «SQL Server» для массовой загрузки данных в удаленную базу данных SQL Server может появиться сообщение об ошибке, похожее на следующее: «Доступна запись OLE DB. Источник: Значение Hresult собственного клиента Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: 0x80040E14 Описание: "Не удалось выполнить массовую загрузку, поскольку невозможно открыть объект сопоставления файлов служб SSIS 'Global\DTSQLIMPORT'. Код ошибки операционной системы 2 (система не может найти указанный файл). Убедитесь, что доступ к локальному серверу осуществляется через систему безопасности Windows"».  
   
  Назначение "SQL Server" предлагает такую же высокоскоростную вставку данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , что и задача "Массовая вставка". Однако используя назначение "SQL Server", пакет может применить преобразования к столбцу раньше, чем данные будут загружены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -92,15 +91,15 @@ ms.locfileid: "48159894"
   
  Дополнительные сведения о свойствах, которые могут быть заданы в диалоговом окне **Редактор назначения SQL Server** , см. в следующих разделах:  
   
--   [Редактор назначения SQL &#40;страницы диспетчера соединений&#41;](../sql-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения SQL (страница "Диспетчер соединений")](../sql-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначения SQL &#40;страница «сопоставления»&#41;](../sql-destination-editor-mappings-page.md)  
+-   [Редактор назначения "SQL" (страница "Сопоставления")](../sql-destination-editor-mappings-page.md)  
   
--   [Редактор назначения SQL &#40;страница "Дополнительно"&#41;](../sql-destination-editor-advanced-page.md)  
+-   [Редактор назначения SQL (страница "Дополнительно")](../sql-destination-editor-advanced-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](../common-properties.md)  
+-   [Общие свойства](../common-properties.md)  
   
 -   [Пользовательские свойства назначения «SQL Server»](sql-server-destination-custom-properties.md)  
   
@@ -118,11 +117,11 @@ ms.locfileid: "48159894"
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [В системах, поддерживающих контроль учетных записей, может быть получена ошибка «Не удалось подготовить массовую вставку данных служб SSIS»](http://go.microsoft.com/fwlink/?LinkId=199482)на сайте support.microsoft.com.  
+-   Техническая статья [В системах, поддерживающих контроль учетных записей, может быть получена ошибка «Не удалось подготовить массовую вставку данных служб SSIS»](https://go.microsoft.com/fwlink/?LinkId=199482)на сайте support.microsoft.com.  
   
--   Техническая статья [Руководство по производительности загрузки данных](http://go.microsoft.com/fwlink/?LinkId=233700)на сайте msdn.microsoft.com.  
+-   Техническая статья [Руководство по производительности загрузки данных](https://go.microsoft.com/fwlink/?LinkId=233700)на сайте msdn.microsoft.com.  
   
--   Техническая статья [Использование служб SQL Server Integration Services для массовой загрузки данных](http://go.microsoft.com/fwlink/?LinkId=233701)размещена на сайте simple-talk.com.  
+-   Техническая статья [Использование служб SQL Server Integration Services для массовой загрузки данных](https://go.microsoft.com/fwlink/?LinkId=233701)размещена на сайте simple-talk.com.  
   
 ## <a name="see-also"></a>См. также  
  [Поток данных](data-flow.md)  

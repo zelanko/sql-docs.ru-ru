@@ -11,12 +11,12 @@ ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc61d95716eabf90f22e76fa43dc1ea7f93a0c81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc0fe3bef02ebd50558c298ef8d9b3d8565744ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159454"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350902"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>Установка служб Reporting Services в режиме SharePoint для SharePoint 2010
   Процедуры, описанные в данном разделе, позволят установить сервер отчетов служб Reporting Services на одиночный сервер в режиме SharePoint. Эти шаги включают запуск мастера установки SQL Server, а также дополнительные задачи по настройке с использованием центра администрирования SharePoint 2010. В этом разделе также можно ознакомиться с отдельными процедурами для существующей установки, например созданием приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения о добавлении дополнительных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] серверы в существующую ферму, см. в разделе [Добавление дополнительного сервера отчетов в ферму &#40;горизонтально масштабируемые службы SSRS&#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) и [Добавление дополнительных веб-служб отчетов Переднего плана к ферме](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md).  
@@ -95,7 +95,7 @@ ms.locfileid: "48159454"
   
     -   **Службы Reporting Services-надстройка для продуктов SharePoint 2010**. ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "Примечание")параметр мастера установки для установки надстройки впервые появился [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выпуска.  
   
-    -   Если у вас еще нет экземпляра SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)], можно также выбрать **службы компонента Database Engine** и **полный набор средств управления** для завершения.  
+    -   Если экземпляр компонента SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]еще не установлен, для завершения установки можно также выбрать **Службы ядра СУБД** и **Полный набор средств управления** .  
   
      Нажмите кнопку **Далее**.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48159454"
   
 14. Если выбрана установка служб ядра СУБД, откроется страница **Настройка компонента Database Engine** , на которой следует добавить соответствующие учетные записи в список администраторов SQL и нажать кнопку **Далее**.  
   
-15. На странице **Настройка служб Reporting Services** будет выбран вариант **Только установка** . При выборе этого варианта устанавливаются файлы сервера отчетов, но среда SharePoint для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не настраивается. По завершении установки SQL Server нужно будет настроить среду SharePoint, как описано в других подразделах этого раздела. В том числе надо будет установить общую службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и создать приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+15. На странице **Настройка служб Reporting Services** будет выбран вариант **Только установка** . При выборе этого варианта устанавливаются файлы сервера отчетов, но среда SharePoint для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не настраивается. По завершении установки SQL Server нужно будет настроить среду SharePoint, как описано в других подразделах этого раздела. В том числе надо будет установить общую службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и создать приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
      ![rs_SQL11_SETUP_SSRS_configpage_withcircles](../../../2014/sql-server/install/media/rs-kj-setup-ssrs-configpage-withcircles.gif "rs_SQL11_SETUP_SSRS_configpage_withcircles")  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48159454"
 > [!NOTE]  
 >  Если производится установка в существующую ферму SharePoint, **не обязательно должны** , следуйте инструкциям в этом разделе. Служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint была установлена и запущена в результате выполнения мастера установки SQL Server, описанного в предыдущем разделе.  
   
- Необходимые файлы были установлены в процессе работы мастера установки SQL Server, но службы необходимо зарегистрировать в ферме SharePoint. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Выпуске добавлена поддержка PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. Следующие шаги позволяют открыть консоль управления SharePoint и запустить командлеты.  
+ Необходимые файлы были установлены в процессе работы мастера установки SQL Server, но службы необходимо зарегистрировать в ферме SharePoint. В выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] появилась поддержка PowerShell для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint. Следующие шаги позволяют открыть консоль управления SharePoint и запустить командлеты.  
   
 1.  Нажмите кнопку **Пуск** .  
   
@@ -230,7 +230,7 @@ ms.locfileid: "48159454"
 ##  <a name="bkmk_additional_config"></a> Дополнительная настройка  
  В этом разделе описываются дополнительные действия по настройке, которые важны для большинства развертываний SharePoint.  
   
-###  <a name="bkmk_provision_agent"></a> Подготовка подписок и предупреждений  
+###  <a name="bkmk_provision_agent"></a> Подготовка подписок и оповещений  
  Для функций подписок и предупреждений об изменении данных в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] может потребоваться настройка разрешений для агента SQL Server. Если отображается сообщение об ошибке, указывающее, что необходим агент SQL Server, хотя агент SQL Server уже запущен, обновите разрешения. Щелкните ссылку **Подготовка подписок и предупреждений** на странице с сообщением об успешном создании приложения службы, чтобы перейти на страницу провизионирования агента SQL Server. Шаг подготовки необходим, если система развернута более чем на одном компьютере, например если экземпляр базы данных SQL Server находится на другом компьютере. Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 
@@ -249,8 +249,8 @@ ms.locfileid: "48159454"
  Если пользователи часто передают элементы опубликованных отчетов непосредственно в библиотеки документов SharePoint, может оказаться полезной функция синхронизации файлов сервера отчетов. Функция синхронизации файлов позволяет синхронизировать каталог сервера отчетов с элементами библиотек документов на более регулярной основе. Дополнительные сведения см. в статье [активировать функции синхронизации файлов сервера отчетов в центре администрирования SharePoint](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
 ## <a name="see-also"></a>См. также  
- [Командлеты PowerShell для режима SharePoint служб Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [Возможности, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473)   
- [Службы Reporting Services SharePoint и службы приложений](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
+ [Командлеты PowerShell для режима служб SharePoint Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
+ [Возможности, поддерживаемые различными выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
+ [Служба SharePoint и Служебные приложения службы Reporting Services](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
   
   

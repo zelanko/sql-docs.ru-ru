@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], roles
@@ -14,12 +13,12 @@ ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c57fa5ea252aa66e14628d49529970ceab7eb64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dea87fd8144863d8098c88ee9e038cebda0b0060
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146416"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816656"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
   Репликация накладывает ограничения на специфические действия, которые пользователь может выполнить в зависимости от роли, соответствующей имени входа пользователя. Репликация предоставляет определенные разрешения предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** и именам входа в списке доступа к публикации (PAL).  

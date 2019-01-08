@@ -1,5 +1,5 @@
 ---
-title: Обработка секций в базе данных рабочей области | Документы Microsoft
+title: Обработка секций в базе данных рабочей области службы Analysis Services | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9cd0bd29454c159d77ed2f5d3d8c49c79586ad1d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6f81d61411ef8815d23407b9aee1df4cf56e70de
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072151"
 ---
 # <a name="process-partitions-in-the-workspace-databse"></a>Обработка секций в базе данных рабочей области 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  В списке **Режим** выберите один из следующих режимов обработки:  
   
-    |Режим|Description|  
+    |Режим|Описание|  
     |----------|-----------------|  
     |**Обработка. По умолчанию**|Обнаруживает состояние обработки объекта секции и выполняет обработку, необходимую для перевода необработанных или частично обработанных объектов секции в полностью обработанное состояние. Выполняется загрузка данных для пустых таблиц и секций; иерархии, вычисляемые столбцы и связи строятся или перестраиваются.|  
     |**Обработка. Полная**|Обрабатывает объект секций и все объекты, которые в нем содержатся. Если объект, который обрабатывается методом полной обработки, уже был обработан, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] удаляют все данные объекта, а затем обрабатывают его. Этот тип обработки требуется при внесении структурных изменений в объект.|  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/10/2018
 3.  В столбце флажков **Обработка** выберите секции для обработки в текущем режиме и нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также  
- [Секций](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
+ [Секции](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
  [Создание секций и управление ими в базе данных рабочей области](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

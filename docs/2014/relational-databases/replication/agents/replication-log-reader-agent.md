@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 892f89c0c2d3161b0df16ad9337237ce14bef159
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: fa69b87466d11c317e73a69454768b0f5396532f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226346"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800476"
 ---
 # <a name="replication-log-reader-agent"></a>Агент чтения журнала репликации
   Агент чтения журнала производит мониторинг журналов транзакций всех баз данных, включенных в репликацию транзакций, и копирует помеченные для репликации транзакции из журнала транзакций в базу данных распространителя.  
@@ -188,7 +187,7 @@ ms.locfileid: "50226346"
  **-RecoverFromDataErrors**  
  Указывает, что агент чтения журнала должен продолжить работу после возникновения ошибок данных в столбце, опубликованном издателем, отличным от SQL Server. По умолчанию такие ошибки приводят к завершению работы агента чтения журнала. Если указан параметр **-RecoverFromDataErrors**, то производится репликация ошибочных данных либо значениями NULL, либо другими соответствующими значениями, а предупреждающие сообщения записываются в таблицу [MSlogreader_history](/sql/relational-databases/system-tables/mslogreader-history-transact-sql) . Этот параметр поддерживается только для издателей Oracle.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Если агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] настроен для запуска от учетной записи локальной системы, а не пользователя домена (по умолчанию), то служба имеет доступ только к локальному компьютеру. Если агент чтения журнала, запускаемый агентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , настроен для входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]с проверкой подлинности Windows, то работа агента слияния завершится ошибкой. Значением по умолчанию является проверка подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения об изменении учетных записей безопасности см. в разделе [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md).  
@@ -201,7 +200,7 @@ ms.locfileid: "50226346"
 |---------------------|  
 |Добавлен параметр **-ExtendedEventConfigFile** .|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование агента репликации](replication-agent-administration.md)  
   
   

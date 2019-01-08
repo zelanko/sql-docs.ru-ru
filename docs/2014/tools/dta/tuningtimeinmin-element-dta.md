@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c81d0dd5ad56db2216143ed847f148467fc2e91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140334"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815876"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Элемент TuningTimeInMin (DTA)
   Позволяет задать максимальную длительность сеанса настройки в минутах.  
@@ -39,15 +38,15 @@ ms.locfileid: "48140334"
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|`unsignedInt`, неограниченная длина.|  
+|**Тип данных и длина**|`unsignedInt`, неограниченная длина|  
 |**Значение по умолчанию**|480 минут (8 часов)|  
-|**Наличие**|Требуется, если задано значение `NumberOfEvents` элемент.|  
+|**Наличие**|Требуется в случае, если не задано значение элемента `NumberOfEvents`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**Родительский элемент**|[Элемент TuningOptions (DTA)](tuningoptions-element-dta.md)|  
 |**Дочерние элементы**|None|  
   
 ## <a name="example"></a>Пример  

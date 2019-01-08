@@ -13,12 +13,12 @@ ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b809b633bb040755ac3d211b33804fd469fcb0a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1742c706d4a89999c28c5cb29d260eed2c0d0334
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104594"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362406"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Учебники по службам Reporting Services (SSRS)
   В этом разделе приведены учебники по [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -39,9 +39,9 @@ ms.locfileid: "48104594"
  Выполняйте пошаговые процедуры из этого учебника, чтобы узнать, как создать детализированный отчет с параметрами и фильтр с помощью элемента управления ReportViewer.  
   
 ## <a name="see-also"></a>См. также  
- [Adventure Works для SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=245471)   
- [Образцы служб Reporting Services на CodePlex)http://go.microsoft.com/fwlink/?LinkId=198283)](http://go.microsoft.com/fwlink/?LinkId=198283)   
- [Вики-сайте TechNet: SQL Server 2012 Samples ()http://go.microsoft.com/fwlink/?linkID=220734)](http://go.microsoft.com/fwlink/?linkID=220734)   
- [«Пикник» (набор данных (образец данных)http://go.microsoft.com/fwlink/?linkID=219108)](http://go.microsoft.com/fwlink/?linkID=219108)  
+ [Adventure Works для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=245471)   
+ [Образцы служб Reporting Services на CodePlex)https://go.microsoft.com/fwlink/?LinkId=198283)](https://go.microsoft.com/fwlink/?LinkId=198283)   
+ [Вики-сайте TechNet: SQL Server 2012 Samples (https://go.microsoft.com/fwlink/?linkID=220734)](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [«Пикник» (набор данных (образец данных)https://go.microsoft.com/fwlink/?linkID=219108)](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

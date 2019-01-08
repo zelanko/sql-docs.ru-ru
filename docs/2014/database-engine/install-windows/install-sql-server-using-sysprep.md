@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d9bcc1a87bd4853736cdc43d597e58728b848e1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018269"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371056"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Установка SQL Server 2014 с помощью SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, доступны в центре установки. На странице **Дополнительно** **центра установки** имеется два параметра: **Подготовка образа изолированного экземпляра[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** и **Завершение образа подготовленного изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. В разделах [Подготовка](#prepare) и [Завершение](#complete) подробно описывается процесс установки. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "51018269"
 -   [Изменение и удаление завершенного экземпляра SQL Server](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
- Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep поддерживает кластеризованные экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке из командной строки. Дополнительные сведения см. в разделе [Что такое Sysprep?](http://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
+ Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep поддерживает кластеризованные экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке из командной строки. Дополнительные сведения см. в разделе [Что такое Sysprep?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
   
 #### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Подготовка кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (самостоятельно)  
   
@@ -137,7 +137,7 @@ ms.locfileid: "51018269"
   
      Все обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (в том числе и пакеты обновления) применяются к каждому из компонентов экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Установленные экземпляры** — в этой сетке перечислены все экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленные на компьютере, на котором выполняется программа установки.  
+     **Установленные экземпляры** — в этой сетке перечислены все экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленные на компьютере, на котором запущена программа установки.  
   
 12. На странице **Требования к свободному месту на диске** вычисляется необходимое место на диске для указанных компонентов. Затем необходимое пространство сравнивается с доступным местом на диске.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "51018269"
   
      **Идентификатор экземпляра** предназначен для идентификации каталогов установки и разделов реестра для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Действует как для экземпляров по умолчанию, так и для именованных экземпляров. Если подготовленный экземпляр на шаге завершения создан как экземпляр по умолчанию, то имя экземпляра переопределяется на MSSQLSERVER. Указанный на этапе подготовки идентификатор экземпляра остается без изменений.  
   
-     **Корневой каталог экземпляра** — каталог, указанный на шаге подготовки, будет использован на этом шаге и не сможет быть изменен.  
+     **Корневой каталог экземпляра** — каталог, указанный на шаге подготовки, будет использован на этом шаге и не сможет быть изменен.  
   
      Все обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (в том числе и пакеты обновления) применяются к каждому из компонентов экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -190,7 +190,7 @@ ms.locfileid: "51018269"
   
 10. Набор операций, оставшихся в этом разделе, зависит от того, какие компоненты были выбраны на шаге подготовки. В зависимости от выбора на экране могут отображаться не все страницы.  
   
-11. На странице **Конфигурация сервера: учетные записи служб** укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке.  
+11. На странице "**Конфигурация сервера**: учетные записи служб" укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке.  
   
      Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настраивать учетные записи служб отдельно, чтобы каждой службе предоставлялся минимальный набор, с тем условием, чтобы службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставлялись минимальные права доступа, необходимые для выполнения их задач. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](../../sql-server/install/server-configuration-service-accounts.md) и [Настройка учетных записей службы Windows и разрешений](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -200,15 +200,15 @@ ms.locfileid: "51018269"
   
      После ввода данных входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нажмите кнопку **Далее**.  
   
-12. На вкладке **Конфигурация сервера: параметры сортировки** можно для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]задать параметры сортировки, отличные от заданных по умолчанию. Дополнительные сведения см. в разделе [Настройка сервера — параметры сортировки](../../sql-server/install/server-configuration-collation.md).  
+12. На вкладке **Настройка сервера — параметры сортировки** можно для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]задать параметры сортировки, отличные от параметров по умолчанию. Дополнительные сведения см. в разделе [Настройка сервера — параметры сортировки](../../sql-server/install/server-configuration-collation.md).  
   
 13. На странице «Настройка компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] — провизионирование учетных записей» укажите следующие сведения:  
   
-    -   Режим безопасности — выберите для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]режим проверки подлинности: «Проверка подлинности Windows» или «Смешанный режим». Если выбран смешанный режим проверки подлинности, необходимо задать надежный пароль для встроенной учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    -   Режим безопасности: выберите для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]режим проверки подлинности, «Проверка подлинности Windows» или «Смешанный режим». Если выбран смешанный режим проверки подлинности, необходимо задать надежный пароль для встроенной учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
          После удачного соединения устройства с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в режиме проверки подлинности Windows и смешанном режиме начинает действовать один механизм безопасности. Дополнительные сведения см. в разделе [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**и затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Администраторы: для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]должен быть задан как минимум один системный администратор. Чтобы добавить учетную запись, с которой выполняется программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Добавить текущего пользователя**. Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**, затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
      После изменения списка нажмите кнопку **ОК**. Проверьте список администраторов в диалоговом окне конфигурации. После завершения работы со списком нажмите кнопку **Далее**.  
   
@@ -322,8 +322,8 @@ ms.locfileid: "51018269"
   
 -   [Удаление существующего экземпляра SQL Server (программа установки)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
-## <a name="see-also"></a>См. также  
- [Что такое Windows SysPrep](http://go.microsoft.com/fwlink/?LinkId=143546)   
- [Как работает Windows SysPrep](http://go.microsoft.com/fwlink/?LinkId=143547)  
+## <a name="see-also"></a>См. также:  
+ [Что такое Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
+ [Как работает Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143547)  
   
   

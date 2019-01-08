@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading clusters
@@ -17,12 +16,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906494"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363716"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Обновление экземпляра отказоустойчивого кластера SQL Server (программа установки)
   Отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно обновить до отказоустойчивого кластера [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] с помощью мастера установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или из командной строки.  
@@ -46,11 +45,11 @@ ms.locfileid: "48906494"
   
 -   Чтобы обеспечить правильность установки компонента, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] потребует установить обновление. Программа установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверит наличие этого обновления и потребует загрузить и установить его, прежде чем можно будет продолжить установку [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы избежать прерывания установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , вы можете загрузить и установить это обновление перед запуском программы установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , как описано ниже (или установить все обновления для .NET 3.5 с пакетом обновления 1 (SP1), доступные в центре обновления Windows).  
   
-     При установке [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] на компьютере с операционной системой Windows Server 2008 SP2, можно получить необходимое обновление [здесь](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     При установке [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] на компьютере с операционной системой Windows Server 2008 SP2, можно получить необходимое обновление [здесь](https://go.microsoft.com/fwlink/?LinkId=198093)  
   
      Если [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] устанавливается на компьютере под управлением [!INCLUDE[win7](../../../includes/win7-md.md)] с пакетом обновления 1 (SP1) или [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1), то это обновление уже установлено.  
   
--   Платформа .NET Framework 3.5 с пакетом обновления 1 (SP1) больше не устанавливается программой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], но может потребоваться при установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]. Дополнительные сведения см. в статье [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][Заметки о выпуске](http://go.microsoft.com/fwlink/?LinkId=296445).  
+-   Платформа .NET Framework 3.5 с пакетом обновления 1 (SP1) больше не устанавливается программой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], но может потребоваться при установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]. Дополнительные сведения см. в статье [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][Заметки о выпуске](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
 -   Для локальных установок программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] нужно запускать с правами администратора. Если [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливается с удаленного общего ресурса, необходимо использовать учетную запись домена, у которой есть разрешения на чтение на этом удаленном ресурсе.  
   
@@ -79,9 +78,9 @@ ms.locfileid: "48906494"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>Обновление отказоустойчивого кластера с несколькими подсетями до [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]  
  Существует два возможных сценария обновления.  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отказоустойчивый кластер настроен в одной подсети: необходимо сначала обновить существующий кластер до [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] , запустив программу установки и после завершения процесса обновления. После завершения обновления существующего кластера отработки отказа добавьте узел в другой подсети с помощью функциональности AddNode. На странице конфигурации сети кластера подтвердите изменение значения зависимости ресурса IP-адреса на OR. Отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с несколькими сетями создан.  
+1.  Отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в настоящее время настроен в единственной подсети. Следует сначала обновить имеющийся кластер до [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], запустив программу установки и следуя процессу обновления. После завершения обновления существующего кластера отработки отказа добавьте узел в другой подсети с помощью функциональности AddNode. На странице конфигурации сети кластера подтвердите изменение значения зависимости ресурса IP-адреса на OR. Отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с несколькими сетями создан.  
   
-2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отказоустойчивый кластер в настоящий момент на несколько подсетей, с помощью stretch технологии распределенных виртуальных ЛС: необходимо сначала обновить существующий кластер до [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Поскольку технология распределения виртуальных ЛС служит для настройки одной подсети, конфигурацию сети необходимо изменить для использования нескольких подсетей и изменить значение зависимости ресурса IP-адреса на OR с помощью средства администрирования отказоустойчивых кластеров Windows.  
+2.  Отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] настроен в нескольких подсетях с помощью технологии распределенных виртуальных ЛС. Необходимо сначала обновить существующий кластер до версии [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Поскольку технология распределения виртуальных ЛС служит для настройки одной подсети, конфигурацию сети необходимо изменить для использования нескольких подсетей и изменить значение зависимости ресурса IP-адреса на OR с помощью средства администрирования отказоустойчивых кластеров Windows.  
   
 ###  <a name="BestPractices"></a> Рекомендации перед обновлением [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отказоустойчивого кластера  
  Чтобы исключить непредвиденные простои, вызванные перезагрузкой, перед выполнением обновлений на узлах отказоустойчивого кластера заранее установите пакет без перезагрузки для .NET Framework 4.0. Для предварительной установки необходимых компонентов рекомендуется выполнить следующие шаги.  
@@ -104,7 +103,7 @@ ms.locfileid: "48906494"
   
 #### <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Обновление отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], перейдите в корневую папку и дважды щелкните файл Setup.exe. Чтобы выполнить установку из общего сетевого ресурса, перейдите в его корневой каталог и дважды щелкните файл Setup.exe. Может появиться запрос на установку обязательных компонентов, если они не установлены ранее.  
+1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , перейдите в корневую папку и дважды щелкните файл Setup.exe. Чтобы выполнить установку из общего сетевого ресурса, перейдите в его корневой каталог и дважды щелкните файл Setup.exe. Может появиться запрос на установку обязательных компонентов, если они не установлены ранее.  
   
 2.  > [!IMPORTANT]  
     >  Дополнительные сведения о шагах 3 и 4, см. в разделе [рекомендации по подготовке обновления отказоустойчивого кластера](#BestPractices) раздел.  

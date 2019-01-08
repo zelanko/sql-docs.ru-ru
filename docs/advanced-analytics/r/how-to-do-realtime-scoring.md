@@ -1,5 +1,5 @@
 ---
-title: Как создавать прогнозы и прогнозы с помощью моделей машинного обучения в SQL Server | Документация Майкрософт
+title: Создавать прогнозы и прогнозы с помощью моделей машинного обучения — службы SQL Server машинного обучения
 description: Используйте rxPredict или sp_rxPredict для оценки в реальном времени или ПРОГНОЗИРОВАНИЯ T-SQL для собственного оценки для создания прогнозов и прогнозирования R и Pythin в машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 576a8b161c87270b0dcc40494cf0121a7b644fc4
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712476"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432507"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Как создавать прогнозы и прогнозы с помощью моделей машинного обучения в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "46712476"
 
 Значимость расширения CLR и C++ — с учетом расположения, к компоненту database engine, сам. C++, которая означает, что модули, написанные на C++, запустите с меньшим числом зависимостей является собственным языком, компонента database engine. В противоположность этому расширения CLR зависят от .NET Core. 
 
-Как можно догадаться, поддержка платформ зависит также от этих сред время выполнения. Расширения ядра базы данных в собственном запуск из любого места, реляционной базы данных поддерживается: Windows, Linux, Azure. Расширения CLR с необходимостью .NET Core в данный момент Windows только.
+Как можно догадаться, поддержка платформ зависит также от этих сред время выполнения. Расширения ядра базы данных в собственном запускать везде, где поддерживается реляционной базы данных: Windows, Linux, Azure. Расширения CLR с необходимостью .NET Core в данный момент Windows только.
 
 ## <a name="scoring-overview"></a>Обзор оценки
 
@@ -99,7 +99,7 @@ _Оценки_ представляет собой двухэтапный про
 Если вы используете [изолированный сервер](r-server-standalone.md) или [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), у вас есть другие варианты, помимо хранимые процедуры и функции T-SQL для быстрого создания прогнозов. Изолированный сервер и сервер машинного обучения поддерживают понятие *веб-службы* для развертывания кода. Можно объединить R или Python предварительно обученной модели веб-службы, вызываемых во время выполнения для оценки новых входных данных. Дополнительные сведения см. в следующих статьях:
 
 + [Что такое веб-служб в Machine Learning Server](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
-+ [Что такое ввода в эксплуатацию](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [Что такое ввода в эксплуатацию](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
 + [Развертывание модели Python в качестве веб-службы azureml модели management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Публикация в блоке кода R или модель в режиме реального времени в виде новой веб-службы](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [пакет mrsdeploy для R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

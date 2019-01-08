@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsource.f1
@@ -17,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3a2e2ff2fd28004d924f2b06a19b6bab3c52914
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e8d49827c9f533c75933a316ff3b655d3f13025
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155374"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353904"
 ---
 # <a name="xml-source"></a>XML-источник
   XML-источник считывает файл XML-данных и заполняет данными столбцы в выходе источника.  
@@ -55,18 +54,18 @@ ms.locfileid: "48155374"
   
  Если в XML-файле данных содержатся элементы, которых нет в XSD-файле, то такие элементы игнорируются и никакой выход для них не создается. С другой стороны, если в XML-файле данных нет элементов, которые есть в XSD-файле, выход будет содержать столбцы со значением NULL.  
   
- Когда данные извлекаются из XML-файла данных, они преобразуются в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Однако источник XML не может преобразовать XML-данные в типы данных DT_TIME2 или DT_DBTIMESTAMP2, поскольку источник эти типы не поддерживает. Дополнительные сведения см. в статье [Integration Services Data Types](integration-services-data-types.md).  
+ Когда данные извлекаются из XML-файла данных, они преобразуются в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Однако источник XML не может преобразовать XML-данные в типы данных DT_TIME2 или DT_DBTIMESTAMP2, поскольку источник эти типы не поддерживает. Дополнительные сведения см. в разделе [Integration Services Data Types](integration-services-data-types.md).  
   
  XSD-файл или встроенная схема может определять тип данных элементов, но если это не так, то диалоговое окно **Редактор источника "XML"** устанавливает тип данных строки Юникода (DT_WSTR) для столбца выхода, содержащего этот элемент, и устанавливает длину столбца, содержащую 255 символов.  
   
  Если схема данных указывает максимальную длину элемента, длина выходного столбца становится равной этому значению. Если максимальная длина больше длины, поддерживаемой типом данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , к которому приведен элемент, то данные усекаются до допустимой для этого типа максимальной длины. Например, если длина строки 5000, она усекается до 4000 символов, так как максимальная длина типа данных DT_WSTR — 4000 символов; таким же образом данные типа byte урезаются до 8000 — до максимальной длины типа данных DT_BYTES. Если в схеме не указана максимальная длина, то по умолчанию длина столбцов с любым типом данных составляет 255. Усечение данных в XML-источнике происходит так же, как и в других компонентах потока данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](error-handling-in-data.md).  
   
- Тип данных и длина столбца могут быть изменены. Дополнительные сведения см. в статье [Integration Services Data Types](integration-services-data-types.md).  
+ Тип данных и длина столбца могут быть изменены. Дополнительные сведения см. в разделе [Integration Services Data Types](integration-services-data-types.md).  
   
 ## <a name="configuration-of-the-xml-source"></a>Конфигурация XML-источника  
  XML-источник поддерживает три разных способа доступа к данным. Можно указать расположение файла XML-данных, переменную, содержащую расположение этого файла, или же переменную с данными в формате XML.  
   
- XML-источник содержит `XMLData` и `XMLSchemaDefinition` пользовательские свойства, которые могут обновляться через выражения свойств, при загрузке пакета. Дополнительные сведения см. в разделах [Выражения служб Integration Services (SSIS)](../expressions/integration-services-ssis-expressions.md), [Использование выражений свойств в пакетах](../expressions/use-property-expressions-in-packages.md) и [Пользовательские свойства источника "XML"](xml-source-custom-properties.md).  
+ XML-источник содержит пользовательские свойства `XMLData` и `XMLSchemaDefinition`, которые можно обновлять выражениями свойств во время загрузки пакета. Дополнительные сведения см. в разделах [Выражения служб Integration Services (SSIS)](../expressions/integration-services-ssis-expressions.md), [Использование выражений свойств в пакетах](../expressions/use-property-expressions-in-packages.md) и [Пользовательские свойства источника "XML"](xml-source-custom-properties.md).  
   
  XML-источник поддерживает несколько обычных выходов и несколько выходов ошибок.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48155374"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](../common-properties.md)  
+-   [Общие свойства](../common-properties.md)  
   
 -   [Пользовательские свойства источника "XML"](xml-source-custom-properties.md)  
   
@@ -96,6 +95,6 @@ ms.locfileid: "48155374"
  [Извлечение данных с помощью XML-источника](xml-source.md)  
   
 ## <a name="related-content"></a>См. также  
- Курируемый ответ [Создание назначения XML для пакета служб SSIS](http://go.microsoft.com/fwlink/?LinkId=321993)на curatedviews.cloudapp.net.  
+ Курируемый ответ [Создание назначения XML для пакета служб SSIS](https://go.microsoft.com/fwlink/?LinkId=321993)на curatedviews.cloudapp.net.  
   
   

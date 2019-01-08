@@ -1,20 +1,22 @@
 ---
-title: Как прием данных в пул данных SQL Server с помощью заданий Spark | Документация Майкрософт
+title: Прием данных с помощью заданий Spark
+titleSuffix: SQL Server 2019 big data clusters
 description: Этом руководстве показано, как прием данных в пул данных с помощью заданий Spark в Azure Data Studio кластера больших данных SQL Server 2019 (Предварительная версия).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 186de5e63663b9c5485cd0385ded816cafbc7c3d
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: d1780ae630231cd96e9424f4f541d921b1496e7d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221480"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432367"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Руководство: Прием данных в пул данных SQL Server с помощью заданий Spark
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Учебник. Прием данных в пул данных SQL Server с помощью заданий Spark
 
 Этот учебник демонстрирует использование заданий Spark для загрузки данных в [пула данных](concept-data-pool.md) кластера SQL Server 2019 больших данных (Предварительная версия). 
 
@@ -30,17 +32,17 @@ ms.locfileid: "51221480"
 
 ## <a id="prereqs"></a> Предварительные требования
 
-* [Развертывание кластера больших данных в Kubernetes](deployment-guidance.md).
-* [Установка Studio данных Azure и расширение SQL Server 2019](deploy-big-data-tools.md).
-* [Загрузка образца данных в кластере](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Средства работы с большими данными](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **Расширение SQL Server 2019**
+- [Загрузка образца данных в кластере больших данных](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Создайте внешнюю таблицу в пул данных
 
 Следующие шаги создания внешней таблицы в пуле данных с именем **web_clickstreams_spark_results**. Эта таблица можно затем использовать как расположение для приема данных к кластеру больших данных.
 
-1. В Azure Data Studio подключитесь к основной экземпляр SQL Server кластера больших данных. Дополнительные сведения см. в разделе [подключение к экземпляру SQL Server master](deploy-big-data-tools.md#master).
+1. В Azure Data Studio подключитесь к основной экземпляр SQL Server кластера больших данных. Дополнительные сведения см. в разделе [подключение к экземпляру SQL Server master](connect-to-big-data-cluster.md#master).
 
 1. Дважды щелкните подключение в **серверы** окно для отображения панели мониторинга сервера для главного экземпляра SQL Server. Выберите **новый запрос**.
 
@@ -61,13 +63,13 @@ ms.locfileid: "51221480"
       );
    ```
   
-1. В CTP-версии 2.1 Создание данных пула является асинхронным, но нет способа определить, когда сеть будет еще. Подождите 2 минуты, чтобы убедиться в том, что при создании пула данных, прежде чем продолжить.
+1. В CTP-версии 2.2 Создание данных пула является асинхронным, но нет способа определить, когда сеть будет еще. Подождите 2 минуты, чтобы убедиться в том, что при создании пула данных, прежде чем продолжить.
 
 ## <a name="start-a-spark-streaming-job"></a>Запустить задание потоковой передачи Spark
 
 Следующим шагом является создание Spark streaming задание, которое загружает веб-маршрута перемещения данных из пула носителей (HDFS) в внешнюю таблицу, которую вы создали в пуле данных.
 
-1. В студии данных Azure подключения к шлюзу HDFS/Spark кластера больших данных. Дополнительные сведения см. в разделе [подключиться к шлюзу HDFS/Spark](deploy-big-data-tools.md#hdfs).
+1. В Azure Data Studio, подключитесь к **HDFS/Spark шлюза** кластера больших данных. Дополнительные сведения см. в разделе [подключиться к шлюзу HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
 
 1. Дважды щелкните подключение шлюза HDFS или Spark в **серверы** окна. Затем выберите **новое задание Spark**.
 
@@ -81,10 +83,12 @@ ms.locfileid: "51221480"
    /jar/mssql-spark-lib-assembly-1.0.jar
    ```
 
+1. В **класс Main** введите `FileStreaming`.
+
 1. В **аргументы** введите следующий текст, указав пароль для главного экземпляра SQL Server в `<your_password>` заполнителя. 
 
    ```text
-   mssql-master-pool-0.service-master-pool 1433 sa <your_password> sales web_clickstreams_spark_results hdfs:///clickstream_data csv false
+   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
    ```
 
    В следующей таблице описаны все аргументы:
@@ -100,6 +104,7 @@ ms.locfileid: "51221480"
    | Исходный каталог для потоковой передачи | Это должен быть полным URI, например «hdfs: / / / clickstream_data» |
    | формат входных данных | Это может быть «csv», «parquet» или «json» |
    | Включить контрольную точку | true или false |
+   | timeout | время выполнения задания в миллисекундах перед выходом из |
 
 1. Нажмите клавишу **отправить** для отправки задания.
 
@@ -113,7 +118,7 @@ ms.locfileid: "51221480"
 
    ![Журнал заданий Spark](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
 
-1. Вернитесь в окно запроса главного экземпляра SQL Server, открытой в начале работы с этим руководством...
+1. Вернитесь в окно запроса главного экземпляра SQL Server, открытой в начале работы с этим руководством.
 
 1. Выполните следующий запрос, чтобы проверить данные, полученные.
 

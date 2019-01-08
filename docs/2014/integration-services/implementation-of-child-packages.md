@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f415816f935e03b6b533fded2fb00760a101526d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec58691ab78fdf7c57871805bb095ca48f221da7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100190"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373406"
 ---
 # <a name="implementation-of-child-packages"></a>Осуществление дочерних пакетов
   При реализации балансировки нагрузки с помощью служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]дочерние пакеты устанавливаются на другие серверы для получения преимуществ от доступного времени ЦП или сервера. Чтобы создать и запустить дочерние пакеты, требуется выполнить следующие шаги.  
@@ -56,7 +56,7 @@ ms.locfileid: "48100190"
   
 -   выполняя индивидуальное задание агента SQL Server на удаленном компьютере, используя среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], чтобы убедиться в том, что пакет запущен.  
   
- Сведения о решении проблем с пакетами, запускаемыми из заданий агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] см. в статье [Пакет служб SSIS не запускается при вызове пакета служб SSIS на шаге задания агента SQL Server](http://support.microsoft.com/kb/918760) в базе знаний поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
+ Сведения о решении проблем с пакетами, запускаемыми из заданий агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] см. в статье [Пакет служб SSIS не запускается при вызове пакета служб SSIS на шаге задания агента SQL Server](https://support.microsoft.com/kb/918760) в базе знаний поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
  Агент SQL Server проверяет действительность доступа к подсистеме учетной записи-посредника и предоставляет ей доступ при каждом выполнении шага задания.  
   
@@ -68,8 +68,8 @@ ms.locfileid: "48100190"
   
 ## <a name="related-content"></a>См. также  
   
--   Запись в блоге [Службы SSIS: доступ к переменным из родительского пакета](http://go.microsoft.com/fwlink/?LinkId=257729)на сайте consultingblogs.emc.com.  
+-   Запись в блоге [служб SSIS: Доступ к переменным из родительского пакета](https://go.microsoft.com/fwlink/?LinkId=257729), на сайте consultingblogs.emc.com.  
   
--   Запись в блоге [Службы SSIS: следует ли выполнять дочерние пакеты внутри процесса или вне его?](http://go.microsoft.com/fwlink/?LinkId=220819)на сайте consultingblogs.emc.com.  
+-   Запись в блоге [служб SSIS: Следует выполнять дочерние пакеты внутри процесса или вне процесса? ](https://go.microsoft.com/fwlink/?LinkId=220819), на сайте consultingblogs.emc.com.  
   
   

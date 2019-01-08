@@ -15,12 +15,12 @@ ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0939540af0c302832925a7a1bef6367718b8c1be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145329"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369286"
 ---
 # <a name="move-an-analysis-services-database"></a>Перемещение базы данных служб Analysis Services
   Часто возникают ситуации, когда администратору баз данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо переместить базу данных для многомерной или табличной модели в другое место. Такие ситуации часто обусловлены потребностями предприятия, например необходимостью переместить базу данных на другой диск для повышения производительности, освободить место для увеличения размера базы данных или при обновлении какого-либо продукта.  
@@ -44,7 +44,7 @@ ms.locfileid: "50145329"
   
 1.  Найдите перемещаемую базу данных на левой или правой панели среды SSMS.  
   
-2.  Щелкните правой кнопкой мыши базу данных и выберите пункт **Отсоединить...**  
+2.  Щелкните правой кнопкой мыши базу данных и выберите **отсоединить...**  
   
 3.  Назначьте пароль отсоединяемой базе данных и нажмите кнопку **ОК** , чтобы выполнить команду отсоединения.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "50145329"
   
 5.  Найдите папку **Базы данных** на левой или правой панели среды SSMS.  
   
-6.  Щелкните правой кнопкой мыши папку **Базы данных** и выберите команду **Присоединить...**  
+6.  Щелкните правой кнопкой мыши **баз данных** папку и выберите **присоединить...**  
   
-7.  В текстовое поле **папка** впечатайте новое местоположение папки базы данных. Выяснить расположение папки базы данных можно также при помощи кнопки обзора (**…**).  
+7.  В текстовое поле **папка** впечатайте новое местоположение папки базы данных. Кроме того, можно использовать кнопку обзора (**...** ) найдите папку базы данных.  
   
 8.  Выберите `ReadWrite` режим базы данных.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "50145329"
   
 2.  Скопируйте следующий шаблон скрипта XML для аналитики.  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -128,11 +128,11 @@ ms.locfileid: "50145329"
   
 4.  Скопируйте следующий шаблон скрипта XML для аналитики в новую вкладку XML для аналитики.  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

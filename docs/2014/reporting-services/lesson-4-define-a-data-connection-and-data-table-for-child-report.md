@@ -1,5 +1,5 @@
 ---
-title: Занятие 4. Определение подключения к данным и таблицы данных для дочернего отчета | Документы Майкрософт
+title: Урок 4. Определение подключения к данным и таблицы данных для дочернего отчета | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3403d416ed7945d4f980ef4c15d89ff0e56c8720
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0aed81ff4ac2daa517bb17ddb53ebaf7eacdcbe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184314"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365416"
 ---
-# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Занятие 4. Определение подключения к данным и таблицы данных для родительского отчета
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Урок 4. Определение подключения к данным и таблицы данных для дочернего отчета
   После проектирования родительского отчета далее необходимо создать подключение к данным и таблицу данных для дочернего отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2008. Предусмотрена также возможность установить подключение к базе данных AdventureWorks2012.  
   
 ### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>Определение подключения к данным и таблицы данных путем добавления набора данных (для дочернего отчета)  
@@ -57,11 +57,11 @@ ms.locfileid: "48184314"
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-     Можно также создать запрос, нажав кнопку **построитель запросов**, а затем проверить запрос, нажав кнопку **выполнить запрос** кнопки. Если запрос не возвращает ожидаемые данные, возможно, используется более ранняя версия AdventureWorks. Дополнительные сведения об установке **AdventureWorks2008** версия AdventureWorks, см. в разделе [Пошаговое руководство: Установка базы данных AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
+     Можно также создать запрос, нажав кнопку **построитель запросов**, а затем проверить запрос, нажав кнопку **выполнить запрос** кнопки. Если запрос не возвращает ожидаемые данные, возможно, используется более ранняя версия AdventureWorks. Дополнительные сведения об установке **AdventureWorks2008** версия AdventureWorks, см. в разделе [Пошаговое руководство: Установка базы данных AdventureWorks](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
   
 10. На **Выбор методов для создания** странице, снимите флажок **создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)**, а затем нажмите кнопку **Готово**.  
   
-     Завершена настройка объекта ADO.NET [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) как источник данных для отчета. На странице конструктора набора данных в Visual Studio появится добавленный объект **DataTable** со списком столбцов, указанных в запросе. Набор данных DataSet2 содержит данные таблицы PurhcaseOrderDetail, указанные в запросе.  
+     Завершена настройка объекта ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) как источник данных для отчета. На странице конструктора набора данных в Visual Studio появится добавленный объект **DataTable** со списком столбцов, указанных в запросе. Набор данных DataSet2 содержит данные таблицы PurhcaseOrderDetail, указанные в запросе.  
   
 11. Сохраните файл.  
   

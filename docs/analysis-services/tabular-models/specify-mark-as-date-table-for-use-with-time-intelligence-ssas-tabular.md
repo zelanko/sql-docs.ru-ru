@@ -1,5 +1,5 @@
 ---
-title: Указание таблицы дат | Документация Майкрософт
+title: Указание таблицы дат в табличных моделях служб Analysis Services | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f059292691904325e997f9089173ec8e39ffcf17
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: df4afbecebd3c076f80064dbd3d13f35ba2cbcf0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099337"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072442"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>Указание таблицы дат для использования со временем
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 341c267b686a56a37390e0ee774df0aa20e73fd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049824"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782896"
 ---
 # <a name="database-element-for-server-dta"></a>Элемент Database описания сервера (DTA)
   Позволяет задать базу данных, которую необходимо настроить на конкретном сервере.  
@@ -40,14 +39,14 @@ ms.locfileid: "48049824"
 |--------------------|-----------------|  
 |Тип данных и длина|Нет.|  
 |Значение по умолчанию|Нет.|  
-|Наличие|Требуется один или несколько раз для каждого `Server` элемент.|  
+|Наличие|Требуется один или несколько раз для каждого элемента `Server`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|Родительский элемент|[Элемент Server &#40;DTA&#41;](server-element-dta.md)|  
-|Дочерние элементы|[Элемент Name для базы данных &#40;DTA&#41;](name-element-for-database-dta.md)<br /><br /> [Элемент schema описания базы данных &#40;DTA&#41;](schema-element-for-database-dta.md)|  
+|Родительский элемент|[Элемент Server (DTA)](server-element-dta.md)|  
+|Дочерние элементы|[Элемент Name для базы данных (DTA)](name-element-for-database-dta.md)<br /><br /> [Элемент Schema описания базы данных (DTA)](schema-element-for-database-dta.md)|  
   
 ## <a name="remarks"></a>Примечания  
  Этот элемент с именем **DatabaseDetailsTypecomplexType** определен в схеме XML помощника по настройке ядра СУБД. Не путайте этот элемент `Database` с элементом, корневым родительским элементом которого является `Configuration`. Дополнительные сведения см. в разделе [Элемент Database для конфигурации (DTA)](database-element-for-configuration-dta.md).  

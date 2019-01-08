@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da29dbf3dae76490fc1a34867006ce82775cd2b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c025a899b426de714fb522218467e8d4cf805b6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063084"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374346"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML, класс событий
   События класса Showplan XML происходят, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкцию SQL. Включите класс событий Showplan XML для идентификации операторов инструкции Showplan. Этот класс событий хранит каждое событие в виде правильно структурированного XML-документа.  
   
  Если класс событий Showplan XML включить в трассировку, это может повлечь за собой издержки в виде значительного снижения производительности. Showplan XML хранит план запроса, который создается при оптимизации запроса. Чтобы свести к минимуму подобные издержки, следует ограничить использование этого класса событий до трассировок, отслеживающих конкретные проблемы в течение короткого периода времени.  
   
- Документы Showplan XML имеют схему, связанную с ними. Эта схема находится на [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkId=41740)или является частью установки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Документы Showplan XML имеют схему, связанную с ними. Эта схема находится на [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkId=41740)или является частью установки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="showplan-xml-event-class-data-columns"></a>Столбцы данных класса событий Showplan XML  
   

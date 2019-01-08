@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 872d886f8e38d408b39387329f13c120d1dc5744
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9b405ee057e843f734310dbf134465d03575efc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152194"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364026"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем
   Можно настроить преобразование «Уточняющий запрос», чтобы использовать режим полного кэширования и диспетчер соединений с кэшем. В режиме полного кэширования эталонный набор данных загружается в кэш еще до запуска преобразования «Уточняющий запрос».  
@@ -54,7 +53,7 @@ ms.locfileid: "48152194"
   
 -   [Преобразование кэша](../data-flow/transformations/cache-transform.md)  
   
--   [Диспетчер подключений с кэшем](cache-connection-manager.md)  
+-   [Диспетчер соединений с кэшем](cache-connection-manager.md)  
   
 -   [Управление очередностью](../control-flow/precedence-constraints.md)  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48152194"
   
 -   [Контейнер последовательности](../control-flow/sequence-container.md)  
   
- Видеоматериал, в котором показано, как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений с кэшем, см. в статье [Как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования (видеоматериал по SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131031).  
+ Видеоматериал, в котором показано, как реализовать преобразование «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений с кэшем, см. в разделе [как: Реализовать преобразование «Уточняющий запрос» в режиме полного кэширования (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Реализация преобразования «Уточняющий запрос» в режиме полного кэширования в одном пакете с использованием диспетчера соединений с кэшем и источника данных в потоке данных  
   
@@ -119,7 +118,7 @@ ms.locfileid: "48152194"
         >  Преобразование «Уточняющий запрос» автоматически сопоставляет столбцы, которые обладают одинаковыми названиями и типами данных.  
   
         > [!NOTE]  
-        >  Типы данных сопоставляемых столбцов должны совпадать. Дополнительные сведения см. в статье [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+        >  Типы данных сопоставляемых столбцов должны совпадать. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
     8.  В списке **Доступные столбцы подстановки** выберите столбцы. Затем в списке **Операция поиска** задайте, будут ли значения из столбцов подстановки замещать значения из входных столбцов или же они будут перезаписаны в новый столбец.  
   
@@ -205,7 +204,7 @@ ms.locfileid: "48152194"
         >  Преобразование «Уточняющий запрос» автоматически сопоставляет столбцы, которые обладают одинаковыми названиями и типами данных.  
   
         > [!NOTE]  
-        >  Типы данных сопоставляемых столбцов должны совпадать. Дополнительные сведения см. в статье [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+        >  Типы данных сопоставляемых столбцов должны совпадать. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
     8.  В списке **Доступные столбцы подстановки** выберите столбцы. Затем в списке **Операция поиска** задайте, будут ли значения из столбцов подстановки замещать значения из входных столбцов или же они будут перезаписаны в новый столбец.  
   
@@ -270,7 +269,7 @@ ms.locfileid: "48152194"
         >  Преобразование «Уточняющий запрос» автоматически сопоставляет столбцы, которые обладают одинаковыми названиями и типами данных.  
   
         > [!NOTE]  
-        >  Типы данных сопоставляемых столбцов должны совпадать. Дополнительные сведения см. в статье [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+        >  Типы данных сопоставляемых столбцов должны совпадать. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
     8.  В списке **Доступные столбцы подстановки** выберите столбцы. Затем в списке **Операция поиска** задайте, будут ли значения из столбцов подстановки замещать значения из входных столбцов или же они будут перезаписаны в новый столбец.  
   
@@ -281,7 +280,7 @@ ms.locfileid: "48152194"
 9. Запустите пакет.  
   
 ## <a name="see-also"></a>См. также  
- [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Реализация преобразования «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Реализация уточняющего запроса в режиме "Частичное кэширование" или "Без кэширования"](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Преобразования служб Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   

@@ -18,12 +18,12 @@ ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d800eed984c6371ed689e9d8ec2748cb6b9886c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0993299edffce3139b468bf3ca27d49f88e8638b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752758"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591338"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +44,19 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@table_server =** ] **"***table_server***"**  
+ [  **@table_server =** ] **"**_table_server_**"**  
  Имя связанного сервера, для которого возвращаются данные. *table_server* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@table_name =** ] **"***table_name***"**]  
+ [  **@table_name =** ] **"**_table_name_**"**]  
  Имя таблицы, для которой предоставляются сведения о правах доступа. *TABLE_NAME* — **sysname**, значение по умолчанию NULL.  
   
- [  **@table_schema =** ] **"***table_schema***"**  
+ [  **@table_schema =** ] **"**_table_schema_**"**  
  Схема таблицы. В некоторых средах СУБД является владельцем таблицы. *table_schema* — **sysname**, значение по умолчанию NULL.  
   
- [  **@table_catalog =** ] **"***значениям table_catalog***"**  
+ [  **@table_catalog =** ] **"**_значениям table_catalog_**"**  
  Имя базы данных, в котором указанный *table_name* находится. *значениям table_catalog* — **sysname**, значение по умолчанию NULL.  
   
- [  **@fUsePattern =**] **"***шаблонов***"**  
+ [  **@fUsePattern =**] **"**_шаблонов_**"**  
  Определяет, следует ли рассматривать символы «_», «%», «[» и «]» как символы-шаблоны. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *Шаблонов* — **бит**, значение по умолчанию 1.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -66,7 +66,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Имя квалификатора таблицы. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (*квалификатор ***.*** владелец ***.*** имя*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица. Это поле может иметь значение NULL.|  
+|**TABLE_CAT**|**sysname**|Имя квалификатора таблицы. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (_квалификатор_**.** _владельца_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица. Это поле может иметь значение NULL.|  
 |**ПО ЗНАЧЕНИЯМ TABLE_SCHEM**|**sysname**|Имя владельца таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, создавшего таблицу. Это поле всегда возвращает значение.|  
 |**ИМЯ_ТАБЛИЦЫ**|**sysname**|Имя таблицы. Это поле всегда возвращает значение.|  
 |**ОБЪЕКТ, ПРЕДОСТАВЛЯЮЩИЙ РАЗРЕШЕНИЕ**|**sysname**|Имя пользователя базы данных, предоставившего разрешения на это **TABLE_NAME** указанному **УЧАСТНИКУ**. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], этот столбец всегда является таким же, как **TABLE_OWNER**. Это поле всегда возвращает значение. Кроме того, столбец GRANTOR может соответствовать или владельцу базы данных (**TABLE_OWNER**) или пользователь, которому владелец базы данных предоставил разрешение с помощью предложения WITH GRANT OPTION инструкции GRANT.|  
@@ -81,7 +81,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
  Необходимо разрешение SELECT для схемы.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере возвращаются сведения о правах доступа для таблиц с именами, начинающимися на `Product`, в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] из указанного связанного сервера `Seattle1`. ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] считается связанным сервером.)  
+ В следующем примере возвращаются сведения о правах доступа для таблиц с именами, начинающимися на `Product`, в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] из указанного связанного сервера `Seattle1`. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] считается связанного сервера).  
   
 ```  
 EXEC sp_table_privileges_ex @table_server = 'Seattle1',   

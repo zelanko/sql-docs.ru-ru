@@ -18,12 +18,12 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aca8858c65a900c085eba9d91461c4b3dc57b7fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 102e9122b93938b8e16d2e8714eed8d1372d21ad
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772982"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591528"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,22 +65,22 @@ sp_update_jobstep
  [  **@job_id =**] *job_id*  
  Идентификатор задания, которому принадлежит шаг. *job_id*— **uniqueidentifier**, значение по умолчанию NULL. Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
- [  **@job_name =**] **"***имя_задания***"**  
+ [  **@job_name =**] **"**_имя_задания_**"**  
  Имя задания, которому принадлежит шаг. *имя_задания*— **sysname**, значение по умолчанию NULL. Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
  [  **@step_id =**] *step_id*  
  Идентификационный номер шага задания, которое необходимо изменить. Этот номер не может быть изменен. *step_id*— **int**, не имеет значения по умолчанию.  
   
- [  **@step_name =**] **"***step_name***"**  
+ [  **@step_name =**] **"**_step_name_**"**  
  Новое имя шага. *step_name*— **sysname**, значение по умолчанию NULL.  
   
- [  **@subsystem =**] **"***подсистемы***"**  
+ [  **@subsystem =**] **"**_подсистемы_**"**  
  Подсистема, используемая агентом Microsoft SQL Server для выполнения *команда*. *Подсистема* — **nvarchar(40)**, значение по умолчанию NULL.  
   
- [  **@command =**] **"***команда***"**  
+ [  **@command =**] **"**_команда_**"**  
  Выполнение команд для выполнения с помощью *подсистемы*. *команда* — **nvarchar(max)**, значение по умолчанию NULL.  
   
- [  **@additional_parameters =**] **"***параметры***"**  
+ [  **@additional_parameters =**] **"**_параметры_**"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@cmdexec_success_code =**] *success_code*  
@@ -112,13 +112,13 @@ sp_update_jobstep
  [  **@on_fail_step_id =**] *fail_step_id*  
  Идентификационный номер шага данного задания, для выполнения, если шаг завершился с ошибкой и *fail_action* — **4**. *fail_step_id* — **int**, значение по умолчанию NULL.  
   
- [ **@server =**] **'***server***'**  
+ [  **@server =**] **"**_server_**"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *сервер* — **nvarchar(128)**, значение по умолчанию NULL.  
   
- [  **@database_name =**] **"***базы данных***"**  
+ [  **@database_name =**] **"**_базы данных_**"**  
  Имя базы данных, в которой выполняется шаг [!INCLUDE[tsql](../../includes/tsql-md.md)]. *База данных*— **sysname**. Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
   
- [  **@database_user_name =**] **"***пользователя***"**  
+ [  **@database_user_name =**] **"**_пользователя_**"**  
  Имя учетной записи пользователя, которая используется при выполнении шага [!INCLUDE[tsql](../../includes/tsql-md.md)]. *пользователь*— **sysname**, значение по умолчанию NULL.  
   
  [  **@retry_attempts =**] *retry_attempts*  
@@ -130,7 +130,7 @@ sp_update_jobstep
  [  **@os_run_priority =**] *run_priority*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@output_file_name =**] **"***имя_файла***"**  
+ [  **@output_file_name =**] **"**_имя_файла_**"**  
  Имя файла, в котором будут сохранены выходные данные этого шага. *File_name* — **nvarchar(200)**, значение по умолчанию NULL. Данный аргумент действителен только с командами, запущенными в подсистемах [!INCLUDE[tsql](../../includes/tsql-md.md)] или CmdExec.  
   
  Чтобы вернуть аргументу output_file_name значение NULL, необходимо задать *аргументу output_file_name* пустую строку ("") или в строку из пробелов, но вы не можете использовать **CHAR(32)** функции. Например, установление данного аргумента равным пустой строке производится следующим образом:  
@@ -151,7 +151,7 @@ sp_update_jobstep
  [ **@proxy_id**=] *proxy_id*  
  Идентификатор учетной записи-посредника, от имени которой выполняется шаг задания. *proxy_id* является типом **int**, значение по умолчанию NULL. Если не *proxy_id* указан, не *proxy_name* указано и не *user_name* указан, шаг задания выполняется как учетная запись службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента.  
   
- [ **@proxy_name**=] **"***proxy_name***"**  
+ [ **@proxy_name**=] **"**_proxy_name_**"**  
  Имя учетной записи-посредника, от имени которой выполняется шаг задания. *proxy_name* является типом **sysname**, значение по умолчанию NULL. Если не *proxy_id* указан, не *proxy_name* указано и не *user_name* указан, шаг задания выполняется как учетная запись службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

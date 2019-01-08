@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_getdefaultdatatypemapping_TSQL
@@ -17,17 +16,17 @@ ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44ddeb1370044c0218d0ef85c1d7e61bad78c646
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2559c69e5857bbc5796d68d19b7d760476594b87
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700612"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589198"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает сведения о сопоставлении по умолчанию для указанного типа данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отличным от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных системы управления (СУБД). Эта хранимая процедура выполняется на распространителе в любой базе данных.  
+  Возвращает сведения о сопоставлении по умолчанию для указанного типа данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отличным от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных системы управления (СУБД). Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +52,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@source_dbms**=] **"***source_dbms***"**  
+ [ **@source_dbms**=] **"**_source_dbms_**"**  
  Это имя СУБД, с которой сопоставлены типы данных. *source_dbms* — **sysname**, и может принимать одно из следующих значений:  
   
 |Значение|Описание|  
@@ -63,10 +62,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  Необходимо указать значение для этого параметра.  
   
- [  **@source_version=** ] **"***source_version***"**  
+ [  **@source_version=** ] **"**_source_version_**"**  
  Номер версии исходной СУБД. *source_version* — **varchar(10)**, со значением по умолчанию NULL.  
   
- [ **@source_type**=] **"***source_type***"**  
+ [ **@source_type**=] **"**_source_type_**"**  
  Тип данных в исходной СУБД. *source_type* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@source_length=** ] *source_length*  
@@ -81,7 +80,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@source_nullable=** ] *source_nullable*  
  Показывает, что тип данных в исходной СУБД поддерживает значение NULL. *source_nullable* — **бит**, со значением по умолчанию **1**, что означает, что значения NULL допустимы.  
   
- [ **@destination_dbms** =] **"***destination_dbms***"**  
+ [ **@destination_dbms** =] **"**_destination_dbms_**"**  
  Название целевой СУБД. *destination_dbms* — **sysname**, и может принимать одно из следующих значений:  
   
 |Значение|Описание|  
@@ -93,10 +92,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  Необходимо указать значение для этого параметра.  
   
- [ **@destination_version**=] **"***destination_version***"**  
+ [ **@destination_version**=] **"**_destination_version_**"**  
  Версия продукта целевой СУБД. *destination_version* — **varchar(10)**, со значением по умолчанию NULL.  
   
- [ **@destination_type**=] **"***destination_type***"** выходных данных  
+ [ **@destination_type**=] **"**_destination_type_**"** выходных данных  
  Тип данных, приведенных в списке целевой СУБД. *destination_type* — **sysname**, со значением по умолчанию NULL.  
   
  [  **@destination_length=** ] *destination_length* выходных данных  
@@ -105,20 +104,20 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@destination_precision=** ] *destination_precision* выходных данных  
  Точность типа данных в целевой СУБД. *destination_precision* — **bigint**, со значением по умолчанию NULL.  
   
- [  **@destination_scale=** ] *destination_scale *** выходных данных**  
+ [  **@destination_scale=** ] _destination_scale_**выходных данных**  
  Масштаб типа данных в целевой СУБД. *destination_scale* — **int**, со значением по умолчанию NULL.  
   
- [  **@destination_nullable=** ] *destination_nullable *** выходных данных**  
+ [  **@destination_nullable=** ] _destination_nullable_**выходных данных**  
  Показывает, что тип данных в целевой СУБД поддерживает значение NULL. *destination_nullable* — **бит**, со значением по умолчанию NULL. **1** означает, что значения NULL допустимы.  
   
- [  **@dataloss=** ] *потерю данных *** выходных данных**  
+ [  **@dataloss=** ] _потерю данных_**выходных данных**  
  Показывает, что при сопоставлении возможна потеря данных. *потери данных* — **бит**, со значением по умолчанию NULL. **1** означает, что есть вероятность потери данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="remarks"></a>Примечания  
- **sp_getdefaultdatatypemapping** используется во всех типах репликации между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отличным от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] СУБД.  
+ **sp_getdefaultdatatypemapping** используется во всех типах репликации между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отличным от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] СУБД.  
   
  **sp_getdefaultdatatypemapping** возвращает данные назначения по умолчанию типа, который является наиболее подходящие для заданного исходного типа данных.  
   

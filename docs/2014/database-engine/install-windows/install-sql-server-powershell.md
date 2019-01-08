@@ -10,12 +10,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8cd37ca4058fb79eddfa296896c3da230b98789
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018800"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360936"
 ---
 # <a name="install-sql-server-powershell"></a>Установка компонентов SQL Server PowerShell
   Выполнение программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет остановлено, если обнаружится, что выбраны компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включающие компоненты PowerShell, а Windows PowerShell 2.0 не установлен. Необходимо установить PowerShell с помощью Windows Management Framework, а затем повторно запустить программу установки.  
@@ -35,7 +35,7 @@ ms.locfileid: "51018800"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживает запуск сеансов Windows PowerShell из дерева обозревателя объектов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает шаги заданий Windows PowerShell.  
   
- Если Windows PowerShell 2.0 не установлена, или было удалено, необходимо установить его, следуя инструкциям [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) страницы.  
+ Если Windows PowerShell 2.0 не установлена, или было удалено, необходимо установить его, следуя инструкциям [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) страницы.  
   
  Если Windows PowerShell удалить после завершения программы установки, то функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Windows PowerShell не будут работать. Пользователи Windows могут удалить Windows PowerShell, и, кроме того, удаление Windows PowerShell может быть необходимо для некоторых вариантов обновления ОС Windows. Для использования функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell необходимо повторно установить PowerShell 2.0 с помощью Windows Management Framework.  
   

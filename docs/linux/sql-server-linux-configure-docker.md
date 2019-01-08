@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 1a4b517374e19ab959a8c00b732d62643c32cff3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.openlocfilehash: 4078d2d660a2690983e34c6db024df3a93df97eb
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657988"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266065"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Настройка образов контейнеров SQL Server в Docker
 
@@ -46,11 +46,11 @@ ms.locfileid: "51657988"
 Например следующая команда извлекает последний контейнер предварительной версии SQL Server 2019, использующий RHEL:
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ::: moniker-end
@@ -253,7 +253,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 Этот метод также позволяет совместно использовать и просматривать файлы на узле за пределами Docker.
 
 > [!IMPORTANT]
-> Сопоставление томов узла для Docker на компьютере Mac с SQL Server в образе Linux не поддерживается в настоящее время. Вместо этого используйте контейнеры томов данных. Это ограничение относится только к `/var/opt/mssql` каталога. Чтение из подключенного каталога работает нормально. Например можно подключить каталог узла, с использованием – v на компьютере Mac и восстановить резервную копию из BAK-файле, который находится на узле.
+> Сопоставление томов узла для Docker на компьютере Mac с SQL Server в образе Linux не поддерживается в настоящее время. Вместо этого используйте контейнеры томов данных. Это ограничение относится только к `/var/opt/mssql` каталога. Чтение из подключенного каталога работает нормально. Например можно подключить узел каталога, используя - v на компьютере Mac и восстановить резервную копию из BAK-файле, который находится на узле.
 
 ### <a name="use-data-volume-containers"></a>Используйте контейнеры томов данных
 

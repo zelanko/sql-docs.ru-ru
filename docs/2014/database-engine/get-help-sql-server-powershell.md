@@ -15,12 +15,12 @@ ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3851ebeb72cc76ce6466d4456772ec13de48a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065324"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363556"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Сведения об использовании поставщика и командлетов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для Windows PowerShell можно получить из нескольких источников. К ним относится справка, доступная в среде Windows PowerShell.  
@@ -33,7 +33,7 @@ ms.locfileid: "48065324"
 ### <a name="help-in-the-windows-powershell-environment"></a>Справка в среде Windows PowerShell  
  Командлет **Get-Help** позволяет получить справку в среде Windows PowerShell. Командлет**Get-Help** предоставляет основную справку по языку Windows PowerShell и различным командлетам и поставщикам, доступным в среде Windows PowerShell.  
   
- Дополнительные сведения о способах использования командлета **Get-Help**см. в документации по [получению справки с помощью командлета Get-Help](http://go.microsoft.com/fwlink/?LinkId=102136).  
+ Дополнительные сведения о способах использовании **Get-Help**, см. в разделе [Get-Help: Получение справки](https://go.microsoft.com/fwlink/?LinkId=102136).  
   
 ### <a name="sql-server-powershell-provider-help"></a>Справка поставщика SQL Server PowerShell  
  Поставщик [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell создает несколько папок на виртуальном диске SQLSERVER, среди них папки SQLSERVER:\SQL и SQLSERVER:\DAC. Каждая папка связана с одной из объектных моделей управляемости SQL Server. Пользователь может перечислять методы и свойства, связанные с каждым узлом в пути SQL Server, однако он не может получить справку по ним в среде PowerShell. Таблица папок со ссылками на соответствующие разделы справочника по программированию приведена в статье [SQL Server PowerShell, поставщик](../powershell/sql-server-powershell-provider.md).  
@@ -62,16 +62,16 @@ ms.locfileid: "48065324"
 Get-Help Invoke-Sqlcmd  
   
 ## Get the full help.  
-Get-Help Invoke-Sqlcmd –Full  
+Get-Help Invoke-Sqlcmd -Full  
   
 ## Get the parameter descriptions.  
 Get-Help Invoke-Sqlcmd -Parameter *  
   
 ## Get the code examples.  
-Get-Help Invoke-Sqlcmd –Examples  
+Get-Help Invoke-Sqlcmd -Examples  
   
 ## Get the syntax diagram.  
-Get-Help Invoke-Sqlcmd –Syntax  
+Get-Help Invoke-Sqlcmd -Syntax  
 ```  
   
 ## <a name="get-a-list-of-providers"></a>Получение списка поставщиков  
@@ -79,9 +79,9 @@ Get-Help Invoke-Sqlcmd –Syntax
   
 1.  Запустите командлет Get-Help, указав категорию поставщиков.  
   
- Дополнительные сведения о получении справки поставщика в среде Windows PowerShell см. в разделе [Диски и поставщики](http://go.microsoft.com/fwlink/?LinkId=102137).  
+ Дополнительные сведения о получении справки поставщика в среде Windows PowerShell см. в разделе [Диски и поставщики](https://go.microsoft.com/fwlink/?LinkId=102137).  
   
-### <a name="example-get-a-list-of-providers"></a>Пример: получение списка поставщиков  
+### <a name="example-get-a-list-of-providers"></a>Пример Получение списка поставщиков  
  Следующий код возвращает список поставщиков, которые включены в текущем сеансе Windows PowerShell:  
   
 ```  
@@ -93,7 +93,7 @@ Get-Help -Category provider
   
 1.  Запустите командлет Get-Help, указав имя SQL Server.  
   
-### <a name="example-get-sql-server-provider-help"></a>Пример: получение справки о поставщике SQL Server  
+### <a name="example-get-sql-server-provider-help"></a>Пример Получение справки о поставщике SQL Server  
  Код, приведенные в этом примере, возвращает основные сведения о поставщике [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
 ```  
@@ -105,7 +105,7 @@ Get-Help SQLServer
   
 1.  Перейдите в узел из пути SQL Server или создайте набор переменных к этому расположению.  
   
-2.  Запустите командлет **Get-Member** , при этом параметру –Type задайте значение Methods или Properties.  
+2.  Запустите **Get-Member** командлет с параметром тип, присвоено значение Methods или Properties  
   
 ### <a name="examples-listing-methods-and-properties"></a>Примеры: список методов и свойств  
  Этот пример формирует список методов, поддерживаемых для узла Databases.  

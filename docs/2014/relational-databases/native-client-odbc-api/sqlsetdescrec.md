@@ -12,12 +12,12 @@ ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20adc991d3d9c497b4bab1f7c665f941bd98e7fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d323b1b92ba02e55064d2f86c62ee36a4a38d904
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088584"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365806"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
   В этом разделе обсуждаются SQLSetDescRec функциональные возможности, относящиеся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -27,7 +27,7 @@ ms.locfileid: "48088584"
   
  В следующей таблице показано сопоставление между параметрами и полями дескриптора.  
   
-|Параметр|Связанные атрибуты для параметров, не возвращающих табличного значения, включая столбцы параметров с табличными значениями|Связанные атрибуты для возвращающих табличное значение параметров|  
+|Параметр|Связанные атрибуты для не табличное значение параметра, включая столбцы возвращающего табличное значение параметра|Связанные атрибуты для возвращающих табличное значение параметров|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*Тип*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*Подтип*|Не учитывается|Для записей типа SQL_DATETIME и SQL_INTERVAL этот атрибут должен иметь значение SQL_DESC_DATETIME_INTERVAL_CODE.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48088584"
  Функция `SQLSetDescRec` поддерживает определяемые пользователем типы больших данных CLR. Дополнительные сведения см. в разделе [Large CLR User-Defined типы &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>См. также  
- [SQLSetDescRec](http://go.microsoft.com/fwlink/?LinkId=80704)   
+ [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

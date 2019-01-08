@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.stepgeneral.f1
@@ -12,14 +12,14 @@ ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d20df5bbaaa7c9ba273b5796dc6a6b9e32bc287f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196080"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807134"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>Свойства шага задания: создание шага задания (страница "Общие")
+# <a name="job-step-properties-new-job-step-general-page"></a>Свойства шага задания: Создание шага задания (страница "Общие")
   Эта страница используется для просмотра и изменения свойств шага задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или для определения нового шага задания.  
   
  Для перехода к данной странице в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] разверните агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , щелкните правой кнопкой мыши **Задания**, выберите пункт **Создать задание**, страницу **Шаги** и нажмите кнопку **Создать**. Перейти к этой странице можно также, щелкнув правой кнопкой мыши задание в обозревателе объектов, наведя курсор мыши на пункт **Свойства**, затем выбрав страницу **Шаги** и нажав кнопку **Создать**, **Вставить**или **Изменить**.  
@@ -261,10 +261,10 @@ ms.locfileid: "48196080"
  **Удалить**  
  Удалить выбранный командный файл.  
   
- **вверх**  
+ **Вверх**  
  Переместить выбранный командный файл вверх.  
   
- **вниз**  
+ **Вниз**  
  Переместить выбранный командный файл вниз.  
   
 ### <a name="data-sources-tab"></a>Вкладка «Источники данных»  
@@ -324,7 +324,7 @@ ms.locfileid: "48196080"
  **Путь к свойству**  
  Позволяет просмотреть или изменить путь к свойству.  
   
- **Value**  
+ **Значение**  
  Позволяет просмотреть или изменить значение свойства.  
   
  **Удалить**  

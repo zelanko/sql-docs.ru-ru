@@ -1,22 +1,21 @@
 ---
-title: Шаг 3. Добавление и настройка диспетчера соединений OLE DB | Документы Майкрософт
+title: Шаг 3. Добавление и настройка диспетчера соединений OLE DB | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 01defa7e46da434cea49944d3cc127740635b1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c04f6fe6e414e2468277644ef74bb2dab395af33
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093914"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757116"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Шаг 3. Добавление и настройка диспетчера соединений OLE DB
   После добавления диспетчера соединений с неструктурированными файлами для подключения к источникам данных предстоит добавить диспетчер соединений OLE DB для соединения с назначением. Диспетчер соединений OLE DB позволяет пакету получать данные из любого источника данных, совместимого с OLE DB, а также загружать данные в такой источник данных. Используя диспетчер соединений OLE DB, можно указать для соединения сервер, метод проверки подлинности и базу данных по умолчанию.  
@@ -48,9 +47,9 @@ ms.locfileid: "48093914"
 10. Нажмите кнопку **ОК**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Шаг 4. Добавление задачи потока данных в пакет](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+ [Шаг 4. Добавление в пакет задачу потока данных](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер подключений OLE DB](connection-manager/ole-db-connection-manager.md)  
+ [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

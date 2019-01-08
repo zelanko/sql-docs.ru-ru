@@ -1,5 +1,5 @@
 ---
-title: 'Задача 5: Экспорт результатов в файл Excel очистки | Документация Майкрософт'
+title: Задача 5. Экспорт результатов в файл Excel очистки | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2d52304ff9a8dae16e74d9d5aa7324adb2aac4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b01c9394419a4e526969c4a8ecccaf262f576d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138174"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368216"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Задача 5. Экспорт результатов очистки в файл Excel.
-  В этой задаче вы экспортируете результаты операции очистки в файл Excel. См. в разделе [этап экспорта](http://msdn.microsoft.com/library/hh213061.aspx#Export) Дополнительные сведения.  
+  В этой задаче вы экспортируете результаты операции очистки в файл Excel. См. в разделе [этап экспорта](https://msdn.microsoft.com/library/hh213061.aspx#Export) Дополнительные сведения.  
   
 1.  В области справа выберите **Excel** для **конечный тип**.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48138174"
   
 7.  Откройте **Cleansed Supplier List.xls** и выполните следующие действия:  
   
-    1.  Убедитесь, что адреса электронной почты, заканчивающиеся на adventure-work.com (без символа «s»), отсутствуют, выполнив поиск «adventure-work.com» на листе.  
+    1.  Убедитесь, что отсутствуют адреса электронной почты которых заканчиваются на adventure-work.com (без символа "), выполнив поиск adventure-work.com в журнале.  
   
     2.  Убедитесь, что не **США** значение в **страны** столбца.  
   

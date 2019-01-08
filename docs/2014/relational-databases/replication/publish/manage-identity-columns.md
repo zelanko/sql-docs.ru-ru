@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identity values [SQL Server replication]
@@ -17,12 +16,12 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a05cbb061c2f0df716458de35b3a1bad9fbae7e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12233854049cf83f809a434b0e28dd4fb06d8d65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198264"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816646"
 ---
 # <a name="manage-identity-columns"></a>Управление столбцами идентификаторов
   В этом разделе описывается управление столбцами идентификаторов в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Если операции вставки с подписчика реплицируются обратно на издатель, необходимо управлять столбцами идентификаторов, чтобы избежать присваивания одинаковых значений идентификаторов на подписчике и издателе. Репликация может управлять диапазонами идентификаторов автоматически, или можно управлять диапазонами идентификаторов вручную.  Сведения о параметрах управления диапазонами идентификаторов, предоставляемых репликацией, см. в статье [Replicate Identity Columns](replicate-identity-columns.md) (Репликация столбцов идентификаторов).  
@@ -74,7 +73,7 @@ ms.locfileid: "48198264"
   
 2.  Щелкните **Свойства статьи**, затем щелкните **Указать свойства выделенной статьи таблицы**.  
   
-3.  На вкладке **Свойства** диалогового окна **Свойства статьи — \<статья>** в разделе **Управление диапазоном идентификаторов** введите значения для одного или нескольких следующих свойств: **Размер диапазона издателя**, **Размер диапазона подписчика** и **Процентный порог выделения диапазона**.  
+3.  На **свойства** вкладке **свойства статьи — \<статье >** отображаемое в диалоговом окне **управление диапазонами идентификаторов** введите значения для одного или нескольких следующие свойства: **Размер диапазона издателя**, **размер диапазона подписчика**, и **процентный порог выделения диапазона**.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

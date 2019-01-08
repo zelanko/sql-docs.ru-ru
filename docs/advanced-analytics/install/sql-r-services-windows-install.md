@@ -1,6 +1,6 @@
 ---
-title: Установка служб R SQL Server 2016 (в базе данных) | Документация Майкрософт
-description: R в SQL Server доступна при установке служб R SQL Server 2016 на Windows.
+title: Установка SQL Server 2016 R Services (в базе данных) — SQL Server машинное обучение
+description: Добавление поддержки языков для ядра СУБД в SQL Server 2016 R Services в Windows программирования R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f4ba4e28a17b0a025b48d41b077d4a536a9be8e9
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 69b3b9a57b2a4f6120c88552ca3100b288968b69
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878127"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645323"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Установка служб SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "48878127"
   + Используется другая библиотека и другой исполняемый файл и получить разные результаты, чем при выполнении в SQL Server.
   + Скрипты R и Python, выполняющиеся на внешние библиотеки не могут управляться SQL Server, что приводит к конкуренции ресурсов.
   
-Если вы использовали все предыдущие версии среды разработки Revolution Analytics или пакетов RevoScaleR или если вы установили все предварительные версии SQL Server 2016, необходимо удалить их. Выполнение нескольких версий RevoScaleR и других частных пакетах не поддерживается. Помощь в удалении предыдущих версий, см. в разделе [обновления и часто задаваемые вопросы установки служб машинного обучения SQL Server](../r/upgrade-and-installation-faq-sql-server-r-services.md).
+Если вы использовали все предыдущие версии среды разработки Revolution Analytics или пакетов RevoScaleR или если вы установили все предварительные версии SQL Server 2016, необходимо удалить их. Выполнение нескольких версий RevoScaleR и других частных пакетах не поддерживается. Получить справку об удалении предыдущих версий, см. в разделе [обновления и часто задаваемые вопросы установки служб машинного обучения SQL Server](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
 > [!IMPORTANT]
 > После завершения установки необходимо выполнить дополнительные шаги настройки, описанные в этой статье. Эти шаги включают Включение SQL Server для использования внешних скриптов и добавление учетных записей, требуемых для SQL Server для выполнения заданий R от вашего имени. Изменения конфигурации обычно требуют перезапуска данного экземпляра или перезапуск службы панели запуска.
@@ -91,27 +91,40 @@ ms.locfileid: "48878127"
 
 7. После установки, если будет предложено перезагрузить компьютер, сделайте это сейчас. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
+## <a name="set-environment-variables"></a>Настройка переменных среды
+
+Для R интеграции функций только, следует задать **MKL_CBWR** переменную среды, чтобы [гарантировать согласованный результат](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) из вычислений Intel Math Kernel Library (MKL).
+
+1. На панели управления выберите **система и безопасность** > **системы** > **Дополнительные параметры системы**  >   **Переменные среды**.
+
+2. Создайте новую переменную пользователем или системой. 
+
+  + Набор имя переменной `MKL_CBWR`
+  + Задать значения переменной `AUTO`
+
+Этот шаг требует перезапуска сервера. Если вы собираетесь включить выполнение сценариев, вы можете воздержаться от перезапуска до завершения всей работы конфигурации.
+
 <a name="bkmk_enableFeature"></a>
 
 ##  <a name="enable-script-execution"></a>Включение сценариев
 
-1. Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
+1. Откройте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
     > [!TIP]
-    > Можно загрузить и установить соответствующую версию на этой странице: [скачать SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > Можно загрузить и установить соответствующую версию на этой странице: [Скачайте SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
     > Можно также попробовать предварительную версию [Azure Data Studio](../../azure-data-studio/what-is.md), который поддерживает административных задач и запросов к SQL Server.
   
 2. Подключитесь к экземпляру, где установлены службы машинного обучения, щелкните **новый запрос** откройте окно запроса и выполните следующую команду:
 
-   ```SQL
+   ```sql
    sp_configure
    ```
     На данном этапе значение для свойства `external scripts enabled` должно быть **0**. Том, что эта функция отключена по умолчанию. Эту функцию необходимо явно включить администратор, перед запуском сценариев R или Python.
      
 3. Чтобы включить внешние средства написания сценариев, выполните следующую инструкцию:
   
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
@@ -132,7 +145,7 @@ ms.locfileid: "48878127"
 
 1. В SQL Server Management Studio откройте новое окно запроса и выполните следующую команду:
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled'
     ```
 
@@ -144,7 +157,7 @@ ms.locfileid: "48878127"
 
     Откройте новую **запроса** окно в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем запустите следующий сценарий:
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
     OutputDataSet <- InputDataSet;
@@ -170,9 +183,9 @@ ms.locfileid: "48878127"
 
 На серверах с отключенной дополнительные действия не требуются. Дополнительные сведения см. в разделе [установить на компьютерах без доступа к Интернету > Применить накопительные обновления](sql-ml-component-install-without-internet-access.md#apply-cu).
 
-1. Начать с экземпляром базовых показателей уже установлен: первоначальный выпуск SQL Server 2016, SQL Server 2016 с пакетом обновления 1 или 2 (SP2) для SQL Server 2016.
+1. Начать с экземпляром базовых показателей уже установлен: Первоначальный выпуск SQL Server 2016, SQL Server 2016 с пакетом обновления 1 или 2 (SP2) для SQL Server 2016.
 
-2. Перейдите к списку накопительного пакета обновления: [обновляет SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+2. Перейти к списку накопительного пакета обновления: [Обновления SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
 
 3. Выберите последний накопительный пакет обновления. Исполняемый файл загружается и извлекаются автоматически.
 
@@ -203,7 +216,7 @@ ms.locfileid: "48878127"
 * [Добавление SQLRUserGroup в качестве пользователя базы данных](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
-> Требуются не все перечисленные изменения и не могут быть необходимы. Требования зависят от схемы безопасности, где установлен SQL Server, а также как ожидается, что пользователи для подключения к базе данных и выполнения внешних скриптов. Дополнительные советы по устранению неполадок можно найти здесь: [вопросы и ответы по обновлению и установке](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> Требуются не все перечисленные изменения и не могут быть необходимы. Требования зависят от схемы безопасности, где установлен SQL Server, а также как ожидается, что пользователи для подключения к базе данных и выполнения внешних скриптов. Дополнительные советы по устранению неполадок можно найти здесь: [Часто задаваемые вопросы по обновлению и установке](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 ## <a name="suggested-optimizations"></a>Предлагаемые оптимизации
 
@@ -241,7 +254,7 @@ ms.locfileid: "48878127"
 
 Разработчики R можно приступить к работе с простыми примерами и ознакомиться с основами как R работает с SQL Server. Следующий шаг см. следующие ссылки:
 
-+ [Руководство: Запуск R в T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Учебник: Анализ в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Учебник. Запуск R в T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Учебник. Аналитика в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Чтобы просмотреть примеры машинного обучения, которые основаны на реальных сценариев, см. в разделе [машинного обучения учебники](../tutorials/machine-learning-services-tutorials.md).

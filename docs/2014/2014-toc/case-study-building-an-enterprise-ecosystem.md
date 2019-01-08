@@ -1,5 +1,5 @@
 ---
-title: 'Практический пример: Создание экосистемы для предприятия с помощью Microsoft Dynamics ERP и репликации SQL Server 2014 для обеспечения масштабируемости и производительности | Документация Майкрософт'
+title: 'Конкретный пример: Создание экосистемы для предприятия с помощью Microsoft Dynamics ERP и репликации SQL Server 2014 для обеспечения масштабируемости и производительности | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1de233ed0f659438c46cab69cec79119fc5291c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3b7652cf67fff68b1a9e6d87e02c2776317af19
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113636"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365243"
 ---
-# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Пример внедрения. Создание экосистемы для предприятия с помощью Microsoft Dynamics ERP и репликации SQL Server 2014 для обеспечения масштабируемости и производительности
-  **Сводка:** в этом документе рассматриваются следующие сценарии:  
+# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Конкретный пример: Создание экосистемы для предприятия с помощью Microsoft Dynamics ERP и репликации SQL Server 2014 для обеспечения масштабируемости и производительности
+  **Сводка.** В этом документе рассматриваются следующие сценарии:  
 Как использовать репликацию транзакций в SQL Server 2014 для распространения транзакций от клиентов Dynamics AX между несколькими узлами. Поскольку данные сохраняются на узлы в режиме реального времени, репликация транзакций обеспечивает избыточность данных, что повышает доступность данных и позволяет более эффективно анализировать доступные данные с целью установления показателей производительности.  
 Как понять конкретику, связанную с репликацией транзакций, используя ее при этом для создания высокомасштабируемых экосистем для предприятий с Microsoft Dynamics ERP. Обеспечение высокой производительности и масштабируемости без настройки готовых возможностей AX.  
   
@@ -34,6 +34,6 @@ ms.locfileid: "48113636"
  **Применимо к:** SQL Server 2008, SQL Server 2012 и SQL Server 2014  
   
  Чтобы прочитать этот документ, скачайте  
-        [Практический пример: Создание экосистемы для предприятия с помощью Microsoft Dynamics ERP и репликации SQL Server 2014 для обеспечения масштабируемости и производительности](http://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/A%20Case%20Study%20Using%20Replication%20to%20Build%20an%20Enterprise%20Ecosystem%20in%20Microsoft%20Dynamics%20ERP%20for%20Scalability%20and%20Performance.docx) документ Word.  
+        [Пример внедрения: Создание экосистемы для предприятия с помощью Microsoft Dynamics ERP и репликации SQL Server 2014 для обеспечения масштабируемости и производительности](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/A%20Case%20Study%20Using%20Replication%20to%20Build%20an%20Enterprise%20Ecosystem%20in%20Microsoft%20Dynamics%20ERP%20for%20Scalability%20and%20Performance.docx) документ Word.  
   
   

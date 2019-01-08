@@ -1,5 +1,5 @@
 ---
-title: Безопасность для машинного обучения SQL Server | Документация Майкрософт
+title: Общие сведения о безопасности для расширений R и Python — машинного обучения SQL Server
 description: Общие сведения о безопасности инфраструктуры расширяемости в службах машинного обучения SQL Server. Безопасность для учетных записей входа и пользователя, службы панели запуска SQL Server, рабочих учетных записей, под управлением нескольких сценариев и разрешения для файлов.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a5d109e16c81481f9e4267dc4963ecea74cfa736
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419379"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596575"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Общие сведения о безопасности для инфраструктуры расширяемости в службах машинного обучения SQL Server
 
@@ -71,7 +71,7 @@ ms.locfileid: "49419379"
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Службы, используемые в звукозапись обрабатывалась (Launchpad)
 
-Инфраструктура расширяемости добавляет одну новую службу NT для [список служб](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) в установке SQL Server: [ **панель запуска SQL Server (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
+Инфраструктура расширяемости добавляет одну новую службу NT для [список служб](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) в установке SQL Server: [**Панель запуска SQL Server (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 Ядро СУБД использует службу панели запуска SQL Server для создания экземпляра в сеансе R или Python, как отдельный процесс. Процесс выполняется под учетной записью с низким уровнем прав; отличается от SQL Server, панель запуска самого и удостоверения пользователя, под которой был выполнен запрос хранимой процедуры или узла. Выполнение сценария в отдельном процессе, от имени учетной записи с низким уровнем прав, лежит в основе модели безопасности и изоляции для R и Python в SQL Server.
 

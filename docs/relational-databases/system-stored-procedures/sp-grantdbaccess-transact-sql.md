@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: be0252386717bb2e9cffcef45918a0dd85d06b41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b35e2baef80dbacf039b9c767f7798ddba0d90a9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652953"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591558"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,10 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@loginame =** ]  **"*** входа* **"** — это имя группы Windows, имя входа Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа должны быть сопоставлены с новой базы данных пользователь. Имена групп Windows и имена входа Windows должны быть дополнены именем домена Windows в виде *домена*\\*входа *, например **LONDON\Joeb**. Указанное имя входа не может быть уже сопоставлено с пользователем в базе данных. *Имя входа* — **sysname**, не имеет значения по умолчанию.  
+ [  **@loginame =** ] **"**_входа_ **"**  
+ Имя группы Windows, имени входа Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое будет сопоставлено с новым пользователем базы данных. Имена групп Windows и имена входа Windows должны быть дополнены именем домена Windows в виде *домена*\\*входа*, например **LONDON\Joeb**. Указанное имя входа не может быть уже сопоставлено с пользователем в базе данных. *Имя входа* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@name_in_db=**] **"***name_in_db***"** [ **ВЫВОДА**]  
+ [  **@name_in_db=**] **"**_name_in_db_**"** [ **ВЫВОДА**]  
  Имя нового пользователя базы данных. *name_in_db* является ВЫХОДНОЙ переменной с типом данных **sysname**и значение по умолчанию NULL. Если не указан, *входа* используется. Если указано как переменная OUTPUT со значением NULL, **@name_in_db** присваивается *входа*. *name_in_db* не должен существовать в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

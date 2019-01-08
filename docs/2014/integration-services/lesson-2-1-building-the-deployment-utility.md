@@ -1,22 +1,21 @@
 ---
-title: Шаг 1. Построение программы развертывания | Документы Майкрософт
+title: Шаг 1. Построение программы развертывания | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2bbae058a0e3ecacaa4be9204a822451e1a0602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8be4778dc8ca28372132e3ca9447d5804454195
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216015"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356339"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Шаг 1. Построение программы развертывания
   В этой задаче будет настроена и построена программа развертывания для проекта «Учебник по развертыванию».  
@@ -49,7 +48,7 @@ ms.locfileid: "48216015"
   
 4.  В окне «Вывод» проверьте следующее.  
   
-     Запущена сборка: проект служб SQL Server Integration Services: добавочная...  
+     Запущено построение проекта «Службы SQL Integration Services». Добавочное ...  
   
      Создание программы развертывания...  
   
@@ -57,14 +56,14 @@ ms.locfileid: "48216015"
   
      Построение завершено — 0 ошибок, 0 предупреждений  
   
-     ========== Сборка: 0 достигнуто, 0 сбоев, 1 обновленный, 0 пропущено ==========  
+     ========== Номер сборки: 0 достигнуто, 0 сбоев, 1 обновленный, 0 пропущено ==========  
   
 5.  В меню **Файл** выберите пункт **Выход**. Если программа предложит сохранить изменения объектов учебника по развертыванию, нажмите кнопку **Да**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 2. Проверка пакета развертывания](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Создание программы развертывания](../../2014/integration-services/create-a-deployment-utility.md)  
