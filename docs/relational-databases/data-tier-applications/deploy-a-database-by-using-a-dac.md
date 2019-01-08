@@ -20,15 +20,15 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff2967c06b32540b92f40007f66ebe346eedca40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9cdb5c17a74b600b640872d7b153f715da8e15a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540394"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590238"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Развертывание базы данных с помощью приложения уровня данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   С помощью мастера **развертывания базы данных в SQL Azure** разверните базу данных между экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и сервером [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] либо между двумя серверами [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="BeforeBegin"></a> Перед началом  

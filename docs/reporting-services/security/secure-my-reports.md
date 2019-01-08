@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86ff5bb9df79c23ba0bfb04954790ba0c475a3d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d80ec6d5087735602b05326e874263c083657a6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775822"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211473"
 ---
 # <a name="secure-my-reports"></a>Обеспечение безопасности «Моих отчетов»
   В компоненте «Мои отчеты» представлено управляемое пользователем рабочее пространство для работы с отчетами. Чтобы обеспечить соответствие своему назначению, для папки «Мои отчеты» требуются более широкие права доступа, чем для других папок, доступных для общего пользования. Пользователям, имеющим разрешения в других папках только на просмотр и запуск отчетов, могут потребоваться дополнительные разрешения для управления их папками My Reports и содержимым, которое им принадлежит. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет для этого специальный механизм назначения и определения ролей.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Доступ к папке «Мои отчеты» возможен только в диспетчере отчетов. Она недоступна в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="role-assignment-for-my-reports"></a>Назначение роли для папки «Мои отчеты»  

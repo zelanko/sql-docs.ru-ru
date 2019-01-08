@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a80d893cd942e7d8c1e9bb12b6fa21a3247d7e52
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba81029a195bcee0e747bfe517fa5d6b27e4ead1
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401629"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588392"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Укажите коэффициент заполнения для индекса
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "52401629"
   
 7.  Щелкните **Закрыть**.  
   
-8.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
+8.  В меню **Файл** выберите пункт **Сохранить**_имя_таблицы_.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>Указание коэффициента заполнения для индекса с помощью обозревателя объектов:  
   

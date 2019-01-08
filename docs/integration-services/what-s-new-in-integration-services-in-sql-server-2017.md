@@ -11,17 +11,17 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1fe0017d3797f260aede9e712cbf1cecfe6a45a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3bb34a00c22e1fa3ceafb7d2f203c1dbd43ac80d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420575"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214023"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Новые возможности служб Integration Services в SQL Server 2017
 В этой статье описаны функции, которые были добавлены или обновлены в [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
 
->   [!NOTE]
+> [!NOTE]
 > В SQL Server 2017 также входят функции SQL Server 2016 и функции, добавленные в обновлениях для SQL Server 2016. Сведения о новых возможностях служб SQL Server Integration Services в SQL Server 2016 см. в разделе [Новые возможности служб Integration Services в SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).
 
 ## <a name="highlights-of-this-release"></a>Главное в этом выпуске

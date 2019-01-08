@@ -29,12 +29,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f7d1e7476e014b1ad3d865bd2b322dd0b9030e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9e216fdf05bd473ad05a55469858ee9a053bd75
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831912"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213683"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -70,7 +70,7 @@ CREATE DATABASE ENCRYPTION KEY
 ## <a name="arguments"></a>Аргументы  
 WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY  }  
 Определяет алгоритм шифрования, который используется для ключа шифрования.   
->  [!NOTE]
+> [!NOTE]
 >    Начиная с версии SQL Server 2016 все алгоритмы, отличные от AES_128, AES_192 и AES_256, являются нерекомендуемыми. Чтобы использовать старые алгоритмы (что не рекомендуется), необходимо установить уровень совместимости базы данных 120 или ниже.  
   
 ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name  
