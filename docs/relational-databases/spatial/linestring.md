@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73aa99ec25e1cdf084dc2a5f7a8dfa4c08f6c90
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: c7765138f3ff4fd1ef31b6d3a606d427020c376d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018639"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979830"
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51018639"
   
  ![Примеры геометрических экземпляров LineString](../../relational-databases/spatial/media/linestring.gif "Примеры геометрических экземпляров LineString")  
   
- На рисунке представлены:  
+На рисунке представлены:  
   
 -   на рисунке 1 представлен простой незамкнутый экземпляр объекта **LineString** ;  
   
@@ -41,69 +41,69 @@ ms.locfileid: "51018639"
 -   на рисунке 4 продемонстрирован замкнутый непростой экземпляр объекта **LineString** , не являющийся кольцом.  
   
 ### <a name="accepted-instances"></a>Принимаемые экземпляры  
- Принятые экземпляры **LineString** могут быть введены в переменную геометрии, но они могут быть недействительными экземплярами **LineString** . Для принятия экземпляра **LineString** должны соблюдаться следующие критерии. Экземпляр должен быть сформирован по меньшей мере двумя точками или же должен быть пустым. Следующие экземпляры LineString допустимы.  
+Принятые экземпляры **LineString** могут быть введены в переменную геометрии, но они могут быть недействительными экземплярами **LineString** . Для принятия экземпляра **LineString** должны соблюдаться следующие критерии. Экземпляр должен быть сформирован по меньшей мере двумя точками или же должен быть пустым. Следующие экземпляры LineString допустимы.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING EMPTY';  
 DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';  
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` показывает, что хотя экземпляр **LineString** допустим, он недействителен.  
+`@g3` показывает, что хотя экземпляр **LineString** допустим, он недействителен.  
   
- Следующий экземпляр **LineString** недопустим. Он выдаст исключение `System.FormatException`.  
+Следующий экземпляр **LineString** недопустим. Он выдаст исключение `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>Допустимые экземпляры  
- Чтобы экземпляр **LineString** был действителен, он должен соответствовать следующим критериям.  
+Чтобы экземпляр **LineString** был действителен, он должен соответствовать следующим критериям.  
   
 1.  Экземпляр **LineString** должен быть принят.  
-  
 2.  Если экземпляр **LineString** не является пустым, он должен содержать по меньшей мере две различные точки.  
-  
 3.  Экземпляр **LineString** не может перекрывать сам себя на интервале из двух или более последовательных точек.  
   
- Следующие экземпляры **LineString** являются действительными.  
+Следующие экземпляры **LineString** являются действительными.  
   
-```  
+```sql  
 DECLARE @g1 geometry= 'LINESTRING EMPTY';  
 DECLARE @g2 geometry= 'LINESTRING(1 1, 3 3)';  
 DECLARE @g3 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0)';  
 DECLARE @g4 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
-  
 ```  
   
- Следующие экземпляры **LineString** не являются действительными.  
+Следующие экземпляры **LineString** не являются действительными.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  
 DECLARE @g2 geometry = 'LINESTRING(1 1, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
 > [!WARNING]  
->  Определение пересечений **LineString** основано на расчетах с плавающей запятой, которые не являются точными.  
+> Определение пересечений **LineString** основано на расчетах с плавающей запятой, которые не являются точными.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере показано, как создать экземпляр `geometry``LineString` с тремя точками и значением SRID, равным 0:  
+### <a name="example-a"></a>Пример А.    
+В следующем примере показано, как создать экземпляр `geometry``LineString` с тремя точками и значением SRID, равным 0:  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1, 2 4, 3 9)', 0);  
 ```  
   
- Каждая точка экземпляра `LineString` может содержать значения Z (уровень) и M (мера). В данном примере значения М добавляются к экземпляру `LineString` , созданному в примере выше. M и Z могут принимать значения NULL.  
+### <a name="example-b"></a>Пример Б.   
+Каждая точка экземпляра `LineString` может содержать значения Z (уровень) и M (мера). В данном примере значения М добавляются к экземпляру `LineString` , созданному в примере выше. M и Z могут принимать значения NULL.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NULL 24.5)', 0);  
 ```  
   
- В следующем примере показано, как создать экземпляр `geometry LineString` с двумя одинаковыми точками. Вызов `IsValid` указывает, что экземпляр **LineString** не является допустимым, а вызов `MakeValid` преобразует экземпляр **LineString** в **Point**.  
+### <a name="example-c"></a>Пример В.   
+В следующем примере показано, как создать экземпляр `geometry LineString` с двумя одинаковыми точками. Вызов `IsValid` указывает, что экземпляр **LineString** не является допустимым, а вызов `MakeValid` преобразует экземпляр **LineString** в **Point**.  
   
 ```sql  
 DECLARE @g geometry  
@@ -118,11 +118,10 @@ ELSE
      SET @g = @g.MakeValid();  
      SELECT @g.ToString() + ' is a valid Point.';    
   END  
-  
 ```  
   
- Вышеприведенный фрагмент кода вернет следующее:  
-  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```  
 LINESTRING(1 3, 1 3) is not a valid LineString  
 POINT(1 3) is a valid Point.  
