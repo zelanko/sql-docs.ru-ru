@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d9760d692e30a7d33828f27202ba7818c1ac047
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3ce470350556e035453e68c8e84e6cff1ae1ee14
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523457"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590228"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,55 +113,55 @@ replmerg [-?]
  **-?**  
  Выводит список всех доступных параметров.  
   
- **-Publisher** *имя_сервера*[**\\***имя_экземпляра*]  
- Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
- **-PublisherDB** *база_данных_издателя*  
+ **-PublisherDB** _publisher_database_  
  Имя базы данных издателя.  
   
- **-Publication** *publication*  
+ **-Publication** _publication_  
  Имя публикации. Этот параметр допустим только в том случае, если в данной публикации моментальный снимок всегда доступен для новых или повторно инициализированных подписок.  
   
- **-Subscriber** *имя_сервера*[**\\***имя_экземпляра*]  
- Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
+ **-Subscriber** _server_name_[**\\**_instance_name_]  
+ Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
- **-SubscriberDB** *subscriber_database*  
+ **-SubscriberDB** _subscriber_database_  
  Имя базы данных подписчика.  
   
- **-AltSnapshotFolder** *alt_snapshot_folder_path*  
+ **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  Путь к папке, где хранится исходный моментальный снимок для подписки.  
   
  **-Continuous**  
  Определяет, будет ли агент постоянно опрашивать реплицируемые транзакции. Если параметр задан, то даже при отсутствии ожидающих транзакций агент опрашивает реплицируемые транзакции с источника через интервалы опроса.  
   
- **-DestThreads** *number_of_destination_threads*  
+ **-DestThreads** _number_of_destination_threads_  
  Указывает число целевых потоков, которые агент слияния использует для применения изменений к целевому объекту. Целевым объектом при передаче является издатель, а при загрузке — подписчик. Значение по умолчанию — 4.  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  Путь к файлу определения агента. Файл определения агента содержит параметры командной строки для агента. Содержимое файла анализируется как для исполняемого файла. Для указания значений параметров, содержащих произвольные символы, используются двойные кавычки (").  
   
- **-Distributor** *имя_сервера*[**\\***имя_экземпляра*]  
- Имя распространителя. Укажите *имя_сервера* для экземпляра служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере. При распространении (принудительном) с помощью распространителя по умолчанию используется имя применяемого по умолчанию экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на локальном компьютере.  
+ **-Distributor** _server_name_[**\\**_instance_name_]  
+ Имя распространителя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _server_name_**\\**_instance_name_ , чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. При распространении (принудительном) с помощью распространителя по умолчанию используется имя применяемого по умолчанию экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на локальном компьютере.  
   
- **-DistributorLogin** *имя_входа_распространителя*  
+ **-DistributorLogin** _имя_входа_распространителя_  
  Имя входа распространителя.  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  Пароль распространителя.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  Указывает режим безопасности распространителя. Значение **0** означает проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (по умолчанию), а значение **1** — проверку подлинности Windows.  
   
- **-DownloadGenerationsPerBatch** *download_generations_per_batch*  
+ **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
  Число поколений, которые должны быть обработаны в одном пакете при загрузке изменений от издателя на подписчик. Поколение — это логическая группа изменений для статьи. Для надежного канала связи значение по умолчанию равно 100, для ненадежного — 10.  
   
- **-DownloadReadChangesPerBatch** *download_read_changes_per_batch*  
+ **-DownloadReadChangesPerBatch** _download_read_changes_per_batch_  
  Число изменений, которые считываются в одном пакете при загрузке изменений от издателя на подписчик. Значение по умолчанию — 100.  
   
- **-DownloadWriteChangesPerBatch** *download_write_changes_per_batch*  
+ **-DownloadWriteChangesPerBatch** _download_write_changes_per_batch_  
  Число изменений, применяемых в одном пакете при загрузке изменений от издателя на подписчик. Значение по умолчанию — 100.  
   
- **-DynamicSnapshotLocation** *dynamic_snapshot_location*  
+ **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  Местоположение файлов моментальных снимков фильтруемых данных в тех случаях, когда в публикации используются параметризованные фильтры строк.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
@@ -179,7 +179,7 @@ replmerg [-?]
  Дополнительные сведения см. в статье [Общие сведения о безопасности (репликация)](../../../relational-databases/replication/security/security-overview-replication.md).  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
- > [!WARNING]  
+> [!WARNING]
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Для ограничения передачи используйте **@subscriber_upload_options** вместо **sp_addmergearticle** .  
   
  Указывает тип обмена данными во время синхронизации, который может быть одним из следующих значений.  
@@ -209,16 +209,16 @@ replmerg [-?]
 |**1**|Принудительно включить конвергенцию для всех поколений.|  
 |**2**|Принудительно включить конвергенцию для всех поколений и исправить поврежденные журналы преобразований. Если указано это значение, укажите также, где следует исправлять поврежденные журналы преобразований: на издателе, подписчике или в обоих местах.|  
   
- **-FtpAddress** *ftp_address*  
+ **-FtpAddress** _ftp_address_  
  Сетевой адрес службы FTP распространителя. Если этот параметр не указан, то по умолчанию применяется параметр **Distributor** .  
   
- **-FtpPassword** *ftp_password*  
+ **-FtpPassword** _ftp_password_  
  Пароль пользователя, используемый для подключения к службе FTP.  
   
- **-FtpPort** *ftp_port*  
+ **-FtpPort** _ftp_port_  
  Номер порта службы FTP распространителя. Если не указан, используется порт службы FTP по умолчанию (21).  
   
- **-FtpUserName** *ftp_user_name*  
+ **-FtpUserName** _ftp_user_name_  
  Имя пользователя для соединения со службой FTP. Если имя не указано, используется имя входа «anonymous».  
   
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
@@ -231,16 +231,16 @@ replmerg [-?]
 |**2**|По умолчанию. Регистрировать в каждой записи о состоянии сеанса как дополнительные сведения о сеансе, так и подробные сведения о сеансе на уровне статьи, в том числе процент выполнения операции, а также последнее сообщение о состоянии агента, подробные сведения о последнем сеансе и любые ошибки. Регистрируются также сообщения о состоянии агентов.|  
 |**3**|То же, что и **-HistoryVerboseLevel** = **2**, с той лишь разницей, что регистрируется большее число сообщений о работе агентов.|  
   
- **-Hostname** *host_name*  
+ **-Hostname** _host_name_  
  Сетевое имя локального компьютера. По умолчанию используется имя локального компьютера.  
   
  **-InteractiveResolution** [**0**|**1**]  
  Указывает, используется ли интерактивный механизм устранения конфликтов в тех случаях, когда конфликт происходит в процессе синхронизации. Значение по умолчанию — **0**, то есть интерактивный механизм устранения конфликтов не применяется.  
   
- **-InternetLogin** *internet_login*  
+ **-InternetLogin** _internet_login_  
  Указывает имя входа, используемое при соединении с ISAPI DLL прослушивателя репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который требует проверки подлинности.  
   
- **-InternetPassword** *internet_password*  
+ **-InternetPassword** _internet_password_  
  Указывает пароль, используемый при соединении с ISAPI DLL прослушивателя репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который требует проверки подлинности.  
   
  **-InternetProxyLogin**  *internet_proxy_login*  
@@ -255,36 +255,36 @@ replmerg [-?]
  **-InternetSecurityMode** [**0**|**1**]  
  Указывает режим безопасности IIS, используемый при соединении с веб-сервером в ходе веб-синхронизации. Значение **0** указывает на обычную проверку подлинности, а значение **1** — на встроенную проверку подлинности Windows (по умолчанию).  
   
- **-InternetTimeout** *internet_timeout*  
+ **-InternetTimeout** _internet_timeout_  
  Время в секундах, по истечении которого разрывается соединение с ISAPI DLL прослушивателя репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- **-InternetURL** *internet_url*  
+ **-InternetURL** _internet_url_  
  Указывает URL-адрес, используемый для подключения к ISAPI DLL прослушивателя репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Задание этого свойства обязательно.  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  Количество секунд до того, как поток журнала проверяет наличие соединений, ожидающих ответа от сервера. Это значение можно уменьшить, чтобы агент проверки не помечал агент слияния как подозрительный при выполнении долго выполняющегося пакета. Значение по умолчанию — **300** секунд.  
   
- **-LoginTimeOut** *время_ожидания_входа_в_сек*  
+ **-LoginTimeOut** _время_ожидания_входа_в_сек_  
  Время ожидания входа в секундах. Значение по умолчанию составляет **15** секунд.  
   
- **-MakeGenerationInterval** *make_generation_interval_seconds*  
+ **-MakeGenerationInterval** _make_generation_interval_seconds_  
  Время ожидания (в секундах) между созданием поколений, или пакетов изменений, для загрузки на клиент. Значение по умолчанию составляет **15** секунд.  
   
  Makegeneration — процесс, который подготавливает изменения издателя для загрузки на подписчиков, и он может быть узким местом производительности во время загрузок. Если процесс makegeneration уже выполнялся в интервале, указанном параметром **-MakeGenerationInterval**, то процесс пропущен в текущем сеансе синхронизации. Это может способствовать параллелизму синхронизации, и особенно полезно, если подписчики не ожидают загрузки изменений.  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** _number_of_threads_  
  Указывает число операций массового копирования, которые можно проводить параллельно. Максимальное число одновременно существующих потоков и соединений ODBC, которое равно меньшему из двух значений: значению параметра **MaxBcpThreads** или числу запросов на массовое копирование, которое отображается в системной таблице **sysmergeschemachange** базы данных публикации. Значение**MaxBcpThreads** должно быть больше 0 и не имеет жестко зафиксированного максимума. Значение по умолчанию — **1**.  
   
- **-MaxDownloadChanges** *number_of_download_changes*  
+ **-MaxDownloadChanges** _number_of_download_changes_  
  Указывает максимальное число измененных строк, которые должны загружаться с издателя на подписчик. Число загружаемых строк может быть больше указанного максимума, так как обработаны завершенные поколения, и может выполняться несколько параллельных потоков назначения, каждый из которых обрабатывает по крайней мере 100 изменений за первый проход. По умолчанию отправляются все изменения, готовые к загрузке.  
   
- **-MaxUploadChanges** *number_of_upload_changes*  
+ **-MaxUploadChanges** _number_of_upload_changes_  
  Означает максимальное число измененных строк, которые должны быть переданы с подписчика на издатель. Число загружаемых строк может быть больше указанного максимума, так как обработаны завершенные поколения, и может выполняться несколько параллельных потоков назначения, каждый из которых обрабатывает по крайней мере 100 изменений за первый проход. По умолчанию отправляются все изменения, готовые к передаче.  
   
  **-MetadataRetentionCleanup** [**0**|**1**]  
  Указывает, удаляются ли метаданные из [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)и [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) в соответствии со сроком хранения публикации. Значение по умолчанию равно **1**, что означает необходимость проведения очистки. Значение **0** указывает на то, что очистка не должна осуществляться автоматически.  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  Путь к выходному файлу агента. Если имя файла не указано, данные выводятся на консоль. Если указанный файл существует, то выходные данные добавляются в конец файла.  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
@@ -296,34 +296,34 @@ replmerg [-?]
  **-PacketSize**  
  Размер пакета в байтах. Значение по умолчанию равно 4 096 байт.  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval_  
  Частота (в секундах), с которой издатель или подписчик выполняют запросы об изменении данных. Значение по умолчанию — 60 секунд.  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  Указывает профиль агента, из которого берутся параметры агента. Если **ProfileName** имеет значение NULL, профиль агента отключен. Если значение **ProfileName** не указано, используется профиль по умолчанию для агентов этого типа. Дополнительные сведения см. в статье [Профили агента репликации](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** *имя_сервера*[**\\***имя_экземпляра*]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  Указывает партнера по обеспечению отработки отказа служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участвующего в сеансе зеркального отображения базы данных с базой данных публикации. Дополнительные сведения см. в статье [Зеркальное отображение и репликация баз данных (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
- **-PublisherLogin** *имя_входа_на_издателе*  
+ **-PublisherLogin** _имя_входа_на_издателе_  
  Имя входа издателя. Данный параметр должен быть указан, если значение **PublisherSecurityMode** равно **0** (при проверке подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
- **-PublisherPassword** *publisher_password*  
+ **-PublisherPassword** _publisher_password_  
  Пароль издателя. Данный параметр должен быть указан, если значение **PublisherSecurityMode** равно **0** (при проверке подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
  **-PublisherSecurityMode** [**0**|**1**]  
  Указывает режим безопасности издателя. Значение **0** означает проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (по умолчанию), а значение **1** — проверку подлинности Windows.  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** _query_time_out_seconds_  
  Время ожидания запроса в секундах. Значение по умолчанию — 300 секунд. Агент слияния также использует значение параметра **QueryTimeout** для определения времени ожидания формирования секционированного моментального снимка, когда это значение превышает отметку 1800.  
   
- **-SrcThreads** *number_of_source_threads*  
+ **-SrcThreads** _number_of_source_threads_  
  Указывает число потоков на источнике, которые агент слияния использует для перечисления поступивших от него изменений. При передаче источником считается подписчик, а при загрузке — издатель. Значение по умолчанию — **3**.  
   
- **-StartQueueTimeout** *start_queue_timeout_seconds*  
+ **-StartQueueTimeout** _start_queue_timeout_seconds_  
  Максимальное время ожидания (в секундах) агента слияния в тех случаях, когда число параллельно выполняемых процессов слияния достигло предельного значения, указываемого свойством **@max_concurrent_merge** хранимой процедуры **sp_addmergepublication**. Если по истечении этого времени агент слияния все еще находится в процессе ожидания, то его работа будет завершена. Значение 0 означает, что агент ждет неопределенно долгое время, хотя его выполнение может быть отменено.  
   
- **-SubscriberDatabasePath** *subscriber_database_path*  
+ **-SubscriberDatabasePath** _subscriber_database_path_  
  Путь к базе данных Jet (MDB-файл) при значении **SubscriberType** равном **2** (позволяет соединиться с базой данных Jet без указания имени источника данных ODBC (DSN)).  
   
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
@@ -339,10 +339,10 @@ replmerg [-?]
 > [!NOTE]  
 >  При указании значений **2** и **3**в параметре **SubscriberDatabasePath** необходимо также задать путь базы данных для подписчика.  
   
- **-SubscriberLogin** *subscriber_login*  
+ **-SubscriberLogin** _subscriber_login_  
  Имя входа подписчика. Данный параметр должен быть указан, если значение **SubscriberSecurityMode** равно **0** (при проверке подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication).  
   
- **-SubscriberPassword** *subscriber_password*  
+ **-SubscriberPassword** _subscriber_password_  
  Пароль подписчика. Данный параметр должен быть указан, если значение **SubscriberSecurityMode** равно **0** (при проверке подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication).  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
@@ -360,13 +360,13 @@ replmerg [-?]
  **-SyncToAlternate** [ **0|1**]  
  Указывает, осуществляет ли агент слияния процедуру синхронизации между подписчиком и альтернативным издателем. Значение **1** указывает на то, что это альтернативный издатель. Значение по умолчанию — **0**.  
   
- **-UploadGenerationsPerBatch** *upload_generations_per_batch*  
+ **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  Число поколений, которые должны обрабатываться в одном пакете при передаче изменений с подписчика на издатель. Поколение — это логическая группа изменений для статьи. Для надежного канала связи значение по умолчанию равно **100**, для ненадежного — **1**.  
   
- **-UploadReadChangesPerBatch** *upload_read_changes_per_batch*  
+ **-UploadReadChangesPerBatch** _upload_read_changes_per_batch_  
  Число изменений, которые считываются в одном пакете при передаче изменений с подписчика на издатель. Значение по умолчанию — **100**.  
   
- **-UploadWriteChangesPerBatch** *upload_write_changes_per_batch*  
+ **-UploadWriteChangesPerBatch** _upload_write_changes_per_batch_  
  Число изменений, применяемых в одном пакете при передаче изменений с подписчика на издатель. Значение по умолчанию — **100**.  
   
  **-UseInprocLoader**  
@@ -385,7 +385,7 @@ replmerg [-?]
 > [!NOTE]  
 >  Проверка с использованием двоичной контрольной суммы может неверно сообщить об отказе, если типы данных на подписчике и издателе отличаются. Дополнительные сведения см. в разделе "Аспекты проверки данных" статьи [Проверка реплицированных данных](../../../relational-databases/replication/validate-replicated-data.md).  
   
- **-ValidateInterval** *validate_interval*  
+ **-ValidateInterval** _validate_interval_  
  Указывает частоту (в минутах) проверки подписки в непрерывном режиме. Значение по умолчанию равно **60** минут.  
   
 ## <a name="remarks"></a>Remarks  

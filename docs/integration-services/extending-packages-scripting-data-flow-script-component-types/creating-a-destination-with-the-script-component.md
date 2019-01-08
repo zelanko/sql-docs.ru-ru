@@ -17,12 +17,12 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77bb9538c24be9fac285ab94b77d46ab85a29907
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 390f2734b36cfb956abd33ad2e5175ecd2320c34
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541938"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210833"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Создание назначения с помощью компонента скрипта
   Компонент назначения в потоке данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используется для сохранения данных, полученных из вышестоящих источников и преобразований, в источник данных. Обычно компонент назначения подключается к источнику данных через существующий диспетчер соединений.  
@@ -101,7 +101,7 @@ ms.locfileid: "52541938"
 ## <a name="examples"></a>Примеры  
  Следующие примеры демонстрируют код, нужный классу **ScriptMain** для создания компонента назначения.  
   
-> [!NOTE]  
+> [!NOTE]
 >  В этих примерах используется таблица **Person.Address** из примера базы данных **AdventureWorks**. В поток данных передаются ее первый и четвертый столбцы: **int*AddressID*** и **nvarchar(30)City**. Эти же данные используются в образцах источника, преобразования и назначения, приведенных в этом разделе. Для каждого примера приведены необходимые дополнительные условия и принимаемые предположения.  
   
 ### <a name="adonet-destination-example"></a>Пример назначения ADO.NET  
