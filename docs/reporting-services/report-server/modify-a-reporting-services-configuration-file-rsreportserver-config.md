@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 412cb586d306da13791a956a01a1a217d5fc0d7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54ca89e75da4bf5ce5d0666ec479b870deda2848
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758661"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202143"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Изменение файла конфигурации служб Reporting Services (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сохраняют параметры приложения в наборе файлов конфигурации. Программа установки создает файлы конфигурации для каждого устанавливаемого экземпляра сервера отчетов. Значения в каждом файла задаются либо во время установки, либо при использовании средств и приложений для настройки сервера и подготовки его к работе. В некоторых случаях приходится изменять непосредственно сам файл, чтобы добавить дополнительные параметры или настроить их. Параметры конфигурации задаются либо как элементы XML, либо как атрибуты. Если вы знакомы с XML и файлами конфигурации, то можете использовать редактор текста или кода для настройки пользовательских параметров.  
   
  Некоторые параметры конфигурации можно задать только с помощью средств. Параметры, которые содержат зашифрованные значения, должны изменяться с помощью программы настройки служб Reporting Services, программы установки или программы командной строки **rsconfig** . Чтобы иметь возможность запускать эти средства, необходимо членство в локальной группе «Администраторы».  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  При изменении файлов конфигурации следует соблюдать осторожность. Если изменяется параметр для внутреннего использования, можно блокировать свою установку. Как правило, изменять параметры конфигурации не рекомендуется, если не пытаетесь устранить конкретную проблему. Дополнительные сведения о параметрах, изменение которых безопасно, см. в разделе [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) или [Файл конфигурации RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md). Дополнительные сведения о файлах конфигурации см. в документации по продукту [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  В этом разделе:  
@@ -89,9 +89,9 @@ ms.locfileid: "47758661"
   
 4.  Введите элемент или значение, которое необходимо добавить или использовать. Элементы вводятся с учетом регистра. При добавлении элемента следите за правильным использованием букв верхнего и нижнего регистра. При настройке модуля подготовки отчетов, модуля проверки подлинности или модулей обработки данных можно руководствоваться конкретными инструкциями по изменению файлов конфигурации:  
   
-    -   [Аутентификация с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)  
+    -   [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)  
   
-    -   [Настройка передачи файлов cookie для пользовательской аутентификации на веб-портале](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+    -   [Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
     -   [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2756cbd4dc0a075662b47aaa81d4e4158074147
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c88606a1c361b1aad4b4a113986dfa73ef20440d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410841"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202463"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Экспорт в XML (построитель отчетов и службы SSRS)
   Модуль подготовки XML-отчета возвращает отчет в XML-формате с разбиением на страницы. Схема для XML-документа, используемого в отчете, создается специально для этого отчета и содержит только данные. Данные макета не обрабатываются модулем подготовки XML-отчета, и разбивка на страницы не сохраняется. XML-документ, сформированный данным модулем, можно импортировать в базу данных, использовать как сообщение XML-данных или отправить пользовательскому приложению.  
@@ -76,7 +76,7 @@ ms.locfileid: "52410841"
   
  Определения пространств имен XML и ссылочные атрибуты схемы также включаются в элементы отчета. Имена переменных выводятся полужирным шрифтом:  
   
- <**Report** xmlns="**SchemaName**" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
+ <**Report** xmlns="**SchemaName**" xmlns:xsi="<https://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  Переменные могут принимать следующие значения.  
   

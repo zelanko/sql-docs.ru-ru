@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 90b1e966a2f62877e658658048b12427bca109cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031863"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202413"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Коллекция полей набора данных (построитель отчетов и службы SSRS)
   Поля набора представляют данные из соединения с данными. Поле может использоваться для представления как числовых, так и нечисловых данных. Примеры включают в себя следующее: объемы продаж, итоговые суммы продаж, имена клиентов, идентификаторы баз данных, URL-адреса, изображения, пространственные данные и адреса электронной почты. В области конструктора поля отображаются в виде выражений в элементах отчета, таких как текстовые поля, таблицы и диаграммы.  
@@ -55,7 +55,7 @@ ms.locfileid: "50031863"
 ### <a name="using-extended-field-properties"></a>Использование расширенных свойств поля  
  Источники данных, поддерживающие многомерные запросы, такие как службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], могут работать со свойствами полей. Свойства полей появляются в результирующем наборе запроса, но не видны на панели **Данные отчета** . Тем не менее, их можно использовать в отчете. Для обращения к свойству поля, перетащите поле в отчет и измените свойство по умолчанию **Value** на имя поля требуемого свойства. Например, в кубе служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно определить формат значений в ячейках куба. Значение форматируется с помощью свойства поля **FormattedValue**. Чтобы использовать значение напрямую, а не устанавливать свойство форматирования текстового поля, перетащите поле в текстовое поле и измените выражение по умолчанию `=Fields!FieldName.Value` на `=Fields!FieldName.FormattedValue`.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Не все свойства **Field** можно использовать для всех источников данных. Свойства **Value** и **IsMissing** определены для всех источников данных. Другие стандартные свойства (например, **Key**, **UniqueName**и **ParentUniqueName** для многомерных источников данных) поддерживаются только в случае поддержки этих свойств источником данных. Некоторые поставщики данных поддерживают пользовательские свойства. Дополнительные сведения см. в конкретных подразделах, посвященных расширенным свойствам полей для типа источника данных, в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Например, сведения об источнике данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   

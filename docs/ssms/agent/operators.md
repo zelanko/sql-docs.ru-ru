@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e89c598b31da3bd8aef755dec49a18bb820afd5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 60e05754e43056e3f71d4abccb1d8af91c650684
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698835"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212123"
 ---
 # <a name="operators"></a>Операторы
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "51698835"
 ### <a name="contact-information"></a>контактная информация.  
 Контактная информация оператора определяет способ уведомления оператора. Операторы могут получать уведомления по электронной почте, по пейджинговой связи или с помощью команды **net send** .  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Режимы отправки уведомлений с помощью пейджера и команды **net send** будут удалены из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в следующей версии [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
   
 -   **Уведомление по электронной почте.**  

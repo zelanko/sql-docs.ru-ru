@@ -10,19 +10,19 @@ ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 16a9770c05ecbc81b0fc5696f83285127ca7d8a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e286f90ddbe008346f70654ca4d9daa24dccb739
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528382"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215530"
 ---
 # <a name="remove-data-quality-server-objects"></a>Удаление объектов служб Data Quality Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   При удалении [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или при полном удалении экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащего [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , некоторые объекты [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] сохраняются, в том числе базы данных служб DQS. Это означает, что при удалении сервера служб DQS с помощью программы установки SQL Server данные [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] не теряются. После завершения процесса удаления эти объекты [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] необходимо удалить вручную.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   Перед удалением [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]рассмотрите возможность создания резервных копий всех имеющихся баз знаний путем их экспорта в файл DQSB, который впоследствии можно будет использовать для импорта всех баз знаний в новую установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Экспорт и импорт всех баз знаний служб DQS можно выполнить только с помощью программы DQSInstaller.exe, запускаемой из командной строки с соответствующими параметрами. Дополнительные сведения см. в статье [Экспорт и импорт баз знаний DQS с помощью DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).  
 > -   Перед удалением баз данных служб DQS, возможно, следует создать их резервную копию для последующего восстановления. Дополнительные сведения об этой процедуре см. в разделе [Управление базами данных DQS](../../data-quality-services/manage-dqs-databases.md).  
   

@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a0afcc9e97bf2518dc0e3fc400842f17c9442543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92f106346e9e1e3d292c1d1a0f40b41da6067fae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744822"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215713"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Свойства шага задания — создание шага задания (страница "Общие")
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47744822"
   
 ## <a name="options-for-activex-script-job-steps"></a>Параметры шагов задания скриптов ActiveX  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Подсистема сценариев ActiveX будет удалена из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в последующей версии [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.  
   
 **VBScript**  
@@ -268,10 +268,10 @@ ms.locfileid: "47744822"
 **Удалить**  
 Удалить выбранный командный файл.  
   
-**вверх**  
+**Вверх**  
 Переместить выбранный командный файл вверх.  
   
-**вниз**  
+**Вниз**  
 Переместить выбранный командный файл вниз.  
   
 ### <a name="data-sources-tab"></a>Вкладка «Источники данных»  
@@ -331,7 +331,7 @@ ms.locfileid: "47744822"
 **Путь к свойству**  
 Позволяет просмотреть или изменить путь к свойству.  
   
-**Value**  
+**Значение**  
 Позволяет просмотреть или изменить значение свойства.  
   
 **Удалить**  
