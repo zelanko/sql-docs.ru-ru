@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
@@ -13,23 +12,23 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc83fa7dc0d9692456cf99f5a77d3723a137963f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f234a7091d923dd08c943ca884d6075d953fb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117011"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360897"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Выбор назначения (мастер импорта и экспорта SQL Server)
   Диалоговое окно **Выбор назначения** указывает место назначения для копируемых данных.  
   
- Дополнительные сведения о работе этого мастера см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о режимах запуска мастера, а также разрешения, необходимые для успешного запуска мастера, см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Дополнительные сведения о работе этого мастера см. в разделе [Мастер импорта и экспорта SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о режимах запуска мастера, а также разрешения, необходимые для успешного запуска мастера, см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
- Цель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта заключается в копировании данных из источника в место назначения. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ Мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначен для копирования данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="static-options"></a>Статические параметры  
  **Назначение**  
- Выберите поставщика данных, соответствующего формату хранения данных места назначения. Для источника данных может существовать несколько поставщиков. Например, с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, поставщик данных .NET Framework для SQL Server или поставщик Microsoft OLE DB для SQL Server.  
+ Выберите поставщика данных, соответствующего формату хранения данных места назначения. Для источника данных может существовать несколько поставщиков. Например, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использоваться собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поставщик данных платформы .NET Framework для SQL Server или поставщик OLE DB для SQL Server (Майкрософт).  
   
 > [!NOTE]  
 >  Чтобы сохранить данные в назначение ODBC, выберите поставщик данных .NET Framework для ODBC.  
@@ -47,16 +46,16 @@ ms.locfileid: "48117011"
  Укажите, должен ли пакет использовать проверку подлинности Microsoft Windows для доступа к базе данных. Для лучшей защиты рекомендуется использовать проверку подлинности Windows.  
   
  **Использовать проверку подлинности SQL Server**  
- Укажите, должен ли пакет использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности для входа в базе данных. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
+ Укажите, должен ли пакет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для доступа к базе данных. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
   
  **Имя пользователя**  
- Укажите имя пользователя для подключения к базе данных, при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.  
+ Укажите имя пользователя для подключения к базе данных, если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Пароль**  
  Укажите пароль для подключения к базе данных, если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **База данных**  
- Выберите из списка баз данных на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], или создайте новую базу данных, щелкнув **New**.  
+ Выберите из списка базу данных на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или создайте новую базу данных при помощи кнопки **Создать**.  
   
  **Обновить**  
  Нажатие кнопки **Обновить** восстанавливает список доступных баз данных.  
@@ -110,7 +109,7 @@ ms.locfileid: "48117011"
  Выберите версию Excel для целевой рабочей книги.  
   
 > [!NOTE]  
->  При экспорте данных [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] назначения, то мастер использует [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] компонент назначения Excel. Сведения об использовании и известных проблемах см. в разделе [назначение «Excel»](../data-flow/excel-destination.md).  
+>  При экспорте данных в назначение [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] мастер использует компонент назначения «Excel» служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Сведения об использовании и известных проблемах см. в разделе [Excel Destination](../data-flow/excel-destination.md).  
   
 ### <a name="destination--microsoft-access"></a>Назначение — «Microsoft Access»  
   
@@ -130,6 +129,6 @@ ms.locfileid: "48117011"
  Если информационный файл рабочей группы связан с базой данных, укажите пароль пользователя для подключения к базе данных. Если база данных защищена одним для всех пользователей паролем, необходимо ввести его в диалоговом окне **Свойства связи данных** , открываемым нажатием кнопки **Дополнительно** .  
   
  **Дополнительно**  
- Задайте дополнительные параметры (например, пароль базы данных или нестандартный информационный файл рабочей группы) в диалоговом окне **Свойства связи данных**. Дополнительные сведения о свойствах поставщика OLE DB см. в разделе «Доступ к данным» (Data Access) [библиотеки MSDN по адресу](http://go.microsoft.com/fwlink/?linkid=62553).  
+ Задайте дополнительные параметры (например, пароль базы данных или нестандартный информационный файл рабочей группы) в диалоговом окне **Свойства связи данных**. Дополнительные сведения о свойствах поставщика OLE DB см. в разделе «Доступ к данным» (Data Access) [библиотеки MSDN по адресу](https://go.microsoft.com/fwlink/?linkid=62553).  
   
   

@@ -17,12 +17,12 @@ ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a1098d5b12a491cc5f2976c76575ce0e91d11e51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f4904cf11ac1cb84acf9b6c0362d453d7b0fc0b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065654"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371146"
 ---
 # <a name="technical-reference-ssrs"></a>Технический справочник (службы SSRS)
   Найдите средства и справочную документацию по PowerShell для использования или администрирования служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -54,7 +54,7 @@ ms.locfileid: "48065654"
  [Справочник по библиотеке поставщика WMI служб Reporting Services (SSRS)](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
 ## <a name="see-also"></a>См. также  
- [Вики-статьи TechNet об устранении неполадок со службами Reporting Services](http://go.microsoft.com/fwlink/?LinkID=209153)   
- [Вики-статьи TechNet об устранении неполадок со службами Reporting Services в режиме SharePoint](http://go.microsoft.com/fwlink/?LinkID=209158)  
+ [Вики-статьи TechNet об устранении неполадок со службами Reporting Services](https://go.microsoft.com/fwlink/?LinkID=209153)   
+ [Вики-статьи TechNet об устранении неполадок со службами Reporting Services в режиме интеграции с SharePoint](https://go.microsoft.com/fwlink/?LinkID=209158)  
   
   

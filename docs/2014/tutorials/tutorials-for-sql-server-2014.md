@@ -18,12 +18,12 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b3a2a4fb654603e783a50e46b212f746226132ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07ff9e3ed413b3cb73a4dbfb84bac6961acb1759
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194474"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368066"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Учебные материалы по SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] добавлено много новых технологий и возможностей.  
@@ -32,9 +32,9 @@ ms.locfileid: "48194474"
   
  При использовании сервера [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] поставщики данных [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] уже установлены. Для того чтобы учебники работали, потребуются либо образцы баз данных [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , работающие с этими поставщиками, либо поставщики данных [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , работающие с версией [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] образцов баз данных.  
   
--   Чтобы загрузить образцы [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] для использования с учебниками, перейдите на страницу [Образцы для SQL Server](http://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) на сайте CodePlex.  
+-   Чтобы загрузить образцы [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] для использования с учебниками, перейдите на страницу [Образцы для SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) на сайте CodePlex.  
   
--   Чтобы скачать книгу [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] и отчеты [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] для использования с учебниками [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , перейдите на страницу [Файлы изображений для образца модели HelloWorldPicnic в PowerPivot и Power View](http://www.microsoft.com/download/details.aspx?id=26719).  
+-   Чтобы скачать книгу [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] и отчеты [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] для использования с учебниками [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , перейдите на страницу [Файлы изображений для образца модели HelloWorldPicnic в PowerPivot и Power View](https://www.microsoft.com/download/details.aspx?id=26719).  
   
     > [!NOTE]  
     >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] входит в состав [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
@@ -43,7 +43,7 @@ ms.locfileid: "48194474"
   
 -   Чтобы скачать базы данных [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] версии [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , перейдите на страницу [Adventure Works для SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) на сайте CodePlex.  
   
--   Чтобы просмотреть список учебников по [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , перейдите по ссылке [Учебники](http://msdn.microsoft.com/library/ms167593.aspx) в библиотеке MSDN.  
+-   Чтобы просмотреть список учебников по [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , перейдите по ссылке [Учебники](https://msdn.microsoft.com/library/ms167593.aspx) в библиотеке MSDN.  
   
 ## <a name="in-this-section"></a>в этом разделе  
  Имеются учебники по следующим технологиям [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] .  

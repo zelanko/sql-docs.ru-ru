@@ -1,22 +1,21 @@
 ---
-title: Свойства сервера (вкладка «службы») отчетов | Документация Майкрософт
+title: Свойства сервера отчетов (вкладка "Службы") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 478278f6cc0c097fd8ced85ae42990d31b2578c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159024"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803426"
 ---
 # <a name="report-server-properties-service-tab"></a>Свойства сервера отчетов (вкладка «Службы»)
   Это служба сервера отчетов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Значения свойств, выделенные светло-серым цветом, с помощью этого приложения изменить нельзя.  
@@ -34,7 +33,7 @@ ms.locfileid: "48159024"
  **Host Name**  
  Отображает имя компьютера или кластера, где запущен полнотекстовый поиск.  
   
- **Название**  
+ **Name**  
  Указывает отображаемое имя службы.  
   
  **Идентификатор процесса**  
@@ -50,7 +49,7 @@ ms.locfileid: "48159024"
   
 -   Автоматически. Эта служба пытается запуститься при запуске компьютера.  
   
--   Отключено. Служба не может быть запущена.  
+-   Отключено: Служба не может быть запущена.  
   
  **Состояние**  
  Указывает, была ли служба запущена, остановлена или отключена.  

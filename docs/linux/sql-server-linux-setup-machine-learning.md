@@ -4,18 +4,18 @@ description: В этой статье описывается установка 
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 10/09/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8433f705b41782c61950cb74f76f694d61cd548d
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 15a1a411672303fc8556927bcaf218052758744d
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100455"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553256"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Установка SQL Server 2019 службы машинного обучения (R, Python, Java) на платформе Linux
 
@@ -23,13 +23,61 @@ ms.locfileid: "49100455"
 
 Машинного обучения и программирование расширения являются надстройку к компоненту database engine. Несмотря на то, что вы можете [одновременно установить компонент database engine и служб машинного обучения](#install-all), это лучший способ сначала установите и настройте компонент SQL Server database engine, устранить все проблемы перед добавлением сведения компоненты. 
 
-Расположение пакета расширений R, Python и Java доступны в репозитории исходного SQL Server Linux. Если вы уже настроили установить репозитории источника для компонента database engine, можно выполнить mssql-mlservices команды установки пакета, используя регистрацию репозитория.
+Расположение пакета для расширений R, Python и Java доступны в репозитории исходного SQL Server Linux. Если вы уже настроили репозиториях для установки ядра базы данных, вы можете запустить **mssql mlservices** упаковать команды установки, используя регистрацию репозитория.
+
+## <a name="uninstall-previous-ctp"></a>Удаление предыдущей CTP-версии
+
+Список пакетов изменилось за последние несколько выпусков CTP, приводит к меньшим числом пакетов. Мы рекомендуем удалить CTP-версии 2.0 или 2.1, чтобы удалить все предыдущие пакеты перед установкой CTP-версии 2.2 или более поздней версии. Side-by-side установку нескольких версий не поддерживается.
+
+### <a name="1-confirm-package-installation"></a>1. Подтверждение установки пакета
+
+Можно проверить существование из предыдущей установки в качестве первого шага. Указать существующую установку, следующие файлы: checkinstallextensibility.sh, exthost, панели запуска.
+
+```bash
+ls /opt/microsoft/mssql/bin
+```
+
+### <a name="2-uninstall-ctp-20-or-21-packages"></a>2. Удаление CTP 2.0 и 2.1 пакетов
+
+Удалите на самом низком уровне пакета. Любой прием пакетов вышестоящего источника зависимый от более низкого уровня пакета, автоматически удаляется.
+
+  + Интеграция R, удалите **microsoft r open —***
+  + Интеграция Python, удалите **mssql-mlservices-python**
+  + Для интеграции Java, удалите **mssql-server расширяемости java**
+
+В следующей таблице, появятся команды для удаления пакетов.
+
+| Платформа  | Выполнение команд удаления пакета | 
+|-----------|----------------------------|
+| RHEL  | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python`<br/>`sudo yum remove msssql-server-extensibility-java` |
+| SLES  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python`<br/>`sudo zypper remove msssql-server-extensibility-java` |
+| Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`<br/>`sudo apt-get remove msssql-server-extensibility-java`|
+
+> [!Note]
+> Microsoft R Open, состоит из трех пакетов. Если любой из этих пакетов остаются после удаления microsoft-r-open-mro-3.4.4, их следует удалить по отдельности.
+> ```
+> microsoft-r-open-foreachiterators-3.4.4
+> microsoft-r-open-mkl-3.4.4
+> microsoft-r-open-mro-3.4.4
+> ```
+
+### <a name="3-proceed-with-ctp-22-install"></a>3. Продолжить установку CTP 2.2
+
+Установите на самом высоком уровне пакета, с помощью инструкций в этой статье для вашей операционной системы.
+
+Для каждого набора определенных Операционных систем инструкции по установке *наивысший уровень пакета* либо **пример 1 — Полная установка** для полного набора пакетов, или **пример 2 - минимальную установку**  содержащий наименьшее число пакеты, необходимые для установки соединения.
+
+1. Интеграция с R, начните с [MRO](#mro) , так как он является необходимым условием. Интеграция R не установит его.
+
+2. Выполните команды установки с помощью диспетчеров пакетов и синтаксис для вашей операционной системы: 
+
+   + [RedHat](#RHEL)
+   + [Ubuntu](#ubuntu)
+   + [SUSE](#SUSE)
 
 ## <a name="prerequisites"></a>предварительные требования
 
-+ Операционная система Linux должна быть [поддерживается SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), работающей в локальной среде или в контейнере Docker.
-
-+ Экземпляр ядра СУБД SQL Server 2019 г. необходимо иметь на: 
++ Требуется версия Linux [поддерживается SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), работающей в локальной среде или в контейнере Docker. Поддерживаемые версии:
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -37,7 +85,9 @@ ms.locfileid: "49100455"
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ Для R, [Microsoft R Open](#mro) для пакетов R mssql mlsservices. 
++ (R) [Microsoft R Open](#mro) предоставляет базовое распределение R для функции R в SQL Server
+
++ Следует получить средство для выполнения команд T-SQL. Редактор запросов необходим для настройки после установки и проверки. Мы рекомендуем [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), бесплатно и под управлением Linux.
 
 <a name="mro"></a>
 
@@ -75,6 +125,9 @@ wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.
 
 # Register the repo
 dpkg -i packages-microsoft-prod.deb
+
+# Update packages on your system (required), including MRO installation
+sudo apt-get update
 ```
 
 #### <a name="mro-on-rhel"></a>MRO на RHEL
@@ -90,6 +143,9 @@ sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.micro
 # The following command is for version 7.x
 # For 6.x, replace 7 with 6 to get that version
 rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
+
+# Update packages on your system (optional)
+yum update
 ```
 #### <a name="mro-on-suse"></a>MRO в SUSE
 
@@ -101,60 +157,60 @@ sudo su
 # This example is for SLES12, the only supported version of SUSE in Machine Learning Server
 zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
 
-# Update packages on your system:
+# Update packages on your system (optional)
 zypper update
 ```
 
 ## <a name="package-list"></a>Список пакетов
 
-На устройстве, подключенном к Интернету пакеты загружаются и устанавливаются независимо от ядра базы данных, с помощью пакета установщика для каждой операционной системы. В следующей таблице описаны все доступные пакеты, но для установки, подключенной к Интернету, вам нужно только *один* R или Python пакет, чтобы получить определенное сочетание функций.
+На устройстве, подключенном к Интернету пакеты загружаются и устанавливаются независимо от ядра базы данных, с помощью пакета установщика для каждой операционной системы. В следующей таблице описаны все доступные пакеты, но для R и Python, нужно указать пакеты, которые предоставляют возможности установки или установки минимальное компонента.
 
 | Имя пакета | Применяется к | Описание |
 |--------------|----------|-------------|
 |MSSQL-server расширяемость  | All | Инфраструктура расширяемости, используемые для запуска кода R, Python или Java. |
 |MSSQL-server расширяемости java | Java | Расширение Java для загрузки среда выполнения Java. Отсутствуют дополнительные библиотеки или пакеты для Java. |
 | Microsoft openmpi  | Python, R | Интерфейс, используемый библиотеками Revo * для параллелизации на платформе Linux передачи сообщений. |
-| [Microsoft-r-открытым *](#mro) | Чтение | Открытый дистрибутив R, состоящий из трех пакетов. |
 | MSSQL-mlservices-python | Python | Распределение открытым исходным кодом Anaconda и Python. |
-|MSSQL-mlservices-mlm-py  | Python | Полная установка. Предоставляет revoscalepy, microsoftml, предварительно обученных моделей для анализа тональности образа Добавление признаков и текст.| 
-|MSSQL-mlservices-mml-py  | Python | Частичной установки. Предоставляет revoscalepy, microsoftml. <br/>Исключает предварительно обученных моделей. | 
-|MSSQL-mlservices пакеты py  | Python | Частичной установки. Предоставляет revoscalepy. <br/>Исключает предварительно обученных моделей и microsoftml. | 
-|MSSQL-mlservices-mlm-r  | Чтение | Полная установка. Предоставляет RevoScaleR, MicrosoftML, sqlRUtils, olapR, предварительно обученных моделей для анализа тональности образа Добавление признаков и текст.| 
-|MSSQL-mlservices-mml-r  | Чтение | Частичной установки. Предоставляет RevoScaleR, MicrosoftML, sqlRUtils, olapR. <br/>Исключает предварительно обученных моделей.  |
-|MSSQL-mlservices пакеты r  | Чтение | Частичной установки. Предоставляет RevoScaleR, sqlRUtils, olapR. <br/>Исключает предварительно обученных моделей и MicrosoftML. | 
+|MSSQL-mlservices-mlm-py  | Python | *Полная установка*. Предоставляет revoscalepy, microsoftml, предварительно обученных моделей для анализа тональности образа Добавление признаков и текст.| 
+|MSSQL-mlservices пакеты py  | Python | *Минимальная установка*. Предоставляет revoscalepy и microsoftml. <br/>Исключает предварительно обученных моделей. | 
+| [Microsoft-r-открытым *](#mro) | Чтение | Открытый дистрибутив R, состоящий из трех пакетов. |
+|MSSQL-mlservices-mlm-r  | Чтение | *Полная установка*. Предоставляет RevoScaleR, MicrosoftML, sqlRUtils, olapR, предварительно обученных моделей для анализа тональности образа Добавление признаков и текст.| 
+|MSSQL-mlservices пакеты r  | Чтение | *Минимальная установка*. Предоставляет RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Исключает предварительно обученных моделей. | 
+|MSSQL-mlservices-mml-py  | Только CTP 2.0 — 2.1 | Устарело в CTP-версии 2.2, из-за консолидации пакета Python в mssql-mslservices-python. Предоставляет revoscalepy. Исключает предварительно обученных моделей и microsoftml.| 
+|MSSQL-mlservices-mml-r  | Только CTP 2.0 — 2.1 | Устарело в CTP-версии 2.2, из-за консолидации пакета R в mssql-mslservices-python. Предоставляет RevoScaleR, sqlRUtils, olapR. Исключает предварительно обученных моделей и MicrosoftML.  |
 
 <a name="RHEL"></a>
 
 ## <a name="rhel-commands"></a>Команды RHEL
 
-Устанавливать какие-либо *один* пакет R и другие *один* пакет Python и Java, если вы хотите, чтобы эту возможность. Каждый пакет R и Python включает набор функций. Выберите пакет, который предоставляет набор функций, которые вам нужны. Зависимые пакеты включаются автоматически.
+Можно установить поддержку языка в любой комбинации требуется (один или несколько языков). R и Python существует два пакета на выбор. Один предоставляет все доступные компоненты, обозначаемым *полная установка*. Выбор альтернативного исключает предварительно обученные модели машинного обучения и считается *минимальную установку*.
 
 > [!Tip]
 > По возможности запустите `yum clean all` обновление пакетов в системе до установки.
 
 ### <a name="example-1----full-installation"></a>Пример 1 - Полная установка 
 
-Включает в себя открытым исходным кодом R и Python, extensibility framework, microsoft-openmpi расширения (R, Python, Java), с помощью библиотеки машинного обучения и предварительно обученных моделей R и Python. R и Python, что-то между полной и Минимальная установка - например библиотеки машинного обучения, но без предварительно обученных моделей - замените `mssql-mlservices-mml-r-9.4.5*` и `mssql-mlservices-mml-py-9.4.5*` вместо этого.
+Включает в себя открытым исходным кодом R и Python, extensibility framework, microsoft-openmpi расширения (R, Python, Java), с помощью библиотеки машинного обучения и предварительно обученных моделей R и Python. 
 
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python, Java)
-# Be sure to include -9.4.5* in mlsservices package names
-sudo yum install mssql-mlservices-mlm-py-9.4.5*
-sudo yum install mssql-mlservices-mlm-r-9.4.5* 
+# Be sure to include -9.4.6* in mlsservices package names
+sudo yum install mssql-mlservices-mlm-py-9.4.6*
+sudo yum install mssql-mlservices-mlm-r-9.4.6* 
 sudo yum install mssql-server-extensibility-java
 ```
 
 ### <a name="example-2---minimum-installation"></a>Пример 2 - Установка минимум 
 
-Включает в себя R и Python, extensibility framework, microsoft-openmpi core Revo * библиотек с открытым кодом R и Python, Java расширения. Исключает предварительно обученных моделей и библиотеки машинного обучения для R и Python. 
+Включает открытым исходным кодом R и Python, инфраструктура расширяемости microsoft openmpi, core Revo * библиотеки и библиотеки машинного обучения для R и Python и Java расширения. Исключает предварительно обученных моделей.
 
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java extensions
-# Be sure to include -9.4.5* in mlsservices package names
-sudo yum install mssql-mlservices-packages-py-9.4.5*
-sudo yum install mssql-mlservices-packages-r-9.4.5*
+# Be sure to include -9.4.6* in mlsservices package names
+sudo yum install mssql-mlservices-packages-py-9.4.6*
+sudo yum install mssql-mlservices-packages-r-9.4.6*
 sudo yum install mssql-server-extensibility-java
 ```
 
@@ -162,7 +218,7 @@ sudo yum install mssql-server-extensibility-java
 
 ## <a name="ubuntu-commands"></a>Команды для Ubuntu
 
-Устанавливать какие-либо *один* пакет R и другие *один* пакет Python и Java, если вы хотите, чтобы эту возможность. Каждый пакет R и Python включает набор функций. Выберите пакет, который предоставляет набор функций, которые вам нужны. Зависимые пакеты включаются автоматически.
+Можно установить поддержку языка в любой комбинации требуется (один или несколько языков). R и Python существует два пакета на выбор. Один предоставляет все доступные компоненты, обозначаемым *полная установка*. Выбор альтернативного исключает предварительно обученные модели машинного обучения и считается *минимальную установку*.
 
 > [!Tip]
 > По возможности запустите `apt-get update` обновление пакетов в системе до установки. Кроме того некоторые образы docker в Ubuntu. не может быть возможность apt транспорта https. Чтобы установить его, используйте `apt-get install apt-transport-https`.
@@ -179,7 +235,7 @@ dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
 
 ### <a name="example-1----full-installation"></a>Пример 1 - Полная установка 
 
-Включает в себя открытым исходным кодом R и Python, extensibility framework, microsoft-openmpi расширения (R, Python, Java), с помощью библиотеки машинного обучения и предварительно обученных моделей R и Python. Для R и Python, если требуется что-то между полной установки и минимум установить - например библиотеки машинного обучения, но без предварительно обученных моделей - замените mssql-mlservices-mml-r и mssql-mlservices-mml-py вместо этого.
+Включает в себя открытым исходным кодом R и Python, extensibility framework, microsoft-openmpi расширения (R, Python, Java), с помощью библиотеки машинного обучения и предварительно обученных моделей R и Python. 
 
 ```bash
 # Install as root or sudo
@@ -192,7 +248,7 @@ sudo apt-get install mssql-server-extensibility-java
 
 ### <a name="example-2---minimum-installation"></a>Пример 2 - Установка минимум 
 
-Включает в себя R и Python, extensibility framework, microsoft-openmpi core Revo * библиотек с открытым кодом R и Python, Java расширения. Исключает предварительно обученных моделей и библиотеки машинного обучения для R и Python. 
+Включает открытым исходным кодом R и Python, инфраструктура расширяемости microsoft openmpi, core Revo * библиотеки и библиотеки машинного обучения для R и Python и Java расширения. Исключает предварительно обученных моделей. 
 
 ```bash
 # Install as root or sudo
@@ -207,31 +263,31 @@ sudo apt-get install mssql-server-extensibility-java
 
 ## <a name="suse-commands"></a>Команды SUSE
 
-Устанавливать какие-либо *один* пакет R и другие *один* пакет Python и Java, если вы хотите, чтобы эту возможность. Каждый пакет R и Python включает набор функций. Выберите пакет, который предоставляет набор функций, которые вам нужны. Зависимые пакеты включаются автоматически. 
+Можно установить поддержку языка в любой комбинации требуется (один или несколько языков). R и Python существует два пакета на выбор. Один предоставляет все доступные компоненты, обозначаемым *полная установка*. Выбор альтернативного исключает предварительно обученные модели машинного обучения и считается *минимальную установку*.
 
 ### <a name="example-1----full-installation"></a>Пример 1 - Полная установка 
 
-Включает в себя открытым исходным кодом R и Python, extensibility framework, microsoft-openmpi расширения (R, Python, Java), с помощью библиотеки машинного обучения и предварительно обученных моделей R и Python. R и Python, что-то между полной и Минимальная установка - например библиотеки машинного обучения, но без предварительно обученных моделей - замените `mssql-mlservices-mml-r-9.4.5*` и `mssql-mlservices-mml-py-9.4.5*` вместо этого.
+Включает в себя открытым исходным кодом R и Python, extensibility framework, microsoft-openmpi расширения (R, Python, Java), с помощью библиотеки машинного обучения и предварительно обученных моделей R и Python. 
 
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python, Java)
-# Be sure to include -9.4.5* in mlsservices package names
-sudo zypper install mssql-mlservices-mlm-py-9.4.5*
-sudo zypper install mssql-mlservices-mlm-r-9.4.5* 
+# Be sure to include -9.4.6* in mlsservices package names
+sudo zypper install mssql-mlservices-mlm-py-9.4.6*
+sudo zypper install mssql-mlservices-mlm-r-9.4.6* 
 sudo zypper install mssql-server-extensibility-java
 ```
 
 ### <a name="example-2---minimum-installation"></a>Пример 2 - Установка минимум 
 
-Включает в себя R и Python, extensibility framework, microsoft-openmpi core Revo * библиотек с открытым кодом R и Python, Java расширения. Исключает предварительно обученных моделей и библиотеки машинного обучения для R и Python. 
+Включает открытым исходным кодом R и Python, инфраструктура расширяемости microsoft openmpi, core Revo * библиотеки и библиотеки машинного обучения для R и Python и Java расширения. Исключает предварительно обученных моделей. 
 
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python, Java extensions
-# Be sure to include -9.4.5* in mlsservices package names
-sudo zypper install mssql-mlservices-packages-py-9.4.5*
-sudo zypper install mssql-mlservices-packages-r-9.4.5*
+# Be sure to include -9.4.6* in mlsservices package names
+sudo zypper install mssql-mlservices-packages-py-9.4.6*
+sudo zypper install mssql-mlservices-packages-r-9.4.6*
 sudo zypper install mssql-server-extensibility-java
 ```
 
@@ -240,7 +296,7 @@ sudo zypper install mssql-server-extensibility-java
 Дополнительная настройка не главным образом посредством [средство mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 
-1. Добавьте учетную запись пользователя mssql, используемой для запуска службы панели запуска SQL Server.
+1. Добавьте учетную запись пользователя mssql, используемой для запуска службы SQL Server. Это необходимо, если настройка еще не запущен ранее.
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf setup
@@ -256,7 +312,13 @@ sudo zypper install mssql-server-extensibility-java
 
   Альтернативный рабочий процесс представляет, что если вы еще не приняли компонент SQL Server database engine, лицензионное соглашение, программа установки обнаруживает mssql-mlservices пакеты и запросы для принятия лицензионного соглашения при `mssql-conf setup` выполняется. Дополнительные сведения о параметрах лицензионное соглашение, см. в разделе [SQL Server можно настроить с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
-3. Перезапустите службу панели запуска SQL Server и экземпляра компонента database engine.
+3. Для R интеграции только, задайте функции **MKL_CBWR** переменную среды, чтобы [гарантировать согласованный результат](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) из вычислений Intel Math Kernel Library (MKL).
+
+  + Измените или создайте файл с именем **.bash_profile** в домашнем каталоге пользователя, добавив строку `export MKL_CBWR="AUTO"` к файлу.
+
+  + Выполните этот файл, введя `source .bash_profile` в командной строке bash.
+
+4. Перезапустите службу панели запуска SQL Server и экземпляра компонента database engine. 
 
   ```bash
   systemctl restart mssql-launchpadd
@@ -264,12 +326,14 @@ sudo zypper install mssql-server-extensibility-java
   systemctl restart mssql-server.service
   ```
 
-4. Включите выполнение внешних скриптов в SQL Server Management Studio или другой инструмент, который выполняется Transact-SQL. 
+5. Включить выполнение внешних скриптов, с помощью Azure Data Studio или другого средства, например SQL Server Management Studio (только Windows), которое будет выполняться Transact-SQL. 
 
   ```bash
   EXEC sp_configure 'external scripts enabled', 1 
   RECONFIGURE WITH OVERRIDE 
   ```
+
+6. Еще раз перезапустите службу панели запуска.
 
 ## <a name="verify-installation"></a>Проверка установки
 
@@ -277,7 +341,11 @@ sudo zypper install mssql-server-extensibility-java
 
 Библиотеки Python (microsoftml и revoscalepy) можно найти в `/opt/mssql/mlservices/libraries/PythonServer`.
 
-С помощью инструмента запросов SQL Server, выполните следующую команду SQL, чтобы проверить выполнение R в SQL Server. Если сценарий не выполняется, попробуйте выполнить перезапуск службы, `sudo systemctl restart mssql-server`.
+Функция интеграции Java не поддерживает библиотеки, но можно запускать `grep -r JAVA_HOME /etc` чтобы подтвердить создание переменной среды JAVA_HOME.
+
+Чтобы проверить установку, запустите сценарий T-SQL, который выполняет вызов R или Python системной хранимой процедуры. Вам потребуется средство запроса для выполнения этой задачи. Azure Data Studio является хорошим выбором. Другие часто используемые средства, такие как SQL Server Management Studio или PowerShell, доступные только для Windows. Если у вас есть компьютер Windows с помощью этих средств, используйте его для подключения к Linux установке компонента database engine.
+
+Выполните следующую команду SQL для проверки выполнения R в SQL Server. Если сценарий не выполняется, попробуйте выполнить перезапуск службы, `sudo systemctl restart mssql-server.service`.
 
 ```r
 EXEC sp_execute_external_script   
@@ -304,29 +372,39 @@ GO
 
 <a name="install-all"></a>
 
-## <a name="chained-installation"></a>Сцепленных
+## <a name="chained-combo-install"></a>Установка цепочки «поле со списком»
 
 Можно установить и настроить компонент database engine и служб машинного обучения в одну процедуру путем добавления пакетов R, Python или Java и параметров в команду, которая устанавливает ядро СУБД. 
 
-Ниже приведен является «template» иллюстрацией того, как с помощью диспетчера пакетов Yum выглядит объединенный пакет установки. Он устанавливает ядро СУБД и добавляет расширения языка Java, запрашивающий extensibility framework пакет как зависимость.
+1. Интеграция R, установите [Microsoft R Open](#mro) как необходимый компонент. Если вы не устанавливаете службы R, этот шаг можно пропустите.
 
-```bash
-sudo yum install -y mssql-server mssql-server-extensibility-java 
-```
+2. Укажите командную строку, которая включает в себя компонент database engine, а также возможности расширения языка.
 
-Расширенный пример со всеми расширениями (Java, R, Python) выглядит следующим образом:
+  Можно добавить один компонент, например Java, установка интеграции для компонента database engine.
 
-```bash
-sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.5* mssql-mlservices-packages-py-9.4.5*
-```
+  ```bash
+  sudo yum install -y mssql-server mssql-server-extensibility-java 
+  ```
 
-За исключением необходимые компоненты R все пакеты, используемые в этом примере находятся по тому же пути. Добавление R необходимо, вы [зарегистрировать репозиторий пакетов microsoft r-open](#mro) как дополнительный шаг, чтобы получить MRO. MRO является необходимым условием для расширения R. На компьютере, подключенном к Интернету MRO извлекается и автоматически установить в ходе установки модуля R, при условии, что вы настроили оба репозитория.
+  Или добавьте все расширения (Java, R, Python).
 
-После установки, не забудьте использовать средство mssql-conf для настройки установки в целом и принять лицензионные соглашения. Неподдерживаемого лицензионные соглашения для компонентов R и Python с открытым кодом, определяются автоматически, и вам будет предложено согласны с ними, а также условия лицензионного соглашения для SQL Server.
+  ```bash
+  sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.6* mssql-mlservices-packages-py-9.4.6*
+  ```
 
-```bash
-sudo /opt/mssql/bin/mssql-conf setup MSSQL_PID=Developer 
-```
+3. Принятие условий лицензионного соглашения и выполнить настройку после установки. Используйте **mssql-conf** средство для выполнения этой задачи.
+
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf setup
+  ```
+
+  Вам будет предложено принять лицензионное соглашение для компонента database engine, выберите выпуск и задание пароля администратора. Кроме того, будет предложено принять лицензионное соглашение для служб машинного обучения.
+
+4. Перезапустите службу, если будет предложено сделать это.
+
+  ```bash
+  sudo systemctl restart mssql-server.service
+  ```
 
 ## <a name="unattended-installation"></a>Автоматическая установка
 
@@ -350,7 +428,7 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 #### <a name="download-site"></a>Сайт загрузки
 
-Вы можете скачать пакеты из [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Все пакеты R, Python и Java mlservices размещены совместно с пакет ядра СУБД. Базовые версии для пакетов mlservices — 9.4.5. Micrososoft-r-open пакеты находятся в другую папку.
+Вы можете скачать пакеты из [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Все пакеты R, Python и Java mlservices размещены совместно с пакет ядра СУБД. 9.4.5 (для CTP-версии 2.0) является базовой версии для пакетов mlservices 9.4.6 (CTP 2.1 и более поздних версий). Вспомним, что пакеты microsoft r open — находятся в [другого репозитория](#mro).
 
 #### <a name="rhel7-paths"></a>Пути RHEL/7
 
@@ -376,7 +454,7 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 #### <a name="package-list"></a>Список пакетов
 
-В зависимости от того, какие расширения, вы хотите использовать, загружать пакеты, необходимые для конкретного языка. Точные имена файлов включают сведения о платформе, но ниже имена файлов должно быть достаточно близко для того, можно определить, какие файлы следует получить.
+В зависимости от того, какие расширения, вы хотите использовать, загружать пакеты, необходимые для конкретного языка. Точные имена файлов включают сведения о платформе в суффиксе, но ниже имена файлов должно быть достаточно близко для того, можно определить, какие файлы следует получить.
 
 ```
 # Core packages 
@@ -391,17 +469,28 @@ microsoft-openmpi-3.0.0
 microsoft-r-open-foreachiterators-3.4.4
 microsoft-r-open-mkl-3.4.4
 microsoft-r-open-mro-3.4.4
-mssql-mlservices-packages-r-9.4.5
-mssql-mlservices-mlm-r-9.4.5
-mssql-mlservices-mml-r-9.4.5
+mssql-mlservices-packages-r-9.4.6.523
+mssql-mlservices-mlm-r-9.4.6.523
+mssql-mlservices-mml-r-9.4.6.523
 
 # Python
 microsoft-openmpi-3.0.0
-mssql-mlservices-python-9.4.5
-mssql-mlservices-packages-py-9.4.5
-mssql-mlservices-mlm-py-9.4.5
-mssql-mlservices-mml-py-9.4.5 
+mssql-mlservices-python-9.4.6.523
+mssql-mlservices-packages-py-9.4.6.523
+mssql-mlservices-mlm-py-9.4.6.523
+mssql-mlservices-mml-py-9.4.6.523
 ```
+
+#### <a name="package-list-for-original-ctp-20-and-21"></a>Список пакетов для исходного CTP 2.0 и 2.1
+
+Удаляет CTP 2.2 **mssql-mlservices-mlm-py** и **mssql-mlservices-mlm-r** за счет объединения пакета в **mssql-mlservices пакеты py** и **mssql-mlservices пакеты r**, соответственно.
+
+Если требуется специально исходного CTP 2.0 или 2.1 пакетов, скачайте следующие пакеты:
+
+* Для CTP-версии 2.0 Загрузите пакет версии 9.4.5
+
+* Для CTP-версии 2.1 скачайте пакет версии 9.4.6.237
+
 
 ## <a name="add-more-rpython-packages"></a>Добавить дополнительные пакеты R и Python 
  
@@ -450,9 +539,9 @@ mssql-mlservices-mml-py-9.4.5
    @script = N'import httpie' 
    ```
 
-## <a name="limitations-in-ctp-20"></a>Ограничения в CTP-версии 2.0
+## <a name="limitations-in-ctp-releases"></a>Ограничения в выпусках CTP
 
-В этой CTP-версии существуют следующие ограничения.
+Интеграция R, Python и Java в Linux — по-прежнему в активной разработке. Следующие функции еще не включены в предварительной версии.
 
 + Неявная проверка подлинности доступна в настоящее время не в службах машинного обучения на платформе Linux в настоящее время, это означает, что не удается подключиться к серверу из сценария R или Python выполняется для доступа к данным или другим ресурсам. 
 
@@ -475,12 +564,12 @@ mssql-mlservices-mml-py-9.4.5
 
 Разработчики R можно приступить к работе с простыми примерами и ознакомиться с основами как R работает с SQL Server. Следующий шаг см. следующие ссылки:
 
-+ [Руководство: Запуск R в T-SQL](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Учебник: Анализ в базе данных для разработчиков R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Учебник. Запуск R в T-SQL](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Учебник. Аналитика в базе данных для разработчиков R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Разработчики Python рассказывается, как использовать Python с SQL Server с помощью этих учебных материалов:
 
-+ [Руководство: Запуск Python в T-SQL](../advanced-analytics/tutorials/run-python-using-t-sql.md)
-+ [Учебник: Анализ в базе данных для разработчиков Python](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Учебник. Запустите Python в T-SQL](../advanced-analytics/tutorials/run-python-using-t-sql.md)
++ [Учебник. Аналитика в базе данных для разработчиков Python](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 Чтобы просмотреть примеры машинного обучения, которые основаны на реальных сценариев, см. в разделе [машинного обучения учебники](../advanced-analytics/tutorials/machine-learning-services-tutorials.md).

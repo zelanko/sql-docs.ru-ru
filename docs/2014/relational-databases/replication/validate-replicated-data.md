@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
@@ -20,12 +19,12 @@ ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae1484fd98b7cf10f06eb86406b03b9c2991a210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84ffe2ad4be91f8a05e4bbbd84b2ad5a67cb09a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098104"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792496"
 ---
 # <a name="validate-replicated-data"></a>Проверка реплицированных данных
   Репликация транзакций, а также репликация слиянием позволяет проверять соответствие данных подписчика данным издателя. Проверку можно выполнять как для определенных подписок, так и для всех подписок в публикации. Задайте один из следующих типов проверки и агент распространителя или агент слияния проверят данные при следующем запуске.  
@@ -38,14 +37,14 @@ ms.locfileid: "48098104"
   
  **Проверка данных**  
   
- Чтобы проверить все статьи в подписке, используйте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], хранимые процедуры или объекты RMO. Дополнительные сведения см. в разделе [Validate Data at the Subscriber](validate-data-at-the-subscriber.md). Чтобы проверить отдельные статьи в публикациях моментальных снимков и публикациях транзакций, следует использовать хранимые процедуры.  
+ Чтобы проверить все статьи в подписке, используйте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], хранимые процедуры или объекты RMO. Дополнительные сведения см. в статье [Validate Data at the Subscriber](validate-data-at-the-subscriber.md). Чтобы проверить отдельные статьи в публикациях моментальных снимков и публикациях транзакций, следует использовать хранимые процедуры.  
   
 ## <a name="data-validation-results"></a>Результаты проверки данных  
  Когда проверка заканчивается, агент распространителя или агент слияния заносит в журнал сообщения касательно успеха или неудачи (репликация не сообщает, на каких строках возникла ошибка). Эти сообщения можно просмотреть в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], мониторе репликации и в системных таблицах репликации. В перечисленных выше разделах руководства описывается, как запустить проверку и просмотреть ее результаты.  
   
  Чтобы обработать ошибки проверки, рассмотрите следующее.  
   
--   Настройте предупреждение репликации под названием **Репликация: ошибка проверки данных подписчиком** , чтобы получать уведомление об ошибке. Дополнительные сведения см. в разделе [Настройка стандартных предупреждений репликации &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
+-   Настройте предупреждение репликации под названием **Репликация: Ошибка проверки данных подписчиком** таким образом, вы получите уведомление о сбое. Дополнительные сведения см. в разделе [Настройка стандартных предупреждений репликации &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
   
 -   Является ли неудачная проверка данных проблемой для приложения? Если неудачная проверка данных представляет собой проблему, обновите данные вручную, чтобы они были синхронизированы, или повторно инициализируйте подписку.  
   

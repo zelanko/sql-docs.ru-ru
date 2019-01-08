@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15f862ceff618fb3c0f20d6e2bdf8d9d5b276801
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97c7159682e421005385fd830ceed4380086089c
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806842"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432267"
 ---
-#<a name="installing-smo"></a>Установка SMO
+# <a name="installing-smo"></a>Установка SMO
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
@@ -38,11 +38,11 @@ ms.locfileid: "47806842"
 >>[!Important]
 >>Как отмечалось на [файлы и номера версий](files-and-version-numbers.md) странице сборки объектов SMO не следует устанавливать в глобальный кэш СБОРОК. Таким образом привести к проблемам с другими приложениями, которые также используют эти версии SMO (такие как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio).
 
-##<a name="installing-the-package"></a>Установка пакета
+## <a name="installing-the-package"></a>Установка пакета
 
 См. в разделе [быстрого запуска NuGet: использование пакета](https://docs.microsoft.com/nuget/quickstart/use-a-package) инструкции и примеры, установке и использованию пакета NuGet. 
   
 ## <a name="system-requirements"></a>Требования к системе
   
- Объекты SMO требуются [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0, чтобы запустить, чтобы все использующие его приложения необходимо убедиться, что клиентские компьютеры этой версии или более поздней.
+ Объекты SMO требуются [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0, чтобы запустить, чтобы все использующие его приложения необходимо убедиться, что клиентские компьютеры этой версии или более поздней. Некоторые собственные двоичные файлы, установленные с библиотеками NetFx SMO также требуется среда выполнения VC 2013 должны быть установлены; среды выполнения не включается в пакет. Вы можете скачать распространяемый пакет, соответствующий целевой архитектуре из https://www.microsoft.com/download/details.aspx?id=40784
   

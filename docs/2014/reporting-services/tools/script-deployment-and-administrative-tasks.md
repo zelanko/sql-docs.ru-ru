@@ -23,12 +23,12 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bf10f8ef0b748582aeef2e790207dcb287d3bdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01d506f8db09b8bc30b5587d6d98ecec793adab9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167290"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398877"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Написание скриптов для задач развертывания и администрирования
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают использование сценариев для автоматизации стандартных задач по установке, развертыванию и администрированию. Развертывание сервера отчетов является многошаговым процессом. Чтобы настроить развертывание, необходимо использовать несколько средств и процессов. Для автоматизации всех задач не существует единой программы или единого подхода.  
@@ -70,7 +70,7 @@ ms.locfileid: "48167290"
   
 -   Средство сервера скриптов сервера отчетов (rs.exe) может выполнять пользовательский программный код на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , предназначенный для повторного создания или перемещения существующего содержимого с одного сервера отчетов на другой. При этом подходе скрипт записывается на языке [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], сохраняется в виде RSS-файла и с помощью программы rs.exe запускается на сервере отчетов. Написанный скрипт может обращаться к веб-службе сервера отчетов по протоколу SOAP. При создании скриптов развертывания данный подход позволяет повторно создавать пространство имен и содержимое папок сервера отчетов, а также политики безопасности на основе ролей.  
   
--   В выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] появились командлеты PowerShell для режима интеграции с SharePoint. PowerShell можно использовать для настройки и администрирования интеграции с SharePoint.  Дополнительные сведения см. в разделе [командлеты PowerShell для режима SharePoint служб Reporting Services](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+-   В выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] появились командлеты PowerShell для режима интеграции с SharePoint. PowerShell можно использовать для настройки и администрирования интеграции с SharePoint.  Дополнительные сведения см. в разделе [Командлеты PowerShell для служб Reporting Services в режиме интеграции с SharePoint](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>Миграция содержимого и папок сервера отчетов с помощью скриптов  
  Можно записать скрипт, дублирующие среду сервера отчетов на другом экземпляре сервера отчетов. Скрипты развертывания, как правило, пишутся на языке [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , а затем выполняются с помощью сервера скриптов сервера отчетов.  
@@ -94,10 +94,10 @@ ms.locfileid: "48167290"
 > [!NOTE]  
 >  Если учетные данные не указаны явным образом, то скрипты выполняются от имени пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, запустившего скрипт.  
   
- Дополнительные сведения о форматировании и выполнении файлов скриптов см. в разделе [скриптов с rs.exe и веб-службы](script-with-the-rs-exe-utility-and-the-web-service.md).  
+ Дополнительные сведения о форматировании и выполнении файлов скриптов см. в разделе [Создание скриптов с помощью программы rs.exe и веб-службы](script-with-the-rs-exe-utility-and-the-web-service.md).  
   
 ## <a name="using-scripts-to-set-server-properties"></a>Настройка свойств сервера с помощью сценариев  
- Можно записать сценарии, которые зададут системные свойства на сервере отчетов. Следующий скрипт [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET иллюстрирует один из способов установки свойств. Этот сценарий отключает элемент управления RSClientPrint ActiveX, но можно заменить `EnableClientPrinting` и `False` любым допустимым именем свойства и значением. Чтобы просмотреть полный список свойств сервера, см. в разделе [системные свойства сервера отчетов](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
+ Можно записать сценарии, которые зададут системные свойства на сервере отчетов. Следующий скрипт [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET иллюстрирует один из способов установки свойств. Этот сценарий отключает элемент управления RSClientPrint ActiveX, но можно заменить значения `EnableClientPrinting` и `False` любым допустимым именем свойства и значением. Полный список свойств сервера см. в разделе [Report Server System Properties](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
  Чтобы использовать скрипт, сохраните его в файл с расширением RSS, а затем воспользуйтесь программой командной строки rs.exe для запуска файла на сервере отчетов. Скрипт не компилируется, поэтому необязательно иметь установку [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. В этом примере предполагается, что пользователь имеет необходимые разрешения на локальном компьютере, на котором находится сервер отчетов. Если пользователь не вошел в систему под учетной записью, имеющей необходимые разрешения, необходимо указать сведения об учетной записи с помощью дополнительных аргументов командной строки. Дополнительные сведения см. в разделе [Программа RS.exe (SSRS)](rs-exe-utility-ssrs.md).  
   
@@ -109,7 +109,7 @@ Public Sub Main()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  
@@ -122,13 +122,13 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Метод GenerateDatabaseCreationScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
- [Метод GenerateDatabaseRightsScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
- [Метод GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
+ [Метод GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
+ [Метод GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
+ [Метод GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
  [Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [Установка сервера отчетов собственный режим Reporting Services](../install-windows/install-reporting-services-native-mode-report-server.md)   
+ [Установка сервера отчетов служб Reporting Services в собственном режиме](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Сервер отчетов служб Reporting Services (основной режим)](../report-server/reporting-services-report-server-native-mode.md)   
- [Программы командной строки сервера отчетов &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [Программы командной строки сервера отчетов (службы SSRS)](report-server-command-prompt-utilities-ssrs.md)   
  [Планирование служб Reporting Services и поддержки Power View в браузерах &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Инструментальные средства служб Reporting Services](reporting-services-tools.md)  
   

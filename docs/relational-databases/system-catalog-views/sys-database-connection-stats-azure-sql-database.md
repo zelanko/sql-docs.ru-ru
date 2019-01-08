@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8b395998b8c0408b264ab2ffe7fe7f3390405cf6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 801074dd7e82f5e1564564125486e0845e2303fb
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676353"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589488"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "51676353"
 |**success_count**|**int**|Число успешных соединений.|  
 |**total_failure_count**|**int**|Общее число неудачных попыток соединения. Это сумма **connection_failure_count**, **terminated_connection_count**, и **throttled_connection_count**и не включает события взаимоблокировки.|  
 |**connection_failure_count**|**int**|Количество сбоев входа.|  
-|**terminated_connection_count**|**int**|***Применяется только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11.***<br /><br /> Число прерванных соединений.|  
-|**throttled_connection_count**|**int**|***Применяется только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11.***<br /><br /> Число регулируемых соединений.|  
+|**terminated_connection_count**|**int**|**_Применяется только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число прерванных соединений.|  
+|**throttled_connection_count**|**int**|**_Применяется только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число регулируемых соединений.|  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -57,7 +57,7 @@ ms.locfileid: "51676353"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>start_time и end_time интервала  
- Событие включается в интервал статистической обработки при возникновении события *на* или *после *** start_time** и *перед *** end_time** для этого интервала. Например, событие, которое происходит точно в `2012-10-30 19:25:00.0000000`, будет включено только во второй интервал, показанный ниже.  
+ Событие включается в интервал статистической обработки при возникновении события *на* или _после_**start_time** и _перед_  **end_time** для этого интервала. Например, событие, которое происходит точно в `2012-10-30 19:25:00.0000000`, будет включено только во второй интервал, показанный ниже.  
   
 ```  
   

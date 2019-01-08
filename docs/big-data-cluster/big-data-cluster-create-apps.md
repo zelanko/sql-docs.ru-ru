@@ -1,24 +1,26 @@
 ---
-title: Развертывание приложения в кластере SQL Server больших данных | Документация Майкрософт
+title: Развертывание приложения
+titleSuffix: SQL Server 2019 big data clusters
 description: Разверните скрипт Python или R в качестве приложения в кластере SQL Server 2019 больших данных (Предварительная версия).
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: dd24b4379f50a5b974e7a0a90412d1e13bf6db22
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.custom: seodec18
+ms.openlocfilehash: cca0ac5e7b81318d95fbb133758fca83e1a0742e
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272562"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246420"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Развертывание приложения в кластере SQL Server 2019 больших данных (Предварительная версия)
 
 В этой статье описывается развертывание и управление ими скрипт R и Python, как приложение в кластере SQL Server 2019 больших данных (Предварительная версия).
 
-Развертываются и управляются с помощью приложения Python и R **mssqlctl-pre** программы командной строки, который включен в CTP 2.1. В этой статье приведены примеры того, как развернуть эти скрипты R и Python в качестве приложения из командной строки.
+Развертываются и управляются с помощью приложения Python и R **mssqlctl-pre** программы командной строки, который включен в CTP-версии 2.2. В этой статье приведены примеры того, как развернуть эти скрипты R и Python в качестве приложения из командной строки.
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -29,12 +31,12 @@ ms.locfileid: "51272562"
 **Mssqlctl-pre** командной строки служебная программа для предварительного просмотра средство развертывания приложений Python и R. Чтобы установить программу, используйте следующую команду:
 
 ```cmd
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctlpre
+pip install -r https://private-repo.microsoft.com/python/ctp-2.2/mssqlctlpre/mssqlctlpre.txt --trusted-host https://private-repo.microsoft.com
 ```
 
 ## <a name="capabilities"></a>Возможности
 
-В CTP-версии 2.1, которые можно создавать удалять, выводить список и запускать приложение R или Python. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **mssqlctl-pre**.
+В CTP-версии 2.2, которые можно создавать удалять, выводить список и запускать приложение R или Python. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **mssqlctl-pre**.
 
 | Command | Описание |
 |---|---|
@@ -54,15 +56,16 @@ mssqlctl-pre app create --help
 
 ## <a name="log-in"></a>Войти
 
-Перед настройкой приложения Python и R, сначала выполнить вход в кластер для обработки больших данных с использованием SQL Server `mssqlctl-pre login` команды. Укажите IP-адрес (внешний) `service-proxy-lb` (например: `https://ip-address:30777`), а также имя пользователя и пароль для кластера.
+Перед настройкой приложения Python и R, сначала выполнить вход в кластер для обработки больших данных с использованием SQL Server `mssqlctl-pre login` команды. Укажите внешний IP-адрес `service-proxy-lb` или `service-proxy-nodeport` служб (например: `https://ip-address:30777`), а также имя пользователя и пароль для кластера.
 
-IP-адрес службы прокси-сервера балансировки нагрузки службы можно получить, выполнив следующую команду в окне bash или cmd:
+Можно получить IP-адрес **службы прокси lb** или **службы, прокси-сервера, nodeport** службу, выполнив следующую команду в окне bash или cmd:
+
 ```bash 
 kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
 ```bash
-mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb> -u <user-name> -p <password>
+mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
 ```
 
 ## <a name="create-an-app"></a>Создание приложения

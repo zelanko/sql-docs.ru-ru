@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c521e524e6e205989e2bff96928af4da9c24bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091881"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354015"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Определение связей "многие ко многим" и свойств связей "многие ко многим"
   В этом разделе рассматривается измерения «многие ко многим» в службах Analysis Services, включая случаи их использования и способы создания.  
@@ -61,7 +61,7 @@ ms.locfileid: "48091881"
   
  Для иллюстрации шагов по созданию связи «многие ко многим» данная процедура воссоздает одну из подобных связей в кубе Adventure Works. Если у вас есть источник данных (в данном случае хранилище данных примера Adventure Works), установленный на экземпляре реляционной СУБД, вы можете выполнить следующую процедуру.  
   
-#### <a name="step-1-verify-dsv-relationships"></a>Шаг 1. Проверка связей представления источника данных  
+#### <a name="step-1-verify-dsv-relationships"></a>Шаг 1. Проверить связи представления источника данных  
   
 1.  В приложении SQL Server Data Tools для многомерного проекта создайте источник данных для реляционного хранилища данных Adventure Works DW 2012, размещенного на экземпляре SQL Server Database Engine.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48091881"
   
      ![Представление источника данных, отображающее связанные таблицы](../media/ssas-m2m-dsvpkeys.PNG "представления источника данных, отображающее связанные таблицы")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>Шаг 2. Создание измерений и групп мер  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>Этап 2. Создание измерения и группы мер  
   
 1.  В среде SQL Server Data Tools для многомерного проекта щелкните правой кнопкой мыши папку **Измерения** и выберите **Создать измерение**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48091881"
   
 11. Присвойте кубу имя и нажмите кнопку **Готово**.  
   
-#### <a name="step-3-define-many-to-many-relationship"></a>Шаг 3. Определение связи "многие ко многим"  
+#### <a name="step-3-define-many-to-many-relationship"></a>Шаг 3. Определение связи «многие ко многим»  
   
 1.  В конструкторе кубов перейдите на вкладку «Использование измерений». Обратите внимание, что между измерениями **Dim Sales Reason** и **Fact Internet Sales**уже имеется связь "многие ко многим". Напомним, что связь «многие ко многим» обозначается следующим значком.  
   
@@ -175,21 +175,21 @@ ms.locfileid: "48091881"
   
 3.  Всегда помните, что нужно развернуть модель и снова подключиться к ней после ее изменения. В Excel нажмите кнопку «Обновить» на ленте «Анализ» сводной таблицы.  
   
-4.  Избегайте использования связанных групп мер в нескольких связях типа «многие ко многим», особенно если эти связи находятся в разных кубах. Это может привести к формированию неоднозначных агрегатов. Дополнительные сведения см. в разделе [Неверные суммы для связанных мер в кубе, содержащих связи "многие ко многим"](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
+4.  Избегайте использования связанных групп мер в нескольких связях типа «многие ко многим», особенно если эти связи находятся в разных кубах. Это может привести к формированию неоднозначных агрегатов. Дополнительные сведения см. в разделе [Неверные суммы для связанных мер в кубе, содержащих связи "многие ко многим"](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
 ##  <a name="bkmk_Learn"></a> Learn more  
  Дополнительную информацию, которая поможет в освоении данных концепций, можно получить по следующим ссылкам.  
   
- [Как определить многие ко многим измерения в службах Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Как определить многие ко многим измерения в службах Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324759)  
   
- [Революция концепции «многие ко многим» 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
+ [Революция концепции «многие ко многим» 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Руководство. Пример измерения "многие ко многим" для служб SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Учебник. Многие ко многим пример измерения для SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>См. также  
  [Связи измерений](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Установка образцов данных и проектов для учебника по многомерному моделированию Analysis Services](../install-sample-data-and-projects.md)   
- [Развертывание проектов служб Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
+ [Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services](../install-sample-data-and-projects.md)   
+ [Развертывание проектов служб Analysis Services (среда SSDT)](deploy-analysis-services-projects-ssdt.md)   
  [Перспективы в многомерных моделях](perspectives-in-multidimensional-models.md)  
   
   

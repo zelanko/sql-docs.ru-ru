@@ -1,91 +1,94 @@
 ---
-title: Работа с данными SQL Server, с помощью языка R (SQL и R глубокое погружение в обработку) | Документация Майкрософт
+title: Создание базы данных и разрешений для использования учебников RevoScaleR - машинного обучения SQL Server
+description: Руководство по созданию базы данных SQL Server для использования учебников R...
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
-ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
+ms.openlocfilehash: 15032b604d7ea28ad03acb837f997dac3afa84b8
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44375677"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645273"
 ---
-# <a name="lesson-1-create-a-database-and-permissions"></a>Занятие 1: Создание базы данных и разрешения
+# <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Создание базы данных и разрешений (руководство по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье является частью [руководстве RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
+Это занятие является частью [руководстве RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
 
-На этом занятии настроить среду и добавить данные, необходимые для обучения моделей и кратких сводок данных. Как часть процесса необходимо выполнить следующие задачи:
-  
-- создадите базу данных, в которой будут храниться данные для обучения и оценки двух моделей R;
-  
-- создадите учетную запись (пользователя Windows или имя входа SQL), которая будет использоваться для обмена данными между рабочей станцией и сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;
-  
-- создадите источники данных в R для работы с данными и объектами базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;
-  
-- используете источник данных R для загрузки данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];
-  
-- используете язык R для получения списка переменных и изменения метаданных таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;
-  
-- создадите контекст вычисления для удаленного выполнения кода на языке R;
-  
-- (Необязательно) Включите трассировку в удаленном контексте вычисления.
-  
-## <a name="create-the-database-and-user"></a>Создание базы данных и пользователя
+Занятие, одно — о настройке базы данных SQL Server и разрешения для изучения этого учебника. Используйте [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) или другого редактора запросов, чтобы выполнить следующие задачи:
 
-В этом пошаговом руководстве, создайте новую базу данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]и добавьте имя входа SQL с разрешениями на запись и чтение данных и для выполнения скриптов R.
+> [!div class="checklist"]
+> * Создать новую базу данных для хранения данных для обучения и оценки двух моделей R
+> * Создайте имя входа пользователя базы данных с разрешениями для создания и использования объектов базы данных
+  
+## <a name="create-the-database"></a>Создайте базу данных
 
-> [!NOTE]
-> Если используется только для чтения данных, учетная запись, запускает скрипты R, требуются разрешения SELECT (**db_datareader** роли) в указанной базе данных. Тем не менее в этом руководстве, необходимо иметь права администратора DDL Подготовка базы данных и создания таблицы для сохранения результатов оценки.
-> 
-> Кроме того Если вы не являетесь владельцем базы данных, необходимо разрешение EXECUTE ANY EXTERNAL SCRIPT для выполнения R-скриптов.
+Этот учебник требуется база данных для хранения данных и кода. Если вы не являетесь администратором, попросите администратора баз данных для создания базы данных и имя входа для вас. Потребуются разрешения на запись и чтение данных и для выполнения скриптов R.
 
-1. В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]выберите экземпляр, в котором включены службы [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] , щелкните правой кнопкой мыши элемент **базы данных**и выберите пункт **Создать базу данных**.
+1. В SQL Server Management Studio подключитесь к экземпляру базы данных с поддержкой R.
+
+2. Щелкните правой кнопкой мыши **баз данных**и выберите **новую базу данных**.
   
-2. Введите имя новой базы данных. Вы можете использовать любое имя, но не забудьте внести соответствующие изменения во все скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] и R в этом пошаговом руководстве.
+2. Введите имя новой базы данных: RevoDeepDive.
   
-    > [!TIP]
-    > Чтобы увидеть новое имя базы данных, щелкните правой кнопкой мыши элемент **Базы данных** и выберите пункт **Обновить** .
+
+## <a name="create-a-login"></a>Создает вход
   
-3. Щелкните **Создать запрос**и измените контекст базы данных на master.
+1. Щелкните **Создать запрос**и измените контекст базы данных на master.
   
-4. В новом окне **Запрос** выполните приведенные ниже команды, чтобы создать учетные записи пользователей и назначить их базе данных, используемой в этом учебнике. При необходимости измените имя базы данных.
+2. В новом окне **Запрос** выполните приведенные ниже команды, чтобы создать учетные записи пользователей и назначить их базе данных, используемой в этом учебнике. При необходимости измените имя базы данных.
+
+3. Чтобы проверить имя входа, выберите новую базу данных, разверните **безопасности**и разверните **пользователей**.
   
-**Пользователь Windows**
+**пользователя Windows**
   
-```SQL
+```sql
  -- Create server user based on Windows account
 USE master
 GO
-CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[DeepDive]
+CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[RevoDeepDive]
 
  --Add the new user to tutorial database
-USE [DeepDive]
+USE [RevoDeepDive]
 GO
 CREATE USER [<user_name>] FOR LOGIN [<DOMAIN>\<user_name>] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
 **Имя входа SQL**
 
-```SQL
+```sql
 -- Create new SQL login
 USE master
 GO
-CREATE LOGIN DDUser01 WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
+CREATE LOGIN [DDUser01] WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
 
 -- Add the new SQL login to tutorial database
-USE [DeepDive]
+USE RevoDeepDive
 GO
 CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
-5. Чтобы проверить, был ли создан пользователь, выберите новую базу данных, а затем разверните узлы **Безопасность**и **Пользователи**.
+## <a name="assign-permissions"></a>Назначение разрешений
 
-## <a name="troubleshooting"></a>Устранение неполадок
+В этом учебнике показано, скрипт R и DDL-операции, включая создание и удаление таблиц и хранимых процедур и запуска сценария R во внешнем процессе в SQL Server. На этом шаге назначение прав, чтобы разрешить эти задачи.
+
+В этом примере предполагается, что имя входа SQL (DDUser01), но если вы создали имя входа Windows, используйте ее.
+
+```sql
+USE RevoDeepDive
+GO
+
+EXEC sp_addrolemember 'db_owner', 'DDUser01'
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO DDUser01
+GO
+```
+
+## <a name="troubleshoot-connections"></a>Устранение неполадок с подключением
 
 В этом разделе перечислены некоторые распространенные проблемы, которые могут возникнуть в процессе настройки базы данных.
 
@@ -95,7 +98,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     Если вы не хотите устанавливать дополнительные средства управления базами данных, то можете создать тестовое подключение к экземпляру SQL Server с помощью компонента [Администратор источников данных ODBC](https://msdn.microsoft.com/library/ms714024.aspx) на панели управления. Если база данных настроена правильно и вы ввели верные имя пользователя и пароль, то вы увидите созданную базу данных и сможете выбрать ее в качестве базы данных по умолчанию.
   
-    Если вы не можете подключиться к базе данных, проверьте, включены ли удаленные подключения для сервера и включен ли протокол именованных каналов. В этой статье предоставляются дополнительные советы по устранению неполадок: [Устранение неполадок подключения к SQL Server Database Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
+    Распространенные причины сбоев соединения включают удаленного соединения не разрешены для сервера, а не включен протокол именованных каналов. Дополнительные советы по устранению неполадок можно найти в этой статье: [Устранение неполадок при подключении к SQL Server Database Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   
 - **Почему имя таблицы имеет префикс datareader?**
   
@@ -111,17 +114,11 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
 - **У меня нет прав DDL. Могу ли я работать с учебником?**
   
-    Да. Однако вам нужно будет предварительно попросить кого-нибудь загрузить данные в таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а затем пропустить разделы, в которых требуется создать таблицы. Функции, требующие прав DDL, называются в этом руководстве, везде, где это возможно.
+    Да, но вам следует попросить кого-нибудь для предварительной загрузки данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблиц и перейти вперед к следующему занятию. Функции, требующие прав DDL, называются в этом руководстве, везде, где это возможно.
 
     Кроме того попросите администратора предоставить вам разрешения EXECUTE ANY EXTERNAL SCRIPT. Он необходим для выполнения сценариев R, ли удаленный или с помощью `sp_execute_external_script`.
 
-## <a name="next-step"></a>Следующий шаг
+## <a name="next-steps"></a>Следующие шаги
 
-[Создание объектов данных SQL Server с помощью функции RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
-## <a name="overview"></a>Обзор
-
-[Глубокое погружение в обработку и анализ данных: использование пакетов RevoScaleR](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-
-
-
+> [!div class="nextstepaction"]
+> [Создание объектов данных SQL Server с помощью функции RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)

@@ -10,12 +10,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ea86d548e509650f0ec237bb77097e3fb4b267ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143796"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368006"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным
   В этом разделе приведены рекомендации по вызову хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным.  
@@ -31,12 +31,12 @@ ms.locfileid: "48143796"
   
  SqlClient не поддерживает получение данных только схемы (обнаружение метаданных) о результирующих наборах, возвращенных скомпилированной в собственном коде хранимой процедурой (CommandType.SchemaOnly). Используйте вместо этого процедуру [sp_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент  
  Версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] не позволяют получить данные только схемы (обнаружение метаданных) о результирующих наборах, возвращенных скомпилированной в собственном коде хранимой процедурой. Используйте вместо этого процедуру [sp_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql).  
   
  Следующие рекомендации применимы к вызовам хранимой процедуры, скомпилированным в собственном коде, с помощью драйвера ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Наиболее эффективный способ однократного вызова хранимой процедуры — выполнить прямой вызов RPC с помощью `SQLExecDirect` и предложения ODBC CALL. Не используйте [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` инструкции. Если хранимая процедура вызывается более одного раза, подготовленное выполнение более эффективно.  
+ Наиболее эффективный способ однократного вызова хранимой процедуры — выполнить прямой вызов RPC с помощью предложений `SQLExecDirect` и ODBC CALL. Не используйте [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` инструкции. Если хранимая процедура вызывается более одного раза, подготовленное выполнение более эффективно.  
   
  Наиболее эффективный способ неоднократного вызова хранимой процедуры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] — через подготовленные вызовы процедур RPC. Подготовленные вызовы RPC выполняются следующим образом с помощью драйвера ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -61,7 +61,7 @@ if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {
 }  
   
 // 2, 3, 4 - ItemNo, ProdCode, Qty  
-…  
+...  
   
 // Prepare stored procedure  
 returnCode = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);  
@@ -87,7 +87,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  Создание образца базы данных с оптимизированной для памяти файловой группой данных. Сведения о создании базы данных с оптимизированной для памяти файловой группой данных см. в разделе [Создание таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде](creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
-2.  Создайте источник данных ODBC с именем PrepExecSample, указывающий на базу данных. Используйте драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Можно также изменить пример и использовать [драйвер Microsoft ODBC для SQL Server](http://msdn.microsoft.com/library/jj730314.aspx).  
+2.  Создайте источник данных ODBC с именем PrepExecSample, указывающий на базу данных. Используйте драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Можно также изменить пример и использовать [драйвер Microsoft ODBC для SQL Server](https://msdn.microsoft.com/library/jj730314.aspx).  
   
 3.  Запустите скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)] (см. ниже) для образца базы данных.  
   

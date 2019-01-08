@@ -1,5 +1,6 @@
 ---
-title: Обучение и сохранение модели Python с помощью T-SQL | Документация Майкрософт
+title: 'Обучение и сохранение модели Python с помощью T-SQL: машинного обучения SQL Server'
+description: Учебник по Python, показывающий, как обучение и сохранение модели с помощью Transact-SQL на сервере SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
@@ -7,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d3917678cb16462f065754dd389be53ae8cd6016
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a0991f43ed7446cc9b86325d4f536a0787b8dcc1
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032721"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645182"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Обучение и сохранение модели Python с помощью T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "51032721"
 
     Эта хранимая процедура должна быть создана для вас, но можно запустить следующий код, чтобы создать его:
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainTestSplit;
     GO
 
@@ -48,20 +49,10 @@ ms.locfileid: "51032721"
 
 2. Чтобы разделить данные с помощью пользовательского разбиения, выполните хранимую процедуру и введите целое число, представляющее процент данных, размещаемых в обучающий набор. Например следующая инструкция выделит 60% данных в обучающий набор.
 
-    ```SQL
+    ```sql
     EXEC PyTrainTestSplit 60
     GO
     ```
-
-## <a name="add-a-name-column-in-nyctaximodels"></a>Добавление имени столбца в nyc_taxi_models
-
-Скрипты в этом руководстве сохраните имя модели как метку для созданные модели. Имя модели используется в запросах для выбора revoscalepy или SciKit модели.
-
-1. В среде Management Studio откройте **nyc_taxi_models** таблицы.
-
-2. Щелкните правой кнопкой мыши **столбцы** и нажмите кнопку **новый столбец**. Задайте имя столбца *имя*, с типом **nchar(250)** и Разрешить значения NULL.
-
-    ![Имя столбца для хранения имен модели](media/sqldev-python-newcolumn.png)
 
 ## <a name="build-a-logistic-regression-model"></a>Создать модель логистической регрессии
 
@@ -78,7 +69,7 @@ ms.locfileid: "51032721"
 
 1.  В [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], откройте новую **запроса** окна и выполните следующую инструкцию, чтобы создать хранимую процедуру **PyTrainScikit**.  Хранимая процедура содержит определение входных данных, поэтому входной запрос указывать не нужно.
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainScikit;
     GO
 
@@ -117,7 +108,7 @@ ms.locfileid: "51032721"
 
 2. Выполните следующие инструкции SQL для вставки обученную модель в таблице Нью-Йорка\_taxi_models.
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC PyTrainScikit @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
@@ -136,11 +127,11 @@ ms.locfileid: "51032721"
 
 Эта хранимая процедура использует новый **revoscalepy** пакет, который представляет новый пакет для Python. Он содержит объекты, преобразования и алгоритмы, аналогичные указанным для языка R **RevoScaleR** пакета. 
 
-С помощью **revoscalepy**, можно создать удаленные контексты вычисления, перенос данных между вычислительных контекстов, преобразовывать данные и прогнозных моделей обучения, используя популярные алгоритмы, такие как логистическая и Линейная регрессия, деревья принятия решений, и Дополнительные. Дополнительные сведения см. в разделе [Какова revoscalepy?](../python/what-is-revoscalepy.md)
+С помощью **revoscalepy**, можно создать удаленные контексты вычисления, перенос данных между вычислительных контекстов, преобразовывать данные и прогнозных моделей обучения, используя популярные алгоритмы, такие как логистическая и Линейная регрессия, деревья принятия решений, и Дополнительные. Дополнительные сведения см. в разделе [revoscalepy модуля в SQL Server](../python/ref-py-revoscalepy.md) и [Справочник по функциям revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
 
 1. В [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], откройте новую **запроса** окна и выполните следующую инструкцию, чтобы создать хранимую процедуру _TrainTipPredictionModelRxPy_.  Так как хранимая процедура уже включает в себя определение входных данных, входной запрос указывать не нужно.
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
     GO
 
@@ -181,7 +172,7 @@ ms.locfileid: "51032721"
 
 2. Выполните хранимую процедуру таким образом, чтобы вставить обученной **revoscalepy** модель в таблицу *nyc_taxi_models*.
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC TrainTipPredictionModelRxPy @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);

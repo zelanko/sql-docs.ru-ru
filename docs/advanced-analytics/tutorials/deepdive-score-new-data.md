@@ -1,32 +1,37 @@
 ---
-title: Оценить новые данные (SQL и R глубокое погружение) | Документы Microsoft
+title: Оценка новых данных с помощью RevoScaleR и rxPredict - машинного обучения SQL Server
+description: Руководство о том, как для оценки данных с помощью языка R на SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2de06b0159c432ac1d53d9e51bbdf0cd820efd7a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2a54ce22a7012f0747cd417f0f3b3fee0fda0ddf
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202336"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644983"
 ---
-# <a name="score-new-data-sql-and-r-deep-dive"></a>Оценить новые данные (SQL и R глубокое погружение)
+# <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Оценка новых данных (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье является частью учебника по глубокое погружение обработки и анализа данных, о том, как использовать [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
+Это занятие является частью [руководстве RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
 
-На этом шаге используется модель логистической регрессии, созданный ранее, чтобы создавать оценки для другой набор данных, который использует же независимых переменных в качестве входных данных.
+На этом шаге используется модель логистической регрессии, созданную на предыдущем занятии, для оценки еще одного набора данных, который использует теми же независимыми переменными в качестве входных данных.
+
+> [!div class="checklist"]
+> * Оценка новых данных
+> * Создание гистограммы оценок
 
 > [!NOTE]
-> Для некоторых из этих шагов необходимы права администратора DDL.
+> Для некоторых из этих действий требуются права администратора DDL.
 
 ## <a name="generate-and-save-scores"></a>Создайте и сохраните оценок
   
-1. Обновление источника данных, которую вы настроили ранее, `sqlScoreDS`, чтобы добавить необходимые сведения.
+1. Обновление источника данных sqlScoreDS (созданных в [урок два](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)) использовать сведения о столбцах, созданные на предыдущем занятии.
   
     ```R
     sqlScoreDS <- RxSqlServerData(
@@ -36,7 +41,7 @@ ms.locfileid: "31202336"
         rowsPerRead = sqlRowsPerRead)
     ```
   
-2. Чтобы убедиться в том, что результаты не исчезнут, создайте объект источника данных. Затем, используйте объект источника данных для заполнения новой таблицы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных.
+2. Чтобы убедиться в том, что не потерять результаты, создайте объект источника данных. Затем используйте новый объект источника данных для заполнения новой таблицы в базе данных RevoDeepDive.
   
     ```R
     sqlServerOutDS <- RxSqlServerData(table = "ccScoreOutput",
@@ -45,25 +50,24 @@ ms.locfileid: "31202336"
     ```
     К этому моменту таблица не была создана. Эта инструкция просто определяет контейнер для данных.
      
-3. Проверьте текущий контекст вычисления и при необходимости задайте серверный контекст.
+3. Проверьте текущий контекст вычислений с помощью **rxGetComputeContext()** и настройки контекста вычислений на сервере, при необходимости.
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
   
-4. Перед выполнением функции прогнозирования, создающей результаты, необходимо проверить наличие таблицы выходных данных. В противном случае будет сообщение об ошибке при попытке записи в новую таблицу.
+4. В качестве меры предосторожности Проверьте наличие таблицы выходных данных. Если одно уже существует с тем же именем, вы получите ошибку при попытке записи в новую таблицу.
   
-    Для этого вызовите функции **rxSqlServerTableExists** и **rxSqlServerDropTable**, передав имя таблицы в качестве входных данных.
+    Для этого вызовите функции [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) и [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable), передав имя таблицы в качестве входных данных.
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
     ```
   
-    -  Функция **rxSqlServerTableExists** запрашивает драйвер ODBC и возвращает значение TRUE, если таблица существует, или значение FALSE в противном случае.
-    -  Функция **rxSqlServerDropTable** выполняет DDL и возвращает значение TRUE, если таблица является успешно удалены, значение FALSE в противном случае.
-    - Ссылки для обеих функций можно найти здесь: [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)
-  
-5. Теперь вы готовы к использованию [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) для создания оценки и сохранить их в новой таблице, определенные в источнике данных `sqlScoreDS`.
+    + **rxSqlServerTableExists** запрашивает драйвер ODBC и возвращает TRUE, если таблица существует, или FALSE в противном случае.
+    + **rxSqlServerDropTable** выполняет DDL и возвращает значение TRUE, если таблица успешно удалена, или FALSE в противном случае.
+
+5. Выполнение [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) для создания оценок и сохранить их в новой таблице, определенной в sqlScoreDS источника данных.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -75,17 +79,17 @@ ms.locfileid: "31202336"
         overwrite = TRUE)
     ```
   
-    Функция **RxPredict** является еще одной функцией, поддерживающей выполнение в удаленных контекстах вычисления. Функцию **rxPredict** можно использовать для создания оценок из моделей, сформированных с помощью [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)или [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
+    Функция **RxPredict** является еще одной функцией, поддерживающей выполнение в удаленных контекстах вычисления. Можно использовать **rxPredict** функцию для создания оценок из моделей на основе [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit), или [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
   
     - В этом случае параметру *writeModelVars* присвоено значение **TRUE** . Это означает, что переменные, которые использовались для оценки, будут включены в новую таблицу.
   
-    - Параметр *predVarNames* определяет переменную, в которой будут храниться результаты. Здесь вы передаете новой переменной `ccFraudLogitScore`.
+    - Параметр *predVarNames* определяет переменную, в которой будут храниться результаты. Здесь вы передаете переменную, `ccFraudLogitScore`.
   
-    - Параметр *type* функции **rxPredict** определяет способ вычисления прогнозов. Укажите ключевое слово **ответ** для формирования оценок, на основе масштаба переменную ответа. Также можно использовать ключевое слово **ссылку** для формирования оценок, на основе базового ссылку функции, в этом случае прогнозы создаются с помощью логистической шкалы.
+    - Параметр *type* функции **rxPredict** определяет способ вычисления прогнозов. Укажите ключевое слово **ответ** для формирования оценок на основе шкалы зависимой переменной. Также можно использовать ключевое слово **ссылку** для формирования оценок в зависимости от базовой функции связи, в этом случае создаются прогнозы с помощью логистической шкале.
 
 6. Через некоторое время вы можете обновить список таблиц в среде Management Studio, чтобы увидеть новую таблицу и ее данные.
 
-7. Чтобы добавить дополнительные переменные в результирующие прогнозы, используйте аргумент *extraVarsToWrite*.  Например, в следующем коде переменной `custID` добавляется из оценки таблицы данных в таблицу выходные данные прогнозов.
+7. Чтобы добавить дополнительные переменные в результирующие прогнозы, используйте аргумент *extraVarsToWrite*.  Например, в следующем коде переменная *custID* добавляется из таблицы данных для оценки в выходную таблицу прогнозов.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -98,11 +102,11 @@ ms.locfileid: "31202336"
             overwrite = TRUE)
     ```
 
-## <a name="display-scores-in-a-histogram"></a>Отображение оценок в гистограмму
+## <a name="display-scores-in-a-histogram"></a>Отображение оценок на гистограмме
 
-После создания новой таблицы можно вычислять и отображать гистограммы 10 000 прогнозируемые оценки. Вычисление выполняется быстрее, если указать значения нижнего и верхнего, поэтому получить из базы данных и добавить их в работе данные.
+После создания новой таблицы, вычисление и отображение гистограммы с 10 000 прогнозируемых оценок. Вычисление выполняется быстрее, если указать нижнее и верхнее значения, поэтому получены из базы данных и добавить их в рабочие данные.
 
-1. Создать новый источник данных, `sqlMinMax`, который запрашивает базу данных для получения значения нижнего и верхнего.
+1. Создайте новый источник данных, sqlMinMax, который запрашивает базу данных для получения нижнего и верхнего значений.
   
     ```R
     sqlMinMax <- RxSqlServerData(
@@ -113,20 +117,22 @@ ms.locfileid: "31202336"
 
      В этом примере можно увидеть, насколько просто использовать объекты источника данных **RxSqlServerData** для определения произвольных наборов данных на основе запросов SQL, функций или хранимых процедур, а затем использовать их в коде R. Переменная не хранит фактические значения, а только определение источника данных. Запрос выполняется для создания значений только при его использовании в функции наподобие **rxImport**.
       
-2. Вызовите [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) функцию для размещения значений в кадре данных, который можно использовать совместно для контекстов вычислений.
+2. Вызовите [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) функции, чтобы поместить значения в кадр данных, который может использоваться совместно в разных контекстах вычисления.
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)
-    minMaxVals \<- as.vector(unlist(minMaxVals))
-  
+    minMaxVals <- as.vector(unlist(minMaxVals))
     ```
-     **Результаты**
+
+    **Результаты**
      
-     *> minMaxVals*
+    ```R
+    > minMaxVals
      
-     *[1] –23,970256   9,786345*
-  
-3. Теперь доступны, максимальное и минимальное значения, используйте значения для создания другого источника данных для созданного оценок.
+    [1] -23.970256   9.786345
+    ```
+
+3. Теперь, когда максимальное и минимальное значения доступны, используйте значения для создания другого источника данных для созданных оценок.
   
     ```R
     sqlOutScoreDS <- RxSqlServerData(sqlQuery = "SELECT ccFraudLogitScore FROM ccScoreOutput",
@@ -137,7 +143,7 @@ ms.locfileid: "31202336"
                         high = ceiling(minMaxVals[2]) ) ) )
     ```
 
-4. Используйте объект источника данных `sqlOutScoreDS` для возврата результатов и вычисления и отображения гистограммы. При необходимости добавьте код для задания контекста вычисления.
+4. Используйте sqlOutScoreDS объекта источника данных для получения оценок и вычисления и отображения гистограммы. При необходимости добавьте код для задания контекста вычисления.
   
     ```R
     # rxSetComputeContext(sqlCompute)
@@ -148,12 +154,7 @@ ms.locfileid: "31202336"
   
     ![Сложная гистограмма, созданная с помощью R](media/rsql-sue-complex-histogram.png "Сложная гистограмма, созданная с помощью R")
   
-## <a name="next-step"></a>Следующий шаг
+## <a name="next-steps"></a>Следующие шаги
 
-[Преобразование данных с помощью языка R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
-
-## <a name="previous-step"></a>Предыдущий шаг
-
-[Создание моделей](../../advanced-analytics/tutorials/deepdive-create-models.md)
-
-
+> [!div class="nextstepaction"]
+> [Преобразование данных с помощью языка R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)

@@ -1,5 +1,5 @@
 ---
-title: Производительность SQL Server R Services - результатов и ресурсы | Документация Майкрософт
+title: Производительность служб R SQL Server — результаты и ресурсы — SQL Server службы машинного обучения
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 81176a5a63b0cd8319d985ef72889a5c972fac63
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3ee5a1d2c656ef420c410c75333546ab8fbf539c
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697502"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645473"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Производительность для служб R: результаты и ресурсы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,11 +26,11 @@ ms.locfileid: "51697502"
 
 В этом разделе перечислены сведения о результатах первый пример использования. Для второй исследований Сводка описывает общую результаты. В конце этого раздела приведены ссылки на все сценарии и образцы данных и ресурсы, используемые первых авторов.
 
-## <a name="performance-case-study-airline-dataset"></a>Пример производительности: набор данных об авиарейсах
+## <a name="performance-case-study-airline-dataset"></a>Пример производительности: Набор данных об авиарейсах
 
 В этом практическом, группа разработчиков SQL Server R Services протестировать влияние различные оптимизации. Был создан один rxLogit модели и оценки над набора данных по Авиарейсам. Оптимизация были применены во время обучения и оценки процессов, чтобы оценить влияние отдельных.
 
-- Github: [демонстрационные данные и скрипты](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) для оптимизации использования SQL Server
+- Github: [Демонстрационные данные и скрипты](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) для оптимизации использования SQL Server
 
 ### <a name="test-methods"></a>Методы теста
 
@@ -62,7 +62,7 @@ ms.locfileid: "51697502"
 
 **Пример временных интервалов**
 
-```
+```text
 Running IntCol Test. Using airlineWithIntCol table.
 run 1 took 3.66 seconds
 run 2 took 3.44 seconds
@@ -90,7 +90,7 @@ metric time pct
 
 Первый тест по сравнению с использование сжатия и таблицы столбцов для уменьшения объема данных.
 
-| Имя таблицы            | Строки     | Зарезервировано   | Данные        | index_size | Не используется  | Процент сохранения (зарезервировано) |
+| Имя таблицы            | Строки     | Зарезервировано   | Данные       | index_size | Не используется  | Процент сохранения (зарезервировано) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10 000 000 | 2 978 816 КБ | 2 972 160 КБ | 6128 КБ    | 528 КБ  | 0                   |
 | *airlineWithPageComp* | 10 000 000 | 625 784 КБ  | 623 744 КБ  | 1352 КБ    | 688 КБ  | 79 %                 |
@@ -273,7 +273,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 Загрузка обученной модели из таблицы четко — более быстрый способ сделать прогноз. Рекомендуется избегать создания модели и выполнения оценки в тот же скрипт.
 
-## <a name="case-study-optimization-for-the-resume-matching-task"></a>Пример использования: оптимизация для задачи подбора резюме
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>Пример внедрения: Оптимизация для задачи подбора резюме
 
 Модель подбора резюме был разработан, специалист по обработке данных Майкрософт Хаун Ke для тестирования производительности кода R в SQL Server и, выполнив так справочные данные по обработке и анализу создавать масштабируемые, решений корпоративного уровня.
 
@@ -347,11 +347,11 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 Ниже приведены ссылки на сведения, инструменты и скрипты, используемые при разработке этих тестов.
 
-+ Тестирование сценариев, а также ссылки на данные производительности: [демонстрационные данные и скрипты для оптимизации использования SQL Server](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
++ Тестирование сценариев, а также ссылки на данные производительности: [Образцы данных и сценарии для оптимизации использования SQL Server](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
-+ Статьи, в которых решение подбора резюме: [советы по оптимизации и рекомендации для SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
++ Статьи, в которых подбора резюме решения: [Советы по оптимизации и рекомендации для SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ Скрипты, используемые в оптимизации SQL для подбора резюме решения: [репозитория GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ Скрипты, используемые в оптимизации SQL для подбора резюме решения: [Репозиторий GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
 
 ### <a name="learn-about-windows-server-management"></a>Дополнительные сведения об управлении Windows server
 
@@ -365,11 +365,11 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 ### <a name="learn-about-sql-server-optimizations"></a>Дополнительные сведения об оптимизации SQL Server
 
-+ [Реорганизация и перестроение индексов](../../relational-databases\indexes\reorganize-and-rebuild-indexes.md)
++ [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 + [Сведения о таблицах, оптимизированных для памяти](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 
-+ [Демонстрация: Улучшение производительности выполняющейся в памяти OLTP](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ [Демонстрация. Улучшение производительности выполняющейся в памяти OLTP](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
 
 + [Сжатие данных](../../relational-databases/data-compression/data-compression.md)
 

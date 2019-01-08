@@ -11,12 +11,12 @@ ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6a0318d041a43e96246931015ef35edaf7fd74a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aae805b154d8c8876766f98e4d17c277a034764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162874"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528255"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Выделение данных диаграммы путем добавления полосковых линий (построитель отчетов и службы SSRS)
   Полосковые линии, или полосы, представляют собой горизонтальные или вертикальные области, которые оттеняют фон диаграммы через регулярные или заданные пользователем интервалы. Полосковые линии используют, чтобы:  
@@ -50,7 +50,7 @@ ms.locfileid: "48162874"
   
      Ее свойства отображаются в окне «Свойства».  
   
-2.  В разделе **Вид** панели свойств нажмите для свойства StripLines кнопку "Изменить коллекцию (…)", чтобы открыть **редактор коллекции ChartStripLine**.  
+2.  В разделе **Вид** панели свойств нажмите для свойства StripLines кнопку "Изменить коллекцию (...)", чтобы открыть **редактор коллекции ChartStripLine**.  
   
 3.  Нажмите кнопку **Добавить** , чтобы добавить новую полосковую линию в коллекцию.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "48162874"
 > [!NOTE]  
 >  По умолчанию свойство Interval установлено в значение Auto. Оно означает, что диаграмма не будет вычислять интервал для пользовательских полосковых линий. Диаграмма вычисляет интервалы для полосковых линий, только если задано значение интервала.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [Добавление скользящего среднего в диаграмму &#40;построитель отчетов и службы SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -1,41 +1,32 @@
 ---
-title: Работа с типами данных R в SQL Server машинного обучения | Документация Майкрософт
+title: Преобразование - службы машинного обучения SQL Server типов данных R-to-SQL
+description: Просмотрите тип converstions явных и неявных данных между R и SQL Server в решения машинного обучения, обработки и анализа данных.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 12/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: bcabb40cffb00e4f3ed1f5b7bb1df72f20f3f121
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 23318c4a0ad9fceff9b293b706ff61f62643ee6d
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890070"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644953"
 ---
-# <a name="r-libraries-and-r-data-types"></a>Библиотеки R и типами данных R
+# <a name="data-type-mappings-betweenr-and-sql-server"></a>Тип данных betweenR сопоставления и SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье описываются библиотеки R, которые включены и типы данных, которые поддерживаются в следующих продуктах:
+Для решений R, запустите функцию интеграции R в службах машинного обучения SQL Server просмотрите список неподдерживаемых типов данных и преобразования типов данных, которые могут осуществляться неявно, когда данные передаются между библиотеки R и SQL Server.
 
-+ SQL Server 2016 R Services (в базе данных)
-+ SQL Server службы машинного обучения (в базе данных)
+## <a name="base-r-version"></a>Версия Base R
 
-В этой статье также перечислены неподдерживаемые типы данных и списки тип данных, которые могут быть выполнены неявно при передаче данных между R и SQL Server.
+SQL Server 2016 R Services и служб SQL Server 2017 машинного обучения с помощью R, выравниваются с отдельными выпусками Microsoft R Open. Например, последний выпуск SQL Server 2017 служб машинного обучения, основана на Microsoft R Open 3.3.3.
 
-## <a name="r-libraries"></a>Библиотеки R
+Чтобы просмотреть версию R, связанные с определенным экземпляром SQL Server, откройте **RGui**. Для экземпляра по умолчанию путь будет выглядеть следующим образом: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 
-Оба этих продукта, службы R Services и служб машинного обучения с помощью R, выравниваются с отдельными выпусками Microsoft R Open. Например, последний выпуск SQL Server 2017 служб машинного обучения, основана на Microsoft R Open 3.3.3.
-
-Чтобы просмотреть версию R, связанные с определенным экземпляром SQL Server, откройте RGui.
-
-1. Для экземпляра по умолчанию путь будет выглядеть следующим образом: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
-2. Отображается сообщение со списком рассылки R и номер версии Microsoft R Open.
-
-Чтобы найти версию R, включенных в конкретную версию Microsoft R Server, см. в разделе [R Server — новые](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
-
-Обратите внимание, что система управления пакетами в SQL Server означает, что несколько версий пакета R можно установить на одном компьютере с несколькими пользователями, совместного использования того же пакета, или с использованием разных версий одного пакета. Дополнительные сведения см. в разделе [управление пакетами R в SQL Server](../r/install-additional-r-packages-on-sql-server.md).
+Средство загружает базовый R и другие библиотеки. Сведения о версии пакета предоставляется в уведомлении для каждого пакета, который загружается во время запуска сеанса. 
 
 ## <a name="r-and-sql-data-types"></a>Типы данных SQL и R
 
@@ -109,18 +100,18 @@ Microsoft SQL Server 2016 и база данных SQL Microsoft Azure соде
 Если определенный тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживается языком R, но вам необходим доступ к столбцам этого типа в скрипте R, мы советуем использовать функции [CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). С их помощью вы сможете правильно преобразовать тип данных в скрипте R.  
 
 > [!WARNING]
-При использовании **rxDataStep** для удаления несовместимых столбцов во время перемещения данных учтите, что аргументы _varsToKeep_ и _varsToDrop_ не поддерживаются для типа источника данных **RxSqlServerData**.
+> При использовании **rxDataStep** для удаления несовместимых столбцов во время перемещения данных учтите, что аргументы _varsToKeep_ и _varsToDrop_ не поддерживаются для типа источника данных **RxSqlServerData**.
 
 
 ## <a name="examples"></a>Примеры
 
-### <a name="example-1-implicit-conversion"></a>Пример 1. Неявное преобразование
+### <a name="example-1-implicit-conversion"></a>Пример 1. Неявное преобразование
 
 В следующем примере показано преобразование данных при выполнении цикла приема-передачи между SQL Server и R.
 
 Запрос получает ряд значений из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы, а затем использует хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для вывода значений при помощи среды выполнения R.
 
-```SQL
+```sql
 CREATE TABLE MyTable (    
  c1 int,    
  c2 varchar(10),    
@@ -176,7 +167,7 @@ outputDataSet <- inputDataSet'
 -   **Столбец C4**. Этого столбца нет в исходных данных. Он содержит значения, созданные сценарием R.
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>Пример 2. Динамический выбор столбцов с помощью R
+## <a name="example-2-dynamic-column-selection-using-r"></a>Пример 2. Динамический выбор столбцов с помощью языка R
 
 В следующем примере показано, как использовать код R для проверки на наличие недопустимых типов столбцов. Приведенный ниже код получает схему указанной таблицы с помощью системных представлений SQL Server и удаляет все столбцы с заданным недопустимым типом.
 

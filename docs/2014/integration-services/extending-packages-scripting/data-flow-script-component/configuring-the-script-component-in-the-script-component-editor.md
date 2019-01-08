@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2b36eef7c358fde58316bafc06697c992f3918b
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: a702321888ad49a9ca5e3bea90abdde6924c8dc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461035"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360106"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Настройка компонента скрипта в редакторе компонента скрипта
   Прежде чем приступать к написанию пользовательского кода в компоненте скрипта, необходимо выбрать тип компонента потока данных, который должен быть создан (источник, преобразование или назначение), а затем настроить метаданные и свойства компонента в окне **Редактор преобразования "скрипт"**.  
@@ -86,9 +84,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 > [!NOTE]  
 >  Когда **редактор преобразования "скрипт"** первого выхода редактор задает `SynchronousInputID` свойства в выходных данных для `ID` входе компонента. Однако при создании последующих выходов редактор задает для свойства `SynchronousInputID` этих выходов значение равное нулю.  
 >   
->  Если создается компонент с синхронными выходами, то для каждого выхода должно быть задано значение свойства `SynchronousInputID`, равное значениям `ID` входа компонента. Поэтому для каждого выхода, созданного редактором вслед за первым выходом, необходимо изменить значение свойства `SynchronousInputID` с нуля на значение `ID` входа компонента.  
+>  Если создается компонент с синхронными выходами, каждого выхода должно быть его `SynchronousInputID` свойству присвоено `ID` входе компонента. Поэтому для каждого выхода, созданного редактором вслед за первым выходом, необходимо изменить значение свойства `SynchronousInputID` с нуля на значение `ID` входа компонента.  
 >   
->  Если создается компонент с асинхронными выходами, то для каждого выхода необходимо задать значение свойства `SynchronousInputID`, равное нулю. Поэтому для первого выхода необходимо изменить значение свойства `SynchronousInputID`, задавая нулевое значение вместо значения `ID` входа компонента.  
+>  Если создается компонент с асинхронными выходами, то для каждого выхода необходимо задать значение свойства `SynchronousInputID`, равное нулю. Поэтому для первого выхода необходимо его `SynchronousInputID` значение изменено с `ID` входных данных компонента до нуля.  
   
  Пример направления строк в один или два синхронных выхода в компоненте скрипта см. в разделе [Создание синхронного преобразования с помощью компонента скрипта](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).  
   
@@ -128,7 +126,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  Дополнительные сведения см. в разделе [Соединение с источниками данных в компоненте скрипта](connecting-to-data-sources-in-the-script-component.md).  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Кодирование и отладка компонента скрипта](coding-and-debugging-the-script-component.md)  

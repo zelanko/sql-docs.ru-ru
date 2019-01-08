@@ -1,37 +1,32 @@
 ---
-title: Область данных отчета | Документы Майкрософт
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
-ms.topic: conceptual
-f1_keywords:
-- sql12.rtp.rptdesigner.reportdata.f1
-- "10039"
-helpviewer_keywords:
-- Report Data pane
-ms.assetid: aa9614a3-12e7-4e17-9de2-fafccd1f5f9d
+title: Область данных отчета
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 910f7f6d67b7e31922ed45006008d292e6f2a1c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.reviewer: ''
+ms.prod: reporting-services-2014, sql-server-2014
+ms.prod_service: reporting-services-native, reporting-services-sharepoint
+ms.topic: conceptual
+ms.custom: seodec18
+ms.date: 12/14/2018
+ms.openlocfilehash: 1696ea3cb9fa238e3ac31418670a1d4195ab2e98
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162784"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553206"
 ---
-# <a name="report-data-pane"></a>Область данных отчета
+# <a name="report-data-pane-in-sql-server-reporting-services-ssrs"></a>Область данных отчета в SQL Server Reporting Services (SSRS)
+
   С помощью области **Данные отчета** можно просмотреть определенные в настоящий момент параметры, источники данных, наборы данных, коллекции полей и изображения в отчете. Область «Данные отчета» отображает иерархическое представление элементов, представляющих данные в отчете. Узлы верхнего уровня представляют встроенные поля, параметры, изображения и ссылки источника данных. Чтобы просмотреть элементы данных, раскройте соответствующие узлы. Например, если раскрывается узел источника данных, отображаются наборы данных, определенные для этого источника. Если раскрывается набор данных, отображается набор полей. Чтобы связать данные с элементами отчета на странице отчета, перетащите нужные элементы в область конструктора отчета.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Параметры
+
  **Встроенные поля**  
  Представляет часто применяемые в отчете поля, предоставляемые службами Reporting Services, например имя отчета или номер страницы. Дополнительные сведения см. в разделе [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
  **Параметры**  
- Представляет коллекцию параметров отчета, каждый из которых может быть однозначным или многозначным. Дополнительные сведения см. в разделе [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Представляет коллекцию параметров отчета, каждый из которых может быть однозначным или многозначным. Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
  **Изображения**  
  Представляет набор изображений, используемых в отчете. Дополнительные сведения см. в разделе [Изображения (построитель отчетов и службы SSRS)](../report-design/images-report-builder-and-ssrs.md).  
@@ -42,8 +37,7 @@ ms.locfileid: "48162784"
  **Набор данных**  
  Представляет отдельный набор данных. Набор данных служит родительским узлом для коллекции полей, указанных в запросе и включающих любые вычисляемые поля. Службы Reporting Services поддерживают конструкторы запросов, чтобы помочь пользователям составлять запросы. Дополнительные сведения см. в разделе [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41; ](report-datasets-ssrs.md) и [средства проектирования запросов в отчет конструктор SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md).  
   
-## <a name="see-also"></a>См. также  
- [Коллекция полей набора данных (построитель отчетов и службы SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Панель группировки](../tools/grouping-pane.md)  
-  
-  
+## <a name="next-steps"></a>Следующие шаги
+
+ - [Коллекция полей набора данных (построитель отчетов и службы SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)
+ - [Панель группировки](../tools/grouping-pane.md)

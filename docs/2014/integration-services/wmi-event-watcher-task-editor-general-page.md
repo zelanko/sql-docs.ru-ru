@@ -15,17 +15,17 @@ ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b284f16b082c174b0e3f335819fd11e6800f24f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 598ce51e4270e419e925d7aa82516e27ed3bf230
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189314"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370736"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>Редактор задачи «Отслеживание событий WMI» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Отслеживание событий WMI»** для ввода имени и описания задачи «Отслеживание событий WMI».  
   
- Дополнительные сведения об этой задаче см. в разделе [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md). Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](http://go.microsoft.com/fwlink/?LinkId=79045)в библиотеке MSDN.  
+ Дополнительные сведения об этой задаче см. в разделе [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md). Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](https://go.microsoft.com/fwlink/?LinkId=79045)в библиотеке MSDN.  
   
 ## <a name="options"></a>Параметры  
  **Название**  
@@ -38,9 +38,9 @@ ms.locfileid: "48189314"
  Введите описание для задачи «Отслеживание событий WMI».  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи Отслеживание событий WMI &#40;страница параметров WMI&#41;](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
- [Страница «выражения»](expressions/expressions-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Отслеживание событий WMI" (страница "Параметры WMI")](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)   
  [Задача «Модуль чтения данных WMI»](control-flow/wmi-data-reader-task.md)  
   
   

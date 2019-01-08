@@ -18,12 +18,12 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e8d29c2a9b273425510342d87349091348c1c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd0273e27ec20f23d683347f9501b72355f560d6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806824"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588609"
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@backup_file_name=** ] **'***backup_file_name***'**  
+ [  **@backup_file_name=** ] **"**_backup_file_name_**"**  
  Имя файла резервной копии. *backup_file_name* — **nvarchar(128)**.  
   
- [  **@database_name=** ] **"***имя_базы_данных***"**  
+ [  **@database_name=** ] **"**_имя_базы_данных_**"**  
  Имя базы данных. Аргумент *database_name* имеет тип **sysname**.  
   
- [  **@result=** ] *результат* **выходных данных**  
+ [  **@result=** ] _результат_ **выходных данных**  
  Указывает, может ли журнал транзакций быть применен к базе данных. *результат* — **бит**.  
   
  1 = журнал может быть применен;  

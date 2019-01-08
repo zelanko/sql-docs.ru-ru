@@ -15,12 +15,12 @@ ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db5b4fcded48a711fc1c8e8c8ffdebdd36562282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12581756e6ffa7d77ba7dc3339c3f38c96962d4e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150304"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372914"
 ---
 # <a name="basic-data-mining-tutorial"></a>Учебник по основам интеллектуального анализа данных
   Добро пожаловать в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] учебник интеллектуального анализа данных. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет интегрированную среду для создания моделей интеллектуального анализа данных и создания прогнозов. В этом учебнике предлагается выполнить сценарий кампании целевой рассылки, в которой используется машинное обучение для анализа и прогнозирования поведения заказчика. Он демонстрирует использование трех наиболее важных алгоритмов интеллектуального анализа данных: кластеризации, деревьев принятия решений и упрощенного алгоритма Байеса. Вы также узнаете, как анализировать результаты с помощью средства просмотра моделей интеллектуального анализа данных и создания прогнозов и диаграмм точности, с помощью средства интеллектуального анализа данных, включенных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Во всех примерах используется вымышленная компания [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)].  
@@ -43,28 +43,28 @@ ms.locfileid: "48150304"
   
  Учебник содержит следующие занятия:  
   
- [Занятие 1: Подготовка анализа службы база данных &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
+ [Занятие 1. Подготовка анализа базы данных служб &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
  На этом занятии рассматривается создание новой базы данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], добавление источника данных и представления источников данных, а также подготовка новой базы данных к интеллектуальному анализу.  
   
- [Занятие 2: Построение структуры прямой почтовой рассылки &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Занятие 2. Построение структуры прямой почтовой рассылки &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  На этом занятии рассматривается создание структур моделей интеллектуального анализа данных, которые могут быть использованы в сценарии прямой почтовой рассылки.  
   
- [Урок 3. Добавление и обработка моделей](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Занятие 3. Добавление и обработка моделей](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  На этом занятии будет рассмотрено добавление модели в структуру. Создаваемые модели построены на основе следующих алгоритмов.  
   
--   алгоритм дерева принятия решений ([!INCLUDE[msCoName](../includes/msconame-md.md)]);  
+-   алгоритм дерева принятия решений [!INCLUDE[msCoName](../includes/msconame-md.md)]  
   
--   алгоритм кластеризации ([!INCLUDE[msCoName](../includes/msconame-md.md)]);  
+-   алгоритм кластеризации [!INCLUDE[msCoName](../includes/msconame-md.md)]  
   
 -   упрощенный алгоритм Байеса ([!INCLUDE[msCoName](../includes/msconame-md.md)])  
   
- [Занятие 4: Изучение моделей целевой рассылки &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
+ [Занятие 4. Изучение моделей целевой рассылки &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  На этом занятии будут рассмотрены анализ и интерпретация результатов каждой модели с использованием средств просмотра.  
   
- [Занятие 5: Тестирование моделей &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Занятие 5. Проверка моделей &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  На этом занятии выполняется копия одной из моделей целевой рассылки, добавляется фильтр модели интеллектуального анализа данных для ограничения обучающих данных определенным набором клиентов, а затем производится оценка устойчивости модели.  
   
- [Занятие 6: Создание прогнозов и работа с &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Занятие 6. Создание прогнозов и работа с &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  На этом последнем занятии учебника по интеллектуальному анализу данных (начальный уровень) используется модель, которая позволяет прогнозировать, какие клиенты с наибольшей вероятностью купят велосипед. Затем производится детализация до базовых вариантов для получения контактных данных.  
   
 ## <a name="requirements"></a>Требования  
@@ -74,16 +74,16 @@ ms.locfileid: "48150304"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в многомерном режиме  
   
--   База данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
+-   База данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- В целях повышения безопасности образцы баз данных не устанавливаются вместе с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы установить официальные образцы баз данных для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], посетите [образцы баз данных SQL Microsoft](http://go.microsoft.com/fwlink/?LinkId=88417) и укажите [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ В целях повышения безопасности образцы баз данных не устанавливаются вместе с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы установить официальные образцы баз данных для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], посетите [образцы баз данных SQL Microsoft](https://go.microsoft.com/fwlink/?LinkId=88417) и укажите [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
 >  При работе с учебником, может оказаться проще перемещаться от одного шага к при добавлении **следующий раздел** и **предыдущий раздел** кнопок панели инструментов средства просмотра документов.  
   
 ## <a name="see-also"></a>См. также  
  [Решения для интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
- [Задачи модели интеллектуального анализа данных и инструкции по](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Создание и выполнение запросов к моделям интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: учебники &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Задачи и инструкции по модели интеллектуального анализа данных](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Создание и выполнение запросов к моделям интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: Учебники по &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

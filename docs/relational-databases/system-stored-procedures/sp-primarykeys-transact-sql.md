@@ -18,12 +18,12 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d994e44e3db00921ca184ed063bcf1bdff487297
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 484890cfe30ace1c65ea45fe2d9e447a6396b52e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753602"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591458"
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +43,16 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@table_server =** ] **"*** table_server"*  
+ [  **@table_server =** ] **"**_table_server"_  
  Имя связанного сервера, с которого возвращаются сведения о первичном ключе. *table_server* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@table_name =** ] **"***table_name***"**  
+ [  **@table_name =** ] **"**_table_name_**"**  
  Имя таблицы, для которой возвращаются сведения о первичном ключе. *TABLE_NAME*— **sysname**, значение по умолчанию NULL.  
   
- [  **@table_schema =** ] **"***table_schema***"**  
+ [  **@table_schema =** ] **"**_table_schema_**"**  
  Схема таблицы. *table_schema* — **sysname**, значение по умолчанию NULL. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует владельцу таблицы.  
   
- [  **@table_catalog =** ] **"***значениям table_catalog***"**  
+ [  **@table_catalog =** ] **"**_значениям table_catalog_**"**  
  Имя каталога, в котором указанный *table_name* находится. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует имени базы данных. *значениям table_catalog* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

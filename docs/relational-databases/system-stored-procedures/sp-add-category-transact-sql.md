@@ -18,12 +18,12 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 047b936bf608be86407c93860078758d43ebbb2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 295f29b86e53a8d58622e4c79c1b36734acdbe3e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792072"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591018"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@class =** ] **"***класс***"**  
+ [  **@class =** ] **"**_класс_**"**  
  Класс добавляемой категории. *Класс* — **varchar(8)** со значением по умолчанию задания, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -52,7 +52,7 @@ sp_add_category
 |ALERT|Добавление категории предупреждений.|  
 |OPERATOR|Добавление категории операторов.|  
   
- [  **@type =** ] **"***тип***"**  
+ [  **@type =** ] **"**_тип_**"**  
  Тип добавляемой категории. *Тип* — **varchar(12)**, со значением по умолчанию **ЛОКАЛЬНОГО**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -61,7 +61,7 @@ sp_add_category
 |НЕСКОЛЬКИМИ СЕРВЕРАМИ|Многосерверная категория заданий.|  
 |None|Категория для класса, отличного от задания **.**|  
   
- [  **@name =** ] **"***имя***"**  
+ [  **@name =** ] **"**_имя_**"**  
  Имя добавляемой категории. Имя должно быть уникальным в указанном классе. *имя* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

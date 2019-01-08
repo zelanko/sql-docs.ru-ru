@@ -18,12 +18,12 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd7f01df2c381ae4ee13b62e196efbc33809e23d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ec2fe4ba5ad90d044a9407be04acc850ae16b73
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803772"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591498"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  [  **@schedule_id=** ] *schedule_id*  
  Идентификационный номер удаляемого расписания. *schedule_id* — **int**, значение по умолчанию NULL.  
   
-> **Примечание:** либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
+> **ПРИМЕЧАНИЕ.** Либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
   
- [  **@schedule_name=** ] **"***schedule_name***"**  
+ [  **@schedule_name=** ] **"**_schedule_name_**"**  
  Имя удаляемого расписания. *schedule_name* — **sysname**, значение по умолчанию NULL.  
   
-> **Примечание:** либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
+> **ПРИМЕЧАНИЕ.** Либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
   
  [ **@force_delete** =] *force_delete*  
  Указывает, будет ли процедура завершаться с ошибкой, если расписание прикреплено к заданию. *Force_delete* имеет тип bit и значение по умолчанию **0**. Когда *force_delete* — **0**, хранимая процедура завершается неудачей, если расписание прикреплено к заданию. Когда *force_delete* — **1**, расписание удаляется независимо от того, прикреплено ли оно к заданию.  

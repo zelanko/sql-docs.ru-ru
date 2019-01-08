@@ -11,12 +11,12 @@ ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f234f4112cee70e3b62fc5076f9e04c05e9bf56f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d708c3ad151cf213f21715f6837c7669aa7baff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154114"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511677"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Создание группы рекурсивной иерархии (построитель отчетов и службы SSRS)
   Группа рекурсивной иерархии организует данные отдельного набора данных отчета, включающего несколько уровней иерархии, например структуру подчинения для иерархии связей «начальник-подчиненный» в организации.  
@@ -57,16 +57,16 @@ ms.locfileid: "48154114"
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Для свойств заполнения необходимо указать строку в формате *nnyy*, где *nn* — число, а *yy* — единица измерения. Приведенное выражение создает строку, которая использует `Level` функция, чтобы увеличить размер отступа в зависимости от уровня рекурсии. Например, строка с уровнем 1 будет иметь отступ в 12 пунктов (2 + (1\*10)), а строка с уровнем 3 — отступ в 32 пункта (2 + (3\*10)). Сведения о `Level` функции, см. в разделе [уровень](report-builder-functions-level-function.md).  
+     Для свойств заполнения необходимо указать строку в формате *nnyy*, где *nn* — число, а *yy* — единица измерения. Приведенное выражение создает строку, в которой используется функция `Level` для увеличения отступа в зависимости от уровня рекурсии. Например, строка с уровнем 1 будет иметь отступ в 12 пунктов (2 + (1\*10)), а строка с уровнем 3 — отступ в 32 пункта (2 + (3\*10)). Сведения о `Level` функции, см. в разделе [уровень](report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Запустите отчет. Отчет выведет группированные данные в иерархическом представлении.  
   
-## <a name="see-also"></a>См. также  
- [Создание групп рекурсивной иерархии &#40;построитель отчетов и службы SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Справочник по агрегатным функциям &#40;построитель отчетов и службы SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](report-builder-functions-aggregate-functions-reference.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Списки &#40;построитель отчетов и службы SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

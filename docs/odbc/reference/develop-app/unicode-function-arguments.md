@@ -14,12 +14,12 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0e67f437cd629411230daed17f6a39f24b7103d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3caa5feb387a7acdfa682f048bf77f2d999b560
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669462"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201843"
 ---
 # <a name="unicode-function-arguments"></a>Аргументы функции Юникода
 Диспетчер драйверов ODBC 3.5 (или более поздней версии) поддерживает версии ANSI и Юникод для всех функций, которые принимают указатели на символьные строки или указатель SQLPOINTER в своих аргументах. Функции Юникода реализованы в виде функции (с суффиксом *W*), а не как макросы. Функции ANSI (который можно вызывать с или без суффикса *A*) аналогичны текущей функций ODBC API.  
@@ -65,7 +65,7 @@ ms.locfileid: "47669462"
 |**SQLGetTranslator**|**SQLWriteDSNToINI**|  
 |**SQLInstallDriver**||  
   
-> [!NOTE]  
+> [!NOTE]
 >  Устаревшие функции имеют поддержку сопоставления Unicode-ANSI, так как ODBC 3 *.x* диспетчера драйверов поддерживает перекомпиляции ODBC 2. *x* приложений при помощи ЮНИКОДА **#define**.  
   
  Этот раздел содержит следующие подразделы.  
