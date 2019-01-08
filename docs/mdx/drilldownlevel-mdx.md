@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f4bd21ab1463d40b0eb9b83e5686951e43dee885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145659"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542200"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (многомерные выражения)
 
@@ -67,7 +67,7 @@ SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sal
 FROM [Adventure Works]  
 ```  
   
- Пример 2 — другой синтаксис, использующий явный уровень индекса  
+ Пример 2 - другой синтаксис, использующий явный уровень индекса  
   
  В этом примере демонстрируется другой синтаксис, в котором уровень индекса указывается через числовое выражение. В этом случае уровень индекса равен 0. Для начинающегося с нуля индекса это самый низкий уровень.  
   
@@ -98,7 +98,7 @@ SELECT [Measures].[Internet Sales Amount] ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
- **Пример 4 — Включение вычисляемых элементов**  
+ **Пример 4 — включая вычисляемые элементы**  
   
  В последнем примере показан вычисляемый элемент, который отображается в нижней части результата задается при добавлении **include_calculated_members** флаг. Обратите внимание, чтобы флажок указан как четвертый параметр.  
   

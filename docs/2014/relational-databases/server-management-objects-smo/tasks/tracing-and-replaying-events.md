@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -19,12 +17,12 @@ ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a24c1da04128c2da01b4496e511f22f15f1f8efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188732"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808836"
 ---
 # <a name="tracing-and-replaying-events"></a>Трассировка и воспроизведение событий
   В SMO объекты `Trace` и `Replay` в пространстве имен <xref:Microsoft.SqlServer.Management.Trace> обеспечивают программный доступ к функциональности приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], которая используется для наблюдения за экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Приложение позволяет собирать и сохранять данные о каждом событии в файле или в таблице для последующего анализа. Например, с помощью приложения можно наблюдать за рабочей средой, чтобы определить, какие процедуры сказываются на производительности из-за того, что выполняются слишком медленно.  
@@ -53,11 +51,11 @@ ms.locfileid: "48188732"
   
 -   воспроизвести файлы и таблицы трассировки.  
   
- Данные трассировки из `Trace` и `Replay` можно использовать объекты SMO-приложении или исследовать их вручную с помощью [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Данные трассировки также совместимы с [трассировки SQL](../../sql-trace/sql-trace.md) хранимые процедуры, которые также обеспечивают возможности трассировки.  
+ Данные трассировки из `Trace` и `Replay` можно использовать объекты SMO-приложении или исследовать их вручную с помощью [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Данные трассировки также совместимы с хранимыми процедурами [SQL Trace](../../sql-trace/sql-trace.md) , которые также обеспечивают возможности трассировки.  
   
  Объекты трассировки SMO находятся в пространстве имен <xref:Microsoft.SqlServer.Management.Trace>, для использования которого необходима ссылка на файл Microsoft.SQLServer.ConnectionInfo.dll.  
   
- `Trace` И `Replay` объектов требуется <xref:Microsoft.SqlServer.Management.Common.ServerConnection> <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> объектов для установления соединения с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> находится в пространстве имен <xref:Microsoft.SqlServer.Management.Common>, для которого необходима ссылка на файл Microsoft.SQLServer.ConnectionInfo.dll.  
+ Объекты `Trace` и `Replay` требуют наличия объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection><xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> для установления соединения с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> находится в пространстве имен <xref:Microsoft.SqlServer.Management.Common>, для которого необходима ссылка на файл Microsoft.SQLServer.ConnectionInfo.dll.  
   
 > [!NOTE]  
 >  Объекты `Trace` и `Replay` не поддерживаются в 64-разрядной версии платформы.  

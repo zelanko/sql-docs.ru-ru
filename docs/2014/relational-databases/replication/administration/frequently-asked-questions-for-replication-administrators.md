@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, frequently asked questions
@@ -14,12 +13,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 30058e297e22ed63a9e22a4755f22c4cc35ab213
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fa90f7732b504000696ad2977ae465b392ff565
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105164"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748734"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Вопросы, часто задаваемые администраторам репликации
   Нижеприведенные вопросы и ответы входят в руководство по выполнению разнообразных задач администраторами реплицируемых баз данных.  
@@ -122,7 +121,7 @@ ms.locfileid: "48105164"
   
 -   Определение объекта, например инструкция CREATE TABLE. По умолчанию репликация копирует определения всех реплицируемых объектов на подписчик.  
   
--   Пространство имен, в пределах которого создается объект: \<база_данных>.\<схема>.\<объект>. Схемы определяются с использованием инструкции CREATE SCHEMA.  
+-   Пространство имен, в пределах которого создается объект: \<База данных >. \<Схемы >. \<Объект >. Схемы определяются с использованием инструкции CREATE SCHEMA.  
   
 -   Репликации свойственно следующее поведение по умолчанию в мастере создания публикаций, касающееся схем и принадлежности объектов:  
   
@@ -185,7 +184,7 @@ ms.locfileid: "48105164"
  Вначале удалите статью из публикации с помощью хранимых процедур [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) или диалогового окна **Свойства публикации — \<публикация>**, а затем удалите ее из базы данных с помощью инструкции `DROP <Object>`. После добавления подписок невозможно удалить статьи из моментального снимка или публикаций транзакций; вначале следует удалить подписки. Дополнительные сведения см. в статье [Добавление и удаление статей в существующих публикациях](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Как добавить или удалить столбцы в публикуемой таблице?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает разнообразные изменения схем для публикуемых объектов, включая добавление и удаление столбцов. Например, при выполнении инструкции ALTER TABLE … DROP COLUMN на издателе эта инструкция будет реплицирована на подписчиках, а затем выполнена для удаления столбца. Подписчики, использующие версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , предшествующие [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , поддерживают добавление и удаление столбцов с помощью хранимых процедур [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) и [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает разнообразные изменения схем для публикуемых объектов, включая добавление и удаление столбцов. Например, при выполнении инструкции ALTER TABLE ... DROP COLUMN на издателе эта инструкция будет реплицирована на подписчиках, а затем выполнена для удаления столбца. Подписчики, использующие версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , предшествующие [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , поддерживают добавление и удаление столбцов с помощью хранимых процедур [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) и [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Обслуживание репликации  
   
@@ -229,7 +228,7 @@ ms.locfileid: "48105164"
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>Работает ли репликация совместно с кластеризацией?  
  Да. Никаких особых действий предпринимать не нужно, поскольку все данные хранятся на одном наборе дисков в кластере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование (репликация)](administration-replication.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   

@@ -17,12 +17,12 @@ ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 450cc656d22d471225e013bfcd2664f6eb27dba9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f5b58434e16d5c3bc17f2d37430d60539ac5bfd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173204"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514780"
 ---
 # <a name="specifying-processing-options"></a>Указание параметров обработки
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Мастер развертывания служб считывает параметры обработки из \< *имя_проекта*> .deploymentoptions файл. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает этот файл при построении проекта служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует параметры обработки, указанные на **развертывания** странице  *\<имя проекта >* **страницы свойств** диалоговое окно, чтобы создать \< *имя_проекта*> .deploymentoptions файл.  
@@ -48,9 +48,9 @@ ms.locfileid: "48173204"
   
 -   **Транзакционное развертывание** Эта настройка контролирует, обрабатываются ли изменения развертывания метаданных и команды обработки в одной транзакции или в отдельных транзакциях.  
   
-    -   Если этот параметр имеет `True` (по умолчанию), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывают все изменения метаданных и все команды обработки в одной транзакции.  
+    -   Если значение этого параметра установлено равным `True` (по умолчанию), то службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывают все изменения метаданных и все команды обработки в одной транзакции.  
   
-    -   Если этот параметр имеет `False`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывают изменения метаданных в одной транзакции и развертывают каждую команду обработки в ее собственной транзакции.  
+    -   Если значение этого параметра установлено равным `False`, то службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывают изменения метаданных в одной транзакции и развертывают каждую команду обработки в ее собственной транзакции.  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>Изменение параметров обработки для развертывания  
  Тем не менее, необходимо развернуть [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проект, используя параметры обработки, отличающиеся от тех, которые хранятся в \< *имя_проекта*> .deploymentoptions файл. Например может быть необходимо полностью обработать все объекты или обработать их с использованием параметра обработки по умолчанию, или не обрабатывать вообще. Если разрешена запись в кубы или измерения, то можно указать, будет ли использоваться новая или существующая таблица обратной записи.  
@@ -61,17 +61,17 @@ ms.locfileid: "48173204"
   
 -   Запустите мастер развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в интерактивном режиме. На странице **Параметры обработки** укажите параметры обработки для развертываемого проекта.  
   
-     —или—  
+     -или-  
   
 -   Запустите мастер развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из командной строки и настройте его на работу в режиме файла ответов. Дополнительные сведения о режиме файла ответов см. в разделе [Запуск мастера развертывания служб Analysis Services](running-the-analysis-services-deployment-wizard.md).  
   
-     —или—  
+     -или-  
   
 -   Изменить \< *имя_проекта*> .deploymentoptions файл, используя любой текстовый редактор.  
   
 ## <a name="see-also"></a>См. также  
  [Указание целевого объекта установки](deployment-script-files-specifying-the-installation-target.md)   
- [Указание секций и параметров развертывания ролей](deployment-script-files-partition-and-role-deployment-options.md)   
+ [Указание параметров развертывания секций и ролей](deployment-script-files-partition-and-role-deployment-options.md)   
  [Указание настроек конфигурации для развертывания решения](deployment-script-files-solution-deployment-config-settings.md)  
   
   

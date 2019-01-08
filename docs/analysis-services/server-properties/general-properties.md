@@ -1,5 +1,5 @@
 ---
-title: Общие свойства | Документация Майкрософт
+title: Службы Analysis Services общие свойства | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906214"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072391"
 ---
 # <a name="general-properties"></a>Общие свойства
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера, перечисленные в следующих таблицах. В этом разделе описываются свойства сервера из файла msmdsrv.ini, которые не отнесены к тому или иному определенному разделу, например Security (безопасность), Network (сеть) или ThreadPool (пул потоков). Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Область применения:** многомерный или табличный режим сервера, если не указано иное.  
+ **Применимо к:** Многомерный и табличный режимы сервера, если не указано иное  
   
 ## <a name="non-specific-category"></a>Общая категория  
  **AdminTimeout**  
@@ -64,7 +64,7 @@ ms.locfileid: "48906214"
  Строковое свойство, определяющее имя папки, в которой хранятся данные.  
   
  **DeploymentMode**  
- Определяет контекст работы экземпляра сервера служб Analysis Services. В диалоговых окнах, сообщениях и документации это свойство называется «режим сервера». Это свойство настраивается при установке SQL Server в соответствии с режимом сервера, выбранным при установке служб Analysis Services. Это свойство следует рассматривать исключительно как внутреннее и всегда использовать в нем значение, указанное программой установки.  
+ Определяет контекст работы экземпляра сервера служб Analysis Services. Это свойство называется «режим сервера» в диалоговых окон, сообщений и документации. Это свойство настраивается при установке SQL Server в соответствии с режимом сервера, выбранным при установке служб Analysis Services. Это свойство следует рассматривать исключительно как внутреннее и всегда использовать в нем значение, указанное программой установки.  
   
  Ниже приведены допустимые значения для этого свойства.  
   

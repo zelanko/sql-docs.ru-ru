@@ -15,12 +15,12 @@ ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1bc91211f646129ca0686ae5d8bffe2371ba0a57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adf846eaa23b7be875605fd5d1cc93811fce9e3f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076124"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537333"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Критические изменения в службах SQL Server Reporting Services в выпуске SQL Server «2014»
   В этом разделе описаны критические изменения в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Эти изменения могут нарушать работу приложений, скриптов или механизмов, основанных на более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Такие проблемы могут возникать при обновлении либо в пользовательских скриптах или отчетах. Дополнительные сведения см. в разделе [Использование помощника по обновлению для подготовки к обновлениям](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "48076124"
 -   [SQL Server 2008 R2 Reporting Services критические изменения](#bkmk_kj)  
   
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Службы Reporting Services, критические изменения  
- Существуют не [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] критические изменения в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ Поведение функций служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] без критических изменений в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ##  <a name="bkmk_rc0"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Службы Reporting Services, критические изменения  
   
@@ -43,14 +43,14 @@ ms.locfileid: "48076124"
   
  `http://<Server name>/ReportServer`  
   
- Теперь требуется включать сайт SharePoint в путь URL-адреса. Например, если для имени веб-сайта «`videos`» использовался префикс «`sites`», URL-адрес будет выглядеть примерно следующим образом:  
+ Теперь требуется включать сайт SharePoint в путь URL-адреса. Например, если имя узла — "`videos`" и "`sites`" префикс, URL-адрес будет выглядеть следующим образом:  
   
  `http://<Server Name>/sites/videos/_vti_bin/ReportServer`  
   
 ### <a name="changes-to-sharepoint-mode-command-line-installation"></a>Изменения в процессе установки режима интеграции с SharePoint из командной строки  
  Входной параметр **/RSINSTALLMODE** работает только при установке в собственном режиме и не работает при установке в режиме интеграции с SharePoint. Например, следующее не поддерживается в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE = «DefaultSharePointMode»**. Указывайте вместо этого входного параметра **/RSSHPINSTALLMODE="DefaultSharePointMode"**.  
   
- Приведенная ниже инструкция представляет собой пример полного набора команд и параметров для установки: **setup /ACTION=install /FEATURES=SQL,RS /InstanceName=Denali_INST1 …. /RSSHPINSTALLMODE="DefaultSharePointMode"**  
+ Приведенная ниже инструкция представляет пример завершения команд и параметров для установки: **setup/Action = install/Features = SQL, RS/instancename = Denali_INST1 … / rsshpinstallmode = «DefaultSharePointMode»**  
   
  Дополнительные сведения об установке из командной строки см. в разделе [командной строки установки из Reporting Services в режиме SharePoint и собственного режима](install-windows/install-reporting-services-at-the-command-prompt.md).  
   
@@ -59,23 +59,23 @@ ms.locfileid: "48076124"
   
  В следующем списке указаны компоненты и рабочие процессы, затронутые данными изменениями.  
   
--   Пользовательские приложения с использованием [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поставщик WMI для [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.  
+-   Пользовательские приложения, в которых используется поставщик WMI [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.  
   
--   Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], rskeymgmt.exe и rsconfig.exe. Вместо того чтобы использовать эти служебные программы для настройки [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] режиме интеграции с SharePoint используйте Центр администрирования SharePoint и PowerShell.  
+-   Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , rskeymgmt.exe и rsconfig.exe. Вместо использования данных программ для настройки режима интеграции [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] с SharePoint применяйте центр администрирования SharePoint и PowerShell.  
   
--   SQL Server Management Studio: клиенты не могут ссылаться на сервер с помощью такого синтаксиса, как <имя_компьютера>/<имя_экземпляра>. Начиная с выпуска [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] рекомендуемым методом было использование URL-адреса сайта SharePoint. Например **http://<sharepoint_server>/<sharePoint_site>**. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], URL-адрес сайта SharePoint является единственным поддерживаемым синтаксисом.  
+-   Среда SQL Server Management Studio: Клиенты не могут ссылаться на сервер с помощью такого синтаксиса, как <machine_name>/<instance_name>. Начиная с выпуска [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] рекомендуемым методом было использование URL-адреса сайта SharePoint. Например **http://<sharepoint_server>/<sharePoint_site>**. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]URL-адрес сайта SharePoint является единственным поддерживаемым синтаксисом.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>Конструктор моделей отчетов отсутствует в SQL Server Data Tools  
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] больше не поддерживает проекты моделей отчетов. В службах [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] нет конструктора моделей отчетов. Не удается создать новые проекты модели отчета или открыть существующий проект в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и невозможно создать или обновить моделей отчетов. Чтобы обновить модели отчетов, можно использовать [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] или средствами предыдущих версий. Можно продолжать пользоваться моделями отчетов в качестве источников данных в отчетах, созданных такими средствами служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], как построитель отчетов или конструктор отчетов. Конструктор запросов, которые позволяют создавать запросы для получения данных отчета из модели отчета по-прежнему будут доступны в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ Среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] больше не поддерживает проекты моделей отчетов. В службах [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]нет конструктора моделей отчетов. В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] больше нельзя ни создать новый, ни открыть существующий проект модели отчета, создание и обновление моделей отчетов также не поддерживается. Для работы с моделями отчетов можно воспользоваться службами [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] или средствами предыдущих версий. Можно продолжать пользоваться моделями отчетов в качестве источников данных в отчетах, созданных такими средствами служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] , как построитель отчетов или конструктор отчетов. Конструктор запросов, с помощью которого создаются запросы для получения данных отчета из модели отчета, будут по-прежнему работать в службах [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_kj"></a> SQL Server 2008 R2 Reporting Services критические изменения  
- В этом разделе описываются критические изменения в [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ В этом разделе описываются критические изменения в службах [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 > [!NOTE]  
 >  Поскольку SQL Server 2008 R2 содержит изменения дополнительного номера версии по сравнению с SQL Server 2008, рекомендуется также просмотреть содержимое раздела по SQL Server 2008.  
   
 ### <a name="expanded-csv-data-renderer"></a>Расширен модуль подготовки данных в формате CSV  
- В [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], CSV-файл включает данные диаграмм и датчиков. Приложения, которые используют применявшуюся ранее структуру CSV-файлов, больше работать не будут из-за появления дополнительных столбцов для диаграмм и датчиков.  
+ В службах [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]CSV-файл включает данные диаграмм и датчиков. Приложения, которые используют применявшуюся ранее структуру CSV-файлов, больше работать не будут из-за появления дополнительных столбцов для диаграмм и датчиков.  
   
  Дополнительные сведения см. в разделе [Экспорт в CSV-файл &#40;построитель отчетов и службы SSRS&#41;](report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   

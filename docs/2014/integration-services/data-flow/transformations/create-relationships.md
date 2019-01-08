@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.createrelationships.f1
@@ -13,12 +12,12 @@ ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 730e203281c4bc964e2b2694e475095280483d58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23baf42a1ddc30ceccf5ec7c6f8b9db96e72e588
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095794"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804926"
 ---
 # <a name="create-relationships"></a>Создание связей
   Используйте диалоговое окно **Создание связей** , чтобы изменить сопоставления между исходными столбцами и столбцами таблицы уточняющих запросов, настроенные в редакторе преобразования «Нечеткий уточняющий запрос», в редакторах преобразования «Уточняющий запрос» и «Уточняющий запрос термина».  
@@ -50,9 +49,9 @@ ms.locfileid: "48095794"
  Укажите имя для нового выходного столбца, который является подобным выбранному столбцу. Если оставить это значение пустым, то выходной столбец не будет создан.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Столбцы")](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Редактор преобразования "Уточняющий запрос" (страница "Столбцы")](../../lookup-transformation-editor-columns-page.md)   
- [Редактор преобразования Уточняющий запрос термина &#40;вкладке Уточняющий запрос термина&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+ [Редактор преобразований "Уточняющий запрос термина" (вкладка "Уточняющий запрос термина")](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
   

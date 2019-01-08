@@ -15,12 +15,12 @@ ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a01d130cc37faa29e2aebe8612fc5e02fef10c78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 965022adeeee40ca7f8fd45a722b22fa6aa64931
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099624"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350613"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Определение именованных запросов в представлении источника данных (службы Analysis Services)
   Именованный запрос является выражением SQL, представленным в виде таблицы. В именованном запросе можно указать выражение SQL для выбора строк и столбцов, возвращаемых из одной или нескольких таблиц в одном или нескольких источниках данных. Именованный запрос подобен другим таблицам со строками и связями в представлении источника данных, за исключением того, что он основан на выражении.  
@@ -36,7 +36,7 @@ ms.locfileid: "48099624"
   
  Таблицы и столбцы, указанные в SQL-запросе, не должны квалифицироваться или должны квалифицироваться только именем таблицы. Например, для ссылки на столбец SaleAmount в таблице можно использовать `SaleAmount` или `Sales.SaleAmount` , но `dbo.Sales.SaleAmount` возвращает ошибку.  
   
- **Примечание** При определении именованного запроса, обращающегося к источнику данных [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, именованный запрос, который содержит связанный вложенный запрос и предложение GROUP BY, завершится неудачно. Дополнительные сведения см. в статье [Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY](http://support.microsoft.com/kb/274729) (Внутренняя ошибка инструкции SELECT, содержащей связанный вложенный запрос и предложение GROUP BY) в базе знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ **Примечание** При определении именованного запроса, обращающегося к источнику данных [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, именованный запрос, который содержит связанный вложенный запрос и предложение GROUP BY, завершится неудачно. Дополнительные сведения см. в статье [Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY](https://support.microsoft.com/kb/274729) (Внутренняя ошибка инструкции SELECT, содержащей связанный вложенный запрос и предложение GROUP BY) в базе знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="add-or-edit-a-named-query"></a>Добавление или изменение именованного запроса  
   
@@ -63,6 +63,6 @@ ms.locfileid: "48099624"
   
 ## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)   
- [Определение именованных вычислений в представлении источника данных &#40;служб Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Определение именованных вычислений в представлении источника данных (службы Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

@@ -20,19 +20,19 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5bf53045abe0f93e2ff1e07ec17d31f7d58248b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814077"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761456"
 ---
 # <a name="register-a-database-as-a-dac"></a>Регистрация базы данных в качестве приложения уровня данных
   Использовать **зарегистрировать Data-tier Application Wizard** или Windows PowerShell скрипта Создайте определение приложения УРОВНЯ данных, описывающее объекты из существующей базы данных, а затем зарегистрировать определение DAC в `msdb` системной базы данных (**master** в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Перед началом работы**  [Ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
--   **Обновление приложения уровня данных с использованием следующих средств:**  [мастер регистрации приложения уровня данных](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Для обновления приложения уровня данных, с помощью:**  [Мастер регистрации приложения уровня данных](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Процесс регистрации создает определение DAC, которое определяет объекты в базе данных. Сочетание определения DAC и базы данных образует экземпляр DAC. Если база данных регистрируется как DAC на управляемом экземпляре компонента Database Engine, зарегистрированный компонент DAC будет включен в служебную программу SQL Server при следующей передаче набора элементов сбора программы с экземпляра в точку управления служебной программой. После этого приложение уровня данных появится в узле **Развернутые приложения уровня данных** в окне [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Обозреватель программ** , а соответствующие сведения будут отображаться на странице сведений **Развернутые приложения уровня данных** .  
@@ -76,7 +76,7 @@ ms.locfileid: "51814077"
 ##  <a name="Set_properties"></a> Страница «Задание свойств»  
  Используйте эту страницу, чтобы указать свойства уровня DAC, например имя и версию приложения.  
   
- **Имя приложения.** -Строка, указывающая имя, используемое для идентификации определения DAC, это поле заполнено именем базы данных.  
+ **Имя приложения.** — Строка, указывающая имя, которое используется для идентификации определения DAC. В этом поле приводится имя базы данных.  
   
  **Версия.** — числовое значение, определяющее версию DAC. Версия DAC используется в среде Visual Studio для определения версии DAC, над которой работают разработчики. При развертывании DAC версия сохраняется в `msdb` базы данных и впоследствии доступна в разделе **приложений уровня данных** узел в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -162,7 +162,7 @@ $registerunit.Description = $description
 $registerunit.Register()  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Приложения уровня данных](data-tier-applications.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Свойства безопасности | Документация Майкрософт
+title: Службы Analysis Services свойства безопасности | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 99678bc9a4a335ef39e10e41112551c751701b8f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 31191e266b017400b8b8aceb2eb912f9bebca3d5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991466"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071731"
 ---
 # <a name="security-properties"></a>Свойства безопасности
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера безопасности, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Область применения:** многомерный и табличный режим сервера  
+ **Применимо к:** многомерный и табличный режим сервера  
   
 ## <a name="properties"></a>Свойства  
  **RequireClientAuthentication**  

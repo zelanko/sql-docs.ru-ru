@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_dsninfo
@@ -17,12 +16,12 @@ ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93b8fb31c89d48a3281e5d5b102e94f95e5f2855
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2836db0eef25c21861ec7b2d766f1195d250f20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828179"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817736"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ sp_dsninfo [ @dsn =] 'dsn'
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Тип сведений**|**Nvarchar(64)**|Типы данных, например: DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
-|**Value**|**nvarchar(512)**|Значение связанного типа данных.|  
+|**Значение**|**nvarchar(512)**|Значение связанного типа данных.|  
   
 ## <a name="remarks"></a>Примечания  
  **sp_dsninfo** используется во всех типах репликации.  

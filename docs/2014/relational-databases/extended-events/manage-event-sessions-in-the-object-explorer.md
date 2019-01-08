@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef82f1aafddd60eeaeae3abd7ec65b51e209670f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050214"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801296"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Управление сеансами событий в обозревателе объектов
   В этом разделе описываются действия, которые можно выполнять в **обозревателе объектов** и которые отражаются на расширенных событиях.  
@@ -83,7 +82,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>Импорт шаблона сеанса расширенных событий  
  С помощью **обозревателя объектов**вы можете импортировать шаблон для сеанса расширенных событий. Например, это может потребоваться при создании сеанса из шаблона, который был экспортирован из другого экземпляра службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Чтобы импортировать сеанс расширенных событий, должна предоставлять необходимые `ALTER ANY EVENT SESSION` разрешения.  
+ Чтобы импортировать сеанс расширенных событий, необходимы разрешения `ALTER ANY EVENT SESSION`.  
   
  Прежде чем импортировать файл шаблона, убедитесь, что файл получен из надежного источника. Файл шаблона должен быть сохранен в расположение с файловой системой NTFS, где есть возможность ограничить доступ, предоставляя его только пользователям, имеющим право просмотра конфиденциальных данных.  
   

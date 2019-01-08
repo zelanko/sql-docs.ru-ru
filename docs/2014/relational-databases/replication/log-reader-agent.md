@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.logreaderagent.f1
@@ -15,12 +14,12 @@ ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cef93fbbd3a0a473fc44a645be26bf86fcbe3147
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92512477ad753bc1e9c3b7e60020fe1721c28930
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147764"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756226"
 ---
 # <a name="log-reader-agent"></a>Агент чтения журнала.
   В диалоговом окне **Агент чтения журнала** отображаются подробные сведения об агенте чтения журнала, включая состояние, историю, информационные сообщения и возможные сообщения об ошибках.  
@@ -67,6 +66,6 @@ ms.locfileid: "48147764"
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Наблюдение за репликацией](monitoring-replication.md)   
- [Обзор агентов репликации](agents/replication-agents-overview.md)  
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

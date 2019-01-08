@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2bf94fb04bd6f96de019c7e8543b8a626cebe439
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699132"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524470"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Антивирусное программное обеспечение для системы платформы аналитики
 Если для центра обработки данных требуется антивирусное программное обеспечение, используйте их для установки антивирусного программного обеспечения на Analytics Platform System. Рекомендуется не устанавливать антивирусного программного обеспечения, если только это не является жестким требованием центра обработки данных.  
@@ -46,13 +46,13 @@ ms.locfileid: "51699132"
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>Список исключений для виртуальных машин (ВМ)  
 Чтобы установить антивирусное программное обеспечение на виртуальных машинах, исключите следующий список каталогов и файлов. Они не будут проверены, выполняемое антивирусным по.  
   
-***PDW_region*-CTL01**  
+**_PDW_region_-CTL01**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-***appliance_domain *-AD01** и ***appliance_domain *-AD02**  
+**_appliance_domain_-AD01** и  **_appliance_domain_-AD02**  
   
 -   Без ограничений  
   
@@ -62,15 +62,15 @@ ms.locfileid: "51699132"
   
 -   G:\  
   
-***appliance_domain*-VMM**  
+**_appliance_domain_- VMM**  
   
 -   Без ограничений  
   
-***appliance_domain*-WDS**  
+**_appliance_domain_— WDS**  
   
 -   Без ограничений  
   
-***appliance_domain*-ISCSI01**  
+**_appliance_domain_-ISCSI01**  
   
 -   C:\iscsitarget  
   

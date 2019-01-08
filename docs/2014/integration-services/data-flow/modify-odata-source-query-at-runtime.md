@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea891738a0a22353e67ff72b87d642bd04749270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0700d2893028efea5486221906636d6c749b66bd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093904"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804855"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Изменение запроса источника OData во время выполнения
   Можно изменить запрос источника OData во время выполнения, добавив выражение в свойство **[OData Source].[Query]** задачи потока данных.  
@@ -28,7 +27,7 @@ ms.locfileid: "48093904"
 ## <a name="exposing-the-query-as-a-parameter"></a>Предоставление запроса в качестве параметра  
  Следующая процедура позволяет предоставить пакету доступ к запросу, используемому компонентом источника OData, в качестве параметра.  
   
-1.  Щелкните правой кнопкой мыши **Задача потока данных** и выберите пункт **Параметризация…** .  
+1.  Щелкните правой кнопкой мыши **Задача потока данных** и выберите пункт **Параметризация…**.  
   
 2.  В диалоговом окне **Параметризация** выберите **[\<имя исходного компонента OData>].[Query]** для параметра **Свойство**.  
   
@@ -53,11 +52,11 @@ ms.locfileid: "48093904"
   
 2.  В окне **Свойства** выделите свойство **Выражения** .  
   
-3.  Нажмите кнопку с многоточием (...), чтобы открыть **Редактор выражений свойств**.  
+3.  Нажмите кнопку... (...), чтобы открыть **редактор выражений свойств**.  
   
 4.  Выберите свойство **[OData Source].[Query]** .  
   
-5.  Нажмите кнопку с многоточием (...) для элемента **Выражение**.  
+5.  Нажмите кнопку... кнопку (…) для **выражение**.  
   
 6.  Введите **выражение**.  
   

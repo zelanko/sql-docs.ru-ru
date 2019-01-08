@@ -20,16 +20,16 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59199461d6a0d827cad043f0b6bdbe35d425815f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855922"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204563"
 ---
 # <a name="sqlendtran-function"></a>Функция SQLEndTran
 **Соответствие стандартам**  
- Версия была введена: ODBC 3.0 соответствует стандартам: ISO-92  
+ Представленные версии: ODBC 3.0 стандартов соответствия: ISO-92  
   
  **Сводка**  
  **SQLEndTran** запрашивает операции фиксации или отката для всех активных операций для всех инструкций, ассоциированные с соединением. **SQLEndTran** можно также запросить выполнение операции фиксации или отката всех подключений, связанных со средой.  
@@ -132,7 +132,7 @@ SQLRETURN SQLEndTran(
   
 -   Драйвер не возвращать одно из следующих сообщений, которые убедитесь, что транзакция не была завершена.  
   
-    -   25S03: выполняется откат транзакции  
+    -   25S03: Выполняется откат транзакции  
   
     -   40001: Сбой сериализации  
   

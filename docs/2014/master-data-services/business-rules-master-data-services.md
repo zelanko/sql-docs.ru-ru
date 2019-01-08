@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
@@ -14,12 +13,12 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f32495e2e12ab56ac2adb8ad5686a669714b81dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 211434d182a0c3fd6da777b8834380a67c4d58c8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074345"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814596"
 ---
 # <a name="business-rules-master-data-services"></a>Бизнес-правила (службы Master Data Services)
   Бизнес-правило в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]— это правило, позволяющее обеспечить качество и точность основных данных. Бизнес-правило можно использовать для автоматического обновления данных, отправки электронной почты или запуска бизнес-процесса или рабочего процесса.  
@@ -69,13 +68,13 @@ ms.locfileid: "48074345"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание и публикация бизнес-правила.|[Создание и публикация бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|Создание и публикация бизнес-правила.|[Создание и публикация бизнес-правила (службы Master Data Services)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |Добавление нескольких условий к бизнес-правилу.|[Добавление нескольких условий к бизнес-правилу (службы Master Data Services)](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
 |Создание бизнес-правила, которое требует заполнения атрибутов.|[Запрос значений атрибута (службы Master Data Services)](../../2014/master-data-services/require-attribute-values-master-data-services.md)|  
-|Создание бизнес-правила, которое запускает действие при изменении значений атрибутов.|[Инициирование действия на основе изменений значения атрибута &#40;службы Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Создание бизнес-правила, которое запускает действие при изменении значений атрибутов.|[Инициирование действия на основе значения атрибута (службы Master Data Services)](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
 |Изменение имени существующего бизнес-правила.|[Изменение имени бизнес-правила (службы Master Data Services)](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|Настройка [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] для отправки уведомлений при применении бизнес-правил.|[Настройка бизнес-правилах отправки уведомлений &#40;службы Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|Применение бизнес-правил к определенным элементам.|[Проверка конкретных членов, соответствие бизнес-правилам &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|Настройка [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] для отправки уведомлений при применении бизнес-правил.|[Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|Применение бизнес-правил к определенным элементам.|[Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |Исключите бизнес-правило, чтобы оно не использовалось.|[Исключение бизнес-правила (службы Master Data Services)](../../2014/master-data-services/exclude-a-business-rule-master-data-services.md)|  
 |Удаление существующего бизнес-правила.|[Удаление бизнес-правила (службы Master Data Services)](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)|  
   
@@ -83,9 +82,9 @@ ms.locfileid: "48074345"
   
 -   [Общие сведения о службах Master Data Services](master-data-services-overview-mds.md)  
   
--   [Версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+-   [Версии (службы Master Data Services)](../../2014/master-data-services/versions-master-data-services.md)  
   
--   [Проверка &#40;службы Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [Проверка (службы Master Data Services)](../../2014/master-data-services/validation-master-data-services.md)  
   
 -   [Отслеживание изменений (службы Master Data Services)](change-tracking-master-data-services.md)  
   

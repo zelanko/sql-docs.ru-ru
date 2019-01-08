@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - development [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ff469192ae7a39eefdc949f48f058f52ca007ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40239944bd2c25c0275aa8e65327b3dd8f1620e5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191684"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816686"
 ---
 # <a name="replication-features-and-tasks"></a>Функции и задачи репликации
   Найдите сведения, необходимые проектировщику, разработчику, аналитику и администратору для проектирования и внедрения решений репликации.  
@@ -31,9 +30,9 @@ ms.locfileid: "48191684"
   
 -   [Разнородная репликация базы данных](non-sql/heterogeneous-database-replication.md)  
   
--   [Репликация на подписчиков оптимизированных для памяти таблиц](replication-to-memory-optimized-table-subscribers.md)  
+-   [Репликация в подписчики таблиц, оптимизированных для памяти](replication-to-memory-optimized-table-subscribers.md)  
   
--   [Replication Agents](agents/replication-agents.md)  
+-   [Агенты репликации](agents/replication-agents.md)  
   
 -   [Повторная публикация данных](republish-data.md)  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48191684"
   
 -   [Зеркальное отображение и репликация баз данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Репликация SQL Server](sql-server-replication.md)   
  [Техническая справка (репликация)](technical-reference-replication.md)  
   

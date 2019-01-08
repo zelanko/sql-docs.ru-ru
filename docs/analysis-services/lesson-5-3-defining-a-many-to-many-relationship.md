@@ -1,5 +1,5 @@
 ---
-title: Определение связи «многие ко многим» | Документы Microsoft
+title: Определение связи «многие ко многим» | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 487b61512e1dbd784b9b63eb0c3efdf1f98281ec
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c2541637af690395bb52c86a604ed7b37bd3fb00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019631"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518022"
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Занятие 5-3-определение связи «многие ко многим»
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34019631"
 С измерением «многие ко многим» значения суммируются отдельно, что означает, что они не вычисляются более одного раза для элемента «Все».  
   
 > [!NOTE]  
-> Для поддержки связи измерений «многие ко многим» в представлении источника данных должна быть определена связь первичный ключ — внешний ключ между всеми задействованными таблицами. В обратном случае будет невозможно выбрать верную промежуточную группу мер при определении связи на вкладке **Использование измерений** конструктора кубов.  
+> Для поддержки связи измерений многие ко многим, необходимо определить отношением первичного и внешнего ключа в представлении источника данных между всеми задействованными таблицами. В обратном случае будет невозможно выбрать верную промежуточную группу мер при определении связи на вкладке **Использование измерений** конструктора кубов.  
   
 Дополнительные сведения см. в разделах [Связи измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)и [Определение связей "многие ко многим" и свойств связей "многие ко многим"](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34019631"
   
 5.  В диалоговом окне **Добавление или удаление таблиц** добавьте в список **Включенные объекты** таблицы **DimSalesReason** и **FactInternetSalesReason** , а затем нажмите кнопку **ОК**.  
   
-    Обратите внимание, что связь первичный ключ — внешний ключ между задействованными таблицами создается автоматически, так как эти связи определены в базовой реляционной базе данных. Если эти связи не определены в базовой реляционной базе данных, их следует определить в представлении источника данных.  
+    Обратите внимание на то, что связи первичного и внешнего ключей между задействованными таблицами создается автоматически, так как эти связи определены в базовой реляционной базе данных. Если эти связи не определены в базовой реляционной базе данных, их следует определить в представлении источника данных.  
   
 6.  В меню **Формат** выберите команду **Автоматический макет**и щелкните значок **Диаграмма**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34019631"
   
 5.  Выберите меру **Internet Sales Reason Count** и просмотрите свойства этой меры в окне свойств.  
   
-    Обратите внимание, что свойство **AggregateFunction** для этой меры определено как **Число** , а не **Сумма**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Выберите **число** так как базовый тип данных является строковым типом данных. Другие два столбца в базовой таблице фактов не были выделены как меры, поскольку в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] они определены как числовые ключи, а не фактические меры. Дополнительные сведения см. в разделе [Определение полуаддитивного режима](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
+    Обратите внимание, что свойство **AggregateFunction** для этой меры определено как **Число** , а не **Сумма**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Число **Число** , поскольку базовый тип данных — строковый. Другие два столбца в базовой таблице фактов не были выделены как меры, поскольку в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] они определены как числовые ключи, а не фактические меры. Дополнительные сведения см. в разделе [Определение полуаддитивного режима](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
   
 6.  В окне «Свойства» измените значение свойства **Visible** меры **Internet Sales Reason Count** на **False**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "34019631"
   
     На следующем рисунке демонстрируются свойства меры **Internet Sales Reason Count** .  
   
-    ![Свойства меры Internet Sales Reason Count](../analysis-services/media/l5-many-to-many-2.gif "свойства меры Internet Sales Reason Count")  
+    ![Свойства меры Internet Sales Reason Count](../analysis-services/media/l5-many-to-many-2.gif "свойства для меры Internet Sales Reason Count")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>Определение измерения «многие ко многим»  
   
@@ -168,14 +168,14 @@ ms.locfileid: "34019631"
   
     На следующем рисунке показаны панели конструктора кубов **Фильтр** и **Данные** .  
   
-    ![И фильтрация данных панели конструктора кубов](../analysis-services/media/l5-many-to-many-5.gif "и фильтрация данных панели конструктора кубов")  
+    ![Фильтрация и данных панели конструктора кубов](../analysis-services/media/l5-many-to-many-5.gif "фильтр и данные панели конструктора кубов")  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Определение степени гранулярности измерения в группе мер](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>См. также  
-[Работа с диаграммами в конструкторе представлений источников данных & #40; Службы Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
-[Связей измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+[Работа с диаграммами в конструкторе представлений источника данных (службы Analysis Services)](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[Связи измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Определение связей "многие ко многим" и свойств связей "многие ко многим"](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   
   

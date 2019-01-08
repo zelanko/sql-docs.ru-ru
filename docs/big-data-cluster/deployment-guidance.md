@@ -1,20 +1,22 @@
 ---
-title: Развертывание SQL Server больших данных кластеров Kubernetes | Документация Майкрософт
+title: Развертывание
+titleSuffix: SQL Server 2019 big data clusters
 description: Дополнительные сведения о развертывании кластеров SQL Server 2019 больших данных (Предварительная версия) на платформе Kubernetes.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 70d8b07caf618cb5f1629fc80f0ca1db8b73ad3c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.custom: seodec18
+ms.openlocfilehash: 9c1f2fbb750dcdf8e5d78ddcfd5004a32c0cc209
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269867"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246753"
 ---
-# <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Развертывание сервера SQL, большие данные кластера в Kubernetes
+# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
 
 Кластер SQL Server больших данных могут развертываться как контейнеры docker в кластере Kubernetes. Это этапы установки и настройки:
 
@@ -26,7 +28,7 @@ ms.locfileid: "51269867"
 
 ## <a id="prereqs"></a> Необходимые условия для кластера Kubernetes
 
-Кластера больших данных в SQL Server требуется версия минимальное v1.10 для Kubernetes, но для сервера и клиента. Чтобы установить определенную версию на клиент kubectl, см. в разделе [установки kubectl двоичных с помощью curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Последние версии minikube и AKS, по крайней мере 1.10. Для AKS, необходимо использовать `--kubernetes-version` параметр для указания версии отличается от по умолчанию.
+Кластерами больших данных SQL Server требуется по меньшей мере минимальной версии Kubernetes v1.10 для сервера и клиента (kubectl).
 
 > [!NOTE]
 > Обратите внимание на то, что Kubernetes версии клиента и сервера должны быть + 1 или -1, дополнительный номер версии. Дополнительные сведения см. в разделе [Kubernetes поддерживаемые выпуски и наклона компонент](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -37,20 +39,22 @@ ms.locfileid: "51269867"
 
 Вы можете развернуть Kubernetes в любом из трех способов:
 
-| Развертывание Kubernetes на: | Описание |
-|---|---|
-| **Minikube** | Кластер Kubernetes одного узла на виртуальной Машине. |
-| **Службы Azure Kubernetes (AKS)** | Управляемой службы контейнеров Kubernetes в Azure. |
-| **Несколько компьютеров** | Кластер Kubernetes, развернутых на физических компьютерах или виртуальных машин с помощью **kubeadm** |
-
-Руководство по настройке по одному из этих параметров кластер Kubernetes для больших данных кластера SQL Server см. в следующих статьях:
-
-   - [Настройка Minikube](deploy-on-minikube.md)
-   - [Настройка Kubernetes в службе Azure Kubernetes](deploy-on-aks.md)
-   - [Настройка Kubernetes на нескольких компьютерах с kubeadm](deploy-with-kubeadm.md)
-   
+| Развертывание Kubernetes на: | Описание | Ссылка |
+|---|---|---|
+| **Minikube** | Кластер Kubernetes одного узла на виртуальной Машине. | [Инструкции](deploy-on-minikube.md) |
+| **Службы Azure Kubernetes (AKS)** | Управляемой службы контейнеров Kubernetes в Azure. | [Инструкции](deploy-on-aks.md) |
+| **Несколько компьютеров** | Кластер Kubernetes, развернутых на физических компьютерах или виртуальных машин с помощью **kubeadm** | [Инструкции](deploy-with-kubeadm.md) |
+  
 > [!TIP]
 > Пример скрипта python, выполняющий развертывание больших данных кластера AKS и SQL Server, см. в разделе [развертывание SQL Server, большие данные кластера в службе Azure Kubernetes (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+
+## <a name="deploy-sql-server-2019-big-data-tools"></a>Развертывание средств SQL Server 2019 больших данных
+
+Перед развертыванием кластера SQL Server 2019 больших данных, сначала [установите средства работы с большими данными](deploy-big-data-tools.md):
+- **mssqlctl**
+- **kubectl**
+- **Azure Data Studio**
+- **Расширение SQL Server 2019**
 
 ## <a id="deploy"></a> Развертывание кластера больших данных в SQL Server
 
@@ -61,9 +65,9 @@ ms.locfileid: "51269867"
 
 Чтобы развернуть кластер больших данных в Azure с помощью всех конфигураций по умолчанию для среды разработки и тестирования, следуйте инструкциям в этой статье:
 
-[Краткое руководство: Развертывание кластера больших данных SQL Server в Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Краткое руководство. Развертывание кластера больших данных SQL Server в Kubernetes](quickstart-big-data-cluster-deploy.md)
 
-Если вы хотите настроить конфигурацию кластера больших данных в соответствии с потребностями рабочей нагрузки, выполните следующий набор инструкций.
+Если вы хотите настроить развертывание кластера больших данных в соответствии с вашей рабочей нагрузки потребности, следуйте указаниям в оставшейся части этой статьи.
 
 ## <a name="verify-kubernetes-configuration"></a>Проверка конфигурации kubernetes
 
@@ -73,76 +77,30 @@ ms.locfileid: "51269867"
 kubectl config view
 ```
 
-## <a id="mssqlctl"></a> Установка mssqlctl
-
-**mssqlctl** — программа командной строки, написанный на Python, что позволяет кластера администраторов для начальной загрузки и управления кластером больших данных с помощью REST API. Минимальная требуемая версия Python — версии 3.5. Необходимо также иметь `pip` , используемый для загрузки и установки **mssqlctl** средство. 
-
-> [!IMPORTANT]
-> Если вы установили предыдущего выпуска, необходимо удалить кластер *перед* обновление **mssqlctl** и установки новой версии. Дополнительные сведения см. в разделе [обновление до нового выпуска](deployment-guidance.md#upgrade).
-
-### <a name="windows-mssqlctl-installation"></a>Mssqlctl установки Windows
-
-1. На клиенте Windows, скачайте необходимые пакеты Python из [ https://www.python.org/downloads/ ](https://www.python.org/downloads/). Python3.5.3 и более поздних версий pip3 также устанавливается одновременно с установкой Python. 
-
-   > [!TIP] 
-   > При установке Python3 выберите добавляемый путь к Python. Если этого не сделать, можно позже найти расположение pip3 и вручную добавить его в нужный путь.
-
-1. Убедитесь, что у вас есть последнюю версию **запросы** пакета.
-
-   ```cmd
-   python -m pip install requests
-   python -m pip install requests --upgrade
-   ```
-
-1. Установка **mssqlctl** , выполнив следующую команду:
-
-   ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
-   ```
-
-### <a name="linux-mssqlctl-installation"></a>Установка mssqlctl Linux
-
-В Linux, необходимо установить **python3** и **python3-pip** пакетов, а затем запустите `sudo pip3 install --upgrade pip`. Это устанавливает 3,5 последнюю версию Python и pip. В следующем примере показано, как эти команды будет работать для Ubuntu (Если вы используете другую платформу, измените команды для диспетчера пакетов):
-
-1. Установите необходимые пакеты Python:
-
-   ```bash
-   sudo apt-get update && /
-   sudo apt-get install -y python3 && /
-   sudo apt-get install -y python3-pip && /
-   sudo -H pip3 install --upgrade pip
-   ```
-
-1. Установка **mssqlctl** , выполнив следующую команду:
-
-   ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
-   ```
-
 ## <a name="define-environment-variables"></a>Определение переменных среды
 
 Конфигурации кластера можно настроить, используя набор переменных среды, которые передаются `mssqlctl create cluster` команды. Большинство переменных среды являются необязательными, со значениями по умолчанию, как указано ниже. Обратите внимание, что переменные среды, такие как учетные данные, которые требуют ввода.
 
 | Переменная среды | Обязательно | Значение по умолчанию | Описание |
 |---|---|---|---|
-| **ACCEPT_EULA** | Да | Недоступно | Примите лицензионное соглашение SQL Server (например, «Y»).  |
-| **ИМЯ_КЛАСТЕРА** | Да | Недоступно | Имя пространства имен Kubernetes для развертывания кластера больших данных в SQLServer. |
-| **CLUSTER_PLATFORM** | Да | Недоступно | Платформы, на которой развернут кластер Kubernetes. Может быть `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | Нет | 1 | Число реплик пула вычислений, чтобы выстроить. В CTP2.0 только табличные значения разрешено-1. |
+| **ACCEPT_EULA** | Да | Н/Д | Примите лицензионное соглашение SQL Server (например, «Y»).  |
+| **ИМЯ_КЛАСТЕРА** | Да | Н/Д | Имя пространства имен Kubernetes для развертывания кластера больших данных в SQLServer. |
+| **CLUSTER_PLATFORM** | Да | Н/Д | Платформы, на которой развернут кластер Kubernetes. Может быть `aks`, `minikube`, `kubernetes`|
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | Нет | 1 | Число реплик пула вычислений, чтобы выстроить. В CTP-версии 2.2 только табличные значения допускается-1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | Нет | 2 | Количество данных пула реплик, чтобы выстроить. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | Нет | 2 | Число реплик пула хранения, чтобы выстроить. |
 | **DOCKER_REGISTRY** | Да | TBD | Частный реестр, где хранятся образы, используемые для развертывания кластера. |
 | **DOCKER_REPOSITORY** | Да | TBD | Частный репозиторий в реестре выше, где хранятся образы.  Он необходим в течение условная общедоступная Предварительная версия. |
-| **DOCKER_USERNAME** | Да | Недоступно | Имя пользователя для доступа к образы контейнеров, в случае, если они хранятся в частный репозиторий. Он необходим в течение условная общедоступная Предварительная версия. |
-| **DOCKER_PASSWORD** | Да | Недоступно | Пароль для доступа к выше частный репозиторий. Он необходим в течение условная общедоступная Предварительная версия.|
-| **DOCKER_EMAIL** | Да | Недоступно | Электронная почта, связанная с выше частный репозиторий. Он необходим в течение неконтролируемые закрытой предварительной версии. |
+| **DOCKER_USERNAME** | Да | Н/Д | Имя пользователя для доступа к образы контейнеров, в случае, если они хранятся в частный репозиторий. Он необходим в течение условная общедоступная Предварительная версия. |
+| **DOCKER_PASSWORD** | Да | Н/Д | Пароль для доступа к выше частный репозиторий. Он необходим в течение условная общедоступная Предварительная версия.|
+| **DOCKER_EMAIL** | Да | Н/Д | Электронная почта, связанная с выше частный репозиторий. Он необходим в течение неконтролируемые закрытой предварительной версии. |
 | **DOCKER_IMAGE_TAG** | Нет | Последние | Метка, используемая для добавлять теги к изображениям. |
 | **DOCKER_IMAGE_POLICY** | Нет | Всегда | Всегда принудительный операции извлечения образов.  |
 | **DOCKER_PRIVATE_REGISTRY** | Да | 1 | Для тех же временных рамках условная общедоступная Предварительная версия это значение должно быть установлено в 1. |
-| **CONTROLLER_USERNAME** | Да | Недоступно | Имя пользователя администратора кластера. |
-| **CONTROLLER_PASSWORD** | Да | Недоступно | Пароль администратора кластера. |
-| **KNOX_PASSWORD** | Да | Недоступно | Пароль для пользователя Knox. |
-| **MSSQL_SA_PASSWORD** | Да | Недоступно | Пароль пользователя SA для главного экземпляра SQL. |
+| **CONTROLLER_USERNAME** | Да | Н/Д | Имя пользователя администратора кластера. |
+| **CONTROLLER_PASSWORD** | Да | Н/Д | Пароль администратора кластера. |
+| **KNOX_PASSWORD** | Да | Н/Д | Пароль для пользователя Knox. |
+| **MSSQL_SA_PASSWORD** | Да | Н/Д | Пароль пользователя SA для главного экземпляра SQL. |
 | **USE_PERSISTENT_VOLUME** | Нет | true | `true` для использования утверждения постоянного тома Kubernetes для хранения pod.  `false` Использование временных узлов хранилища для хранения pod. См. в разделе [постоянного хранения](concept-data-persistence.md) Дополнительные сведения. При развертывании SQL Server, большие данные кластера в minikube и USE_PERSISTENT_VOLUME = true, необходимо задать значение для `STORAGE_CLASS_NAME=standard`. |
 | **STORAGE_CLASS_NAME** | Нет | значение по умолчанию | Если `USE_PERSISTENT_VOLUME` является `true` это указывает на имя класса хранения Kubernetes для использования. См. в разделе [постоянного хранения](concept-data-persistence.md) Дополнительные сведения. При развертывании SQL Server, большие данные кластера в minikube, имя класса для хранения по умолчанию отличается, и его необходимо переопределить, задав `STORAGE_CLASS_NAME=standard`. |
 | **MASTER_SQL_PORT** | Нет | 31433 | Порт TCP/IP, который ожидает передачи данных master экземпляра SQL в общедоступной сети. |
@@ -153,7 +111,7 @@ kubectl config view
 > [!IMPORTANT]
 >1. В течение ограниченной закрытой предварительной версии, учетные данные для частного реестра Docker будет предоставляться вам после рассмотрения вашего [регистрации EAP](https://aka.ms/eapsignup).
 >1. Для созданного локального кластера с помощью **kubeadm**, значение для переменной среды `CLUSTER_PLATFORM` является `kubernetes`. Кроме того, когда `USE_PERSISTENT_VOLUME=true`, необходимо предварительно подготовить класс хранения Kubernetes и передать его с помощью `STORAGE_CLASS_NAME`.
->1. Убедитесь, что перенос паролей в двойные кавычки, если он содержит специальные символы. Можно присвоить любое MSSQL_SA_PASSWORD, но убедитесь, что они достаточно сложны и не используйте `!`, `&` или `‘` символов. Обратите внимание, что двойные кавычки-разделители работают только в команды bash.
+>1. Убедитесь, что перенос паролей в двойные кавычки, если он содержит специальные символы. Можно присвоить любое MSSQL_SA_PASSWORD, но убедитесь, что они достаточно сложны и не используйте `!`, `&` или `'` символов. Обратите внимание, что двойные кавычки-разделители работают только в команды bash.
 >1. Имя кластера должно быть только буквенно цифровые символы в нижнем регистре, не должно быть пробелов. Все артефакты Kubernetes (контейнеры, модулей, вертикальное наборов, службы) для кластера будет создан в пространство имен с тем же именем, что и кластер указанное имя.
 >1. **SA** учетная запись является администратором системы на экземпляре SQL Server Master, которая создается во время установки. После создания контейнера SQL Server, переменную среды MSSQL_SA_PASSWORD, которое вы указали будет обнаружить, выполнив вывод на экран MSSQL_SA_PASSWORD $ в контейнере. В целях безопасности смените пароль SA в соответствии с практическими рекомендациями, описанными [здесь](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
@@ -169,9 +127,9 @@ kubectl config view
 SET ACCEPT_EULA=Y
 SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
-SET CONTROLLER_USERNAME=<controller_admin_name – can be anything>
-SET CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
-SET KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
+SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
+SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
+SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
 SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
 SET DOCKER_REGISTRY=private-repo.microsoft.com
@@ -190,9 +148,9 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 export ACCEPT_EULA=Y
 export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
-export CONTROLLER_USERNAME="<controller_admin_name – can be anything>"
-export CONTROLLER_PASSWORD="<controller_admin_password – can be anything, password complexity compliant>"
-export KNOX_PASSWORD="<knox_password – can be anything, password complexity compliant>"
+export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
+export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
+export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
 export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
 export DOCKER_REGISTRY="private-repo.microsoft.com"
@@ -230,36 +188,44 @@ export STORAGE_CLASS_NAME=standard
 API создания кластера используется для инициализации пространств имен Kubernetes и развернуть всех модулях приложения в пространстве имен. Чтобы развернуть кластер больших данных SQL Server в кластере Kubernetes, выполните следующую команду:
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl create cluster <your-cluster-name>
 ```
 
-Во время начальной загрузки кластера командное окно клиента будет выводить состояние развертывания. Можно также проверить состояние развертывания, выполнив следующие команды в окне командной строки различные:
+Во время начальной загрузки кластера командное окно клиента будет выводить состояние развертывания. Во время развертывания вы увидите ряд сообщений где ожидает pod контроллера:
 
-```bash
-kubectl get all -n <name of your cluster>
-kubectl get pods -n <name of your cluster>
-kubectl get svc -n <name of your cluster>
+```output
+2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-Вы увидите более детализированные состоянии и конфигурации для каждого модуля, выполнив:
-```bash
-kubectl describe pod <pod name> -n <name of your cluster>
+Через 10 – 20 минут вы должны быть уведомлены выполняющийся модуль контроллера:
+
+```output
+2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
 ```
 
-После запуска контроллера pod можно использовать вкладку "Развертывание" на портале администрирования кластера для мониторинга развертывания.
+> [!IMPORTANT]
+> Всего развертывание может занять много времени из-за время, необходимое для загрузки образов контейнеров для компонентов кластера больших данных. Тем не менее он должен занять несколько часов. При возникновении проблем с развертыванием, см. в разделе [Устранение неполадок](#troubleshoot) этой статьи, чтобы узнать, как отслеживать и проверить развертывания.
+
+После завершения развертывания, уведомляет о выходных данных успеха.
+
+```output
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
+```
 
 ## <a id="masterip"></a> Получите экземпляр SQL Server Master и IP-адреса кластера больших данных SQL Server
 
-После успешного выполнения сценария развертывания, можно получить IP-адрес главного экземпляра SQL Server, используя шаги, описанные ниже. Этот IP-адрес и порт номер 31433 будет использовать для подключения к основной экземпляр SQL Server (например:  **\<ip адрес\>, 31433**). Аналогичным образом, для больших объемов данных SQL Server IP-адрес кластера. На вкладке "конечные точки службы" на портале администрирования кластера также описаны все конечные точки кластера. На портале администрирования кластера можно использовать для мониторинга развертывания. Доступны на портале с помощью внешних IP-адрес и порт номер для `service-proxy-lb` (например: **https://\<ip адрес\>: 30777**). Учетные данные для доступа к порталу администрирования являются значениями `CONTROLLER_USERNAME` и `CONTROLLER_PASSWORD` переменные среды, приведенные выше.
+После успешного выполнения сценария развертывания, можно получить IP-адрес главного экземпляра SQL Server, используя шаги, описанные ниже. Этот IP-адрес и порт номер 31433 будет использовать для подключения к основной экземпляр SQL Server (например:  **\<ip адрес\>, 31433**). Аналогичным образом, для больших объемов данных SQL Server IP-адрес кластера. На вкладке "конечные точки службы" на портале администрирования кластера также описаны все конечные точки кластера. На портале администрирования кластера можно использовать для мониторинга развертывания. Доступны на портале с помощью внешних IP-адрес и порт номер для `service-proxy-lb` (например: **https://\<ip адрес\>: 30777: портал**). Учетные данные для доступа к порталу администрирования являются значениями `CONTROLLER_USERNAME` и `CONTROLLER_PASSWORD` переменные среды, приведенные выше.
 
 ### <a name="aks"></a>AKS
 
 Если вы используете AKS, Azure предоставляет службы Azure Подсистема балансировки нагрузки. Выполните следующую команду:
 
 ```bash
-kubectl get svc service-master-pool-lb -n <name of your cluster>
-kubectl get svc service-security-lb -n <name of your cluster>
-kubectl get svc service-proxy-lb -n <name of your cluster>
+kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc service-security-lb -n <your-cluster-name>
+kubectl get svc service-proxy-lb -n <your-cluster-name>
 ```
 
 Найдите **External-IP** значение, присвоенное к службе. Затем подключитесь к основной экземпляр SQL Server с помощью IP-адрес на порте 31433 (например:  **\<ip адрес\>, 31433**) и SQL Server конечную точку кластера больших данных с помощью external-IP для `service-security-lb` службы. 
@@ -274,7 +240,7 @@ minikube ip
 
 Независимо от платформы запуске кластера Kubernetes, чтобы получить все конечные точки служб, развернутых для кластера, выполните следующую команду:
 ```bash
-kubectl get svc -n <name of your cluster>
+kubectl get svc -n <your-cluster-name>
 ```
 
 ## <a id="upgrade"></a> Обновление до нового выпуска
@@ -292,7 +258,7 @@ kubectl get svc -n <name of your cluster>
 1. Установите последнюю версию **mssqlctl**.
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
 
    > [!IMPORTANT]
@@ -300,6 +266,62 @@ kubectl get svc -n <name of your cluster>
 
 1. Установите последнюю версию, следуя инструкциям из раздела [развернуть раздел](#deploy) этой статьи. 
 
+## <a id="troubleshoot"></a> Мониторинг и устранение неполадок
+
+Чтобы отслеживать или устранения проблемы развертывания, используйте **kubectl** проверке состояния кластера и для выявления потенциальных проблем. В любое время, во время развертывания можно открыть другой командное окно, чтобы выполнить следующие тесты.
+
+1. Проверьте статус POD, содержащихся в кластере.
+
+   ```cmd
+   kubectl get pods -n <your-cluster-name>
+   ```
+
+   Во время развертывания модулей с **состояние** из **ContainerCreating** по-прежнему в ближайшее время. Если развертывание перестает отвечать на запросы по любой причине, это может послужить идею где проблема может быть. Также рассмотрим **ГОТОВЫ** столбца. Это означает, сколько контейнеров начали в pod. Обратите внимание на то, что развертывание может занять 30 минут или более в зависимости от вашей конфигурации и сети. Основная часть этого времени расходуется загрузки образов контейнеров для различных компонентов. В следующей таблице показаны изменить пример выходных данных два контейнера во время развертывания:
+
+   ```output
+   PS C:\> kubectl get pods -n sbdc8
+   NAME                                     READY   STATUS              RESTARTS   AGE
+   mssql-controller-h79ft                   4/4     Running             0          13m
+   mssql-storage-pool-default-0             0/7     ContainerCreating   0          6m
+   ```
+
+1. Описания отдельных pod для получения дополнительных сведений. Следующая команда проверяет `mssql-storage-pool-default-0` pod.
+
+   ```cmd
+   kubectl describe pod mssql-storage-pool-default-0 -n <your-cluster-name>
+   ```
+
+   Это выводит подробные сведения о pod, включая последние события. Если произошла ошибка, иногда можно найти здесь ошибку.
+
+1. Получить журналы для контейнеров, запущенных в модуле. Следующая команда извлекает журналы для всех контейнеров, запущенных в модуль с именем `mssql-storage-pool-default-0` и выводит их в файл с именем `pod-logs.txt`:
+
+   ```cmd
+   kubectl logs mssql-storage-pool-default-0 --all-containers=true -n <your-cluster-name> > pod-logs.txt
+   ```
+
+1. Просмотрите службы кластеров, во время и после развертывания с помощью следующей команды:
+
+   ```cmd
+   kubectl get svc -n <your-cluster-name>
+   ```
+
+   Эти службы поддерживают внутренние и внешние подключения к кластеру больших данных. Для внешних подключений используются следующие службы:
+
+   | Служба | Описание |
+   |---|---|
+   | **Конечная точка master-pool** | Предоставляет доступ к основной экземпляр.<br/>(**EXTERNAL-IP, 31433** и **SA** пользователя) |
+   | **Служба mssql контроллер lb**<br/>**Служба mssql контроллер nodeport** | Поддержка средств и клиентов, управления кластером. |
+   | **Служба прокси-сервер балансировки нагрузки.**<br/>**службы, прокси-сервера, nodeport** | Предоставляет доступ к [портал администрирования кластера](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777: портал)|
+   | **службы безопасности балансировки нагрузки.**<br/>**службы безопасности nodeport** | Предоставляет доступ к шлюзу HDFS или Spark.<br/>(**EXTERNAL-IP** и **корневой** пользователя) |
+
+   > [!NOTE]
+   > Имена служб, зависит от среды Kubernetes. При развертывании в службе Azure Kubernetes (AKS), имена служб заканчиваться **-lb**. Для сред с minikube и kubeadm имена служб заканчиваться **- nodeport**.
+
+1. Используйте [портал администрирования кластера](cluster-admin-portal.md) мониторинге развертывания на **развертывания** вкладки. Вам придется ждать для **службы прокси-сервера балансировки нагрузки** службы для запуска до доступа к этому порталу, поэтому он не будет доступен в начале развертывания.
+
+> [!TIP]
+> Дополнительные сведения об устранении неполадок кластера см. в разделе [команды Kubectl для наблюдения и диагностики кластеров SQL Server с большими данными](cluster-troubleshooting-commands.md).
+
 ## <a name="next-steps"></a>Следующие шаги
 
-После успешного развертывания SQL Server, больших данных кластера Kubernetes, [установите средства работы с большими данными](deploy-big-data-tools.md) и ознакомьтесь с некоторыми новыми возможностями и узнайте [использованию записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md).
+Ознакомьтесь с некоторыми новыми возможностями и узнайте [использованию записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md).

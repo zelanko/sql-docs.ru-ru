@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661753"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417375"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Разработка драйвера ODBC с поддержкой пула подключений
 В этом разделе рассматриваются сведения о разработке драйверу ODBC, содержащий сведения о том, как драйвер должен предоставить службы пула подключений.  
@@ -45,7 +45,7 @@ ms.locfileid: "51661753"
 |Компонент|Дополнительные возможности|  
 |--------------|-------------------------|  
 |[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Поддерживает новый тип дескриптора: SQL_HANDLE_DBC_INFO_TOKEN (см. описание ниже).|  
-|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Поддерживает новый атрибут соединения только для задания: SQL_ATTR_DBC_INFO_TOKEN для сброса соединения (см. описание ниже).|  
+|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Поддержка новый атрибут соединения только для задания: SQL_ATTR_DBC_INFO_TOKEN для сброса соединения (см. описание ниже).|  
   
 > [!NOTE]  
 >  Устаревшие функции, такие как **SQLError** и **SQLSetConnectOption** не поддерживаются для включения организации пулов соединений с учетом драйвера.  
@@ -87,7 +87,7 @@ ms.locfileid: "51661753"
   
  Так как сведения о соединении могут поступать из нескольких источников (строка подключения, атрибуты соединения и имени DSN), драйвер может потребоваться проанализировать строку подключения и разрешить конфликт между эти источники в каждом из приведенного выше вызова функции.  
   
- Таким образом, вводится новый дескриптор ODBC: SQL_HANDLE_DBC_INFO_TOKEN. С помощью SQL_HANDLE_DBC_INFO_TOKEN драйвер не нужно проанализировать строку подключения и разрешение конфликтов в сведения о подключении более одного раза. Так как это структуры данных, драйвер можно хранить данные, например сведений о соединении или идентификатор пула.  
+ Таким образом вводится новый дескриптор ODBC: SQL_HANDLE_DBC_INFO_TOKEN. С помощью SQL_HANDLE_DBC_INFO_TOKEN драйвер не нужно проанализировать строку подключения и разрешение конфликтов в сведения о подключении более одного раза. Так как это структуры данных, драйвер можно хранить данные, например сведений о соединении или идентификатор пула.  
   
  Этот дескриптор используется только как интерфейс между диспетчера драйверов и драйверов. Приложение не может выделить этот дескриптор напрямую.  
   

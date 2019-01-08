@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledest.f1
@@ -18,12 +17,12 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9cc425ca170a8b6619bead023f76b163e698aab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed4cb484f89d44ed31b4c82a9e1349dfab925dac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058794"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761756"
 ---
 # <a name="flat-file-destination"></a>назначение «Неструктурированный файл»
   Назначение «Неструктурированный файл» записывает данные в текстовый файл. Текстовый файл может быть в следующих форматах: с разделителями, фиксированной ширины, фиксированной ширины с разделителем строки и без выравнивания текста справа.  
@@ -45,13 +44,13 @@ ms.locfileid: "48058794"
   
  Дополнительные сведения о свойствах, которые можно задать в диалоговом окне **Редактор источника «Неструктурированный файл»** , см. в следующих разделах:  
   
--   [Редактор назначения файлов неструктурированными &#40;страницы диспетчера соединений&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения "Неструктурированный файл" (страница "Диспетчер соединений")](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначения файлов неструктурированными &#40;страница «сопоставления»&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [Редактор назначения "Неструктурированный файл" (страница "Сопоставления")](../flat-file-destination-editor-mappings-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](../common-properties.md)  
+-   [Общие свойства](../common-properties.md)  
   
 -   [Пользовательские свойства неструктурированного файла](flat-file-custom-properties.md)  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48058794"
  Дополнительные сведения о настройке свойств для компонента потока данных см. в разделе [Установление свойств компонента потока данных](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>См. также  
- [Источник неструктурированных файлов](flat-file-source.md)   
+ [Источник «Неструктурированный файл»](flat-file-source.md)   
  [Поток данных](data-flow.md)  
   
   

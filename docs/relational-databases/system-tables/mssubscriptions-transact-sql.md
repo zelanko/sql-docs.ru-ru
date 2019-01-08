@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSsubscriptions_TSQL
@@ -19,12 +18,12 @@ ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22a80f913566a65596d86bd08fce9ff9c7ee1570
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b0c5d53519b09c9f30ccdf7e973e25e5a06a6a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728862"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823601"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47728862"
 |**snapshot_seqno_flag**|**bit**|Указывает источник порядкового номера транзакции снимка, где значение **1** означает, что **subscription_seqno** — это порядковый номер моментального снимка.|  
 |**independent_agent**|**bit**|Указывает, имеется ли для данной публикации изолированный агент распространителя.|  
 |**subscription_time**|**datetime**|Только для внутреннего применения.|  
-|**loopback_detection**|**bit**|Применяется к подпискам, которые являются частью двунаправленной топологии репликации транзакций. Механизм распознавания обратной связи определяет, отправляет ли агент распространителя транзакции, созданные в подписчике, обратно подписчику:<br /><br /> **1** = не отправляет обратно.<br /><br /> **0** = отправляет обратно.<br /><br /> Примечание: Этот столбец поддерживается только для обратной совместимости с функциями двунаправленной репликации в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Для более поздних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следует использовать одноранговую репликацию. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|**loopback_detection**|**bit**|Применяется к подпискам, которые являются частью двунаправленной топологии репликации транзакций. Механизм распознавания обратной связи определяет, отправляет ли агент распространителя транзакции, созданные в подписчике, обратно подписчику:<br /><br /> **1** = не отправляет обратно.<br /><br /> **0** = отправляет обратно.<br /><br /> Примечание. Этот столбец поддерживается только для обратной совместимости с функциями двунаправленной репликации в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Для более поздних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следует использовать одноранговую репликацию. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
 |**agent_id**|**int**|Идентификатор агента.|  
 |**update_mode**|**tinyint**|Тип обновления.|  
 |**publisher_seqno**|**varbinary(16)**|Последовательный номер транзакции на издателе для этой подписки.|  

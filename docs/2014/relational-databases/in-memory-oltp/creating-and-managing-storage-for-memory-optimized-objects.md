@@ -10,12 +10,12 @@ ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8929a59cbffc8a9aad3ed3c6be4504fe7937be69
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109314"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416975"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Создание и управление хранилищем для оптимизированных для памяти объектов
   Механизм [!INCLUDE[hek_2](../../includes/hek-2-md.md)] интегрирован в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], что позволяет использовать оптимизированные для памяти таблицы и (традиционные) таблицы на диске в одной базе данных. Тем не менее структуры хранилища оптимизированных для памяти таблиц и таблиц на диске отличаются.  
@@ -58,7 +58,7 @@ ms.locfileid: "48109314"
   
 -   [Определение устойчивости для оптимизированных для памяти объектов](defining-durability-for-memory-optimized-objects.md)  
   
--   [Сравнение хранилища таблиц на диске с хранилищем таблиц, оптимизированных для памяти](comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
+-   [Сравнение хранилища таблиц на диске с хранилищем таблиц оптимизированным для памяти](comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
   
 -   [Мониторинг и устранение неполадок со слиянием для пар файлов данных и разностных файлов](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
   

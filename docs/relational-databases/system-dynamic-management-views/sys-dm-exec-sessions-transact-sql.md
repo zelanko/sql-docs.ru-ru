@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c187ed1ede04f8ed140ddbb73d251af304745cf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2a01f7c8ffa3616deb0c7f1ebcec1ea94e65dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705720"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535194"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "47705720"
   
  Динамические административные представления sys.dm_exec_connections, sys.dm_exec_sessions и sys.dm_exec_requests сопоставляются [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) системная таблица.  
   
-> **Примечание:** вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_exec_sessions**.  
+> **ПРИМЕЧАНИЕ.** Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_exec_sessions**.  
   
 |Имя столбца|Тип данных|Описание и сведения о версии|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Идентификатор сеанса, связанный со всеми активными первичными соединениями. Не допускает значение NULL.|  
 |login_time|**datetime**|Время подключения сеанса. Не допускает значение NULL.|  
-|host_name|**nvarchar(128)**|Имя клиентской рабочей станции, указанное в сеансе. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.<br /><br /> **Примечание по безопасности:** клиентское приложение предоставляет имя рабочей станции и может предоставлять неточные данные. Не следует полагаться на функцию HOST_NAME для обеспечения безопасности.|  
+|host_name|**nvarchar(128)**|Имя клиентской рабочей станции, указанное в сеансе. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.<br /><br /> **Примечание по безопасности.** Имя рабочей станции предоставляется клиентским приложением, оно может предоставлять неточные данные. Не следует полагаться на функцию HOST_NAME для обеспечения безопасности.|  
 |program_name|**nvarchar(128)**|Имя клиентской программы, которая инициировала сеанс. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
 |host_process_id|**int**|Идентификатор процесса клиентской программы, которая инициировала сеанс. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
 |client_version|**int**|Версия TDS-протокола интерфейса, который используется клиентом для подключения к серверу. Для внутреннего сеанса это значение равно NULL. Допускает значение NULL.|  
@@ -50,7 +50,7 @@ ms.locfileid: "47705720"
 |login_name|**nvarchar(128)**|Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], под которым выполняется текущий сеанс. Чтобы узнать первоначальное имя входа, с помощью которого был создан сеанс, см. параметр original_login_name. Может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности имени входа или имени пользователя домена, прошедшего проверку подлинности Windows. Не допускает значение NULL.|  
 |nt_domain|**nvarchar(128)**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Домен Windows для клиента, если во время сеанса применяется проверка подлинности Windows или доверительное соединение. Для внутренних сеансов и пользователей, не принадлежащих к домену, это значение равно NULL. Допускает значение NULL.|  
 |nt_user_name|**nvarchar(128)**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Имя пользователя Windows для клиента, если во время сеанса используется проверка подлинности Windows или доверительное соединение. Для внутренних сеансов и пользователей, не принадлежащих к домену, это значение равно NULL. Допускает значение NULL.|  
-|status|**nvarchar(30)**|Состояние сеанса. Возможные значения:<br /><br /> **Под управлением** -запущенных один или несколько запросов<br /><br /> **В спящем режиме** -запросы не выполняются в настоящее время.<br /><br /> **Неактивные** — сеанс будет сброшено из-за пула соединений и теперь находится в состоянии, предшествующем регистрации.<br /><br /> **Preconnect** -сеанс находится в классификатор регулятора ресурсов.<br /><br /> Не допускает значение NULL.|  
+|status|**nvarchar(30)**|Состояние сеанса. Возможные значения:<br /><br /> **Под управлением** -запущенных один или несколько запросов<br /><br /> **В спящем режиме** -запросы не выполняются в настоящее время.<br /><br /> **Неактивные** -сеанс будет сброшено из-за пула соединений и теперь находится в состоянии, предшествующем регистрации.<br /><br /> **Preconnect** -сеанс находится в классификатор регулятора ресурсов.<br /><br /> Не допускает значение NULL.|  
 |context_info|**varbinary(128)**|Значение параметра CONTEXT_INFO для сеанса. Сведения о контексте задается пользователем с помощью [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) инструкции. Допускает значение NULL.|  
 |cpu_time|**int**|Время ЦП, использованное данным сеансом, в миллисекундах. Не допускает значение NULL.|  
 |memory_usage|**int**|Количество 8-килобайтовых страниц памяти, используемых данным сеансом. Не допускает значение NULL.|  
@@ -93,8 +93,8 @@ ms.locfileid: "47705720"
   
 ## <a name="permissions"></a>Разрешения  
 Все могут видеть свои собственные сведения о сеансе.  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Требует `VIEW SERVER STATE` разрешение на [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] для просмотра всех сеансов на сервере.  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Требует `VIEW DATABASE STATE` Чтобы просмотреть все подключения к текущей базе данных. `VIEW DATABASE STATE` не может быть предоставлена в `master` базы данных. 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Требуется `VIEW SERVER STATE` разрешение на [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] для просмотра всех сеансов на сервере.  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Требуется `VIEW DATABASE STATE` Чтобы просмотреть все подключения к текущей базе данных. `VIEW DATABASE STATE` не может быть предоставлена в `master` базы данных. 
   
   
 ## <a name="remarks"></a>Примечания  

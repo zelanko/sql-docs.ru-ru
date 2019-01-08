@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - leading blanks
@@ -15,12 +14,12 @@ ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f49bafa553a2524ecd5cfd66300a635eadc2a5c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52ef9134b2d745df6b6471e74a062a8f0bfd67e2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088924"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793856"
 ---
 # <a name="trim-ssis-expression"></a>TRIM (выражение служб SSIS)
   Возвращает символьное выражение после удаления начальных и конечных пробелов.  
@@ -61,8 +60,8 @@ TRIM(FirstName + " "+ LastName)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [LTRIM &#40;выражение служб SSIS&#41;](trim-ssis-expression.md)   
- [RTRIM &#40;выражение служб SSIS&#41;](rtrim-ssis-expression.md)   
- [Функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md)  
+ [LTRIM (выражение служб SSIS)](trim-ssis-expression.md)   
+ [RTRIM (выражение служб SSIS)](rtrim-ssis-expression.md)   
+ [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   
   

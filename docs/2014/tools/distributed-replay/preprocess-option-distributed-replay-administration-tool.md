@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28e4f41d6f11381fcb6fcdf82f708d185a293120
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f5f4492dc18a93ab1fea9d34287eb90703bc3d5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174614"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792806"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Параметр предварительной обработки (средство администрирования распределенного воспроизведения)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Средство администрирования распределенного воспроизведения `DReplay.exe`, это средство командной строки, которое можно использовать для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описан параметр командной строки **preprocess** и соответствующий синтаксис.  
@@ -41,7 +41,7 @@ ms.locfileid: "48174614"
  **-i** *input_trace_file*  
  Задает полный путь к входному файлу трассировки на контроллере, например `D:\Mytrace.trc`. Параметр **-i** является обязательным.  
   
- При наличии в том же каталоге файлов продолжения они загружаются и используются автоматически. Эти файлы должны соответствовать соглашению об именовании переключения на файл продолжения, например: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, … `Mytrace_n.trc`.  
+ При наличии в том же каталоге файлов продолжения они загружаются и используются автоматически. Файлы должны соответствовать соглашению об именовании переключения на файл продолжения, например: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, … `Mytrace_n.trc`.  
   
 > [!NOTE]  
 >  При использовании средства администрирования на компьютере, отличном от контроллера, необходимо скопировать файлы входных данных трассировки на контроллер, чтобы в этом параметре можно было использовать локальный путь.  
@@ -75,13 +75,13 @@ ms.locfileid: "48174614"
  В этом примере предварительная подготовка запускается со всеми параметрами по умолчанию. Значение `localhost` указывает, что служба контроллера запущена на том же компьютере, что и средство администрирования. Параметр *input_trace_file* задает расположение входных данных трассировки — `c:\mytrace.trc`. Так как фильтрация файлов трассировки не используется, указывать параметр **-c** не обязательно.  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
  В этом примере запускается этап предварительной подготовки и указывается измененный файл конфигурации предварительной обработки. В отличие от предыдущего примера параметр **-c** используется для указания измененного файла конфигурации, сохраненного в другом расположении. Пример:  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
 ```  
   
  В измененном файле конфигурации предварительной обработки добавлено условие фильтра, которое позволяет отфильтровать системные сеансы во время распределенного воспроизведения. Фильтр добавляется путем изменения элемента `<PreprocessModifiers>` в файле конфигурации предварительной обработки `DReplay.exe.preprocess.config`.  

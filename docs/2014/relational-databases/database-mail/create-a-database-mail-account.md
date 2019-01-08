@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], accounts
@@ -14,21 +13,21 @@ ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d066f107460e9671d4f5840271d8c4a466eb968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081392"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798366"
 ---
 # <a name="create-a-database-mail-account"></a>Создание учетной записи компонента Database Mail
   Для создания учетной записи компонента Database Mail применяется **мастер настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
--   **Перед началом работы:**  [необходимые компоненты](#Prerequisites)  
+-   **Перед началом работы**  [Предварительные требования](#Prerequisites)  
   
--   **Создание учетной записи компонента Database Mail с использованием следующих средств:**  [мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Чтобы создать запись компонента Database Mail, используйте:**  [Базы данных мастер конфигурации почты](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [Следующие шаги настройки компонента Database Mail](#FollowUp)  
+-   **Дальнейшие действия.**  [Дальнейшие действия по настройке компонента Database Mail](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -85,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. Следующие шаги настройки компонента Database Mail  
+##  <a name="FollowUp"></a> Дальнейшие действия: Следующие шаги настройки компонента Database Mail  
   
 -   [Создание профиля компонента Database Mail](create-a-database-mail-profile.md)  
   

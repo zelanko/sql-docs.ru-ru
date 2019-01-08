@@ -20,16 +20,16 @@ ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc70580de4f759a5adb6a501ac5dc200b62cba5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a189bd082bbf3d5f08080fccec48334165d5d15c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716662"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208323"
 ---
 # <a name="sqlpostinstallererror-function"></a>Функция SQLPostInstallerError
 **Соответствие стандартам**  
- Версия была введена: ODBC 3.0  
+ Представленные версии: ODBC 3.0  
   
  **Сводка**  
  **SQLPostInstallerError** предоставляет механизм для установки библиотеки драйвера или перевода для сообщения об ошибках для **ConfigDriver**, **ConfigDSN**, и **ConfigTranslator**  функций в очередь ошибок установщика. Приложения не используют этот API; они используют **SQLInstallerError** извлекаемой ошибки.  
@@ -39,8 +39,8 @@ ms.locfileid: "47716662"
 ```  
   
 RETCODE SQLPostInstallerError(  
-     DWORD    fErrorCode,  
-     LPSTR    szErrorMsg);  
+     DWORD    fErrorCode,  
+     LPSTR    szErrorMsg);  
 ```  
   
 ## <a name="arguments"></a>Аргументы  

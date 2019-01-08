@@ -1,7 +1,8 @@
 ---
-title: 'Краткое руководство: Подключение и запросы к хранилищу данных SQL Azure с помощью студии данных Azure | Документация Майкрософт'
-description: В этом кратком руководстве показано, как использовать Studio данных Azure для подключения к базе данных SQL и выполнить запрос
-ms.custom: tools|sos
+title: Краткое руководство. Подключение и запросы к хранилищу данных SQL Azure
+titleSuffix: Azure Data Studio
+description: В этом кратком руководстве показано, как использовать Studio данных Azure для подключения к хранилищу данных SQL Azure и выполнить запрос
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: bf26924bc7791cf5321c32b3c127abc52780740b
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355735"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030758"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Краткое руководство: Использование [!INCLUDE[name-sos](../includes/name-sos-short.md)] подключение и запрос данных в хранилище данных SQL Azure
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Краткое руководство. Используйте [!INCLUDE[name-sos](../includes/name-sos-short.md)] подключение и запрос данных в хранилище данных SQL Azure
 
 В этом кратком руководстве показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к хранилищу данных Azure SQL, а затем с помощью инструкций Transact-SQL для создания, вставки и выбора данных. 
 

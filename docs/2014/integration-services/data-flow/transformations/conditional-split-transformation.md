@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittrans.f1
@@ -16,12 +15,12 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b6cfae604393fa2fec1c8d3a22edf2c0379581b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d5c075898bc503a58c6b90641788d01e9b97d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814916"
 ---
 # <a name="conditional-split-transformation"></a>преобразование «Условное разбиение»
   Преобразование «Условное разбиение» может направлять строки данных в различные выходы в зависимости от содержимого данных. Применение преобразования «Условное разбиение» похоже на применение структур выбора CASE в языке программирования. Преобразование производит оценку выражений и на основе результатов направляет строку данных на указанный выход. Это преобразование также предоставляет выход по умолчанию, так что если строка не имеет совпадений, то она направляется в выход по умолчанию.  
@@ -47,7 +46,7 @@ ms.locfileid: "48073584"
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] содержат функции и операторы, которые можно использовать для создания выражений, которые оценивают и направляют входные данные. Дополнительные сведения см. в разделе [Выражения служб Integration Services (SSIS)](../../expressions/integration-services-ssis-expressions.md).  
   
- Преобразование «Условное разбиение» содержит `FriendlyExpression` пользовательское свойство. Это свойство может быть обновлено выражением свойства при загрузке пакета. Дополнительные сведения см. в разделах [Использование выражений свойств в пакетах](../../expressions/use-property-expressions-in-packages.md) и [Пользовательские свойства преобразований](transformation-custom-properties.md).  
+ Преобразование «Условное разбиение» содержит пользовательское свойство `FriendlyExpression`. Это свойство может быть обновлено выражением свойства при загрузке пакета. Дополнительные сведения см. в разделах [Использование выражений свойств в пакетах](../../expressions/use-property-expressions-in-packages.md) и [Пользовательские свойства преобразований](transformation-custom-properties.md).  
   
  Это преобразование содержит один вход, один (или более) выход и один выход ошибки.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48073584"
 -   [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Разбиение набора данных с помощью преобразования "Условное разбиение"](conditional-split-transformation.md)  
+ [Разбиение набора данных с помощью преобразования «Условное разбиение»](conditional-split-transformation.md)  
   
 ## <a name="see-also"></a>См. также  
  [Поток данных](../data-flow.md)   

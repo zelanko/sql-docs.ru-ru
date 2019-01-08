@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4cfbb4d3cfb62405546ef5ff955a52811ded41b5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031906"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202253"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Сценарии глобализации для служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "38031906"
   
 -   Файлы журнала будут содержать как английские, так и локализованные сообщения, при условии что вы установили языковой пакет на сервере Windows, на котором работают службы Analysis Services.  
   
--   Документы и инструменты, например [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] и [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], переводятся на следующие языки: китайский упрощенный, китайский традиционный, французский, немецкий, итальянский, японский, корейский, португальский (Бразилия), русский и испанский. Культура указывается в процессе установки.  
+-   Документация и инструменты, такие как [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] и [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], переведены на следующие языки: китайский (упрощенное письмо), китайский (традиционное письмо), французский, немецкий, итальянский, японский, корейский, русский, португальский (Бразилия) и испанский. Культура указывается в процессе установки.  
   
  Для многомерных моделей службы Analysis Services позволяют задать язык, параметры сортировки и преобразования независимо друг от друга по всей иерархии объектов.  Для табличных моделей можно добавлять только преобразования: язык и параметры сортировки наследуются операционной системой сервера виртуальных машин.  
   
@@ -57,14 +57,14 @@ ms.locfileid: "38031906"
 |**Capability**|**Табличный**|**Multidimensional**|  
 |[Языки и параметры сортировки (службы Analysis Services)](../analysis-services/languages-and-collations-analysis-services.md)|Наследуется от операционной системы|Наследуется, но с возможностью переопределять язык и параметры сортировки для основных объектов в иерархии модели.|  
 |Поддержка области преобразования|Заголовки и описания|Преобразования можно создавать для имен объектов, заголовков, идентификаторов и описания. Они также могут быть в любом сценарии и языке Юникода. Это верно даже в том случае, когда средства и среда используют другой язык. Например, в среде разработки, использующей английский язык и латинские параметры сортировки во всем стеке, можно включить в модель объект, в имени которого используются символы кириллицы.|  
-|Реализация поддержки преобразования|Используйте [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы создать файлы преобразования, которые сначала заполняются, а затем импортируются в модель.<br /><br /> Дополнительные сведения см. в разделе [Переводы в табличных моделях (службы Analysis Services)](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|Используйте[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы определить преобразования для заголовков, описаний и типов учетных записей для кубов, а также мер, измерений и атрибутов.<br /><br /> Дополнительные сведения см. в разделе [Переводы в многомерных моделях (службы Analysis Services)](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md). Урок по использованию этой функции можно найти в [Уроке 9. Определение перспектив и переводов](../analysis-services/lesson-9-defining-perspectives-and-translations.md) учебника [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|Реализация поддержки преобразования|Используйте [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы создать файлы преобразования, которые сначала заполняются, а затем импортируются в модель.<br /><br /> Дополнительные сведения см. в разделе [Переводы в табличных моделях (службы Analysis Services)](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|Используйте[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы определить преобразования для заголовков, описаний и типов учетных записей для кубов, а также мер, измерений и атрибутов.<br /><br /> Дополнительные сведения см. в разделе [Переводы в многомерных моделях (службы Analysis Services)](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md). Урок по использованию этой функции можно найти в [занятие 9: Определение перспектив и переводов](../analysis-services/lesson-9-defining-perspectives-and-translations.md) из [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] руководства.|  
 |Преобразование валюты|Недоступно.|Преобразование валюты выполняется с помощью специальных сценариев многомерных выражений, которые преобразуют меры, содержащие данные валюты. Вы можете создать скрипт многомерных выражений, использующий комбинацию данных и метаданных из измерений, атрибутов и групп мер для конвертации мер, содержащих данные в валюте, с помощью мастера бизнес-аналитики в [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] . См. раздел [Преобразования валюты (службы Analysis Services)](../analysis-services/currency-conversions-analysis-services.md).|  
   
 ## <a name="see-also"></a>См. также  
  [Поддержка параметров перевода в службах Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
  [Интернационализация для приложений Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Центр разработчиков go Global](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Приложения Windows Store записи с адаптивной конструкцией, основанной на языковых стандартах](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Разработка приложений для универсальной Windows на C# и XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Центр разработчиков Go Global](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Запись приложений Магазина Windows с адаптивной конструкцией, основанной на языковых стандартах](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Разработка универсальных приложений для Windows на C# и XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

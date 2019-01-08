@@ -11,12 +11,12 @@ ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ec1406b5259a68eadc821092bea3cccd10e032d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bd0382906d3ee56055cc026036816af64b55dc6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185824"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408980"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Настройка служб Integration Services на работу в качестве ресурса кластера
   Этот раздел содержит инструкции по настройке службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в качестве ресурса кластера, которые могут пригодиться клиентам, считающим, что преимущества данной конфигурации перевешивают ее недостатки. Тем не менее корпорация [!INCLUDE[msCoName](../includes/msconame-md.md)] не рекомендует настраивать службу [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в качестве ресурса кластера.  
@@ -101,7 +101,7 @@ ms.locfileid: "48185824"
   
 2.  Создайте на общем диске новую папку с именем **Packages** , которая будет служить хранилищем пакетов. Предоставьте подходящим группам и пользователям разрешения на просмотр содержимого и на запись в созданную папку.  
   
-3.  Откройте файл конфигурации с общего диска в редакторе текста или XML. Измените значение свойства `ServerName` имя виртуального [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , находится в той же группе ресурсов.  
+3.  Откройте файл конфигурации с общего диска в редакторе текста или XML. Измените значение элемента `ServerName`, указав имя виртуального [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], относящегося к той же группе ресурсов.  
   
 4.  Измените значение свойства `StorePath` полный путь к **пакетов** папки, созданной на общем диске на предыдущем шаге.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
@@ -13,18 +12,18 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 649d92089f8e46a9618e7416ee959d153385f1c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89a988a5d664e460a3148cf910c0be31ba07a5dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193674"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816336"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Рекомендации по обеспечению безопасности автономных баз данных
-  С автономными базами данных связаны некоторые уникальные угрозы, о которых администраторы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] должны знать (и принимать меры по их устранению). Большая часть угроз связана с `USER WITH PASSWORD` процессом проверки подлинности, который перемещает границу проверки подлинности из [!INCLUDE[ssDE](../../includes/ssde-md.md)] уровня на уровень базы данных.  
+  С автономными базами данных связаны некоторые уникальные угрозы, о которых администраторы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] должны знать (и принимать меры по их устранению). Большая часть угроз связана с процессом проверки подлинности `USER WITH PASSWORD`, который перемещает границу проверки подлинности с уровня компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на уровень базы данных.  
   
 ## <a name="threats-related-to-users"></a>Угрозы, связанные с пользователями  
- Пользователям автономной базы данных, имеющим `ALTER ANY USER` разрешения, такие как члены **db_owner** и **db_securityadmin** предопределенных ролей базы данных, можно предоставить доступ к базе данных без ведома или разрешения Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] администратора. Предоставление пользователям доступа к автономной базе данных увеличивает контактную зону возможной атаки на всем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Администраторы должны понимать это делегирования контроля доступа и должны быть очень осторожными при предоставлении пользователям в автономной базе данных `ALTER ANY USER` разрешение. Все владельцы базы данных имеют `ALTER ANY USER` разрешение. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны периодически проводить аудит пользователей в автономной базе данных.  
+ Пользователям автономной базы данных, имеющим `ALTER ANY USER` разрешения, такие как члены **db_owner** и **db_securityadmin** предопределенных ролей базы данных, можно предоставить доступ к базе данных без ведома или разрешения Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] администратора. Предоставление пользователям доступа к автономной базе данных увеличивает контактную зону возможной атаки на всем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Администраторы должны понимать это делегирования контроля доступа и должны быть очень осторожными при предоставлении пользователям в автономной базе данных разрешения `ALTER ANY USER`. Все владельцы базы данных обладают разрешением `ALTER ANY USER`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны периодически проводить аудит пользователей в автономной базе данных.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>Доступ к другим базам данных с использованием гостевой учетной записи  
  Владельцы и пользователи базы данных, имеющие разрешение `ALTER ANY USER`, могут создавать пользователей автономной базы данных. После соединения с автономной базой данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]пользователь автономной базы данных имеет доступ к другим базам данных в [!INCLUDE[ssDE](../../includes/ssde-md.md)], если в других базах данных включена **гостевая** учетная запись.  
@@ -46,7 +45,7 @@ CREATE USER Carlo WITH PASSWORD = '<same password>', SID = <SID from DB1>;
 GO  
 ```  
   
- Чтобы выполнить запрос между базами данных, необходимо задать `TRUSTWORTHY` параметра вызывающей базы данных. Например, если заданный выше пользователь (Carlo) находится в DB1 для выполнения запроса `SELECT * FROM db2.dbo.Table1;`, то параметр `TRUSTWORTHY` должен быть включен для базы данных DB1. Выполните следующий код, чтобы задать `TRUSTWORHTY` на.  
+ Для выполнения межбазового запроса необходимо установить параметр `TRUSTWORTHY` в вызывающей базе данных. Например, если заданный выше пользователь (Carlo) находится в DB1 для выполнения запроса `SELECT * FROM db2.dbo.Table1;`, то параметр `TRUSTWORTHY` должен быть включен для базы данных DB1. Чтобы включить параметр `TRUSTWORHTY`, выполните следующий код:  
   
 ```  
 ALTER DATABASE DB1 SET TRUSTWORTHY ON;  

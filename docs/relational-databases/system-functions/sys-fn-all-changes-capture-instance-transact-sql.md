@@ -21,12 +21,12 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 77da6b8a6b4b81f6f7d05e6a64c58834a01b65c0
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 5b2cb804718afc2eeed5aa174b2de51a33f5c3ea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072058"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409071"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Затем к результирующему набору добавляются битовые флаги для каждого столбца, указанного параметром @update_flag_list. Для **все изменения** оболочки, битовых флагов всегда равно NULL, если значение __CDC_OPERATION равно бы ", «I» или «UO». Если \__CDC_OPERATION имеет значение 'UN', флаг будет указано значение 1 или 0 в зависимости от того, является ли операция обновления изменен столбец.  
   
- Шаблон конфигурации «Instantiate CDC Wrapper TVFs for Schema» для системы отслеживания измененных данных показывает, как использовать хранимую процедуру sp_cdc_generate_wrapper_function, чтобы получить скрипты CREATE для всех функций-оболочек для функций запросов, определенных в схеме. Затем шаблон создает эти скрипты. Дополнительные сведения о шаблонах см. в разделе [обозреватель шаблонов](../../ssms/template/template-explorer.md).  
+ Шаблон конфигурации системы отслеживания измененных данных изменений «Создать экземпляр CDC Wrapper TVFs for Schema» показано, как использовать хранимую процедуру sp_cdc_generate_wrapper_function, чтобы получить скрипты CREATE для всех функций-оболочек для функций запросов, определенных в схеме. Затем шаблон создает эти скрипты. Дополнительные сведения о шаблонах см. в разделе [обозреватель шаблонов](../../ssms/template/template-explorer.md).  
   
 ## <a name="see-also"></a>См. также  
  [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

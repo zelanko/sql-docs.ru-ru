@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a9d7d8e73dc61afc90485c0d5cd36b3bb009fda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b16deb7ed2bd43cc45966d27b79729897e76405c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658952"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532362"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>sys.external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47658952"
 |признак_конца_поля|**nvarchar(10)**|Format_type = DELIMITEDTEXT, это признак конца поля.||  
 |string_delimiter|**nvarchar(10)**|Format_type = DELIMITEDTEXT, это разделитель строк.||  
 |date_format|**nvarchar(50)**|Format_type = DELIMITEDTEXT, это определяемые пользователем формат даты и времени.||  
-|use_type_default|**bit**|Format_type = текста с разделителями, указывает способ обработки отсутствующих значений, когда PolyBase Импорт данных из текстовых файлов HDFS в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 — хранения отсутствующих значений в строку «NULL».<br /><br /> 1 — сохраните отсутствующие значения как значение столбца по умолчанию.|  
+|use_type_default|**bit**|Format_type = текста с разделителями, указывает способ обработки отсутствующих значений, когда PolyBase Импорт данных из текстовых файлов HDFS в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 — хранения отсутствующих значений в строку «NULL».<br /><br /> 1 - сохраните отсутствующие значения как значение столбца по умолчанию.|  
 |serde_method|**nvarchar(255)**|Format_type = RCFILE, метод сериализации/десериализации.||  
 |признак_конца_строки|**nvarchar(10)**|Format_type = DELIMITEDTEXT, это символьная строка, которая завершает каждой строки во внешнем файле Hadoop.|Всегда «\n».|  
 |кодировка|**nvarchar(10)**|Format_type = DELIMITEDTEXT, этот способ кодирования для внешнего файла Hadoop.|Всегда 'UTF8'.|  

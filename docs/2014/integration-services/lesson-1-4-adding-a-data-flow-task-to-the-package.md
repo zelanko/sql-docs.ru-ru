@@ -1,28 +1,27 @@
 ---
-title: Шаг 4. Добавление задачи потока данных в пакет | Документы Майкрософт
+title: Шаг 4. Добавление задачи потока данных в пакет | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e36f658dc2742efba59d5a708fd5f626ea8a1609
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06c80bc188937ef66f72fef003a5f8c27830ad10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219454"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793946"
 ---
-# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Этап 4. Добавление задачи потока данных в пакет
+# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Шаг 4. Добавление задачи потока данных в пакет
   После того как были созданы диспетчеры соединений для исходных и целевых данных, предстоит добавить в пакет задачу потока данных. Задача потока данных включает в себя подсистему обработки потока данных, которая осуществляет передачу данных между источниками и назначениями, а также преобразует, очищает и изменяет данные при их перемещении. В задаче потока данных сосредоточена большая часть работы в процессе извлечения, преобразования и загрузки.  
   
 > [!NOTE]  
->  В службах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] поток данных и поток управления разделены.  
+>  В службах[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] поток данных и поток управления разделены.  
   
 ### <a name="to-add-a-data-flow-task"></a>Добавление задачи потока данных  
   
@@ -31,7 +30,7 @@ ms.locfileid: "48219454"
 2.  В окне **Панель элементов служб SSIS**разверните элемент **Избранное**и перетащите элемент **Задача потока данных** в область конструктора вкладки **Поток управления** .  
   
     > [!NOTE]  
-    >  Если область элементов служб SSIS недоступна, выберите в главном меню «Службы SSIS», а затем «Область элементов SSIS».  
+    >  Если область элементов служб SSIS недоступна, выберите в главном меню "Службы SSIS", а затем "Область элементов SSIS".  
   
 3.  На **поток управления** область конструктора, щелкните правой кнопкой мыши только что добавленного **задача потока данных**, нажмите кнопку **Переименовать**и измените имя на `Extract Sample Currency Data`.  
   

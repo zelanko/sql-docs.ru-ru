@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - recursive hierarchies [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b18ec687743d035e56ac3111f894add26f2b8f71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c62c04ccbfa6e4143277f09950f79e8b59a01f97
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198514"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810926"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Рекурсивные иерархии (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]рекурсивная иерархия — это производная иерархия, которая содержит рекурсивную связь. Рекурсивная связь возникает, когда у сущности есть атрибут, который базируется на самой сущности, на основе домена.  
@@ -55,14 +54,14 @@ ms.locfileid: "48198514"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание производной иерархии.|[Создание производной иерархии &#40;службы Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|  
-|Изменение имени существующей производной иерархии.|[Изменение имени производной иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
-|Удаление существующей производной иерархии.|[Удаление производной иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|Создание производной иерархии.|[Создание производной иерархии (службы Master Data Services)](create-a-derived-hierarchy-master-data-services.md)|  
+|Изменение имени существующей производной иерархии.|[Изменение имени производной иерархии (службы Master Data Services)](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|Удаление существующей производной иерархии.|[Удаление производной иерархии (службы Master Data Services)](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Атрибуты на основе домена &#40;службы Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Атрибуты на основе домена (службы Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [Производные иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+-   [Производные иерархии (службы Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
   

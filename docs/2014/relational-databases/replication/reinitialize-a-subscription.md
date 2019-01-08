@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
@@ -15,12 +14,12 @@ ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 738b9179143b4c6b0c986f7f6a16464980b60f8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130351"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771396"
 ---
 # <a name="reinitialize-a-subscription"></a>Повторная инициализация подписки
   В данном разделе описывается повторная инициализация подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Отдельные подписки можно помечать для повторной инициализации, чтобы во время следующей синхронизации применялся новый моментальный снимок.  
@@ -174,9 +173,9 @@ ms.locfileid: "48130351"
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> .  
   
     > [!NOTE]  
-    >  Если этот метод возвращает `false`, либо на подписку на шаге 2 были неверно определены свойства, либо подписка по запросу не существует.  
+    >  Если этот метод возвращает значение `false`, значит, на шаге 2 были неправильно заданы свойства подписки либо подписка по запросу не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> . Этот метод помечает подписку для повторной инициализации.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A>. Этот метод помечает подписку для повторной инициализации.  
   
 5.  Выполните синхронизацию подписки по запросу. Дополнительные сведения см. в статье [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -189,9 +188,9 @@ ms.locfileid: "48130351"
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> .  
   
     > [!NOTE]  
-    >  Если этот метод возвращает `false`, либо на подписку на шаге 2 были неверно определены свойства, либо принудительная подписка не существует.  
+    >  Если этот метод возвращает значение `false`, значит, на шаге 2 были неправильно заданы свойства подписки либо принудительная подписка не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Этот метод помечает подписку для повторной инициализации.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A>. Этот метод помечает подписку для повторной инициализации.  
   
 5.  Выполните синхронизацию принудительной подписки. Дополнительные сведения см. в статье [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
@@ -204,9 +203,9 @@ ms.locfileid: "48130351"
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> .  
   
     > [!NOTE]  
-    >  Если этот метод возвращает `false`, либо на подписку на шаге 2 были неверно определены свойства, либо подписка по запросу не существует.  
+    >  Если этот метод возвращает значение `false`, значит, на шаге 2 были неправильно заданы свойства подписки либо подписка по запросу не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> . Передайте значение `true`, чтобы передать изменения на подписчике перед повторной инициализацией, или значение `false`, чтобы выполнить повторную инициализацию с потерей всех изменений, ожидающих на подписчике. Этот метод помечает подписку для повторной инициализации.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A>. Передайте значение `true`, чтобы передать изменения на подписчике перед повторной инициализацией, или значение `false`, чтобы выполнить повторную инициализацию с потерей всех изменений, ожидающих на подписчике. Этот метод помечает подписку для повторной инициализации.  
   
     > [!NOTE]  
     >  Нельзя передать изменения, если срок действия подписки истек. Дополнительные сведения см. в статье [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
@@ -222,14 +221,14 @@ ms.locfileid: "48130351"
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> .  
   
     > [!NOTE]  
-    >  Если этот метод возвращает `false`, либо на подписку на шаге 2 были неверно определены свойства, либо принудительная подписка не существует.  
+    >  Если этот метод возвращает значение `false`, значит, на шаге 2 были неправильно заданы свойства подписки либо принудительная подписка не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> . Передайте значение `true`, чтобы передать изменения на подписчике перед повторной инициализацией, или значение `false`, чтобы выполнить повторную инициализацию с потерей всех изменений, ожидающих на подписчике. Этот метод помечает подписку для повторной инициализации.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A>. Передайте значение `true`, чтобы передать изменения на подписчике перед повторной инициализацией, или значение `false`, чтобы выполнить повторную инициализацию с потерей всех изменений, ожидающих на подписчике. Этот метод помечает подписку для повторной инициализации.  
   
     > [!NOTE]  
     >  Нельзя передать изменения, если срок действия подписки истек. Дополнительные сведения см. в статье [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
   
-5.  Выполните синхронизацию принудительной подписки. Дополнительные сведения см. в статье [Синхронизация принудительной подписки](synchronize-a-push-subscription.md).  
+5.  Выполните синхронизацию принудительной подписки. Дополнительные сведения см. в статье [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
 ###  <a name="PShellExample"></a> Примеры (объекты RMO)  
  В следующем примере повторно инициализируется подписка по запросу на публикацию транзакций.  

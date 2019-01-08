@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], copying objects
@@ -16,12 +15,12 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43378e9129b40324144a2f20f2039f6f376fa39d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c1ebef7107ed58629502457bdc81bfe3e07f337
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200524"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805676"
 ---
 # <a name="copy-package-objects"></a>Копирование объектов пакета
   В этом разделе описано, как копировать элементы потока управления, потока данных и диспетчеров соединения внутри пакета или между пакетами.  
@@ -37,7 +36,7 @@ ms.locfileid: "48200524"
 4.  Выберите поток управления или элементы потока данных для копирования. Элементы можно выбирать по одному, нажав клавишу Shift и щелкая нужный элемент, либо выбрать группу элементов, перетаскивая указатель мыши через необходимые элементы.  
   
     > [!IMPORTANT]  
-    >  Управление очередностью и пути, соединяющие элементы, при выборе двух соединяемых ими элементов автоматически не выбираются. Чтобы скопировать упорядоченный рабочий процесс — сегмент потока управления или потока данных, — убедитесь, что были скопированы ограничение очередностью и пути.  
+    >  Управление очередностью и пути, соединяющие элементы, при выборе двух соединяемых ими элементов автоматически не выбираются. Чтобы скопировать упорядоченный рабочий процесс (сегмент потока управления или потока данных), убедитесь, что были скопированы ограничение очередностью и пути.  
   
 5.  Щелкните правой кнопкой мыши выбранный элемент и выберите **Копировать**.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48200524"
   
 6.  Щелкните правой кнопкой мыши **Диспетчеры соединений** и выберите **Вставить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поток управления](control-flow/control-flow.md)   
  [Поток данных](data-flow/data-flow.md)   
  [Соединения в службах Integration Services (SSIS)](connection-manager/integration-services-ssis-connections.md)   

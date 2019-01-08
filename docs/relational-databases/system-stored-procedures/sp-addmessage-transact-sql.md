@@ -18,12 +18,12 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8b3f01c833e725fc807de11c15e39142509626
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b5ba2a19505d0d7a1493b997eda7d12f3a588f7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668332"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524109"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  [  **@severity =** ]*серьезности*  
  Уровень серьезности ошибки. *уровень серьезности* — **smallint** значение по умолчанию NULL. Допустимые уровни: от 1 до 25. Дополнительные сведения о степенях серьезности см. в разделе [Степени серьезности ошибок компонента Database Engine](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
- [  **@msgtext =** ] **"***msg***"**  
+ [  **@msgtext =** ] **"**_msg_**"**  
  Текст сообщения об ошибке. *msg* — **nvarchar(255)** значение по умолчанию NULL.  
   
- [  **@lang =** ] **"***языка***"**  
+ [  **@lang =** ] **"**_языка_**"**  
  Язык данного сообщения. *Язык* — **sysname** значение по умолчанию NULL. Поскольку несколько языков, которые могут быть установлены на одном сервере, *языка* указывает язык, на котором написано каждое сообщение. Когда *языка* — этот параметр опущен, язык — язык по умолчанию для сеанса.  
   
  [  **@with_log =** ] { **"** TRUE **"** | **'FALSE'** }  
@@ -61,7 +61,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  Если сообщение заносится в журнал приложений Windows, оно также заносится и в журнал ошибок компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- [ **@replace** *=* ] **"***замените***"**  
+ [ **@replace** *=* ] **"**_замените_**"**  
  Если указано строковое *замените*, сообщение об ошибке существующих перезаписывается новые сообщения текстом и уровнем серьезности. *Замените* — **varchar(7)** значение по умолчанию NULL. Этот параметр должен быть задан, если *msg_id* уже существует. Если перезаписать сообщение на американском английском, Сообщение на английском языке, уровень серьезности будет переопределен для всех сообщений на других языках, которые имеют одинаковые *msg_id*.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

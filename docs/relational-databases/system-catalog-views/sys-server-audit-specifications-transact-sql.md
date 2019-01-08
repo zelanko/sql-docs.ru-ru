@@ -20,12 +20,12 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b8b642797808b023e200f1f59ae162f09cea514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 061636210c76bace7ae483e277c624bb291cdeb8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780322"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510000"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47780322"
 |**server_specification_id**|**Int**|Идентификатор **server_specification**.|  
 |**create_date**|**DateTime**|Дата создания спецификации аудита сервера.|  
 |**modified_date**|**DateTime**|Дата последнего изменения спецификации аудита сервера.|  
-|**is_state_enabled**|**tinyint**|Состояние спецификации аудита:<br /><br /> 0 — ОТКЛЮЧЕН.<br /><br /> 1 — ВКЛЮЧЕН|  
+|**is_state_enabled**|**tinyint**|Состояние спецификации аудита:<br /><br /> 0 — ОТКЛЮЧЕНО<br /><br /> 1 - ВКЛЮЧЕН|  
 |**audit_GUID**|**uniqueidentifier**|Идентификатор GUID аудита, содержащего эту спецификацию. Используется в процессе перечисления спецификаций аудита рядового сервера при запуске сервера.|  
   
 ## <a name="permissions"></a>Разрешения  

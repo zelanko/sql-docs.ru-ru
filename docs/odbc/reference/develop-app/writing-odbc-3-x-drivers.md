@@ -16,12 +16,12 @@ ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77a94c7505b5ab221fee4896e91f9b26850669df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795658"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518551"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Написание драйверов ODBC 3.x
 В следующей таблице показаны функции поддержки в ODBC 3. *x* драйвер и приложение ODBC и сопоставления, выполняемые диспетчером драйверов при вызове функций для работы с ODBC 3. *x* драйвера.  
@@ -106,9 +106,9 @@ ms.locfileid: "47795658"
 |**SQLTables**|Да|Да|Нет|  
 |**SQLTransact**|Нет|Нет [1]|Да|  
   
- [1] Эта функция является устаревшей в ODBC 3. *x*. ODBC 3. *x* приложения не должны использовать эту функцию. Тем не менее приложения Open Group или совместимых с ISO CLI можно вызвать эту функцию.  
+ [1] Эта функция является устаревшей в ODBC 3. *x*. ODBC 3. *x* приложения не должны использовать эту функцию. Тем не менее Open Group или приложение, совместимое с ISO CLI можно вызвать эту функцию.  
   
- [2] ODBC 3. *x* приложения должны использовать **SQLBindParameter** вместо **SQLBindParam**. Тем не менее приложения Open Group или совместимых с ISO CLI можно вызвать эту функцию.  
+ [2] ODBC 3. *x* приложения должны использовать **SQLBindParameter** вместо **SQLBindParam**. Тем не менее Open Group или приложение, совместимое с ISO CLI можно вызвать эту функцию.  
   
  [3] модули записи драйвер следует отметить, что ODBC 2. *x* SQL_COLUMN_PRECISION SQL_COLUMN_SCALE и SQL_COLUMN_LENGTH должен поддерживаться с атрибуты столбца **SQLColAttribute**.  
   

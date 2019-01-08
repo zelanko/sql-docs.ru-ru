@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.indexcolumns
@@ -12,12 +12,12 @@ ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2cecd9aced6b4135c581910e5cbfb3a23d2aefd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21e9b4b0f05b2728ac42bbba96a6227872ceaeec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168624"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818646"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Столбцы индекса» (визуальные инструменты для баз данных)
   Это диалоговое окно используется для выбора столбцов для индекса и установки порядка их сортировки. Индекс может использовать один или несколько столбцов, причем каждый столбец может быть отсортирован по возрастанию или убыванию. Чтобы открыть это диалоговое окно, в диалоговом окне **Индексы/Ключи** нажмите кнопку с многоточием для строки **Столбцы** в разделе **Общие** .  

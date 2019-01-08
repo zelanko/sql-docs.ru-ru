@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI provider [SMO]
@@ -17,17 +15,17 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc42cd7c5f7670ed3ece73ee424de03891ed5781
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211664"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762206"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Управление службами и сетевыми настройками с помощью поставщика WMI
-  Поставщик WMI представляет собой опубликованный интерфейс, который используется [!INCLUDE[msCoName](../../../includes/msconame-md.md)] консоли управления (MMC) для управления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] службами и сетевыми протоколами. В SMO <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> представляет объект поставщика WMI.  
+  Поставщик WMI представляет собой опубликованный интерфейс, используемый консолью управления (MMC) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] для управления службами и сетевыми протоколами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В SMO поставщик WMI представляется объектом <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> Действует независимо от соединения, установленного <xref:Microsoft.SqlServer.Management.Smo.Server> объект в экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]и использует учетные данные Windows для подключения к службе WMI.  
+ Объект <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> действует независимо от соединения, установленного объектом <xref:Microsoft.SqlServer.Management.Smo.Server> с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], и использует учетные данные Windows для соединения со службой WMI.  
   
 ## <a name="example"></a>Пример  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

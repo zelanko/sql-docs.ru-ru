@@ -20,16 +20,16 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c1f199d5f3318181aa03499c31d9597f2348fec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d65b7f31010aeb768f7b04c06753f185d3cc792f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655382"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210100"
 ---
 # <a name="configdsn-function"></a>Функция ConfigDSN
 **Соответствие стандартам**  
- Версии представлены: ODBC 1.0  
+ Представленные версии: ODBC 1.0  
   
  **Сводка**  
  **ConfigDSN** добавляет, изменяет или удаляет сведения о системе источников данных. Он может запросить у пользователя для сведений о соединении. Он может находиться в DLL-Библиотека драйвера или отдельные DLL-файлов установки.  
@@ -56,7 +56,7 @@ BOOL ConfigDSN(
   
  ODBC_CONFIG_DSN: Настройка (изменить) существующего источника данных.  
   
- Значение ODBC_REMOVE_DSN: Удаление существующего источника данных.  
+ ЗНАЧЕНИЕ ODBC_REMOVE_DSN: Удаление существующего источника данных.  
   
  *lpszDriver*  
  [Вход] Описание драйвера (обычно имя связанного СУБД) предоставляемые пользователям вместо имени физического драйвера.  

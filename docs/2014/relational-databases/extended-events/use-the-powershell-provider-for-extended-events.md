@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
@@ -15,17 +14,17 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f500b1805d4af2e7b13ad74b439fff72d667060f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0a7393a3b0547d37c5f69f4e75915f8706acf12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185084"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752846"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Использование поставщика PowerShell для расширенных событий
   Управлять расширенными событиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с помощью поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Вложенная папка XEvent находится на диске SQLSERVER. Получить доступ к папке можно одним из следующих способов.  
   
--   В командной строке введите `sqlps`, и нажмите клавишу ВВОД. Введите `cd xevent` и нажмите клавишу ВВОД. После этого можно использовать **компакт-диска** и `dir` команды (или **Set-Location** и **Get-Childitem** командлетов) перейдите к имени сервера и имя экземпляра.  
+-   В командной строке введите команду `sqlps` и нажмите клавишу ВВОД. Введите `cd xevent` и нажмите клавишу ВВОД. После этого можно использовать **компакт-диска** и `dir` команды (или **Set-Location** и **Get-Childitem** командлетов) перейдите к имени сервера и имя экземпляра.  
   
 -   В обозревателе объектов разверните узел имени экземпляра, разверните узел **Управление**, щелкните правой кнопкой мыши **Расширенные события**и выберите команду **Запустить PowerShell**. Оболочка PowerShell будет запущена в следующем пути:  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48185084"
   
 -   Скрипты должны сохраняться с расширением PS1.  
   
--   Политика выполнения PowerShell должна разрешать выполнения скриптов. Чтобы задать политику выполнения, воспользуйтесь командлетом **Set-Executionpolicy** . (Дополнительные сведения, введите `get-help set-executionpolicy -detailed`, и нажмите клавишу ВВОД.)  
+-   Политика выполнения PowerShell должна разрешать выполнения скриптов. Чтобы задать политику выполнения, воспользуйтесь командлетом **Set-Executionpolicy** . (Для получения дополнительных сведений введите `get-help set-executionpolicy -detailed` и нажмите клавишу ВВОД.)  
   
  Следующий скрипт создает новый сеанс с именем «TestSession».  
   

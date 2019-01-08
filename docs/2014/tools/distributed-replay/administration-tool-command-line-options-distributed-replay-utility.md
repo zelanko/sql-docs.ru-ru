@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e961628f9cae062861b61bf46569331cd42da61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f53c456832e89aa96c0f7c9a1decd9fabbe96360
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087020"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815966"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>Параметры командной строки средства администрирования (программа распределенного воспроизведения)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Средство администрирования распределенного воспроизведения `DReplay.exe`, это средство командной строки, которое можно использовать для взаимодействия с контроллером распределенного воспроизведения. При помощи средства администрирования можно инициировать операции на контроллере, наблюдать за ними и отменять.  
@@ -59,13 +59,13 @@ Usage:
   
  Подробные сведения о синтаксисе, включая командные аргументы и примеры, см. в следующих разделах:  
   
--   [Параметр предварительной обработки &#40;распределенного воспроизведения средство администрирования&#41;](preprocess-option-distributed-replay-administration-tool.md)  
+-   [Параметр предварительной обработки (средство администрирования распределенного воспроизведения)](preprocess-option-distributed-replay-administration-tool.md)  
   
--   [Параметр воспроизведения &#40;распределенного воспроизведения средство администрирования&#41;](replay-option-distributed-replay-administration-tool.md)  
+-   [Параметр воспроизведения (средство администрирования распределенного воспроизведения)](replay-option-distributed-replay-administration-tool.md)  
   
--   [Параметр состояния &#40;распределенного воспроизведения средство администрирования&#41;](status-option-distributed-replay-administration-tool.md)  
+-   [Параметр состояния (средство администрирования распределенного воспроизведения)](status-option-distributed-replay-administration-tool.md)  
   
--   [Параметр отмены &#40;распределенного воспроизведения средство администрирования&#41;](cancel-option-distributed-replay-administration-tool.md)  
+-   [Параметр отмены (средство администрирования распределенного воспроизведения)](cancel-option-distributed-replay-administration-tool.md)  
   
  Удаленные вызовы процедур (RPC) воспроизводятся как RPC, а не события языка.  
   

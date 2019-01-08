@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -29,12 +28,12 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0b69773070201021390926e6da1a7fdd20d8fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137292"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813916"
 ---
 # <a name="programmatically-monitor-replication"></a>Наблюдение за репликацией программным образом
   Монитор репликации — это графическое средство, позволяющее осуществлять мониторинг топологии репликации. К данным мониторинга можно обращаться программным путем с помощью хранимых процедур репликации [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO. Эти объекты позволяют программировать следующие задачи:  
@@ -173,7 +172,7 @@ ms.locfileid: "48137292"
   
 2.  Получите объект <xref:Microsoft.SqlServer.Replication.PublisherMonitor> одним из следующих способов.  
   
-    -   Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Задайте для издателя свойство <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> . Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, было неправильно задано имя издателя, либо публикация не существует.  
+    -   Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Задайте для издателя свойство <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> . Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение `false`, это означает, что было неправильно задано имя издателя или такой публикации не существует.  
   
     -   Из коллекции <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> , доступ к которой был получен с помощью свойства <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> существующего объекта <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> .  
   
@@ -269,13 +268,13 @@ ms.locfileid: "48137292"
   
         |Значение|Описание|  
         |-----------|-----------------|  
-        |1|`expiration` — следит за приближающимся истечением срока подписки на публикации транзакций.|  
-        |2|`latency` — следит за производительностью подписки на публикации транзакций.|  
-        |4|`mergeexpiration` — следит за приближающимся истечением срока подписки на публикации слиянием.|  
+        |1|`expiration` следит за приближающимся истечением срока подписки на публикации транзакций.|  
+        |2|`latency` следит за производительностью подписки на публикации транзакций.|  
+        |4|`mergeexpiration` следит за приближающимся истечением срока подписки на публикации слиянием.|  
         |5|`mergeslowrunduration` — следит за продолжительностью синхронизаций слиянием через соединения с низкой пропускной способностью (коммутируемые).|  
-        |6|`mergefastrunduration` — следит за продолжительностью синхронизаций слиянием через соединения с высокой пропускной способностью (локальная сеть).|  
+        |6|`mergefastrunduration` следит за длительностью синхронизации слиянием через соединения с высокой пропускной способностью (локальная сеть).|  
         |7|`mergefastrunspeed` — следит за частотой синхронизаций слиянием через соединения с высокой пропускной способностью (локальная сеть).|  
-        |8|`mergeslowrunspeed` — следит за частотой синхронизации слиянием через соединения с низкой пропускной способностью (коммутируемые).|  
+        |8|`mergeslowrunspeed` — следит за частотой синхронизаций слиянием через соединения с низкой пропускной способностью (коммутируемые).|  
   
     -   *enable* - <xref:System.Boolean> , которое указывает, включен ли этот показатель для данной публикации.  
   

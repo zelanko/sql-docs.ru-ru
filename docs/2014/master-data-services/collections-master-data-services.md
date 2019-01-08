@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7982f81d5046c0d3c9f23b4357f5b0364603c222
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3533108054d1c65e73f3167d68a05727e95fa2d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203634"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792026"
 ---
 # <a name="collections-master-data-services"></a>Коллекции (службы основных данных)
   Коллекция — это группа конечных или консолидированных элементов из одной сущности. Коллекции используются, когда нет необходимости в полной иерархии и нужно просмотреть разные группы элементов для отчетов или анализа или когда необходимо создать классификацию.  
@@ -46,12 +45,12 @@ ms.locfileid: "48203634"
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Включение сущности для явных иерархий и коллекций.|[Активация сущности для явных иерархий и коллекций &#40;службы Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Создание новой коллекции.|[Создание коллекции &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
-|Добавление элементов в существующую коллекцию.|[Добавление элементов в коллекцию &#40;службы Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|Создание новой коллекции.|[Создание коллекции (службы Master Data Services)](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|Добавление элементов в существующую коллекцию.|[Добавление элементов в коллекцию (службы Master Data Services)](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Явные иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [Явные иерархии (службы Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
 -   [Экспорт данных &#40;службы Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetInstances
@@ -18,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7e35b7b2a3551882ce8b244c5e93aa8ad107b8fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128594"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795042"
 ---
 # <a name="localdbgetinstances-function"></a>Функция LocalDBGetInstances
   Возвращает все экземпляры SQL Server Express LocalDB с данной версией.  
@@ -42,7 +40,7 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Параметры  
  *pInstanceNames*  
- [Выход] Функция возвращает значения именованных экземпляров LocalDB и экземпляров LocalDB по умолчанию на рабочей станции пользователя.  
+ [Выход] Когда эта функция возвращает значение, содержащий имена и именованные и экземпляров LocalDB на рабочей станции пользователя по умолчанию.  
   
  *lpdwNumberOfInstances*  
  [Вход/Выход] На входе содержит число ячеек для имен экземпляров в буфере *pInstanceNames* . На выходе содержит количество экземпляров LocalDB, найденных на рабочей станции пользователя.  

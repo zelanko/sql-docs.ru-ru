@@ -20,16 +20,16 @@ ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc2ab4b2e97b9e1a83e0b00404010195b08f0dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654932"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502550"
 ---
 # <a name="sqlrowcount-function"></a>Функция SQLRowCount
 **Соответствие стандартам**  
- Версия была введена: ODBC 1.0 соответствует стандартам: ISO-92  
+ Представленные версии: Соответствие стандартам 1.0 ODBC: ISO-92  
   
  **Сводка**  
  **SQLRowCount** возвращает количество строк, затронутых **обновление**, **вставить**, или **удалить** оператор; SQL_ADD SQL_UPDATE_BY_BOOKMARK или SQL_ Операция DELETE_BY_BOOKMARK **SQLBulkOperations**; или выполнении операций SQL_UPDATE и SQL_DELETE **SQLSetPos**.  
@@ -48,7 +48,7 @@ SQLRETURN SQLRowCount(
  [Вход] Дескриптор инструкции.  
   
  *RowCountPtr*  
- [Выход] Указывает на буфер, в которую будет возвращено количество строк. Для **обновление**, **вставить**, и **удалить** инструкций для операций в SQL_ADD SQL_UPDATE_BY_BOOKMARK и SQL_DELETE_BY_BOOKMARK  **SQLBulkOperations**и для операций в SQL_UPDATE или SQL_DELETE **SQLSetPos**, значение, возвращаемое в **RowCountPtr* — либо количество строк, затронутых запрос или – 1, если количество затронутых строк не доступен.  
+ [Выход] Указывает на буфер, в которую будет возвращено количество строк. Для **обновление**, **вставить**, и **удалить** инструкций для операций в SQL_ADD SQL_UPDATE_BY_BOOKMARK и SQL_DELETE_BY_BOOKMARK  **SQLBulkOperations**и для операций в SQL_UPDATE или SQL_DELETE **SQLSetPos**, значение, возвращаемое в **RowCountPtr* — либо количество строк, затронутых запрос или -1, если количество затронутых строк не доступен.  
   
  Когда **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, **SQLSetPos или SQLMoreResults** называется SQL_DIAG_ROW_COUNT поля структуры диагностических данных задается количество строк и число строк кэшируется образом зависит от реализации. **SQLRowCount** возвращает значение счетчика кэшированной строке. Значение счетчика кэшированной строке является допустимым, пока не будет снова установить значение подготовленного или выделенное состояние дескриптора инструкции, инструкция будет выполнена повторно, или **SQLCloseCursor** вызывается. Обратите внимание, что если функция была вызвана, поскольку поле SQL_DIAG_ROW_COUNT была задана, значение, возвращаемое функцией **SQLRowCount** может отличаться от значения в поле SQL_DIAG_ROW_COUNT, так как поле SQL_DIAG_ROW_COUNT сбрасывается до 0 по вызову функции.  
   

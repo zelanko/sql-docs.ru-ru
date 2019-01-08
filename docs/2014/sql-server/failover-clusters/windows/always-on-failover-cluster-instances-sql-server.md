@@ -20,20 +20,20 @@ ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6bdc16e4bd09a0f5e93b0335cb8383040e778dc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff76632459f25981041e5585cd9cbb3dbcf906c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220964"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349566"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)
-  В рамках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn экземпляры отказоустойчивой кластеризации AlwaysOn используют функциональные возможности отказоустойчивой кластеризации Windows Server (WSFC) для обеспечения высокого уровня доступности локальных ресурсов за счет избыточности на уровне экземпляра сервера — *экземпляра отказоустойчивого кластера* (FCI). Экземпляр отказоустойчивого кластера (FCI) является единственным экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , установленным на всех узлах отказоустойчивой кластеризации Windows Server (WSFC) и, возможно, в нескольких подсетях. Экземпляр отказоустойчивого кластера выглядит в сети как экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , запущенный на одном компьютере, но экземпляр отказоустойчивого кластера обеспечивает отработку отказа с переходом одного узла WSFC на другой узел, если текущий узел становится недоступным.  
+  В рамках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn экземпляры отказоустойчивой кластеризации AlwaysOn используют функциональные возможности отказоустойчивой кластеризации Windows Server (WSFC) для обеспечения высокого уровня доступности локальных ресурсов за счет избыточности на уровне экземпляра сервера — *экземпляра отказоустойчивого кластера* (FCI). Экземпляр отказоустойчивого кластера (FCI) является единственным экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , установленным на всех узлах отказоустойчивой кластеризации Windows Server (WSFC) и, возможно, в нескольких подсетях. Экземпляр отказоустойчивого кластера выглядит в сети как экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , запущенный на одном компьютере, но экземпляр отказоустойчивого кластера обеспечивает отработку отказа с переходом одного узла WSFC на другой узел, если текущий узел становится недоступным.  
   
  Экземпляр отказоустойчивого кластера (FCI) может эффективно использовать [Группы доступности AlwaysOn](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) для выполнения удаленного аварийного восстановления на уровне базы данных. Дополнительные сведения см. в разделе [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
->  Начиная с версии [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], экземпляры отказоустойчивого кластера AlwaysOn поддерживают кластерные общие тома (CSV) как в [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)], так и в [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Дополнительные сведения о CSV-файле см. в разделе [Основные сведения о кластерных общих томах в отказоустойчивом кластере](http://technet.microsoft.com/library/dd759255.aspx).  
+>  Начиная с версии [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], экземпляры отказоустойчивого кластера AlwaysOn поддерживают кластерные общие тома (CSV) как в [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)], так и в [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Дополнительные сведения о CSV-файле см. в разделе [Основные сведения о кластерных общих томах в отказоустойчивом кластере](https://technet.microsoft.com/library/dd759255.aspx).  
   
  **В этом разделе.**  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48220964"
 |----------------------------|---------------|  
 |Описывает, как установить новый FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Создание нового отказоустойчивого кластера SQL Server (; Программа установки);](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Описывает, как выполнить обновление до отказоустойчивого кластера [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Обновление отказоустойчивого кластера SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Описание основных понятий отказоустойчивых кластеров Windows, а также ссылки на связанные с ними задачи.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [обзор отказоустойчивых кластеров](http://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [обзор отказоустойчивых кластеров](http://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Описание основных понятий отказоустойчивых кластеров Windows, а также ссылки на связанные с ними задачи.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]. [Обзор отказоустойчивых кластеров](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Обзор отказоустойчивых кластеров](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Описывает различия в основных понятиях между узлами в экземпляре отказоустойчивого кластера и репликами внутри группы доступности, а также содержит рекомендации по использованию экземпляра отказоустойчивого кластера для размещения реплики для группы доступности.|[Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

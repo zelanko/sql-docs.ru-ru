@@ -11,12 +11,12 @@ ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a8d8a5238caa09d9b4a3d85d014b2891c3f427e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45acf7bef608bb23d697fc18381872f741cc2e21
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145914"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401369"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Изучение модели дерева принятия решений (учебник по интеллектуальному анализу данных — начальный уровень)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Алгоритм дерева принятия решений прогнозирует, какие столбцы влияют на решение о приобретении велосипеда на основании оставшихся столбцов в обучающем наборе.  
@@ -64,7 +64,7 @@ ms.locfileid: "48145914"
   
  Поскольку при создании структуры и модели была включена детализация, из вариантов модели и структуры интеллектуального анализа данных можно получить подробные сведения, в том числе для столбцов, не включенных в модель интеллектуального анализа данных (например, столбцов emailAddress, FirstName).  
   
- Дополнительные сведения см. в разделе [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+ Дополнительные сведения см. в разделе [Запросы детализации (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 #### <a name="to-drill-through-to-case-data"></a>Углубленная детализация данных вариантов  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48145914"
  [Изучение модели кластеризации &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Вкладка «дерево» решение &#40;просмотра модели интеллектуального анализа данных&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
  [Вкладка «Сеть зависимостей» &#40;просмотра модели интеллектуального анализа данных&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   
  [Просмотр модели с помощью средства просмотра деревьев (Майкрософт)](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  

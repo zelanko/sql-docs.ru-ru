@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], location paths
@@ -17,12 +15,12 @@ ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d70223df27f8f75c6e3a4d354d8f57f9ee8f150a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7450810f45d81dd1530699677a80a052840ed867
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124986"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806006"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Задание проверки узла в пути доступа (SQLXML 4.0)
   Проверка узла задает тип узла, выбранного на шаге доступа. Каждая ось (`child`, `parent`, `attribute` или `self`) имеет тип узла участника. Для `attribute` является основным типом узла оси,  **\<атрибут >**. Для `parent`, `child`, и `self` является основным типом узла оси,  **\<элемент >**.  
@@ -30,12 +28,12 @@ ms.locfileid: "48124986"
 > [!NOTE]  
 >  Шаблон проверки узла * (например `child::*`) не поддерживается.  
   
-## <a name="node-test-example-1"></a>Проверка узла: Пример 1  
+## <a name="node-test-example-1"></a>Проверка узла. Пример 1  
  Путь к расположению `child::Customer` выбирает  **\<клиента >** дочерние элементы узла контекста.  
   
  В следующем примере элемент `child` является осью, а `Customer` является проверкой узла. Основным типом узла для `child` ось является  **\<элемент >**. Таким образом, проверка узла возвращает значение TRUE Если  **\<клиента >** узел является  **\<элемент >** узла. Если узел контекста не имеет  **\<клиента >** дочерних элементов, возвращается пустой набор узлов.  
   
-## <a name="node-test-example-2"></a>Проверка узла: Пример 2  
+## <a name="node-test-example-2"></a>Проверка узла. Пример 2  
  Путь к расположению `attribute::CustomerID` выбирает **CustomerID** атрибут узла контекста.  
   
  В этом примере элемент `attribute` является осью, а `CustomerID` является проверкой узла. Тип узла участника `attribute` ось является  **\<атрибут >**. Таким образом, проверка узла возвращает значение TRUE Если **CustomerID** —  **\<атрибут >** узла. Если узел контекста не имеет **CustomerID**, возвращается пустой набор узлов.  

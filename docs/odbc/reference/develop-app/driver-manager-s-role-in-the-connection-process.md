@@ -16,12 +16,12 @@ ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f69ae2b8c00f062d3650606de071a4d07eefab4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af81fd6c4b0b56474497a829985a754ccf88f3ff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607252"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408851"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>Диспетчер драйверов&#39;s роль в процессе подключения
 Помните, что приложения не вызывают функции драйверов напрямую. Вместо этого они вызывают функции диспетчера драйверов с тем же именем, и диспетчер драйверов вызывает функции драйвера. Обычно это происходит почти мгновенно. Например, приложение вызывает **SQLExecute** диспетчера драйверов и после проверки несколько ошибок, диспетчер драйверов вызывает **SQLExecute** в драйвере.  

@@ -15,12 +15,12 @@ ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b5db12f6c4fb6fcba85b4ed6e59b0434ce3697d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 3a50b9d8c1f22f23f3533240b2543ef981fef8e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560471"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535203"
 ---
 # <a name="rds-tutorial-vbscript"></a>Учебник по RDS (VBScript)
 Это учебник по RDS, написанных на Visual Basic Scripting Edition. Описание цели этого руководства, см. в разделе [учебник по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "51560471"
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом руководстве [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) и [RDS. Пространство данных](../../../ado/reference/rds-api/dataspace-object-rds.md) создаются во время разработки, то есть они определяются с помощью тегов object, следующим образом: `<OBJECT>...</OBJECT>`. В качестве альтернативы они могут создаваться во время выполнения с [метод CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) метод. Например **RDS. DataControl** может быть создан следующим образом:  
+ В этом руководстве [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) и [RDS. Пространство данных](../../../ado/reference/rds-api/dataspace-object-rds.md) создаются во время разработки — то есть они определяются с помощью теги объектов, следующим образом: `<OBJECT>...</OBJECT>`. В качестве альтернативы они могут создаваться во время выполнения с [метод CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) метод. Например **RDS. DataControl** может быть создан следующим образом:  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  
@@ -49,7 +49,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
    Dim DF1   
 ```  
   
-## <a name="step-1--specify-a-server-program"></a>Шаг 1 — Укажите программу сервера  
+## <a name="step-1---specify-a-server-program"></a>Шаг 1 — укажите программу сервера  
  VBScript можно обнаружить имя веб-сервера IIS он выполняется, обратившись к VBScript **Request.ServerVariables** доступный метод для ASP-страницы:  
   
 ```vb
@@ -65,7 +65,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  
 ```  
   
-## <a name="step-2a--invoke-the-server-program-with-rdsdatacontrol"></a>Шаг 2а, вызовите программу сервера с помощью RDS. DataControl  
+## <a name="step-2a---invoke-the-server-program-with-rdsdatacontrol"></a>Шаг 2а - вызовите программу сервера с помощью RDS. DataControl  
  В этом примере является просто комментарием, демонстрируя, что по умолчанию **RDS. DataControl** — выполнить указанный запрос.  
   
 ```vb
@@ -84,17 +84,17 @@ Sub RDSTutorial2A()
 ...  
 ```  
   
-## <a name="step-2b--invoke-the-server-program-with-rdsserverdatafactory"></a>Шаг 2b, вызовите программу сервера с RDSServer.DataFactory  
+## <a name="step-2b---invoke-the-server-program-with-rdsserverdatafactory"></a>Шаг 2b - вызовите программу сервера с RDSServer.DataFactory  
   
-## <a name="step-3--server-obtains-a-recordset"></a>Шаг 3 — Сервер получает набор записей  
+## <a name="step-3---server-obtains-a-recordset"></a>Шаг 3 - сервер получает набор записей  
   
-## <a name="step-4--server-returns-the-recordset"></a>Шаг 4 — Сервер возвращает набор записей  
+## <a name="step-4---server-returns-the-recordset"></a>Шаг 4 - сервер возвращает набор записей  
   
 ```vb
 Set RS = DF1.Query("DSN=Pubs;", "SELECT * FROM Authors")  
 ```  
   
-## <a name="step-5--datacontrol-is-made-usable-by-visual-controls"></a>Шаг 5 — DataControl обеспечивается можно использовать визуальные элементы управления  
+## <a name="step-5---datacontrol-is-made-usable-by-visual-controls"></a>Шаг 5 - DataControl обеспечивается можно использовать визуальные элементы управления  
   
 ```vb
 ' Assign the returned recordset to the DataControl.  
@@ -102,7 +102,7 @@ Set RS = DF1.Query("DSN=Pubs;", "SELECT * FROM Authors")
 DC1.SourceRecordset = RS  
 ```  
   
-## <a name="step-6a--changes-are-sent-to-the-server-with-rdsdatacontrol"></a>Шаг 6a, изменения отправляются на сервер с помощью RDS. DataControl  
+## <a name="step-6a---changes-are-sent-to-the-server-with-rdsdatacontrol"></a>Шаг 6а. изменения отправляются на сервер с помощью RDS. DataControl  
  В этом примере является просто комментарием Демонстрация как **RDS. DataControl** выполняет обновление.  
   
 ```vb
@@ -126,7 +126,7 @@ Set DC1.SourceRecordset = RS
 DC1.SubmitChanges  
 ```  
   
-## <a name="step-6b--changes-are-sent-to-the-server-with-rdsserverdatafactory"></a>Шаг 6b — изменения будут отправлены на сервер с RDSServer.DataFactory  
+## <a name="step-6b---changes-are-sent-to-the-server-with-rdsserverdatafactory"></a>Шаге 6б. изменения будут отправлены на сервер с RDSServer.DataFactory  
   
 ```vb
 DF.SubmitChanges "DSN=Pubs", RS  

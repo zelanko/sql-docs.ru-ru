@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - greater than operator (>)
@@ -14,12 +13,12 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96b4fda680df05da1094db32075414ace3039a90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da56a8d96880ea83777388d1b5e9977ff91c7dfd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125844"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799790"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (больше) (выражение служб SSIS)
   Выполняет сравнение с целью определения, является ли первое выражение больше второго. Перед проведением сравнения средство оценки выражений автоматически преобразует большинство типов данных.  
@@ -56,7 +55,7 @@ expression1 > expression2
     > [!NOTE]  
     >  Сравнения строк производятся с учетом регистра, диакритических знаков, японской азбуки и ширины символов.  
   
--   **Дата, время или дата-время** . Значения выражений *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET и DT_FILETIME.  
+-   **Даты, времени или даты и времени** оба *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET или DT_FILETIME.  
   
     > [!NOTE]  
     >  Система не поддерживает сравнения выражений, значения которых имеют тип данных даты, времени или даты-времени. Возникнет ошибка.  
@@ -101,11 +100,11 @@ ListPrice > 500
 ```  
   
 ## <a name="see-also"></a>См. также  
- [&#60;&#40;Меньше, чем&#41; &#40;выражение служб SSIS&#41;](less-than-ssis-expression.md)   
+ [&#60; (меньше чем) (выражение служб SSIS)](less-than-ssis-expression.md)   
  [&#62;= (больше или равно) (выражение служб SSIS)](greater-than-or-equal-to-ssis-expression.md)   
  [&#60;= (меньше или равно) (выражение служб SSIS)](less-than-or-equal-to-ssis-expression.md)   
- [== &#40;Равно&#41; &#40;выражение служб SSIS&#41;](equal-ssis-expression.md)   
- [Приоритет и ассоциативность операторов](operator-precedence-and-associativity.md)   
- [Операторы &#40;выражение служб SSIS&#41;](operators-ssis-expression.md)  
+ [= = (равно) (выражение служб SSIS)](equal-ssis-expression.md)   
+ [Очередность и ассоциативность операторов](operator-precedence-and-associativity.md)   
+ [Операторы (выражение служб SSIS)](operators-ssis-expression.md)  
   
   

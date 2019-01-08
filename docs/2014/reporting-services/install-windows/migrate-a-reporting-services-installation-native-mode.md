@@ -9,12 +9,12 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.date: 08/10/2017
-ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6993b1fa53bc6aa3d0b6de95ca9feff4eb34ad51
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604065"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351854"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Перенос установки служб Reporting Services (собственный режим)
 
@@ -26,7 +26,7 @@ ms.locfileid: "51604065"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Требуются дополнительные действия, см. в разделе [нельзя использовать для размещения баз данных 2014 сервера отчетов SQL Server 2005](http://support.microsoft.com/kb/2796721).  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (Требуются дополнительные действия, см. в разделе [нельзя использовать для размещения баз данных 2014 сервера отчетов SQL Server 2005](https://support.microsoft.com/kb/2796721).  
   
 ||  
 |-|  
@@ -184,7 +184,7 @@ ms.locfileid: "51604065"
   
     1.  [Развертывание пользовательской сборки](../custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2.  [Развертывание пользовательского элемента отчета](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2.  [Как Развертывание пользовательского элемента отчета](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3.  [Развертывание модуля обработки данных](../extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -224,7 +224,7 @@ ms.locfileid: "51604065"
 ##  <a name="bkmk_copy_custom_config"></a> Копирование настроек пользовательской конфигурации в файл RSReportServer.config  
  Если изменен файл RSReportServer.config или RSWebApplication.config в предыдущей установке, следует внести те же изменения в новый файл RSReportServer.config. В следующем списке приведена сводка причин изменения предыдущего файла конфигурации и даны ссылки на дополнительную информацию о способах настройки этих же параметров в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-|Пользовательская настройка|Сведения|  
+|Настройка|Сведения|  
 |-------------------|-----------------|  
 |Доставка электронной почты сервера отчетов с пользовательскими параметрами|[Настройка сервера отчетов для доставки электронной почты &#40;диспетчер конфигурации служб SSRS&#41; ](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) и [параметры электронной почты — Configuration Manager &#40;собственный режим служб SSRS&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Настройки сведений об устройстве|[Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)|  

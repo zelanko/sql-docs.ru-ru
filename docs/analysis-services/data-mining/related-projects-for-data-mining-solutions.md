@@ -1,5 +1,5 @@
 ---
-title: Связанные проекты для решений интеллектуального анализа данных | Документы Microsoft
+title: Связанные проекты для решений интеллектуального анализа данных | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f884a7d70447771769ba2d6ff8928234095c7cae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e7a1934a207beebca88e3939a211667e94be976
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019461"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415611"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Связанные проекты для решений интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34019461"
   
  В этом разделе описаны другие функции [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которые часто являются частью решения прогнозирующего анализа для поддержки процессов подготовки данных и интеллектуального анализа данных или для предоставления пользователям необходимых инструментов для анализа и действий.  
   
- [Службы Integration Services](#bkmk_SSIS)  
+ [Службы интеграции](#bkmk_SSIS)  
   
  [Службы Reporting Services](#bkmk_SSRS)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34019461"
  [семантическое индексирование](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> службы SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]предоставляют компоненты и компоненты, необходимые для подготовки данных и обучения моделей в проекте интеллектуального анализа данных. Хотя многие задачи очистки и подготовки данных можно решить с помощью других инструментов, например скриптов, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] имеют множество преимуществ для интеллектуального анализа данных.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют компоненты и функции, необходимые для подготовки данных и обучения моделей в проекте интеллектуального анализа данных. Хотя многие задачи очистки и подготовки данных можно решить с помощью других инструментов, например скриптов, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] имеют множество преимуществ для интеллектуального анализа данных.  
   
 -   Представляют задачи как часть рабочего процесса, которую можно повторять, автоматизировать, разветвлять и расширять.  
   
@@ -57,33 +57,33 @@ ms.locfileid: "34019461"
   
  **Компоненты потока управления**  
   
--   [Службы Analysis Services задача выполнения DDL](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [Задача «Выполнение инструкции DDL служб Analysis Services»](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Службы Analysis Services обработки задачи](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Задача «Обработка средствами Analysis Services»](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
--   [Задача «Управление CDC»](../../integration-services/control-flow/cdc-control-task.md)  
+-   [Задача управления CDC](../../integration-services/control-flow/cdc-control-task.md)  
   
 -   [Очистка данных](../../data-quality-services/data-cleansing.md)  
   
 -   [Задача «Запрос интеллектуального анализа данных»](../../integration-services/control-flow/data-mining-query-task.md)  
   
--   [Задача «профилирование данных»](../../integration-services/control-flow/data-profiling-task.md)  
+-   [Задача «Профилирование данных»](../../integration-services/control-flow/data-profiling-task.md)  
   
  **Компоненты потока данных**  
   
 -   [Компоненты потока CDC](../../integration-services/data-flow/cdc-flow-components.md)  
   
--   [Преобразование "Условное разбиение"](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
+-   [Преобразование «Условное разбиение»](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
 -   [Преобразование «Конвертация данных»](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
 -   [Назначение «Обучение модели интеллектуального анализа данных»](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
--   [Преобразование «запрос интеллектуального анализа данных»](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
+-   [Преобразование «Запрос интеллектуального анализа данных»](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
--   [Преобразование "Производный столбец"](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
+-   [Преобразование «Производный столбец»](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
--   [Преобразование "Процентная выборка"](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
+-   [Преобразование «Процентная выборка»](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
 -   [Преобразование «Извлечение терминов»](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
@@ -102,11 +102,11 @@ ms.locfileid: "34019461"
   
  Дополнительные сведения об использовании служб Reporting Services с запросами DMX в качестве источника данных можно найти по следующим ссылкам:  
   
- [Получить данные из модели интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; & #40; Службы SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Получение данных из модели интеллектуального анализа данных (расширения интеллектуального анализа данных) (службы SSRS)](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
- [Analysis Services DMX пользовательский интерфейс конструктора запросов](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
+ [Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных & #40; Службы SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Однако использовать DMX в качестве источника данных необязательно. Компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для интеллектуального анализа данных также позволяют сохранить прогнозирующий запрос в реляционной базе данных. Если существует рабочий поток для обновления моделей с помощью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], сохранение прогнозов и других результатов запросов интеллектуального анализа данных в SQL Server позволяет использовать для получения отчетов [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] , а также другие инструменты, не поддерживающие DMX.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019461"
   
  Дополнительные сведения о парадигматических модулях см. в разделе [Настройка средств разбиения на слова и парадигматические модули для поиска и управление ими](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- Версия слова, которая сохраняется после полнотекстового индексирования — это токен в сжатой форме. Последующие запросы к полнотекстовому индексу создают многочисленные грамматические формы слова на основе правил конкретного языка. Таким образом обнаруживаются все возможные совпадения. Например, в индексе может храниться маркер «бег», но обработчик запросов ищет и такие слова, как «бегун» и «бежать», потому что это обычные морфологические вариации корневого слова «бег».  
+ Версия слова, которая сохраняется после полнотекстового индексирования — это токен в сжатой форме. Последующие запросы к полнотекстовому индексу создают многочисленные грамматические формы слова на основе правил конкретного языка. Таким образом обнаруживаются все возможные совпадения. Например несмотря на то, что токен, который хранится может быть «бег», обработчик запросов ищет термины «running», «выполнялся» и «выполняющийся», так как они регулярно производном морфологические вариации корневого слова «бег».  
   
  Можно также создать и построить пользовательский тезаурус для хранения синонимов, получения лучших результатов поиска и разбивки терминов на категории. Подготовив тезаурус, ориентированный на пользовательские полнотекстовые данные, можно эффективно расширить область полнотекстовых запросов к этим данным. Дополнительные сведения см. в разделе [Настройка файлов тезауруса для полнотекстового поиска и управление ими](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   

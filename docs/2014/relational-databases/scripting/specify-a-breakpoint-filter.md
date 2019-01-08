@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09fd45e648833f2d46c258a1806e8c424634b514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e35da51b4af9e653fd6cdbad77704676941c49b3
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219574"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328714"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Задание фильтра точек останова
   Фильтр для точек останова ограничивает действие точки останова определенными компьютерами, процессами операционной системы и потоками. Фильтры точек останова обычно используются при отладке параллельных приложений.  
@@ -40,15 +38,13 @@ ms.locfileid: "48219574"
   
     -   `MachineName` — это компьютер, на котором запущен экземпляр Database Engine.  
   
-    -   `ProcessID`, и `ProcessName` — процесс операционной системы, на котором запущен экземпляр компонента Database Engine.  
+    -   `ProcessID` и `ProcessName` — это процесс операционной системы, в котором исполняется экземпляр компонента Database Engine.  
   
-    -   `ThreadID` и `ThreadName` — поток операционной системы, в котором выполняется [!INCLUDE[tsql](../../includes/tsql-md.md)] пакет, процедура или функция в экземпляре компонента Database Engine.  
+    -   `ThreadID` и `ThreadName` — это поток операционной системы, в котором выполняется пакет, процедура или функция [!INCLUDE[tsql](../../includes/tsql-md.md)] на экземпляре Database Engine.  
   
 3.  Нажмите кнопку **ОК** , чтобы внести изменения, либо кнопку **Отмена** , чтобы выйти без их применения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задание условия точки останова](specify-a-breakpoint-condition.md)   
  [Настройка счетчика числа попаданий](specify-a-hit-count.md)   
  [Задание действия в точке останова](specify-a-breakpoint-action.md)  
-  
-  

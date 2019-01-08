@@ -15,12 +15,12 @@ ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 590cb6da26f0857c62b87542b7890732416aa486
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d83edf8ee65b638525c0ddd5ee994a26cfcfbd70
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103994"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545800"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Редактор задачи «Передача сообщений об ошибках» (страница «Сообщения»)
   Используйте страницу **Сообщения** диалогового окна **Редактор задачи "Передача сообщений об ошибках"**, чтобы указать свойства копирования одного или более определенных пользователем сообщений об ошибках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из одного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в другой. Дополнительные сведения об этой задаче см. в разделе [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  
@@ -46,23 +46,23 @@ ms.locfileid: "48103994"
 |**False**|Копировать только указанные пользовательские сообщения.|  
   
  **ErrorMessagesList**  
- Нажмите кнопку обзора, обозначенную многоточием **(...)** , чтобы выбрать сообщения об ошибках для копирования.  
+ Нажмите кнопку обзора, обозначенную многоточием **(...)**, чтобы выбрать сообщения об ошибках для копирования.  
   
 > [!NOTE]  
 >  Необходимо указать значение параметра **SourceConnection** прежде, чем можно будет выбрать сообщения об ошибках для копирования.  
   
  **ErrorMessageLanguagesList**  
- Нажмите кнопку обзора, обозначенную многоточием **(...)** , чтобы выбрать языки, для которых должны быть скопированы на целевой сервер пользовательские сообщения об ошибках. Прежде чем можно будет передать на целевой сервер версии сообщения на других языках, на нем должна существовать англоязычная версия сообщения (кодовая страница 1033, us_english).  
+ Нажмите кнопку обзора, обозначенную многоточием **(...)**, чтобы выбрать языки, для которых должны быть скопированы на целевой сервер пользовательские сообщения об ошибках. Прежде чем можно будет передать на целевой сервер версии сообщения на других языках, на нем должна существовать англоязычная версия сообщения (кодовая страница 1033, us_english).  
   
 > [!NOTE]  
 >  Необходимо указать значение параметра **SourceConnection** прежде, чем можно будет выбрать сообщения об ошибках для копирования.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи служб Integration Services](control-flow/integration-services-tasks.md)   
- [Редактор передача сообщений об задач &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "Передача сообщений об ошибках" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
  [Диспетчер соединений SMO](connection-manager/smo-connection-manager.md)   
- [Редактор передача сообщений об задач &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "Передача сообщений об ошибках" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
  [Диспетчер подключений управляющих объектов SQL Server](connection-manager/smo-connection-manager.md)  
   
   

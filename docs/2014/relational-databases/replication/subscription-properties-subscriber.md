@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.subproperties.subscriber.f1
@@ -15,12 +14,12 @@ ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44047907e0e572eb19dcd5c886de363e7648ae78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9fa0e53e7bccdadf6d1aefdde9b716ad0a75c22
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226797"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761672"
 ---
 # <a name="subscription-properties---subscriber"></a>Свойства подписки — подписчик
   Диалоговое окно **Свойства подписки** на подписчике позволяет просматривать и задавать свойства для подписки по запросу.  
@@ -84,7 +83,7 @@ ms.locfileid: "48226797"
  При выборе серверного типа подписки в мастере создания подписок подписчику назначается приоритет, используемый при устранении конфликтов.  
   
  **Интерактивное разрешение конфликтов**  
- Указывается, использовать ли пользовательский интерфейс интерактивного сопоставителя при синхронизации слиянием. Для этого необходимо установить значение **Включено** для параметра **Использовать диспетчер синхронизации Windows**. Дополнительные сведения см. в разделе [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Указывается, использовать ли пользовательский интерфейс интерактивного сопоставителя при синхронизации слиянием. Для этого необходимо установить значение **Включено** для параметра **Использовать диспетчер синхронизации Windows**. Дополнительные сведения см. в статье [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Веб-синхронизация**  
  **Использование веб-синхронизации** определяет, требуется ли подключение к службе [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS для синхронизации подписки. Этот параметр доступен только в том случае, если публикация разрешена для веб-синхронизации. Дополнительные сведения см. в статье [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  

@@ -1,18 +1,20 @@
 ---
-title: Как управлять записных книжек в Azure Data Studio | Документация Майкрософт
-description: ''
+title: Управление записных книжек в Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: Сведения об управлении записных книжек в Azure Data Studio. Это включает в себя Открытие записных книжек, их сохранение и изменение подключения кластера больших данных.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ca756c81dcf54f42cb46be4b0f412ce9630814af
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.custom: seodec18
+ms.openlocfilehash: 998692f56f75e890ef0b4f8e40e256f2ebbd54de
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48796962"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246593"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Как управлять записных книжек в Azure Data Studio
 
@@ -22,8 +24,11 @@ ms.locfileid: "48796962"
 
 В этой статье предполагается, что уже записную книжку, который вы хотите использовать в Azure Data Studio. Если вы хотите создать записную книжку, см. в разделе [использованию записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md). Чтобы использовать записные книжки в Azure Data Studio, необходимо выполнить следующие условия:
 
-- [Установите новейшие средства работы с большими данными для предварительной версии SQL Server 2019](deploy-big-data-tools.md).
 - [Развертывание кластера больших данных](quickstart-big-data-cluster-deploy.md).
+- [Средства SQL Server 2019 больших данных](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Расширение SQL Server 2019**
+   - **kubectl**
 
 ## <a name="open-a-notebook"></a>Откройте записную книжку
 
@@ -43,7 +48,7 @@ ms.locfileid: "48796962"
 
 ### <a name="command-palette"></a>Палитра команд
 
-Используйте команду **файл: открыть** палитре команд введите сочетание клавиш Ctrl + Shift + P (в Windows) и Cmd + Shift + P (в Mac).
+Используйте команду **файла: Откройте** палитре команд введите сочетание клавиш Ctrl + Shift + P (в Windows) и Cmd + Shift + P (в Mac).
 
 ![Открытие диалогового окна открытия файла, введя File:Open в палитре команд](./media/notebooks-how-to-manage/open-file-3.png)
 
@@ -57,7 +62,7 @@ ms.locfileid: "48796962"
 > Следующие методы в настоящее время не сохранять изменения для записных книжек:
 >
 > - **Файл: Сохранить**, **файл: Сохранить как...**  и **файл сохранить все** команды из меню "файл".
-> - **Файл: Сохраните** команд, введенных в палитре команд.
+> - **Файл: Сохранить** команд, введенных в палитре команд.
 
 ## <a name="change-the-big-data-cluster"></a>Изменение кластера больших данных
 

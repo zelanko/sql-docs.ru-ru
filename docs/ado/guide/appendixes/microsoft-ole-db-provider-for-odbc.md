@@ -14,12 +14,12 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be6edd514530acca7ac79cebf959a09d20562ac5
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350648"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535555"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Поставщик Microsoft OLE DB для ODBC-Обзор
 Для использования программистами ADO или служб удаленных рабочих СТОЛОВ идеальном мире бы один, в котором каждый источник предоставляет интерфейс OLE DB таким образом, ADO может вызывать непосредственно в источнике данных. Несмотря на то, что все чаще других поставщиков базы данных при реализации интерфейсов OLE DB, некоторые источники данных не еще доступны таким образом. Однако большинство систем СУБД, в настоящее время может осуществляться через ODBC.
@@ -107,14 +107,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Максимальное количество столбцов в Order By (KAGPROP_MAXCOLUMNSINORDERBY)|Указывает максимальное число столбцов, которые могут быть перечислены в предложении ORDER BY инструкции SELECT.|
 |Максимальное количество столбцов в Select (KAGPROP_MAXCOLUMNSINSELECT)|Указывает максимальное число столбцов, которые могут быть перечислены в части SELECT инструкции SELECT.|
 |Максимальное количество столбцов в таблице (KAGPROP_MAXCOLUMNSINTABLE)|Указывает максимальное число столбцов, допустимое в таблице.|
-|Числовые функции (KAGPROP_NUMERICFUNCTIONS)|Указывает числовые функции, которые поддерживаются драйвером ODBC. Список имен функций и связанных значений, используемых в этой битовой маске, см. в разделе [приложении E: скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), в документации ODBC.|
+|Числовые функции (KAGPROP_NUMERICFUNCTIONS)|Указывает числовые функции, которые поддерживаются драйвером ODBC. Список имен функций и связанных значений, используемых в этой битовой маске, см. в разделе [приложении E: Скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), в документации ODBC.|
 |Возможности внешнего соединения (KAGPROP_OJCAPABILITY)|Указывает типы ВНЕШНИХ соединений, поддерживаемых поставщиком.|
 |Внешние соединения (KAGPROP_OUTERJOINS)|Указывает, поддерживает ли поставщик ВНЕШНИЕ соединения.|
 |Специальные символы (KAGPROP_SPECIALCHARACTERS)|Указывает, какие символы имеют особое значение для драйвера ODBC.|
 |Хранимые процедуры (KAGPROP_PROCEDURES)|Указывает, доступны ли хранимые процедуры для использования с помощью этого драйвера ODBC.|
-|Строковые функции (KAGPROP_STRINGFUNCTIONS)|Указывает, какие строки функции поддерживаются драйвером ODBC. Список имен функций и связанных значений, используемых в этой битовой маске, см. в разделе [приложении E: скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), в документации ODBC.|
-|Системные функции (KAGPROP_SYSTEMFUNCTIONS)|Указывает, какие системные функции поддерживаются драйвером ODBC. Список имен функций и связанных значений, используемых в этой битовой маске, см. в разделе [приложении E: скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), в документации ODBC.|
-|Функции даты и времени, (KAGPROP_TIMEDATEFUNCTIONS)|Указывает, какие функции даты и времени поддерживаются драйвером ODBC. Список имен функций и связанных значений, используемых в этой битовой маске, см. в разделе [приложении E: скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), в документации ODBC.|
+|Строковые функции (KAGPROP_STRINGFUNCTIONS)|Указывает, какие строки функции поддерживаются драйвером ODBC. Список имен функций и связанных значений, используемых в этой битовой маске, см. в разделе [приложении E: Скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), в документации ODBC.|
+|Системные функции (KAGPROP_SYSTEMFUNCTIONS)|Указывает, какие системные функции поддерживаются драйвером ODBC. Список имен функций и связанных значений, используемых в этой битовой маске, см. в разделе [приложении E: Скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), в документации ODBC.|
+|Функции даты и времени, (KAGPROP_TIMEDATEFUNCTIONS)|Указывает, какие функции даты и времени поддерживаются драйвером ODBC. Список имен функций и связанных значений, используемых в этой битовой маске, см. в разделе [приложении E: Скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), в документации ODBC.|
 |Поддержка Грамматика SQL (KAGPROP_ODBCSQLCONFORMANCE)|Указывает, драйвер ODBC поддерживает грамматику SQL.|
 
 ## <a name="provider-specific-recordset-and-command-properties"></a>Набор записей поставщика и свойства команды
@@ -137,7 +137,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
  ODBC предоставляет особый синтаксис для вызова хранимых процедур. Для [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) свойство **команда** объекта, *CommandText* аргумент **Execute** метод [ Подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта, или *источника* аргумент **откройте** метод [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект передает в строке со следующим синтаксисом:
 
 ```
-"{ [ ? = ] call procedure [ ( ? [, ? [ , … ]] ) ] }"
+"{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
 ```
 
  Каждый **?** ссылается на объект в [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции. Первый **?** ссылки на **параметры**(0), Далее **?** ссылки на **параметры**(1), и т. д.
@@ -227,7 +227,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="dynamic-properties"></a>Динамические свойства
  Поставщик Microsoft OLE DB для ODBC вставляет несколько динамических свойств в **свойства** коллекцию неоткрытый [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [Команда](../../../ado/reference/ado-api/command-object-ado.md) объектов.
 
- В следующих таблицах представлены cross-index имен ADO и OLE DB для каждого динамического свойства. Справочник программиста OLE DB по указано имя свойства ADO с термином «Description». Дополнительные сведения об этих свойствах можно найти в справочнике программиста OLE DB. Найдите имя свойства OLE DB в индексе или см. в разделе [приложение C: OLE DB свойства](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ В следующих таблицах представлены cross-index имен ADO и OLE DB для каждого динамического свойства. Справочник программиста OLE DB по указано имя свойства ADO с термином «Description». Дополнительные сведения об этих свойствах можно найти в справочнике программиста OLE DB. Найдите имя свойства OLE DB в индексе или см. в разделе [приложение в: Свойства OLE DB](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## <a name="connection-dynamic-properties"></a>Динамические свойства подключения
  Следующие свойства добавляются к **подключения** объекта **свойства** коллекции.

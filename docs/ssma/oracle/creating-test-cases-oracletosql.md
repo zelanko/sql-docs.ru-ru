@@ -12,18 +12,18 @@ ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 07b52a71d3f12455bacdd2e9789aadb5ed5967db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2c1bd3fea167a784d86f7e323566f73c3a01f86
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604682"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512947"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Создание тестовых случаев (OracleToSQL)
 Создание теста с помощью мастера тестового случая. Этот мастер позволяет создавать тестовые случаи, выбирая и проверите объектов и путем указания параметров тестирования.  
   
 ## <a name="starting-the-test-case-wizard"></a>Запуск мастера тестового случая  
-Для запуска мастера тестового случая выберите **новый тестовый случай...** из **тест-инженер** меню.  
+Для запуска мастера тестового случая выберите **новый тестовый случай...**  из **тест-инженер** меню.  
   
 При запуске, мастер ищет схемы SSMATESTER_ORACLE на исходном сервере Oracle. Это расширение схемы тест-инженер, используемой для хранения вспомогательных объектов. Если мастер тестового случая не может найти SSMATESTER_ORACLE, отображается диалоговое окно, которое предлагает для создания схемы. (Такая ситуация обычно возникает во время первого запуска SSMA тест-инженер.)  
   

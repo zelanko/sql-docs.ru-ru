@@ -1,11 +1,10 @@
 ---
-title: 'Класс событий Progress Report: Online Index Operation | Документация Майкрософт'
+title: 'Класс событий Progress Report: Класс событий Online Index Operation | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a366fe0d64943506160a748f56a43bf7f2b44c9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756126"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Класс событий Progress Report: Online Index Operation
-  Класс событий Progress Report: класс событий Online Index Operation указывает ход операции оперативного построения индекса.  
+# <a name="progress-report-online-index-operation-event-class"></a>Класс событий Progress Report: класс события Online Index Operation
+  Класс событий Progress Report: Класс события Online Index Operation указывает ход операции оперативного построения индекса.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Столбцы данных класса событий Progress Report: Online Index Operation  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Класс событий Progress Report: Online Index Operation  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.cvqueued.f1
@@ -13,12 +12,12 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 003450f73ae1026a294827a6d52c50f38d259b52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072484"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788394"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Средство просмотра конфликтов репликации Майкрософт (репликация транзакций)
   Средство просмотра конфликтов репликации позволяет просматривать конфликты, возникшие во время синхронизации для одноранговой репликации транзакций и репликации транзакций с подписками, обновляемыми посредством очередей. Дополнительные сведения см. в статье [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
@@ -62,12 +61,12 @@ ms.locfileid: "48072484"
  Выберите для показа первых пяти столбцов и любых столбцов с конфликтами. Это полезно, если таблица содержит много столбцов, но требуется видеть только те столбцы, которые имеют наибольшее отношение к разрешению конфликта. Первые пять столбцов всегда включены в данное представление, поскольку поля, определяющие строки, такие как первичный ключ или поля имен, часто встречаются среди первых столбцов таблицы.  
   
  **Отображать данные о столбце** (**…**)  
- Щелкните для просмотра данных о столбце: **Имя таблицы**, **Имя столбца**, **Тип данных**и **Значение столбца**.  
+ Нажмите для просмотра данных о столбце: **Имя таблицы**, **имя столбца**, **тип данных**, и **значение столбца**.  
   
  **Записать в журнал подробные сведения о конфликте.**  
  Установите этот флажок для записи сведений о конфликте в файл. Для указания размещения файла укажите меню **Вид** и выберите пункт **Параметры**. Введите значение или нажмите кнопку обзора (**...**) и перейдите к необходимому файлу. Нажмите кнопку **ОК** для выхода из диалогового окна **Параметры** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обнаружение конфликтов в одноранговой репликации](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   

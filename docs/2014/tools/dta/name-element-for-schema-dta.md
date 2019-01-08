@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb954856e5d48a458652de15e7445c9232889b29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01b536c24661ce223e91cbe791c70529558388ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096224"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801706"
 ---
 # <a name="name-element-for-schema-dta"></a>Элемент Name описания схемы (DTA)
   Содержит имя схемы.  
@@ -47,7 +46,7 @@ ms.locfileid: "48096224"
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент schema описания базы данных &#40;DTA&#41;](schema-element-for-database-dta.md)|  
+|**Родительский элемент**|[Элемент Schema описания базы данных (DTA)](schema-element-for-database-dta.md)|  
 |**Дочерние элементы**|Нет.|  
   
 ## <a name="example"></a>Пример  
