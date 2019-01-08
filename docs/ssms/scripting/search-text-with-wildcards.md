@@ -7,7 +7,6 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
-- vs.wildcards
 - vswildcardsbuilder
 helpviewer_keywords:
 - searches [SQL Server Management Studio], wildcards
@@ -18,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0da299ec52c99c081b975f90de41bef763e5531e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 81d196473f6333b680f8d09afdcd044baabb2f31
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643952"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327527"
 ---
 # <a name="search-text-with-wildcards"></a>Поиск текста с символами-шаблонами
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,5 +47,3 @@ ms.locfileid: "51643952"
 ## <a name="see-also"></a>См. также:  
  [Поиск и замена](../../relational-databases/scripting/search-and-replace.md)   
  [Поиск текста с помощью регулярных выражений](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
-  

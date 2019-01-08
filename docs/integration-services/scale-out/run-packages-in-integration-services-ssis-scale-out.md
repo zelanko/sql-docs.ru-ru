@@ -13,12 +13,12 @@ ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 70ebcc5773d17f6f0f6fe714367f4bf487f3a0db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c718dd14e1c7d2fc508efa403a9abfbcbae100d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686272"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205813"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Выполнение пакетов в SQL Server Integration Services (SSIS) Scale Out
 После развертывания пакетов на сервере служб Integration Services их можно запускать в Scale Out одним из следующих способов:
@@ -33,7 +33,7 @@ ms.locfileid: "47686272"
 
 1. Откройте диалоговое окно "Выполнение пакета в сценарии масштабирования".
 
-    В [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] подключитесь к серверу служб Integration Services. В обозревателе объектов разверните дерево для отображения узлов в разделе **Каталоги служб Integration Services**. Щелкните правой кнопкой мыши узел **SSISDB** либо проект или пакет, который требуется запустить, и выберите пункт **Execute in Scale Out**(Выполнить в масштабном развертывании).
+    В [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]подключитесь к серверу служб Integration Services. В обозревателе объектов разверните дерево для отображения узлов в разделе **Каталоги служб Integration Services**. Щелкните правой кнопкой мыши узел **SSISDB** либо проект или пакет, который требуется запустить, и выберите пункт **Execute in Scale Out**(Выполнить в масштабном развертывании).
 
 2. Выберите пакеты и задайте параметры.
 
@@ -117,7 +117,7 @@ GO
 
 После задания этого режима выполнения по умолчанию больше не нужно указывать параметр **@runinscaleout** при вызове хранимой процедуры `[catalog].[create_execution]`. Пакеты выполняются в Scale Out автоматически. 
 
-![Режим выполнения](media\exe-mode.PNG)
+![Режим выполнения](media/exe-mode.PNG)
 
 Чтобы отключить выполнение в режиме Scale Out по умолчанию, присвойте свойству **Серверный режим выполнения по умолчанию** значение **Сервер**.
 
