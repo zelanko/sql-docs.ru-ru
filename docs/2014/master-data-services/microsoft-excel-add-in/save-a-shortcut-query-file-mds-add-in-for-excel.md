@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f427e1bcea7fcd4b926b953d27008b4e8143cbb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 600d5b5dfc42e52c4d4c04912530bf586fb569f8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195884"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768176"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Сохранение файла ярлыка запроса (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно сохранить файл ярлыка запроса, если требуется часто обращаться к одному и тому же набору данных.  
@@ -30,7 +29,7 @@ ms.locfileid: "48195884"
   
 1.  В группе **Сохранение и отправка** нажмите стрелку под кнопкой **Сохранить запрос** и выберите команду **Сохранить как запрос**.  
   
-2.  Необязательный параметр. Чтобы переименовать запрос, щелкните стрелку под кнопкой **Сохранить запрос** и выберите команду **Управление запросами**. Выберите запрос и нажмите кнопку **Переименовать**.  
+2.  Необязательный. Чтобы переименовать запрос, щелкните стрелку под кнопкой **Сохранить запрос** и выберите команду **Управление запросами**. Выберите запрос и нажмите кнопку **Переименовать**.  
   
 ## <a name="next-steps"></a>Следующие шаги  
   

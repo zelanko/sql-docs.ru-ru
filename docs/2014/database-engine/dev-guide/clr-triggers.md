@@ -27,12 +27,12 @@ ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2827d98dda93a59b3e599f1db07ebb3fadd234d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c755b605b834d5c31a7017358fb6e714cfde7964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226704"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522892"
 ---
 # <a name="clr-triggers"></a>Триггеры CLR
   Благодаря тому что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интегрирован со средой [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR, для создания триггеров CLR можно использовать любой язык [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. В настоящем разделе рассматриваются сведения, касающиеся реализации триггеров в условиях интеграции со средой CLR. Полное описание триггеров, см. в разделе [триггеры DDL](../../relational-databases/triggers/ddl-triggers.md).  
@@ -500,7 +500,7 @@ EXTERNAL NAME SQLCLRTest.CLRTriggers.EmailAudit
 ```  
 Msg 6549, Level 16, State 1, Procedure trig_InsertValidator, Line 0  
 A .NET Framework error occurred during execution of user defined routine or aggregate 'trig_InsertValidator':   
-System.Data.SqlClient.SqlException: Transaction is not allowed to roll back inside a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting… User transaction, if any, will be rolled back.  
+System.Data.SqlClient.SqlException: Transaction is not allowed to roll back inside a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting... User transaction, if any, will be rolled back.  
 ```  
   
  Это ожидаемое исключение, поэтому для продолжения выполнения кода необходим блок try-catch. По завершении выполнения кода триггера возникает еще одно исключение.  

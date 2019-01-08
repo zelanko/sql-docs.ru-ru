@@ -16,12 +16,12 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec0157d30495166aba0a001997d843dafb5ba916
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180154"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529696"
 ---
 # <a name="database-engine-error-severities"></a>Степени серьезности ошибок компонента Database Engine
   Если ошибка возникла в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], серьезность ошибки указывает на тип проблемы, с которой столкнулся сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -57,18 +57,18 @@ ms.locfileid: "48180154"
  Инструкция RAISERROR может применяться для формирования пользовательских сообщений об ошибках с уровнем серьезности от 1 до 25. Инструкция RAISERROR может либо ссылаться на определенное пользователем сообщение, находящееся в представлении каталога **sys.messages** , либо динамически создавать сообщение. Если при формировании ошибки используется пользовательское сообщение об ошибках, хранимое в представлении **sys.messages**, то уровень серьезности, указанный в инструкции RAISERROR, переопределяет уровень серьезности, указанный в представлении **sys.messages**. Дополнительные сведения см. в разделе [RAISERROR (Transact-SQL)](/sql/t-sql/language-elements/raiserror-transact-sql).  
   
 ## <a name="error-severity-and-trycatch"></a>Серьезность ошибки и конструкция TRY…CATCH  
- Конструкция TRY…CATCH перехватывает все ошибки исполнения с уровнем серьезности, большим 10, которые не прерывают подключение к базе данных.  
+ Конструкция TRY…CATCH перехватывает все ошибки исполнения с уровнем серьезности выше 10, которые не прерывают подключение к базе данных.  
   
- Ошибки с уровнем серьезности от 0 до 10 являются информационными сообщениями и не вызывают выхода процесса выполнения из блока CATCH конструкции TRY…CATCH.  
+ Ошибки с уровнем серьезности от 0 до 10 являются информационными сообщениями и не приводят к выходу процесса выполнения из блока CATCH конструкции TRY…CATCH.  
   
  Ошибки, приводящие к прерыванию подключения к базе данных и обычно имеющие уровень серьезности от 20 до 25, не обрабатываются блоком CATCH, так как при разрыве соединения выполнение прерывается.  
   
  Дополнительные сведения см. в разделе [TRY...CATCH (Transact-SQL)](/sql/t-sql/language-elements/try-catch-transact-sql).  
   
 ## <a name="retrieving-error-severity"></a>определение серьезности ошибки  
- Чтобы определить серьезность ошибки, инициирующей выполнение блока CATCH конструкции TRY…CATCH, может использоваться системная функция ERROR_SEVERITY. Если вызов происходит не из блока CATCH, функция ERROR_SEVERITY возвращает значение NULL. Дополнительные сведения см. в разделе [ERROR_SEVERITY (Transact-SQL)](/sql/t-sql/functions/error-severity-transact-sql).  
+ Чтобы определить серьезность ошибки, инициирующей выполнение блока CATCH конструкции TRY…CATCH, можно использовать системную функцию ERROR_SEVERITY. Если вызов происходит не из блока CATCH, функция ERROR_SEVERITY возвращает значение NULL. Дополнительные сведения см. в разделе [ERROR_SEVERITY (Transact-SQL)](/sql/t-sql/functions/error-severity-transact-sql).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения об ошибках компонента Database Engine](../native-client-ole-db-errors/errors.md)   
  [sys.messages (Transact-SQL)](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
  [Системные функции (Transact-SQL)](/sql/t-sql/functions/system-functions-transact-sql)   

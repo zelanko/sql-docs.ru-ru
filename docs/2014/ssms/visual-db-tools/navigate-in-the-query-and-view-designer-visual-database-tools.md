@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, navigating
@@ -15,12 +15,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f12ed69b92922046f4a4432ed56b46d9a40904d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123196"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769166"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Навигация по конструктору запросов и представлений (визуальные инструменты для баз данных)
   С конструктором запросов и представлений можно работать как с помощью клавиатуры, так и с помощью мыши. Чтобы получить сведения о конкретных методах, обратитесь к следующим таблицам.  

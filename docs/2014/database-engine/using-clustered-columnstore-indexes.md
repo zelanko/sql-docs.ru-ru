@@ -10,19 +10,19 @@ ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6d040f8d7e784650cfbf0cf8b4540c599ed9599
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059404"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502702"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Использование кластеризованных индексов columnstore
   Задачи при использовании кластеризованных индексов columnstore в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Общие сведения об индексах columnstore см. в разделе [индексам ColumnStore](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Общие сведения об индексах columnstore см. в разделе [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
   
- Сведения о кластеризованных индексах columnstore см. в разделе [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
+ Дополнительные сведения о кластеризованных индексах columnstore см. в разделе [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
 ## <a name="contents"></a>Содержание  
   
@@ -60,7 +60,7 @@ GO
  Используйте [DROP INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql) инструкцию, чтобы удалить кластеризованный индекс columnstore. Эта операция удаляет индекс columnstore и преобразует таблицу columnstore в кучу rowstore.  
   
 ##  <a name="load"></a> Загрузка данных в кластеризованный индекс Columnstore  
- Можно добавлять данные к существующим кластеризованным индексам columnstore с помощью любого из стандартных методов загрузки.  Например, программа массовой загрузки bcp, службы Integration Services и инструкция INSERT... SELECT могут загружать данные в кластеризованный индекс columnstore.  
+ Можно добавлять данные к существующим кластеризованным индексам columnstore с помощью любого из стандартных методов загрузки.  Например массовой загрузки bcp средства, службы Integration Services и INSERT... SELECT могут загружать данные в кластеризованный индекс columnstore.  
   
  Кластеризованные индексы columnstore используют deltastore, чтобы исключить фрагментацию сегментов столбца в columnstore.  
   
@@ -68,7 +68,7 @@ GO
  Для секционированных данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] сначала назначает каждую строку секции, а затем выполняет операции columnstore для данных в секции. Каждая секция имеет собственную rowgroups и как минимум одно deltastore.  
   
 ### <a name="deltastore-loading-scenarios"></a>Сценарии загрузки Deltastore  
- Строки накапливаются в каждом deltastore до тех пор, пока число строк не достигнет максимального количества строк, допустимого для rowgroup. Когда deltastore будет содержать максимальное количество строк на rowgroup, компонент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пометит rowgroup как CLOSED. Фоновый процесс, называемый «переносчик кортежей», находит группу строк CLOSED и перемещает ее в columnstore, где группа строк сжимается в сегменты столбца, которые сохраняются в columnstore.  
+ Строки накапливаются в каждом deltastore до тех пор, пока число строк не достигнет максимального количества строк, допустимого для rowgroup. Когда deltastore будет содержать максимальное количество строк на rowgroup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пометит rowgroup как «ЗАКРЫТО». Фоновый процесс, называется «кортежей», находит CLOSED rowgroup и перемещает в columnstore, где группа строк сжимается в сегменты и сегменты столбцов сохраняются в columnstore.  
   
  Для каждого кластеризованного индекса columnstore может быть несколько deltastore.  
   
@@ -83,9 +83,9 @@ GO
 |Строки для массовой загрузки|Строки, добавленные в Columnstore|Строки, добавленные в Deltastore|  
 |-----------------------|-----------------------------------|----------------------------------|  
 |102,000|0|102,000|  
-|145,000|145,000<br /><br /> Размер группы строк: 145 000.|0|  
-|1,048,577|1 048 576<br /><br /> Размер группы строк: 1 048 576.|1|  
-|2,252,152|2,252,152<br /><br /> Размер группы строк: 1 048 576, 1 048 576, 155 000.|0|  
+|145,000|145,000<br /><br /> Размер Rowgroup: 145,000|0|  
+|1,048,577|1 048 576<br /><br /> Размер Rowgroup: 1,048,576.|1|  
+|2,252,152|2,252,152<br /><br /> Размеры Rowgroup: 1,048,576, 1,048,576, 155,000.|0|  
   
  В следующем примере показаны результаты загрузки 1 048 577 строк в секцию. Результаты показывают наличие одной СЖАТОЙ rowgroup в columnstore (в виде сжатых сегментов столбцов) и 1 строки в deltastore.  
   
@@ -120,7 +120,7 @@ SELECT * FROM sys.column_store_row_groups
 ### <a name="rebuild-process"></a>Процесс перестроения  
  Перестроение кластеризованного индекса columnstore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Приобретает монопольную блокировку на таблице или секции на то время, как происходит перестроение.  Во время перестроения данные находятся в режиме «вне сети» и недоступны.  
+-   Приобретает монопольную блокировку на таблице или секции на то время, как происходит перестроение.  Во время перестроения данные находятся в автономном режиме и недоступны.  
   
 -   Дефрагментирует таблицу columnstore, физически удаляя строки, которые были логически удалены из таблиц; удаленные байты освобождают место на физическом носителе.  
   

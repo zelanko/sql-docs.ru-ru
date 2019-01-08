@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.reindex.f1
@@ -16,12 +15,12 @@ ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 237b9b7ef70b2cc258d57507a7a7e0bd28ef26c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103476"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818228"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Задача «Перестроение индекса» (план обслуживания)
   Диалоговое окно **Задача "Перестроение индекса"** используется для пересоздания индексов на таблицах в базе данных с новым коэффициентом заполнения. Коэффициент заполнения определяет количество пустого пространства на каждой странице индекса для обеспечения роста в будущем. По мере того как к таблице добавляются данные, свободное пространство заполняется, поскольку коэффициент заполнения не сохраняется. Восстановить свободное пространство можно путем реорганизации данных и страниц индекса.  
@@ -103,7 +102,7 @@ ms.locfileid: "48103476"
  **Использовать указанные имя пользователя и пароль**  
  Подключиться к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
- **Имя пользователя**  
+ **User name**  
  Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
  **Пароль**  

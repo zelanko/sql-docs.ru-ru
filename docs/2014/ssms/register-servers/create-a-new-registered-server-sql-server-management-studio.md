@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.general.sqlce.f1
@@ -15,12 +15,12 @@ ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6480fc8aea74144ee54fd0c96e50fcbdd74e9cfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8561eb723337530818f45c5a845f7b352b328653
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185504"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757966"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Создание нового зарегистрированного сервера (среда SQL Server Management Studio)
   В этом разделе описывается, как сохранить сведения о соединении для серверов, к которым часто выполняется обращение, путем регистрации сервера в компоненте «Зарегистрированные серверы» среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Сервер может быть зарегистрирован в обозревателе объектов до или во время подключения. Для регистрации экземпляра сервера на локальном компьютере существует специальный пункт меню.  
@@ -102,7 +102,7 @@ ms.locfileid: "48185504"
   
 ## <a name="see-also"></a>См. также  
  [Скрытие системных объектов в обозревателе объектов](../object/hide-system-objects-in-object-explorer.md)   
- [Выполнение экспорта сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](export-registered-server-information-sql-server-management-studio.md)   
+ [Экспорт сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](export-registered-server-information-sql-server-management-studio.md)   
  [Импорт сведений компонента "Зарегистрированные серверы" (среда SQL Server Management Studio)](import-registered-server-information-sql-server-management-studio.md)  
   
   

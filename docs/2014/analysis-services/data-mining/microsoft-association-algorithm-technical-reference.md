@@ -21,12 +21,12 @@ ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d709a575ddde6fe9d3f31e7d8a50b8f6dec83a5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4389ab6f8cd2df0f744eca5b4552a4bb18723627
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146019"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524403"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Технический справочник по алгоритму взаимосвязей (Майкрософт)
   Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой простую реализацию хорошо известного априорного алгоритма.  
@@ -77,7 +77,7 @@ ms.locfileid: "50146019"
  Параметры модели интеллектуального анализа данных можно изменить в любой момент с помощью конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Можно также менять параметры программно с помощью <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> коллекции объектов AMO или с помощью [элемент MiningModels &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) в XML для Аналитики. В следующей таблице содержатся описания всех параметров.  
   
 > [!NOTE]  
->  Изменить параметры существующей модели с помощью инструкций на языке расширений интеллектуального анализа данных нельзя. Нужно задать параметры в инструкциях DMX CREATE MODEL или ALTER STRUCTURE… ADD MODEL при создании модели.  
+>  Не удается изменить параметры существующей модели с помощью инструкции расширений интеллектуального анализа данных; необходимо указать параметры в инструкциях DMX CREATE MODEL или ALTER STRUCTURE … ADD MODEL при создании модели.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  Указывает максимальное количество создаваемых наборов элементов. Если количество не указано, используется значение по умолчанию.  
@@ -90,7 +90,7 @@ ms.locfileid: "50146019"
  *MAXIMUM_ITEMSET_SIZE*  
  Указывает максимальное количество элементов, допустимых в наборе элементов. Задание этого значения равным 0 указывает, что размер набора элементов не ограничен.  
   
- Значение по умолчанию — 3.  
+ Значение по умолчанию — 3.  
   
 > [!NOTE]  
 >  Снижение этого значения может привести к сокращению времени создания модели, поскольку обработка модели прекращается, когда достигнуто предельное значение.  

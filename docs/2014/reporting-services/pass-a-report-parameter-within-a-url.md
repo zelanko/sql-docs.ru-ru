@@ -14,12 +14,12 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 80450865b72360068555cb1a25224a3ea503e5a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfbf2362b06abc254879d25c4f8e7b8e876a6737
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097584"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215863"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
   Чтобы передать параметры в отчет, можно включить их в URL-адрес отчета. Такие параметры URL-адреса не снабжаются префиксами, поскольку они передаются непосредственно в подсистему обработки отчетов.  
@@ -31,12 +31,12 @@ ms.locfileid: "48097584"
   
  Все параметры запроса могут иметь соответствующие параметры отчета. Параметр запроса можно передать в отчет. Дополнительные сведения см. в статье [Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  В параметрах отчета учитывается регистр символов.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Параметры отчета учитывают регистр символов и используют следующие специальные символы:  
->   
+> 
 >  -   Все пробельные символы в строке URL-адресов заменяются символами «%20» в соответствии со стандартами кодировки URL-адресов.  
 > -   Пробел в секции параметров URL-адреса заменяется символом плюса (+).  
 > -   Точка с запятой в любой части строки заменяется символами «%3A».  
@@ -84,30 +84,30 @@ SalesOrderNumber:isnull=true
 ##  <a name="bkmk_examples"></a> Дополнительные примеры  
  В следующем примере URL-адрес содержит пробелы и многозначные параметры.  
   
--   Имя папки «Группы образования пользователя SQL Server» содержит пробелы, которые заменяются знаком «+».  
+-   Имя папки "Группы образования пользователя SQL Server" содержит пробелы, которые заменяются знаком "+".  
   
--   Имя отчета «Отчет по командному проекту» содержит пробелы, которые заменяются знаком «+».  
+-   Имя отчета "Отчет по командному проекту" содержит пробелы, которые заменяются знаком "+".  
   
--   Передает два параметра: «teamgrouping2» со значением «xgroup» и «teamgrouping1» со значением «ygroup».  
+-   Передает два параметра: teamgrouping2 со значением xgroup и teamgrouping1 со значением ygroup.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup  
 ```  
   
- В следующем примере URL-адрес содержит многозначный параметр «OrderID». Формат многозначного параметра должен повторять имя параметра для каждого значения.  
+ В следующем примере URL-адрес содержит многозначный параметр OrderID. Формат многозначного параметра должен повторять имя параметра для каждого значения.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- В следующем примере URL-адреса передается один параметр *SellStartDate* со значением "1.7.2005" для сервера отчетов, работающего в основном режиме.  
+ В следующем примере URL-адреса передается один параметр *SellStartDate* со значением 1.7.2005 для сервера отчетов, работающего в основном режиме.  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## <a name="see-also"></a>См. также  
- [URL-адресов &#40;SSRS&#41;](url-access-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Доступ по URL-адресу (службы SSRS)](url-access-ssrs.md)   
  [Ссылка на параметр доступа по URL-адресу](url-access-parameter-reference.md)  
   
   

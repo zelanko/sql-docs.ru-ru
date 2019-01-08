@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], push subscriptions
@@ -15,12 +14,12 @@ ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac4db6c772d7b40daadbded626bcd778356de2b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225464"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752586"
 ---
 # <a name="synchronize-a-push-subscription"></a>Синхронизация принудительной подписки
   В данном разделе описывается синхронизация принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [агентов репликации](agents/replication-agents-overview.md)или объектов RMO.  
@@ -214,11 +213,11 @@ REM -- The following command must be supplied without line breaks.
   
     -   соединение, созданное на шаге 1, в свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> , чтобы получить остальные свойства подписки. Если этот метод возвращает `false`, убедитесь, что подписка существует.  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> , чтобы получить остальные свойства подписки. Если этот метод возвращает значение `false`, проверьте, существует ли подписка.  
   
 4.  На распространителе запустите агент распространителя одним из следующих способов.  
   
-    -   Вызовите метод <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> экземпляра класса <xref:Microsoft.SqlServer.Replication.TransSubscription> , созданного на шаге 2. Этот метод запускает агент распространителя асинхронно, а управление сразу после его вызова передается обратно приложению; задание агента при этом продолжает выполняться. Этот метод нельзя вызывать, если подписка была создана со значением `false` для <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>.  
+    -   Вызовите метод <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> экземпляра класса <xref:Microsoft.SqlServer.Replication.TransSubscription> , созданного на шаге 2. Этот метод запускает агент распространителя асинхронно, а управление сразу после его вызова передается обратно приложению; задание агента при этом продолжает выполняться. Этот метод нельзя вызвать, если при создании подписки свойству <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> было присвоено значение `false`.  
   
     -   Получите экземпляр класса <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> из свойства <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizationAgent%2A> и вызовите метод <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> . Этот метод запускает агент синхронно, и управление не возвращается приложению до тех пор, пока выполнение задания агента не будет завершено. При синхронном выполнении во время работы агента можно обрабатывать события <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> .  
   
@@ -238,11 +237,11 @@ REM -- The following command must be supplied without line breaks.
   
     -   соединение, созданное на шаге 1, в свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> , чтобы получить остальные свойства подписки. Если этот метод возвращает `false`, убедитесь, что подписка существует.  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> , чтобы получить остальные свойства подписки. Если этот метод возвращает значение `false`, проверьте, существует ли подписка.  
   
 4.  На распространителе запустите агент слияния одним из следующих способов:.  
   
-    -   Вызовите метод <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> экземпляра класса <xref:Microsoft.SqlServer.Replication.MergeSubscription> , созданного на шаге 2. Этот метод запускает агент слияния асинхронно, а управление сразу после его вызова передается обратно приложению, задание агента при этом продолжает выполняться. Этот метод нельзя вызывать, если подписка была создана со значением `false` для <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>.  
+    -   Вызовите метод <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> экземпляра класса <xref:Microsoft.SqlServer.Replication.MergeSubscription> , созданного на шаге 2. Этот метод запускает агент слияния асинхронно, а управление сразу после его вызова передается обратно приложению, задание агента при этом продолжает выполняться. Этот метод нельзя вызвать, если при создании подписки свойству <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> было присвоено значение `false`.  
   
     -   Получите экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> из свойства <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> и вызовите метод <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> . Этот метод запускает агент слияния синхронно, и управление не возвращается приложению до тех пор, пока не будет закончено выполнение задания агента. При синхронном выполнении в процессе работы агента можно обрабатывать событие <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> .  
   

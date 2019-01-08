@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -13,12 +13,12 @@ ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbc3d3ce9bd665efa78554c98c010ee0952c8e51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65777f25066cfb42093313b90ac198c6bc1796a6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123094"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789806"
 ---
 # <a name="page-compression-implementation"></a>Реализация сжатия страниц
   Этот раздел содержит описание того, как компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] реализует сжатие страниц. В этой сводке представлены основные сведения, которые помогут при планировании объема хранения.  
@@ -33,7 +33,7 @@ ms.locfileid: "48123094"
   
 3.  сжатие словаря.  
   
- При сжатии страницы неконечные страницы индексов сжимаются, используя только сжатие строк. Дополнительные сведения о сжатии строк см. в разделе [Row Compression Implementation](../data-compression/row-compression-implementation.md).  
+ При сжатии страницы неконечные страницы индексов сжимаются с использованием только сжатия строк. Дополнительные сведения о сжатии строк см. в разделе [Row Compression Implementation](../data-compression/row-compression-implementation.md).  
   
 ## <a name="prefix-compression"></a>сжатие префикса;  
  Для каждой сжимаемой страницы сжатие префикса состоит из следующих шагов.  
@@ -66,7 +66,7 @@ ms.locfileid: "48123094"
   
  Если существующая таблица, содержащая данные, преобразуется для сжатия страниц, каждая страница перестраивается и оценивается. Перестроение всех страниц приводит к перестроению таблицы, индекса или секции.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сжатие данных](data-compression.md)   
  [Row Compression Implementation](row-compression-implementation.md)  
   

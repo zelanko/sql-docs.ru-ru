@@ -1,5 +1,5 @@
 ---
-title: Занятие 3. Проектирование родительского отчета с использованием мастера отчетов | Документы Майкрософт
+title: Урок 3. Проектирование родительского отчета с помощью мастера отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d2b872449bf553a00b53bcf6153befd68b6053d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 331d073082ce68f3ad1b58749256c5a177897e07
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219994"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395069"
 ---
-# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Занятие 3. Проектирование родительского отчета с использованием мастера отчетов
+# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Урок 3. Проектирование родительского отчета с использование мастера отчетов
   После создания подключения к данным и таблицы данных для родительского отчета следующий шаг состоит в проектировании родительского отчета в конструкторе отчетов с помощью мастера отчетов. Дополнительные сведения о конструкторе отчетов см. в разделе [Разработка отчетов с использованием конструктора отчетов (SSRS)](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### <a name="to-design-the-parent-report-using-the-report-wizard"></a>Проектирование родительского отчета с использованием мастера отчетов  
@@ -31,7 +31,7 @@ ms.locfileid: "48219994"
   
      Запустится мастер отчетов.  
   
-4.  На **свойства набора данных** странице **источника данных** выберите **DataSet1** был создан в [занятии 2: определение подключения к данным и таблицы данных для Родительского отчета](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+4.  На **свойства набора данных** странице **источника данных** выберите **DataSet1** был создан в [занятии 2: Определение подключения к данным и таблицы данных для родительского отчета](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
     Значение поля **Доступные наборы данных** автоматически изменится на **DataTable** (созданную ранее таблицу данных).  
   
 5.  Нажмите кнопку **Далее**.  

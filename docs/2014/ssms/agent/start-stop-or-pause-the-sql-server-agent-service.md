@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, starting
@@ -14,12 +14,12 @@ ms.assetid: c95a9759-dd30-4ab6-9ab0-087bb3bfb97c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54680a5a9d43ebe9deb8ddafeb3f91b33689706b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f21d13149ffa90a2383e8f090b205b50efa54641
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227594"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751347"
 ---
 # <a name="start-stop-or-pause-the-sql-server-agent-service"></a>Start, Stop, or Pause the SQL Server Agent Service
   В этом разделе описывается, как запустить, остановить или перезапустить службу агента SQL Server в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -73,7 +73,7 @@ ms.locfileid: "48227594"
   
  Дополнительные сведения см. в разделе:  
   
--   [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
+-   [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
 -   [Автоматический запуск агента SQL Server (среда SQL Server Management Studio)](autostart-sql-server-agent-sql-server-management-studio.md)  
   

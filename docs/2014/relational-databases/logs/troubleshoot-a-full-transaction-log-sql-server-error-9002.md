@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], full
@@ -18,12 +18,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75677d897c714828e23205490d68fd2e691b9b39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084914"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759516"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Устранение неполадок при переполнении журнала транзакций (ошибка SQL Server 9002)
   В этом разделе описаны возможные действия при переполнении журнала транзакций, а также советы о том, как его избежать. Когда журнал транзакций переполняется, в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] происходит ошибка 9002. Журнал может заполниться, когда база данных работает в режиме «в сети» или находится в процессе восстановления. Если журнал заполняется, когда база данных находится в режиме «в сети», база данных остается в режиме «в сети», но доступной только для чтения, но не для обновления. Если журнал заполняется, когда база данных находится в процессе восстановления, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] помечает базу данных как RESOURCE PENDING. В любом случае необходимо вмешательство пользователя, чтобы сделать журнал транзакций доступным.  

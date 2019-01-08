@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1a114fbb79ff3c6df57991f0db695f357d743adc
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983469"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402649"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Проверка подлинности и авторизация PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "38983469"
 |Администратор фермы или службы|Установка, включение и настройка служб и приложений.<br /><br /> Использование панели мониторинга управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и просмотр административных отчетов.|  
 |Полный доступ|Активация интеграции функции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на уровне семейств веб-сайтов.<br /><br /> Создание библиотеки галереи [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Создание библиотеки веб-каналов данных.|  
 |Участие|Добавление, изменение, удаление и скачивание книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Настройка обновления данных.<br /><br /> Создание новых отчетов и книг на основе книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , расположенных на сайте SharePoint.<br /><br /> Создание сервисных документов данных в библиотеке веб-каналов данных.|  
-|Чтение|Доступ к книгам [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в качестве внешнего источника данных, когда URL-адрес книги вводится явным образом в диалоговом окне подключения (например, через мастер подключения к данным Excel).|  
+|Чтение|Доступ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги в качестве внешнего источника данных, когда URL-адрес книги вводится явным образом в диалоговом окне подключения (например, в мастер подключения данных для Excel).|  
 |Только просмотр|Просмотр книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Просмотр журнала обновления данных.<br /><br /> Подключение локальной книги к книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сайте SharePoint для повторного использования ее данных в других целях.<br /><br /> Загрузите моментальный снимок книги. Моментальный снимок является статической копией данных, без срезов, фильтров, формул или подключений к данным. Содержимое моментального снимка аналогично копии значений ячеек из окна браузера.|  
   
 ##  <a name="excel"></a> Вопросы безопасности служб Excel для книг PowerPivot  
@@ -100,19 +100,19 @@ ms.locfileid: "38983469"
 > [!NOTE]  
 >  Большинство параметров безопасности применяется к надежным расположениям. Если необходимо сохранить значения по умолчанию или использовать разные значения для разных сайтов, можно создать дополнительное надежное расположение для сайтов, которые содержат данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , а затем настроить следующие параметры только для этих сайтов. Дополнительные сведения см. в разделе [Создание надежного расположения для сайтов PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-|Область|Настройка|Описание|  
+|Область|Параметр|Описание|  
 |----------|-------------|-----------------|  
 |Веб-приложение|Поставщик проверки подлинности Windows|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] преобразует токен утверждений, получаемый от служб Excel, в удостоверение пользователя Windows. Каждое веб-приложение, которое использует службы Excel в качестве ресурса, должно быть настроено для использования поставщика проверки подлинности Windows.|  
 |Надежное расположение|Тип расположения|Это значение должно быть равно **Microsoft SharePoint Foundation**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] получают копию XLSX-файла и загружают ее на сервер служб Analysis Services в ферме. Этот сервер может получить XLSX-файл только из библиотеки содержимого.|  
 ||Разрешить внешние данные|Это значение должно быть установлено равным **Надежные библиотеки подключений к данным и внедренные**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] внедряются в книгу. Если запретить внедренные соединения, то пользователи смогут просматривать кэш [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , но не смогут взаимодействовать с данными [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 ||Предупреждать при обновлении|Этот параметр должен быть отключен, если галерея [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] используется для хранения книг и отчетов. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] имеет функцию предварительного просмотра документов, которая работает лучше, если отключены оба предупреждения при открытии и обновлении.|  
 |Надежные поставщики данных|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 включается по умолчанию, но для доступа к [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] поставщиком MSOLAP.4 должна быть версия SQL Server 2008 R2.<br /><br /> Поставщик MSOLAP.5 устанавливается с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для SharePoint версии [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Не удаляйте эти поставщики из списка надежных поставщиков данных. В некоторых случаях может потребоваться установка дополнительных копий этого поставщика на других серверах SharePoint на ферме. Дополнительные сведения см. в статье [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).|  
-|Надежные библиотеки подключений к данным|Необязательный параметр.|Можно использовать файлы подключения к данным Office (ODC), хранящиеся в книгах [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Если сведения о подключении к локальным книгам [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] поставляются из ODC-файла, то эти же ODC-файлы можно добавить в данную библиотеку.|  
+|Надежные библиотеки подключений к данным|Необязательный.|Можно использовать файлы подключения к данным Office (ODC), хранящиеся в книгах [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Если сведения о подключении к локальным книгам [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] поставляются из ODC-файла, то эти же ODC-файлы можно добавить в данную библиотеку.|  
 |Определяемая пользователем сборка функций|Неприменимо.|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint игнорирует сборки пользовательских функций, созданные и развернутые для служб Excel. Если пользовательские сборки необходимы для каких-то операций, помните, что подсистема обработки запросов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] не будет использовать созданные функции, определяемые пользователем.|  
   
 ## <a name="see-also"></a>См. также  
  [Настройка учетных записей служб Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [Настройка Power Pivot (Power Pivot для SharePoint) учетной записи автоматического обновления](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
+ [Настройка учетной записи автоматического обновления данных PowerPivot (PowerPivot для SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [Создание надежного расположения для сайтов PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Архитектура безопасности PowerPivot](http://go.microsoft.com/fwlink/?linkID=220970)  
   

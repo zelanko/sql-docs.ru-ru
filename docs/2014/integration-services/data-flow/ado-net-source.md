@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
@@ -19,20 +18,20 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43e7e3e85567b74b2195214c37f9761cde5f0d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b672d602666fd51f98cf1854917dd2a035157d5e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072164"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352116"
 ---
 # <a name="ado-net-source"></a>Источник ADO NET
   Источник ADO NET использует данные поставщика .NET и делает данные доступными для потока данных.  
   
- Вы можете использовать источник ADO NET для подключения к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)]см. в разделе [Общие рекомендации и ограничения (база данных SQL Windows Azure)](http://go.microsoft.com/fwlink/?LinkId=248228).  
+ Вы можете использовать источник ADO NET для подключения к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)]см. в разделе [Общие рекомендации и ограничения (база данных SQL Windows Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Поддержка типов данных  
- Источник преобразует все типы данных, которые не сопоставлены с конкретными типами данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_NTEXT. Это преобразование происходит, даже если тип данных является `System.Object`.  
+ Источник преобразует все типы данных, которые не сопоставлены с конкретными типами данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_NTEXT. Преобразованию подвергаются даже данные типа `System.Object`.  
   
  Тип данных DT_NTEXT можно изменить на тип DT_WSTR, а DT_WSTR на DT_NTEXT. Типы данных меняются установкой свойства **DataType** в диалоговом окне **Расширенный редактор** источника ADO NET. Дополнительные сведения см. в статье [Common Properties](../common-properties.md).  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48072164"
 >  Когда инструкция SQL используется для вызова хранимой процедуры, возвращающей результаты из временной таблицы, используйте параметр WITH RESULT SETS для определения метаданных набора результатов.  
   
 > [!NOTE]  
->  Если происходит сбой пакета со следующей ошибкой при использовании инструкции SQL для выполнения хранимой процедуры, можно устранить эту ошибку, добавив `SET FMTONLY OFF` перед инструкцией exec.  
+>  Если при использовании инструкции SQL для выполнения хранимой процедуры происходит сбой пакета со следующей ошибкой, эту ошибку можно исправить путем добавления инструкции `SET FMTONLY OFF` перед инструкцией EXEC.  
 >   
 >  **Столбец <имя_столбца> не найден в источнике данных.**  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48072164"
   
 ## <a name="see-also"></a>См. также  
  [Назначение DataReader](datareader-destination.md)   
- [Назначение "ADO.NET"](ado-net-destination.md)   
+ [Назначение «ADO.NET»](ado-net-destination.md)   
  [Поток данных](data-flow.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, about explicit hierarchies
@@ -15,12 +14,12 @@ ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41a2e720490e67158847152e1cdf1d8f37ee3cae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90153c2ed0524a486fe7014890e7e1a30d987d84
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062484"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809276"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Явные иерархии (службы основных данных)
   В явных иерархиях в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]элементы из одной сущности упорядочиваются любым заданным способом. Структура может быть неоднородной, причем, в отличие от производных иерархий, явные иерархии не основываются на связях, основанных на доменах атрибутов.  
@@ -70,7 +69,7 @@ ms.locfileid: "48062484"
 |Может быть неоднородной|Всегда содержит согласованное количество уровней.|  
   
 ## <a name="explicit-hierarchy-example"></a>Пример явной иерархии  
- В следующем примере сущность Product содержит следующие конечные элементы: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} и BK-R650 {Road-650}.  
+ В приведенном ниже примере сущность Product содержит конечные элементы: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} и BK-R650 {Road-650}.  
   
  Для объединения этих конечных элементов в заданных точках консолидации можно создать консолидированные элементы для сущности Product. Для этого надо вставить консолидированные элементы на том уровне дерева иерархии, где планируется объединить конечные элементы. Не существует никаких ограничений на то, где именно необходимо вставлять консолидированные элементы, однако каждый из них (и конечный, и объединенный) можно использовать только один раз.  
   
@@ -83,15 +82,15 @@ ms.locfileid: "48062484"
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Включение сущности для явных иерархий и коллекций.|[Активация сущности для явных иерархий и коллекций &#40;службы Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Создание новой явной иерархии.|[Создание явной иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Изменение имени существующей явной иерархии.|[Изменение имени явной иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|Удаление существующей явной иерархии.|[Удаление явной иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|Создание новой явной иерархии.|[Создание явной иерархии (службы Master Data Services)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Изменение имени существующей явной иерархии.|[Изменение имени явной иерархии (службы Master Data Services)](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|Удаление существующей явной иерархии.|[Удаление явной иерархии (службы Master Data Services)](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>См. также  
   
--   [Производные иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+-   [Производные иерархии (службы Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [Коллекции &#40;службы Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [Коллекции (службы Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
   
   

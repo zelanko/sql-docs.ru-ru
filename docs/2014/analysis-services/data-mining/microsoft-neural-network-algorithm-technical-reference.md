@@ -29,12 +29,12 @@ ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 118c20c16890edb50bdc19686da40c77b362c29d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217654"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521122"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Технический справочник по алгоритму нейронной сети (Майкрософт)
   Алгоритм нейронной сети ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) использует сеть в виде *многослойного перцептрона* , также известного под названием *сеть дельта-правила с обратным распространением*, в состав которой может входить до трех слоев нейронов, или *перцептронов*. Такими слоями являются входной слой, необязательный скрытый слой и выходной слой.  
@@ -160,7 +160,7 @@ ms.locfileid: "48217654"
   
  Другими словами, если для параметра HOLDOUT_PERCENTAGE задано значение 30, то алгоритм будет использовать либо значение этого параметра, либо значение, равное 70 процентам от общего количества вариантов, в зависимости от того, какое из двух указанных значений меньше.  
   
- Значение по умолчанию — 10 000.  
+ Значение по умолчанию — 10 000.  
   
 ### <a name="modeling-flags"></a>Флаги моделирования  
  Далее перечислены флаги модели, которые поддерживает алгоритм нейронной сети ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ).  
@@ -203,7 +203,7 @@ ms.locfileid: "48217654"
   
 ## <a name="see-also"></a>См. также  
  [Алгоритм нейронной сети (Майкрософт)](microsoft-neural-network-algorithm.md)   
- [Модель интеллектуального анализа данных для моделей нейронных сетей &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Содержимое моделей интеллектуального анализа данных для моделей нейронных сетей (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Примеры запросов к модели нейронной сети](neural-network-model-query-examples.md)  
   
   

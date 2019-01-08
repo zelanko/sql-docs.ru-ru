@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544268"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Развертывание решений PowerPivot в SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,19 +26,19 @@ ms.locfileid: "38984766"
   
  Этот раздел состоит из следующих подразделов.  
   
- [Обязательное условие: убедитесь, что в веб-приложении используется классический режим проверки подлинности.](#bkmk_classic)  
+ [Предварительные требования. Убедитесь, что веб-приложения используется классический режим проверки подлинности](#bkmk_classic)  
   
  [Шаг 1. Развертывание решения фермы](#bkmk_farm)  
   
- [Шаг 2. Развертывание решения веб-приложения PowerPivot в центре администрирования](#deployCA)  
+ [Шаг 2. Развертывание решения Power Pivot веб-приложения в центре администрирования](#deployCA)  
   
- [Шаг 3. Развертывание решения для веб-приложений PowerPivot для других веб-приложений](#deployUI)  
+ [Шаг 3. Развертывание решения Power Pivot веб-приложения в других веб-приложений](#deployUI)  
   
  [Повторное развертывание или отзыв решения](#retract)  
   
  [О решениях PowerPivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Обязательное условие: убедитесь, что в веб-приложении используется классический режим проверки подлинности.  
+##  <a name="bkmk_classic"></a> Предварительные требования. Проверка использования классического режима проверки подлинности в веб-приложении  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint поддерживается только в тех веб-приложениях, которые используют классическую проверку подлинности Windows. Чтобы проверить, использует ли приложение классический режим, выполните следующий командлет PowerShell из **консоль управления SharePoint 2010**, заменив **http://\<имя сайта верхнего уровня >** с Имя сайта SharePoint:  
   
 ```  
@@ -47,7 +47,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Должно быть возвращено значение **false**. Если значение равно **true**, доступ к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] с помощью этого веб-приложения невозможен.  
   
-##  <a name="bkmk_farm"></a> Шаг 1. Развертывание решения фермы  
+##  <a name="bkmk_farm"></a> Шаг 1. Разверните решение фермы  
  В этом разделе показано, как развертывать решения с помощью PowerShell, но для этой задачи можно использовать и средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Дополнительные сведения см. в разделе [Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Это действие выполняется один раз после установки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint.  
@@ -57,7 +57,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  Для добавления решения фермы выполните следующий командлет.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      Командлет возвратит имя решения, его идентификатор, а также атрибут Deployed=False. На следующем шаге будет выполнено развертывание решения.  
@@ -65,10 +65,10 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Выполните следующий командлет, чтобы развернуть решение фермы.  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> Шаг 2. Развертывание решения веб-приложения PowerPivot в центре администрирования  
+##  <a name="deployCA"></a> Шаг 2. Развертывание решения Power Pivot веб-приложения в центре администрирования  
  После развертывания решения фермы следует развернуть решение веб-приложения для центра администрирования. Это действие добавляет в центр администрирования панель мониторинга [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 1.  Откройте консоль управления SharePoint 2010, выбрав команду **Запуск от имени администратора** .  
@@ -82,7 +82,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Для добавления решения фермы выполните следующий командлет.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      Командлет возвратит имя решения, его идентификатор, а также атрибут Deployed=False. На следующем шаге будет выполнено развертывание решения.  
@@ -95,7 +95,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Теперь, когда решение веб-приложения развернуто в центре администрирования, оставшиеся шаги конфигурации можно выполнить с помощью центра администрирования.  
   
-##  <a name="deployUI"></a> Шаг 3. Развертывание решения для веб-приложений PowerPivot для других веб-приложений  
+##  <a name="deployUI"></a> Шаг 3. Развертывание решения Power Pivot веб-приложения в других веб-приложений  
  В предыдущей задаче решение powerpivotwebapp.wsp было развернуто в центре администрирования. В этом разделе описано развертывание решения powerpivotwebapp.wsp для каждого веб-приложения, поддерживающего доступ к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . При добавлении других веб-приложений в дальнейшем необходимо будет повторить для них этот шаг.  
   
 1.  В разделе «Системные параметры» центра администрирования выберите **Управление решениями фермы**.  

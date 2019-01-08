@@ -23,12 +23,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 429a0d7d29864cb3aeca313f5e69638014ff2887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9feaa3be20692b89b0d0568f1ccacc49c992667
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215124"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408283"
 ---
 # <a name="set-index-options"></a>Установка параметров индекса
   В этом разделе описывается процесс изменения свойств индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,9 +51,9 @@ ms.locfileid: "48215124"
   
 ###  <a name="Restrictions"></a> Ограничения  
   
--   К индексу с помощью предложения SET в инструкции ALTER INDEX немедленно применяются следующие параметры: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY и STATISTICS_NORECOMPUTE.  
+-   К индексу с помощью предложения SET в инструкции ALTER INDEX можно немедленно применить следующие параметры. ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY, и STATISTICS_NORECOMPUTE.  
   
--   Следующие параметры можно установить при перестройке индекса с помощью инструкции ALTER INDEX REBUILD или CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP и DROP_EXISTING (только CREATE INDEX).  
+-   Следующие параметры индекса можно установить при перестройке индекса с помощью инструкции ALTER INDEX REBUILD или CREATE INDEX WITH DROP_EXISTING. PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP и DROP_EXISTING (только для CREATE INDEX).  
   
 ###  <a name="Security"></a> безопасность  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48215124"
   
 #### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>Изменение свойств индекса при помощи конструктора таблиц.  
   
-1.  В обозревателе объектов щелкните знак «плюс», чтобы развернуть базу данных, содержащую таблицу, в которой необходимо изменить свойства индекса.  
+1.  В обозревателе объектов щелкните значок плюса, чтобы развернуть базу данных, содержащую таблицу, в которой необходимо изменить свойства индекса.  
   
 2.  Чтобы развернуть папку **Таблицы** , щелкните значок «плюс».  
   
@@ -82,11 +82,11 @@ ms.locfileid: "48215124"
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Изменение свойств индекса при помощи обозревателя объектов.  
   
-1.  В обозревателе объектов щелкните знак «плюс», чтобы развернуть базу данных, содержащую таблицу, в которой необходимо изменить свойства индекса.  
+1.  В обозревателе объектов щелкните значок плюса, чтобы развернуть базу данных, содержащую таблицу, в которой необходимо изменить свойства индекса.  
   
 2.  Чтобы развернуть папку **Таблицы** , щелкните значок «плюс».  
   
-3.  Щелкните знак «плюс» (+), чтобы развернуть таблицу, в которой необходимо изменить свойства индекса.  
+3.  Щелкните значок плюса (+), чтобы развернуть таблицу, в которой необходимо изменить свойства индекса.  
   
 4.  Чтобы развернуть папку **Индексы** , щелкните знак «плюс» (+).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48215124"
   
 #### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>Просмотр свойств всех индексов в таблице  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "48215124"
   
 #### <a name="to-set-the-properties-of-an-index"></a>Задание свойств индекса  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

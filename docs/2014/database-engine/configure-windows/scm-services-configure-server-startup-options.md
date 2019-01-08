@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], startup options
@@ -17,15 +16,15 @@ ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07fc15bf088cf48e0a1b9a30cd68d5c10254d345
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 91a48d4acd771c19617bac26c1393f30334768e8
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072109"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639492"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>Настройка параметров запуска сервера (диспетчер конфигурации SQL Server)
-  В этом разделе описывается настройка параметров запуска, которые будут использоваться каждый раз [!INCLUDE[ssDE](../../includes/ssde-md.md)] начинается [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Список параметров запуска см. в разделе [Параметры запуска службы Database Engine](database-engine-service-startup-options.md).  
+  В этом разделе описано, как настроить параметры запуска, которые будут использоваться при каждом запуске компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], с помощью Configuration Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список параметров запуска см. в разделе [Параметры запуска службы Database Engine](database-engine-service-startup-options.md).  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   

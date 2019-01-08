@@ -1,5 +1,5 @@
 ---
-title: Технический справочник по алгоритму нейронной сети Майкрософт | Документы Microsoft
+title: Технический справочник по алгоритму нейронной сети Майкрософт | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e71ae9c0ceb236c49df8e7fc8ec67713ef3e76
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a9895eb3e52c83c1ee3594b40fa7257fc53fd4d0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018251"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525487"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Технический справочник по алгоритму нейронной сети (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Алгоритм нейронной сети ([!INCLUDE[msCoName](../../includes/msconame-md.md)]) использует сеть в виде *многослойного перцептрона*, также известного под названием *сеть дельта-правила с обратным распространением*, в состав которой может входить до трех слоев нейронов, или *перцептронов*. Такими слоями являются входной слой, необязательный скрытый слой и выходной слой.  
+  Алгоритм нейронной сети ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) использует сеть в виде *многослойного перцептрона* , также известного под названием *сеть дельта-правила с обратным распространением*, в состав которой может входить до трех слоев нейронов, или *перцептронов*. Такими слоями являются входной слой, необязательный скрытый слой и выходной слой.  
   
  В задачи настоящей документации не входит подробное рассмотрение таких нейронных сетей, как многослойные перцептроны. В данном разделе содержится описание базовой реализации алгоритма, в том числе метода, используемого для нормализации входных и выходных значений. Приводится также описание методов выбора компонентов, которые применяются для снижения количества элементов атрибута. В данном разделе описываются параметры и другие настройки, с помощью которых можно управлять поведением алгоритма. Приводятся также ссылки на дополнительную информацию о запросах к модели.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34018251"
   
  **Дискретные значения**  
   
- `μ = p` — первоначальная вероятность состояния  
+ `μ = p` — Первоначальная вероятность состояния  
   
  `StdDev  = sqrt(p(1-p))`  
   
@@ -183,8 +183,8 @@ ms.locfileid: "34018251"
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм нейронной сети Майкрософт](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Содержимое модели интеллектуального анализа данных для модели нейронной сети & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Алгоритм нейронной сети (Майкрософт)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Содержимое моделей интеллектуального анализа данных для моделей нейронных сетей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Примеры запросов к модели нейронной сети](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

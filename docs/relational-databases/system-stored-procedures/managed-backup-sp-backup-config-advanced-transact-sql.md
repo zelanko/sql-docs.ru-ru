@@ -21,12 +21,12 @@ ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c3f19fed072e693de6bbebb53354eae8c0bfaa0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86db5a13ab1bdac2b35c6d5128ba1b2234bc24b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827912"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536401"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ EXEC managed_backup.sp_backup_config_advanced
  Имя базы данных для включения управляемого резервного копирования на определенной базе данных. Если значение равно NULL или *, то этот управляемого резервного копирования применяется ко всем базам данных на сервере.  
   
  @encryption_algorithm  
- Имя алгоритма шифрования, используемого во время резервного копирования для шифрования файла резервной копии. @encryption_algorithm — **SYSNAME**. Это обязательный параметр при настройке конфигурации [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] в первый раз для базы данных. Укажите **NO_ENCRYPTION** Если шифровать файл резервной копии не требуется. При изменении параметров конфигурации [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] этот параметр не обязателен; если он не указан, сохраняются существующие значения. Разрешенные значения для этого параметра:  
+ Имя алгоритма шифрования, используемого во время резервного копирования для шифрования файла резервной копии. @encryption_algorithm — **SYSNAME**. Это обязательный параметр при настройке конфигурации [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] в первый раз для базы данных. Укажите **NO_ENCRYPTION** Если шифровать файл резервной копии не требуется. При изменении [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] параметры конфигурации, этот параметр является необязательным - Если этот параметр не указан, то сохраняются существующие значения конфигурации. Разрешенные значения для этого параметра:  
   
 -   AES_128  
   

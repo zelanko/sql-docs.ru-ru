@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - rounding expressions
@@ -14,12 +13,12 @@ ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 950d2c8aa3bd67327eb184017a71bc3851cb2abf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3033398be7625230ac6d9abd7b8b329f312632c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212264"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808016"
 ---
 # <a name="round-ssis-expression"></a>ROUND (выражение служб SSIS)
   Возвращает числовое выражение, округленное до указанной длины или точности. Параметр длины должен иметь целочисленное значение.  
@@ -33,7 +32,7 @@ ROUND(numeric_expression,length)
   
 ## <a name="arguments"></a>Аргументы  
  *numeric_expression*  
- Является выражением допустимого числового типа. Дополнительные сведения см. в статье [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Является выражением допустимого числового типа. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  *длина*  
  Является целочисленным выражением. Это точность, до которой должно быть округлено значение *numeric_expression* .  
@@ -55,6 +54,6 @@ ROUND(137.1575,3)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md)  
+ [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   
   

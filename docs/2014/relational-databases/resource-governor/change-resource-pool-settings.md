@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, resource pool alter
@@ -14,19 +13,19 @@ ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9c81b1c82932fe09a89ffb32f17fd32de34ad8d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6392c8211e073183b68d2d04e9c949317d6a33a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183024"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763316"
 ---
 # <a name="change-resource-pool-settings"></a>Изменение параметров пула ресурсов
   Можно изменить параметры пула ресурсов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Перед началом работы**  [Ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
--   **Изменение параметров для пула ресурсов с использованием следующих средств:**  [SQL Server Management Studio](#ChgRPProp), [Transact-SQL](#ChgRPTSQL)  
+-   **Чтобы изменить параметры для пула ресурсов, с помощью:**  [SQL Server Management Studio](#ChgRPProp), [Transact-SQL](#ChgRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -70,7 +69,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Регулятор ресурсов](resource-governor.md)   
+ [регулятор ресурсов](resource-governor.md)   
  [Активация регулятора ресурсов](enable-resource-governor.md)   
  [Создание пула ресурсов](create-a-resource-pool.md)   
  [Удаление пула ресурсов](delete-a-resource-pool.md)   

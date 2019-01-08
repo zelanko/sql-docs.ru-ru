@@ -14,12 +14,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9422afe49ecd31512b22995767ead61b7e9f4cce
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018469"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352508"
 ---
 # <a name="migrate-query-plans"></a>Перенос планов запросов
   В большинстве случаев обновление базы данных до последней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приведет к повышению производительности запросов. Однако при наличии ответственных запросов, для которых производительность тщательно настроена, перед началом обновления может оказаться полезным сохранить планы запросов, создав для каждого из них структуру плана. Если после обновления оптимизатор запросов выбирает для некоторых запросов менее эффективный план, можно разрешить использование старых структур планов и заставить оптимизатор запросов пользоваться ими.  
@@ -41,7 +41,7 @@ ms.locfileid: "51018469"
 ## <a name="example"></a>Пример  
  Следующий пример иллюстрирует запись старого плана для запроса путем создания структуры плана.  
   
-### <a name="step-1-collect-the-plan"></a>Шаг 1: Получение плана  
+### <a name="step-1-collect-the-plan"></a>Шаг 1. Получите план  
  План запроса, записываемый в структуру плана, должен иметь формат XML. Планы запросов в формате XML могут быть созданы следующими способами.  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>Шаг 2: Создание структуры плана для принудительного плана  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>Этап 2. Создайте структуру плана для принудительного выбора плана  
  Скопируйте план запроса в формате XML, полученный любым из описанных выше способов, из структуры плана, а затем вставьте его в виде строкового литерала в указание запроса USE PLAN предложения OPTION процедуры sp_create_plan_guide.  
   
  В самом XML-плане перед созданием структуры плана необходимо экранировать входящие в него кавычки ('). Например, план, содержащий `WHERE A.varchar = 'This is a string'`, должен быть изменен и содержать `WHERE A.varchar = ''This is a string''`.  
@@ -79,16 +79,16 @@ EXECUTE sp_create_plan_guide
 @type = N'SQL',  
 @module_or_batch = NULL,  
 @params = NULL,  
-@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''http://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
+@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''https://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
     Version=''''0.5'''' Build=''''9.00.1116''''>  
     <BatchSequence><Batch><Statements><StmtSimple>  
-    …  
+    ...  
     </StmtSimple></Statements></Batch>  
     </BatchSequence></ShowPlanXML>'')';  
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Шаг 3: Убедитесь, что структура плана применяется к запросу  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Шаг 3. Убедитесь в том, что к запросу применено руководство плана.  
  Выполните запрос еще раз и проверьте созданный план запроса. Убедитесь, что план выполнения совпадает с тем, что был указан в структуре плана.  
   
 ## <a name="see-also"></a>См. также  

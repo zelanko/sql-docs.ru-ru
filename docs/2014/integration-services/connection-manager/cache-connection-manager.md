@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Cache connection manager
@@ -13,12 +12,12 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0d3513446c930d41ef9163708e60ad063244479
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa2c26f086ea67a83308945990375b19164a7d0d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064284"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769146"
 ---
 # <a name="cache-connection-manager"></a>диспетчер соединений с кэшем
   Диспетчер соединений с кэшем считывает данные из преобразования кэша или из файла кэша (CAW) и может сохранить эти данные в файле кэша. Данные всегда будут храниться в памяти, вне зависимости от того, был ли настроен диспетчер соединений с кэшем для использования файла кэша.  
@@ -52,9 +51,9 @@ ms.locfileid: "48064284"
   
  Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , см. в разделе [Редактор диспетчера соединений с кэшем](../cache-connection-manager-editor.md).  
   
- Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Дополнительные сведения о программной настройке диспетчера соединений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера подключений с кэшем](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+ [реализовать преобразование «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений с кэшем](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
   

@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59c9af7037c51490e93352849957ec57bc7e4eb3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f6af7eecb4a77adb4d53440753da1c9b6ef6e1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662303"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509819"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Интерпретация заметки — sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Массовая загрузка XML обрабатывает **sql: сопоставлены** заметки в схеме XSD должным образом, т. е если схема сопоставления задает **sql: сопоставлены = «false»** для любого элемента или атрибута, Массовая загрузка XML не поддерживает Попытка сохранить связанные данные в соответствующем столбце.  
+  Массовая загрузка XML обрабатывает **sql: сопоставлены** является заметки в схемах XSD, ожидается, если схема сопоставления задает **sql: сопоставлены = «false»** для любого элемента или атрибута, Массовая загрузка XML не поддерживает Попытка сохранить связанные данные в соответствующем столбце.  
   
  Массовая загрузка XML пропускает элементы и атрибуты, которые не сопоставлены (поскольку они не описаны в схеме, или они помечены в схеме XSD с **sql: сопоставлены = «false»**). Все несопоставленные данные попадают в столбце переполнения, если такой столбец задается с помощью **SQL: Overflow-поле**.  
   

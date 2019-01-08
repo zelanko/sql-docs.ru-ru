@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server replication], merge replication
@@ -16,12 +15,12 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 01e0d1d3214d9502d3c4a8db91cd16617dd9472a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4d1bdc1f39e7e8e40b75b02bcb258f23ee411a7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220894"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757494"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Стратегия резервного копирования и восстановления из копии для репликации слиянием
   Для репликации слиянием регулярно создавайте резервные копии следующих баз данных:  
@@ -62,7 +61,7 @@ ms.locfileid: "48220894"
   
  Если выполняется синхронизация с подписчиком, на котором запущена версия [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] меньше [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], подписка не может быть анонимной. Это должна быть клиентская или серверная подписка (в предыдущих версиях такие подписки называются локальными и глобальными).  
   
- Чтобы синхронизировать подписку, см. разделы [Синхронизация принудительной подписки](../synchronize-a-push-subscription.md) и [Синхронизация подписки по запросу](../synchronize-a-pull-subscription.md).  
+ Чтобы синхронизировать подписку, см. разделы [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) и [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
 ### <a name="reinitializing-all-subscriptions"></a>Повторная инициализация всех подписок  
  Повторная инициализация всех подписок гарантирует, что все подписчики находятся в состоянии, согласованном с восстановленной базой данных публикаций. Такой подход следует применять, если требуется вернуть всю топологию в предыдущее состояние, представленное резервной копией базы данных публикаций. Например, повторная инициализация всех подписок может потребоваться, если восстановление базы данных публикаций до более ранней точки используется в качестве механизма возврата из ошибочно выполненной пакетной операции.  

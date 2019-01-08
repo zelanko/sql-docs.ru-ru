@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - FINDSTRING function
@@ -13,12 +12,12 @@ ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b2ea62bd49073d7da87fd0e8218b656ded7f96f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc77f0d87be4595e672cec61b43d041f0b89a22a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105680"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782536"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (выражение служб SSIS)
   Возвращает местоположение заданного вхождения строки в символьном выражении. Возвращаемый результат является относительным положением вхождения в выражении, нумерация символов которого начинается с единицы. Значением параметра строки должно быть символьное выражение, а значением параметра вхождения должно быть целое число. Если строка не найдена, возвращается значение 0. Если строка встречается меньшее количество раз, чем определено аргументом, то возвращается значение 0.  
@@ -78,7 +77,7 @@ FINDSTRING(Name,Size,1)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [ЗАМЕНИТЕ &#40;выражение служб SSIS&#41;](replace-ssis-expression.md)   
- [Функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md)  
+ [REPLACE (выражение служб SSIS)](replace-ssis-expression.md)   
+ [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   
   

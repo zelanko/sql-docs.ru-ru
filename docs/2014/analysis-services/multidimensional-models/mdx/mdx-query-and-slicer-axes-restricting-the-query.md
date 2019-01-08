@@ -16,12 +16,12 @@ ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b2a7d69055d3d60f8805a7cf7e8b9f1a98b9c01e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3413f4da8443df07732e1c6acca5ed6112cb59dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508423"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>Ограничение запроса с помощью осей запроса и среза (многомерные выражения)
   При формировании инструкции многомерных выражений SELECT приложение обычно изучает куб и разбивает набор иерархий на два следующих подмножества.  
@@ -35,7 +35,7 @@ ms.locfileid: "48048186"
  Пример использования осей запроса и среза см. в разделе [Оси запроса и среза. Простой пример (многомерные выражения)](mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md).  
   
 ## <a name="see-also"></a>См. также  
- [Работа с элементами, кортежами и наборами &#40;многомерных Выражений&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Основные принципы запросов многомерных Выражений &#40;служб Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Работа с элементами, кортежами и наборами (многомерные выражения)](working-with-members-tuples-and-sets-mdx.md)   
+ [Основные принципы запросов многомерных выражений (службы Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

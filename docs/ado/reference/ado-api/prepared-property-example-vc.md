@@ -15,15 +15,15 @@ ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb7e726b506ab913d99d3024a4dc6f64a71bf543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7be1a190773483e198a005b91470dbdbcfc50663
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846492"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532595"
 ---
 # <a name="prepared-property-example-vc"></a>Пример свойства Prepared (Visual C++)
-В этом примере показано [подготовленных](../../../ado/reference/ado-api/prepared-property-ado.md) свойство, открыв два [команда](../../../ado/reference/ado-api/command-object-ado.md) объектов — подготовлен и не подготовлена.  
+В этом примере показано [подготовленных](../../../ado/reference/ado-api/prepared-property-ado.md) свойство, открыв два [команда](../../../ado/reference/ado-api/command-object-ado.md) объектов - подготовлены и не подготовлена.  
   
 ## <a name="example"></a>Пример  
   
@@ -142,8 +142,8 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Результаты производительности:**  
-**Не готов: 0.016 секунд**  
-**Подготовка: 0.016 секунд**   
+**Не готов:  0.016 секунд**  
+**Подготовить.      0.016 секунд**   
 ## <a name="see-also"></a>См. также  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Свойство Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

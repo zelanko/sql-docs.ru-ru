@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ce5905026d2a64df3180828e5ee2983f88a5aa06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f86645a542e4c215a3675d7a0cbf9cfbd45cc2e9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056084"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783946"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Изменение типа атрибута (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]администраторы могут изменить тип атрибута, если тип данных или количество допустимых символов являются неверными.  
@@ -31,7 +30,7 @@ ms.locfileid: "48056084"
   
 -   необходимо иметь разрешение на доступ к функциональным областям **Администрирование системы** и **Обозреватель** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../administrators-master-data-services.md).  
   
 -   должны быть существующие модель, сущность и атрибут.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48056084"
   
 -   Изменение типа данных атрибута.  
   
--   Создание копии атрибута с суффиксом «_old», которая не содержит никаких значений. Это называется **устаревшим** атрибута.  
+-   Создание копии атрибута с суффиксом «_old», который содержит любое значение. Это называется **устаревшим** атрибута.  
   
  Однако все существующие элементы, которые зависят от исходного атрибута, будут указывать на устаревший атрибут, а не на измененный.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48056084"
 >  Изменять тип данных атрибутов MDS, которые имеют данные и связанные сущности, неудобно, особенно если объявлено бизнес-правило или представление подписки, которое ссылается на сущность. Рекомендуется для начала выбрать тип данных, который достаточно гибок и позволяет указывать все необходимые значения. Например, вначале строки могут быть небольшими, но со временем становиться все длиннее, поэтому следует исходить из самого худшего варианта развития событий. Очень длинные текстовые строки могут быть неудобными в работе (например, широкие текстовые поля для пользовательского интерфейса сложно уместить на экране), поэтому следует избегать слишком длинных строк.  
   
 ## <a name="see-also"></a>См. также  
- [Атрибуты &#40;службы Master Data Services&#41;](../attributes-master-data-services.md)   
+ [Атрибуты (службы Master Data Services)](../attributes-master-data-services.md)   
  [Построение модели (надстройка MDS для Excel)](building-a-model-mds-add-in-for-excel.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], permissions
@@ -17,12 +16,12 @@ ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 683fce95bca8a2e08b893031d88c46d8fe5de590
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bed2868b74087cd0e4c119ada7e29f0c5db73ce5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176084"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754606"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Разрешения, необходимые для запуска приложения SQL Server Profiler
   По умолчанию для запуска приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] требуются такие же разрешения, что и для хранимых процедур языка Transact-SQL, используемых для создания трассировок. Для запуска приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] пользователь должен обладать разрешением ALTER TRACE. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на сервер (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).  
@@ -33,7 +32,7 @@ ms.locfileid: "48176084"
 ## <a name="permissions-used-to-replay-traces"></a>Разрешения на воспроизведение трассировок  
  Для воспроизведения трассировок пользователю требуется разрешение ALTER TRACE.  
   
- Однако если во время воспроизведения трассировки возникло событие «Audit Login», приложение [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] использует команду EXECUTE AS. Эту команду [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] использует для олицетворения пользователя, связанного с событием входа в систему.  
+ Однако если во время воспроизведения трассировки возникло событие «Audit Login», приложение [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] использует команду EXECUTE AS. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] использует для олицетворения пользователя, связанного с событием входа в систему.  
   
  Если в воспроизводимой трассировке приложение [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] обнаруживает событие входа в систему, то производятся проверки следующих разрешений.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48176084"
   
 2.  В воспроизводимой трассировке возникло событие входа в систему для Пользователя2.  
   
-3.  Приложение [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] олицетворяет Пользователя2 командой EXECUTE AS.  
+3.  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] олицетворяет Пользователя2 командой EXECUTE AS.  
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается проверить подлинность Пользователя2, и, в зависимости от результатов, происходят следующие действия.  
   
@@ -68,8 +67,8 @@ ms.locfileid: "48176084"
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры приложения SQL Server Profiler (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   
  [Воспроизведение трассировок](replay-traces.md)   
- [Создать трассировку &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
- [Воспроизведение таблицы трассировки &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
- [Воспроизведение файла трассировки (приложение SQL Server Profiler)](replay-a-trace-file-sql-server-profiler.md)  
+ [Создание трассировки (SQL Server Profiler)](create-a-trace-sql-server-profiler.md)   
+ [Воспроизведение таблицы трассировки (SQL Server Profiler)](replay-a-trace-table-sql-server-profiler.md)   
+ [Воспроизведение файла трассировки (SQL Server Profiler)](replay-a-trace-file-sql-server-profiler.md)  
   
   

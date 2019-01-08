@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23cc199958a43fc9056a7a5dc1b83f691ae15523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9518a92cbd3b1f39c49adcdd84bb18e254e6f67
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063742"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760946"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>Устранение неполадок пакетов с помощью отчетов
   В текущем выпуске служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] доступны стандартные отчеты, упрощающие наблюдение за пакетами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , развернутых в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а также устранение неполадок с пакетами. Два из этих отчетов о пакетах позволяют просматривать состояние выполнения пакетов и выявлять причины ошибок выполнения.  
@@ -33,7 +32,7 @@ ms.locfileid: "48063742"
   
      Вы можете отфильтровать таблицу, отображенную на любой странице, нажав кнопку **Фильтр** и выбрав критерии фильтрации в диалоговом окне **Параметры фильтра** . Доступные условия фильтрации зависят от отображаемых данных. Чтобы изменить порядок сортировки отчета, вы можете щелкнуть значок сортировки в диалоговом окне **Параметры фильтра** .  
   
--   **Отчет "Активность — все выполнения"** . В этом отчете дается сводка по всем выполнениям служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сервере. В сводке показываются данные о каждом выполнении: состояние, время начала и время окончания. Каждая запись сводки содержит ссылки на дополнительные сведения о выполнении, включая сообщения, которые создаются во время выполнения, и данные о производительности. Как и в отчете «Панель мониторинга служб Integration Services», здесь вы можете применить фильтр к таблице, чтобы сократить объем информации.  
+-   **Отчет "Активность — все выполнения"**. В этом отчете дается сводка всех выполнений служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сервере. В сводке показываются данные о каждом выполнении: состояние, время начала и время окончания. Каждая запись сводки содержит ссылки на дополнительные сведения о выполнении, включая сообщения, которые создаются во время выполнения, и данные о производительности. Как и в отчете «Панель мониторинга служб Integration Services», здесь вы можете применить фильтр к таблице, чтобы сократить объем информации.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Просмотр отчетов для сервера служб Integration Services](../view-reports-for-the-integration-services-server.md)  
@@ -41,6 +40,6 @@ ms.locfileid: "48063742"
 ## <a name="related-content"></a>См. также  
  [Отчеты для сервера служб Integration Services](../reports-for-the-integration-services-server.md)  
   
- [Инструменты устранения неполадок с выполнением пакетов](troubleshooting-tools-for-package-execution.md)  
+ [Устранение неполадок инструментов с помощью отчетов](troubleshooting-tools-for-package-execution.md)  
   
   

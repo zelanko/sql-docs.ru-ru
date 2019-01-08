@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], applying
@@ -14,12 +13,12 @@ ms.assetid: 631f48bf-50c9-4015-b9d8-8f1ad92d1ee2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc0654f4526ebd816b0b76dd7b2629a5bf2e1393
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd78bf7da1a68e7e053af52c4fa8f9cf0cd71094
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135780"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755646"
 ---
 # <a name="create-and-apply-the-snapshot"></a>Создание и применение моментального снимка
   Моментальные снимки создаются агентом моментальных снимков после создания публикации. Моментальные снимки могут создаваться:  
@@ -44,9 +43,9 @@ ms.locfileid: "48135780"
   
  Чтобы просмотреть или изменить папку по умолчанию для моментального снимка, см.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Указание расположения моментальных снимков по умолчанию (SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Задайте местоположение моментальных снимков по умолчанию &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)  
   
--   Программирование репликации и RMO: [Configure Publishing and Distribution](configure-publishing-and-distribution.md)  
+-   Программирование репликации и RMO: [Настройка публикации и распространения](configure-publishing-and-distribution.md)  
   
 ## <a name="see-also"></a>См. также  
  [Инициализация подписки с помощью моментального снимка](initialize-a-subscription-with-a-snapshot.md)   

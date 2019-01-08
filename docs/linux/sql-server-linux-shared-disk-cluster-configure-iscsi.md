@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676343"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524909"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Настройка экземпляра отказоустойчивого кластера — iSCSI — SQL Server в Linux
 
@@ -93,7 +93,7 @@ ms.locfileid: "51676343"
 6.  Проверьте присоединенных дисков iSCSI
 
     ```bash
-    sudo grep “Attached SCSI” /var/log/messages
+    sudo grep "Attached SCSI" /var/log/messages
     ```
     ![30-iSCSIattachedDisks][7]
 
@@ -187,7 +187,7 @@ ms.locfileid: "51676343"
    *    Удалите файлы из существующего каталога данных SQL Server. Вы не получите любое подтверждение при успешном выполнении.
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    Убедитесь, что файлы были удалены. На рисунке ниже показан пример всей последовательности из c помощью h.
@@ -337,7 +337,7 @@ ms.locfileid: "51676343"
 14. Настройте сервер, чтобы этот единственный Pacemaker может активировать группу томов.
 
     ```bash
-    sudo lvmconf --enable-halvm --services –startstopservices
+    sudo lvmconf --enable-halvm --services -startstopservices
     ```
  
 15. Создайте список групп томов на сервере. Все компоненты в списке, не диск iSCSI используется системой, такие как для диска ОС.
@@ -367,7 +367,7 @@ ms.locfileid: "51676343"
 
 18. Перезагрузите сервер.
 
-19. На другом сервере, который будет участвовать в FCI выполните шаги 1 – 6. При этом возникнет целевому объекту iSCSI к SQL Server. 
+19. На другом сервере, который будет участвовать в FCI выполните шаги 1 - 6. При этом возникнет целевому объекту iSCSI к SQL Server. 
  
 20. Создайте список групп томов на сервере. Она должна отобразиться в группу томов, созданные ранее. 
 

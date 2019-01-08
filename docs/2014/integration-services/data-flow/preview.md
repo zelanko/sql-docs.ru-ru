@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a3fd12d81fe8789bb8900707d09c9b8a6d71652
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7803ef13e85987d0866af1e455ccb3ef771d7357
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156864"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780124"
 ---
 # <a name="preview"></a>Предварительный просмотр
   В диалоговом окне **Предварительный просмотр** можно просмотреть данные, извлекаемые источником SAP BW.  
@@ -53,7 +52,7 @@ ms.locfileid: "48156864"
  В этом диалоговом окне отсутствуют другие параметры.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор источника SAP BW &#40;страницы диспетчера соединений&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [Редактор источника SAP BW (страница "Диспетчер подключений")](sap-bw-source-editor-connection-manager-page.md)   
  [Справка F1 по Microsoft Connector 1.1 для SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

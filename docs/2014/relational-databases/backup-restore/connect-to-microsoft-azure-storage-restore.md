@@ -12,12 +12,12 @@ ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 310ab71162dedf64e12ae28c8ffedf3465f1fc14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 506f074a8693e54bdc51882ab08b19e9ea3e1994
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130904"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517873"
 ---
 # <a name="connect-to-windows-azure-storage-restore"></a>Соединение с хранилищем Windows Azure (восстановление)
   Это диалоговое окно позволяет указать сведения для подключения к учетной записи хранения Windows Azure для получения файлов в учетной записи хранения. После ввода необходимой информации нажмите кнопку **Подключить** , чтобы установить соединение с хранилищем Windows Azure.  
@@ -30,7 +30,7 @@ ms.locfileid: "48130904"
  Укажите ключ доступа к учетной записи хранения Windows Azure.  
   
  Флажок**Использовать защищенные конечные точки (HTTPS)**   
- Установите этот флажок, чтобы установить безопасное соединение с хранилищем Windows Azure — рекомендуется.  
+ Установите этот флажок, чтобы установить безопасное соединение с хранилищем Windows Azure — рекомендуется.  
   
  Флажок**Сохранить мой ключ учетной записи**   
  Установите этот флажок, чтобы SQL Server запоминал ключ доступа для этой учетной записи хранения.  

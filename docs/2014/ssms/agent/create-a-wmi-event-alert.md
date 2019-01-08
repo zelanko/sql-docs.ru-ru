@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - WMI event alerts [SQL Server Management Studio]
@@ -12,12 +12,12 @@ ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0916acc815ecff5c994b57850b8ce218ff4f2b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5af4472d80e74c9d2845e6397f815ffb1c27f4d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181964"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764196"
 ---
 # <a name="create-a-wmi-event-alert"></a>Создание предупреждения о событии WMI
   В этом разделе описано, как создать предупреждение агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , вызываемое при возникновении определенного события [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которое отслеживается поставщиком WMI для событий сервера, в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -79,7 +79,7 @@ ms.locfileid: "48181964"
   
 #### <a name="to-create-a-wmi-event-alert"></a>Создание предупреждения о событии WMI  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48181964"
     EXEC dbo.sp_add_alert  
         @name = N'Test Alert 2',  
         @message_id = 54001  
-        @notification_message = N'Error 54001 has occurred on the Sales.SalesOrderDetail table on the AdventureWorks2012 database. Please see the following information…',  
+        @notification_message = N'Error 54001 has occurred on the Sales.SalesOrderDetail table on the AdventureWorks2012 database. Please see the following information...',  
         @wmi_namespace = '\\.\root\Microsoft\SqlServer\ServerEvents\,  
         @wmi_query = N'SELECT * FROM ALTER_TABLE   
     WHERE DatabaseName = 'AdventureWorks2012' AND SchemaName = 'Sales'   

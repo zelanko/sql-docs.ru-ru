@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], timing out
@@ -15,12 +14,12 @@ ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe68f68034c71708ba6f23ba7bdb79a218ed2bc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2e2d2f89b12274694bde8c4f9743416fa2ba253
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100763"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641095"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>Настройка параметра конфигурации сервера query wait
   В этом разделе описано, как настроить параметр конфигурации сервера **query wait** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Запросы, требующие много памяти (например, включающие сортировку и хеширование), помещаются в очередь, если для выполнения запроса не хватает памяти. Параметр **query wait** указывает время в секундах (от 0 до 2147483647), в течение которого запрос будет ожидать необходимые ресурсы. Значение по умолчанию для этого параметра равно -1. Это означает, что время ожидания вычисляется как время на запрос, умноженное на 25 раз.  
@@ -91,7 +90,7 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра query wait  
+##  <a name="FollowUp"></a> Дальнейшие действия: После настройки параметра времени ожидания запроса  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
 ## <a name="see-also"></a>См. также  

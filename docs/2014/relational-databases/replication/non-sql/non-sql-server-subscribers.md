@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -21,12 +20,12 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19516e1b90a04c29efdfc8175d003a30ddf7957c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071064"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763226"
 ---
 # <a name="non-sql-server-subscribers"></a>Подписчики, отличные от подписчиков SQL Server
   Следующие подписчики, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , могут подписаться на публикации моментальных снимков и публикации транзакций, используя принудительные подписки. Подписки поддерживаются для двух самых последних версий каждой из баз данных, приведенных в списке, с использованием самой последней версии поставщика OLE DB из приводимого списка.  
@@ -70,7 +69,7 @@ ms.locfileid: "48071064"
   
 -   Если статья добавляется или удаляется из публикации, то подписки для подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , должны быть повторно инициализированы.  
   
--   Для всех подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , поддерживаются только ограничения NULL и NOT NULL. Ограничения первичного ключа реплицируются как уникальные индексы.  
+-   Для всех подписчиков, не относящихся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], поддерживаются только следующие ограничения: NULL и NOT NULL. Ограничения первичного ключа реплицируются как уникальные индексы.  
   
 -   В разных базах данных значение NULL обрабатывается по-разному, что влияет на представление пустых значений, пустых строк и значений NULL. Это в свою очередь влияет на поведение значений, вставляемых в столбцы с определяемыми уникальными ограничениями. Например, СУБД Oracle допускает существование нескольких значений NULL в столбце, который считается уникальным, тогда как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] допускает наличие только одного значения NULL в уникальном столбце.  
   

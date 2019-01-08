@@ -10,12 +10,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48fd9be77e8b72ee25211bbf52a70f7989785f52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d63ed7db1cb1f2f201100a8d75c764cca194d4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091244"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514243"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Поддерживаемые конструкции для хранимых процедур, скомпилированных в собственном коде
   В этом разделе содержится список поддерживаемых функций для скомпилированных хранимых процедур ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -34,9 +34,9 @@ ms.locfileid: "48091244"
   
 -   [Ограничения на сортировку](#los)  
   
- Сведения о типах данных, поддерживаемых в скомпилированных в собственном коде хранимые процедуры, см. в разделе [поддерживаемые типы данных](supported-data-types-for-in-memory-oltp.md).  
+ Сведения о типах данных, поддерживаемых в скомпилированных в собственном коде хранимых процедурах, см. в разделе [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
   
- Дополнительные сведения о неподдерживаемых конструкциях и сведения о том, как обойти некоторые неподдерживаемые функции в собственном коде хранимых процедурах, см. в разделе [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Дополнительные сведения о неподдерживаемых компонентах см. в разделе [Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ Полные сведения о неподдерживаемых конструкциях и о том, как обойти некоторые неподдерживаемые функции в хранимых процедурах, скомпилированных в собственном коде, см. в разделе [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Дополнительные сведения о неподдерживаемых компонентах см. в разделе [Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
 ##  <a name="pncsp"></a> Возможности программирования в собственном коде хранимых процедурах  
  Поддерживаются следующие конструкции:  
@@ -83,13 +83,13 @@ ms.locfileid: "48091244"
   
 -   Математические функции: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE и TAN  
   
--   Функции даты: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
+-   Функции для работы с датой: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
   
 -   Строковые функции: LEN, LTRIM, RTRIM и SUBSTRING  
   
--   Функция идентификации: SCOPE_IDENTITY  
+-   Функция IDENTITY: SCOPE_IDENTITY  
   
--   NULL-функции: ISNULL  
+-   Функцию NULL: ISNULL  
   
 -   Функции уникальных идентификаторов: NEWID и NEWSEQUENTIALID  
   
@@ -130,26 +130,26 @@ ms.locfileid: "48091244"
   
 -   Присвоение переменных в списке предложения SELECT.  
   
--   WHERE … AND  
+-   WHERE... AND  
   
  <sup>1</sup> TOP и ORDER BY поддерживаются в скомпилированных хранимых процедур, с некоторыми ограничениями:  
   
--   Не поддерживается для `DISTINCT` в `SELECT` или `ORDER BY` предложение.  
+-   Не поддерживается `DISTINCT` в предложениях `SELECT` и `ORDER BY`.  
   
 -   Не поддерживаются `WITH TIES` и `PERCENT` в предложении `TOP`.  
   
--   `TOP` в сочетании с `ORDER BY` поддерживает не более 8192 строк при использовании константы в `TOP` предложение. Это ограничение может быть понижено в случае, если запрос содержит соединения или агрегатные функции. (Например, с одним соединением (двумя таблицами) ограничение составляет 4 096 строк. С двумя соединениями (тремя таблицами) ограничение равно 2 730 строкам.)  
+-   `TOP` совместно с `ORDER BY` не поддерживает более 8192 строк при использовании константы в предложении `TOP`. Это ограничение может быть понижено в случае, если запрос содержит соединения или агрегатные функции. (Например, с одним соединением (двумя таблицами) ограничение составляет 4 096 строк. С двумя соединениями (тремя таблицами) ограничение равно 2 730 строкам.)  
   
      Результаты более 8 192 можно получить, сохраняя в переменной несколько строк.  
   
     ```tsql  
     DECLARE @v INT = 9000  
-    SELECT TOP (@v) … FROM … ORDER BY …  
+    SELECT TOP (@v) ... FROM ... ORDER BY ...  
     ```  
   
  Однако константа в предложении `TOP` обеспечивает лучшую производительность, чем при использовании переменной.  
   
- Эти ограничения не применяются к интерпретированному доступу [!INCLUDE[tsql](../../includes/tsql-md.md)] доступа к таблицам, оптимизированных для памяти.  
+ Эти ограничения не применяются к интерпретированному доступу [!INCLUDE[tsql](../../includes/tsql-md.md)] к оптимизированным для памяти таблицам.  
   
 ##  <a name="auditing"></a> Аудит  
  Аудит на уровне процедуры поддерживается для хранимых процедур, скомпилированных в собственном коде. Аудит уровня инструкций не поддерживается.  
@@ -172,13 +172,13 @@ ms.locfileid: "48091244"
 ##  <a name="los"></a> Ограничения на сортировку  
  В запросе с использованием [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) и [предложения ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) можно сортировать более 8 000 строк. Без [предложения ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) позволяет сортировать не более 8 000 строк (меньше, если есть соединения).  
   
- Если в запросе используется как оператор [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql), так и [предложение ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql), для оператора TOP можно указать не более 8192 строк. Если строк будет больше, чем 8192, вы получите такое сообщение об ошибке: **сообщение 41398, уровень 16, состояние 1, процедура *\<имя_процедуры>*, строка *\<номер_строки>*. Оператор TOP может возвратить не более 8192 строк; запрошенное число: *\<число>*.**  
+ Если в запросе используется как оператор [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql), так и [предложение ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql), для оператора TOP можно указать не более 8192 строк. Если указано больше 8192 строк, возникает следующее сообщение об ошибке: **Сообщение 41398, уровень 16, состояние 1, процедура  *\<Имя_процедуры >*, строки  *\<номер_строки >* оператор TOP может возвращать не более 8192 строк;  *\<номер >* был запрошен.**  
   
  Если отсутствует предложение TOP, то можно отсортировать любое количество строк с помощью предложения ORDER BY.  
   
  Если не используется предложение ORDER BY, то можно использовать любое целочисленное значение с оператором TOP.  
   
- Пример для оператора TOP с числом значений 8192: компиляция  
+ Пример для оператора TOP с числом значений 8192: Компиляция  
   
 ```tsql  
 CREATE PROCEDURE testTop  
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- Пример для оператора TOP с числом значений > 8192: сбой компиляции.  
+ Пример для оператора TOP с числом значений > 8192: Ошибка компиляции.  
   
 ```tsql  
 CREATE PROCEDURE testTop  
@@ -206,7 +206,7 @@ GO
   
  Ограничение в 8192 строки применяется только к `TOP N` , где `N` является константой, как показано в предыдущих примерах.  Если нужно, чтобы `N` было больше 8192, можно присвоить это значение переменной и использовать ее с оператором `TOP`.  
   
- Пример использования переменной: компиляция  
+ Пример использования переменной. Компиляция  
   
 ```tsql  
 CREATE PROCEDURE testTop  
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Ограничения возвращаемых строк:** существует два варианта, когда возможно уменьшение числа строк, возвращаемых оператором TOP:  
+ **Ограничения возвращаемых строк:** Существует два варианта, когда возможно уменьшение числа строк, возвращаемых оператором TOP.  
   
 -   Использование соединений в запросе.  Влияние соединений на ограничения зависит от плана запроса.  
   

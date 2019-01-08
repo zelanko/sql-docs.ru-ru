@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
@@ -15,12 +15,12 @@ ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af4556f5acf21616ebfd94cf038b8f453263a34c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210804"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754236"
 ---
 # <a name="implement-sql-server-agent-security"></a>Обеспечение безопасности агента SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент позволяет администратору базы данных выполнять каждый шаг задания в контексте безопасности, имеющем только те разрешения, которые необходимы для выполнения шага задания, что обеспечивается учетной записью-посредником агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для установки разрешений для конкретного шага задания необходимо создать учетную запись-посредник, обладающую необходимыми разрешениями, а затем назначить ее шагу задания. Учетная запись-посредник может быть назначена нескольким этапам задания. Шагам задания, которым требуются одинаковые разрешения, назначают одну и ту же учетную запись-посредник.  
@@ -65,13 +65,13 @@ ms.locfileid: "48210804"
   
 -   ACE зависит от следующих библиотек конфигурации DLL, принадлежащих SSDP, поскольку эти API библиотек DLL вызываются ACE:  
   
-    -   **SCO** — Microsoft.SqlServer.Configuration.Sco.dll, содержащий новые проверки SCO для виртуальных учетных записей  
+    -   **SCO** — Microsoft.SqlServer.Configuration.Sco.dll, содержащий новые проверки SCO для виртуальных учетных записей;  
   
-    -   **Кластер** — Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Кластер** — Microsoft.SqlServer.Configuration.Cluster.dll;  
   
-    -   **SFC** — Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC** — Microsoft.SqlServer.Configuration.SqlConfigBase.dll;  
   
-    -   **Расширение** — Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Расширение** — Microsoft.SqlServer.Configuration.ConfigExtension.dll.  
   
 ## <a name="see-also"></a>См. также  
  [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md)   

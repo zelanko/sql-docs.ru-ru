@@ -14,12 +14,12 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f3c06bbb9a8390b6ec41aa3e2233feeb10b8ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187764"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352999"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента предоставляет поля дескриптора для дескрипторе строки реализации (IRD) только. В IRD [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ссылки на поля дескриптора атрибуты столбца специфические для драйвера. Дополнительные сведения о полном списке поля дескриптора доступны специфические для драйвера, см. в разделе [SQLColAttribute](sqlcolattribute.md).  
@@ -152,7 +152,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLGetDescField](http://go.microsoft.com/fwlink/?LinkId=59351)   
+ [Функция SQLGetDescField](https://go.microsoft.com/fwlink/?LinkId=59351)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [SQL Server]
@@ -20,12 +20,12 @@ ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dabe5913b62231b7d75862b720c632c7d3bbfdf4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 773ceb4aedddd6a39df6487bd36b47b83f7fa9a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182804"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781696"
 ---
 # <a name="visual-database-tool-designers"></a>Конструкторы визуальных инструментов для баз данных
   Визуальные инструменты для баз данных представляют собой сочетание средств проектирования, которые можно использовать для работы с источниками данных. С их помощью можно создавать запросы, конструировать и менять структуру базы данных и обновлять данные. В число этих средств входят конструктор диаграмм баз данных, конструктор таблиц и конструктор запросов и представлений.  

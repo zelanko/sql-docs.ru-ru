@@ -15,20 +15,20 @@ ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fb8a192a2d33e2068be75f0acd19fb76166f0705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95062797cdfe8f2ab4bc2f3b8b8bb2735d2d0dcf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078434"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395827"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>Соединение с сервером отчетов, работающим в собственном режиме
-  Это диалоговое окно используется для подключения к локальному или удаленному [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] экземпляра сервера отчетов. Это средство нельзя использовать для подключения к более ранним версиям [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] серверов отчетов. Одновременно можно подключиться только к одному экземпляру.  
+  Используйте это диалоговое окно для подключения к локальному или удаленному экземпляру сервера отчетов служб [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или более поздней версии. Это средство нельзя использовать для подключения к более ранним версиям сервера отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Одновременно можно подключиться только к одному экземпляру.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager не используется для настройки и администрирования [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме интеграции с SharePoint. Для настройки сервера отчетов в режиме интеграции с SharePoint используется центр администрирования SharePoint и скрипты PowerShell. Дополнительные сведения см. в разделе [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
+>  Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не используется для настройки и администрирования служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. Для настройки сервера отчетов в режиме интеграции с SharePoint используется центр администрирования SharePoint и скрипты PowerShell. Дополнительные сведения см. в статье [Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
 > [!TIP]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool.exe) устанавливается с уровнем прав доступа «highestAvailable». Это поведение предусмотрено намеренно. Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует подключения к API-интерфейсам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI. Для некоторых средств [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI требуется более высокий уровень прав администратора.  
@@ -37,17 +37,17 @@ ms.locfileid: "48078434"
   
 -   Чтобы соединиться с удаленным экземпляром сервера отчетов, введите имя сервера, нажмите кнопку **Найти**, выберите экземпляр и нажмите кнопку **Соединить**.  
   
- Чтобы открыть это диалоговое окно, запустите [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Это диалоговое окно открывается немедленно после запуска программы. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Чтобы открыть это диалоговое окно, запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Это диалоговое окно открывается немедленно после запуска программы. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Параметры  
  **Имя сервера**  
- Введите сетевое имя компьютера, на котором [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] установлен. Вводите только имя компьютера, не включайте в него ни префикс, ни символы косой черты.  
+ Введите сетевое имя компьютера, на котором установлены службы [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или более поздней версии. Вводите только имя компьютера, не включайте в него ни префикс, ни символы косой черты.  
   
  **найти**  
  Найдите компьютер, указанный в **Имя сервера**.  
   
  **Экземпляр сервера отчетов**  
- Выберите, какие экземпляры подсоединять, если установлено несколько экземпляров сервера отчетов. Выбирать можно только допустимые экземпляры. Если вы используете более старых версиях [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] side-by-side [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра, эти экземпляры не будут приводиться в списке.  
+ Выберите, какие экземпляры подсоединять, если установлено несколько экземпляров сервера отчетов. Выбирать можно только допустимые экземпляры. Если выполняются более ранние версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] параллельно с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , эти экземпляры не будут приводиться в списках.  
   
  **Подключить**  
  Соединитесь с указанным сервером и экземпляром.  

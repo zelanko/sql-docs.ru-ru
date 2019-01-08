@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fbf203ad7928de8b9d6e4919f9b1d44b5f5cd45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36be65b9e359d4fe115e2b410db181f049c1eccd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141121"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766826"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Изменение целевого времени восстановления базы данных (SQL Server)
   В этом разделе описывается изменение целевого времени восстановления базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. По умолчанию целевое время восстановления — 0, а база данных использует *автоматические контрольные точки* , задаваемые при помощи параметра сервера **интервал восстановления** . Установка значения времени восстановления &gt; 0 ведет к тому, что база данных будет использовать *непрямые контрольные точки* и установит верхнюю границу времени восстановления для этой базы данных.  
@@ -24,9 +23,9 @@ ms.locfileid: "48141121"
 > [!NOTE]  
 >  Верхняя граница, указываемая для отдельной базы данных посредством настройки целевого времени восстановления, может быть превышена из-за долгой транзакции, которая может вызвать чрезмерное время для отмены действий.  
   
--   **Перед началом:**  [Ограничения](#Restrictions), [Безопасность](#Security)  
+-   **Перед началом работы**  [Ограничения](#Restrictions), [безопасности](#Security)  
   
--   **To change the target recovery time, using:**  [SQL Server Management Studio](#SSMSProcedure) or [Transact-SQL](#TsqlProcedure)  
+-   **Чтобы изменить целевой объект восстановления временем действия, используя:**  [SQL Server Management Studio](#SSMSProcedure) или [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   

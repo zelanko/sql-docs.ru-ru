@@ -21,21 +21,21 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1c4d2d5c90f651d1d24dd6fabbaa74213a6fff9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061904"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212013"
 ---
 # <a name="sql-server-configuration-manager"></a>Диспетчер конфигурации SQL Server
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] — это средство, предназначенное для управления службами, связанными с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], для настройки сетевых протоколов, которые используются [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], а также для управления конфигурацией подключений с клиентских компьютеров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Диспетчер конфигурации [!INCLUDE[msCoName](../includes/msconame-md.md)] представляет собой оснастку консоли управления (ММС), которую можно открыть из меню "Пуск" или добавить в любой экран консоли управления [!INCLUDE[msCoName](../includes/msconame-md.md)] . [!INCLUDE[msCoName](../includes/msconame-md.md)] Консоль управления (mmc.exe) использует файл SQLServerManager10.msc в папке Windows System32, чтобы открыть [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Диспетчер конфигурации и среда SQL Server Management Studio используют инструментарий WMI для просмотра и изменения некоторых параметров сервера. Инструментарий WMI обеспечивает единообразный интерфейс с API-вызовами, которые управляют операциями с реестром, запрашивающими средства [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , а также улучшенный контроль и управление выбранными SQL-службами оснастки «Диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ». Сведения о настройке разрешений, связанных с WMI, см. в разделе [Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Поскольку диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] является оснасткой консоли управления ( [!INCLUDE[msCoName](../includes/msconame-md.md)] ), а не изолированной программой, при работе в более новых версиях Windows диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не отображается как приложение.  
->   
+> 
 >  -   **Windows 10**:  
 >          Чтобы открыть [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager на **начальная страница**, введите SQLServerManager12.msc (для [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]). Для предыдущих версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] замените 12 на меньшее число. Щелкнув SQLServerManager12.msc Откроется диспетчер конфигурации. Чтобы закрепить диспетчер конфигурации на начальной странице или панели задач, щелкните правой кнопкой мыши SQLServerManager12.msc и нажмите кнопку **открыть расположение файла**. В проводнике Windows щелкните правой кнопкой мыши SQLServerManager12.msc затем **закрепить на начальном экране** или **закрепить на панели задач**.  
 > -   **Windows 8**:  

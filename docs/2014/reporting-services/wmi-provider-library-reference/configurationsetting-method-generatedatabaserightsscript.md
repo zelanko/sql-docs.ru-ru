@@ -19,12 +19,12 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e322ca0ed99c5c5b84c764cf0d89e2f365b6ed31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2163b7a264fc782cb1f05e98d0400dbd751c8b85
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221294"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502907"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>Метод GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
   Создает скрипт SQL, с помощью которого пользователям могут предоставляться права доступа к базе данных сервера отчетов и другим базам данных, необходимым для работы сервера отчетов. Ожидается, что участник соединится с базой данных сервера отчетов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполнит скрипт.  
@@ -65,7 +65,7 @@ out Int32 HRESULT);
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 указывает, что вызов метода завершился успешно. Ненулевое значение указывает, что произошла ошибка.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если параметр *DatabaseName* пуст, *IsRemote* пропускается и значение файла конфигурации сервера отчетов используется в качестве имени базы данных.  
   
  Если *IsWindowsUser* присваивается `true`, *UserName* должно быть в формате \<домена >\\< имя пользователя\>.  
@@ -84,20 +84,20 @@ out Int32 HRESULT);
 |локальная система;|Локальная система|\<Домен>\\<имя_компьютера\>$|  
 |(S-1-5-20)|Сетевая служба.|\<Домен>\\<имя_компьютера\>$|  
 |NT AUTHORITY\NetworkService|Сетевая служба.|\<Домен>\\<имя_компьютера\>$|  
-|(S-1-5-19)|Локальная служба.|Ошибка — см. ниже.|  
-|NT AUTHORITY\LocalService|Локальная служба.|Ошибка — см. ниже.|  
+|(S-1-5-19)|Локальная служба.|Ошибка — см. ниже.|  
+|NT AUTHORITY\LocalService|Локальная служба.|Ошибка — см. ниже.|  
   
  Если в [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]используется встроенная учетная запись, а база данных сервера отчетов удаленная, то возвращается сообщение об ошибке.  
   
- Если `LocalService` указана встроенная учетная запись и базы данных сервера отчетов удаленная, будет возвращена ошибка.  
+ Если указана встроенная учетная запись `LocalService` и база данных сервера отчетов удаленная, то возвращается сообщение об ошибке.  
   
  Если параметр *IsWindowsUser* имеет значение true, а значение параметра *UserName* требует перевода, то поставщик WMI определяет, на каком компьютере находится база данных сервера отчетов: на этом же или на удаленном. Чтобы определить, что установка локальная, поставщик WMI проверяет свойство DatabaseServerName на значения из приведенного ниже списка. Если одно из значений совпадает, то база данных локальная. В противном случае она является удаленной. При сравнении учитывается регистр букв.  
   
 |Значение параметра DatabaseServerName|Пример|  
 |---------------------------------|-------------|  
-|“.”||  
-|“(local)”||  
-|“LOCAL”||  
+|"."||  
+|"(local)"||  
+|"LOCAL"||  
 |localhost||  
 |\<Имя_компьютера>|testlab14|  
 |\<Полное_доменное_имя_компьютера>|example.redmond.microsoft.com|  
@@ -116,7 +116,7 @@ out Int32 HRESULT);
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

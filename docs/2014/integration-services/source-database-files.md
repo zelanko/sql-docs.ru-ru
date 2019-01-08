@@ -13,12 +13,12 @@ ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 277575fdd10231300bcfa6726f35aa648f75d7e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42ac066ede8be2af8f08106ed358e63821a92c54
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172804"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533939"
 ---
 # <a name="source-database-files"></a>Файлы базы данных-источника
   Диалоговое окно **Файлы базы данных-источника** используется для просмотра имен файлов базы данных и их размещения на исходном сервере, а также для указания общей сетевой папки в задаче «Передача базы данных». Дополнительные сведения об этой задаче см. в разделе [Задача "Передача базы данных"](control-flow/transfer-database-task.md).  
@@ -35,13 +35,13 @@ ms.locfileid: "48172804"
  **Сетевая общая папка**  
  Сетевая общая папка на исходном сервере, из которой будут перенесены файлы базы данных. Параметр **Сетевая общая папка** используется при переносе базы данных в режиме вне сети путем задания значения **DatabaseOffline** (Автономный режим базы данных) параметру **Метод** на странице **Базы данных** диалогового окна **Редактор задачи «Передача базы данных»** .  
   
- Введите путь к общей сетевой папке или нажмите кнопку обзора **(…)** , чтобы найти эту папку.  
+ Введите путь к общей сетевой папке или нажмите кнопку обзора **(...)**, чтобы найти эту папку.  
   
  При переносе базы данных в режиме вне сети файлы базы данных копируются в заданную параметром **Сетевая общая папка** папку на исходном сервере, прежде чем они будут перенесены на целевой сервер.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задач базы данных передача &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
- [Редактор задач базы данных передача &#40;баз данных страницы&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Передача базы данных" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "Передача базы данных" (страница "Базы данных")](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

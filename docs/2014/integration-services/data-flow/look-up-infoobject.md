@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c3fa39cde45e568ad713a3238c98e96d40f8495
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dd5bc058acf58a62c07fd5bdc65a33a43a6a7d6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155044"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749796"
 ---
 # <a name="look-up-infoobject"></a>Поиск InfoObject
   Используйте диалоговое окно **Поиск InfoObject** для поиска InfoObject, заданного в системе SAP Netweaver BW. После открытия списка объектов InfoObject выберите нужный объект InfoObject, после чего целевой объект SAP BW заполнит связанные параметры необходимыми значениями.  
@@ -59,7 +58,7 @@ ms.locfileid: "48155044"
  **Характеристики времени**  
  Поиск объектов InfoObject, которые являются выражением характеристик времени.  
   
- **Название**  
+ **Name**  
  Введите имя InfoObject для поиска или часть имени с символом-шаблоном звездочки (*). Также можно использовать символ-шаблон звездочки для включения всех объектов InfoObject.  
   
  **Описание**  
@@ -84,8 +83,8 @@ ms.locfileid: "48155044"
  [Создание InfoSource](create-infosource.md)   
  [Создание InfoSource для данных транзакции](create-infosource-for-transaction-data.md)   
  [Создание InfoSource для основных данных](create-infosource-for-master-data.md)   
- [Создание InfoObject](create-new-infoobject.md)   
- [Редактор назначений SAP BW &#40;страницы диспетчера соединений&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [Создание нового InfoObject](create-new-infoobject.md)   
+ [Редактор назначений SAP BW (страница "Диспетчер подключений")](sap-bw-destination-editor-connection-manager-page.md)   
  [Справка F1 по Microsoft Connector 1.1 для SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

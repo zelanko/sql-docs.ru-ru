@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
@@ -16,12 +15,12 @@ ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8a02dbe6174af6dbfefb472b7dddfb878fb569d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc58bc72a9c2d9da96c123ff206616b210e75b6c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228774"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749737"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Сопоставления параметров запросов с переменными в компонентах потока данных
   При настройке конфигурации источника OLE DB для использования параметризованных запросов можно сопоставить параметры с переменными.  
@@ -55,6 +54,6 @@ ms.locfileid: "48228774"
   
 ## <a name="see-also"></a>См. также  
  [Источник OLE DB](ole-db-source.md)   
- [Преобразование "Уточняющий запрос"](transformations/lookup-transformation.md)  
+ [Преобразование «Уточняющий запрос»](transformations/lookup-transformation.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent, profiles
@@ -21,12 +20,12 @@ ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67a5355791ddb9043a5da65077ee5e531ab47da9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160374"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763326"
 ---
 # <a name="replication-agent-profiles"></a>Профили агента репликации
   При настройке репликации на распространителе устанавливается набор профилей агентов. Профиль агента содержит набор параметров, используемых при каждом запуске агента: каждый агент регистрируется на распространителе во время запуска и запрашивает параметры в своем профиле. Для подписок на публикацию слиянием, которые используют веб-синхронизацию, профили загружаются и хранятся на подписчике. Если профиль изменяется, профиль, хранящийся на подписчике, обновляется при следующем запуске агента слияния. Дополнительные сведения о веб-синхронизации см. в разделе [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  

@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba121e26858aaff8a34e07ecad4aa5a465116cd4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 72b416a0ad6b28813825c1af220c5a7bf1bd5a7c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662868"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503906"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>Интерфейсы SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента предоставляет интерфейсы для потребителей, которому нужен доступ к данным на одном или нескольких компьютерах под управлением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует требованиям стандарта OLE DB версии 2.0.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента предоставляет интерфейсы для потребителей, которому нужен доступ к данным на одном или нескольких компьютерах под управлением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента является 2.0-совместимой версии поставщика OLE DB.  
   
  Это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Справочник по программированию поставщика OLE DB для собственного клиента не содержит описания всех методов, и интерфейсы OLE DB только эти интерфейсы и методы, демонстрируют поведение конкретного поставщика, при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB для собственного клиента Поставщик.  
   
