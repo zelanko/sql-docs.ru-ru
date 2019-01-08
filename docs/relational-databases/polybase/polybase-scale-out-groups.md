@@ -14,12 +14,12 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a145b7ae7194720c8366f0c647a511e086fe4a2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ad890736cf0536c5f4f776d2bd4949e195dd26d6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412641"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205423"
 ---
 # <a name="polybase-scale-out-groups"></a>Масштабируемые группы PolyBase
 
@@ -46,7 +46,7 @@ ms.locfileid: "52412641"
 Предположим, что у вас есть внешняя таблица SQL Server с 12 секциями (за каждый месяц) и масштабируемая группа PolyBase с 3 узлами. Каждый узел будет использовать по 4 средства чтения PolyBase для обработки каждой из 12 секций. Это продемонстрировано на следующей картинке. 
 
 > [!NOTE]
- Процесс отличается от масштабируемого чтения в Hadoop. 
+>  Процесс отличается от масштабируемого чтения в Hadoop. 
 
 ![Масштабируемые группы PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Масштабируемые группы PolyBase")
   

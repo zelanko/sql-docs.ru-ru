@@ -18,18 +18,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc197fdb8571df79e1ea39cf49086a1cea68b4f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c9a7592e4ba1d3087aafaff1eef22b467eb55dd7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543796"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215480"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Определение признаков конца поля и строки (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Для символьных полей данных можно определить символы, которые являются разделителями полей и строк в файле данных, указав *признак конца поля* и *признак конца строки*. Для программ, считывающих файлы данных, это единственный способ определить, какими символами в нем разделяются строки и столбцы.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  При использовании собственного формата или собственного формата в кодировке Юникод вместо признаков конца поля используются префиксы длины. Данные в собственном формате могут конфликтовать со знаками завершения, так как файл данных в собственном формате хранится во внутреннем двоичном формате данных [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="characters-supported-as-terminators"></a>Символы, поддерживаемые в качестве признаков конца полей и строк  

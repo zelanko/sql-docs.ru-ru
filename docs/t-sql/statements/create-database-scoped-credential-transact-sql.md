@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2220349cf0ab3db2a31e2c520fc8ef92acb48eb9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7544e79400c2b85b11330825866909a05acdfd09
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762422"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213763"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ WITH IDENTITY = 'identity_name'
   
  SECRET **='**_secret_**'**  
  Указывает секретный код, необходимый для исходящей проверки подлинности. `SECRET` требуется для импорта файла из хранилища больших двоичных объектов Azure. Для загрузки из хранилища BLOB-объектов Azure в хранилище данных SQL или Parallel Data Warehouse в качестве секретного ключа необходимо использовать ключ хранилища Azure.  
->  [!WARNING]
+> [!WARNING]
 >  Значение ключа SAS может начинаться с '?' (вопросительный знак). При использовании ключа SAS необходимо удалить начальный символ '?'. В противном случае действия могут быть заблокированы.  
   
 ## <a name="remarks"></a>Remarks  

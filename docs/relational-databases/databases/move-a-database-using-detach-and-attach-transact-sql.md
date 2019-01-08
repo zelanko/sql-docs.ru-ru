@@ -18,12 +18,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e00a6a7ec9efe549ea3a98b0bb0138ca827372ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 95d7af5f6b5c0d1b6a0f162d09cb64b954ce5d09
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558748"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591508"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Перенос базы данных путем отсоединения и присоединения (язык Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,12 +59,12 @@ ms.locfileid: "51558748"
     GO  
     ```  
   
-2.  Скопируйте любым образом файлы базы данных (AdventureWorks208R2_Data.mdf и AdventureWorks208R2_log) в папки C:\MySQLServer\AdventureWorks208R2_Data.mdf и C:\MySQLServer\AdventureWorks208R2_Log.ldf, соответственно.  
+2.  Скопируйте любым образом файлы базы данных (AdventureWorks208R2_Data.mdf и AdventureWorks208R2_log) в папки «C:\MySQLServer\AdventureWorks208R2_Data.mdf» и «C:\MySQLServer\AdventureWorks208R2_Log.ldf» соответственно.  
   
     > [!IMPORTANT]  
     >  При работе с производственными базами данных помещайте базу данных и журналы транзакций на отдельные диски.  
   
-     При копировании файлов по сети на диск удаленного компьютера укажите имя удаленного места в формате UNC. UNC-имя имеет следующий формат: **\\\\***имя_сервера***\\***имя_общего_ресурса***\\***путь***\\***имя_файла*. Как и при записи файлов на жесткий диск локального компьютера, для записи (или считывания) файла на диск удаленного компьютера учетной запись пользователя, которая используется экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должны быть предоставлены соответствующие разрешения.  
+     При копировании файлов по сети на диск удаленного компьютера укажите имя удаленного места в формате UNC. Имя UNC имеет следующий формат: **\\\\**_имя_сервера_**\\**_имя_общего_хранилища_**\\**_путь_**\\**_имя_файла_. Как и при записи файлов на жесткий диск локального компьютера, для записи (или считывания) файла на диск удаленного компьютера учетной запись пользователя, которая используется экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должны быть предоставлены соответствующие разрешения.  
   
 3.  Присоедините перемещенную базу данных и, возможно, ее журнал, выполнив следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   

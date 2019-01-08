@@ -24,19 +24,19 @@ ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4bbf698ed48d63d4e94a697cd91069efa3b98d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29345e463715bf787b7b7ada9d96c97aa42f38ed
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757442"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204453"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Обеспечивает интерактивное обновление существующего столбца типа **text**, **ntext** или **image** с минимальным ведением журнала. Инструкция WRITETEXT перезаписывает любые существующие данные в столбце, для которого применяется. Инструкцию WRITETEXT нельзя использовать для столбцов типа **text**, **ntext** и **image** в представлениях.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого пользуйтесь типами данных большого объема и предложением **.** WRITE инструкции [UPDATE](../../t-sql/queries/update-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

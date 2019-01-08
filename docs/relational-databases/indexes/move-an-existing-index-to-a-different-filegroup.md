@@ -17,12 +17,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3da52bc9b6014f5a2a553fc24e844299dd4ab4e8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4eebf51a73a6d5f4665c418b6f6b03078777bd0f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515784"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590378"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Перемещение существующего индекса в другую файловую группу
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "52515784"
   
 8.  Нажмите кнопку **ОК**.  
   
- На странице **Хранение** диалогового окна **Свойства индекса ―** *имя_индекса* доступны следующие сведения:  
+ На странице **Хранение** диалогового окна **Свойства индекса ―** _имя_индекса_ доступны следующие сведения:  
   
  **Файловая группа**  
  Сохраняет индекс в указанной файловой группе. Этот список содержит только стандартные файловые группы (ROW). По умолчанию из этого списка выбирается первичная файловая группа (PRIMARY) текущей базы данных.  

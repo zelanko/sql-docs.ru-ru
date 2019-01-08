@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4eb0d351eeb3555f9f0162670209a9c15af6d964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 746150438e87746c6fefc81fa7c0bff354147ed6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531493"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205333"
 ---
 # <a name="sql-server-help-and-feedback"></a>Справка и отзывы по SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "52531493"
 
 ## <a name="i-want-to-contribute-to-sql-server-documentation"></a>Я хочу принять участие в работе над документацией по SQL Server
 
-###<a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![изменить содержимое](../includes/media/edit-topic-pencil.png) Редактирование содержимого
+### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![изменить содержимое](../includes/media/edit-topic-pencil.png) Редактирование содержимого
 Предположим, вы нашли неточности в нашей документации. Или у вас есть материалы, которые помогут ее улучшить. Что же, вы можете изменять содержимое на сайте docs.microsoft.com самостоятельно. Это не только улучшит нашу документацию, но и даст вам статус участника в создании этой страницы! Дополнительные сведения см. на странице [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
 
 Рабочая группа по содержимому SQL проверяет все общедоступные публикации на предмет технической точности и согласованности. 

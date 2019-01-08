@@ -16,12 +16,12 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eaa6caf40a44ba8579b5e5cff31f0c4c10f2eb4a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9c34a12bf9532d87c599ea02ee7be068facda93a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420515"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205953"
 ---
 # <a name="variables-window"></a>Окно переменных
   Окно **Переменные** используется для создания и изменения переменных, определяемых пользователем, и просмотра системных переменных.  
@@ -30,7 +30,7 @@ ms.locfileid: "52420515"
   
  При необходимости окно **Переменные** можно открыть, назначив команде View.Variables нужное сочетание клавиш на странице **Клавиатура** диалогового окна **Параметры** .  
   
-> [!NOTE]  
+> [!NOTE]
 >  Первым символом в значениях свойств **Имя** и **Пространство имен** согласно стандарту Юникод 2.0 должна быть буква или символ подчеркивания (_). Далее могут следовать буквы или цифры по определению стандарта Юникод 2.0 или символ подчеркивания (\_).  
   
 ## <a name="options"></a>Параметры  

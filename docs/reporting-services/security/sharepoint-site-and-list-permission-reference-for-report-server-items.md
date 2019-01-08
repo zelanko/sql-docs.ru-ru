@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b164b167de39a8a465e19b1f751ab22c9295c6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a51a863a36562d7be1ef242ca9ad680e9149c73b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725952"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213053"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов
   В этом разделе содержится список разрешений в SharePoint, которые могут быть использованы для предоставления доступа к операциям сервера отчетов, работающего в режиме интеграции с SharePoint. Данный раздел может использоваться в качестве справки при создании пользовательских уровней разрешений.  
@@ -37,7 +37,7 @@ ms.locfileid: "47725952"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим SharePoint &#124; SharePoint 2010 и SharePoint 2013.|  
+| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим SharePoint &#124; SharePoint 2010 и SharePoint 2013.|  
   
 ## <a name="list-permissions"></a>Разрешения списка  
  Разрешения, присваиваемые на доступ к библиотеке, содержащей элементы сервера отчетов, определяют порядок доступа пользователей к указанным элементам.  
@@ -68,7 +68,7 @@ ms.locfileid: "47725952"
 |Перечислить разрешения|Перечисляет разрешения на доступ к веб-сайту, списку, папке либо элементу списка.|X|||Чтение разрешений на доступ ко всем элементам сервера отчетов. Просмотр отчета с дополнительной информацией, использующего модель отчета, содержащую настройки безопасности элементов модели.|  
 |Управление предупреждениями|Управляет предупреждениями для всех пользователей веб-сайта.|X|||Создать, изменить или удалить подписку на сайт.|  
 |Использование удаленных интерфейсов|Использование интерфейсов Use SOAP, Web DAV или приложения SharePoint Designer для доступа к веб-сайту.|X|X|X|Используется для вызова URL-адреса конечной точки учетной записи-посредника при соединении с сервером отчетов.|  
-|Открытие|Открывает веб-сайт, список либо папку для доступа к элементам внутри контейнера.|X|X|X|Чтение расписаний и свойств элементов.|  
+|Открыть|Открывает веб-сайт, список либо папку для доступа к элементам внутри контейнера.|X|X|X|Чтение расписаний и свойств элементов.|  
   
 ## <a name="see-also"></a>См. также:  
  [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   

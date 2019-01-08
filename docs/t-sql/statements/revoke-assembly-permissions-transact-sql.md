@@ -16,12 +16,12 @@ ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 92fd00d481a83fe84a82dec9e3f0154af4d2a89b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef4b2cd449045508e94221b02c7616a4ccc467ba
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844882"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589288"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE, отмена разрешений на сборку (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  Указывает разрешение, которое может быть отменено на сборку. Перечислены ниже.  
   
- ON ASSEMBLY **::***assembly_name*  
+ ON ASSEMBLY **::**_assembly_name_  
  Указывает сборку, на которую отменяется разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
