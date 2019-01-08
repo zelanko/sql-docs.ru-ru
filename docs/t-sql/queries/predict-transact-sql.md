@@ -1,7 +1,7 @@
 ---
 title: PREDICT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 12/03/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b95f966b27db3638aae6455dc5e7819f07d0ebae
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c909ac69819fc66f734b33fd8b2badce6069cdef
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695462"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951636"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -108,19 +108,6 @@ MODEL = @model | model_literal
 ## <a name="examples"></a>Примеры
 
 В следующих примерах демонстрируется синтаксис вызова `PREDICT`.
-
-### <a name="call-a-stored-model-and-use-it-for-prediction"></a>Вызов хранимой модели и использование ее для прогнозирования
-
-В этом примере вызывается существующая модель логистической регрессии, хранящаяся в таблице [models_table]. Последняя обученная модель вызывается инструкцией SELECT, а затем двоичная модель передается функции PREDICT. Входные значения представляют компоненты; выходные значения представляют классификацию, назначенную моделью.
-
-```sql
-DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_table] ORDER BY [trained_date] DESC";
-DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
-
-SELECT PREDICT [class]
-FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry)
-WITH (class string);
-```
 
 ### <a name="using-predict-in-a-from-clause"></a>Использование PREDICT в предложении FROM
 
