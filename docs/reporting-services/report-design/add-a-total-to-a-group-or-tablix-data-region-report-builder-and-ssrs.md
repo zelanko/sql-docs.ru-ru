@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: cf1b96c3-7f0f-4c94-ad08-5239c77ccfe4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dd441fdfcc9d08f7555cb357f7f6e5d5ba64d194
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dcceaba7b972e69462fa19333375630c295d8ad
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819462"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215633"
 ---
 # <a name="add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs"></a>Добавление итога в группу или область данных табликса (построитель отчетов и службы SSRS)
  В отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] можно добавлять итоги к области данных табликса или ко всей области данных. По умолчанию итогом считается сумма данных с числовыми значениями, отличными от NULL, в группе или в области данных, вычисленная после применения фильтров. Чтобы добавить итоги к группе, выберите пункт **Добавить итоги** в контекстном меню для группы на панели «Группирование». Для добавления итогов в отдельную ячейку области тела табликса нужно в контекстном меню для этой ячейки выбрать пункт **Добавить итог** . Команда **Добавить итог** чувствительна к контексту и доступна только для числовых полей. В зависимости от выбранной ячейки табликса можно добавить итог для одной ячейки, выбрав эту ячейку в области тела табликса, или для всей группы, выбрав ячейку в области группы строк либо в области группы столбцов табликса. Дополнительные сведения об областях табликса см. в разделе [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md).  
   
- После добавления итога можно заменить применяемую по умолчанию функцию Sum другой агрегатной функцией из списка встроенных функций отчета. Дополнительные сведения см. в разделе [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).[!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+ После добавления итога можно заменить применяемую по умолчанию функцию Sum другой агрегатной функцией из списка встроенных функций отчета. Дополнительные сведения см. в разделах [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md). [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="to-add-a-total-for-an-individual-value-in-the-tablix-body-area"></a>Добавление итога для индивидуального значения в области тела табликса  
   

@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d1afb4913b758397d4d072859c3fb80879f2e46
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0999d5011df80bae97c767ac910b2a5fd810127c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643562"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211813"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Изменение скриптов SQLCMD при помощи редактора запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "51643562"
   
 -   Редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] поддерживает переменные среды и переменные, определенные в скрипте SQLCMD, однако не поддерживает встроенные переменные SQLCMD и **osql** . Обрабатываемый код SQLCMD среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] чувствителен к регистру переменных. Например, PRINT '$(COMPUTERNAME)' выдаст правильный результат, а PRINT '$(ComputerName)' приведет к ошибке.  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] использует [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient для выполнения в обычном режиме и в режиме SQLCMD. При вызове из командной строки SQLCMD использует поставщика OLE DB. Так как могут применяться различные параметры по умолчанию, выполнение одного и того же запроса в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в режиме SQLCMD и в программе SQLCMD может проходить по-разному.  
   
 ## <a name="supported-sqlcmd-syntax"></a>Поддерживаемый синтаксис SQLCMD  

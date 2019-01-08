@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fbd32c13badb86db8dae7156b14ca3f93f97d76c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6949ff07fccb7de14a597b754e7f2beeaa9bfe8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710652"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206294"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Автоматизация администрирования в масштабах предприятия
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47710652"
 Содержит сведения о влиянии использования неадминистративных учетных записей Windows или учетной записи Local System службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на многосерверное окружение.  
   
 [Установка параметров шифрования на целевых серверах](../../ssms/agent/set-encryption-options-on-target-servers.md)  
-Содержит сведения о настройке подраздела реестра MsxEncryptChannelOptions агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на целевых серверах.  
+Содержит сведения о настройке подраздела реестра MsxEncryptChannelOptions агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на целевых серверах.  
   
 [Управление заданиями в масштабе предприятия](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 Содержит сведения о проверке состояния задания, изменения для него целевых серверов, синхронизации времени на целевых серверах и опросе главных серверов о состоянии текущих заданий.  

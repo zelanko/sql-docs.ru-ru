@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a78727d3b0ab3ee1909f9e86032ab392642b5603
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390487"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211213"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
   Чтобы передать параметры в отчет, можно включить их в URL-адрес отчета. Такие параметры URL-адреса не снабжаются префиксами, поскольку они передаются непосредственно в подсистему обработки отчетов.  
@@ -28,12 +28,12 @@ ms.locfileid: "52390487"
   
  Все параметры запроса могут иметь соответствующие параметры отчета. Параметр запроса можно передать в отчет. Дополнительные сведения см. в статье [Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  В параметрах отчета учитывается регистр символов.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Параметры отчета учитывают регистр символов и используют следующие специальные символы:  
->   
+> 
 >  -   Все пробельные символы в строке URL-адресов заменяются символами «%20» в соответствии со стандартами кодировки URL-адресов.  
 > -   Пробел в секции параметров URL-адреса заменяется символом плюса (+).  
 > -   Точка с запятой в любой части строки заменяется символами «%3A».  

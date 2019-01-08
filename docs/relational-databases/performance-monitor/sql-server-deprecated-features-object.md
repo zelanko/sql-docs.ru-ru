@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fcb107c5ae7a22fa2705fda0580e0284940f694
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523344"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380695"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, объект Deprecated Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Обнаружены ссылки на устаревшее представление sys.numbered_procedure_parameters. Не используйте. Происходит один раз на каждую компиляцию.|  
 |numbered_procedures|Обнаружены ссылки на устаревшее представление sys.numbered_procedures. Не используйте. Происходит один раз на каждую компиляцию.|  
-|Устаревший формат RAISEERROR|Обнаружен устаревший синтаксис RAISERROR (формат: RAISERROR integer string). Перепишите инструкции для использования текущего синтаксиса RAISERROR. Происходит один раз на каждую компиляцию.|  
+|Устаревший формат RAISEERROR|Устаревший синтаксис RAISERROR (формат: RAISERROR integer string). Перепишите инструкции для использования текущего синтаксиса RAISERROR. Происходит один раз на каждую компиляцию.|  
 |OLEDB для нерегламентированных соединений|Поставщик SQLOLEDB не поддерживается. Используйте собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для нерегламентированных соединений.|  
 |PERMISSIONS|Обнаружены ссылки на встроенную функцию PERMISSIONS. Запросите sys.fn_my_permissions. Происходит один раз для каждого запроса.|  
 |ProcNums|Обнаружен устаревший синтаксис ProcNums. Перепишите инструкции, чтобы удалить эти ссылки. Происходит один раз на каждую компиляцию.|  

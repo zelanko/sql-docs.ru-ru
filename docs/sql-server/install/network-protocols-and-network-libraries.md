@@ -21,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 708b8c242098251211e3f0dc17df003669b68991
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c6683da3464e094db8e85eca71baa45e3c2d031
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696642"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201876"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Сетевые протоколы и библиотеки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "51696642"
 ## <a name="server-message-block-protocol"></a>Протокол SMB  
  На серверах в демилитаризованной зоне сети необходимо отключить все ненужные протоколы, в том числе протокол SMB. Веб-серверам и DNS-серверам не нужен протокол SMB. Этот протокол необходимо отключить, чтобы противостоять угрозе сбора сведений о пользователях.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Отключение протокола SMB заблокирует доступ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или службы кластеров Windows к удаленной общей папке. Не отключайте протокол SMB, если выполняется или планируется одно из следующих действий:  
->   
+> 
 >  -   Использование режима кворума большинства общих папок и узлов кластера Windows  
 > -   Указание общей папки SMB в качестве каталога данных во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 > -   Создание файла базы данных в общей папке SMB  

@@ -18,12 +18,12 @@ ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 02afdd859faf63e7317b49971591ab4ef49037be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8e85590f094595b73cd2279ee61ae698b42d2e9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706302"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590287"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>Службы SCM. Отключение автоматического запуска экземпляра
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "47706302"
   
 3.  В области сведений щелкните правой кнопкой мыши **MSSQLServer**и выберите пункт **Свойства**.  
   
-4.  В диалоговом окне **Свойства SQL Server \<***имя_экземпляра***>** на вкладке **Служба** в поле **Общее** установите для параметра **Режим запуска** значение **Вручную**.  
+4.  В диалоговом окне диалогового окна **Свойства SQL Server \<**_имя_экземпляра_**>** на вкладке **Служба** в поле **Общие** установите для параметра **Режим запуска** значение **Вручную**.  
   
-5.  Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Свойства SQL Server \<***имя_экземпляра***>**, а затем закройте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Свойства SQL Server \<**_имя_экземпляра_**>**, а затем закройте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
- [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
+ [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   

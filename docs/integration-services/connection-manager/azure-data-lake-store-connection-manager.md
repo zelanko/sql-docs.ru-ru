@@ -14,12 +14,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 3e9caa6e272e4b1e2479f0abf10547e52721049c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5db5df2a209cf9f291c37f960cdd9b2947966061
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719272"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531109"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Диспетчер подключений Azure Data Lake Store
 Пакет служб SQL Server Integration Services (SSIS) может использовать диспетчер подключений Azure Data Lake Store для подключения к службе Azure Data Lake Storage 1-го поколения с использованием одного из двух следующих типов проверки подлинности:
@@ -28,7 +28,7 @@ ms.locfileid: "47719272"
 
 Диспетчер подключений Azure Data Lake Store входит в состав [пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
->   [!NOTE]
+> [!NOTE]
 > Чтобы диспетчер подключений Azure Data Lake Store и компоненты, которые его используют (т. е. источник и цель Data Lake Storage 1-го поколения), могли подключаться к службам, убедитесь, что вы скачали последнюю версию пакета дополнительных компонентов Azure [здесь](https://www.microsoft.com/download/details.aspx?id=49492). 
  
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>Настройка диспетчера подключений Azure Data Lake Store
@@ -44,7 +44,7 @@ ms.locfileid: "47719272"
     
         2. Чтобы проверить подключение, нажмите кнопку **Проверить подключение**. Если вы или администратор клиента ранее не давали согласия на разрешение доступа к данным Data Lake Storage 1-го поколения со стороны служб SSIS, выберите **Принять** при появлении соответствующего запроса. Дополнительные сведения о предоставлении согласия см. в разделе [Интеграция приложений с Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
     
-        >   [!NOTE] 
+        > [!NOTE] 
         > При выборе варианта проверки подлинности **Удостоверение пользователя Azure AD** многофакторная проверка подлинности и проверка подлинности учетной записи Майкрософт не поддерживаются.
     
     2. Если вы выбрали вариант **Удостоверение службы Azure AD**, выполните указанные ниже действия.

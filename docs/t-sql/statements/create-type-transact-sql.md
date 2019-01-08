@@ -27,12 +27,12 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6dae0f33308ca37bb9a5fd4b0f1f94280ecbf146
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: fba367c376084ff4842ef165382fb5a91f410724
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512902"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266005"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,8 +56,10 @@ CREATE TYPE [ schema_name. ] type_name
     [ ( precision [ , scale ] ) ]  
     [ NULL | NOT NULL ]   
   | EXTERNAL NAME assembly_name [ .class_name ]   
-  | AS TABLE ( { <column_definition> | <computed_column_definition> }  
-        [ <table_constraint> ] [ ,...n ] )    
+AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+    | [ <table_constraint> ] [ ,... n ]    
+    | [ <table_index> ] [ ,... n ] } )
+ 
 } [ ; ]  
   
 <column_definition> ::=  
@@ -112,14 +114,18 @@ column_name AS computed_column_expression
 {  
     IGNORE_DUP_KEY = { ON | OFF }  
 }  
+
+< table_index > ::=  
+  INDEX constraint_name  
+     [ CLUSTERED | NONCLUSTERED ]   (column [ ASC | DESC ] [ ,... n ] )} }  
 ```  
   
 ```  
--- User-defined Table Types Syntax  
+-- User-defined Memory Optimized Table Types Syntax  
 CREATE TYPE [schema_name. ] type_name  
-AS TABLE ( { <column_definition> }  
-    |  [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ]    } )
+AS TABLE ( { <column_definition> [ ,... n ] }  
+    | [ <table_constraint> ] [ ,... n ]    
+    | [ <table_index> ] [ ,... n ] } )
     [ WITH ( <table_option> [ ,... n ] ) ]  
  [ ; ]  
   
@@ -219,6 +225,12 @@ column_name <data_type>
   
  \<index_option>  
  Определяет реакцию на ошибку, возникшую из-за дублирования значений ключа при вставке нескольких строк в уникальный кластеризованный или уникальный некластеризованный индекс. Дополнительные сведения о параметрах индекса см. в разделе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).  
+ 
+  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
+     
+**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+Задает создание индекса для таблицы. Это может быть кластеризованный или некластеризованный индекс. Индекс будет содержать указанные столбцы и сортировать данные по возрастанию или убыванию.
   
  INDEX  
  Индексы столбцов и таблиц необходимо указывать в составе инструкции CREATE TABLE. DROP INDEX и CREATE INDEX не поддерживаются для таблиц, оптимизированных для памяти.  
