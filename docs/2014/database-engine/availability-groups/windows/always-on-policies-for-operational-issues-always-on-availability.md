@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1e4c878004f3cdcc492637d338e8ff6c8d92937
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104177"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350013"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)
   Модель правил определения исправности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] вычисляет набор стандартных (PBM) политик управления на основе политик. Их можно использовать для просмотра исправности группы доступности и реплики доступности и базы данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "48104177"
 ##  <a name="AlwaysOnPBM"></a> Стандартные политики и проблемы  
  В следующей таблице приведены итоговые сведения о стандартных политиках.  
   
-|Имя политики|Проблема|Категории**<sup>*</sup>**|Аспект|  
+|Имя политики|Проблемы|Категории**<sup>*</sup>**|Аспект|  
 |-----------------|-----------|------------------------------|-----------|  
 |Состояние кластера WSFC|[WSFC служба кластеров работает в режиме вне сети](wsfc-cluster-service-is-offline.md).|Критическая|Экземпляр SQL Server|  
 |Режим «в сети» группы доступности|[Группа доступности в режиме вне сети](availability-group-is-offline.md).|Критическая|группа доступности|  
@@ -84,9 +84,9 @@ ms.locfileid: "48104177"
 ##  <a name="ExtendHealthModel"></a> Расширение модели исправности AlwaysOn  
  Расширение модели исправности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — это просто создание собственных пользовательских политик и их размещение в категориях по типам наблюдаемых объектов.  После изменения некоторых параметров панель мониторинга AlwaysOn автоматически вычисляет собственные, определяемые пользователем политики, а также стандартные политики AlwaysOn.  
   
- Определяемая пользователем политика может применять доступные аспекты управления на основе политик, включая те из них, которые используются в стандартных политиках AlwaysOn (см. подраздел [Стандартные политики и проблемы](#AlwaysOnPBM) выше). Аспект сервера содержит следующие свойства для наблюдения за [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] работоспособности: (`IsHadrEnabled` и `HadrManagerStatus`). Аспект сервера также содержит следующие свойства политики для мониторинга конфигурации кластера WSFC: `ClusterQuorumType`, и `ClusterQuorumState`.  
+ Определяемая пользователем политика может применять доступные аспекты управления на основе политик, включая те из них, которые используются в стандартных политиках AlwaysOn (см. подраздел [Стандартные политики и проблемы](#AlwaysOnPBM) выше). Аспект сервера содержит следующие свойства для мониторинга работоспособности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (`IsHadrEnabled` и `HadrManagerStatus`). Аспект сервера содержит также следующие свойства политики для мониторинга конфигурации кластера WSFC: `ClusterQuorumType` и `ClusterQuorumState`.  
   
- Дополнительные сведения см. в записи [The AlwaysOn Health Model Part 2 -- Extending the Health Model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Модель работоспособности AlwaysOn, часть 2. Расширение модели работоспособности) блога группы разработчиков SQL Server AlwaysOn.  
+ Дополнительные сведения см. в записи [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Модель работоспособности AlwaysOn, часть 2. Расширение модели работоспособности) блога группы разработчиков SQL Server AlwaysOn.  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -104,11 +104,11 @@ ms.locfileid: "48104177"
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [AlwaysOn работоспособности модель, часть 1 архитектура модели исправности](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn работоспособности модель, часть 1 архитектура модели исправности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Модель исправности AlwaysOn часть 2 — расширение модели исправности](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [Модель исправности AlwaysOn часть 2 — расширение модели исправности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>См. также  
  [Группы доступности AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: Определение неизвестного элемента и свойств обработки значений Null | Документы Microsoft
+title: Определение Unknown Member и Null Processing свойства | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e39ac2042304b927d8270da57a88c4452ef79337
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 08e05c68bf69bcb7ca54d2f0920ee041aae3ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019581"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525923"
 ---
-# <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Занятие 4-7-Определение неизвестного элемента и свойств обработки значений Null
+# <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Занятие 4 – 7-определение Unknown Member и Null Processing свойства
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 В процессе обработки измерения службами [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] его атрибуты заполняются всеми уникальными значениями, полученными из базовых столбцов представлений и таблиц в представлении источника данных. Если при обработке службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] обнаруживают значение NULL, по умолчанию оно преобразуется в нулевое значение для числовых столбцов или в пустую строку — для строковых. Можно изменить значения по умолчанию или преобразовывать значения NULL в процессе извлечения, преобразования или загрузки данных (если они выполняются) из базового реляционного хранилища данных. Кроме того, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно настроить для преобразования значения NULL в указанное значение настройкой трех свойств: **UnknownMember** и **UnknownMemberName** для измерения и **NullProcessing** для ключевого атрибута измерения.  
@@ -60,7 +60,7 @@ ms.locfileid: "34019581"
   
     Этот уровень содержит компоненты сборки, используемые при построении других компонентов, начиная с продукта **Adjustable Race** , как показано на рисунке ниже.  
   
-    ![Компоненты сборки для создания других компонентов](../analysis-services/media/l4-productdimensionerrorconfig-2.gif "компоненты сборки для создания других компонентов")  
+    ![Компоненты сборки, используемые для создания других компонентов](../analysis-services/media/l4-productdimensionerrorconfig-2.gif "компоненты сборки, используемые для создания других компонентов")  
   
 ## <a name="defining-attributes-from-snowflaked-tables-and-a-product-category-user-defined-hierarchy"></a>Определение атрибутов из связанных по схеме «снежинка» таблиц и пользовательской иерархии Product Category  
   
@@ -90,7 +90,7 @@ ms.locfileid: "34019581"
   
 9. На панели **Атрибуты** измените имя нового атрибута на **Category**.  
   
-10. В окне свойств щелкните поле свойства **NameColumn** , а затем нажмите кнопку обзора (**…**), чтобы открыть диалоговое окно **Столбец имени** .  
+10. В окне «Свойства» щелкните **NameColumn** свойство и нажмите кнопку обзора (**...** ) кнопку, чтобы открыть **столбец имени** диалоговое окно.  
   
 11. В списке **Исходный столбец** выберите **EnglishProductCategoryName** и нажмите кнопку **ОК**.  
   
@@ -98,11 +98,11 @@ ms.locfileid: "34019581"
   
 13. На панели **Атрибуты** измените имя нового атрибута на **Subcategory**.  
   
-14. В окне свойств щелкните поле свойства **NameColumn** , а затем нажмите кнопку обзора ( **…** ), чтобы открыть диалоговое окно **Столбец имени** .  
+14. В окне «Свойства» щелкните **NameColumn** свойство и нажмите кнопку обзора **(...)**  кнопку, чтобы открыть **столбец имени** диалоговое окно.  
   
 15. В списке **Исходный столбец** выберите **EnglishProductSubcategoryName** и нажмите кнопку **ОК**.  
   
-16. Создайте пользовательскую иерархию под названием **Product Categories** со следующими уровнями (сверху вниз): **Category**, **Subcategory**и **Product Name**.  
+16. Создание новой пользовательской иерархии называется **категории продуктов** со следующими уровнями, в порядке сверху вниз: **Категория**, **подкатегории**, и **название продукта**.  
   
 17. Укажите для свойства **AllMemberName** пользовательской иерархии Product Categories значение **All Products** .  
   
@@ -176,10 +176,10 @@ ms.locfileid: "34019581"
   
     Обратите внимание, что все компоненты сборки отображаются на уровне **Product Name** , как показано на рисунке ниже.  
   
-    ![Уровню имени товара компонентами сборки](../analysis-services/media/l4-assemblycomponents-1.gif "уровень название продукта, компонентами сборки")  
+    ![Уровень имя продукта, с компонентами сборки](../analysis-services/media/l4-assemblycomponents-1.gif "уровень название продукта, с компонентами сборки")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 5: Определение связей между измерениями и группами мер](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[Занятие 5. Определение связей между измерениями и группами мер](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

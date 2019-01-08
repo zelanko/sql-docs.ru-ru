@@ -1,7 +1,8 @@
 ---
-title: Заметки о выпуске Azure Data Studio | Документация Майкрософт
+title: Заметки о выпуске и журнал изменений
+titleSuffix: Azure Data Studio
 description: Заметки о выпуске Azure Data Studio
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,21 +11,21 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9723a51154d0098271f8d3206c7f7a7470598422
-ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
+ms.openlocfilehash: 22542b42aff4b6d2d37e4a7342395d154d16dc95
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51289924"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030348"
 ---
-# <a name="azure-data-studio-release-notes"></a>Заметки о выпуске Azure Data Studio
+# <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio последние заметки о выпуске и журнал изменений
 
 **[Скачайте Ноябрьский выпуск!](download.md)**
 
 ## <a name="november-2018-november-release"></a>Ноябрь 2018 г. (Ноябрьский выпуск)
 
 Дата выпуска: 6 ноября 2018 г.  
-версия: 1.2.4
+Версия: 1.2.4
 
 - Обновление до [расширение предварительной версии SQL Server 2019 г.](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 - Знакомство с вставить расширение плана
@@ -34,13 +35,13 @@ ms.locfileid: "51289924"
 - Обновления службы средств SQL для.Net Core 2,2 предварительной версии 3 (для поддержки итоговой AAD)
 
 ### <a name="bug-fixes"></a>Исправления ошибок
-- Исправить [выдавать #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): потеряно подключение к базе данных SQL Azure
-- Исправить [выдавать #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): «Недопустимый аргумент» исключение, развернув узел обозревателя Объектов базы данных
-- Исправить [выдавать #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): правильно отображать сообщения несколько строк в результатах запроса
-- Исправить [выдавать #2906](https://github.com/Microsoft/azuredatastudio/pull/2906): имя документа исправить изменить данные, если имя таблицы содержит специальные символы
-- Исправить [выдавать #2929](https://github.com/Microsoft/azuredatastudio/issues/2929): построение в расширении журнал изменений, что надо проверять заметки о выпуске VSCode для изменения
-- Исправить [выдавать #2719](https://github.com/Microsoft/azuredatastudio/issues/2719): "высококонтрастной" теме тип Double/триад значки
-- Исправить [выдавать #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Добавление интерфейса командной строки для подключения к SQL Server
+- Исправить [выдавать #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Потеряно соединение с базой данных SQL Azure
+- Исправить [выдавать #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): «Недопустимый аргумент» исключение раскрываемого обозревателя Объектов базы данных узла
+- Исправить [выдавать #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): Правильно отображать сообщения несколько строк в результатах запроса
+- Исправить [выдавать #2906](https://github.com/Microsoft/azuredatastudio/pull/2906): Исправьте имя документа изменение данных в том случае, когда имя таблицы содержит специальные символы
+- Исправить [выдавать #2929](https://github.com/Microsoft/azuredatastudio/issues/2929): Встроенные в расширении журнал изменений, что надо проверять заметки о выпуске VSCode для изменения
+- Исправить [выдавать #2719](https://github.com/Microsoft/azuredatastudio/issues/2719): Темы высокой контрастности тип Double/триад значки
+- Исправить [выдавать #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Добавить интерфейс командной строки для подключения к SQL Server
 - Исправить [выдавать #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Добавление поддержки темы плана запроса
 - ...
 
@@ -49,7 +50,7 @@ ms.locfileid: "51289924"
 ## <a name="october-2018-october-release"></a>Октября 2018 г. (Октябрьский выпуск)
 
 Дата выпуска: 29 октября 2018 г.  
-версия: 1.1.4
+Версия: 1.1.4
 
 - Представляем обозреватель ресурсов Azure для просмотра баз данных SQL Azure
 - Повысить устойчивость подключения обозревателя объектов и редактора запросов
@@ -57,11 +58,11 @@ ms.locfileid: "51289924"
 - Обновление до [расширение предварительной версии SQL Server 2019 г.](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 
 ### <a name="bug-fixes"></a>Исправления ошибок
-- Исправить [выдавать #2717](https://github.com/Microsoft/azuredatastudio/issues/2717): результирующий XML-столбец, нажмите кнопку форматирования
-- Исправить [выдавать #2993](https://github.com/Microsoft/azuredatastudio/issues/2993): windows результат его ширина не завершена
-- Исправить [выдавать #2999](https://github.com/Microsoft/azuredatastudio/issues/2999): не удалось загрузить файл System.Diagnostics.Tracing на компьютере Mac, при подключении к базе данных
-- Исправить [выдавать #2851](https://github.com/Microsoft/azuredatastudio/issues/2851): временной ряд диаграммы не отображаются надлежащим образом
-- Исправить [выдавать #2996](https://github.com/Microsoft/azuredatastudio/issues/2996): временной потери таблицы из-за внезапного сеанса изменения
+- Исправить [выдавать #2717](https://github.com/Microsoft/azuredatastudio/issues/2717): Результирующий XML-столбец, нажмите кнопку форматирования
+- Исправить [выдавать #2993](https://github.com/Microsoft/azuredatastudio/issues/2993): Ширина элемента результата windows не завершена
+- Исправить [выдавать #2999](https://github.com/Microsoft/azuredatastudio/issues/2999): Не удалось загрузить файл System.Diagnostics.Tracing на компьютере Mac, при подключении к базе данных
+- Исправить [выдавать #2851](https://github.com/Microsoft/azuredatastudio/issues/2851): Временной ряд диаграммы не отображаются надлежащим образом
+- Исправить [выдавать #2996](https://github.com/Microsoft/azuredatastudio/issues/2996): Потеря временной таблицы из-за внезапного сеанса изменения
 - ...
 
 Подробные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), и [выпуски](https://github.com/Microsoft/azuredatastudio/releases).
@@ -92,7 +93,7 @@ ms.locfileid: "51289924"
 
 ### <a name="bug-fixes"></a>Исправления ошибок
 
-- Исправить [выдавать #2647](https://github.com/Microsoft/azuredatastudio/issues/143): диаграммы заняло большим шагом назад.
+- Исправить [выдавать #2647](https://github.com/Microsoft/azuredatastudio/issues/143): Диаграммы заняло большим шагом назад.
 - Исправить [выдавать #2648](https://github.com/Microsoft/azuredatastudio/issues/143): Укажите, что возвращает весь столбец гиперссылок JSON.
 - ...
 
@@ -102,7 +103,7 @@ ms.locfileid: "51289924"
 ## <a name="august-2018-august-public-preview"></a>Августа 2018 г. (август Предварительная версия)
 
 Дата выпуска: 30 августа 2018 г.  
-версия: 0.32.8
+Версия: 0.32.8
 
 *0.32.8 содержит исправления для несколько регрессии в 0.32.7 ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372)*)
 
@@ -112,49 +113,49 @@ ms.locfileid: "51289924"
 - SQL Server Profiler сеанса управления
 - Поддержка шаблонов сеанса SQL Server Profiler
 - Усовершенствования агента SQL Server
-- Новое расширение сообщества: первый комплект сетевого ответчика
-- Усовершенствования потратив: строки подключения
+- Новое расширение сообщества: Первый комплект сетевого ответчика
+- Потратив улучшения: Строки подключения
 
 ### <a name="bug-fixes"></a>Исправления ошибок
 
 - Синтаксический анализ SQL в окно редактора запросов с помощью `Parse Syntax` команды.
-- Исправить [выдавать #143](https://github.com/Microsoft/azuredatastudio/issues/143): дважды щелкните файл, не выбрав в имя переменной.
-- Исправить [выдавать #387](https://github.com/Microsoft/azuredatastudio/issues/387): значок DB SQL вкладке отображается красным цветом.
-- Исправить [выдавать #825](https://github.com/Microsoft/azuredatastudio/issues/825): запрос: Автосоединение для текущего сервера после скрипта как... 
+- Исправить [выдавать #143](https://github.com/Microsoft/azuredatastudio/issues/143): Дважды щелкните файл, не выбрав в имя переменной.
+- Исправить [выдавать #387](https://github.com/Microsoft/azuredatastudio/issues/387): Значок DB вкладка SQL — красный.
+- Исправить [выдавать #825](https://github.com/Microsoft/azuredatastudio/issues/825): Запрос: Автоматическое соединение с текущего сервера после скрипта как... 
 - Исправить [выдавать #1278](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [записи Desktop] - избыточных значение для имени & комментарий.
-- Исправить [выдавать #1285](https://github.com/Microsoft/azuredatastudio/issues/1285): при обновлении значок приложения, чтобы быть удалены или заменены в Windows.
-- Исправить [выдавать #1317](https://github.com/Microsoft/azuredatastudio/issues/1317): исправление десятичного разделителя.
-- Исправить [выдавать #1474](https://github.com/Microsoft/azuredatastudio/issues/1474): Отмена изменить соединение отключается текущего соединения.
-- Исправить [выдавать #1497](https://github.com/Microsoft/azuredatastudio/issues/1497): Просмотр в виде диаграммы параметры обрезаны в нижней.
-- Исправить [выдавать #1524](https://github.com/Microsoft/azuredatastudio/issues/1524): оболочки/Dashboard: значки viewlet Main перетаскиваемой и могут вызвать сбой приложения.
-- Исправить [выдавать #1578](https://github.com/Microsoft/azuredatastudio/issues/1578): не удалось развернуть/свернуть удаленной общей папки браузера, щелкнув имя.
-- Исправить [выдавать #1620](https://github.com/Microsoft/azuredatastudio/issues/1620): функция предложение: получить строку подключения для существующего соединения.
-- Исправить [выдавать #1624](https://github.com/Microsoft/azuredatastudio/issues/1624): SelectBox не изменяется цвет при отключении.
-- Исправить [выдавать #1728](https://github.com/Microsoft/azuredatastudio/issues/1728): сохранить в виде JSON или EXCEL и CSV не работают.
-- Исправить [выдавать #1744](https://github.com/Microsoft/azuredatastudio/issues/1744): панель результатов теряет его позиции прокрутки, при переключении между вкладками.
-- Исправить [выдавать #1748](https://github.com/Microsoft/azuredatastudio/issues/1748): сообщение об ошибке при сохранении файла, второй (и последующие) Excel.
-- Исправить [выдавать #1782](https://github.com/Microsoft/azuredatastudio/issues/1782): изменение данных: ячейки не вернуться к исходному значению на нажатие клавиши Escape.
+- Исправить [выдавать #1285](https://github.com/Microsoft/azuredatastudio/issues/1285): Обновление причины значок приложения, чтобы быть удалены или заменены в Windows.
+- Исправить [выдавать #1317](https://github.com/Microsoft/azuredatastudio/issues/1317): Исправьте десятичного разделителя.
+- Исправить [выдавать #1474](https://github.com/Microsoft/azuredatastudio/issues/1474): Отмена изменений соединения отключает текущего соединения.
+- Исправить [выдавать #1497](https://github.com/Microsoft/azuredatastudio/issues/1497): Просмотр в виде диаграммы, параметры обрезаны внизу.
+- Исправить [выдавать #1524](https://github.com/Microsoft/azuredatastudio/issues/1524): Оболочки и панели мониторинга: Значки основной viewlet перетаскиваемой и могут вызвать сбой приложения.
+- Исправить [выдавать #1578](https://github.com/Microsoft/azuredatastudio/issues/1578): Не удается развернуть/свернуть удаленной общей папки браузера, щелкнув имя.
+- Исправить [выдавать #1620](https://github.com/Microsoft/azuredatastudio/issues/1620): Функция предложение: Получение строки подключения для существующего соединения.
+- Исправить [выдавать #1624](https://github.com/Microsoft/azuredatastudio/issues/1624): SelectBox не изменяет цвет при отключении.
+- Исправить [выдавать #1728](https://github.com/Microsoft/azuredatastudio/issues/1728): Сохраните как JSON или EXCEL и CSV не работают.
+- Исправить [выдавать #1744](https://github.com/Microsoft/azuredatastudio/issues/1744): При переключении между вкладками, панель результатов теряет его позиции прокрутки.
+- Исправить [выдавать #1748](https://github.com/Microsoft/azuredatastudio/issues/1748): Сообщение об ошибке при сохранении файла, второй (и последующие) Excel.
+- Исправить [выдавать #1782](https://github.com/Microsoft/azuredatastudio/issues/1782): Изменение данных: ячейки не вернуться к исходному значению на нажатие клавиши Escape.
 - Исправить [выдавать #1836](https://github.com/Microsoft/azuredatastudio/issues/1836): SQL-файлы, не связанные с SQL Operations Studio.
-- Исправить [выдавать #1850](https://github.com/Microsoft/azuredatastudio/issues/1850): N, введя '' будут автоматически завершаться по до N'' '.
-- Исправить [выдавать #1985](https://github.com/Microsoft/azuredatastudio/issues/1985): копирование из сетки результатов запроса отключен, столбец: 1.
-- Исправить [выдавать #1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998): Добавление VS Code версии для о диалоговое окно.
-- Исправить [выдавать #2042](https://github.com/Microsoft/azuredatastudio/pull/2042): агент: включенной кнопкой, чтобы импортировать запросы из файлов sql.
-- Исправить [выдавать #2091](https://github.com/Microsoft/azuredatastudio/issues/2091): нельзя использовать сочетания клавиш Ctrl + C для копирования из панель результатов.
-- Исправить [выдавать #2099](https://github.com/Microsoft/azuredatastudio/pull/2099): добавлены дополнительные параметры saveAsCsv.
-- Исправить [выдавать #2107](https://github.com/Microsoft/azuredatastudio/issues/2107): значок обновления документа для панели мониторинга и Profiler документов.
-- Исправить [выдавать #2129](https://github.com/Microsoft/azuredatastudio/pull/2129): позиция прокрутки сохранить изменение данных при переключении вкладок.
-- Исправить [выдавать #2152](https://github.com/Microsoft/azuredatastudio/issues/2152): строка индикатора результатов сетки ноль основе.
+- Исправить [выдавать #1850](https://github.com/Microsoft/azuredatastudio/issues/1850): Введите N'' будут автоматически завершаться по до N'' '.
+- Исправить [выдавать #1985](https://github.com/Microsoft/azuredatastudio/issues/1985): Копирование из сетки результатов запроса по 1 столбец отключена.
+- Исправить [выдавать #1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998): Добавьте версию Visual STUDIO Code для о диалоговое окно.
+- Исправить [выдавать #2042](https://github.com/Microsoft/azuredatastudio/pull/2042): Агент: Включить кнопку, чтобы импортировать запросы из файлов sql.
+- Исправить [выдавать #2091](https://github.com/Microsoft/azuredatastudio/issues/2091): Нельзя использовать сочетания клавиш Ctrl + C для копирования из панель результатов.
+- Исправить [выдавать #2099](https://github.com/Microsoft/azuredatastudio/pull/2099): Добавлены дополнительные параметры saveAsCsv.
+- Исправить [выдавать #2107](https://github.com/Microsoft/azuredatastudio/issues/2107): Обновите значок документа для панели мониторинга и Profiler документов.
+- Исправить [выдавать #2129](https://github.com/Microsoft/azuredatastudio/pull/2129): Сохраните редактируемую позицию прокрутки данных при переключении вкладок.
+- Исправить [выдавать #2152](https://github.com/Microsoft/azuredatastudio/issues/2152): Индикатор строки сетки результатов отсчитываемый от нуля.
 
 ## <a name="known-issues"></a>Известные проблемы
 
 - [Выдача #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) Сохранить как только сохраняет первую строку данных Excel
-- [Проблема #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): не удалось подключиться на Ubuntu 16.04 to SQL в контейнере
+- [Выдача #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Не удалось подключиться на Ubuntu 16.04 to SQL в контейнере
 
 
 ## <a name="july-2018-july-public-preview"></a>Июля 2018 г. (июль Предварительная версия)
 
 Дата выпуска: 19 июля 2018 г.  
-версия: 0.31.4
+Версия: 0.31.4
 
 *Общедоступной предварительной версии июля* посвящена первоначального выпуска сценариев конфигурации агента SQL Server, улучшений шаблона сеанса и представления SQL Server Profiler и дальнейшего исправления ошибок для клиентов сообщили о проблемах GitHub. Этот выпуск содержит следующие моменты:  
 
@@ -173,27 +174,27 @@ ms.locfileid: "51289924"
 - Версия расширения сценариев объединения
 - Мастера и расширяемость диалоговое окно точки, добавляемые авторы расширений
 - Устранение проблем на GitHub:
- - Исправить [выдавать 728](https://github.com/Microsoft/azuredatastudio/issues/728): нет ответа, чтобы добавить подключение в macOS
- - Исправить [выдавать 1612](https://github.com/Microsoft/azuredatastudio/issues/1612): пропало отображения текста в сетке результатов, международные символы
- - Исправить [выдавать 1693](https://github.com/Microsoft/azuredatastudio/issues/1693): диалоговое окно резервного копирования: браузер файлов пользовательского интерфейса не работает
- - Исправить [выдавать 1713](https://github.com/Microsoft/azuredatastudio/issues/1713): число затронутых строк
- - Исправить [выдавать 1718](https://github.com/Microsoft/azuredatastudio/issues/1718): не удалось подключиться к любой источник данных
+ - Исправить [выдавать 728](https://github.com/Microsoft/azuredatastudio/issues/728): Нет ответа, чтобы добавить подключение в macOS
+ - Исправить [выдавать 1612](https://github.com/Microsoft/azuredatastudio/issues/1612): Перепутаны отображения текста в сетке результатов, международные символы
+ - Исправить [выдавать 1693](https://github.com/Microsoft/azuredatastudio/issues/1693): Диалоговое окно резервное копирование: Браузер файлов пользовательского интерфейса не работает
+ - Исправить [выдавать 1713](https://github.com/Microsoft/azuredatastudio/issues/1713): Число затронутых строк
+ - Исправить [выдавать 1718](https://github.com/Microsoft/azuredatastudio/issues/1718): Не удалось подключиться к любой источник данных
  - Исправить [выдавать 1719](https://github.com/Microsoft/azuredatastudio/issues/1719): TypeError при подключении к серверу
- - Исправить [выдавать 1724](https://github.com/Microsoft/azuredatastudio/issues/1724): диалоговые окна расширения работает
- - Исправить [выдавать 1749](https://github.com/Microsoft/azuredatastudio/issues/1749): ошибка: Получает интерпретировать HTML-данные в столбце
- - Исправить [выдавать 1789](https://github.com/Microsoft/azuredatastudio/issues/1789): расширяемость: при добавлении поставщика подключения удаления никогда не удалит его из списка
- - Исправить [выдавать 1791](https://github.com/Microsoft/azuredatastudio/issues/1791): Sqlops расширения: queryeditor.connect() подключается к целевой базе данных, но пользовательский Интерфейс не отображается подключен редактор
- - Исправить [выдавать 1799](https://github.com/Microsoft/azuredatastudio/issues/1799): Top 10 DB размер диаграммы не работает на экземплярах с учетом регистра
+ - Исправить [выдавать 1724](https://github.com/Microsoft/azuredatastudio/issues/1724): Диалоговые окна расширения работает
+ - Исправить [выдавать 1749](https://github.com/Microsoft/azuredatastudio/issues/1749): ОШИБКА: Получает интерпретировать HTML-данные в столбце
+ - Исправить [выдавать 1789](https://github.com/Microsoft/azuredatastudio/issues/1789): Расширяемость: при добавлении поставщика подключения удаления никогда не удалит его из списка
+ - Исправить [выдавать 1791](https://github.com/Microsoft/azuredatastudio/issues/1791): Расширения Sqlops: queryeditor.connect() подключается к целевой базе данных, но пользовательский Интерфейс не показываются подключен редактор
+ - Исправить [выдавать 1799](https://github.com/Microsoft/azuredatastudio/issues/1799): TOP 10 DB размер диаграммы не работает на экземплярах с учетом регистра
  - Исправить [выдавать 1814](https://github.com/Microsoft/azuredatastudio/issues/1814): определение типа опечатка sqlops.d.ts, вызывает неявное «any»
- - Исправить [выдавать 1817](https://github.com/Microsoft/azuredatastudio/issues/1817): ошибка de Ortografia
- - Исправить [выдавать 1830](https://github.com/Microsoft/azuredatastudio/issues/1830): задание iconPath в ButtonComponent после вызова component() не приводит к изменению значка
- - Исправить [выдавать 1843](https://github.com/Microsoft/azuredatastudio/issues/1843): организации лучше таблицы
+ - Исправить [выдавать 1817](https://github.com/Microsoft/azuredatastudio/issues/1817): Ошибка de Ortografia
+ - Исправить [выдавать 1830](https://github.com/Microsoft/azuredatastudio/issues/1830): Задание iconPath в ButtonComponent после вызова component() не приводит к изменению значка
+ - Исправить [выдавать 1843](https://github.com/Microsoft/azuredatastudio/issues/1843): Улучшения организации таблицы
 
 
 ## <a name="june-2018-june-public-preview"></a>Июня 2018 г. (июнь общедоступную предварительную версию.)
 
 Дата выпуска: 20 июня 2018 г.  
-версия: 0.30.6
+Версия: 0.30.6
 
 *Общедоступной предварительной версии июня* содержит следующие моменты:  
 
@@ -204,37 +205,37 @@ ms.locfileid: "51289924"
 - Улучшенная **мастер & платформе построитель пользовательского интерфейса диалоговых окон** интерфейсов API расширяемости.
 - Обновление кода платформы VS исходного кода интеграции [марта 2018 г. (1.22)](https://code.visualstudio.com/updates/v1_22) и [апреля 2018 г. (1,23)](https://code.visualstudio.com/updates/v1_23) освобождает.
 - Устранение проблем на GitHub:
-  - Запрос на функцию ([выдавать 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): вносить ширина Автоподбор размера столбца сетки результатов данные или вспомнить изменения, вносимые вручную в том случае, если тот же запрос запускается повторно.
-  - Исправить [выдавать 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): сообщение и добавить кнопку учетной записи для учетной записи при пустом связанной учетной записи добавьте show.
-  - Исправить [выдавать 1399](https://github.com/Microsoft/azuredatastudio/issues/1399): вкладка связанной учетной записи разрывается при свернутом представлении.
-  - Исправить [выдавать 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): служба средств SQL происходит сбой, при открытии SQL-файл с диска.
-  - Исправить [выдавать 1372](https://github.com/Microsoft/azuredatastudio/issues/1372): SQL отсутствует ключевое слово «BETWEEN».
-  - Исправить [выдавать 1 395](https://github.com/Microsoft/azuredatastudio/issues/1395): ключевое слово «СОПОСТАВЛЕНИЕ» аварийно завершает работу службы средств SQL.
+  - Запрос на функцию ([выдавать 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): Пожалуйста сделать результаты ширина столбца Автоподбор размера сетки данных и/или вспомнить изменения, вносимые вручную в том случае, если тот же запрос запускается повторно.
+  - Исправить [выдавать 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Следует показать добавьте сообщение и кнопка учетной записи для учетной записи при пустом связанной учетной записи.
+  - Исправить [выдавать 1399](https://github.com/Microsoft/azuredatastudio/issues/1399): Вкладка связанной учетной записи разорвано при свернутом представлении.
+  - Исправить [выдавать 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): Служба средства SQL происходит сбой, при открытии SQL-файл с диска.
+  - Исправить [выдавать 1372](https://github.com/Microsoft/azuredatastudio/issues/1372): Отсутствует ключевое слово SQL «BETWEEN».
+  - Исправить [выдавать 1 395](https://github.com/Microsoft/azuredatastudio/issues/1395): Ключевое слово «СОПОСТАВЛЕНИЕ» аварийно завершает работу службы средств SQL.
   - Исправить [выдавать 1496](https://github.com/Microsoft/azuredatastudio/issues/1496): «Новый Profiler» в контекстном меню в обозревателе объектов не выполняет никаких действий.
-  - Исправить [выдавать 1495](https://github.com/Microsoft/azuredatastudio/issues/1495): план запроса «Объяснение» редактор запросов не работает.
+  - Исправить [выдавать 1495](https://github.com/Microsoft/azuredatastudio/issues/1495): План запроса «Объяснение» редактор запросов тоже прекратится.
 
 
 ## <a name="may-2018-may-public-preview"></a>Май 2018 г. (май общедоступной предварительной версии)
 
 Дата выпуска: 7 мая 2018 г.  
-версия: 0.29.3
+Версия: 0.29.3
 
 *Может общедоступной предварительной версии* сосредоточена на стабилизацию и исправления ошибок. Эта сборка содержит следующие моменты:  
 
 - Объявление о расширении поиск SQL Redgate, доступных в диспетчере расширений.
-- Сообщество локализации для 10 языков: немецкий, испанский, французский, итальянский, японский, корейский, португальский, русский, упрощенный китайский и китайский, традиционное письмо.
+- Локализация сообщества для 10 языков: Немецкий, испанском, французском, итальянском, японский, корейский, португальский, русский, упрощенный китайский и китайский (традиционный).
 - Сбор данных телеметрии ограниченной, улучшенный интерфейс отказаться и в продукте ссылки на заявление о конфиденциальности.
 - Диспетчер расширений имеет улучшенную Marketplace возможности быстрого обнаружения расширений сообщества.
 - Расширение задания агента SQL Server и журнал заданий представления улучшения.
 - Обновления для whoisactive и расширений сервера отчетов.
 - Улучшить управление свойствами на панели мониторинга прокрутки.
 - Устранение проблем на GitHub:
-   - Исправить [выдавать 703](https://github.com/Microsoft/azuredatastudio/issues/703): ввод текста в стиле HTML на изменение данных приводит значение к неправильному отображению только при обновлении
+   - Исправить [выдавать 703](https://github.com/Microsoft/azuredatastudio/issues/703): Ввод текста в стиле HTML на изменение данных приводит значение к неправильному отображению только при обновлении
    - Исправить [выдавать 821](https://github.com/Microsoft/azuredatastudio/issues/821): зависимость пакета azuredatastudio.deb
-   - Исправить [выдавать 1260](https://github.com/Microsoft/azuredatastudio/issues/1260): ключевое слово «distinct» не остается выделенным,
-   - Исправить [выдавать 1332](https://github.com/Microsoft/azuredatastudio/issues/1332): отменить изменение данных строк не работает
-   - Исправить [выдавать 1215](https://github.com/Microsoft/azuredatastudio/issues/1215): расширение агента SQL и строка состояния
-   - Исправить [выдавать 1316](https://github.com/Microsoft/azuredatastudio/issues/1316): SQL Agent не размер был изменен после изменения размера windows
+   - Исправить [выдавать 1260](https://github.com/Microsoft/azuredatastudio/issues/1260): «Distinct» не остается выделенным, ключевое слово.
+   - Исправить [выдавать 1332](https://github.com/Microsoft/azuredatastudio/issues/1332): Изменение данных вернуть строки не работает
+   - Исправить [выдавать 1215](https://github.com/Microsoft/azuredatastudio/issues/1215): Расширение агента SQL и строка состояния
+   - Исправить [выдавать 1316](https://github.com/Microsoft/azuredatastudio/issues/1316): Изменение размера не агента SQL после изменения размера windows
 
 
 
@@ -242,7 +243,7 @@ ms.locfileid: "51289924"
 ## <a name="april-2018-april-public-preview"></a>Апрель 2018 г. (апрель общедоступную предварительную версию.)
 
 Дата выпуска: 25 апреля 2018 г.  
-версия: 0.28.6
+Версия: 0.28.6
 
 *Общедоступной предварительной версии апреля* содержит исправления ошибок и улучшения. 
 
@@ -251,22 +252,22 @@ ms.locfileid: "51289924"
 - Разделение работать одновременно с нескольких терминалов откройте интегрированный терминал.
 - Foot число ограниченной установки файла на диске печати для ускорения установки и время запуска.
 - Продолжить устранение проблем на GitHub:
-   - Исправить [выдавать 37](https://github.com/Microsoft/azuredatastudio/issues/37): когда средство просмотра диаграммы выдает ошибку, происходит непредвиденное поведение.
-   - Исправить [выдавать 462](https://github.com/Microsoft/azuredatastudio/issues/462): запрос функции: параметр для групп серверов, которые развернуты по умолчанию.
+   - Исправить [выдавать 37](https://github.com/Microsoft/azuredatastudio/issues/37): Когда средство просмотра диаграммы выдает ошибку, происходит непредвиденное поведение.
+   - Исправить [выдавать 462](https://github.com/Microsoft/azuredatastudio/issues/462): Запрос функции: Параметр для групп серверов, которые развернуты по умолчанию.
    - Исправить [выдавать 606](https://github.com/Microsoft/azuredatastudio/issues/606): intellisense - неудачный вариант для команды «Обновить».
-   - Исправить [выдавать 967](https://github.com/Microsoft/azuredatastudio/issues/967): ожидается, что план запроса при выборе XML showplan в сетке результатов.
-   - Исправить [выдавать 1023](https://github.com/Microsoft/azuredatastudio/issues/1023): добавить квадратные скобки для вызова ms_foreachdb из flyfishingdba.
-   - Исправить [выдавать 1048](https://github.com/Microsoft/azuredatastudio/issues/1048): Ошибка подтверждения соединения перед входом SSL/TLS.
-   - Исправить [выдавать 1050](https://github.com/Microsoft/azuredatastudio/issues/1050): очистить insights просмотреть перед отображением ошибки.
-   - Исправить [выдавать 1057](https://github.com/Microsoft/azuredatastudio/issues/1057): восстановления и новые действия запроса в обозревателе-мини-приложения не работают.
-   - Исправить [выдавать 1068](https://github.com/Microsoft/azuredatastudio/issues/1068): выходные данные панели мониторинга windows появится с сообщением об ошибке для базы данных SQL Azure.
-   - Исправить [выдавать 1069](https://github.com/Microsoft/azuredatastudio/issues/1069): диалоговое окно подключения отображается ошибка сервера требуется при первоначальном отображении.
-   - Исправить [выдавать 1070](https://github.com/Microsoft/azuredatastudio/issues/1070): группы серверов, теперь требуют как двойной щелчок, чтобы развернуть.
-   - Исправить [выдавать 1072](https://github.com/Microsoft/azuredatastudio/issues/1072): полупрозрачного фона элемента управления выбором.
-   - Исправить [выдавать 1115](https://github.com/Microsoft/azuredatastudio/issues/1115): устранить проблемы со специальными возможностями все высокой контрастности в SQL Operations Studio.
-   - Исправить [выдавать 1101](https://github.com/Microsoft/azuredatastudio/issues/1101): расширение не может выполнить обновления «скачать вручную» ссылка передается неверное расположение.
+   - Исправить [выдавать 967](https://github.com/Microsoft/azuredatastudio/issues/967): Ожидается, что план запроса при выборе XML showplan в сетке результатов.
+   - Исправить [выдавать 1023](https://github.com/Microsoft/azuredatastudio/issues/1023): Добавьте квадратные скобки для вызова ms_foreachdb из flyfishingdba.
+   - Исправить [выдавать 1048](https://github.com/Microsoft/azuredatastudio/issues/1048): Ошибка подтверждения SSL/TLS перед входом.
+   - Исправить [выдавать 1050](https://github.com/Microsoft/azuredatastudio/issues/1050): Очистить insights представление перед отображением ошибки.
+   - Исправить [выдавать 1057](https://github.com/Microsoft/azuredatastudio/issues/1057): Восстановление и новых действий запроса в обозревателе-мини-приложения не работают.
+   - Исправить [выдавать 1068](https://github.com/Microsoft/azuredatastudio/issues/1068): Панель мониторинга выходных данных windows появится с сообщением об ошибке для базы данных SQL Azure.
+   - Исправить [выдавать 1069](https://github.com/Microsoft/azuredatastudio/issues/1069): Диалоговое окно подключения отображается ошибка сервера требуется при первоначальном отображении.
+   - Исправить [выдавать 1070](https://github.com/Microsoft/azuredatastudio/issues/1070): Группы серверов, теперь требуют как двойной щелчок, чтобы развернуть.
+   - Исправить [выдавать 1072](https://github.com/Microsoft/azuredatastudio/issues/1072): Фон элемента управления выбором будет частично прозрачным.
+   - Исправить [выдавать 1115](https://github.com/Microsoft/azuredatastudio/issues/1115): Исправьте проблемы со специальными возможностями все высокой контрастности в SQL Operations Studio.
+   - Исправить [выдавать 1101](https://github.com/Microsoft/azuredatastudio/issues/1101): Расширение не может выполнить обновления «скачать вручную» ссылка передается неверное расположение.
    - Исправить [выдавать 1103](https://github.com/Microsoft/azuredatastudio/issues/1103): V прокрутки не работает на вкладке "Главная".
-   - Исправить [выдавать 1104](https://github.com/Microsoft/azuredatastudio/issues/1104): вкладки расширения SQL работает.
+   - Исправить [выдавать 1104](https://github.com/Microsoft/azuredatastudio/issues/1104): Вкладки расширения SQL работает.
 
 
 Значительное выделение для общедоступной предварительной версии апреля — это исходный код 1.21 кода Visual Studio платформа обновления. Это дает несколько обновлений к базовым редактором и workbench из предыдущей точки 1.19 синхронизации. Вот несколько примеров:
@@ -292,7 +293,7 @@ ms.locfileid: "51289924"
 ## <a name="march-2018-march-public-preview"></a>Март 2018 г. (март Предварительная версия)
 
 Дата выпуска: 28 марта 2018 г.  
-версия: 0.27.3
+Версия: 0.27.3
 
 *Общедоступной предварительной версии марта* продолжает решить основные проблемы GitHub и ориентированы на улучшение нашей истории расширяемости. В частности включения диспетчера расширений, улучшению управления информационной панели и предоставление агента SQL Server и расширений insights. Этот выпуск включает следующие улучшения:
 
@@ -307,22 +308,22 @@ ms.locfileid: "51289924"
 ## <a name="february-2018-february-public-preview"></a>Февраль 2018 г. (февраль Предварительная версия)
 
 Дата выпуска: 15 февраля 2018 г.  
-версия: 0.26.7
+Версия: 0.26.7
 
 *Общедоступной предварительной версии февраля* включает некоторые предложения по функциям и исправления ошибок высоким приоритетом. Этот выпуск включает следующие улучшения:
 
 - Знакомство с установки автоматического обновления, который выдает уведомление, если новый выпуск доступен для скачивания 
 - Поле «База_данных» диалоговое окно подключения теперь является динамически заполняемый стрелку раскрывающегося списка, который будет содержать список баз данных, заполненное из указанного сервера.
-- Исправить [выпуск 6](https://github.com/Microsoft/azuredatastudio/issues/6): сохранить подключение и выберите базу данных при открытии новой вкладки для запроса.
+- Исправить [выпуск 6](https://github.com/Microsoft/azuredatastudio/issues/6): При открытии новой вкладки запроса, сохраните подключение и выберите базу данных.
 - Исправить [выпуск 22](https://github.com/Microsoft/azuredatastudio/issues/22): «Имя сервера» и «Имя базы данных -» могут их быть раскрывающимся спискам вместо текстовых полей?
-- Исправить [выдавать 549](https://github.com/Microsoft/azuredatastudio/issues/549): автоматическая установка Silent/очень приводит приложение, после установки.
-- Исправить [выдавать 481](https://github.com/Microsoft/azuredatastudio/issues/481): добавьте параметр «Поиск обновлений».
+- Исправить [выдавать 549](https://github.com/Microsoft/azuredatastudio/issues/549): Автоматическая установка silent/очень приводит приложение, после установки.
+- Исправить [выдавать 481](https://github.com/Microsoft/azuredatastudio/issues/481): Добавьте параметр «Поиск обновлений».
 - Редактор SQL Раскраска и автоматического завершения исправления.
-   - Исправить [выдавать 584](https://github.com/Microsoft/azuredatastudio/issues/584): ключевое слово «FULL» не остается выделенным, технологией IntelliSense.
-   - Исправить [выдавать 345](https://github.com/Microsoft/azuredatastudio/issues/345): функции SQL выделения цветом в редакторе.
+   - Исправить [выдавать 584](https://github.com/Microsoft/azuredatastudio/issues/584): Ключевое слово «Полное», не остается выделенным, технологией IntelliSense.
+   - Исправить [выдавать 345](https://github.com/Microsoft/azuredatastudio/issues/345): Необходимо выделить цветом функции SQL в редакторе.
    - Исправить [выдавать 300](https://github.com/Microsoft/azuredatastudio/issues/300): [#tempData] последние «]» будет отображаться зеленым цветом.
-   - Исправить [выдавать 225](https://github.com/Microsoft/azuredatastudio/issues/225): несоответствие цвет ключевое слово.
-   - Исправить [выдавать 60](https://github.com/Microsoft/azuredatastudio/issues/60): недопустимый sql цвет выделения синтаксиса при использовании временной таблицы в предложении from.
+   - Исправить [выдавать 225](https://github.com/Microsoft/azuredatastudio/issues/225): Несоответствие цвет ключевое слово.
+   - Исправить [выдавать 60](https://github.com/Microsoft/azuredatastudio/issues/60): Недопустимый sql цвет выделения синтаксиса при использовании временной таблицы в предложении from.
 - Вызвать API расширяемости подключения.
 - Интеграция VS 1.19 редактора кода.
 - Обновление компонента JustinPealing/html плана запроса для отправки несколько улучшений средства просмотра плана запроса.
@@ -331,7 +332,7 @@ ms.locfileid: "51289924"
 ## <a name="january-2018-january-public-preview"></a>Январь 2018 г. (январь Предварительная версия)
 
 Дата выпуска: 17 января 2018 г.  
-версия: 0.25.4
+Версия: 0.25.4
 
 *Общедоступной предварительной версии января* включает некоторые предложения по функциям и исправления ошибок высоким приоритетом. Этот выпуск включает следующие улучшения:
 
@@ -348,7 +349,7 @@ ms.locfileid: "51289924"
 ## <a name="december-2017-december-public-preview"></a>Декабрь 2017 г. (декабрь Предварительная версия)
 
 Дата выпуска: 19 декабря 2017 г.  
-версия: 0.24.1
+Версия: 0.24.1
 
 *Общедоступной предварительной версии декабря* включает в себя несколько исправлений ошибок по всех функциональных областей, а также следующие улучшения:
 
@@ -365,7 +366,7 @@ ms.locfileid: "51289924"
 ## <a name="november-2017"></a>Ноябрь 2017 г.
 
 Дата выпуска: 15 ноября 2017 г.  
-версия: 0.23.6
+Версия: 0.23.6
 
 - Первоначальный выпуск [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 

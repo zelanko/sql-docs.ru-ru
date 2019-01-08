@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, applying XSL transformations
@@ -18,12 +16,12 @@ ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11f7ce945dcf4b89c6b76ba14e0383bc38ca3c39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74f8834ef29e4b5a1cf2b3988585f771cb9d1f1f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224044"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800020"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Применение преобразования XSL (поставщик SQLXMLOLEDB)
   В этом образце приложения ADO выполняется SQL-запрос, и к результату применяется преобразование XSL. ClientSideXML свойству присвоено значение True, обеспечивает обработку набора строк на стороне клиента. Диалект команды имеет значение {5d531cb2-e6ed-11d2-b252-00c04f681b71}, поскольку SQL-запрос задан в шаблоне, а при выполнении шаблона должен указываться этот диалект. Свойство xsl задает XSL-файл, использовать для применения преобразования. Значение свойства базовый путь используется для поиска XSL-файл. Если путь указан в значении свойства xsl, путь задается относительно пути, указанного в свойстве базовый путь.  
@@ -40,7 +38,7 @@ ms.locfileid: "48224044"
   
  Свойство xsl задается в приложении; Таким образом преобразование XSL применяется к XML-документ, который создается на стороне клиента, и результатом является таблица двух столбцов.  
   
- Для выполнения этой команды шаблона необходимо указать диалект XML-шаблона {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
+ Для выполнения этой команды шаблона, необходимо указать диалект XML-шаблона — {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   
 > [!NOTE]  
 >  В коде необходимо задать имя экземпляра Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения. Кроме того, в данном примере указано использование собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в качестве поставщика данных, для чего требуется установка дополнительного клиентского сетевого ПО. Дополнительные сведения см. в разделе [требования к системе для собственного клиента SQL Server](../../native-client/system-requirements-for-sql-server-native-client.md).  

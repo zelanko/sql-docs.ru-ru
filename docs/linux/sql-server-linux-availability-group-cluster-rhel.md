@@ -1,21 +1,22 @@
 ---
-title: Настройка кластера RHEL для группы доступности SQL Server | Документация Майкрософт
-description: ''
+title: Настройка кластера RHEL для группы доступности SQL Server
+titleSuffix: SQL Server
+description: Дополнительные сведения о кластерах группы доступности при выполнении Red Hat Enterprise Linux (RHEL)
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670823"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160609"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Настройка кластера RHEL для группы доступности SQL Server
 
@@ -88,7 +89,7 @@ ms.locfileid: "51670823"
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-Дополнительные сведения см. в разделе [высокий уровень доступности кластера Pacemaker — Open Source,](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+Дополнительные сведения см. в разделе [высокий уровень доступности кластера Pacemaker - Open Source,](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
 
 После настройки подписки, выполните следующие действия, чтобы настроить Pacemaker.
 
@@ -112,7 +113,7 @@ ms.locfileid: "51670823"
 
 * [Pacemaker кластеры с нуля](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
 * [Ограждения и STONITH](https://clusterlabs.org/doc/crm_fencing.html)
-* [Red Hat надстройку высокого уровня доступности с Pacemaker: ограждения](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Red Hat надстройку высокого уровня доступности с Pacemaker: Ограждения](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 Поскольку уровень узла ограждения конфигурации во многом зависит от среды, отключите его в этом руководстве (его можно настроить позже). Следующий скрипт отключает ограждения уровня узла:
 

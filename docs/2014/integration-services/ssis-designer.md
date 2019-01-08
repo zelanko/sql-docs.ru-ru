@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -18,12 +17,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18f8ee2b794488a098e68ff54803b624c8fa4455
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c056a6a1ebf5958b980c21e3d36d6bc1291f8869
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144724"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792874"
 ---
 # <a name="ssis-designer"></a>конструктор служб SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Конструктор служб — это графическое средство, с помощью которого можно создавать и обслуживать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] Конструктор служб доступен из среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] в составе проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -51,7 +50,7 @@ ms.locfileid: "48144724"
 ## <a name="undo-and-redo"></a>Отмена и повторение  
  В конструкторе [!INCLUDE[ssIS](../includes/ssis-md.md)] можно отменять и повторять выполнение до 20 действий. Для пакетов отмена и повторение доступны на вкладках **Поток управления**, **Поток данных**, **Обработчики событий**и **Параметры** , а также в окне **Переменные** . Для проекта отмена и повторение доступны в окне **Параметры проекта** .  
   
- Изменения, выполняемые в **Области элементов служб SSIS**, нельзя отменять и повторять.  
+ Изменения, выполняемые в **области элементов служб SSIS**, нельзя отменять и повторять.  
   
  При внесении изменений в компонент с помощью редактора компонентов изменения отменяются и повторяются как целостный набор изменений, а не по отдельности. Набор изменений отображается в раскрывающемся списке отмены и повторения как одно действие.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "48144724"
   
 -   [Создание пакетов в SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пользовательский интерфейс служб Integration Services](integration-services-user-interface.md)  
   
   

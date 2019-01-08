@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 399665103725cec573a790667c9253b25836b076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bed79906ff69305a135b1c7249cd4d3331ca3d7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095956"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207593"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>Обновление данных (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]обновление данных можно выполнить, когда необходимо получить последние данные из репозитория MDS без открытия нового листа. Обновить можно либо все, либо только выделенные ячейки. Эта возможность может оказаться полезной при вставке столбцов с пользовательскими формулами или других данных, которые не управляются MDS и которые нужно сохранить.  
@@ -36,7 +35,7 @@ ms.locfileid: "48095956"
   
 -   Если в репозитории MDS изменились значения атрибутов, то значение на листе обновляется значением из репозитория MDS. Цвет ячейки не изменяется.  
   
-> [!WARNING]  
+> [!WARNING]
 >  -   Если на активном листе существуют неуправляемые данные в строках ниже строк с данными, управляемыми MDS, то эти данные могут быть перезаписаны. Это происходит при обновлении листа и добавлении новых строк, управляемых MDS, которые перекрывают неуправляемые данные.  
 > -   Комментарии в ячейках, управляемых MDS, при обновлении удаляются.  
   
@@ -52,10 +51,10 @@ ms.locfileid: "48095956"
   
 ## <a name="related-content"></a>См. также  
   
--   [Соединения (надстройка MDS для ExcelExcel)](connections-mds-add-in-for-excel.md)  
+-   [Соединения (надстройка MDS для Excel)](connections-mds-add-in-for-excel.md)  
   
 -   [Загрузка данных &#40;надстройка MDS для Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
--   [Надстройка служб Master Data Services для Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Надстройка Master Data Services для Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
   

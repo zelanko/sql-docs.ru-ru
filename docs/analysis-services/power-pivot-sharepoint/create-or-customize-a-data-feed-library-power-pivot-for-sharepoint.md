@@ -1,5 +1,5 @@
 ---
-title: Создание или Настройка библиотеки веб-каналов данных (Power Pivot для SharePoint) | Документы Microsoft
+title: Создание или Настройка библиотеки веб-каналов данных (Power Pivot для SharePoint) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71c051d64a40f38a6514301ca3353e7627c67aaf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7586527bcd2f79b6a9a54725fcbd376bd2720096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021258"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519097"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Создание или настройка библиотеки веб-каналов данных (PowerPivot для SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34021258"
   
 -   Предоставлять общий доступ и управлять сервисными документами данных в централизованном местоположении.  
   
--   Визуально определять сервисные документы данных по значкам, что позволяет легко отличать сервисных документов из других документов, хранящихся в той же библиотеке: ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   Визуально определять сервисные документы данных по значкам, что позволяет легко отличать их от других документов, хранящихся в той же библиотеке: ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  В библиотеке каналов данных всегда содержатся сервисные документы данных (ATOMSVC), но никогда не содержатся сами каналы данных. В отличие от канала данных, состоящего из статических XML-данных, в сервисных документах данных указывается URL-адрес к службам или приложениям, используемым для создания канала по требованию, благодаря чему предоставляются сведения соединения, которые могут использоваться повторно при повторяющихся операциях импорта.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34021258"
   
 1.  В левом верхнем углу страницы нажмите кнопку **Действия сайта** .  
   
-2.  Нажмите кнопку **Дополнительные параметры**.  
+2.  Нажмите кнопку **Дополнительные параметры**...  
   
 3.  В списке «Библиотеки» щелкните элемент **Библиотека потоков данных**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34021258"
   
  Для всех библиотек, в которых необходимо создать или изменить документы регистрации каналов данных, необходимо повторить следующие действия.  
   
-#### <a name="step-1-enable-content-type-management"></a>Шаг 1. Включение управления типами содержимого  
+#### <a name="step-1-enable-content-type-management"></a>Шаг 1. Включите управление типами содержимого  
   
 1.  Откройте библиотеку документов, для которой нужно включить несколько типов содержимого.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34021258"
   
 7.  Нажмите кнопку **ОК**.  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>Шаг 2. Добавление типа содержимого сервисного документа данных  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Этап 2. Добавление типа содержимого сервисного документа данных  
   
 1.  В разделе «Типы содержимого» выберите пункт **Добавить из существующих типов содержимого сайта**. Если эта страница не отображается, вернитесь на сайт, выберите в средствах библиотеки **Библиотека** , а затем выберите **Параметры библиотеки**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "34021258"
   
 ## <a name="see-also"></a>См. также  
  [Использование веб-каналов данных (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
- [Удаление библиотеки каналов данных Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
+ [Удаление библиотеки веб-каналов данных Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Веб-каналы данных Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
@@ -13,15 +12,15 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 2fd8083c7043d5aeb7259e6a284b28ae66c82a02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119842"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756969"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Задание интервала для информации об изменениях данных
-  Первой задачей в потоке управления пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], который выполняет добавочную загрузку информации об измененных данных, является вычисление конечных точек интервала изменений. Эти конечные точки имеют значения `datetime` и сохраняются в переменных пакета для дальнейшего использования в пакете.  
+  Первой задачей в потоке управления пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который выполняет добавочную загрузку информации об измененных данных, является вычисление конечных точек интервала изменений. Эти конечные точки имеют значения `datetime` и сохраняются в переменных пакета для дальнейшего использования в пакете.  
   
 > [!NOTE]  
 >  Описание общего процесса по проектированию потока управления см. в разделе [Система отслеживания измененных данных (SSIS)](change-data-capture-ssis.md).  
@@ -101,12 +100,12 @@ ms.locfileid: "49119842"
 3.  На странице **Результирующий набор** **Редактора задачи «Выполнение SQL»** сопоставьте результат ExtractStartTime с переменной ExtractStartTime пакета, а результат ExtractEndTime — с переменной ExtractEndTime пакета.  
   
     > [!NOTE]  
-    >  При использовании выражения для задания значения [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] переменной, выражение вычисляется при каждом обращении к значению переменной.  
+    >  Если для установки значения переменной служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используется выражение, это выражение вычисляется при каждом обращении к значению переменной.  
   
 ## <a name="next-step"></a>Следующий шаг  
  После вычисления начальной и конечной точек диапазона изменений необходимо определить, готовы ли измененные данные.  
   
- **Следующий раздел:** [Определение готовности информации об изменениях данных](determine-whether-the-change-data-is-ready.md)  
+ **Следующая тема:** [Определение готовности информации об изменениях данных](determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>См. также  
  [Использование переменных в пакетах](../use-variables-in-packages.md)   

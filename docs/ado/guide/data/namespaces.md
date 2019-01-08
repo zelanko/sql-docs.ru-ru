@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5553072dcea3ed64ef8454019892ac5790c7a142
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: db90ecbc083a887a9845542b73e50bae6bf61e1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600114"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534738"
 ---
 # <a name="namespaces"></a>Пространства имен
 Формат сохраняемости XML в ADO использует следующие четыре пространства имен.  
@@ -38,7 +38,7 @@ ms.locfileid: "51600114"
 > [!IMPORTANT]
 >  Идентификатор для тега схемы должен быть «RowsetSchema», и должен указывать пространство имен, используемое для ссылки на схему текущего набора строк «#RowsetSchema.»  
   
- Обратите внимание, что префикс пространства имен — часть между двоеточие и знак равенства, выбрано произвольно.  
+ Обратите внимание, что префикс пространства имен - часть между двоеточием и знака равенства - произвольные.  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  

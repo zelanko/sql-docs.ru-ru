@@ -1,5 +1,5 @@
 ---
-title: Настройка сбора данных об использовании (Power Pivot для SharePoint | Документы Microsoft
+title: Настройка сбора данных об использовании (Power Pivot для SharePoint | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bafa3d8b45dc2ad59314218f34959120b50e6bfe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026881"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420285"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Настройка сбора данных об использовании с PowerPivot для SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -86,9 +86,9 @@ ms.locfileid: "34026881"
 ##  <a name="jobs"></a> Настройка заданий таймера, используемых при сборе данных об использовании  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] переносятся в разные расположения в системе сбора данных об использовании с помощью двух заданий таймера.  
   
--   Задание таймера "Импорт данных об использовании Microsoft SharePoint Foundation" перемещает данные об использовании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в базу данных приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+-   Задание таймера «Microsoft SharePoint Foundation Импорт данных об использовании» перемещает [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] использования [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] базы данных приложения службы.  
   
--   "Задание таймера по обработке панели управления[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] " переносит данные в книгу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которая служит источником данных для встроенных отчетов администратора.  
+-   "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Задание таймера обработки информационной панели управления» данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги, которая является источником данных для встроенных отчетов администратора.  
   
  Если нужно чаще обновлять отчеты администратора, отображаемые на информационной панели управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , сделайте следующее.  
   
@@ -179,9 +179,9 @@ ms.locfileid: "34026881"
   
  Следующая таблица показывает значения по умолчанию для настройки сбора данных об использовании.  
   
-|Настройка|Значение по умолчанию|Тип|Допустимый диапазон|  
+|Параметр|Значение по умолчанию|Тип|Допустимый диапазон|  
 |-------------|-------------------|----------|-----------------|  
-|**События использования служб Analysis Services** (соединение, загрузка, выгрузка, запросы)|\<включить >|Boolean|Эти значения либо включены, либо выключены.|  
+|**События использования служб Analysis Services** (соединение, загрузка, выгрузка, запросы)|\<включить >|Логическое значение|Эти значения либо включены, либо выключены.|  
 |**Query Reporting interval**|300 (в секундах)|Целочисленный|От 1 до любого целого положительного числа. Значение по умолчанию равно 5 минутам.|  
 |**Usage data history**|365 (дни)|Целочисленный|0 означает неограниченное время, однако можно также задать верхнюю границу, по достижении которой данные журнала будут удалены автоматически. Допустимые значения для ограниченного срока хранения — от 1 до 5000 (в днях).|  
 |Верхняя граница тривиального ответа|500 (в миллисекундах)|Целочисленный|Задает верхнюю границу, которая определяет время отклика на тривиальный запрос. Запрос, который завершается в течение от 0 до 500 миллисекунд, является тривиальным запросом и не включается в отчет.|  
@@ -191,6 +191,6 @@ ms.locfileid: "34026881"
   
 ## <a name="see-also"></a>См. также  
  [Справочник по параметрам конфигурации (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [Сбор данных об использовании Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
+ [Сбор данных об использовании PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
   

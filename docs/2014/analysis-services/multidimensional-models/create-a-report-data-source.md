@@ -11,12 +11,12 @@ ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15034c7bdf1dd32f173e3c2f9eebacda8b72fc11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20e04f8192753b2ca8a5cb48715fac20118df3e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187366"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407981"
 ---
 # <a name="create-a-report-data-source"></a>Создание источника данных отчета
   Для подключения Power View к многомерной модели необходимо создать определение общего источника данных отчета (файл с расширением RSDS) в библиотеке SharePoint. Файл RSDS задает имя экземпляра сервера служб Analysis services, тип соединения, строку подключения и учетные данные, используемые для подключения к многомерной модели. Когда пользователь щелкает RSDS, в браузере открывается новый пустой отчет Power View (файл RDLX).  
@@ -51,14 +51,14 @@ ms.locfileid: "48187366"
   
 5.  В поле **Строка подключения**введите имя сервера служб Analysis Services, имя базы данных, имя куба и все необязательные параметры.  
   
-     Строка подключения: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
+     Строка подключения: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
     > [!NOTE]  
     >  Если имеется более одного куба, необходимо указать имя куба.  
   
-     (Необязательно) Кубы могут иметь перспективы, позволяющие пользователям выбрать представление, в котором клиенту будут видны только определенные измерения или группы мер. Чтобы указать перспективу, введите ее имя в качестве значения свойства Cube: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>’`  
+     (Необязательно) Кубы могут иметь перспективы, позволяющие пользователям выбрать представление, в котором клиенту будут видны только определенные измерения или группы мер. Чтобы указать перспективу, введите ее имя в качестве значения свойства Cube: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (Необязательно) Кубы могут иметь метаданные и переводы данных, заданные для различных языков в модели. Чтобы видеть переводы (данные и метаданные), необходимо добавить свойство Locale Identifier в строку подключения: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’; Locale Identifier=<identifier number>`  
+     (Необязательно) Кубы могут иметь метаданные и переводы данных, заданные для различных языков в модели. Чтобы видеть переводы (данные и метаданные), необходимо добавить свойство «Идентификатор языкового стандарта» в строку подключения: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  В разделе **Учетные данные**задайте, каким образом сервер отчетов получает учетные данные для доступа к внешнему источнику данных.  
   

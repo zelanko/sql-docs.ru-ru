@@ -14,12 +14,12 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 72089aad9a38c488b36fdb65cc94060d70c6482c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f89a84f8e003063883d711f8908ac619d50e93df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104764"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398676"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>установить параметры обработки (службы Reporting Services в режиме интеграции с SharePoint)
   Можно установить параметры обработки для отчета [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , определяющие время обработки данных. Также при обработке отчета можно определить интервал ожидания и задать параметры, определяющие порядок создания журнала отчета для текущего отчета.  
@@ -31,7 +31,7 @@ ms.locfileid: "48104764"
 -   Журнал отчета — это коллекция ранее созданных копий отчета. Журнал отчетов можно использовать для отслеживания отчета во времени. Журнал отчета не используется для отчетов, содержащих конфиденциальные или личные данные. По этой причине журнал отчета может охватывать только те отчеты, которые обращаются к источнику данных с помощью только одного набора учетных данных (сохраненных учетных данных или учетных данных, используемых для автоматического выполнения отчета), доступного для всех пользователей, выполняющих отчет.  
   
     > [!NOTE]  
-    >  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint используют функции управления содержимым SharePoint (извлечение и возврат) для сохранения обновлений в типы содержимого служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Это включает создание моментальных снимков отчетов. Поэтому, если включено управление версиями в библиотеке документов, то при создании нового моментального снимка журнала отчета версия отчета будет обновлена. Это является побочным результатом обновления моментальных снимков. Обновление моментального снимка приводит к изменению свойства LastExecution, что вызывает изменение версии отчета.  
+    >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint используют функции управления содержимым SharePoint (извлечение и возврат) для сохранения обновлений в типы содержимого служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Это включает создание моментальных снимков отчетов. Поэтому, если включено управление версиями в библиотеке документов, то при создании нового моментального снимка журнала отчета версия отчета будет обновлена. Это является побочным результатом обновления моментальных снимков. Обновление моментального снимка приводит к изменению свойства LastExecution, что вызывает изменение версии отчета.  
   
 -   Можно указать значения времени ожидания, чтобы ограничить использование системных ресурсов.  
   
@@ -103,11 +103,11 @@ ms.locfileid: "48104764"
   
 ##  <a name="bkmk_set_database_timeout"></a> Задать время ожидания базы данных  
   
-1.  Задать время ожидания базы данных сервера отчетов SharePoint с помощью Windows PowerShell. Дополнительные сведения см. в разделе «Get и set свойств базы данных приложения службы отчетов» раздела [командлеты PowerShell для режима SharePoint служб Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+1.  Задать время ожидания базы данных сервера отчетов SharePoint с помощью Windows PowerShell. Дополнительные сведения см. в разделе "Получение и задание свойств базы данных приложения Reporting Service" статьи [PowerShell cmdlets for Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) (Командлеты PowerShell для режима совместимости с SharePoint служб Reporting Services).  
   
 ## <a name="see-also"></a>См. также  
  [Установка свойств обработки отчетов](report-server/set-report-processing-properties.md)   
  [Кэширование отчетов (службы SSRS)](report-server/caching-reports-ssrs.md)   
- [Задание значений времени ожидания для обработки общего набора данных отчета и &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS)](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

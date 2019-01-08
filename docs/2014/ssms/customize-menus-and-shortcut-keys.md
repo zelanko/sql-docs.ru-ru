@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0df572c5e939504222bd0f24884e7b00ac9b075
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183126"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778176"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Настройка меню и сочетаний клавиш
   Сочетания клавиш можно выбрать команду меню или нажать кнопку путем нажатия клавиш ALT +*\<Однобуквенные >*. Например, чтобы открыть меню **Правка** , нажмите клавиши ALT+E. В диалоговом окне **Настройка** можно переставить и изменить кнопки панели инструментов, меню и команды меню. Имеются инструкции по изменению настроек с помощью мыши или только с помощью клавиатуры.  

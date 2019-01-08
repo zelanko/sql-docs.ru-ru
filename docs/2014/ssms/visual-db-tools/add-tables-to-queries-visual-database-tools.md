@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting tables
@@ -14,12 +14,12 @@ ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a58a2514009eab620f484afd8552fbb34a568857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba3957eb5b0c88396376d615033107b13d0621ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170874"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781566"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Добавление таблиц в запросы (визуальные инструменты для баз данных)
   При создании запроса извлекаются данные из таблицы или других объектов, структурированных подобно таблицам, таких как представления и некоторые пользовательские функции. Чтобы любые из этих объектов можно было использовать в запросе, их следует добавить на **панель диаграммы**.  

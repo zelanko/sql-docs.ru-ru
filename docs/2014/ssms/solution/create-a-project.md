@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.newproject
@@ -15,12 +15,12 @@ ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 693989d4a1dddd812d3f96279b23cd2218f2078c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a33663ff92a093ea63f183cf8efb901d133a5a27
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182764"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751746"
 ---
 # <a name="create-a-project"></a>Создание проекта
   В существующем решении можно создать один или несколько проектов.  
@@ -36,7 +36,7 @@ ms.locfileid: "48182764"
      **Шаблоны**  
      В поле **Шаблоны** выберите шаблон. Краткое описание выбранного шаблона проекта появляется под полем **Шаблоны** .  
   
-     **Название**  
+     **Name**  
      Введите имя создаваемого проекта скрипта. Папка с именем проекта создается в месте, указанном в поле **Расположение** . Для некоторых проектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] создаются исходные и прочие вспомогательные файлы, которые добавляются в папку нового проекта.  
   
     > [!NOTE]  
@@ -94,7 +94,7 @@ ms.locfileid: "48182764"
   
 4.  Нажмите кнопку **ОК**.  
   
- Проекту скрипта можно назначить имя, но имена папок задаются средой [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и не могут быть изменены. Можно определить букву диска и путь для общего набора папок, используя диалоговое окно **Добавить новый проект** . Щелкните правой кнопкой мыши значок решения в **обозревателе решений**, а затем щелкните **Добавить**. По умолчанию папка проекта скриптов размещена по пути: "C:\Documents and Settings\\*имя_пользователя*\My Documents\SQL Server Management Studio\Projects\\\".  
+ Проекту скрипта можно назначить имя, но имена папок задаются средой [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и не могут быть изменены. Можно определить букву диска и путь для общего набора папок, используя диалоговое окно **Добавить новый проект** . Щелкните правой кнопкой мыши значок решения в **обозревателе решений**, а затем щелкните **Добавить**. По умолчанию папка проекта скриптов размещена по пути: C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a>См. также  
  [Обозреватель решений](solution-explorer.md)   

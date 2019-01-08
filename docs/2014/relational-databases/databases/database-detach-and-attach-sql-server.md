@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -28,12 +27,12 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3d3850e98bce1031d285388b6f5fbe75737e37b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107344"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778446"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Присоединение и отсоединение базы данных (SQL Server)
   Файлы данных и журналов транзакций базы данных можно отсоединить, а затем снова присоединить к тому же или другому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Отсоединение и присоединение базы данных полезно, если необходимо переместить базу данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на том же компьютере либо перенести базу данных.  
@@ -74,7 +73,7 @@ ms.locfileid: "48107344"
 -   База данных является системной базой данных.  
   
 ### <a name="backup-and-restore-and-detach"></a>Резервное копирование, восстановление и отсоединение  
- Для разностных резервных копий отсоединение базы данных, доступной только для чтения, приводит к потере сведений о базовой копии для разностного копирования. Дополнительные сведения см. в статье [Разностные резервные копии (SQL Server)](../backup-restore/differential-backups-sql-server.md).  
+ Для разностных резервных копий отсоединение базы данных, доступной только для чтения, приводит к потере сведений о базовой копии для разностного копирования. Дополнительные сведения см. в разделе [Разностные резервные копии (SQL Server)](../backup-restore/differential-backups-sql-server.md).  
   
 ### <a name="responding-to-detach-errors"></a>Реакция на ошибки отсоединения  
  Ошибки, возникшие во время отсоединения базы данных, могут воспрепятствовать чистому закрытию базы данных и перестроению журнала транзакций. При получении сообщения об ошибке выполните следующие действие по исправлению.  
@@ -93,7 +92,7 @@ ms.locfileid: "48107344"
 > [!NOTE]  
 >  Если присоединяемый первичный файл данных доступен только для чтения, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] предполагает, что и база данных доступна только для чтения.  
   
- Когда зашифрованная база данных впервые присоединяется к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], владелец базы данных должен открыть главный ключ базы данных, выполнив следующую инструкцию: OPEN MASTER KEY DECRYPTION BY PASSWORD = **" *`password`*'**. Рекомендуется включить автоматическую расшифровку главного ключа, выполнив следующую инструкцию: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Дополнительные сведения см. в разделах [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql) и [ALTER MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Когда зашифрованная база данных впервые присоединяется к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], владелец базы данных должен открыть главный ключ базы данных, выполнив следующую инструкцию: OPEN MASTER KEY РАСШИФРОВКИ ПАРОЛЯ = **"*`password`*"**. Рекомендуется включить автоматическую расшифровку главного ключа, выполнив следующую инструкцию: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Дополнительные сведения см. в разделах [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql) и [ALTER MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Требования для присоединения файлов журналов частично зависят от того, доступна база данных для записи и чтения или только для чтения.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "48107344"
   
 -   [Удаление моментального снимка базы данных (Transact-SQL)](drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Файлы и файловые группы базы данных](database-files-and-filegroups.md)  
   
   

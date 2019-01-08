@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
@@ -13,12 +12,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a84224e68be8b5d4c5ad9fcd3f2be1ddce78fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057464"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804456"
 ---
 # <a name="configure-an-oracle-publisher"></a>Настройка издателя Oracle
   Публикации издателей Oracle создаются таким же способом, как и публикации моментальных снимков и публикации транзакций, но перед тем как создать публикацию от издателя Oracle, необходимо выполнить следующие шаги (в данном разделе подробно описаны шаги 1, 3 и 4):  
@@ -123,7 +122,7 @@ ms.locfileid: "48057464"
 > [!NOTE]  
 >  Издатель Oracle не может иметь то же имя, что и его распространитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , или имя любого из издателей [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , использующих тот же распространитель.  
   
- При идентификации баз данных Oracle в качестве издателя необходимо выбрать параметр публикации Oracle: Complete или Oracle Gateway. После идентификации издателя изменить данный параметр без удаления и перенастройки издателя невозможно. Параметр «Complete» предназначен для обеспечения публикаций моментальными снимками и публикаций транзакций полным набором поддерживаемых функций, необходимых для публикаций Oracle. Параметр «Oracle Gateway» обеспечивает оптимизацию производительности для случаев, когда шлюзом между системами выступает репликация.  
+ При идентификации баз данных Oracle в качестве издателя необходимо выбрать параметр публикации Oracle: «Complete» или «Oracle Gateway». После идентификации издателя изменить данный параметр без удаления и перенастройки издателя невозможно. Параметр «Complete» предназначен для обеспечения публикаций моментальными снимками и публикаций транзакций полным набором поддерживаемых функций, необходимых для публикаций Oracle. Параметр «Oracle Gateway» обеспечивает оптимизацию производительности для случаев, когда шлюзом между системами выступает репликация.  
   
  После идентификации издателя Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] репликация создает связанный сервер с таким же именем, как и служба TNS базы данных Oracle. Этот связанный сервер может использоваться только репликацией. Если вам нужно подключиться к издателю Oracle через подключение связанного сервера, создайте другое имя службы TNS и используйте это имя при вызове процедуры [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   

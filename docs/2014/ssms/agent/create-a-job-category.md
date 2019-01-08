@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -14,12 +14,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a2c9966dfbb270165ea5245fd59e0793d165bdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3254ae226a0ac955f2cf5b2f39077853ebf3e057
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127464"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762786"
 ---
 # <a name="create-a-job-category"></a>Создание категории заданий
   В данном разделе описывается процесс создания категории заданий в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющих объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -34,7 +34,7 @@ ms.locfileid: "48127464"
  Многосерверные категории существуют только на главном сервере. На нем по умолчанию имеется только одна категория заданий: [**Без категорий (многосерверный)**]. Если загружается многосерверное задание, его категория на целевом сервере меняется на **Задания от главного сервера** .  
   
 ###  <a name="Security"></a> безопасность  
- Дополнительные сведения см. в разделе [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
 
   
@@ -58,7 +58,7 @@ ms.locfileid: "48127464"
   
 8.  В диалоговом окне **Управление категориями заданий***имя_сервера* нажмите кнопку **Обновить**, чтобы убедиться в активности новой категории заданий. Если все выглядит так, как нужно, закройте это диалоговое окно.  
   
- Дополнительные сведения об этих диалоговых окон, см. в разделе [категории заданий: Управление категориями заданий](job-categories-manage-job-categories.md) и [свойства категории заданий и Создание категории заданий](job-categories-properties-new-job-category.md).  
+ Дополнительные сведения об этих диалоговых окон, см. в разделе [категории заданий: Управление категориями заданий](job-categories-manage-job-categories.md) и [свойства категории и новой категории заданий задания](job-categories-properties-new-job-category.md).  
   
  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48127464"
   
 #### <a name="to-create-a-job-category"></a>Создание категории заданий  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48127464"
 ##  <a name="SMO"></a> Использование управляющих объектов SQL Server  
  **Создание категории заданий**  
   
- Вызовите `JobCategory` , используя язык программирования, таком как Visual Basic, Visual C# или PowerShell. Пример кода см. в разделе [Планирование автоматических административных задач в агенте SQL Server](sql-server-agent.md).  
+ Вызовите класс `JobCategory` с использованием выбранного языка программирования, например Visual Basic, Visual C# или PowerShell. Пример кода см. в разделе [Планирование автоматических административных задач в агенте SQL Server](sql-server-agent.md).  
   
  
   

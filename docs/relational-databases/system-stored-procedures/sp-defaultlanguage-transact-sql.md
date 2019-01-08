@@ -18,12 +18,12 @@ ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ab8c72a9b3b4dc3771705a1bccc89bb44a3905c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b99e16505cf6f7a08503a98f37ced7bedcdb12
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641755"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520815"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@loginame =** ] **"***входа***"**  
+ [  **@loginame =** ] **"**_входа_**"**  
  Имя входа. *Имя входа* — **sysname**, не имеет значения по умолчанию. *Имя входа* может представлять собой существующее [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа или пользователя Windows или группы.  
   
- [  **@language =** ] **"***языка***"**  
+ [  **@language =** ] **"**_языка_**"**  
  Язык по умолчанию для имени входа. *Язык* — **sysname**, значение по умолчанию NULL. *Язык* должен быть действительным языком на сервере. Если *языка* не указан, *языка* имеет значение по умолчанию язык сервера; язык по умолчанию определяется **sp_configure** переменную конфигурации **язык по умолчанию**. Изменение заданного по умолчанию языка сервера не изменяет язык, заданный по умолчанию для существующих имен входа.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

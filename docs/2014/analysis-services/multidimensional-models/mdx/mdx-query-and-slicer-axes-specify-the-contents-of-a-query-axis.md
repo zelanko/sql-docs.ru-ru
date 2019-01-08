@@ -14,12 +14,12 @@ ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f3e44d2891d9080b361d07d0bdcacfd0ad2ec39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05555f9f3b90cbf0eaae410a2b97dc31a0ed17d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209774"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393098"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>Определение содержимого оси запроса (многомерные выражения)
   Оси запроса указывают границы набора ячеек, возвращаемого инструкцией многомерных выражений SELECT. Определение границ набора ячеек позволяет ограничить возвращаемые данные, видимые клиенту.  
@@ -72,7 +72,7 @@ FROM [Adventure Works]
   
 ```  
   
- Ключевое слово NON EMPTY, используемое до определения набора, представляет собой простой способ удаления пустых кортежей из осей. Так, в примерах, описанных выше, в кубе отсутствуют данные начиная с августа 2004 г. Чтобы удалить все строки из набора ячеек, в которых отсутствуют данные во всех столбцах, просто добавьте NON EMPTY до набора по оси строк следующим образом:  
+ Ключевое слово NON EMPTY, используемое до определения набора, представляет собой простой способ удаления пустых кортежей из осей. Например в примерах, мы уже рассмотрели есть нет данных в кубе от августа 2004 г. и более поздних версий. Чтобы удалить все строки из набора ячеек, в которых отсутствуют данные во всех столбцах, просто добавьте NON EMPTY до набора по оси строк следующим образом:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -116,6 +116,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Определение содержимого оси среза &#40;многомерных Выражений&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Определение содержимого оси среза (многомерные выражения)](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

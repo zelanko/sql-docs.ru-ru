@@ -11,12 +11,12 @@ ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d40854ecff0b138fa854103650dda9691be94a41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145104"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515975"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Развертывание решений PowerPivot в SharePoint
   Используйте следующие инструкции для выполнения вручную развертывания двух пакетов решений, добавляющих функции PowerPivot в среде SharePoint Server 2010. Развертывание решений — это обязательный шаг настройки PowerPivot для SharePoint на сервере SharePoint 2010. Чтобы просмотреть полный список обязательных шагов, см. в разделе [Настройка и администрирование сервера PowerPivot в центре администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md).  
@@ -27,19 +27,19 @@ ms.locfileid: "48145104"
   
  Этот раздел состоит из следующих подразделов.  
   
- [Обязательное условие: убедитесь, что в веб-приложении используется классический режим проверки подлинности.](#bkmk_classic)  
+ [Предварительные требования. Убедитесь, что веб-приложения используется классический режим проверки подлинности](#bkmk_classic)  
   
  [Шаг 1. Развертывание решения фермы](#bkmk_farm)  
   
- [Шаг 2: Развертывание решения веб-PowerPivot приложения в центре администрирования](#deployCA)  
+ [Шаг 2. Развертывание решения веб-PowerPivot приложения в центре администрирования](#deployCA)  
   
- [Шаг 3: Развертывание решения PowerPivot веб приложения для других веб-приложений](#deployUI)  
+ [Шаг 3. Развертывание решения PowerPivot веб приложения для других веб-приложений](#deployUI)  
   
  [Повторное развертывание или отзыв решения](#retract)  
   
  [О решениях PowerPivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Обязательное условие: убедитесь, что в веб-приложении используется классический режим проверки подлинности.  
+##  <a name="bkmk_classic"></a> Предварительные требования. Проверка использования классического режима проверки подлинности в веб-приложении  
  PowerPivot для SharePoint поддерживается только в тех веб-приложениях, которые используют классическую проверку подлинности Windows. Чтобы проверить, использует ли приложение классический режим, выполните следующий командлет PowerShell из **консоль управления SharePoint 2010**, заменив `http://<top-level site name>` с именем сайта SharePoint:  
   
 ```  
@@ -48,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Должно быть возвращено значение **false**. Если это **true**, не может получить доступ к данным PowerPivot с помощью этого веб-приложения.  
   
-##  <a name="bkmk_farm"></a> Шаг 1. Развертывание решения фермы  
+##  <a name="bkmk_farm"></a> Шаг 1. Разверните решение фермы  
  В этом разделе показано, как развертывать решения с помощью PowerShell, но для этой задачи можно использовать и средство PowerPivot Configuration Tool. Дополнительные сведения см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2010 &#40;средство настройки PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Эта задача выполняется один раз после установки PowerPivot для SharePoint.  
@@ -58,7 +58,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  Для добавления решения фермы выполните следующий командлет.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      Командлет возвратит имя решения, его идентификатор, а также атрибут Deployed=False. На следующем шаге будет выполнено развертывание решения.  
@@ -66,10 +66,10 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Выполните следующий командлет, чтобы развернуть решение фермы.  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> Шаг 2: Развертывание решения веб-PowerPivot приложения в центре администрирования  
+##  <a name="deployCA"></a> Шаг 2. Разверните решение веб-приложения PowerPivot в центре администрирования.  
  После развертывания решения фермы следует развернуть решение веб-приложения для центра администрирования. Этот шаг добавляет в центр администрирования панель управления PowerPivot.  
   
 1.  Откройте консоль управления SharePoint 2010, выбрав команду **Запуск от имени администратора** .  
@@ -83,7 +83,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Для добавления решения фермы выполните следующий командлет.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      Командлет возвратит имя решения, его идентификатор, а также атрибут Deployed=False. На следующем шаге будет выполнено развертывание решения.  
@@ -96,7 +96,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Теперь, когда решение веб-приложения развернуто в центре администрирования, оставшиеся шаги конфигурации можно выполнить с помощью центра администрирования.  
   
-##  <a name="deployUI"></a> Шаг 3: Развертывание решения PowerPivot веб приложения для других веб-приложений  
+##  <a name="deployUI"></a> Шаг 3. Разверните решение для веб-приложений PowerPivot для остальных веб-приложений.  
  В предыдущей задаче решение powerpivotwebapp.wsp было развернуто в центре администрирования. В этом разделе описано развертывание решения powerpivotwebapp.wsp для каждого веб-приложения, поддерживающего доступ к данным PowerPivot. При добавлении других веб-приложений в дальнейшем необходимо будет повторить для них этот шаг.  
   
 1.  В разделе «Системные параметры» центра администрирования выберите **Управление решениями фермы**.  

@@ -15,12 +15,12 @@ ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4f4831bb8ab288e2dcdf2770936084d0492a91e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbee38fc49361f8a4350467a0813ffcb9c483533
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085344"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506458"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>Редактор назначения обработки измерений (страница «Дополнительно»)
   Используйте страницу **Дополнительно** диалогового окна **Редактор назначения обработки измерений** для настройки обработки ошибок.  
@@ -93,14 +93,14 @@ ms.locfileid: "48085344"
 |**Сообщить и остановиться**|Сообщить об ошибке и остановить обработку.|  
   
  **Путь к журналу ошибок**  
- Введите путь к журналу ошибок или нажмите кнопку **Обзор (…)** для выбора назначения.  
+ Введите путь к журналу ошибок или нажмите кнопку **Обзор(...)** для выбора назначения.  
   
  **Обзор (...)**  
  Укажите путь к журналу ошибок.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения обработки измерений &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [Редактор назначения обработки измерений &#40;страница «сопоставления»&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения "Обработка измерения" (страница "Диспетчер соединений")](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
+ [Редактор назначения "Обработка измерения" (страница "Сопоставления")](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
   
   

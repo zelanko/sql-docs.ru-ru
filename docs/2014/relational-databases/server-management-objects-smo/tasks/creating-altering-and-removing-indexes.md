@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - indexes [SMO]
@@ -14,12 +12,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a335f0c62c4dcaa0ab69eac80488703c9372c3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e2bf2f470c7605f5535f66d19531e6a8e34cd39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136884"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814116"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Создание, изменение и удаление индексов
   В иерархии управляющих объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO) индексы представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Index>. Индексированные столбцы представлены коллекцией объектов <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn>, соответствующих свойству <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>.  
@@ -186,7 +184,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Создание XML-индекса на языке Visual Basic  
- Этот пример кода показывает, как создать XML-индекс для типа данных XML. Тип данных XML представляет собой коллекцию схем XML, именем MySampleCollection, которая создается в [Using XML Schemas](using-xml-schemas.md). Для XML-индексов имеются некоторые ограничения, одно из которых состоит в том, что индекс должен создаваться для таблицы, у которой уже есть кластеризованный первичный ключ.  
+ Этот пример кода показывает, как создать XML-индекс для типа данных XML. Тип данных XML представляет собой коллекцию схем XML с именем MySampleCollection, которая была создана в разделе [Using XML Schemas](using-xml-schemas.md). Для XML-индексов имеются некоторые ограничения, одно из которых состоит в том, что индекс должен создаваться для таблицы, у которой уже есть кластеризованный первичный ключ.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -249,7 +247,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Создание XML-индекса на языке Visual C#  
- Этот пример кода показывает, как создать XML-индекс для типа данных XML. Тип данных XML представляет собой коллекцию схем XML, именем MySampleCollection, которая создается в [Using XML Schemas](using-xml-schemas.md). Для XML-индексов имеются некоторые ограничения, одно из которых состоит в том, что индекс должен создаваться для таблицы, у которой уже есть кластеризованный первичный ключ.  
+ Этот пример кода показывает, как создать XML-индекс для типа данных XML. Тип данных XML представляет собой коллекцию схем XML с именем MySampleCollection, которая была создана в разделе [Using XML Schemas](using-xml-schemas.md). Для XML-индексов имеются некоторые ограничения, одно из которых состоит в том, что индекс должен создаваться для таблицы, у которой уже есть кластеризованный первичный ключ.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -312,7 +310,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>Создание XML-индекса в PowerShell  
- Этот пример кода показывает, как создать XML-индекс для типа данных XML. Тип данных XML представляет собой коллекцию схем XML, именем MySampleCollection, которая создается в [Using XML Schemas](using-xml-schemas.md). Для XML-индексов имеются некоторые ограничения, одно из которых состоит в том, что индекс должен создаваться для таблицы, у которой уже есть кластеризованный первичный ключ.  
+ Этот пример кода показывает, как создать XML-индекс для типа данных XML. Тип данных XML представляет собой коллекцию схем XML с именем MySampleCollection, которая была создана в разделе [Using XML Schemas](using-xml-schemas.md). Для XML-индексов имеются некоторые ограничения, одно из которых состоит в том, что индекс должен создаваться для таблицы, у которой уже есть кластеризованный первичный ключ.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

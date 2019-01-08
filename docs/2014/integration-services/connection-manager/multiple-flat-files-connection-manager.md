@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Multiple Flat Files connection manager
@@ -18,19 +17,19 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9c9bd0573a3a6fa8211324066e86446b85ec0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 575bf85a81557e7a0a974dd1fc2210e58f34bde0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185666"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790536"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>диспетчер соединения с несколькими неструктурированными файлами
   Диспетчер соединения с несколькими неструктурированными файлами позволяет пакету получить доступ к данным в нескольких неструктурированных файлах. Например, источник неструктурированных файлов может использовать диспетчер соединения с несколькими неструктурированными файлами, если задача потока данных находится в контейнере цикла, например в контейнере «цикл по элементам». В каждом цикле контейнера источник неструктированных файлов загружает данные из следующего имени файла, которое предоставляет диспетчер соединения с несколькими неструктурированными файлами.  
   
  При добавлении к пакету диспетчера соединений нескольких неструктурированных файлов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает подключение диспетчера, который разрешает подключение нескольких неструктурированных файлов во время выполнения, устанавливает свойства диспетчера соединений нескольких неструктурированных файлов, и добавляет диспетчер соединений нескольких неструктурированных файлов `Connections` коллекцию пакета.  
   
- `ConnectionManagerType` Свойства диспетчера соединений присваивается `MULTIFLATFILE`.  
+ Свойству `ConnectionManagerType` диспетчера соединений присваивается значение `MULTIFLATFILE`.  
   
  Можно установить конфигурацию диспетчера соединений с несколькими неструктурированными файлами следующими способами.  
   
@@ -63,19 +62,19 @@ ms.locfileid: "48185666"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница "столбцы"&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Столбцы")](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;страница "Дополнительно"&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Дополнительно")](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [Редактор диспетчера соединений с несколькими неструктурированными файлами &#40;Предварительный просмотр страницы&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Предварительный просмотр")](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- Сведения о программной настройке диспетчера соединений см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>См. также  
- [Источник неструктурированных файлов](../data-flow/flat-file-source.md)   
- [Неструктурированный файл](../data-flow/flat-file-destination.md)   
- [Службы Integration Services &#40;SSIS&#41; подключений](integration-services-ssis-connections.md)  
+ [Источник «Неструктурированный файл»](../data-flow/flat-file-source.md)   
+ [Назначение «Неструктурированный файл»](../data-flow/flat-file-destination.md)   
+ [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   
   

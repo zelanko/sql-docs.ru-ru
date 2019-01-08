@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], agents
@@ -20,12 +19,12 @@ ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b176e84d15daa2471014ebf90a6a72a683cdc29a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1456a3113feb8a32ce9876ef7ef060f96f66910b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107471"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800736"
 ---
 # <a name="monitor-replication-agents"></a>Наблюдение за агентами репликации
   Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет систематический обзор деятельности репликации, а также облегчает поиск сведений о конкретном агенте. В приведенном ниже списке перечислены все агенты, для которых существуют вкладки в мониторе репликации, а также дается ссылка на раздел, где описывается порядок доступа к этим вкладкам.  
@@ -38,7 +37,7 @@ ms.locfileid: "48107471"
   
     -   Агент чтения очереди.  
   
-     Получить доступ к сведениям и задачам, связанным с этими агентами, можно на следующих вкладках: **Агенты** (доступна для каждого издателя и публикации) и **Предупреждения** (доступна для каждой публикации). Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](view-information-and-perform-tasks-for-publication-agents.md).  
+     Получить доступ к сведениям и задачам, связанным с этими агентами, можно на следующих вкладках: **Агенты** (доступно для каждого издателя и публикации) и **предупреждения** (доступна для каждой публикации). Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](view-information-and-perform-tasks-for-publication-agents.md).  
   
 -   С подписками в мониторе репликации связаны следующие агенты:  
   
@@ -46,7 +45,7 @@ ms.locfileid: "48107471"
   
     -   Агент слияния.  
   
-     Получить доступ к сведениям и задачам, связанным с этими агентами, можно на следующих вкладках: **Список наблюдения за подписками** (доступна для каждого издателя) или **Все подписки** (доступна для каждой публикации). Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](view-information-and-perform-tasks-for-subscription-agents.md).  
+     Получить доступ к сведениям и задачам, связанным с этими агентами, можно на следующих вкладках: **Список наблюдения за подписками** (доступна для каждого издателя) или **все подписки** (доступна для каждой публикации). Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>Использование среды Management Studio для наблюдения за агентами репликации  
  Среда[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] предоставляет возможность наблюдения за агентами репликации с помощью следующих диалоговых окон:  
@@ -119,6 +118,6 @@ ms.locfileid: "48107471"
   
 ## <a name="see-also"></a>См. также  
  [Наблюдение за репликацией](../monitoring-replication.md)   
- [Обзор агентов репликации](../agents/replication-agents-overview.md)  
+ [Replication Agents Overview](../agents/replication-agents-overview.md)  
   
   

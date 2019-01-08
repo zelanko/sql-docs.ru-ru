@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072068"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400637"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -273,7 +273,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Результат: \<неизвестное имя столбца > **varchar(20) NULL**  
+ Результат: \<Неизвестное имя столбца > **varchar(20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Для имен столбцов принудительно обеспечивается соответствие с помощью присвоения псевдонимов  
  Аналогично предыдущему, но имена столбцов идентичны благодаря присвоению псевдонимов.  
@@ -355,7 +355,7 @@ IF(1=1)
 EXEC(@SQL); '  
 ```  
   
- Результат: ошибка. Результат невозможно обнаружить из-за динамического SQL.  
+ Результат: Ошибка. Результат невозможно обнаружить из-за динамического SQL.  
   
 #### <a name="result-set-specified-by-user"></a>Результирующий набор, указываемый пользователем  
  Первый результирующий набор указывается пользователем вручную.  
@@ -387,7 +387,7 @@ N'
 , @params = N'@p int'  
 ```  
   
- Результат: ошибка. T1 может быть dbo.t1 или s1.t1 с Разное количество столбцов.  
+ Результат: Ошибка. T1 может быть dbo.t1 или s1.t1 с Разное количество столбцов.  
   
 #### <a name="result-even-with-ambiguous-result-set"></a>Результат возвращается даже при неоднозначном результирующем наборе  
  Используйте те же предположения, что и в предыдущем примере.  

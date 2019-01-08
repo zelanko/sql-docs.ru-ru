@@ -18,12 +18,12 @@ ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a27efabaa838ed4b93fc7c17eeb67f721c8aa634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 719038f8ce72bdb05ad9dbf3c3585c377abb3a75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630162"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526233"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,26 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id =**] **'***job_id***'**  
+ [  **@job_id =**] **"**_job_id_**"**  
  Идентификационный номер задания, содержащего журнал шагов задания, который необходимо удалить. *job_id* — **int**, значение по умолчанию NULL.  
   
- [  **@job_name =**] **"***имя_задания***"**  
+ [  **@job_name =**] **"**_имя_задания_**"**  
  Имя задания. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
-> **Примечание:** либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
+> **ПРИМЕЧАНИЕ.** Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
  [  **@step_id =**] *step_id*  
  Идентификационный номер шага задания, журнал которого планируется удалить. Если не включен, все журналы шагов задания в задании удаляются **@older_than** или **@larger_than** указаны. *step_id* — **int**, значение по умолчанию NULL.  
   
- [  **@step_name =**] **"***step_name***"**  
+ [  **@step_name =**] **"**_step_name_**"**  
  Имя шага задания, журнал которого необходимо удалить. *step_name* — **sysname**, значение по умолчанию NULL.  
   
-> **Примечание:** либо *step_id* или *step_name* можно указать, но не оба аргумента одновременно.  
+> **ПРИМЕЧАНИЕ.** Либо *step_id* или *step_name* можно указать, но не оба аргумента одновременно.  
   
- [  **@older_than =**] **"***даты***"**  
+ [  **@older_than =**] **"**_даты_**"**  
  Дата и время создания старейшего сохраняемого журнала шагов задания. Удаляются все журналы шагов задания старше указанной даты и времени. *Дата* — **datetime**, значение по умолчанию NULL. Оба **@older_than** и **@larger_than** можно указать.  
   
- [  **@larger_than =**] **"***size_in_bytes***"**  
+ [  **@larger_than =**] **"**_size_in_bytes_**"**  
  Размер в байтах самого большого сохраняемого журнала шагов задания. Удаляются все журналы шагов задания, размер которых превышает указанный. Оба **@larger_than** и **@older_than** можно указать.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

@@ -18,12 +18,12 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7ba1ee6a8fae84d0371c30758fcd2be1098b60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 409dec92a6dbfe9c4dd2c8cef1d81b2aa7f21d91
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649272"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536379"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_detach_schedule
  [  **@job_id=** ] *job_id*  
  Идентификационный номер задания, из которого удаляется расписание. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name=** ] **"***имя_задания***"**  
+ [  **@job_name=** ] **"**_имя_задания_**"**  
  Имя задания, из которого удаляется расписание. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -55,7 +55,7 @@ sp_detach_schedule
  [  **@schedule_id=** ] *schedule_id*  
  Идентификационный номер расписания, которое удаляется из задания. *schedule_id* — **int**, значение по умолчанию NULL.  
   
- [  **@schedule_name=** ] **"***schedule_name***"**  
+ [  **@schedule_name=** ] **"**_schedule_name_**"**  
  Имя расписания, которое удаляется из задания. *schedule_name* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  

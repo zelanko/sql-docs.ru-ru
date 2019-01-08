@@ -1,5 +1,5 @@
 ---
-title: Power Pivot конфигурации с помощью Windows PowerShell | Документы Microsoft
+title: Power Pivot конфигурации, с помощью Windows PowerShell | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7deb70905efe8874e3b512c10eff5c0951ab4b24
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e290e0e15797a8b84a6d52c945a5fd78458515fc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024961"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505631"
 ---
 # <a name="power-pivot-configuration-using-windows-powershell"></a>Настройка PowerPivot с помощью Windows PowerShell
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34024961"
   
     -   17 командлетов на сервере служб Analysis Services SQL Server 2012, работающем в режиме интеграции с SharePoint и SharePoint 2010.  
   
-     Если в списке не возвращаются команды или появляется сообщение об ошибке, например "`get-help could not find *powerpivot* in a help file in this session.`", см. инструкции по включению командлетов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сервере в следующем разделе этой статьи.  
+     Если команды не возвращаются в списке или вы видите сообщение об ошибке, аналогичную "`get-help could not find *powerpivot* in a help file in this session.`«, см. ниже в этом разделе инструкции по включению [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] командлетов на сервере.  
   
      Для всех командлетов имеется справка в Интернете. В следующем примере показано, как посмотреть справку в Интернете для командлета **New-PowerPivotServiceApplication** .  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34024961"
 2.  Запустите первый командлет.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      Командлет возвратит имя решения, его идентификатор, а также атрибут Deployed=False. На следующем шаге будет выполнено развертывание решения.  
@@ -75,7 +75,7 @@ ms.locfileid: "34024961"
 3.  Выполните второй командлет, чтобы развернуть решение.  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 4.  Закройте окно. Откройте его снова с помощью варианта **Запуск от имени администратора** .  

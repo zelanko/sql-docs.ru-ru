@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server replication]
@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90dcc76466709b1cc3e76406029ea2fffaaea1f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167201"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768456"
 ---
 # <a name="manage-job-steps"></a>Управление шагами задания
   Шаг задания — это действие, производимое заданием над базой данных или сервером. Каждое задание должно иметь, по крайней мере, один шаг. Шагами задания могут быть:  
@@ -57,7 +57,7 @@ ms.locfileid: "48167201"
   
 -   Исполняемые программы и команды операционной системы.  
   
--   Инструкции[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] задачи.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48167201"
   
 -   Код завершения процесса, возвращаемый при успешном выполнении команды.  
   
--   Команда для выполнения. Чтобы выполнить команду операционной системы, необходимо просто выполнить саму команду. Для внешней программы это ее имя и аргументы, например: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   Команда для выполнения. Чтобы выполнить команду операционной системы, необходимо просто выполнить саму команду. Для внешней программы это ее имя и аргументы, например: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e - q «sp_who»**  
   
     > [!NOTE]  
     >  Необходимо предоставить полный путь к исполняемой программе, если только она не размещена в каталоге, указанном в системном пути или в пути пользователя, от имени которого выполняется шаг задания.  

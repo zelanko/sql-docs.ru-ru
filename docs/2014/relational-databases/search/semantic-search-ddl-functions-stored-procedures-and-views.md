@@ -12,12 +12,12 @@ ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d61854f57214212d079b4d32ae69b0bc6e8c5cce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76ced95f53b50c0fc0402051cff35329d39ce9f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160474"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530729"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>Инструкции семантического поиска DDL, функции, хранимые процедуры и представления
   Содержит список инструкций Transact-SQL и объектов базы данных, которые поддерживают статистический семантический поиск в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "48160474"
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  
-|[ALTER FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-index-transact-sql)|[Включение семантического поиска по таблицам и столбцам](enable-semantic-search-on-tables-and-columns.md)|  
+|[ALTER FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-index-transact-sql)|[Включение семантического поиска на таблицы и столбцы](enable-semantic-search-on-tables-and-columns.md)|  
 |[CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)|[Включение семантического поиска по таблицам и столбцам](enable-semantic-search-on-tables-and-columns.md)|  
   
 ##  <a name="func"></a> Системные функции  
@@ -65,7 +65,7 @@ ms.locfileid: "48160474"
 |[sys.fulltext_semantic_language_statistics_database (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)|[Установка и настройка семантического поиска](install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)|[Установка и настройка семантического поиска](install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> Системные представления — динамические административные представления  
+##  <a name="dmv"></a> Системные представления — динамические административные представления  
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  

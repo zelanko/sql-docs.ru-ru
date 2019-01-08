@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], database roles
@@ -18,12 +17,12 @@ ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f7fd2e31b87725419f7b9c9bf6b5e76249e9def1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b7430a12c64ab669182ab2877bb6620b42b2f48
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208994"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795424"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Имена входа, пользователи и роли базы данных (службы Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает имена входа, пользователей и роли, которые автоматически устанавливаются на экземпляр [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] , где размещена база данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Изменять этих пользователей, имена входа и роли не рекомендуется.  
@@ -37,14 +36,14 @@ ms.locfileid: "48208994"
   
 ## <a name="msdb-users"></a>Пользователи msdb  
   
-|Пользователь|Описание|  
+|Пользовательская|Описание|  
 |----------|-----------------|  
 |`mds_clr_user`|Не используется.<br /><br /> Сопоставляется с mds_dlp_login.|  
-|`mds_email_user`|Используется для уведомлений.<br /><br /> Сопоставляется с mds_email_login.<br /><br /> Является членом роли: DatabaseMailUserRole.|  
+|`mds_email_user`|Используется для уведомлений.<br /><br /> Сопоставляется с mds_email_login.<br /><br /> Является членом следующей роли: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Пользователи базы данных Master Data Services  
   
-|Пользователь|Описание|  
+|Пользовательская|Описание|  
 |----------|-----------------|  
 |`mds_email_user`|Используется для уведомлений.<br /><br /> Имеет разрешение SELECT для схемы mdm.<br /><br /> Имеет разрешение EXECUTE для определяемого пользователем табличного типа mdm.MemberGetCriteria.<br /><br /> Имеет разрешение EXECUTE для хранимой процедуры mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|Владеет схемами mdm и mdq. Схема по умолчанию — mdm.<br /><br /> Не имеет сопоставленного имени входа.|  
@@ -65,6 +64,6 @@ ms.locfileid: "48208994"
 |**stg**|Содержит таблицы базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , хранимые процедуры и представления, связанные с промежуточным процессом. Запрещается удалять любые из этих объектов. Дополнительные сведения о промежуточном процессе см. в разделе [импорта данных &#40;службы Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).|  
   
 ## <a name="see-also"></a>См. также  
- [Защита объектов базы данных &#40;службы Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
+ [Защита объектов базы данных (службы Master Data Services)](../../2014/master-data-services/database-object-security-master-data-services.md)  
   
   

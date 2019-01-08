@@ -19,12 +19,12 @@ ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5c89e1d4ee1ec4b3590f6b9e0a738561cd61e1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63bf65118f876a0677592bfe1dd8056b05397f71
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740934"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406681"
 ---
 # <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47740934"
 |Столбец|Тип|Описание|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary(8)**|Показывает внутренний адрес блока памяти NSO, содержащего запрос ввода-вывода от драйвера. Не допускает значение NULL.|  
-|**current_spid**|**smallint**|Показывает идентификатор системного процесса (SPID) для текущего соединения SQL Server. Не допускает значение NULL.|  
+|**current_spid**|**smallint**|Показывает идентификатор системного процесса (SPID) для подключения текущего SQL Server. Не допускает значение NULL.|  
 |**request_type**|**nvarchar(60)**|Показывает тип пакета запроса ввода-вывода (IRP). Возможные типы запросов: REQ_PRE_CREATE, REQ_POST_CREATE, REQ_RESOLVE_VOLUME, REQ_GET_VOLUME_INFO, REQ_GET_LOGICAL_NAME, REQ_GET_PHYSICAL_NAME, REQ_PRE_CLEANUP, REQ_POST_CLEANUP, REQ_CLOSE, REQ_FSCTL, REQ_QUERY_INFO, REQ_SET_INFO, REQ_ENUM_DIRECTORY, REQ_QUERY_SECURITY и REQ_SET_SECURITY. Не допускает значение NULL.|  
 |**request_state**|**nvarchar(60)**|Показывает состояние запроса ввода-вывода в NSO. Возможные значения: REQ_STATE_RECEIVED, REQ_STATE_INITIALIZED, REQ_STATE_ENQUEUED, REQ_STATE_PROCESSING, REQ_STATE_FORMATTING_RESPONSE, REQ_STATE_SENDING_RESPONSE, REQ_STATE_COMPLETING и REQ_STATE_COMPLETED. Не допускает значение NULL.|  
 |**request_id**|**int**|Показывает уникальный идентификатор, назначенный драйвером этому запросу. Не допускает значение NULL.|  

@@ -1,7 +1,8 @@
 ---
-title: 'Руководство: Включение пять медленных запросов пример мини-приложение - Studio данных Azure | Документация Майкрософт'
+title: Учебник. Включить пять самые медленные запросы пример мини-приложения
+titleSuffix: Azure Data Studio
 description: Этот учебник демонстрирует включение пять самые медленные запросы пример мини-приложения на панели мониторинга базы данных.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75886c26b7ceff9df9e2fc96f76038e8d6e70dd0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356245"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030788"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Учебник: Добавление *пять медленных запросов* пример мини-приложения на панель мониторинга базы данных
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Учебник. Добавить *пять медленных запросов* пример мини-приложения на панель мониторинга базы данных
 
 Этот учебник демонстрирует процесс добавления одной из [!INCLUDE[name-sos](../includes/name-sos-short.md)]на встроенный пример мини-приложения для *панель мониторинга базы данных* позволяет быстро просматривать пять медленных запросов базы данных. Вы также узнаете, как для просмотра сведений о медленных запросов и планов запросов с использованием [!INCLUDE[name-sos](../includes/name-sos-short.md)]в функции. С помощью этого учебника вы узнаете, как:
 
@@ -54,7 +55,7 @@ ms.locfileid: "49356245"
 Для добавления *медленно мини-приложение запросов* к панели мониторинга, изменение *dashboard.database.widgets* в вашей *параметры пользователя* файл.
 
 1. Откройте *параметры пользователя* , нажав клавишу **Ctrl + Shift + P** открыть *палитру команд*.
-2. Тип *параметры* в поле поиска и выберите **предпочтения: открыть параметры пользователя**.
+2. Тип *параметры* в поле поиска и выберите **предпочтения: Откройте параметры пользователя**.
 
    ![Открытые пользовательские параметры команды](./media/tutorial-qds-sql-server/open-user-settings.png)
 

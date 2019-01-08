@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f8103e48da5c0059cfc977f862ebd8fc0839fb9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8827614f494702d4e738d336e96cd96b92f949d1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661063"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514306"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ sys.dm_db_index_operational_stats (
 |**database_id**|**smallint**|Идентификатор базы данных.|    
 |**object_id**|**int**|Идентификатор таблицы или представления.|    
 |**index_id**|**int**|Идентификатор индекса или кучи.<br /><br /> 0 = куча;|    
-|**hobt_id**|**bigint**|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Идентификатор кучи данных или сбалансированного дерева строк, который отслеживает внутренние данные для индекса columnstore.<br /><br /> NULL — это не является внутренней columnstore набором строк.<br /><br /> Дополнительные сведения см. в разделе [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Идентификатор кучи данных или сбалансированного дерева строк, который отслеживает внутренние данные для индекса columnstore.<br /><br /> NULL — это не является внутренней columnstore набором строк.<br /><br /> Дополнительные сведения см. в разделе [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|Номер секции внутри индекса или кучи (нумерация начинается с 1).|    
 |**leaf_insert_count**|**bigint**|Совокупное количество вставок конечного уровня.|    
 |**leaf_delete_count**|**bigint**|Совокупное количество удалений конечного уровня. leaf_delete_count увеличивается только удаленные записи, которые не помечены как фантомную. сначала. Для удаленных записей, которые являются синхронизирован. во-первых **leaf_ghost_count** вместо увеличивается.|    
@@ -173,7 +173,7 @@ sys.dm_db_index_operational_stats (
 ## <a name="column-remarks"></a>Примечания по столбцам    
  Значения в **lob_orphan_create_count** и **lob_orphan_insert_count** всегда должны быть равны.    
     
- Значение в столбцах **lob_fetch_in_pages** и **lob_fetch_in_bytes** может быть больше нуля для некластеризованных индексов, содержащих один или несколько столбцов LOB как включенные столбцы. Дополнительные сведения см. в статье [Создание индексов с включенными столбцами](../../relational-databases/indexes/create-indexes-with-included-columns.md). Аналогичным образом, значение в столбцах **row_overflow_fetch_in_pages** и **row_overflow_fetch_in_bytes** может быть больше 0 для некластеризованных индексов, если индекс содержит столбцы, которые могут быть переданы вне строки.    
+ Значение в столбцах **lob_fetch_in_pages** и **lob_fetch_in_bytes** может быть больше нуля для некластеризованных индексов, содержащих один или несколько столбцов LOB как включенные столбцы. Дополнительные сведения см. в статье [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md). Аналогичным образом, значение в столбцах **row_overflow_fetch_in_pages** и **row_overflow_fetch_in_bytes** может быть больше 0 для некластеризованных индексов, если индекс содержит столбцы, которые могут быть переданы вне строки.    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>Переустановка счетчиков в кэше метаданных    
  Данные, возвращаемые **sys.dm_db_index_operational_stats** существует только, пока объект кэша метаданных, представляющий кучу или индекс доступен. Эти данные не являются постоянными и не согласованы на уровне транзакций. Это означает, что эти счетчики не позволяют определить факт использования индекса или время, когда индекс применялся последний раз. Сведения об этом см. в разделе [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    

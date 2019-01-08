@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b115edd3e8addbedc60c0c37b4ea014a3123909
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38acf6fd70bebf5033fde5dcf33fe5b2a6ac6722
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098226"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754826"
 ---
 # <a name="raw-file-custom-properties"></a>Пользовательские свойства необработанного файла
   **Пользовательские свойства источника**  
@@ -44,7 +43,7 @@ ms.locfileid: "48098226"
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (перечисление)|Значение, указывающее, содержит ли свойство FileName имя файла, или указывающее переменную, которая содержит имя файла. Параметрами являются `File name` (0) и `File name from variable` (1).|  
 |FileName|String|Имя файла, в который назначение «Необработанный файл» осуществляет запись.|  
-|WriteOption|Integer (перечисление)|Значение, указывающее, следует ли назначению «Необработанный файл» удалять существующий файл с таким же именем. Возможные варианты: `Create Always` (0), `Create Once` (1), `Truncate and Append` (3), и `Append` (2). Значение по умолчанию этого свойства — `Create Always` (0).|  
+|WriteOption|Integer (перечисление)|Значение, указывающее, следует ли назначению «Необработанный файл» удалять существующий файл с таким же именем. Допустимые параметры — `Create Always` (0), `Create Once` (1), `Truncate and Append` (3) и `Append` (2). По умолчанию это свойство имеет значение `Create Always` (0).|  
   
 > [!NOTE]  
 >  Операция добавления в файл требует, чтобы метаданные добавляемых данных совпадали с метаданными данных, уже содержащихся в файле.  

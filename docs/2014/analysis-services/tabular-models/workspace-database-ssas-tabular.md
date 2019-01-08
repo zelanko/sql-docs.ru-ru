@@ -11,12 +11,12 @@ ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65d4a23044084f18662c3aca1cc68bfd157ea3dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d70cf1724eb67dbf8f1a75989df5f4021b5512d6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134994"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416705"
 ---
 # <a name="workspace-database-ssas-tabular"></a>База данных рабочей области (табличные службы SSAS)
   База данных рабочей области табличной модели, используемая во время создания модели, формируется при создании нового проекта табличной модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. База данных рабочей области находится в памяти на экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], запущенном в табличном режиме, как правило, на том же компьютере, что и [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -78,10 +78,10 @@ ms.locfileid: "48134994"
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Свойств модели &#40;табличные службы SSAS&#41;](model-properties-ssas-tabular.md)|Предоставляет описания и шаги настройки свойств базы данных рабочей области модели.|  
+|[Свойства модели (табличные службы SSAS)](model-properties-ssas-tabular.md)|Предоставляет описания и шаги настройки для рабочей области модели свойства базы данных.|  
   
 ## <a name="see-also"></a>См. также  
- [Настройка моделирования данных по умолчанию и свойств развертывания &#40;табличные службы SSAS&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [Свойства проекта &#40;табличные службы SSAS&#41;](properties-ssas-tabular.md)  
+ [Настройка моделирования данных по умолчанию и свойств развертывания (табличные службы SSAS)](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Свойства проекта (табличные службы SSAS)](properties-ssas-tabular.md)  
   
   

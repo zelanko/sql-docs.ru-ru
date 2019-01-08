@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 6: Перенос базы данных из источника локального компьютера на целевой компьютер в Windows Azure | Документация Майкрософт'
+title: Урок 6. Перенос базы данных из источника локального компьютера на целевой компьютер в Windows Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 78674b36b395aa50677e17fa4344690c988f5715
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a75375ae8636cd3c8861030131ce08c63832460
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215134"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404286"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Урок 6. Перенос базы данных с исходного локального компьютера на целевой компьютер в Microsoft Azure
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Урок 6. Перенос базы данных с исходного локального компьютера на целевой компьютер в Windows Azure
   Для этого занятия предполагается, что у вас уже есть другой экземпляр SQL Server, который может находиться на другом локальном компьютере или на виртуальной машине Windows Azure. Сведения о том, как создать виртуальную машину SQL Server в Windows Azure, см. в разделе [подготовки виртуальной машины с SQL Server в Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). После провизионирования виртуальной машины SQL Server в Windows Azure необходимо подключиться к экземпляру SQL Server на этой виртуальной машине с помощью среды SQL Server Management Studio, работающей на другом компьютере.  
   
  Для этого занятия также предполагается, что вы уже выполнили следующие шаги.  
@@ -51,7 +51,7 @@ ms.locfileid: "48215134"
   
         2.  На панели инструментов Стандартная выберите **новый запрос**.  
   
-        3.  Скопируйте и вставьте следующий пример в окно запроса (при необходимости измените). В следующей инструкции создаются учетные данные SQL Server для хранения сертификата общего доступа контейнера хранилища.  
+        3.  Скопируйте и вставьте следующий пример в окно запроса (при необходимости измените). Следующая инструкция создает учетные данные SQL Server для хранения сертификата общего доступа контейнера хранилища.  
   
             ```tsql  
   
@@ -147,6 +147,6 @@ ms.locfileid: "48215134"
   
  **Следующее занятие:**  
   
- [Занятие 7. Перемещение файлов данных в хранилище Microsoft Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Занятие 7. Переместить файлы данных в хранилище Windows Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

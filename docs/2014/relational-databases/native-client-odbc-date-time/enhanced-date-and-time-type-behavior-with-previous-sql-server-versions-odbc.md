@@ -12,18 +12,18 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 392e09bee33370116ba0c4ff6e0f9f13ce0fdad5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184200"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543710"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Улучшенная работа типа даты-времени с предыдущими версиями SQL Server (ODBC)
   В этом разделе описывается ожидаемое поведение клиентских приложений, использующих улучшенные функции даты и времени, которые подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версий более ранних, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], а также в случаях, когда клиентское приложение использует компоненты доступа к данным MDAC, Windows DAC или собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] для отправки команд на сервер, поддерживающий улучшенные функции даты и времени.  
   
 ## <a name="down-level-client-behavior"></a>Работа в клиентах низкого уровня  
- Клиентские приложения, скомпилированные с помощью собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], распознают новые типы даты и времени, как столбцы nvarchar. Содержимое этих столбцов является представлением литералов, как описано в разделе «Данные форматы: строки и литералы» [поддержка типов данных ODBC Дата и время улучшениях](data-type-support-for-odbc-date-and-time-improvements.md). Размер столбца равен максимальной длине литерала для долей секунды, указываемых с заданной для столбца точностью.  
+ Клиентские приложения, скомпилированные с помощью собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], распознают новые типы даты и времени, как столбцы nvarchar. Содержимое этих столбцов является представлением литералов, как описано в разделе «Форматы данных: Строки и литералы» раздела [поддержка типов данных ODBC Дата и время улучшениях](data-type-support-for-odbc-date-and-time-improvements.md). Размер столбца равен максимальной длине литерала для долей секунды, указываемых с заданной для столбца точностью.  
   
  API-интерфейсы каталога возвращают метаданные, согласующиеся с кодом типа данных низкого уровня, полученного клиентом (например, nvarchar) и со связанным представлением низкого уровня (например, с соответствующим форматом литерала). Тем не менее, будет возвращено реальное имя типа данных [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -37,8 +37,8 @@ ms.locfileid: "48184200"
 |||SQL_C_TYPE_TIMESTAMP|Поля времени устанавливаются в нули.|OK (2)<br /><br /> Завершается ошибкой, если значение поля времени не равно нулю. Работает с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|ОК (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Поля даты устанавливаются в текущую дату.|OK (2)<br /><br /> Дата пропускается. Ошибка, если доли секунды не равны нулю. Работает с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||Time(7)|SQL_C_TIME|Ошибка — недопустимый литерал времени.|ОК (1)|  
-|||SQL_C_TYPE_TIMESTAMP|Ошибка — недопустимый литерал времени.|ОК (1)|  
+||Time(7)|SQL_C_TIME|Сбой — недопустимый литерал времени.|ОК (1)|  
+|||SQL_C_TYPE_TIMESTAMP|Сбой — недопустимый литерал времени.|ОК (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|OK|ОК (1)|  
 ||datetime2(7)|SQL_C_TYPE_TIMESTAMP|OK|Значение округляется до 1/300 секунды при преобразовании на клиенте.|  
 |Smalldatetime|Дата|SQL_C_TYPE_DATE|OK|OK|  
@@ -87,8 +87,8 @@ ms.locfileid: "48184200"
 |TYPE_NAME|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

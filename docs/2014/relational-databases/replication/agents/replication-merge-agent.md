@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3b7a3b52b30bdce214dd7d481403425dd07cd09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9d3b323be70911881b99f055503d12bb6b79988d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237110"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762826"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   Агент слияния репликации — это исполняемый файл программы, который применяет к подписчикам исходный моментальный снимок, содержащийся в таблицах базы данных. Кроме того, он выполняет слияние добавочных изменений данных, которые произошли на издателе после создания исходного моментального снимка, а также улаживает конфликты либо в соответствии с правилами, заданными пользователем, либо с помощью созданного пользователем сопоставителя.  
@@ -64,7 +63,7 @@ ms.locfileid: "50237110"
 [-InternetLogininternet_login]  
 [-InternetPasswordinternet_password]  
 [-InternetProxyLogininternet_proxy_login]  
-[–InternetProxyPasswordinternet_proxy_password]  
+[-InternetProxyPasswordinternet_proxy_password]  
 [-InternetProxyServerinternet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeoutinternet_timeout]  
@@ -243,7 +242,7 @@ ms.locfileid: "50237110"
  **-InternetProxyLogin**  *internet_proxy_login*  
  Указывает имя входа, используемое при соединении с заданным в параметре *internet_proxy_server*прокси-сервером, который требует проверки подлинности.  
   
- **–InternetProxyPassword**  *internet_proxy_password*  
+ **-InternetProxyPassword**  *internet_proxy_password*  
  Указывает пароль, используемый при соединении с заданным в параметре *internet_proxy_server*прокси-сервером, который требует проверки подлинности.  
   
  **-InternetProxyServer**  *internet_proxy_server*  
@@ -385,7 +384,7 @@ ms.locfileid: "50237110"
  **-ValidateInterval** *validate_interval*  
  Указывает частоту (в минутах) проверки подписки в непрерывном режиме. Значение по умолчанию равно **60** минут.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Если агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] установлен для запуска от учетной записи пользователя не домена (по умолчанию), а локальной системы, то служба имеет доступ только к локальному компьютеру. Если агент слияния, запускаемый агентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , настроен для входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]с проверкой подлинности Windows, то работа агента слияния завершится ошибкой. Значением по умолчанию является проверка подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -394,7 +393,7 @@ ms.locfileid: "50237110"
   
  Журнал агента слияния для текущего сеанса не удаляется при работе в непрерывном режиме. Длительная непрерывная работа агента может привести к появлению большого количества записей в таблицах журнала слияния, что может снизить производительность. Чтобы устранить эту проблему, переключитесь в режим работы по расписанию или продолжите работу в непрерывном режиме, но создайте выделенное задание, которое будет периодически перезапускать агент слияния. Также можно понизить уровень детализации журнала, чтобы уменьшить число строк, и таким образом уменьшить снижение производительности.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование агента репликации](replication-agent-administration.md)  
   
   

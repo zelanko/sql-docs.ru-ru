@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ce5bc22f1cf7dd8794aaa8d65e23d0324a204d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a91275eadeebd6b996774363ab279eddc76f0f75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172134"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540010"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>В схеме system_function_schema запрещены определяемые пользователем функции
   Помощник по обновлению обнаружил определяемые пользователем функции, принадлежащие недокументированному пользователю **system_function_schema**. Нельзя создать определяемую пользователем системную функцию с указанием пользователя. **System_function_schema** имя пользователя не существует, и идентификатор пользователя, связанный с ним (UID = 4) зарезервирован для **sys** схемы и предназначен только для внутреннего использования.  
@@ -40,7 +40,7 @@ ms.locfileid: "48172134"
   
  Эти изменения влияют на определяемые пользователем системные функции следующим образом.  
   
--   Инструкции языка определения (DDL) данных, которые ссылаются на **system_function_schema** завершится ошибкой. Например, оператор `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... не удастся.  
+-   Инструкции языка определения (DDL) данных, которые ссылаются на **system_function_schema** завершится ошибкой. Например, оператор `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... не будет успешным.  
   
 -   После обновления до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], существующие объекты, принадлежащие **system_function_schema** будут содержаться только в **sys** схему **master** базы данных. Поскольку системные объекты не могут быть изменены, эти функции никогда не может изменить или удалены из **master** базы данных. Кроме того, эти функции не могут быть вызваны из других баз данных с помощью только однокомпонентного имени функции.  
   

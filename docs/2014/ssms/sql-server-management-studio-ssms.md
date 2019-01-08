@@ -4,24 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ae78c114b9c46fd23d066a37837620441c6e6a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181154"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812356"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] — это интегрированная среда для управления инфраструктурой SQL Server. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] предоставляет средства для настройки, наблюдения и администрирования экземпляров SQL Server. Она также предоставляет средства для развертывания, наблюдения и обновления компонентов уровня данных, например баз данных и хранилищ данных, используемых приложениями, а также для построения запросов и скриптов.  
+  Среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] — это интегрированная среда для управления инфраструктурой SQL Server. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] предоставляет средства для настройки, наблюдения и администрирования экземпляров SQL Server. Она также предоставляет средства для развертывания, наблюдения и обновления компонентов уровня данных, например баз данных и хранилищ данных, используемых приложениями, а также для построения запросов и скриптов.  
   
 ## <a name="benefits-of-sql-server-management-studio"></a>Преимущества среды SQL Server Management Studio  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] является полнофункциональной программой для управления SQL Server объектами, объединяющей простой в использовании графический интерфейс и богатые возможности для создания скриптов. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] можно использовать для управления [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], и [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] является полнофункциональной программой для управления объектами SQL Server, объединяющей удобный графический интерфейс и богатые возможности для создания скриптов. Можно использовать [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] для управления компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ## <a name="sql-server-management-studio-components"></a>Компоненты среды SQL Server Management Studio  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48181154"
 |Описывает, как использовать редакторы языков [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] для интерактивного построения и отладки запросов и скриптов.|[Редакторы запросов и текста (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Руководство: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
- [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Учебник. SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
+ [Учебник. Написание инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 99d3317f25af947f042d43fdd64e4cad334ca51f
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37891005"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510932"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Параллельное хранилище данных компонентов - Analytics Platform System
 В этой статье объясняется, программное обеспечение устройства и компоненты программного обеспечения не является специализированным Analytics Platform System.  
@@ -40,7 +40,7 @@ To learn more about Analytics Platform System, see:
   
 ![Параллельное хранилище данных программного обеспечения](media/parallel-data-warehouse-software.png "программного обеспечения Parallel Data Warehouse")  
   
-## <a name="sec1"></a>Программное обеспечение устройства — запрос, обработка и хранение данных пользователя  
+## <a name="sec1"></a>Программное обеспечение устройства - запрос, обработка и хранение данных пользователя  
   
 ### <a name="control-node"></a>Управляющий узел  
 Механизм MPP  
@@ -153,7 +153,7 @@ sqlcmd — это средство командной строки SQL Server д
   
 <!-- MISSING LINKS
 
-If you don’t have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
+If you don't have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
 --> 
   
 ### <a name="integration-services"></a>Службы Integration Services  

@@ -20,16 +20,16 @@ ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12fe4ceda2a6ee219763b2d07b23e73508e84363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778372"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538865"
 ---
 # <a name="sqlallochandle-function"></a>Функция SQLAllocHandle
 **Соответствие стандартам**  
- Версия была введена: ODBC 3.0 соответствует стандартам: ISO-92  
+ Представленные версии: ODBC 3.0 стандартов соответствия: ISO-92  
   
  **Сводка**  
  **SQLAllocHandle** выделяет дескриптор среды, подключения, инструкции или дескриптора.  
@@ -79,7 +79,7 @@ SQLRETURN SQLAllocHandle(
   
  Если диспетчер драйверов не удалось выделить память для  *\*OutputHandlePtr* при **SQLAllocHandle** с *HandleType* SQL_HANDLE_ENV, называется, или приложение предоставляет пустой указатель для *OutputHandlePtr*, **SQLAllocHandle** возвращает ошибку SQL_ERROR. Задает диспетчер драйверов **OutputHandlePtr* для SQL_NULL_HENV (если приложение является пустым указателем, который возвращает значение SQL_ERROR). Нет нет дескриптора, с которым необходимо связать дополнительные диагностические сведения.  
   
- Диспетчер драйверов не вызывает функцию выделения дескриптора среды уровня драйвер пока приложение не вызовет **SQLConnect**, **SQLBrowseConnect**, или **SQLDriverConnect**. При возникновении ошибки на уровне драйвера **SQLAllocHandle** функции, а затем диспетчер драйверов — уровень **SQLConnect**, **SQLBrowseConnect**, или  **SQLDriverConnect** функция возвращает значение SQL_ERROR. Структура диагностических данных, содержит SQLSTATE IM004 (драйвера **SQLAllocHandle** сбой). Ошибка возвращена на дескриптор соединения.  
+ Диспетчер драйверов не вызывает функцию выделения дескриптора среды уровня драйвер пока приложение не вызовет **SQLConnect**, **SQLBrowseConnect**, или **SQLDriverConnect**. При возникновении ошибки на уровне драйвера **SQLAllocHandle** функции, а затем уровень диспетчера драйверов **SQLConnect**, **SQLBrowseConnect**, или  **SQLDriverConnect** функция возвращает значение SQL_ERROR. Структура диагностических данных, содержит SQLSTATE IM004 (драйвера **SQLAllocHandle** сбой). Ошибка возвращена на дескриптор соединения.  
   
  Дополнительные сведения о передаче вызовов функций между диспетчера драйверов и драйверов см. в разделе [функция SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
@@ -96,7 +96,7 @@ SQLRETURN SQLAllocHandle(
 |HY010|Ошибка последовательности функций|(DM) *HandleType* аргумент был SQL_HANDLE_DBC, и **SQLSetEnvAttr** не был вызван для установки атрибута SQL_ODBC_VERSION среды.<br /><br /> (DM) был вызван асинхронно выполняемой функции для **InputHandle** и еще выполнялась при **SQLAllocHandle** функция была вызвана с **HandleType** значение значение SQL_HANDLE_STMT или SQL_HANDLE_DESC.|  
 |HY013|Ошибка управления памятью|*HandleType* аргумент был SQL_HANDLE_DBC, имеющим значение SQL_HANDLE_STMT или SQL_HANDLE_DESC; а вызов функции не может быть обработан, так как базовые объекты памяти оказываются недоступны, возможно из-за нехватки памяти условия.|  
 |HY014 ДОСТИГНУТ|Предельное число дескрипторов|Указывает предельное число дескрипторов, которые могут быть выделены для типа дескриптора определяемые драйвером *HandleType* аргумент был достигнут.|  
-|HY092|Недопустимый атрибут/идентификатор параметра|(DM) *HandleType* аргумент не: SQL_HANDLE_ENV, установленным в значение sql_handle_stmt, имеющим значение SQL_HANDLE_STMT или SQL_HANDLE_DESC.|  
+|HY092|Недопустимый атрибут/идентификатор параметра|(DM) *HandleType* аргумент не был: SQL_HANDLE_ENV, установленным в значение sql_handle_stmt, имеющим значение SQL_HANDLE_STMT или SQL_HANDLE_DESC.|  
 |HY117|Подключение будет приостановлена из-за состояние транзакции неизвестно. Только отключиться и разрешены функции, доступные только для чтения.|(DM) Дополнительные сведения о состоянии приостановки, см. в разделе [функция SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Дополнительная возможность не реализована|*HandleType* аргумент SQL_HANDLE_DESC и драйвер ODBC 2. *x* драйвера.|  
 |HYT01|Время ожидания подключения истекло|Время ожидания подключения истекло раньше, чем ответил на запрос источника данных. Период времени ожидания задается с помощью **SQLSetConnectAttr**, sql_attr_connection_timeout не учитывается.|  

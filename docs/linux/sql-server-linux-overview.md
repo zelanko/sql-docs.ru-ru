@@ -10,23 +10,23 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: bf1d3b2b494377eb964f4a30ea97a48bd1dfcff7
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 37cd2269d6d8fe413b730a111ad0a5f604ed8994
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269528"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408881"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server в Linux:
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: moniker range="= sql-server-2017 || = sqlallproducts-allversions"
-Начиная с SQL Server 2017, SQL Server выполняется в системе Linux. Это то же ядро СУБД SQL Server со многими аналогичными возможностями и службами, не зависящими от вашей операционной системы.
+Начиная с SQL Server 2017, SQL Server выполняется в системе Linux. Это такое же ядро СУБД SQL Server, много подобных возможностей и служб независимо от операционной системы.
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-Предварительная версия SQL Server 2019 выполняется в системе Linux. Это то же ядро СУБД SQL Server со многими аналогичными возможностями и службами, не зависящими от вашей операционной системы. Чтобы узнать больше об этом выпуске, см. в разделе [новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+Предварительная версия SQL Server 2019 выполняется в системе Linux. Это такое же ядро СУБД SQL Server, много подобных возможностей и служб независимо от операционной системы. Чтобы узнать больше об этом выпуске, см. в разделе [новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"

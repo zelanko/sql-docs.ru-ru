@@ -18,12 +18,12 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: be2f6f67182a9dd3dbc5866fa8690e5dcd018445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9dc5d0ae36feb5801f026f0fca77683004e23b3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189074"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400547"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)
   Развертывание сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в одной из следующих операционных систем требует дополнительных шагов настройки, если вы желаете управлять экземпляром этого сервера локально. Данная тема объясняет как настроить сервер отчетов для локального администрирования. Если вы еще не установили или сервер отчетов, см. в разделе [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) и [управление собственный режим сервера отчетов служб отчетов](manage-a-reporting-services-native-mode-report-server.md).  
@@ -119,7 +119,7 @@ ms.locfileid: "48189074"
 2.  В верхнем углу домашней страницы нажмите кнопку **Параметры сайта** .  
   
     > [!TIP]  
-    >  **Примечание.** Если вариант **Параметры сайта** недоступен, закройте и повторно откройте браузер и перейдите к диспетчеру отчетов с правами администратора.  
+    >  **Примечание.** Если вы не видите **параметры сайта** параметр, закройте и повторно откройте браузер и перейдите к диспетчеру отчетов с правами администратора.  
   
 3.  Щелкните пункт **Безопасность**.  
   
@@ -184,9 +184,9 @@ ms.locfileid: "48189074"
 -   Смотрите предыдущие разделы [Параметры каталога диспетчера отчетов](#bkmk_configure_folder_settings) и [Параметры сайта диспетчера отчетов](#bkmk_configure_site_settings) данной темы.  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> Дополнительные сведения  
- Еще одно распространенное действие по настройке администрирования [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — открытие порта номер 80 в брандмауэре Windows для разрешения доступа к компьютеру с сервером отчетов. Инструкции см. в разделе [Настройка брандмауэра для доступа к серверу отчетов](configure-a-firewall-for-report-server-access.md).  
+ Еще одно распространенное действие по настройке администрирования [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — открытие порта номер 80 в брандмауэре Windows для разрешения доступа к компьютеру с сервером отчетов. Инструкции см. в разделе [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md).  
   
-## <a name="see-also"></a>См. также  
- [Управление сервером отчетов Reporting Services в собственном режиме](manage-a-reporting-services-native-mode-report-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Управление сервером отчетов служб Reporting Services в собственном режиме](manage-a-reporting-services-native-mode-report-server.md)  
   
   

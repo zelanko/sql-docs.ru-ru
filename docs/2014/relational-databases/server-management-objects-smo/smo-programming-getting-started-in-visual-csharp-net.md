@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - Visual C# [SMO]
@@ -14,15 +12,15 @@ ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ddea53ac070e23d687e79644379538076a6854e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd25cd3ba339ebd27430bfeea2e634a6ad8f2ff4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056676"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797381"
 ---
 # <a name="getting-started-in-visual-c-net"></a>Приступая к работе с Visual C# .NET
-  [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET является одним из управляемых языков программирования, поддерживаемых общеязыковой среды выполнения (CLR) в [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Дополнительные сведения о языке C#, см. в разделе [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] документация по .NET. Для разработки приложений объектов SMO можно использовать [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] и [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] .  
+  [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET является одним из управляемых языков программирования, поддерживаемых общеязыковой среды выполнения (CLR) в [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Дополнительные сведения о языке C# см. в документации [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Для разработки приложений объектов SMO можно использовать [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] и [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] .  
   
 ## <a name="references-and-imports"></a>Ссылки и импорт  
  После запуска проекта [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] необходимо добавить ссылки на сборки объектов (SMO). Затем нужно импортировать требуемые пространства имен, чтобы программа могла распознать типы SMO.  

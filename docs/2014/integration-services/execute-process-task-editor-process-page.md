@@ -15,12 +15,12 @@ ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d98e80da1f311292daf3fa275c87e4db5f9cc2e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 62cd98e586e5bd57f846b0203aa41c6a3efd50bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100634"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530639"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Редактор задачи «Выполнение процесса» (страница «Процесс»)
   Страница **Процесс** диалогового окна **Редактор задачи «Выполнение процесса»** позволяет настраивать параметры выполнения процесса. Эти параметры включают исполняемый объект, его расположение, аргументы командной строки и переменные для входных и выходных данных.  
@@ -38,12 +38,12 @@ ms.locfileid: "48100634"
  Введите аргументы командной строки.  
   
  **WorkingDirectory**  
- Введите путь к папке, содержащей исполняемый объект, или нажмите кнопку обзора **(…)** и укажите эту папку.  
+ Введите путь к папке, содержащей исполняемый объект, или нажмите кнопку обзора **(...)** и укажите эту папку.  
   
  **StandardInputVariable**  
  Выберите переменную для ввода данных для этого процесса или нажмите кнопку \<**Создать переменную...**> для создания новой переменной:  
   
- **См. также:**[добавить переменную  ](../../2014/integration-services/add-variable.md)  
+ **См. также:**  [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
  Выберите переменную для получения выходных данных этого процесса или нажмите кнопку \<**Создать переменную...**> для создания новой переменной.  
@@ -67,7 +67,7 @@ ms.locfileid: "48100634"
  Указывает стиль окна, в котором выполняется процесс.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Страница "Выражения"](expressions/expressions-page.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)  
   
   

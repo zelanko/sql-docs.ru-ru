@@ -1,5 +1,5 @@
 ---
-title: Определение и использование действия детализации | Документы Microsoft
+title: Определение и использование действия детализации | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45f35145b116f36280ff7d70ee820f4e333382aa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3b57c18d159c677fe10d99fbae1ea9e4bffbed9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018051"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507964"
 ---
-# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Занятие 8-1-Определение и использование действия детализации
+# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Урок 8 – 1-Определение и использование действия детализации
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Распределение данных фактов по измерениям фактов без верной фильтрации данных, возвращаемых запросом, может привести к снижению его производительности. Чтобы избежать этого, можно определить действие детализации, которое ограничит общее число возвращаемых строк. Это позволит значительно повысить производительность выполнения запросов.  
@@ -47,19 +47,19 @@ ms.locfileid: "34018051"
   
 6.  В списке **Возвращаемые столбцы** установите флажки **Описание элемента** и **Номер заказа** , а затем нажмите кнопку **ОК**. На следующем рисунке показано, как выглядит шаблон действия в этот момент времени данной процедуры.  
   
-    ![Столбцы детализации](../analysis-services/media/l8-action3.gif "столбцы детализации")  
+    ![Столбцы детализации поле](../analysis-services/media/l8-action3.gif "столбцы детализации")  
   
 7.  Разверните поле **Дополнительные свойства** , как показано на рисунке ниже.  
   
-    ![Окно «Дополнительные свойства»](../analysis-services/media/l8-action4.gif "«дополнительные свойства»")  
+    !["Дополнительные свойства"](../analysis-services/media/l8-action4.gif "\"Дополнительные свойства\"")  
   
 8.  В поле **Максимальное число строк** введите значение **10**.  
   
-9. В поле **Заголовок** введите **Детализация сведений о заказе**.  
+9. В **заголовок** введите **Детализация сведений о заказе...** .  
   
     Эти настройки ограничивают количество возвращаемых строк и указывают заголовок, отображаемый в меню клиентского приложения. На рисунке ниже показаны эти параметры в поле **Дополнительные свойства** .  
   
-    ![Окно «Дополнительные свойства»](../analysis-services/media/l8-action5.gif "«дополнительные свойства»")  
+    !["Дополнительные свойства"](../analysis-services/media/l8-action5.gif "\"Дополнительные свойства\"")  
   
 ## <a name="using-the-drillthrough-action"></a>Использование действия детализации  
   
@@ -123,7 +123,7 @@ ms.locfileid: "34018051"
   
     На следующем рисунке эти столбцы выделены.  
   
-    ![Столбцы детализации](../analysis-services/media/l8-action7.gif "столбцы детализации")  
+    ![Столбцы детализации поле](../analysis-services/media/l8-action7.gif "столбцы детализации")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>Просмотр измененного действия детализации  
   
@@ -144,7 +144,7 @@ ms.locfileid: "34018051"
     ![Заказы, доставленные Адаму Пауэлу](../analysis-services/media/l8-action8.gif "заказы доставленные Адаму Пауэлу")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 9: Определение перспектив и переводов](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[Занятие 9. Определение перспектив и переводов](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>См. также  
 [Действия (службы Analysis Services — многомерные данные)](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  

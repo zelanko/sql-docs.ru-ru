@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a01af53372a8be1fce6ffa2e4ee8d4cddce8d057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98844917c047e2e52018e9ed8b050f708617ae2f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135344"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799106"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Проверка данных (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]при публикации данных происходят проверки двух типов:  
@@ -39,7 +38,7 @@ ms.locfileid: "48135344"
 |------------|-----------------|  
 |Ошибка|Одно или несколько значений в строке не прошли проверку с использованием бизнес-правил, определенных администратором MDS.|  
 |Не проверялось.|Значения в строке еще не проверялись с использованием бизнес-правил.|  
-|Успешно|Все значения в строке прошли проверку с использованием бизнес-правил.|  
+|Success|Все значения в строке прошли проверку с использованием бизнес-правил.|  
   
 ## <a name="input-statuses"></a>Состояния входных данных  
  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]возможны приведенные ниже состояния входных данных.  
@@ -55,7 +54,7 @@ ms.locfileid: "48135344"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Определяет, какие значения не соответствуют определенным бизнес-правилам.|[Применение бизнес-правил &#40;надстройка MDS для Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
+|Определяет, какие значения не соответствуют определенным бизнес-правилам.|[Применение бизнес-правил (надстройка MDS для Excel)](apply-business-rules-mds-add-in-for-excel.md)|  
 |Чтобы исправить ошибки проверки, просмотрите все транзакции, выполненные для элемента.|[Просмотр всех заметок или транзакций для элемента (надстройка MDS для Excel)](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>См. также  

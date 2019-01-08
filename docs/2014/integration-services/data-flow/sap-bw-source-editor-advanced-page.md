@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67e45ef54da3d79d877882c94ee34fcaf0814514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7729e4762b5289c4ed63b9cf204eac87381a232b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100714"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823648"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Редактор источников SAP BW (страница «Дополнительно»)
   Используйте страницу **Дополнительно** **Редактора источников SAP BW** , чтобы указать правило преобразования строк и время ожидания, а также сбросить состояние запроса с определенным идентификатором.  
@@ -47,7 +46,7 @@ ms.locfileid: "48100714"
   
 |Параметр|Описание|  
 |------------|-----------------|  
-|**Автоматическое преобразование строк**|Все строки преобразуются в `nvarchar` когда в системе SAP Netweaver BW поддерживает Юникод. В противном случае все строки преобразуются в `varchar`.|  
+|**Автоматическое преобразование строк**|Преобразовать все строки в `nvarchar`, если система SAP Netweaver BW поддерживает Юникод. В противном случае все строки преобразуются в `varchar`.|  
 |**Преобразование строк в varchar**|Все строки преобразуются в `varchar`.|  
 |**Преобразование строк в nvarchar**|Все строки преобразуются в `nvarchar`.|  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48100714"
  Укажите максимальное число секунд для периода ожидания источника.  
   
 > [!NOTE]  
->  Этот параметр допустим только в том случае, если выбран параметр **W — ждать уведомления** в качестве значения **Режим выполнения** на странице редактора **Диспетчер соединений** . Дополнительные сведения см. в разделе [SAP BW Source Editor &#40;Connection Manager Page&#41;](sap-bw-source-editor-connection-manager-page.md).  
+>  Этот параметр допустим только в том случае, если выбран параметр **W — ждать уведомления** в качестве значения **Режим выполнения** на странице редактора **Диспетчер соединений** . Дополнительные сведения см. в разделе [Редактор источника SAP BW (страница "Диспетчер подключений")](sap-bw-source-editor-connection-manager-page.md).  
   
  **Идентификатор запроса**  
  Укажите идентификатор запроса, состояние которого необходимо сбрасывать до "G — зеленый" при нажатии кнопки **Сброс**.  
@@ -64,8 +63,8 @@ ms.locfileid: "48100714"
  Позволяет сбросить состояние идентификатора запроса до «G — зеленый», после отображения запроса на подтверждение. Это может быть полезным, если произошла ошибка и система SAP Netweaver BW отметила запрос с состоянием «Красный» или «Желтый».  
   
 ## <a name="see-also"></a>См. также  
- [Редактор источника SAP BW &#40;страницы диспетчера соединений&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [Редактор источника SAP BW &#40;страница "столбцы"&#41;](sap-bw-source-editor-columns-page.md)   
+ [Редактор источника SAP BW (страница "Диспетчер подключений")](sap-bw-source-editor-connection-manager-page.md)   
+ [Редактор источника SAP BW (страница "Столбцы")](sap-bw-source-editor-columns-page.md)   
  [Редактор источника SAP BW (страница "Вывод ошибок")](sap-bw-source-editor-error-output-page.md)   
  [Справка F1 по Microsoft Connector 1.1 для SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   

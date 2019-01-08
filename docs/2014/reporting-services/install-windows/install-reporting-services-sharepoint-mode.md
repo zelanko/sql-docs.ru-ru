@@ -15,17 +15,17 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b1406c93a798df2b19f49d3a83123221826d1bf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 549cae9b4e42866194f5a391bb7d5e111eb202ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170824"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395158"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Установка служб Reporting Services в режиме интеграции с SharePoint (SharePoint 2010 и SharePoint 2013)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в SharePoint режим является коллекцией из серверных компонентов, которые обеспечивают создание отчетов и доставку, на основе [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] продуктов SharePoint.  
   
- Выполнение служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint обеспечивает функции [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] и предупреждений об изменении данных. Дополнительные сведения о функциях в режиме SharePoint см. в подразделе "Поддержка функций и различия в поведении в режимах сервера" раздела [Сервер отчетов служб Reporting Services](../reporting-services-report-server.md).  
+ Выполнение служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint обеспечивает функции [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] и предупреждений об изменении данных. Дополнительные сведения о функциях в режиме интеграции с SharePoint, в подразделе «Поддержка функций и поведение различия в режимах сервера» раздела [сервер отчетов служб Reporting Services](../reporting-services-report-server.md)  
   
  Для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint требуются две базовые установки.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48170824"
   
  Для установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используется установочный носитель [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Инструкции по расширенным вариантам развертывания см. в разделе [контрольный список развертывания: служб Reporting Services, Power View и PowerPivot для SharePoint](../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) и [контрольный список развертывания: Установка служб Reporting Services в существующей Ферма SharePoint](../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md).  
+ Инструкции по расширенным вариантам развертывания см. в разделе [контрольный список развертывания: Службы Reporting Services, Power View и PowerPivot для SharePoint](../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) и [контрольный список развертывания: Установка служб Reporting Services в существующей ферме SharePoint](../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Поддерживаемые сочетания SharePoint и компонентов служб Reporting Services и надстройки &#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
@@ -47,20 +47,20 @@ ms.locfileid: "48170824"
   
  [Установка или удаление Reporting Services надстройки для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
- [Где найти надстройку служб Reporting Services для продуктов SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
+ [Где найти надстройку службы Reporting Services для продуктов SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [Добавление дополнительного сервера отчетов в ферму &#40;горизонтально масштабируемые службы SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [Добавление дополнительного клиентского веб-интерфейса служб Reporting Services в ферме](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
- [Настройка электронной почты для приложения служб Reporting Services &#40;SharePoint 2010 и SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
+ [Настройка электронной почты для приложения служб Reporting Services (SharePoint 2010 и SharePoint 2013)](configure-e-mail-for-a-reporting-services-service-application.md)  
   
  [Подготовка подписок и предупреждений для приложений служб SSRS](provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
  [Служба claims to Windows Token Service &#40;C2WTS&#41; и службы Reporting Services](../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)  
   
 ## <a name="see-also"></a>См. также  
- [Предупреждений об изменении данных, архитектура и рабочий процесс](../reporting-services-data-alerts.md#AlertingWF)   
+ [Архитектура предупреждений об изменении данных и рабочий процесс](../reporting-services-data-alerts.md#AlertingWF)   
  [Диспетчер предупреждений данных для оповещения администраторов](../data-alert-manager-for-alerting-administrators.md)  
   
   

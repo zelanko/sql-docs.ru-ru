@@ -12,12 +12,12 @@ ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1c638a220aa423f9e30c1ef0fb746dd56a77d2a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a87b213731ac0b8cb1b76eb87b1997f86157c6c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798132"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411081"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Работа с образцами файлов сценария консоли (SybaseToSQL)
 Справочник по пользовательскому и использовании были предоставлены несколько образцы файлов вместе с продуктом. В этом разделе описывается способ легко настроить эти сценарии в соответствии с потребностями пользователя.  
@@ -84,7 +84,7 @@ ms.locfileid: "47798132"
   
     -   `source-schema:` Указывает, требуется для преобразования базы данных-источника.  
   
-    -   `sql-server-schema`: Указывает целевую базу данных, которую следует перенести в  
+    -   `sql-server-schema`. Указывает целевую базу данных, которую следует перенести в  
   
     **Имя команды**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47798132"
   
     **Attribute**  
   
-    `object-name`: Укажите базы данных-источника или имя, которое требуется для преобразования объекта. Убедитесь, что соответствующий `object-type` изменяются в зависимости от типа объекта, указанного в `object-name`  
+    `object-name`. Укажите базы данных-источника или имя, которое требуется для преобразования объекта. Убедитесь, что соответствующий `object-type` изменяются в зависимости от типа объекта, указанного в `object-name`  
   
     **Имя команды**  
   

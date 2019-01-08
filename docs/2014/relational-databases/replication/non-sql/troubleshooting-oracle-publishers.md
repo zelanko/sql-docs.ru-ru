@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
@@ -14,12 +13,12 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 680cb75aa3a302b8aa889f009a6fd080eb3cd1b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223524"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786696"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Диагностика издателей Oracle
   В этой теме рассматривается ряд вопросов, которые могут возникнуть при настройке и использовании издателя Oracle.  
@@ -206,7 +205,7 @@ ms.locfileid: "48223524"
 ## <a name="oracle-error-ora-01555"></a>Ошибка Oracle ORA-01555  
  Следующая ошибка базы данных Oracle относится не к репликации моментального снимка, а к тому, как Oracle строит подходящие для чтения представления данных:  
   
- "ORA-01555: слишком старый моментальный снимок"  
+ «ORA-01555: слишком старый моментальный снимок»  
   
  При помощи объектов, называемых сегментами отката, Oracle создает пригодные для чтения представления данных на момент выдачи инструкции SQL. Ошибка «слишком старый моментальный снимок» может возникнуть, если данные отката переписываются другими, одновременно выполняющими сеансами. До версии Oracle 9i для уменьшения частоты появления этой ошибки рекомендовался метод увеличения размера или количества сегментов отката и назначения больших транзакций для определенных сегментов отката.  
   

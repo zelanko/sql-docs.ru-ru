@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 009ac57e854323c1340d600063dd1aee7fda2875
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b05c023e8b0c54f0037af7829421f8f69f2595d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905754"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805006"
 ---
 # <a name="data-profile-viewer"></a>Средство просмотра профиля данных
   Просмотр и анализ профилей данных — следующий шаг в процессе профилирования данных. Профили можно просмотреть после запуска задачи «Профилирование данных» внутри пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и расчета профилей данных. Дополнительные сведения о настройке и использовании задач "Профилирование данных" см. в разделе [Установка задачи "Профилирование данных"](data-profiling-task.md).  
@@ -61,7 +60,7 @@ ms.locfileid: "48905754"
 > [!IMPORTANT]  
 >  Возможность углубленной детализации, которая доступна в средстве просмотра профиля данных, отправляет активные запросы к исходному источнику данных. Эти запросы могут отрицательно повлиять на производительность сервера.  
 >   
->  Если выполнить детализацию из выходного файла, который не был создан недавно, запросы углубленной детализации может вернуть другой набор строк, чем те, на которых вычислялись первоначальные выходные данные.  
+>  Если детализация углублением выполняется из выходного файла, созданного некоторое время назад, запросы углубленной детализации могут возвратить набор строк, отличающихся от тех, на основе которых вычислялись первоначальные выходные данные.  
   
  Дополнительные сведения о пользовательском интерфейсе средства просмотра профилей данных см. в разделе [Data Profile Viewer F1 Help](../data-profile-viewer-f1-help.md).  
   

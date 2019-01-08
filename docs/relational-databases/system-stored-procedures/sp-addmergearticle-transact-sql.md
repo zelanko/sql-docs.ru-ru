@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergearticle
@@ -17,12 +16,12 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f64a1719ea74448c6c4cc7402f2e6b1afd2be185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7894d5f7f3d3c686c8984c0386f1025f00c2890
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653322"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770146"
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,16 +74,16 @@ sp_addmergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=** ] **"***публикации***"**  
+ [  **@publication=** ] **"**_публикации_**"**  
  Имя публикации, которая содержит статью. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article=** ] **"***статье***"**  
+ [  **@article=** ] **"**_статье_**"**  
  Имя статьи. Имя должно быть уникальным в пределах публикации. *статья* — **sysname**, не имеет значения по умолчанию. *статья* должна находиться на локальном компьютере, выполняющем [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и должны соответствовать правилам для идентификаторов.  
   
- [  **@source_object=** ] **"***source_object***"**  
+ [  **@source_object=** ] **"**_source_object_**"**  
  Публикуемый объект базы данных. *source_object* — **sysname**, не имеет значения по умолчанию. Дополнительные сведения о типах объектов, которые могут быть опубликованы при репликации слиянием, см. в разделе [публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
- [  **@type=** ] **"***тип***"**  
+ [  **@type=** ] **"**_тип_**"**  
  Тип статьи. *Тип* — **sysname**, значение по умолчанию **таблицы**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -96,19 +95,19 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**только схема синонима**|Только синоним со схемой.|  
 |**только схема представления**|Только представление со схемой.|  
   
- [  **@description=** ] **"***описание***"**  
+ [  **@description=** ] **"**_описание_**"**  
  Описание статьи. *Описание* — **nvarchar(255)**, значение по умолчанию NULL.  
   
- [  **@column_tracking=** ] **"***column_tracking***"**  
+ [  **@column_tracking=** ] **"**_column_tracking_**"**  
  Параметр отслеживания на уровне столбца. *column_tracking* — **nvarchar(10)**, значение по умолчанию FALSE. **значение true,** включается отслеживание столбцов. **false** выключает отслеживание столбцов, обнаружение конфликтов остается на уровне строк. Если таблица уже опубликована в других публикациях слиянием, необходимо использовать для параметра отслеживания столбца то же значение, что и для существующих статей, основанных на данной таблице. Этот параметр применим только для статей таблиц.  
   
 > [!NOTE]  
 >  Если для обнаружения конфликтов применяется трассировка на уровне строк (по умолчанию), базовая таблица может содержать не более 1 024 столбцов, однако столбцы из статьи должны быть отфильтрованы, чтобы было опубликовано не более 246 столбцов. Если применяется трассировка на уровне столбцов, базовая таблица может содержать не более 246 столбцов.  
   
- [  **@status=** ] **"***состояние***"**  
+ [  **@status=** ] **"**_состояние_**"**  
  Состояние статьи. *состояние* — **nvarchar(10)**, значение по умолчанию **unsynced**. Если **active**, скрипт начальной обработки для публикации таблицы запускается. Если **unsynced**, скрипт начальной обработки для публикации таблицы запускается при следующем запуске агента моментальных снимков.  
   
- [  **@pre_creation_cmd=** ] **"***pre_creation_cmd***"**  
+ [  **@pre_creation_cmd=** ] **"**_pre_creation_cmd_**"**  
  Указывает действие системы, если во время применения моментального снимка таблица уже существует на подписчике. *pre_creation_cmd* — **nvarchar(10)**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -118,7 +117,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**DROP** (по умолчанию)|Удаляет таблицу перед ее повторным созданием. Требуется для поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] подписчиков.|  
 |**truncate**|Усекает целевую таблицу.|  
   
- [  **@creation_script=** ] **"***creation_script***"**  
+ [  **@creation_script=** ] **"**_creation_script_**"**  
  Путь и имя необязательного скрипта схемы статьи, применяемого для создания статьи в базе данных подписки. *creation_script* — **nvarchar(255)**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -174,32 +173,32 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *Schema_option* параметр влияет только на параметры репликации исходного моментального снимка. Когда исходная схема будет сформирован агентом моментальных снимков и применена на подписчике, репликация изменений схемы публикации на подписчик происходит на основании правил репликации изменений схемы и *replicate_ddl* значения параметра, указанного в [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- [  **@subset_filterclause=** ] **"***subset_filterclause***"**  
+ [  **@subset_filterclause=** ] **"**_subset_filterclause_**"**  
  Предложение WHERE, определяющее горизонтальную фильтрацию статьи таблицы, без указания самого слова WHERE. *subset_filterclause* имеет **nvarchar(1000)**, значение по умолчанию является пустая строка.  
   
 > [!IMPORTANT]  
 >  По соображениям производительности не рекомендуется применять функции к именам столбцов в предложениях параметризованных фильтров строк, например `LEFT([MyColumn]) = SUSER_SNAME()`. Если вы используете [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) в предложении фильтра и переопределении значения HOST_NAME, может потребоваться преобразование типов данных с помощью [преобразовать](../../t-sql/functions/cast-and-convert-transact-sql.md). Дополнительные сведения о рекомендациях по этому сценарию в подразделе «Переопределение значения HOST_NAME()» раздела [параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
- [  **@article_resolver=** ] **"***article_resolver***"**  
+ [  **@article_resolver=** ] **"**_article_resolver_**"**  
  Сопоставитель конфликтов на основе COM, используемый для разрешения конфликтов статей таблиц, или сборка .NET Framework, вызываемая для выполнения специальной бизнес-логики табличной статьи. *article_resolver* — **varchar(255)**, значение по умолчанию NULL. Доступные значения для этого параметра, перечислены в [!INCLUDE[msCoName](../../includes/msconame-md.md)] пользовательские сопоставители конфликтов Майкрософт. Если значение не является одним из [!INCLUDE[msCoName](../../includes/msconame-md.md)] сопоставителей, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует указанный Сопоставитель вместо предоставляемого системы. Используйте **sp_enumcustomresolvers** перечислить список имеющихся пользовательских сопоставителей. Дополнительные сведения см. в разделе [выполнение бизнес логики во время синхронизации слияния](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md) и [Advanced Merge Replication Conflict Detection и разрешение](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- [  **@resolver_info=** ] **"***resolver_info***"**  
+ [  **@resolver_info=** ] **"**_resolver_info_**"**  
  Используется для указания дополнительных сведений, необходимых пользовательскому сопоставителю. Некоторым из сопоставителей конфликтов [!INCLUDE[msCoName](../../includes/msconame-md.md)] в качестве входного параметра требуется столбец. *resolver_info* — **nvarchar(255)**, значение по умолчанию NULL. Дополнительные сведения см. в статье [Сопоставители на базе технологии Microsoft COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
- [  **@source_owner=** ] **"***этот аргумент***"**  
+ [  **@source_owner=** ] **"**_этот аргумент_**"**  
  Имя владельца *source_object*. *Этот аргумент* — **sysname**, значение по умолчанию NULL. Если значение равно NULL, то предполагается, что владельцем является текущий пользователь.  
   
- [  **@destination_owner=** ] **"***destination_owner***"**  
+ [  **@destination_owner=** ] **"**_destination_owner_**"**  
  Владелец объекта в базе данных подписки, отличный от «dbo». *destination_owner* — **sysname**, значение по умолчанию NULL. Если значение аргумента равно NULL, то предполагается, что владельцем является dbo.  
   
- [  **@vertical_partition=** ] **"***column_filter***"**  
+ [  **@vertical_partition=** ] **"**_column_filter_**"**  
  Включает и выключает фильтрацию столбцов в статье таблицы. *vertical_partition* — **nvarchar(5)** значение по умолчанию FALSE.  
   
  **false** указывает на отсутствие вертикальной фильтрации и публикацию всех столбцов.  
   
  **значение true,** очищает все столбцы, кроме объявленного первичного ключа и столбцов ROWGUID. Столбцы добавляются с помощью **sp_mergearticlecolumn**.  
   
- [  **@auto_identity_range=** ] **"***automatic_identity_range***"**  
+ [  **@auto_identity_range=** ] **"**_automatic_identity_range_**"**  
  Включает и выключает автоматическую обработку диапазона идентификаторов для данной табличной статьи публикации во время ее создания. *auto_identity_range* — **nvarchar(5)**, значение по умолчанию FALSE. **значение true,** включает автоматический диапазон идентификаторов обработки, тогда как **false** отключает его.  
   
 > [!NOTE]  
@@ -224,16 +223,16 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** указывает, что подпись будет проверяться, чтобы увидеть, что он получен из надежного источника.  
   
- [  **@destination_object=** ] **"***destination_object***"**  
+ [  **@destination_object=** ] **"**_destination_object_**"**  
  Имя объекта в базе данных подписки. *destination_object* — **sysname**, со значением по умолчанию новые **@source_object**. Этот аргумент может быть указан только для статей типа «только схема», например для статей хранимых процедур, представлений или пользовательских функций. Если статья определена является статьи таблицы, значение в *@source_object* переопределяет значение в *destination_object*.  
   
- [  **@allow_interactive_resolver=** ] **"***allow_interactive_resolver***"**  
+ [  **@allow_interactive_resolver=** ] **"**_allow_interactive_resolver_**"**  
  Разрешает или запрещает использование интерактивного арбитра конфликтов для данной статьи. *allow_interactive_resolver* — **nvarchar(5)**, значение по умолчанию FALSE. **значение true,** разрешает использование интерактивного арбитра конфликтов для данной статьи; **false** отключает его.  
   
 > [!NOTE]  
 >  Интерактивный сопоставитель конфликтов не поддерживается подписчиками [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
- [  **@fast_multicol_updateproc=** ] **"***fast_multicol_updateproc***"**  
+ [  **@fast_multicol_updateproc=** ] **"**_fast_multicol_updateproc_**"**  
  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов.  
   
  [  **@check_permissions=** ] *check_permissions*  
@@ -253,7 +252,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** указывает, что добавление статьи может привести к недействительности моментального снимка и если существующие подписки потребуют нового моментального снимка, дается разрешение существующий моментальный снимок помечается как устаревшего и создание нового моментального снимка. *подписки потребуют* присваивается **1** при добавлении статьи в публикацию с помощью существующего моментального снимка.  
   
- [  **@published_in_tran_pub=** ] **"***published_in_tran_pub***"**  
+ [  **@published_in_tran_pub=** ] **"**_published_in_tran_pub_**"**  
  Показывает, что статья в публикации слиянием также опубликована в публикации транзакций. *published_in_tran_pub* — **nvarchar(5)**, значение по умолчанию FALSE. **значение true,** указывает, что статья также опубликована в публикации транзакций.  
   
  [  **@force_reinit_subscription=** ] *этот*  
@@ -263,7 +262,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** означает, что изменения статьи слияния вызывают повторную инициализацию и дает разрешение произвести повторную инициализацию подписки. *Этот* присваивается **1** при *subset_filterclause* указывает параметризованного фильтра строк.  
   
- [  **@logical_record_level_conflict_detection=** ] **"***logical_record_level_conflict_detection***"**  
+ [  **@logical_record_level_conflict_detection=** ] **"**_logical_record_level_conflict_detection_**"**  
  Указывает уровень обнаружения конфликтов для статьи, входящей в состав логической записи. *logical_record_level_conflict_detection* — **nvarchar(5)**, значение по умолчанию FALSE.  
   
  **значение true,** указывает, что конфликт будет отслеживаться, если были внесены изменения в любом месте в логической записи.  
@@ -273,7 +272,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Поскольку логические записи не поддерживаются [!INCLUDE[ssEW](../../includes/ssew-md.md)] подписчиков, необходимо указать значение **false** для *logical_record_level_conflict_detection* для поддержки этих подписчиков.  
   
- [  **@logical_record_level_conflict_resolution=** ] **"***logical_record_level_conflict_resolution***"**  
+ [  **@logical_record_level_conflict_resolution=** ] **"**_logical_record_level_conflict_resolution_**"**  
  Указывает уровень устранения конфликтов для статьи, входящей в состав логической записи. *logical_record_level_conflict_resolution* — **nvarchar(5)**, значение по умолчанию FALSE.  
   
  **значение true,** указывает, что Выигравшая логическая запись целиком перезаписывает побежденную.  
@@ -325,7 +324,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  Для обеспечения обратной совместимости когда значение *identityrangemanagementoption* имеет значение NULL, значение *auto_identity_range* проверяется. Тем не менее, если значение *identityrangemanagementoption* не NULL, то значение *auto_identity_range* учитывается. Дополнительные сведения см. в статье [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
- [  **@delete_tracking=** ] **"***delete_tracking***"**  
+ [  **@delete_tracking=** ] **"**_delete_tracking_**"**  
  Указывает, являются ли удаления реплицируемыми. *delete_tracking* — **nvarchar(5)**, значение по умолчанию TRUE. **false** указывает, что операции удаления не реплицируются, и **true** указывает, что операции удаления реплицируются, что является обычным поведением для репликации слиянием. Когда *delete_tracking* присваивается **false**, строки, удаляемые на подписчике должны быть вручную удалены на издателе и строки, удаленные на издателе, должны быть вручную удалены на подписчике.  
   
 > [!IMPORTANT]  
@@ -334,13 +333,13 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *delete_tracking* параметры нельзя задать с помощью **мастера создания публикаций** или **свойства публикации** диалоговое окно.  
   
- [  **@compensate_for_errors=** ] **"***compensate_for_errors***"**  
+ [  **@compensate_for_errors=** ] **"**_compensate_for_errors_**"**  
  Указывает, будут ли выполняться корректирующие действия, если во время синхронизации возникнут ошибки: *compensate_for_errors я*s **nvarchar(5)**, значение по умолчанию FALSE. Если задано значение **true**, изменения, не может использоваться на стороне подписчика или издателя во время синхронизации всегда вызывают корректирующие действия для отмены изменений; тем не менее, одно неправильно настроен подписчик, вызывающий ошибки может вызвать изменений на других подписчиках и издателях, подлежащих отмене. **false** отключает, по-прежнему компенсирующие действия, тем не менее, ошибки регистрируются, так как в случае компенсации и последующих слияний продолжает попытки применить изменения до успешной установки соединения.  
   
 > [!IMPORTANT]  
 >  Даже если в данных в измененных строках отсутствует конвергенция, то, если исправить все ошибки, изменения можно применить и добиться конвергенции данных. Если исходная таблица для статьи уже опубликована в другой публикации, то значение *compensate_for_errors* должно быть одинаковым для обеих статей.  
   
- [  **@stream_blob_columns=** ] **"***stream_blob_columns***"**  
+ [  **@stream_blob_columns=** ] **"**_stream_blob_columns_**"**  
  Указывает, производится ли оптимизация потока данных при репликации столбцов больших двоичных объектов. *stream_blob_columns* — **nvarchar(5)**, значение по умолчанию FALSE. **значение true,** означает, что будет предприниматься попытка оптимизации. *stream_blob_columns* имеет значение true, если включен режим FILESTREAM. Это позволяет оптимально выполнять репликацию данных FILESTREAM и уменьшить использование памяти. Чтобы принудительно заставить статьи таблицы FILESTREAM не использовать потоковую передачу больших двоичных объектов, используйте **sp_changemergearticle** присвоить *stream_blob_columns* значение false.  
   
 > [!IMPORTANT]  

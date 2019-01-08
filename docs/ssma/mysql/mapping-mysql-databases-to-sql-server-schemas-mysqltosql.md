@@ -13,12 +13,12 @@ ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ba413a15f0d201ecaddadf83e353d28ee3010c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40a3cf9db1248292d66d2a296c25c53ccfda002d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721952"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408711"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Сопоставление баз данных MySQL со схемами SQL Server (MySQLToSQL)
 По умолчанию SSMA для MySQL переносит все объекты в схеме MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure с именем схемы. Тем не менее, можно настроить сопоставление между схемами MySQL и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или баз данных SQL Azure.  
@@ -57,7 +57,7 @@ ms.locfileid: "47721952"
   
 -   Сопоставление с SQL Azure  
   
-База данных-источник можно сопоставить с подключенным целевым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных или ни одной схеме в подключенном целевом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных. Если сопоставить источник схемы ни одной схеме, не существует в списке подключенных целевую базу данных, то появится сообщение **«схемы не существует в целевой объект метаданных. Он будет создан во время синхронизации. Вы действительно хотите продолжить? «** Нажмите "Да".  
+База данных-источник можно сопоставить с подключенным целевым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных или ни одной схеме в подключенном целевом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных. Если сопоставить источник схемы ни одной схеме, не существует в списке подключенных целевую базу данных, то появится сообщение **«схемы не существует в целевой объект метаданных. Он будет создан во время синхронизации. Вы действительно хотите продолжить? "** Нажмите "Да".  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Восстановление базы данных по умолчанию и схемы  
 Если настроить сопоставление схемы MySQL и схемы SQL Server, можно вернуть сопоставление значения по умолчанию.  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 49cf92537bf0289765dca7b3a04c76fe0bf50fd8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145309"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418705"
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Свойства ячеек многомерных Выражений — с помощью свойства ячейки
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +62,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_ENABLED_WITH_UPDATE** (0x00000002)   Ячейку можно обновить при помощи инструкции обновления. Операция может не выполниться, если обновляемая конечная ячейка не доступна для записи.|  
 ||**CELL_UPDATE_NOT_ENABLED_FORMULA** (0x10000001)   Ячейку нельзя обновить, поскольку одна из ее координат является вычисляемым элементом; ячейка была извлечена вместе с набором в предложении WHERE. Ячейку можно обновить, даже если значение ячейки зависит от формулы или от вычисляемого элемента (например, если она обрабатывается статистической функцией). В этом случае итоговое значение ячейки может не соответствовать обновленному значению, поскольку на результат влияют вычисления.|  
 ||**CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE** (0x10000002) Ячейку нельзя обновить, поскольку нельзя обновлять несуммарные меры (количество, минимум, максимум, число различных объектов, полуаддитивные показатели).|  
-||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003)   Ячейку нельзя обновить, так как она не существует, поскольку находится на пересечении меры и элемента измерения, не связанного с группой мер данной меры.|  
+||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003) ячейку нельзя обновить, поскольку не существует, так как он находится на пересечении меры и элемента измерения, не связанных с группой мер меры.|  
 ||**CELL_UPDATE_NOT_ENABLED_SECURE** (0x10000005)    Ячейку нельзя обновить, поскольку она защищена.|  
 ||**CELL_UPDATE_NOT_ENABLED_CALCLEVEL** (0x10000006) Зарезервировано для будущего использования.|  
 ||**CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE** (0x10000007)   Ячейку нельзя обновить по внутренним причинам.|  

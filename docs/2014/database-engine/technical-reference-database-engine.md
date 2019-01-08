@@ -14,12 +14,12 @@ ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 882764275d2455f63cadaa4f72dbfd33b85fb833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052514"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533302"
 ---
 # <a name="technical-reference-database-engine"></a>Технический справочник (ядро СУБД)
   В [!INCLUDE[ssDE](../includes/ssde-md.md)] имеется справочная документация по средствам, языкам и программированию для администратора компонента [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "48052514"
  ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") **командлеты PowerShell для ядра базы данных**  
  [Invoke-PolicyEvaluation, командлет](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  
   
- [Командлет Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)  
+ [Invoke-Sqlcmd, командлет](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)  
   
  ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") **ошибки и события**  
  [События ядра базы данных и ошибки] (.. /Relational-databases/Errors-Events/Database-Engine-Events-and-Errors.md0  

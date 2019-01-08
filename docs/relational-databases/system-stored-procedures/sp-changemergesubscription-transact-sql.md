@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergesubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57e581985a4fcc5b7d1055748f87aed40c06a5a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac79494bfb0d08503be6e138bce748596eb8165
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629632"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819081"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +43,19 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
+ [  **@publication=**] **"**_публикации_**"**  
  Имя публикации, которую нужно изменить. *Публикация* — **sysname**, значение по умолчанию NULL. Публикация уже должна существовать и соответствовать правилам для идентификаторов.  
   
- [  **@subscriber=**] **"***подписчика***"**  
+ [  **@subscriber=**] **"**_подписчика_**"**  
  Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
   
- [  **@subscriber_db=**] **"***subscriber_db***"**  
+ [  **@subscriber_db=**] **"**_subscriber_db_**"**  
  Имя базы данных подписки. *subscriber_db*— **sysname**, значение по умолчанию NULL.  
   
- [  **@property=**] **"***свойство***"**  
+ [  **@property=**] **"**_свойство_**"**  
  Свойство, изменяемое для данной публикации. *Свойство* — **sysname**, и может принимать одно из значений в таблице.  
   
- [  **@value=**] **"***значение***"**  
+ [  **@value=**] **"**_значение_**"**  
  Новое значение для указанного *свойство*. *значение* — **nvarchar(255)**, и может принимать одно из значений в таблице.  
   
 |Свойство|Значение|Описание|  

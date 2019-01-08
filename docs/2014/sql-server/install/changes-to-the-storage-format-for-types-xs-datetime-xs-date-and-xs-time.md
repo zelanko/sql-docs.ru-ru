@@ -16,12 +16,12 @@ ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2de2791ff4dcb52c50a57dbc91322756c10a7c13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8ccc6581e48a44e636fad07891bd8ec51596fbf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110674"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797646"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Изменение формата хранения для типов xs:dateTime, xs:date и xs:time
   Правило XMLDATETIME определяет, содержат ли базы данных типизированные XML-данные, которые станут недопустимыми после обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -43,14 +43,14 @@ ms.locfileid: "48110674"
   
  Следующий запрос выполняет поиск коллекций XML-схем, ссылающихся на затронутые типы, а также типизированных XML-столбцов. Это позволит определить, имеются ли экземпляры с отрицательными значениями года.  
   
-```  
+```sql
 CREATE PROCEDURE DateTimeInvestigation(@withdata bit)  
 -- @withdata = 0: only get the affected meta data information  
 -- @withdata = 1: get the affected meta data and instance information  
 AS  
 BEGIN  
 -- First get XML containing all schema collections containing affected element and attributes  
--- components (model groups????)   
+-- components (model groups?)   
 -- and columns that are affected by the schema collections.   
 CREATE table #_dt_collector(x xml);   
 ;with dttypes as  

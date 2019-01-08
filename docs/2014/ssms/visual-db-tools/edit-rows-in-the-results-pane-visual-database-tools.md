@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.pane.results
@@ -17,12 +17,12 @@ ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c837864701814ce0a1a9a45735cd8524bda1a90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121874"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818676"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>изменить строки на панели результатов (визуальные инструменты для баз данных)
   В большинстве случаев данные на [панели результатов](visual-database-tools.md)можно изменять. Сведения об изменении данных см. в разделах [Правила обновления результатов (визуальные инструменты для баз данных)](rules-for-updating-results-visual-database-tools.md) и [Работа с данными на панели результатов (визуальные инструменты для баз данных)](work-with-data-in-the-results-pane-visual-database-tools.md)можно изменять.  

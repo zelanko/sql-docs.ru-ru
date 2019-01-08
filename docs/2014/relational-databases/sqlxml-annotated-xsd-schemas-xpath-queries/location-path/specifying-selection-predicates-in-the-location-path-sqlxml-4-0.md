@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], predicates
@@ -19,12 +17,12 @@ ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a491b824881f9c308eed30e797e492561c40ad73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ded9395af45d9445f9189f411c7a0911a26e653
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144224"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807456"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Указание предикатов выбора в пути доступа (SQLXML 4.0)
   Предикат фильтрует набор узлов по отношению к оси (аналогично предложению WHERE в инструкции SELECT). Предикат указывается в квадратных скобках. Для каждого узла в фильтруемом наборе узлов выражение предиката вычисляется с этим узлом в качестве узла контекста, а количество узлов в наборе определяет размер контекста. Если для данного узла выражение предиката дает значение TRUE, то узел включается в результирующий набор узлов.  
@@ -34,7 +32,7 @@ ms.locfileid: "48144224"
 > [!NOTE]  
 >  Сведения об ограничениях этой реализации XPath и отличиях от спецификации W3C, см. в разделе [введение в использование запросов XPath &#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
-## <a name="selection-predicate-example-1"></a>Предикат выбора: Пример 1  
+## <a name="selection-predicate-example-1"></a>Предикат выбора. Пример 1  
  Следующее выражение XPath (путь доступа) выбирает из текущего контекстного узла все  **\<клиента >** дочерние элементы, имеющие **CustomerID** атрибута значение «ALFKI»:  
   
 ```  
@@ -49,7 +47,7 @@ ms.locfileid: "48144224"
 /Customer[@CustomerID="ALFKI"]  
 ```  
   
-## <a name="selection-predicate-example-2"></a>Предикат выбора: Пример 2  
+## <a name="selection-predicate-example-2"></a>Предикат выбора. Пример 2  
  Следующее выражение XPath (путь доступа) выбирает из текущего контекстного узла все  **\<порядок >** внучатые элементы, имеющие **SalesOrderID** атрибут со значением 1:  
   
 ```  
@@ -64,7 +62,7 @@ ms.locfileid: "48144224"
 /Customer/Order[@SalesOrderID="1"]  
 ```  
   
-## <a name="selection-predicate-example-3"></a>Предикат выбора: Пример 3  
+## <a name="selection-predicate-example-3"></a>Предикат выбора. Пример 3  
  Следующее выражение XPath (путь доступа) выбирает из текущего контекстного узла все  **\<клиента >** дочерние элементы, имеющие один или несколько  **\<ContactName >** дочерние элементы:  
   
 ```  
@@ -83,7 +81,7 @@ child::Customer[child::ContactName]
 Customer[ContactName]  
 ```  
   
-## <a name="selection-predicate-example-4"></a>Предикат выбора: Пример 4  
+## <a name="selection-predicate-example-4"></a>Предикат выбора. Пример 4  
  Следующее выражение XPath выбирает  **\<клиента >** дочерние элементы узла контекста, у которых нет  **\<ContactName >** дочерние элементы:  
   
 ```  
@@ -100,7 +98,7 @@ child::Customer[not(child::ContactName)]
 Customer[not(ContactName)]  
 ```  
   
-## <a name="selection-predicate-example-5"></a>Предикат выбора: Пример 5  
+## <a name="selection-predicate-example-5"></a>Предикат выбора. Пример 5  
  Следующее выражение XPath выбирает из текущего контекстного узла все  **\<клиента >** дочерние элементы, имеющие **CustomerID** атрибут:  
   
 ```  
@@ -115,7 +113,7 @@ child::Customer[attribute::CustomerID]
 Customer[@CustomerID]  
 ```  
   
-## <a name="selection-predicate-example-6"></a>Предикат выбора: Пример 6  
+## <a name="selection-predicate-example-6"></a>Предикат выбора. Пример 6  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 включает поддержку запросов XPath, которые содержат в предикате перекрестное произведение, как показано в следующем примере:  
   
 ```  

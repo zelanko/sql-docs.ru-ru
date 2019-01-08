@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.general.f1
@@ -13,18 +12,18 @@ ms.assetid: 7912362f-c4d6-4f60-bd39-dee1f656ed18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6337e69df7b7d6fe0984a843bf82124f90cc4d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b04098ad26cd4cf539fde4f1f826e4e6d1ce5c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112674"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786176"
 ---
 # <a name="publication-properties-general"></a>Свойства публикации, страница «Общие»
   Страница **Общие** диалогового окна **Свойства публикации** содержит основные сведения о публикации, включая ее имя, описание и порядок истечения срока ее действия.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Имя публикации (только для чтения).  
   
  **База данных**  
@@ -37,7 +36,7 @@ ms.locfileid: "48112674"
  Тип публикации (только для чтения).  
   
  **Окончание действия подписки**  
- Выберите один из параметров срока действия публикации: **Бессрочные подписки** или **Подписки со сроком действия**с четко обозначенным периодом времени (**Интервал**).  
+ Выберите один из параметров срока действия публикации: **Бессрочные подписки** или **подписки со сроком действия**, с помощью обозначенным периодом времени (**интервал**).  
   
  Для публикаций моментальных снимков и публикаций транзакций [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует использовать в качестве значения по умолчанию **Бессрочные подписки**.  
   

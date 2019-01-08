@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/02/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
@@ -19,17 +18,17 @@ ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef51e4b20fb96f76bbcfa8e9f5a2d4dccaa75d42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 86a96f938a036edf39b3602278f9b6b6d2d46719
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116395"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771666"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Определение и изменение параметризованного фильтра строк для статьи публикации слиянием
   В этом разделе описывается определение и изменение параметризованного фильтра строк в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- При создании статей таблицы можно применять параметризованные фильтры строк. Эти фильтры используют предложение [WHERE](/sql/t-sql/queries/where-transact-sql) , чтобы выбрать необходимые данные для публикации. Вместо того чтобы задавать буквенное значение в предложении (как для статического фильтра строк), вы указываете одну или обе системные функции: [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) и [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql). Дополнительные сведения см. в статье [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+ При создании статей таблицы можно применять параметризованные фильтры строк. Эти фильтры используют предложение [WHERE](/sql/t-sql/queries/where-transact-sql) , чтобы выбрать необходимые данные для публикации. Вместо того чтобы задавать буквенное значение в предложении (так, как в случае статического фильтра строк), вы указываете одну или обе следующие системные функции: [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) и [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql). Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d55e6bc30ec2634fd2b782fbb8986ab99c1fc91a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56157ce2c29a95d35198ab44835b50e45d7831a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174958"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752976"
 ---
 # <a name="plan-guide-successful-event-class"></a>Plan Guide Successful, класс событий
   Класс событий Plan Guide Successful показывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] успешно создал план выполнения для запроса или пакета, который содержал структуру плана. Событие возникает, когда выполняются следующие условия.  
@@ -42,7 +41,7 @@ ms.locfileid: "48174958"
 |EventClass|`int`|Тип события = 214.|27|Нет|  
 |EventSequence|`int`|Последовательность указанного события в запросе.|51|Нет|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
-|IsSystem|`int`|Указывает, вызвано ли событие системным процессом или пользовательским: 1 = системным, 0 = пользовательским.|60|Да|  
+|IsSystem|`int`|Указывает, в каком процессе произошло событие, в системном или в пользовательском. 1 = системный, 0 = пользовательский.|60|Да|  
 |LoginName|`nvarchar`|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате ДОМЕН\\*имя_пользователя*).|11|Да|  
 |LoginSid|`image`|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлениях каталога [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) или [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |NTDomainName|`nvarchar`|Домен Windows, к которому принадлежит пользователь.|7|Да|  

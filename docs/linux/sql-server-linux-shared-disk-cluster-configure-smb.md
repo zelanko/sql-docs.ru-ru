@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 5bd5581b2842ec5d11cd27a989aa41ddb2cee1de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661942"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531998"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Настроить экземпляр отказоустойчивого кластера — SMB — SQL Server в Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "47661942"
 
 В этой статье объясняется, как настроить хранилище SMB для экземпляра отказоустойчивого кластера (FCI) в Linux. 
  
-В мире отличных от Windows часто называют для совместного использования в качестве Common Internet File System (CIFS) и реализуются с помощью Samba SMB. В мире Windows, доступ к общей папке SMB выполняется таким образом: \\имя_сервера\имя_общего_ресурса. Для установки SQL Server под управлением Linux необходимо подключить общий ресурс SMB как папка.
+В мире отличных от Windows часто называют для совместного использования в качестве Common Internet File System (CIFS) и реализуются с помощью Samba SMB. В мире Windows доступ к общей папке SMB выполняется таким образом: \\ИМЯ_СЕРВЕРА\ИМЯ_ОБЩЕГО_РЕСУРСА. Для установки SQL Server под управлением Linux необходимо подключить общий ресурс SMB как папка.
 
 ## <a name="important-source-and-server-information"></a>Важные сведения об источнике и сервере
 
@@ -102,7 +102,7 @@ ms.locfileid: "47661942"
    *    Удалите файлы из существующего каталога данных SQL Server. Вы не получите любое подтверждение при успешном выполнении.
  
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    Убедитесь, что файлы были удалены. 

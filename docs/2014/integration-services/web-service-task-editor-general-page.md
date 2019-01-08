@@ -15,12 +15,12 @@ ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32da4424359a7b27ebef6f48c988f9e20c6f4d71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d349947ed06ec406dad4f928cdbbc97838aec409
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090234"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538685"
 ---
 # <a name="web-service-task-editor-general-page"></a>Редактор задачи «Веб-служба» (страница «Общие»)
   Страница **Общие** в диалоговом окне **Редактор задачи "Веб-служба"** применяется для указания диспетчера HTTP-соединений, расположения файла WSDL, используемого задачей веб-службы, описания задачи веб-службы и загрузки файла WSDL.  
@@ -29,15 +29,15 @@ ms.locfileid: "48090234"
   
 ## <a name="options"></a>Параметры  
  **HTTPConnection**  
- Выберите диспетчер соединений из списка или щелкните \<**Создать соединение…**>, чтобы создать его.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
 > [!IMPORTANT]  
 >  Диспетчер HTTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
   
- **См. также**: [Диспетчер HTTP-соединений](connection-manager/http-connection-manager.md), [Редактор диспетчера HTTP-соединений](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **См. также:**  [Диспетчер HTTP-соединений](connection-manager/http-connection-manager.md), [редактор диспетчера HTTP-соединений &#40;страница сервера&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- Введите полный путь к локальному WSDL-файлу на компьютере или нажмите кнопку обзора **(…)** и выберите файл.  
+ Введите полный путь к локальному WSDL-файлу на компьютере или нажмите кнопку обзора **(...)** и выберите файл.  
   
  Если WSDL-файл был загружен на компьютер вручную, выберите этот файл. Однако, если WSDL-файл еще не был загружен, выполните следующие действия.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48090234"
   
  Если планируется загрузить WSDL-файл с помощью **загрузить язык WSDL** "Кнопка", это значение равно `True`.  
   
- **Название**  
+ **Name**  
  Введите уникальное имя задачи веб-службы. Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -72,9 +72,9 @@ ms.locfileid: "48090234"
  Эта кнопка недоступна, пока не указано имя существующего локального файла в поле **WSDLFile** .  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задач веб-служба &#40;страница «Вход»&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Редактор задач веб-служба &#40;вывода страницы&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
- [Страница "Выражения"](expressions/expressions-page.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Веб-служба" (страница "Ввод")](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [Редактор задачи "Веб-служба" (страница "Вывод")](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)  
   
   

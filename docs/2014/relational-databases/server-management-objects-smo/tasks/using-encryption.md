@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - database master key [SMO]
@@ -21,36 +19,36 @@ ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95a0323cc5362ec2fd780c5ee28926b3b78aa755
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09de7053de66d2d280c2bc6da61b8bf6b2ebf55b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198524"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794466"
 ---
 # <a name="using-encryption"></a>Использование шифрования
-  В SMO главный ключ службы, представленного <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> объекта. Это ссылается <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Server> объекта. Его можно сформировать заново с помощью <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> метод.  
+  В SMO главный ключ службы представлен объектом <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey>. На него ссылается свойство <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Server>. Его можно сформировать заново с помощью метода <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A>.  
   
- Главный ключ базы данных представлена <xref:Microsoft.SqlServer.Management.Smo.MasterKey> объекта. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> Свойство указывает, зашифрован ли главный ключ базы данных с помощью главного ключа службы. Зашифрованная копия в базе данных master обновляется автоматически при любом изменении главного ключа базы данных.  
+ Главный ключ базы данных представлен объектом <xref:Microsoft.SqlServer.Management.Smo.MasterKey>. Свойство <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> указывает, шифруется ли главный ключ базы данных с помощью главного ключа службы. Зашифрованная копия в базе данных master обновляется автоматически при любом изменении главного ключа базы данных.  
   
- Можно удалять службы с помощью ключа шифрования <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> метод и зашифровать главный ключ базы данных с паролем. В таком случае потребуется явно открыть главный ключ базы данных перед доступом к хранящимся в нем закрытым ключам.  
+ С помощью метода <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> можно отключить шифрование с использованием ключа службы и зашифровать главный ключ базы данных с использованием пароля. В таком случае потребуется явно открыть главный ключ базы данных перед доступом к хранящимся в нем закрытым ключам.  
   
- При присоединении базы данных к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо указать пароль для главного ключа базы данных либо выполнить <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> метод, чтобы создать незашифрованную копию главного ключа базы данных, доступную для шифрования в службе главный ключ. Этот шаг рекомендуется, поскольку он позволяет избежать необходимости явно открывать главный ключ базы данных.  
+ При подключении базы данных к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] необходимо либо предоставить пароль для главного ключа базы данных, либо выполнить метод <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A>, чтобы создать незашифрованную копию главного ключа базы данных, доступную для шифрования с использованием главного ключа службы. Этот шаг рекомендуется, поскольку он позволяет избежать необходимости явно открывать главный ключ базы данных.  
   
- <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> Метод повторно создает главный ключ базы данных. При повторном создании главного ключа базы данных все ключи, которые были зашифрованы главным ключом базы данных, расшифровываются, а затем шифруются с использованием нового главного ключа базы данных. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> Метод удаления шифрования главного ключа базы данных с помощью главного ключа службы. Сущность <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> используется для шифрования копии главного ключа с помощью главного ключа службы и сохраняется как в текущей базе данных, так и в базе данных master.  
+ Метод <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> используется для повторного создания главного ключа базы данных. При повторном создании главного ключа базы данных все ключи, которые были зашифрованы главным ключом базы данных, расшифровываются, а затем шифруются с использованием нового главного ключа базы данных. Метод <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> используется для удаления шифрования главного ключа базы данных с помощью главного ключа службы. Сущность <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> используется для шифрования копии главного ключа с помощью главного ключа службы и сохраняется как в текущей базе данных, так и в базе данных master.  
   
- В SMO сертификаты представлены <xref:Microsoft.SqlServer.Management.Smo.Certificate> объекта. <xref:Microsoft.SqlServer.Management.Smo.Certificate> Объект имеет свойства, указывающие открытый ключ, имя субъекта, срок действия и сведения об издателе. Разрешение на доступ к сертификату управляется с помощью `Grant`, `Revoke` и `Deny` методы.  
+ В SMO сертификаты представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Certificate>. У объекта <xref:Microsoft.SqlServer.Management.Smo.Certificate> есть свойства, указывающие открытый ключ, имя субъекта, срок действия и сведения об издателе. Разрешение на доступ к сертификату управляется с помощью методов `Grant`, `Revoke` и `Deny`.  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-a-certificate-in-visual-basic"></a>Добавление сертификата на языке Visual Basic  
- В этом примере кода создается простой сертификат с паролем для шифрования. В отличие от других объектов <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> метод имеет несколько перегрузок. Перегруженный метод, используемый в этом примере, создает новый сертификат с паролем для шифрования.  
+ В этом примере кода создается простой сертификат с паролем для шифрования. В отличие от других объектов у метода <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> есть несколько перегруженных методов. Перегруженный метод, используемый в этом примере, создает новый сертификат с паролем для шифрования.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBCertificate1](SMO How to#SMO_VBCertificate1)]  -->  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>Добавление сертификата на языке Visual C#  
- В этом примере кода создается простой сертификат с паролем для шифрования. В отличие от других объектов <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> метод имеет несколько перегрузок. Перегруженный метод, используемый в этом примере, создает новый сертификат с паролем для шифрования.  
+ В этом примере кода создается простой сертификат с паролем для шифрования. В отличие от других объектов у метода <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> есть несколько перегруженных методов. Перегруженный метод, используемый в этом примере, создает новый сертификат с паролем для шифрования.  
   
 ```  
 {  
@@ -78,7 +76,7 @@ ms.locfileid: "48198524"
 ```  
   
 ## <a name="adding-a-certificate-in-powershell"></a>Добавление сертификата в PowerShell  
- В этом примере кода создается простой сертификат с паролем для шифрования. В отличие от других объектов <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> метод имеет несколько перегрузок. Перегруженный метод, используемый в этом примере, создает новый сертификат с паролем для шифрования.  
+ В этом примере кода создается простой сертификат с паролем для шифрования. В отличие от других объектов у метода <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> есть несколько перегруженных методов. Перегруженный метод, используемый в этом примере, создает новый сертификат с паролем для шифрования.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

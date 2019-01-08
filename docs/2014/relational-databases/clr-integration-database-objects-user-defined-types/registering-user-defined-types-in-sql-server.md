@@ -33,12 +33,12 @@ ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 158f71abbe82a3b15b497ea8cbd6e74aec2ed6ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216194"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508446"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Регистрация определяемых пользователем типов в SQL Server
   Для использования определяемого пользователем типа (UDT) в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо зарегистрировать его. Регистрация определяемого пользователем типа включает регистрацию сборки и создание типа в базе данных, в которой его нужно использовать. Определяемые пользователем типы находятся в одной базе данных и не могут использоваться в нескольких базах данных, пока идентичная сборка и определяемый пользователем тип не будут зарегистрированы в каждой базе данных. После регистрации сборки определяемого пользователем типа и создания типа этот тип можно использовать в [!INCLUDE[tsql](../../includes/tsql-md.md)] и клиентском коде. Дополнительные сведения об определяемых пользователем типах данных CLR см. в разделе [Определяемые пользователем типы данных CLR](clr-user-defined-types.md).  
@@ -83,7 +83,7 @@ WITH PERMISSION_SET = SAFE;
 ```  
 USE AdventureWorks;  
 CREATE ASSEMBLY Point  
-FROM 0xfeac4 … 21ac78  
+FROM 0xfeac4 ... 21ac78  
 ```  
   
 ### <a name="using-create-type"></a>Использование инструкции CREATE TYPE  

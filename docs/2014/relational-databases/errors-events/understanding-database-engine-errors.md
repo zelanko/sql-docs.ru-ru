@@ -15,12 +15,12 @@ ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 759dd5aa8381669f2f17136406f144e23b1ec103
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174724"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534645"
 ---
 # <a name="understanding-database-engine-errors"></a>Основные сведения об ошибках компонента Database Engine
   Ошибки, возникшие в компоненте [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , имеют атрибуты, описанные в следующей таблице.  
@@ -56,7 +56,7 @@ SELECT
   
  Дополнительные сведения см. в разделе [sys.messages (Transact-SQL)](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys.messages (Transact-SQL)](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
  [RAISERROR (Transact-SQL)](/sql/t-sql/language-elements/raiserror-transact-sql)   
  [@@ERROR (Transact-SQL)](/sql/t-sql/functions/error-transact-sql)   

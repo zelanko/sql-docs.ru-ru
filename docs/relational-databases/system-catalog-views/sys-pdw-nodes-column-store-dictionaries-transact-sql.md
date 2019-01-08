@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: eeed58e54510748969b1111e09c3791a9320d23c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de2cd6746b23ebec2b51e124ba7b5d2e22fb91e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732778"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520863"
 ---
 # <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47732778"
 |**column_id**|**int**|Идентификатор столбца columnstore.|  
 |**dictionary_id**|**int**|Идентификатор словаря.|  
 |**version**|**int**|Версия формата словаря.|  
-|**type**|**int**|Тип словаря:<br /><br /> 1 — хэш-словарь, содержащий **int** значения<br /><br /> 2 — не используется<br /><br /> 3 — хэш-словарь, содержащий строковые значения<br /><br /> 4 — хэш-словарь, содержащий **float** значения|  
+|**type**|**int**|Тип словаря:<br /><br /> 1 - hash, словарь, содержащий **int** значения<br /><br /> 2 - не используется<br /><br /> 3 — хэш-словарь, содержащий строковые значения<br /><br /> 4 - словарь, содержащий hash **float** значения|  
 |**last_id**|**int**|Последний идентификатор данных в словаре.|  
 |**entry_count**|**bigint**|Количество записей в словаре.|  
 |**on_disc_size**|**bigint**|Размер словаря в байтах.|  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6312332a6c0c8cc9cf07a93f67aa71ebd61b62ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 009a2eda2bf0690ee9657a156a02eb4659a3224d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054244"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793568"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (выражение служб SSIS)
   Возвращает токен (подстроку) из строки с учетом заданных разделителей токенов строки и номера токена, определяющего, какой токен следует возвратить.  
@@ -32,7 +31,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
  Строка, содержащая токены, разделенные соответствующими символами.  
   
  *delimiter_string*  
- Строка, содержащая символы разделения. Например, строка «; ,» содержит три символа разделения: точку с запятой, пробел и запятую.  
+ Строка, содержащая символы разделения. Например, строка "; ," содержит три символа разделения: точку с запятой, пробел и запятую.  
   
  *occurrence*  
  Целое число со знаком или без знака, указывающее возвращаемый токен. Например, если для параметра указать значение 3, из строки будет возвращен третий токен.  
@@ -40,7 +39,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Эта функция разделяет строку <character_expression> на набор токенов, разделенных символами, которые заданы в строке <delimiter_string>, а затем возвращает токен N, где N — это порядковый номер токена, заданный параметром \<occurrence>. Примеры использования этой функции см. в разделе «Примеры».  
   
  Следующие примечания относятся к функции TOKEN.  
@@ -58,7 +57,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 -   Переменные и столбцы могут использоваться в качестве значений всех аргументов в выражении.  
   
 ## <a name="expression-examples"></a>Примеры выражений  
- В следующем примере функция TOKEN возвращает значение «a». Строка «a little white dog» состоит из 4 токенов «a», «little», «white» и «dog», разделенных символом « » (символ пробела). Второй аргумент — строка разделителя, задает только один разделитель, символ пробела, который используется для разбития входной строки на токены. Последний аргумент — 1, указывает, что возвращаться должен первый токен. В этом образце строки первый токен — «а».  
+ В следующем примере функция TOKEN возвращает значение «a». Строка "a little white dog" состоит из 4 токенов: "a", "little", "white" и "dog", разделенных символом " " (символ пробела). Второй аргумент — строка разделителя, задает только один разделитель, символ пробела, который используется для разбития входной строки на токены. Последний аргумент — 1, указывает, что возвращаться должен первый токен. В этом образце строки первый токен — "а".  
   
 ```  
 TOKEN("a little white dog"," ",1)  
@@ -94,13 +93,13 @@ TOKEN("        a little white dog", " ", 1)
 TOKEN("2009/01/01", "/"), 1  
 ```  
   
- В следующем примере функция TOKEN возвращает имя файла из указанного пути. Например, если значение параметра User::Path равно «c:\program files\data\myfile.txt», функция TOKEN возвращает строку «myfile.txt». Функция TOKENCOUNT возвращает 4, и функция TOKEN возвращает четвертый токен — «myfile.txt».  
+ В следующем примере функция TOKEN возвращает имя файла из указанного пути. Например, если значение параметра User::Path равно "c:\program files\data\myfile.txt", функция TOKEN возвращает строку "myfile.txt". Функция TOKENCOUNT возвращает 4, а функция TOKEN возвращает четвертый токен — "myfile.txt".  
   
 ```  
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   
   

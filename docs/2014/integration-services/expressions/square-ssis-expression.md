@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQUARE
@@ -14,12 +13,12 @@ ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c375621cf6b8f6310fad1beec74b9cf1850478d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7b312453000aaf3862eef91c5c660ecf6ecb9cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214984"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787236"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (выражение служб SSIS)
   Возвращает квадрат числового выражения.  
@@ -33,7 +32,7 @@ SQUARE(numeric_expression)
   
 ## <a name="arguments"></a>Аргументы  
  *numeric_expression*  
- Числовое выражение любого типа числовых данных. Дополнительные сведения см. в статье [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Числовое выражение любого типа числовых данных. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Типы результата  
  DT_R8  
@@ -66,6 +65,6 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 >  В выражениях имена переменных всегда содержат префикс \@.  
   
 ## <a name="see-also"></a>См. также  
- [Функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md)  
+ [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   
   

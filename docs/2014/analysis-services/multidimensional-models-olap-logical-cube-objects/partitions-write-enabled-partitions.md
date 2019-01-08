@@ -19,12 +19,12 @@ ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8429c02d84520524906fb0fbd411ee0a49169815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0dcfda333d3381b1a35313c00e6c95173b869c7d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194644"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352490"
 ---
 # <a name="write-enabled-partitions"></a>Секции, доступные для записи
   Как правило, данные в кубе доступны только для чтения. Однако для определенных сценариев может быть необходимым иметь доступ к секции с возможностью записи. Секции, доступные для записи, позволяют пользователям исследовать сценарии, изменяя значения ячеек и анализируя влияние этих изменений на данные куба. При разрешении записи в секцию клиентские приложения могут записывать изменения данных секции. Эти изменения, называющиеся данными обратной записи, сохраняются в отдельной таблице, и не перезаписывают существующие данные в группе мер. Однако они включены в результаты запросов, поскольку являются частью данных куба.  
@@ -32,7 +32,7 @@ ms.locfileid: "48194644"
  Доступ для записи может быть предоставлен всему кубу или определенным секциям в кубе. Измерения, доступные для записи, являются различными, но взаимодополняющими объектами.  Секция, доступная для записи, дает возможность пользователям обновлять ячейки секции, в то время как доступное для записи измерение позволяет пользователям обновлять элементы измерения. Эти две функции можно сочетать друг с другом. Например, куб или секция, доступные для записи, необязательно должны включать в себя какие-либо измерения, доступные для записи. **См. также:**[измерениях](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 > [!NOTE]  
->  При необходимости разрешения записи в куб, источником данных которого является база данных Microsoft Access, не используйте поставщик Microsoft OLE DB для драйверов ODBC в определениях источника данных для куба, его секций или его измерений. Вместо этого можно использовать поставщик Microsoft Jet 4.0 OLE DB или любую версию пакета обновления Jet Service Pack, включающего Jet 4.0 OLE Дополнительные сведения см. в статье базы знаний Майкрософт [как получить последний пакет обновления для Microsoft Jet 4.0 Database Engine](http://support.microsoft.com/?kbid=239114).  
+>  При необходимости разрешения записи в куб, источником данных которого является база данных Microsoft Access, не используйте поставщик Microsoft OLE DB для драйверов ODBC в определениях источника данных для куба, его секций или его измерений. Вместо этого можно использовать поставщик Microsoft Jet 4.0 OLE DB или любую версию пакета обновления Jet Service Pack, включающего Jet 4.0 OLE Дополнительные сведения см. в статье базы знаний Майкрософт [как получить последний пакет обновления для Microsoft Jet 4.0 Database Engine](https://support.microsoft.com/?kbid=239114).  
   
  Куб может быть доступен для записи только в том случае, если все его меры используют агрегатную функцию `Sum`. Для связанных групп мер и локальных кубов нельзя разрешить запись.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48194644"
 ## <a name="see-also"></a>См. также  
  [Измерения, доступные для записи](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [Агрегаты и статистические схемы](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
- [Секции &#40;службы Analysis Services — многомерные данные&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Секции (службы Analysis Services — многомерные данные)](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Измерения, доступные для записи](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

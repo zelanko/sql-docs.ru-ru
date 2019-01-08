@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70ad2bc83f1a77bc9649e3747c309ad6522b2007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 327e02721efaeb480d2b816de6af8135e1d1a80f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196364"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771106"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Пользовательские свойства задач управления CDC
   Пользовательские свойства задачи «Управление CDC» описаны в следующей таблице. Все свойства доступны для чтения и записи.  
@@ -34,7 +33,7 @@ ms.locfileid: "48196364"
 |CommandTimeout|integer|Это значение указывает время ожидания (в секундах), которое используется при взаимодействии с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это значение используется в тех случаях, если время ответа из базы данных весьма продолжительно и значение по умолчанию (30 секунд) является недостаточным.|  
   
 ## <a name="see-also"></a>См. также  
- [Задача «Управление CDC»](cdc-control-task.md)   
- [Редактор задачи «Управление CDC»](../cdc-control-task-editor.md)  
+ [CDC Control Task](cdc-control-task.md)   
+ [CDC Control Task Editor](../cdc-control-task-editor.md)  
   
   

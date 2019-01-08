@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 3b36e720cc390311c851eef55d09a74cc5e5d6ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601824"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503280"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Оценка предприятия и объединять оценки с помощью DMA
 
@@ -70,7 +70,7 @@ ms.locfileid: "51601824"
 - Таблицы SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Если в CSV-файле
-При использовании в CSV-файл для импорта данных, убедитесь, существует только два столбца данных — **имя экземпляра** и **имя базы данных**, и что у столбцов нет строки заголовка.
+При использовании CSV-файл для импорта данных, убедитесь, существует только два столбца данных — **имя экземпляра** и **имя базы данных**, и что у столбцов нет строки заголовка.
  
  ![содержимое файла CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
@@ -218,7 +218,7 @@ ms.locfileid: "51601824"
 В этом разделе находится в основной отчет, показывающий готовность базы-данных экземпляра. Этот отчет содержит иерархию детализации:
 - База_данных_экземпляра
 - ChangeCategory
-- Title
+- Заголовок
 - ObjectType
 - ImpactedObjectName
 

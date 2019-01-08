@@ -16,12 +16,12 @@ ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80fb27aa51d6e0a44f8f006711708e24cd04bef3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db3b72b7bdaf60febdeb41eb6f6e1e86c5064f63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632322"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507161"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Указывает один или несколько атрибутов [поле](../../../ado/reference/ado-api/field-object.md) объекта.  
@@ -38,7 +38,7 @@ ms.locfileid: "47632322"
 |**adFldIsRowURL**|0x10000|Указывает, что поле содержит URL-адреса, имена ресурсов из хранилища данных, представленный записи.|  
 |**adFldLong**|0x80|Указывает, что поле является длинным двоичным полем. Также указывает, что можно использовать [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) и [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) методы.|  
 |**adFldMayBeNull**|0x40|Указывает, что можно прочитать значения null из поля.|  
-|**adFldMayDefer**|0x2|Указывает, что поле откладывается — то есть значения полей не извлекаются из источника данных с помощью всей записи, но только в том случае, если вы явным образом обращаться к ним.|  
+|**adFldMayDefer**|0x2|Указывает, что поле что отложенное заключается, значения полей получаются из источника данных с помощью всей записи, но только в том случае, если вы явным образом обращаться к ним.|  
 |**adFldNegativeScale**|0x4000|Указывает, что поле представляет числовое значение из столбца, который поддерживает отрицательные значения масштабирования. Масштаб задается [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) свойство.|  
 |**adFldRowID**|0x100|Указывает, что поле содержит постоянный идентификатор строк, не может быть записан и имеющий отсутствии содержательного значения, за исключением того, чтобы определить строки (например, номер записи, уникальный идентификатор и так далее).|  
 |**adFldRowVersion**|0x200|Указывает, что поле содержит какой-то отметку времени или даты, используемый для отслеживания обновлений.|  

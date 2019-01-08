@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -16,12 +15,12 @@ ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d4c2bbf0d59cce86debc955d8cf4cefade5ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150124"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809983"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Параметры воспроизведения (приложение SQL Server Profiler)
   Перед воспроизведением захваченной трассировки с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]задайте параметры воспроизведения в диалоговом окне **Конфигурация воспроизведения** . Чтобы открыть его, откройте файл трассировки воспроизведения в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]и в меню **Воспроизведение** выберите **Запуск**. Сведения о разрешениях, необходимых для воспроизведения трассировки, см. в разделе [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md).  
@@ -80,7 +79,7 @@ ms.locfileid: "48150124"
   
 ## <a name="see-also"></a>См. также  
  [Воспроизведение трассировок](replay-traces.md)   
- [Требования к воспроизведению](replay-requirements.md)   
- [Вопросы воспроизведения трассировки &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
+ [Replay Requirements](replay-requirements.md)   
+ [Вопросы воспроизведения трассировки (приложение SQL Server Profiler)](considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

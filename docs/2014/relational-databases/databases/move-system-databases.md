@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - moving system databases
@@ -28,12 +27,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3297457db7fb0d363e8122cab9b4d02abcd87ceb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080424"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756276"
 ---
 # <a name="move-system-databases"></a>Перемещение системных баз данных
   В этом разделе описано, как в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]перемещают системные базы данных. Эта операция может пригодиться в следующих ситуациях:  
@@ -61,7 +60,7 @@ ms.locfileid: "48080424"
   
 -   [Перемещение базы данных Resource](#Resource)  
   
--   [Продолжение: После перемещения всех системных баз данных](#Follow)  
+-   [Дальнейшие действия: После перемещения всех системных баз данных](#Follow)  
   
 -   [Примеры](#Examples)  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48080424"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или выключите систему для проведения работ по обслуживанию дисков. Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+2.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или выключите систему для проведения работ по обслуживанию дисков. Дополнительные сведения см. в статье [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Переместите файл или файлы в новое расположение.  
   
@@ -159,11 +158,11 @@ ms.locfileid: "48080424"
   
 3.  В диалоговом окне **Свойства SQL Server (***имя_экземпляра***)** перейдите на вкладку **Параметры запуска**.  
   
-4.  В поле **Существующие параметры** выберите параметр –d, чтобы переместить файл данных master. Нажмите **Обновить** для сохранения изменений.  
+4.  В поле **Существующие параметры** выберите параметр -d, чтобы переместить файл данных master. Нажмите **Обновить** для сохранения изменений.  
   
      В поле **Укажите параметр запуска** задайте новый путь к базе данных master.  
   
-5.  В поле **Существующие параметры** выберите параметр –l, чтобы переместить файл журнала master. Нажмите **Обновить** для сохранения изменений.  
+5.  В поле **Существующие параметры** выберите параметр -l, чтобы переместить файл журнала master. Нажмите **Обновить** для сохранения изменений.  
   
      В поле **Укажите параметр запуска** задайте новый путь к базе данных master.  
   
@@ -197,7 +196,7 @@ ms.locfileid: "48080424"
 ##  <a name="Resource"></a> Перемещение базы данных Resource  
  База данных Resource находится в каталоге \<*диск*>:\Program Files\Microsoft SQL Server\MSSQL\<версия.\<*имя_экземпляра*>\MSSQL\Binn\\. Эту базу данных нельзя переместить.  
   
-##  <a name="Follow"></a> Продолжение: после перемещения всех системных баз данных  
+##  <a name="Follow"></a> Дальнейшие действия: После перемещения всех системных баз данных  
  Если все системные базы данных перемещаются на новый диск или том либо на другой сервер с другой буквой диска, выполните следующие обновления.  
   
 -   Измените путь к журналу агента SQL Server. Если этого не сделать, то агент SQL Server не сможет запуститься.  
@@ -264,7 +263,7 @@ ms.locfileid: "48080424"
   
 5.  Удалите файлы `tempdb.mdf` и `templog.ldf` из исходного местоположения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [База данных Resource](resource-database.md)   
  [База данных tempdb](tempdb-database.md)   
  [База данных master](master-database.md)   

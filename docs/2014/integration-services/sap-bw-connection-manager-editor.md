@@ -11,12 +11,12 @@ ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e73545b8417b92abf57747441b49531736ecdd48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52a7ceaa177c223363f4c14313cf14f70a0e52f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120820"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508683"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Редактор диспетчера соединений SAP BW
   Используйте **Редактор диспетчера соединений SAP BW** , чтобы указать свойства для подключения к системе SAP Netweaver BW версии 7.  
@@ -34,7 +34,7 @@ ms.locfileid: "48120820"
   
     -   Дважды щелкните диспетчер соединений SAP BW.  
   
-         —или—  
+         -или-  
   
     -   Щелкните правой кнопкой мыши диспетчер соединений SAP BW, а затем выберите **Изменить**.  
   

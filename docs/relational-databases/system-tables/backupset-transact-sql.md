@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5bf5ce20678845111a1f410739674c50c7bb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596163"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402859"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47596163"
 |**last_media_number**|**smallint**|Номер носителя, которым заканчивается резервный набор данных. Может иметь значение NULL.|  
 |**catalog_family_number**|**tinyint**|Номер семейства носителя, содержащего начало каталога резервного набора данных. Может иметь значение NULL.|  
 |**catalog_media_number**|**smallint**|Номер носителя, содержащего начало каталога резервного набора данных. Может иметь значение NULL.|  
-|**положение**|**int**|Позиция резервного набора данных, используемая в операции восстановления для поиска соответствующего резервного набора данных и файлов. Может иметь значение NULL. Дополнительные сведения см. в разделе файла в [резервного КОПИРОВАНИЯ &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Позиция резервного набора данных, используемая в операции восстановления для поиска соответствующего резервного набора данных и файлов. Может иметь значение NULL. Дополнительные сведения см. в разделе файла в [резервного КОПИРОВАНИЯ &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Дата и время окончания срока действия для резервного набора. Может иметь значение NULL.|  
 |**software_vendor_id**|**int**|Идентификационный номер поставщика программного обеспечения, выполняющего запись заголовка резервного носителя. Может иметь значение NULL.|  
 |**name**|**nvarchar(128)**|Имя резервного набора. Может иметь значение NULL.|  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
@@ -13,12 +13,12 @@ ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e0f1e8f3e76ffbe84495fc7bae6229a1b590089
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211934"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783886"
 ---
 # <a name="sql-server-agent"></a>Агент SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это служба Microsoft Wвdows, выполняющая запланированные административные задачи, которые называются *заданиями* в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "48211934"
 ### <a name="schedules"></a>Расписания  
  *Расписание* определяет время выполнения задания. Сразу несколько заданий могут выполняться по одному и тому же расписанию, а несколько расписаний могут применяться к одному и тому же заданию. Расписание может определить следующие условия для времени выполнения задания:  
   
--   при каждом запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];  
+-   При каждом запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   каждый раз, когда использование ЦП компьютера будет достигать уровня, который определен как уровень простоя;  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48211934"
   
  Дополнительные сведения см. в разделе [Создание и присоединение расписаний к заданиям](create-and-attach-schedules-to-jobs.md).  
   
-### <a name="alerts"></a>видны узлы  
+### <a name="alerts"></a>Предупреждения  
  *Предупреждение* — это автоматический ответ на наступление указанного события. Например, событие может быть заданием, которое начинает выполняться, или системным ресурсом, достигшим указанного порогового значения. Пользователь определяет условия, при которых выдается предупреждение.  
   
  Предупреждение может быть реакцией на одно из следующих условий:  

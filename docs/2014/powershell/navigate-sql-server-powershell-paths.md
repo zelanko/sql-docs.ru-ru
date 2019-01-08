@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e13b3cde8681c4f717f0fa12d7426eea58d0caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135894"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752087"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Перемещение путей SQL Server PowerShell
   Поставщик компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell представляет набор объектов в экземпляре SQL Server в структуре, аналогичной пути к файлу. Командлеты Windows PowerShell можно использовать для навигации по пути поставщика и для создания нестандартных дисков, укорачивающих путь, который требуется ввести.  
@@ -115,9 +114,9 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>Создание пользовательского диска  
  **Создание и использование пользовательского диска**  
   
-1.  Использование `New-PSDrive` для определения пользовательского диска. Используйте `Root` параметр для указания пути, представляемого именем пользовательского диска.  
+1.  Использование `New-PSDrive` для определения пользовательского диска. Используйте параметр `Root` для указания пути, представляемого именем пользовательского диска.  
   
-2.  Используйте имя пользовательского диска в командлетах прохождения пути, такие как `Set-Location`.  
+2.  Используйте имя пользовательского диска в таких командлетах прохождения пути, как `Set-Location`.  
   
 ### <a name="custom-drive-example-powershell"></a>Пример пользовательского диска (PowerShell)  
  В приведенном ниже примере создается виртуальный диск AWDB, сопоставленный с узлом для развернутой копии образца базы данных AdventureWorks2012. Виртуальный диск затем используется для перехода к таблице в базе данных.  

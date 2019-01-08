@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d515496ec264e4b6331021d385a8d42a981fbbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 373cee8bf85815db18c50eb2919600ffec258f0b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058364"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516501"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Создание, изменение и удаление таблиц FileTables
   Описывает способы создания новых таблиц FileTable и изменения или удаления существующих таблиц FileTable.  
@@ -35,7 +35,7 @@ ms.locfileid: "48058364"
   
 -   Можно также указать имена, предназначенные для использования в трех первичных ключах и ограничениях уникальности, создаваемых автоматически.  
   
-###  <a name="HowToCreate"></a> Практическое руководство. Создание таблицы FileTable  
+###  <a name="HowToCreate"></a> Инструкции: создать FileTable  
  **Создание таблицы FileTable с помощью Transact-SQL**  
  Создайте объект FileTable, вызвав инструкцию [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) с параметром **AS FileTable**. Поскольку таблица FileTable имеет фиксированную схему, нет необходимости указывать список столбцов. Можно указать следующие параметры для новой FileTable:  
   
@@ -96,7 +96,7 @@ GO
   
 -   Поскольку таблица FileTable содержит столбец FILESTREAM, требуется действующая файловая группа FILESTREAM. При необходимости можно указать действующую файловую группу FILESTREAM в команде **CREATE TABLE** для создания таблицы FileTable. Если файловая группа не указана, то таблица FileTable использует файловую группу FILESTREAM по умолчанию для базы данных. Если база данных не содержит файловую группу FILESTREAM, то возникнет ошибка.  
   
--   Невозможно создать ограничение таблицы в составе инструкции **CREATE TABLE…AS FILETABLE** . Однако можно добавить ограничение позже с помощью инструкции **ALTER TABLE** .  
+-   Невозможно создать ограничение таблицы в составе инструкции **CREATE TABLE…AS FILETABLE**. Однако можно добавить ограничение позже с помощью инструкции **ALTER TABLE** .  
   
 -   Невозможно создать FileTable в базе данных **tempdb** или любой другой системной базе данных.  
   
@@ -107,7 +107,7 @@ GO
   
  Сведения об использовании инструкции ALTER TABLE для включения или отключения пространства имен FileTable, включая системные ограничения, см. в разделе [Управление объектами FileTable](manage-filetables.md).  
   
-###  <a name="HowToChange"></a> Практическое руководство. Изменение каталога для таблицы FileTable  
+###  <a name="HowToChange"></a> Инструкции: изменить каталог для таблицы FileTable  
  **Изменение каталога для таблицы FileTable с помощью Transact-SQL**  
  Вызовите инструкцию ALTER TABLE и задайте новое допустимое значение параметра **FILETABLE_DIRECTORY** SET.  
   
@@ -181,7 +181,7 @@ GO
   
 -   *<уникальный_идентификатор>\<* — это формируемая системой строка, уникальным образом идентифицирующая ограничение. Эта строка может содержать имя таблицы FileTable и уникальный идентификатор.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление таблицами FileTable](manage-filetables.md)  
   
   

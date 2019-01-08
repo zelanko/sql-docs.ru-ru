@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services]
@@ -18,12 +17,12 @@ ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b07719a39cd8f82561bd92635dcba8e97ffee532
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8125a27eed225a137a5665d87c923271cb592859
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096044"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793136"
 ---
 # <a name="members-master-data-services"></a>Элементы (службы основных данных)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]элементы являются физическими основными данными. Например, элемент может быть велосипедом «Road-150» в сущности «Product» или конкретным клиентом в сущности «Customer».  
@@ -62,11 +61,11 @@ ms.locfileid: "48096044"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание нового конечного элемента.|[Создание конечного элемента &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
-|Создание нового объединенного элемента.|[Создание объединенного элемента &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
-|Удаление существующего элемента или коллекции.|[Удаление элемента или коллекции &#40;службы Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
-|Повторная активация удаленного элемента или коллекции.|[Повторная активация элемента или коллекции &#40;службы Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|Обновление значений атрибутов элемента.|[Изменение типа атрибута &#40;надстройка MDS для Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|Создание нового конечного элемента.|[Создание конечного элемента (службы Master Data Services)](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
+|Создание нового объединенного элемента.|[Создание объединенного элемента (службы Master Data Services)](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
+|Удаление существующего элемента или коллекции.|[Удаление элемента или коллекции (службы Master Data Services)](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
+|Повторная активация удаленного элемента или коллекции.|[Повторная активация элемента или коллекции (службы Master Data Services)](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
+|Обновление значений атрибутов элемента.|[Изменение типа атрибута (надстройка MDS для Excel)](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 |Перемещение элементов в иерархии.|[Перемещение элементов в иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
@@ -75,16 +74,16 @@ ms.locfileid: "48096044"
   
 -   [Сущности (службы Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [Атрибуты &#40;службы Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [Атрибуты (службы Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [Иерархии &#40;службы Master Data Services&#41;](hierarchies-master-data-services.md)  
+-   [Иерархии (службы Master Data Services)](hierarchies-master-data-services.md)  
   
--   [Коллекции &#40;службы Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [Коллекции (службы Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
   
--   [Разрешения конечного элемента &#40;службы Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [Разрешения конечного элемента (службы основных данных)](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
 -   [Объединенные разрешения &#40;службы Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
--   [Операторы фильтров &#40;службы Master Data Services&#41;](../../2014/master-data-services/filter-operators-master-data-services.md)  
+-   [Операторы фильтров (службы Master Data Services)](../../2014/master-data-services/filter-operators-master-data-services.md)  
   
   
