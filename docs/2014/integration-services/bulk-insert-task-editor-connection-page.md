@@ -15,12 +15,12 @@ ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72b150ecf09dcf2c96c05ac690a366c6d2711586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 047c5a572195520f194660753315fbe73ffe7c15
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226864"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523636"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Редактор задачи «Массовая вставка» (страница «Соединение»)
   Страница **Соединение** диалогового окна **Редактор задачи «Массовая вставка»** используется для указания источника и места назначения операции массовой вставки и формата для использования.  
@@ -31,7 +31,7 @@ ms.locfileid: "48226864"
  **Соединение**  
  Выберите диспетчер подключений OLE DB в списке или щелкните \<**Создать подключение...**>, чтобы создать соединение.  
   
- **См. также:**  [Диспетчер подключений OLE DB](connection-manager/ole-db-connection-manager.md), [Настройка диспетчера подключений OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **См. также:** [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md), [Настройка диспетчера соединений OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **DestinationTable**  
  Введите имя целевой таблицы или представления или выберите таблицу или представление из списка.  
@@ -51,7 +51,7 @@ ms.locfileid: "48226864"
   
  Если пользователь осуществляет доступ к исходному файлу с помощью диспетчера соединений с неструктурированным файлом, в задаче «Массовая вставка» не используется формат, указанный в диспетчере соединений с неструктурированными файлами. Вместо этого задача "Массовая вставка" использует либо формат, указанный в файле форматирования, либо значения свойств задачи RowDelimiter и ColumnDelimiter.  
   
- **См. также:** [Диспетчер подключений](connection-manager/file-connection-manager.md), [Редактор диспетчера соединения файлов](../../2014/integration-services/file-connection-manager-editor.md), [Диспетчер соединений с неструктурированными файлами](connection-manager/flat-file-connection-manager.md), [Редактор диспетчера соединений с неструктурированными файлами (страница "Общие")](general-page-of-integration-services-designers-options.md), [Редактор диспетчера соединений с неструктурированными файлами (страница "Столбцы")](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [Редактор диспетчера соединений с неструктурированными файлами (страница "Дополнительно")](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md), [Flat File Connection Manager](connection-manager/flat-file-connection-manager.md), [редактор диспетчера соединений с неструктурированными &#40;&#41; ](general-page-of-integration-services-designers-options.md), [Редактор диспетчера соединений с неструктурированными &#40;страница "столбцы"&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md), [редактор диспетчера соединений с неструктурированными &#40;страница "Дополнительно"&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
  **Обновить таблицы**  
  Обновите список таблиц и представлений.  
@@ -60,7 +60,7 @@ ms.locfileid: "48226864"
   
 ### <a name="format--use-file"></a>Формат = Использовать файл  
  **FormatFile**  
- Введите путь к файлу форматирования или нажмите кнопку с многоточием **(…)** для поиска файла формата.  
+ Введите путь к файлу форматирования или нажмите кнопку с многоточием **(...)** для поиска этого файла.  
   
 ### <a name="format--specify"></a>Формат = Указать  
  `RowDelimiter`  
@@ -70,10 +70,10 @@ ms.locfileid: "48226864"
  Укажите разделитель столбцов в файле источника. Значение по умолчанию составляет **Табуляция**.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Массовая вставка редактор задачи &#40;страница "Общие"&#41;](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
- [Массовая вставка редактор задачи &#40;страница параметров&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
- [Страница «выражения»](expressions/expressions-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Массовая вставка" (страница "Общие")](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
+ [Редактор задачи "Массовая вставка" (страница "Параметры")](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Поток управления](control-flow/control-flow.md)  
   

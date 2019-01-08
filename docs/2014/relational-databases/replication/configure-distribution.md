@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], distribution
@@ -21,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 794a5097e78c8a77bba8a6c5d37f49020372c88f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f001652af1f6ed627ded9be287b4910059cce9cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202764"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813836"
 ---
 # <a name="configure-distribution"></a>Настройка распространителя
   Распространитель — это сервер, на котором находится база данных распространителя, хранящая метаданные и данные предыстории для всех типов репликации, а также транзакции репликации транзакций. Для настройки репликации, необходимо настроить распространитель. Каждый издатель может быть назначен только одному экземпляру распространителя, однако один распространитель может совместно использоваться несколькими издателями. Распространитель использует следующие дополнительные ресурсы на сервере, где он расположен.  

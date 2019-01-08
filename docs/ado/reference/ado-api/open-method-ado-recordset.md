@@ -17,12 +17,12 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c1a53f8c310f43503b7dde8c85beb862a66e953
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c2b02ac3d8e95bb583515dfa780f473402ea798f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606688"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206323"
 ---
 # <a name="open-method-ado-recordset"></a>Метод Open (объект Recordset ADO)
 Открывает курсор на [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -36,19 +36,19 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Параметры  
  *Source*  
- Необязательный параметр. Объект **Variant** , результатом которого является допустимым является [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта, инструкции SQL, имя таблицы, вызов хранимой процедуры, URL-адрес или имя файла или [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объект, содержащий постоянно храниться [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Необязательный. Объект **Variant** , результатом которого является допустимым является [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта, инструкции SQL, имя таблицы, вызов хранимой процедуры, URL-адрес или имя файла или [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объект, содержащий постоянно храниться [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  *ActiveConnection*  
- Необязательный параметр. Либо **Variant** , результатом которого является допустимым является [подключения](../../../ado/reference/ado-api/connection-object-ado.md) переменная с именем объекта или **строка** , содержащий [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) параметры.  
+ Необязательный. Либо **Variant** , результатом которого является допустимым является [подключения](../../../ado/reference/ado-api/connection-object-ado.md) переменная с именем объекта или **строка** , содержащий [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) параметры.  
   
  *Примеры CursorType*  
- Необязательный параметр. Объект [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) значение, определяющее тип курсора, поставщик следует использовать при открытии **записей**. Значение по умолчанию — **adOpenForwardOnly**.  
+ Необязательный. Объект [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) значение, определяющее тип курсора, поставщик следует использовать при открытии **записей**. Значение по умолчанию — **adOpenForwardOnly**.  
   
  *LockType*  
- Необязательный параметр. Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение, которое определяет, какой тип блокировки (параллелизм) поставщик следует использовать при открытии **записей**. Значение по умолчанию — **adLockReadOnly**.  
+ Необязательный. Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение, которое определяет, какой тип блокировки (параллелизм) поставщик следует использовать при открытии **записей**. Значение по умолчанию — **adLockReadOnly**.  
   
  *Параметры*  
- Необязательный параметр. Объект **Long** значение, указывающее, каким образом следует оценить, поставщик *источника* аргумент, если что-то отличное от **команда** объекта или, **Записей** должен быть восстановлен из файла, где он был ранее сохранен. Может быть один или несколько [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения, которые могут быть объединены с помощью побитового оператора OR.  
+ Необязательный. Объект **Long** значение, указывающее, каким образом следует оценить, поставщик *источника* аргумент, если что-то отличное от **команда** объекта или, **Записей** должен быть восстановлен из файла, где он был ранее сохранен. Может быть один или несколько [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения, которые могут быть объединены с помощью побитового оператора OR.  
   
 > [!NOTE]
 >  При открытии **записей** из **Stream** содержащий материализованный **записей**, с использованием [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значение **adAsyncFetchNonBlocking** не окажет никакого воздействия; выборка будет иметь синхронной и блокировки.  
@@ -61,7 +61,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  С помощью **откройте** метод **записей** открывается курсор, который представляет записей из базовой таблицы, результаты запроса, или ранее сохраненному **записей**.  
   
- Используйте необязательный *источника* аргумент, чтобы указать источник данных, с помощью одного из следующих: **команда** объектной переменной, инструкции SQL, хранимой процедуры, имя таблицы, URL-адрес или полное путь имя файла. Если *источника* — это путь к имени файла, он может быть полный путь («c:\dir\file.rst»), относительный путь (».. \file.RST»), или URL-адрес (» https://files/file.rst«).  
+ Используйте необязательный *источника* аргумент, чтобы указать источник данных, с помощью одного из следующих: **команда** объектной переменной, инструкции SQL, хранимой процедуры, имя таблицы, URL-адрес или полное путь имя файла. Если *источника* — это путь к имени файла, он может быть полный путь («c:\dir\file.rst»), относительный путь (».. \file.RST»), или URL-адрес (»<https://files/file.rst>«).  
   
  Не рекомендуется использовать *источника* аргумент **откройте** метод для выполнения запроса, не возвращающих записи, так как нет простого способа определить, успешно ли выполнен вызов. **Записей** возвращается такой запрос будет закрыт. Чтобы выполнить запрос, который не возвращает записи, например инструкцию SQL INSERT, вызовите [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) метод **команда** объекта или [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) метод [Подключения](../../../ado/reference/ado-api/connection-object-ado.md) вместо этого объекта.  
   

@@ -1,5 +1,5 @@
 ---
-title: Неоднородные иерархии | Документы Microsoft
+title: Неоднородные иерархии | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c5eb53a8ae3ff25b7c0b4d390d9c5ffc896e542
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cf8844188330a408c29c8b959994637e097f7043
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529338"
 ---
-# <a name="user-defined-hierarchies---ragged-hierarchies"></a>Пользовательские иерархии - неоднородные иерархии
+# <a name="user-defined-hierarchies---ragged-hierarchies"></a>Пользовательские иерархии — неоднородные иерархии
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   неоднородная иерархия — это пользовательская иерархия, которая имеет нечетное количество уровней. Распространенные примеры включают организационную диаграмму, на которой менеджеры высокого уровня координируют работу как менеджеров отделов, так и их подчиненных, или географические иерархии, состоящие из страны, региона и города, которые включают города без родительского элемента штата или провинции, например Вашингтон О. К., Ватикан или Новый Дели.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34023101"
   
 -   Создать иерархию типа «родители-потомки», которая явным образом управляет элементами уровня. См. иллюстрацию этого метода в разделе [Неоднородная иерархия в службах SSAS (запись блога)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/). Дополнительные сведения см. в разделе [Измерения "родители-потомки"](../../analysis-services/multidimensional-models/parent-child-dimension.md)в электронной документации. Недостаток создания иерархии типа «родители-потомки» заключается в том, что можно иметь только одну такую иерархию на измерение, и обычно при вычислении агрегатов для промежуточных элементов страдает производительность.  
   
- Если в измерении есть несколько неоднородных иерархий, следует воспользоваться первым способом, задав свойство **HideMemberIf**. Разработчики бизнес-аналитики, имеющие практический опыт работы с неоднородными иерархиями, рекомендуют вносить дополнительные изменения в физические таблицы данных путем создания отдельных таблиц для каждого уровня. Дополнительные сведения об этом методе см. в разделе [Финансовый куб служб SSAS. Часть 1а. Неоднородные иерархии. Мартин Мейсон (блог)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) .  
+ Если в измерении есть несколько неоднородных иерархий, следует воспользоваться первым способом, задав свойство **HideMemberIf**. Разработчики бизнес-аналитики, имеющие практический опыт работы с неоднородными иерархиями, рекомендуют вносить дополнительные изменения в физические таблицы данных путем создания отдельных таблиц для каждого уровня. См. в разделе [Мартин мейсон финансовый куб SSAS-часть 1a неоднородные иерархии (блог)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) Дополнительные сведения об этом методе.  
   
 ##  <a name="bkmk_Hide"></a> Задание свойства Set HideMemberIf для скрытия элементов в обычной иерархии  
  В таблице переменного измерения логически отсутствующие элементы могут представляться различными способами. Ячейки таблицы могут содержать правила, пустые строки или значения родительских элементов (когда они служат заполнителями). Представление заполнителей определяется состоянием заполнителя дочернего элемента, которое задается свойством **HideMemberIf** и свойством строки подключения **MDX Compatibility** для клиентского приложения.  
@@ -71,7 +71,7 @@ ms.locfileid: "34023101"
 ## <a name="see-also"></a>См. также  
  [Создание пользовательских иерархий](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Пользовательские иерархии](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
- [Родитель потомок измерения](../../analysis-services/multidimensional-models/parent-child-dimension.md)   
- [Свойства строки соединения & #40; Службы Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Измерения "родители-потомки"](../../analysis-services/multidimensional-models/parent-child-dimension.md)   
+ [Свойства строки подключения (службы Analysis Services)](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

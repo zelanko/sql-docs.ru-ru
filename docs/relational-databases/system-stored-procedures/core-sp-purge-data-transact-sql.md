@@ -21,17 +21,17 @@ ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbcd8616fc743ee749b3adb9b30f343939fa7f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23495d6f2d18964bb35395666c3c7b867e508e20
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819242"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211223"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Удаляет данные из хранилища данных управления в соответствии со стратегией хранения. Эта процедура выполняется ежедневно mdw_purge_data[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задание агента из хранилища данных управления, связанный с указанным экземпляром. Эта хранимая процедура предназначена для удаления данных из хранилища данных управления по требованию.  
+  Удаляет данные из хранилища данных управления в соответствии со стратегией хранения. Эта процедура выполняется ежедневно заданием mdw_purge_data агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применительно к хранилищу данных управления, связанному с определенным экземпляром. Эта хранимая процедура предназначена для удаления данных из хранилища данных управления по требованию.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

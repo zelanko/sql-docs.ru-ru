@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmieventwatchertask.f1
@@ -16,12 +15,12 @@ ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb074ec8723eb0f8f35df5d32aaebe9122e1bfc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b76916940175e9a3b3acf7c157ffe05d2b2aebf8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203114"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351776"
 ---
 # <a name="wmi-event-watcher-task"></a>Задача «Отслеживание событий WMI»
   Задача «Отслеживание событий WMI» осуществляет наблюдение за событием инструментария управления Windows (WMI) при помощи запроса на языке запросов к инструментарию управления (WQL), определяющего нужные события. Задачу «Отслеживание событий WMI» можно использовать в следующих целях:  
@@ -39,7 +38,7 @@ ms.locfileid: "48203114"
 -   [Задача «Модуль чтения данных WMI»](wmi-data-reader-task.md)  
   
 ## <a name="wql-queries"></a>WQL-запрос  
- WQL — это разновидность языка SQL с выражениями, поддерживающими уведомления о событиях инструментария WMI и другие функции WMI. Дополнительные сведения о WQL см. в документации по инструментарию управления Windows в [библиотеке MSDN](http://go.microsoft.com/fwlink/?linkid=62553).  
+ WQL — это разновидность языка SQL с выражениями, поддерживающими уведомления о событиях инструментария WMI и другие функции WMI. Дополнительные сведения о WQL см. в документации по инструментарию управления Windows в [библиотеке MSDN](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 > [!NOTE]  
 >  Классы WMI отличаются в различных версиях операционной системы Windows.  
@@ -92,11 +91,11 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи Отслеживание событий WMI &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "Отслеживание событий WMI" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи Отслеживание событий WMI &#40;страница параметров WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [Редактор задачи "Отслеживание событий WMI" (страница "Параметры WMI")](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
--   [Страница "Выражения"](../expressions/expressions-page.md)  
+-   [Страница «Выражения»](../expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   

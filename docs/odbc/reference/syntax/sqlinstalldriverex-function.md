@@ -20,16 +20,16 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169351"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208650"
 ---
 # <a name="sqlinstalldriverex-function"></a>Функция SQLInstallDriverEx
 **Соответствие стандартам**  
- Версия была введена: ODBC 3.0  
+ Представленные версии: ODBC 3.0  
   
  **Сводка**  
  **SQLInstallDriverEx** добавляет сведения о драйвер в Odbcinst.ini запись сведений о системе и увеличивает возможности драйвера *UsageCount* на 1. Тем не менее, если версия драйвер уже существует, но *UsageCount* значение драйвер не существует, новый *UsageCount* имеет значение 2.  
@@ -73,7 +73,7 @@ BOOL SQLInstallDriverEx(
   
  ODBC_INSTALL_INQUIRY: Запрос установки драйвера.  
   
- ODBC_INSTALL_COMPLETE: Завершите запрос на установку.  
+ ODBC_INSTALL_COMPLETE: Выполните запрос на установку.  
   
  *lpdwUsageCount*  
  [Выход] Счетчик использования драйвера после вызова этой функции.  

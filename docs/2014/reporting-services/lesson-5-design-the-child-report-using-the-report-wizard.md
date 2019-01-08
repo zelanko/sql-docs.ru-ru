@@ -1,5 +1,5 @@
 ---
-title: Занятие 5. Проектирование родительского отчета с использованием мастера отчетов | Документы Майкрософт
+title: Занятие 5. Проектирование родительского отчета с помощью мастера отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1eb2cb7693110204767a627e54cd4248e7d1a7cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc993c0881eb4aeeddb18c8df0efad69dbba261e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166944"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418355"
 ---
-# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Занятие 5. Проектирование родительского отчета с использованием мастера отчетов
+# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Занятие 5. Проектирование дочернего отчета с использованием мастера отчетов
   После создания подключения к данным и таблицы данных для дочернего отчета следующий шаг состоит в проектировании дочернего отчета в конструкторе отчетов с помощью мастера отчетов. Дополнительные сведения о конструкторе отчетов см. в разделе [Разработка отчетов с использованием конструктора отчетов (SSRS)](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### <a name="to-design-the-child-report-using-the-report-wizard"></a>Проектирование дочернего отчета с использованием мастера отчетов  

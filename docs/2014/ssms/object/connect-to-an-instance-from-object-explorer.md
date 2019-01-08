@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7947bba9f41ffb77a1260ce79a5f4afb6c773295
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110934"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748026"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>Подключение к экземпляру из обозревателя объектов
   Для управления объектами с помощью обозревателя объектов необходимо вначале подключить обозреватель объектов к экземпляру, содержащему объекты. Можно одновременно подключить обозреватель объектов к нескольким экземплярам.  
@@ -36,7 +36,7 @@ ms.locfileid: "48110934"
   
 4.  Перейдите на вкладку **Свойства соединения** для настройки дополнительных параметров. Набор доступных параметров зависит от типа сервера. Для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]доступны следующие параметры.  
   
-    |Настройка|Описание|  
+    |Параметр|Описание|  
     |-------------|-----------------|  
     |**Подключиться к базе данных**|Позволяет выбрать одну из доступных баз данных на сервере. Список содержит только те базы данных, для просмотра которых имеется разрешение.|  
     |**Сетевой протокол**|Позволяет выбрать один из вариантов: «Общая память», «TCP/IP» или «Именованные каналы».|  

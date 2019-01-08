@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.condition
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c20dc45263b28225943e867ddafa8428593d92d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b70305d832c06388bc5977cdbcc560c3c8be8860
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050575"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327634"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Задание условия точки останова
   Условием для точки останова служит выражение [!INCLUDE[tsql](../../includes/tsql-md.md)] , проверяемое отладчиком по достижению точки останова. Если достигнуто указанное число попаданий или удовлетворяется указанное условие, то отладчик останавливает выполнение или выполняет действие, заданное для точки останова.  
@@ -48,5 +46,3 @@ ms.locfileid: "48050575"
 ## <a name="see-also"></a>См. также  
  [Настройка счетчика числа попаданий](specify-a-hit-count.md)   
  [Задание действия в точке останова](specify-a-breakpoint-action.md)  
-  
-  

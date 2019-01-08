@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_marksubscriptionvalidation
@@ -17,12 +16,12 @@ ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4d649403a04aa48475705059328656d81ae8597
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22b25d1a6c33d52bac27ba2735cd439732b6e9c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748912"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213563"
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
  Имя целевой базы данных. *destination_db* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@publisher=** ] **"***издателя***"**  
- Указывает, отличный от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+ Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует использовать для публикации, к которой принадлежит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
@@ -63,9 +62,9 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ## <a name="remarks"></a>Примечания  
  **sp_marksubscriptionvalidation** используется в репликации транзакций.  
   
- **sp_marksubscriptionvalidation** не поддерживает отличных[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
+ **sp_marksubscriptionvalidation** не поддерживает отличных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков.  
   
- Для не -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, не удается выполнить **sp_marksubscriptionvalidation** из явной транзакции. Это обусловлено тем, что явные транзакции не поддерживаются через соединение связанного сервера, через которое осуществляется подключение к издателю.  
+ Для не - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, не удается выполнить **sp_marksubscriptionvalidation** из явной транзакции. Это обусловлено тем, что явные транзакции не поддерживаются через соединение связанного сервера, через которое осуществляется подключение к издателю.  
   
  **sp_marksubscriptionvalidation** должен использоваться вместе с [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), указав значение **1** для  *уровень_подписки*и может использоваться с другими вызовами **sp_marksubscriptionvalidation** Пометить текущую открытую транзакцию для других подписчиков.  
   

@@ -14,20 +14,20 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb7cf0945eb15d0f741e5b5fcba6c6e28fbe4955
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660592"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530245"
 ---
 # <a name="ado-methods"></a>Методы ADO
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Создает новую запись для обновляемый **записей** объекта.|  
-|[добавить](../../../ado/reference/ado-api/append-method-ado.md)|Добавляет объект в коллекцию. Если коллекция **поля**, новый **поле** объекта могут быть созданы перед добавлением в коллекцию.|  
+|[Append](../../../ado/reference/ado-api/append-method-ado.md)|Добавляет объект в коллекцию. Если коллекция **поля**, новый **поле** объекта могут быть созданы перед добавлением в коллекцию.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Добавляет данные в большие текстовые или двоичные данные **поле**, или к **параметр** объекта.|  
-|[Примеры BeginTrans, CommitTrans и RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Управляет обработки в пределах транзакций **подключения** следующим образом:<br /><br /> **Примеры BeginTrans** — начинает новую транзакцию.<br /><br /> **CommitTrans** — сохраняет все изменения и завершает текущую транзакцию. Кроме того, он может начать новую транзакцию.<br /><br /> **RollbackTrans** — отменяет все изменения и завершает текущую транзакцию. Кроме того, он может начать новую транзакцию.|  
+|[Примеры BeginTrans, CommitTrans и RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Управляет обработки в пределах транзакций **подключения** следующим образом:<br /><br /> **Примеры BeginTrans** -начинает новую транзакцию.<br /><br /> **CommitTrans** — сохраняет все изменения и завершает текущую транзакцию. Кроме того, он может начать новую транзакцию.<br /><br /> **RollbackTrans** — отменяет все изменения и завершает текущую транзакцию. Кроме того, он может начать новую транзакцию.|  
 |[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Отменяет выполнение ожидающих асинхронный вызов метода.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Отменяет ожидающие пакетного обновления.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Отменяет все изменения, внесенные в текущей или новой строки **записей** объекта, или **поля** коллекцию **записи** объект перед вызовом  **Обновление** метод.|  
@@ -85,7 +85,7 @@ ms.locfileid: "47660592"
  [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Перечисляемые константы ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Приложение б. ошибки объектов ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Приложение б. Ошибки ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [События ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Объекты и интерфейсы ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   

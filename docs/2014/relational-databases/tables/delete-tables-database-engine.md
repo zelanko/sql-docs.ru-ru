@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table deletions [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60b92e01601a2c0103594405e9adca41969142fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f040c9907574bba718827999bb9c0fbb432a0bd0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165504"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814516"
 ---
 # <a name="delete-tables-database-engine"></a>Удаление таблиц (компонент Database Engine)
   Удалить таблицу из базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,7 +50,7 @@ ms.locfileid: "48165504"
   
 -   При удалении таблицы относящиеся к ней правила и значения по умолчанию теряют привязку, а любые связанные с таблицей ограничения или триггеры автоматически удаляются. Если таблица будет создана заново, нужно будет заново привязать все правила и значения по умолчанию, заново создать триггеры и добавить необходимые ограничения.  
   
--   Если удалить таблицу, содержащую `varbinary (max)` столбец с атрибутом FILESTREAM, все данные, хранящиеся в файловой системе не будут удалены.  
+-   При удалении таблицы, которая содержит столбец `varbinary (max)` с атрибутом FILESTREAM, не будут удалены какие-либо сохраненные в файловой системе данные.  
   
 -   Инструкции DROP TABLE и CREATE TABLE нельзя выполнять для одной таблицы в одном пакете. В противном случае может произойти непредвиденная ошибка.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "48165504"
   
 #### <a name="to-delete-a-table-in-query-editor"></a>Удаление таблицы в редакторе запросов  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

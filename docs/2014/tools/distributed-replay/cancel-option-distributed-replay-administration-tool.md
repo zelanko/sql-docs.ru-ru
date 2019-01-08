@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b69c21123f76517243805b3d5d3391fd3c5d5149
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d9aa28d4a6879f3077b137880aae54b9a0c434
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069504"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822288"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>Параметр отмены (средство администрирования распределенного воспроизведения)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Средство администрирования распределенного воспроизведения `DReplay.exe`, это средство командной строки, которое можно использовать для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описывается параметр командной строки **cancel** и соответствующий синтаксис.  
@@ -46,7 +46,7 @@ dreplay cancel [-mcontroller] [-q]
  В следующем примере запрос отмены передается в тихом режиме. Значение `localhost` указывает, что служба контроллера запущена на том же компьютере, что и средство администрирования.  
   
 ```  
-dreplay cancel –m localhost -q  
+dreplay cancel -m localhost -q  
 ```  
   
 ## <a name="permissions"></a>Разрешения  

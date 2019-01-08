@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - CHECK constraints, disabling
@@ -16,12 +15,12 @@ ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0ffb9af3b02bf8c92041d64b54d06b55a24f42a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 957fcd77a6443cf2e23be8965a68823085db870c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061574"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807526"
 ---
 # <a name="disable-check-constraints-for-replication"></a>Отключение проверочных ограничений для репликации
   Отключить проверочные ограничения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Также можно явно отключить проверочные ограничения при репликации, что может оказаться полезным при публикации данных от более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -52,7 +51,7 @@ ms.locfileid: "48061574"
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>Отключение проверочных ограничений при репликации  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

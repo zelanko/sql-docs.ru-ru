@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
@@ -15,12 +14,12 @@ ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8dd5e5cc4b725e7a6127348cd3e7de29dd0ad10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f37369821585845d63bd4d416b1868364045680f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122324"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779426"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>создать шаблон трассировки (приложение SQL Server Profiler)
   В этом подразделе описывается создание нового шаблона трассировки при помощи [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -52,7 +51,7 @@ ms.locfileid: "48122324"
 8.  Нажмите кнопку **Сохранить.**  
   
 ## <a name="see-also"></a>См. также  
- [Указать столбцы событий и данных для файла трассировки &#40;SQL Server Profiler&#41;](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [Указание столбцов событий и данных для файла трассировки (приложение SQL Server Profiler)](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Извлечение шаблона из выполняемой трассировки (приложение SQL Server Profiler)](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Извлечение шаблона из файла трассировки или таблицы трассировки (приложение SQL Server Profiler)](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [Шаблоны и разрешения приложения SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   

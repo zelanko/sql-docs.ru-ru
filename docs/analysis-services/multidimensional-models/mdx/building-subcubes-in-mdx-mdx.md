@@ -1,5 +1,5 @@
 ---
-title: Построение вложенных кубов в многомерных Выражениях (многомерные Выражения) | Документы Microsoft
+title: Построение вложенных кубов в многомерных Выражениях (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9f9bcc170883c9c663903d17f3355e27b2b14177
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7bf6396ebe7cfe18aa7d1005d39095a35713e10b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026251"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419055"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>Построение вложенных кубов в многомерных выражениях (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  Кроме того, во вложенном кубе визуально подсчитываются статистические значения. Пусть вложенный куб содержит значения `USA`, `WA`и `OR`. Статистическое значение для параметра `USA` будет суммой `{WA,OR}` , поскольку `WA` и `OR` — единственные штаты, определенные во вложенном кубе. Все прочие штаты будут проигнорированы.  
   
- Кроме того, явные ссылки на ячейки вне вложенного куба возвращают значения ячеек, вычисленные в контексте всего куба. Пусть создан вложенный куб, ограниченный текущим годом. После этого можно при помощи функции [ParallelPeriod](../../../mdx/parallelperiod-mdx.md) сравнить текущий год с предыдущим. Разность значений будет вычислена, хотя значения предыдущего года лежат вне данного вложенного куба.  
+ Кроме того, явные ссылки на ячейки вне вложенного куба возвращают значения ячеек, вычисленные в контексте всего куба. Пусть создан вложенный куб, ограниченный текущим годом. После этого можно при помощи функции [ParallelPeriod](../../../mdx/parallelperiod-mdx.md) сравнить текущий год с предыдущим. Несмотря на то, что предыдущего года лежат вне данного вложенного куба, будет возвращаться разницы между значениями.  
   
  Наконец, если оригинальный контекст не заменяется, функции наборов, значения которых рассчитаны в подзапросе выборки, вычисляются в контексте этого подзапроса. Если контекст заменяется, функции наборов вычисляются в контексте всего куба.  
   
@@ -60,7 +60,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
 ## <a name="see-also"></a>См. также  
- [Определение контекста куба в запросе & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [Основные принципы запросов многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Определение контекста куба в запросе (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+ [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

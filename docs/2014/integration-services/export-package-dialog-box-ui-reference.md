@@ -15,12 +15,12 @@ ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90a098ce2c4ea006f33eb01034136bd92e7fe0b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91a7d5573a6d0488b48d7e4ddaf328664de7a2c8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116744"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523669"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>Диалоговое окно «Экспорт пакета» справочника по пользовательскому интерфейсу
   Диалоговое окно **Экспорт пакета** , доступное в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], используется для экспорта пакета служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в другое место и, при необходимости, изменения уровня защиты пакета.  
@@ -47,7 +47,7 @@ ms.locfileid: "48116744"
  **Тип проверки подлинности**  
  Выберите тип проверки подлинности.  
   
- **Имя пользователя**  
+ **User name**  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] укажите имя пользователя.  
   
  **Пароль**  
@@ -57,12 +57,12 @@ ms.locfileid: "48116744"
  Введите путь модуля или нажмите кнопку обзора **(...)** и выберите папку, в которой должен быть сохранен пакет.  
   
  **Уровень защиты**  
- Нажмите кнопку обзора **(...)** и обновите уровень защиты в диалоговом окне **Уровень защиты пакета** . Дополнительные сведения см. в разделе [Диалоговое окно уровня защиты пакета и проекта](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Нажмите кнопку обзора **(...)** и обновите уровень защиты в диалоговом окне **Уровень защиты пакета**. Дополнительные сведения см. в разделе [Диалоговое окно уровня защиты пакета и проекта](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>См. также  
  [Сохранение копии пакета](../../2014/integration-services/save-copy-of-package.md)   
- [Импорт пакета диалогового окна пользовательского интерфейса в справочник](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Диалоговое окно «Импорт пакета» справочника по пользовательскому интерфейсу](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Сохранение пакетов](save-packages.md)   
- [Импорт и экспорт пакетов &#40;службы SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [Импорт и экспорт пакетов (службы SSIS)](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

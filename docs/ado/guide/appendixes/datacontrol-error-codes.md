@@ -14,12 +14,12 @@ ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa058add661ba5dc4054a431e0324f97e1efb422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf56b6614587c333f473136f1cafc72128846a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514376"
 ---
 # <a name="datacontrol-object-error-codes"></a>Коды ошибок DataControl объекта
 В следующей таблице перечислены [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта коды ошибок. Положительное десятичное преобразование низкой два байта, показаны отрицательное десятичное преобразование кода ошибку переполнения и шестнадцатеричные значения.
@@ -33,7 +33,7 @@ ms.locfileid: "47753106"
 |**IDS_CantFindDataspace**|4102 -2146824186 0x800A1006|Свойство пространство данных недопустимо.|
 |**IDS_CantInvokeMethod**|4101 -2146824187 0x800A1005|Метод нельзя вызывать в бизнес-объекте.|
 |**IDS_CrossDomainWarning**|4112 -2146824170 0x800A1016|Эта страница получает доступ к данным в другом домене. Вы действительно хотите разрешить это? Чтобы избежать появления этого сообщения в Internet Explorer, можно добавить безопасный веб-сайт в зону надежных узлов на **безопасности** вкладке **обозревателя** диалоговое окно.|
-|**IDS_InvalidADCClientVersion**|4106 -2146824176 0x800A1010|Недопустимая версия клиента RDS — Клиент более новой версии сервера.|
+|**IDS_InvalidADCClientVersion**|4106 -2146824176 0x800A1010|Недопустимая версия клиента служб удаленных рабочих СТОЛОВ - клиент более новой версии сервера.|
 |**IDS_INVALIDARG**|5376 -2147019520 0x80071500|Один или несколько аргументов являются недопустимыми.|
 |**IDS_InvalidBindings**|4097 -2146824191 0x800A1001|Ошибка в свойство привязки.|
 |**IDS_InvalidParam**|4110 -2146824172 0x800A1014|Один или несколько аргументов являются недопустимыми.|

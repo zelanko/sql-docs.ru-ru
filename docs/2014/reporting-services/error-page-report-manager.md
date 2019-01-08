@@ -11,23 +11,23 @@ ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 28366043f6681ab01cd3d1912d5180ae06914ae8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19d1fdd45018e436dddab95cfe01173ec63f794d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157654"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511675"
 ---
 # <a name="error-page-report-manager"></a>Страница «Ошибка» (диспетчер отчетов)
   Страница «Ошибка» используется для просмотра подробностей состояния ошибки. На этой странице отображаются ошибки сервера или сеанса. Ошибки проверки, связанные с конкретными элементами управления на страницах, отображаются в строке сразу после соответствующего элемента.  
   
--   Если возникают ошибки, подобные этой, при переходе на локальный сервер отчетов, см. в разделе: [настроить сервер отчетов в собственном режиме для локального администрирования &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+-   Если при переходе на локальный сервер отчетов отображаются сообщения об ошибках, похожие на приведенное далее, см. следующие разделы: [Настройка сервера отчетов, работающего в основном режиме, для локального администрирования (службы SSRS)](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   
      Пользователь "домена\\[имя_пользователя]" не имеет необходимых разрешений. Убедитесь, что предоставлены достаточные разрешения и учтены ограничения контроля учетных записей Windows.  
   
--   Если вы видите сообщения об ошибках, подобные этой, см. в разделе [Настройка сервера отчетов для удаленного администрирования](report-server/configure-a-report-server-for-remote-administration.md).  
+-   Если отображаются сообщения об ошибке, подобные приведенному далее, см. раздел [Configure a Report Server for Remote Administration](report-server/configure-a-report-server-for-remote-administration.md).  
   
-     Невозможно найти компьютер. "Сервер RPC недоступен. (Исключение HRESULT: 0x800706BA.)".  
+     Невозможно найти компьютер. "Сервер RPC недоступен. (Исключение HRESULT: 0x800706BA)».  
   
 -   Можно задать свойства сервера на сервере отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , чтобы возвращались дополнительные сведения об ошибках, возникающих на удаленных серверах. Если сообщение об ошибке содержит текст «Дополнительные сведения об этой ошибке, перейдите к серверу отчетов на локальном сервере или включите удаленный контроль ошибок», см. в разделе [включить отслеживание удаленных ошибок &#40;служб Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md).  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, creating policy conditions
@@ -12,12 +12,12 @@ ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c0e2394f5d470cc523c16346cfb2f091043b948d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 942a0be0503cd728defb6800a516b0cb0c85c13f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155540"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804296"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>Создание нового условия управления на основе политик
   В этом разделе описывается создание условия управления на основе политик в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  

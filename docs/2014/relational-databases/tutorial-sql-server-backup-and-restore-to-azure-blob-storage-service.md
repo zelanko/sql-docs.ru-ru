@@ -1,39 +1,38 @@
 ---
-title: 'Учебник: SQL Server резервного копирования и восстановления в Windows Azure BLOB-объектов службы хранилища | Документация Майкрософт'
+title: Учебник. SQL Server резервного копирования и восстановления в Windows Azure BLOB-объектов службы хранилища | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 65015ec9175bc1e09b97486794f7bdd44d1c1038
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2216674bec52dd4d4800aa1b03aa4a2834667974
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056134"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811246"
 ---
-# <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service
+# <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Windows Azure
   Добро пожаловать в учебник «Приступая к резервному копированию и восстановлению данных SQL Server при помощи службы хранилищ больших двоичных объектов Windows Azure». С помощью этого учебника вы научитесь создавать и восстанавливать резервные копии с помощью службы хранилища больших двоичных объектов Windows Azure.  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  
  В этом учебнике показано, как создать учетную запись хранения Windows, контейнер больших двоичных объектов, учетные данные для доступа к учетной записи хранения, как записать резервную копию в службу хранилищ больших двоичных объектов и выполнить простое восстановление. Учебник разделен на четыре занятия.  
   
- [Занятие 1. Создание объектов хранения Microsoft Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ [Занятие 1. Создание объектов хранения Windows Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  На этом занятии вы создадите учетную запись хранения Windows Azure и контейнер больших двоичных объектов.  
   
- [Занятие 2. Создание учетных данных SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
+ [Занятие 2. Создание учетных данных SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  На этом занятии вы также создадите учетные данные для хранения сведений о безопасности, которые будут использоваться для доступа к учетной записи хранения Windows Azure.  
   
- [Занятие 3. Запись полной резервной копии базы данных в службе хранилища больших двоичных объектов Microsoft Azure](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
+ [Занятие 3. Запись полной резервной копии в Windows Azure Blob Storage Service](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
  Кроме того, на этом занятии вам предстоит выполнить инструкцию Т-SQL для записи резервной копии базы данных AdventureWorks2012 в службу хранилищ больших двоичных объектов Windows Azure.  
   
- [Занятие 4. Восстановление базы данных из полной резервной копии](../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  
+ [Занятие 4. Выполните восстановление из полной резервной копии](../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  
  На этом занятии также предстоит выполнить инструкцию T-SQL для восстановления из резервной копии базы данных, созданной на предыдущем занятии.  
   
 ### <a name="requirements"></a>Требования  
@@ -48,7 +47,7 @@ ms.locfileid: "48056134"
 -   Учетная запись пользователя, применяемая для выдачи команды BACKUP или RESTORE, должна находиться в роли базы данных **db_backup operator** с разрешениями **Alter any credential** .  
   
 ### <a name="additional-reading"></a>Дополнительные материалы  
- Чтобы разобраться в концепциях и рекомендуемых методах использования службы хранилищ больших двоичных объектов Windows Azure для резервного копирования [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], рекомендуется изучить перечисленные ниже материалы.  
+ Чтобы разобраться в концепциях и рекомендуемых методах использования службы хранилищ больших двоичных объектов Windows Azure для резервного копирования [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , рекомендуется изучить перечисленные ниже материалы.  
   
 1.  [Резервное копирование и восстановление SQL Server с помощью службы хранилищ больших двоичных объектов Microsoft Azure](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   

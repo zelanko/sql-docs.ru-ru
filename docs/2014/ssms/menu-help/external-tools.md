@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cefca611c1f09db94c8e2df523121bdc9b2bf819
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227644"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328794"
 ---
 # <a name="external-tools"></a>Внешние инструменты
   С помощью этого диалогового окна можно добавить в меню **Сервис** внешние инструменты, такие как диспетчер конфигурации SQL Server или "Блокнот". Добавление внешних средств позволяет легко запускать другие приложения во время работы в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. При запуске средств можно указать аргументы и рабочий каталог. Кроме того, выходные данные некоторых средств могут отображаться в окне «Вывод». Диалоговое окно **Внешние инструменты** доступно в меню **Сервис** .  
@@ -78,5 +76,3 @@ ms.locfileid: "48227644"
   
 > [!NOTE]  
 >  Чтобы проверить расположение соответствующих файлов на компьютере, просмотрите свойства ярлыка среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в меню **Пуск** .  
-  
-  

@@ -17,12 +17,12 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f36432352d7b8351e7ae51840906c0d00ff67d78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4959243f633702fb0f0afd9b2444ae65666ef680
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076304"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506961"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Отслеживание подписок служб Reporting Services
   Вы можете отслеживать подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательском интерфейсе, Windows PowerShell или в файлах журнала. Параметры, которые можно отслеживать, зависят от того, какой режим сервера отчетов используется.  
@@ -62,7 +62,7 @@ ms.locfileid: "48076304"
 |Ошибка записи файла \<имя_файла>: \<сообщение>|Показывает, что доставка в расположение общей папки завершилась неуспешно. Это сообщение модуля доставки в общую папку.|  
 |\<пользовательские сообщения о состоянии>|Сообщения о состоянии (об успешном и неуспешном завершении доставки), формируемые модулями доставки. При использовании сторонних или пользовательских модулей доставки могут выводиться дополнительные сообщения о состоянии.|  
   
- Кроме того, администраторы сервера отчетов могут отслеживать обработку стандартных подписок, выполняемую в настоящий момент. Отслеживать обработку подписок, управляемых данными, невозможно. Дополнительные сведения см. в разделе [управление запущенным процессом](manage-a-running-process.md).  
+ Кроме того, администраторы сервера отчетов могут отслеживать обработку стандартных подписок, выполняемую в настоящий момент. Отслеживать обработку подписок, управляемых данными, невозможно. Дополнительные сведения см. в разделе [Управление запущенным процессом](manage-a-running-process.md).  
   
  Если подписку доставить не удается (например, если почтовый сервер недоступен), то модуль доставки повторяет доставку. Число повторных попыток задается соответствующим параметром конфигурации. По умолчанию количество повторных попыток равно нулю. Иногда отчет обрабатывается без данных (например, если источник данных работает в режиме «вне сети»). В таком случае сведения об этом приводятся в теле сообщения.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48076304"
   
  Ниже приведен пример сообщения об ошибке трассировки журнала файла, связанного с подписками.  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i СВЕДЕНИЯ: Инициализация EnableExecutionLogging как True, как указано в Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ОШИБКА: **Ошибка при отправке сообщения**. Исключение: System.Net.Mail.SmtpException: SMTP-серверу требуется безопасное соединение, или клиент не прошел проверку подлинности. Ответ сервера: 5.7.1. Клиент не прошел проверку подлинности в System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response).  
+-   Библиотека! WindowsService_7! b60! 05/20/2014-22: 34:36:: i сведения: Инициализация enableexecutionlogging как «True», как указано в Server system properties.emailextension! WindowsService_7! b60! 05/20/2014-22: 34:41:: e ошибка: **Ошибка при отправке электронной почты**. Исключение: System.Net.Mail.SmtpException: SMTP-серверу требуется безопасное соединение, или клиент не прошел проверку подлинности. Получен ответ сервера. 5.7.1. Клиент не прошел проверку подлинности в System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response).  
   
  Файл журнала не содержит сведения об открытии отчета или об успешном фактическом выполнении доставки. Успешная доставка означает, что ошибки обработчика планирования и доставки отсутствуют и сервер отчетов подключился к почтовому серверу. Если при попытке доставки по электронной почте в почтовый ящик пользователя пришло сообщение о невозможности доставки отчета, то эти сведения не будут включены в файл журнала. Дополнительные сведения о файлах журналов см. в разделе [Файлы и источники журналов служб Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48076304"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Дата|Процесс|Область|Категория|Level|Correlation|Сообщение|  
-|5/21/2014 14:34:06:15|Пул приложений: a0ba039332294f40bc4a81544afde01d|службы SQL Server Reporting Services|Расширение электронной почты сервера отчетов|Непредвиденное|(пусто)|**Ошибка при отправке сообщения электронной почты.** Исключение: System.Net.Mail.SmtpException: почтовый ящик недоступен. Ответ сервера: 5.7.1. У клиента нет разрешений для отправки, так как данный отправитель в System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) в System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) в System.Net.Mail.SmtpClient.Send(MailMessage message) в Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification).|  
+|5/21/2014 14:34:06:15|Пул приложений: a0ba039332294f40bc4a81544afde01d|службы SQL Server Reporting Services|Расширение электронной почты сервера отчетов|Непредвиденное|(пусто)|**Ошибка при отправке сообщения электронной почты.** Исключение: System.Net.Mail.SmtpException: Почтовый ящик недоступен. Получен ответ сервера. 5.7.1. У клиента нет разрешений для отправки, так как данный отправитель в System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) в System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) в System.Net.Mail.SmtpClient.Send(MailMessage message) в Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification).|  
   
 ##  <a name="bkmk_use_powershell"></a> Использование PowerShell для отслеживания подписок  
  Примеры скриптов PowerShell для проверки состояния подписок в собственном режиме или в режиме SharePoint см. в разделе [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "48076304"
  Если какие-либо условия приводят к деактивации подписки, то она отразит этот факт, когда сервер отчетов пытается запустить ее. Если в расписании подписки задана доставка отчета каждую пятницу в 2:00 утра, а применяемый подпиской модуль доставки удален в понедельник в 9:00 утра, то подписка не отразит свое неактивное состояние до 2:00 утра пятницы.  
   
 ## <a name="see-also"></a>См. также  
- [Создание и администрирование подписок для серверов отчетов в собственном режиме](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Подписки и доставка (службы Reporting Services)](subscriptions-and-delivery-reporting-services.md)  
   
   

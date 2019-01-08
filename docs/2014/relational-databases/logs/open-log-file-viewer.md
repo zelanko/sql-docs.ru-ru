@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, opening
@@ -13,12 +12,12 @@ ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84f624ce603a852bed3527b45c942f1ffa00fdbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170250"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818165"
 ---
 # <a name="open-log-file-viewer"></a>Открытие средства просмотра файла журнала
   Средство просмотра журнала используется в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для доступа к сведениям об ошибках и событиях, записываемых в следующие журналы.  
@@ -41,7 +40,7 @@ ms.locfileid: "48170250"
   
  Открыть средство просмотра журнала можно несколькими способами (в зависимости от того, какие сведения нужно просмотреть).  
   
-##  <a name="BeforeYouBegin"></a> Разрешения  
+##  <a name="BeforeYouBegin"></a> Permissions  
  Чтобы получить доступ к файлам журнала для экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые находятся в сети, требуется членство в предопределенной роли сервера securityadmin.  
   
  Чтобы получить доступ к файлам журнала для экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые находятся вне сети, необходим доступ на чтение к пространству WMI **Root\Microsoft\SqlServer\ComputerManagement10** , а также к папке, в которой хранятся файлы журнала. Дополнительные сведения см. в подразделе "Безопасность" раздела [Просмотр автономных файлов журнала](view-offline-log-files.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0160cb8dc1092936cfa315865775dfaef2ea7e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf6e9bb278417d69be0ec0a99cb1c47d88ffddff
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141208"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809674"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие Broker:Forwarded Message Dropped при удалении компонентом Service Broker сообщения, предназначенного для переадресации.  
@@ -55,7 +54,7 @@ ms.locfileid: "48141208"
 |SPID|`int`|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  
 |StartTime|`datetime`|Время начала события, если доступно.|14|Да|  
 |State|`int`|Указывает место в исходном коде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которое вызвало это событие. Каждое место, которое может вызвать это событие, обозначается отдельным кодом состояния. Сотрудник службы технической поддержки Microsoft может использовать этот код состояния для обнаружения участка, выполнение которого привело к событию.|30|Нет|  
-|Успешно|`int`|Текущее время существования сообщения. Если это значение больше или равно времени жизни сообщения, то сообщение удаляется.|23|Нет|  
+|Success|`int`|Текущее время существования сообщения. Если это значение больше или равно времени жизни сообщения, то сообщение удаляется.|23|Нет|  
 |TargetLoginName|`nvarchar`|Сетевой адрес, на который переадресовано данное сообщение.|42|Нет|  
 |TargetUserName|`nvarchar`|Имя вызывающей службы для сообщения.|39|Нет|  
 |TextData|`ntext`|Описание причины удаления сообщения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|1|Да|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor
@@ -14,12 +13,12 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c32d48446c549fbc73913497ec78018292e58074
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b03c94ccfd50dc1c031c7e25f548e61ab1de1ac5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215354"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815727"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Обзор интерфейса монитора репликации
   Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает представление всех операций репликации в окне, состоящем из двух панелей, со стороны издателя и со стороны распространителя. При добавлении издателя в монитор на левую панель, на правой панели монитора отображается информация об этом издателе, его публикациях, подписках на эти публикации и различных агентах репликации. Помимо представления информации о топологии репликации, монитор репликации позволяет выполнять некоторые задачи, например пуск и остановку агентов, а также проверку данных.  

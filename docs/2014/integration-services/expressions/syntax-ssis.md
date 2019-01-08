@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], syntax
@@ -14,12 +13,12 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c1b1be45aff03e3e4e0c0358c3b3eb9903e718d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 809ce46e388dcc96a407e70cf5eb33c4e5afa44f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189304"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351003"
 ---
 # <a name="syntax-ssis"></a>Синтаксис (службы SSIS)
   Синтаксис выражений служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] похож на синтаксис языков C и C#. Выражения содержат элементы, такие как идентификаторы (столбцы и переменные), литералы, операторы и функции. В этом разделе обобщаются особые требования синтаксиса средства оценки выражений с точки зрения различных элементов выражений.  
@@ -27,7 +26,7 @@ ms.locfileid: "48189304"
 > [!NOTE]  
 >  В предыдущих выпусках служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]действовало ограничение в 4000 символов на результат вычисления выражения, если результат имел тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_WSTR или DT_STR. Это ограничение снято.  
   
- Образцы выражений, использующих специальные операторы и функции, см. в разделах, посвященных соответствующим операторам и функциям: [Операторы (выражение служб SSIS)](operators-ssis-expression.md) и [Функции (выражение служб SSIS)](functions-ssis-expression.md).  
+ Образцы выражений, использующих специальные операторы и функции, см. в разделе о каждом операторе и функции: [Операторы &#40;выражение служб SSIS&#41; ](operators-ssis-expression.md) и [функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md).  
   
  Образцы выражений, использующих несколько операторов и функций так же, как идентификаторы и литералы, см. в разделе [Примеры расширенных выражений служб Integration Services](examples-of-advanced-integration-services-expressions.md).  
   
@@ -81,8 +80,8 @@ ms.locfileid: "48189304"
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [Памятка выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=217683)на сайте pragmaticworks.com  
+-   Техническая статья [Памятка выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=217683)на сайте pragmaticworks.com  
   
--   Техническая статья [Примеры выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
+-   Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
   

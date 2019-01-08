@@ -17,17 +17,17 @@ ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6140fe9fc991356a0138c533e8dcbfdb53ca0959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae03c7dccdc702ccb4deae068013a69d7852d623
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789487"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529632"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>Индекс синтаксиса ADO для Visual C++ для модели COM
 Этот индекс является перекрестной ссылки на Справочник по языку ADO, исходя из Microsoft Visual C++.  
   
- Если вы используете **#import** директивы в своем приложении, файл заголовка будет создаваться, позволит вам использовать синтаксис, похожий на Microsoft Visual Basic. Имена свойств формы **get_ *** PropertyName* и **put_ *** PropertyName* может рассматриваться, как если бы они были объявлены как просто *PropertyName*. Свойство можно интерпретировать как элемент данных, а не функции.  
+ Если вы используете **#import** директивы в своем приложении, файл заголовка будет создаваться, позволит вам использовать синтаксис, похожий на Microsoft Visual Basic. Имена свойств формы **get_**_PropertyName_ и **put_**_PropertyName_ может рассматриваться, как если бы они были объявлены как просто *PropertyName*. Свойство можно интерпретировать как элемент данных, а не функции.  
   
  Все методы, свойства и события являются функции, возвращающие **HRESULT**, который можно проверить, чтобы определить, если функция выполнена успешно.  
   

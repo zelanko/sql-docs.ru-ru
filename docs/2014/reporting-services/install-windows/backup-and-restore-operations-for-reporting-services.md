@@ -20,12 +20,12 @@ ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 573ea25fdbb617f079fb71c08057294c5568d95c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dff50034b255ae2b2654f6250cf1c39aad092cb5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092494"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390417"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Операции резервного копирования и восстановления для служб Reporting Services
   В этом разделе представлены общие сведения обо всех файлах данных, использованных при установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , а также содержится описание времени и способа создания резервных копий этих файлов. Разработка плана создания резервных копий и восстановления баз данных сервера отчетов является самой важной частью в стратегии восстановления. Однако более полная стратегия восстановления включает дополнительные компоненты, в том числе создание резервных копий ключей шифрования, пользовательских сборок или модулей, файлов конфигурации и исходных файлов для отчетов и моделей.  
@@ -40,9 +40,9 @@ ms.locfileid: "48092494"
   
     -   [Обновление и перенос служб Reporting Services](upgrade-and-migrate-reporting-services.md)  
   
-    -   [Перенос установки служб Reporting Services &#40;режиме интеграции с SharePoint&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)  
+    -   [Перенос установки служб Reporting Services (режим интеграции с SharePoint)](migrate-a-reporting-services-installation-sharepoint-mode.md)  
   
-    -   [Перенос установки служб Reporting Services &#40;собственный режим&#41;](migrate-a-reporting-services-installation-native-mode.md)  
+    -   [Перенос установки служб Reporting Services (собственный режим)](migrate-a-reporting-services-installation-native-mode.md)  
   
 ## <a name="backing-up-the-report-server-databases"></a>Создание резервных копий баз данных сервера отчетов  
  Так как сервер отчетов является сервером без сохранения состояния, все данные приложений хранятся в базах данных **reportserver** и **reportservertempdb** , которые выполняются на экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Можно создать резервные копии баз данных **reportserver** и **reportservertempdb** с помощью одного из поддерживаемых методов создания резервных копий баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для баз данных сервера отчетов рекомендуется следующее:  
@@ -56,10 +56,10 @@ ms.locfileid: "48092494"
  Дополнительные сведения о резервном копировании и восстановлении реляционных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 > [!IMPORTANT]  
->  Если сервер отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] находится в режиме интеграции с SharePoint, следует учитывать дополнительные базы данных, включая базы данных конфигурации SharePoint и базы данных предупреждений [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . В режиме интеграции с SharePoint для каждого приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] создаются три базы данных. Базы данных **reportserver**, **reportservertempdb**и **dataalerting** . Дополнительные сведения см. в разделе [резервного копирования и восстановления SharePoint приложений службы Reporting Services](../backup-and-restore-reporting-services-sharepoint-service-applications.md)  
+>  Если сервер отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] находится в режиме интеграции с SharePoint, следует учитывать дополнительные базы данных, включая базы данных конфигурации SharePoint и базы данных предупреждений [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . В режиме интеграции с SharePoint для каждого приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] создаются три базы данных. Базы данных **reportserver**, **reportservertempdb**и **dataalerting** . Дополнительные сведения см. в разделе [Backup and Restore Reporting Services SharePoint Service Applications](../backup-and-restore-reporting-services-sharepoint-service-applications.md)(Резервное копирование и восстановление приложений службы Reporting Services SharePoint).  
   
 ## <a name="backing-up-the-encryption-keys"></a>Создание резервных копий ключей шифрования  
- При первой настройке установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] необходимо создать резервную копию ключей шифрования. Кроме того, необходимо создавать резервные копии ключей шифрования каждый раз при изменении удостоверения учетных записей служб или изменении имени компьютера. Дополнительные сведения см. в разделе [Резервное копирование и восстановление ключей шифрования служб Reporting Services](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Для серверов отчетов в режиме SharePoint, см. в разделе «Управление ключами» [управление приложения SharePoint службы Reporting Services](../manage-a-reporting-services-sharepoint-service-application.md).  
+ При первой настройке установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] необходимо создать резервную копию ключей шифрования. Кроме того, необходимо создавать резервные копии ключей шифрования каждый раз при изменении удостоверения учетных записей служб или изменении имени компьютера. Дополнительные сведения см. в разделе [Резервное копирование и восстановление ключей шифрования служб Reporting Services](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Сведения о серверах отчетов в режиме интеграции с SharePoint см. в разделе "Управление ключами" статьи [Управление приложением службы SharePoint — Reporting Services](../manage-a-reporting-services-sharepoint-service-application.md).  
   
 ## <a name="backing-up-the-configuration-files"></a>Создание резервной копии файлов конфигурации  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используются файлы конфигурации. Необходимо создать резервную копию этих файлов при первой настройке сервера, а также после развертывания каких-либо пользовательских модулей. Необходимо создать резервные копии следующих файлов:  
@@ -84,11 +84,11 @@ ms.locfileid: "48092494"
  Убедитесь в наличии резервной копии любых используемых пользовательских модулей и пользовательских сборок.  
   
 ## <a name="see-also"></a>См. также  
- [База данных сервера отчетов &#40;собственный режим служб SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../report-server/report-server-database-ssrs-native-mode.md)   
  [Файлы конфигурации служб Reporting Services](../report-server/reporting-services-configuration-files.md)   
- [Программа rskeymgmt &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
+ [Программа rskeymgmt (SSRS)](../tools/rskeymgmt-utility-ssrs.md)   
  [Копирование баз данных путем создания и восстановления резервных копий](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
  [Администрирование базы данных сервера отчетов (службы SSRS в собственном режиме)](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [Настройка и управление ключами шифрования &#40;диспетчер конфигурации служб SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - ORDER BY clause [Visual Database Tools]
@@ -12,12 +12,12 @@ ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14f9efc4b93aedd4bacb757912e82a954c2fff72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30a2fca3dd0f2fcc6f22f2330c37fb8e333d9994
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078484"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771936"
 ---
 # <a name="sort-with-order-by-visual-database-tools"></a>Произведение сортировки с помощью предложения ORDER BY (визуальные инструменты для баз данных)
   Предложение ORDER BY позволяет сортировать результаты запроса по одному или нескольким столбцам. Его можно определить, выбрав параметры на панели «Подробности критериев».  
@@ -36,7 +36,7 @@ ms.locfileid: "48078484"
  Обратите внимание, что во время работы с панелью критериев предложение UNION запроса изменяется в соответствии с последними действиями.  
   
 > [!NOTE]  
->  При сортировке результатов по нескольким столбцам в столбце **Порядок сортировки** укажите порядок, в котором будут просматриваться столбцы при сортировке. Дополнительные сведения см. в разделе **Как производить сортировку нескольких столбцов в запросе**.  
+>  При сортировке результатов по нескольким столбцам в столбце **Порядок сортировки** укажите порядок, в котором будут просматриваться столбцы при сортировке. Дополнительные сведения см. в разделе **как: Сортировка по нескольким столбцам в запросах**.  
   
 ## <a name="see-also"></a>См. также  
  [Результаты запросов сортировки и группирования &#40;визуальных инструментах баз данных&#41;](sort-and-group-query-results-visual-database-tools.md)   

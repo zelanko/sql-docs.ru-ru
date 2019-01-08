@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c1dc3110f35d79d0e100ac90b52b303b0e750fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a52df417f41e2ba7a71152ededc0d2846f43956
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158344"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798091"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>Создание атрибута на основе домена (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]администраторы могут создать атрибут на основе домена, чтобы ограничить значения в столбце определенным набором значений.  
@@ -31,7 +30,7 @@ ms.locfileid: "48158344"
   
 -   необходимо иметь разрешение на доступ к функциональным областям **Администрирование системы** и **Обозреватель** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../administrators-master-data-services.md).  
   
 -   Модель и сущность должны быть созданы ранее.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48158344"
 -   Чтобы удалить или добавить значения в списке с ограничениям, загрузите сущность, на которой основан атрибут. Дополнительные сведения о загрузке сущностей см. в разделе [загрузки данных из MDS в Excel](export-data-to-excel-from-master-data-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [Атрибуты на основе домена &#40;службы Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   
+ [Атрибуты на основе домена (службы Master Data Services)](../domain-based-attributes-master-data-services.md)   
  [Создание сущности (надстройка MDS для Excel)](create-an-entity-mds-add-in-for-excel.md)   
  [Построение модели (надстройка MDS для Excel)](building-a-model-mds-add-in-for-excel.md)  
   

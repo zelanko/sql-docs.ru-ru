@@ -1,7 +1,8 @@
 ---
-title: Расширить функциональные возможности студии данных Azure | Документация Майкрософт
-description: Добавляйте расширения в Azure Data Studio
-ms.custom: tools|sos
+title: Добавление расширения
+titleSuffix: Azure Data Studio
+description: Добавление расширений из Marketplace расширения Studio данных Azure
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f00275187781b3981974c0456a7870a52604220c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: a79732ba0a10121f4c4323e7f19bac009c64964d
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356235"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030468"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>Расширения функциональности [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

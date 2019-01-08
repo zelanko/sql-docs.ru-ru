@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], security
@@ -15,12 +14,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fccfdf6883a0b5c049824f75086a97a2533c3c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b15344c41bcfe8f43606683dc2e94f848bdb5923
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217794"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780086"
 ---
 # <a name="secure-the-subscriber"></a>Организация безопасности подписчика
   Агенты слияния и распространителей подключаются к подписчику. Эти подключения могут выполняться в контексте имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или имени входа Windows. Важно предоставить для этих агентов соответствующее имя входа, придерживаясь принципа предоставления минимально необходимых прав и обеспечивая защиту хранилища всех паролей. Сведения о разрешениях, необходимых для каждого агента, см. в разделе [Replication Agent Security Model](replication-agent-security-model.md).  
@@ -72,7 +71,7 @@ ms.locfileid: "48217794"
     > [!IMPORTANT]  
     >  Используйте проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для подключений к подписчикам, и задавайте разные учетные записи для подключения к каждому подписчику. При использовании подписки по запросу репликация всегда устанавливает соединение для использования проверки подлинности Windows (для подписок по запросу репликация не может обратиться к метаданным на подписчике, необходимым для использования проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ). В этом случае измените соединение таким образом, чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] после настройки подписки.  
   
-     Дополнительные сведения см. в статьях "Инструкции. Создание обновляемых подписок для публикаций транзакций (среда SQL Server Management Studio)" и [Просмотр и изменение параметров безопасности репликации](view-and-modify-replication-security-settings.md).  
+     Дополнительные сведения см. в разделе Как Создание обновляемой подписки на публикацию транзакций (SQL Server Management Studio) и [Просмотр и изменение параметров безопасности репликации](view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>См. также  
  [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

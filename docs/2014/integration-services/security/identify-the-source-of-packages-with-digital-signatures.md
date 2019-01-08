@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - signing packages [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8a94f52f72f91a465adcb4fba1d9a6e8c95375d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e1bf17207e57f8488e10c6b37cc7fa876d511b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073504"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798916"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Определение источника пакетов с помощью цифровых подписей
   Пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может быть подписан цифровым сертификатом, удостоверяющим его происхождение. После подписи пакета цифровым сертификатом службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проверяют цифровую подпись перед загрузкой пакета. Чтобы службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проверяли подпись, необходимо задать параметр в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или в программе **dtexec** (dtexec.exe) либо задать необязательное значение реестра.  
@@ -44,7 +43,7 @@ ms.locfileid: "48073504"
 >  Дополнительный раздел реестра **BlockedSignatureStates** может задавать значение, накладывающее более строгое ограничение, чем параметр цифровой подписи, задаваемый в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или программе командной строки **dtexec** . В этом случае значение в реестре переопределяет другие параметры.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Integration Services &#40;SSIS&#41; пакетов](../integration-services-ssis-packages.md)   
- [Общие сведения о безопасности &#40;служб Integration Services&#41;](security-overview-integration-services.md)  
+ [Пакеты служб Integration Services (SSIS)](../integration-services-ssis-packages.md)   
+ [Общие сведения о безопасности (службы Integration Services)](security-overview-integration-services.md)  
   
   

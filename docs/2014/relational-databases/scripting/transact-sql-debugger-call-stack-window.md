@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.callstack
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c2f69398562a11c466d3772389c326b32cb6e6cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb1838890edb044ca3f1bbe5dfd5ebd3dad51c9d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220741"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328694"
 ---
 # <a name="call-stack-window"></a>Окно стека вызовов
   В окне **Стек вызовов** отображаются модули в стеке вызова, а также типы данных и значения всех параметров, передаваемых в модули. [!INCLUDE[tsql](../../includes/tsql-md.md)] включают в себя хранимые процедуры, функции и триггеры. Чтобы отобразить стек вызова, необходимо находиться в режиме отладки.  
@@ -48,7 +46,7 @@ ms.locfileid: "48220741"
  Все выражения в окнах **Локальные значения**, **Контрольные значения**и **Быстрая проверка** вычисляются на основе текущего кадра стека. В окне «Редактор запросов» отображается код текущего кадра. По умолчанию текущим кадром стека является кадр, в котором отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] приостановил выполнение. После перехода от текущего кадра стека к другому кадру выражения в окнах **Локальные переменные**, **Контрольные значения**и **Быстрая проверка** повторно вычисляются в контексте нового кадра и в окне редактора запросов отображается исходный код нового кадра.  
   
 ## <a name="columns"></a>Столбцы  
- **Название**  
+ **Name**  
  Отображается информация о модуле в стеке вызова.  
   
  В нижней строке в стеке вызова в поле **Имя** указано окно источника редактора запросов и номер строки первого вызова в стеке. В других строках поле **Имя** имеет формат **Модуль(Экземпляр.База_данных)(Список_параметров) Номер_строки**.  
@@ -72,5 +70,3 @@ ms.locfileid: "48220741"
  [Отладчик Transact-SQL](transact-sql-debugger.md)   
  [Сведения отладчика Transact-SQL](transact-sql-debugger-information.md)   
  [Пошаговая отладка кода Transact-SQL](step-through-transact-sql-code.md)  
-  
-  

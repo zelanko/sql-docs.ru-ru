@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.queuereaderagent.f1
@@ -15,12 +14,12 @@ ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8bb7f1790918ceff5579eefeea35bf574d23edd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 401d36c399c88088475a989a355a9430ce6e3818
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163603"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777946"
 ---
 # <a name="queue-reader-agent"></a>Агент чтения очереди.
   В диалоговом окне **Агент чтения очереди** предоставляются подробные данные об агенте чтения очереди, в том числе состояние, данные журнала, информационные сообщения и любые сообщения об ошибках.  
@@ -67,6 +66,6 @@ ms.locfileid: "48163603"
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Наблюдение за репликацией](monitoring-replication.md)   
- [Обзор агентов репликации](agents/replication-agents-overview.md)  
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

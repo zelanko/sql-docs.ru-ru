@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9594191e604d70ef71ad7db00ce840d010398b92
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 99ccf53ab36d68ab0b03fa042d08e00d65703228
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147999"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393429"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Разработка с использованием XMLA в службах Analysis Services
   XML для аналитики (XMLA) — это XML-протокол, основанный на протоколе SOAP и специально предназначенный для обеспечения унифицированного доступа к данным в любом стандартном многомерном источнике данных, доступном через HTTP-соединение. В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA является единственным протоколом для связи с клиентскими приложениями. Все клиентские библиотеки, поддерживаемые службами Analysis Services, в конечном итоге формируют запросы и ответы по протоколу XMLA.  
@@ -54,10 +54,10 @@ ms.locfileid: "50147999"
 ### <a name="namespace"></a>Пространство имен  
  Схемы, определенной в данной спецификации использует пространство имен XML `http://schemas.microsoft.com/AnalysisServices/2003/Engine` и стандартное сокращение «DDL».  
   
-### <a name="schema"></a>Схема  
+### <a name="schema"></a>схема  
  В основе определения схемы XSD для языка определения объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] лежат определение элементов схемы и иерархии, приведенное в этом разделе.  
   
-## <a name="extensibility"></a>Расширяемость  
+## <a name="extensibility"></a>Расширение среды  
  Расширяемость схемы языка определения объектов обеспечивается с помощью параметра **заметки** элемент, который включается во все объекты. Этот элемент может содержать любой допустимый код XML из любого пространства имен XML (отличного от целевого пространства имен, определяющего DDL) с соблюдением следующих правил.  
   
 -   В XML-коде могут содержаться только элементы.  

@@ -17,19 +17,19 @@ ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d99f844a83ee112dbd66f6e4c2110035d70658a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89054576eb64a913e67bf3ae9a3f53d0c79eb48f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681132"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206613"
 ---
 # <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Возвращает сведения о всех ожиданий, зафиксированных потоками, которые выполнены для каждого сеанса. Это представление можно использовать для диагностики проблем производительности с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сеанса и конкретных запросов и пакетов.  Это представление возвращает сеанс те же сведения, объединяются для [sys.dm_os_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) , но предоставляет **session_id** также номер.  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

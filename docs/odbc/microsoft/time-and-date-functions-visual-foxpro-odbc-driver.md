@@ -18,12 +18,12 @@ ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7752c1c1d5184ddb1beea26d7c35e29ea5769796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644332"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538754"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Функции даты и времени (драйвер ODBC для Visual FoxPro)
 В следующей таблице перечислены ODBC функций даты и времени поддерживаются драйвером Visual FoxPro ODBC; Если Visual FoxPro грамматики для той же функции отличается от синтаксиса ODBC, Visual FoxPro эквивалентное отображаются.  
@@ -57,8 +57,8 @@ ms.locfileid: "47644332"
  Драйвер также поддерживает escape-последовательность ODBC для данных date и timestamp. Синтаксис escape-предложении выглядит следующим образом:  
   
 ```  
---(*vendor(Microsoft),product(ODBC) d 'value' *)—  
---(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
+--(*vendor(Microsoft),product(ODBC) d 'value' *)-  
+--(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
  В этом синтаксисе **d** указывает, что *значение* является датой в *гггг мм дд* формат и **служб терминалов** указывает, что *значение*  представляет собой метку времени в *гггг мм дд чч: мм:*[.*f...*] формат. Сокращенный синтаксис для данных date и timestamp выглядит следующим образом:  

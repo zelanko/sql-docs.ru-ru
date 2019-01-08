@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/23/2018
+ms.date: 12/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 513b85aafb4cd25d55dfb40e37dabd6fc47b814f
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878197"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886889"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -168,8 +168,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Применимо к**: с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Происходит с планами параллельных запросов, когда поток-потребитель ожидает поток-производитель для отправки строк. Это является обычной частью параллельного выполнения запросов. <br /> **Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Происходит с планами параллельных запросов, при синхронизации итератора обмена обработчика запросов, а также при создании и использовании строк. Если ожидание избыточно и не может быть уменьшено путем настройки запросов (например, добавлением индексов), рассмотрите возможность настройки параметра cost threshold for parallelism или уменьшите степень параллелизма.<br /> **Примечание:** начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, и [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ожидания CXPACKET относится только к синхронизации итератора обмена обработчика запросов и создания строк для потоки-потребители. Потоки-потребители в тип ожидания CXCONSUMER отслеживаются отдельно.| 
+|CXCONSUMER |Происходит с планами параллельных запросов, когда поток-потребитель ожидает поток-производитель для отправки строк. Это является обычной частью параллельного выполнения запросов. <br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Происходит с планами параллельных запросов, при синхронизации итератора обмена обработчика запросов, а также при создании и использовании строк. Если ожидание избыточно и не может быть уменьшено путем настройки запросов (например, добавлением индексов), рассмотрите возможность настройки параметра cost threshold for parallelism или уменьшите степень параллелизма.<br /> **Примечание.** Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, и [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ожидания CXPACKET относится только к синхронизации итератора обмена обработчика запросов и создания строк для потоки-потребители. Потоки-потребители в тип ожидания CXCONSUMER отслеживаются отдельно.| 
 |CXROWSET_SYNC |Имеет место при параллельном просмотре диапазона.| 
 |DAC_INIT |Имеет место при инициализации выделенного административного соединения.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -331,7 +331,7 @@ GO
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |Фоновая задача ожидает окончания запуска фоновой задачи, которая обрабатывает уведомления WSFC. Только для внутреннего использования., <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |Фоновая задача ожидает завершения работы фоновой задачи, которая обрабатывает уведомления WSFC. Только для внутреннего использования., <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_PARTNER_SYNC |Ожидание управления параллелизмом список участников., <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HADR_READ_ALL_NETWORKS |Ожидание доступа к списку сетей WSFC для чтения или записи. Только для внутреннего применения. Примечание: Система хранит список сетей WSFC, используемый в динамических административных представлениях (например, sys.dm_hadr_cluster_networks) или для проверки Transact-SQL AlwaysOn инструкций, ссылающихся на WSFC сведения о сети. Этот список обновляется при запуске ядра, связанных с WSFC уведомления и внутренней Always On перезапуска (например, утери и кворума WSFC). Обычно задачи будут блокироваться, пока выполняется обновление в этом списке. , <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_READ_ALL_NETWORKS |Ожидание доступа к списку сетей WSFC для чтения или записи. Только для внутреннего применения. Примечание. Система хранит список сетей WSFC, используемый в динамических административных представлениях (например, sys.dm_hadr_cluster_networks) или для проверки Transact-SQL AlwaysOn инструкций, ссылающихся на WSFC сведения о сети. Этот список обновляется при запуске ядра, связанных с WSFC уведомления и внутренней Always On перезапуска (например, утери и кворума WSFC). Обычно задачи будут блокироваться, пока выполняется обновление в этом списке. , <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |Ожидание подключения базы данных-получателя к базе данных-источнику до начала восстановления. Это ожидание предусмотрено, который можно увеличить, при низкой для установления подключения к первичной реплике., <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |Механизм восстановления базы данных ожидает, пока база данных-получатель закончит фазу восстановления и инициализации, которая вернет ее к общей временной точке в журнале с базой данных-источником. Это ожидание предусмотрено после отработки отказа. Отменить можно отследить ход выполнения с помощью системного монитора Windows (perfmon.exe) и динамических административных представлений., <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_REPLICAINFO_SYNC |Ожидание управления параллелизмом обновление текущего состояния реплики., <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -931,6 +931,7 @@ GO
 |VIA_ACCEPT |Имеет место при завершении соединения с поставщиком VIA во время запуска.| 
 |VIEW_DEFINITION_MUTEX |Имеет место в процессе синхронизации доступа к кэшированным определениям представлений.| 
 |WAIT_FOR_RESULTS |Имеет место при ожидании срабатывания триггера уведомления запроса.| 
+|WAIT_ON_SYNC_STATISTICS_REFRESH |Происходит во время ожидания обновления синхронной статистики после компиляции запроса, и можно возобновить выполнение.<br /> **Область применения**: Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XLOGREAD_SIGNAL |TBD <br /> **Применимо к**: с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

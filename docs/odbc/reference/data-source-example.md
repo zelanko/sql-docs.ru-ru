@@ -13,17 +13,17 @@ ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69cc3a0d32c12c71b3909bda23dea93417475f2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f427074f7cd7153f448aaef43bc4ac5dca84c01
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847633"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215725"
 ---
 # <a name="data-source-example"></a>Образец источника данных
 На компьютерах под управлением Microsoft® Windows NT® Server и Windows 2000 Server, Microsoft Windows NT Workstation и Windows 2000 Professional или Microsoft Windows® 95/98, данные компьютера источника хранится в реестре. В зависимости от того, какие параметры реестра ключа сведения хранятся в разделе, источник данных называется *источника данных* или *системный источник данных*. Пользовательские источники данных хранятся в разделе HKEY_CURRENT_USER и доступны только для текущего пользователя. Системные источники данных хранятся в разделе HKEY_LOCAL_MACHINE и может использоваться более чем одним пользователем, на одном компьютере. Они также могут использоваться службами всей системы, которые затем могут получить доступ к источнику данных, даже если пользователь не вошел в систему на компьютере. Дополнительные сведения о пользовательских и системных источников данных, см. в разделе [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  
   
- Предположим, что у пользователя есть три источника данных пользователя: персонала и инвентаризации, которые используют СУБД с Oracle; и платежных ведомостей, который использует СУБД Microsoft SQL Server. Значения реестра для источников данных могут быть:  
+ Предположим, что у пользователя есть три источника данных пользователя: Только у сотрудников и инвентаризации, которые используют СУБД с Oracle; и платежных ведомостей, который использует СУБД Microsoft SQL Server. Значения реестра для источников данных могут быть:  
   
 ```  
 HKEY_CURRENT_USER  
@@ -47,7 +47,7 @@ HKEY_CURRENT_USER
                          Driver : REG_SZ : C:\WINDOWS\SYSTEM\Sqlsrvr.dll  
                          Description : REG_SZ : Payroll database  
                          Server : REG_SZ : PYRLL1  
-                         FastConnectOption : REG_SZ : No                          UseProcForPrepare : REG_SZ : Yes  
+                         FastConnectOption : REG_SZ : No                          UseProcForPrepare : REG_SZ : Yes  
                          OEMTOANSI : REG_SZ : No  
                          LastUser : REG_SZ : smithjo  
                          Database : REG_SZ : Payroll  

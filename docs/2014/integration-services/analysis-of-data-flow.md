@@ -11,12 +11,12 @@ ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e612fefcebd0537d13a4377484bbaddc04d086a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa33b840a985cb3053ad8868c3b6153dc53822ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064524"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515822"
 ---
 # <a name="analysis-of-data-flow"></a>Анализ потока данных
   Можно использовать [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` представление для анализа потока данных пакетов базы данных. Это представление отображает строку каждый раз, когда компонент потока данных передает данные в компонент, находящийся ниже в иерархии. Подобная информация дает полное представление о строках, отправляемых для каждого компонента.  
@@ -62,7 +62,7 @@ order by source_component_name desc
 ## <a name="related-tasks"></a>Связанные задачи  
  [Отладка потока данных](troubleshooting/debugging-data-flow.md)  
   
- [Инструменты устранения неполадок с выполнением пакетов](troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Устранение неполадок инструментов с помощью отчетов](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
 ## <a name="see-also"></a>См. также  
  [Данные потоков данных](data-flow/data-in-data-flows.md)  

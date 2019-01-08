@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], renaming
@@ -14,12 +13,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53a917074efc3ba8b966f795a619c2606e3a160b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8226ca15ed39dd6cc24c7235f54a047d2af86508
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055614"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783626"
 ---
 # <a name="rename-a-database"></a>Переименование базы данных
   В этом подразделе описывается, как переименовать пользовательскую базу данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Имя базы данных может содержать все символы, соответствующие правилам для идентификаторов.  
@@ -38,7 +37,7 @@ ms.locfileid: "48055614"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After renaming a database](#FollowUp)  
+-   **Дальнейшие действия.**  [После переименования базы данных](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -82,7 +81,7 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> Дальнейшие действия. После переименования базы данных  
+##  <a name="FollowUp"></a> Дальнейшие действия: После переименования базы данных  
  Создавайте резервную копию базы данных **master** после переименования любой базы данных.  
   
 ## <a name="see-also"></a>См. также  

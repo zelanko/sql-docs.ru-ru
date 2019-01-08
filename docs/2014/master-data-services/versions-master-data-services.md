@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
@@ -16,12 +15,12 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5003667b952e927454e5674538d0b40fab577aa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f99012be602f80279826de0446df006ff4e69f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190921"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778396"
 ---
 # <a name="versions-master-data-services"></a>Версии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно создать несколько версий основных данных в модели. Версии могут быть заблокированы до проведения проверки данных и будут зафиксированы после проверки данных. Зафиксированные версии образуют запись аудита об изменениях. Каждая созданная версия содержит все элементы, значения атрибутов, элементы иерархии, отношения в иерархии и коллекции для модели.  
@@ -48,7 +47,7 @@ ms.locfileid: "48190921"
   
 1.  Начальная версия создается автоматически при создании модели и наполнении базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] основными данными компании. На основании разрешений пользователи могут при необходимости вносить изменения в эту версию.  
   
-2.  Когда необходимо зафиксировать версию модели, заблокируйте ее, чтобы только администраторы модели могли обновлять данные. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md). Если настраиваются уведомления, то администратору модели по электронной почте направляются уведомления каждый раз, когда изменяется состояние версии. Дополнительные сведения см. в разделе [Настройка уведомления электронной почты (службы Master Data Services)](../../2014/master-data-services/configure-email-notifications-master-data-services.md).  
+2.  Когда необходимо зафиксировать версию модели, заблокируйте ее, чтобы только администраторы модели могли обновлять данные. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md). Если настраиваются уведомления, то администратору модели по электронной почте направляются уведомления каждый раз, когда изменяется состояние версии. Дополнительные сведения см. в разделе [Настройка уведомления электронной почты (службы Master Data Services)](../../2014/master-data-services/configure-email-notifications-master-data-services.md).  
   
 3.  Примените бизнес-правила к данным заблокированной версии и просмотрите все ошибки, обнаруженные при проверке. При необходимости можно внести отсутствующие данные или восстановить транзакции, которые привели к возникновению ошибки. Можно также разблокировать версию, чтобы пользователи могли вносить изменения.  
   
@@ -70,22 +69,22 @@ ms.locfileid: "48190921"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Изменение имени существующей версии.|[Изменение имени версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
-|Блокирование версии, чтобы изменять ее данные могли только администраторы.|[Блокировка версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
-|Разблокирование версии, чтобы изменять ее данные могли пользователи.|[Разблокировка версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
-|Фиксирование версии после проверки всех данных.|[Фиксация версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
-|Создание нового флага для обозначения версии.|[Создание флага версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
-|Изменение имени для существующего флага версии.|[Изменение имени флага версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|Назначение существующего флага для версии.|[Назначение флага версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|Создание новой копии для существующей версии|[Копирование версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
-|Удаление существующей версии.|[Удаление версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
+|Изменение имени существующей версии.|[Изменение имени версии (службы Master Data Services)](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
+|Блокирование версии, чтобы изменять ее данные могли только администраторы.|[Блокировка версии (службы Master Data Services)](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
+|Разблокирование версии, чтобы изменять ее данные могли пользователи.|[Разблокировка версии (службы Master Data Services)](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
+|Фиксирование версии после проверки всех данных.|[Фиксация версии (службы Master Data Services)](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
+|Создание нового флага для обозначения версии.|[Создание флага версии (службы Master Data Services)](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
+|Изменение имени для существующего флага версии.|[Изменение имени флага версии (службы Master Data Services)](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Назначение существующего флага для версии.|[Назначение флага версии (службы Master Data Services)](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|Создание новой копии для существующей версии|[Копирование версии (службы Master Data Services)](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
+|Удаление существующей версии.|[Удаление версии (службы Master Data Services)](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Отмена транзакции &#40;службы Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [Отмена транзакции (службы Master Data Services)](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [Уведомления &#40;службы Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+-   [Уведомления (службы Master Data Services)](../../2014/master-data-services/notifications-master-data-services.md)  
   
--   [Бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [Бизнес-правила (службы Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

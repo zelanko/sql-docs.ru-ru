@@ -1,5 +1,5 @@
 ---
-title: Восстановление из Power Pivot | Документы Microsoft
+title: Восстановление из Power Pivot в службах Analysis Services | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f95c1e891a218af73eb7c5bacbd1ea5a48e3a830
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 75290c6b877c3bb10cd42fbb10f1c087310791d3
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041930"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072780"
 ---
 # <a name="restore-from-power-pivot"></a>Восстановление из Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34041930"
 5.  В области **Параметры**оставьте флажок **Включить сведения о безопасности** . При восстановлении из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] этот параметр не действует.  
   
 ## <a name="see-also"></a>См. также  
- [Табличный шаблон баз данных](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
+ [Базы данных табличной модели](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
  [Импорт из Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
   
   

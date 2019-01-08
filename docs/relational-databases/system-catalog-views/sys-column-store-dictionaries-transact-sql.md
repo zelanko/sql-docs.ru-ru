@@ -20,12 +20,12 @@ ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dbcd828ea886bd1c83b327cae9a49bca4668ef15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd497326f278dcc01b4fa81a0e64da6a93cbe8cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617902"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518814"
 ---
 # <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47617902"
 |**column_id**|**int**|Идентификатор столбца columnstore, начиная с 1. Первый столбец имеет идентификатор = 1, второй столбец с Идентификатором = 2, и т.д.|  
 |**dictionary_id**|**int**|Может существовать два вида словарей: глобальные и локальные, связанные с сегмента столбца. Dictionary_id 0 представляет глобальный словарь, общей для всех сегментов (по одному для каждой из групп строк) для этого столбца.|  
 |**version**|**int**|Версия формата словаря.|  
-|**type**|**int**|Тип словаря:<br /><br /> 1 — хэш-словарь, содержащий **int** значения<br /><br /> 2 — не используется<br /><br /> 3 — хэш-словарь, содержащий строковые значения<br /><br /> 4 — хэш-словарь, содержащий **float** значения<br /><br /> Дополнительные сведения о словарях см. в разделе [руководство по индексам Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
+|**type**|**int**|Тип словаря:<br /><br /> 1 - hash, словарь, содержащий **int** значения<br /><br /> 2 - не используется<br /><br /> 3 — хэш-словарь, содержащий строковые значения<br /><br /> 4 - словарь, содержащий hash **float** значения<br /><br /> Дополнительные сведения о словарях см. в разделе [руководство по индексам Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
 |**last_id**|**int**|Последний идентификатор данных в словаре.|  
 |**entry_count**|**bigint**|Количество записей в словаре.|  
 |**on_disc_size**|**bigint**|Размер словаря в байтах.|  

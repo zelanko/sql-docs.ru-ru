@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_link_publication_TSQL
@@ -17,22 +16,22 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd0e41f54792978dd2adf8186d88dd4f07c1fa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683092"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210062"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Задает сведения о конфигурации и безопасности, применяемые триггерами синхронизации немедленно обновляемых подписок при подключении к издателю. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
-  
-> [!IMPORTANT]  
+> 
+> [!IMPORTANT]
 >  При определенных условиях данная хранимая процедура могут отклоняться на подписчике работает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] пакетом обновления 1 или более поздней версии, а издатель работает более ранней версии. Если в этом случае хранимая процедура завершается ошибкой, обновите издатель до [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 1 (SP1) или более поздней версии.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -65,8 +64,8 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**0**|Использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности с помощью имени входа, заданного в этой хранимой процедуре как *входа* и *пароль*.<br /><br /> Примечание: В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], этот параметр используется для указания динамического удаленного вызова процедур (RPC).|  
-|**1**|Использует контекст безопасности (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows) пользователя, редактирующего подписчика.<br /><br /> Примечание: Эта учетная запись должна существовать на издателе с достаточными правами. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.|  
+|**0**|Использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности с помощью имени входа, заданного в этой хранимой процедуре как *входа* и *пароль*.<br /><br /> Примечание. В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью этого параметра задавался динамический удаленный вызов процедур (RPC).|  
+|**1**|Использует контекст безопасности (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows) пользователя, редактирующего подписчика.<br /><br /> Примечание. Эта учетная запись должна существовать также и на издателе с соответствующими правами доступа. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.|  
 |**2**|Используется существующее, определенное пользователем связанного сервера имя для входа создан с помощью **sp_link_publication**.|  
   
  [ **@login**=] **"***входа***"**  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingmodeltrainingdest.f1
@@ -18,12 +17,12 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdef0e0ed6de3bf527a5b87bc05a12e1bc6ace5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c43a668ba9d418ea93b9367edb110980720d1c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068964"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781166"
 ---
 # <a name="data-mining-model-training-destination"></a>целевой объект «Обучение модели интеллектуального анализа данных»
   Целевой объект «Обучение модели интеллектуального анализа данных» обучает модели анализа данных, пропуская данные, которые получает целевой объект, через алгоритмы модели интеллектуального анализа данных. Несколько моделей интеллектуального анализа данных могут быть обучены одним целевым объектом, если модели построены на одной и той же структуре интеллектуального анализа данных. Дополнительные сведения см. в разделах [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) и [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -42,13 +41,13 @@ ms.locfileid: "48068964"
   
  Дополнительные сведения о свойствах, которые могут быть заданы в диалоговом окне **Редактор сценариев обучения моделей интеллектуального анализа данных** , см. в одном из следующих разделов:  
   
--   [Редактор обучения модели интеллектуального анализа &#40;вкладке "Подключение"&#41;](../data-mining-model-training-editor-connection-tab.md)  
+-   [Редактор обучения модели интеллектуального анализа данных (вкладка "Соединение")](../data-mining-model-training-editor-connection-tab.md)  
   
--   [Редактор обучения модели интеллектуального анализа &#40;вкладка "столбцы"&#41;](../data-mining-model-training-editor-columns-tab.md)  
+-   [Редактор обучения модели интеллектуального анализа данных (вкладка "Столбцы")](../data-mining-model-training-editor-columns-tab.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](../common-properties.md)  
+-   [Общие свойства](../common-properties.md)  
   
 -   [Пользовательские свойства назначения «Обучение модели интеллектуального анализа данных»](data-mining-model-training-destination-custom-properties.md)  
   

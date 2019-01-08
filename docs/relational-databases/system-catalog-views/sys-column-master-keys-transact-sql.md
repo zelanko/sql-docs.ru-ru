@@ -26,12 +26,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af9802fbf1568e7ce9d15882a29b96bbe0ad1762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb1740bdb0ae26d91e2a9ad9e2becb69d3b2810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711012"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518723"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "47711012"
 |**column_master_key_id**|**int**|Идентификатор главного ключа столбца.|  
 |**create_date**|**datetime**|Дата создания главного ключа столбца.|  
 |**modify_date**|**datetime**|Дата последнего изменения главного ключа столбца.|  
-|**key_store_provider_name**|**sysname**|Имя поставщика хранилища главных ключей столбцов, который содержит ключ CMK. Допустимые значения:<br /><br /> MSSQL_CERTIFICATE_STORE — Если Store сертификат хранилища главных ключей столбцов.<br /><br /> Определяемое пользователем значение, если хранилища главных ключей столбца пользовательского типа.|  
+|**key_store_provider_name**|**sysname**|Имя поставщика хранилища главных ключей столбцов, который содержит ключ CMK. Допустимые значения:<br /><br /> MSSQL_CERTIFICATE_STORE - Если Store сертификат хранилища главных ключей столбцов.<br /><br /> Определяемое пользователем значение, если хранилища главных ключей столбца пользовательского типа.|  
 |**key_path**|**nvarchar(4000)**|Путь конкретного хранилища главного ключа столбца ключа. Формат пути зависит от типа хранилища главного ключа столбца. Пример<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Для хранилища главных ключей пользовательских столбцов, разработчик отвечает за определение — какие путь к ключу для хранилища главных ключей пользовательского столбца.|  
-|**allow_enclave_computations**|**bit**|Указывает, является ли главный ключ столбца поддержкой анклава, (если ключ шифрования столбца, зашифрованный с помощью этого главного ключа, может использоваться для вычислений внутри безопасного enclaves на стороне сервера). Дополнительные сведения см. в разделе [всегда зашифрованы с помощью безопасного enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
+|**allow_enclave_computations**|**bit**|Указывает, является ли главный ключ столбца поддержкой анклава, (если ключ шифрования столбца, зашифрованный с помощью этого главного ключа, может использоваться для вычислений внутри безопасного enclaves на стороне сервера). Дополнительные сведения см. в статье [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
 |**signature**|**varbinary(max)**|Цифровую подпись **key_path** и **allow_enclave_computations**, созданных с помощью главного ключа столбца, ссылается **key_path**.|
 
 
@@ -59,7 +59,7 @@ ms.locfileid: "47711012"
 ## <a name="see-also"></a>См. также  
  [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Постоянное шифрование (компонент Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
   
   

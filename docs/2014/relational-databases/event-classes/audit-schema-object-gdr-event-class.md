@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: a0187811-dc71-4792-a282-3bfe1ca90c21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a66d6800917699171d237c6002037dbb7f228cb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e29280e6771c06ad11a0ec833445ba94c93c279f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175155"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814846"
 ---
 # <a name="audit-schema-object-gdr-event-class"></a>Audit Schema Object GDR, класс событий
   События класса **Audit Schema Object GDR** возникают всякий раз, когда выполняются инструкции GRANT, REVOKE или DENY по поводу разрешения для объекта схемы любым пользователем в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -45,13 +44,13 @@ ms.locfileid: "48175155"
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
 |**ObjectName**|**nvarchar**|Имя объекта, являющегося предметом разрешения, отмены разрешения или запрета разрешения.|34|Да|  
-|**ObjectType**|**int**|Значение, представляющее тип объекта, связанного с событием. Это значение соответствует столбцу типа в представлении каталога **sys.objects** . Значения см. в статье [Столбец события ObjectType Trace](objecttype-trace-event-column.md).|28|Да|  
+|**ObjectType**|**int**|Значение, представляющее тип объекта, связанного с событием. Это значение соответствует столбцу типа в представлении каталога **sys.objects** . Значения см. в разделе [Столбец события ObjectType Trace](objecttype-trace-event-column.md).|28|Да|  
 |**OwnerName**|**nvarchar**|Имя пользователя базы данных, присвоенное владельцу объекта, являющегося предметом разрешения, отмены разрешения или запрета разрешения.|37|Да|  
 |**ParentName**|**nvarchar**|Имя схемы, в которой находится объект.|59|Да|  
 |**Разрешения**|**bigint**|Целочисленное значение, отражающее тип проверяемых разрешений.<br /><br /> 1 = SELECT ALL<br /><br /> 2 = UPDATE ALL<br /><br /> 4 = REFERENCES ALL<br /><br /> 8 = INSERT<br /><br /> 16 = DELETE<br /><br /> 32 = EXECUTE (только для процедур)<br /><br /> 4096 = SELECT ANY (минимум один столбец)<br /><br /> 8192 = UPDATE ANY<br /><br /> 16384 = REFERENCES ANY|19|Да|  
 |**RequestID**|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
-|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
+|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Имя_входа1 и при выполнении инструкции под именем Имя_входа2 **SessionLoginName** содержит значение «Имя_входа1», а **LoginName** содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  
 |**Успешно**|**int**|1 = успешное завершение. 0 = неуспешное завершение. Например, значение 1 означает успешную проверку разрешений, а значение 0 означает, что эта проверка не пройдена.|23|Да|  

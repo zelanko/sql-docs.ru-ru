@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 288e086f164199ae372ccca2ffb482855bb3c2d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211894"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804056"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, класс событий
   Класс событий SQL:StmtRecompile указывает на повторные компиляции уровня инструкций, инициированные всеми типами пакетов: хранимыми процедурами, триггерами, нерегламентированными пакетами и запросами. Запросы могут передаваться с помощью sp_executesql, динамического SQL, методов Prepare, методов Execute или аналогичных интерфейсов. Вместо класса событий SP:Recompile должен использоваться класс событий SQL:StmtRecompile.  

@@ -1,5 +1,5 @@
 ---
-title: Обработка секций табличной модели | Документация Майкрософт
+title: Обработка секций табличной модели служб Analysis Services | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dea6ad8d7ef5d183990734042177f8053bb5969b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f4b4cb7307c30d03b80ef800d6808f5ce85deaa5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640931"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072021"
 ---
 # <a name="process-tabular-model-partitions"></a>Обработка секций табличной модели 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

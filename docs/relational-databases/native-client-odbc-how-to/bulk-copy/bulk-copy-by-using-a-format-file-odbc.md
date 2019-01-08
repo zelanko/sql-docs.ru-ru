@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 836e9724f05caa82eb0be01e6ab49cfa1519136e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cd144d8e32433971368649eb9c80b402c15019e7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671023"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216033"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Выполнение массового копирования при использовании файла форматирования (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "51671023"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Выполните первый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы создать таблицу, которой пользуется образец.  
+ Выполните первый ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) листинг, чтобы создать таблицу, которая будет использоваться образца кода.  
   
  Скопируйте второй листинг кода и вставьте его в файл Bcpfmt.fmt. Каждый столбец в таблице отделен символом табуляции.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "51671023"
   
  Скомпилируйте четвертый листинг кода (C++) с библиотеками odbc32.lib и odbcbcp.lib. При работе с программой MSBuild.exe сначала скопируйте файлы Bcpfmt.fmt и Bcpodbc.bcp из каталога проекта в тот каталог, где находится исполняемый файл, а затем вызовите этот исполняемый файл.  
   
- Выполните пятый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы удалить таблицу, которую использовал образец.  
+ Выполните пятый ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) листинг, чтобы удалить таблицу, которую использовал образец кода.  
   
 ```  
 use AdventureWorks  

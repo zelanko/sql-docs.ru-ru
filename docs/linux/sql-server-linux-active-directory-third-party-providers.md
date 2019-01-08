@@ -1,5 +1,6 @@
 ---
-title: Использование сторонних поставщиков Active Directory с SQL Server в Linux | Документация Майкрософт
+title: Использование сторонних поставщиков Active Directory с SQL Server в Linux
+titleSuffix: SQL Server
 description: Этот учебник содержит действия по настройке проверки подлинности Active Directory с помощью сторонних поставщиков
 author: dylan-MSFT
 ms.date: 07/25/2018
@@ -7,16 +8,16 @@ ms.author: dygray
 manager: mikehab
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AD authentication
-ms.openlocfilehash: 0ffe146de3a842f9c273b4dbba2a9fe4d9ff7ff5
-ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
+ms.openlocfilehash: de28696efd16a2be61864a810b3fd713b1066258
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757999"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160572"
 ---
 # <a name="use-third-party-active-directory-providers-with-sql-server-on-linux"></a>Использование сторонних поставщиков Active Directory с SQL Server в Linux
 

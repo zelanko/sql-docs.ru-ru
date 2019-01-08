@@ -13,12 +13,12 @@ ms.assetid: 9b648198-349f-46f6-b869-13d129945971
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa2211ddef09e127b66430968792007d29dd5eb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44e773248cd2d61e211f6de98d5a0f81acc78bd1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840102"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215550"
 ---
 # <a name="insert---sql-command"></a>INSERT (команда SQL)
 Добавляет запись в конец таблицы, содержащий указанные значения полей.  

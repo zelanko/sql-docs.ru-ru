@@ -1,5 +1,5 @@
 ---
-title: 'SQL Server управляемое резервное копирование в Windows Azure: взаимодействие и совместная работа | Документация Майкрософт'
+title: 'Управляемое резервное копирование SQL Server в Windows Azure: Взаимодействие и совместная работа | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c825ca99e120dce81cb4a18dc65413c1f5d03c4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184244"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509135"
 ---
-# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>Управляемое резервное копирование SQL Server в Microsoft Azure: взаимодействие и сосуществование
-  В этом разделе описываются вопросы взаимодействия и совместной работы [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] с некоторыми функциями в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Эти функции включают следующие: группы доступности AlwaysOn, зеркальное отображение базы данных, планы обслуживания резервных копий, доставка журналов, Нерегламентированное резервное копирование, отсоединение базы данных и Drop Database.  
+# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>Управляемое резервное копирование SQL Server в Windows Azure: Возможности взаимодействия и совместной работы
+  В этом разделе описываются вопросы взаимодействия и совместной работы [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] с некоторыми функциями в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. К таким средствам относятся: Группы доступности AlwaysOn, зеркальное отображение базы данных, планы обслуживания резервных копий, доставка журналов, нерегламентированное резервное копирование, отсоединение и удаление базы данных.  
   
 ### <a name="alwayson-availability-groups"></a>Группы доступности AlwaysOn  
- Группы доступности AlwaysOn, настраиваемые как решение только для Windows Azure и поддерживаемые для [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Не поддерживаются только локальные либо гибридные конфигурации групп доступности AlwaysOn. Дополнительные сведения и другие требования, см. в разделе [Настройка SQL Server Managed Backup to Windows Azure для групп доступности](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
+ Группы доступности AlwaysOn, которые настроены как решение только в Azure, поддерживается для Windows [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Не поддерживаются только локальные либо гибридные конфигурации групп доступности AlwaysOn. Дополнительные сведения и другие требования, см. в разделе [Настройка SQL Server Managed Backup to Windows Azure для групп доступности](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### <a name="database-mirroring"></a>Зеркальное отображение базы данных  
  Службы [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] поддерживаются только в основной базе данных. Если использование [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] настроено как на основной, так и на зеркальной базе данных, зеркальная база данных будет пропущена и ее резервное копирование выполнено не будет. Однако в случае отработки отказа [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] запустит процесс резервного копирования, после того как зеркальный сервер завершит переключение ролей и подключится к сети. В этом случае резервные копии будут сохраняться в новом контейнере. Если зеркальный сервер не настроен для использования [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], при отработке отказа резервное копирование производиться не будет. Рекомендуется настраивать [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] и в основной и в зеркальной базе данных, чтобы резервное копирование продолжалось и в случае отработки отказа.  
@@ -53,9 +53,9 @@ ms.locfileid: "48184244"
 ### <a name="log-backups-using-other-backup-tools-or-custom-scripts"></a>Резервное копирование журнала с применением других средств резервного копирования или пользовательских скриптов  
  Любые две операции резервного копирования, настроенные для выполнения резервного копирования журналов на одной базе данных, вызовут разрыв в цепочке копирования журналов. Безусловно, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] попытается обойти разрыв в цепочке резервного копирования, запланировав полное резервное копирование при его обнаружении, но это не устранит разрывы, периодически возникающие при копировании журнала двумя конкурирующими средствами. Это также может повлиять на восстановимость базы данных, поскольку не гарантируется, что какой-либо из инструментов будет всегда иметь полный набор последовательных резервных копий. Хоть это и относится к любым двум компонентам или инструментам, выполняющим резервное копирование журналов, будет полезно рассмотреть конкретные примеры, описанные ниже. Это также относится к проблемам, связанным с настройкой планов обслуживания или доставкой журналов, которые описаны в предыдущих подразделах данного раздела.  
   
- **Резервные копии на основе Data Protection Manager (DPM):** Microsoft Data Protection Manager позволяет выполнять полного и добавочного резервного копирования. Добавочные резервные копии — это копии журнала, которые выполняют усечение журнала после создания резервной копии T-журнала. Поэтому не поддерживается настройка и DPM и [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] для одной и той же базы данных.  
+ **Резервные копии на основе Data Protection Manager (DPM):** Microsoft Data Protection Manager позволяет создавать полные и добавочные резервные копии. Добавочные резервные копии — это копии журнала, которые выполняют усечение журнала после создания резервной копии T-журнала. Поэтому не поддерживается настройка и DPM и [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] для одной и той же базы данных.  
   
- **Сторонние инструменты и скрипты:** любое средство стороннего производителя или сценарии, резервные копии журналов журнала с усечением несовместим с [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]и не поддерживается.  
+ **Сторонние инструменты и скрипты.** Любые сторонние инструменты и скрипты, выполняющие резервное копирование журнала с усечением, несовместимы с [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], поэтому не поддерживаются.  
   
  Если у вас есть [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] включен для экземпляра базы данных, и вы хотите воспользоваться Нерегламентированное резервное копирование, можно использовать либо [smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) хранимой процедуры, как описано ранее в раздел. Если требуется также периодически делать резервные копии вне пределов [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], можно использовать функции резервного копирования только с копированием.  Дополнительные сведения см. в разделе [Резервные копии только для копирования (SQL Server)](../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   

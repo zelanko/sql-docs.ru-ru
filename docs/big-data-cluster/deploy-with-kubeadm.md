@@ -1,20 +1,22 @@
 ---
-title: Настройка Kubernetes с помощью kubeadm для SQL Server 2019 развертываний | Документация Майкрософт
+title: Настройка Kubernetes с помощью kubeadm
+titleSuffix: SQL Server 2019 big data clusters
 description: Сведения о настройке Kubernetes на несколько Ubuntu 16.04 или 18.04 компьютеров (физических или виртуальных) для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 842a23877290aec76f7813f27b68b4bccd7b5c9b
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 7b6c6aeced930bfdd17915e2acc130fc4446f4a5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221780"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210283"
 ---
-# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-deployments"></a>Настройка Kubernetes на нескольких компьютерах, для развертываний SQL Server 2019
+# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Настройка Kubernetes на несколько компьютеров для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных
 
 В этой статье приведен пример использования **kubeadm** Настройка Kubernetes на несколько компьютеров для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных. В этом примере несколько Ubuntu 16.04 или 18.04 LTS компьютеров (физических или виртуальных) являются целью. При развертывании на другую платформу Linux, необходимо изменить некоторые из команд в соответствии с вашей системы.  
 
@@ -143,4 +145,4 @@ kubectl get nodes
 
 Действия, описанные в этой статье настроить кластер Kubernetes на нескольких компьютерах Ubuntu. Следующим шагом является развертывание кластера SQL Server 2019 больших данных. Инструкции см. следующую статью:
 
-[Развертывание SQL Server 2019 CTP 2.1 в Kubernetes](deployment-guidance.md#deploy)
+[Развертывание SQL Server 2019 CTP-версии 2.2 в Kubernetes](deployment-guidance.md#deploy)

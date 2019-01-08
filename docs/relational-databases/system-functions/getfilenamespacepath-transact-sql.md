@@ -18,12 +18,12 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72d1842f81a8a4a3558b96d1dbece16f8ea4352d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c94fc80bd516c0be5b414aac98e0e4435ec8b53
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727162"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396187"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ SELECT @root = FileTableRootPath();
   
 @fullPath = varchar(1000);  
 SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## <a name="remarks"></a>Примечания  
@@ -93,13 +93,13 @@ WHERE Name = N’document.docx’;
  Следующие примеры показывают, как вызывать **GetFileNamespacePath** функцию для получения UNC-путь для файла или каталога в таблице FileTable.  
   
 ```  
--- returns the relative path of the form “\MyFileTable\MyDocDirectory\document.docx”  
+-- returns the relative path of the form "\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath() AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
   
--- returns “\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx”  
+-- returns "\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## <a name="see-also"></a>См. также  

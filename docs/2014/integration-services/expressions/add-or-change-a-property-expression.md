@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], creating
@@ -14,12 +13,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c571f92879a31399c0db4c7bc0acacc1355e169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8144f0a050afd484d77a12c13780de461587513b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178504"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807386"
 ---
 # <a name="add-or-change-a-property-expression"></a>Добавление или изменение выражение свойства
   Пользователь может создать выражения свойств для пакетов, задач, контейнеров «цикл по каждому элементу», контейнеров «цикл по элементам», контейнеров последовательности, обработчиков событий, диспетчеров соединений на уровне пакетов и проектов и регистраторов.  
@@ -44,7 +43,7 @@ ms.locfileid: "48178504"
   
     -   Введите или измените выражение свойства непосредственно в столбце **Выражение** и нажмите кнопку **ОК**.  
   
-         —или—  
+         -или-  
   
     -   Нажмите кнопку с многоточием (...) в строке выражения свойства, чтобы открыть **построитель выражений**.  
   
@@ -65,10 +64,10 @@ ms.locfileid: "48178504"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения служб Integration Services (SSIS)](integration-services-ssis-expressions.md)   
  [Использование выражений свойств в пакетах](use-property-expressions-in-packages.md)   
- [Службы Integration Services &#40;SSIS&#41; пакетов](../integration-services-ssis-packages.md)   
+ [Пакеты служб Integration Services (SSIS)](../integration-services-ssis-packages.md)   
  [Контейнеры служб Integration Services](../control-flow/integration-services-containers.md)   
  [Задачи служб Integration Services](../control-flow/integration-services-tasks.md)   
  [Обработчики событий в службах Integration Services (SSIS)](../integration-services-ssis-event-handlers.md)   

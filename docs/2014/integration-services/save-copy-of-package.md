@@ -15,12 +15,12 @@ ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0cd386cad85726707f1ce3ea9f7931bda4e66c25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c9018dcf8ae02d939f7ba3bc29d46231ef39d1f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140504"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545548"
 ---
 # <a name="save-copy-of-package"></a>Сохранение копии пакета
   Используйте диалоговое окно **Сохранение копии пакета** , доступное в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], чтобы сохранить копию пакета служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] из среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] в другое местоположение и в случае необходимости изменить уровень защиты пакета.  
@@ -38,7 +38,7 @@ ms.locfileid: "48140504"
  **Server**  
  Введите имя сервера или выберите его из списка. Этот параметр доступен, только если в качестве места хранения указан **SQL Server** или **Хранилище пакетов служб SSIS**.  
   
- **Проверка подлинности**  
+ **Authentication**  
  Выберите проверку подлинности Windows или проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Этот параметр доступен, только если в качестве места хранения указан [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
@@ -47,22 +47,22 @@ ms.locfileid: "48140504"
  **Тип проверки подлинности**  
  Выберите тип проверки подлинности.  
   
- **Имя пользователя**  
+ **User name**  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] укажите имя пользователя.  
   
  **Пароль**  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] укажите пароль.  
   
  **Путь пакета**  
- Введите путь модуля или нажмите кнопку обзора **(...)** и выберите папку, в которой должен быть сохранен пакет.  
+ Введите путь к пакету или нажмите кнопку обзора **(...)**  кнопку и найдите папку, в которой должен быть сохранен пакет.  
   
  **Уровень защиты**  
- Нажмите кнопку обзора **(...)** и обновите уровень защиты в диалоговом окне **Уровень защиты пакета** . Дополнительные сведения см. в разделе [Диалоговое окно уровня защиты пакета и проекта](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Нажмите кнопку обзора **(...)**  и обновите уровень защиты в **уровень защиты пакета** диалоговое окно. Дополнительные сведения см. в разделе [Диалоговое окно уровня защиты пакета и проекта](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>См. также  
- [Импорт пакета диалогового окна пользовательского интерфейса в справочник](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
- [Экспорт пакета диалоговое окно пользовательского интерфейса в справочник](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ [Диалоговое окно «Импорт пакета» справочника по пользовательскому интерфейсу](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Диалоговое окно «Экспорт пакета» справочника по пользовательскому интерфейсу](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Сохранение пакетов](save-packages.md)   
- [Импорт и экспорт пакетов &#40;службы SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [Импорт и экспорт пакетов (службы SSIS)](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

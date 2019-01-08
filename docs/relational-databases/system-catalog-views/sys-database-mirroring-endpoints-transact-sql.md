@@ -23,12 +23,12 @@ ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4a791f5d47382e78ce9bbfe34d939cffc273515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa757203ba82794a0564e50c715134e502c6ac1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734602"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538081"
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ ms.locfileid: "47734602"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<наследуемые столбцы >**|—|Наследует столбцы из **sys.endpoints** (Дополнительные сведения см. в разделе [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
-|**Роли**|**tinyint**|Роль в зеркальном отображении, одна из следующих:<br /><br /> **0** = нет<br /><br /> **1** = partner<br /><br /> **2** = следящего сервера<br /><br /> **3** = all<br /><br /> Примечание: Это значение относится только к зеркального отображения базы данных.|  
-|**role_desc**|**nvarchar(60)**|Описание роли в зеркальном отображении, одно из следующих.<br /><br /> **NONE**<br /><br /> **ПАРТНЕР**<br /><br /> **СЛЕДЯЩИЙ СЕРВЕР**<br /><br /> **ALL**<br /><br /> Примечание: Это значение относится только к зеркального отображения базы данных.|  
+|**\<наследуемые столбцы >**|-|Наследует столбцы из **sys.endpoints** (Дополнительные сведения см. в разделе [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
+|**Роли**|**tinyint**|Роль в зеркальном отображении, одна из следующих:<br /><br /> **0** = нет<br /><br /> **1** = partner<br /><br /> **2** = следящего сервера<br /><br /> **3** = all<br /><br /> Примечание. Это значение применимо только при зеркальном отображении баз данных.|  
+|**role_desc**|**nvarchar(60)**|Описание роли в зеркальном отображении, одно из следующих.<br /><br /> **NONE**<br /><br /> **ПАРТНЕР**<br /><br /> **СЛЕДЯЩИЙ СЕРВЕР**<br /><br /> **ALL**<br /><br /> Примечание. Это значение применимо только при зеркальном отображении баз данных.|  
 |**is_encryption_enabled**|**bit**|**1** означает, что шифрование включено.<br /><br /> **0** означает, что шифрование отключено.|  
 |**connection_auth**|**tinyint**|Тип проверки подлинности соединения, требуемый при подключении к этой конечной точке, один из следующих.<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -СОГЛАСОВАНИЯ<br /><br /> **4** -СЕРТИФИКАТА<br /><br /> **5** -NTLM, CERTIFICATE<br /><br /> **6** -KERBEROS, CERTIFICATE<br /><br /> **7** -NEGOTIATE, CERTIFICATE<br /><br /> **8** -CERTIFICATE, NTLM<br /><br /> **9** -CERTIFICATE, KERBEROS<br /><br /> **10** -CERTIFICATE, NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|Описание типа проверки подлинности, необходимого для подключения к конечной точке. Это один из следующих типов.<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  
 |**идентификатор_сертификата**|**int**|Идентификатор сертификата, используемого для проверки подлинности (если таковой имеется).<br /><br /> 0 = используется проверка подлинности Windows.|  
-|**encryption_algorithm**|**tinyint**|Алгоритм шифрования. Это один из следующих алгоритмов.<br /><br /> **0** — NONE<br /><br /> **1** — RC4<br /><br /> **2** — AES<br /><br /> **3** — NONE, RC4<br /><br /> **4** — NONE, AES<br /><br /> **5** — RC4, AES<br /><br /> **6** — AES, RC4<br /><br /> **7** — NONE, RC4, AES<br /><br /> **8** — NONE, AES, RC4|  
+|**encryption_algorithm**|**tinyint**|Алгоритм шифрования. Это один из следующих алгоритмов.<br /><br /> **0** — NONE<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -NONE, RC4<br /><br /> **4** -NONE, AES<br /><br /> **5** -RC4, AES<br /><br /> **6** -AES, RC4<br /><br /> **7** -NONE, RC4, AES<br /><br /> **8** -NONE, AES, RC4|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Описание алгоритма шифрования. Это один из следующих алгоритмов.<br /><br /> None<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>Примечания  

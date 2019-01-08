@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f711dc12ed5014dbc397e5a72f97f55350da7d38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4535ce33d0615cd98bf910da9b765a0e972131d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002226"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525664"
 ---
-# <a name="deployment-script-files---solution-deployment-config-settings"></a>Файлы скриптов развертывания — параметры конфигурации развертывания решения
+# <a name="deployment-script-files---solution-deployment-config-settings"></a>Файлы скриптов развертывания — параметры конфигурации развертывания решения
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Мастер развертывания служб считывает секций и ролей варианты развертывания, используемые в скрипте развертывания, из \< *имя_проекта*> .configsettings файл. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает этот файл при построении проекта служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует настройки конфигурации текущего проекта для создания \< *имя_проекта*> .configsettings файл.  
@@ -46,11 +46,11 @@ ms.locfileid: "38002226"
   
 -   Запустите мастер развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в интерактивном режиме и на странице **Параметры конфигурации** укажите параметры конфигурации для развертываемых объектов.  
   
-     —или—  
+     -или-  
   
 -   Запустите мастер развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из командной строки и настройте его на работу в режиме файла ответов. Дополнительные сведения о режиме файла ответов см. в разделе [Запуск мастера развертывания служб Analysis Services](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).  
   
-     —или—  
+     -или-  
   
 -   Изменить \< *имя_проекта*> .configsettings файл, используя любой текстовый редактор.  
   

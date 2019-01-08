@@ -12,12 +12,12 @@ ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ae3f3363c8cedee988f55875fab5d15e58114238
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a27b2e7c915a1ac13050d0ed188002cd42746c8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843302"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400437"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Сопоставление схем Sybase ASE со схемами SQL Server (SybaseToSQL)
 В Sybase Adaptive Server Enterprise (ASE), каждая база данных имеет один или несколько схем. По умолчанию SSMA выполняет миграцию всех объектов в пределах базы данных и схемы на один и тот же базы данных и схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Тем не менее, можно настроить сопоставление между ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или баз данных SQL Azure, так и схемы.  
@@ -52,7 +52,7 @@ ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или указ
   
 -   Сопоставление с SQL Azure  
   
-Вы можете сопоставить базы данных-источника, подключенных целевую базу данных SQL Azure или ни одной схеме подключенного целевой базы данных SQL Azure. Если сопоставить источник схемы ни одной схеме, не существует в списке подключенных целевую базу данных, то появится сообщение **«схемы не существует в целевой объект метаданных. Он будет создан во время синхронизации. Вы действительно хотите продолжить? «** Нажмите "Да".  
+Вы можете сопоставить базы данных-источника, подключенных целевую базу данных SQL Azure или ни одной схеме подключенного целевой базы данных SQL Azure. Если сопоставить источник схемы ни одной схеме, не существует в списке подключенных целевую базу данных, то появится сообщение **«схемы не существует в целевой объект метаданных. Он будет создан во время синхронизации. Вы действительно хотите продолжить? "** Нажмите "Да".  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Восстановление базы данных по умолчанию и схемы  
 Если настроить сопоставление между схему ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или схему SQL Azure, можно отменить сопоставление значения по умолчанию.  

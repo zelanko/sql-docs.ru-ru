@@ -13,12 +13,12 @@ ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 166689f175485af66ca140f82fa968512baf8519
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086344"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542969"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Создание структуры интеллектуального анализа данных (надстройки интеллектуального анализа данных SQL Server)
   ![Кнопка "создать структуру интеллектуального анализа данных", интеллектуального анализа данных](media/dmc-createstruct.gif "кнопка Create Mining Structure, интеллектуального анализа данных")  

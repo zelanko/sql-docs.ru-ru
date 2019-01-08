@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - Service Broker [SMO]
@@ -14,17 +12,17 @@ ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbd837c0dc28e1c083a14c21614d174580eb7b0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e74e1530efc8e6000a9edf8882cf37cc60b1f1e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219924"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821908"
 ---
 # <a name="managing-service-broker"></a>Управление компонентом Service Broker
   В объектах SMO объекты компонента [!INCLUDE[ssSB](../../../includes/sssb-md.md)] находятся в пространстве имен `Microsoft.SqlServer.Management.Smo.Broker`, которое требует ссылки на сборку Microsoft.SqlServer.Smo.dll. Кроме того, необходима ссылка на сборку Microsoft.SqlServer.ServiceBrokerEnum.dll для поддержки сведений о классах.  
   
- SMO предоставляет набор объектов компонента [!INCLUDE[ssSB](../../../includes/sssb-md.md)], которые допускают программное управление (DDL) реализацией [!INCLUDE[ssSB](../../../includes/sssb-md.md)]. Оно включает определение типов сообщений, контрактов, очередей и служб. Так как SMO является средством управления, которое не предназначено для работы с данными, SMO не поддерживает отправку и получение сообщений компонента [!INCLUDE[ssSB](../../../includes/sssb-md.md)].  
+ SMO предоставляет набор объектов компонента [!INCLUDE[ssSB](../../../includes/sssb-md.md)] , которые допускают программное управление (DDL) реализацией [!INCLUDE[ssSB](../../../includes/sssb-md.md)] . Оно включает определение типов сообщений, контрактов, очередей и служб. Так как SMO является средством управления, которое не предназначено для работы с данными, SMO не поддерживает отправку и получение сообщений компонента [!INCLUDE[ssSB](../../../includes/sssb-md.md)] .  
   
  В SMO объект <xref:Microsoft.SqlServer.Management.Smo.Database.ServiceBroker%2A> является классом верхнего уровня, который заключает всю функциональность компонента [!INCLUDE[ssSB](../../../includes/sssb-md.md)]. Реализация компонента [!INCLUDE[ssSB](../../../includes/sssb-md.md)] необходима для каждой базы данных, которая участвует в работе приложений с распределенным обменом сообщениями. Поэтому объект <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceBroker> является потомком объекта <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   

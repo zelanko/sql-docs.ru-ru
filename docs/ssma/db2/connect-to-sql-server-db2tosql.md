@@ -10,12 +10,12 @@ ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fadb1ba3a38c8379417ad04581adaec956e4ecd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bc3c92067d1fd8240cc17db03de7dac409a0123
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670322"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414411"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>Подключение к SQL Server (DB2ToSQL)
 Используйте **подключение к SQL Server** диалоговое окно для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо выполнить перенос. Для доступа к **подключение к SQL Server** диалоговом окне **файл** меню, щелкните **подключение к SQL Server**.  
@@ -36,7 +36,7 @@ ms.locfileid: "47670322"
 **База данных**  
 Укажите базу данных для переноса объектов и данных. Этот параметр недоступен при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-**Проверка подлинности**  
+**Authentication**  
 Выберите метод проверки подлинности, который используется для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для использования текущей учетной записи Windows, выберите проверку подлинности Windows. Чтобы указать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа и пароль, выберите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.  
   
 **Имя пользователя**  

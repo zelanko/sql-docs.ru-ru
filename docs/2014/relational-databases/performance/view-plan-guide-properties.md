@@ -15,12 +15,12 @@ ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67a6c074b6b2b65ef264118bd367e55920b166c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b49b24db5dfa3c9b522247024e0cbb8dbd1a81d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114054"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411821"
 ---
 # <a name="view-plan-guide-properties"></a>Просмотр свойств структуры плана
   Свойства структур планов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно просмотреть при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -62,7 +62,7 @@ ms.locfileid: "48114054"
      **Отключен**  
      Отображает состояние структуры плана. Допустимые значения — **True** и **False**.  
   
-     **Название**  
+     **Name**  
      Отображает имя структуры плана.  
   
      **Параметры**  
@@ -89,14 +89,14 @@ ms.locfileid: "48114054"
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>Просмотр свойств структуры плана  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
     ```  
-    -- If a plan guide named “Guide1” already exists in the AdventureWorks2012 database, delete it.  
+    -- If a plan guide named "Guide1" already exists in the AdventureWorks2012 database, delete it.  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID(N'Guide1') IS NOT NULL  
@@ -124,7 +124,7 @@ ms.locfileid: "48114054"
        hints,  
        is_disabled  
     FROM sys.plan_guides  
-    WHERE name = N’Guide1’;  
+    WHERE name = N'Guide1';  
     GO  
     ```  
   

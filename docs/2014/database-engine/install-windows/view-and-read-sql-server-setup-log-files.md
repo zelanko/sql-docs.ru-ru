@@ -18,12 +18,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6017cadea0039613f7e97dc6e78665e47c9e2575
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018509"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858659"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Просмотр и чтение файлов журналов программы установки SQL Server
   Каждом выполнении программы установки создаются файлы журналов находятся в новой папке журналов с меткой времени в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\. Формат папки журналов с меткой времени — ГГГГММДД_ччммсс. При запуске программы установке в автоматическом режиме журналы создаются в % temp%\sqlsetup*.log. Все файлы в папке журналов архивируются в файле Log\*.cab в соответствующей папке журналов.  
@@ -141,11 +141,11 @@ ms.locfileid: "51018509"
   
  Типы файлов журналов MSI:  
   
--   \<Компонент> _\<Архитектура>\_\<Итерация> .log  
+-   \<компонент>_\<архитектура>\_\<взаимодействие>.log  
   
--   \<Компонент>_\<Архитектура>\_\<Язык>\_\<Итерация>.log  
+-   \<компонент>_\<архитектура>\_\<язык>\_\<взаимодействие>.log  
   
--   \<Компонент>_\<Архитектура>\_\<Итерация>\_\<рабочий процесс>.log  
+-   \<компонент>_\<архитектура>\_\<взаимодействие>\_\<рабочий процесс>.log  
   
 ### <a name="location"></a>Местоположение  
  Файлы журналов MSI расположены в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< ггггммдд_ччмм >\\< имя\>. log.  

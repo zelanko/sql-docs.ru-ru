@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articleproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9c136f2eb27f4c999d71c398b14b67405cee108
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c426781f52a513cca1e90e5f83eac7feab79fdaf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128324"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785226"
 ---
 # <a name="article-properties---ltarticlegt"></a>Свойства статьи — &lt;Статья&gt;
   Диалоговое окно **Свойства статьи** доступно из мастера создания публикаций и диалогового окна **Свойства публикации** . Оно позволяет просматривать и устанавливать свойства для всех типов статей. Некоторые свойства могут быть установлены только при создании публикации, а другие могут устанавливаться только в случае, если у публикации нет активных подписок. Свойства, которые не могут быть установлены, отображаются как доступные только для чтения.  
@@ -89,7 +88,7 @@ ms.locfileid: "48128324"
  Этот параметр применяется только к хранимым процедурам. Он определяет, следует ли выполнять репликацию для определения хранимой процедуры (инструкция CREATE PROCEDURE) или для ее выполнения. При репликации выполнения процедуры репликация определения процедуры выполняется на подписчик при инициализации подписки; при выполнении процедуры на издателе репликация выполняет соответствующую процедуру на подписчике. Таким образом, существенно улучшается производительность в ситуациях, когда выполняются большие групповые операции. Дополнительные сведения см. в статье [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Параметры публикаций слиянием  
- Диалоговое окно **Свойства статьи** для публикаций слиянием имеет две вкладки: **Свойства** и **Сопоставитель**.  
+ **Свойства статьи** диалоговое окно для публикаций слиянием имеет две вкладки: **Свойства** и **Сопоставитель**.  
   
 ### <a name="properties-tab"></a>Вкладка «Свойства»  
  **Направление синхронизации**  
@@ -125,7 +124,7 @@ ms.locfileid: "48128324"
  Если будет выбран сопоставитель по умолчанию, то конфликты будут разрешаться в соответствии с приоритетами, выданными каждому подписчику, либо на основе первого изменения, записанного на издатель, в зависимости от типа используемых подписок. Дополнительные сведения см. в статье [Обнаружение и разрешение конфликтов репликации слиянием](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
   
  **Использовать пользовательский сопоставитель (зарегистрированный на распространителе)**  
- Если будет выбрано использование арбитра статей (предоставленного [!INCLUDE[msCoName](../../includes/msconame-md.md)] или написанного самостоятельно), то необходимо выбрать механизм разрешения конфликтов в списке. Дополнительные сведения см. в статье [Расширенное обнаружение и разрешение конфликтов репликации слиянием](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Если будет выбрано использование арбитра статей (предоставленного [!INCLUDE[msCoName](../../includes/msconame-md.md)] или написанного самостоятельно), то необходимо выбрать механизм разрешения конфликтов в списке. Дополнительные сведения см. в статье [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Если сопоставитель требует предоставления каких-либо дополнительных сведений, то их следует указать в текстовом окне **Введите данные, необходимые сопоставителю конфликтов** . Дополнительные сведения о предоставлении сведений, необходимых для пользовательских арбитров [!INCLUDE[msCoName](../../includes/msconame-md.md)] , см. в статье [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
@@ -136,7 +135,7 @@ ms.locfileid: "48128324"
  Все основанные на COM арбитры, предоставляемые [!INCLUDE[msCoName](../../includes/msconame-md.md)] , заверяются подписью. Выберите этот параметр, чтобы проверять допустимость сопоставителя при синхронизации.  
   
 ## <a name="options-for-oracle-publications"></a>Параметры публикаций Oracle  
- Диалоговое окно **Свойства статьи** для публикаций Oracle имеет две вкладки: **Свойства** и **Сопоставление данных**. Публикации Oracle поддерживают не все свойства, поддерживаемые публикациями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ **Свойства статьи** диалоговое окно для публикаций Oracle имеет две вкладки: **Свойства** и **сопоставление данных**. Публикации Oracle поддерживают не все свойства, поддерживаемые публикациями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ### <a name="properties-tab"></a>Вкладка «Свойства»  
  **Копировать хранимые процедуры INSERT, UPDATE и DELETE**  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - enlisting target servers [SQL Server]
@@ -16,12 +16,12 @@ ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 298a3045cc9fc51664c77fcc28d89c95d30fd6fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085634"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786216"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Прикрепление целевого сервера к главному
   В этом разделе описывается, как добавить целевые серверы в конфигурацию администрирования нескольких серверов. Запустите эту процедуру с главного сервера. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server (SMO).  

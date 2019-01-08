@@ -20,16 +20,16 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98fb29265c17970fbcef0f21778d7a9130e52771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644522"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206973"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions, функция
 **Соответствие стандартам**  
- Версия была введена: ODBC 1.0 соответствует стандартам: ISO-92  
+ Представленные версии: Соответствие стандартам 1.0 ODBC: ISO-92  
   
  **Сводка**  
  **SQLGetFunctions** возвращает сведения о том, поддерживает ли драйвер определенной функции ODBC. Эта функция реализуется в диспетчере драйверов. Он также может осуществляться в драйверах. Если драйвер реализует **SQLGetFunctions**, диспетчер драйверов вызывает функцию в драйвере. В противном случае он выполняет саму функцию.  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="comments"></a>Комментарии  
  **SQLGetFunctions** всегда возвращает, **SQLGetFunctions**, **SQLDataSources**, и **SQLDrivers** поддерживаются. Это делается потому, что эти функции реализованы в диспетчера драйверов. Диспетчер драйверов будут сопоставлены с соответствующей функции Юникода функцию ANSI, если функции Юникода существует и сопоставит функция Юникода с соответствующей функции ANSI, если существует функция ANSI. Сведения об использовании приложений **SQLGetFunctions**, см. в разделе [уровни соответствия интерфейса](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
   
- Ниже приведен список допустимых значений для *FunctionId* для функций, которые соответствуют уровню — соответствие стандартам ISO-92:  
+ Ниже приведен список допустимых значений для *FunctionId* для функций, которые соответствуют уровню соответствия стандартам ISO-92:  
   
 |FunctionId значение|FunctionId значение|  
 |----------|----------|  
@@ -109,14 +109,14 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
 |SQL_API_SQLGETDATA| |  
   
- Ниже приведен список допустимых значений для *FunctionId* для функций, соответствующий требованиям к уровню соответствия стандартам — Open Group:  
+ Ниже приведен список допустимых значений для *FunctionId* для функций, соответствующий требованиям к уровню соответствия стандартам Open Group:  
   
 |FunctionId значение|FunctionId значение|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
- Ниже приведен список допустимых значений для *FunctionId* для функций, соответствующий требованиям к уровню соответствия стандартам — ODBC.  
+ Ниже приведен список допустимых значений для *FunctionId* для функций, соответствующий требованиям к уровню соответствия стандартам ODBC.  
   
 |FunctionId значение|FunctionId значение|  
 |-|-|  
@@ -142,7 +142,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="sqlfuncexists-macro"></a>Макрос SQL_FUNC_EXISTS  
  SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) макрос используется для определения поддержки ODBC 3 *.x* или более ранней функции после **SQLGetFunctions**  был вызван с *FunctionId* аргумент SQL_API_ODBC3_ALL_FUNCTIONS. Приложение вызывает SQL_FUNC_EXISTS с *SupportedPtr* аргумент значение *SupportedPtr* переданный *SQLGetFunctions*и с  *FunctionID* аргумент значение **#define** для функции. SQL_FUNC_EXISTS в противном случае возвращает SQL_TRUE, если поддерживается функция and SQL_FALSE.  
   
-> [!NOTE]  
+> [!NOTE]
 >  При работе с ODBC 2 *.x* драйвера ODBC 3 *.x* диспетчера драйверов вернет SQL_TRUE для **SQLAllocHandle** и **SQLFreeHandle**поскольку **SQLAllocHandle** сопоставляется **SQLAllocEnv**, **SQLAllocConnect**, или **SQLAllocStmt**, и так как **SQLFreeHandle** сопоставляется **SQLFreeEnv**, **SQLFreeConnect**, или **SQLFreeStmt**. **SQLAllocHandle** или **SQLFreeHandle** с *HandleType* аргумент SQL_HANDLE_DESC не поддерживается, тем не менее, несмотря на то, что SQL_TRUE возвращается для функций, так как нет ODBC 2 *.x* функции для сопоставления в этом случае.  
   
 ## <a name="code-example"></a>Пример кода  

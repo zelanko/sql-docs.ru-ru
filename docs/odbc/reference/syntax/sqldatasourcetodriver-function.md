@@ -20,12 +20,12 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 631dcb0f76346de88a2a48e8dfb00060626d58f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0ad4a98689db00c6dcb484e7a04bb973d2e1761
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813582"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206263"
 ---
 # <a name="sqldatasourcetodriver-function"></a>Функция SQLDataSourceToDriver
 **SQLDataSourceToDriver** supportstranslations для драйверов ODBC. Эта функция не вызывается приложений с поддержкой ODBC; приложения запрашивают трансляции с помощью **SQLSetConnectAttr**. Драйвера, связанного с *ConnectionHandle* указано в **SQLSetConnectAttr** вызывает указанную библиотеку DLL для выполнения преобразования всех данных, поступающих из источника данных к драйверу. Перевод DLL по умолчанию можно указать в файле инициализации ODBC.  
@@ -52,7 +52,7 @@ BOOL SQLDataSourceToDriver(
  [Вход] Значение параметра.  
   
  *fSqlType*  
- [Вход] Тип данных SQL. Этот аргумент сообщает драйверу о том, как преобразовать *rgbValueIn* в форму, допустимые для приложения. Список допустимых типов данных SQL, см. в разделе [типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) разделов в типы данных приложение D:.  
+ [Вход] Тип данных SQL. Этот аргумент сообщает драйверу о том, как преобразовать *rgbValueIn* в форму, допустимые для приложения. Список допустимых типов данных SQL, см. в разделе [типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) разделе в приложение г Типы данных.  
   
  *rgbValueIn*  
  [Вход] Преобразуемое значение.  

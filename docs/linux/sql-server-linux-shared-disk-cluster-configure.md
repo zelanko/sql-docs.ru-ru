@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 322160591d1e4ce741459e3a338bca30b0ea1603
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 87bffa2c93442aabc2dd6f193373e024466ecea6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085470"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397106"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Настроить экземпляр отказоустойчивого кластера — SQL Server на Linux (RHEL)
 
@@ -131,10 +131,10 @@ ms.locfileid: "49085470"
    sudo firewall-cmd --reload
    ```
 
-   > Если вы используете другой брандмауэр, который не имеет встроенной конфигурации высокого уровня доступности, откройте следующие порты, чтобы Pacemaker мог связываться с другими узлами в кластере.
+   > Если вы используете другой брандмауэр, который не имеет встроенной конфигурации высокого уровня доступности, следующие порты должны быть открыты для Pacemaker иметь возможность связываться с другими узлами в кластере
    >
-   > * Порты TCP: 2224, 3121, 21064.
-   > * Порт UDP: 5405.
+   > * TCP: Порты с кодом 2224, 3121, 21064.
+   > * UDP: Порт 5405.
 
 1. Установите пакеты Pacemaker на каждом узле.
 

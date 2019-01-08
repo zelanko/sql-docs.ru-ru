@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publishersettings.f1
@@ -15,12 +14,12 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 098eb9610a07531249246970ac9cca71e449209f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d07ea418d89b36a6d759eb1fa6b71e8b909ee5cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135994"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777776"
 ---
 # <a name="publisher-settings"></a>Настройки издателя
   Диалоговое окно **Настройки издателя** позволяет изменить настройки издателей, добавленных к левой панели монитора репликации.  
@@ -47,7 +46,7 @@ ms.locfileid: "48135994"
  **Создать группу**  
  Нажмите эту кнопку для создания новой группы издателей. Группа издателей предоставляет удобный способ упорядочить издателей в мониторе репликации. Группы не оказывают влияние на данные или связи между серверами в топологии репликации.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
  [Наблюдение за репликацией](monitoring-replication.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3f5f7d912a41476588662c4543b20c041b02672
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172144"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813036"
 ---
 # <a name="database-element-for-workload-dta"></a>Элемент Database описания рабочей нагрузки (DTA)
   Указывает базу данных, в которой находится таблица трассировки рабочей нагрузки.  
@@ -41,14 +40,14 @@ ms.locfileid: "48172144"
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необходимо наличие одного такого элемента, если не задан никакой другой тип рабочей нагрузки. Необходимо указать `EventString`, `File`, или `Database` дочернего элемента для `Workload` родительского, но только один тип может использоваться. Например, если рабочая нагрузка определена посредством элемента `Database`, в том же входном XML-файле нельзя указывать рабочую нагрузку также с помощью элемента `File`.|  
+|**Наличие**|Необходимо наличие одного такого элемента, если не задан никакой другой тип рабочей нагрузки. Для родительского элемента `EventString` необходимо задать дочерний элемент `File`, `Database` или `Workload`, однако одновременно может использоваться только один из них. Например, если рабочая нагрузка определена посредством элемента `Database`, в том же входном XML-файле нельзя указывать рабочую нагрузку также с помощью элемента `File`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент Workload &#40;DTA&#41;](workload-element-dta.md)|  
-|**Дочерние элементы**|[Элемент Name для базы данных &#40;DTA&#41;](name-element-for-database-dta.md)<br /><br /> [Элемент schema описания базы данных &#40;DTA&#41;](schema-element-for-database-dta.md)|  
+|**Родительский элемент**|[Элемент Workload (DTA)](workload-element-dta.md)|  
+|**Дочерние элементы**|[Элемент Name для базы данных (DTA)](name-element-for-database-dta.md)<br /><br /> [Элемент Schema описания базы данных (DTA)](schema-element-for-database-dta.md)|  
   
 ## <a name="remarks"></a>Примечания  
  Этот элемент с именем **DatabaseDetailsTypecomplexType** определен в схеме XML помощника по настройке ядра СУБД. Не путайте этот элемент `Database` с элементом, корневым родительским элементом которого является `Configuration`. (См. раздел [Элемент Database описания конфигурации (DTA)](database-element-for-configuration-dta.md).)  

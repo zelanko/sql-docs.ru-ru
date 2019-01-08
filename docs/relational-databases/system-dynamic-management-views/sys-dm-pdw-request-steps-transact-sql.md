@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ac7c933c9ae730810b198266cb9b2b3086169092
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8543933aa102a6962846164b7267fad7df222cdd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832122"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393598"
 ---
 # <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47832122"
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Идентификатор request_id и step_index составляющие ключ для этого представления.<br /><br /> Уникальный числовой идентификатор, связанный с запросом.|См. в разделе request_id в [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Идентификатор request_id и step_index составляющие ключ для этого представления.<br /><br /> Позиция этого шага в последовательности действий, составляющих запрос.|0 (n-1) для запроса с n шагов.|  
-|operation_type|**nvarchar(35)**|Тип операции, представленное в этом действии.|**Операции плана запроса DMS:** «ReturnOperation», «PartitionMoveOperation», «MoveOperation», «BroadcastMoveOperation», «ShuffleMoveOperation», «TrimMoveOperation», «CopyOperation», «DistributeReplicatedTableMoveOperation»<br /><br /> **Операции плана запросов SQL:** «OnOperation», «RemoteOperation»<br /><br /> **Другие операции плана запросов:** «MetaDataCreateOperation», «RandomIDOperation»<br /><br /> **Внешние операции для операций чтения:** «HadoopShuffleOperation», «HadoopRoundRobinOperation», «HadoopBroadcastOperation»<br /><br /> **Внешние операции для MapReduce:** «HadoopJobOperation», «HdfsDeleteOperation»<br /><br /> **Внешние операции для операций записи:** «ExternalExportDistributedOperation», «ExternalExportReplicatedOperation», «ExternalExportControlOperation»<br /><br /> Дополнительные сведения см. в разделе «Основные сведения о планах запросов» в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
+|operation_type|**nvarchar(35)**|Тип операции, представленное в этом действии.|**Операции плана запроса DMS:** «ReturnOperation», «PartitionMoveOperation», «MoveOperation», «BroadcastMoveOperation», «ShuffleMoveOperation», «TrimMoveOperation», «CopyOperation», «DistributeReplicatedTableMoveOperation»<br /><br /> **Операции плана запроса SQL:** «OnOperation», «RemoteOperation»<br /><br /> **Другие операции плана запросов:** «MetaDataCreateOperation», «RandomIDOperation»<br /><br /> **Внешние операции для операций чтения:** «HadoopShuffleOperation», «HadoopRoundRobinOperation», «HadoopBroadcastOperation»<br /><br /> **Внешние операции для MapReduce:** «HadoopJobOperation», «HdfsDeleteOperation»<br /><br /> **Внешние операции для операций записи:** «ExternalExportDistributedOperation», «ExternalExportReplicatedOperation», «ExternalExportControlOperation»<br /><br /> Дополнительные сведения см. в разделе «Основные сведения о планах запросов» в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
 |distribution_type|**nvarchar(32)**|Тип распределения, которые будут подвергнуты этот шаг.|«AllNodes», «AllDistributions», «Возможные», «ComputeNode», «Distribution», «SubsetNodes», «SubsetDistributions», «Unspecified»|  
 |значение параметра location_type действия|**nvarchar(32)**|Когда выполняется этап.|«Вычисления», «Управление», «DMS»|  
 |status|**nvarchar(32)**|Состояние этого шага.|Ожидающие выполнения, полный, сбой, UndoFailed, PendingCancel отменено, отменено, прервана|  

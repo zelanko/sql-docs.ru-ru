@@ -12,25 +12,25 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 46795611f8bb3554491dbdd400d383a59a540b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
+ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766598"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52826089"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Шифрование подключений к SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux безопасности транспортного уровня (TLS) для шифрования можно использовать данные, передаваемые по сети между клиентским приложением и экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает те же протоколы TLS в Windows и Linux: TLS 1.0, 1.1 и 1.2. Тем не менее, действия по настройке TLS относящиеся к операционной системе, на котором [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущена.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux безопасности транспортного уровня (TLS) для шифрования можно использовать данные, передаваемые по сети между клиентским приложением и экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает те же протоколы TLS в Windows и Linux: TLS 1.2, 1.1 и 1.0. Тем не менее, действия по настройке TLS относящиеся к операционной системе, на котором [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущена.  
 
 ## <a name="requirements-for-certificates"></a>Требования к сертификатам 
 Перед началом работы необходимо убедиться, что сертификаты соответствовать следующим требованиям:
 - Текущее системное время должен быть после действителен с свойства сертификата и перед допустимо для свойства сертификата.
 - Сертификат должен быть предназначен для проверки подлинности сервера. Для этого требуется свойство расширенного использования ключа сертификата, проверку подлинности сервера (1.3.6.1.5.5.7.3.1).
 - Сертификат должен быть создан с помощью параметра KeySpec AT_KEYEXCHANGE. Как правило свойство использования ключа сертификата (KEY_USAGE) также включает шифрование ключей (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
-- Свойство субъекта сертификата должно указывать, что общее имя (CN) совпадает с именем узла или полное доменное имя (FQDN) сервера. Примечание: поддерживаются групповые сертификаты.
+- Свойство субъекта сертификата должно указывать, что общее имя (CN) совпадает с именем узла или полное доменное имя (FQDN) сервера. Примечание. Поддерживаются групповые сертификаты.
 
 ## <a name="configuring-the-openssl-libraries-for-use-optional"></a>Настройка библиотеки OpenSSL для использования (необязательно)
 Можно создать символические ссылки в `/opt/mssql/lib/` каталог, который ссылается `libcrypto.so` и `libssl.so` библиотек следует использовать для шифрования. Это полезно, если нужно, чтобы SQL Server для использования определенной версии OpenSSL используемый по умолчанию, предоставляемые системой. Если эти символических ссылок не существуют, SQL Server будет загружать библиотеки OpenSSL по умолчанию, настроенного в системе.
@@ -56,8 +56,8 @@ TLS используется для шифрования подключения 
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
 
@@ -65,14 +65,14 @@ TLS используется для шифрования подключения 
 
     -   Если вы используете подписанный сертификат ЦС, необходимо скопировать сертификат центра сертификации (ЦС) вместо сертификата пользователя на клиентском компьютере. 
     -   Если вы используете самозаверяющий сертификат, просто скопируйте PEM-файл в следующие папки, соответствующей для распространения и выполните команды, чтобы включить их 
-        - **Ubuntu**: копирование сертификатов ```/usr/share/ca-certificates/``` переименования расширение на CRT использовать сертификаты ЦС dpkg reconfigure для включения его как системный ЦС сертификат. 
-        - **RHEL**: копирование сертификатов ```/etc/pki/ca-trust/source/anchors/``` использовать ```update-ca-trust``` для включения его как системный ЦС сертификат.
-        - **SUSE**: копирование сертификатов ```/usr/share/pki/trust/anchors/``` использовать ```update-ca-certificates``` для включения его как системный ЦС сертификат.
-        - **Windows**: импорта PEM-файл в качестве сертификата учетной записью текущего пользователя "->" Доверенные корневые центры сертификации "->" сертификаты
+        - **Ubuntu**: Копирование сертификатов ```/usr/share/ca-certificates/``` переименования расширение на CRT использовать сертификаты ЦС dpkg reconfigure для включения его как системный ЦС сертификат. 
+        - **RHEL**: Копирование сертификатов ```/etc/pki/ca-trust/source/anchors/``` использовать ```update-ca-trust``` для включения его как системный ЦС сертификат.
+        - **SUSE**: Копирование сертификатов ```/usr/share/pki/trust/anchors/``` использовать ```update-ca-certificates``` для включения его как системный ЦС сертификат.
+        - **Windows**:  Импорта PEM-файл в качестве сертификата учетной записью текущего пользователя "->" Доверенные корневые центры сертификации "->" сертификаты
         - **macOS**: 
            - Копирование сертификатов ```/usr/local/etc/openssl/certs```
            - Выполните следующую команду, чтобы получить хэш-значение: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - Переименуйте cert значению. Например, ```mv mssql.pem dc2dd900.0```. Убедитесь, что dc2dd900.0 находится в ```/usr/local/etc/openssl/certs```
+           - Переименуйте cert значению. Например: ```mv mssql.pem dc2dd900.0```. Убедитесь, что dc2dd900.0 находится в ```/usr/local/etc/openssl/certs```
     
 -   **Примеры строк подключения** 
 
@@ -85,7 +85,7 @@ TLS используется для шифрования подключения 
     - **ADO.NET** 
 
             "Encrypt=True; TrustServerCertificate=False;" 
-    - **ODBC** 
+    - **интерфейс ODBC** 
 
             "Encrypt=Yes; TrustServerCertificate=no;" 
     - **JDBC** 
@@ -106,8 +106,8 @@ TLS используется для шифрования подключения 
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
         
@@ -119,7 +119,7 @@ TLS используется для шифрования подключения 
     - **ADO.NET** 
 
             "Encrypt=False; TrustServerCertificate=False;" 
-    - **ODBC** 
+    - **интерфейс ODBC** 
 
             "Encrypt=no; TrustServerCertificate=no;"  
     - **JDBC** 

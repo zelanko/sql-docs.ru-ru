@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cce6109766d6eddff563287fa6a36adf187146d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24661690a0252b1018e2ddc52ba99a44cb5cedbe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595902"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207473"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Улучшения поддержки типов данных даты и времени OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  В этом разделе содержатся сведения о типах OLE DB (собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), которые поддерживают типы данных даты-времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Этот раздел содержит сведения о OLE DB ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client), поддерживающих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных даты и времени.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Сопоставление типов данных в наборах строк и параметрах  
- OLE DB предоставляет два новых типа данных для поддержки новых типов серверов: DBTYPE_DBTIME2 и DBTYPE_DBTIMESTAMPOFFSET. Следующая таблица отображает полное сопоставление типов серверов.  
+ OLE DB предоставляет два новых типа данных для поддержки серверов новых типов: DBTYPE_DBTIME2 и DBTYPE_DBTIMESTAMPOFFSET. Следующая таблица отображает полное сопоставление типов серверов.  
   
 |Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Тип данных OLE DB|Значение|  
 |-----------------------------------------|----------------------|-----------|  
@@ -40,7 +40,7 @@ ms.locfileid: "47595902"
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
-## <a name="data-formats-strings-and-literals"></a>Форматы данных: Строки и литералы  
+## <a name="data-formats-strings-and-literals"></a>Форматы данных: строки и литералы  
   
 |Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Тип данных OLE DB|Формат строки для клиентских преобразований|  
 |-----------------------------------------|----------------------|------------------------------------------|  
@@ -61,7 +61,7 @@ ms.locfileid: "47595902"
   
  Пустая строка не является допустимым литералом даты-времени, она не представляет значение NULL. Попытка преобразовать пустую строку в значение даты-времени приведет к ошибкам со значением SQLState, равным 22018, и сообщением «Недопустимое символьное значение для спецификации приведения».  
   
-## <a name="data-formats-data-structures"></a>Форматы данных: Структуры данных  
+## <a name="data-formats-data-structures"></a>Форматы данных: структуры данных  
  В структурах, зависящих от поставщика OLE DB, на OLE DB налагаются те же ограничения, что и на ODBC. Следующие определения взяты из описания григорианского календаря.  
   
 -   Диапазон месяцев — от 1 до 12 включительно.  

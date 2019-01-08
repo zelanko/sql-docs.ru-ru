@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpullsubscription_agent
@@ -17,12 +16,12 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c1ba5e237a9e652e0ef33e359cad0858420abbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cd847b9c3f5bcbc24260632ed632f42ad6840c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649638"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808766"
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,22 +80,22 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=**] **"***издателя***"**  
+ [  **@publisher=**] **"**_издателя_**"**  
  Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publisher_db=**] **"*** publisher_db"*  
+ [  **@publisher_db=**] **"**_publisher_db"_  
  Имя базы данных издателя. *publisher_db* — **sysname**, со значением по умолчанию NULL. *publisher_db* обрабатывается издателями Oracle.  
   
- [  **@publication=**] **"***публикации***"**  
+ [  **@publication=**] **"**_публикации_**"**  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@subscriber=**] **"***подписчика***"**  
+ [  **@subscriber=**] **"**_подписчика_**"**  
  Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов.  
   
- [  **@subscriber_db=**] **"***subscriber_db***"**  
+ [  **@subscriber_db=**] **"**_subscriber_db_**"**  
  Имя базы данных подписки. *subscriber_db* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -108,22 +107,22 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Агент распространителя всегда подключается к локальному подписчику с использованием проверки подлинности Windows. Если значение, отличное от NULL или **1** указан для данного параметра, выдается предупреждающее сообщение.  
   
- [  **@subscriber_login =**] **"***subscriber_login***"**  
+ [  **@subscriber_login =**] **"**_subscriber_login_**"**  
  — Это имя входа подписчика, используемое при подключении к подписчику при синхронизации. *subscriber_login* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если для этого аргумента указывается значение, то выдается предупреждающее сообщение, а значение не обрабатывается.  
   
- [  **@subscriber_password=**] **"***subscriber_password***"**  
+ [  **@subscriber_password=**] **"**_subscriber_password_**"**  
  Пароль подписчика. *subscriber_password* является обязательным, если *subscriber_security_mode* присваивается **0**. *subscriber_password* — **sysname**, значение по умолчанию NULL. Если пароль подписчика используется, он автоматически шифруется.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если для этого аргумента указывается значение, то выдается предупреждающее сообщение, а значение не обрабатывается.  
   
- [  **@distributor=**] **"***распространителя***"**  
+ [  **@distributor=**] **"**_распространителя_**"**  
  Имя распространителя. *распространитель* — **sysname**, значение по умолчанию значение, заданное параметром *издателя*.  
   
- [  **@distribution_db=**] **"***distribution_db***"**  
+ [  **@distribution_db=**] **"**_distribution_db_**"**  
  Имя базы данных распространителя. *distribution_db* — **sysname**, со значением по умолчанию NULL.  
   
  [  **@distributor_security_mode=**] *distributor_security_mode*  
@@ -132,16 +131,16 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login=**] **"***distributor_login***"**  
+ [  **@distributor_login=**] **"**_distributor_login_**"**  
  Имя входа распространителя, используемое для подключения к нему при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_login* — **sysname**, значение по умолчанию NULL.  
   
- [  **@distributor_password =**] **"***distributor_password***"**  
+ [  **@distributor_password =**] **"**_distributor_password_**"**  
  Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_password* — **sysname**, значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли. По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
- [  **@optional_command_line=**] **"***optional_command_line***"**  
+ [  **@optional_command_line=**] **"**_optional_command_line_**"**  
  Необязательная командная строка, поддерживаемая агентом распространителя. Например **- DefinitionFile** C:\Distdef.txt или **- CommitBatchSize** 10. *optional_command_line* — **nvarchar(4000)**, значение по умолчанию пустая строка.  
   
  [  **@frequency_type=**] *frequency_type*  
@@ -203,52 +202,52 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@active_end_date=**] *active_end_date*  
  Дата, когда запланирован останов агента распространителя, в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию **0**.  
   
- [  **@distribution_jobid =**] *distribution_jobid *** выходных данных**  
+ [  **@distribution_jobid =**] _distribution_jobid_**выходных данных**  
  Идентификатор задания агента распространителя для этого задания. *distribution_jobid* — **binary(16)**, значение по умолчанию NULL и является ВЫХОДНЫМ параметром.  
   
  [  **@encrypted_distributor_password=**] *encrypted_distributor_password*  
  Установка *encrypted_distributor_password* больше не поддерживается. Попытка присвоить этому **бит** параметр **1** приведет к ошибке.  
   
- [  **@enabled_for_syncmgr=**] **"***enabled_for_syncmgr***"**  
+ [  **@enabled_for_syncmgr=**] **"**_enabled_for_syncmgr_**"**  
  Является ли подписку можно синхронизировать через [!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер синхронизации. *enabled_for_syncmgr* — **nvarchar(5)**, значение по умолчанию FALSE. Если **false**, подписка не зарегистрирована диспетчером синхронизации. Если **true**, подписка регистрируется диспетчером синхронизации и может быть синхронизирована без запуска [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- [  **@ftp_address=**] **"***ftp_address***"**  
+ [  **@ftp_address=**] **"**_ftp_address_**"**  
  Только для обратной совместимости.  
   
  [  **@ftp_port=**] *ftp_port*  
  Только для обратной совместимости.  
   
- [  **@ftp_login=**] **"***ftp_login***"**  
+ [  **@ftp_login=**] **"**_ftp_login_**"**  
  Только для обратной совместимости.  
   
- [  **@ftp_password=**] **"***ftp_password***"**  
+ [  **@ftp_password=**] **"**_ftp_password_**"**  
  Только для обратной совместимости.  
   
- [  **@alt_snapshot_folder=** ] **"*** alternate_snapshot_folder"*  
+ [  **@alt_snapshot_folder=** ] **"**_alternate_snapshot_folder"_  
  Указывает местоположение альтернативной папки для моментального снимка. *alternate_snapshot_folder* — **nvarchar(255)**, значение по умолчанию NULL.  
   
- [ **@working_directory**=] **"***working_director***"**  
+ [ **@working_directory**=] **"**_working_director_**"**  
  Имя рабочего каталога, используемого для хранения файлов данных и схем для публикации. *working_directory* — **nvarchar(255)**, значение по умолчанию NULL. Имя должно быть задано в формате UNC.  
   
- [ **@use_ftp**=] **"***use_ftp***"**  
+ [ **@use_ftp**=] **"**_use_ftp_**"**  
  Указывает использование протокола FTP вместо обычного протокола для получения моментальных снимков. *use_ftp* — **nvarchar(5)**, значение по умолчанию FALSE.  
   
  [ **@publication_type**=] *publication_type*  
  Задает тип репликации для публикации. *publication_type* — **tinyint** значение по умолчанию **0**. Если **0**, публикация является публикацией транзакций. Если **1**, публикация является публикацией моментальных снимков. Если **2**, публикация является публикацией слиянием.  
   
- [ **@dts_package_name**=] **"***dts_package_name***"**  
+ [ **@dts_package_name**=] **"**_dts_package_name_**"**  
  Указывает имя пакета DTS. *dts_package_name* — **sysname** значение по умолчанию NULL. Например, для задания пакета `DTSPub_Package` параметр должен быть равен `@dts_package_name = N'DTSPub_Package'`.  
   
- [ **@dts_package_password**=] **"***dts_package_password***"**  
+ [ **@dts_package_password**=] **"**_dts_package_password_**"**  
  Задает пароль для пакета, если он имеется. *dts_package_password* — **sysname** значение по умолчанию NULL, означающее пароль не входит в пакет.  
   
 > [!NOTE]  
 >  Необходимо указать пароль, если *dts_package_name* указан.  
   
- [ **@dts_package_location**=] **"***dts_package_location***"**  
+ [ **@dts_package_location**=] **"**_dts_package_location_**"**  
  Указывает местоположение пакета. *dts_package_location* — **nvarchar(12)**, значение по умолчанию **подписчика**. Расположение пакета может быть **распространителя** или **подписчика**.  
   
- [ **@reserved**=] **"***зарезервированные***"**  
+ [ **@reserved**=] **"**_зарезервированные_**"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@offloadagent**=] '*remote_agent_activation*"  
@@ -262,10 +261,10 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [ **@job_name**=] '*имя_задания*"  
  Имя существующего задания агента. *имя_задания* — **sysname**, со значением по умолчанию NULL. Этот аргумент указывается только тогда, когда подписка будет синхронизироваться с использованием существующего задания, а не вновь создаваемого задания (выбор по умолчанию). Если вы не являетесь членом **sysadmin** предопределенной роли сервера, необходимо указать *job_login* и *job_password* при указании *имя_задания*.  
   
- [ **@job_login**=] **"***job_login***"**  
+ [ **@job_login**=] **"**_job_login_**"**  
  Имя входа для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. Для соединений агента с подписчиком всегда используется эта учетная запись Windows.  
   
- [ **@job_password**=] **"***job_password***"**  
+ [ **@job_password**=] **"**_job_password_**"**  
  Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию.  
   
 > [!IMPORTANT]  

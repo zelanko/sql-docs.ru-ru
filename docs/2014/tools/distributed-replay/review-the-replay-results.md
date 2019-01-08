@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a60b3f18d6249f0fcce10b25521aa9652699c3a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181334"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792836"
 ---
 # <a name="review-the-replay-results"></a>просмотреть результаты воспроизведения
   Когда компонент распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] завершает распределенное воспроизведение, действие воспроизведения может быть записано в результирующий файл трассировки на каждом клиенте. Чтобы записать это действие, необходимо использовать параметр **-o**, когда запускается средство администрирования с параметром **replay**. Дополнительные сведения о параметре replay см. в статье [Параметр воспроизведения (средство администрирования распределенного воспроизведения)](replay-option-distributed-replay-administration-tool.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "48181334"
 |Ошибки и предупреждения|Replay Internal Error|Один раз для каждой внутренней ошибки|В случае внутренней ошибки|  
 ||Replay Provider Error|Один раз для каждой ошибки поставщика|В случае ошибки поставщика|  
   
- Следует отметить следующее.  
+ Обратите внимание на следующее условия:  
   
 -   Каждому событию, успешно воспроизведенному на целевом сервере, соответствует один класс выходных событий.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48181334"
 ## <a name="event-class-column-mapping"></a>Сопоставление столбцов классов событий  
  На следующем рисунке показано, какие столбцы результирующей трассировки доступны для каждого класса событий, записываемого в ходе воспроизведения.  
   
- ![Сопоставление столбцов классов событий](../../database-engine/media/eventclassmappings.gif "сопоставление столбцов классов событий")  
+ ![Event class column mapping](../../database-engine/media/eventclassmappings.gif "Event class column mapping")  
   
 ## <a name="column-descriptions-for-result-trace"></a>Описания столбцов для результирующей трассировки  
  В следующей таблице описаны столбцы в результирующих данных трассировки.  
@@ -78,8 +78,8 @@ ms.locfileid: "48181334"
   
 ## <a name="see-also"></a>См. также  
  [Распределенное воспроизведение SQL Server](sql-server-distributed-replay.md)   
- [Требования распределенного воспроизведения](distributed-replay-requirements.md)   
- [Параметры командной строки средства администрирования &#40;распределенного воспроизведения программы&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [Параметры командной строки средства администрирования (программа распределенного воспроизведения)](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Настройка распределенного воспроизведения](configure-distributed-replay.md)  
   
   

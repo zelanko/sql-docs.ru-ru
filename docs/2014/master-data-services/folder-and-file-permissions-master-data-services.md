@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], file and folder
@@ -16,12 +15,12 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 06cec1895333e305739476d6c2eca731544fcd3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 594ceb3c21dec321afb7b08a2a54e90571ec8f5f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204134"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802856"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Разрешения для папок и файлов (службы Master Data Services)
   При установке [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]папки и файлы устанавливаются по указанному для общих компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пути установки в файловой системе. При использовании пути установки по умолчанию для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] общих компонентов, путь установки для [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] — *диск*: \Program Files\Microsoft SQL Server\120\Master Data Services. Хотя путь установки общих компонентов можно изменить, следует учитывать разрешения, наследуемые от родительской папки, а также явно заданные для [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]разрешения.  

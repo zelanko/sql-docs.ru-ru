@@ -1,5 +1,5 @@
 ---
-title: Алгоритма Байеса (Майкрософт) | Документы Microsoft
+title: Алгоритм Байеса (Майкрософт) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b3cbe50437011bc97ba4f4e1e246ee85e89495c1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7c55ffcb48d6c079c942d9bdffec0a1dc1c1d8f9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017241"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411311"
 ---
-# <a name="microsoft-naive-bayes-algorithm"></a>Упрощенный алгоритм Байеса (Майкрософт)
+# <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Упрощенный алгоритм Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) — это алгоритм классификации, основанный на теоремах Байеса, который можно использовать как для изучения данных, так и для прогнозного моделирования. Слово «упрощенный» в его названии указывает на то, что алгоритм использует методы Байеса, но не учитывает возможные зависимости.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Упрощенный алгоритм Байеса, — это алгоритм классификации, основанный на теоремах Байеса и может использоваться для произвольного тестирования и прогнозного моделирования. Слово «упрощенный» в его названии указывает на то, что алгоритм использует методы Байеса, но не учитывает возможные зависимости.  
   
  Данный алгоритм требует меньшего количества вычислений, чем другие алгоритмы [!INCLUDE[msCoName](../../includes/msconame-md.md)] , и может применяться для быстрого формирования моделей интеллектуального анализа данных для обнаружения отношений между входными и прогнозируемыми столбцами. Этот алгоритм можно использовать для первоначального исследования данных, а затем применить результаты для создания дополнительных моделей интеллектуального анализа с другими алгоритмами, требующими большего количества вычислений и являющимися более точными.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34017241"
   
  Разобраться в работе этого метода можно с помощью средства просмотра упрощенного алгоритма Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (см. рисунок). Оно позволяет в наглядном режиме исследовать, как происходит распределение состояний в рамках этого алгоритма.  
   
- ![Упрощенный алгоритм Байеса распределения состояний](../../analysis-services/data-mining/media/naive-bayes.gif "упрощенного алгоритма Байеса распределения состояний")  
+ ![Упрощенный алгоритм Байеса распределения состояний](../../analysis-services/data-mining/media/naive-bayes.gif "упрощенный алгоритм Байеса распределения состояний")  
   
  Здесь средство просмотра упрощенного алгоритма Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] содержит список всех входных столбцов в наборе данных и показывает, как распределяются состояния каждого из столбцов при каждом из состояний прогнозируемого столбца.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34017241"
   
  Дополнительные сведения о создании запросов к модели интеллектуального анализа данных см. в разделе [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md). Примеры использования запросов с моделью упрощенного алгоритма Байеса см. в разделе [Примеры запросов к модели упрощенного алгоритма Байеса](../../analysis-services/data-mining/naive-bayes-model-query-examples.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 -   Поддерживается использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.  
   
@@ -84,10 +84,10 @@ ms.locfileid: "34017241"
 -   Поддерживается использование моделей интеллектуального анализа OLAP.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Выбор компонентов & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Выбор компонентов (интеллектуальный анализ данных)](../../analysis-services/data-mining/feature-selection-data-mining.md)   
  [Примеры запросов к модели упрощенного алгоритма Байеса](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
- [Содержимое модели интеллектуального анализа данных для моделей упрощенного алгоритма Байеса & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
- [Технический справочник Майкрософт упрощенный алгоритм Байеса](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)  
+ [Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [Технический справочник по упрощенному алгоритму Байеса (Майкрософт)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

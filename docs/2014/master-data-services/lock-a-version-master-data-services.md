@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], locking
@@ -14,12 +13,12 @@ ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad236e42b0556ddef4e316b1b6b24280615b7e9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23e705dd936383db09b0a9eda37eb6d925dbffbb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140524"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750876"
 ---
 # <a name="lock-a-version-master-data-services"></a>Блокировка версии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]блокировка версии модели препятствует изменениям элементов модели и их атрибутов.  
@@ -32,7 +31,7 @@ ms.locfileid: "48140524"
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
   
 -   Версия должна быть в состоянии **Открыта**.  
   
@@ -48,12 +47,12 @@ ms.locfileid: "48140524"
   
 ## <a name="next-steps"></a>Следующие шаги  
   
--   [Проверка версии на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
--   [Фиксация версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
+-   [Фиксация версии (службы Master Data Services)](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
- [Версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
- [Разблокировка версии &#40;службы Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
+ [Версии (службы Master Data Services)](../../2014/master-data-services/versions-master-data-services.md)   
+ [Разблокировка версии (службы Master Data Services)](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
   
   

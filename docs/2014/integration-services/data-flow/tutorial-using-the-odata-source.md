@@ -1,24 +1,23 @@
 ---
-title: 'Учебник: Использование источника OData [SSIS] | Документация Майкрософт'
+title: Учебник. Использование источника OData [SSIS] | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32d4e2f651fe4a080c1b75c4bd8c00ded7940bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 693eb9b33c753f1d87b4b5635e47de82ca7e4b59
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155004"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805156"
 ---
-# <a name="tutorial-using-the-odata-source-ssis"></a>Учебник: Использование источника OData [SSIS]
+# <a name="tutorial-using-the-odata-source-ssis"></a>Учебник. Использование источника OData [SSIS]
   Этот учебник содержит процедуру извлечения коллекции **Employees** из образца **Northwind** службы OData (http://services.odata.org/V3/Northwind/Northwind.svc/)) и последующей ее загрузки в неструктурированный файл.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Создание проекта служб Integration Services  
@@ -43,7 +42,7 @@ ms.locfileid: "48155004"
   
 4.  Дважды щелкните компонент **Источник OData** , чтобы открыть диалоговое окно **Редактор источника OData** .  
   
-5.  В меню **Создать…** , чтобы добавить новый диспетчера соединений с OData.  
+5.  Щелкните **Создать…**, чтобы добавить новый диспетчера соединений OData.  
   
 6.  Введите URL-адрес службы OData в поле **Расположение сервисного документа**. Это может быть URL-адрес сервисного документа либо определенный канал или сущность. Для целей этого учебного примера введите [ http://services.odata.org/V3/Northwind/Northwind.svc/ ](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   

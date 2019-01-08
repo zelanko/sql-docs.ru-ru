@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9a2ef095189ca4505248865a6b9a8a99c86243d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200878"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808066"
 ---
 # <a name="lockcancel-event-class"></a>Класс событий Lock:Cancel
   Класс событий **Lock:Cancel** сигнализирует, что получение блокировки на ресурс было отменено (например по причине отмены запроса).  
@@ -52,7 +51,7 @@ ms.locfileid: "48200878"
 |**OwnerID**|`int`|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|Да|  
 |**RequestID**|`int`|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |**ServerName**|`nvarchar`|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
-|**SessionLoginName**|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
+|**SessionLoginName**|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Имя_входа1 и при выполнении инструкции под именем Имя_входа2 **SessionLoginName** содержит значение «Имя_входа1», а **LoginName** содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|`datetime`|Время начала события, если оно доступно.|14|Да|  
 |**TextData**|`ntext`|Текстовое значение, зависящее от типа запрошенной блокировки. Это то же значение, что и в столбце **resource_description** в динамическом представлении управления **sys.dm_tran_locks**.|1|Да|  

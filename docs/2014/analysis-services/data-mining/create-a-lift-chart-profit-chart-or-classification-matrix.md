@@ -13,12 +13,12 @@ ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67399a724001cbd1f04a24f0558f2618aafd155a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e183c1e25aa81b05c897674fc5c9f4a2dd8d0c5b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069434"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529357"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Создать диаграмму точности прогнозов, диаграмму роста прибыли или матрицу классификации
   Диаграмма точности для модели интеллектуального анализа данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создается в пять простых шагов.  
@@ -70,7 +70,7 @@ ms.locfileid: "48069434"
   
     -   Выберите вариант **Использовать проверочные варианты структуры интеллектуального анализа данных**для использования полного набора проверочных вариантов, которые были определены в составе набора контрольных данных структур интеллектуального анализа данных.  
   
-    -   Выберите параметр **Задать другой набор данных**, если нужно использовать внешние данные.  Набор данных должен быть доступен в форме представления источников данных.   Нажмите кнопку обзора (**…**), чтобы выбрать таблицы данных для использования в диаграмме точности. Дополнительные сведения см. в статье [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
+    -   Выберите параметр **Задать другой набор данных**, если нужно использовать внешние данные.  Набор данных должен быть доступен в форме представления источников данных.   Нажмите кнопку обзора (**...** ) кнопку, чтобы выбрать таблицы данных для использования в диаграмме точности. Дополнительные сведения см. в статье [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
   
          При использовании внешнего набора данных можно, по желанию, фильтровать набор входных данных. Дополнительные сведения см. в статье [Применение фильтров к данным проверки модели](apply-filters-to-model-testing-data.md).  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48069434"
      Сумма прибыли, связанная с каждой успешной продажей.  
   
 ## <a name="see-also"></a>См. также  
- [Диаграмма точности прогнозов &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](lift-chart-analysis-services-data-mining.md)   
- [Матрица классификации &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](lift-chart-analysis-services-data-mining.md)   
+ [Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)](classification-matrix-analysis-services-data-mining.md)  
   
   

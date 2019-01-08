@@ -11,12 +11,12 @@ ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09084760637464c5e985eeb17762959c8576c5ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a66c6284ea53f65351a964e3f24492c569521af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222810"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544262"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Прогноз взаимосвязей (учебник по интеллектуальному анализу данных — средний уровень)
   После обработки моделей для создания прогнозов можно использовать сведения о взаимосвязях, хранящиеся в модели. В последней задаче этого занятия предстоит изучить, как создавать прогнозирующие запросы к созданным моделям взаимосвязей. В этом занятии предполагается, что вы знакомы с работой построителя прогнозирующих запросов и хотите научиться создавать прогнозирующие запросы к моделям взаимосвязей. Дополнительные сведения том, как использовать построитель прогнозирующих запросов, см. в разделе [интерфейсы запросов данных для интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  
@@ -209,7 +209,7 @@ ms.locfileid: "48222810"
  Можно попытаться создать подобный прогнозирующий запрос для нескольких моделей и узнать, изменятся ли результаты прогнозов после фильтрации. Дополнительные сведения о создании прогнозов и других типов запросов, см. в разделе [примеры запросов моделей взаимосвязей](../../2014/analysis-services/data-mining/association-model-query-examples.md).  
   
 ## <a name="see-also"></a>См. также  
- [Модель интеллектуального анализа данных для моделей взаимосвязей &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [PredictAssociation &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/predictassociation-dmx)   
  [Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   

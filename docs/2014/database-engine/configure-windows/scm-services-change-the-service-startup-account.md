@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server services, startup account changes
@@ -15,12 +14,12 @@ ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bbd2042a5286c337867032e3950c9f7214aad2c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2a830ad4d6fa87cd754910baf8be53216086cab
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153195"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641255"
 ---
 # <a name="change-the-service-startup-account-for-sql-server-sql-server-configuration-manager"></a>изменить стартовую учетную запись службы для SQL Server (диспетчер конфигурации SQL Server)
   В этом разделе описывается использование диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для изменения параметров запуска служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и изменения учетных записей служб, которые используются компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell. Дополнительные сведения о выборе учетной записи службы см. в разделе [Configure Windows Service Accounts and Permissions](configure-windows-service-accounts-and-permissions.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "48153195"
   
 -   Обновление номера SKU (от[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] до другого номера SKU)  
   
-     Во время установки [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] служба « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , агент» настраивается для использование учетной записи Network Service, но отключается. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager можно изменить учетную запись, назначенную для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служба агента, но служба не может включить или запустить. После обновления номера SKU с [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] до другого номера SKU служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не включается автоматически, но при необходимости ее можно включить с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и задать для нее тип запуска «Вручную» или «Авто».  
+     Во время установки [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] служба « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , агент» настраивается для использование учетной записи Network Service, но отключается. В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно изменить учетную запись, назначенную для службы "Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]", но нельзя включить или запустить эту службу. После обновления номера SKU с [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] до другого номера SKU служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не включается автоматически, но при необходимости ее можно включить с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и задать для нее тип запуска «Вручную» или «Авто».  
   
 ##  <a name="SSMSProcedure"></a> Использование диспетчера конфигурации SQL Server  
   

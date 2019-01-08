@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ab3e6eb8839b87f1145501cd0b30895bf181ec60
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e2d15054f3d6ebbcd25627df42aab5b9248db1f6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984476"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207503"
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "38984476"
 |Имя|Поддерживаемая версия SharePoint|Подробные данные конфигурации|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013|SharePoint 2013|[Настройка или восстановление Power Pivot для SharePoint 2013 (Средство настройки Power Pivot)](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Средство настройки|SharePoint 2010 с @@@SharePoint 2010@@@|[Настройка или восстановление Power Pivot для SharePoint 2010 (средство настройки Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Средство настройки|SharePoint 2010 с @@@SharePoint 2010@@@|[Настройка или восстановление PowerPivot для SharePoint 2010 (средство настройки PowerPivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
   
 ###  <a name="bkmk_sum_differences_betweentools"></a> Отличия двух средств настройки  
  Две версии средств настройки похожи, однако есть отличия в этапах настройки, которые применяются средствами. Отличия обусловлены расхождениями в SharePoint 2010 и SharePoint 2013, а также различием в архитектуре версии SQL Server 2012 SP1 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и предыдущих версий [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint.  
@@ -83,9 +83,9 @@ ms.locfileid: "38984476"
   
 -   [Справочник по PowerShell для Power Pivot для SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
-> [!NOTE]  
+> [!NOTE]
 >  Средство не настраивает службы Reporting Services. При добавлении служб Reporting Services в среду SharePoint их следует устанавливать и настраивать отдельно. Дополнительные сведения см. в следующих разделах:  
->   
+> 
 >  -   [Установка первого сервера отчетов в режиме интеграции с SharePoint](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md).  
 > -   [Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
   
@@ -103,7 +103,7 @@ ms.locfileid: "38984476"
   
      ![два средства настройки powerpivot](../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "два средства настройки powerpivot")  
   
-     **Примечание.** Эти средства доступны, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
+     **Примечание.** Эти средства доступны, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
 2.  Во время запуска средство настройки проверяет состояние установки и предоставляет задачи, допустимые для нее.  
   

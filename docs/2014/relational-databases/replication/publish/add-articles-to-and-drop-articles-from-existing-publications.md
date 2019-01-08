@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], dropping
@@ -20,12 +19,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 411a97c4e143ea06ee5bd00dc9a357c4c2c7e1ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d067f6cd8981780efa057f7367cd5282c7e668a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187264"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203343"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Добавление и удаление статей в существующих публикациях
   Возможно добавлять и удалять статьи после создания публикации. Можно добавить статьи в любое время, но действия, необходимые для удаления статей, зависят от типа репликации и времени удаления статьи.  
@@ -33,7 +32,7 @@ ms.locfileid: "48187264"
 ## <a name="adding-articles"></a>добавление статей  
  Добавление статьи включает следующие операции: добавление статьи в публикацию, создание нового моментального снимка публикации, синхронизация подписки для применения схемы и данных для новой статьи.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Если при добавлении статьи в публикацию слиянием, существующая статья зависит от новой статьи, то необходимо задать порядок обработки для обеих статей с помощью параметра **@processing_order** процедур [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) и [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Рассмотрим следующий сценарий: необходимо опубликовать таблицу без публикации функции, на которую ссылается эта таблица. Если функция не будет опубликована, то таблица не сможет быть создана на подписчике. При добавлении функции к публикации: задайте значение **1** для параметра **@processing_order** хранимой процедуры **sp_addmergearticle**и значение **2** для параметра **@processing_order** хранимой процедуры **sp_changemergearticle**, указав имя таблицы в параметре **@article**. Этот порядок обработки гарантирует создание функции на подписчике до создания таблицы, которая зависит от нее. Можно использовать различные числа для каждой статьи при условии, что число для функции меньше числа для таблицы.  
   
 1.  Добавьте одну или несколько статей с помощью следующих методов:  

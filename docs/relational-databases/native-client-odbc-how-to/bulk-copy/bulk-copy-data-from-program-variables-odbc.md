@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e01f9a772b306616c8ac2ca3763a01f820e7854
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d8d0d377cff846bcabac999667718c5696089971
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661153"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216053"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Обеспечение массового копирования данных из переменных приложения (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,11 +67,11 @@ ms.locfileid: "51661153"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Выполните первый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы создать таблицы, которыми пользуется образец.  
+ Выполните первый ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) листинг для создания таблиц, которые будут использовать образец кода.  
   
  Скомпилируйте второй листинг кода (C++) с библиотеками odbc32.lib и odbcbcp.lib. При работе с программой MSBuild.exe сначала скопируйте файлы Bcpfmt.fmt и Bcpodbc.bcp из каталога проекта в тот каталог, где находится исполняемый файл, а затем вызовите этот исполняемый файл.  
   
- Выполните третий листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы удалить таблицы, которые использовал образец.  
+ Выполните третий ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) листинг для удаления таблицы, которую использовал образец кода.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

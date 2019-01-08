@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_article_validation_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 921ddeb18eff52731b78a56c0a2c056575572b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f0d205f22e00916c53f5557458694d939bf1766
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648702"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210913"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +45,10 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
+ [  **@publication=**] **"**_публикации_**"**  
  Имя публикации, в которой находится статья. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article=**] **"***статье***"**  
+ [  **@article=**] **"**_статье_**"**  
  Имя проверяемой статьи. *статья* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@rowcount_only=**] *type_of_check_requested*  
@@ -64,7 +63,7 @@ sp_article_validation [ @publication = ] 'publication'
  [  **@full_or_fast=**] *full_or_fast*  
  Метод, применяемый для подсчета числа строк. *full_or_fast* — **tinyint**, и может принимать одно из следующих значений.  
   
-|**Value**|**Описание**|  
+|**Значение**|**Описание**|  
 |---------------|---------------------|  
 |**0**|Выполняет полный подсчет при помощи функции COUNT(*).|  
 |**1**|Выполняет быстрый подсчет из **sysindexes.rows**. Подсчет строк в **sysindexes** выполняется быстрее, чем подсчет строк в фактической таблице. Тем не менее **sysindexes** обновляется в фоновом режиме, и количество строк может оказаться неточным.|  
@@ -79,8 +78,8 @@ sp_article_validation [ @publication = ] 'publication'
  [  **@reserved=**] *зарезервированные*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@publisher**=] **"***издателя***"**  
- Указывает, отличный от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+ [ **@publisher**=] **"**_издателя_**"**  
+ Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует использовать при запросе проверки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  

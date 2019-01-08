@@ -1,5 +1,5 @@
 ---
-title: Задайте тип данных столбца | Документы Microsoft
+title: Тип данных столбца в табличной модели служб Analysis Services | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18aa18d9c9ee7fbc0291d9961e144263053710dd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 595f2cf0c95cf09241dd2189c380deb3ce7b5760
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071961"
 ---
 # <a name="set-the-data-type-of-a-column"></a>Выбор типа данных столбца 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
   
  В семантических моделях бизнес-аналитики доступны следующие типы данных:  
   
--   **Текст**  
+-   **Text**  
   
 -   **Десятичное число**  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/10/2018
   
  Если тип данных поддерживается, но конструктор моделей обнаруживает значения, не поддерживаемые новым типом данных, то возникает другая ошибка и значения данных потребуется исправить перед продолжением операции.  
   
- Подробные сведения о типах данных, используемых в семантических моделей бизнес-аналитики, как они могут неявно преобразованный и как разные типы данных используются в формулах см. в разделе [поддерживаемые типы данных](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ Подробные сведения о типах данных, используемых в семантических моделях бизнес-аналитики, как они неявного преобразования и различных типов данных используются в формулах, см. в разделе [поддерживаемые типы данных](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>См. также  
  [Поддерживаемые типы данных](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  

@@ -1,24 +1,23 @@
 ---
-title: Шаг 1. Создание рабочих папок и переменных среды | Документы Майкрософт
+title: Шаг 1. Создание рабочих папок и переменных среды | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 640d865069769d826b3d0a3f7839c718bdf47cd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa27d9c38c7c1b147432295d5ec636c8c73863c6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201254"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350919"
 ---
-# <a name="step-1-creating-working-folders-and-environment-variables"></a>Шаг 1. Создание рабочих папок и переменных среды
+# <a name="step-1-creating-working-folders-and-environment-variables"></a>Шаг 1. Создание рабочих папок и переменных среды
   В этой задаче предстоит создать рабочую папку (C:\DeploymentTutorial) и новые системные переменные среды (`DataTransfer` и `LoadXMLData`), которые будут использоваться в последующих задачах учебника.  
   
  Рабочая папка является корневой папкой диска C. Если необходимо, используйте другой диск или расположение. Однако необходимо обратить внимание на это расположение и использовать его в дальнейшем всегда, когда в учебнике встречается ссылка на рабочую папку DeploymentTutorial.  
@@ -86,6 +85,6 @@ ms.locfileid: "48201254"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 2. Создание проекта развертывания](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
-![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
   

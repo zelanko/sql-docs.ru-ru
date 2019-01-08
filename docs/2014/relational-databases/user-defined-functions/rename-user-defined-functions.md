@@ -10,12 +10,12 @@ ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c0993dfccf1ab48d509f47e5d179402240b453cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3419faca26d9d252610c07cb994ab5faa738f937
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219954"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399187"
 ---
 # <a name="rename-user-defined-functions"></a>Переименование определяемых пользователем функций
   Определяемые пользователем функции в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно переименовать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -76,7 +76,7 @@ ms.locfileid: "48219954"
   
  Дополнительные сведения см. в разделах [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql) и [DROP FUNCTION (Transact-SQL)](/sql/t-sql/statements/drop-function-transact-sql).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представление каталога sys.sql_expression_dependencies (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)   
  [Просмотр определяемых пользователем функций](user-defined-functions.md)  
   

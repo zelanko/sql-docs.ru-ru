@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -15,12 +14,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ff6cda85a64841e5b97c89e1ccf936b857fd1f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077694"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774916"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Создание подписки для подписчика, отличного от подписчика SQL Server
   В данном разделе описывается процесс создания подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для подписчика, отличного от подписчика SQL Server, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Репликация транзакций и репликация моментальных снимков поддерживают публикацию данных на подписчики, отличные от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о поддерживаемых платформах подписчиков см. в разделе [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
@@ -97,7 +96,7 @@ ms.locfileid: "48077694"
   
     -   Для IBM DB2 база данных указывается в свойстве строки соединения DB2 **Исходный каталог** , которое может быть введено в поле **Дополнительные параметры соединения** , описанном далее в этом разделе.  
   
-8.  Чтобы получить доступ к диалоговому окну **Безопасность агента распространителя** , на странице**Безопасность агента распространителя**нажмите кнопку свойств ( **…** ), расположенную рядом с подписчиком.  
+8.  Чтобы получить доступ к диалоговому окну **Безопасность агента распространителя**, на странице**Безопасность агента распространителя** нажмите кнопку свойств (**...**), расположенную рядом с подписчиком.  
   
 9. В диалоговом окне **Безопасность агента распространителя** выполните следующие действия:  
   
@@ -154,12 +153,12 @@ ms.locfileid: "48077694"
   
 2.  В издателе в базе данных издателя проверьте, поддерживает ли публикация подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполнив процедуру [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql).  
   
-    -   Если значение `enabled_for_het_sub` -1, отличным от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются подписчики.  
+    -   Если параметр `enabled_for_het_sub` имеет значение 1, то подписчики, отличные от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаются.  
   
     -   Если значение `enabled_for_het_sub` равно 0, выполнение [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав `enabled_for_het_sub` для **@property** и `true` для  **@value**.  
   
         > [!NOTE]  
-        >  Перед изменением `enabled_for_het_sub` для `true`, необходимо удалить все существующие подписки на публикацию. Нельзя присвоить параметру `enabled_for_het_sub` значение `true`, если публикация также поддерживает обновляемые подписки. Изменение параметра `enabled_for_het_sub` отразится на других свойствах публикации. Дополнительные сведения см. в разделе [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
+        >  Перед изменением значения `enabled_for_het_sub` на `true` необходимо удалить все существующие подписки на публикацию. Нельзя присвоить параметру `enabled_for_het_sub` значение `true`, если публикация также поддерживает обновляемые подписки. Изменение параметра `enabled_for_het_sub` отразится на других свойствах публикации. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 3.  В издателе в базе данных публикации выполните процедуру [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Задайте **@publication**, **@subscriber**, **(назначение по умолчанию)** @property **@destination_db**, **push** @property **@subscription_type**, а также 3 в качестве значения параметра **@subscriber_type** (задает поставщика OLE DB).  
   
@@ -183,7 +182,7 @@ ms.locfileid: "48077694"
     > [!IMPORTANT]  
     >  При создании принудительной подписки на издателе с удаленным распространителем значения, указываемые для всех параметров, включая *job_login* и *job_password*, передаются распространителю в виде обычного текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)   
  [Oracle Subscribers](non-sql/oracle-subscribers.md)   
  [Другие подписчики, отличные от SQL Server](non-sql/other-non-sql-server-subscribers.md)   

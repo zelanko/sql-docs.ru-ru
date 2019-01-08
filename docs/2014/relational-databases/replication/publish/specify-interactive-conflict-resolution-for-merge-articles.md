@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], interactive resolvers
@@ -16,12 +15,12 @@ ms.assetid: e298dea0-b5ef-4907-a745-cfad9793653f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 80f3817de3ff8242d24dfc0e1ca507f186e05508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 710db513395aa5a9c51df55b54bafbdc425ecb5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205304"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749297"
 ---
 # <a name="specify-interactive-conflict-resolution-for-merge-articles"></a>Указание интерактивного устранения конфликтов для статей публикации слиянием
   В данном разделе описывается указание интерактивного устранения конфликтов для статей публикации слиянием в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -64,7 +63,7 @@ ms.locfileid: "48205304"
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>Указание, что подписка должна использовать интерактивное разрешение конфликтов  
   
-1.  В диалоговом окне **Свойства подписки — \<подписчик>: \<база данных подписки>** для параметра **Интерактивное разрешение конфликтов** задайте значение **True**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделах [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) и [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md).  
+1.  В **свойства подписки — \<подписчик >: \<База данных подписки >** диалоговом окне укажите значение **True** для **интерактивное разрешение конфликтов** параметр. Дополнительные сведения о доступе к этому диалоговому окну см. в разделах [Просмотр и изменение свойств принудительной подписки](../view-and-modify-push-subscription-properties.md) и [Просмотр и изменение свойств подписки по запросу](../view-and-modify-pull-subscription-properties.md).  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

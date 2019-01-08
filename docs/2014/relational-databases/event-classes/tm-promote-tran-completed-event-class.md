@@ -1,11 +1,10 @@
 ---
-title: 'Класс событий TM: Promote Tran Completed | Документация Майкрософт'
+title: 'События класса TM: Promote Tran Completed, класс событий | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 729988d6e1c7b1d87cf596537c26ee81b4add5c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 029b077b034d7b022ea1e27832624df86decb547
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103414"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823212"
 ---
-# <a name="tm-promote-tran-completed-event-class"></a>Класс событий TM: Promote Tran Completed
-  Класс событий TM:Promote Tran Completed указывает на то, что был выполнен запрос PROMOTE TRANSACTION. Запрос отправляется клиентом через интерфейс управления транзакциями.  
+# <a name="tm-promote-tran-completed-event-class"></a>События класса TM: Класс события Promote Tran Completed
+  События класса TM: класс событий Promote Tran Completed» указывает, что завершен запрос PROMOTE TRANSACTION. Запрос отправляется клиентом через интерфейс управления транзакциями.  
   
-## <a name="tm-promote-tran-completed-event-class-data-columns"></a>Столбцы данных класса событий TM: Promote Tran Completed  
+## <a name="tm-promote-tran-completed-event-class-data-columns"></a>События класса TM: столбцы данных класса событий Promote Tran Completed  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -49,7 +48,7 @@ ms.locfileid: "48103414"
 |SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
-|Успешно|`int`|1 = успешное завершение. 0 = неуспешное завершение (например, 1 означает, что проверка разрешений проходит, а 0 — что не проходит).|23|Да|  
+|Success|`int`|1 = успешное завершение. 0 = неуспешное завершение (например, 1 означает, что проверка разрешений проходит, а 0 — что не проходит).|23|Да|  
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   

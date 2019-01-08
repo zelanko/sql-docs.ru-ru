@@ -1,6 +1,8 @@
 ---
-title: Изучите ресурсы Azure SQL с помощью обозревателя ресурсов Azure | Документация Майкрософт
+title: Изучите ресурсы Azure SQL с помощью обозревателя ресурсов Azure
+titleSuffix: Azure Data Studio
 description: Узнайте, как для обзора и управления Azure SQL Server, базы данных SQL Azure и управляемый экземпляр SQL Azure через обозреватель ресурсов Azure.
+ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
 manager: craigg
@@ -8,14 +10,14 @@ ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 5b969ded699c11414c1822c0cb455ee84dfa212f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: d202a305468f78cf1890533292570ebb56edff12
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356065"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030118"
 ---
-# <a name="explore-azure-sql-resources-with-azure-resource-explorer"></a>Изучите ресурсы Azure SQL с помощью обозревателя ресурсов Azure
+# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Просмотр и управление ресурсами Azure SQL с помощью обозревателя ресурсов Azure
 
 В этом документе вы узнаете, как могут просматривать и управлять Azure SQL Server, базы данных Azure SQL и ресурсы управляемый экземпляр SQL Azure с помощью обозревателя ресурсов Azure в [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 

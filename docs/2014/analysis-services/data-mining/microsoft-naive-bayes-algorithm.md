@@ -17,12 +17,12 @@ ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0eb14757ba0b327d478f287e425ad5124a239043
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7ea7b0f79dac89188599854c73279ee8d8c2f5c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187114"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390881"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Упрощенный алгоритм Байеса является алгоритмом классификации, основанного на теоремах Байеса и предоставляемые [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозирующем моделировании. Слово «упрощенный» в его названии указывает на то, что алгоритм использует методы Байеса, но не учитывает возможные зависимости.  
@@ -93,10 +93,10 @@ ms.locfileid: "48187114"
 -   Поддерживается использование моделей интеллектуального анализа OLAP.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Выбор компонентов &#40;интеллектуального анализа данных&#41;](feature-selection-data-mining.md)   
- [Примеры запросов к упрощенной модели Байеса](naive-bayes-model-query-examples.md)   
- [Модель интеллектуального анализа данных для моделей упрощенного алгоритма Байеса &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Выбор компонентов (интеллектуальный анализ данных)](feature-selection-data-mining.md)   
+ [Примеры запросов к модели упрощенного алгоритма Байеса](naive-bayes-model-query-examples.md)   
+ [Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Технический справочник по упрощенному алгоритму Байеса (Майкрософт)](microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

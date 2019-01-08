@@ -1,7 +1,8 @@
 ---
-title: 'Руководство: Включение таблицы места использования образца insight мини-приложения в Azure Data Studio | Документация Майкрософт'
+title: Учебник. Включение таблицы места использования образца insight мини-приложения
+titleSuffix: Azure Data Studio
 description: Этот учебник демонстрирует включение таблицы места использования образца insight мини-приложения на панели мониторинга базы данных Azure Data Studio.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355995"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030358"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Руководство: Включение таблицы места использования примера insight мини-приложения с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Учебник. Включение таблицы места использования примера insight мини-приложения с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Этот учебник демонстрирует включение мини-приложение представление на панели мониторинга базы данных, предоставляя в краткие представления об использовании пространства для всех таблиц в базе данных. С помощью этого учебника вы узнаете, как:
 
@@ -38,7 +39,7 @@ ms.locfileid: "49355995"
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] имеет встроенный пример мини-приложение для мониторинга места, используемого таблицами в базе данных.
 
 1. Откройте *параметры пользователя* , нажав клавишу **Ctrl + Shift + P** открыть *палитру команд*.
-2. Тип *параметры* в поле поиска и выберите **предпочтения: открыть параметры пользователя**.
+2. Тип *параметры* в поле поиска и выберите **предпочтения: Откройте параметры пользователя**.
 2. Тип *панели мониторинга* поле ввода параметров поиска и найдите **dashboard.database.widgets**.
 
 3. Для настройки **dashboard.database.widgets** необходимо изменить параметры **dashboard.database.widgets** запись в **параметры пользователя** раздела (в столбце Правая сторона). Если не **dashboard.database.widgets** в **параметры пользователя** разделе, наведите указатель мыши **dashboard.database.widgets** текст в столбце параметры по умолчанию и нажмите кнопку значок карандаша, который отображается слева от текста и нажмите кнопку **копирования к параметрам**. Если указано всплывающем **замените в параметрах**, не щелкая его! Перейдите к **параметры пользователя** столбец вправо и найдите **dashboard.database.widgets** раздел и перейдите к следующему шагу.

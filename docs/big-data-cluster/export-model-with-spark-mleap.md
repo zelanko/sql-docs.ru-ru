@@ -1,22 +1,24 @@
 ---
-title: Экспорт моделей машинного обучения Spark с MLeap | SQL Server
-description: Экспорт машинного обучения моделей с MLeap Spark
-services: SQL Server 2019 Big Data Cluster Spark
-ms.service: SQL Server 2019 Big Data Cluster Spark
+title: Экспорт моделей машинного Обучения Spark с MLeap
+titleSuffix: SQL Server 2019 big data clusters
+description: Узнайте, как экспортировать машинного обучения моделей с MLeap Spark.
 author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/10/2018
-ms.openlocfilehash: 546e46c6e9c5b2875f817fbf9a5fc3107afeb8a2
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: db6e980441c2037311cf2dc35a8f9de01acb045b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411869"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211173"
 ---
-# <a name="export-models-using-mleap"></a>Экспорт моделей с помощью Mleap
+# <a name="export-spark-machine-learning-models-with-mleap"></a>Экспорт машинного обучения моделей с MLeap Spark
+
 Сценарий обычно машинного обучения включает в себя обучение в Spark и оценка модели за пределами Spark. Экспортируйте модели в формате PDF, таким образом, он может использоваться за пределами Spark. [MLeap](https://github.com/combust/mleap) – один такой формат обмена модели. Он позволяет Spark конвейеры машинного обучения и модели, экспортируемых в качестве переносимого форматов и использовать их в любой системе на основе виртуальной машины Java с `Mleap` среды выполнения.
 
 В этом руководстве показано, как можно экспортировать с помощью Mleap моделей spark. Действия представлены ниже и углубляться в код в следующем разделе.
@@ -27,8 +29,7 @@ ms.locfileid: "50411869"
 4. Чтобы проверить, мы импортируем `Mleap` снова объединить назад и использовать его для оценки в Spark.
 
 ## <a name="step-1---start-by-creating-a-spark-model"></a>Шаг 1 - начните с создания модели Spark
-Выполнения [машинного обучения, обучение и создание модели с помощью Spark] (train-and-create-machinelearning-models-with-spark.md) для создания, обучения и тестирования наборы и модели и сохранить в хранилище HDFS. Модели должно быть экспортировано как `AdultCensus.mml` под `spark_ml` каталога.
-
+Запустите [обучения, а также создание машинного обучения модели с помощью Spark](train-and-create-machinelearning-models-with-spark.md) для создания наборов обучения и тестирования и модель и сохранить в хранилище HDFS. Модели должно быть экспортировано как `AdultCensus.mml` под `spark_ml` каталога.
 
 ## <a name="step-2---import-the-trainingtest-data-and-the-model"></a>Шаг 2 - Импорт training\test данных и модели
 
@@ -49,7 +50,6 @@ model = PipelineModel.load(model_fs)
 print("Model is " , model)
 print("Model stages", model.stages)
 ```
-
 
 ## <a name="step-3---export-the-model-as-mleap-bundle"></a>Шаг 3 — экспортировать модель в качестве `Mleap` пакета
 

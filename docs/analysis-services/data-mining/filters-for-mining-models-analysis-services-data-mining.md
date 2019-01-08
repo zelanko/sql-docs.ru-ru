@@ -1,5 +1,5 @@
 ---
-title: Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c678773a77b9411eb1a51dbeb85b5eeb5f08b43
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016761"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410671"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,14 +54,14 @@ ms.locfileid: "34016761"
 ### <a name="creating-filters-on-nested-tables"></a>Создание фильтров во вложенных таблицах  
  Если представление источника данных содержит вложенные таблицы, то во втором диалоговом окне фильтров можно создавать условия для строк во вложенных таблицах.  
   
- Например, если таблица вариантов связана с покупателями, а во вложенной таблице показаны продукты, приобретенные покупателями, то можно создать фильтр для покупателей, которые приобрели определенные товары. Это можно сделать с помощью приведенного синтаксиса в фильтре вложенной таблицы: `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`.  
+ Например, если таблица вариантов связана с покупателями, а во вложенной таблице показаны продукты, приобретенные покупателями, то можно создать фильтр для покупателей, которые приобрели определенные товары. Это можно сделать с помощью приведенного синтаксиса в фильтре вложенной таблицы: `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`.  
   
- Кроме того, можно отфильтровать данные по существованию определенного значения во вложенной таблице с помощью ключевых слов **EXISTS** или **NOT EXISTS** и вложенного запроса. Это позволяет создавать такие условия, как `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`. Условие `EXISTS SELECT(<subquery>)` возвращает значение **true** , если вложенная таблица содержит хотя бы одну строку, включающую значение `Water Bottle`.  
+ Кроме того, можно отфильтровать данные по существованию определенного значения во вложенной таблице с помощью ключевых слов **EXISTS** или **NOT EXISTS** и вложенного запроса. Это позволяет создавать такие условия, как `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. Условие `EXISTS SELECT(<subquery>)` возвращает значение **true** , если вложенная таблица содержит хотя бы одну строку, включающую значение `Water Bottle`.  
   
- Можно сочетать условия в таблице вариантов с условиями во вложенной таблице. Например, в показанном ниже синтаксисе приведены условие в таблице вариантов (`Age > 30` ), вложенный запрос к вложенной таблице (`EXISTS (SELECT * FROM Products)`), а также несколько условий к вложенной таблице (`WHERE ProductName=’Milk’  AND Quantity>2`).  
+ Можно сочетать условия в таблице вариантов с условиями во вложенной таблице. Например, в показанном ниже синтаксисе приведены условие в таблице вариантов (`Age > 30` ), вложенный запрос к вложенной таблице (`EXISTS (SELECT * FROM Products)`), а также несколько условий к вложенной таблице (`WHERE ProductName='Milk'  AND Quantity>2`).  
   
 ```  
-(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity>2) )  
+(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity>2) )  
 ```  
   
  Когда построение фильтра завершено, текст фильтра вычисляется службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], переводится в DMX-выражение и после этого сохраняется в модели.  
@@ -93,7 +93,7 @@ ms.locfileid: "34016761"
 ### <a name="how-can-i-save-a-filter"></a>Как сохранить фильтр?  
  Критерий фильтра сохраняется в виде скрипта, который хранится в связанной модели интеллектуального анализа данных или во вложенной таблице. Если удалить текст фильтра, его можно восстановить только вручную путем повторного создания критерия фильтра. Таким образом, при создании сложных критериев фильтра следует создавать также резервные копии текста фильтра.  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Почему я не вижу никакого эффекта от применения фильтра?  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Почему не все эффекты от фильтра?  
  Всякий раз при изменении или добавлении критерия фильтра необходимо выполнять повторную обработку структуры и модели, чтобы изменения вступили в силу.  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>Почему в результатах прогнозирующего запроса присутствуют отфильтрованные атрибуты?  
@@ -116,6 +116,6 @@ ms.locfileid: "34016761"
   
 ## <a name="see-also"></a>См. также  
  [Синтаксис и примеры фильтра модели (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Тестирование и проверка & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

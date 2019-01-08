@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.locals
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6e79bed7775a55d52382d38eb44f6711ed1050c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22090b4bdb1827be4add47ec2f539cde0ea70827
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221314"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327404"
 ---
 # <a name="locals-window"></a>окно локальных переменных
   В окне **Локальные переменные** отображаются сведения о локальных выражениях в текущей области отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] . Областью является текущий кадр стека вызова, выбранный в окне **Стек вызовов** . Чтобы иметь возможность просматривать локальные выражения, необходимо находиться в режиме отладки.  
@@ -35,7 +33,7 @@ ms.locfileid: "48221314"
 -   Щелкните правой кнопкой мыши выражение и выберите **Изменить значение**.  
   
 ## <a name="columns"></a>Столбцы  
- **Название**  
+ **Name**  
  Имя локального выражения. В отладчике [!INCLUDE[tsql](../../includes/tsql-md.md)] перечисляются переменные, параметры и системные функции, имена которых начинаются с @@.  
   
  **Value**  
@@ -55,5 +53,3 @@ ms.locfileid: "48221314"
  [Окно стека вызовов](transact-sql-debugger-call-stack-window.md)   
  [Диалоговое окно «Быстрая проверка»](transact-sql-debugger-quickwatch-dialog-box.md)   
  [Выражения (Transact-SQL)](/sql/t-sql/language-elements/expressions-transact-sql)  
-  
-  

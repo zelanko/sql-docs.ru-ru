@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ae900ea29dba0217a9e186007476c12fa15c92e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac9e0cfe4b8e7d0250f6da7acea276f64dfb622f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790736"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>Параметры запроса профиля распределения длины столбцов (задача «Профилирование данных»)
   При помощи панели **Свойства запроса** страницы **Запросы профиля** можно задать параметры для варианта **Запрос профиля распределения длины столбцов** , выбранного на панели запросов. Профиль «Распределение длины столбцов» содержит все точные значения длины строковых значений в выбранном столбце и процент строк таблицы, соответствующий каждому значению длины. Этот профиль помогает выявлять такие проблемы данных, как недопустимые значения. Например, во время профилирования столбца с кодами штатов США, состоящими из двух символов, можно выявить значения длиной более двух символов.  
@@ -80,7 +79,7 @@ ms.locfileid: "48098584"
  Указывает, следует ли пропускать конечные пробелы при сравнении строковых значений. По умолчанию значение этого параметра равно **True**.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор задачи "профилирование данных" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "Профилирование данных" (страница "Общие")](../general-page-of-integration-services-designers-options.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](single-table-quick-profile-form-data-profiling-task.md)  
   
   

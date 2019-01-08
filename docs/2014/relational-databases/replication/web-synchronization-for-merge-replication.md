@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication synchronization [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72d8b7697af9920f7bd15e7120a6724acff231d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a3dfc7b81bf6f6a3ef0b9b74a2d1a78f3e3e1db
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190924"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816736"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Веб-синхронизация для репликации слиянием
   Веб-синхронизация для репликации слиянием позволяет производить репликацию данных по протоколу HTTPS и может оказаться полезной в следующих случаях.  
@@ -48,7 +47,7 @@ ms.locfileid: "48190924"
   
  ![Компоненты и последовательности данных веб-синхронизации](media/web-sync01.gif "Компоненты и последовательности данных веб-синхронизации")  
   
- Веб-синхронизация может использоваться только для подписок по запросу, поэтому на подписчике всегда будет запущен агент слияния. Это может быть стандартный агент слияния, элемент управления ActiveX агента слияния или приложение, которое обеспечивает синхронизацию с помощью объектов RMO. Для указания расположения компьютера с службами IIS служит параметр **–InternetUrl** агента слияния.  
+ Веб-синхронизация может использоваться только для подписок по запросу, поэтому на подписчике всегда будет запущен агент слияния. Это может быть стандартный агент слияния, элемент управления ActiveX агента слияния или приложение, которое обеспечивает синхронизацию с помощью объектов RMO. Для указания расположения компьютера со службами IIS служит параметр **-InternetUrl** агента слияния.  
   
  На сервере IIS настроено средство прослушивания репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (replisapi.dll), которое отвечает за обработку сообщений, поступающих на сервер от издателя и от подписчиков. Каждый узел в топологии обрабатывает поток XML-данных с помощью посредника репликации слиянием (replrec.dll).  
   
@@ -81,7 +80,7 @@ ms.locfileid: "48190924"
   
 3.  После получения HTTPS-ответа агент слияния на подписчике применяет загруженные изменения к базе данных подписки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Configure Web Synchronization](configure-web-synchronization.md)   
  [Topologies for Web Synchronization](topologies-for-web-synchronization.md)  
   

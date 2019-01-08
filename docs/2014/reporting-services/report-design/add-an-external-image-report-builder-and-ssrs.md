@@ -11,12 +11,12 @@ ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 24186d0caa92b983f17b12c2f317d450af8be2bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbe37d01a3e503d5ffb9aa9dc326d19bb9360d63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081874"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506939"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Добавление внешнего изображения (построитель отчетов и службы SSRS)
   Внешние изображения могут находиться на сервере отчетов в собственном режиме или в режиме интеграции с SharePoint либо находиться на любом другом веб-сайте. При включении внешних изображений в отчет необходимо проверить, что изображение существует и читатель отчета имеет разрешения на доступ к изображению. Дополнительные сведения см. в разделе [Изображения (построитель отчетов и службы SSRS)](images-report-builder-and-ssrs.md).  
@@ -36,9 +36,9 @@ ms.locfileid: "48081874"
   
 5.  В списке **Выберите источник изображения**выберите **Внешний**.  
   
-     Для изображения, расположенного на сервере отчетов в собственном режиме, введите относительный путь к изображению в поле **Использовать это изображение** , например ../images/image1.jpg.  
+     Для изображения, расположенного на сервере отчетов в собственном режиме, введите относительный путь к изображению в поле **Использовать это изображение**, например ../images/image1.jpg.  
   
-     Для изображения на сервере отчетов в режиме интеграции с SharePoint или на любом другом веб-сайте укажите полный URL-адрес изображения в окне **Использовать это изображение**, например http://\<имя_сервера_SharePoint>/\<сайт>/Documents/images/image1.jpg.  
+     Для изображения на сервере отчетов в режиме интеграции с SharePoint или веб-сайт, введите полный URL-адрес изображения в **использовать это изображение** поле-например, http://\<SharePointservername > /\<узел > / Documents/Images/Image1.jpg.  
   
      Дополнительные сведения см. в разделе [Указание путей к внешним элементам (построитель отчетов и службы SSRS)](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
@@ -46,8 +46,8 @@ ms.locfileid: "48081874"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Внедрение изображения в отчете &#40;построитель отчетов и службы SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Внедрение изображения в отчет (построитель отчетов и службы SSRS)](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Добавление фонового изображения (построитель отчетов и службы SSRS)](add-a-background-image-report-builder-and-ssrs.md)   
  [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и службы SSRS)](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

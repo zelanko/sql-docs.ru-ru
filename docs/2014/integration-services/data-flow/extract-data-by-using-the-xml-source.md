@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - extracting data [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 92bc7c34c7581f41a1ad814923aa350df4da4cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1d68856ff161a46d9ee74d0ac7e252c532b136a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222504"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793836"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Извлечение данных с помощью XML-источника
   Чтобы добавить и настроить источник XML, пакет должен уже содержать не менее одной задачи потока данных.  
@@ -63,7 +62,7 @@ ms.locfileid: "48222504"
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
 ## <a name="see-also"></a>См. также  
- [Источник XML](xml-source.md)   
+ [XML-источник](xml-source.md)   
  [Преобразования служб Integration Services](transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](integration-services-paths.md)   
  [Задача потока данных](../control-flow/data-flow-task.md)  

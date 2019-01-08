@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], creating
@@ -14,12 +13,12 @@ ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dade621e2dc095ee08a803351f6692d4c4a5cc34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65670b6958d2b0de36d1771d8c85bacfed1fa9a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227024"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821938"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Создание и публикация бизнес-правила (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]бизнес-правило создается для гарантии точности основных данных. Чтобы применить к данным созданное правило, его необходимо опубликовать.  
@@ -29,7 +28,7 @@ ms.locfileid: "48227024"
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>Создание и публикация бизнес-правила  
   
@@ -89,12 +88,12 @@ ms.locfileid: "48227024"
   
 -   Примените бизнес-правила к данным с помощью одной из следующих процедур:  
   
-    -   [Проверка конкретных членов, соответствие бизнес-правилам &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Проверка версии на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
- [Настройка бизнес-правилах отправки уведомлений &#40;службы Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
+ [Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Изменение имени бизнес-правила (службы Master Data Services)](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Добавление нескольких условий к бизнес-правилу (службы Master Data Services)](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   

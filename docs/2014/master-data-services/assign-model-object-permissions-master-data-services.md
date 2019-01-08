@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], assigning object permissions
@@ -14,12 +13,12 @@ ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b926ae17b2f0939563ddf1840320f7cf8f60a9c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b064acea6aa53ccb6615b787c089cd249d4eb07d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191704"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767366"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>Назначение разрешения для объекта модели (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]назначьте разрешения для объектов модели при необходимости разрешить пользователю или группе доступ к данным в функциональной области **Обозреватель** в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]или при необходимости сделать пользователя или группу администратором.  
@@ -32,7 +31,7 @@ ms.locfileid: "48191704"
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
   
 ### <a name="to-assign-model-object-permissions"></a>Назначения разрешений объекта модели  
   
@@ -59,8 +58,8 @@ ms.locfileid: "48191704"
 -   [Назначение разрешений для элемента иерархии (службы Master Data Services)](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md) (необязательно)  
   
 ## <a name="see-also"></a>См. также  
- [Удаление разрешений объекта модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/delete-model-object-permissions-master-data-services.md)   
- [Разрешения объекта модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [Создание администратора модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)  
+ [Удаление разрешений для объекта модели (службы Master Data Services)](../../2014/master-data-services/delete-model-object-permissions-master-data-services.md)   
+ [Разрешения объекта модели (службы Master Data Services)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [Создание администратора модели (службы Master Data Services)](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)  
   
   

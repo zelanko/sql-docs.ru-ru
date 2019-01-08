@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80f8c532bd416926a604d29946e979669b964228
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f083aafd2dc8718bb79798d43483c66b3520b0d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173384"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795876"
 ---
 # <a name="analysis-server-properties-service-tab"></a>Свойства сервера анализа данных (вкладка «Службы»)
   Эта служба представляет собой службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Она должна быть запущена для правильной работы служб [!INCLUDE[ssAS](../../includes/ssas-md.md)] . Значения свойств, окрашенные в светло-серый цвет, нельзя изменить при помощи этого приложения.  
@@ -34,7 +33,7 @@ ms.locfileid: "48173384"
  **Host Name**  
  Отображает имя компьютера или кластера, где запущены службы [!INCLUDE[ssAS](../../includes/ssas-md.md)].  
   
- **Название**  
+ **Name**  
  Указывает отображаемое имя службы.  
   
  **Идентификатор процесса**  
@@ -50,7 +49,7 @@ ms.locfileid: "48173384"
   
 -   Автоматически. Эта служба пытается запуститься при запуске компьютера.  
   
--   Отключено. Служба не может быть запущена.  
+-   Отключено: Служба не может быть запущена.  
   
  **Состояние**  
  Указывает, была ли служба запущена, остановлена или отключена.  

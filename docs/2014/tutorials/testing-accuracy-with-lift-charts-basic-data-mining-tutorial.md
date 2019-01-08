@@ -11,12 +11,12 @@ ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01142090276214f28e523dfc1c969747d5de60a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5311f08e9ec6b31fd0eabc1395baa31319eff64
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222244"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412211"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Проверка точности при помощи диаграмм точности прогнозов (учебник интеллектуального анализа данных — начальный уровень)
   На **диаграмма точности интеллектуального анализа** вкладки конструктора интеллектуального анализа данных, можно вычислить, насколько хорошо каждой из моделей прогнозов и сравнить результаты каждой модели непосредственно с результатами других моделей. Этот метод сравнения называется *диаграмма точности прогнозов*. Обычно точность прогнозирования модели интеллектуального анализа данных определяется либо точностью предсказания, либо точностью классификации. В данном учебнике используются только диаграммы точности прогнозов.  
@@ -83,7 +83,7 @@ ms.locfileid: "48222244"
  [Проверка модели с фильтром &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Диаграмма точности прогнозов &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Вкладка Диаграмма точности прогнозов &#40;интеллектуального анализа данных представление диаграммы точности&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)  
   
   

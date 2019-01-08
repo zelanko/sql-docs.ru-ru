@@ -4,32 +4,32 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69abea91334f53993fec78e2204cee1573afd780
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac903ecb951e98e29dcd6521f8c9623f8cc62768
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754256"
 ---
 # <a name="list-job-category-information"></a>Просмотр сведений о категории задания
   Как получить список сведений о категории задания в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющих объектов SQL Server.  
 
   
 ##  <a name="Security"></a> безопасность  
- Дополнительные сведения см. в разделе [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
 
   
 ##  <a name="TSQL"></a> Использование Transact-SQL  
   
 #### <a name="to-list-job-category-information"></a>Просмотр сведений о категории задания  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48181584"
 ##  <a name="SMO"></a> Использование управляющих объектов SQL Server  
  **Просмотр сведений о категории задания**  
   
- Используйте `JobCategory` , используя язык программирования, таком как Visual Basic, Visual C# или PowerShell... Дополнительные сведения см. в разделе [управляющих объектов SQL Server &#40;SMO&#41; руководство по программированию](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
+ Воспользуйтесь классом `JobCategory` на любом языке программирования, таком как Visual Basic, Visual C# или PowerShell. Дополнительные сведения см. в разделе [управляющих объектов SQL Server &#40;SMO&#41; руководство по программированию](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
   
   
   

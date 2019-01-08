@@ -1,5 +1,6 @@
 ---
-title: Начало работы с SQL Server в Ubuntu | Документация Майкрософт
+title: Начало работы с SQL Server в Ubuntu
+titleSuffix: SQL Server
 description: В этом кратком руководстве показано, как установить SQL Server 2017 или SQL Server 2019 в Ubuntu, а затем создать и запрос к базе данных с помощью sqlcmd.
 author: rothja
 ms.author: jroth
@@ -7,17 +8,17 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 917e43dd6a9c78e5199967df58a2d46c4843cf13
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 83f5cdf3f02ffc9a51dfa954347cc57f78e004dd
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677960"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160552"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Краткое руководство: Установка SQL Server и создать базу данных в Ubuntu
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Краткое руководство. Установка SQL Server и создать базу данных в Ubuntu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -88,7 +89,7 @@ ms.locfileid: "51677960"
    ```
 
    > [!TIP]
-   > В следующих выпусках SQL Server 2017 свободно лицензируются: Evaluation, Developer и Express.
+   > Свободно лицензируются следующих выпусков SQL Server 2017: Evaluation, Developer и Express.
 
    > [!NOTE]
    > Не забудьте указать надежный пароль для учетной записи SA (минимум длина 8 символов, заглавные и строчные буквы, десятичные цифры и не буквенно-цифровых символов).
@@ -183,7 +184,7 @@ ms.locfileid: "51677960"
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Необязательный**: добавление `/opt/mssql-tools/bin/` для вашей **путь** переменной среды в оболочке bash.
+1. **Необязательный**: Добавить `/opt/mssql-tools/bin/` для вашей **путь** переменной среды в оболочке bash.
 
    Чтобы сделать **sqlcmd и bcp** доступен из оболочки bash для сеансов входа изменить ваш **путь** в **~/.bash_profile** файл с помощью следующей команды:
 

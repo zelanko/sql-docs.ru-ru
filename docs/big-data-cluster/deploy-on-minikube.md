@@ -1,26 +1,28 @@
 ---
-title: Настройка Minikube для развертывания кластера SQL Server 2019 больших данных | Документация Майкрософт
-description: Сведения о настройке Minikube для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных на одном компьютере.
+title: Настройка minikube
+titleSuffix: SQL Server 2019 big data clusters
+description: Сведения о настройке minikube для развернутых кластеров (Предварительная версия) SQL Server 2019 больших данных на одном компьютере.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9b6902057c3bf5da706de8832b33c959ed285a9b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seodec18
+ms.openlocfilehash: a4bdccba6d42868225a39792cb94566df1f56680
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702352"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246573"
 ---
-# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Настройка Minikube для развертывания кластера SQL Server 2019 больших данных
+# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Настройка minikube, для развертывания кластера SQL Server 2019 больших данных
 
 В этой статье описывается настройка **minikube** на одном компьютере для развертываний кластеров (Предварительная версия) SQL Server 2019 больших данных. Minikube — это средство, которое позволяет легко запускать Kubernetes на одном компьютере как ноутбук или к рабочему столу. Minikube запускает одноузловой кластер Kubernetes внутри виртуальной Машины на локальном компьютере для пользователей, которые хотят опробовать Kubernetes или разработку, используя его повседневной. 
 
 ## <a name="prerequisites"></a>предварительные требования
 
-- Чтобы запустить Minikube кластер для SQL Server 2019 CTP-версии 2.1 в конфигурации кластера больших данных SQL, рекомендуется наличие по крайней мере 32 ГБ ОЗУ на компьютере.
+- Чтобы запустить кластер Minikube для SQL Server 2019 (Предварительная версия) для кластеров больших данных, рекомендуется наличие по крайней мере 32 ГБ ОЗУ на компьютере.
 
    > [!TIP] 
    > Если на компьютере установлена только минимум, рекомендованный объем памяти, затем настройки развертывания кластера могут быть только 1 вычислительный экземпляр пула, 1 экземпляр пула данных и экземпляр пула хранения 1. Эта конфигурация должна использоваться только в тестовых средах где устойчивости и доступности данных не важен. См. в разделе [документации по развертыванию](deployment-guidance.md#define-environment-variables) Дополнительные сведения о переменных среды, чтобы задать для настройки числа реплик для данных пулов вычислительных пулов и пулы носителей.
@@ -28,8 +30,6 @@ ms.locfileid: "51702352"
 - Виртуализации VT-x или AMD-v необходимо включить в BIOS компьютера.
 
 ## <a name="install-dependencies"></a>Установка зависимостей
-
-1. Если еще не установлен, установите локально на устройстве git [Windows](https://git-for-windows.github.io/), [Linux или Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 1. Установка [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
@@ -44,7 +44,7 @@ ms.locfileid: "51702352"
 
 ## <a name="install-minikube"></a>Установка Minikube
 
-Установка Minikube в соответствии с инструкциями для [v0.28.2 выпуска](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). Кластер SQL Server 2019 CTP 2.1 больших данных работает только в версии v0.24.1 и более.
+Установка Minikube в соответствии с инструкциями для [v0.28.2 выпуска](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). Кластера SQL Server 2019 больших данных (Предварительная версия) работает только в версии v0.24.1 и более.
 
 ## <a name="create-a-minikube-cluster"></a>Создание кластера Minikube
 
@@ -74,4 +74,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 Действия, описанные в этой статье настроили кластер Minikube. Следующим шагом является развертывание кластера SQL Server 2019 больших данных. Инструкции см. следующую статью:
 
-[Развертывание SQL Server 2019 CTP 2.1 в Kubernetes](deployment-guidance.md#deploy)
+[Развертывание кластеров SQL Server 2019 больших данных в Kubernetes](deployment-guidance.md#deploy)

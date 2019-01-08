@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df9595071c60680db94a18dc373ce24f1f9b4ea5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9135df30afcec9bdae307d9b12aec6810baa98ec
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43108673"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417235"
 ---
 # <a name="create-a-tabular-model-project"></a>Создание проекта табличной модели
 
@@ -22,7 +22,7 @@ ms.locfileid: "43108673"
 
 На этом занятии используется Visual Studio с SQL Server Data Tools (SSDT) или Visual Studio 2017 с Microsoft Analysis Services проекты VSIX для создания нового проекта табличной модели с уровнем совместимости 1400. После создания нового проекта можно начать добавление данных и созданию модели. Кроме того, это занятие содержит краткое введение в среду в Visual Studio для создания табличных моделей.  
   
-Предполагаемое время выполнения данного занятия: **10 минут.**  
+Предполагаемое время выполнения данного занятия: **10 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -80,7 +80,7 @@ ms.locfileid: "43108673"
 
 ## <a name="whats-next"></a>Дальнейшие действия
 
-[Занятие 2: Получение данных](../tutorial-tabular-1400/as-lesson-2-get-data.md).
+[Занятие 2. Получение данных](../tutorial-tabular-1400/as-lesson-2-get-data.md).
 
   
   

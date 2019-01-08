@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting business rules [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: de5fc5202b7a2b463fb80e51fcc37623c7d65528
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 652b301a91adc3c6c417e23ff2f192712c5f4a04
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161904"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784416"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Удаление бизнес-правила (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно удалить бизнес-правило, которое больше не нужно.  
@@ -32,7 +31,7 @@ ms.locfileid: "48161904"
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-business-rule"></a>Удаление бизнес-правила  
   
@@ -59,8 +58,8 @@ ms.locfileid: "48161904"
 11. В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также  
- [Исключите бизнес-правило &#40;службы Master Data Services&#41;](exclude-a-business-rule-master-data-services.md)   
+ [Исключение бизнес-правила (службы Master Data Services)](exclude-a-business-rule-master-data-services.md)   
  [Создание и публикация бизнес-правила (службы Master Data Services)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [Бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+ [Бизнес-правила (службы Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

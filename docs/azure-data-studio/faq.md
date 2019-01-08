@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio часто задаваемые вопросы | Документация Майкрософт
-description: Часто задаваемые вопросы (FAQ) для Azure Data Studio.
-ms.custom: tools|sos
+title: ВОПРОСЫ И ОТВЕТЫ
+titleSuffix: Azure Data Studio
+description: Часто задаваемые вопросы (FAQ) о данных в студии.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356355"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030338"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] ВОПРОСЫ И ОТВЕТЫ
 
@@ -48,7 +49,7 @@ Azure Data Studio обеспечивает согласованную работ
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>Мы планируем открытый код SSMS?
 
-Нет. Однако следующего поколения средства интерфейса командной строки и графического пользовательского интерфейса в различных ОС, открытым исходным кодом. Например расширение mssql для Visual STUDIO Code, mssql scripter и msql CLI имеют открытый исходный код на сайте GitHub. Исходный код для Studo данных Azure можно найти в GitHub.  
+Нет. Однако следующего поколения средства интерфейса командной строки и графического пользовательского интерфейса в различных ОС, открытым исходным кодом. Например расширение mssql для Visual STUDIO Code, mssql scripter и msql CLI имеют открытый исходный код на сайте GitHub. Исходный код для Azure Data Studio доступна на сайте GitHub.  
 
 ## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>Теперь, когда имеется Studio данных Azure, корпорация Майкрософт планирует отказаться от SSMS и SSDT? 
 
@@ -116,7 +117,7 @@ Azure Data Studio обеспечивает согласованную работ
 |В виде текста||Да|
 |Средство просмотра пространственных||Да|
 |SQLCMD||Да|
-|Отладчик Transact-SQL||Да|
+|Отладчик T-SQL.||Да|
 
 ### <a name="operating-system-support"></a>Поддержка операционных систем
 
@@ -146,7 +147,7 @@ Azure Data Studio обеспечивает согласованную работ
 |Постоянное шифрование||Да|
 |Мастер копирования данных||Да|
 |Помощник по настройке данных||Да|
-|Диаграммы баз данных||Да|
+|Диаграммы базы данных.||Да|
 |Просмотр журнала ошибок||Да|
 |Планы обслуживания||Да|
 |Запрос с несколькими серверами||Да|

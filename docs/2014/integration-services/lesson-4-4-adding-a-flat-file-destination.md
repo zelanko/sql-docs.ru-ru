@@ -1,22 +1,21 @@
 ---
-title: Шаг 4. Добавление назначения "Неструктурированный файл" | Документы Майкрософт
+title: Шаг 4. Добавление назначения неструктурированных файлов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a29d4953919644100b5863c3f4766895ea356c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c43885de9e2a6945a8a24263765df8ee8e26920a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823378"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Шаг 4. Добавление назначения «Неструктурированный файл»
   Выход ошибок преобразования «Ключ уточняющего запроса валют» перенаправляет в преобразование «Скрипт» все строки данных, завершившиеся ошибкой в операции поиска. Для расширения сведений о возникших ошибках преобразование «Скрипт» выполняет скрипт, получающий описания ошибок.  
@@ -60,6 +59,6 @@ ms.locfileid: "48075584"
 15. Нажмите кнопку **ОК**.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- [Шаг 5. Проверка учебного пакета, созданного на занятии 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+ [Шаг 5. Проверка учебного пакета занятия 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

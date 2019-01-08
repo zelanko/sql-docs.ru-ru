@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54459f4c31854c11a2285c072b8e5d20ca510807
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b420e0b4b9c9531209f3d3227f534116e26dd206
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174994"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763626"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface, класс событий
   Класс событий **OLEDB QueryInterface** возникает, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вызывает функцию **QueryInterface** OLE DB при обращении к распределенным запросам и удаленным хранимым процедурам. Этот класс событий включается в трассировку, выполняющую наблюдение за проблемами, связанными с выполнением распределенных запросов и удаленных хранимых процедур.  
@@ -52,7 +51,7 @@ ms.locfileid: "48174994"
 |NTUserName|`nvarchar`|Имя пользователя Windows.|6|Да|  
 |ProviderName|`nvarchar`|Имя поставщика OLE DB.|46|Да|  
 |RequestID|`int`|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Имя_входа1 и выполнении инструкции под именем Имя_входа2 в столбце `SessionLoginName` выводит значение Имя_входа1 и `LoginName` Имя_входа2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
+|SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, если подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Имя_входа1 и выполнить инструкцию как пользователь с именем Имя_входа2, в столбце `SessionLoginName` выводится значение Имя_входа1, а в столбце `LoginName` — значение Имя_входа2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
 |TextData|`nvarchar`|Параметры, которые отправляются и принимаются в вызове OLE DB.|1|Нет|  

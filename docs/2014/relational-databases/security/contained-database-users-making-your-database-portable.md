@@ -13,12 +13,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e793680a5171493460ff1f66caf7a918103619cf
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851828"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351556"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Пользователи автономной базы данных — создание переносимой базы данных
   Используйте пользователей автономной базы данных для проверки подлинности подключений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] на уровне базы данных. Автономная база данных — это база данных, изолированная от других баз данных и от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (и базы данных master), на котором размещена эта база данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает пользователей автономной базы данных для проверки подлинности Windows и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При использовании [!INCLUDE[ssSDS](../../includes/sssds-md.md)]объединяйте пользователей автономной базы данных с правилами брандмауэра уровня базы данных. В этом разделе рассматриваются различия и преимущества использования модели автономной базы данных по сравнению с традиционной моделью имя для входа/ пользователь и правилами брандмауэра в Windows или на уровне сервера. Конкретные сценарии, управляемость или приложение бизнес-логики могут по-прежнему требовать использования традиционной модели имя для входа/ пользователь и правила брандмауэра на уровне сервера.  
@@ -49,9 +49,9 @@ ms.locfileid: "48851828"
   
  Дополнительные сведения о правилах брандмауэра [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в следующих статьях:  
   
--   [Параметры брандмауэра базы данных Azure SQL](http://msdn.microsoft.com/library/azure/ee621782.aspx)  
+-   [Параметры брандмауэра базы данных Azure SQL](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [Практическое руководство. Настройка параметров брандмауэра для базы данных SQL с помощью портала Azure](http://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [Как Настройка параметров брандмауэра (база данных Azure SQL)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
 -   [sp_set_firewall_rule (база данных Azure SQL)](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   

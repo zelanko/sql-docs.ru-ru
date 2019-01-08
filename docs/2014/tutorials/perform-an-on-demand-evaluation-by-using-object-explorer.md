@@ -11,12 +11,12 @@ ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f950b99b7de4b7e81d75ed9decee47f74a785206
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddb0eeb783f2bdb617ba5c2ac2b18896c23abdcc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098114"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536564"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Выполнение политики по запросу с помощью обозревателя объектов
   В этой задаче для выполнения по запросу рекомендуемых политик для компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] на единственном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] используется обозреватель объектов.  

@@ -1,10 +1,10 @@
 ---
-title: Учебник. Составление инструкций Transact-SQL | Документы Майкрософт
+title: Учебник. Составление инструкций Transact-SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL statements, tutorials
@@ -14,12 +14,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9add0b2c75b00a5cf10a1da28c8dd9e30560f716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061474"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807586"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Учебник. Составление инструкций Transact-SQL
   Учебник «Составление инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] ». Этот учебник предназначен для пользователей, не умеющих составлять инструкции SQL. Он поможет новым пользователям начать обучение с просмотра некоторых простых инструкций по созданию таблиц и вставке данных. Этот учебник использует язык [!INCLUDE[tsql](../includes/tsql-md.md)], [!INCLUDE[msCoName](../includes/msconame-md.md)] -реализацию стандарта SQL. Он представляет собой краткое введение в язык [!INCLUDE[tsql](../includes/tsql-md.md)] и не заменяет обучение языку [!INCLUDE[tsql](../includes/tsql-md.md)] . Инструкции в учебнике намеренно простые и не представляют всей сложности типичной производственной базы данных.  
@@ -35,13 +35,13 @@ ms.locfileid: "48061474"
   
  Учебник разделен на три занятия.  
   
- [Урок 1. Создание объектов базы данных](lesson-1-creating-database-objects.md)  
+ [Занятие 1. Создание объектов базы данных](lesson-1-creating-database-objects.md)  
  В этом занятии будет создана база данных, таблица в ней, вставлены данные в таблицу, затем данные будут обновлены и прочитаны.  
   
- [Урок 2. Настройка разрешений для объектов базы данных](lesson-2-configuring-permissions-on-database-objects.md)  
+ [Занятие 2. Настройка разрешений на объекты базы данных](lesson-2-configuring-permissions-on-database-objects.md)  
  В этом занятии будут созданы имя входа и пользователь. Также будут созданы представление и хранимая процедура, и пользователю будет предоставлено разрешение на нее.  
   
- [Урок 3. Удаление объектов базы данных](lesson-3-1-deleting-database-objects.md)  
+ [Занятие 3. Удаление объектов базы данных](lesson-3-1-deleting-database-objects.md)  
  В этом занятии доступ к данным будет запрещен, данные из таблицы удалены, сама таблица тоже удалена вместе с базой данных.  
   
 ## <a name="requirements"></a>Требования  

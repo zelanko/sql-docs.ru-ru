@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - .SPID
@@ -23,12 +23,12 @@ ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77b678508867f39a37acbf640eb159a61a4f3727
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122334"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754266"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Справка F1 окна свойств (среда Management Studio)
   В окне **Свойства** можно просмотреть свойства выбранных элементов. Кроме того, в окне **Свойства** можно просматривать свойства файла, проекта или решения. Чтобы открыть окно **Свойства** , щелкните **Окно "Свойства"** в меню **Вид** .  
@@ -52,6 +52,6 @@ ms.locfileid: "48122334"
  Панель описания расположена в нижней части окна **Свойства** и содержит тип и краткое описание текущего свойства. Для включения и отключения описания свойства можно использовать команду **Описание** в контекстном меню.  
   
 ## <a name="see-also"></a>См. также  
- [Использование окна "Свойства" в среде Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
+ [Использование окна «Свойства» в среде Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   
   

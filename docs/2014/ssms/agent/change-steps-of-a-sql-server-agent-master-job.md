@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f23c4817ff1a09c7d25b636049c22410003da002
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bf10e4357579bcda5ec9ac3bef92b49f596b7a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221164"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812296"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   В этом разделе описано внесение изменений в шаги главного задания агента SQL Server в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "48221164"
 ###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
- Если пользователь не является членом предопределенной роли сервера **sysadmin** , он может изменять только свои собственные задания. Дополнительные сведения см. в разделе [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Если пользователь не является членом предопределенной роли сервера **sysadmin** , он может изменять только свои собственные задания. Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -56,19 +56,19 @@ ms.locfileid: "48221164"
   
 4.  Щелкните правой кнопкой мыши задание, шаги которого требуется изменить, и выберите пункт **Свойства**.  
   
-5.  В диалоговом окне **Свойства задания —***имя_задания* в разделе **Выберите страницу** выберите пункт **Шаги**.  
+5.  В **свойства задания — *** имя_задания* диалогового **Выбор страницы**выберите **действия**.  
   
-6.  Нажмите кнопку **Изменить**, чтобы открыть диалоговое окно **Свойства шага задания —***имя_шага_задания*. Дополнительные сведения о параметрах, доступных в этом диалоговом окне см. в разделе [Свойства шага задания: Создание шага задания &#40;страница "Общие"&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) и [Свойства шага задания: Создание шага задания &#40;страница "Дополнительно"&#41; ](job-step-properties-new-job-step-advanced-page.md).  
+6.  Нажмите кнопку **изменить** для открытия **Свойства шага задания — *** имя_шага_задания* диалоговое окно. Дополнительные сведения о параметрах, доступных в этом диалоговом окне см. в разделе [Свойства шага задания: Создание шага задания &#40;страница "Общие"&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) и [Свойства шага задания: Создание шага задания &#40;страница "Дополнительно"&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  После завершения нажмите кнопку **ОК**.  
   
-8.  В диалоговом окне **Свойства задания —***имя_задания* нажмите кнопку **ОК**.  
+8.  В **свойства задания — *** имя_задания* диалоговом окне щелкните **ОК**.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-make-changes-to-the-steps-of-a-sql-server-agent-master-job"></a>Внесение изменений в шаги главного задания агента SQL Server  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

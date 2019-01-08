@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 129d5c1104d2e2b05df6f484364b1fdfa12fcc9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 247548de6f3a89afac2143347d987a6f6d638c55
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052016"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759126"
 ---
 # <a name="create-manual-traces-using-stored-procedures"></a>Создание трассировок вручную с помощью хранимых процедур
   Для создания трассировок на экземпляре компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Microsoft [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет системные хранимые процедуры на языке [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Эти системные хранимые процедуры можно использовать для создания трассировок вручную в рамках пользовательских приложений вместо использования приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Это позволяет писать пользовательские приложения, отвечающие конкретным нуждам предприятия.  
@@ -31,7 +30,7 @@ ms.locfileid: "48052016"
 |[Хранимая процедура sp_trace_create (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)|Создает определение трассировки. Новая трассировка будет находиться в остановленном состоянии.|  
 |[Хранимая процедура sp_trace_generateevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)|Создает пользовательское событие.|  
 |[Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)|Добавляет класс событий или столбец данных к трассировке либо удаляет их из трассировки.|  
-|[sp_trace_setstatus (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)|Запускает, останавливает или закрывает трассировку.|  
+|[Хранимая процедура sp_trace_setstatus (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)|Запускает, останавливает или закрывает трассировку.|  
 |[sys.fn_trace_getfilterinfo (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql)|Возвращает сведения о фильтрах, примененных к трассировке.|  
 |[sp_trace_setfilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)|Применяет новый или измененный фильтр к трассировке.|  
   

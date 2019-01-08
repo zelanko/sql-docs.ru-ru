@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
@@ -13,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db5225c9432f0ea86a90b299e9ff1ede70147e8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191474"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810896"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Рассмотрение структуры и ограничений издателей Oracle
   Публикация из баз данных Oracle спроектирована таким образом, чтобы работать идентично публикации из базы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Однако необходимо знать о следующих ограничениях и проблемах:  
@@ -104,7 +103,7 @@ ms.locfileid: "48191474"
   
  Рассмотрите также следующие вопросы:  
   
--   Oracle и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обрабатывают значение NULL по-разному: Oracle допускает наличие нескольких строк со значениями NULL для столбцов, которые могут содержать значения NULL и включаются в ограничения уникальности или индексы. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает уникальность, разрешая наличие только одной строки со значением NULL для одного и того же столбца. Нельзя опубликовать уникальное ограничение или индекс, разрешающий значение NULL, поскольку в этом случае произошло бы нарушение ограничения на подписчике, если публикуемая таблица содержит несколько строк со значениями NULL для любого из столбцов, включенных в индекс или ограничение.  
+-   Oracle и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обрабатывают значение NULL по-разному: Oracle допускает наличие нескольких строк со значениями NULL для столбцов, которые могут содержать значения NULL и включаются в уникальные ограничения или индексы. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает уникальность, разрешая наличие только одной строки со значением NULL для одного и того же столбца. Нельзя опубликовать уникальное ограничение или индекс, разрешающий значение NULL, поскольку в этом случае произошло бы нарушение ограничения на подписчике, если публикуемая таблица содержит несколько строк со значениями NULL для любого из столбцов, включенных в индекс или ограничение.  
   
 -   При проверке на уникальность конечные пробелы в поле игнорируются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а в Oracle — учитываются.  
   

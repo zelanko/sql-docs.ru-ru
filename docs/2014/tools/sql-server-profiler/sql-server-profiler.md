@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
@@ -26,12 +25,12 @@ ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfaad106f7d2671dad24de87c64e02859b021769
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138294"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780726"
 ---
 # <a name="sql-server-profiler"></a>Приложение SQL Server Profiler
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] представляет собой развитый интерфейс, предназначенный для создания трассировок и управления ими, а также для анализа и воспроизведения результатов трассировок. События сохраняются в файле трассировки, который затем может быть проанализирован или использован для воспроизведения определенных последовательностей шагов для выявления возникших проблем.  
@@ -43,7 +42,7 @@ ms.locfileid: "48138294"
   
 ||||  
 |-|-|-|  
-|**Компонент\целевая рабочая нагрузка**|**Реляционный механизм**|**службы Analysis Services**|  
+|**Компонент\целевая рабочая нагрузка**|**Реляционный механизм**|**Службы Analysis Services**|  
 |**Запись трассировки**|Графический пользовательский интерфейс расширенных событий в среде SQL Server Management Studio|Приложение SQL Server Profiler|  
 |**Воспроизведение трассировки**|Распределенное воспроизведение|Приложение SQL Server Profiler|  
   
@@ -131,7 +130,7 @@ ms.locfileid: "48138294"
 |----------------------|-----------|  
 |Позволяет получить список предопределенных шаблонов, с помощью которых приложение SQL Server выполняет мониторинг событий определенных типов, а также список разрешений, используемых для воспроизведения трассировок.|[Шаблоны и разрешения приложения SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)|  
 |Содержит описание процесса запуска приложения SQL Server Profiler.|[Разрешения, необходимые для запуска приложения SQL Server Profiler](permissions-required-to-run-sql-server-profiler.md)|  
-|Содержит описание процесса создания трассировки.|[Создание трассировки (SQL Server Profiler)](create-a-trace-sql-server-profiler.md)|  
+|Содержит описание процесса создания трассировки.|[Создание трассировки (приложение SQL Server Profiler)](create-a-trace-sql-server-profiler.md)|  
 |Содержит описание процесса указания определенных событий и столбцов данных для файла трассировки.|[Указание столбцов событий и данных для файла трассировки (приложение SQL Server Profiler)](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)|  
 |Содержит описание процесса сохранения результатов трассировки в файл.|[Сохранение результатов трассировки в файл (приложение SQL Server Profiler)](save-trace-results-to-a-file-sql-server-profiler.md)|  
 |Содержит описание процесса сохранения результатов трассировки в таблице.|[Сохранение результатов трассировки в таблицу (SQL Server Profiler)](save-trace-results-to-a-table-sql-server-profiler.md)|  
@@ -143,7 +142,7 @@ ms.locfileid: "48138294"
 |Содержит описание процесса запуска трассировки.|[Запуск трассировки](start-a-trace.md)|  
 |Содержит описание автоматического процесса запуска трассировки после соединения с сервером.|[Автоматический запуск трассировки после соединения с сервером (приложение SQL Server Profiler)](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)|  
 |Содержит описание процесса фильтрации событий по времени начала события.|[Фильтрация событий по времени начала (SQL Server Profiler)](filter-events-based-on-the-event-start-time-sql-server-profiler.md)|  
-|Содержит описание процесса фильтрации событий по времени окончания события.|[Фильтровать события по времени окончания (приложение SQL Server Profiler)](filter-events-based-on-the-event-end-time-sql-server-profiler.md)|  
+|Содержит описание процесса фильтрации событий по времени окончания события.|[Фильтрация событий по времени окончания (SQL Server Profiler)](filter-events-based-on-the-event-end-time-sql-server-profiler.md)|  
 |Содержит описание процесса фильтрации идентификаторов процесса сервера (SPID) в трассировке.|[Фильтрация идентификаторов серверных процессов (SPID) в трассировке (приложение SQL Server Profiler)](filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)|  
 |Содержит описание процесса приостановки трассировки.|[Приостановка трассировки (приложение SQL Server Profiler)](pause-a-trace-sql-server-profiler.md)|  
 |Содержит описание процесса прекращения трассировки.|[Остановка трассировки (приложение SQL Server Profiler)](stop-a-trace-sql-server-profiler.md)|  

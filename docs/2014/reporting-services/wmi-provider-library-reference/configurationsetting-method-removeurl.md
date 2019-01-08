@@ -13,12 +13,12 @@ ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e6736f0d05de76abbd230892c1b6ab8c23fc625e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ab7dc3ea75201bd011b85f80169d50e2ba0d37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518893"
 ---
 # <a name="removeurl-method-wmi-msreportserverconfigurationsetting"></a>Метод RemoveURL (WMI MSReportServer_ConfigurationSetting)
   Удаляет URL-адрес, зарезервированный для сервера отчетов. Если нужно удалить несколько URL-адресов, это должно быть сделано одним вызовом данного API.  
@@ -55,10 +55,10 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 означает, что вызов метода завершился успешно; код ошибки означает, что произошла ошибка.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  *UrlString* не включает имя виртуального каталога — для этого есть [метод SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting)](configurationsetting-method-setvirtualdirectory.md).  
   
- Перед вызовом [ReserveURL](configurationsetting-method-reserveurl.md) метод, необходимо указать значение для свойства конфигурации VirtualDirectory для *приложения* параметра. Используйте [метод SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting)](configurationsetting-method-setvirtualdirectory.md) для задания свойства VirtualDirectory.  
+ Прежде чем вызывать метод [ReserveURL](configurationsetting-method-reserveurl.md) , необходимо задать значение свойства конфигурации VirtualDirectory для параметра *Application* . Используйте [метод SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting)](configurationsetting-method-setvirtualdirectory.md) для задания свойства VirtualDirectory.  
   
  Если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют SSL-сертификат и он не нужен никаким другим URL-адресам, он удаляется.  
   
@@ -67,7 +67,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

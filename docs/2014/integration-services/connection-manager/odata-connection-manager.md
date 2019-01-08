@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac0ffe016e2c88a381b230a26c58be2f6b2087a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d88e90e595cd69da28c4767c723fed63b0e052
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136634"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756646"
 ---
 # <a name="odata-connection-manager"></a>Диспетчер соединений OData
   Диспетчер соединений OData позволяет пакету подключаться к источнику OData. Компонент источника OData подключается к источнику OData с помощью диспетчера соединений OData и использует данные из службы. Подробные сведения, включая инструкции по установке этих компонентов, см. в разделе [OData Source](../data-flow/odata-source.md).  
@@ -24,16 +23,16 @@ ms.locfileid: "48136634"
 ## <a name="adding-connection-manager-to-an-ssis-package"></a>Добавление диспетчера соединений в пакет SSIS  
  Новый диспетчер соединений OData можно добавить в пакет служб SSIS тремя способами.  
   
--   Нажмите кнопку **Создать…** в **редакторе источника OData**  
+-   Нажмите кнопку **Создать…** в **редакторе источника OData**.  
   
 -   Щелкните правой кнопкой мыши папку **Диспетчеры соединений** в **обозревателе решений** и выберите команду **Новый диспетчер соединений**. Для параметра **Тип диспетчера соединений** выберите **ODATA**.  
   
--   Щелкните правой кнопкой мыши панель **Диспетчеры соединений** в нижней части конструктора пакетов и выберите **Создать соединение…**. Для параметра **Тип диспетчера соединений** выберите **ODATA**.  
+-   Щелкните правой кнопкой мыши в **диспетчеры соединений** панели в нижней части конструктора пакетов и выберите **новое соединение...** . Для параметра **Тип диспетчера соединений** выберите **ODATA**.  
   
 ## <a name="connection-manager-authentication"></a>Проверка подлинности диспетчера соединений  
  Диспетчер соединений OData поддерживает два режима проверки подлинности.  
   
--   Проверка подлинности Windows.  
+-   Проверка подлинности Windows  
   
 -   Обычная проверка подлинности (имя пользователя или пароль)  
   

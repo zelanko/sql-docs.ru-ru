@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changepublication_snapshot_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b17c17686195f202b4a7e99f9f9ea5374f24be6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1f001752ee67253297917746ff50eeb61a3ff1d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764752"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203633"
 ---
 # <a name="spchangepublicationsnapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +129,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
  Имя существующего задания агента моментальных снимков, если оно используется. *snapshot_agent_name* — **nvarchar(100)** со значением по умолчанию NULL.  
   
  [  **@publisher_security_mode =** ] *publisher_security_mode*  
- Режим безопасности, используемый агентом при установке соединения с издателем. *publisher_security_mode* — **smallint**, значение по умолчанию NULL. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности, и **1** задает проверку подлинности Windows. Значение **0** должен быть указан для отличных[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей.  
+ Режим безопасности, используемый агентом при установке соединения с издателем. *publisher_security_mode* — **smallint**, значение по умолчанию NULL. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности, и **1** задает проверку подлинности Windows. Значение **0** должен быть указан для отличных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -145,7 +144,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 >  Не используйте пустые пароли. Выбирайте надежные пароли. По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
  [ **@job_login** =] **"***job_login***"**  
- Имя входа для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, значение по умолчанию NULL. Для соединения агента с распространителем всегда используется эта учетная запись Windows. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков. Это единственно предусмотренный вариант для издателя, не относящегося к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Имя входа для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, значение по умолчанию NULL. Для соединения агента с распространителем всегда используется эта учетная запись Windows. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков. Это единственно возможный отличается от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
   
  [  **@job_password =** ] **"***job_password***"**  
  Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, значение по умолчанию NULL. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
@@ -154,7 +153,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
  [  **@publisher =** ] **"***издателя***"**  
- Задает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *издатель* — **sysname**, значение по умолчанию NULL.  
+ Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует использовать при создании агента моментальных снимков в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  

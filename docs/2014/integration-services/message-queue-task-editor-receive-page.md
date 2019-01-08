@@ -15,12 +15,12 @@ ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0226a655ff1adc7269e0ee66996e7680f659826e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8227fe1c7cfe63772ff092d9cd30b6ea8b07271a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060856"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545634"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Редактор задачи «Очередь сообщений» (страница «Получение»)
   Используйте страницу **Получение** диалогового окна **Редактор задачи "Очередь сообщений"**, чтобы настроить задачу "Очередь сообщений" для получения сообщений [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ).  
@@ -51,7 +51,7 @@ ms.locfileid: "48060856"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Сообщение файла данных  
  **SaveFileAs**  
- Введите путь к используемому файлу или нажмите кнопку с многоточием **(…)** , а затем найдите файл.  
+ Введите путь к используемому файлу или нажмите кнопку с многоточием **(…)**, а затем найдите файл.  
   
  **Overwrite**  
  Укажите, необходимо ли перезаписать данные в существующем файле при сохранении содержимого сообщения файлов данных. Значение по умолчанию — `False`.  
@@ -72,12 +72,12 @@ ms.locfileid: "48060856"
   
 #### <a name="filter--from-package"></a>Filter = Из пакета  
  **Идентификатор**  
- Если выбрано применение фильтра, то следует ввести уникальный идентификатор пакета, из которого могут быть получены сообщения, или нажать кнопку с многоточием **(…)** и указать пакет.  
+ Если выбрано применение фильтра, следует ввести уникальный идентификатор пакета, из которого могут быть получены сообщения, или нажать кнопку с многоточием **(…)** и указать пакет.  
   
- **См. также:** [Выбор переменных](control-flow/select-a-package.md)  
+ **См. также:** [Выбор пакета](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Сообщение с переменными  
- **Фильтр**  
+ **Filter**  
  Укажите, следует ли применять фильтр к сообщениям. Это свойство имеет параметры, указанные в следующей таблице.  
   
 |Значение|Описание|  
@@ -88,7 +88,7 @@ ms.locfileid: "48060856"
  **Переменная**  
  Введите имя переменной либо выберите \<**Создать переменную…**> и затем настройте новую переменную.  
   
- **См. также:** [Добавление переменной](../../2014/integration-services/add-variable.md)  
+ **См. также:** [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>Динамические параметры фильтра  
   
@@ -98,9 +98,9 @@ ms.locfileid: "48060856"
   
 #### <a name="filter--from-package"></a>Filter = Из пакета  
  **Идентификатор**  
- Если выбрано применение фильтра, то следует ввести уникальный идентификатор пакета, из которого могут быть получены сообщения, или нажать кнопку с многоточием **(…)** и указать пакет.  
+ Если выбрано применение фильтра, следует ввести уникальный идентификатор пакета, из которого могут быть получены сообщения, или нажать кнопку с многоточием **(…)** и указать пакет.  
   
- **См. также:** [Выбор переменных](control-flow/select-a-package.md)  
+ **См. также:** [Выбор пакета](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = Строковое сообщение  
  **Сравнить**  
@@ -133,13 +133,13 @@ ms.locfileid: "48060856"
  **Переменная**  
  Введите имя переменной, в которой должно храниться полученное сообщение, либо выберите \<**Создать переменную…**> и затем настройте новую переменную.  
   
- **См. также:** [Добавление переменной](../../2014/integration-services/add-variable.md)  
+ **См. также:** [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи очереди сообщений &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
- [Редактор задачи очереди сообщений &#40;отправка страницы&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
- [Страница «выражения»](expressions/expressions-page.md)   
- [Задача «Очередь сообщений»](control-flow/message-queue-task.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Очередь сообщений" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "Очередь сообщений" (страница "Отправка")](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)   
+ [Message Queue Task](control-flow/message-queue-task.md)  
   
   

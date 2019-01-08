@@ -22,17 +22,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5f671e8450255e9c03005c71d6f887c63559d3a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90ad88cfaae5c82b79d9da1fa7de5baa60fe46f3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603852"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403720"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Примечание: Это свойство применимо только в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]версии 11.**  
+  **Примечание. Это свойство применимо только в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]версии 11.**  
   
  Возвращает сведения о пропускной способности сети, используемой каждой базой данных в  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] логический сервер версии 11**,. Каждая строка, возвращенная для конкретной базы данных, содержит одно направление и класс использования в течение одного часа.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "47603852"
 |-----------------|-----------------|  
 |**time**|Время (час) использования пропускной полосы. Строки в этом представлении указаны для каждого часа. Например, 2009-09-19 02:00:00.000 означает, что пропускная способность использовалась 19 сентября 2009 г. c 02:00 до 03:00.|  
 |**database_name**|Имя базы данных, использовавшей полосу пропускания.|  
-|**Направление**|Тип полосы пропускания, которая была использована. Одно из следующих значений.<br /><br /> Входящие данные: Данные, которые перемещаются в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Исходящий трафик: Данные, которые перемещаются из [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-|**class**|Класс полосы пропускания, которая была использована. Одно из следующих значений.<br />Внутреннее: Данные, которые перемещаются внутри платформы Azure.<br />Внешние: Данные, которые перемещаются из платформы Azure.<br /><br /> Этот класс возвращается только в том случае, если база данных участвует в связи непрерывного копирования между регионами ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). If a given database does not participate in any continuous copy relationship, then “Interlink” rows are not returned. Дополнительные сведения см. в подразделе "Замечания" далее в этой статье.|  
+|**direction**|Тип полосы пропускания, которая была использована. Одно из следующих значений.<br /><br /> Входящие данные: Данные, которые передаются в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Исходящий трафик: Данные, которые передаются из [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**class**|Класс полосы пропускания, которая была использована. Одно из следующих значений.<br />Внутренняя: Данные, которые перемещаются внутри платформы Azure.<br />Внешние: Данные, которые перемещаются из платформы Azure.<br /><br /> Этот класс возвращается, только если база данных участвует в связи непрерывного копирования между регионами ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Если для заданной базы данных не участвует в связи непрерывного копирования, «Interlink» строки не возвращаются. Дополнительные сведения см. в подразделе «Замечания» далее в этом разделе.|  
 |**time_period**|Период времени, которого происходило потребление — пик или ставить. The Peak time is based on the region in which the server was created. Например, если сервер был создан в регионе «US_Northwest», параметр Peak определяется как время от 10:00 до 18:00. по тихоокеанскому времени.|  
 |**количество**|Объем использованной полосы пропускания в килобайтах (КБ).|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47603852"
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|Ingress|External|Peak|66|  
 |2012-04-21 17:00:00|Db1|Egress|External|Peak|741|  
-|2012-04-21 17:00:00|Db1|Ingress|Internal|Пик|1052|  
+|2012-04-21 17:00:00|Db1|Ingress|Internal|Peak|1052|  
 |2012-04-21 17:00:00|Db1|Egress|Внутренние|Peak|3525|  
   
 ### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>Интерпретация направления данных для [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]  

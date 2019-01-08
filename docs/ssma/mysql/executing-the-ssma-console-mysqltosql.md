@@ -18,12 +18,12 @@ ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fd560a17c10b5e076236195107d0a9154921422a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701812"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411261"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Выполнение команд консоли SSMA (MySQLToSQL)
 Корпорация Майкрософт предоставляет широкий набор сценариев файл команды для выполнения и контроля над SSMA действий.  
@@ -59,7 +59,7 @@ ms.locfileid: "47701812"
   
    overwrite-if-exists="<true/false>"   (optional)  
   
-   project-type==”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”   (optional)  
+   project-type=="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"   (optional)  
   
 />  
 ```  
@@ -94,7 +94,7 @@ ms.locfileid: "47701812"
   
 **Command**  
   
-проект сохранить: сохраняет проект миграции.  
+Save проект: Сохраняет проект миграции.  
   
 **Скрипт**  
   
@@ -106,7 +106,7 @@ ms.locfileid: "47701812"
 **Command**  
   
 Закрыть проект  
-                  : Закрытие проекта миграции.  
+                  , перечислены ниже. Закрытие проекта миграции.  
   
 **Скрипт**  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47701812"
 **Command**  
   
 Закрыть проект  
-                  : Закрытие проекта миграции.  
+                  , перечислены ниже. Закрытие проекта миграции.  
   
 **Скрипт**  
   
@@ -307,7 +307,7 @@ Connect-target-database
 ## <a name="migration--script-file-commands"></a>Команды файл сценария миграции  
 Команды миграции преобразовать схему целевой базы данных в исходной схеме и переносит данные на целевой сервер.  
   
-В выходных данных консоли по умолчанию для команды миграции — «Full» выходной отчет с отчет не подробные сведения об ошибке выводится: только сводку в корневом узле дерева исходного объекта.  
+В выходных данных консоли по умолчанию для команды миграции — «Full» выходной отчет с отсутствия сообщений подробные сведения об ошибке: Только сводку в корневой узел дерева на объект источника.  
   
 **Command**  
   
@@ -402,7 +402,7 @@ Connect-target-database
 ```xml  
 <migrate-data  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true">  
   
@@ -429,7 +429,7 @@ Connect-target-database
   
    object-type="<object-category>"  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true"/>  
 ```  
@@ -463,7 +463,7 @@ map-schema
 Команды управляемости помогают синхронизировать объекты целевой базы данных с базы данных-источника.  
   
 > [!NOTE]  
-> В выходных данных консоли по умолчанию для команды миграции — «Full» выходной отчет с отчет не подробные сведения об ошибке выводится: только сводку в корневом узле дерева исходного объекта.  
+> В выходных данных консоли по умолчанию для команды миграции — «Full» выходной отчет с отсутствия сообщений подробные сведения об ошибке: Только сводку в корневой узел дерева на объект источника.  
   
 **Command**  
   
@@ -593,7 +593,7 @@ map-schema
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>Команд файла скрипта создания скриптов  
-Команды создания сценариев выполнения двух задач: они помогают сохранить выходные данные в файл скрипта; консоли, и запишите консоль или в файл, созданный на основе параметров, заданных выходных данных T-SQL.  
+Команды создания сценариев выполнения двух задач: Они помогают сохранить выходные данные в файл скрипта; консоли и запишите консоль или в файл, созданный на основе параметров, заданных выходных данных T-SQL.  
   
 **Command**  
   
@@ -626,7 +626,7 @@ map-schema
   
    object-type="<object-category>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
    overwrite="<true/false>"   (optional)  
   
@@ -639,7 +639,7 @@ map-schema
   
    metabase="<source/target>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
       <metabase-object object-name="<object-name>"  
   

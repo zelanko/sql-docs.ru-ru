@@ -15,12 +15,12 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5b8624bd3d3628c5c7499dd32bfa26afe048225c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5973d419bb87c4b53313afa3051865b4e746ef96
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061974"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211853"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Доставка библиотек SharePoint в службах Reporting Services
   Сервер отчетов, настроенный на работу в режиме интеграции с SharePoint, располагает модулем доставки, с помощью которого можно отправить отчет в библиотеку SharePoint.  
@@ -71,11 +71,11 @@ ms.locfileid: "48061974"
  Имя и расширение файла  
  Укажите имя и расширение файла отчета, который должен быть доставлен в целевую библиотеку. Если расширение не указано, сервер отчетов добавит его в соответствии с форматом вывода. Это значение обязательно. Имя файла не должно включать следующие символы: : \ / * ? " \< > | # { } %  
   
- Title  
- Указывает необязательное `Title` для отчета в целевой библиотеке. Это стандартное свойство для всех элементов, хранящихся в библиотеке. Пользователь определяет, отобразить или скрыть это свойство при просмотре содержимого библиотеки на сайте SharePoint.  
+ Заголовок  
+ Указывает необязательное свойство `Title` для отчета в целевой библиотеке. Это стандартное свойство для всех элементов, хранящихся в библиотеке. Пользователь определяет, отобразить или скрыть это свойство при просмотре содержимого библиотеки на сайте SharePoint.  
   
  Путь  
- Указывает полный URL-адрес библиотеки SharePoint, включая имя сайта и веб-приложения SharePoint. Например: http://mySharePointWeb/MySite/MyDocLib, где "http://mySharePointWeb" указывает веб-приложение, «Сайт» — сайт SharePoint, а «библиотека» — библиотеку SharePoint, куда будет доставлен отчет.  
+ Указывает полный URL-адрес библиотеки SharePoint, включая имя сайта и веб-приложения SharePoint. Например: <http://mySharePointWeb/MySite/MyDocLib>, где "<http://mySharePointWeb>" указывает веб-приложение, «Сайт» — сайт SharePoint, а «библиотека» — библиотеку SharePoint, куда будет доставлен отчет.  
   
  Нельзя указать страницу, сайт или список. Целевым контейнером должна быть библиотека, расположенная на том же сайте или в той же ферме.  
   
@@ -86,8 +86,8 @@ ms.locfileid: "48061974"
  Эта функция позволяет автоматически копировать последнюю версию файла в несколько мест. Файл копируется в том случае, если включен режим **Заменить** . Если вы использовали **Autoincrement** или **None**, произойдет сбой доставки и `rsDeliveryError` возникнет ошибка.  
   
 ## <a name="see-also"></a>См. также  
- [Создание и администрирование подписок для серверов отчетов в режиме интеграции с SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Подписки и доставка &#40;службы Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Определение учетных данных и сведениях о подключении для источников данных отчета](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Подписки и доставка (службы Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
+ [Задание учетных данных и сведениях о соединении для источников данных отчета](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

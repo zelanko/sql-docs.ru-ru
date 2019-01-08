@@ -1,5 +1,5 @@
 ---
-title: Определение содержимого оси запроса (многомерные Выражения) | Документы Microsoft
+title: Определение содержимого оси запроса (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bceafa9fb8ddd89162deca105404c317001a86bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 38a48fd99ae9a03599914a1dfdac0bf204301c4c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026811"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399577"
 ---
-# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Многомерных Выражений оси запроса и среза - укажите содержимое оси запроса
+# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Запрос многомерных выражений и ось среза — указание содержимого оси запроса
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Оси запроса указывают границы набора ячеек, возвращаемого инструкцией многомерных выражений SELECT. Определение границ набора ячеек позволяет ограничить возвращаемые данные, видимые клиенту.  
   
@@ -68,7 +68,7 @@ FROM [Adventure Works]
   
 ```  
   
- Ключевое слово NON EMPTY, используемое до определения набора, представляет собой простой способ удаления пустых кортежей из осей. Так, в примерах, описанных выше, в кубе отсутствуют данные начиная с августа 2004 г. Чтобы удалить все строки из набора ячеек, в которых отсутствуют данные во всех столбцах, просто добавьте NON EMPTY до набора по оси строк следующим образом:  
+ Ключевое слово NON EMPTY, используемое до определения набора, представляет собой простой способ удаления пустых кортежей из осей. Например в примерах, мы уже рассмотрели есть нет данных в кубе от августа 2004 г. и более поздних версий. Чтобы удалить все строки из набора ячеек, в которых отсутствуют данные во всех столбцах, просто добавьте NON EMPTY до набора по оси строк следующим образом:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -112,6 +112,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Определение содержимого оси среза & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Определение содержимого оси среза (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

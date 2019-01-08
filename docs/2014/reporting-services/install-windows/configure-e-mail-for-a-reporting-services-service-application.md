@@ -11,12 +11,12 @@ ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0bebe156765726cee5f76d11c830dad56ebf92cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2e6d846be6b4ff3d13b840d3cc67064aeaf5240
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217766"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404539"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application-sharepoint-2010-and-sharepoint-2013"></a>Настройка электронной почты для приложения служб Reporting Services (SharePoint 2010 и SharePoint 2013)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Функция предупреждения об изменении данных служб отправляет предупреждения в сообщениях электронной почты. Для отправки электронной почты могут потребоваться настройка приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и изменение модуля доставки электронной почты приложением службы. Необходимо настроить параметры электронной почты и в том случае, если планируется использование модуля доставки электронной почты функцией подписки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -49,16 +49,16 @@ ms.locfileid: "48217766"
   
 ### <a name="ntlm-authentication"></a>Проверка подлинности NTLM  
   
-1.  Если среда электронной почты требует проверки подлинности NTLM и не поддерживает анонимный доступ, необходимо изменить настройки модуля доставки электронной почты приложениям службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Укажите для параметра **SMTPAuthenticate** значение «2». Это значение нельзя изменить через пользовательский интерфейс. Следующий пример скрипта PowerShell обновляет полную конфигурацию расширения сервера отчетов для доставки электронной почты приложением службы с именем «SSRS_TESTAPPLICATION». Обратите внимание, что некоторые перечисленные в скрипте узлы (например, адрес отправителя) можно также задать через пользовательский интерфейс.  
+1.  Если среда электронной почты требует проверки подлинности NTLM и не поддерживает анонимный доступ, необходимо изменить настройки модуля доставки электронной почты приложениям службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Укажите для параметра **SMTPAuthenticate** значение "2". Это значение нельзя изменить через пользовательский интерфейс. Следующий пример скрипта PowerShell обновляет полную конфигурацию расширения сервера отчетов для доставки электронной почты приложением службы с именем SSRS_TESTAPPLICATION. Обратите внимание, что некоторые перечисленные в скрипте узлы (например, адрес отправителя) можно также задать через пользовательский интерфейс.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION *"}  
     $emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
     $emailXml = [xml]$emailCfg   
-    $emailXml.SelectSingleNode("//SMTPServer").InnerText = “your email server name"  
+    $emailXml.SelectSingleNode("//SMTPServer").InnerText = "your email server name"  
     $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
     $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
-    $emailXml.SelectSingleNode("//From").InnerText = “your FROM email address”  
+    $emailXml.SelectSingleNode("//From").InnerText = "your FROM email address"  
     Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
     ```  
   
@@ -68,14 +68,14 @@ ms.locfileid: "48217766"
     get-sprsserviceapplication  
     ```  
   
-3.  Следующий пример возвращает текущие значения модуля доставки электронной почты для приложения службы с именем «SSRS_TESTAPPLICATION».  
+3.  Следующий пример возвращает текущие значения модуля доставки электронной почты для приложения службы с именем SSRS_TESTAPPLICATION.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRSTEST_APPLICATION*"}  
     Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
     ```  
   
-4.  Следующий пример создает новый файл с именем «emailconfig.txt», содержащий текущие значения модуля доставки электронной почты для приложения службы с именем «SSRS_TESTAPPLICATION».  
+4.  Следующий пример создает новый файл с именем emailconfig.txt, содержащий текущие значения модуля доставки электронной почты для приложения службы с именем SSRS_TESTAPPLICATION.  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION*"}  

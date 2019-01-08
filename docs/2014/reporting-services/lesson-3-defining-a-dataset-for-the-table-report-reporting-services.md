@@ -1,5 +1,5 @@
 ---
-title: Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services) | Документы Майкрософт
+title: Урок 3. Определение набора данных для табличного отчета (службы Reporting Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3b300b51acf83f79b54b12341299ebe9a8d82c17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33a91c27f78e3bbf2dfec3aeb71f2f2230c9376d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086544"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528212"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services)
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Урок 3. Определение набора данных для табличного отчета (службы Reporting Services)
   После определения источника данных необходимо определить набор данных. В службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]данные, используемые в отчетах, содержатся в *наборе данных*. Набор данных содержит указатель на источник данных и запрос, используемый в отчете, а также вычисляемые поля и переменные.  
   
  Чтобы создать запрос, можно использовать «Конструктор запросов». В этом руководстве вы создадите запрос, возвращающий данные заказов на продажу из [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** базы данных.  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>Определение запроса Transact-SQL для данных отчета  
   
-1.  В области **данных отчета** нажмите кнопку **Создать**и выберите **Набор данных**. Откроется диалоговое окно **Свойства набора данных** .  
+1.  В области **данных отчета** нажмите кнопку **Создать** и выберите **Набор данных...**. Откроется диалоговое окно **Свойства набора данных** .  
   
 2.  В поле **Имя** введите **AdventureWorksDataset**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48086544"
   
 6.  Нажмите кнопку **Конструктор запросов** (необязательно). В текстовом конструкторе запросов будет отображен запрос. Вы можете переключиться к графическому конструктору запросов, нажав кнопку **Изменить как текст**. Просмотреть результаты запроса, нажав кнопку запуска **(!)**  кнопку на панели инструментов конструктора запросов.  
   
-     Будут показаны данные из шести полей четырех различных таблиц из [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных. В запросе используется возможность псевдонимов языка Transact-SQL. Например, таблица SalesOrderHeader называется soh.  
+     Будут показаны данные из шести полей четырех различных таблиц из базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . В запросе используется возможность псевдонимов языка Transact-SQL. Например, таблица SalesOrderHeader называется soh.  
   
      Нажмите кнопку **ОК** для выхода из конструктора запросов.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "48086544"
      Поля и набор данных **AdventureWorksDataset** появятся в области данных отчета.  
   
 ## <a name="next-task"></a>Следующая задача  
- Определен запрос, получающий данные для отчета. Далее предстоит создать макет отчета. См. [Занятие 4. Добавление таблицы в отчет (службы Reporting Services)](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+ Определен запрос, получающий данные для отчета. Далее предстоит создать макет отчета. См. в разделе [урок 4: Добавление таблицы в отчет &#40;службы Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
  [Средства проектирования в отчет конструктора SQL Server Data Tools запросов &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Тип соединения SQL Server (службы SSRS)](report-data/sql-server-connection-type-ssrs.md)   
- [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Учебник. Написание инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

@@ -1,7 +1,8 @@
 ---
-title: Система управления версиями в студии данных Azure | Документация Майкрософт
-description: Узнайте, как настроить систему управления версиями в студии данных Azure.
-ms.custom: tools|sos
+title: Система управления версиями
+titleSuffix: Azure Data Studio
+description: Узнайте, как настроить систему управления версиями в студии данных Azure
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 956ead73c4fe28a045f5ff24280012ed32937f9c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 5fb3c8dea11e570bba4452e181626625e31acbe0
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356315"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030678"
 ---
 #  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>С помощью системы управления версиями в [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

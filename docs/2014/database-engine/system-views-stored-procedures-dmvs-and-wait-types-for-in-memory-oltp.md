@@ -10,12 +10,12 @@ ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04b2d0fdd00d9f3001ce1687744a9ecd992f44dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144624"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406164"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Системные представления, хранимые процедуры, динамические административные представления и типы ожидания для выполняющейся в памяти OLTP
   В этой статье представлены краткие описания многих объектов баз данных, которые поддерживают In-Memory OLTP, и ссылки на них.  
@@ -30,7 +30,7 @@ ms.locfileid: "48144624"
 |[sys.all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Убедитесь, что хранимая процедура компилируется в собственном режиме.|**uses_native_compilation** столбца.|  
 |[sys.sql_modules (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|Убедитесь, что хранимая процедура компилируется в собственном режиме.|**uses_native_compilation** столбца.|  
 |[sys.table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Проверьте, оптимизирована ли таблица для памяти.|**is_memory_optimized** столбца.|  
-|[sys.tables (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Проверьте, оптимизирована ли таблица для памяти и проверьте параметр устойчивости таблицы.|**Устойчивость**, **durability_desc**, и **is_memory_optimized** столбцы.|  
+|[sys.tables (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Проверьте, если в таблице, оптимизированной для памяти и проверьте параметр устойчивости таблицы.|**Устойчивость**, **durability_desc**, и **is_memory_optimized** столбцы.|  
 |[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|Показывают индексы хэша таблицы, оптимизированной для памяти.|Они уникальны для In-memory OLTP.|  
   
 ### <a name="metadata-functions"></a>Функции метаданных  

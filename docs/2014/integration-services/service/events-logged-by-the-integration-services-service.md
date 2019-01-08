@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - service [Integration Services], events
@@ -15,12 +14,12 @@ ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52cb18c5828a2d72ef8a36082554425e7e3afb82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29e121f600d9dc34aac21bb87ce3b77b4f21d3cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187094"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799076"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Cобытия, зарегистрированные службами Integration Services
   Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] регистрирует различные сообщения в журнале событий приложений Windows. Служба записывает эти события в журнал при своем запуске, остановке и при возникновении некоторых проблем.  
@@ -41,7 +40,7 @@ ms.locfileid: "48187094"
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] остановлена.%nВерсия сервера %1|Служба остановлена.|  
   
 ## <a name="messages-about-the-configuration-file"></a>Сообщения о файле конфигурации  
- Параметры службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранятся в XML-файле, который можно изменять. Дополнительные сведения см. в разделе [Configuring the Integration Services Service &#40;SSIS Service&#41;](../configuring-the-integration-services-service-ssis-service.md).  
+ Параметры службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранятся в XML-файле, который можно изменять. Дополнительные сведения см. в разделе [Настройка служб Integration Services (службы SSIS)](../configuring-the-integration-services-service-ssis-service.md).  
   
 |Идентификатор события|Символическое имя|Текста|Примечания|  
 |--------------|-------------------|----------|-----------|  

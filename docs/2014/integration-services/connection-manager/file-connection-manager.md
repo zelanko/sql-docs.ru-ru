@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
@@ -18,20 +17,20 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea35467bd5b5209a2e625adc081774ef39492439
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a5d4113fbb2add2cc4dcd0073d714daa86419820
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119974"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801644"
 ---
 # <a name="file-connection-manager"></a>диспетчер соединения файлов
   Диспетчер соединения файлов позволяет пакету ссылаться на существующий файл или папку или создавать файл или папку в процессе выполнения. Например, можно установить ссылку на файл Excel. Некоторые компоненты из служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используют данные, хранящиеся в файлах, для выполнения своей работы. Например, задача «Выполнение SQL» может ссылаться на файл, содержащий набор инструкций SQL. Другие компоненты выполняют операции с файлами. Например, задача «Файловая система» может ссылаться на файл для его копирования в другое расположение.  
   
 ## <a name="usage-types-of-the-file-connection-manager"></a>Типы применения в диспетчере соединения файлов  
- `FileUsageType` Свойство диспетчер подключения файлов определяет, как используется соединение файла. Диспетчер подключения файлов может создать файл или папку, а также использовать уже существующий файл или папку.  
+ Свойство `FileUsageType` диспетчера соединения файлов определяет, как используется соединение файла. Диспетчер подключения файлов может создать файл или папку, а также использовать уже существующий файл или папку.  
   
- В следующей таблице перечислены значения `FileUsageType`.  
+ В следующей таблице приводятся значения `FileUsageType`.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -44,9 +43,9 @@ ms.locfileid: "48119974"
  Диспетчер соединения файлов может ссылаться только на один файл или папку. Для создания ссылки на несколько файлов или папок используйте диспетчер соединения нескольких файлов вместо диспетчера соединений с файлом. Дополнительные сведения см. в статье [Multiple Files Connection Manager](multiple-files-connection-manager.md).  
   
 ## <a name="configuration-of-the-file-connection-manager"></a>Настройка диспетчера соединения файлов  
- При добавлении к пакету диспетчер соединения файлов [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают, разрешит соединение файла во время выполнения, устанавливает свойства подключения файла и добавляет подключения файла в диспетчер соединений `Connections` коллекцию пакета.  
+ Когда в пакет добавляется диспетчер подключения файлов, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают диспетчер соединений, который в процессе выполнения создает соединение файла, устанавливает свойства подключения файла и добавляет подключения файла в коллекцию `Connections` пакета.  
   
- `ConnectionManagerType` Свойства диспетчера соединений присваивается `FILE`.  
+ Свойству `ConnectionManagerType` диспетчера соединений присваивается значение `FILE`.  
   
  Диспетчер соединения файлов можно настроить следующим образом.  
   
@@ -60,6 +59,6 @@ ms.locfileid: "48119974"
   
  Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в статье [Файл/папка](../file-connection-manager-editor.md).  
   
- Сведения о программной настройке диспетчера соединений см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

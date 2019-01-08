@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - cost threshold for parallelism option
@@ -13,12 +12,12 @@ ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd36b02c43dadb7bd6cd5206b36d3db3bcd04eb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6bf9890b05d0334b1a91561ce67e6acde18e1fe6
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190384"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639382"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>Параметр конфигурации сервера cost threshold for parallelism
   В этом разделе описываются способы настройки параметра конфигурации сервера **cost threshold for parallelism** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **cost threshold for parallelism** позволяет указать пороговое значение, при котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает и выполняет параллельные планы для запросов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает и выполняет параллельный план для запроса только в случае, если оценочная стоимость выполнения последовательного плана для этого запроса выше значения, заданного параметром **cost threshold for parallelism**. Стоимость представляет предполагаемое затраченное время в секундах, необходимое для выполнения последовательного плана в определенной конфигурации оборудования. Параметру **cost threshold for parallelism** можно присвоить любое значение от 0 до 32 767. Значение по умолчанию — 5.  
@@ -39,7 +38,7 @@ ms.locfileid: "48190384"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [После настройки параметра стоимостного порога для параллелизма](#FollowUp)  
+-   **Дальнейшие действия.**  [После настройки параметра cost threshold for parallelism, параметр](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -109,7 +108,7 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра стоимостного порога для параллелизма  
+##  <a name="FollowUp"></a> Дальнейшие действия: После настройки параметра cost threshold for parallelism  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
 ## <a name="see-also"></a>См. также  

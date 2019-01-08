@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7da91677755f2d7e808165bdc8361864e15ac2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131754"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819336"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Настройка сервера IIS 7 для веб-синхронизации
   В этой статье описывается процесс настройки вручную служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) версии 7 и более поздней, которые будут использоваться при веб-синхронизации для репликации слиянием. 
@@ -29,7 +28,7 @@ ms.locfileid: "48131754"
  Обзор процесса настройки см. в статье [Настройка веб-синхронизации](configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Убедитесь в том, что приложение использует только [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] или более позднюю версию, а более ранние версии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на IIS-сервере не установлены. Использование более ранних версий [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] может привести к ошибкам, например: «Недопустимый формат сообщения во время веб-синхронизации. Убедитесь в том, что компоненты репликации на веб-сервере настроены правильно».  
+>  Убедитесь в том, что приложение использует только [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] или более позднюю версию, а более ранние версии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на IIS-сервере не установлены. Более ранние версии платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] могут вызывать ошибки, например: «Недопустимый формат сообщения во время веб-синхронизации. Убедитесь в том, что компоненты репликации на веб-сервере настроены правильно».  
   
  Чтобы использовать веб-синхронизацию, необходимо настроить службы IIS 7, выполнив следующие шаги. Каждый шаг подробно описан в данном разделе.  
   

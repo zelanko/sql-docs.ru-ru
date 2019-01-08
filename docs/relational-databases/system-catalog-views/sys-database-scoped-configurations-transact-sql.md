@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 350f3af1bfd6e2765f74d074727577541378d2e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733842"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947658"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "47733842"
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|Идентификатор параметра конфигурации.|  
 |**name**|**nvarchar(60)**|Имя параметра конфигурации. Сведения о возможных конфигурациях см. в разделе [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
-|**Значение**|**SQLVARIANT**|Значение, заданное для этого параметра конфигурации для первичной реплики.|  
+|**value**|**SQLVARIANT**|Значение, заданное для этого параметра конфигурации для первичной реплики.|  
 |**value_for_secondary**|**SQLVARIANT**|Значение, заданное для этого параметра конфигурации для вторичных реплик.|  
-|**elevate_online**|**nvarchar(60)** |Базы данных с заданной областью набора по умолчанию для параметра online для операций с индексами |
+|**is_value_default**|**bit** |Указывает, является ли заданное значение по умолчанию.|
 |**elevate_resumable**|nvarchar(60)|Базы данных с заданной областью набора по умолчанию для Возобновляемый параметр для операций с индексами| 
   
 ##  <a name="Permissions"></a> Permissions  

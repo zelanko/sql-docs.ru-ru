@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
@@ -12,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d057ee45a14550b1ba56b9b15b9e7011e5238db1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143444"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798696"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Использование приложения SQL Server Profiler для создания набора элементов сбора трассировки SQL (среда SQL Server Management Studio)
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно использовать возможности серверной трассировки приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], чтобы экспортировать определение трассировки для создания набора элементов сбора, использующего общий тип сборщика трассировки SQL. Этот процесс состоит из двух частей.  
@@ -54,7 +54,7 @@ ms.locfileid: "48143444"
   
 6.  На вкладке **Общие** выполните следующее.  
   
-    1.  В поле **Имя трассировки** введите требуемое имя трассировки. В этом примере является имя трассировки `SPgt80`.  
+    1.  В поле **Имя трассировки** введите требуемое имя трассировки. В этом примере используется имя `SPgt80`.  
   
     2.  В списке **Использовать шаблон**выберите шаблон для трассировки. В этом примере выберите **TSQL_SPs**.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48143444"
   
 3.  Прокрутите скрипт и выполните следующие замены, отмеченные в текстовом комментарии скрипта.  
   
-    -   Замените строку **Имя набора сбора SQLTrace** именем, которое будет использоваться для набора элементов сбора. В этом примере имя набора элементов сбора `SPROC_CollectionSet`.  
+    -   Замените строку **Имя набора сбора SQLTrace** именем, которое будет использоваться для набора элементов сбора. В данном примере имя набора элементов сбора — `SPROC_CollectionSet`.  
   
-    -   Замените строку **Имя элемента сбора SQLTrace** именем, которое будет использоваться для элемента сбора. В этом примере имя элемента сбора `SPROC_Collection_Item`.  
+    -   Замените строку **Имя элемента сбора SQLTrace** именем, которое будет использоваться для элемента сбора. В данном примере имя элемента сбора — `SPROC_Collection_Item`.  
   
 4.  Нажмите кнопку **Выполнить** , чтобы запустить запрос и создать набор элементов сбора.  
   

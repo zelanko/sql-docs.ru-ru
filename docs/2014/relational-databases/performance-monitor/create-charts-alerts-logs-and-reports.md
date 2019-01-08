@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - System Monitor [SQL Server], charts and reports
@@ -19,12 +19,12 @@ ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3921f2db7ef3e80dd13ad9df0787ab1f6afc0611
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f36f1a3df7eae3fd363aa5e2bc4b5ae13f36ae2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136864"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780836"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>Создание диаграмм, предупреждений, журналов и отчетов
   Для контроля экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]системный монитор позволяет создавать диаграммы, предупреждения, журналы и отчеты.  
@@ -48,7 +48,7 @@ ms.locfileid: "48136864"
   
  Диаграммы полезно использовать для кратковременного контроля показателей локального или удаленного компьютера в реальном времени (например, контроля возникновения определенных событий).  
   
-## <a name="alerts"></a>видны узлы  
+## <a name="alerts"></a>Предупреждения  
  При помощи предупреждений системный монитор отслеживает определенные события и уведомляет выбранным способом. В журнал предупреждений можно записывать текущее состояние выбранных счетчиков производительности и экземпляров объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда счетчик превышает заданное значение, в журнал записываются соответствующие дата и время. Предупреждения о событиях можно передавать по сети. Кроме того, можно указать программу, которую необходимо запускать при первом или каждом возникновении события. Например, можно передать по сети сообщение всем системным администраторам о том, что экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не хватает пространства на диске.  
   
 ## <a name="logs"></a>Журналы  

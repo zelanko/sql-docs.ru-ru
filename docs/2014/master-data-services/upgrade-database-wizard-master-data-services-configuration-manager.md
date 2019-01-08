@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ce9dd246ed810f1b7e04f22b43f9dec34f26ab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55a722f54b6697aacf7fea87e436d33a5479afb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050052"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797972"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Мастер обновления баз данных (диспетчер конфигурации служб Master Data Services)
   Используйте **Мастер обновления баз данных** для обновления базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -30,7 +29,7 @@ ms.locfileid: "48050052"
 |Имя элемента управления|Описание|  
 |------------------|-----------------|  
 |**Экземпляр SQL Server**|Имя выбранного в данный момент экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] .|  
-|**База данных служб основных данных**|Имя выбранной в данный момент базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
+|**База данных служб Master Data Services**|Имя выбранной в данный момент базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
   
 ## <a name="progress-and-finish"></a>Ход выполнения и завершение  
  Отображает ход процесса обновления. После обновления базы данных щелкните ссылку на файл журнала, чтобы просмотреть подробные сведения об обновлении, или нажмите кнопку **Завершить** , чтобы закрыть мастер баз данных и вернуться к странице **Базы данных** . Будет выбрана обновленная база данных, которую можно просмотреть и изменить ее системные настройки.  

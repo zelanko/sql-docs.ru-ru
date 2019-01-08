@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - services [SQL Server], security
@@ -16,12 +15,12 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 18a09a4c2183eb96b97d42b928bce0e5c34b6625
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 258ec0640a5281152fcce6faa771272c3f94de64
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075002"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641535"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Служба обозревателя SQL Server (компонент Database Engine и SSAS)
   Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполняется как служба Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает входящие запросы к ресурсам [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и предоставляет сведения об экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленных на компьютере. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначен для выполнения трех задач:  
@@ -126,7 +125,7 @@ ms.locfileid: "48075002"
  Скрытые экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это экземпляры, которые поддерживают только соединения через общую память. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]установите флаг `HideInstance` , чтобы браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выдавал сведения об этом экземпляре сервера.  
   
 ### <a name="using-a-firewall"></a>Применение брандмауэра  
- Для связи со службой браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервере, защищенном брандмауэром, в дополнение к TCP-порту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например 1433) откройте UDP-порт 1434. Сведения о работе с брандмауэром см. в статье "Как настроить брандмауэр Windows для доступа к компоненту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Для связи со службой браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервере, защищенном брандмауэром, в дополнение к TCP-порту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например 1433) откройте UDP-порт 1434. Дополнительные сведения об использовании брандмауэра см. в разделе «Как настроить брандмауэр для доступа к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также  
  [Сетевые протоколы и библиотеки](../../sql-server/install/network-protocols-and-network-libraries.md)  

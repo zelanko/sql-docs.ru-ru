@@ -5,8 +5,7 @@ ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f19ad878499d9739745f29aa8c2f749fe2b3132
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41e5f03dbe8619ca2e00d70b2c569d90f75d2d2f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843382"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211284"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +97,7 @@ sp_table_validation [ @table = ] 'table'
   
  При проверке контрольной суммы структура таблицы должна быть идентичной на двух серверах; таким образом, таблицы должны иметь одинаковые столбцы, расположенные в одинаковом порядке, один и тот же тип данных и длину и одинаковые условия NULL/NOT NULL. Например, если издатель создает таблицу инструкцией CREATE TABLE, а затем добавляет столбцы инструкцией ALTER TABLE, а выполняемый на подписчике скрипт выполняет только инструкцию CREATE (создает таблицу), то структуры НЕ БУДУТ одинаковыми. Если нет уверенности что структуры двух таблиц идентичны, просмотрите [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) и убедитесь, что смещение в каждой таблице такая же.  
   
- Числа с плавающей запятой, скорее всего, создавать различия в контрольных суммах, если символьного режима **bcp** использовался, представляющего собой вариант, если публикация содержит не -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков. Это связано с минимальными и неизбежными различиями в точности при преобразовании в символьный режим и из символьного режима.  
+ Числа с плавающей запятой, скорее всего, создавать различия в контрольных суммах, если символьного режима **bcp** использовался, представляющего собой вариант, если публикация содержит не - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков. Это связано с минимальными и неизбежными различиями в точности при преобразовании в символьный режим и из символьного режима.  
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения **sp_table_validation**, необходимо иметь разрешения SELECT для проверяемой таблицы.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], files
@@ -19,12 +18,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11e70904aa8a67a1290cd466aeabcd33d2e7e651
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213464"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778326"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Добавление файлов данных или журналов в базу данных
   В этом подразделе содержатся инструкции по добавлению файлов данных или журналов в базу данных на сервере [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -76,7 +75,7 @@ ms.locfileid: "48213464"
   
 8.  Укажите исходный размер файла. Файл данных следует делать как можно большего размера, в соответствии с максимальным предполагаемым объемом данных в базе данных.  
   
-9. Укажите, как должен расширяться файл, нажав кнопку (**...**) в столбце **Авторасширение** . Выберите один из следующих параметров.  
+9. Укажите, как должен расширяться файл, нажав кнопку (**...**) в столбце **Авторасширение**. Выберите один из следующих параметров.  
   
     1.  Чтобы разрешить выбранному файлу расти по мере необходимости, установите флажок **Разрешить авторасширение** и выберите один из следующих параметров.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "48213464"
 11. Укажите путь к файлу. Указанный путь к добавляемому файлу должен существовать.  
   
     > [!NOTE]  
-    >  Данные и журналы транзакций по умолчанию помещаются на один и тот же диск и в один и тот же каталог. Это сделано в соответствии с требованиями, предъявляемыми системами с одним диском, но для рабочей среды это может оказаться неоптимальным. Дополнительные сведения см. в статье [Файлы и группы файлов базы данных](database-files-and-filegroups.md).  
+    >  Данные и журналы транзакций по умолчанию помещаются на один и тот же диск и в один и тот же каталог. Это сделано в соответствии с требованиями, предъявляемыми системами с одним диском, но для рабочей среды это может оказаться неоптимальным. Дополнительные сведения см. в статье [Database Files and Filegroups](database-files-and-filegroups.md).  
   
 12. Нажмите кнопку **ОК**.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "48213464"
   
  Дополнительные сведения см. в разделе [Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Files and Filegroups](database-files-and-filegroups.md)   
  [Удаление файлов данных или журнала из базы данных](delete-data-or-log-files-from-a-database.md)   
  [Увеличение размера базы данных](increase-the-size-of-a-database.md)  

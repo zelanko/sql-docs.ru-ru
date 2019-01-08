@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7dc1581fd2940ec5bad7698985eeab2c8ed96b2c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 29fb46b02e887ceebde293383fda99cbd3ed42be
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037522"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072431"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Обратная совместимость служб анализа (SQL 2017 г.)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -28,14 +28,14 @@ ms.locfileid: "38037522"
   
 |||  
 |-|-|  
-|**Режим/категории**|**Компонент**|
+|**Режим/категории**|**Возможность**|
 |Multidimensional|Интеллектуальный анализ данных|
 |Multidimensional|Удаленные связанные группы мер|
 |Табличный|Модели с уровнем совместимости 1100 и 1103|
 |Табличный|Свойства табличной объектной модели: Column.IsDefaultImage Column.TableDetailPosition Column.IsDefaultLabel,|
 |Инструменты|Приложение SQL Server Profiler для перехвата трассировки<br /><br /> В качестве замены можно использовать профилировщик расширенных событий, встроенный в SQL Server Management Studio.  <br /> См. раздел [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Инструменты|Воспроизведение трассировки с помощью приложения SQL Server Profiler <br />Замена. Замена отсутствует.|  
-|Объекты управления трассировкой и интерфейсы API трассировки|Объекты Microsoft.AnalysisServices.Trace (содержат интерфейсы API для объектов трассировки и воспроизведения Analysis Services). Замена состоит из нескольких частей:<br /><br /> — Настройка трассировки: Microsoft.SqlServer.Management.xevent;<br />— Чтение трассировки: Microsoft.SqlServer.XEvent.Linq<br />— воспроизведение трассировки: отсутствует.|  
+|Объекты управления трассировкой и интерфейсы API трассировки|Объекты Microsoft.AnalysisServices.Trace (содержат интерфейсы API для объектов трассировки и воспроизведения Analysis Services). Замена состоит из нескольких частей:<br /><br /> — Настройка трассировки: Microsoft.SqlServer.Management.XEvent<br />-Чтение трассировки: Microsoft.SqlServer.XEvent.Linq<br />— Воспроизведение трассировки: None|  
 
 
 ## <a name="discontinued-features"></a>Неподдерживаемые функции
@@ -45,7 +45,7 @@ ms.locfileid: "38037522"
   
 |||  
 |-|-|  
-|**Режим/категории**|**Компонент**|  
+|**Режим/категории**|**Возможность**|  
 |Табличный|Значение свойства VertipaqPagingPolicy памяти (2), разрешите разбиение на страницы на диск с использованием памяти сопоставлены файлы.|
 |Multidimensional|Удаленные секции|  
 |Multidimensional|Удаленные связанные группы мер|  

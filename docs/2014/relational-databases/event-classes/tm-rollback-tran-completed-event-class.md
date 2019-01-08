@@ -1,11 +1,10 @@
 ---
-title: 'Класс событий TM: Rollback Tran Completed | Документация Майкрософт'
+title: 'События класса TM: Класс события Rollback Tran Completed | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0872d301bbd4d03c0e51e26efd76c9221609bd38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 105c5da23d5d827271c5c94c70b293acf051d1aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145530"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786926"
 ---
-# <a name="tm-rollback-tran-completed-event-class"></a>Класс событий TM: Rollback Tran Completed
-  Класс событий "TM:Rollback Tran Completed" указывает на завершение обработки запроса ROLLBACK TRANSACTION. Запрос был отправлен клиентом через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после отката текущей транзакции.  
+# <a name="tm-rollback-tran-completed-event-class"></a>События класса TM: Класс события Rollback Tran Completed
+  События класса TM: Класс событий Rollback Tran Completed указывает на завершение запроса ROLLBACK TRANSACTION. Запрос был отправлен клиентом через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после отката текущей транзакции.  
   
-## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>Столбцы данных класса событий TM: Rollback Tran Completed  
+## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>События класса TM: столбцы данных класса событий Rollback Tran Completed  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -49,7 +48,7 @@ ms.locfileid: "48145530"
 |SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
-|Успешно|`int`|1 = успешное завершение. 0 = неуспешное завершение (например значение 1 показывает, что проверка разрешений прошла успешно, а 0 — проверка завершилась ошибкой).|23|Да|  
+|Success|`int`|1 = успешное завершение. 0 = неуспешное завершение (например значение 1 показывает, что проверка разрешений прошла успешно, а 0 — проверка завершилась ошибкой).|23|Да|  
 |TextData|`ntext`|Текстовое значение, зависящее от класса событий, фиксируемых при трассировке.|1|Да|  
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  

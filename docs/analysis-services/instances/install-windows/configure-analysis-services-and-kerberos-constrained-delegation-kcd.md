@@ -1,5 +1,5 @@
 ---
-title: Настройка Analysis Services и ограниченного делегирования Kerberos (KCD) | Документы Microsoft
+title: Настройка Analysis Services и ограниченного делегирования Kerberos (KCD) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: be9fde53d440ff82a34fafce3230cdfbf85f2897
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019251"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811156"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Настройка служб Analysis Services и ограниченного делегирования Kerberos (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,15 +25,15 @@ ms.locfileid: "34019251"
   
  В разделах этой статьи дается обзор распространенных сценариев с [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , в которых требуется KCD, а также приводится пример развертывания сервера с общей сводкой того, что необходимо установить и настроить. Ссылки на более подробные сведения о рассматриваемых технологиях, таких как контроллеры домена и KCD, см. в разделе [Дополнительные сведения и материалы сообщества](#bkmk_moreinfo) .  
   
-## <a name="scenario-1-workbook-as-data-source-wds"></a>Сценарий 1. Книга в качестве источника данных (WDS)  
- ![1. в разделе](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "1 в разделе") Office Online Server открывает книгу Excel и ![. в разделе 2](../../../analysis-services/instances/install-windows/media/ssas-callout2.png ". в разделе 2") обнаруживает подключение данных к другой книге. Office Online Server отправляет запрос на [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] при использовании службы перенаправителя ![. в разделе 3](../../../analysis-services/instances/install-windows/media/ssas-callout3.png ". в разделе 3") , чтобы открыть вторую книгу и данные ![4 в разделе](../../../analysis-services/instances/install-windows/media/ssas-callout4.png "4 в разделе ").  
+## <a name="scenario-1-workbook-as-data-source-wds"></a>Сценарий 1. Книгу в качестве источника данных (WDS).  
+ ![см. в разделе 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "см. в разделе 1") Office Online Server открывает книгу Excel и ![см. в разделе 2](../../../analysis-services/instances/install-windows/media/ssas-callout2.png "см. в разделе 2") обнаруживает подключение данных к другой книге. Office Online Server отправляет запрос на [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] служба перенаправителя ![см. в разделе 3](../../../analysis-services/instances/install-windows/media/ssas-callout3.png "см. в разделе 3") чтобы открыть вторую книгу и данные ![см. в разделе 4](../../../analysis-services/instances/install-windows/media/ssas-callout4.png "см. в разделе 4 ").  
   
  В этом сценарии пользовательские учетные данные нужно делегировать из Office Online Server в службу перенаправителя SharePoint [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в SharePoint.  
   
- ![книга в качестве источника данных](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "книга в качестве источника данных")  
+ ![книгу в качестве источника данных](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "книгу в качестве источника данных")  
   
-## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>Сценарий 2. Табличная модель служб Analysis Services ссылается на книгу Excel  
- Модели служб Analysis Services табличной ![1 в разделе](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "1 в разделе") ссылки на книгу Excel, которая содержит модель Power Pivot. В этом сценарии, когда [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] загружает табличную модель, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] обнаруживает ссылку на эту книгу. При обработке модели [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] отправляет запрос в SharePoint, чтобы загрузить книгу. В этом сценарии клиентские учетные данные **не** требуется делегировать из служб Analysis Services в SharePoint, однако клиентское приложение может перезаписать сведения источника данных во внешней привязке. Если запрос внешней привязки предписывает олицетворять текущего пользователя, то пользовательские учетные данные необходимо делегировать, что требует настройки KCD между [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и SharePoint.  
+## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>Сценарий 2. Analysis Services табличной модели ссылки на книгу Excel  
+ Модель служб Analysis Services табличной ![см. в разделе 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "см. в разделе 1") ссылки на книгу Excel, которая содержит модель Power Pivot. В этом сценарии, когда [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] загружает табличную модель, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] обнаруживает ссылку на эту книгу. При обработке модели [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] отправляет запрос в SharePoint, чтобы загрузить книгу. В этом сценарии клиентские учетные данные **не** требуется делегировать из служб Analysis Services в SharePoint, однако клиентское приложение может перезаписать сведения источника данных во внешней привязке. Если запрос внешней привязки предписывает олицетворять текущего пользователя, то пользовательские учетные данные необходимо делегировать, что требует настройки KCD между [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и SharePoint.  
   
  ![office online server](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-oos.png "office online server")  
   
@@ -53,13 +53,13 @@ ms.locfileid: "34019251"
 ### <a name="domain-controller"></a>Контроллер домена  
  Ниже приведен краткий обзор того, что следует установить для контроллера домена (DC).  
   
--   **Роль:** доменные службы Active Directory. Общие сведения см. в разделе [Настройка Active Directory (AD DS) в Windows Server 2012](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/).  
+-   **Роль:** Доменные службы Active Directory. Общие сведения см. в разделе [Настройка Active Directory (AD DS) в Windows Server 2012](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/).  
   
 -   **Роль:** DNS-сервер  
   
 -   **Компонент:** компоненты .NET Framework 3.5 или .NET Framework 3.5  
   
--   **Компонент:** средства удаленного администрирования сервера и средства администрирования ролей  
+-   **Функция:** Средства удаленного администрирования сервера и средства администрирования ролей  
   
 -   Настройте Active Directory, чтобы создать новый лес и присоединить компьютеры к домену. Прежде чем пытаться добавить в частный домен другие компьютеры, необходимо настроить в DNS на клиентских компьютерах IP-адрес контроллера домена. На компьютере контроллера домена запустите `ipconfig /all` , чтобы получить адреса IPv4 и IPv6 для следующего шага.  
   
@@ -96,13 +96,13 @@ ms.locfileid: "34019251"
   
 1.  Запустите мастер установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] и на странице выбора компонентов щелкните ядро СУБД, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]и средства управления. На последующих этапах работы мастера установки можно указать режим [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-2.  Для настройки экземпляра настройте именованный экземпляр POWERPIVOT.  
+2.  Для настройки экземпляра настройте именованный экземпляр «POWERPIVOT».  
   
 3.  На странице настройки служб Analysis Services настройте режим **Power Pivot** для сервера служб Analysis Services и добавьте **имя компьютера** Office Online Server в список администраторов сервера служб Analysis Services. Дополнительные сведения см. в разделе [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Обратите внимание, что по умолчанию тип объекта "Компьютер" не включен в поиск. Нажмите кнопку ![выберите объекты для добавления учетной записи компьютера](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "выберите объекты для добавления учетной записи компьютера") добавлен объект компьютеров.  
+4.  Обратите внимание, что по умолчанию тип объекта «Компьютер» не включается в поиск. Нажмите кнопку ![выберите объекты для добавления учетной записи компьютера](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "выберите объекты для добавления учетной записи компьютера") добавлен объект компьютеров.  
   
-     ![Добавление учетных записей компьютеров в качестве администраторов служб ssas](../../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "добавить учетные записи компьютеров в качестве администраторов служб ssas")  
+     ![Добавление учетных записей компьютеров в качестве администраторов ssas](../../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "Добавление учетных записей компьютеров в качестве администраторов служб ssas")  
   
 5.  Создайте имена субъектов-служб (SPN) для экземпляра служб Analysis Services.  
   
@@ -131,13 +131,13 @@ ms.locfileid: "34019251"
   
 7.  **Настройте параметры ограниченного делегирования** в учетной записи служб Analysis Services для любого внешнего источника, от которого вы будете обновляться, такого как SQL Server или файлы Excel. В учетной записи служб Analysis Services мы хотим убедиться, что установлено следующее.  
   
-     **Примечание** . Если в разделе "Пользователи и компьютеры Active Directory" отсутствует вкладка делегирования для учетной записи, значит, для этой учетной записи нет SPN.  Чтобы эта вкладка появилась, можно добавить фиктивный SPN, например `my/spn`.  
+     **Примечание.** Если вы не видите вкладка делегирования для учетной записи, в Active Directory — пользователи и компьютеры, это значит, нет имени участника-службы для этой учетной записи.  Чтобы эта вкладка появилась, можно добавить фиктивный SPN, например `my/spn`.  
   
      **Доверять этому пользователю делегирование указанных служб** и **Использовать любой протокол проверки подлинности**.  
   
      Это называется ограниченным делегированием и является обязательным, поскольку токен Windows будет получен из службы Claims to Windows Token Services (C2WTS), которая требует ограниченное делегирование со сменой протоколов.  
   
-     ![Службы Analysis Services — ограниченное делегирование](../../../analysis-services/instances/install-windows/media/analysis-services-constrained-delegation.png "службы Analysis Services — ограниченного делегирования")  
+     ![Службы Analysis Services — ограниченное делегирование](../../../analysis-services/instances/install-windows/media/analysis-services-constrained-delegation.png "службы Analysis Services — ограниченное делегирование")  
   
      Кроме того, потребуется добавить службы, доступ к которым будет делегироваться. Это будет зависеть от среды.  
   
@@ -149,11 +149,11 @@ ms.locfileid: "34019251"
   
     1.  На сервере Office Online Server откройте окно PowerShell с правами администратора и выполните следующую команду.  
   
-    2.  `New-OfficeWebAppsExcelBIServer –ServerId <AS instance name>`  
+    2.  `New-OfficeWebAppsExcelBIServer -ServerId <AS instance name>`  
   
-    3.  Образец. `New-OfficeWebAppsExcelBIServer –ServerId "MTGQLSERVER-13\POWERPIVOT"`  
+    3.  Образец. `New-OfficeWebAppsExcelBIServer -ServerId "MTGQLSERVER-13\POWERPIVOT"`  
   
-3.  **Настройте Active Directory** , чтобы разрешить учетной записи компьютера Office Online Server олицетворять пользователей для учетной записи службы SharePoint. Итак, установите свойство делегирования в субъекте, запускающем пул приложений для веб-служб SharePoint, на Office Online Server: команды PowerShell в этом разделе требуют объекты PowerShell Active Directory (AD).  
+3.  **Настройте Active Directory** , чтобы разрешить учетной записи компьютера Office Online Server олицетворять пользователей для учетной записи службы SharePoint. Таким образом установите свойство делегирования в основной запускающем пул приложений для веб-служб SharePoint, на сервере Office Online Server: Команды PowerShell в этом разделе требуют объекты PowerShell Active Directory (AD).  
   
     1.  Получите удостоверение Active Directory сервера Office Online Server.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019251"
         $computer1 = Get-ADComputer -Identity [ComputerName]  
         ```  
   
-         Чтобы найти имя субъекта, посмотрите имя пользователя w3wp.exe в разделе "Диспетчер задач"/"Сведения". Например, svcSharePoint.  
+         Чтобы найти имя субъекта, посмотрите имя пользователя w3wp.exe в разделе "Диспетчер задач"/"Сведения". Например, «svcSharePoint»  
   
         ```  
         Set-ADUser svcSharePoint -PrincipalsAllowedToDelegateToAccount $computer1  
@@ -171,12 +171,12 @@ ms.locfileid: "34019251"
     2.  Чтобы проверить правильность установки свойства:  
   
     3.  ```  
-        Get-ADUser svcSharePoint –Properties PrincipalsAllowedToDelegateToAccount  
+        Get-ADUser svcSharePoint -Properties PrincipalsAllowedToDelegateToAccount  
         ```  
   
 4.  **Настройте параметры ограниченного делегирования** в учетной записи Office Online Server для экземпляра Power Pivot служб Analysis Services. Это должна быть учетная запись, в которой работает Office Online Server. В учетной записи Office Online Server мы хотим убедиться, что установлено следующее.  
   
-     **Примечание**. Если в разделе "Пользователи и компьютеры Active Directory" отсутствует вкладка делегирования для учетной записи, значит, для этой учетной записи нет SPN.  Чтобы эта вкладка появилась, можно добавить фиктивный SPN, например `my/spn`.  
+     **Примечание.** Если вы не видите вкладка делегирования для учетной записи, в Active Directory — пользователи и компьютеры, это значит, нет имени участника-службы для этой учетной записи.  Чтобы эта вкладка появилась, можно добавить фиктивный SPN, например `my/spn`.  
   
      **Доверять этому пользователю делегирование указанных служб** и **Использовать любой протокол проверки подлинности**.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "34019251"
   
 6.  **Настройте параметры ограниченного делегирования** в учетной записи службы C2WTS.  Эти параметры должны соответствовать тому, что вы делали на шаге 4.  
   
- ![сервер SharePoint](../../../analysis-services/instances/install-windows/media/ssas-kcd-sharepointserver-icon.png "сервер sharepoint")  
+ ![SharePoint server](../../../analysis-services/instances/install-windows/media/ssas-kcd-sharepointserver-icon.png "sharepoint server")  
   
 ### <a name="sharepoint-server-2016"></a>SharePoint Server 2016  
  Ниже приведен краткий обзор установки SharePoint Server.  
@@ -195,11 +195,11 @@ ms.locfileid: "34019251"
   
 2.  Запуск и установка SharePoint и выбор роли установки **Ферма с одним сервером** .  
   
-3.  Запуск надстройки PowerPivot для SharePoint (spPowerPivot16.msi). Дополнительные сведения см. в разделе [Установка или удаление надстройки Power Pivot для надстройки SharePoint (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
+3.  Запуск надстройки PowerPivot для SharePoint (spPowerPivot16.msi). Дополнительные сведения см. в разделе [Установка или удаление Power Pivot для надстройки SharePoint (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
 4.  Запуск мастера настройки PowerPivot. См. раздел [Средства настройки PowerPivot](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
-5.  Подключение SharePoint к Office Online Server.    ??Configure_xlwac_on_SPO.ps1 ??  
+5. Подключения SharePoint к Office Online Server. (Configure_xlwac_on_SPO.ps1)
   
 6.  Настройка поставщиков проверки подлинности SharePoint для Kerberos. **Это требуется для сценария 1**. Дополнительные сведения см. в разделе [Планирование проверки подлинности Kerberos в SharePoint 2013](https://technet.microsoft.com/library/ee806870.aspx).  
   

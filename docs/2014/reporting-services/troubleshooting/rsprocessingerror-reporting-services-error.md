@@ -13,12 +13,12 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68a2b5b9a48523193f263ae0bba1c8eaddc186c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be7e09d5254efc35761b267655a8949e4b09173d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207324"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403619"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Ошибка службы Reporting Services
     
@@ -76,18 +76,18 @@ ms.locfileid: "48207324"
 -   Если запуск производится от лица локального администратора на сервере отчетов, просмотрите файл журнала в поисках `ReportProcessingException`. В записях журнала содержится дополнительная информация. Журнал сервера отчетов обычно находится в файле \<*диск*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*метка_даты_и_времени*.log. Дополнительные сведения см. в разделе [Файлы и источники журналов служб Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>Не удалось загрузить хранилище сборки выражений  
- У пользовательских сборок должны быть подписанные строгие имена и установлен атрибут AllowPartiallyTrustedCallers. Дополнительные сведения см. в разделе [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md) и [Understanding Security Policies](../extensions/secure-development/understanding-security-policies.md).  
+ У пользовательских сборок должны быть подписанные строгие имена и установлен атрибут AllowPartiallyTrustedCallers. Дополнительные сведения см. в разделах [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md) и [Understanding Security Policies](../extensions/secure-development/understanding-security-policies.md).  
   
 ### <a name="a-built-in-global-name-does-not-exist"></a>Встроенное глобальное имя не существует  
  Проверьте правильность написания имен в выражениях. Встроенные имена глобальных переменных, параметров и полей с учетом регистра. В выражении, вызвавшем ошибку, проверьте, что имя действительно существует в отчете и написано правильно. Дополнительные сведения см. в разделе [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### <a name="parameter-properties-and-null"></a>Свойства параметров и значение NULL  
- Параметр с несколькими значениями не может принимать значение NULL. Дополнительные сведения см. в разделе [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Параметр с несколькими значениями не может принимать значение NULL. Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Не удается обработать основной отчет с вложенным отчетом  
- Основной и вложенный отчеты должны обрабатываться одной и той же версией обработчика отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . При обновлении отчетов до текущей версии схемы определения отчетов возможно, что основной и вложенные отчеты будут обновлены одновременно. Если версии основного и вложенных отчетов не совпадают, выдается следующее сообщение: Subreport could not be processed (Не удалось обработать вложенный отчет).  
+ Основной и вложенный отчеты должны обрабатываться одной и той же версией обработчика отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . При обновлении отчетов до текущей версии схемы определения отчетов возможно, что основной и вложенные отчеты будут обновлены одновременно. Если версии основного и вложенного отчетов не совпадают, будет выдано следующее сообщение: «Не удается обработать вложенный отчет».  
   
- Нужно изменить либо основной, либо вложенный запрос, чтобы оба они обрабатывались одной и той же версией обработчика отчетов. Сведения о том, почему отчет для обновления, см. в разделе [обновление отчетов](../install-windows/upgrade-reports.md).  
+ Нужно изменить либо основной, либо вложенный запрос, чтобы оба они обрабатывались одной и той же версией обработчика отчетов. Дополнительные сведения о том, почему версия отчета могла не обновиться, см. в разделе [Обновление отчетов](../install-windows/upgrade-reports.md).  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>Вызовы функций написаны на Visual Basic, а не SQL  
  В тексте запроса в реляционной базе данных можно использовать функции SQL. В тексте запросов нельзя использовать функции [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
@@ -112,7 +112,7 @@ ms.locfileid: "48207324"
   
  Можно также передать агрегатной функции имя конкретной области. Область может быть именем набора данных, областью данных или именем области более высокого порядка в иерархии данных. Это относится к следующим сообщениям:  
   
--   Элемента отчета *\<тип элемента отчета>* "*\<имя элемента отчета>*" имеет недопустимую область "*\<имя области>*". Область должна совпадать с текущей или содержаться в ней.  
+-   Элемент отчета *\<тип элемента отчета>* "*\<имя элемента отчета>*" имеет недопустимую область "*\<имя области>*". Область должна совпадать с текущей или содержаться в ней.  
   
 -   Выражение *\<имя свойства>* для элемента отчета *\<тип элемента отчета>* "*\<имя элемента отчета>*" содержит параметр области, недопустимый для агрегатной функции. Параметр области должен быть задан строковой константой, совпадающей с именем объемлющей группы, объемлющей области данных или имени набора данных.  
   
@@ -125,14 +125,14 @@ ms.locfileid: "48207324"
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>Область набора данных по умолчанию для текстового поля верхнего уровня  
  Не рекомендуется использовать область по умолчанию для текстового поля, добавленного в область конструктора отчетов, если у отчета есть несколько наборов данных. Используйте выражение, включающее как агрегатную функцию, так и имя набора данных для задания области. Например, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения (построитель отчетов и службы SSRS)](../report-design/expressions-report-builder-and-ssrs.md)   
- [Справочник по агрегатным функциям &#40;построитель отчетов и службы SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Часто используемые фильтры (построитель отчетов и службы SSRS)](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Ссылки на коллекцию параметров &#40;построитель отчетов и службы SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Ссылки на коллекцию параметров (построитель отчетов и службы SSRS)](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

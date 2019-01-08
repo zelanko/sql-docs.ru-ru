@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.general.f1
@@ -12,18 +12,18 @@ ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0a3abb807efffd757c7f56e447c888ea4febef4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206354"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772846"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>Оповещения свойства — новое предупреждение (страница "Общие")
   Воспользуйтесь этой страницей для просмотра и изменения общих свойств предупреждений агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Изменить имя предупреждения.  
   
  **Как включить**  
@@ -67,7 +67,7 @@ ms.locfileid: "48206354"
  **Создать предупреждение, если счетчик**  
  Укажите поведение счетчика, на которое должно реагировать предупреждение. Например, нужно, чтобы предупреждение реагировало на условие, когда значение счетчика **Свободное пространство в tempdb (КБ)** падает ниже определенного значения, или чтобы оповещение реагировало на условие, когда число **Компиляций SQL в секунду** превышает определенное значение.  
   
- **Value**  
+ **Значение**  
  Укажите значение счетчика.  
   
 ## <a name="wmi-event-alert-options"></a>Параметры предупреждения о событии WMI  

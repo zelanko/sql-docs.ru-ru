@@ -14,12 +14,12 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ce5c4b0a789572e58db7068911a9abae7475fcb
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: b499f06254a482deea2c90f2fc570b8bb7c9d43e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557862"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516755"
 ---
 # <a name="customization-file-userlist-section"></a>Настройка раздела UserList файла
 **Userlist** раздел относится к **подключения** раздел с тот же раздел *идентификатор* параметра.  
@@ -38,7 +38,7 @@ ms.locfileid: "51557862"
 |Часть|Описание|  
 |----------|-----------------|  
 |*userName*|*Имя пользователя* лица, применение этого подключения. Допустимые имена пользователей, устанавливаются со службами IIS **Service Manager** диалоговое окно.|  
-|***accessRights***|Один из следующих прав доступа:<br /><br /> -   **NoAccess** — пользователь не может получить доступ к источнику данных.<br />-   **Только для чтения** — пользователь может просматривать источника данных.<br />-   **ReadWrite** — пользователя можно считывать или записывать в источник данных.|  
+|***accessRights***|Один из следующих прав доступа:<br /><br /> -   **NoAccess** -пользователь не может получить доступ к источнику данных.<br />-   **Только для чтения** -пользователь может просматривать источника данных.<br />-   **ReadWrite** -пользователя можно считывать или записывать в источник данных.|  
   
 ## <a name="see-also"></a>См. также  
  [Настройка раздела подключения файла](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

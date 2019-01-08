@@ -10,12 +10,12 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d423dc8eb00dfce0434c680046f39e0fb9dfa8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101514"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351656"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Панель мониторинга программ (служебная программа SQL Server)
   Чтобы просмотреть данные на панели мониторинга служебной программы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], выберите верхний узел дерева обозревателя программ, который называется "Utility<Имя_UCP>\\(Имя_компьютера\UCP)". На панели мониторинга отображаются сводка и подробные данные всех управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и всех приложений уровня данных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы обновить данные на панели мониторинга, щелкните правой кнопкой мыши верхний узел в дереве обозревателя программ и выберите команду **Обновить**.  
@@ -83,7 +83,7 @@ ms.locfileid: "48101514"
  Подробное состояние каждого параметра исправности отображают скользящие индикаторы. В области правее скользящих индикаторов показывается, сколько приложений уровня данных содержится в каждой категории состояний. Дополнительные сведения о просмотре состояний исправности отдельных приложений уровня данных или просмотре либо изменении параметров конфигурации политик см. в разделе [Подробные сведения о развернутом приложении уровня данных (служебная программа SQL Server)](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md).  
   
  Журнал использования хранилища служебной программы  
- Журнал использования отображается во временном графе в нижней части панели мониторинга [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Обратите внимание, что данные времени — это локальные дата и время в формате UCP с использованием типа данных datetime. Дополнительные сведения см. в разделе [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) электронной документации по SQL Server. При использовании объектной модели служебной программы обратите внимание, что среда SSMS использует тип данных datetimeoffset. Дополнительные сведения см. в разделе [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) электронной документации по SQL Server.  
+ Журнал использования отображается во временном графе в нижней части панели мониторинга [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Обратите внимание, что данные времени — это локальные дата и время в формате UCP с использованием типа данных datetime. Дополнительные сведения см. в разделе [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) электронной документации по SQL Server. При использовании объектной модели служебной программы обратите внимание, что среда SSMS использует тип данных datetimeoffset. Дополнительные сведения см. в разделе [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) электронной документации по SQL Server.  
   
  Используйте переключатели левее области отображения, чтобы изменить период графа.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dc.datacollection.wizard_finish.f1
@@ -23,12 +23,12 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6935fa7a5cb18f1a870e5a099fb000ea55e2eba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192514"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789816"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Настройка хранилища данных управления (среда SQL Server Management Studio)
   В этом разделе описано, как настроить склад данных управления для поддержки хранилища данных управления на одном интерфейсе или на нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , использующих сборщик данных. Эти экземпляры могут быть на одном или на разных серверах. Здесь также приведены описания пользовательского интерфейса диалогового окна [мастера настройки хранилища данных управления](#Wizard) . Сведения о настройке сборщика данных см. в разделе [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md).  

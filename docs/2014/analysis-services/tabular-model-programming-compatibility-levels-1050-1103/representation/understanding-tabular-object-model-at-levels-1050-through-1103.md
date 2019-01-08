@@ -12,12 +12,12 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 574614976a9d24f6c9cedbfede2fd5a150211416
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148441"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525788"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Основные сведения о табличной объектной модели
   Табличная модель — это логическое представление таблиц, связей, иерархий, перспектив, мер и ключевых показателей эффективности. В этом разделе представлены сведения о внутренней реализации с помощью объектов AMO. См. в разделе [Разработка объектов управления аналитикой &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) Если вы пользовались объектами AMO.  
@@ -57,7 +57,7 @@ ms.locfileid: "50148441"
   
  См. в разделе [представление иерархии &#40;табличный&#41; ](tables-hierarchy-representation.md) Дополнительные сведения о способах создания и управления им представление иерархии.  
   
-### <a name="key-performance-indicator-kpi--representation"></a>Представление ключевого показателя эффективности (KPI)  
+### <a name="key-performance-indicator--kpi--representation"></a>Ключ производительности индикатор ключевого показателя Эффективности--представление  
  KPI служит показателем производительности значения, определяемого базовой мерой, относительно целевого значения. С точки зрения объектов AMO представление ключевого показателя эффективности имеет связь «один ко многим». Ключевой показатель эффективности представляется с помощью следующих объектов AMO: <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> и <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> (они являются основными обязательными объектами).  Важно отметить, что это не значит, что все объекты, содержащиеся в ранее упомянутых объектах AMO, могут быть использованы при моделировании.  
   
 > [!NOTE]  

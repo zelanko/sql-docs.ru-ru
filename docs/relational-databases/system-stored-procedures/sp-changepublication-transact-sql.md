@@ -5,8 +5,7 @@ ms.date: 08/29/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changepublication
@@ -17,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e80f468f917a240981fc6e4c16df862d72084541
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670173"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209133"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +59,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|На данную публикацию нельзя создавать анонимные подписки. Невозможно изменить для одноранговых публикаций.|  
 |**allow_initialize_from_backup**|**true**|Подписчики могут инициализировать подписку на эту публикацию из резервной копии, а не из исходного моментального снимка. Это свойство не может быть изменено для отличных[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] публикаций.|  
 ||**false**|Подписчики должны использовать исходный моментальный снимок. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**allow_partition_switch**|**true**|Инструкции ALTER TABLE…SWITCH могут выполняться по отношению к опубликованной базе данных. Дополнительные сведения см. в статье [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md) (Репликация секционированных таблиц и индексов).|  
-||**false**|Инструкции ALTER TABLE…SWITCH не могут выполняться по отношению к опубликованной базе данных.|  
+|**allow_partition_switch**|**true**|ИНСТРУКЦИЯ ALTER TABLE … Операторы SWITCH могут выполняться в опубликованной базе данных. Дополнительные сведения см. в статье [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md) (Репликация секционированных таблиц и индексов).|  
+||**false**|ИНСТРУКЦИЯ ALTER TABLE … Операторы SWITCH не может выполняться в опубликованной базе данных.|  
 |**allow_pull**|**true**|Подписки по запросу на данную публикацию разрешены. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|Подписки по запросу на данную публикацию не разрешены. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**allow_push**|**true**|Принудительные подписки на данную публикацию разрешены.|  
@@ -80,7 +79,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**Описание**||Необязательная запись описания публикации.|  
 |**enabled_for_het_sub**|**true**|Позволяет публикации поддерживать подписчиков, не являющихся подписчиками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **enabled_for_het_sub** нельзя изменить, если существуют подписки на публикацию. Может потребоваться выполнить [хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) соблюдать следующие требования перед установкой **enabled_for_het_sub** значение true:<br /> - **allow_queued_tran** должно быть **false**.<br /> - **allow_sync_tran** должно быть **false**.<br /> Изменение **enabled_for_het_sub** для **true** может изменить существующие параметры публикации. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|Публикация не поддерживает подписчиков, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**enabled_for_internet**|**true**|Публикация через Интернет разрешена, поэтому для передачи файлов моментальных снимков подписчику может быть использован протокол FTP. Файлы синхронизации для публикации помещаются в следующем каталоге: C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* не может иметь значение NULL. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**enabled_for_internet**|**true**|Публикация через Интернет разрешена, поэтому для передачи файлов моментальных снимков подписчику может быть использован протокол FTP. Файлы синхронизации для публикации помещаются в следующий каталог: C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* не может иметь значение NULL. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|Публикация через Интернет не разрешена. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**enabled_for_p2p**|**true**|Публикация поддерживает одноранговую репликацию. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /> Чтобы задать **enabled_for_p2p** для **true**, применяются следующие ограничения:<br /> - **allow_anonymous** должно быть **false**<br /> - **allow_dts** должно быть **false**.<br /> - **allow_initialize_from_backup** должно быть **true**<br /> - **allow_queued_tran** должно быть **false**.<br /> - **allow_sync_tran** должно быть **false**.<br /> - **enabled_for_het_sub** должно быть **false**.<br /> - **independent_agent** должно быть **true**.<br /> - **repl_freq** должно быть **непрерывной**.<br /> - **replicate_ddl** должно быть **1**.|  
 ||**false**|Публикация не поддерживает одноранговую репликацию. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -93,19 +92,19 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Файлы синхронизации создаются только для новых подписок. Подписчики могут получать файлы синхронизации после подписки при условии, что агент моментальных снимков был запущен и завершил работу.|  
 |**independent_agent**|**true**|Публикация имеет собственный выделенный агент распространителя.|  
 ||**false**|Публикация использует общий агент распространителя, а каждая пара баз данных публикации и подписки имеет общий агент.|  
-|**p2p_continue_onconflict**|**true**|Агент распространителя продолжает обрабатывать изменения при обнаружении конфликта.<br /> **Предупреждение:** мы рекомендуем использовать значение по умолчанию `FALSE`. Если этот параметр установлен `TRUE`, агент распространителя будет пытаться обеспечить конвергентность данных в топологии, применяя конфликтующую строку из узла с наибольшим значением идентификатора инициатора. Этот метод не гарантирует конвергенции. После обнаружения конфликта следует убедиться, что топология остается согласованной. Дополнительные сведения см. в подразделе «Обработка конфликтов» раздела [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|**p2p_continue_onconflict**|**true**|Агент распространителя продолжает обрабатывать изменения при обнаружении конфликта.<br /> **Предупреждение:** Мы рекомендуем использовать значение по умолчанию `FALSE`. Если этот параметр установлен `TRUE`, агент распространителя будет пытаться обеспечить конвергентность данных в топологии, применяя конфликтующую строку из узла с наибольшим значением идентификатора инициатора. Этот метод не гарантирует конвергенции. После обнаружения конфликта следует убедиться, что топология остается согласованной. Дополнительные сведения см. в подразделе «Обработка конфликтов» раздела [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 ||**false**|Агент распространителя прекращает обрабатывать изменения при обнаружении конфликта.|  
 |**post_snapshot_script**||Указывает расположение файла скрипта на языке [!INCLUDE[tsql](../../includes/tsql-md.md)], который агент распространителя запускает после применения всех остальных скриптов и данных объектов репликации во время исходной синхронизации.|  
 |**pre_snapshot_script**||Указывает расположение файла скрипта на языке [!INCLUDE[tsql](../../includes/tsql-md.md)], который агент распространителя запускает перед применением всех остальных скриптов и данных объектов репликации во время исходной синхронизации.|  
 |**publish_to_ActiveDirectory**|**true**|Этот аргумент устарел и поддерживается только для обратной совместимости скриптов. Больше нельзя добавлять данные публикации в службу [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.|  
 ||**false**|Удаляет сведения о публикации из службы Active Directory.|  
-|**queue_type**|**sql**|Для хранения транзакций используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это свойство можно изменить только при отсутствии активных подписок.<br /><br /> Примечание: Поддержка с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений прекратила работу. Указав значение **msmq** для *значение* приводит к ошибке.|  
+|**queue_type**|**sql**|Для хранения транзакций используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это свойство можно изменить только при отсутствии активных подписок.<br /><br /> Примечание. Поддержка использования [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений прекратила работу. Указав значение **msmq** для *значение* приводит к ошибке.|  
 |**repl_freq**|**Непрерывная**|Публикует выход всех транзакций, основанных на журнале.|  
 ||**Моментальный снимок**|Публикует только запланированные события синхронизации.|  
 |**replicate_ddl**|**1**|Реплицируются инструкции языка определения данных (DDL), которые выполняются на издателе. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0**|Репликация инструкций DDL не производится. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Невозможно отключить репликацию изменений схемы при использовании одноранговой репликации.|  
-|**replicate_partition_switch**|**true**|Инструкции ALTER TABLE…SWITCH, которые выполняются по отношению к опубликованной базе данных, должны реплицироваться на подписчики. Этот параметр действителен, только если *allow_partition_switch* имеет значение TRUE. Дополнительные сведения см. в статье [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md) (Репликация секционированных таблиц и индексов).|  
-||**false**|Инструкции ALTER TABLE…SWITCH не должны реплицироваться на подписчики.|  
+|**replicate_partition_switch**|**true**|ИНСТРУКЦИЯ ALTER TABLE … Инструкции SWITCH, которые выполняются для опубликованной базы данных должны реплицироваться на подписчики. Этот параметр действителен, только если *allow_partition_switch* имеет значение TRUE. Дополнительные сведения см. в статье [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md) (Репликация секционированных таблиц и индексов).|  
+||**false**|ИНСТРУКЦИЯ ALTER TABLE … Операторы SWITCH не должны реплицироваться на подписчики.|  
 |**хранение**||**int** представляющее срок хранения в часах, действия подписки. Если подписка не активна в течение указанного срока хранения, она удаляется.|  
 |**snapshot_in_defaultfolder**|**true**|Файлы моментального снимка сохранены в папке для моментальных снимков по умолчанию. Если *alt_snapshot_folder*также указано, файлы моментальных снимков хранятся в модели по умолчанию и альтернативные расположения.|  
 ||**false**|Файлы моментальных снимков хранятся в другом расположении, заданном по *alt_snapshot_folder*.|  
@@ -116,7 +115,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**Параллельные**|Используется собственный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
 ||**Concurrent_c**|Используется символьный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
 |**Идентификатор задачи**||Это свойство устарело и больше не поддерживается.|  
-|**allow_drop**|**true**|Позволяет `DROP TABLE` DLL поддержки для статей, которые являются частью репликации транзакций. Минимальная поддерживаемая версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 или более поздней версии и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 или более поздней версии. Дополнительная справка: [базы Знаний 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|Позволяет `DROP TABLE` DLL поддержки для статей, которые являются частью репликации транзакций. Минимальная поддерживаемая версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Пакет обновления 2 или более поздней версии и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакет обновления 1 или более поздней версии. Дополнительные справочные материалы. [Статья базы знаний 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Отключает `DROP TABLE` DLL поддержки для статей, которые являются частью репликации транзакций. Это **по умолчанию** значение этого свойства.|
 |**NULL** (по умолчанию)||Возвращает список поддерживаемых значений для *свойство*.|  
   
@@ -132,7 +131,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **1** указывает, что изменения в статье приводят существующую подписку для повторной инициализации и дает разрешение произвести повторную инициализацию подписки.  
   
 [ **@publisher** =] **"***издателя***"**  
- Задает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *издатель* — **sysname**, значение по умолчанию NULL.  
+ Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
   > [!NOTE]  
   >  *издатель* не следует использовать при изменении свойств статьи на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24e6ee2cfdf337090d7080a5b5de866a3933f6fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abffd5a1fc77f6cf4935cbf5172210445dbd7006
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175324"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816556"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit, класс событий
   Класс событий SP:CacheHit указывает на то, что в кэше планов находится хранимая процедура.  
@@ -35,7 +34,7 @@ ms.locfileid: "48175324"
 |DatabaseName|`nvarchar`|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
 |EventClass|`int`|Тип события = 38.|27|Нет|  
 |EventSequence|`int`|Порядковый номер данного события в запросе.|51|Нет|  
-|EventSubClass|`int`|Типы подкласса события.<br /><br /> 1 = попадание контекста выполнения. В кэше планов найден свободный план выполнения.<br /><br /> 2 = попадание скомпилированного плана. В кэше планов найден скомпилированный план.|21|Да|  
+|EventSubClass|`int`|Типы подкласса события.<br /><br /> 1 = попадание контекста выполнения: В кэше планов найден свободный план выполнения.<br /><br /> 2 = попадание: В кэше планов найден скомпилированный план.|21|Да|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IsSystem|`int`|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  

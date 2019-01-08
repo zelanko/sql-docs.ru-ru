@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e65b458f81e6a09b31d7be2bdffa40547e3c215
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ee4e94ff48db339bbe5c012f821368306bfb253
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098214"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406562"
 ---
 # <a name="recompile-a-stored-procedure"></a>Перекомпиляция хранимой процедуры
   В этом разделе описывается, как перекомпилировать хранимую процедуру в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Существует три способа это сделать: `WITH RECOMPILE` параметр в определении процедуры или при вызове процедуры `RECOMPILE` указание запроса в отдельных инструкциях или с помощью `sp_recompile` системной хранимой процедуры. В этом разделе описывается использование параметра WITH RECOMPILE при создании определения процедуры и выполнении существующей процедуры. Также описывается использование системной хранимой процедуры sp_recompile для перекомпиляции существующей процедуры.  
@@ -131,7 +131,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание хранимой процедуры](../stored-procedures/create-a-stored-procedure.md)   
  [Изменение хранимой процедуры](../stored-procedures/modify-a-stored-procedure.md)   
  [Изменение имени хранимой процедуры](rename-a-stored-procedure.md)   

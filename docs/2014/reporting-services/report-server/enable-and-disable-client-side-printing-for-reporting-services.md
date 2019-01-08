@@ -11,12 +11,12 @@ ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e723602973828fe5a213bb211872e7ef8b2f1ebb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c454dece75264c08d4f4bdc9f9549a1ef0f9b932
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067446"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418885"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Включение и отключение печати на стороне клиента для служб Reporting Services
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Элемент управления ActiveX, **RSClientPrint**, предоставляет клиентские функции печати для отчетов, просматриваемых в браузере. Данный элемент управления отображает пользовательское диалоговое окно печати, которое поддерживает функции, общие с другими диалоговыми окнами печати. Среди этих функций — предварительный просмотр, выбор страниц для указания отдельных страниц и диапазонов, поля и ориентация страниц. Хотя по умолчанию клиентская печать допускается, эту функцию можно отключить.  
@@ -90,7 +90,7 @@ Dim rs As New ReportingService()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  

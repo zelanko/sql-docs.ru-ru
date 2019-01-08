@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainerdetails.f1
@@ -17,15 +16,15 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1d04762b61376d2e9ede00467d89f62c55634d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92e1ff31c03e3de20d680544f7f432350151f33e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203735"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761806"
 ---
 # <a name="for-loop-container"></a>Контейнер «цикл по элементам»
-  Контейнер «цикл по элементам» определяет повторяющийся поток управления в пакете. Управление циклом аналогично структуре цикла **For** в языках программирования. В ходе каждого повтора цикла контейнер цикла For, вычисляет выражение и повторяет рабочий процесс, пока выражение не примет значение `False`.  
+  Контейнер «цикл по элементам» определяет повторяющийся поток управления в пакете. Управление циклом аналогично структуре цикла **For** в языках программирования. В ходе каждого повтора цикла контейнер «цикл по элементам» вычисляет выражение и повторяет рабочий процесс до тех пор, пока результатом выражения не станет `False`.  
   
  Контейнер "цикл по элементам" использует следующие элементы для определения цикла:  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48203735"
   
 -   [Редактор циклов по элементам](../for-loop-editor.md)  
   
--   [Страница "Выражения"](../expressions/expressions-page.md)  
+-   [Страница «Выражения»](../expressions/expressions-page.md)  
   
  Дополнительные сведения о задании этих свойств программными средствами см. в документации по классу **T:Microsoft.SqlServer.Dts.Runtime.ForLoop** в руководстве для разработчиков.  
   

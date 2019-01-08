@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55feda84f7c64b4d33229ac6fe58b6b2d782b7a9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 728e404c5f64b137b8260da82846d97c8647a430
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671151"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215450"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Управление столбцами text и image — использование параметров данных времени выполнения
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,11 +51,11 @@ ms.locfileid: "51671151"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Выполните первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы создать таблицу, используемую образцом.  
+ Выполните первый ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) листинг, чтобы создать таблицу, используемую образцом кода.  
   
  Скомпилируйте второй листинг кода (C++) с библиотекой odbc32.lib. Затем запустите программу.  
   
- Выполните третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы удалить таблицу, используемую образцом.  
+ Выполните третий ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) листинг удалить таблицу, используемую образцом кода.  
   
 ```  
 use AdventureWorks  

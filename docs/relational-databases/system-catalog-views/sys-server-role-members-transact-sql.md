@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b5234cf66bc5f829ab9d83c2642da14b5716161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4107e6c1f675f7fae78ca384c082ef12c2fa309b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735452"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406461"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47735452"
  Чтобы добавить или удалить членство в роли сервера, используйте [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)инструкции.  
   
 ## <a name="permissions"></a>Разрешения  
- Имена входа могут просматривать сведения о собственном членстве в роли сервера, а также просматривать principal_id членов предопределенных ролей сервера. Чтобы просмотреть все членства в роли сервера требует **VIEW DEFINITION ON SERVER ROLE** разрешения или членства в **securityadmin** предопределенной роли сервера.  
+ Имена входа можно просматривать свои собственные членство в роли сервера, а также просматривать principal_id членов предопределенных ролей сервера. Чтобы просмотреть все членства в роли сервера требует **VIEW DEFINITION ON SERVER ROLE** разрешения или членства в **securityadmin** предопределенной роли сервера.  
   
  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

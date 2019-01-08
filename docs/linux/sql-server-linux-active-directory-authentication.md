@@ -1,5 +1,6 @@
 ---
-title: Руководстве по проверке подлинности Active Directory для SQL Server в Linux | Документация Майкрософт
+title: Учебник. Проверка подлинности Active Directory для SQL Server в Linux
+titleSuffix: SQL Server
 description: Этот учебник шаги конфигурации используется для проверки подлинности AAD для SQL Server в Linux.
 author: meet-bhagdev
 ms.date: 02/23/2018
@@ -7,18 +8,18 @@ ms.author: meetb
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: c641b6ee84ffd13e17bc540b3272ba9a95d74648
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 237924a1bc4309b4e4d686076d1e0862ea3afe92
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658503"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160612"
 ---
-# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Учебник: Использование Active Directory аутентификации с SQL Server в Linux
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Учебник. Использование проверки подлинности Active Directory с SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -230,7 +231,7 @@ ms.locfileid: "51658503"
    ```
 
    > [!NOTE]
-   > Имена участников-служб может занять несколько минут для распространения через домен, особенно в том случае, если домен велико. Если появляется ошибка «kvno: сервер не найден в базе данных Kerberos при получении учетных данных для MSSQLSvc /\*\*\<полное доменное имя компьютера-узла\>\*\*:\* \* \<TCP-порт\>\*\*\@CONTOSO.COM», подождите несколько минут и повторите попытку.
+   > Имена участников-служб может занять несколько минут для распространения через домен, особенно в том случае, если домен велико. Если появляется ошибка «kvno: Сервер не найден в базе данных Kerberos при получении учетных данных для MSSQLSvc /\*\*\<полное доменное имя компьютера-узла\>\*\*:\* \* \< TCP-порт\>\*\*\@CONTOSO.COM», подождите несколько минут и повторите попытку.
 
 2. Создание файла keytab с **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** для пользователя AD, созданный на предыдущем шаге. При запросе введите пароль для этой учетной записи AD.
 
@@ -292,7 +293,7 @@ ms.locfileid: "51658503"
    sudo systemctl restart mssql-server
    ```
 
-6. Необязательно: Отключить UDP-подключений к контроллеру домена для повышения производительности. Во многих случаях подключения по протоколу UDP всегда завершится ошибкой, при подключении к контроллеру домена, можно задать параметры конфигурации `/etc/krb5.conf` пропустить вызовы UDP. Изменить `/etc/krb5.conf` и задать следующие параметры:
+6. Необязательно. Отключите UDP-подключений к контроллеру домена для повышения производительности. Во многих случаях подключения по протоколу UDP всегда завершится ошибкой, при подключении к контроллеру домена, можно задать параметры конфигурации `/etc/krb5.conf` пропустить вызовы UDP. Изменить `/etc/krb5.conf` и задать следующие параметры:
 
    ```/etc/krb5.conf
    [libdefaults]
@@ -339,9 +340,9 @@ ms.locfileid: "51658503"
 
 * С помощью других драйверов клиента проверки подлинности AD
 
-  * JDBC: [с помощью Kerberos, встроенная проверка подлинности для подключения к серверу SQL](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
-  * ODBC: [использование встроенной проверки подлинности](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
-  * ADO.NET: [синтаксис строки подключения](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
+  * JDBC: [С помощью встроенной проверки подлинности Kerberos для подключения к серверу SQL](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
+  * ODBC. [Использование встроенной проверки подлинности](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
+  * ADO.NET: [Синтаксис строки соединения](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
 
 ## <a name="performance-improvements"></a>Повышение производительности
 Если вы Обратите внимание, что поиск учетной записи AD занимает некоторое время вы проверили AD конфигурация является допустимой с действия, описанные в [использование аутентификации Active Directory с помощью SQL Server в Linux с помощью сторонних поставщиков AD](sql-server-linux-active-directory-third-party-providers.md), вы можете добавить строки ниже, чтобы `/var/opt/mssql/mssql.conf` пропустить вызовы SSSD и непосредственно использовать вызовы LDAP.

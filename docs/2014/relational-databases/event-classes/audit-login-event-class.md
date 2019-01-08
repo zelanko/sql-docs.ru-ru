@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11ddf57e8ed1c1a57b1eb610d5a722677112da08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e76d95b99ed2578cdfc9ff5ab9a752b644d82067
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228404"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775586"
 ---
 # <a name="audit-login-event-class"></a>Audit Login, класс событий
   Класс событий **Audit Login** сообщает об успешном входе пользователя в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. События этого класса запускаются новыми соединениями или соединениями, которые многократно используются в пуле соединений.  

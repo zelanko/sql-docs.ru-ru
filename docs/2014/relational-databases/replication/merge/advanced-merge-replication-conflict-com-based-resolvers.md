@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66a8adfa8d9e060f316062e033be23ba8f5dbbc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fb5a27e9087044b1049106ca5abd071db74af9f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186824"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766418"
 ---
 # <a name="microsoft-com-based-resolvers"></a>Microsoft COM-Based Resolvers
   Все сопоставители, основанные на технологии COM и поставляемые с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , обрабатывают конфликты обновления, а там, где это оговорено специально, они также обрабатывают конфликты вставки и удаления. Все арбитры производят отслеживание столбцов; большинство из них также производят отслеживание строк. Эти и все другие основанные на технологии COM сопоставители объявляют типы конфликтов, которые они обрабатывают, а для всех остальных типов конфликтов агент слияния использует сопоставитель по умолчанию.  

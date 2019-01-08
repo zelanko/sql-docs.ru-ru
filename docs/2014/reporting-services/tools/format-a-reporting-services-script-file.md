@@ -14,12 +14,12 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7e6cf79410e521490a7a2deadd02f5d1181b51fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd33fa4ddfe9f90d7041cf5f6d5b0a47da757a59
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063154"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350762"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Форматирование файла скрипта служб Reporting Services
   Скрипт служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — это файл кода [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET, написанный для прокси-сервера, построенного на основе языка описания веб-служб (язык WSDL), определяющего API-интерфейс протокола простого доступа к объектам служб Reporting Services (SOAP). Файл скрипта хранится как текстовый файл Юникод или UTF-8 с расширением RSS.  
@@ -47,14 +47,14 @@ End Sub
 ```  
   
 > [!IMPORTANT]  
->  Учетные данные пользователей находятся под управлением среды скриптов и передаются через аргументы командной строки с помощью программы RS.exe. Хотя проверку подлинности веб-службы можно задать с помощью переменной *rs* , рекомендуется использовать среду скриптов. Внутри самого файла скрипта выполнять проверку подлинности веб-службы не требуется. Дополнительные сведения о проверке подлинности в среде скрипта, см. в разделе [служебная программа RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
+>  Учетные данные пользователей находятся под управлением среды скриптов и передаются через аргументы командной строки с помощью программы RS.exe. Хотя проверку подлинности веб-службы можно задать с помощью переменной *rs* , рекомендуется использовать среду скриптов. Внутри самого файла скрипта выполнять проверку подлинности веб-службы не требуется. Дополнительные сведения о проверке подлинности в среде скриптов см. в разделе [Служебная программа RS.exe (SSRS)](rs-exe-utility-ssrs.md).  
   
- Пространства имен не объявляются в файлах скриптов. Среда скриптов предоставляет доступ к нескольким полезным пространствам имен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] : **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**и **System.IO**.  
+ Пространства имен не объявляются в файлах скриптов. Среда скриптов предоставляет несколько полезных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] пространства имен, доступных пользователю: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**, и **System.IO**.  
   
- Образцы скриптов см. на странице [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Образцы скриптов см. на странице [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>См. также  
- [Веб-служба сервера отчетов](../report-server-web-service/report-server-web-service.md)   
+ [веб-служба сервера отчетов](../report-server-web-service/report-server-web-service.md)   
  [Технический справочник (службы SSRS)](../technical-reference-ssrs.md)   
  [Служебная программа RS.exe (SSRS)](rs-exe-utility-ssrs.md)  
   

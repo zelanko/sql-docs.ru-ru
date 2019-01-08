@@ -11,17 +11,17 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f08906f5de609cfd1a520d397a41fe5bc0f36bc4
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 768d35d4cc2763ee055fc2bebfee3e954a64dc65
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099665"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350195"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Вы выполняете обновление с версии SQL Server 2005?
   Окончание расширенной поддержки для SQL Server 2005 — еще одна причина выполнить обновление до более новой версии SQL Server и базы данных SQL Azure. Обновление позволяет обеспечить безопасность и соответствие требованиям, достичь высокой производительности и оптимизировать инфраструктуру платформы данных.  
   
- Дополнительные сведения, руководство и средства для планирования и автоматизации обновления или миграции см. в разделе [Прекращение поддержки SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
+ Дополнительные сведения, руководство и средства для планирования и автоматизации обновления или миграции см. в разделе [Прекращение поддержки SQL Server 2005](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
   
 ## <a name="why-upgrade"></a>Зачем выполнять обновление  
   
@@ -33,13 +33,13 @@ ms.locfileid: "50099665"
  ![Лист данных об обновлении с SQL Server 2005](../../../2014/sql-server/install/media/sqlserver2005eos.png "лист данных об обновлении с SQL Server 2005")  
   
 ## <a name="choose-your-upgrade-option"></a>Выберите вариант обновления  
- При обновлении реляционных баз данных SQL Server 2005 доступны следующие варианты реляционного хранилища на платформе Майкрософт.  
+ При обновлении реляционных баз данных SQL Server 2005, доступны следующие варианты для реляционного хранилища на платформе Microsoft.  
   
  Чтобы просмотреть более подробный анализ этих вариантов, [щелкните здесь](http://sql05upgrade.azurewebsites.net/).  
   
 |Вариант реляционного хранилища|Преимущества|Другие факторы, которые следует учитывать|  
 |-------------------------------|--------------|-------------------------------|  
-|**SQL Server на локальном компьютере**<br /><br /> Этот вариант рекомендуется для приложений баз данных любого типа: от транзакционных систем до хранилищ данных.<br /><br /> Дополнительные сведения см. в разделе [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/).|У вас есть полный контроль над возможностями и масштабируемостью, так как вы управляете и оборудованием, и программным обеспечением.<br /><br /> Эта среда наиболее близка к обновляемой среде SQL Server 2005.|Необходимо сделать максимальные первоначальные инвестиции и обеспечить наиболее тщательное управление, поскольку необходимо приобрести собственное оборудование и программное обеспечение, поддерживать его и управлять им.|  
+|**SQL Server на локальном компьютере**<br /><br /> Этот вариант рекомендуется для приложений баз данных любого типа: от транзакционных систем до хранилищ данных.<br /><br /> Дополнительные сведения см. в разделе [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/).|У вас есть полный контроль над возможностями и масштабируемостью, так как вы управляете и оборудованием, и программным обеспечением.<br /><br /> При обновлении с SQL Server 2005, это наиболее близкие среды.|Необходимо сделать максимальные первоначальные инвестиции и обеспечить наиболее тщательное управление, поскольку необходимо приобрести собственное оборудование и программное обеспечение, поддерживать его и управлять им.|  
 |**SQL Server, размещенный на виртуальных машинах Azure**<br /><br /> Рекомендуется использовать этот вариант, если требуется следующее.<br />-Преимущества миграции в размещенную среду.<br />-Управление операционной средой.<br />-Набор знакомых функций SQL Server.<br /><br /> Дополнительные сведения см. в разделе [SQL Server на виртуальных машинах Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).<br /><br /> Сведения о миграции см. в разделе [Перенос базы данных в SQL Server на виртуальной машине Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/).|Можно быстро выполнить развертывание из библиотеки образов виртуальных машин.<br /><br /> Вы получаете полный набор функций SQL Server.<br /><br /> Можно сэкономить на стоимости оборудования и серверного программного обеспечения. Вы платите только за почасовое использование.|Необходимо настроить программное обеспечение SQL Server и операционной системы и управлять им.|  
 |**Размещенная служба базы данных SQL Azure**<br /><br /> Рекомендуется использовать этот вариант, если требуется экономичное решение с меньшим объемом обслуживания.<br /><br /> Этот вариант особенно хорошо подходит для приложений, которым не требуется постоянное выделение одинаковых мощностей или для которых необходим внешний доступ.<br /><br /> Дополнительные сведения см. в разделе [базы данных SQL](https://azure.microsoft.com/services/sql-database/).<br /><br /> Сведения о миграции см. в разделе [Миграция базы данных SQL Server в базу данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/).|Можно быстро выполнить развертывание и масштабирование.<br /><br /> Вы платите только за почасовое использование.<br /><br /> Стоимость обслуживания включает не только хранилище, но и высокую доступность и автоматическое резервное копирование.|В базе данных SQL Azure отсутствуют некоторые функции SQL Server, которые не применяются в размещенной облачной среде. Дополнительные сведения см. в разделе [Сведения о Transact-SQL Базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/).<br /><br /> Кроме того, база данных SQL Azure имеет максимальный размер 500 ГБ, а SQL Server — 524 ПБ.|  
   
@@ -58,11 +58,11 @@ ms.locfileid: "50099665"
   
 -   Ознакомьтесь с рядом сообщений о планировании обновления в блоге группы разработчиков SQL Server.  
   
-    -   [Планирование эффективного обновления SQL Server 2005: шаг 1 из 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [Планирование эффективного обновления SQL Server 2005: Шаг 1 из 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
   
-    -   [Планирование эффективного обновления SQL Server 2005: шаг 2 из 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [Планирование эффективного обновления SQL Server 2005: Шаг 2 из 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
   
-    -   [Планирование эффективного обновления SQL Server 2005: шаг 3 из 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [Планирование эффективного обновления SQL Server 2005: Шаг 3 из 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
   
 -   Ознакомьтесь с требованиями и рекомендациями в разделе [Планирование установки SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md), в том числе [оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
@@ -73,16 +73,16 @@ ms.locfileid: "50099665"
         > [!IMPORTANT]  
         >  Невозможно обновить SQL Server 2005 до SQL Server 2014 на месте. Необходимо установить SQL Server 2014, а затем перенести базы данных SQL Server 2005 в новую установку.  
   
-    -   Чтобы получить подробное "Техническое руководство по обновлению" в формате PDF, [щелкните здесь](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf).  
+    -   Чтобы получить подробное "Техническое руководство по обновлению" в формате PDF, [щелкните здесь](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf).  
   
--   Дополнительные сведения, руководство и средства для планирования и автоматизации обновления или миграции см. в разделе [Прекращение поддержки SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
+-   Дополнительные сведения, руководство и средства для планирования и автоматизации обновления или миграции см. в разделе [Прекращение поддержки SQL Server 2005](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
   
 ## <a name="get-sql-server-2014"></a>Получить SQL Server 2014  
  Чтобы загрузить пробную версию SQL Server 2014, [здесь](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2014).  
   
 ## <a name="see-also"></a>См. также  
- [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
- [Прекращение поддержки SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
+ [SQL Server 2014](https://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
+ [Прекращение поддержки SQL Server 2005](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
  [Обновление с SQL Server 2005 до SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

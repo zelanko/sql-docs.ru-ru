@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, modifications to DBs
@@ -13,12 +12,12 @@ ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d08eb0368840a6f2850467d13cbe42c5519c7b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f78f4bdf08b9a5caf9b2654289bf181080efff02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083654"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751086"
 ---
 # <a name="modified-features-contained-database"></a>Измененные функции (автономная база данных)
   Для поддержки частично автономных баз данных в следующие функции были внесены изменения. Обычно функции изменяются для того, чтобы они не пересекали границу базы данных.  
@@ -46,7 +45,7 @@ ms.locfileid: "48083654"
  Временные таблицы не могут ссылаться на определяемые пользователем типы, коллекции схем XML или определяемые пользователем функции.  
   
 ## <a name="collation"></a>Параметры сортировки  
- В модели неавтономной базы данных имеется три раздельных типа параметров сортировки: параметры сортировки базы данных, параметры сортировки экземпляра и параметры сортировки tempdb. В автономных базах данных используются только два набора параметров сортировки: параметры сортировки базы данных и параметры сортировки новых каталогов. Дополнительные сведения о параметрах сортировки в автономных базах данных см. в разделе [Contained Database Collations](contained-database-collations.md) .  
+ В модели неавтономной базы данных имеется три раздельных типа параметров сортировки: Параметры сортировки базы данных, параметры сортировки экземпляра и параметры сортировки tempdb. В автономных базах данных используются только два набора параметров сортировки: параметры сортировки базы данных и параметры сортировки новых каталогов. Дополнительные сведения о параметрах сортировки в автономных базах данных см. в разделе [Contained Database Collations](contained-database-collations.md) .  
   
 ## <a name="user-options"></a>Пользовательские параметры  
  При включении поддержки автономных баз данных необходимо установить [параметр «пользовательские параметры»](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) в значение 0 для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
