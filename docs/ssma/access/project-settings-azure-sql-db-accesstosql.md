@@ -13,12 +13,12 @@ ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d10af49e419827f9fbd70b7cbef45fdf0562dea3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2307a62c05503a231c3ee16b79efb25e964f55bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749631"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402129"
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>Параметры проекта (база данных Azure SQL) (AccessToSQL)
 Параметры проекта SQL Azure позволяют настраивать суффикс базы данных SQL Azure для добавления в диалоговом окне соединения и позволяют реализации механизма пульса в соединении SQL Azure.  

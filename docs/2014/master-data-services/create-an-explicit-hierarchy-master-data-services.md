@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating explicit hierarchies [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71c695a31aacf146bf2e97dd0ad4a38044d6b8b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b24a03ff71e6ddec125dfa40ae4c01b3062ada8c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761606"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Создание явной иерархии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]явные иерархии создаются, если необходима неоднородная иерархия, элементы которой могут располагаться на любом уровне. Явные иерархии содержат элементы из одной сущности.  
@@ -31,7 +30,7 @@ ms.locfileid: "48083584"
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
   
 -   Для сущности необходимо разрешить использование явных иерархий и коллекций. Дополнительные сведения см. в разделе [активация сущности для явных иерархий и коллекций &#40;службы Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48083584"
   
 7.  На **Добавление явной иерархии** странице **имя явной иерархии** поле, введите имя для иерархии.  
   
-8.  По желанию снимите флажок **Обязательная иерархия** для создания необязательной иерархии. Дополнительные сведения о типах иерархий см. в разделе [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
+8.  По желанию снимите флажок **Обязательная иерархия** для создания необязательной иерархии. Дополнительные сведения о типах иерархий см. в разделе [Явные иерархии (службы Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
   
 9. Нажмите кнопку **сохранить иерархию**.  
   
@@ -59,13 +58,13 @@ ms.locfileid: "48083584"
   
 ## <a name="next-steps"></a>Следующие шаги  
   
--   [Создание объединенного элемента &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)  
+-   [Создание объединенного элемента (службы Master Data Services)](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)  
   
 -   [Перемещение элементов в иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
- [Явные иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
+ [Явные иерархии (службы Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [Производные иерархии с явными ограничениями (службы Master Data Services)](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [Изменение имени явной иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
+ [Изменение имени явной иерархии (службы Master Data Services)](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
   
   

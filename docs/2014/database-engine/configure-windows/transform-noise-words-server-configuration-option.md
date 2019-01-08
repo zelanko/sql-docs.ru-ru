@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text queries [SQL Server], performance
@@ -17,12 +16,12 @@ ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6b79ebeaddb028b901b7f59397c29b18c6b3dbeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068880"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639472"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>Параметр конфигурации сервера «transform noise words»
   Используйте `transform noise words` параметр конфигурации сервера, чтобы подавить сообщение об ошибке если неучитываемые слова, то есть [стоп-слов](../../relational-databases/search/full-text-search.md), логическая операция на полнотекстовый запрос возвращает 0 строк. Этот параметр удобно использовать в полнотекстовых запросах с предикатом CONTAINS, в котором логические операции или операции NEAR содержат пропускаемые слова. Возможные значения описаны в следующей таблице.  
@@ -33,7 +32,7 @@ ms.locfileid: "48068880"
 |1|Пропускаемые слова (или стоп-слова) преобразуются. Они пропускаются, а остальная часть запроса обрабатывается.<br /><br /> Если пропускаемые слова встречаются в предложениях, обозначающих расстояние, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаляет их. Например, пропускаемое слово `is` удаляется из фразы `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`, в результате чего поисковый запрос преобразуется в `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`. Обратите внимание, что запрос `CONTAINS(<column_name>, 'NEAR(hello,is)')` будет преобразован просто в `CONTAINS(<column_name>, hello)` , поскольку там всего одно допустимое слово поиска.|  
   
 ## <a name="effects-of-the-transform-noise-words-setting"></a>Действие настройки transform noise words  
- В этом разделе проиллюстрировано поведение запросов с пропускаемым словом "`the`«, в другой настройке параметра `transform noise words`.  Предполагается обработка образцов строк полнотекстовых запросов по строке таблицы со следующими данными: `[1, "The black cat"]`.  
+ В этом разделе проиллюстрировано поведение запросов с пропускаемым словом «`the`» при другой настройке параметра `transform noise words`.  Предполагается обработка образцов строк полнотекстовых запросов по строке таблицы со следующими данными: `[1, "The black cat"]`.  
   
 > [!NOTE]  
 >  Все подобные сценарии могут выдавать предупреждение о пропускаемых словах.  

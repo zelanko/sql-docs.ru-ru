@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.specifytablecopyorquery.f1
@@ -13,17 +12,17 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 69135b95383c8a00bbde4475717e68d2bbdaf770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53d97adb5252594bb38f85989e87742a557331ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150764"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750406"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Выбор копирования таблицы или запроса (мастер импорта и экспорта SQL Server)
   Используйте **Выбор копирования таблицы или запроса** страницу, чтобы указать способ копирования данных. Можно при помощи графического интерфейса выбрать существующие объекты базы данных или при помощи языка Transact-SQL создать более сложный запрос.  
   
- Дополнительные сведения о работе этого мастера см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о режимах запуска мастера, а также разрешения, необходимые для успешного запуска мастера, см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Дополнительные сведения о работе этого мастера см. в разделе [Мастер импорта и экспорта SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о режимах запуска мастера, а также разрешения, необходимые для успешного запуска мастера, см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  Назначение мастера импорта и экспорта SQL Server заключается в копировании данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -31,7 +30,7 @@ ms.locfileid: "48150764"
  **Скопировать данные из одной или нескольких таблиц или представлений**  
  Копировать поля из выбранных исходных таблиц и представлений в нужное место или места назначения с помощью **Выбор исходных таблиц и представлений** диалоговое окно. Используйте этот режим, если нужно копировать все данные из источника без фильтрации или упорядочения записей.  
   
- При использовании [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] поставщик данных для подключения к источнику данных, **копирование данных из одного или нескольких таблиц или представлений** параметр может быть недоступен. Этот параметр доступен только для поставщиков, у которых имеется раздел ProviderDescription в файле ProviderDescriptors.xml. Каждый раздел ProviderDescription содержит сведения, необходимые для получения метаданных от соответствующего поставщика. По умолчанию файл ProviderDescriptors.xml содержит раздел ProviderDescription только для следующих поставщиков:  
+ При использовании для подключения к источнику данных поставщика платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] параметр **Скопировать данные из одной или нескольких таблиц или представлений** может быть недоступен. Этот параметр доступен только для поставщиков, у которых имеется раздел ProviderDescription в файле ProviderDescriptors.xml. Каждый раздел ProviderDescription содержит сведения, необходимые для получения метаданных от соответствующего поставщика. По умолчанию файл ProviderDescriptors.xml содержит раздел ProviderDescription только для следующих поставщиков:  
   
 -   System.Data.SqlClient  
   

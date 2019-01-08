@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb325d4121670940b22292a7c4ee3d73cc3edcc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 975da6bc447ed3a29f39dd9a8e877a5b556098c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143284"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774526"
 ---
 # <a name="user-configurable-event-class"></a>класс пользовательских событий
   Используйте категорию событий Пользовательские для наблюдения за пользовательскими событиями. Создайте пользовательские классы событий, чтобы наблюдать за событиями, которые не могут контролироваться системными классами событий в других категориях событий. Например, пользовательское событие может быть создано для наблюдения за ходом работы приложения, которое тестируется. В ходе работы приложения оно может создавать события в предопределенных позициях, позволяя определить текущий этап выполнения приложения.  

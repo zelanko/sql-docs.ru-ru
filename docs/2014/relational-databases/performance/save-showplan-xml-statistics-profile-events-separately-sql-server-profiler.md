@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Showplan XML events
@@ -15,12 +14,12 @@ ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 511769ec59b62cef75ffde7f0226fe89b3970bc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79f3f41d4224baacd485c7d2151db0f3f2059f86
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198294"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752176"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>раздельно сохранить события «Профиль статистики Showplan XML» (приложение SQL Server Profiler)
   В этом подразделе описывается сохранение событий **профиля статистики Showplan XML** , фиксируемых трассировкой, в отдельные файлы с расширением SQLPlan при помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Файлы событий **профиля статистики Showplan XML** можно открыть в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], что позволит посмотреть графический план выполнения для каждого события.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
@@ -13,12 +12,12 @@ ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: baff749af3e0cc745342787b5d5ab73d7f7f6e1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6cc706bb7e4852e37f473378d519c813001a96d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139516"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768126"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Изменение имени группы атрибутов (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить имя группы атрибутов.  
@@ -28,7 +27,7 @@ ms.locfileid: "48139516"
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
   
 ### <a name="to-change-an-attribute-group-name"></a>Изменение имени группы атрибутов  
   
@@ -51,8 +50,8 @@ ms.locfileid: "48139516"
 9. Нажмите кнопку **Сохранить группу**.  
   
 ## <a name="see-also"></a>См. также  
- [Группы атрибутов &#40;службы Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+ [Группы атрибутов (службы Master Data Services)](../../2014/master-data-services/attribute-groups-master-data-services.md)   
  [Создание группы атрибутов (службы Master Data Services)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)   
- [Удаление группы атрибутов &#40;службы Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)  
+ [Удаление группы атрибутов (службы Master Data Services)](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)  
   
   

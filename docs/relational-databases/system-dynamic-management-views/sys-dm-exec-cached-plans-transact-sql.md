@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1778d2615c64d9d1bf19b53fb694e2f7f050be6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f366e091cccad7dbc317093f090bf2547f95b1df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659952"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411531"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает строку для каждого плана запроса, кэшируемого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для более быстрого выполнения запросов. Можно использовать динамическое административное представление для поиска кэшированных планов запросов, кэшированного текста запросов, объема памяти, занимаемого кэшированными планами и счетчика повторного использования кэшированных планов.  
   
- Динамические административные представления в среде [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Чтобы избежать предоставления этих сведений, все строки, содержащие данные, не принадлежащие к подключенному клиенту, фильтруются. Кроме того, значения в столбцах **memory_object_address** и **pool_id** отфильтровываются значения столбца присваивается значение NULL.  
+ Динамические административные представления в среде [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Чтобы избежать раскрытия этих сведений, все строки, содержащие данные, не принадлежащие к подключенному клиенту, фильтруются. Кроме того, значения в столбцах **memory_object_address** и **pool_id** отфильтровываются значения столбца присваивается значение NULL.  
   
 > [!NOTE]  
 >  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_exec_cached_plans**.  
@@ -46,7 +46,7 @@ ms.locfileid: "47659952"
 |size_in_bytes|**int**|Число байтов, занимаемых объектом кэша.|  
 |memory_object_address|**varbinary(8)**|Адрес памяти кэшированной записи. Это значение может быть использовано с [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) чтобы проанализировать распределение памяти кэшированного плана и с [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)для определения затрат на кэширование записи.|  
 |cacheobjtype|**nvarchar(34)**|Тип объекта в кэше. Значение может быть одним из следующих:<br /><br /> Compiled Plan (скомпилированный план)<br /><br /> Compiled Plan Stub (заглушка скомпилированного плана)<br /><br /> Parse Tree (дерево синтаксического анализа)<br /><br /> Extended Proc (расширенные процедуры)<br /><br /> CLR Compiled Func (скомпилированная функция CLR)<br /><br /> CLR Compiled Proc (скомпилированная процедура CLR)|  
-|objtype|**nvarchar(16) в формате**|Тип объекта. Ниже приведены возможные значения и их соответствующие описания.<br /><br /> Proc: Хранимая процедура<br />Подготовка: Подготовленной инструкции<br />Adhoc: нерегламентированного запроса. Ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] отправляемым как языковые события с помощью **osql** или **sqlcmd** вместо виде удаленных вызовов процедур.<br />ReplProc: Фильтр процедура репликации<br />Триггер: триггер<br />Представления: представление<br />По умолчанию: по умолчанию<br />UsrTab: Пользовательская таблица<br />SysTab: Системная таблица<br />Проверка: ПРОВЕРОЧНОЕ ограничение<br />Правило: правило|  
+|objtype|**nvarchar(16) в формате**|Тип объекта. Ниже приведены возможные значения и их соответствующие описания.<br /><br /> Проц.: Хранимая процедура<br />Подготовить. Подготовленная инструкция<br />Adhoc. Нерегламентированный запрос. Ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] отправляемым как языковые события с помощью **osql** или **sqlcmd** вместо виде удаленных вызовов процедур.<br />ReplProc: Процедура фильтра репликации<br />Триггер: Триггер<br />Представление: Представление<br />По умолчанию: Значение по умолчанию<br />UsrTab: Пользовательская таблица<br />SysTab: Системная таблица<br />Проверка: Ограничение CHECK<br />Правило: Правило|  
 |plan_handle|**varbinary(64)**|Идентификатор плана в оперативной памяти. Этот идентификатор является временным и константным, только пока план сохраняется в кэше. Это значение можно использовать со следующими функциями динамического управления:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|Идентификатор пула ресурсов, для которого подсчитывается использование памяти для плана.|  
 |pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  

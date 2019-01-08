@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.ue.navigation.f1
@@ -12,12 +12,12 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d3bf10eac6a527bf0a659eaffef27744bd46144a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158904"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789916"
 ---
 # <a name="utility-explorer-f1-help"></a>Справка F1 проводника служебной программы
   В следующих разделах описываются функциональные возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служебной программы и связанные операции.  
@@ -31,7 +31,7 @@ ms.locfileid: "48158904"
   
  [Администрирование программ (служебная программа SQL Server)](../../database-engine/utility-administration-sql-server-utility.md)  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Ссылка  
  [Создание точки управления служебной программы SQL Server (служебная программа SQL Server)](create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [Подключение к служебной программе SQL Server](connect-to-a-sql-server-utility.md)  
@@ -42,7 +42,7 @@ ms.locfileid: "48158904"
   
  [Наблюдение за экземплярами SQL Server в служебной программе SQL Server](monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции и задачи служебной программы SQL Server](sql-server-utility-features-and-tasks.md)   
  [Устранение неполадок служебной программы SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
   

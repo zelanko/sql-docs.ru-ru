@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variables.f1
@@ -15,22 +14,22 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2be1625093dfd89e59cef4731e61411f2c7e4b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b8541b0e590fe0fa6de9d577e69b7068fb2843d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158184"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206210"
 ---
 # <a name="variables-window"></a>Окно переменных
   Окно **Переменные** используется для создания и изменения переменных, определяемых пользователем, и просмотра системных переменных.  
   
- По умолчанию окно **Переменные** располагается ниже области **Диспетчеры соединений** конструктора служб SSIS в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Если окно **Переменные** не отображается, выберите пункт **Переменные** в меню **Службы SSIS** , чтобы отобразить его.  
+ По умолчанию окно **Переменные** располагается ниже области **Диспетчеры соединений** конструктора служб SSIS в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Если окно **Переменные** не отображается, выберите пункт **Переменные** в меню **Службы SSIS**, чтобы отобразить его.  
   
  При необходимости окно **Переменные** можно открыть, назначив команде View.Variables нужное сочетание клавиш на странице **Клавиатура** диалогового окна **Параметры** .  
   
-> [!NOTE]  
->  Значения `Name` и `Namespace` свойства должно начинаться с буквы алфавита, согласно определению стандарта Юникод 2.0 или символ подчеркивания (_). Далее могут следовать буквы или цифры по определению стандарта Юникод 2.0 или символ подчеркивания (\_).  
+> [!NOTE]
+>  Первым символом в значениях свойств `Name` и `Namespace` согласно стандарту Юникод 2.0 должна быть буква или символ подчеркивания (_). Далее могут следовать буквы или цифры по определению стандарта Юникод 2.0 или символ подчеркивания (\_).  
   
 ## <a name="options"></a>Параметры  
  **Добавить переменную**  
@@ -39,7 +38,7 @@ ms.locfileid: "48158184"
  **Переместить переменную**  
  Выберите переменную из списка, а затем нажмите **Переместить переменную** , чтобы изменить область переменной. В диалоговом окне **Выбор новой области** выберите пакет, контейнер, задачу или обработчик событий в пакете, чтобы изменить область переменной.  
   
- Дополнительные сведения об области переменной см. в разделе [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ Дополнительные сведения об области переменной см. в разделе [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md).  
   
  **Удалить переменную**  
  Выберите переменную из списка и щелкните **Удалить переменную**.  
@@ -79,7 +78,7 @@ ms.locfileid: "48158184"
  При присваивании выражения переменной рядом с переменной отображается специальный маркер значка. Этот специальный маркер значка отображается также рядом с диспетчерами соединений и задачами, для которых заданы выражения.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md)   
+ [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)   
  [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)   
  [Выражения служб Integration Services (SSIS)](expressions/integration-services-ssis-expressions.md)   
  [Создание файлов дампа для выполнения пакетов](troubleshooting/generating-dump-files-for-package-execution.md)  

@@ -15,12 +15,12 @@ ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ac59cddb24d5e08e3b620c178f40e206460eb7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 833e2740e54f07701fb66a894bb5e4798c4a42e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835422"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516404"
 ---
 # <a name="parameter-markers"></a>Маркеры параметров
 В соответствии со спецификацией SQL-92 приложения не удается разместить маркеры параметров в следующих расположениях. Более полный список см. в спецификации SQL-92.  
@@ -37,7 +37,7 @@ ms.locfileid: "47835422"
   
 -   Как выражение и первое значение **IN** операции  
   
--   Как операнд унарного + или – операции  
+-   Как операнд унарного + или - операции  
   
 -   В качестве аргумента *Справочник по функциям набора*  
   

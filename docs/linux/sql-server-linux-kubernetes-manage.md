@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1760256333abad2c6ae32d0aa2a94e1deaebd551
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ad4f310ce6c0e200d5e658b3d5814131000d0004
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356365"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518486"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>Управление SQL Server Always On Availability Group Kubernetes
 
@@ -37,7 +37,7 @@ ms.locfileid: "49356365"
 
   Обновите файл для вашей среды.
 
-  - Замените `<containerName>` именем целевую группу предположительно станет доступным.
+  - Замените `<containerName>` pod именем (например mssql2-0) целевую группу предположительно станет доступным.
   - Если группа доступности не находится в `ag1` пространства имен, замените `ag1` с пространством имен.
 
   Этот файл определяет задание отработки отказа с именем `manual-failover`.
@@ -63,7 +63,7 @@ ms.locfileid: "49356365"
   В следующем примере возвращается состояние задания с именем `manual-failover`.
 
   ```azurecli
-  kubectl describe jobs/manual-failover -–namespace ag1
+  kubectl describe jobs/manual-failover --namespace ag1
   ```
 
 1. Удаление задания на другой ресурс вручную. 
@@ -76,7 +76,7 @@ ms.locfileid: "49356365"
   Следующая команда удаляет задание.
 
   ```azurecli
-  kubectl delete jobs manual-failover -–namespace ag1
+  kubectl delete jobs manual-failover --namespace ag1
   ```
 
 ## <a name="rotate-credentials"></a>Смена учетных данных
@@ -127,7 +127,7 @@ kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --f
 
   Kubernetes обновляет главного ключа и `sa` пароль для одного экземпляра SQL Server в группе доступности.
 
-1. Убедитесь, что задание завершено. Выполните следующую команду: чтобы убедиться, что задание завершено, запустите 
+1. Убедитесь, что задание завершено. Выполните следующую команду: Чтобы проверить, что задание завершено, запустите 
 
   ```azcli
   kubectl describe job rotate-creds --namespace ag1

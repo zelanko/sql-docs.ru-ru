@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - saving traces
@@ -20,12 +19,12 @@ ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80781d3b32ef33fa844c5df96f837aaa14ba06c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159605"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796986"
 ---
 # <a name="save-traces-and-trace-templates"></a>Сохранение трассировок и шаблонов трассировок
   Сохранение файлов трассировки нужно отличать от сохранения шаблонов трассировок. Сохранение файла трассировки предполагает сохранение собранных данных о событиях в указанном месте. Сохранение шаблона трассировки связано с сохранением определения трассировки (например указанных столбцов данных, классов событий или фильтров).  
@@ -63,8 +62,8 @@ ms.locfileid: "48159605"
  [Хранимая процедура sp_trace_create (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)  
   
 ## <a name="see-also"></a>См. также  
- [Сохранение результатов трассировки в таблицу &#40;SQL Server Profiler&#41;](save-trace-results-to-a-table-sql-server-profiler.md)   
- [Создание шаблона трассировки &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [Сохранение результатов трассировки в таблицу (приложение SQL Server Profiler)](save-trace-results-to-a-table-sql-server-profiler.md)   
+ [Создание шаблона трассировки (приложение SQL Server Profiler)](create-a-trace-template-sql-server-profiler.md)   
  [Извлечение шаблона из выполняемой трассировки (приложение SQL Server Profiler)](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Извлечение шаблона из файла трассировки или таблицы трассировки (приложение SQL Server Profiler)](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [Экспорт шаблона трассировки (приложение SQL Server Profiler)](export-a-trace-template-sql-server-profiler.md)   

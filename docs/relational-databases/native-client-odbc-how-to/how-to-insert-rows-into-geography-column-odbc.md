@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: вставлять строки в столбец Geography (ODBC) | Документация Майкрософт'
+title: Как Вставка строк в столбец Geography (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24785ff7f4b708b615280231b13a86009aeaebb0
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: cc99a6dc997dd5cad589784446235a2ea1011d7d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753462"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206283"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Как вставлять строки в столбец Geography (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "50753462"
  Дополнительные сведения о создании пространственных хранилищ см. в разделе [пространственных данных &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Пример  
- Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает таблицу, которая используется данным образцом.  
+ Первый ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) пример кода создает таблицу, используемую данным образцом.  
   
  Скомпилируйте второй листинг кода (C++) с библиотеками odbc32.lib и user32.lib. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "50753462"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) удаляет таблицу, используемую данным образцом.  
+ Третий ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) пример кода удаляет таблицу, используемую данным образцом.  
   
 ```sql
 use tempdb  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.LRA.f1
@@ -13,12 +12,12 @@ ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 24e74cbeae446e4bd70088b0dc3a61b1490e590d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d6bcf7d78fd550404f81f9cc303414303ad82504
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124454"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761452"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>Безопасность агента чтения журнала (одноранговая репликация)
   На странице **Безопасность агента чтения журнала** можно указать учетные записи, под которыми агент чтения журнала запускается и устанавливает соединения на каждом узле. Сведения о разрешениях, требуемых агентами, и об оптимальных методах защиты репликации см. в статьях [Модель безопасности агента репликации](security/replication-agent-security-model.md) и [Рекомендации по защите репликации](security/replication-security-best-practices.md).  
@@ -41,7 +40,7 @@ ms.locfileid: "48124454"
  Контекст, в котором устанавливается соединение с распространителем. Локальное соединение с распространителем всегда устанавливается в контексте учетной записи Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)], под которой запущен агент; таким образом, в этом поле всегда будет отображаться следующее: **Impersonate '\<домен>\\<имя_для_входа\>'** или **Impersonate '\<компьютер>\\<имя_для_входа\>'**.  
   
  **Соединение с издателем**  
- Контекст, в котором осуществляется соединение с издателем. Устанавливать соединение с издателем можно при помощи имени входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в контексте учетной записи Windows, под которой запущен агент. В поле отображается одна из следующих строк: **Use login '\<Имя_для_входа>'**, **Impersonate '\<Домен>\\<Имя_для_входа\>'** или **Impersonate '\<Компьютер>\\<Имя_для_входа\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует выполнять соединение в контексте учетной записи Windows.  
+ Контекст, в котором осуществляется соединение с издателем. Устанавливать соединение с издателем можно при помощи имени входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в контексте учетной записи Windows, под которой запущен агент. В поле отображается одна из следующих строк: **Использовать имя входа "\<Login >"**, **Impersonate "\<домена >\\< входа\>"** или **Impersonate '\<компьютера >\\< входа\>"**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует выполнять соединение в контексте учетной записи Windows.  
   
 ## <a name="see-also"></a>См. также  
  [Администрирование одноранговой топологии (программирование репликации на языке Transact-SQL)](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

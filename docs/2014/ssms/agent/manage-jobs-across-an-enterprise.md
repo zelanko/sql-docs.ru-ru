@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - multiserver job management [SQL Server]
@@ -16,12 +16,12 @@ ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 505ec27423b7a0cc508b2161e408440c4fb8eaa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167294"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812436"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>Управление заданиями в масштабе предприятия
   При внесении изменений в определения многосерверных задач вне среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] необходимо поместить их в список скачивания, чтобы целевые серверы могли скачать обновленную задачу. Чтобы убедиться в том, что целевые серверы получили текущие определения заданий, после обновления многосерверной задачи разместите инструкцию INSERT следующим образом:  

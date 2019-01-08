@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], firewall systems
@@ -15,12 +14,12 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bc7f87e7e648e81b4af7411a9f9474b6cc9818da
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905922"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640055"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Настройка брандмауэра Windows для доступа к компоненту Database Engine
   В данном разделе описывается, как настроить брандмауэр Windows для доступа к компоненту Database Engine в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации SQL Server. Системы брандмауэров предотвращают несанкционированный доступ к ресурсам компьютера. Чтобы обращаться к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] через брандмауэр, необходимо разрешить такой доступ в настройках брандмауэра на компьютере с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -47,7 +46,7 @@ ms.locfileid: "48905922"
   
      [безопасность](#Security)  
   
--   **Настройка брандмауэра Windows для доступа к ядру базы данных, с помощью:**  
+-   **Как настроить брандмауэр Windows для доступа к ядру СУБД, используя следующее средство:**  
   
      [Диспетчер конфигурации SQL Server](#SSMSProcedure)  
   

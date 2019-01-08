@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea0f839fb1f1366827279d2a9254a88dbe0f8de6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5dcea48b96087770ff90202a9e0758c35203316
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854652"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532157"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,10 +72,10 @@ RETCODE bcp_setbulkmode (
   
 |property|Описание|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру – c в BCP. EXE-файла и чтобы bcp_setcolfmt с **BCP_FMT_TYPE** свойство значение **SQLCHARACTER**.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP. EXE-файла и bcp_setcolfmt с **BCP_FMT_TYPE** свойство значение **SQLNCHAR**.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Указывает собственные типы для несимвольных типов и Юникод для символьных типов.<br /><br /> Соответствует параметру – N в BCP. EXE-файла и bcp_setcolfmt с **BCP_FMT_TYPE** свойство значение **SQLNCHAR** Если типом столбца является строка (значение по умолчанию не строка).|  
-|BCP_OUT_NATIVE_MODE|Указывает типы данных базы данных.<br /><br /> Соответствует параметру – n в BCP. EXE-файла и bcp_setcolfmt с **BCP_FMT_TYPE** свойство, значение по умолчанию.|  
+|BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру - c в BCP. EXE-файла и чтобы bcp_setcolfmt с **BCP_FMT_TYPE** свойство значение **SQLCHARACTER**.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру -w в BCP. EXE-файла и bcp_setcolfmt с **BCP_FMT_TYPE** свойство значение **SQLNCHAR**.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Указывает собственные типы для несимвольных типов и Юникод для символьных типов.<br /><br /> Соответствует параметру -N в BCP. EXE-файла и bcp_setcolfmt с **BCP_FMT_TYPE** свойство значение **SQLNCHAR** Если типом столбца является строка (значение по умолчанию не строка).|  
+|BCP_OUT_NATIVE_MODE|Указывает типы данных базы данных.<br /><br /> Соответствует параметру - n в BCP. EXE-файла и bcp_setcolfmt с **BCP_FMT_TYPE** свойство, значение по умолчанию.|  
   
  Не следует использовать bcp_setbulkmode с последовательностью вызовов функций, которая включает в себя bcp_setcolfmt bcp_control и bcp_readfmt. Например не следует вызывать bcp_control(BCPTEXTFILE) и bcp_setbulkmode.  
   
@@ -86,30 +86,30 @@ RETCODE bcp_setbulkmode (
  Ниже приведены некоторые примеры вызовов функций, которые приводят к ошибка последовательности функций.  
   
 ```  
-bcp_init(“table”, DB_IN);  
+bcp_init("table", DB_IN);  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_readfmt();  
 ```  
   
 ```  
 bcp_init(NULL, DB_OUT);  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_setcolfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_readfmt();  
 bcp_setcolfmt();  
@@ -119,18 +119,18 @@ bcp_setcolfmt();
 bcp_init(NULL, DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setbulkmode();  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_readfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_columns();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setcolfmt();  
 ```  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fba7ca3af280beaea72e4055d29e9fc7e444c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b05d3b02c4fcd0d90b0b96a1a32c792537818e1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177194"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757926"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Группирование изменений в связанных строках с помощью логических записей
     
@@ -142,6 +141,6 @@ ms.locfileid: "48177194"
  Если используются логические записи, агент слияния должен обрабатывать все изменения для каждой логической записи совместно. Это влияет на время, которое требуется агенту слияния для репликации строк. Кроме того, так как агент открывает отдельную транзакцию для каждой логической записи, потребность в блокировках может увеличиться.  
   
 ## <a name="see-also"></a>См. также  
- [Параметры статьи для репликации слиянием](article-options-for-merge-replication.md)  
+ [Article Options for Merge Replication](article-options-for-merge-replication.md)  
   
   

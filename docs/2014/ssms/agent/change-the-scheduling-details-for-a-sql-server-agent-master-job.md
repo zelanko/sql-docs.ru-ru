@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17cc3b572076ebe1101ff309f26b54947ccae1f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13cd77270554a3c68ab07bfe8820295f9136f3dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053300"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751676"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Изменение параметров расписания для главного задания агента SQL Server
   В этом разделе описывается изменение параметров расписания для определения задания в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "48053300"
 ###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
- Если пользователь не является членом предопределенной роли сервера **sysadmin** , он может изменять только свои собственные задания. Дополнительные сведения см. в разделе [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Если пользователь не является членом предопределенной роли сервера **sysadmin** , он может изменять только свои собственные задания. Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48053300"
   
 4.  Щелкните правой кнопкой мыши задание, расписание которого необходимо изменить, и выберите пункт **Свойства**.  
   
-5.  В диалоговом окне **Свойства задания —***имя_задания* в разделе **Выберите страницу** выберите пункт **Расписания**. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания: новое задание &#40;страница "расписания"&#41;](job-properties-new-job-schedules-page.md).  
+5.  В **свойства задания — *** имя_задания* диалогового **Выбор страницы**выберите **расписания**. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания: Новое задание &#40;планирует страницы&#41;](job-properties-new-job-schedules-page.md).  
   
 6.  После завершения нажмите кнопку **ОК**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48053300"
   
 #### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>Изменение параметров расписания для определения задания  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

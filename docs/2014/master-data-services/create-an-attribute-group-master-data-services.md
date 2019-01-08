@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], creating
@@ -14,12 +13,12 @@ ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a1aa0fdc536a4f0b80e5f855fb9d04dda264c5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 055c02ae541ec62d0ea556a20aab5d12d9c0a001
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163464"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760916"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Создание группы атрибутов (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]группы атрибутов создаются, когда нужно отобразить атрибуты на отдельных вкладках сетки **обозревателя** .  
@@ -32,7 +31,7 @@ ms.locfileid: "48163464"
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md).  
   
 -   Требуется хотя бы один атрибут. Дополнительные сведения см. в разделе [Создание текстового атрибута (службы Master Data Services)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md).  
   
@@ -71,11 +70,11 @@ ms.locfileid: "48163464"
   
 ## <a name="next-steps"></a>Следующие шаги  
   
--   [Превращение группы атрибутов в видимую для пользователей &#40;службы Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
+-   [Превращение группы атрибутов в видимую для пользователей (службы Master Data Services)](make-an-attribute-group-visible-to-users-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
- [Группы атрибутов &#40;службы Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [Атрибуты &#40;службы Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [Группы атрибутов (службы Master Data Services)](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+ [Атрибуты (службы Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)   
  [Изменение имени группы атрибутов (службы Master Data Services)](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [Удаление группы атрибутов (службы Master Data Services)](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
  [Разрешения конечного элемента &#40;службы Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   

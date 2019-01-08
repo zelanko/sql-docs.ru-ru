@@ -20,12 +20,12 @@ ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b91e302c48917454ba29210a2557caf558940a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf5f584a556db9e32fcaf1f53b907adcb8d08e25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604913"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522984"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47604913"
 |database_specification_id|**int**|Идентификатор спецификации базы данных.|  
 |create_date|**datetime**|Дата создания спецификации аудита.|  
 |modified_date|**datetime**|Дата последнего изменения спецификации аудита.|  
-|is_state_enabled|**bit**|Состояние спецификации аудита:<br /><br /> 0 — ОТКЛЮЧЕН.<br /><br /> 1 — ВКЛЮЧЕН|  
+|is_state_enabled|**bit**|Состояние спецификации аудита:<br /><br /> 0 — ОТКЛЮЧЕНО<br /><br /> 1 - ВКЛЮЧЕН|  
 |audit_GUID|**uniqueidentifer**|Идентификатор GUID аудита, содержащего эту спецификацию. Используется в процессе перечисления спецификаций аудита рядовой базы данных при присоединении или запуске базы данных.|  
   
 ## <a name="remarks"></a>Примечания  

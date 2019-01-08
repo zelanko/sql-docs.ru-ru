@@ -14,15 +14,15 @@ ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f48418911358fb7833b745ee8c3172de2d763155
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091444"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519445"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Выбор начальной страницы синхронизации данных (мастера группы доступности AlwaysOn)
-  Используйте страницу AlwaysOn **Выбор начальной синхронизации данных** для указания нужных предпочтений по синхронизации начальных данных для новых баз данных-получателей. Эта страница используется тремя мастерами — [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]и [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
+  Используйте страницу AlwaysOn **Выбор начальной синхронизации данных** для указания нужных предпочтений по синхронизации начальных данных для новых баз данных-получателей. Эта страница используется тремя мастерами — [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] и [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
   
  Возможные варианты: **Полная**, **Только присоединение**или **Пропустить начальную синхронизацию данных**. Прежде чем выбрать значение **Полная** или **Только присоединение** , удостоверьтесь в том, что среда соответствует обязательным условиям.  
   

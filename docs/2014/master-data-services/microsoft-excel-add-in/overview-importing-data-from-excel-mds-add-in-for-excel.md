@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aaeab2123eba4cfe19c03094bef6dac5a013e418
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ed014aaed74ea9da70485b73d089e8ddaae0f43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100794"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760266"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Публикация данных (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно опубликовать данные в репозитории MDS, если их необходимо передать другим пользователям. После публикации они станут доступными для загрузки другим пользователям надстройки.  
   
- Все добавленные и обновившиеся при публикации данные публикуются в репозитории MDS. Удаленные данные не публикуются, их необходимо удалить отдельно. Дополнительные сведения см. в разделе [удалить строку &#40;надстройки MDS для Excel&#41;](delete-a-row-mds-add-in-for-excel.md).  
+ Все добавленные и обновившиеся при публикации данные публикуются в репозитории MDS. Удаленные данные не публикуются, их необходимо удалить отдельно. Дополнительные сведения см. в разделе [Удаление строки (надстройка MDS для Excel)](delete-a-row-mds-add-in-for-excel.md).  
   
 > [!NOTE]  
 >  Публикация не может быть использована для создания новой сущности. Дополнительные сведения о создании сущностей см. в разделе [Создание сущности (надстройка MDS для Excel)](create-an-entity-mds-add-in-for-excel.md).  
@@ -53,12 +52,12 @@ ms.locfileid: "48100794"
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Публикация данных из активного листа в репозитории MDS.|[Публикация данных из Excel в MDS &#40;надстройка MDS для Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|Одновременное удаление строки из репозитория MDS и с листа.|[Удалить строку &#40;надстройка MDS для Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
+|Одновременное удаление строки из репозитория MDS и с листа.|[Удаление строки (надстройка MDS для Excel)](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>См. также  
   
 -   [Обновление данных (надстройка MDS для Excel)](refreshing-data-mds-add-in-for-excel.md)  
   
--   [Надстройка служб Master Data Services для Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Надстройка Master Data Services для Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
   

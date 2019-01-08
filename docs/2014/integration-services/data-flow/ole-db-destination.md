@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
@@ -21,12 +20,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39f15609f326699c77688cfef599eed9c01adab6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0aedda782c65cbe8d28f066b7e5e97d3e7fc87cd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058134"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790776"
 ---
 # <a name="ole-db-destination"></a>Назначение «OLE DB»
   Назначение «OLE DB» загружает данные в различные OLE DB-совместимые базы данных при помощи таблицы базы данных или представления, или команды SQL. Например, источник OLE DB может загрузить данные в таблицы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access и базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -46,7 +45,7 @@ ms.locfileid: "48058134"
 > [!NOTE]  
 >  Назначение «OLE DB» не поддерживает параметры. Если необходимо выполнить параметризованную инструкцию INSERT, лучше воспользоваться преобразованием «Команда OLE DB». Дополнительные сведения см. в разделе [OLE DB Command Transformation](transformations/ole-db-command-transformation.md).  
   
- Когда назначение «OLE DB» загружает данные, в которых используется двухбайтовая кодировка (DBCS), они могут быть повреждены, если режим доступа к данным не использует возможность быстрой загрузки и если диспетчер соединений OLE DB использует поставщик [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Чтобы обеспечить целостность данных в двухбайтовой кодировке (DBCS), необходимо настроить диспетчер подключений OLE DB для использования собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или использовать один из следующих режимов доступа быстрой загрузки: **Быстрая загрузка таблицы или представления** или **Быстрая загрузка переменной имени представления или имени таблицы**. Оба параметра доступны в диалоговом окне **Редактор назначения "OLE DB"** . При программировании [!INCLUDE[ssIS](../../includes/ssis-md.md)] объектной модели, необходимо присвоить значение свойству AccessMode значение `OpenRowset Using FastLoad`, или `OpenRowset Using FastLoad From Variable`.  
+ Когда назначение «OLE DB» загружает данные, в которых используется двухбайтовая кодировка (DBCS), они могут быть повреждены, если режим доступа к данным не использует возможность быстрой загрузки и если диспетчер соединений OLE DB использует поставщик [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Чтобы обеспечить целостность данных в двухбайтовой кодировке (DBCS), необходимо настроить диспетчер соединений OLE DB для использования собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или использовать один из следующих режимов доступа быстрой загрузки. **Таблица или просмотреть — Быстрая загрузка** или **таблицы представления или имени имя Быстрая загрузка переменной**. Оба параметра доступны в диалоговом окне **Редактор назначения "OLE DB"** . При программировании [!INCLUDE[ssIS](../../includes/ssis-md.md)] объектной модели, необходимо присвоить значение свойству AccessMode значение `OpenRowset Using FastLoad`, или `OpenRowset Using FastLoad From Variable`.  
   
 > [!NOTE]  
 >  При использовании диалогового окна **Редактор назначения "OLE DB"** в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] для создания целевой таблицы, в которую целевой объект OLE DB вставляет данные, потребуется вручную выбрать вновь созданную таблицу. Необходимость выбора вручную возникает, когда поставщик OLE DB, такой как OLE DB для DB2, автоматически добавляет идентификаторы схемы в имя таблицы.  
@@ -102,11 +101,11 @@ ms.locfileid: "48058134"
   
  Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Редактор назначения "OLE DB"** см. в следующих разделах:  
   
--   [Редактор назначения OLE DB &#40;страницы диспетчера соединений&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения OLE DB (страница "Диспетчер соединений")](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначения OLE DB &#40;страница «сопоставления»&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [Редактор назначения OLE DB (страница "Сопоставления")](../ole-db-destination-editor-mappings-page.md)  
   
--   [Редактор назначения OLE DB &#40;странице вывода ошибок&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [Редактор назначения "OLE DB" (страница "Вывод ошибок")](../ole-db-destination-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
@@ -116,14 +115,14 @@ ms.locfileid: "48058134"
   
  Дополнительные сведения о настройке свойств см. в следующих разделах.  
   
--   [Загрузка данных с помощью назначения «OLE DB»](ole-db-destination.md)  
+-   [Загрузка данных с помощью назначения «OLE DB»](ole-db-destination.md)  
   
 -   [Установление свойств компонента потока данных](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>См. также  
- [Источник «OLE DB»](ole-db-source.md)  
+ [Источник OLE DB](ole-db-source.md)  
   
- [Службы Integration Services &#40;SSIS&#41; переменных](../integration-services-ssis-variables.md)  
+ [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md)  
   
  [Поток данных](data-flow.md)  
   

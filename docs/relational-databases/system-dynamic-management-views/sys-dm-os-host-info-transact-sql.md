@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55291c5cc30b9fe16d7bd259bab03677f6df45db
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672953"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209553"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51672953"
 ### <a name="permissions"></a>Разрешения  
 `SELECT` Разрешение на `sys.dm_os_host_info` предоставляется `public` роли по умолчанию. При запрете требует `VIEW SERVER STATE` разрешение на сервере.   
  
->  [!CAUTION]
+> [!CAUTION]
 >  Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] версии 17 требуется `SELECT` разрешение на `sys.dm_os_host_info` для подключения к [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Если `SELECT` из отменяется разрешение `public`, только имена входа с `VIEW SERVER STATE` разрешение можно подключить с помощью последней версии SSMS. (Другие средства, такие как `sqlcmd.exe` можно подключиться без `SELECT` разрешение на `sys.dm_os_host_info`.)
 
   

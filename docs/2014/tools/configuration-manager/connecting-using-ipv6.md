@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Internet Protocol
@@ -15,12 +14,12 @@ ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf7d2893d588db9f67c6f2a0c15f44192193820a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db26351430c6b7e0737273b2107bea242c455a2a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182724"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775246"
 ---
 # <a name="connecting-using-ipv6"></a>Соединение с использованием IPv6
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полностью поддерживают протокол IP версии 4 (IPv4) и версии 6 (IPv6). Если в Windows настроен протокол IPv6, то компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]автоматически обнаруживают наличие IPv6. Дополнительно настраивать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требуется.  

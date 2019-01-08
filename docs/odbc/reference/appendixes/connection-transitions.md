@@ -15,17 +15,17 @@ ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46d480683a2d10f760a02049ab28bc590353fcbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f808460a1421a9ab4cb3a76c2810d810b9636b11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619102"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537499"
 ---
 # <a name="connection-transitions"></a>Переходы подключения
 Подключения ODBC иметь следующие состояния.  
   
-|Состояние|Описание|  
+|Штат|Описание|  
 |-----------|-----------------|  
 |C0|Нераспределенное среды, нераспределенное подключения|  
 |C1|Выделенной среды, нераспределенное подключения|  
@@ -266,7 +266,7 @@ ms.locfileid: "47619102"
   
  [1] подключение находилась в режиме автоматической фиксации или источника данных не удалось начать транзакцию.  
   
- [2] подключение было в режиме ручной – фиксации и источника данных начала транзакции.  
+ [2] подключение находилась в режиме ручной фиксации и источника данных начала транзакции.  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   

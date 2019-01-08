@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.pubtodist.tran.f1
@@ -13,12 +12,12 @@ ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb3abbdd11cf671203b0a9ebb6e146038b69970f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7514af7f2b9d76772dd56060c98a4d195afe763
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112050"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782006"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Подписка, журнал издателя для распространителя (подписка на публикацию транзакций)
   Вкладка **Журнал операций от издателя к распространителю** отображает подробные сведения об агенте чтения журнала, включая состояние, журнал, информационные сообщения и любые сообщения об ошибках.  
@@ -34,7 +33,7 @@ ms.locfileid: "48112050"
   
 -   Ошибка  
   
--   Завершен  
+-   Завершено  
   
 -   Повтор  
   
@@ -65,6 +64,6 @@ ms.locfileid: "48112050"
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Наблюдение за репликацией](monitoring-replication.md)   
- [Обзор агентов репликации](agents/replication-agents-overview.md)  
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

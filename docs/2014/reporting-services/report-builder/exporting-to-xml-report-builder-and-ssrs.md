@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 947cdf64fa93eadb13724220fc6684813be11fb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0f17e055f4f1ddcf7f19ba58d92c5617c891a5e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116404"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204753"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Экспорт в XML (построитель отчетов и службы SSRS)
   Модуль подготовки XML-отчета возвращает отчет в XML-формате. Схема для XML-документа, используемого в отчете, создается специально для этого отчета и содержит только данные. Данные макета не обрабатываются модулем подготовки XML-отчета, и разбивка на страницы не сохраняется. XML-документ, сформированный данным модулем, можно импортировать в базу данных, использовать как сообщение XML-данных или отправить пользовательскому приложению.  
@@ -81,7 +81,7 @@ ms.locfileid: "48116404"
   
  Определения пространств имен XML и ссылочные атрибуты схемы также включаются в элементы отчета. Имена переменных выводятся полужирным шрифтом:  
   
- \<**Отчет** xmlns =»**SchemaName**"xmlns: xsi =» http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**=»**SchemaNameReportURL**&amp;rc % 3aSchema = true» Name = «ReportName» >  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  Переменные могут принимать следующие значения.  
   
@@ -110,10 +110,10 @@ ms.locfileid: "48116404"
 ### <a name="custom-report-items"></a>Пользовательские элементы отчета  
  CustomReportItems (CRI) не видимы для модуля подготовки отчетов. Если в отчете существует пользовательский элемент, модуль подготовки отчетов отобразит его как обычный элемент отчета.  
   
-### <a name="images"></a>Изображений  
+### <a name="images"></a>Изображения  
  Изображения не подготавливаются к просмотру.  
   
-### <a name="lines"></a>Прямых линий  
+### <a name="lines"></a>Линии  
  Линии не подготавливаются к просмотру.  
   
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало") [В начало](#BackToTop)  
@@ -128,7 +128,7 @@ ms.locfileid: "48116404"
  Углы не подготавливаются к просмотру. Подготавливается к просмотру только содержимое угла.  
   
 #### <a name="tablix-cells"></a>Ячейки табликса  
- Ячейки табликса подготавливаются к просмотру как элементы. Имена элементов берутся из свойства RDL DataElementName ячейки.  
+ Ячейки табликса подготавливаются к просмотру как элементы. Имена элементов поступают из свойства RDL DataElementName ячейки.  
   
 #### <a name="automatic-subtotals"></a>Автоматические подытоги  
  Автоматические подытоги табликса не подготавливаются к просмотру.  
@@ -200,8 +200,8 @@ ms.locfileid: "48116404"
 ## <a name="see-also"></a>См. также  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов &#40;построитель отчетов и службы SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Таблицы, матрицы, списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   
