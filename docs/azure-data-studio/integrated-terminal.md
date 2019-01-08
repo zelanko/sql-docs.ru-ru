@@ -1,7 +1,8 @@
 ---
-title: Интегрированный терминал в студии данных Azure | Документация Майкрософт
+title: Интегрированный терминал
+titleSuffix: Azure Data Studio
 description: Дополнительные сведения о встроенном терминале студии данных Azure.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 91adc56e93a7dc1b065b77169ad18fd977231d9f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355985"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030438"
 ---
 # <a name="integrated-terminal"></a>Интегрированный терминал
 
@@ -89,7 +90,7 @@ ms.locfileid: "49355985"
 
 ## <a id="key-bindings"></a>Терминалов сочетания клавиш
 
-**Представления: переключить интегрированный терминал** команда привязана к **Ctrl +'** для быстрого переключения встроенная панель терминалов и.
+**Представления: Переключить интегрированный терминал** команда привязана к **Ctrl +'** для быстрого переключения встроенная панель терминалов и.
 
 Ниже приведены сочетания клавиш для быстрого перехода в окне интегрированного терминала.
 
@@ -109,16 +110,16 @@ Key|Command
 
 Подробные сведения.
 
-* `workbench.action.terminal.focus`: Сосредоточиться терминала. Это подобно переключателя, но рассматриваются терминалов вместо спрятать, если она видна.
-* `workbench.action.terminal.focusNext`: Основное внимание уделяется терминалов следующего экземпляра.
-* `workbench.action.terminal.focusPrevious`: Основное внимание уделяется терминалов предыдущего экземпляра.
-* `workbench.action.terminal.kill`: Удалите текущий экземпляр терминала.
-* `workbench.action.terminal.runSelectedText`Задание выполняется выделенный текст в экземпляре терминала.
-* `workbench.action.terminal.runActiveFile`: Запустите активный файл в экземпляре терминала.
+* `workbench.action.terminal.focus`. Фокус в окне терминала. Это подобно переключателя, но рассматриваются терминалов вместо спрятать, если она видна.
+* `workbench.action.terminal.focusNext`. Основное внимание уделяется терминалов следующего экземпляра.
+* `workbench.action.terminal.focusPrevious`. Основное внимание уделяется терминалов предыдущего экземпляра.
+* `workbench.action.terminal.kill`. Удаляет текущий экземпляр терминала.
+* `workbench.action.terminal.runSelectedText`. Запустите выбранный текст в экземпляре терминала.
+* `workbench.action.terminal.runActiveFile`. Запустите файл с активным в экземпляре терминалов.
 
 ### <a name="run-selected-text"></a>Выполнение выделенного текста
 
-Для использования `runSelectedText` команды, выделите текст в редакторе и выполните команду **терминалов: запустите выделенный текст в окне терминала Active** через **палитру команд** (**Ctrl + Shift + P**). Терминал предпринимает попытку выполнить выделенный текст:
+Чтобы использовать `runSelectedText` команды, выделите текст в редакторе и выполните команду **терминалов: Выполнение выделенного текста в окне терминала Active** через **палитра команд** (**Ctrl + Shift + P**). Терминал предпринимает попытку выполнить выделенный текст:
 
 ![Запустите выделенный текст](media/integrated-terminal/terminal_run_selected.png)
 
@@ -130,7 +131,7 @@ Key|Command
 
 * Linux: **Ctrl + Shift + C** и **Ctrl + Shift + V**
 * MAC: **Cmd + C** и **Cmd + V**
-* Windows: **Ctrl + C** и **Ctrl + V**
+* Windows: **CTRL + C** и **Ctrl + V**
 
 ### <a name="find"></a>Найти
 
@@ -145,7 +146,7 @@ Key|Command
 
 ### <a name="rename-terminal-sessions"></a>Переименовать сеансов терминала
 
-Интегрированной сеансы терминалов могут теперь переименованы с помощью **терминалов: Переименовать** (`workbench.action.terminal.rename`) команды. Новое имя отображается в терминалов выбора раскрывающегося списка.
+Интегрированной сеансы терминалов могут теперь переименованы с помощью **терминалов: Переименуйте** (`workbench.action.terminal.rename`) команды. Новое имя отображается в терминалов выбора раскрывающегося списка.
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Форсирование планов сочетания клавиш для передачи через терминал
 

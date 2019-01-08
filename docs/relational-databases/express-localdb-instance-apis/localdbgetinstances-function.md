@@ -16,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a562aa5947444fe149c5e24f3a5a1b9cd74fe4d3
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: d04bc4e669faad149a4dccbfc1b40a82a9a1aae0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571224"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398177"
 ---
 # <a name="localdbgetinstances-function"></a>Функция LocalDBGetInstances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Параметры  
  *pInstanceNames*  
- [Выход] Функция возвращает значения именованных экземпляров LocalDB и экземпляров LocalDB по умолчанию на рабочей станции пользователя.  
+ [Выход] Когда эта функция возвращает значение, содержащий имена и именованные и экземпляров LocalDB на рабочей станции пользователя по умолчанию.  
   
  *lpdwNumberOfInstances*  
  [Вход/Выход] На входе содержит число ячеек для имен экземпляров в буфере *pInstanceNames* . На выходе содержит количество экземпляров LocalDB, найденных на рабочей станции пользователя.  

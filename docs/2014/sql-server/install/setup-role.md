@@ -11,12 +11,12 @@ ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 77a3e61d36ce9661a9b01095c868c7d54de81f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33cc1b337666e1d628ae285a7df0ba43cc4fe140
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130564"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352847"
 ---
 # <a name="setup-role"></a>Роль установки
   На этой странице можно указать, будет страница «Выбор компонентов» использоваться для выбора отдельных функций или для установки с использованием роли установки.  
@@ -32,20 +32,20 @@ ms.locfileid: "48130564"
   
  Дополнительно в установку можно включить экземпляр ядра СУБД для реляционных баз данных, если он необходим для размещения баз данных в ферме SharePoint. Если ферма уже настроена, этот шаг можно пропустить.  
   
- После завершения установки необходимо настроить программное обеспечение, с помощью одного из следующих подходов: средство настройки PowerPivot, командлеты PowerShell или Центр администрирования SharePoint 2010. В отличие от предыдущих выпусков, программа установки больше не выполняет какие-либо задачи по настройке установки PowerPivot.  
+ По завершении процедуры установки необходимо настроить программное обеспечение с помощью одного из следующих средств: средство настройки PowerPivot, командлеты PowerShell или центр администрирования SharePoint 2010. В отличие от предыдущих выпусков, программа установки больше не выполняет какие-либо задачи по настройке установки PowerPivot.  
   
  Установка на основе роли не включает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot для клиентского приложения Excel. Клиентское приложение устанавливается отдельно.  
   
  **Все компоненты по умолчанию**  
  Выберите эту роль установки, чтобы установить все компоненты, доступные для этой версии. Обратите внимание, что PowerPivot для SharePoint исключен из этой роли. Чтобы установить этот компонент, необходимо использовать роль программы установки PowerPivot для SharePoint.  
   
- Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] настраивается для запуска с использованием учетной записи **NT AUTHORITY\NETWORK SERVICE**. Текущий пользователь подготавливается в качестве члена роли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**. Значения, заданные этим параметром, могут быть переопределены с помощью дополнительных параметров командной строки.  
+ Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] настраивается для запуска с использованием учетной записи **NT AUTHORITY\NETWORK SERVICE** . Текущий пользователь подготавливается в качестве члена роли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**. Значения, заданные этим параметром, могут быть переопределены с помощью дополнительных параметров командной строки.  
   
  Если операционная система не является контроллером домена, по умолчанию в компоненте Database Engine и службах Reporting Services используется учетная запись NTAUTHORITY\NETWORK SERVICE, в Integration Services — учетная запись NTAUTHORITY\NETWORK SERVICE, а в средстве запуска управляющей программы полнотекстовой фильтрации SQL — учетная запись NTAUTHORITY\LOCAL SERVICE.  
   
 ## <a name="see-also"></a>См. также  
- [Установка PowerPivot для SharePoint](http://go.microsoft.com/fwlink/?LinkId=206906)   
- [Оборудованию и программному обеспечению (PowerPivot для SharePoint](http://go.microsoft.com/fwlink/?LinkId=216823)   
+ [Установка PowerPivot для SharePoint](https://go.microsoft.com/fwlink/?LinkId=206906)   
+ [Оборудованию и программному обеспечению (PowerPivot для SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
  [Выбор компонентов](../../../2014/sql-server/install/feature-selection.md)  
   
   

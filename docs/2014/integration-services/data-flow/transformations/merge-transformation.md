@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergetrans.f1
@@ -19,12 +18,12 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6125dbd164065afc0ee808bb77a4e2544606ef8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 322caa6b9be17e860afaa1e3526a3590df049820
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226634"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790957"
 ---
 # <a name="merge-transformation"></a>преобразование «Слияние»
   Преобразование «Слияние» объединяет два упорядоченных набора данных в один. Строки из каждого набора данных вставляются в выходной набор на основе значений их ключевых столбцов.  
@@ -61,7 +60,7 @@ ms.locfileid: "48226634"
   
  Дополнительные сведения о параметрах, задаваемых программно, см. в следующих разделах:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Общие свойства](../../common-properties.md)  
   
 -   [Пользовательские свойства преобразований](transformation-custom-properties.md)  
   
@@ -73,8 +72,8 @@ ms.locfileid: "48226634"
 -   [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="see-also"></a>См. также  
- [Преобразование соединения слиянием](merge-join-transformation.md)   
- [UNION All Transformation](union-all-transformation.md)   
+ [Преобразование «Соединение слиянием»](merge-join-transformation.md)   
+ [Преобразование «Объединить все»](union-all-transformation.md)   
  [Поток данных](../data-flow.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   

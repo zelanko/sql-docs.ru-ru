@@ -13,12 +13,12 @@ ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cbaa1d648b3de2cdd0b16d233db93bf52635b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176064"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321640"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Другие проблемы обновления компонента Database Engine
   Текущая версия помощника по обновлению не может обнаружить следующие проблемы, возникающие при обновлении. Ознакомьтесь с нижеприведенным списком проблем, чтобы оценить потенциальные последствия для систем.  
@@ -64,7 +64,7 @@ ms.locfileid: "48176064"
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>Целевая таблица для предложения OUTPUT INTO не может содержать определяемых триггеров.  
- Вывод в целевую таблицу с помощью предложения OUTPUT INTO не поддерживается, если в таблице определены какие-либо триггеры.  
+ Выходные данные в целевую таблицу, если в таблице определены какие-либо триггеры не поддерживается.  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>Ошибки времени компиляции для определяемых пользователем функций в случаях, если целевой объект предложения OUTPUT INTO — таблица  
  Нельзя использовать определяемую пользователем функцию, чтобы выполнить действия, изменяющие состояние базы данных. Например, такая функция не может выполнять инструкции DDL (CREATE/ALTER/DROP) и DML (INSERT/UPDATE/DELETE) ни на каких объектах, кроме табличных переменных.  

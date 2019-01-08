@@ -1,11 +1,10 @@
 ---
-title: Руководство. Репликация данных между постоянно соединенными серверами | Документация Майкрософт
+title: Учебник. Репликация данных между постоянно соединенными серверами | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 382a505f8e7c716f3c2ccd8c117468c376ad6b08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094626"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753926"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Учебник. Репликация данных между постоянно соединенными серверами
   Репликация представляет собой хорошее решение проблемы перемещения данных между постоянно соединенными серверами. С помощью мастеров репликации можно легко настроить и администрировать топологию репликации. В этом учебники рассказывается о настройке топологии репликации для постоянно соединенных серверов.  
@@ -53,7 +52,7 @@ ms.locfileid: "48094626"
   
 ## <a name="lessons-in-this-tutorial"></a>Занятия этого учебника  
   
--   [Урок 1. Публикация данных с помощью репликации транзакций](lesson-1-publishing-data-using-transactional-replication.md)  
+-   [Занятие 1. Публикация данных с помощью репликации транзакций](lesson-1-publishing-data-using-transactional-replication.md)  
   
 -   [Занятие 2. Создание подписки на публикацию транзакций](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
   

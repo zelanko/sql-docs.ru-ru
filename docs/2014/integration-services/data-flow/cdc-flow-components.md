@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5df2aac01300c006858a84097bf346875f175c82
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 306d810d844140caf0d3ee0e5cfe04fcae55e3fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120142"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360006"
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
   Компоненты отслеживания измененных данных Attunity для служб Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] позволяют разработчикам служб SSIS работать с CDC и уменьшают сложность пакетов CDC.  
@@ -172,7 +171,7 @@ ms.locfileid: "49120142"
 ## <a name="cdc-state"></a>CDC State  
  С каждой группой CDC связано состояние, которое представляется строкой особого формата. Дополнительные сведения см. в разделе [CDC Control Task](../control-flow/cdc-control-task.md). В следующей таблице показаны возможные значения состояния CDC.  
   
-|Состояние|Описание|  
+|Штат|Описание|  
 |-----------|-----------------|  
 |0-(INITIAL)|Состояние, которое имеет место до выполнения пакетов в текущей группе CDC. Это состояние также имеет место, если состояние CDC пусто.<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |1-ILSTART (начало начальной загрузки)|Это состояние, которое имеет место при запуске пакета начальной загрузки. Это происходит после вызова операции **MarkInitialLoadStart** в задаче «Управление CDC».<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../control-flow/cdc-control-task.md).|  
@@ -205,17 +204,17 @@ ms.locfileid: "49120142"
   
 ## <a name="related-content"></a>См. также  
   
--   Запись в блоге [CDC в SSIS для SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242543)на сайте mattmasson.com.  
+-   Запись в блоге [CDC в SSIS для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242543)на сайте mattmasson.com.  
   
--   Запись в блоге [Служба CDC для Oracle в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827), касающуюся параметра службы CDC, см. на сайте blogs.msdn.com.  
+-   Запись в блоге [Служба CDC для Oracle в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827), касающуюся параметра службы CDC, см. на сайте blogs.msdn.com.  
   
--   Техническую статью [Установка системы отслеживания измененных данных Microsoft SQL Server 2012 для Oracle компании Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)см. на сайте social.technet.microsoft.com.  
+-   Техническую статью [Установка системы отслеживания измененных данных Microsoft SQL Server 2012 для Oracle компании Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)см. на сайте social.technet.microsoft.com.  
   
--   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](http://go.microsoft.com/fwlink/?LinkId=252960)см. на сайте social.technet.microsoft.com.  
+-   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](https://go.microsoft.com/fwlink/?LinkId=252960)см. на сайте social.technet.microsoft.com.  
   
--   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](http://go.microsoft.com/fwlink/?LinkId=252961)см. на сайте social.technet.microsoft.com.  
+-   Техническую статью [Устранение неполадок в конфигурации системы отслеживания измененных данных Майкрософт для Oracle компании Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)см. на сайте social.technet.microsoft.com.  
   
--   Видеоролик [CDC для баз данных Oracle, использующих службы SQL Server Integration Services 2012 (видео по SQL Server)](http://technet.microsoft.com/sqlserver/jj218898)на сайте technet.microsoft.com.  
+-   Видеоролик [CDC для баз данных Oracle, использующих службы SQL Server Integration Services 2012 (видео по SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)на сайте technet.microsoft.com.  
   
 ## <a name="see-also"></a>См. также  
  [Задача управления CDC](../control-flow/cdc-control-task.md)  

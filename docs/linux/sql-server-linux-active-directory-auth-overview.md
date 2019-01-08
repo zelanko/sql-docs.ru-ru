@@ -1,5 +1,6 @@
 ---
-title: Проверка подлинности Active Directory для SQL Server в Linux | Документация Майкрософт
+title: Проверка подлинности Active Directory для SQL Server в Linux
+titleSuffix: SQL Server
 description: Статья содержит общие сведения о проверке подлинности Active Directory для SQL Server в Linux.
 author: rothja
 ms.date: 02/23/2018
@@ -7,16 +8,16 @@ ms.author: jroth
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 94b3aa8b63b76d03ccd08acf312b3efcf8b45bca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcc2148119634c7114d72f67b2c7143fa7d47724
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610372"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160403"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Проверка подлинности Active Directory для SQL Server в Linux
 
@@ -39,7 +40,7 @@ ms.locfileid: "47610372"
 
 Чтобы использовать проверку подлинности Active Directory, необходимо иметь контроллера домена AD (Windows) в сети.
 
-В этом руководстве предоставляются подробные сведения о настройке проверки подлинности AD [руководство: проверка подлинности Active Directory для использования с SQL Server в Linux](sql-server-linux-active-directory-authentication.md). В следующем списке приведены Сводка со ссылкой на каждый раздел в этом руководстве:
+В этом руководстве предоставляются подробные сведения о настройке проверки подлинности AD [руководства: Использовать проверку подлинности Active Directory с SQL Server в Linux](sql-server-linux-active-directory-authentication.md). В следующем списке приведены Сводка со ссылкой на каждый раздел в этом руководстве:
 
 1. [Присоединение узла SQL Server к домену Active Directory](sql-server-linux-active-directory-authentication.md#join).
 1. [Создание пользователя AD для SQL Server и задайте ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
@@ -53,4 +54,4 @@ ms.locfileid: "47610372"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о том, как реализовать проверку подлинности Active Directory для SQL Server в Linux см. в разделе [руководство: проверка подлинности Active Directory для использования с SQL Server в Linux](sql-server-linux-active-directory-authentication.md).
+Дополнительные сведения о том, как реализовать проверку подлинности Active Directory для SQL Server в Linux см. в разделе [руководства: Использовать проверку подлинности Active Directory с SQL Server в Linux](sql-server-linux-active-directory-authentication.md).

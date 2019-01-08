@@ -16,12 +16,12 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9b48d22e463b8596065c1df68d1affc0de5ef92a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15e75dd27ca447eaab326ff50cc67614d442e096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091536"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543594"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Решения высокого уровня доступности (SQL Server)
   В данном разделе представлены некоторые решения высокой доступности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , позволяющие повысить уровень доступности серверов или баз данных. Решения по повышению уровня доступности защищают от последствий ошибок в программах и сбоев оборудования, помогая сохранить доступность приложений, и предельно сокращают для пользователей время простоя.  
@@ -34,7 +34,7 @@ ms.locfileid: "48091536"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет несколько вариантов обеспечения высокого уровня доступности сервера или базы данных. Существуют следующие режимы обеспечения высокого уровня доступности.  
   
  Экземпляры отказоустойчивого кластера (режим AlwaysOn)  
- В рамках AlwaysOn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляры отказоустойчивой кластеризации AlwaysOn эффективно используют функциональные возможности отказоустойчивой кластеризации Windows Server (WSFC) для обеспечения высокого уровня доступности локальных ресурсов за счет избыточности на уровне экземпляра сервера — *экземпляра отказоустойчивого кластера* (FCI). Экземпляр отказоустойчивого кластера (FCI) является единственным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленным на всех узлах отказоустойчивой кластеризации Windows Server (WSFC) и, возможно, в нескольких подсетях. Экземпляр отказоустойчивого кластера выглядит в сети как экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенный на одном компьютере, но экземпляр отказоустойчивого кластера обеспечивает отработку отказа с переходом одного узла WSFC на другой узел, если текущий узел становится недоступным.  
+ Как часть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn экземпляры отказоустойчивой кластеризации AlwaysOn эффективно используют функциональные возможности сервера отказоустойчивой кластеризации Windows (WSFC) для обеспечения высокого уровня доступности локальных за счет избыточности на экземпляре сервера уровень a  *экземпляр отказоустойчивого кластера* (FCI). Экземпляр отказоустойчивого кластера (FCI) является единственным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленным на всех узлах отказоустойчивой кластеризации Windows Server (WSFC) и, возможно, в нескольких подсетях. Экземпляр отказоустойчивого кластера выглядит в сети как экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенный на одном компьютере, но экземпляр отказоустойчивого кластера обеспечивает отработку отказа с переходом одного узла WSFC на другой узел, если текущий узел становится недоступным.  
   
  Дополнительные сведения см. в разделе [ экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48091536"
   
  Зеркальное отображение базы данных  
  > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо нее рекомендуется пользоваться представлением [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого рекомендуется использовать [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
  Зеркальное отображение базы данных — это решение, предназначенное главным образом для увеличения доступности базы данных за счет почти мгновенного перехода на отработку отказа. Зеркальное отображение базы данных может использоваться для поддержки одиночной резервной базы данных или *зеркальной базы данных*, соответствующей базе данных, которая доступна для чтения и записи и называется *основной базой данных*. Дополнительные сведения см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48091536"
   
 ## <a name="see-also"></a>См. также  
  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Зеркальное отображение базы данных: взаимодействие и сосуществание (SQL Server)](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Зеркальное отображение базы данных: Взаимодействие и совместная работа &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Нерекомендуемые функции ядра СУБД в SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

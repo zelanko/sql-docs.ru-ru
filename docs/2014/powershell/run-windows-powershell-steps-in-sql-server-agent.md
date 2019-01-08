@@ -4,35 +4,34 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e87aa1b7fd49681594220f81e447abbadc6716d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204244"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798206"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Использование Windows PowerShell в шагах агента SQL Server
   Агент SQL Server применяется для запуска скриптов SQL Server PowerShell в запланированное время.  
   
-1.  **Перед началом работы выполните следующие действия.**  [Ограничения](#LimitationsRestrictions)  
+1.  **Перед началом работы**  [Пределы и ограничения](#LimitationsRestrictions)  
   
-2.  **Запуск PowerShell из агента SQL Server с помощью следующих средств:**  [шаг задания PowerShell](#PShellJob), [шаг задания командной строки](#CmdExecJob)  
+2.  **Запуск PowerShell из агента SQL Server, с помощью:**  [Шаг задания PowerShell](#PShellJob), [шаг задания командной строки](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Существует несколько типов шагов заданий агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Каждый тип связан с некоторой подсистемой, в которой реализуется определенная среда, например агент репликации или среда командной строки. Можно создавать скрипты Windows PowerShell, а затем использовать агент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , чтобы включить скрипты в задания, которые выполняются в запланированное время или в ответ на события [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Скрипты Windows PowerShell можно запускать либо с помощью шагов задания командной строки, либо с помощью шагов задания PowerShell.  
   
 1.  Используйте шаги задания PowerShell для запуска подсистемой агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] программы `sqlps`, запускающей PowerShell 2.0 и импортирующей модуль `sqlps`.  
   
-2.  Используйте шаг задания командной строки для запуска PowerShell.exe и укажите скрипт, импортирующий `sqlps` модуля.  
+2.  Используйте шаг задания командной строки для запуска PowerShell.exe и укажите скрипт, импортирующий модуль `sqlps`.  
   
-###  <a name="LimitationsRestrictions"></a> ограничения  
+###  <a name="LimitationsRestrictions"></a> Ограничения  
   
 > [!CAUTION]  
 >  Каждый шаг задания агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], запускающий PowerShell с модулем `sqlps`, запускает процесс, которому требуется приблизительно 20 МБ памяти. Одновременный запуск большого числа шагов задания Windows PowerShell может иметь негативное влияние на производительность.  

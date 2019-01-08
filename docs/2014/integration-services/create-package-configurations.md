@@ -19,12 +19,12 @@ ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e4d13fb24ad337ed6395e8529f4067d8acd2a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf5ca4c2e27f366a6f5ded97f9a9aa5213db122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140644"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361076"
 ---
 # <a name="create-package-configurations"></a>Создание конфигурации пакетов
   Конфигурации пакетов создаются с помощью диалогового окна **Организатор конфигураций пакетов**, а также мастера настройки пакетов. Для доступа к этим средствам выберите **Конфигурация пакетов** в меню **службы SSIS** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "48140644"
 |------------|-----------------|  
 |**Имя конфигурации**|Имя конфигурации.|  
 |**Тип конфигурации**|Тип конфигурации.|  
-|**Строка конфигурации**|Расположение конфигурации. Расположением может быть путь, переменная среды, раздел реестра, имя переменной в родительском пакете или таблица в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|**Строка конфигурации**|Расположение конфигурации. Расположением может быть путь, переменная среды, раздел реестра, имя переменной в родительском пакете или таблица в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |**Целевой объект**|Имя объекта со свойством, у которого есть конфигурация. Если конфигурация является XML-файлом конфигурации, столбец остается пустым, потому что конфигурация может обновлять несколько объектов.|  
 |**Целевое свойство**|Имя свойства. Если конфигурация записывается в XML-файл конфигурации или таблицу SQL Server, столбец остается пустым, потому что конфигурация может обновлять несколько объектов.|  
   
@@ -111,11 +111,11 @@ ms.locfileid: "48140644"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Техническая статья [Understanding Integration Services Package Configurations](http://go.microsoft.com/fwlink/?LinkId=165643)(Основные сведения о конфигурации пакетов служб Integration Services) на сайте msdn.microsoft.com.  
+-   Техническая статья [Основные сведения о конфигурации пакетов служб Integration Services](https://go.microsoft.com/fwlink/?LinkId=165643) на сайте msdn.microsoft.com.  
   
--   Запись в блоге [Creating packages in code – Package Configurations](http://go.microsoft.com/fwlink/?LinkId=217663)(Создание пакетов в коде — конфигурации пакетов) на сайте www.sqlis.com.  
+-   Запись в блоге [создание пакетов в коде — конфигурации пакетов](https://go.microsoft.com/fwlink/?LinkId=217663), на www.sqlis.com.  
   
--   Запись в блоге [API Sample – Programmatically add a configuration file to a package](http://go.microsoft.com/fwlink/?LinkId=217664)(Пример API — программное добавление файла конфигурации в пакет) на сайте blogs.msdn.com.  
+-   Запись в блоге [образец API - программным способом добавить файл конфигурации в пакет](https://go.microsoft.com/fwlink/?LinkId=217664), на сайте blogs.msdn.com.  
   
 ## <a name="see-also"></a>См. также  
  [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   

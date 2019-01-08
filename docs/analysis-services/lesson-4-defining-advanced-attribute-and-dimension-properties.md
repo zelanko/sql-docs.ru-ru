@@ -1,5 +1,5 @@
 ---
-title: 'Урок 4: Определение дополнительных свойств атрибутов и измерений | Документы Microsoft'
+title: Урок 4. Определение дополнительных свойств атрибутов и измерений | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8a3f2d9a45233eba795e8f252723850bd9710f43
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e99a6db1198422f137e281ea52da6b135172fcd7
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015851"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951586"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Урок 4. Определение расширенных свойств атрибутов и измерений
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34015851"
 [Использование измененной версии проекта Analysis Services Tutorial](../analysis-services/lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
 В этой задаче вы откроете, просмотрите и выполните развертывание измененной версии проекта «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] », содержащей несколько групп мер и дополнительных измерений.  
   
-[Определение свойств родительского атрибута в иерархии «родители-потомки»](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
+[Определение свойств родительского атрибута в иерархии "родители-потомки"](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
 В этой задаче вы зададите имена уровней в измерении типа «родители-потомки» и укажите, следует ли отображать данные, связанные с элементами-родителями. Дополнительные сведения см. в разделах [Измерения "родители-потомки"](../analysis-services/multidimensional-models/parent-child-dimension.md) и [Атрибуты в иерархиях типа "родители-потомки"](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
 [Автоматическое группирование элементов атрибута](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "34015851"
 [Сортировка элементов атрибута по вторичному атрибуту](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
 В этой задаче изучается порядок сортировки элементов измерения на основе вторичного атрибута.  
   
-[Определение связей атрибутов в определенной пользователем иерархии](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[Определение связей атрибутов в определенной пользователем иерархии](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
 В этой задаче мы изучим, как следует указывать свойства элементов для атрибутов, чтобы задавать статистические связи между ними. Дополнительные сведения см. в разделах [Определение связей атрибутов](../analysis-services/multidimensional-models/attribute-relationships-define.md) и [Свойства пользовательской иерархии](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
 [Определение свойств Unknown Member и Null Processing](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
@@ -52,7 +52,7 @@ ms.locfileid: "34015851"
   
 ## <a name="see-also"></a>См. также  
 [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Многомерное моделирование & #40; Учебник по Adventure Works & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Измерения в многомерных моделях](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

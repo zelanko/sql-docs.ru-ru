@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], Windows Synchronization Manager
@@ -14,17 +13,17 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d12b1cc5b4626ab9093639d69a7ee724f2cc745d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb3e20913a2a7232aeeb93132fb6a8d0bb69e532
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147434"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782796"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Синхронизация подписки с помощью диспетчера синхронизации Windows (Windows Synchronization Manager)
   Диспетчер синхронизации[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows можно использовать только для синхронизации подписок на публикации Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на том же самом компьютере, что и диспетчер синхронизации (кроме того, его можно использовать для синхронизации файлов и веб-страниц в режиме «вне сети»). Чтобы использовать диспетчер синхронизации, необходимо выполнить следующие действия:  
   
-1.  Синхронизацию подписки по запросу с помощью диспетчера синхронизации Windows можно включить в диалоговом окне **Свойства подписки — \<подписчик>:\<база_данных_подписки>**. Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств подписки по запросу](view-and-modify-pull-subscription-properties.md).  
+1.  Включите синхронизацию подписки по запросу с помощью диспетчера синхронизации Windows в **свойства подписки — \<подписчик >: \<База данных подписки >** диалоговое окно. Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств подписки по запросу](view-and-modify-pull-subscription-properties.md).  
   
 2.  Запустите диспетчер синхронизации из меню **Пуск** операционной системы Windows.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48147434"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Включение синхронизации подписок по запросу с помощью диспетчера синхронизации Windows  
   
-1.  На странице **Общие** диалогового окна **Свойства подписки — \<подписчик>: \<база_данных_подписки>** выберите значение **Включить** для параметра **Использовать диспетчер синхронизации Windows**.  
+1.  На **Общие** странице **свойства подписки — \<подписчик >: \<База данных подписки >** диалоговое окно, выберите значение **включить** для **использовать диспетчер синхронизации Windows** параметр.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

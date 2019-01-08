@@ -11,17 +11,17 @@ ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7ddb7f9ffd0aa44db250df00df78b9f20d307e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61965f9d07ebef7d3f30623df318125e67587890
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082290"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349393"
 ---
 # <a name="troubleshoot-report-builder"></a>Устранение неполадок в построителе отчетов
-  Построитель отчетов — это средство разработки отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], которое позволяет строить отчеты с использованием разного рода источников данных, а также публиковать отчеты на сервере отчетов или на сайте SharePoint. Созданные отчеты можно просмотреть в построителе отчетов в веб-браузере или как часть [!INCLUDE[msCoName](../includes/msconame-md.md)] приложения Windows или на сайте SharePoint.  
+  Построитель отчетов — это средство разработки отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , которое позволяет строить отчеты с использованием разного рода источников данных, а также публиковать отчеты на сервере отчетов или на сайте SharePoint. Созданные отчеты можно просматривать в построителе отчетов, в веб-браузере или как часть приложения [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows или сайта SharePoint.  
   
- Чтобы узнать, как использовать построитель отчетов и выполнении множества простых задач, см. в разделе [учебники](report-builder-tutorials.md).  
+ Сведения об использовании построителя отчетов и выполнении множества простых задач см. в разделе [Учебники](report-builder-tutorials.md).  
   
  Следующие разделы помогут устранить неполадки отчетов, с точки зрения автора отчетов или администратора сервера отчетов.  
   
@@ -30,12 +30,12 @@ ms.locfileid: "48082290"
   
  [Устранение неполадок в элементах отчета &#40;построитель отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [Устранение неполадок с диаграммами &#40;построитель отчетов и службы SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [Устранение неполадок с диаграммами (построитель отчетов и службы SSRS)](report-design/charts-report-builder-and-ssrs.md)  
   
 ## <a name="administrators"></a>Администраторы  
  [Установка, удаление и поддержка построителя отчетов](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
- Кроме того, см. в следующих разделах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] документации в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [документации](http://go.microsoft.com/fwlink/?linkid=121312):  
+ См. также следующие подразделы в документации по службам [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [План поддержки отчетов-карт](../../2014/reporting-services/plan-for-map-report-support.md)  
   
@@ -46,9 +46,9 @@ ms.locfileid: "48082290"
   
  Например, участие в дискуссионных группах дает возможность общаться с опытными пользователями построителя отчетов в сети, в том числе со статусом MVP по службам Reporting Services, которые готовы ответить на вопросы, предоставить рекомендации, подсказки и решения.  
   
- Соображения и рекомендации членов группы разработчиков служб Reporting Services можно прочитать в [блоге группы Reporting Services](http://go.microsoft.com/fwlink/?LinkId=118788).
+ Соображения и рекомендации членов группы разработчиков служб Reporting Services можно прочитать в [блоге группы Reporting Services](https://go.microsoft.com/fwlink/?LinkId=118788).
   
- Если ответ на вопрос найти не удалось, [напишите отзыв](http://go.microsoft.com/fwlink/?LinkId=118791).  
+ Если ответ на вопрос найти не удалось, [напишите отзыв](https://go.microsoft.com/fwlink/?LinkId=118791).  
   
 ## <a name="see-also"></a>См. также  
  [Установка, удаление и поддержка построителя отчетов](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  

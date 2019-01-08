@@ -15,21 +15,21 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79eb8344ef875aa76cde5b0ffcc34aa0bf23e1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1061ae540d4773ae53560c464d2af568c8e35782
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122374"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589628"
 ---
 # <a name="project-property-pages-dialog-box"></a>Диалоговое окно страниц свойств проекта
-  Страницы свойств проекта позволяют настраивать свойства развертывания проекта сервера отчетов. Чтобы открыть это диалоговое окно, в меню **Проект** щелкните ***Свойства***\<имя проекта отчета>.  
+  Страницы свойств проекта позволяют настраивать свойства развертывания проекта сервера отчетов. Чтобы открыть это диалоговое окно, в меню **Проект** щелкните _\<Имя проекта отчета_**Свойства**.  
   
  После определения свойств настройки можно выбрать конфигурацию из раскрывающегося списка **Конфигурации решений** на панели инструментов.  
   
 ## <a name="options"></a>Параметры  
  **Configuration**  
- Выберите конфигурацию для изменения. Первоначально доступны следующие конфигурации: **Debug**, **DebugLocal**и **Release**. Активная конфигурация отображается первой, например **Активная (Debug)**.  
+ Выберите конфигурацию для изменения. Первоначально доступны следующие конфигурации: **Отладка**, **DebugLocal**, и **выпуска**. Активная конфигурация отображается первой, например **Активная (Debug)**.  
   
  Чтобы видеть одновременно свойства для нескольких конфигураций, выберите **Все конфигурации** или **Несколько конфигураций**.  
   
@@ -79,8 +79,8 @@ ms.locfileid: "48122374"
   
 ## <a name="see-also"></a>См. также  
  [Публикация отчетов](../publish-reports.md)   
- [Публикация отчета в библиотеку SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [Задание свойств развертывания &#40;службы Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
+ [опубликовать отчет в библиотеке SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Задание свойства развертывания (службы Reporting Services)](set-deployment-properties-reporting-services.md)   
  [Справка F1 по использованию конструктора отчетов](report-designer-f1-help.md)  
   
   

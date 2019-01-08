@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
@@ -14,12 +13,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d22744898dcc45ac213436afcdf25359ba24adec
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072208"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351467"
 ---
 # <a name="upgrade-integration-services-packages"></a>Обновление пакетов служб Integration Services
   При обновлении экземпляра [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] для текущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], существующие [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] пакеты не будут автоматически обновлены до формата пакетов, используемого в текущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] использует. Необходимо будет выбрать метод обновления и обновить эти пакеты вручную.  
@@ -47,7 +46,7 @@ ms.locfileid: "49072208"
   
 -   Переместите пакеты в службы [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], а затем обновите их до версии [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)].  
   
-     Дополнительные сведения о миграции пакетов служб DTS в [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] и [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] см. в разделах [Миграция пакетов служб DTS](http://go.microsoft.com/fwlink/?LinkId=251870) (2005) и [Миграция пакетов служб DTS](http://go.microsoft.com/fwlink/?LinkId=251871) (2008).  
+     Дополнительные сведения о миграции пакетов служб DTS в [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] и [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] см. в разделах [Миграция пакетов служб DTS](https://go.microsoft.com/fwlink/?LinkId=251870) (2005) и [Миграция пакетов служб DTS](https://go.microsoft.com/fwlink/?LinkId=251871) (2008).  
   
 -   Повторно создайте пакеты служб DTS с помощью [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)].  
   
@@ -84,7 +83,7 @@ ms.locfileid: "49072208"
   
  Чтобы использовать [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] для проектирования пакетов, которые включают [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] настраиваемые компоненты, необходимо изменить файл devenv.exe.config, который находится в каталоге  *\<диска >*: \Program Files\ Microsoft Visual Studio 10.0\Common7\IDE.  
   
- Чтобы эти пакеты работали с клиентскими приложениями, созданными для среды выполнения [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], включите правила переадресации в разделе файла *.exe.config для исполняемого файла. Правила перенаправляют сборки среды выполнения на версию 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Подробнее о перенаправлении версии сборки см. в разделе [Элемент \<assemblyBinding> для \<runtime>](http://msdn.microsoft.com/library/twy1dw1e.aspx).  
+ Чтобы эти пакеты работали с клиентскими приложениями, созданными для среды выполнения [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], включите правила переадресации в разделе файла *.exe.config для исполняемого файла. Правила перенаправляют сборки среды выполнения на версию 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Подробнее о перенаправлении версии сборки см. в разделе [Элемент \<assemblyBinding> для \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### <a name="locating-the-assemblies"></a>Нахождение сборок  
  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]сборки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] были обновлены до .NET 4.0. Существует отдельный глобальный кэш сборок для .NET 4, который находится в следующем расположении: *\<диск>*:\Windows\Microsoft.NET\assembly. Там вы можете найти все сборки [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , обычно в папке GAC_MSIL.  
@@ -95,11 +94,11 @@ ms.locfileid: "49072208"
  В процессе обновления пакетов большинство компонентов и функций в пакетах [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] успешно преобразуются в соответствующие объекты из текущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако существует несколько компонентов и функций, которые не будут обновлены или на результаты обновления которых следует обратить внимание. В следующей таблице приведены эти компоненты и функции.  
   
 > [!NOTE]  
->  Чтобы определить, в каких пакетах возникли неполадки, перечисленные в таблице, запустите помощник по обновлению. Дополнительные сведения см. в разделе [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
+>  Чтобы определить, в каких пакетах возникли неполадки, перечисленные в таблице, запустите помощник по обновлению. Дополнительные сведения см. в разделе [Использование помощника по обновлению для подготовки к обновлениям](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 |Компонент или функция|Результаты обновления|  
 |--------------------------|---------------------|  
-|Строки подключения|Для пакетов [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] изменились имена некоторых поставщиков, из-за чего в строках подключения требуется указывать другие значения. Чтобы обновить строки подключения, выполните одну из следующих процедур.<br /><br /> — Используйте мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], чтобы обновить пакет, и выберите параметр **Обновить строки соединения для использования новых имен поставщиков**.<br /><br /> — В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] на странице "Общие" диалогового окна "Параметры" выберите параметр **Обновить строки соединения для использования новых имен поставщиков**. Дополнительные сведения об этом параметре см. в разделе [General Page](../general-page-of-integration-services-designers-options.md).<br /><br /> — В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] откройте пакет и вручную измените текст свойства ConnectionString.<br /><br /> Примечание. Нельзя применять предыдущие процедуры для обновления строки подключения, если она хранится в файле конфигурации или файле источника данных либо если выражение устанавливает свойство `ConnectionString`. В таком случае, чтобы обновить строки соединения, необходимо вручную обновить файл конфигурации или выражение.<br /><br /> Дополнительные сведения о доступных источниках данных см. в разделе [Источники данных](../connection-manager/data-sources.md).|  
+|Строки подключения|Для пакетов [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] изменились имена некоторых поставщиков, из-за чего в строках подключения требуется указывать другие значения. Чтобы обновить строки подключения, выполните одну из следующих процедур.<br /><br /> — Используйте мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], чтобы обновить пакет, и выберите параметр **Обновить строки соединения для использования новых имен поставщиков**.<br /><br /> — В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] на странице "Общие" диалогового окна "Параметры" выберите параметр **Обновить строки соединения для использования новых имен поставщиков**. Дополнительные сведения об этом параметре см. в разделе [General Page](../general-page-of-integration-services-designers-options.md).<br /><br /> — В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] откройте пакет и вручную измените текст свойства ConnectionString.<br /><br /> Примечание. Нельзя применять предыдущие процедуры для обновления строки соединения, если строка подключения хранится в файле конфигурации или файле источника данных либо если выражение устанавливает свойство `ConnectionString`. В таком случае, чтобы обновить строки соединения, необходимо вручную обновить файл конфигурации или выражение.<br /><br /> Дополнительные сведения о доступных источниках данных см. в разделе [Источники данных](../connection-manager/data-sources.md).|  
 |Преобразование «Уточняющий запрос»|При обновлении пакетов [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] преобразование "Уточняющий запрос" автоматически обновляется до текущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Однако у текущего выпуска этого компонента есть некоторые дополнительные возможности.<br /><br /> Дополнительные сведения см. в разделе [Lookup Transformation](../data-flow/transformations/lookup-transformation.md).|  
 |Задача «Скрипт» и компонент скрипта|Для пакетов [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] в процессе обновления пакета скрипты из задачи и компонента скрипта автоматически переносятся из VSA в VSTA.<br /><br /> Дополнительные сведения об изменениях, которые может потребоваться внести в скрипт перед выполнением миграции, а также об ошибках их преобразования см. в разделе [Миграция скриптов в VSTA](../../sql-server/install/migrate-scripts-to-vsta.md).|  
   
@@ -108,10 +107,10 @@ ms.locfileid: "49072208"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Техническая статья [5 советов для беспроблемного обновления служб SSIS до версии SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=235321)на сайте msdn.microsoft.com.  
+-   Техническая статья [5 советов для беспроблемного обновления служб SSIS до версии SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=235321)на сайте msdn.microsoft.com.  
   
--   Запись в блоге [Использование существующих пользовательских расширений служб SSIS и приложений в Denali](http://go.microsoft.com/fwlink/?LinkId=238157)на blogs.msdn.com.  
+-   Запись в блоге [Использование существующих пользовательских расширений служб SSIS и приложений в Denali](https://go.microsoft.com/fwlink/?LinkId=238157)на blogs.msdn.com.  
   
--   Веб-трансляция [Обновление пакетов служб SSIS в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=258674)на channel9.msdn.com.  
+-   Веб-трансляция [Обновление пакетов служб SSIS в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=258674)на channel9.msdn.com.  
   
   

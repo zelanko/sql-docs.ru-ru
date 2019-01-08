@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d55d63b9cfbf501750522f3f5d0ca68757ae1ab3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc6511c6a0999dfd366c87fcfa18630614215efa
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741862"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407301"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | ЗНАЧЕНИЕ NULL
 
- **ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
+ **ПРИМЕНИМО К:** SQL Server (начиная с 2008), база данных SQL Azure
 
  Идентификатор базы данных. *database_id* имеет тип int и не имеет значения по умолчанию. Допустимыми входными значениями являются идентификационный номер базы данных или NULL. Когда указывается значение NULL, возвращаются все базы данных экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -66,7 +66,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | ЗНАЧЕНИЕ NULL
 
-**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
+**ПРИМЕНИМО К:** SQL Server (начиная с 2008), база данных SQL Azure
  
 Идентификатор файла. *file_id* имеет тип int и не имеет значения по умолчанию. Правильные значения — идентификационный номер файла или значение NULL. Когда указывается значение NULL, возвращаются все файлы базы данных.  
   
@@ -101,7 +101,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
 ### <a name="a-return-statistics-for-a-log-file"></a>A. Возвращает статистику для файла журнала
 
-**Применяется к:** SQL Server (начиная с 2008), база данных SQL Azure
+**Применимо к:** SQL Server (начиная с 2008), база данных SQL Azure
 
  В следующем примере возвращается вся статистика для файла журнала в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
@@ -112,11 +112,11 @@ GO
   
 ### <a name="b-return-statistics-for-file-in-tempdb"></a>Б. Возвращает статистику для файла в базе данных tempdb
 
-**Применяется к:** хранилище данных Azure SQL
+**Применимо к:** Хранилище данных SQL Azure
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
-WHERE database_name = ‘tempdb’ AND file_id = 2;
+WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 

@@ -11,22 +11,22 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bce7d17a2edb004f662d5229ea929d89c6d66d4f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166104"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350483"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Тип соединения PowerPivot (службы SSRS)
   Для извлечения данных из книги PowerPivot, опубликованной в галерее PowerPivot на сайте SharePoint, можно использовать модуль обработки данных служб SQL Server Analysis Services.  
   
  Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Источник данных PowerPivot должен быть опубликован в галерее PowerPivot на сайте SharePoint.  
   
- Для подключения к книге PowerPivot из построителя отчетов необходимо установить на рабочей станции библиотеку SQL Server 2008 R2 ADOMD.NET. Эта клиентская библиотека устанавливается вместе с PowerPivot для Excel, но, если используется компьютер, на котором нет этого приложения, необходимо загрузить и установить ADOMD.NET со страницы [Пакет дополнительных компонентов SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=192565).  
+ Для подключения к книге PowerPivot из построителя отчетов необходимо установить на рабочей станции библиотеку SQL Server 2008 R2 ADOMD.NET. Эта клиентская библиотека устанавливается вместе с PowerPivot для Excel, но, если используется компьютер, на котором нет этого приложения, необходимо загрузить и установить ADOMD.NET со страницы [Пакет дополнительных компонентов SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=192565).  
   
 ## <a name="data-source-type"></a>Тип источника данных  
  Используйте тип источника данных отчета **Microsoft SQL Server Analysis Services**.  
@@ -53,7 +53,7 @@ ms.locfileid: "48166104"
   
  Данные в книге PowerPivot имеют высокую степень сжатия; данные, извлекаемые из книги PowerPivot для отчета, не сжимаются. Используйте конструктор запросов, чтобы указать фильтры и параметры, ограничивающие объем данных в отчете.  
   
- В отличие от куба служб Analysis Services, модель PowerPivot не имеет иерархий. Чтобы предоставить схожую функциональность связанным срезам в книге, необходимо создать каскадные параметры в отчете. Дополнительные сведения см. в разделе [Добавление каскадных параметров в отчет &#40;построитель отчетов и службы SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
+ В отличие от куба служб Analysis Services, модель PowerPivot не имеет иерархий. Чтобы предоставить схожую функциональность связанным срезам в книге, необходимо создать каскадные параметры в отчете. Дополнительные сведения см. в разделах [Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS)](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
   
  В некоторых случаях может потребоваться изменить выражения, чтобы привести их в соответствие со значениями базовых данных из модели PowerPivot. Может потребоваться изменить выражения, чтобы преобразовать данные в нужный тип данных или чтобы добавить или удалить агрегатную функцию. Например, чтобы преобразовать тип данных из String в Integer, можно использовать функцию `=CInt`. Перед публикацией отчета всегда проверяйте, что отчет отображает ожидаемые значения данных из модели PowerPivot.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48166104"
 -   Отчет содержит только данные PowerPivot из источника данных PowerPivot.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Analysis Services MDX пользовательский интерфейс конструктора запросов &#40;построитель отчетов&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services (построитель отчетов)](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [Выражения (построитель отчетов и службы SSRS)](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

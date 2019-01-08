@@ -1,5 +1,5 @@
 ---
-title: Создать источник данных отчета | Документы Microsoft
+title: Создать источник данных отчета | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bf4b8048392121c37b6f4f13584aa2fd18a90984
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b6e811f9114a484f7b0b68ca9782b9b60e366383
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026971"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393327"
 ---
 # <a name="create-a-report-data-source"></a>Создание источника данных отчета
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,14 +50,14 @@ ms.locfileid: "34026971"
   
 5.  В поле **Строка подключения**введите имя сервера служб Analysis Services, имя базы данных, имя куба и все необязательные параметры.  
   
-     Строка подключения: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
+     Строка подключения: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
     > [!NOTE]  
     >  Если имеется более одного куба, необходимо указать имя куба.  
   
-     (Необязательно) Кубы могут иметь перспективы, позволяющие пользователям выбрать представление, в котором клиенту будут видны только определенные измерения или группы мер. Чтобы указать перспективу, введите ее имя в качестве значения свойства Cube: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>’`  
+     (Необязательно) Кубы могут иметь перспективы, позволяющие пользователям выбрать представление, в котором клиенту будут видны только определенные измерения или группы мер. Чтобы указать перспективу, введите ее имя в качестве значения свойства Cube: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (Необязательно) Кубы могут иметь метаданные и переводы данных, заданные для различных языков в модели. Чтобы видеть переводы (данные и метаданные), необходимо добавить свойство Locale Identifier в строку подключения: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’; Locale Identifier=<identifier number>`  
+     (Необязательно) Кубы могут иметь метаданные и переводы данных, заданные для различных языков в модели. Чтобы видеть переводы (данные и метаданные), необходимо добавить свойство «Идентификатор языкового стандарта» в строку подключения: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  В разделе **Учетные данные**задайте, каким образом сервер отчетов получает учетные данные для доступа к внешнему источнику данных.  
   

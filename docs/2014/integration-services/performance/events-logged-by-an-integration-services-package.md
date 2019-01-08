@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - package [Integration Services], events
@@ -14,12 +13,12 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ecc2c837001d5a05339ebe9b7eb3bdc9e6a7055
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38a9660c94f4fc340ab00e1fb0dc83efa0482e0c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188034"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814306"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Регистрация событий в пакете служб Integration Services
   Пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] записывает различные сообщения о событиях в журнал событий приложений Windows. Пакет записывает эти сообщения при запуске пакета при остановке пакета и возникновении определенных неполадок.  
@@ -80,6 +79,6 @@ ms.locfileid: "48188034"
  Сведения о просмотре записей журнала в режиме реального времени см. в разделе [Просмотр записей журнала в окне "Регистрация событий"](../view-log-entries-in-the-log-events-window.md).  
   
 ## <a name="see-also"></a>См. также  
- [События, зарегистрированные службами Integration Services](../service/events-logged-by-the-integration-services-service.md)  
+ [Cобытия, зарегистрированные службами Integration Services](../service/events-logged-by-the-integration-services-service.md)  
   
   

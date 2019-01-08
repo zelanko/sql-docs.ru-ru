@@ -11,12 +11,12 @@ ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e0e98af473babc84863c8e0a1610107843ca76d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f69addfdda05b00ff1f322b526bb656c2c9b317
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128274"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518624"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Развертывание запланированных политик на нескольких экзмплярах
   В окне «Зарегистрированные серверы» можно выполнить развертывание политик на управляемых серверах из центрального узла. Можно выполнить развертывание политик либо с группы локальных серверов, либо с сервера централизованного управления.  
@@ -94,7 +94,7 @@ ms.locfileid: "48128274"
  В этом учебнике было показано, как по требованию и по расписанию производить оценки политик рекомендаций для одного или более экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="next"></a>Дальше  
- Данный учебник завершен. Чтобы вернуться к началу, см. в разделе [учебник: выполнению рекомендаций по управления на основе политик](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
+ Данный учебник завершен. Чтобы вернуться к началу, см. в разделе [руководства: Выполнение политик рекомендаций с помощью управления на основе](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
  Чтобы просмотреть список [!INCLUDE[ssDE](../includes/ssde-md.md)] руководства и нажмите кнопку [учебники по компоненту ядра базы данных](../relational-databases/database-engine-tutorials.md).  
   

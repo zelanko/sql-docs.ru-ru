@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfermasterspstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b7763c8aeffe60c361a9f54ac3c9657653af40a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 734c659186f749b740bbde5ef7caa59b6925fa9f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150234"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761856"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Задача «Передача главных хранимых процедур»
   Задача "Передача главных хранимых процедур" перемещает одну или несколько пользовательских хранимых процедур между базами данных **master** в экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы переместить хранимую процедуру из базы данных **master** , владелец процедуры должен быть dbo.  
@@ -46,7 +45,7 @@ ms.locfileid: "48150234"
  Задача «Передача главных хранимых процедур» не сообщает о прогрессе перемещения; она сообщает только о степени выполнения 0% и 100%.  
   
 ## <a name="execution-value"></a>Значение выполнения  
- Значение выполнения, определенное в `ExecutionValue` свойство задачи, возвращает количество перемещенных хранимых процедур. Назначив пользовательскую переменную, чтобы `ExecValueVariable` свойства задачи «Передача главных хранимых процедур» сведения о перемещении хранимой процедуры могут быть сделаны доступными другим объектам в пакете. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md) и [Использование переменных в пакетах](../use-variables-in-packages.md).  
+ Значение выполнения, определенное в свойстве `ExecutionValue` задачи, возвращает количество перемещенных хранимых процедур. После назначения пользовательской переменной свойству `ExecValueVariable` задачи «Передача главных хранимых процедур» сведения о перемещении хранимой процедуры могут стать доступными другим объектам в пакете. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md) и [Использование переменных в пакетах](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача главных хранимых процедур» содержит следующие пользовательские записи журнала:  
@@ -55,7 +54,7 @@ ms.locfileid: "48150234"
   
 -   TransferSStoredProceduresTaskFinishedTransferringObjects — данная запись в журнале сообщает об окончании перемещения. В записях журнала указывается время завершения.  
   
- Кроме того, запись журнала для `OnInformation` событие сообщает количество перемещенных хранимых процедур, а запись журнала для `OnWarning` для каждой хранимой процедуры на обновляемом записывается событие.  
+ Кроме того, запись журнала для события `OnInformation` сообщает о количестве перемещенных хранимых процедур, а запись журнала для события `OnWarning` фиксирует каждую перезаписываемую хранимую процедуру в целевом месте.  
   
 ## <a name="security-and-permissions"></a>Безопасность и разрешения  
  Пользователь должен иметь разрешение на просмотр списка хранимой процедуры в базе данных **master** на источнике и быть членом роли сервера sysadmin или иметь права на созданные хранимые процедуры в базе данных **master** на целевом сервере.  
@@ -65,11 +64,11 @@ ms.locfileid: "48150234"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах.  
   
--   [Редактор Передача главных хранимых процедур задач &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "Передача главных хранимых процедур" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор Передача главных хранимых процедур задач &#40;хранимых процедур страницы&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+-   [Редактор задачи "Передача главных хранимых процедур" (страница "Хранимые процедуры")](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
--   [Страница "Выражения"](../expressions/expressions-page.md)  
+-   [Страница «Выражения»](../expressions/expressions-page.md)  
   
  Сведения о задании этих свойств программными средствами см. в следующем разделе:  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48150234"
 -   [Задание свойств задач или контейнеров](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>См. также  
- [Перенос SQL Server Objects Task](transfer-sql-server-objects-task.md)   
+ [Задача «Передача объектов SQL Server»](transfer-sql-server-objects-task.md)   
  [Задачи служб Integration Services](integration-services-tasks.md)   
  [Поток управления](control-flow.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], public profiles
@@ -15,12 +14,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 667dbd4e0b323f50721af716a30709ba9ea6d5c8
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071818"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979140"
 ---
 # <a name="create-a-database-mail-profile"></a>Создание профиля компонента Database Mail
   Открытые и закрытые профили компонента Database Mail можно создать с помощью **мастера настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -53,7 +52,7 @@ ms.locfileid: "49071818"
   
 -   На странице **Управление профилями и учетными записями** выберите команду **Создать новый профиль** и нажмите кнопку **Далее**.  
   
--   На странице **Создать профиль** задайте имя профиля и описание, а также добавьте учетные записи, которые будут включены в профиль, затем нажмите кнопку **Далее**.  
+-   На **новый профиль** странице укажите имя профиля, описание и добавьте учетные записи должны быть включены в профиле и нажмите кнопку **Далее**.  
   
 -   На странице **Завершение работы мастера** просмотрите действия, которые будут выполнены, и нажмите кнопку **Готово** , чтобы завершить создание нового профиля.  
   
@@ -191,7 +190,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*Статус профиля по умолчанию* '  
   
-     где *@profile_name* — имя профиля, и *@principal_name* чтобы указать это открытый профиль, *@is_default* определяет, является ли это профиль по умолчанию для пользователя или роли.  
+     где *@profile_name* — имя профиля; *@principal_name* указывает, что этот профиль является общим, а *@is_default* определяет, является ли этот профиль профилем по умолчанию для пользователя или роли базы данных.  
   
  В следующем примере создается учетная запись компонента Database Mail, создается закрытый профиль компонента Database Mail, затем учетная запись добавляется к профилю и предоставляется общий доступ к профилю.  
   

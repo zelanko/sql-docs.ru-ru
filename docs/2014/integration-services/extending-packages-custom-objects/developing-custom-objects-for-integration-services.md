@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom user interface [Integration Services]
@@ -15,12 +13,12 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2c291f88128442431c0a6e60250600d8866519fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cabe3abc2a6ce962a101f8dd2910bd37125f9eea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125614"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353186"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Разработка пользовательских объектов для служб Integration Services
   Если объекты потока управления и потока данных, поставляемые со службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], не отвечают потребностям пользователя, можно разработать множество типов собственных пользовательских объектов, в том числе:  
@@ -93,7 +91,7 @@ ms.locfileid: "48125614"
 ## <a name="providing-a-custom-user-interface"></a>Создание настраиваемого пользовательского интерфейса  
  Чтобы предоставить пользователям возможность настраивать свойства пользовательского объекта, потребуется также создать настраиваемый пользовательский интерфейс. В случаях, когда создание пользовательского интерфейса необязательно, возможно, окажется целесообразным создать его, чтобы предоставить пользователю дружественный интерфейс, более удобный, чем редактор по умолчанию.  
   
- В проекте или сборке пользовательского интерфейса обычно используются два класса — класс, реализующий интерфейс служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для пользовательских интерфейсов определенного типа пользовательского объекта, и форма Windows, отображаемая им для получения сведений от пользователя. Интерфейсы, реализуемые пользователем, имеют лишь несколько методов, и разработка пользовательского интерфейса не представляет особой сложности.  
+ В проекте или сборке пользовательского интерфейса обычно используются два класса — класс, реализующий интерфейс служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для пользовательских интерфейсов определенного типа пользовательского объекта, и форма Windows, отображаемая им для получения сведений от пользователя. Интерфейсы, реализуемые пользователем, имеют лишь несколько методов, и разработка пользовательского интерфейса не представляет особой сложности.  
   
 > [!NOTE]  
 >  Многие регистраторы служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] имеют пользовательский интерфейс, реализующий интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> и заменяющий текстовое поле **Конфигурация** отфильтрованным раскрывающимся списком доступных диспетчеров соединений. Однако пользовательские интерфейсы для пользовательских регистраторов в этом выпуске служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не реализованы. Указание значения для свойства <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> атрибута <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> не имеет никакого эффекта.  
@@ -110,9 +108,9 @@ ms.locfileid: "48125614"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Запись в блоге [Процесс построения решения Visual Studio выдает предупреждение о косвенной зависимости от сборки .NET Framework из-за ссылок служб SSIS](http://go.microsoft.com/fwlink/?LinkId=215662) на сайте blogs.msdn.com.  
+-   Запись в блоге [Процесс построения решения Visual Studio выдает предупреждение о косвенной зависимости от сборки .NET Framework из-за ссылок служб SSIS](https://go.microsoft.com/fwlink/?LinkId=215662) на сайте blogs.msdn.com.  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
  [Сохранение пользовательских объектов](persisting-custom-objects.md)   

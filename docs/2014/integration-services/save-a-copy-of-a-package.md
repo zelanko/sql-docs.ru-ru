@@ -17,12 +17,12 @@ ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e77ba9379ebf482d8ed2f587ea175706458bd275
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24e5e554af43cd95a65c6d392106217af9ab2cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193414"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532176"
 ---
 # <a name="save-a-copy-of-a-package"></a>Сохранение одной копии пакета
   Эта процедура описывает, как сохранить копию пакета в файле, хранилище пакетов или базе данных **msdb** в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При указании места сохранения копии пакета можно также обновить имя пакета.  
@@ -56,7 +56,7 @@ ms.locfileid: "48193414"
   
 7.  Просмотрите уровень защиты пакета.  
   
-8.  Для изменения уровня защиты нажмите кнопку обзора **(…)** возле поля **Уровень защиты** .  
+8.  Для изменения уровня защиты нажмите кнопку обзора **(…)** возле поля **Уровень защиты**.  
   
     -   В диалоговом окне **Уровень защиты пакета** выберите иной уровень защиты.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48193414"
 9. Нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Integration Services &#40;SSIS&#41; пакетов](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Настройка интеграции службы служб &#40;службы SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce74bb210e3d5d3cd01120b0bd406672db6dd5ed
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975102"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785825"
 ---
 # <a name="server-properties-in-analysis-services"></a>Свойства сервера в службах Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "37975102"
 > 
 > В число других свойств, влияющих на конфигурацию сервера, входят свойства конфигурации развертывания в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения об этих свойствах см. в разделе [Указание настроек конфигурации для развертывания решения](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
-##  <a name="bkmk_config"></a> Настройка свойств в среде Management Studio 
+## <a name="configure-properties-in-management-studio"></a>Настройка свойств в среде Management Studio 
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]подключитесь к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -40,12 +40,11 @@ ms.locfileid: "37975102"
   
      Изменение свойств сервера поддерживается только для серверов в табличном и многомерном режимах. Если установлен [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], всегда используйте значения по умолчанию, если только сотрудник службы технической поддержки Майкрософт не даст другие указания.  
   
-     Указания по решению проблем, связанных с функционированием или производительностью, путем изменения свойств сервера см. в [Руководстве по использованию служб SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
-     Кроме того, дополнительные сведения о свойствах сервера (многие из которых не изменялись в последних нескольких выпусках) можно получить в техническом документе Майкрософт [Свойства сервера служб SQL Server 2005 Analysis Services (SSAS)](http://go.microsoft.com/fwlink/?LinkID=199102).    
+## <a name="configure-properties-in-msmdsrvini"></a>Настройка свойств в файле msmdsrv.ini
   
-##  <a name="bkmk_msmdsrvini"></a> Настройка свойств в файле msmdsrv.ini
-  Определенные свойства можно задать только в файле msmdrsrv.ini. Если свойство, которое необходимо задать, не отображается даже после включения дополнительных свойств, может потребоваться внести изменения непосредственно в файл msmdsrv.ini.
+Определенные свойства можно задать только в файле msmdrsrv.ini. Эти свойства неприменимы к службам Azure Analysis Services.
+Если свойство, которое необходимо задать, не отображается даже после включения дополнительных свойств, может потребоваться внести изменения непосредственно в файл msmdsrv.ini. 
   
 1.  Проверьте свойство **DataDir** на странице свойств "Общие" в среде Management Studio, чтобы проверить, где находятся программные файлы служб Analysis Services, в том числе файл msmdsrv.ini.
 
@@ -59,7 +58,7 @@ ms.locfileid: "37975102"
   
 5.  Сохраните файл и перезапустите службу.  
   
-##  <a name="bkmk_ref"></a> Справочник по свойствам сервера  
+##  <a name="server-property-reference"></a>Справочник по свойствам сервера  
   
  Следующие подразделы содержат описание различных свойств конфигурации служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   

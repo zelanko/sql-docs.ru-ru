@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 892a3aee2236c93953825d3414b402ce5b49d174
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7acd72b5386eed5e78ddcd2fe1cd0344905fa833
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115874"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761496"
 ---
 # <a name="spstmtstarting-event-class"></a>SP:StmtStarting, класс событий
   Класс событий SP:StmtStarting указывает на то, что в хранимой процедуре запущена инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -55,7 +54,7 @@ ms.locfileid: "48115874"
 |SourceDatabaseID|`int`|Идентификатор базы данных, в которой находится объект.|62|Да|  
 |SPID|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
-|Состояние|`int`|Указывает, выполняется ли инструкция после перекомпиляции.<br /><br /> 1 = перекомпиляция выполнена.|30|Да|  
+|Штат|`int`|Указывает, выполняется ли инструкция после перекомпиляции.<br /><br /> 1 = перекомпиляция выполнена.|30|Да|  
 |TextData|`ntext`|Текстовое значение, зависящее от класса событий, фиксируемых при трассировке.|1|Да|  
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, используемый для описания текущей транзакции.|50|Да|  

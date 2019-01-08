@@ -1,11 +1,10 @@
 ---
-title: 'Класс событий TM: Rollback Tran Starting | Документация Майкрософт'
+title: 'События класса TM: Класс события Rollback Tran Starting | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 565f1d58b8043b2d7d4007fba29e699cbf36be11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a761d04ebb9bef40deacb19081d7dfdf6a329ea4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145934"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786006"
 ---
-# <a name="tm-rollback-tran-starting-event-class"></a>Класс событий TM: Rollback Tran Starting
-  Класс событий "TM:Rollback Tran Starting" указывает на начало выполнения запроса ROLLBACK TRANSACTION. Клиент направляет этот запрос через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после отката текущей транзакции.  
+# <a name="tm-rollback-tran-starting-event-class"></a>События класса TM: Класс события Rollback Tran Starting
+  События класса TM: Rollback Tran Starting указывает на выполнение запроса ROLLBACK TRANSACTION. Клиент направляет этот запрос через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после отката текущей транзакции.  
   
-## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>Столбцы данных класса событий TM: Rollback Tran Starting  
+## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>События класса TM: Столбцы данных класса событий TM:Rollback Tran Starting  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  

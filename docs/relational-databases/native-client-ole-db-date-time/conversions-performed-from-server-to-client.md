@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad07d16aec3f215c8c9d854e872f8c0555f34747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f5df8d27f39918cb8ddac4dd46dd8b3ca4449c5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647422"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399127"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Преобразования, выполняемые при передаче от сервера к клиенту
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47647422"
   В данном разделе описываются преобразования даты и времени, выполняемые между [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией) и клиентским приложением, написанным с использованием OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="conversions"></a>Преобразования  
- В следующей таблице описываются преобразования между типом, возвращенным клиенту, и типом в привязке. Для выходных параметров, если был вызван ICommandWithParameters::SetParameterInfo и тип, указанный в *pwszDataSourceType* не соответствует фактическому типу на сервере, неявное преобразование будет выполняться на сервере , и тип, возвращаемый клиенту будет совпадать с типом, заданные с помощью ICommandWithParameters::SetParameterInfo. Это может привести к непредвиденным результатам преобразования, если правила преобразования сервера отличаются от описанных в данном разделе. Например, когда требуется предоставить дату по умолчанию, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует значение 1900-1-1, а не 1899-12-30.  
+ В следующей таблице описываются преобразования между типом, возвращенным клиенту, и типом в привязке. Для выходных параметров, если был вызван ICommandWithParameters::SetParameterInfo и тип, указанный в *pwszDataSourceType* не соответствует фактическому типу на сервере, неявное преобразование будет выполняться на сервере , и тип, возвращаемый клиенту будет совпадать с типом, заданные с помощью ICommandWithParameters::SetParameterInfo. Это может привести к непредвиденным результатам преобразования, если правила преобразования сервера отличаются от описанных в этом разделе. Например, когда требуется предоставить дату по умолчанию, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует значение 1900-1-1, а не 1899-12-30.  
   
 |В -><br /><br /> От|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
@@ -38,7 +38,7 @@ ms.locfileid: "47647422"
 |DATETIME|5,7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |Datetime2|5,7|8|9,10|10|7|3|5,7|-|ОК (VT_BSTR)|OK|OK|4|4|  
 |Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|OK|5,7,11|-|ОК (VT_BSTR)|OK|OK|4|4|  
-|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|  
+|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|Н/Д|Недоступно|Недоступно|Недоступно|Недоступно|Н/Д|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (date)|1,7|OK|2|2|1|1,3|1,7|-|OK (VT_BSTR)|OK|OK|4|4|  

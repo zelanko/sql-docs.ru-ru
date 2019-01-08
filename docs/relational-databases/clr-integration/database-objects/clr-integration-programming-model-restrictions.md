@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c39bb3499302ef1b60744a4332c665506c7fd21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809042"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538528"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Ограничения модели программирования на основе интеграции со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "47809042"
  Во время выполнения код сборки проверяется на соответствие ряду условий. Если имеет место хотя бы одно из этих условий, выполнение управляемого кода не разрешается и активизируется исключение.  
   
 ### <a name="unsafe"></a>UNSAFE  
- Загрузка сборки — явным образом с помощью вызова методов **System.Reflection.Assembly.Load()** метод из массива байтов, или неявно путем использования **Reflection.Emit** пространство имен — не допускается.  
+ Загрузка либо для сборки явным образом путем вызова **System.Reflection.Assembly.Load()** метод из массива байтов, или неявно путем использования **Reflection.Emit** пространство имен — не допускается.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Все **UNSAFE** условия проверяются.  

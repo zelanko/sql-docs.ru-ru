@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.new.custom.report.f1
@@ -14,12 +14,12 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a1f66753b1ff002a43f59fb065134967e15254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3417b4905fd43734fb058d05db81f7318d87539d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208901"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354678"
 ---
 # <a name="custom-reports-in-management-studio"></a>Пользовательские отчеты в среде Management Studio
   Во многих узлах обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображается набор стандартных отчетов, созданных в [!INCLUDE[msCoName](../../includes/msconame-md.md)]. В этих отчетах сведены все обычно запрашиваемые данные о серверах. Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2), администраторы могут запускать настраиваемые отчеты, созданные в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , из среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -71,7 +71,7 @@ ms.locfileid: "48208901"
 >  В отчет можно внедрить любую допустимую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] и она будет выполняться из этого отчета. Запуск отчета через учетную запись пользователя, обладающего расширенными правами доступа, делает возможным беспрепятственный запуск любых внедренных инструкций.  
   
 ## <a name="report-samples"></a>Образцы отчетов  
- [Образцы отчетов](http://go.microsoft.com/fwlink/?LinkId=81792), включая стандартные отчеты, созданные [!INCLUDE[msCoName](../../includes/msconame-md.md)], доступны для загрузки. Эти образцы можно изменять с помощью среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ [Образцы отчетов](https://go.microsoft.com/fwlink/?LinkId=81792), включая стандартные отчеты, созданные [!INCLUDE[msCoName](../../includes/msconame-md.md)], доступны для загрузки. Эти образцы можно изменять с помощью среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>См. также  
  [Добавление пользовательского отчета в среде Management Studio](add-a-custom-report-to-management-studio.md)   

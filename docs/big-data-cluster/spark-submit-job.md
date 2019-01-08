@@ -1,27 +1,31 @@
 ---
-title: Отправка задания Spark в кластерах больших данных SQL Server в Azure Data Studio
-description: Отправка задания Spark в кластерах больших данных SQL Server в Azure Data Studio
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Запуск заданий Spark в Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: Отправка заданий Spark в кластерах больших данных SQL Server в Azure Data Studio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+ms.date: 12/07/2018
 ms.topic: conceptual
-ms.date: 11/06/2018
-ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: d0843315b44b52a38377068023b9d17ba2bd05a2
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221610"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246504"
 ---
-# <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Отправка задания Spark в кластерах больших данных SQL Server в Azure Data Studio
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Отправка заданий Spark в кластерах больших данных SQL Server в Azure Data Studio
 
-Одним из основных сценариев является возможность отправлять задания Spark для SQL Server 2019 CTP 2.1. Функция отправки задания Spark позволяет отправить локальные файлы JAR-файл или Py со ссылками на кластер SQL Server 2019 больших данных. Он также позволяет выполнять JAR-файл или копировать файлы, которые уже находятся в файловой системе HDFS. 
+Одним из основных сценариев для работы с большими данными кластеров является возможность отправки заданий Spark для предварительной версии SQL Server 2019. Функция отправки задания Spark позволяет отправить локальные файлы JAR-файл или Py со ссылками на кластер SQL Server 2019 больших данных. Он также позволяет выполнять JAR-файл или копировать файлы, которые уже находятся в файловой системе HDFS. 
 
-## <a name="prerequisite"></a>Предварительные требования 
-Установите средства работы с большими данными для SQL Server и подключение к кластеру больших данных, перед отправкой задания Spark. Сведения об установке, см. ссылку [развертывание средств работы с большими данными](deploy-big-data-tools.md).
+## <a name="prerequisites"></a>предварительные требования
+
+- [Средства SQL Server 2019 больших данных](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Расширение SQL Server 2019**
+   - **kubectl**
+
+- [Подключение Azure Data Studio к шлюзу HDFS/Spark кластера больших данных](connect-to-big-data-cluster.md).
 
 ## <a name="open-spark-job-submission-dialog"></a>Открыть диалоговое окно отправки задания Spark
 Существует несколько способов, чтобы открыть диалоговое окно отправки задания Spark. Способы включают панели мониторинга, контекстное меню в обозревателе объектов и Palate команды.

@@ -1,22 +1,21 @@
 ---
-title: Шаг 7. Добавление и настройка назначения OLE DB | Документы Майкрософт
+title: Шаг 7. Добавление и Настройка назначения «OLE DB» | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 89073c9da5a4cd6243bd1fcdcd53d3fa13d02bb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6136d3e8e574d476b8ebabcfb78ed10284ead334
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138470"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750576"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Шаг 7. Добавление и настройка назначения OLE DB
   Созданный пакет теперь может извлекать данные из источника «Неструктурированный файл» и преобразовывать эти данные в формат, совместимый с форматом назначения. Далее требуется загрузить преобразованные данные в указанное назначение. Чтобы загрузить данные, необходимо добавить назначение OLE DB в поток данных. Назначение OLE DB может использовать таблицу, представление или SQL-команду базы данных, чтобы загрузить данные в различные OLE DB-совместимые базы данных.  
@@ -54,9 +53,9 @@ ms.locfileid: "48138470"
 14. В окне «Свойства» убедитесь, что `LocaleID` свойству **русский (Россия)** и`DefaultCodePage` свойству **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Шаг 8. Упрощение чтения пакета, созданного на занятии 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+ [Шаг 8. Облегчение пакета занятия 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 ## <a name="see-also"></a>См. также  
- [Назначение «OLE DB»](data-flow/ole-db-destination.md)  
+ [Назначение OLE DB](data-flow/ole-db-destination.md)  
   
   

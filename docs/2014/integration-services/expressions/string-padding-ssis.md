@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - padding strings [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27b200fd9f3d09fef0a94ea005add9bc7f1eca12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7141a102efe167c07147dce19ac2a88aa4606f3b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156754"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359326"
 ---
 # <a name="string-padding-ssis"></a>Дополнение строк (службы SSIS)
   Средство оценки выражений не проверяет, содержит ли строка начальные и конечные пробелы, и не приводит строки к одинаковой длине перед их сравнением. Если выражения требуют дополнения строк, можно использовать оператор + для сцепления значений столбцов и пустых строк. Дополнительные сведения см. в разделе [+ (объединение) (выражение SSIS)](concatenate-ssis-expression.md).  
@@ -31,6 +30,6 @@ ms.locfileid: "48156754"
 >  Функция LEN включает в счет начальные и завершающие пробелы.  
   
 ## <a name="related-content"></a>См. также  
- Техническая статья [Памятка выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=217683)на сайте pragmaticworks.com  
+ Техническая статья [Памятка выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=217683)на сайте pragmaticworks.com  
   
   

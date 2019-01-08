@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -22,12 +22,12 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b200fc8b534fad9e33f0b01d97d46d0bece4c988
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204944"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364186"
 ---
 # <a name="data-compression"></a>Сжатие данных
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает сжатие строк и страниц для таблиц и индексов rowstore, а также поддерживает columnstore и архивное сжатие columnstore для таблиц и индексов columnstore.  
@@ -108,12 +108,12 @@ ms.locfileid: "48204944"
   
 ||  
 |-|  
-|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ### <a name="basics"></a>Основы  
  Таблицы и индексы Columnstore всегда сохраняются со сжатием columnstore. Можно еще более уменьшить размер данных columnstore, настроив дополнительное сжатие, именуемое архивным сжатием.  Чтобы выполнить архивное сжатие, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяет к данным алгоритм сжатия XPress корпорации Майкрософт. Добавьте или удалите архивное сжатие, используя следующие типы сжатия данных.  
   
--   Используйте `COLUMNSTORE_ARCHIVE` сжатие данных для сжатия данных columnstore с помощью архивного сжатия.  
+-   Используйте сжатие данных `COLUMNSTORE_ARCHIVE` для сжатия данных columnstore с помощью архивного сжатия.  
   
 -   Используйте сжатие данных **COLUMNSTORE** для распаковки архивного сжатия. Эти результирующие данные по-прежнему будут сжаты с использованием сжатия columnstore.  
   
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [sys.indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - `type` и `type_desc` столбцы содержат CLUSTERED COLUMNSTORE и NONCLUSTERED COLUMNSTORE.  
   
--   [sys.partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) — `data_compression` и `data_compression_desc` столбцы содержат COLUMNSTORE и COLUMNSTORE_ARCHIVE.  
+-   [sys.partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - `data_compression` и `data_compression_desc` столбцы содержат COLUMNSTORE и COLUMNSTORE_ARCHIVE.  
   
  Процедура [sp_estimate_data_compression_savings (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) не применяется к индексам columnstore.  
   
@@ -251,7 +251,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   Включение сжатия может вызвать изменение планов запросов, поскольку данные будут занимать при хранении другое число страниц с другим числом строк на страницу.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация сжатия строк](row-compression-implementation.md)   
  [Реализация сжатия страниц](page-compression-implementation.md)   
  [Реализация сжатия Юникода](unicode-compression-implementation.md)   

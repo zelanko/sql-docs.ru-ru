@@ -17,19 +17,19 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b6837fdc076db7abfe4a085c2bb98201e1a298d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6a5ef9a9ced2399ba5539f8117cc40e5c13db0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055264"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352033"
 ---
 # <a name="reporting-services-ssrs"></a>Cлужбы Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет полный спектр готовых к использованию средств и служб для создания, развертывания и управления отчетами организации. Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включают возможности программирования, которые позволяют расширять и настраивать функциональные возможности по работе с отчетами.  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — Это серверная платформа отчетов, который предоставляет комплексные возможности создания отчетов для различных источников данных. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включает полный набор средств для создания, управления и доставки отчетов и API-интерфейсы, позволяющие разработчикам произвести интеграцию или расширить возможности данных и обработки отчетов в пользовательских приложениях. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] работают в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] среды и полностью интегрированы с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] средства и компоненты.  
   
- С помощью служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] можно создать интерактивные, табличные, графические отчеты и отчеты свободной формы из реляционных, многомерных и XML-источников данных. Отчеты могут включать визуализацию сложных данных, в том числе диаграммы, карты и спарклайны. Можно публиковать отчеты, планировать их обработку или осуществлять доступ к отчетам по требованию. Имеется большой выбор форматов просмотра. Можно экспортировать отчеты в другие приложения, например [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]. Также можно подписаться на публикуемые отчеты. Созданные отчеты можно просматривать с помощью веб-соединения или как часть приложения [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows или сайта SharePoint. Также возможно создавать предупреждения об изменении данных в отчетах, опубликованных на сайте SharePoint, и получать электронные сообщения при изменении данных в отчете.  
+ С помощью служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]можно создать интерактивные, табличные, графические отчеты и отчеты свободной формы из реляционных, многомерных и XML-источников данных. Отчеты могут включать визуализацию сложных данных, в том числе диаграммы, карты и спарклайны. Можно публиковать отчеты, планировать их обработку или осуществлять доступ к отчетам по требованию. Имеется большой выбор форматов просмотра. Можно экспортировать отчеты в другие приложения, например [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]. Также можно подписаться на публикуемые отчеты. Созданные отчеты можно просматривать с помощью веб-соединения или как часть приложения [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows или сайта SharePoint. Также возможно создавать предупреждения об изменении данных в отчетах, опубликованных на сайте SharePoint, и получать электронные сообщения при изменении данных в отчете.  
   
  Дополнительные сведения о новых компонентах [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], см. в разделе [новые &#40;служб Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
   
@@ -67,6 +67,6 @@ ms.locfileid: "48055264"
  ![Значок папки](media/hlp-16folder.gif "значок папки") [Справочник по функциям &#40;служб Reporting Services&#41;](feature-reference-reporting-services.md)  
   
 ## <a name="see-also"></a>См. также  
- [Центр ресурсов SQL Server](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [Центр ресурсов SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

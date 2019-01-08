@@ -19,12 +19,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2bcf7cb620a97578b921ca09d565ff2ef2fe77a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b18efaacb7ab891402e84b851735870c4c47e883
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080977"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360516"
 ---
 # <a name="analysis-services"></a>Службы Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] — подсистема аналитики данных в Интернете, которая используется в решениях для бизнес-аналитики (BI) и поддержки принятия решений. Эта подсистема предоставляет аналитические данные, которые применяются в бизнес-отчетах и клиентских приложениях, таких как Excel, отчеты служб Reporting Services, а также других сторонних средствах бизнес-аналитики. Типовой рабочий процесс для [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] включает построение модели на основе OLAP или табличных данных, развертывание модели в виде базы данных на экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], обработку базы данных для загрузки в нее данных и присваивание разрешений на доступ к данным. После подготовки доступ к этой многоцелевой модели данных может осуществляться любым клиентским приложением, поддерживающим [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в качестве источника данных.  
@@ -67,7 +67,7 @@ ms.locfileid: "48080977"
  [Руководства по службам Analysis &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Установка SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Руководство разработчика &#40;служб Analysis Services&#41;](analysis-services-developer-documentation.md)   
- [Центр ресурсов SQL Server](http://go.microsoft.com/fwlink/?linkID=219676)   
- [Сайте SQLCat.com](http://go.microsoft.com/fwlink/?linkID=220963)  
+ [Центр ресурсов SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)   
+ [Сайте SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
   

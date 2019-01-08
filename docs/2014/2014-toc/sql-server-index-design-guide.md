@@ -10,17 +10,17 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3d939e8d1576e31de3ba42eaa7deba59a2801bb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9af1d66612485f3a790de1ebc8149b7a9e374103
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178264"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360416"
 ---
 # <a name="sql-server-index-design-guide"></a>Руководство по проектированию индексов SQL Server
   Плохо спроектированные индексы и их недостаточное количество — основной источник узких мест в приложениях баз данных. Проектирование эффективных индексов имеет первостепенную важность для достижения высокой производительности баз данных и приложений. Это руководство по проектированию индексов SQL Server содержит сведения и рекомендации, руководствуясь которыми вы сможете создавать эффективные индексы, удовлетворяющие потребностям ваших приложений.  
   
-**Применяется к**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] через [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Если не указано иное.  
+**Область применения**: с [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] по [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] включительно, если не указано иное.  
   
  Предполагается, что читатель обладает общими знаниями типов индексов, которые есть в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Общее описание типов индексов приведено в разделе [Типы индексов](../relational-databases/indexes/indexes.md).  
   
@@ -389,7 +389,7 @@ INCLUDE (FileName);
   
     -   изменение поведения столбца в отношении значения NULL с NOT NULL на NULL;  
   
-    -   Увеличьте длину `varchar`, `nvarchar`, или `varbinary` столбцов.  
+    -   Увеличение длины столбцов типов `varchar`, `nvarchar` и `varbinary`.  
   
         > [!NOTE]  
         >  Эти ограничения на изменение столбца также применяются к ключевым столбцам индекса.  
@@ -595,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
  ![Значок стрелки, используемый для ссылки возврата в начало](media/uparrow16x16.gif "значок стрелки, используемый для ссылки возврата в начало") [в данном руководстве](#Top)  
   
 ##  <a name="Additional_Reading"></a> Дополнительные материалы  
- [Повышение производительности с помощью индексированных представлений SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+ [Повышение производительности с помощью индексированных представлений SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
  [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   

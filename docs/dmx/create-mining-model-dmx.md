@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ea71a918ab9ceb1afba41e5af0148212f33044b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607144"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521203"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  Список алгоритмов, поддерживаемых текущим поставщиком могут быть получены с помощью [набор строк DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Чтобы просмотреть алгоритмы, поддерживаемые в текущий экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], см. в разделе [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *список параметров*  
- Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
+ Необязательный. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
   
  *XML-строка*  
  (Для опытных пользователей.) Модель, закодированная на языке XML (PMML). Строка должна быть заключена в одиночные кавычки (').  
@@ -119,7 +119,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Список параметров может использоваться для настройки производительности и функциональности модели интеллектуального анализа данных. Синтаксис списка параметров следующий:  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
  Список параметров, которые связаны с каждым алгоритмом, см. в разделе [алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  

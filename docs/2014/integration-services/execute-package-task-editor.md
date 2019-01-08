@@ -15,12 +15,12 @@ ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 468823b10b4b97fb2a4fe7fcd0a83f28af6fc5b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f750d134459b55e3d14772bf8b4c6db25b1ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119044"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504519"
 ---
 # <a name="execute-package-task-editor"></a>редактор задачи «Выполнение пакета»
   Для настройки задачи «Выполнение пакета» используйте редактор задачи «Выполнение пакета». Задача «Выполнение пакета» расширяет возможности служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в рамках организации, позволяя одним пакетам выполнять другие пакеты как часть рабочего процесса.  
@@ -91,7 +91,7 @@ ms.locfileid: "48119044"
  **Соединение**  
  Выберите диспетчер подключений OLE DB в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:**  [Диспетчер подключений OLE DB](connection-manager/ole-db-connection-manager.md), [Настройка диспетчера подключений OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **См. также:** [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md), [Настройка диспетчера соединений OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  Введите имя дочернего пакета или нажмите кнопку с многоточием (...) и определите местоположение пакета.  
@@ -100,7 +100,7 @@ ms.locfileid: "48119044"
  **Соединение**  
  Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  Отображает имя пакета.  

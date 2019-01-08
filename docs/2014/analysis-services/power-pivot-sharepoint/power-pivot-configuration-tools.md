@@ -11,12 +11,12 @@ ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 62a5d85272aae56b7f54b780b863642b5ddac6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 133f5db597dfd56464678c52273e576e3493f172
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102114"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210873"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
   Настройка, исправление или удаление [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] с помощью средств настройки PowerPivot.  
@@ -46,7 +46,7 @@ ms.locfileid: "48102114"
 -   При работе со средствами настройки порты TCP/IP не задействуются, поэтому не нужно выполнять какую-либо особую настройку брандмауэра. При работе со средством настройки подразумевается, что веб-приложения и общие службы входят в состав платформы SharePoint. Может потребоваться настройка брандмауэра для сервера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения см. в статье [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ##  <a name="bkmk_twoversions"></a> 2 версии средства настройки  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Мастер установки устанавливает средство настройки PowerPivot для SharePoint 2010, а также средство настройки PowerPivot для SharePoint 2013.  
+ Мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установит средства настройки PowerPivot для SharePoint 2010, а также средство настройки PowerPivot для SharePoint 2013.  
   
  Средства можно использовать только с экземпляром [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] объекта [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Не следует использовать средства с установками [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48102114"
 |Настройка PowerPivot для SharePoint 2013|Средство настройки PowerPivot|  
 |--------------------------------------------------|-----------------------------------|  
 |На главной странице появился новый параметр для **PowerPivot Server для служб Excel**. Параметр поддерживает новую архитектуру с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , выполняемым за пределами фермы SharePoint. Необходимо настроить службы Excel для использования одного или нескольких серверов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , работающих в режиме интеграции с SharePoint.<br /><br /> ![Сервер PowerPivot в новом средстве настройки](../media/as-powerpivot-configtool-differences-new-mainpage.gif "сервера PowerPivot в новом средстве настройки")||  
-||Средство 2010 содержит страницу **регистрация служб SQL Server Analysis Services (PowerPivot) на локальном сервере** для настройки локального экземпляра [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Эта страница не является частью средства 2013, поскольку локальный экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]отсутствует.<br /><br /> ![КАК учетная запись службы в старом средстве настройки](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "как учетная запись службы в старом средстве настройки")|  
+||Средство 2010 содержит страницу **Регистрация служб SQL Server Analysis Services (PowerPivot) на локальном сервере** для настройки локального экземпляра [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Эта страница не является частью средства 2013, поскольку локальный экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]отсутствует.<br /><br /> ![КАК учетная запись службы в старом средстве настройки](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "как учетная запись службы в старом средстве настройки")|  
 ||Страница **Создание приложения службы PowerPivot** содержит дополнительный параметр **Обновить книги, чтобы получить возможность обновления данных**. Этот параметр недоступен в средстве 2013.<br /><br /> ![Обновление книг в старом средстве настройки](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "обновление книг в старом средстве настройки")|  
 |В средстве 2013 появилась новая страница **Настройка серверов PowerPivot**. Эта страница поддерживает новую архитектуру экземпляра [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , выполняемого за пределами фермы SharePoint. По умолчанию имя сервера, которое было указано на главной странице в текстовом поле **Сервер PowerPivot для служб Excel**, также отображается на вкладке **Настройка серверов PowerPivot**.<br /><br /> ![Зарегистрировать новое средство настройки PowerPivot сервера](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "новое средство настройки PowerPivot для регистрации сервера")||  
 |В средстве 2013 появилась новая страница **Регистрация надстройки PowerPivot в качестве модуля отслеживания служб Excel**. Службы Excel services SharePoint 2010 не отслеживают сведения об использовании PowerPivot.||  
@@ -82,9 +82,9 @@ ms.locfileid: "48102114"
   
 -   [Справочник по PowerShell для PowerPivot для SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
-> [!NOTE]  
+> [!NOTE]
 >  Средство не настраивает службы Reporting Services. При добавлении служб Reporting Services в среду SharePoint их следует устанавливать и настраивать отдельно. Дополнительные сведения см. в следующих разделах:  
->   
+> 
 >  -   [Установка служб Reporting Services в режиме SharePoint для SharePoint 2013](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
 > -   [Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48102114"
   
      ![два средства настройки powerpivot](../media/as-powerpivot-configtools-bothicons.gif "два средства настройки powerpivot")  
   
-     **Примечание.** Эти средства доступны, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
+     **Примечание.** Эти средства доступны, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
 2.  Во время запуска средство настройки проверяет состояние установки и предоставляет задачи, допустимые для нее.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "48102114"
  При нажатии кнопки «Пуск» средство обработает все действия в пакетном режиме. Несмотря на то что каждое действие отображается как отдельный элемент в списке задач, все действия в составе задачи обрабатываются вместе. Обрабатываются только те действия, которые проходят проверку. Для прохождения проверки, возможно, потребуется добавить или изменить некоторые из входных значений.  
   
 ## <a name="related-content"></a>См. также  
- [Обновление PowerPivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) рассматривает рабочий процесс, который обновляет существующую установку, уже находящегося в ферме.  
+ [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) Рассматривает рабочий процесс, который обновляет установку, уже существующую в ферме.  
   
- [Удаление PowerPivot для SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) рассматривает рабочий процесс, который удаляет PowerPivot для служб, решения и страницы приложений из фермы SharePoint.  
+ [Uninstall PowerPivot for SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) Рассматривает рабочий процесс, который удаляет с фермы службы, решения и страницы приложений PowerPivot для SharePoint.  
   
  [Настройка PowerPivot с помощью Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   

@@ -18,12 +18,12 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d4f057351f6d3c4713c616c90748c2c6e43524f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fc52fd7af36d2238c53d8cbd877b7a6d43cd1dd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837762"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591488"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@schedule_name =** ] **"***schedule_name***"**  
+ [  **@schedule_name =** ] **"**_schedule_name_**"**  
  Имя расписания. *schedule_name* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@enabled =** ] *включена*  
@@ -98,7 +98,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x8**|Часы|  
   
  [  **@freq_subday_interval =** ] *freq_subday_interval*  
- Число *freq_subday_type* периодов должно пройти между выполнениями задания. *freq_subday_interval* — **int**, значение по умолчанию **0**. Примечание: Интервал должен быть более 10 секунд. *freq_subday_interval* учитывается в тех случаях, где *freq_subday_type* равен **1**.  
+ Число *freq_subday_type* периодов должно пройти между выполнениями задания. *freq_subday_interval* — **int**, значение по умолчанию **0**. Примечание. Интервал должен составлять более 10 секунд. *freq_subday_interval* учитывается в тех случаях, где *freq_subday_type* равен **1**.  
   
  [  **@freq_relative_interval =** ] *freq_relative_interval*  
  Появления задания *freq_interval* в каждом месяце, если *freq_interval* — 32 (ежемесячное относительное расписание). *freq_relative_interval* — **int**, значение по умолчанию **0**, и может принимать одно из следующих значений. *freq_relative_interval* учитывается в тех случаях, где *freq_type* не равен 32.  
@@ -130,13 +130,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [  **@active_end_time =** ] *active_end_time*  
  Время в любой день между *active_start_date* и *active_end_date* завершения выполнения задания. *active_end_time* — **int**, значение по умолчанию **235959**, означающее 23:59:59. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
- [ **@owner_login_name**=] **"***аргумента***"**  
+ [ **@owner_login_name**=] **"**_аргумента_**"**  
  Имя сервера-участника, владеющего расписанием. *том* — **sysname**, и по умолчанию NULL, которое указывает, что владельцем расписания является создателем.  
   
- [ **@schedule_uid**=] *schedule_uid *** выходных данных**  
+ [ **@schedule_uid**=] _schedule_uid_**выходных данных**  
  Уникальный идентификатор для расписания. *schedule_uid* является переменной типа **uniqueidentifier**.  
   
- [ **@schedule_id**=] *schedule_id *** выходных данных**  
+ [ **@schedule_id**=] _schedule_id_**выходных данных**  
  Идентификатор расписания. *schedule_id* является переменной типа **int**.  
   
  [ **@originating_server**= ] *server_name*  

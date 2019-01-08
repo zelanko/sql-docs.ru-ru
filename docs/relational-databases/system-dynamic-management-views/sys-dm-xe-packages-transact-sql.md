@@ -20,12 +20,12 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cab25279fe7842d21b3657d34edef8234ae058cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 895eeeea22b305236d263827156c6717b458a96a
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738865"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785925"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "47738865"
  
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|Имя пакета. Это описание берется из самого пакета. Не допускает значение NULL.|  
+|name|**nvarchar(256)**|Имя пакета. Это описание берется из самого пакета. Не допускает значение NULL.|  
 |guid|**uniqueidentifier**|Идентификатор GUID пакета. Не допускает значение NULL.|  
-|description|**nvarchar(256)**|Описание пакета. descriptionis задайте автором пакета и не допускает значения NULL.|  
+|description|**nvarchar(3072)**|Описание пакета. descriptionis задайте автором пакета и не допускает значения NULL.|  
 |capabilities|**int**|Битовая карта, описывающая возможности этого пакета. Допускает значение NULL.|  
 |capabilities_desc|**nvarchar(256)**|Список всех возможностей, допустимых для этого пакета. Допускает значение NULL.|  
-|module_guid|**uniqueidentifier**|Идентификатор GUID модуля, содержащегося в пакете. Не допускает значение NULL.|  
+|module_guid|**nvarchar(60)**|Идентификатор GUID модуля, содержащегося в пакете. Не допускает значение NULL.|  
 |module_address|**varbinary(8)**|Базовый адрес, по которому загружается модуль, содержащийся в пакете. Один модуль может занимать несколько пакетов. Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  

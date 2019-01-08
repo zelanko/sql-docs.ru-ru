@@ -11,12 +11,12 @@ ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6bc556d6da6461fbd159cd09102d5b9c82bc2dc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68e73b7fc2d7b1982724da4040c4912473f30d78
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210259"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352573"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)
   В веб-средах можно добавлять множество функций, обеспечивающих взаимодействие пользователей с отчетами. Пользователи могут изменять порядок сортировки значений в отчете, показывать или скрывать элементы отчета, а также щелкать ссылки для перехода к другим отчетам или веб-страницам. Также можно добавить оглавление или схему документа. Пользователи отчета могут переходить к различным областям отчета, щелкая элементы в оглавлении или схеме документа.  
@@ -30,7 +30,7 @@ ms.locfileid: "48210259"
 -   **Ссылки на детализованные отчеты** — переход к другим отчетам на том же сервере отчетов. Дополнительные сведения см. в разделе [Детализированные отчеты (построитель отчетов и службы SSRS)](drillthrough-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Ссылки, привязанные к полям набора данных, могут стать мишенью для злонамеренного вторжения. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../security/secure-reports-and-resources.md) [электронной документации](http://go.microsoft.com/fwlink/?LinkId=154888) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+>  Ссылки, привязанные к полям набора данных, могут стать мишенью для злонамеренного вторжения. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../security/secure-reports-and-resources.md) [электронной документации](https://go.microsoft.com/fwlink/?LinkId=154888) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
   
  Также можно предоставить пользователям возможность управлять отображением отчета и его содержимым, создавая выражения, включающие ссылки на параметры для сортировки, фильтрации и определения видимости. Дополнительные сведения см. в разделах [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md), [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md) и [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
@@ -38,19 +38,19 @@ ms.locfileid: "48210259"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Интерактивная сортировка &#40;построитель отчетов и службы SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)  
+ [Интерактивная сортировка (построитель отчетов и службы SSRS)](interactive-sort-report-builder-and-ssrs.md)  
  Содержит описание способов добавления кнопки интерактивной сортировки к заголовкам столбцов.  
   
  [Создание схемы документа (построитель отчетов и службы SSRS)](create-a-document-map-report-builder-and-ssrs.md)  
  Объясняет, как добавить оглавление для перемещения по большим отчетам.  
   
- [Добавить закладку в отчет &#40;построитель отчетов и службы SSRS&#41;](add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [Добавление в отчет закладки (построитель отчетов и службы SSRS)](add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  Объясняет, как добавить закладки, чтобы создать ссылки внутри отчета.  
   
- [Добавление гиперссылки на URL-адрес &#40;построитель отчетов и службы SSRS&#41;](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Объясняет, как добавить в отчет ссылки на URL-адрес.  
   
 ## <a name="see-also"></a>См. также  
- [Детализация, Углубленная детализация, вложенные отчеты и вложенные области данных &#40;построитель отчетов и службы SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

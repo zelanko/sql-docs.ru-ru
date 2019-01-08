@@ -16,12 +16,12 @@ ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9a9a8db6c84bfde40ec7c71012d4cc528d57efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ceeb9a6d964dadd35c725a7ae4cd9e6db7c8d090
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163544"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363646"
 ---
 # <a name="upgrade-full-text-search"></a>Обновление полнотекстового поиска
   Обновление полнотекстового поиска с переходом к версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выполняется во время установки, а также во время присоединения, восстановления или копирования файлов баз данных или полнотекстовых каталогов из более ранней версии до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера копирования баз данных.  
@@ -126,7 +126,7 @@ ms.locfileid: "48163544"
 ## <a name="backup-and-imported-full-text-catalogs"></a>Резервные копии полнотекстовых каталогов и импортированные полнотекстовые каталоги  
  Для полнотекстовых каталогов, которые были восстановлены или сброшены во время обновления (и для новых полнотекстовых каталогов) полнотекстовый каталог является логическим понятием. Он не располагается в файловой группе. Следовательно, чтобы создать резервную копию полнотекстового каталога в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], следует определить все файловые группы, содержащие полнотекстовый индекс каталога, а затем последовательно создать резервные копии каждой из этих групп. Дополнительные сведения см. в разделе [Создание резервных копий и восстановление полнотекстовых каталогов и индексов](back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
- Те полнотекстовые каталоги, которые были импортированы из [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], все еще являются файлами базы данных в собственных файловых группах. Процесс резервного копирования [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] для полнотекстовых каталогов применим, за исключением того, что служба MSFTESQL не существует в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о процессе [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] см. в разделе [Резервное копирование и восстановление полнотекстовых каталогов](http://go.microsoft.com/fwlink/?LinkId=209154) электронной документации по SQL Server 2005.  
+ Те полнотекстовые каталоги, которые были импортированы из [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], все еще являются файлами базы данных в собственных файловых группах. Процесс резервного копирования [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] для полнотекстовых каталогов применим, за исключением того, что служба MSFTESQL не существует в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о процессе [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] см. в разделе [Резервное копирование и восстановление полнотекстовых каталогов](https://go.microsoft.com/fwlink/?LinkId=209154) электронной документации по SQL Server 2005.  
   
 ##  <a name="Upgrade_Db"></a> Миграция полнотекстовых индексов при обновлении базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Файлы баз данных и полнотекстовые каталоги из предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть обновлены до версии существующего экземпляра сервера [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи присоединения, восстановления или с использованием мастера копирования баз данных. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] полнотекстовые индексы (при их наличии) импортируются, сбрасываются или перестраиваются. Свойство сервера **upgrade_option** определяет, какой из режимов обновления полнотекстового поиска будет использоваться экземпляром сервера при обновлении базы данных.  
@@ -135,9 +135,9 @@ ms.locfileid: "48163544"
   
  **Изменение поведения полнотекстового обновления на экземпляре сервера**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: используйте действие **upgrade\_option** хранимой процедуры [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql).  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]. Используйте **обновление\_параметр** действие [sp\_fulltext\_службы](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** используйте параметр **Режим обновления полнотекстового каталога** в диалоговом окне **Свойства сервера** . Дополнительные сведения см. в разделе [Управление и наблюдение за полнотекстовым поиском для экземпляра сервера](manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Используйте **режим обновления полнотекстового поиска** из **свойства сервера** диалоговое окно. Дополнительные сведения см. в разделе [Управление и наблюдение за полнотекстовым поиском для экземпляра сервера](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="Considerations_for_Restore"></a> Замечания по восстановлению полнотекстового каталога [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Одним из методов обновления полнотекстовых данных базы данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] является восстановление полной резервной копии базы данных до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -148,7 +148,7 @@ ms.locfileid: "48163544"
   
 -   Если полнотекстовый каталог находится в режиме «вне сети», то резервное копирование завершится ошибкой.  
   
- Дополнительные сведения о резервном копировании и восстановлении полнотекстовых каталогов [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] см. в разделах [Резервное копирование и восстановление полнотекстовых каталогов](http://go.microsoft.com/fwlink/?LinkId=121052) и [Резервное копирование и восстановление файлов и полнотекстовые каталоги](http://go.microsoft.com/fwlink/?LinkId=121053)в электронной документации по [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+ Дополнительные сведения о резервном копировании и восстановлении полнотекстовых каталогов [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] см. в разделах [Резервное копирование и восстановление полнотекстовых каталогов](https://go.microsoft.com/fwlink/?LinkId=121052) и [Резервное копирование и восстановление файлов и полнотекстовые каталоги](https://go.microsoft.com/fwlink/?LinkId=121053)в электронной документации по [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
  При восстановлении базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]для полнотекстового каталога будет создан новый файл базы данных. По умолчанию данный файл имеет имя ftrow_*имя-каталога*.ndf. Например, если *имя-каталога* — `cat1`, то именем по умолчанию файла базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] будет `ftrow_cat1.ndf`. Но если имя по умолчанию уже используется в целевом каталоге, новый файл базы данных будет назван `ftrow_`*имя-каталога*`{`*GUID*`}.ndf`(где *GUID* — это глобальный уникальный идентификатор нового файла).  
   
@@ -194,6 +194,6 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
 ## <a name="see-also"></a>См. также  
  [Приступая к работе с компонентом Full-Text Search](get-started-with-full-text-search.md)   
  [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Настройка поисковых фильтров и управление ими](configure-and-manage-filters-for-search.md)  
+ [Настройка и управление фильтрами для поиска](configure-and-manage-filters-for-search.md)  
   
   

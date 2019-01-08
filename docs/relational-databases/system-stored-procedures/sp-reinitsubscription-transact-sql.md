@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_reinitsubscription
@@ -17,12 +16,12 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1e22ef6cd6ed820bf290125c109ab5e0f772cbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da8e0d9ab1959251bf5e41e35e4b3d647e072d8a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785142"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207341"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  Указывает, является ли повторная инициализация результатом изменения схемы в базе данных публикации. *for_schema_change* — **бит**, значение по умолчанию 0. Если **0**, активные подписки публикаций, которые допускают непосредственное обновление, повторно до тех пор, пока повторной инициализации всей публикации, а не только некоторые из его статей. Это означает, что повторная инициализация инициируется в результате изменения схемы. Если **1**, активные подписки не активируются, пока не будет запущен агент моментальных снимков.  
   
  [  **@publisher=** ] **"***издателя***"**  
- Задает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *издатель* — **sysname**, значение по умолчанию NULL.  
+ Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует использовать для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей.  

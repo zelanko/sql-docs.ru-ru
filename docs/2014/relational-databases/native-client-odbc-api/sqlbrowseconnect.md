@@ -14,12 +14,12 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5300285872c0c03ce25410ba0bfd636c7ccf6bca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208538"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352685"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect** использует ключевые слова, которые можно разделить на три уровня сведений о соединении. Для каждого ключевого слова в следующей таблице указано, возвращается ли список допустимых значений и является ли ключевое слово необязательным.  
@@ -28,8 +28,8 @@ ms.locfileid: "48208538"
   
 |Ключевое слово|Возвращает список?|Является необязательным?|Описание|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|Недоступно|Нет|Имя источника данных, возвращенных **SQLDataSources**. Ключевое слово DSN нельзя использовать, если используется ключевое слово DRIVER.|  
-|DRIVER|Недоступно|Нет|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя драйвера ODBC для собственного клиента {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Ключевое слово DRIVER нельзя использовать, если используется ключевое слово DSN.|  
+|DSN|Н/Д|Нет|Имя источника данных, возвращенных **SQLDataSources**. Ключевое слово DSN нельзя использовать, если используется ключевое слово DRIVER.|  
+|DRIVER|Н/Д|Нет|Microsoft?? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Собственное имя драйвера ODBC для клиента — {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Ключевое слово DRIVER нельзя использовать, если используется ключевое слово DSN.|  
   
 ## <a name="level-2"></a>Уровень 2  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48208538"
 |Добавлена документация по SQL_COPT_SS_BROWSE_CACHE_DATA.|  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLBrowseConnect](http://go.microsoft.com/fwlink/?LinkId=59329)   
+ [Функция SQLBrowseConnect](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

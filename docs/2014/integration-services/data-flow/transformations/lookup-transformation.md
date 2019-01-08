@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
@@ -20,12 +19,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c4491baada6f3a378a1704608c4dd8427c526ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c285e24c2a981464c93001c1df41f164e60b1e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229854"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353805"
 ---
 # <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
   Преобразование «Уточняющий запрос» выполняет уточняющие запросы, объединяя данные во входных столбцах со столбцами в ссылочном наборе данных. Уточняющие запросы используются для доступа к дополнительной информации в связанной таблице, основанной на значениях в общих столбцах.  
@@ -60,7 +59,7 @@ ms.locfileid: "48229854"
   
 -   Если в ссылочной таблице содержится несколько соответствующих записей, преобразование «Уточняющий запрос» возвращает только первое соответствие, возвращаемое уточняющим запросом. Если было найдено несколько совпадений, преобразование «Уточняющий запрос» формирует ошибку или предупреждение только в том случае, если оно было настроено для загрузки всего эталонного набора данных в кэш. В этом случае преобразование «Уточняющий запрос» формирует ошибку, если оно обнаруживает несколько совпадений во время заполнения кэша.  
   
- Соединение может быть составным. Это значит, что можно объединить несколько столбцов на входе преобразования со столбцами в эталонном наборе данных. Преобразование поддерживает соединение столбцов с любыми типами данных, кроме DT_R4, DT_R8, DT_TEXT, DT_NTEXT и DT_IMAGE. Дополнительные сведения см. в статье [Integration Services Data Types](../integration-services-data-types.md).  
+ Соединение может быть составным. Это значит, что можно объединить несколько столбцов на входе преобразования со столбцами в эталонном наборе данных. Преобразование поддерживает соединение столбцов с любыми типами данных, кроме DT_R4, DT_R8, DT_TEXT, DT_NTEXT и DT_IMAGE. Дополнительные сведения см. в разделе [Integration Services Data Types](../integration-services-data-types.md).  
   
  Обычно значения из эталонного набора данных добавляются к выходу преобразования. Например, преобразование «Уточняющий запрос» может извлечь название продукта из таблицы, используя значение из входного столбца, затем добавить название продукта в выход преобразования. Значения из ссылочной таблицы могут заменить значения столбца или могут быть добавлены в новый столбец.  
   
@@ -120,29 +119,29 @@ ms.locfileid: "48229854"
 ## <a name="related-tasks"></a>Связанные задачи  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или программными средствами. Дополнительные сведения см. в следующих разделах.  
   
--   [Реализация уточняющего запроса в режиме "Частичное кэширование" или "Без кэширования"](implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
+-   [Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»](implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
 -   [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера подключений с кэшем](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера соединений OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [Реализация преобразования «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>См. также  
   
--   Видеоролик [Как реализовать преобразование «Уточняющий запрос» в режиме полного кэширования](http://go.microsoft.com/fwlink/?LinkId=131031)на сайте msdn.microsoft.com  
+-   Видео, [как: Реализовать преобразование «Уточняющий запрос» в режиме полного кэширования](https://go.microsoft.com/fwlink/?LinkId=131031), на сайте msdn.microsoft.com  
   
--   Запись в блоге, [Рекомендации по использованию режимов кэширования для преобразования «Уточняющий запрос»](http://go.microsoft.com/fwlink/?LinkId=146623), на сайте blogs.msdn.com  
+-   Запись в блоге, [Рекомендации по использованию режимов кэширования для преобразования «Уточняющий запрос»](https://go.microsoft.com/fwlink/?LinkId=146623), на сайте blogs.msdn.com  
   
--   Запись в блоге [Шаблон уточняющего запроса: без учета регистра символов](http://go.microsoft.com/fwlink/?LinkId=157782)на сайте blogs.msdn.com  
+-   Запись в блоге [шаблон уточняющего запроса: Без учета регистра](https://go.microsoft.com/fwlink/?LinkId=157782), на сайте blogs.msdn.com  
   
--   Образец, [Преобразование «Уточняющий запрос»](http://go.microsoft.com/fwlink/?LinkId=267528), на сайте msftisprodsamples.codeplex.com.  
+-   Образец, [Преобразование «Уточняющий запрос»](https://go.microsoft.com/fwlink/?LinkId=267528), на сайте msftisprodsamples.codeplex.com.  
   
-     Дополнительные сведения об установке образцов продукта и баз данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] см. в разделе [Образцы продукта служб SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=267527).  
+     Дополнительные сведения об установке образцов продукта и баз данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] см. в разделе [Образцы продукта служб SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## <a name="see-also"></a>См. также  
  [Преобразование «Нечеткий уточняющий запрос»](fuzzy-lookup-transformation.md)   
- [Преобразование "Уточняющий запрос термина"](term-lookup-transformation.md)   
+ [Преобразование «Уточняющий запрос термина»](term-lookup-transformation.md)   
  [Поток данных](../data-flow.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   

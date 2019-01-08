@@ -14,12 +14,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90b8f11b303c72eedbf116ae4154ce9d611a401c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1d563b4cefc2e074c437fa0ab3b66bfea9796fb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164864"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372226"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Модули персонализации служб Analysis Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] модули персонализации служб являются основой лежат в основе архитектуры подключаемых модулей. С помощью архитектуры подключаемых модулей можно динамически разрабатывать новые объекты кубов и функциональность и легко обмениваться ими с другими разработчиками. Таким образом [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] модулей персонализации служб предоставляют функциональность, позволяет добиться следующего:  
@@ -43,7 +43,7 @@ ms.locfileid: "48164864"
  При запуске службы, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] загружает необходимые сборки и определяет, какие классы имеют <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> настраиваемого атрибута.  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] определяет специальные атрибуты как способ описания программного кода и влияния на поведение времени выполнения. Дополнительные сведения см. в разделе "[Обзор атрибутов](http://go.microsoft.com/fwlink/?LinkId=82929),» в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] руководства для разработчиков на сайте MSDN.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] определяет специальные атрибуты как способ описания программного кода и влияния на поведение времени выполнения. Дополнительные сведения см. в разделе "[Обзор атрибутов](https://go.microsoft.com/fwlink/?LinkId=82929),» в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] руководства для разработчиков на сайте MSDN.  
   
  Для всех классов, содержащих <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> настраиваемого атрибута [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] вызывают конструкторы по умолчанию. Вызов всех конструкторов при запуске представляет собой удобный, из которого выполняется построение новых объектов и независимо от действий пользователя.  
   
@@ -117,13 +117,13 @@ ms.locfileid: "48164864"
 #### <a name="adomdcommand-class"></a>Класс AdomdCommand  
  Класс <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> теперь поддерживает следующие команды многомерных выражений:  
   
--   [Инструкция CREATE MEMBER &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-definition-create-member)  
+-   [Инструкция CREATE MEMBER (многомерные выражения)](/sql/mdx/mdx-data-definition-create-member)  
   
 -   [Инструкция UPDATE MEMBER &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [Инструкция DROP MEMBER &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [Инструкция CREATE SET &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-definition-create-set)  
+-   [Инструкция CREATE SET (многомерные выражения)](/sql/mdx/mdx-data-definition-create-set)  
   
 -   [Инструкция DROP SET &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   
@@ -141,10 +141,10 @@ ms.locfileid: "48164864"
  В синтаксис многомерных выражений добавлены команды CREATE KPI и DROP KPI. Ключевые показатели эффективности можно создавать динамически из любого скрипта многомерных выражений.  
   
 ### <a name="schema-rowsets-extensions"></a>Расширения наборов строк схем  
- На MDSCHEMA_MEMBERS *область* добавляется столбец. Ниже приведены значения области: MDMEMBER_SCOPE_GLOBAL = 1, MDMEMBER_SCOPE_SESSION = 2.  
+ На MDSCHEMA_MEMBERS *область* добавляется столбец. Возможны следующие значения области действия: MDMEMBER_SCOPE_GLOBAL=1, MDMEMBER_SCOPE_SESSION=2.  
   
- На MDSCHEMA_SETS *set_evaluation_context* добавляется столбец. Значения контекста вычислений, следующим образом: MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
+ На MDSCHEMA_SETS *set_evaluation_context* добавляется столбец. Допустимы следующие значения контекста вычислений: MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
   
- Добавлен столбец scope  в набор строк схемы MDSCHEMA_KPIS. Ниже приведены значения области: MDKPI_SCOPE_GLOBAL = 1, MDKPI_SCOPE_SESSION = 2.  
+ Добавлен столбец scope  в набор строк схемы MDSCHEMA_KPIS. Возможны следующие значения области действия: MDKPI_SCOPE_GLOBAL=1, MDKPI_SCOPE_SESSION=2.  
   
   

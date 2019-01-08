@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3fbd8408df9425f2e42d0819d1efa1c4bdcc4dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 812ba207d699cbbdb2156a4c5f3799cbfa8a74db
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124144"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753417"
 ---
 # <a name="bitmap-warning-event-class"></a>Bitmap Warning, класс событий
   Класс событий **Bitmap Warning** можно использовать для мониторинга фильтрации по битовым картам в запросах. Подкласс этого события применяется для сообщения об отключенных фильтрах по битовым картам в запросе.  

@@ -1,5 +1,5 @@
 ---
-title: Включить режим DirectQuery в SSDT | Документы Microsoft
+title: Включить в режиме Analysis Services DirectQuery в SSDT | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1d2a1ced9638a48dc02729c0f224b883974a7dde
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 83fa1cf8d99f18cd82e00b4020a2d846b1bdfdc6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206303"
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>Включение режима DirectQuery в SSDT
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -40,11 +41,11 @@ ms.lasthandoff: 05/10/2018
 
 Кроме того, чтобы проверить модель при ее создании, можно создать демонстрационную секцию для каждой таблицы и добавить в нее демонстрационные данные. Все добавленные данные используются в средстве **Анализ для Excel** или в других клиентских средствах, которые могут подключаться к базе данных рабочей области. Дополнительные сведения см. в разделе [Добавление демонстрационных данных в модель DirectQuery в режиме конструктора](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) .  
   
-> [!TIP]  
-    >  Даже если модель пуста, в режиме DirectQuery для каждой таблицы всегда можно посмотреть небольшой встроенный набор строк. В [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]выберите меню **Таблица** > **Свойства таблицы** , чтобы просмотреть набор данных из 50 строк.  
+> [!TIP]
+>  Даже если модель пуста, в режиме DirectQuery для каждой таблицы всегда можно посмотреть небольшой встроенный набор строк. В [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]выберите меню **Таблица** > **Свойства таблицы** , чтобы просмотреть набор данных из 50 строк.  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Включение режима DirectQuery в SSMS](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md)
 
 [Добавление демонстрационных данных в модель DirectQuery в режиме конструктора](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md)

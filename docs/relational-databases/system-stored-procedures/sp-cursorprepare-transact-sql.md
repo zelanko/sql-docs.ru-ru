@@ -18,12 +18,12 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c32bc8d9b8cca81c560e12b82f58169b257ca1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857002"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535504"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -112,9 +112,9 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|0|Успешно|  
+|0|Success|  
 |0x0001|Failure|  
-|1FF6|Невозможно вернуть метаданные.<br /><br /> Примечание: Обусловлено тем, что инструкция не создает результирующий набор; Например это инструкция INSERT или DDL.|  
+|1FF6|Невозможно вернуть метаданные.<br /><br /> Примечание. Причина в том, что эта инструкция не создает результирующий набор. Например, это инструкция INSERT или DDL.|  
   
 ## <a name="examples"></a>Примеры  
  Когда *stmt* параметризован и *scrollopt* значение PARAMETERIZED_STMT имеет значение ON, используется следующий формат строки:  

@@ -15,19 +15,19 @@ ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7e2a3ff2f7e0f1a224b837eb46aad42840b057c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbc80b6f50ea023a998b6a7958577933afd007a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190714"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362347"
 ---
 # <a name="server-configuration---collation"></a>Настройка сервера — параметры сортировки
   На странице «Конфигурация сервера — Параметры сортировки» мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно изменить параметры сортировки, используемые компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] и службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Это позволят согласовать параметры сортировки для различных установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или на разных компьютерах.  
   
 ## <a name="options"></a>Параметры  
  Настроить для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет две группы параметров сортировки: параметры сортировки Windows и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметры сортировки. Параметры сортировки для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]могут быть индивидуальными или одинаковыми.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет две группы параметров сортировки: Параметры сортировки Windows и параметры сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметры сортировки для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]могут быть индивидуальными или одинаковыми.  
   
  По умолчанию для англоязычных локалей систем выбираются параметры сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В локализованных версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметры сортировки по умолчанию определяются локалью системы Windows для компьютера.  
   
@@ -35,10 +35,10 @@ ms.locfileid: "48190714"
   
  **Примечание.** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют только параметры сортировки Windows. Если планируется установить службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], выберите параметры сортировки Windows во время установки служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы обеспечить согласованность результатов между [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Дополнительные сведения см. в разделе [Настройка параметров сортировки в программе установки](http://go.microsoft.com/fwlink/?LinkId=190977).  
+ Дополнительные сведения см. в разделе [Настройка параметров сортировки в программе установки](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
 ## <a name="best-practices"></a>Рекомендации  
- Дополнительные сведения о таблице языков системы Windows и соответствующих им параметрах сортировки по умолчанию, используемых программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в разделе [Настройка параметров сортировки в программе установки](http://go.microsoft.com/fwlink/?LinkId=190977).  
+ Дополнительные сведения о таблице языков системы Windows и соответствующих им параметрах сортировки по умолчанию, используемых программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в разделе [Настройка параметров сортировки в программе установки](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
  По возможности используйте единые параметры сортировки для всей организации. В этом случае не нужно будет явно устанавливать параметры сортировки для каждой базы данных, столбца, выражения или идентификатора. При работе с объектами, имеющими разные параметры сортировки и кодовые страницы, создание запросов должно производиться с учетом правил очередности параметров сортировки. Дополнительные сведения см. в разделе электронной документации [Очередность параметров сортировки (Transact-SQL)](/sql/t-sql/statements/collation-precedence-transact-sql).  
   

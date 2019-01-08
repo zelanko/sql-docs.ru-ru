@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, backward compatibility
@@ -19,12 +18,12 @@ ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60cf56b2d230435c42f1ef1402d55938e89af2b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206624"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797076"
 ---
 # <a name="replication-backward-compatibility"></a>Обратная совместимость репликации
   Разделы в главе по обратной совместимости описывают изменения в поведении репликации в разных версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При обновлении или наличии нескольких версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в топологии репликации важно понимать принцип обратной совместимости.  

@@ -14,12 +14,12 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0e5a129fbd9a6dc9fbafd6b06fe5088d162ac9ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 876397aeab28f0d328e3fb80555bdae18699bb01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210854"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536975"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Обзор монитора зеркального отображения баз данных
   При наличии разрешения возможно использование монитора зеркального отображения баз данных для эффективного контроля любого набора зеркальных баз данных на экземпляре сервера. Процедура контроля позволяет проверить выполнение и правильность передачи данных во время сеанса зеркального отображения базы данных. Монитор зеркального отображения баз данных также полезен для диагностики причины уменьшения потока данных.  
@@ -102,8 +102,8 @@ ms.locfileid: "48210854"
   
 -   [Запуск монитора зеркального отображения баз данных (среда SQL Server Management Studio)](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>См. также  
- [Наблюдение за зеркальным отображением базы данных (SQL Server)](database-mirroring-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Мониторинг зеркального отображения базы данных (SQL Server)](database-mirroring-sql-server.md)   
  [Запуск мастера настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)  
   
   

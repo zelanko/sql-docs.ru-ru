@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d69ded06359dfc7f5f7c71864d3be6b64de6f7af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f79b52e62a8080c70865ae8ebe33d1a8a87faa04
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227329"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779316"
 ---
 # <a name="sql-server-properties-service-tab"></a>Свойства SQL Server (вкладка «Службы»)
   Используйте вкладку **Службы**в диалоговом окне **Свойства MSSQLSERVER** , чтобы просмотреть или указать следующие параметры.  
@@ -34,7 +33,7 @@ ms.locfileid: "48227329"
  **Host Name**  
  Отображает имя компьютера или кластера, где запущена служба [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Название**  
+ **Name**  
  Указывает отображаемое имя службы.  
   
  **Идентификатор процесса**  
@@ -50,9 +49,9 @@ ms.locfileid: "48227329"
   
 -   Автоматически. Эта служба пытается запуститься при запуске компьютера.  
   
--   Отключено. Служба не может быть запущена.  
+-   Отключено: Служба не может быть запущена.  
   
  **Состояние**  
- Указывает, была ли служба запущена, остановлена или отключена. «**…**» указывает, что ожидается изменение состояния.  
+ Указывает, была ли служба запущена, остановлена или отключена. **…** указывает, что ожидается изменение состояния.  
   
   

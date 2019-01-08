@@ -15,17 +15,17 @@ ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5892aa294983a453c018afc5511cee0f88eff0a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133421"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369126"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   В данном разделе описываются функции ODBC, демонстрирующие специфичное для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поведение при использовании с драйвером ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Здесь перечислены не все функции ODBC. В отдельных разделах обсуждаются только те проблемы, которые специфичны для функции ODBC в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они не являются полным справочником по функциям ODBC.  
   
- Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует спецификации ODBC 3.51, а также спецификации ODBC 3.8 в случае использования пакета Windows 7 SDK. Полный справочник по ODBC, просмотреть [Справочник по программированию ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) online.  
+ Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует спецификации ODBC 3.51, а также спецификации ODBC 3.8 в случае использования пакета Windows 7 SDK. Полный справочник по ODBC, просмотреть [Справочник по программированию ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   

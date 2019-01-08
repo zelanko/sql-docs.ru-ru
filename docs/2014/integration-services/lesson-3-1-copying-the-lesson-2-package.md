@@ -1,25 +1,24 @@
 ---
-title: Шаг 1. Копирование пакета, созданного на занятии 2 | Документы Майкрософт
+title: Шаг 1. Копирование пакета занятия 2 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45a536e151432a2f2edbac55362af9ea2f2feb55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bcc6c331908f33df3b324ff7061b38065e36981
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205554"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360895"
 ---
 # <a name="step-1-copying-the-lesson-2-package"></a>Шаг 1. Копирование пакета занятия 2
-  В этой задаче будет создана копия пакета Lesson 2.dtsx, созданного на занятии 2. Либо можно добавить пакет для занятия 2, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 3.  
+  В этой задаче будет создана копия пакета Lesson 2.dtsx, созданного на занятии 2. Либо можно добавить пакет для занятия 2, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 3.  
   
 ### <a name="to-create-the-lesson-3-package"></a>Создание пакета занятия 3  
   
@@ -49,11 +48,11 @@ ms.locfileid: "48205554"
   
 3.  В диалоговом окне **Добавление копии существующего пакета** в разделе **Расположение пакета**выберите пункт **Файловая система**.  
   
-4.  Нажмите кнопку обзора **(…)** , перейдите в папку с пакетом **Lesson 2.dtsx** на компьютере и нажмите кнопку **Открыть**.  
+4.  Нажмите кнопку обзора **(…)**, перейдите в папку с пакетом **Lesson 2.dtsx** на компьютере и нажмите кнопку **Открыть**.  
   
      Чтобы загрузить все пакеты занятий этого учебника, выполните следующие действия.  
   
-    1.  Перейдите к [образцам продуктов служб Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027).  
+    1.  Перейдите к [образцам продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027).  
   
     2.  Перейдите на вкладку **DOWNLOADS** .  
   

@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d3c09a2d625f8b1a8c92d3fc55d8b571336a020
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c003b103c7957e737f53eb8733022e68073b3aef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857032"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802506"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  Показывает наличие изолированного агента распространителя для этой публикации. *independent_agent* — **nvarchar(5)**, значение по умолчанию TRUE. Если **true**, имеется изолированный агент распространителя для этой публикации. Если **false**, имеется один агент распространителя для каждой пары издатель базы данных подписчик базы данных. *independent_agent* является свойством публикации и должен иметь то же значение что и на издателе.  
   
  [  **@subscription_type=**] **"***subscription_type***"**  
- Тип подписки. *subscription_type* — **nvarchar(9)**, значение по умолчанию **анонимный**. Необходимо указать значение **по запросу** для *subscription_type*, только если вы хотите создать подписку без регистрации подписки на издателе. В этом случае необходимо указать значение **анонимный**. Это необходимо в тех случаях, когда не удается установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединение с издателем в момент настройки подписки.  
+ Тип подписки. *subscription_type* — **nvarchar(9)**, значение по умолчанию **анонимный**. Необходимо указать значение **по запросу** для *subscription_type*, только если вы хотите создать подписку без регистрации подписки на издателе. В этом случае необходимо указать значение **анонимный**. Это необходимо в тех случаях, когда невозможно установить соединение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с издателем в момент настройки подписки.  
   
  [  **@description=**] **"***описание***"**  
  Описание публикации. *Описание* — **nvarchar(100)**, значение по умолчанию NULL.  

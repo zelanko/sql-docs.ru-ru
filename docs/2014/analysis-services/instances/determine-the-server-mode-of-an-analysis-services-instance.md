@@ -11,15 +11,15 @@ ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50ddca5c3cdb1b7e314ccc6650bbd8fcc3ed3841
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f71f7b3f8d2cb6f7bd50ef676742282ee73d540
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113444"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411681"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Определение режима работы сервера экземпляра служб Analysis Services
-  Службы Analysis Services можно установить одним из трех серверных режимов: многомерный и интеллектуальный анализ данных (по умолчанию), PowerPivot для SharePoint и табличный. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
+  Службы Analysis Services могут быть установлены в одном из трех серверных режимов: многомерный и интеллектуальный анализ данных (по умолчанию), PowerPivot для SharePoint и табличный. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
   
  Режим сервера определяет тип создаваемого и развертываемого решения. Если программное обеспечение сервера не было установлено и необходимо узнать, в каком режиме установлен сервер, режим можно определить, следуя указаниям в этом разделе. Дополнительные сведения о доступных функциях в определенном режиме см. в разделе [Сравнение табличных и многомерных решений (службы SSAS)](../comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -34,10 +34,10 @@ ms.locfileid: "48113444"
  Также можно проверить свойство `DeploymentMode` в файле msmdsrv.ini, который имеется в каждом экземпляре служб Analysis Services. Значение этого свойства определяет режим сервера. Допустимые значения: 0 (многомерный), 1 (SharePoint) или 2 (табличный). Чтобы открыть файл msmdsrv.ini, необходимо быть администратором служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (то есть членом роли сервера). Этот файл содержит структурированный XML-код. Просмотреть этот файл можно в Блокноте или другом текстовом редакторе.  
   
 > [!CAUTION]  
->  Не изменяйте значение `DeploymentMode` свойства. Изменение свойства вручную после установки сервера не поддерживается.  
+>  Не изменяйте значение свойства `DeploymentMode`. Изменение свойства вручную после установки сервера не поддерживается.  
   
 ## <a name="about-the-deploymentmode-property"></a>О свойстве DeploymentMode  
- Свойство `DeploymentMode` определяет контекст работы экземпляра сервера служб Analysis Services. В диалоговых окнах, сообщениях и документации это свойство называется «режим сервера». Это свойство инициализируется программой установки в зависимости от способа установки служб Analysis Services. Это свойство следует рассматривать исключительно как внутреннее и всегда использовать в нем значение, указанное программой установки.  
+ Свойство `DeploymentMode` определяет контекст работы экземпляра сервера служб Analysis Services. Это свойство называется «режим сервера» в диалоговых окон, сообщений и документации. Это свойство инициализируется программой установки в зависимости от способа установки служб Analysis Services. Это свойство следует рассматривать исключительно как внутреннее и всегда использовать в нем значение, указанное программой установки.  
   
  Ниже приведены допустимые значения для этого свойства.  
   
@@ -54,8 +54,8 @@ ms.locfileid: "48113444"
  [Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Установка PowerPivot для SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Подключение к службам Analysis Services](connect-to-analysis-services.md)   
- [Решения табличных моделей &#40;табличные службы SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)   
- [Решения многомерной модели &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Модели интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [Решения табличных моделей (табличные службы SSAS)](../tabular-model-solutions-ssas-tabular.md)   
+ [Решения многомерной модели (службы SSAS)](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

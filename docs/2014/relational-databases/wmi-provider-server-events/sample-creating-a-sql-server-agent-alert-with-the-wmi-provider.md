@@ -1,12 +1,10 @@
 ---
-title: 'Пример: Создание предупреждения агента SQL Server с помощью поставщика WMI для событий сервера | Документация Майкрософт'
+title: Образец. Создание предупреждения агента SQL Server с помощью поставщика WMI для событий сервера | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Agent [WMI]
@@ -16,18 +14,18 @@ ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2623087a485070b442716c953501b2496679be9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823448"
 ---
-# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Создание предупреждения агента SQL Server при помощи поставщика WMI для событий сервера
+# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Образец. Создание предупреждения агента SQL Server при помощи поставщика WMI для событий сервера
   Один из общепринятых способов использования поставщика событий WMI состоит в создании предупреждений агента SQL Server, которые отвечают на конкретные события. В следующем образце представлено простое предупреждение, которое сохраняет события графа взаимоблокировок XML в таблице для последующего анализа. Агент SQL Server отправляет запрос WQL, получает события WMI и запускает задание в ответ на событие. Обратите внимание, что в обработке сообщения уведомления участвуют несколько объектов компонента Service Broker, но детальные операции создания и управления этими объектами возлагаются на поставщика событий WMI.  
   
 ## <a name="example"></a>Пример  
- Прежде всего в базе данных `AdventureWorks` создается таблица для хранения событий графа взаимоблокировок. Таблица содержит два столбца: `AlertTime` столбец содержит время запуска предупреждения, и `DeadlockGraph` столбец содержит XML-документ, который содержит диаграмму взаимоблокировок.  
+ Прежде всего в базе данных `AdventureWorks` создается таблица для хранения событий графа взаимоблокировок. Таблица содержит два столбца: столбец `AlertTime` содержит время запуска предупреждения, а столбец `DeadlockGraph` содержит XML-документ, в котором хранится граф взаимоблокировок.  
   
  Затем создается предупреждение. Скрипт сначала создает задание, которое запускается предупреждением, добавляет шаг задания к заданию и направляет задание в текущий экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После этого скрипт создает предупреждение.  
   

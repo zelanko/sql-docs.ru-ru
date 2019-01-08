@@ -1,5 +1,5 @@
 ---
-title: Технический справочник по алгоритму кластеризации последовательностей (Microsoft) | Документы Microsoft
+title: Технический справочник по алгоритму кластеризации последовательностей (Майкрософт) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cf5f652cc2cec77fdbcb488710886441788a0631
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418385"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -92,7 +93,7 @@ ms.lasthandoff: 05/10/2018
  Значение по умолчанию — 64.  
   
  MAXIMUM_STATES  
- Указывает максимальное количество состояний для атрибута не из последовательности, поддерживаемого алгоритмом. Если количество состояний атрибута не из последовательности превышает максимально возможное количество состояний, то алгоритм использует наиболее популярные состояния атрибута и рассматривает остальные состояния как **Отсутствует**.  
+ Указывает максимальное количество состояний для атрибута не из последовательности, поддерживаемого алгоритмом. Если число состояний непоследовательного атрибута больше, чем максимальное количество состояний, то алгоритм использует наиболее популярные состояния атрибута и считает остальные состояния **Missing**.  
   
  Значение по умолчанию — 100.  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 05/10/2018
  Применяется к столбцу структуры интеллектуального анализа данных.  
   
  MODEL_EXISTENCE_ONLY  
- Столбец будет обрабатываться так, как будто у него два возможных состояния: **Missing** и **Existing**. NULL означает отсутствие значения — **Missing** .  
+ Столбец будет обрабатываться так, как будто у него два возможных состояния: **Отсутствует** и **существующие**. NULL означает отсутствие значения — **Missing** .  
   
  Применяется к столбцу модели интеллектуального анализа данных.  
   
@@ -127,17 +128,17 @@ ms.lasthandoff: 05/10/2018
 |Входной атрибут|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table и Ordered|  
 |Прогнозируемый атрибут|Continuous, Cyclical, Discrete, Discretized, Table и Ordered|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
--   Для прогнозирования последовательностей используйте функцию [PredictSequence (расширения интеллектуального анализа данных)](../../dmx/predictsequence-dmx.md). Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих прогнозирование последовательностей см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Для прогнозирования последовательностей используйте функцию [PredictSequence (расширения интеллектуального анализа данных)](../../dmx/predictsequence-dmx.md). Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих прогнозирование последовательностей, см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   Алгоритм кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] не поддерживает использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.  
   
 -   Алгоритм кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает детализацию, а также использование моделей и измерений интеллектуального анализа данных OLAP.  
   
-## <a name="see-also"></a>См. также раздел  
- [Алгоритм кластеризации последовательностей (Майкрософт)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Примеры запросов модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Содержимое модели интеллектуального анализа данных для моделей кластеризации последовательностей & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+## <a name="see-also"></a>См. также  
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Примеры запросов к модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [Содержимое моделей интеллектуального анализа данных для моделей кластеризации последовательностей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

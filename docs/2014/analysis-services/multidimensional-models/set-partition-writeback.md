@@ -16,19 +16,19 @@ ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07c13662da9a558c6c9406a7659c5529114236d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157394"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364236"
 ---
 # <a name="set-partition-writeback"></a>Настройка обратной записи секции
   При включении возможности записи в группе мер пользователи смогут вносить изменения в данные куба при их просмотре. При этом сделанные изменения сохраняются не в данных куба или исходных данных, а в отдельной таблице, которая называется таблицей обратной записи. Конечные пользователи, просматривающие секцию, доступную для записи, видят суммарный результат всех изменений в таблице обратной записи для секции.  
   
  Данные обратной записи можно просматривать или удалять. Также можно преобразовывать данные обратной записи в секцию. В секции, доступной для записи, можно использовать роли кубов для предоставления доступа на чтение и запись пользователям и группам пользователей и для ограничения доступа к конкретным ячейкам или группам ячеек в секции.  
   
- Краткий видеоролик с общими сведениями о таблицах обратной записи см. в статье [Обратная запись Excel 2010 для служб Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394951). Более подробное описание этой возможности приведено в цикле записей [Создание приложения обратной записи с помощью служб Analysis Services (блог)](http://go.microsoft.com/fwlink/?LinkId=394977).  
+ Краткий видеоролик с общими сведениями о таблицах обратной записи см. в статье [Обратная запись Excel 2010 для служб Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394951). Более подробное описание этой возможности приведено в цикле записей [Создание приложения обратной записи с помощью служб Analysis Services (блог)](https://go.microsoft.com/fwlink/?LinkId=394977).  
   
 > [!NOTE]  
 >  Обратная запись поддерживается только для реляционных баз данных SQL Server и киосков данных, а также только для многомерных моделей служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -62,7 +62,7 @@ ms.locfileid: "48157394"
   
 ## <a name="see-also"></a>См. также  
  [Секции, доступные для записи](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Включение обратной записи в куб OLAP на уровне ячейки в Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Включение и защита ввода данных с помощью обратной записи служб Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Включение обратной записи в куб OLAP на уровне ячейки в Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Включение и защита ввода данных с помощью обратной записи служб Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

@@ -1,20 +1,22 @@
 ---
-title: Как прием данных в пул данных SQL Server с помощью Transact-SQL | Документация Майкрософт
+title: Прием данных в пул данных SQL Server
+titleSuffix: SQL Server 2019 big data clusters
 description: Этом руководстве показано, как прием данных в пуле данных кластера SQL Server 2019 больших данных (Предварительная версия) с sp_data_pool_table_insert_data хранимой процедуры.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 1f585a354175ff893869cef7f2f47b12fe244634
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 142a2db6bc841947a83ada4dc24c59de4e58df8f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221700"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432447"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Руководство: Прием данных в пул данных SQL Server с помощью Transact-SQL
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Учебник. Прием данных в пул данных SQL Server с помощью Transact-SQL
 
 Этот учебник демонстрирует использование Transact-SQL для загрузки данных в [пула данных](concept-data-pool.md) кластера SQL Server 2019 больших данных (Предварительная версия). С кластерами больших данных в SQL Server данные из различных источников можно принимаются и распределения между экземплярами пула данных.
 
@@ -30,17 +32,17 @@ ms.locfileid: "51221700"
 
 ## <a id="prereqs"></a> Предварительные требования
 
-* [Развертывание кластера больших данных в Kubernetes](deployment-guidance.md).
-* [Установка Studio данных Azure и расширение SQL Server 2019](deploy-big-data-tools.md).
-* [Загрузка образца данных в кластере](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Средства работы с большими данными](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **Расширение SQL Server 2019**
+- [Загрузка образца данных в кластере больших данных](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Создайте внешнюю таблицу в пул данных
 
 Следующие шаги создания внешней таблицы в пуле данных с именем **web_clickstream_clicks_data_pool**. Эта таблица можно затем использовать как расположение для приема данных к кластеру больших данных.
 
-1. В Azure Data Studio подключитесь к основной экземпляр SQL Server кластера больших данных. Дополнительные сведения см. в разделе [подключение к экземпляру SQL Server master](deploy-big-data-tools.md#master).
+1. В Azure Data Studio подключитесь к основной экземпляр SQL Server кластера больших данных. Дополнительные сведения см. в разделе [подключение к экземпляру SQL Server master](connect-to-big-data-cluster.md#master).
 
 1. Дважды щелкните подключение в **серверы** окно для отображения панели мониторинга сервера для главного экземпляра SQL Server. Выберите **новый запрос**.
 
@@ -66,7 +68,7 @@ ms.locfileid: "51221700"
       );
    ```
   
-1. В CTP-версии 2.1 Создание данных пула является асинхронным, но нет способа определить, когда сеть будет еще. Подождите 2 минуты, чтобы убедиться в том, что при создании пула данных, прежде чем продолжить.
+1. В CTP-версии 2.2 Создание данных пула является асинхронным, но нет способа определить, когда сеть будет еще. Подождите 2 минуты, чтобы убедиться в том, что при создании пула данных, прежде чем продолжить.
 
 ## <a name="load-data"></a>Загрузка данных
 

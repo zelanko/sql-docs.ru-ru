@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
@@ -14,12 +13,12 @@ ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fcccefeda97346c43fd70b41653f2f125816adc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136214"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747976"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Свойства TCP-IP (IP-адрес вкладка "адреса")
   Чтобы настроить параметры протокола TCP/IP для определенного IP-адреса, используйте диалоговое окно **Свойства TCP/IP (вкладка "IP-адреса")** . Для всех адресов одновременно посредством выбора пункта **Все IP** можно настроить только **Динамические TCP-порты** и **TCP-порт**.  
@@ -52,14 +51,14 @@ ms.locfileid: "48136214"
   
  Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] может прослушивать несколько портов на одном IP-адресе. Порты в списке разделяются запятыми в следующем формате: 1433,1500,1501. Длина этого поля ограничена 2047 символами.  
   
- Для настройки прослушивания нескольких портов на одном IP-адресе параметру **Прослушивать все** должно быть присвоено значение **Нет**на вкладке **Протокол** диалогового окна **Свойства TCP/IP** . Дополнительные сведения см. в разделе «Как настроить компонент Database Engine на прослушивание нескольких TCP-портов» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Для настройки прослушивания нескольких портов на одном IP-адресе параметру **Прослушивать все** должно быть присвоено значение **Нет**на вкладке **Протоколы** диалогового окна **Свойства TCP/IP** . Дополнительные сведения см. в разделе «Как настроить компонент Database Engine на прослушивание нескольких TCP-портов» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Добавление или удаление IP-адресов  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager отображает IP-адреса, которые были доступны во время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был установлен. Доступные IP-адреса могут измениться при добавлении или удалении сетевых адаптеров, после истечения срока действия динамически назначаемых IP-адресов, при перестройке сетевой структуры или при изменении физического местоположения компьютера, например в случае, когда переносной компьютер подключается к сети в другом здании. Для изменения IP-адреса необходимо изменить поле **IP-адрес** и перезапустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображает IP-адреса, которые были доступны во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Доступные IP-адреса могут измениться при добавлении или удалении сетевых адаптеров, после истечения срока действия динамически назначаемых IP-адресов, при перестройке сетевой структуры или при изменении физического местоположения компьютера, например в случае, когда переносной компьютер подключается к сети в другом здании. Для изменения IP-адреса необходимо изменить поле **IP-адрес** и перезапустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также  
  [Выбор сетевого протокола](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Создание допустимой строки подключения с использованием протокола TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [Служба обозревателя SQL Server](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
+ [Служба браузера SQL Server](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   
   

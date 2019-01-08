@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41a23e9885a2d5bd49d074dc72699601eb08a6d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90705da83013de65423aa2984293f8f780194de0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850562"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588938"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +43,26 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication =** ] **"***публикации***"**  
+ [  **@publication =** ] **"**_публикации_**"**  
  Имя связанной публикации. *Публикация* — **sysname**, значение по умолчанию **%**, который возвращает сведения обо всех подписках для этого сервера.  
   
- [  **@article=** ] **"***статье***"**  
+ [  **@article=** ] **"**_статье_**"**  
  Имя статьи. *статья* — **sysname**, значение по умолчанию **%**, который возвращает сведения обо всех подписках для выбранных публикаций и подписчиков. Если **все**, возвращаются только одна запись для полной подписки на публикацию.  
   
- [  **@subscriber=** ] **"***подписчика***"**  
+ [  **@subscriber=** ] **"**_подписчика_**"**  
  Имя подписчика, для которого возвращаются сведения о подписке. *подписчик* — **sysname**, значение по умолчанию **%**, который возвращает сведения обо всех подписках для выбранных публикаций и статей.  
   
- [  **@destination_db=** ] **"***destination_db***"**  
+ [  **@destination_db=** ] **"**_destination_db_**"**  
  Имя целевой базы данных. *destination_db* — **sysname**, значение по умолчанию **%**.  
   
- [  **@found=** ] **"***найти***"** выходных данных  
+ [  **@found=** ] **"**_найти_**"** выходных данных  
  Флаг для указания возвращаемых строк. *найти*— **int** и ВЫХОДНОЙ параметр, значение по умолчанию 23456.  
   
  **1** указывает, что публикация найдена.  
   
  **0** указывает, что публикация не найдена.  
   
- [ **@publisher**=] **"***издателя***"**  
+ [ **@publisher**=] **"**_издателя_**"**  
  Имя издателя. *издатель* — **sysname**и значение по умолчанию — имя текущего сервера.  
   
 > [!NOTE]  
@@ -91,9 +90,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|Расположение пакета служб DTS, если он назначен для подписки. Если имеется пакет значение **0** указывает, что пакет находится на **распространителя**. Значение **1** указывает **подписчика**.|  
 |**subscriber_security_mode**|**smallint**|Режим безопасности на подписчике, где **1** означает проверку подлинности Windows, и **0** означает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.|  
 |**subscriber_login**|**sysname**|Имя входа на подписчике.|  
-|**subscriber_password**||Фактический пароль подписчика никогда не возвращается. Результат скрывается "**\*\*\*\*\*\***" строка.|  
+|**subscriber_password**||Фактический пароль подписчика никогда не возвращается. Результат скрывается "**&#42;&#42;&#42;&#42;&#42;&#42;**" строка.|  
 |**job_login**|**sysname**|Имя учетной записи Windows, под которой работает агент распространителя.|  
-|**job_password**||Фактический пароль задания никогда не возвращается. Результат скрывается "**\*\*\*\*\*\***" строка.|  
+|**job_password**||Фактический пароль задания никогда не возвращается. Результат скрывается "**&#42;&#42;&#42;&#42;&#42;&#42;**" строка.|  
 |**distrib_agent_name**|**Nvarchar(100)**|Имя задания агента, которое синхронизирует подписку.|  
 |**subscriber_type**|**tinyint**|Тип подписчика. Может быть одним из следующих.<br /><br /> **0** = подписчик SQL Server<br /><br /> **1** = сервер источника данных ODBC<br /><br /> **2** = база данных Microsoft JET (устаревший)<br /><br /> **3** = поставщик OLE DB|  
 |**subscriber_provider**|**sysname**|Уникальный программный идентификатор (PROGID), с которым регистрируется поставщик OLE DB для источника данных, отличного от SQL Server.|  

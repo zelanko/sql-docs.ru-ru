@@ -19,19 +19,19 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69e0eb339ee66da1f91956555a931a71ac94406b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab1ed7614ff315986f38d497f00687784785790b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743522"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213700"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает текущий размер запрошенного объекта и оценивает размер объекта для запрошенного состояния сжатия. Сжатие можно оценить для всех таблиц или только для части. Это же касается куч, кластеризованные индексы, некластеризованные индексы, индексы columnstore, индексированные представления и таблицы и индексных секций. Объекты могут быть сжаты с помощью строки, страницы, columnstore или columnstore сжатие архива. Если таблица, индекс или секция уже сжаты, использование этой процедуры позволяет определить размер таблицы, индекса или секции в распакованном виде.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Сжатие и **sp_estimate_data_compression_savings** доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Чтобы оценить размер объекта после сжатия с запрошенными параметрами, эта хранимая процедура создает образец исходного объекта и загружает эти данные в эквивалентную таблицу и индекс, созданные в базе данных tempdb. Созданная в базе данных tempdb таблица или индекс затем сжимается до необходимых настроек, и вычисляется оценка экономии от сжатия.  
@@ -72,7 +72,7 @@ sp_estimate_data_compression_savings
  Чтобы указать раздел, можно также указать [$partition](../../t-sql/functions/partition-transact-sql.md) функции. Чтобы получить сведения обо всех секциях объекта, укажите значение NULL.  
   
  [ @data_compression=] '*data_compression*"  
- Тип сжатия для оценки. *data_compression* может принимать одно из следующих значений: NONE, строки, страницы, COLUMNSTORE или COLUMNSTORE_ARCHIVE.  
+ Тип сжатия для оценки. *data_compression* может принимать одно из следующих значений: Нет, строки, страницы, COLUMNSTORE или COLUMNSTORE_ARCHIVE.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

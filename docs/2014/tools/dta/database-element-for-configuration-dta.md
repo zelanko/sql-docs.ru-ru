@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,15 +14,15 @@ ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a3547d10f325e047174f7106267b480084e88df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062044"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747286"
 ---
 # <a name="database-element-for-configuration-dta"></a>Элемент Database описания конфигурации (DTA)
-  Указывает базу данных, для которой нужно помощник по настройке ядра СУБД должен произвести оценку гипотетической конфигурации (определяется `Configuration` элемент).  
+  Задает базу данных, в которой помощник по настройке ядра СУБД будет оценивать гипотетическую настройку (заданную элементом `Configuration`).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,14 +39,14 @@ ms.locfileid: "48062044"
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Требуется один или несколько раз для каждого `Server` элемент.|  
+|**Наличие**|Требуется один или несколько раз для каждого элемента `Server`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент Server описания конфигурации &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
-|**Дочерние элементы**|[Элемент Name для базы данных &#40;DTA&#41;](name-element-for-database-dta.md)<br /><br /> [Элемент schema описания базы данных &#40;DTA&#41;](schema-element-for-database-dta.md)<br /><br /> [Элемент Recommendation &#40;DTA&#41;](recommendation-element-dta.md)|  
+|**Родительский элемент**|[Элемент Server описания конфигурации (DTA)](server-element-for-configuration-dta.md)|  
+|**Дочерние элементы**|[Элемент Name для базы данных (DTA)](name-element-for-database-dta.md)<br /><br /> [Элемент Schema описания базы данных (DTA)](schema-element-for-database-dta.md)<br /><br /> [Элемент Recommendation (DTA)](recommendation-element-dta.md)|  
   
 ## <a name="remarks"></a>Примечания  
  Этот элемент с именем **DatabaseTypecomplexType** определен в схеме XML помощника по настройке ядра СУБД. Не путайте этот элемент `Database` с элементом, родительским корневым элементом которого является элемент `Server`, находящийся в верхней части входного XML-файла. Дополнительные сведения см. в разделе [Элемент Database описания сервера (DTA)](database-element-for-server-dta.md).  

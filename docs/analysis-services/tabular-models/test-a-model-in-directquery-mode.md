@@ -1,5 +1,5 @@
 ---
-title: Проверка модели в режиме DirectQuery | Документы Microsoft
+title: Тестирование табличной модели служб Analysis Services в режиме DirectQuery | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eae53b4edbcc542154d627a748321810c2059d59
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: def4c6231ef180e0fc7ff42bed1f170bf36884dd
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039724"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071891"
 ---
 # <a name="test-a-model-in-directquery-mode"></a>Тестирование модели в режиме DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

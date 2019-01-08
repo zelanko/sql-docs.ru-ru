@@ -1,24 +1,23 @@
 ---
-title: Шаг 2. Запуск мастера установки пакета | Документы Майкрософт
+title: Этап 2. Запуск мастера установки пакета | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 661b411c87d5a1f570545d2e8d174c8900274bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1af58b00b41b741ea0540a2fa29503dc33badcf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053370"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351798"
 ---
-# <a name="step-2-running-the-package-installation-wizard"></a>Шаг 2. Запуск мастера установки пакета
+# <a name="step-2-running-the-package-installation-wizard"></a>Этап 2. Запуск мастера установки пакета
   В этой задаче мастер установки пакета используется для развертывания пакетов из проекта Deployment Tutorial в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В таблицу sysssispackages базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb можно установить только пакеты; файлы поддержки, включенные в пакет развертывания, будут развернуты в файловой системе.  
   
  Мастер установки пакета проводит пользователя через последовательность шагов по установке и настройке пакетов. Пакеты будут устанавливаться в экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на компьютере назначения (куда скопирован пакет развертывания). Будет также создана папка «C:\DeploymentTutorialInstall», в которую мастер установит файлы, не относящиеся к пакету.  
@@ -82,11 +81,11 @@ ms.locfileid: "48053370"
   
      Поскольку значения переменных среды на целевом компьютере отличаются от значений переменных среды на компьютере разработчика, на странице проверки пакетов отображается несколько предупреждений. Следует ожидать следующих предупреждений.  
   
-    -   Файл конфигурации C:\DeploymentTutorial\DataTransferConfig.dtsConfig недопустим. Проверьте имя файла конфигурации.  
+    -   Недопустимый файл конфигурации  «C:\DeploymentTutorial\DataTransferConfig.dtsConfig». Проверьте имя файла конфигурации.  
   
     -   Не удалось загрузить по крайней мере одну запись конфигурации в пакете. Проверьте записи конфигурации и предыдущие предупреждения, чтобы увидеть, какая из них ошибочна.  
   
-    -   Файл конфигурации C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig недопустим. Проверьте имя файла конфигурации.  
+    -   Недопустимый файл конфигурации  «C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig». Проверьте имя файла конфигурации.  
   
     -   Не удалось загрузить по крайней мере одну запись конфигурации в пакете. Проверьте записи конфигурации и предыдущие предупреждения, чтобы увидеть, какая из них ошибочна.  
   
@@ -102,10 +101,10 @@ ms.locfileid: "48053370"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 3. Тестирование развернутых пакетов](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services** <br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
 ## <a name="see-also"></a>См. также  
- [Службе Integration Services &#40;службы SSIS&#41;](service/integration-services-service-ssis-service.md)   
+ [Службы Integration Services (службы SSIS)](service/integration-services-service-ssis-service.md)   
  [Управление службой Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)  
   
   

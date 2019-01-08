@@ -1,22 +1,24 @@
 ---
-title: Что такое большие данные кластеров SQL Server главного экземпляра? | Документы Майкрософт
-description: В этой статье описывается основной экземпляр в кластере SQL Server 2019 больших данных.
+title: Что такое основной экземпляр
+titleSuffix: SQL Server 2019 big data clusters
+description: В этой статье описывается основной экземпляр SQL Server в кластере SQL Server 2019 больших данных (Предварительная версия).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 50955f8c781dcf370aa3f48ed72a0ed993854655
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 2ea25aeb5c7c39c5b00e545bc39974073132b1b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221600"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208173"
 ---
-# <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>Что такое большие данные SQL Server кластера главного экземпляра?
+# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>Что такое основной экземпляр в кластере SQL Server 2019 больших данных?
 
-В этой статье описывается роль *главного экземпляра SQL Server* в кластере SQL Server 2019 больших ata. Основной экземпляр является экземпляром SQL Server работает в кластере SQL Server больших данных [плоскость управления](big-data-cluster-overview.md#controlplane).
+В этой статье описывается роль *главного экземпляра SQL Server* в кластере SQL Server 2019 больших данных. Основной экземпляр является экземпляром SQL Server работает в кластере SQL Server больших данных [плоскость управления](big-data-cluster-overview.md#controlplane).
 
 Основной экземпляр SQL Server предоставляет следующие функциональные возможности:
 
@@ -26,7 +28,7 @@ ms.locfileid: "51221600"
 
 ## <a name="scale-out-query-management"></a>Горизонтальное масштабирование запросов управления
 
-Основной экземпляр SQL Server содержит ядро запросов горизонтального масштабирования, который используется для распределения запросов между экземплярами SQL Server на узлах в [вычислений пула](concept-compute-pool.md). Обработчик запросов горизонтальное масштабирование также предоставляет доступ через Transact-SQL для всех таблиц Hive в кластере без дополнительной настройки. (Поддержка таблиц hive не CTP 2.1)
+Основной экземпляр SQL Server содержит ядро запросов горизонтального масштабирования, который используется для распределения запросов между экземплярами SQL Server на узлах в [вычислений пула](concept-compute-pool.md). Обработчик запросов горизонтальное масштабирование также предоставляет доступ через Transact-SQL для всех таблиц Hive в кластере без дополнительной настройки. (Поддержка таблиц hive не CTP 2.2)
 
 ## <a name="metadata-and-user-databases"></a>Метаданные и пользовательских баз данных
 
@@ -43,7 +45,7 @@ ms.locfileid: "51221600"
 
 Службы машинного обучения SQL Server является функцией расширения к компоненту database engine, используемый для выполнения кода Java, R и Python в SQL Server. Эта функция основана на структуре расширяемости SQL Server, который изолирует внешних процессов из основных процессов, но полностью интегрируется с реляционными данными как хранимые процедуры, скрипт T-SQL, содержащий инструкции R или Python или Java, R или Код Python, содержащий T-SQL.
 
-Как часть кластера больших данных SQL Server службы машинного обучения будут доступны в экземпляре SQL Serevr master по умолчанию. Это означает, что после выполнения внешнего скрипта будет включен в основной экземпляр SQL Server, она будет возможна, для выполнения Java, Python и R сценариев, с помощью процедуры sp_execute_external_script.
+Как часть кластера больших данных SQL Server службы машинного обучения будут доступны на основной экземпляр SQL Server по умолчанию. Это означает, что после выполнения внешнего скрипта будет включен в основной экземпляр SQL Server, она будет возможна, для выполнения Java, Python и R сценариев, с помощью процедуры sp_execute_external_script.
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Преимущества служб машинного обучения в кластере больших данных
 

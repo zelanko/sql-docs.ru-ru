@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
@@ -15,12 +14,12 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b07bc36ebf3ca16bac2a2134d1054d850c19886
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6fd76284caf53ff6a3d46d1bbfd0f514615c2e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203364"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805556"
 ---
 # <a name="transfer-database-task"></a>Задача «Передача базы данных»
   Задача «Передача базы данных» передает базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между двумя экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В отличие от других задач, передающих объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только путем копирования, задача «Передача базы данных» может копировать или перемещать базу данных. Эту задачу можно также использовать для копирования базы данных в пределах того же сервера.  
@@ -39,7 +38,7 @@ ms.locfileid: "48203364"
 ## <a name="execution-value"></a>Значение выполнения  
  Значение выполнения, заданное в свойстве `ExecutionValue` задачи, возвращает значение 1, поскольку в отличие от других задач передачи, задача «Передача базы данных» может передавать только одну базу данных.  
   
- Назначив пользовательскую переменную, чтобы `ExecValueVariable` свойства задачи «Передача базы данных» сведения о передаче сообщений об ошибках можно сделать доступными другим объектам пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md) и [Использование переменных в пакетах](../use-variables-in-packages.md).  
+ С помощью выделения пользовательской переменной для свойства `ExecValueVariable` задачи «Передача базы данных» сведения об ошибках передачи становятся доступными для других объектов пакета. Дополнительные сведения см. в разделах [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md) и [Использование переменных в пакетах](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Записи журнала  
  Задача «Передача базы данных» содержит следующие пользовательские записи в журнале.  
@@ -50,7 +49,7 @@ ms.locfileid: "48203364"
   
 -   SourceDB    Запись журнала содержит имя передаваемой базы данных.  
   
- Кроме того, запись журнала для `OnInformation` записывается событие при перезаписывании целевой базы данных.  
+ Дополнительно при перезаписывании целевой базы данных делается запись журнала для события `OnInformation`.  
   
 ## <a name="security-and-permissions"></a>Безопасность и разрешения  
  Для передачи базы данных в режиме вне сети пользователь, запускающий выполнение пакета, должен быть членом роли сервера sysadmin.  
@@ -72,11 +71,11 @@ ms.locfileid: "48203364"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задач базы данных передача &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "Передача базы данных" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задач базы данных передача &#40;баз данных страницы&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Редактор задачи "Передача базы данных" (страница "Базы данных")](../transfer-database-task-editor-databases-page.md)  
   
--   [Страница "Выражения"](../expressions/expressions-page.md)  
+-   [Страница «Выражения»](../expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   

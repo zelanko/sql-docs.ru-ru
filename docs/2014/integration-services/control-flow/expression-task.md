@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.EXPRESSIONTASK.F1
@@ -13,12 +12,12 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 959162fb98d3f3c82f479ed31d8944d2ec806b3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fa6ade04fac0c4a00ca344554f72d7f1b8aad30
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102954"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359306"
 ---
 # <a name="expression-task"></a>Задания выражения
   Задача «Выражение» создает и вычисляет выражения, задающие значения переменных во время выполнения, с помощью построителя выражений. При изменении задачи будет запущен [Expression Builder](../expressions/expression-builder.md) .  
@@ -34,6 +33,6 @@ ms.locfileid: "48102954"
  [Использование выражения в компоненте потока данных](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>См. также  
- Техническая статья [Памятка выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=217683)на сайте pragmaticworks.com  
+ Техническая статья [Памятка выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=217683)на сайте pragmaticworks.com  
   
   

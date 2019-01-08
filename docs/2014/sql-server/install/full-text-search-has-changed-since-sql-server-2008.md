@@ -11,12 +11,12 @@ ms.assetid: d253bb05-9166-4b50-bd4a-27b818f514e0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39fc136bc29813c01c237289debbc6474f7d291d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6a5301a972775d262f0b7d4640880610bef3b9d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161364"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361056"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>Компонент Full-Text Search был изменен по сравнению с версией SQL Server 2008
   Помощник по обновлению обнаружил попытку обновления полнотекстового поиска. Многие из параметров и настроек полнотекстового поиска были изменены. Поэтому при обновлении компонента Full-Text Search до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] может потребоваться изменить некоторые из параметров.  
@@ -33,7 +33,7 @@ ms.locfileid: "48161364"
 ## <a name="external-resources"></a>Внешние ресурсы  
  [Обратная совместимость полнотекстового поиска](../../../2014/database-engine/full-text-search-backward-compatibility.md)  
   
- [Обновление полнотекстового поиска](http://go.microsoft.com/fwlink/?LinkId=112291)  
+ [Обновление полнотекстового поиска](https://go.microsoft.com/fwlink/?LinkId=112291)  
   
  [Критические изменения в полнотекстовом поиске](../../../2014/database-engine/breaking-changes-to-full-text-search.md)  
   

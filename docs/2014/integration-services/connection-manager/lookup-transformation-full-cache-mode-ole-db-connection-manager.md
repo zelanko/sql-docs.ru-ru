@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5025524fb0f414a3a419b53d51868009eafc9820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab881af80386badae624b1d5910ba99ba67a4a43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147020"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767826"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>Реализация преобразования «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений OLE DB
   Можно настроить преобразование «Уточняющий запрос», чтобы использовать режим полного кэширования и диспетчер соединений OLE DB. В режиме полного кэширования эталонный набор данных загружается в кэш еще до запуска преобразования «Уточняющий запрос».  
@@ -52,11 +51,11 @@ ms.locfileid: "48147020"
   
     -   Выберите параметр **Использовать таблицу или представление**, а затем выберите таблицу или представление; либо нажмите кнопку **Создать** , чтобы создать таблицу или представление.  
   
-         —или—  
+         -или-  
   
     -   Щелкните мышью **Использовать результаты SQL-запроса**и введите запрос в окне **Команда SQL** или щелкните **Создать запрос** для создания запроса с помощью графических средств, предоставляемых **построителем запросов** .  
   
-         —или—  
+         -или-  
   
     -   Можно также щелкнуть **Обзор** для импорта инструкции SQL из файла.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48147020"
     >  Преобразование «Уточняющий запрос» автоматически сопоставляет столбцы, которые обладают одинаковыми названиями и типами данных.  
   
     > [!NOTE]  
-    >  Типы данных сопоставляемых столбцов должны совпадать. Дополнительные сведения см. в статье [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+    >  Типы данных сопоставляемых столбцов должны совпадать. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 11. Включите столбцы подстановки в выходные данные, выполнив следующие действия.  
   
@@ -83,8 +82,8 @@ ms.locfileid: "48147020"
 13. Нажмите кнопку **ОК** , чтобы сохранить изменения в преобразовании «Уточняющий запрос», а затем запустите пакет.  
   
 ## <a name="see-also"></a>См. также  
- [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера подключений с кэшем](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
- [Реализация уточняющего запроса в режиме "Частичное кэширование" или "Без кэширования"](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [реализовать преобразование «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений с кэшем](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Преобразования служб Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   
   

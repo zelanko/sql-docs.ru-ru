@@ -20,16 +20,16 @@ ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1316ad29a31872d149201f31d60ede14a8a9051
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855082"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591818"
 ---
 # <a name="sqlgetcursorname-function"></a>Функция SQLGetCursorName
 **Соответствие стандартам**  
- Версия была введена: ODBC 1.0 соответствует стандартам: ISO-92  
+ Представленные версии: Соответствие стандартам 1.0 ODBC: ISO-92  
   
  **Сводка**  
  **SQLGetCursorName** возвращает имя курсора, связанного с указанной инструкцией.  
@@ -81,9 +81,9 @@ SQLRETURN SQLGetCursorName(
 |IM001|Драйвер не поддерживает эту функцию|Драйвер (DM), связанные с *StatementHandle* не поддерживает функцию.|  
   
 ## <a name="comments"></a>Комментарии  
- Имена курсоров используются только в позиционированного обновления и удаления инструкций (например, **обновление** *имя таблицы* ... **WHERE CURRENT OF** *имя курсора*). Дополнительные сведения см. в разделе [расположен обновления и удаления инструкций](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Если приложение не вызывает **SQLSetCursorName** для определения имени курсора, драйвер создает имя. Это имя начинается с букв SQL_CUR.  
+ Имена курсоров используются только в позиционированного обновления и удаления инструкций (например, **обновление** _имя таблицы_ ... **WHERE CURRENT OF** _имя курсора_). Дополнительные сведения см. в разделе [расположен обновления и удаления инструкций](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Если приложение не вызывает **SQLSetCursorName** для определения имени курсора, драйвер создает имя. Это имя начинается с букв SQL_CUR.  
   
-> [!NOTE]  
+> [!NOTE]
 >  В ODBC 2 *.x*, когда возникла без открытого курсора, и имя не было значение путем вызова **SQLSetCursorName**, вызов **SQLGetCursorName** возвращается SQLSTATE HY015 (имена курсоров доступна). В ODBC 3 *.x*, это больше не true; независимо от того, когда **SQLGetCursorName** является именем, драйвер возвращает имя курсора.  
   
  **SQLGetCursorName** возвращает имя курсора, создан ли имя явно или неявно. Имя курсора создается неявно в том случае, если **SQLSetCursorName** не вызывается. **SQLSetCursorName** можно вызвать, чтобы переименовать курсора в инструкции до тех пор, пока курсор находится в состоянии выделением или подготовленной.  

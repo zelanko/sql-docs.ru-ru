@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpoints
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a8cb745670ebfe1c9a8a08eb4674e0a3755cc50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f0d333cde04e41f7f640a93cd68108af334d71d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170724"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328494"
 ---
 # <a name="breakpoints-window"></a>Окно точек останова
   В окне **Точки останова** перечисляются все точки останова, которые заданы в текущем редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Чтобы управлять точками останова, используйте панель инструментов в окне **Точки останова** . Точки останова представляют собой точки кода, где выполнение в режиме отладке приостанавливается, чтобы можно было просматривать отладочные данные.  
@@ -33,7 +31,7 @@ ms.locfileid: "48170724"
 ## <a name="breakpoints-window-columns"></a>Столбцы окна «Точки останова»  
  По умолчанию в окне **Точки останова** перечислены следующие столбцы.  
   
- **Название**  
+ **Name**  
  Отображается имя точки останова. Имена точек останова предоставляются отладчиком. Это имя включает имя окна редактора запросов компонента Database Engine, которое содержит точку останова, и номер строки в редакторе запросов, на которой задана точка останова.  
   
  **Условие**  
@@ -88,5 +86,3 @@ ms.locfileid: "48170724"
   
 ## <a name="see-also"></a>См. также  
  [Отладчик Transact-SQL](transact-sql-debugger.md)  
-  
-  

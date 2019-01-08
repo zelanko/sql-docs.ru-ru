@@ -11,12 +11,12 @@ ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 729780b737502557830e6f1ccdea39203b0154ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6d96efaa23d50042ea4f4501b89b4a5cc1dd31
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077834"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365048"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Методики проверки подлинности, поддерживаемые службами Analysis Services
   Для подключений клиентского приложения к экземпляру служб Analysis Services требуется проверка подлинности Windows (встроенная). Предоставить удостоверение пользователя Windows можно с помощью любого из следующих методов.  
@@ -33,7 +33,7 @@ ms.locfileid: "48077834"
   
  Обратите внимание, что проверка подлинности на основе утверждений не поддерживается. Нельзя использовать токен утверждения Windows для доступа к службам Analysis Services. Клиентские библиотеки служб Analysis Services работают только с принципами безопасности Windows. Если в решении бизнес-аналитики используются идентификаторы утверждений, то для каждого пользователя требуются теневые учетные записи удостоверения Windows или необходимо использовать сохраненные учетные данные для доступа к данным служб Analysis Services.  
   
- Дополнительные сведения о потоках проверки подлинности бизнес-аналитики и служб Analysis Service см. в разделе [Проверка подлинности для бизнес-аналитики Майкрософт и делегирование удостоверений](http://go.microsoft.com/fwlink/?LinkID=286576).  
+ Дополнительные сведения о потоках проверки подлинности бизнес-аналитики и служб Analysis Service см. в разделе [Проверка подлинности для бизнес-аналитики Майкрософт и делегирование удостоверений](https://go.microsoft.com/fwlink/?LinkID=286576).  
   
 ##  <a name="bkmk_auth"></a> Основные сведения о вариантах проверки подлинности  
  Для подключения к базе данных служб Analysis Services требуется удостоверение пользователя или группы Windows и связанные с ним разрешения. В качестве удостоверения можно применять имя входа общего назначения, используемое всеми пользователями, которым требуется просматривать отчет. Однако чаще для этого применяются удостоверения отдельных пользователей.  
@@ -63,7 +63,7 @@ ms.locfileid: "48077834"
   
  EffectiveUserName — это свойство строки подключения, с помощью которого службам Analysis Services передаются данные идентификации. С его помощью PowerPivot для SharePoint ведет запись действий пользователей в журналах использования. Службы Excel и PerformancePoint могут с помощью этого свойства получать данные, используемые книгами и панелями мониторинга в SharePoint. Его также можно применять в пользовательских приложениях или скриптах, которые выполняют операции в экземпляре служб Analysis Services.  
   
- Дополнительные сведения об использовании свойства EffectiveUserName в SharePoint см. в разделе [Использование свойства EffectiveUserName служб Analysis Services в SharePoint Server 2010](http://go.microsoft.com/fwlink/?LinkId=311905).  
+ Дополнительные сведения об использовании свойства EffectiveUserName в SharePoint см. в разделе [Использование свойства EffectiveUserName служб Analysis Services в SharePoint Server 2010](https://go.microsoft.com/fwlink/?LinkId=311905).  
   
  **Обычная проверка подлинности и анонимный пользователь**  
   
@@ -77,11 +77,11 @@ ms.locfileid: "48077834"
   
  У большинства служб приложений среднего уровня имеются функции для хранения имени пользователя и пароля, которые затем используются для получения данных из хранилища низкого уровня, например служб Analysis Services или реляционного механизма SQL Server. Как таковые сохраненные учетные данные являются пятым вариантом получения данных. Среди ограничений, связанных с этим методом, можно указать затраты на обновление имен пользователей и паролей и использование одного удостоверения в подключении. Если решению требуется удостоверение исходного инициатора вызова, то использовать сохраненные учетные данные невозможно.  
   
- Дополнительные сведения о сохраненных учетных данных см. в разделах [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) и [Использование служб Excel со службой Secure Store в SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
+ Дополнительные сведения о сохраненных учетных данных см. в разделах [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) и [Использование служб Excel со службой Secure Store в SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkID=309869).  
   
 ## <a name="see-also"></a>См. также  
- [Использование олицетворения и безопасность транспорта](http://go.microsoft.com/fwlink/?LinkId=311727)   
- [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
+ [Использование олицетворения и безопасность транспорта](https://go.microsoft.com/fwlink/?LinkId=311727)   
+ [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Настройка служб Analysis Services для ограниченного делегирования Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [Регистрация имени участника-службы для экземпляра служб Analysis Services](spn-registration-for-an-analysis-services-instance.md)   
  [Подключение к службам Analysis Services](connect-to-analysis-services.md)  

@@ -20,16 +20,16 @@ ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a41829e9cb1f905c82e7cd5f8b179e5e1f777741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70fe1ca95f5160f801eaf3528e625116705eda6d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771682"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203813"
 ---
 # <a name="sqlgetenvattr-function"></a>Функция SQLGetEnvAttr
 **Соответствие стандартам**  
- Версия была введена: ODBC 3.0 соответствует стандартам: ISO-92  
+ Представленные версии: ODBC 3.0 стандартов соответствия: ISO-92  
   
  **Сводка**  
  **SQLGetEnvAttr** возвращает текущее значение атрибута среды.  
@@ -88,7 +88,7 @@ SQLRETURN SQLGetEnvAttr(
   
  **SQLGetEnvAttr** можно вызвать в любое время между выделении и освобождении дескриптора среды. Все атрибуты среды, успешно установлены приложением для среды сохраняется до **SQLFreeHandle** вызывается для *EnvironmentHandle* с *HandleType*из SQL_HANDLE_ENV. Более одного дескриптора среды может находиться одновременно в ODBC 3 *.x*. Атрибут среды в одной среде не влияет на другую среду было выделено.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Атрибут среды SQL_ATTR_OUTPUT_NTS поддерживается соответствующих стандартам приложений. Когда **SQLGetEnvAttr** вызывается ODBC 3 *.x* диспетчера драйверов всегда возвращает SQL_TRUE для этого атрибута. SQL_ATTR_OUTPUT_NTS можно задать значение sql_true только путем вызова **SQLSetEnvAttr**.  
   
 ## <a name="related-functions"></a>Связанные функции  

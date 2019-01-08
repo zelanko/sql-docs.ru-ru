@@ -14,19 +14,19 @@ ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dd92e346a3a1f3dbb04e2a8d726ad4460ca5fc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128134"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369156"
 ---
 # <a name="use-sql-server-management-studio"></a>Использование среды SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) — это интегрированная среда для доступа, настройки, управления, администрирования и разработки всех компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Служба SSMS сочетает в себе обширную группу графических инструментов с рядом отличных редакторов сценариев для обеспечения доступа к службе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для разработчиков и администраторов всех профессиональных уровней.  
   
  Служба SSMS объединяет в единую среду функции Корпоративного Диспетчера, Анализатора Запросов и Диспетчера Анализа, включенные в прошлые выпуски службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В дополнение, служба SSMS работает со всеми компонентами службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , такими как [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Разработчики получают знакомую среду, а администраторы баз данных — единую полнофункциональную программу, объединяющую простые в использовании графические средства и богатые возможности для создания сценариев.  
   
- Скачайте и установите SSMS из [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx).  
+ Скачайте и установите SSMS из [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx).  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Возможности среды SQL Server Management Studio](features-in-sql-server-management-studio.md)  

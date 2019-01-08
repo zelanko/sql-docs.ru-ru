@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 7: Перемещение файлов данных в хранилище Windows Azure | Документация Майкрософт'
+title: Занятие 7. Переместить файлы данных в хранилище Windows Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b49907bb7cb9c2d33d7672570f161cbd98432d45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d88e1fa7853c1207f1a8c95da2f96bb77dd7d49c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170086"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355337"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>Занятие 7. Перемещение файлов данных в хранилище Windows Azure
   На этом занятии вы узнаете, как переместить файлы данных (но не экземпляр SQL Server) в хранилище Windows Azure. Для прохождения этого занятия не требуется завершать занятия 4, 5 и 6.  
@@ -64,7 +64,7 @@ ms.locfileid: "48170086"
   
     ```  
   
-3.  После выполнения этой инструкции вы увидите следующее сообщение: «Файл «TestDB1Alter» изменен в системном каталоге. При следующем запуске этой базы данных будет использоваться новый путь».  
+3.  После выполнения этой инструкции вы увидите следующее сообщение: «Файл «TestDB1Alter» изменен в системном каталоге. Новый путь будет использоваться при следующем запуске базы данных.»  
   
 4.  Затем переведите базу данных в автономный режим.  
   
@@ -75,9 +75,9 @@ ms.locfileid: "48170086"
   
     ```  
   
-5.  Теперь необходимо скопировать файлы данных в хранилище Windows Azure одним из следующих методов: [инструмента AzCopy](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [вставки страницы](https://msdn.microsoft.com/library/azure/ee691975.aspx), [справочника по клиентской библиотеке хранилища](https://msdn.microsoft.com/library/azure/dn261237.aspx)или обозревателя хранилищ сторонних производителей.  
+5.  Теперь необходимо скопировать файлы данных в хранилище Windows Azure одним из следующих методов: [Средство AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [Справочник по клиентской библиотеке хранилища](https://msdn.microsoft.com/library/azure/dn261237.aspx), или хранилища стороннего обозревателя.  
   
-     **Внимание!** При использовании этого расширения всегда проверяйте, что создается большой двоичный объект страницы, а не блока.  
+     **Важно:** При использовании этого расширения всегда проверяйте, что создается большой двоичный объект страницы, а не блока.  
   
 6.  Затем переведите базу данных в оперативный режим.  
   

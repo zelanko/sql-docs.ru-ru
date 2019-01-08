@@ -16,12 +16,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e560cae97a647b484bc75936db31434dc08864a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1e86eec76a94a3858ede48fc0fb1b0703de4508
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177014"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356257"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Группы доступности AlwaysOn (SQL Server)
   Функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — это решение высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Поддержка [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], добавленная с версии [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , позволяет максимально увеличить доступность набора пользовательских баз данных для предприятия. *Группа доступности* поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как *базы данных доступности*, которые совместно выполняют переход на другой ресурс. Группа доступности поддерживает набор первичных баз данных чтения и записи и от одного до четырех наборов соответствующих вторичных баз данных. Кроме того, базы данных-получатели можно сделать доступными только для чтения или для некоторых операций резервного копирования.  
@@ -49,9 +49,9 @@ ms.locfileid: "48177014"
   
 -   Позволяет настроить данную реплику доступности для поддержки одной или обеих возможностей активных вторичных реплик.  
   
-    -   Доступ с подключением только для чтения, который позволяет использовать подключения только для чтения для доступа и чтения баз данных во время работы в качестве вторичной реплики. Дополнительные сведения см. в разделе [активные вторичные реплики: вторичные реплики для чтения; Группы доступности AlwaysOn](https://msdn.microsoft.com/library/ff878253.aspx)).  
+    -   Доступ с подключением только для чтения, который позволяет использовать подключения только для чтения для доступа и чтения баз данных во время работы в качестве вторичной реплики. Дополнительные сведения см. в разделе [активные вторичные реплики: Вторичные реплики для чтения; Группы доступности AlwaysOn](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
-    -   Выполнение операций резервного копирования для своих баз данных во время работы в качестве вторичной реплики. Дополнительные сведения см. в разделе [активные вторичные реплики: резервное копирование на вторичных репликах](https://msdn.microsoft.com/library/ff878253.aspx)).  
+    -   Выполнение операций резервного копирования для своих баз данных во время работы в качестве вторичной реплики. Дополнительные сведения см. в разделе [активные вторичные реплики: Резервного копирования во вторичных репликах](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
      Использование возможностей активных вторичных реплик позволяет улучшить эффективность использования информационных технологий и снизить стоимость за счет более рационального использования ресурсов вторичного аппаратного обеспечения. Кроме того, перевод приложений с намерением чтения и заданий резервного копирования на вторичные реплики позволяет повысить производительность работы основной реплики.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48177014"
   
         -   [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] запускает переход на другой ресурс вручную для группы доступности. В зависимости от конфигурации и состояния вторичной реплики, указанной в качестве целевой реплики отработки отказа, мастер может выполнить запланированный или принудительный переход на другой ресурс вручную. Дополнительные сведения см. в разделе [использовать мастер отработки отказа доступности группы; SQL Server Management Studio; ](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-    -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] Отслеживает группы доступности AlwaysOn, реплик доступности и баз данных доступности и оценивает результаты политик AlwaysOn. Дополнительные сведения см. в разделе [использовании панели мониторинга AlwaysOn; SQL Server Management Studio; ](use-the-always-on-dashboard-sql-server-management-studio.md).  
+    -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] отслеживает группы доступности AlwaysOn, реплики доступности и базы данных доступности и оценивает результаты политик AlwaysOn. Дополнительные сведения см. в разделе [использовании панели мониторинга AlwaysOn; SQL Server Management Studio; ](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
     -   В области сведений обозревателя объектов отображаются основные сведения о существующих группах доступности. Дополнительные сведения см. в разделе [использование Подробности обозревателя объектов в группу доступности монитора; SQL Server Management Studio; ](use-object-explorer-details-to-monitor-availability-groups.md).  
   
@@ -136,12 +136,12 @@ ms.locfileid: "48177014"
   
 -   [Компонент Service Broker](../../configure-windows/sql-server-service-broker.md)  
   
--   [Агент SQL Server](../../../ssms/agent/sql-server-agent.md)  
+-   [SQL Server, агент](../../../ssms/agent/sql-server-agent.md)  
   
 -   [службы Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  Сведения об ограничениях на использование других компонентов с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], см. в разделе [группы доступности AlwaysOn: взаимодействие; SQL Server; ](always-on-availability-groups-interoperability-sql-server.md).  
+>  Сведения об ограничениях на использование других компонентов с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], см. в разделе [группы доступности AlwaysOn: Взаимодействие; SQL Server; ](always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -151,19 +151,19 @@ ms.locfileid: "48177014"
   
 -   **Блоги**  
   
-     [SQL Server AlwaysOn блоги группы разработчиков: Официальном блоге SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server Always On блоги группы разработчиков: Официальный блог по SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Блоги инженеров CSS SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Видеоролики**  
   
-     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 1. Вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Серия Microsoft SQL Server с кодовым названием «Denali» Always On, часть 1: Представляем решение высокого уровня доступности следующего поколения](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Always On серия Microsoft SQL Server с кодовым названием «Denali», часть 2: Создание критически важных высокого уровня доступности с помощью AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Серия Microsoft SQL Server с кодовым названием «Denali» Always On, часть 2: Создание решения критически важных высокого уровня доступности с помощью AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Технические документы**  
   
-     [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   

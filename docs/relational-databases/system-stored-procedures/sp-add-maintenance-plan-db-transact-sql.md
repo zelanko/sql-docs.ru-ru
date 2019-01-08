@@ -18,12 +18,12 @@ ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 672058e0273f4269acc5ac463ed070dac6635c53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 007f0eea045c22ea2fb7ef2ed0d6db6e9262d060
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630132"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535814"
 ---
 # <a name="spaddmaintenanceplandb-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@plan_id =**] **"***plan_id***"**  
+ [  **@plan_id =**] **"**_plan_id_**"**  
  Задает идентификатор плана обслуживания. *plan_id* — **uniqueidentifier**, и должен быть допустимым идентификатором.  
   
- [  **@db_name =**] **"***имя_базы_данных***"**  
+ [  **@db_name =**] **"**_имя_базы_данных_**"**  
  Указывает имя базы данных, добавляемой к плану обслуживания. База данных должна быть создана или уже существовать до добавления в план. Аргумент *database_name* имеет тип **sysname**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

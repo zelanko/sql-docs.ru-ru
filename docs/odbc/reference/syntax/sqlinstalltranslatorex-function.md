@@ -20,16 +20,16 @@ ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3506e1421ef47c4bb74537f81b7007348895555b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742382"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212533"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>Функция SQLInstallTranslatorEx
 **Соответствие стандартам**  
- Версия была введена: ODBC 3.0  
+ Представленные версии: ODBC 3.0  
   
  **Сводка**  
  **SQLInstallTranslatorEx** добавляет сведения о переводчика разделе Odbcinst.ini информация о системе (HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. INI\ODBC переводчиков раздел реестра).  
@@ -75,7 +75,7 @@ BOOL SQLInstallTranslatorEx(
   
  ODBC_INSTALL_INQUIRY: Запрос установки преобразователя.  
   
- ODBC_INSTALL_COMPLETE: Завершите запрос на установку.  
+ ODBC_INSTALL_COMPLETE: Выполните запрос на установку.  
   
  *lpdwUsageCount*  
  [Выход] Счетчик использования преобразователь после вызова этой функции.  

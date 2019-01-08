@@ -20,12 +20,12 @@ ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b430e6f8c5d9d1febefadf615ca24cfff02fa87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6725ebaf9aa90e8ab3ae768ad30199a3a8b9b2aa
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835050"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785835"
 ---
 # <a name="sysdmxesessioneventactions-transact-sql"></a>Динамическое административное представление sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "47835050"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|Адрес сеанса событий в памяти. Не допускает значение NULL.|  
-|action_name|**nvarchar(60)**|Имя действия. Не допускает значение NULL.|  
+|action_name|**nvarchar(256)**|Имя действия. Не допускает значение NULL.|  
 |action_package_guid|**uniqueidentifier**|Идентификатор GUID пакета, который содержит это действие. Не допускает значение NULL.|  
-|event_name|**nvarchar(60)**|Имя события, для которого предназначено действие. Не допускает значение NULL.|  
+|event_name|**nvarchar(256)**|Имя события, для которого предназначено действие. Не допускает значение NULL.|  
 |event_package_guid|**uniqueidentifier**|Идентификатор GUID пакета, который содержит это событие. Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -48,14 +48,8 @@ ms.locfileid: "47835050"
 |От|Чтобы|Связь|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_event_actions.event_session_address|sys.dm_xe_sessions.address|«многие к одному»|  
-|sys.dm_xe_session_event_actions.action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_session_events.event_package_guid|«многие к одному»|  
-|sys.dm_xe_session_event_actions.event_name<br /><br /> sys.dm_xe_session_event_actions.event_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|«многие к одному»|  
-  
-## <a name="change-history"></a>Журнал изменений  
-  
-|Обновленное содержимое|  
-|---------------------|  
-|Обновлена таблица «Количество элементов связей»: исправлены имена динамических административных представлений и имена столбцов.|  
+|sys.dm_xe_session_event_actions.action_name,<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_session_events.event_package_guid|«многие к одному»|  
+|sys.dm_xe_session_event_actions.event_name,<br /><br /> sys.dm_xe_session_event_actions.event_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|«многие к одному»|  
   
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

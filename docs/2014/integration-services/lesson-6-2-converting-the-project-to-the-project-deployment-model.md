@@ -1,22 +1,21 @@
 ---
-title: Шаг 2. Преобразование проекта в модель развертывания проекта | Документы Майкрософт
+title: Этап 2. Преобразование проекта в модель развертывания проекта | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 459630f452458d4bbc9723133013c861619806bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfca842a547ac20365dbd79ad5ad3295fa83f75f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093934"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752557"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>Этап 2. Преобразование проекта в модель развертывания проекта
   В этой задаче будет использоваться мастер преобразования проекта служб Integration Services для преобразования проекта в модель развертывания проекта.  
@@ -52,6 +51,6 @@ ms.locfileid: "48093934"
 13. Перейдите на вкладку "Параметры" и убедитесь, что пакет теперь содержит параметр для VarFolderName и, что значение является тем же путем, который был определен для папки New Sample Data из файла конфигурации занятия 5.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Шаг 3. Проверка пакета, созданного на занятии 6](lesson-6-3-testing-the-lesson-6-package.md)  
+ [Шаг 3. Тестирование пакета занятия 6](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

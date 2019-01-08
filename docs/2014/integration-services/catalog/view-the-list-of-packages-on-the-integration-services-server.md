@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 67a992d1-7524-4f4b-b3d8-ebd9e5ea82a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ccb817e44acce8a8854894230b6ae62ecd21dd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaf7524e98f9137ebb101902d1d3acf48ac167d5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069804"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757186"
 ---
 # <a name="view-the-list-of-packages-on-the-integration-services-server"></a>Просмотр списка пакетов на хранимом сервере служб Integration Services
   Список хранимых на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетов вы можете просмотреть одним из двух способов.  
@@ -24,7 +23,7 @@ ms.locfileid: "48069804"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] доступ  
  Чтобы просмотреть список пакетов, сохраненных на сервере, создайте запрос к представлению [catalog.packages (SSISDB Database)](/sql/integration-services/system-views/catalog-packages-ssisdb-database).  
   
- В среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] сделайте следующее.  
+ In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
  Для просмотра пакетов, хранящихся на сервере, с помощью обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]выполните следующие действия.  
   
 ### <a name="to-view-packages-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Просмотр пакетов с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  

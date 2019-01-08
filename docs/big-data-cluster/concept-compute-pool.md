@@ -1,20 +1,22 @@
 ---
-title: Что такое пул вычислительных кластеров SQL больших данных? | Документы Майкрософт
-description: В этой статье описывается пул вычислительных в кластере SQL Server 2019 больших данных.
+title: Что такое пулы вычислительных?
+titleSuffix: SQL Server 2019 big data clusters
+description: В этой статье описывается пул вычислительных в кластере SQL Server 2019 больших данных (Предварительная версия).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 6aa73c5881a4b6a17e190c26c15f97b3d8c79c14
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: f1e725580c98585ee86b401c0e8c12ea143cdab1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221800"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207723"
 ---
-# <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>Что такое пул вычислительных кластеров SQL больших данных?
+# <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>Что такое пулы вычислительных в кластере SQL Server 2019 больших данных?
 
 В этой статье описывается роль *пулов вычислений SQL Server* в кластере SQL Server 2019 предварительного просмотра больших данных. Вычислительные пулы обеспечивают горизонтальное масштабирование вычислительных ресурсов для кластера больших данных. Архитектура и функциональные возможности пул вычислительных в следующих разделах.
 
@@ -23,7 +25,7 @@ ms.locfileid: "51221800"
 Пул вычислительных состоит из одного или нескольких вычислительных модулями, запущенными в Kubernetes. Автоматическое создание и управление этих модулей координируется [главного экземпляра SQL Server](concept-master-instance.md). Каждый модуль содержит набор базовых служб и экземпляра компонента SQL Server database engine.
 
 > [!NOTE]
-> CTP 2.1 поддерживает только пул одном вычислительном кластере.
+> CTP-версии 2.2 поддерживает только пул одном вычислительном кластере.
 
 ## <a name="scale-out-groups"></a>Масштабируемые группы
 

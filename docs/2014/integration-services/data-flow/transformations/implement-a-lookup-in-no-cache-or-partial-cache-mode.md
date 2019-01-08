@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation
@@ -16,12 +15,12 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce09e0765f553d2a884a271b7740118a293a9510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb778827f9193cd9fae136e078e353241d2b55ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089774"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769746"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»
   Можно настроить преобразование «Уточняющий запрос», чтобы использовать частичный кэш или не использовать режим кэша.  
@@ -61,11 +60,11 @@ ms.locfileid: "48089774"
   
     -   Выберите параметр **Использовать результаты SQL-запроса**, а затем создайте запрос в окне **Команда SQL** .  
   
-         —или—  
+         -или-  
   
          Нажмите кнопку **Создать запрос** , чтобы создать запрос с помощью графических средств, предоставляемых **Построителем запросов** .  
   
-         —или—  
+         -или-  
   
          Нажмите кнопку **Обзор** , чтобы выполнить импорт инструкции SQL из файла.  
   

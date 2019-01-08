@@ -1,22 +1,21 @@
 ---
-title: 'Учебник: SQL Server Data Files в службе хранилища Windows Azure | Документация Майкрософт'
+title: Учебник. SQL Server Data Files в службе хранилища Windows Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b30ee8f664f88f0fcd59a3801c1aa612926d1dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3d33209cd6dfe261a5deced345adac70b46961f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095485"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810976"
 ---
 # <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Учебник. Файлы данных SQL Server в службе хранилища Windows Azure
   Учебник по интеграции файлов данных SQL Server со службой хранилища Windows Azure. С помощью этого учебника вы научитесь напрямую сохранять файлы данных SQL Server в службе хранилища больших двоичных объектов Windows Azure.  
@@ -28,25 +27,25 @@ ms.locfileid: "48095485"
   
  Учебник разделен на девять занятий.  
   
- **[Занятие 1: Создание учетной записи хранения Azure для Windows и контейнера](../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md)**  
+ **[Занятие 1. Создайте учетную запись хранения Azure и контейнер](../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md)**  
  На этом занятии вы создадите учетную запись хранилища Windows Azure и контейнер.  
   
  **[Занятие 2. Создать политику для контейнера и создать подпись общего доступа &#40;SAS&#41; ключ](lesson-1-create-stored-access-policy-and-shared-access-signature.md)**  
  На этом занятии вы создадите политику в контейнере больших двоичных объектов, а также сформируете подписанный URL-адрес.  
   
- **[Занятие 3: Создание учетных данных SQL Server](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)**  
+ **[Занятие 3. Создание учетных данных SQL Server](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)**  
  На этом занятии вы также создадите учетные данные для хранения сведений о безопасности, которые будут использоваться для доступа к учетной записи хранения Windows Azure.  
   
- **[Занятие 4: Создание базы данных в хранилище Windows Azure](../relational-databases/lesson-3-database-backup-to-url.md)**  
+ **[Занятие 4. Создание базы данных в хранилище Windows Azure](../relational-databases/lesson-3-database-backup-to-url.md)**  
  На этом занятии вы создадите базу данных в хранилище Windows Azure с помощью параметра CREATE Database FILENAME.  
   
  **[Занятие 5. &#40;Необязательно&#41; зашифровать базу данных с помощью прозрачного шифрования данных](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
  На этом занятии вы зашифруете базу данных с помощью прозрачного шифрования данных (TDE) и сертификата сервера.  
   
- **[Занятие 6: Перенос базы данных из источника локального компьютера на целевой компьютер в Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)**  
+ **[Занятие 6. Перенос базы данных из источника локального компьютера на целевой компьютер в Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)**  
  На этом занятии вы перенесете базу данных с локальной на виртуальную машину в Windows Azure с помощью параметра CREATE DATABASE FOR ATTACH.  
   
- **[Занятие 7: Перемещение файлов данных в хранилище Windows Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)**  
+ **[Занятие 7. Переместить файлы данных в хранилище Windows Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)**  
  На этом занятии вы перенесете свои файлы данных в хранилище Windows Azure с помощью инструкции ALTER DATABASE.  
   
  **[Занятие 8. Восстановление базы данных в хранилище Windows Azure](../relational-databases/lesson-7-restore-a-database-to-a-point-in-time.md)**  

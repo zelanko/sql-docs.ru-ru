@@ -17,12 +17,12 @@ ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a1377552b3e50fe5c536ae0d7d854346ccb062d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7695f971504744d42056d0067217e102ef3d990
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140354"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368463"
 ---
 # <a name="linked-measure-groups"></a>Связанные группы мер
   Связанная группа мер основана на другой группе мер в другом кубе в той же или другой базе данных служб Analysis Services. Можно использовать связанную группу мер, если требуется повторно использовать набор мер и соответствующие значения данных в нескольких кубах.  
@@ -47,7 +47,7 @@ ms.locfileid: "48140354"
   
 -   Обратная связь не поддерживается в связанных группах мер.  
   
--   Связанные группы мер нельзя использовать в нескольких связях типа «многие ко многим», особенно если эти связи находятся в разных кубах. Это может привести к формированию неоднозначных агрегатов. Дополнительные сведения см. в разделе [Неверные суммы для связанных мер в кубе, содержащих связи "многие ко многим"](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
+-   Связанные группы мер нельзя использовать в нескольких связях типа «многие ко многим», особенно если эти связи находятся в разных кубах. Это может привести к формированию неоднозначных агрегатов. Дополнительные сведения см. в разделе [Неверные суммы для связанных мер в кубе, содержащих связи "многие ко многим"](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
  Меры в связанной группе мер можно непосредственно организовать только вместе со связанными измерениями, полученными из той же базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Можно использовать вычисляемые элементы для связи данных из связанных групп мер с другими, несвязанными измерениями в кубе. Для связи несвязанных измерений со связанной группой мер также можно использовать косвенную связь, например ссылку или связь «многие ко многим».  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48140354"
 ## <a name="secure-a-linked-measure"></a>Защита связанной меры  
  После того как ссылка определена, управление доступом к измерениям в связанной группе мер осуществляется так же, как и доступ к другим группам мер. В конструкторе ролей связанный объект отображается рядом со своими аналогами, которые не имеют связей. Дополнительные сведения об управлении безопасностью группы мер см. в разделе [Предоставление разрешений кубу или модели (службы Analysis Services)](grant-cube-or-model-permissions-analysis-services.md).  
   
- Чтобы определить или использовать связанную группу мер, учетная запись для службы Windows [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр должны принадлежать к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] роли базы данных, имеющий `ReadDefinition` и `Read` права на источнике доступа [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр исходный куб и группу мер или должны относиться к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] роли администраторов для источника [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра.  
+ Чтобы определить или использовать связанную группу мер, учетная запись службы Windows для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должна принадлежать к роли базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], имеющей права доступа `ReadDefinition` и `Read` в исходном экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на исходный куб и группу мер, или к роли «Администраторы» служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для исходного экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Определение связанных измерений](define-linked-dimensions.md)  
+ [Определите связанные измерения](define-linked-dimensions.md)  
   
   

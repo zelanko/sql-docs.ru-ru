@@ -14,12 +14,12 @@ ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bcb96b2bd0710af94b944d2f8e3417d9cfbcee6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad7331fbbfed123da5d7121d83558ba4bbabc912
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720712"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527254"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO — синтаксис WFC)
 ## <a name="package-commswfcdata"></a>com.ms.wfc.data пакета  
@@ -70,9 +70,9 @@ public AdoProperties getProperties()
   
  Реализует ADO и WFC **значение** свойство с **getValue** метод, который возвращает объект типа VARIANT; и **setValue** метод, который принимает в качестве аргумента типа VARIANT. Варианты высокой эффективны в некоторых языках, таких как Microsoft Visual Basic.  
   
- В дополнение к **значение** предоставляет свойство, ADO и WFC *доступа* методы, которые используют типы данных Java для получения и задания содержание **параметр** объектов. Большинство этих методов имеют имена вида **получить *** DataType* или **задать *** DataType*.  
+ В дополнение к **значение** предоставляет свойство, ADO и WFC *доступа* методы, которые используют типы данных Java для получения и задания содержание **параметр** объектов. Большинство этих методов имеют имена вида **получить**_DataType_ или **задать**_DataType_.  
   
- Есть одно исключение заслуживающие внимания: существует не **getNull** свойства; вместо этого используется **isNull** свойство, которое возвращает логическое значение, указывающее, является ли поле значение null.  
+ Есть одно исключение заслуживающие внимания: Существует не **getNull** свойства; вместо этого используется **isNull** свойство, которое возвращает логическое значение, указывающее, является ли поле значение null.  
   
 ```  
 public boolean getBoolean()  

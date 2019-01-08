@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], size management
@@ -12,15 +12,15 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a681921eb1db363f8a2ddf7fc14836e0d9b781b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066764"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816616"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Управление размером файла журнала транзакций
-  В некоторых случаях может быть полезным физическое сжатие или расширение физического файла журнала транзакций из журнала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных. В данном разделе содержатся сведения о мониторинге размера журнала транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , сжатии журнала транзакций, добавлении или увеличении файла журнала транзакций, оптимизации скорости роста журнала транзакций **tempdb** , а также об управлении размером файла журнала транзакций.  
+  В некоторых случаях может оказаться полезным физическое сжатие или расширение размера реального файла журнала или журнала транзакции базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В данном разделе содержатся сведения о мониторинге размера журнала транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , сжатии журнала транзакций, добавлении или увеличении файла журнала транзакций, оптимизации скорости роста журнала транзакций **tempdb** , а также об управлении размером файла журнала транзакций.  
   
   
 ##  <a name="MonitorSpaceUse"></a> Мониторинг используемого пространства журнала  
@@ -55,7 +55,7 @@ ms.locfileid: "48066764"
 -   [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (См. столбцы **size**, **max_size** и **growth** файла или файлов журнала.)  
   
 > [!NOTE]  
->  Можно задать автоматическое выполнение сжатия файлов базы данных и журнала. Однако автоматическое сжатие не рекомендуется, поэтому свойство `autoshrink` базы данных по умолчанию имеет значение FALSE. Если свойство `autoshrink` имеет значение TRUE, то автоматическое сжатие уменьшит размер файла только в том случае, если неиспользуемое пространство занимает более 25 % от общего объема. Файл будет сжат либо до размера, в котором 25 % пространства не используется, либо до исходного размера, каким бы большим он ни был. Сведения об изменении параметра `autoshrink` свойство, см. в разделе [Просмотр или изменение свойств базы данных](../databases/view-or-change-the-properties-of-a-database.md)— использовать **Auto Shrink** свойство **параметры**страницы — или [параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)— использование параметра AUTO_SHRINK.  
+>  Можно задать автоматическое выполнение сжатия файлов базы данных и журнала. Однако автоматическое сжатие не рекомендуется, поэтому свойство `autoshrink` базы данных по умолчанию имеет значение FALSE. Если свойство `autoshrink` имеет значение TRUE, то автоматическое сжатие уменьшит размер файла только в том случае, если неиспользуемое пространство занимает более 25 % от общего объема. Файл будет сжат либо до размера, в котором 25 % пространства не используется, либо до исходного размера, каким бы большим он ни был. Сведения об изменении параметра `autoshrink` свойство, см. в разделе [Просмотр или изменение свойств базы данных](../databases/view-or-change-the-properties-of-a-database.md)-использовать **Auto Shrink** свойство **параметры**страницы- или [параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-использовании параметра AUTO_SHRINK.  
   
   
 ##  <a name="AddOrEnlarge"></a> Добавление или увеличение размера файла журнала  
@@ -71,7 +71,7 @@ ms.locfileid: "48066764"
   
   
 ##  <a name="ControlGrowth"></a> Управлять ростом файла журнала транзакций  
- Для управления размером файла журнала транзакций вы можете использовать инструкцию [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql). Следует отметить следующее.  
+ Для управления размером файла журнала транзакций вы можете использовать инструкцию [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql). Обратите внимание на следующее условия:  
   
 -   Чтобы изменить текущий размер файла в КБ, МБ, ГБ и ТБ, используйте параметр «SIZE».  
   

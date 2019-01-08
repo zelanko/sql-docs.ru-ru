@@ -1,5 +1,5 @@
 ---
-title: Children (многомерные Выражения) | Документы Microsoft
+title: Children (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d61eb168b01e9b6d48c4c003ba28d0f977026906
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 03c96a1c90f7ca0a18bd49c371a2ec90582b38f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740103"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533416"
 ---
 # <a name="children-mdx"></a>Children (многомерные выражения)
 
@@ -29,11 +29,11 @@ Member_Expression.Children
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Member_Expression.*  
+ *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
 ## <a name="remarks"></a>Примечания  
- **Дочерних** функция возвращает естественно упорядоченный набор, содержащий потомки заданного элемента. Если у элемента нет потомков, функция возвращает пустой набор.  
+ **Дочерние элементы** функция возвращает естественно упорядоченный набор, содержащий дочерний элемент указанного элемента. Если у элемента нет потомков, функция возвращает пустой набор.  
   
 ## <a name="example"></a>Пример  
  В следующем примере возвращаются потомки элемента United States в иерархии Geography измерения Geography.  
@@ -43,7 +43,7 @@ SELECT [Geography].[Geography].[Country].&[United States].Children ON 0
 FROM [Adventure Works]  
 ```  
   
- Следующий пример возвращает все элементы в **меры** измерение по оси столбцов, это включает в себя все вычисляемые элементы и набор всех потомков `[Product].[Model Name]` иерархии на оси строк из атрибута **Adventure Works** куба.  
+ Следующий пример возвращает все элементы в **меры** измерения на оси столбцов, сюда входят все вычисляемые элементы и набор всех потомков `[Product].[Model Name]` иерархии на оси строк атрибута из **Adventure Works** куба.  
   
 ```  
 SELECT  
@@ -56,9 +56,9 @@ FROM
   
 |Выпуск|Журнал|  
 |-------------|-------------|  
-|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Измененное содержимое:**<br /> — Обновлены синтаксис и аргументы для облегчения понимания.<br /><br /> — Добавлены обновленные примеры.|  
+|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Измененное содержимое:**<br /> -Обновлены синтаксис и аргументы для облегчения понимания.<br /><br /> — Добавлены обновленные примеры.|  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

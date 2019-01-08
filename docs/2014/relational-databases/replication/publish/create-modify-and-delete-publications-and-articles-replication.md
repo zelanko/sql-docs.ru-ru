@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
@@ -14,12 +13,12 @@ ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df06bcf5a5f1d43dff50009166279e6b2658790e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3849273ee37db2780e53d28933ad7f1ffd89f056
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145434"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794436"
 ---
 # <a name="create-modify-and-delete-publications-and-articles-replication"></a>Создание, изменение и удаление публикаций и статей (репликация)
   Этот раздел документации содержит сведения о процедурах для задач, связанных с созданием публикаций и определением статей.  
@@ -70,7 +69,7 @@ ms.locfileid: "48145434"
   
 -   [Определение и изменение статического строкового фильтра](define-and-modify-a-static-row-filter.md)  
   
--   [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
+-   [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   
 -   [Optimize Parameterized Row Filters (Оптимизация параметризованных фильтров строк)](../merge/parameterized-filters-parameterized-row-filters.md)  
   

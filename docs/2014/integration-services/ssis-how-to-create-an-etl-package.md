@@ -1,11 +1,10 @@
 ---
-title: 'Учебник по службам SSIS: Создание простого ETL-пакета | Документация Майкрософт'
+title: Учебник по службам SSIS. Создание простого ETL-пакета | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, tutorials
@@ -18,12 +17,12 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b246e9d0badb30027d2971437ebdde5f0d1effde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a99169168eb21f0a7d42f133e7e882141c776e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066604"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357915"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>Учебник по службам SSIS. Создание простого ETL-пакета
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) представляют собой платформу для построения высокопроизводительных решений интеграции данных, включая извлечения, преобразования и загрузки (ETL) пакетов для хранилищ данных. Службы SSIS содержат графические инструменты и мастера для построения и отладки пакетов; задачи для выполнения функций рабочего процесса, таких как операции FTP, выполнение инструкций SQL и отправка сообщений электронной почты; источники данных и назначения для извлечения и загрузки данных; преобразования для очистки, статистической обработки, слияния и копирования данных; службу управления, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для администрирования выполнения и хранения пакетов, а также API-интерфейсы для программирования объектной модели служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -40,7 +39,7 @@ ms.locfileid: "48066604"
   
  Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с базой данных **AdventureWorksDW2012** . В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются. Для загрузки базы данных **AdventureWorksDW2012** перейдите по ссылке [Adventure Works для SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026).  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с базой данных **AdventureWorksDW2012** . В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются. Для загрузки базы данных **AdventureWorksDW2012** перейдите по ссылке [Adventure Works для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=275026).  
   
     > [!IMPORTANT]  
     >  При присоединении базы данных (файл\*.mdf) по умолчанию среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] выполняет поиск LDF-файла. Необходимо вручную удалить LDF-файл перед тем, как нажать кнопку «ОК» в диалоговом окне **Присоединение баз данных** .  
@@ -49,7 +48,7 @@ ms.locfileid: "48066604"
   
 -   Образцы данных. Образцы данных включаются в состав с пакетами занятий по службам [!INCLUDE[ssIS](../includes/ssis-md.md)] . Чтобы загрузить образцы данных и пакеты занятий выполните следующие действия.  
   
-    1.  Перейдите к [образцам продуктов служб Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027).  
+    1.  Перейдите к [образцам продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027).  
   
     2.  Перейдите на вкладку **DOWNLOADS** .  
   
@@ -68,10 +67,10 @@ ms.locfileid: "48066604"
  [Занятие 4. Добавление перенаправления потока ошибок](lesson-4-add-error-flow-redirection-with-ssis.md)  
  На этом занятии созданный на занятии 3 пакет будет расширен, что позволит использовать новые конфигурации вывода ошибок.  
   
- [Урок 5. Добавление конфигураций пакетов в модель развертывания пакета](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [Занятие 5. Добавление конфигураций пакетов в модель развертывания пакетов](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  На этом занятии созданный на занятии 4 пакет будет расширен, что позволит использовать новые параметры конфигурации пакета.  
   
- [Занятие 6. Использование параметров в модели развертывания проекта](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [Занятие 6. Использование параметров в модели развертывания проекта](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
  На этом занятии будет расширен пакет, созданный на занятии 5, чтобы воспользоваться преимуществами новых параметров в модели развертывания проекта.  
   
   

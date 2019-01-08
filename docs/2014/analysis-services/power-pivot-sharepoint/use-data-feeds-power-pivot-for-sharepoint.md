@@ -11,12 +11,12 @@ ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f5e41f1dac0c9c0048b5751439209e17e289f4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178134"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365016"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>использовать веб-каналы данных (PowerPivot для SharePoint)
   Канал данных — это один или несколько потоков данных, формируемых из источника данных в сети и направляемых в целевой документ или приложение. Если используется PowerPivot для Excel, веб-каналы данных позволяют получать существующие корпоративные данные или бизнес-данные из произвольных источников данных в окно PowerPivot в книге Excel 2010. После импорта веб-канала данных в книгу на него можно ссылаться в любых операциях обновления данных, планируемых на сервере SharePoint.  
@@ -63,7 +63,7 @@ ms.locfileid: "48178134"
 ##  <a name="rsreport"></a> Создание веб-канала данных на основе отчета служб Reporting Services  
  Если на компьютере развернуты службы SQL Server 2008 R2 Reporting Services, можно использовать новый модуль подготовки отчетов Atom для создания веб-канала данных из существующего отчета. Для получения наилучших результатов на рабочей станции должно быть установлено приложение Excel 2010 с надстройкой PowerPivot для Excel. При выполнении экспорта веб-канала данных запускается клиентское приложение Gemini PowerPivot, которое автоматически добавляет и связывает таблицы и столбцы по мере их поступления в поток.  
   
- Инструкции по экспорту потока данных из отчета см. в разделе [Формирование веб-каналов данных из отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) [справки по построителю отчетов](http://go.microsoft.com/fwlink/?LinkId=154494).  
+ Инструкции по экспорту потока данных из отчета см. в разделе [Формирование веб-каналов данных из отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) [справки по построителю отчетов](https://go.microsoft.com/fwlink/?LinkId=154494).  
   
 > [!NOTE]  
 >  Чтобы настроить обновление данных по расписанию, при котором выполняется повторный импорт данных отчетов в книгу PowerPivot, опубликованную в библиотеке SharePoint, сервер отчетов должен быть настроен в режиме интеграции с SharePoint. Дополнительные сведения об использовании PowerPivot для SharePoint и Reporting Services вместе см. в разделе [Настройка и администрирование сервера отчетов &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  

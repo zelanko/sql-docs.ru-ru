@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 848b38185c2915c41b97dee594d69598710bba1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cec72a2f70db07e5653d095ce586b50604d6412
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137110"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813416"
 ---
 # <a name="database-features"></a>Функции базы данных
   Этот раздел содержит функции и задачи, связанные с базами данных, объектами баз данных, типами данных и механизмами для работы с данными и управления ими.  
@@ -29,7 +28,7 @@ ms.locfileid: "48137110"
 |[Таблицы](tables/tables.md)|[Порядковые номера](sequence-numbers/sequence-numbers.md)|[Массовый импорт и экспорт данных (SQL Server)](import-export/bulk-import-and-export-of-data-sql-server.md)|  
 |[Выполняющаяся в памяти OLTP (оптимизация в памяти)](in-memory-oltp/in-memory-oltp-in-memory-optimization.md)|[Триггеры DDL](triggers/ddl-triggers.md)|[Сжатие данных](data-compression/data-compression.md)|  
 |[Индексы](indexes/indexes.md)|[Триггеры DML](triggers/dml-triggers.md)|[Объекты OLE-автоматизации в Transact-SQL](stored-procedures/ole-automation-objects-in-transact-sql.md)|  
-|[Секционированные таблицы и индексы](partitions/partitioned-tables-and-indexes.md)|[Синонимы (компонент Database Engine)](synonyms/synonyms-database-engine.md)|[Уведомления о событиях](service-broker/event-notifications.md)|  
+|[Partitioned Tables and Indexes](partitions/partitioned-tables-and-indexes.md)|[Синонимы (компонент Database Engine)](synonyms/synonyms-database-engine.md)|[Уведомления о событиях](service-broker/event-notifications.md)|  
 |[Представления](views/views.md)|[Данные XML (SQL Server)](xml/xml-data-sql-server.md)|[Наблюдение и настройка производительности](performance/monitor-and-tune-for-performance.md)|  
 |[Хранимые процедуры (компонент Database Engine)](stored-procedures/stored-procedures-database-engine.md)|[Пространственные данные (SQL Server)](spatial/spatial-data-sql-server.md)||  
 |[Поиск &#40;SQL Server&#41;](../database-engine/search-sql-server.md)|[Данные большого двоичного объекта (SQL Server)](blob/binary-large-object-blob-data-sql-server.md)||  

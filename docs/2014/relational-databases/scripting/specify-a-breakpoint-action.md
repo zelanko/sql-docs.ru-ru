@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.action
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
@@ -16,12 +14,12 @@ ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b2dfffc59284a0eb2d4f121b2f2328bdadae1d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92ac0e98924b54a20ad16c183386dd407fc7604c
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189520"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328994"
 ---
 # <a name="specify-a-breakpoint-action"></a>Задание действия в точке останова
   Действие точки останова **При попадании** задает пользовательское действие, которое отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняет для точки останова. Если достигнуто указанное число попаданий или удовлетворяется любое из указанных условий для точки останова, то отладчик выполняет действие, заданное для точки останова.  
@@ -31,7 +29,7 @@ ms.locfileid: "48189520"
   
  Сообщение указывается в параметре **Вывод сообщения** в виде текстовой строки, которая включает выражения с данными из кода [!INCLUDE[tsql](../../includes/tsql-md.md)] , отладка которого выполняется. Выражения могут включать следующие элементы.  
   
--   Выражение [!INCLUDE[tsql](../../includes/tsql-md.md)] , заключенное в фигурные скобки ({}). В выражении могут использоваться переменные, параметры и встроенные функции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Например: {@MyVariable}, {@NameParameter}, {@@SPID} или {SERVERPROPERTY('ProcessID')}.  
+-   Выражение [!INCLUDE[tsql](../../includes/tsql-md.md)] , заключенное в фигурные скобки ({}). В выражении могут использоваться переменные, параметры и встроенные функции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Например: {@MyVariable}, {@NameParameter}, {@@SPID} или {SERVERPROPERTY(ProcessID)}.  
   
 -   Одно из следующих ключевых слов:  
   
@@ -43,7 +41,7 @@ ms.locfileid: "48189520"
   
     4.  $FUNCTION возвращает имя хранимой процедуры или определяемой пользователем функции, для которой установлена точка останова. Если точка останова задана в окне редактора, $FUNCTION возвращает имя редактируемого файла скрипта.  
   
-    5.  $PID и $PNAME возвращают идентификатор и имя процесса операционной системы, выполняющего экземпляр компонента Database Engine, где выполняется [!INCLUDE[tsql](../../includes/tsql-md.md)] . $PID возвращает такой же идентификатор, что и SERVERPROPERTY("ProcessID"), за исключением того, что $PID имеет шестнадцатеричное, а SERVERPROPERTY("ProcessID") — десятичное значение.  
+    5.  $PID и $PNAME возвращают идентификатор и имя процесса операционной системы, выполняющего экземпляр компонента Database Engine, где выполняется [!INCLUDE[tsql](../../includes/tsql-md.md)] . $PID возвращает такой же идентификатор, что и SERVERPROPERTY(ProcessID), за исключением того, что $PID имеет шестнадцатеричное, а SERVERPROPERTY(ProcessID) — десятичное значение.  
   
     6.  $TID и $TNAME возвращают идентификатор и имя потока операционной системы, в котором выполняется пакет [!INCLUDE[tsql](../../includes/tsql-md.md)] . Этот поток связан с процессом, в котором выполняется экземпляр ядра СУБД. $TID возвращает такое же значение, как и инструкция SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID, за одним исключением: $TID содержит шестнадцатеричное значение, а kpid — десятичное.  
   
@@ -67,8 +65,6 @@ ms.locfileid: "48189520"
   
 3.  Нажмите кнопку **ОК** , чтобы внести изменения, либо кнопку **Отмена** , чтобы выйти без их применения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задание условия точки останова](specify-a-breakpoint-condition.md)   
  [Настройка счетчика числа попаданий](specify-a-hit-count.md)  
-  
-  

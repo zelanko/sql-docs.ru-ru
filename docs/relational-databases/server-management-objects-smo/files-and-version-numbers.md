@@ -18,22 +18,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 991efd9798b371c24c5c68c595c6ef86446d79e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a72b776add3dc1fb31886711b3f812b65d1176c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836422"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203706"
 ---
 # <a name="files-and-version-numbers"></a>Файлы и номера версий
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Все необходимые компоненты объектов управления SQL Server (SMO) помещаются в пакет Microsoft.SqlServer.SqlManagementObjects NuGet. Объекты SMO реализованы в нескольких управляемых сборках. Можно разрабатывать приложения объектов SMO либо на клиенте, либо на сервере.  
 
->>[!Important]
-Версия файла сборки объектов SMO отображается как основной. **0**. Build.Revision. Но версия embedded сборки основной номер. **100**. Build.Revision. Это позволяет отделить версия объектов SMO, используемые в каждом приложении, чтобы обновления одного не влияют на любые другие.
->>
->>По этой причине следует **не** установить эти версии сборок в глобальный кэш сборок (GAC). Это может привести к другим приложениям, такие как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, чтобы прервать. 
+> > [!Important]
+> > Версия файла сборки объектов SMO отображается как основной. **0**. Build.Revision. Но версия embedded сборки основной номер. **100**. Build.Revision. Это позволяет отделить версия объектов SMO, используемые в каждом приложении, чтобы обновления одного не влияют на любые другие.
+> > 
+> > По этой причине следует **не** установить эти версии сборок в глобальный кэш сборок (GAC). Это может привести к другим приложениям, такие как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, чтобы прервать. 
   
 |Файл|Описание|  
 |-----------|-----------------|  

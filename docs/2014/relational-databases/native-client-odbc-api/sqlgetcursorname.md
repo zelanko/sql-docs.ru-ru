@@ -14,18 +14,18 @@ ms.assetid: 3a427a23-28ef-49aa-b9ec-6cab0914bdf3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fc982405e1e5244b6d151c7475024590682cbc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 603a2b5be4ca75495f094aa838d0373a9689a523
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114602"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352410"
 ---
 # <a name="sqlgetcursorname"></a>SQLGetCursorName
   Если приложение не указывает имени курсора, драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует его для приложения после создании курсора. Приложение может использовать **SQLGetCursorName** , чтобы получить определенное драйвером имя курсора для позиционированных инструкций UPDATE и DELETE. Приложению не требуется вызывать **SQLSetCursorName** , чтобы использовать преимущества позиционированных инструкций по обработке данных.  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLGetCursorName](http://go.microsoft.com/fwlink/?LinkId=59349)   
+ [Функция SQLGetCursorName](https://go.microsoft.com/fwlink/?LinkId=59349)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

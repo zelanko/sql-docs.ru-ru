@@ -16,12 +16,12 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 898d2f0982ce5538f853335ea652891e7c390547
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6715c89ff3086f5031e2554929aced39d6f135db
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670053"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501907"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Функции, связанные с QName — expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   Если *$paramLocal* указано недопустимое значение в правильной лексической формой для типа xs: NCName, возвращается пустая последовательность и отображается динамическая ошибка.  
   
--   Преобразование данных типа xs:QName type к любому другому типу не поддерживается в приложении [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. По этой причине **expanded-QName()** функция не может использоваться в XML-конструкции. Например при создании узла, такого как `<e> expanded-QName(…) </e>`, значение должно быть нетипизированным. Это потребовало бы преобразования значения типа xs:QName, возвращаемого функцией `expanded-QName()` к типу xdt:untypedAtomic. Однако это не поддерживается. Решение приведено далее в примере в этом же подразделе.  
+-   Преобразование данных типа xs:QName type к любому другому типу не поддерживается в приложении [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. По этой причине **expanded-QName()** функция не может использоваться в XML-конструкции. Например при создании узла, такого как `<e> expanded-QName(...) </e>`, значение должно быть нетипизированным. Это потребовало бы преобразования значения типа xs:QName, возвращаемого функцией `expanded-QName()` к типу xdt:untypedAtomic. Однако это не поддерживается. Решение приведено далее в примере в этом же подразделе.  
   
 -   Можно модифицировать или сравнить существующие значения типа QName. Например `/root[1]/e[1] eq expanded-QName("https://nsURI" "myNS")` сравнивает значение элемента <`e`>, с QName, возвращаемым **expanded-QName()** функции.  
   
@@ -201,7 +201,7 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>Ограничения реализации  
- Существует одно ограничение: **expanded-QName()** функция принимает пустую последовательность в качестве второго аргумента и возвращает пустой не вызывает ошибку времени выполнения, если второй аргумент являются неверными.  
+ Существует одно ограничение: **Expanded-QName()** функция принимает пустую последовательность в качестве второго аргумента и возвращает пустой не вызывает ошибку времени выполнения, если второй аргумент являются неверными.  
   
 ## <a name="see-also"></a>См. также  
  [Функции, связанные с QName &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  

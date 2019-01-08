@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.iscreatefolder.f1
@@ -15,12 +14,12 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dcbd655e33cfc2ad74eacdd0453c40f93b7c373
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6cbca0592074b34250d5d07003494800942affaa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155144"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804566"
 ---
 # <a name="folder-properties-dialog-box"></a>Диалоговое окно «Свойства папки»
   В папке содержатся проекты и среды в каталоге служб `SSISDB`. Каждая папка определяет разрешения, которые применяются к ее содержимому. Дополнительные сведения о разрешениях [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в статье [catalog.grant_permission (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  

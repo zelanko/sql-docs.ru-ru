@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: babdafaaa1c507a609760b02895f9438baf21581
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 313708ad1575c7b9922ac796791d0d623c51b54b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145020"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207523"
 ---
 # <a name="canceling-commands-xmla"></a>Отмена команд (XMLA)
   В зависимости от прав администратора для пользователя, выполняющего команду [отменить](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) команды XML для аналитики (XMLA) может отменить команду на сеанс, сеанс, подключение, серверный процесс или связанного с ним сеанса или подключение.  
@@ -36,7 +36,7 @@ ms.locfileid: "50145020"
 ## <a name="canceling-connections"></a>Отмена соединений  
  Указав идентификатор соединения в [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) свойство **отменить** команды, администратор сервера может отменить все сеансы, ассоциированные с данным соединением, включая все Выполнение команд и отменить само соединение.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Если экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не удается обнаружить и отменить сеансы, ассоциированные с соединением, например, когда средство переноса данных открывает несколько сеансов, обеспечивая подключения по протоколу HTTP, экземпляр не может отменить соединение. Если такая ситуация возникает во время выполнения **отменить** команды произошла ошибка.  
   
  Администратор сервера может извлекать активных подключений для [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра путем извлечения набора строк схемы DISCOVER_CONNECTIONS, с помощью XML для Аналитики **Discover** метод.  

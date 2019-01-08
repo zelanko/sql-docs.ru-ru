@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - makChanToTab
@@ -13,12 +12,12 @@ ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bcf061866f6992e37ed5411a0c3b6ac0971f23e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2b2d4bb6d27c683cae84c22b2c914e13412c19d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068064"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804796"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>Внесение изменений в выбранные для отслеживания изменений таблицы
   В этом диалоговом окне можно выбрать столбцы из выбранной таблицы, изменения данных в которых будут отслеживаться. Можно также изменить **Роль безопасности** и **Экземпляр отслеживания** .  
@@ -51,7 +50,7 @@ ms.locfileid: "48068064"
  В поле **Экземпляр отслеживания** введите имя экземпляра отслеживания.  
   
 ## <a name="see-also"></a>См. также  
- [Как создать экземпляр базы данных изменения SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
- [Выбор таблиц и столбцов Oracle](select-oracle-tables-and-columns.md)  
+ [Как создать экземпляр изменения базы данных SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
+ [Выберите столбцы и таблицы Oracle](select-oracle-tables-and-columns.md)  
   
   

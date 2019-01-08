@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.report.f1
@@ -18,12 +18,12 @@ ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e89d1e8032d52e49e85cca13d945fe76d341e18f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086884"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779026"
 ---
 # <a name="object-explorer-details-pane"></a>Область сведений обозревателя объектов
   Подробности обозревателя объектов — это компонент среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], который обеспечивает просмотр всех объектов сервера и пользовательский интерфейс для управления ими. Возможности обозревателя объектов могут незначительно отличаться в зависимости от типа сервера, но в общем случае они включают функции разработки для баз данных, а также функции управления для всех типов серверов.  

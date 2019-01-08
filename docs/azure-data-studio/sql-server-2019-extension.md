@@ -1,7 +1,8 @@
 ---
-title: Расширение SQL Server Data Studio 2019 Azure (Предварительная версия) | Документация Майкрософт
+title: Расширение SQL Server 2019 (Предварительная версия)
+titleSuffix: Azure Data Studio
 description: Расширение 2019 г. версия SQL Server для данных в студии
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 11/06/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -11,16 +12,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ce04a8f41ec466980bd13d3d032660696e50870
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 6ce44d22675be344aaa1f08632e39bfdf9c190b3
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269817"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432817"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Расширение SQL Server 2019 (Предварительная версия)
 
-Расширение SQL Server 2019 (Предварительная версия) обеспечивает поддержку предварительной версии новых функциях и средствах доставки поддержки [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]. Сюда входит поддержка предварительной версии [кластеров SQL Server 2019 больших данных](../big-data-cluster/big-data-cluster-overview.md), интегрированное [записная книжка](../big-data-cluster/notebooks-guidance.md), PolyBase [мастера Create External Table](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json)и [Обозреватель ресурсов azure](azure-resource-explorer.md).
+Расширение SQL Server 2019 (Предварительная версия) обеспечивает поддержку предварительной версии новых функциях и средствах доставки поддержки [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Сюда входит поддержка предварительной версии [кластеров SQL Server 2019 больших данных](../big-data-cluster/big-data-cluster-overview.md), интегрированное [записная книжка](../big-data-cluster/notebooks-guidance.md), PolyBase [мастера Create External Table](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json)и [Обозреватель ресурсов azure](azure-resource-explorer.md).
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Установите расширение SQL Server 2019 (Предварительная версия)
 
@@ -41,6 +42,8 @@ ms.locfileid: "51269817"
 1. Выберите **перезагрузить** для включения расширения (только обязательно при первоначальной установке расширения).
 
 1. После повторной загрузки расширения будут установлены зависимости. Вы увидите ход выполнения в окне вывода и может занять несколько минут.
+
+1. После зависимостей завершить установку, закройте и снова откройте Studio данных Azure. **Кластера больших данных в SQL Server** тип подключения недоступен, необходимо перезапустить Studio данных Azure.
 
 ## <a name="release-notes-v080"></a>Заметки о выпуске (версии 0.8.0)
 *Записные книжки*:

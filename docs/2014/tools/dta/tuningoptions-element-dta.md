@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4630640d2d61685accdb26031b87aff2883b644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3050ce285cc98386f6de6278bedd2520cb39ba36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065844"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348754"
 ---
 # <a name="tuningoptions-element-dta"></a>Элемент TuningOptions (DTA)
   Содержит параметры конкретного сеанса настройки.  
@@ -42,14 +41,14 @@ ms.locfileid: "48065844"
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный параметр. Если используется, может использоваться только один раз для каждого `DTAInput` элемент.|  
+|**Наличие**|Необязательный. В случае использования может применяться только один раз для каждого элемента `DTAInput`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент DTAInput &#40;DTA&#41;](dtainput-element-dta.md)|  
-|**Дочерние элементы**|`ReportSet` элемент. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](http://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> `TuningLogTable` элемент. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](http://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> `NumberOfEvents` элемент. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](http://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> [Элемент TuningTimeInMin &#40;DTA&#41;](tuningtimeinmin-element-dta.md)<br /><br /> [Элемент StorageBoundInMB &#40;DTA&#41;](storageboundinmb-element-dta.md)<br /><br /> `MaxKeyColumnsInIndex` элемент. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](http://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> `MaxColumnsInIndex` элемент. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](http://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> `MinPercentageImprovement` элемент. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](http://go.microsoft.com/fwlink/?linkid=43100)<br /><br /> [Элемент TestServer &#40;DTA&#41;](server-element-dta.md)<br /><br /> [Элемент FeatureSet &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Элемент partitioning &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [Элемент DropOnlyMode &#40;DTA&#41;](droponlymode-element-dta.md)<br /><br /> [Элемент KeepExisting &#40;DTA&#41;](keepexisting-element-dta.md)<br /><br /> [Элемент OnlineIndexOperation &#40;DTA&#41;](onlineindexoperation-element-dta.md)<br /><br /> [Элемент DatabaseToConnect &#40;DTA&#41;](databasetoconnect-element-dta.md)<br /><br /> `IgnoreConstantsInWorkload` элемент. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](http://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> `RetainShellDB` элемент. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](http://go.microsoft.com/fwlink/?linkid=43100).|  
+|**Родительский элемент**|[Элемент DTAInput (DTA)](dtainput-element-dta.md)|  
+|**Дочерние элементы**|Элемент `ReportSet`. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> Элемент `TuningLogTable`. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> Элемент `NumberOfEvents`. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> [Элемент TuningTimeInMin (DTA)](tuningtimeinmin-element-dta.md)<br /><br /> [Элемент StorageBoundInMB (DTA)](storageboundinmb-element-dta.md)<br /><br /> Элемент `MaxKeyColumnsInIndex`. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> Элемент `MaxColumnsInIndex`. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> Элемент `MinPercentageImprovement`. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100)<br /><br /> [Элемент TestServer (DTA)](server-element-dta.md)<br /><br /> [Элемент FeatureSet (DTA)](featureset-element-dta.md)<br /><br /> [Элемент Partitioning (DTA)](partitioning-element-dta.md)<br /><br /> [Элемент DropOnlyMode (DTA)](droponlymode-element-dta.md)<br /><br /> [Элемент KeepExisting (DTA)](keepexisting-element-dta.md)<br /><br /> [Элемент OnlineIndexOperation (DTA)](onlineindexoperation-element-dta.md)<br /><br /> [Элемент DatabaseToConnect (DTA)](databasetoconnect-element-dta.md)<br /><br /> Элемент `IgnoreConstantsInWorkload`. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> Элемент `RetainShellDB`. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="example"></a>Пример  
  Примеры `TuningOptions` элемент, см. в разделе [образцы входных файлов XML &#40;DTA&#41;](xml-input-file-samples-dta.md).  

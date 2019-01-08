@@ -13,12 +13,12 @@ ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2968561d90f1bc45f50f040d7d303b969cc3c3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8daa6582f18d9c5279e7539dd9c3740d90e36d2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103024"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353202"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Реализация политики подписывания путем задания параметра реестра
   Для управления организационной политикой при загрузке подписанных и неподписанных пакетов можно использовать необязательный параметр реестра. При использовании данного параметра реестра его необходимо создать на каждом компьютере, где будут выполняться пакеты [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и где требуется принудительное выполнение этой политики. После задания такого параметра реестра службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] будут проверять наличие и верность подписи перед загрузкой пакетов.  
@@ -43,7 +43,7 @@ ms.locfileid: "48103024"
 |3|Заблокировать недопустимые и ненадежные подписи и неподписанные пакеты.<br /><br /> Это параметр также блокирует самостоятельно сформированные подписи.|  
   
 > [!NOTE]  
->  Рекомендованное значение для `BlockedSignatureStates` — 3. Это обеспечивает наибольшую защиту от неподписанных пакетов или подписей, которые являются либо недействительными, либо ненадежными. Однако рекомендованное значение не может подходить для всех случаев. Дополнительные сведения о подписывании электронных ресурсов см. в разделе[Введение в подписывание кода](http://go.microsoft.com/fwlink/?LinkId=51414)библиотеки MSDN.  
+>  Рекомендованное значение для `BlockedSignatureStates` — 3. Это обеспечивает наибольшую защиту от неподписанных пакетов или подписей, которые являются либо недействительными, либо ненадежными. Однако рекомендованное значение не может подходить для всех случаев. Дополнительные сведения о подписывании электронных ресурсов см. в разделе[Введение в подписывание кода](https://go.microsoft.com/fwlink/?LinkId=51414)библиотеки MSDN.  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Реализация политики подписи пакетов  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48103024"
   
 4.  Щелкните правой кнопкой мыши раздел **MSDTS**, укажите пункт **Создать**, а затем щелкните **Параметр DWORD**.  
   
-5.  Обновите имя нового значения для `BlockedSignatureStates`.  
+5.  Обновите имя нового значения до `BlockedSignatureStates`.  
   
 6.  Щелкните правой кнопкой мыши `BlockedSignatureStates` и нажмите кнопку **изменить**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48103024"
 9. В меню **Файл** выберите пункт **Выход**.  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о безопасности &#40;служб Integration Services&#41;](security/security-overview-integration-services.md)   
+ [Общие сведения о безопасности (службы Integration Services)](security/security-overview-integration-services.md)   
  [Определение источника пакетов с помощью цифровых подписей](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

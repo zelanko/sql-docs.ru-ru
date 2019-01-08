@@ -1,5 +1,5 @@
 ---
-title: Использование измененной версией Analysis Services учебного проекта | Документы Microsoft
+title: Использование измененной версии Analysis Services учебного проекта | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 93847b7e6cade7d77774603ba1852c16a5a783b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4d3fb90b8823ff8a8585647bf60b87ed4098bc6e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017701"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401118"
 ---
-# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Занятие 4-1-использование измененной версии проекта Tutorial служб Analysis Services
+# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Урок 4 – 1-использование измененной версии проекта Analysis Services Tutorial
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Оставшиеся занятия этого учебника основаны на улучшенной версии проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, с которым велась работа на первых трех занятиях. В представление источника данных **Adventure Works DW 2012** были добавлены некоторые таблицы и именованные вычисления, в проект были добавлены дополнительные измерения, которые также были добавлены в куб учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Кроме того, была добавлена вторая группа мер, которая содержит меры из второй таблицы фактов. Улучшенная версия проекта позволит продолжить изучение добавления новых функций в приложение бизнес-аналитики без необходимости повторного применения полученных навыков.  
@@ -25,15 +25,15 @@ ms.locfileid: "34017701"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Загрузка и извлечение файла проекта  
   
-1.  [Щелкните здесь](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services), чтобы перейти на страницу загрузки, где представлены образцы проектов, прилагаемых к этому учебнику. Проекты учебника включены в **adventure-works — многомерный учебник projects.zip** загрузки.  
+1.  [Щелкните здесь](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) , чтобы перейти на страницу загрузки, где представлены образцы проектов, прилагаемых к этому учебнику. Образцы проектов включены в **adventure-works многомерных учебник projects.zip** загрузки.  
   
-2.  Нажмите кнопку **adventure-works — многомерный учебник projects.zip** для загрузки пакета, содержащий проекты для этого учебника.  
+2.  Нажмите кнопку **adventure-works многомерных учебник projects.zip** для загрузки пакета, содержащий проекты для этого руководства.  
   
     По умолчанию этот ZIP-файл сохраняется в папке «Загрузки». Этот ZIP-файл необходимо перенести в расположение с более коротким путем (например, создайте папку C:\Tutorials для хранения таких файлов).  После этого можно извлечь файлы из ZIP-файла. При попытке распаковать файлы из папки «Загрузки», путь к которой значительно больше, возникнет ошибка из занятия 1.  
   
 3.  Создайте папку на уровне корневого диска или с неглубоким вложением, например C:\Tutorial.  
   
-4.  Переместить **adventure-works — многомерный учебник projects.zip** во вложенную папку.  
+4.  Переместить **adventure-works многомерных учебник projects.zip** файл во вложенную папку.  
   
 5.  Щелкните файл правой кнопкой мыши и выберите команду **Извлечь все**.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34017701"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Загрузка и обработка улучшенной версии проекта  
   
-1.  В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]в меню **Файл** щелкните команду **Закрыть решение** , чтобы закрыть файлы, которые не будут использоваться.  
+1.  В [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]на **файл** меню, щелкните **закрыть решение** закрыть файлы, которые не будут использоваться.  
   
 2.  В меню **Файл** выберите пункт **Открыть**, затем выберите **Проект/Решение**.  
   

@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb3b255e145c489968b0d62b73aaa526bec8446c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec0a5700df76134eab8a4fe2278820691dad509e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134886"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359316"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
     
@@ -59,7 +59,7 @@ ms.locfileid: "48134886"
   
 -   Выбирайте столбцы, определенные как NOT NULL, при определении столбцов для уникального индекса или ограничения уникальности. При этом исключается возможность возникновения нарушения уникальности, когда больше чем в одной строке содержится значение NULL в значениях ключа.  
   
--   Если дублирование значений является результатом ошибок ввода данных, исправьте данные вручную и затем создайте индекс или ограничение. Дополнительные сведения об удалении повторяющихся строк из таблицы вы найдете в статье базы знаний 139444: [Удаление повторяющихся строк из таблицы в SQL Server](http://support.microsoft.com/kb/139444).  
+-   Если дублирование значений является результатом ошибок ввода данных, исправьте данные вручную и затем создайте индекс или ограничение. Дополнительные сведения об удалении повторяющихся строк в таблице см. в статье 139444 базы знаний Майкрософт: [Удаление повторяющихся строк из таблицы в SQL Server](https://support.microsoft.com/kb/139444).  
   
 ## <a name="see-also"></a>См. также  
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   

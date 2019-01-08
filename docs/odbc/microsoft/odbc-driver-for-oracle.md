@@ -15,12 +15,12 @@ ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57f0713c6da777a7c338a3be888a43e72e287342
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4685d209d768bd3ff41c1c7367ef6cb6dcd45bcf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806732"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515105"
 ---
 # <a name="odbc-driver-for-oracle"></a>Драйвер ODBC для Oracle
 > [!IMPORTANT]  
@@ -34,7 +34,7 @@ ms.locfileid: "47806732"
   
  ![Драйвер ODBC для Oracle приложения&#47;архитектура драйвера](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- Драйвер ODBC для Oracle соответствует 1 уровень соответствия API и базового уровня соответствия SQL. Она также поддерживает некоторые функции в API совместимости уровня 2 и основная часть грамматики в уровни соответствия Core и расширенную SQL. Драйвер ODBC 2,5 требованиям и поддерживает 32-разрядных системах. Oracle 7.3 x поддерживается полностью; Oracle8 обеспечивает ограниченную поддержку. Драйвер ODBC для Oracle не поддерживает новые типы данных Oracle8 — данные в Юникоде, BLOB, CLOB, и т. д — и не поддерживает Oracle в новой реляционной модели объектов. Дополнительные сведения о поддерживаемых типах данных см. в разделе [поддерживаемые типы данных](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) в данном руководстве.  
+ Драйвер ODBC для Oracle соответствует 1 уровень соответствия API и базового уровня соответствия SQL. Она также поддерживает некоторые функции в API совместимости уровня 2 и основная часть грамматики в уровни соответствия Core и расширенную SQL. Драйвер ODBC 2,5 требованиям и поддерживает 32-разрядных системах. Oracle 7.3 x поддерживается полностью; Oracle8 обеспечивает ограниченную поддержку. Драйвер ODBC для Oracle не поддерживает новые типы данных Oracle8 - Юникода типов данных, большие двоичные объекты, CLOB и т. д. — и не поддерживает Oracle в новой реляционной модели объектов. Дополнительные сведения о поддерживаемых типах данных см. в разделе [поддерживаемые типы данных](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) в данном руководстве.  
   
  Для доступа к данным Oracle, необходимы следующие компоненты:  
   

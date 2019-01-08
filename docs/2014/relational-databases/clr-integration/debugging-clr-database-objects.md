@@ -16,17 +16,17 @@ ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1cc46a4f9f4e6897971f45d8947c3eff6f830f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70b092f81030c7905fe1d771844369f2d59317b9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072244"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354172"
 ---
 # <a name="debugging-clr-database-objects"></a>Отладка объектов базы данных среды CLR
   В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляется поддержка отладки объектов [!INCLUDE[tsql](../../../includes/tsql-md.md)] и среды CLR в базе данных. Ключевыми особенностями отладки в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] стали простота установки и использования, а также интеграция отладчика SQL Server с отладчиком Microsoft Visual Studio. Более того, процесс отладки охватывает код на всех применяемых языках: пользователи могут беспрепятственно переходить к коду объектов среды CLR из кода [!INCLUDE[tsql](../../../includes/tsql-md.md)] и наоборот. Отладчик Transact-SQL в среде SQL Server Management Studio нельзя использовать для отладки управляемых объектов базы данных, но эти объекты можно отлаживать с помощью отладчиков, входящих в состав среды Visual Studio. Отладка управляемого объекта базы данных в Visual Studio поддерживает все обычные средства отладки, такие как шаг с входом и шаг с выходом в процедурах, выполняющихся на сервере. Отладчики могут задавать точки останова, просматривать стек вызова, проверять значения переменных и изменять значения переменных во время отладки. Обратите внимание, что среду Visual Studio .NET 2003 нельзя использовать для программирования или отладки в интеграции со средой CLR. В состав [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] входит предварительно установленная платформа .NET Framework, а Visual Studio .NET 2003 не может использовать сборки .NET Framework версии 2.0.  
   
- Дополнительные сведения об отладке управляемого кода с помощью Visual Studio см. в разделе "[Debugging Managed Code](http://go.microsoft.com/fwlink/?LinkId=120377)" разделе документации Visual Studio.  
+ Дополнительные сведения об отладке управляемого кода с помощью Visual Studio см. в разделе "[Debugging Managed Code](https://go.microsoft.com/fwlink/?LinkId=120377)" разделе документации Visual Studio.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>Разрешения и ограничения отладки  
  Отладка представляет собой весьма привилегированную операцию и поэтому только члены **sysadmin** предопределенной роли сервера могут выполнить это на [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "48072244"
 ## <a name="overview-of-debugging-managed-database-objects"></a>Общие сведения об отладке управляемых объектов базы данных  
  Отладка в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] организована на основе модели с учетом соединений. Отладчик может обнаруживать и отлаживать действия только в том клиентском соединении, к которому он присоединен. Функциональные возможности отладчика не ограничиваются типом соединения, поэтому возможна отладка как соединений с потоком табличных данных (TDS), так и HTTP-соединений. Однако [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не позволяет выполнять отладку существующих соединений. Процесс отладки поддерживает общие функции отладки внутри процедур, выполняемых на сервере. Взаимодействие между отладчиком и сервером [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] происходит через модель DCOM.  
   
- Дополнительные сведения об отладке и сценарии управляемые хранимые процедуры, функции, триггеры, определяемые пользователем типы и статистические выражения, см. в разделе "[отладку по базы данных интеграции SQL Server со средой CLR](http://go.microsoft.com/fwlink/?LinkId=120378)» раздела в Visual Studio документация.  
+ Дополнительные сведения об отладке и сценарии управляемые хранимые процедуры, функции, триггеры, определяемые пользователем типы и статистические выражения, см. в разделе "[отладку по базы данных интеграции SQL Server со средой CLR](https://go.microsoft.com/fwlink/?LinkId=120378)» раздела в Visual Studio документация.  
   
  Чтобы использовать Visual Studio для удаленной разработки, отладки и разработки, в экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должен быть включен протокол TCP/IP. Дополнительные сведения о включении протокола TCP/IP на сервере, см. в разделе [Настройка клиентских протоколов](../../database-engine/configure-windows/configure-client-protocols.md).  
   

@@ -14,15 +14,15 @@ ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26f9bdc0564b98132bb5ec413c99917e78e4d62e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57e0fe66d76f91c8cea35710e9d0245db7619628
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855182"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544427"
 ---
 # <a name="sqlbindparam-mapping"></a>Сопоставление SQLBindParam
-**SQLBindParam** не может по-настоящему вызываться не рекомендуется так как не существует в ODBC; тем не менее, оно по-прежнему представляет продублированные функции — диспетчер драйверов необходимо экспортировать его, поскольку ISO и откройте совместимого группы приложений будут использовать его. Так как **SQLBindParameter** содержит все функциональные возможности **SQLBindParam**, **SQLBindParam** будет сопоставляться на основе **SQLBindParameter** (при базового драйвера ODBC 3 *.x* драйвер). ODBC 3 *.x* драйвер не нужно реализовать **SQLBindParam**.  
+**SQLBindParam** не может по-настоящему вызываться не рекомендуется, так как он не существует в ODBC; тем не менее, он по-прежнему представляет продублированные функции — диспетчер драйверов необходимо экспортировать его, поскольку ISO и откройте группу совместимые приложения будет использовать его. Так как **SQLBindParameter** содержит все функциональные возможности **SQLBindParam**, **SQLBindParam** будет сопоставляться на основе **SQLBindParameter** (при базового драйвера ODBC 3 *.x* драйвер). ODBC 3 *.x* драйвер не нужно реализовать **SQLBindParam**.  
   
 ## <a name="remarks"></a>Примечания  
  Если следующий вызов **SQLBindParam** выполняется:  

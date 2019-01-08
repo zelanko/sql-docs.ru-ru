@@ -1,7 +1,8 @@
 ---
-title: Включить или отключить сбор данных об использовании и отчеты для Azure Data Studio о сбоях | Документация Майкрософт
+title: Включение и отключение сбора данных об использовании и создание отчетов о сбоях
+titleSuffix: Azure Data Studio
 description: В этой статье описывается управление, если об использовании и сбоях, передает данные собираются и отправляются в корпорацию Майкрософт.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0a5adf802ab07e05f1041b1385044e2d580db32
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 1f9dd29edf2474ab8db0e3dc7ad7dc2ff78016d1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356485"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030108"
 ---
 # <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>Включение или отключение сбора данных об использовании [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -31,7 +32,7 @@ ms.locfileid: "49356485"
     "telemetry.enableTelemetry": false
 ```
 
-**Важное уведомление**: этот параметр требует перезапуска [!INCLUDE[name-sos](../includes/name-sos-short.md)] вступили в силу. 
+**Важное уведомление**: Этот параметр требует перезапуска [!INCLUDE[name-sos](../includes/name-sos-short.md)] вступили в силу. 
 
 ## <a name="how-to-disable-crash-reporting"></a>Отключение создания отчетов о сбоях
 
@@ -41,7 +42,7 @@ ms.locfileid: "49356485"
     "telemetry.enableCrashReporter": false
 ```
 
-**Важное уведомление**: этот параметр требует перезапуска [!INCLUDE[name-sos](../includes/name-sos-short.md)] вступили в силу.
+**Важное уведомление**: Этот параметр требует перезапуска [!INCLUDE[name-sos](../includes/name-sos-short.md)] вступили в силу.
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 - [Параметры рабочей области и пользователя](settings.md)

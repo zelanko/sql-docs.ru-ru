@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, classifier function create
@@ -16,12 +15,12 @@ ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 16eb3ef5b20a2aa3d8ffc869d386e541b081752f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112824"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799682"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Создать и проверить определяемую пользователем функцию-классификатор
   В этом разделе описывается создание и проверка определяемой пользователем функции-классификатора (UDF). Шаги включают выполнение инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в редакторе запросов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -116,7 +115,7 @@ ms.locfileid: "48112824"
     go  
     ```  
   
-4.  Создайте функцию-классификатор, использующую функции и значения времени, которые можно оценить со временем в таблице подстановки. Дополнительные сведения об использовании таблиц подстановки в функции-классификаторе см. в подразделе «Рекомендации по использованию таблиц подстановки в функции-классификаторе» данного раздела.  
+4.  Создайте функцию-классификатор, использующую функции и значения времени, которые можно оценить со временем в таблице подстановки. Дополнительные сведения об использовании таблиц подстановки в функции-классификаторе см. в разделе "Рекомендации по использованию таблиц подстановки в функции-классификаторе" этой статьи.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] представлен расширенный набор типов данных и функций даты и времени. Дополнительные сведения см. в статье [Типы данных и функции даты и времени (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
@@ -263,8 +262,8 @@ ms.locfileid: "48112824"
         > [!WARNING]  
         >  Рекомендуется использовать именно эти методы. Если что-то не позволяет использовать эти методы, рекомендуем связаться со службой технической поддержки Майкрософт для эффективного устранения возможных проблем.  
   
-## <a name="see-also"></a>См. также  
- [Регулятор ресурсов](resource-governor.md)   
+## <a name="see-also"></a>См. также:  
+ [регулятор ресурсов](resource-governor.md)   
  [Активация регулятора ресурсов](enable-resource-governor.md)   
  [Пул ресурсов регулятора ресурсов](resource-governor-resource-pool.md)   
  [Группа рабочей нагрузки регулятора ресурсов](resource-governor-workload-group.md)   

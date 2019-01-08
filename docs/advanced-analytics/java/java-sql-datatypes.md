@@ -1,5 +1,5 @@
 ---
-title: Типы данных Java, поддерживаемые в SQL Server 2019 | Документация Майкрософт
+title: Типы данных Java, поддерживаемые в SQL Server 2019 - службы машинного обучения SQL Server
 description: Сопоставление типов данных, из Java к SQL Server для структур входные и выходные данные, а также для входных параметров в sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3510b53510514daa125382fc10ea33285fe44a80
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 6921a40efc9af3ef94c0a53f8409891fee16127e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715438"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432537"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java и SQL Server поддерживаемые типы данных
 

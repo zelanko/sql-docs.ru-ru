@@ -1,5 +1,5 @@
 ---
-title: Вычисления в многомерных моделях | Документы Microsoft
+title: Вычисления в многомерных моделях | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b51dc3cbb0ad98b5f14fdd278c03dc54b43a6b9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c72d43c95013074051356c690ac2d7abf0a575e0
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023721"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983995"
 ---
 # <a name="calculations-in-multidimensional-models"></a>Вычисления в многомерных моделях
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,8 +28,6 @@ ms.locfileid: "34023721"
   
 -   Панель «Выражения вычисления» поддерживает представление формы и представление скрипта.  
   
-> [!NOTE]  
->  Дополнительные сведения о скриптах многомерных выражений см. в разделе [Введение в многомерные выражения в Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892), а также в разделе «Дополнительные ресурсы» на странице [SQL Server 2005 — службы Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) веб-сайта Microsoft TechNet. Дополнительные сведения о неполадках с производительностью, связанных с проектированием кубов, см. в разделе [Руководство по настройке производительности служб SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="creating-a-new-calculation"></a>Создание вычисления  
  Чтобы создать вычисление, на вкладке **Вычисления** конструктора кубов в меню **Куб** выберите пункт **Создать вычисляемый элемент**, **Создать именованный набор**или **Создать команду скрипта**, в зависимости от требуемого типа вычисления. Также можно нажать любые из соответствующих кнопок на панели инструментов или щелкнуть правой кнопкой мыши в любой части области **Организатор скриптов** , а затем выбрать одну из команд контекстного меню. Данное действие добавляет новое вычисление к панели **Организатор скриптов** и отображает для него поля в форме вычислений на панели «Выражения вычисления». При создании нового скрипта данное действие открывает представление «Скрипт» на панели «Выражения вычисления». Дополнительные сведения о построении трех типов вычислений см. в разделах [Создание вычисляемых элементов](../../analysis-services/multidimensional-models/create-calculated-members.md), [Создание именованных наборов](../../analysis-services/multidimensional-models/create-named-sets.md)и [Определение назначений и других команд скриптов](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md).  

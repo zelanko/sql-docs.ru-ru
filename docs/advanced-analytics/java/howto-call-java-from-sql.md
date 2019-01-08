@@ -1,22 +1,22 @@
 ---
-title: Как вызвать Java из SQL | Документация Майкрософт
+title: Как вызвать Java из SQL - службы машинного обучения SQL Server
 description: Узнайте, как вызывать классы Java из хранимых процедур SQL Server с помощью программирования расширение языка в SQL Server 2019 Java.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08af5a18b827c783515ecd3b4ba4a802c3472f93
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 438c1096a933932e08c5cbf21722ba75874bb1dc
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715432"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644763"
 ---
-# <a name="how-to-call-java-from-sql-server-2019"></a>Как вызвать Java из SQL Server 2019
+# <a name="how-to-call-java-from-sql-server-2019-preview"></a>Как вызвать Java из предварительной версии SQL Server 2019
 
 При использовании [расширение языка Java](extension-java.md), [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) система, хранимая процедура — это интерфейс, используемый для вызова среды выполнения Java. Разрешения в базе данных, применяются к выполнению кода Java.
 
@@ -33,7 +33,7 @@ ms.locfileid: "46715432"
 * «params» используется для передачи параметров в класс Java. Вызов метода, который требует аргументов не поддерживается, что делает параметры единственным способом передать значения аргумента в метод. 
 
 > [!Note]
-> Эта заметка формулирующее поддерживаемые и неподдерживаемые операций, относящихся к Java в CTP 2.0.
+> Эта заметка формулирующее поддерживаемые и неподдерживаемые операций, относящихся к Java в CTP-версии 2.x.
 > * Для хранимой процедуры поддерживаются входных параметров. Выходные параметры не являются.
 > * Потоковая передача с помощью параметра sp_execute_external_script **@r_rowsPerRead** не поддерживается.
 > * Секционирование с помощью **@input_data_1_partition_by_columns** не поддерживается.
@@ -41,7 +41,7 @@ ms.locfileid: "46715432"
 
 ## <a name="call-spexecuteexternalscript"></a>Вызов sp_execute_external_script
 
-[Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) система, хранимая процедура — это интерфейс, используемый для вызова среды выполнения Java. В следующем примере показано sp_execute_external_script, используя расширение Java и параметры для указания пути, скрипты и пользовательский код.
+Применимо к Windows и Linux, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) система, хранимая процедура — это интерфейс, используемый для вызова среды выполнения Java. В следующем примере показано sp_execute_external_script, используя расширение Java и параметры для указания пути, скрипты и пользовательский код.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -65,14 +65,14 @@ EXEC sp_execute_external_script
 
 После компиляции класс Java или классов и поместить файлы .class или JAR-файлы в ваш путь к классу Java, у вас есть два варианта предоставления пути к классам в расширение SQL Server Java:
 
-**Вариант 1: Передать в качестве параметра**
+**Вариант 1. Передать в качестве параметра**
 
 Одним из подходов для указания пути к скомпилированным кодом является, задав пути к КЛАССАМ в качестве входного параметра для процедуры sp_execute_external_script. [Пример Java](java-first-sample.md#call-method) этот метод продемонстрирован. Если вы выбрали этот подход и использовать несколько путей, обязательно используйте разделитель пути, который является допустимым для операционной системы:
 
 * В Linux, разделяйте путей в пути к КЛАССАМ с запятой «:».
 * В Windows, пути в пути к КЛАССУ следует разделять точкой с запятой «;»
 
-**Вариант 2: Регистрация системная переменная**
+**Вариант 2. Регистрация системной переменной**
 
 Так же, как вы создали системную переменную для JDK исполняемых файлов, можно создать системную переменную для пути кода. Чтобы сделать это, создать системную переменную среды с именем «Путь к КЛАССУ»
 
@@ -152,6 +152,8 @@ NULL карты используется модулем для указания 
 ```java
 public static boolean[][] outputNullMap
 ```
+<a name="create-external-library"></a>
+
 
 ## <a name="next-steps"></a>Следующие шаги
 

@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addtabletocontents_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3aa1013de0030a21152a38e11a3dcb0fe12a02bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ad6e8fe499e3ffe57a745cfb924bdc792938dd9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638242"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810946"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@table_name=**] **"***table_name***"**  
+ [  **@table_name=**] **"**_table_name_**"**  
  Имя таблицы. *TABLE_NAME* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@owner_name=**] **"***owner_name***"**  
+ [  **@owner_name=**] **"**_owner_name_**"**  
  Имя владельца таблицы. *owner_name* — **sysname**, значение по умолчанию NULL.  
   
- [  **@filter_clause=** ] **"***filter_clause***"**  
+ [  **@filter_clause=** ] **"**_filter_clause_**"**  
  Указывает предложение фильтра, определяющее строки вновь загруженных данных, которые следует добавить в таблицы отслеживания слияния. *filter_clause* — **nvarchar(4000)**, со значением по умолчанию NULL. Если *filter_clause* — **null**, все массового добавления загруженные строки.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

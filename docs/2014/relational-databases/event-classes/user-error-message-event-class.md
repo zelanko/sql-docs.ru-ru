@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 387a961edba89d3b46236fe30cdd2d4851a68d6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afd556972ea3f5b47850e8cc20a8a5624ed45da5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176984"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774746"
 ---
 # <a name="user-error-message-event-class"></a>User Error Message, класс событий
   Класс событий User Error Message содержит сообщение об ошибке в том виде, в каком его видит пользователь при возникновении ошибки или исключения. Текст сообщения содержится в поле TextData.  
@@ -49,7 +48,7 @@ ms.locfileid: "48176984"
 |Severity|`int`|Степень серьезности ошибки или исключения.|20|Да|  
 |SPID|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
-|Состояние|`int`|Эквивалентно коду состояния ошибки.|30|Да|  
+|Штат|`int`|Эквивалентно коду состояния ошибки.|30|Да|  
 |TextData|`ntext`|Текст сообщения об ошибке или исключении.|1|Да|  
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  

@@ -1,21 +1,22 @@
 ---
-title: Настройка кластера Ubuntu для группы доступности SQL Server | Документация Майкрософт
-description: ''
+title: Настройка кластера Ubuntu для группы доступности SQL Server
+titleSuffix: SQL Server
+description: Дополнительные сведения о создании кластеров группы доступности для Ubuntu
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b8be84952a1f7652fc9e40cf82ce5ca25dfa25f4
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658390"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160622"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Настройка кластера Ubuntu и ресурс группы доступности
 
@@ -97,7 +98,7 @@ sudo systemctl enable pacemaker
 
 1. Удалите все существующие конфигурации кластера со всех узлов. 
 
-   Выполнение «sudo apt-get install компьютеров под управлением» устанавливает ПК, pacemaker и corosync в то же время и запускает выполнение всех 3 служб.  Запуск corosync создает шаблон "/ etc/cluster/corosync.conf" файла.  Для успешного выполнения этот файл дальнейшие действия не должно существовать — Чтобы обойти эту проблему, необходимо остановить pacemaker и corosync и удалите "/ etc/cluster/corosync.conf", а затем выполните следующие шаги. «ПК cluster destroy» делает то же самое, и его можно использовать как этап настройки времени исходного кластера.
+   Выполнение «sudo apt-get install компьютеров под управлением» устанавливает ПК, pacemaker и corosync в то же время и запускает выполнение всех 3 служб.  Запуск corosync создает шаблон "/ etc/cluster/corosync.conf" файла.  Для успешного выполнения этот файл дальнейшие действия не должно существовать - Чтобы обойти эту проблему, необходимо остановить pacemaker и corosync и удалите "/ etc/cluster/corosync.conf", а затем выполните следующие шаги. «ПК cluster destroy» делает то же самое, и его можно использовать как этап настройки времени исходного кластера.
    
    Следующая команда удаляет существующие файлы конфигурации кластера и останавливает все службы кластера. Это окончательно уничтожает кластера. Запустите его в качестве первого шага в подготовительной среде. Обратите внимание что «ПК cluster destroy» отключить службу pacemaker и ему нужно повторно включать. Выполните на всех узлах следующую команду.
    
@@ -123,7 +124,7 @@ sudo systemctl enable pacemaker
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2...> <node3>
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```

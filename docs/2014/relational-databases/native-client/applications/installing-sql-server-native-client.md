@@ -21,15 +21,15 @@ ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d2d63945b2dd2268f6c8f9447a4e1c2a641f451
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 71438a61dcaec201d0b3ae21eb7e27d979029204
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071784"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363026"
 ---
 # <a name="installing-sql-server-native-client"></a>Установка собственного клиента SQL Server
-  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 устанавливается при установке [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client отсутствует. Дополнительные сведения см. в разделе [новые возможности в SQL Server Native Client](../sql-server-native-client.md). Также можно извлечь файл sqlncli.msi с веб-страницы пакета дополнительных компонентов SQL Server 2012. Чтобы загрузить самую последнюю версию SQL Server Native Client, перейдите к [пакет дополнительных компонентов Microsoft® SQL Server® 2012 с пакетом обновления 2](http://www.microsoft.com/en-us/download/details.aspx?id=43339). Если на компьютере установлена предыдущая версия [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (до SQL Server 2012), то клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 будет установлен параллельно с более ранней версией.  
+  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 устанавливается при установке [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client отсутствует. Дополнительные сведения см. в разделе [новые возможности в SQL Server Native Client](../sql-server-native-client.md). Также можно извлечь файл sqlncli.msi с веб-страницы пакета дополнительных компонентов SQL Server 2012. Чтобы загрузить самую последнюю версию SQL Server Native Client, перейдите к [Microsoft?? SQL Server?? Пакет дополнительных компонентов 2012 с пакетом обновления 2](https://www.microsoft.com/en-us/download/details.aspx?id=43339). Если на компьютере установлена предыдущая версия [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (до SQL Server 2012), то клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 будет установлен параллельно с более ранней версией.  
   
  Файлы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (sqlncli11.dll, sqlnclir11.rll и s11ch_sqlncli.chm) устанавливаются в следующий каталог.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "49071784"
   
  Помимо установки Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], в рамках установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имеется распространяемый установщик sqlncli.msi, который можно найти на установочном диске [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в следующем каталоге: `%CD%\Setup\`.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client можно распространять в виде файла sqlncli.msi. При развертывании приложения может потребоваться установка [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Один из способов установки нескольких пакетов в одном (с точки зрения пользователя) сеансе установки состоит в применении технологии построителей цепочек и загрузчиков. Дополнительные сведения см. в статьях [Разработка пользовательского пакета начального загрузчика для Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=115667) и [Добавление настраиваемых необходимых компонентов](http://go.microsoft.com/fwlink/?LinkId=115668).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client можно распространять в виде файла sqlncli.msi. При развертывании приложения может потребоваться установка [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Один из способов установки нескольких пакетов в одном (с точки зрения пользователя) сеансе установки состоит в применении технологии построителей цепочек и загрузчиков. Дополнительные сведения см. в статьях [Разработка пользовательского пакета начального загрузчика для Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) и [Добавление настраиваемых необходимых компонентов](https://go.microsoft.com/fwlink/?LinkId=115668).  
   
  Версии файла sqlncli.msi для архитектур x64 и Itanium устанавливают и 64-разрядную версию, и 32-разрядную версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Если приложение планируется использовать на платформе, отличной от той, на которой оно разрабатывалось, можно скачать из центра загрузки Майкрософт версии sqlncli.msi for x64, Itanium и x86.  
   

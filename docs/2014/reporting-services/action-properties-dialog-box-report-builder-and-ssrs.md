@@ -34,12 +34,12 @@ ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093634"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370656"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Диалоговое окно «Свойства действия» (построитель отчетов и службы SSRS)
   С помощью диалогового окна **Действие** можно включить параметры гиперссылок для диаграммы, датчика и элементов карты, поддерживающих ссылки. Определите действие, чтобы дать пользователю возможность щелкнуть отчет и перейти по URL-адресу к другому отчету на том же сервере отчетов или на сайте SharePoint, интегрированном с сервером отчетов, или к другому расположению в текущем отчете.  
@@ -61,7 +61,7 @@ ms.locfileid: "48093634"
   
  Для отчета, который опубликован на сервере отчетов, настроенном для работы в режиме интеграции с SharePoint, используется полный URL-адрес, включая расширение имени файла (RDL). Например, http://*\<SharePointservername > /\<сайта >*  /Documents/Report1.RDL. Относительные пути не поддерживаются.  
   
- Дополнительные сведения см. в разделе [Указание путей к внешним элементам (построитель отчетов и службы SSRS)](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) в [документации по построителю отчетов](http://go.microsoft.com/fwlink/?LinkId=154494) на сайте msdn.microsoft.com.  
+ Дополнительные сведения см. в разделе [Указание путей к внешним элементам (построитель отчетов и службы SSRS)](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) в [документации по построителю отчетов](https://go.microsoft.com/fwlink/?LinkId=154494) на сайте msdn.microsoft.com.  
   
  **Эти параметры можно использовать для выполнения отчета**  
  Добавьте список параметров для передачи детализированному отчету. Имена параметров должны совпадать с параметрами, определенными для целевого отчета. Добавление и удаление параметров производится при помощи кнопок **Добавить** и **Удалить** , а изменение их порядка в списке — стрелками вверх и вниз.  
@@ -78,10 +78,10 @@ ms.locfileid: "48093634"
  **Стрелка вниз**  
  Переместить параметр в списке вниз.  
   
- **Название**  
+ **Name**  
  Введите текст, представляющий имя параметра, определенного в детализированном отчете.  
   
- **Value**  
+ **Значение**  
  Введите или выберите значение именованного параметра для передачи детализированному отчету. Чтобы изменить выражение, нажмите кнопку **Выражение** (*fx*).  
   
  **Пропустить**  
@@ -106,6 +106,6 @@ ms.locfileid: "48093634"
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Добавление вложенного отчета и параметров (построитель отчетов и службы SSRS)](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [Интерактивная сортировка, схемы документов и ссылки &#40;построитель отчетов и службы SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

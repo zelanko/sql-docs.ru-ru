@@ -1,21 +1,22 @@
 ---
-title: Настройка SQL Server группы доступности AlwaysOn для обеспечения высокой доступности в Linux | Документация Майкрософт
-description: ''
+title: Настройка SQL Server группы доступности AlwaysOn для обеспечения высокой доступности в Linux
+titleSuffix: SQL Server
+description: Сведения о создании SQL Server всегда в группе доступности (AG) для обеспечения высокой доступности в Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f88178450fb5ca19e52703ad02e29d107ca562a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621082"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201963"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Настройка SQL Server группы доступности AlwaysOn для обеспечения высокой доступности в Linux
 
@@ -177,8 +178,8 @@ ms.locfileid: "47621082"
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
       ),
-      N'node2' WITH ( 
-         ENDPOINT_URL = N'tcp://node2:5022', 
+      N'node2' WITH ( 
+         ENDPOINT_URL = N'tcp://node2:5022', 
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
@@ -210,7 +211,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->После создания группы Доступности, необходимо настроить интеграцию с технологией кластера как Pacemaker для обеспечения высокой доступности. Для чтения и масштабирования конфигурации с помощью групп доступности, начиная с [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], настройку кластера не требуется.
+>После создания группы Доступности, необходимо настроить интеграцию с технологией кластера как Pacemaker для обеспечения высокой доступности. Для чтения и масштабирования конфигурации с помощью групп доступности, начиная с [!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)], настройку кластера не требуется.
 
 Если вы выполнили действия, описанные в этом документе, у вас есть группа Доступности, еще не кластеризован. Следующим шагом является добавление в кластер. Эта конфигурация является допустимым для чтения scale/load балансировки сценариев, не завершена для обеспечения высокой доступности. Для обеспечения высокой доступности необходимо добавить в группу Доступности в качестве ресурса кластера. См. в разделе [дальнейшие действия](#next-steps) инструкции. 
 

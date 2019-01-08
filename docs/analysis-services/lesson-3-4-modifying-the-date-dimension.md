@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2e060b546287b1a56a103086b8a4d6fc7e120be9
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 58afef163d7c46c69556ad00bfd201751e61e943
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753571"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514563"
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Занятие 3 – 4-изменение измерения Date
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "50753571"
   
 3.  Если окно "Свойства" не открыто, откройте его и нажмите в строке заголовка кнопку **Автоматически скрывать** , чтобы оно оставалось открытым.  
   
-4.  Ближе к нижней части окна щелкните поле свойства **NameColumn** и нажмите кнопку обзора (**…**), чтобы открыть диалоговое окно **Столбец имени** .  
+4.  Нажмите кнопку **NameColumn** свойство поле в нижней части окна, а затем нажмите кнопку обзора (**...** ) кнопку, чтобы открыть **столбец имени** диалоговое окно.  
   
 5.  Выберите пункт **SimpleDate** внизу списка **Исходный столбец** и нажмите кнопку **OK**.  
   

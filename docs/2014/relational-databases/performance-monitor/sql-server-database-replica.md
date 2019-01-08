@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -15,12 +15,12 @@ ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6547d1e5ce67245ce749c2ad492399631373b908
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ea811d8fcc598342781111aa559795888a889b2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156294"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777744"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, реплика базы данных
   Объект производительности **SQLServer:Database Replica** содержит счетчики производительности, которые сообщают сведения о базах данных-получателях групп доступности AlwaysOn в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Этот объект действителен только на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена вторичная реплика.  
@@ -39,7 +39,7 @@ ms.locfileid: "48156294"
 |**Число данных журнала, требующих отмены**|Общий объем журнала, который должен быть обработан для отмены, в килобайтах.|Вторичная реплика|  
 |**Задержка транзакции**|Задержки в ожидании подтверждения незавершенной фиксации, в миллисекундах.|Первичная реплика|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за использованием ресурсов (системный монитор)](monitor-resource-usage-system-monitor.md)   
  [SQL Server, реплика доступности](sql-server-availability-replica.md)   
  [SQL Server, объект Databases](sql-server-databases-object.md)   

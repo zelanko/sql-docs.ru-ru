@@ -11,12 +11,12 @@ ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 25054c92124930d2d33b9f35eb43a1945d4a22bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9470cc5f4a0567d211e0678b32aec05d12b5b239
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197124"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374846"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Указания по использованию функций бизнес-аналитики SQL Server в ферме SharePoint 2010
   В этом разделе содержатся сведения о доступности компонентов в зависимости от версии и выпуска используемого ПО. Здесь также описываются требования по установке SharePoint 2010 для использования определенных компонентов SQL Server. Сведения, относящиеся к SharePoint 2013, см. в разделе [топологии развертывания для компонентов бизнес-Аналитики SQL Server в SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "48197124"
   
 -   Службы Reporting Services включают надстройку для продуктов SharePoint. Поддерживаемые конфигурации для надстройки и сервера отчетов допускают настройку на более детальном уровне, чем указано здесь. Дополнительные сведения см. в разделе [поддерживаемые сочетания SharePoint и Reporting Services и надстройки &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
--   Средства разработчика SharePoint поддерживают только изолированную конфигурацию SharePoint.  Дополнительные сведения см. в документации по SharePoint: [требования к разработке решений SharePoint](http://msdn.microsoft.com/library/ee231582.aspx).  
+-   Средства разработчика SharePoint поддерживают только изолированную конфигурацию SharePoint.  Дополнительные сведения см. в документации по SharePoint: [Требования по разработке решений SharePoint](https://msdn.microsoft.com/library/ee231582.aspx).  
   
 ##  <a name="bkmk_vers"></a> Поддержка выпусков SharePoint и компонентов бизнес-Аналитики  
  Некоторые функции бизнес-аналитики [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживаются только в определенных выпусках продуктов SharePoint.  
@@ -49,7 +49,7 @@ ms.locfileid: "48197124"
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], в состав [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Предупреждения об изменении данных в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|Корпоративный выпуск [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].|  
 |Общие возможности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] по просмотру отчетов и интеграция функций с SharePoint.|Стандартный и корпоративный выпуск [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|  
   
- Дополнительные сведения см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473).  
+ Дополнительные сведения см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_sp1"></a> SharePoint 2010 с пакетом обновления 1 (SP1)  
  Рекомендуется обновить экземпляр SharePoint 2010 до версии SharePoint 2010 с пакетом обновления 1 (SP1). Пакет обновления 1 (SP1) для SharePoint требуется в следующих случаях.  
@@ -61,16 +61,16 @@ ms.locfileid: "48197124"
  Одно из основных причин SP1 является обязательным для установки SharePoint, с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] является компонента database engine **sp_dboption**, который был объявлен устаревшим в предыдущем выпуске, прекращается в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] выпуск. Дополнительные сведения см. в разделе [неподдерживаемые функции ядра СУБД в SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>Руководство по установке пакета обновления 1 (SP1) для SharePoint 2010  
- [Скачайте SharePoint Server 2010 SP1](http://go.microsoft.com/fwlink/?LinkID=219697) и примените его на всех серверах в ферме.  
+ [Скачайте SharePoint Server 2010 SP1](https://go.microsoft.com/fwlink/?LinkID=219697) и примените его на всех серверах в ферме.  
   
 > [!NOTE]  
->  В существующей ферме, необходимо использовать одно из следующих **дополнительных** обновление действия, чтобы завершить SharePoint с пакетом обновления 1. Дополнительные сведения см. в разделе [известные проблемы при установке пакета обновления 1 для Office 2010 и SharePoint 2010 с пакетом обновления 1](http://support.microsoft.com/kb/2532126) и [описание из SharePoint Server 2010 с пакетом обновления 1](http://support.microsoft.com/kb/2460045):  
+>  В существующей ферме, необходимо использовать одно из следующих **дополнительных** обновление действия, чтобы завершить SharePoint с пакетом обновления 1. Дополнительные сведения см. в разделе [известные проблемы при установке пакета обновления 1 для Office 2010 и SharePoint 2010 с пакетом обновления 1](https://support.microsoft.com/kb/2532126) и [описание из SharePoint Server 2010 с пакетом обновления 1](https://support.microsoft.com/kb/2460045):  
   
--   **Мастер настройки продуктов SharePoint:** запустите мастер, чтобы завершить обновление SP1 и настройку.  
+-   **Мастер настройки продуктов SharePoint:** запустите мастер, чтобы завершить обновление до версии с пакетом обновления 1 (SP1) и настройку.  
   
--   **Завершение обновления с помощью psconfig:** выполните команду `psconfig –upgrade` для завершения обновления SP1  
+-   **Завершение обновления с помощью psconfig:** запустите команду `psconfig -upgrade`, чтобы завершить обновление до версии с пакетом обновления 1 (SP1).  
   
- Дополнительные сведения см. в разделе «обновление» [(SharePoint Server 2010)](http://technet.microsoft.com/library/cc263093.aspx) и [Центр ресурсов: обновления для продуктов SharePoint 2010](http://technet.microsoft.com/sharepoint/ff800847.aspx)  
+ Дополнительные сведения см. в разделе «обновление» [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) и [Центр ресурсов: Обновления для продуктов SharePoint 2010](https://technet.microsoft.com/sharepoint/ff800847.aspx)  
   
 ## <a name="sharepoint-installation-with-sql-server-bi-features"></a>Установка SharePoint с компонентами бизнес-аналитики SQL Server  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48197124"
  ![GMNI_SetupUI_DoNotConfigureMOSS](../../../2014/sql-server/install/media/gmni-setupui-donotconfiguremoss.gif "GMNI_SetupUI_DoNotConfigureMOSS")  
   
 ## <a name="see-also"></a>См. также  
- [Установка и развертывание SharePoint Server 2010](http://technet.microsoft.com/sharepoint/ee518643.aspx)   
- [Несколько серверов для трехуровневой фермы (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?linkID=219834)  
+ [Установка и развертывание SharePoint Server 2010](https://technet.microsoft.com/sharepoint/ee518643.aspx)   
+ [Несколько серверов для трехуровневой фермы (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)  
   
   

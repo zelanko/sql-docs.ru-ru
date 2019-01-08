@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_runtime_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48e9993ecacc1365f961255b99c24eb7f456e0d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b53020f747b84c824ae8cd816c3b7ba1975df80b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710852"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712435"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Содержит сведения о сведений о статистике выполнения среды выполнения для запроса.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47710852"
 |**runtime_stats_id**|**bigint**|Идентификатор строки, представляющее статистические данные для **plan_id**, **execution_type** и **runtime_stats_interval_id**. Он уникален только для последних интервалов статистики среды выполнения. Для активной интервал может быть несколько строк, представляющих статистику времени выполнения для плана, который ссылается **plan_id**, с помощью выполнения тип, представленный **execution_type**. Как правило, одна строка представляет статистику времени выполнения, в который записываются на диск, тогда как другие (s) представляют собой состояние в памяти. Таким образом, чтобы получить фактическое состояние для каждого интервала необходимо выполнять статистическое вычисление метрик, Группировка по **plan_id**, **execution_type** и **runtime_stats_interval_id**. |  
 |**plan_id**|**bigint**|Внешний ключ. Присоединяет к [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Внешний ключ. Присоединяет к [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
-|**execution_type**|**tinyint**|Определяет тип выполнения запроса.<br /><br /> 0 — обычное выполнение (успешно завершено)<br /><br /> 3 — клиент прервал выполнение<br /><br /> 4 - исключение прервал выполнение|  
+|**execution_type**|**tinyint**|Определяет тип выполнения запроса.<br /><br /> 0 — обычное выполнение (успешно завершено)<br /><br /> 3 - клиент прервал выполнение<br /><br /> 4 - исключение прервал выполнение|  
 |**execution_type_desc**|**nvarchar(128)**|Текстовое описание выполнения тип поля:<br /><br /> 0 — обычный<br /><br /> 3 — прервано<br /><br /> 4 - исключение|  
 |**first_execution_time**|**datetimeoffset**|Время первого выполнения для плана запроса в пределах интервала статистической обработки.|  
 |**last_execution_time**|**datetimeoffset**|Время последнего выполнения запроса план в пределах интервала статистической обработки.|  

@@ -19,24 +19,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42d5912b67a4039ccd16421413a20763aa8015c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b52f71577bed8a0433c8d516cdc9cbd877066e4
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644230"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785935"
 ---
 # <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Подготавливает параметризованную [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции и возвращает инструкцию *обрабатывать* для выполнения. процедура sp_prepare вызывается указанием ID = 11 в пакете потока табличных данных.  
+Подготавливает параметризованную [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции и возвращает инструкцию *обрабатывать* для выполнения.  `sp_prepare` вызывается при указании ID = 11 в пакете потока табличных данных.  
   
  ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 sp_prepare handle OUTPUT, params, stmt, options  
 ```  
   
@@ -58,20 +57,57 @@ sp_prepare handle OUTPUT, params, stmt, options
 |0x0001|RETURN_METADATA|  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере подготавливается и выполняется простая инструкция.  
+A. В следующем примере подготавливается и выполняется простая инструкция.  
   
-```  
-Declare @P1 int;  
-Exec sp_prepare @P1 output,   
+```sql  
+DECLARE @P1 int;  
+EXEC sp_prepare @P1 output,   
     N'@P1 nvarchar(128), @P2 nvarchar(100)',  
     N'SELECT database_id, name FROM sys.databases WHERE name=@P1 AND state_desc = @P2';  
-Exec sp_execute @P1, N'tempdb', N'ONLINE';  
+EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  
-```  
+```
 
+Б. В следующем примере приложение подготавливает инструкцию в базе данных AdventureWorks2016 и более поздней версии выполняется с помощью дескриптора.
+
+```sql
+-- Prepare query
+DECLARE @P1 int;  
+EXEC sp_prepare @P1 output,   
+    N'@Param int',  
+    N'SELECT *
+FROM Sales.SalesOrderDetail AS sod
+INNER JOIN Production.Product AS p ON sod.ProductID = p.ProductID
+WHERE SalesOrderID = @Param
+ORDER BY Style DESC;';  
+
+-- Return handle for calling application
+SELECT @P1;
+GO
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+-----------
+1
+
+(1 row affected)
+```
+
+Затем приложение выполняет запрос, используя дескриптор значение 1, удалялись подготовленного плана.
+
+```sql
+EXEC sp_execute 1, 49879;  
+GO
+
+EXEC sp_execute 1, 48766;
+GO
+
+EXEC sp_unprepare 1; 
+GO
+```
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   
 

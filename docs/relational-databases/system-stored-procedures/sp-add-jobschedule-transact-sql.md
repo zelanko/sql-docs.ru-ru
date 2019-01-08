@@ -18,12 +18,12 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e52684ee8c73c976e42c29ca54079ac716527a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4411cb68c86bbea92429a983449e77985d3d236d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834492"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591588"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@job_id=** ] *job_id*  
  Идентификационный номер задания, которому добавляется расписание. *job_id* — **uniqueidentifier**, не имеет значения по умолчанию.  
   
- [  **@job_name=** ] **"***имя_задания***"**  
+ [  **@job_name=** ] **"**_имя_задания_**"**  
  Имя задания, которому добавляется расписание. *имя_задания* — **nvarchar(128)**, не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
- [  **@name=** ] **"***имя***"**  
+ [  **@name=** ] **"**_имя_**"**  
  Имя расписания. *имя* — **nvarchar(128)**, не имеет значения по умолчанию.  
   
  [  **@enabled=** ] *enabled_flag*  
@@ -134,13 +134,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@active_start_time=** ] *active_start_time*  
  Время в любой день между *active_start_date* и *active_end_date* начала выполнения задания. *active_start_time* — **int**, не имеет значения по умолчанию. Формат времени ЧЧMMСС в 24-часовом формате.  
   
- [**@active_end_time= *** active_end_time*  
+ [  **@active_end_time=**_active_end_time_  
  Время в любой день между *active_start_date* и *active_end_date* окончания выполнения задания. *active_end_time* — **int**, не имеет значения по умолчанию. Формат времени ЧЧMMСС в 24-часовом формате.  
   
- [  **@schedule_id=***schedule_id***выходных данных**  
+ [  **@schedule_id=**_schedule_id_**выходных данных**  
  Идентификационный номер, присваиваемый учетной записи-посреднику после успешного создания. *schedule_id* является выходной переменной типа **int**, не имеет значения по умолчанию.  
   
- [ **@schedule_uid**=] *schedule_uid *** выходных данных**  
+ [ **@schedule_uid**=] _schedule_uid_**выходных данных**  
  Уникальный идентификатор для расписания. *schedule_uid* является переменной типа **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

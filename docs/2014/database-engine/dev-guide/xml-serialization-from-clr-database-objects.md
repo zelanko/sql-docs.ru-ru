@@ -17,12 +17,12 @@ ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8125f5b8693eccfc619dd2ee3aed6f203e17dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61f863aa3d32ae60ff1cbcac562e74250899088
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183174"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356568"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>Сериализация XML из объектов базы данных CLR
   XML-сериализация используется в двух случаях:  
@@ -37,7 +37,7 @@ ms.locfileid: "48183174"
   
 2.  Зарегистрируйте созданную сборку в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкции `CREATE ASSEMBLY`.  
   
- Сведения об ошибках, появляющиеся при выполнении XML-сериализации см. в следующей статье технической поддержки Майкрософт: [«Не удается загрузить динамически созданную сборку сериализации»](http://support.microsoft.com/kb/913668).  
+ Информацию об ошибках, которые могут возникнуть при выполнении XML-сериализации, см. в следующей статье службы технической поддержки Майкрософт: [«Не удается загрузить динамически созданную сборку сериализации»](https://support.microsoft.com/kb/913668).  
   
  Сведения о типах данных, не поддерживаемых классом XMLSerializer, см. в разделе о поддержке привязки к схеме XML на платформе .NET Framework в документации по платформе .NET Framework.  
   

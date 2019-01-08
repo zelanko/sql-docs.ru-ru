@@ -1,5 +1,5 @@
 ---
-title: Изменение свойства KeyColumn атрибута | Документы Microsoft
+title: Изменение свойства KeyColumn атрибута | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 278780dd8457a90a6ee2fba632216bd1697ec0f7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4415c5dba3382e636488ac94408f163c8e54dc6f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021491"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539030"
 ---
-# <a name="attribute-properties---modify-the-keycolumn-property"></a>Атрибут свойства — изменение свойства KeyColumn
+# <a name="attribute-properties---modify-the-keycolumn-property"></a>Свойства атрибута — изменение свойства KeyColumn
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Свойство **KeyColumns** атрибута можно изменить. Например, в качестве ключа атрибута может потребоваться не одиночный ключ, а составной.  
   
@@ -28,9 +28,9 @@ ms.locfileid: "34021491"
   
     -   В **обозревателе решений**правой кнопкой мыши щелкните папку **Измерения** , а затем выберите либо **Открыть** , либо **Конструктор представлений**.  
   
-         —или—  
+         -или-  
   
-    -   В конструкторе кубов на **Структура куба** , разверните измерение куба в **измерения** панели и нажмите **изменить \<измерения >**.  
+    -   В конструкторе кубов на **Структура куба** вкладке, разверните измерение куба в **измерения** область и выберите команду **изменить \<измерения >**.  
   
 3.  На вкладке **Структура измерения** , на панели **Атрибуты** , щелкните атрибут, для которого нужно изменить свойство **KeyColumns** .  
   

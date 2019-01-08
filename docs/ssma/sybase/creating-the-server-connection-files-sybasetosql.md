@@ -13,12 +13,12 @@ ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8cdb580a5a4221dd792d8d298ac4da3c4a333182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d42e8166198cbf97b2589b55f77d40514e56dee
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756162"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534702"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>Создание файлов подключения к серверу (SybaseToSQL)
 В разделе "серверы" файла скрипта или в файле подключения отдельный сервер можно указать сведения о сервере. — Параметр командной строки файла подключения к серверу, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файл скрипта и файла подключения сервера, тогда считается определение сервера в файле скрипта.  
@@ -70,7 +70,7 @@ ms.locfileid: "47756162"
 ```  
   
 ```  
-2.<!—Sample of server connection file commands-->  
+2.<!-Sample of server connection file commands-->  
 <sybase name="<source-server-unique-name>">  
   
   <advanced-mode>  

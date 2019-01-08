@@ -1,21 +1,22 @@
 ---
-title: Настройка кластера SLES для группы доступности SQL Server | Документация Майкрософт
-description: ''
+title: Настройка кластера SLES для группы доступности SQL Server
+titleSuffix: SQL Server
+description: Сведения о создании кластеров группы доступности для SQL Server в SUSE Linux Enterprise Server (SLES)
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670623"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160632"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Настройка кластера SLES для группы доступности SQL Server
 
@@ -118,13 +119,13 @@ ms.locfileid: "51670623"
 
 3. Настройка уровня связи кластеров (Corosync): 
 
-   A. Введите адрес для доступа к сети. По умолчанию он предлагает сетевой адрес eth0. Кроме того введите отдельный сетевой адрес, например, адрес bond0. 
+   1. Введите адрес для доступа к сети. По умолчанию он предлагает сетевой адрес eth0. Кроме того введите отдельный сетевой адрес, например, адрес bond0. 
 
-   Б. Введите адрес многоадресной рассылки. Он предлагает случайно выбранный адрес, который можно использовать по умолчанию. 
+   2. Введите адрес многоадресной рассылки. Он предлагает случайно выбранный адрес, который можно использовать по умолчанию. 
 
-   в. Введите порт многоадресной рассылки. Он предлагает 5405 по умолчанию. 
+   В. Введите порт многоадресной рассылки. Он предлагает 5405 по умолчанию. 
 
-   г. Чтобы настроить `SBD ()`, введите постоянного пути к разделу блок устройства, которое вы хотите использовать для одновременной передачи данных. Пути должны быть согласованы по всем узлам в кластере. 
+   Г. Чтобы настроить `SBD ()`, введите постоянного пути к разделу блок устройства, которое вы хотите использовать для одновременной передачи данных. Пути должны быть согласованы по всем узлам в кластере. 
    Наконец сценарий запускает службу Pacemaker для одного узла кластера и включение веб-интерфейс управления Hawk2. URL-адрес, используемый для Hawk2 отображается на экране. 
 
 4. Все сведения о процессе установки см. `/var/log/sleha-bootstrap.log`. Теперь у вас есть кластер работает одним узлом. Проверьте состояние кластера с состоянием crm:
@@ -220,7 +221,7 @@ crm configure property cluster-recheck-interval=2min
 
 Узел уровня ограждения гарантирует, что узел не все ресурсы. Это делается путем сброса параметров узла и его реализация Pacemaker вызывается STONITH (что означает «устранение неисправностей другой узел в заголовке»). Pacemaker поддерживает разнообразные полезные ограждения устройств, таких как источник бесперебойного питания питания или управления картами для серверов.
 
-Дополнительные сведения см. в разделе [кластеров Pacemaker с нуля](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [ограждения и Stonith](https://clusterlabs.org/doc/crm_fencing.html) и [документации SUSE HA: ограждения и STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Дополнительные сведения см. в разделе [кластеров Pacemaker с нуля](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [ограждения и Stonith](https://clusterlabs.org/doc/crm_fencing.html) и [SUSE HA документации: Ограждения и STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 Во время инициализации кластера STONITH будет отключен, если конфигурация не обнаруживается. Его можно включить позже, выполнив следующую команду:
 

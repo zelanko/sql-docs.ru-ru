@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], encrypted
@@ -21,12 +20,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c6cc99554690fb1faf8b7eaf24788d87b502d615
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ffe88de8533db5cf9bbec7936d30e95d64b1726
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096894"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640775"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)
   В этом разделе описано, как активировать зашифрованные соединения для экземпляра компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , указав сертификат для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Компьютеру сервера должен быть назначен сертификат, а компьютер клиента должен доверять корневому центру сертификации. Провизионирование — это процесс установки сертификата путем импорта сертификата в систему Windows.  
@@ -60,7 +59,7 @@ ms.locfileid: "48096894"
   
 1.  На **запустить** меню, щелкните **запуска**и в **откройте** введите `MMC` и нажмите кнопку **ОК**.  
   
-2.  На консоли MMC в меню **Файл** выберите **Добавить или удалить оснастку**.  
+2.  В консоли MMC в меню **Файл** выберите **Добавить или удалить оснастку**.  
   
 3.  В диалоговом окне **Добавление или удаление оснастки** нажмите кнопку **Добавить**.  
   

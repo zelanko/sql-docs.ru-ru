@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
@@ -14,12 +13,12 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4310f16b19fa85012844cc6e0fb71b2dce3ce6f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e762a450a28f1d07e58a0baa6f7f3ff3948681
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112054"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797046"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Разрешения на элементы иерархии (службы Master Data Services)
   Разрешения на элементы иерархии не являются обязательными и их следует использовать только в тех случаях, когда пользователь должен иметь ограниченный доступ к определенным элементам. Если на вкладке **Элементы иерархии** разрешения не назначены, то разрешения пользователя определяются только на основании разрешений, заданных на вкладке **Модели** .  
@@ -37,7 +36,7 @@ ms.locfileid: "48112054"
   
 |Разрешение|Описание|  
 |----------------|-----------------|  
-|**Только для чтения**|Элементы отображаются, но пользователь не может их изменить. Пользователь также не может перемещать элементы в явных иерархиях или коллекциях, к которым принадлежат элементы.<br /><br /> Примечание: Если назначить **только для чтения** разрешение на **корневой**, элементы в разделе **корневой** доступны только для чтения; Однако в явных иерархиях и коллекциях пользователь может перемещать участникам **корневой** и можно добавлять новые элементы к **корневой**.|  
+|**Только для чтения**|Элементы отображаются, но пользователь не может их изменить. Пользователь также не может перемещать элементы в явных иерархиях или коллекциях, к которым принадлежат элементы.<br /><br /> Примечание. Если назначить **только для чтения** разрешение на **корневой**, элементы в разделе **корневой** доступны только для чтения; Однако в явных иерархиях и коллекциях пользователь может перемещать элементы в **Корневой** и можно добавлять новые элементы к **корневой**.|  
 |**Update**|Элементы отображаются, и пользователь может их изменять. Пользователь также может перемещать элементы в явных иерархиях или коллекциях, к которым принадлежат элементы.|  
 |**Запретить**|Элементы не отображаются.|  
   
@@ -57,10 +56,10 @@ ms.locfileid: "48112054"
 -   Если одному узлу иерархии назначено **обновление** или **только для чтения** разрешение, а другому узлу назначены **Deny**, а затем элементы в узле не отображаются.  
   
 ## <a name="see-also"></a>См. также  
- [Назначение разрешений для элемента иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [Способ определения разрешений &#40;службы Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [Назначение разрешений для элемента иерархии (службы Master Data Services)](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [Способ определения разрешений (службы Master Data Services)](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Элементы (службы Master Data Services)](../../2014/master-data-services/members-master-data-services.md)   
  [Иерархии (службы Master Data Services)](../../2014/master-data-services/hierarchies-master-data-services.md)   
- [Срочное применение разрешений для элемента &#40;службы Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
+ [Срочное применение разрешения для элемента (службы Master Data Services)](immediately-apply-member-permissions-master-data-services.md)  
   
   

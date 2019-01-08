@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - event classes [SQL Server], replaying traces
@@ -16,12 +15,12 @@ ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 447792a89be970078fdfca3f1e79eadbcc25bbfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b9da4b68bba6358ff473846fb710f8fa6454e5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173674"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757706"
 ---
 # <a name="replay-requirements"></a>Replay Requirements
   Для воспроизведения данных трассировки с помощью [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или программы распределенного воспроизведения в трассировке должен быть записан определенный набор классов событий и столбцов. Если для настройки трассировки, которая в дальнейшем будет использоваться для воспроизведения, применяется шаблон трассировки **TSQL_Replay** , то по умолчанию эти параметры включены. В этом разделе приводится описание этих параметров и других требований к воспроизведению.  
@@ -124,10 +123,10 @@ ms.locfileid: "48173674"
  Сведения о разрешениях, необходимых для воспроизведения трассировки, см. в разделе [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md).  
   
 ## <a name="see-also"></a>См. также  
- [Воспроизведение таблицы трассировки &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
+ [Воспроизведение таблицы трассировки (приложение SQL Server Profiler)](replay-a-trace-table-sql-server-profiler.md)   
  [Воспроизведение файла трассировки (приложение SQL Server Profiler)](replay-a-trace-file-sql-server-profiler.md)   
  [Справочник по классам событий SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_defaultdb (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-defaultdb-transact-sql)   
- [Распределенное воспроизведение SQL Server](../distributed-replay/sql-server-distributed-replay.md)  
+ [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)  
   
   

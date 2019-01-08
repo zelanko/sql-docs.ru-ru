@@ -20,16 +20,16 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d86f2aa373b120d2ecf1ea47b021b327fc57dc21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651972"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211714"
 ---
 # <a name="sqlbrowseconnect-function"></a>Функция SQLBrowseConnect
 **Соответствие стандартам**  
- Версия была введена: ODBC 1.0 соответствует стандартам: ODBC  
+ Представленные версии: Соответствие стандартам 1.0 ODBC: интерфейс ODBC  
   
  **Сводка**  
  **SQLBrowseConnect** поддерживает итеративный метод обнаружения и перечисление атрибутов и значений атрибутов, необходимых для подключения к источнику данных. Каждый вызов **SQLBrowseConnect** возвращает последовательные уровни атрибутов и значений атрибутов. Если были перечислены все уровни, завершения подключения к источнику данных и возвращается полная строка подключения **SQLBrowseConnect**. Код возврата SQL_SUCCESS или SQL_SUCCESS_WITH_INFO указывает, что был указан всех сведений о соединении, и приложение теперь подключено к источнику данных.  

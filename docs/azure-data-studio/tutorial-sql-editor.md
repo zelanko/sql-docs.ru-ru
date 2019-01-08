@@ -1,7 +1,8 @@
 ---
-title: Руководство По использованию редактора Transact-SQL Studio данных Azure для создания объектов базы данных | Документация Майкрософт
-description: В этом учебнике показано ключевых функций в Azure Data Studio, которые упрощают использование T-SQL.
-ms.custom: tools|sos
+title: Учебник. Используйте редактор Transact-SQL для создания объектов базы данных
+titleSuffix: Azure Data Studio
+description: В этом учебнике показано ключевых функций в Azure Data Studio, которые упрощают работу с помощью T-SQL.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2a517b1efb6a86d70bd05f9a1418792c0b61098
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355935"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030458"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Руководство По использованию редактора Transact-SQL для создания объектов базы данных: [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Учебник. Используйте редактор Transact-SQL для создания объектов базы данных: [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Создание и выполнение запросов, хранимых процедур, сценарии и др. — основные задачи для специалистов по базам данных. В этом учебнике показано ключевых функций в редакторе T-SQL для создания объектов базы данных.
 
