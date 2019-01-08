@@ -5,8 +5,7 @@ ms.date: 02/13/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
 - службы master data services
@@ -14,12 +13,12 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ba64768a5131fea3f3fee2ef994cdfa274d45695
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38c4cdc0a777fe68d466854a9b2dd7cf1403d07f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531784"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757796"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Требования веб-приложений (службы Master Data Services)
 
@@ -53,14 +52,14 @@ ms.locfileid: "52531784"
   
 ||  
 |-|  
-|Службы IIS<br /><br /> Средства управления веб-сайтом<br /><br /> Консоль управления (IIS)<br /><br /> Веб-службы Интернета<br /><br /> Разработка приложений<br /><br /> Расширяемость платформы .NET версии 3.5<br /><br /> Расширяемость платформы .NET версии 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Расширения ISAPI<br /><br /> Фильтры ISAPI<br /><br /> Общие функции HTTP<br /><br /> Документ по умолчанию<br /><br /> Обзор каталога<br /><br /> Ошибки HTTP<br /><br /> Статическое содержимое<br /><br /> [Примечание: не устанавливайте протокол публикации WebDAV.]<br /><br /> Исправность и диагностика<br /><br /> Ведение журнала служб HTTP<br /><br /> Монитор запросов<br /><br /> Производительность<br /><br /> Сжатие статического содержимого<br /><br /> безопасность<br /><br /> Фильтрация запросов<br /><br /> Проверка подлинности Windows.|  
+|Службы IIS<br /><br /> Средства управления веб-сайтом<br /><br /> Консоль управления (IIS)<br /><br /> Веб-службы Интернета<br /><br /> Разработка приложений<br /><br /> Расширяемость платформы .NET версии 3.5<br /><br /> Расширяемость платформы .NET версии 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Расширения ISAPI<br /><br /> Фильтры ISAPI<br /><br /> Общие функции HTTP<br /><br /> Документ по умолчанию<br /><br /> Обзор каталога<br /><br /> Ошибки HTTP<br /><br /> Статическое содержимое<br /><br /> Примечание. Не устанавливайте протокол публикации WebDAV.]<br /><br /> Исправность и диагностика<br /><br /> Ведение журнала служб HTTP<br /><br /> Монитор запросов<br /><br /> Производительность<br /><br /> Сжатие статического содержимого<br /><br /> безопасность<br /><br /> Фильтрация запросов<br /><br /> Проверка подлинности Windows.|  
   
 ### <a name="features"></a>Компоненты 
  В Windows Server 2012 и Windows Server 2012 R2 приведенные ниже компоненты можно установить с помощью **Диспетчера сервера** .  
   
 ||  
 |-|  
-|.NET Framework 3.5 (включая .NET 2.0 и 3.0)<br /><br /> Дополнительные службы .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> Службы WCF<br /><br /> Активация HTTP [Примечание: это обязательно.]<br /><br /> Совместное использование TCP-порта<br /><br /> Служба активации Windows<br /><br /> Модель процесса<br /><br /> Среда .NET<br /><br /> API-интерфейсы конфигурации<br/><br/>Функция сжатия динамического содержимого|  
+|.NET Framework 3.5 (включая .NET 2.0 и 3.0)<br /><br /> Дополнительные службы .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> Службы WCF<br /><br /> HTTP-активация [Примечание. Обязательный компонент.]<br /><br /> Совместное использование TCP-порта<br /><br /> Служба активации Windows<br /><br /> Модель процесса<br /><br /> Среда .NET<br /><br /> API-интерфейсы конфигурации<br/><br/>Функция сжатия динамического содержимого|  
   
  Ниже приведен пример сценария PowerShell для добавления необходимых компонентов и ролей сервера. Необходимые роли и компоненты сервера зависят от среды.  
   

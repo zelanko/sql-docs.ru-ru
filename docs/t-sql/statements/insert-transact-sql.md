@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be8577fca914627434314fa4b7352d6610ff72c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e717254256468a04ed4502a63c14dc742a1101a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522914"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206993"
 ---
 # <a name="insert-transact-sql"></a>Инструкция INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -296,7 +296,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
  Указывает приблизительное число строк в потоке двоичных данных. Дополнительные сведения см. в разделе [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
->  [!NOTE]
+> [!NOTE]
 >  Если список столбцов отсутствует, то возникает синтаксическая ошибка.  
 
 ## <a name="remarks"></a>Remarks  

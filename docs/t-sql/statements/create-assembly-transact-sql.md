@@ -24,19 +24,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b81e8cb39a9520697af41624dfda2609bdbbef9f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 31eda87e2a1934c5f18d73540a502880590445e8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697153"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207663"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Создает управляемый модуль приложений, содержащий метаданные класса и управляемый код, например объект в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ссылаясь на этот модуль, в базе данных можно создать функции среды CLR, хранимые процедуры CLR, триггеры CLR, определяемые пользователем статистические вычисления и типы.  
   
->  [!WARNING]
+> [!WARNING]
 >  Среда CLR использует управление доступом для кода (CAS) в .NET Framework, которое больше не поддерживается в качестве границы безопасности. Сборки среды CLR, созданные с помощью `PERMISSION_SET = SAFE`, могут получать доступ к внешним системным ресурсам, вызывать неуправляемый код и получать права системного администратора. Начиная с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], появился параметр `sp_configure`, называемый `clr strict security`, для повышения безопасности сборок среды CLR. `clr strict security` включен по умолчанию и рассматривает сборки `SAFE` и `EXTERNAL_ACCESS`, как если бы они были помечены `UNSAFE`. Параметр `clr strict security` можно отключить для обеспечения обратной совместимости, но это делать не рекомендуется. Корпорация Майкрософт рекомендует подписывать все сборки с помощью сертификата или асимметричного ключа с соответствующим именем входа, которому предоставлено разрешение `UNSAFE ASSEMBLY` в базе данных master. Дополнительные сведения см. в статье о параметре [clr strict security](../../database-engine/configure-windows/clr-strict-security.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -85,8 +85,8 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  Выражение типа **varbinary**.  
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
- >  [!IMPORTANT]  
- >  На параметр `PERMISSION_SET` влияет параметр `clr strict security`, описанный в начальном предупреждении. Когда `clr strict security` включено, все сборки считаются `UNSAFE`.
+> [!IMPORTANT]
+>  На параметр `PERMISSION_SET` влияет параметр `clr strict security`, описанный в начальном предупреждении. Когда `clr strict security` включено, все сборки считаются `UNSAFE`.
  
  Указывает набор разрешений доступа к коду, которые предоставляются сборке при доступе к ней [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если этот аргумент не задан, по умолчанию применяется SAFE.  
   
@@ -129,7 +129,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 -   Двоичный файл сборки является верным с правильными метаданными и сегментами кода, и сегменты кода содержат правильные инструкции промежуточного языка корпорации Майкрософт (MSIL).  
   
--   Ссылаться можно на следующие поддерживаемые типы системных сборок в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll и System.Xml.Linq.dll. Можно ссылаться и на другие системные сборки, но они должны быть явно зарегистрированы в базе данных.  
+-   Набор системных сборок, на которые она ссылается, является одной из поддерживаемых сборок в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll и System.Xml.Linq.dll. Можно ссылаться и на другие системные сборки, но они должны быть явно зарегистрированы в базе данных.  
   
 -   Для сборок, созданных с наборами разрешений SAFE или EXTERNAL ACCESS должны быть соблюдены следующие условия.  
   
@@ -143,7 +143,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  Кроме предварительных проверок, которые выполняются при выполнении CREATE ASSEMBLY, существуют дополнительные проверки, которые выполняются во время выполнения кода сборки.  
   
--   Вызов определенных API-функций [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], которые требуют наличия определенных прав доступа к коду, может завершиться неудачно, если набор прав сборки не включает такого права.  
+-   Вызов определенных API-функций [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], которые требуют наличия определенного разрешения на доступ к коду, может завершиться ошибкой, если набор разрешений сборки не включает такого разрешения.  
   
 -   Для сборок SAFE и EXTERNAL_ACCESS любая попытка вызова API-функций [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], которые аннотированы определенным HostProtectionAttributes, завершится неудачно.  
   
