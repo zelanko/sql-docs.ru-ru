@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], message queues
@@ -16,17 +15,17 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1501af4a26c0e039df3113a719a61e1e2c3f40a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 015488fc30b364b9f82086acb995df3967eb5b10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135044"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766856"
 ---
 # <a name="msmq-connection-manager"></a>диспетчер соединений MSMQ
   Диспетчер соединений MSMQ позволяет пакетам соединяться с очередями сообщений, которые используют службу очередей сообщений (также называемую MSMQ). Задача «Очередь сообщений», содержащаяся в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , использует диспетчер соединений MSMQ.  
   
- При добавлении к пакету диспетчер соединений MSMQ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают диспетчер, который будет решать задачи соединений MSMQ во время выполнения, устанавливает свойства диспетчера соединений и добавляет диспетчер соединений для соединений `Connections` коллекции пакет. `ConnectionManagerType` Свойства диспетчера соединений присваивается `MSMQ`.  
+ При добавлении к пакету диспетчера MSMQ-сеансов службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают диспетчер соединений, который будет решать задачи MSMQ-сеансов во время работы, устанавливает свойства диспетчера соединений и добавляет его к коллекции пакета `Connections`. Свойству `ConnectionManagerType` диспетчера соединений присваивается значение `MSMQ`.  
   
  Настроить диспетчер соединений MSMQ можно следующими способами.  
   
@@ -48,10 +47,10 @@ ms.locfileid: "48135044"
   
  Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в статье [Редактор диспетчера MSMQ-сеансов](../msmq-connection-manager-editor.md).  
   
- Сведения о программной настройке диспетчера соединений см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>См. также  
  [Задача «Очередь сообщений»](../control-flow/message-queue-task.md)   
- [Службы Integration Services &#40;SSIS&#41; подключений](integration-services-ssis-connections.md)  
+ [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   
   

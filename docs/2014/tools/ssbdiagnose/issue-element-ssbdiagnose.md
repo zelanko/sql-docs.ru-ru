@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - issue element
@@ -15,12 +14,12 @@ ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54109bc479d06833aeee6af803c39e8ac7873ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195184"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796136"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Элемент Issue (программа ssbdiagnose)
   Сообщает о проблеме, обнаруженной программой **ssbdiagnose** . В выходном XML-файле программы **ssbdiagnose** для каждой из обнаруженных проблем присутствует один элемент Issue.  
@@ -53,15 +52,15 @@ ms.locfileid: "48195184"
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|`string`, длина не ограничена.|  
-|**Value**|Возвращает текст сообщения об ошибке.|  
+|**Тип данных и длина**|`string`, неограниченная длина|  
+|**Значение**|Возвращает текст сообщения об ошибке.|  
 |**Наличие**|Один раз для каждой ошибки.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент DiagnosticInformation &#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
+|**Родительский элемент**|[Элемент DiagnosticInformation (программа ssbdiagnose)](diagnosticinformation-element-ssbdiagnose.md)|  
 |**Дочерние элементы**|None|  
   
 ## <a name="example"></a>Пример  

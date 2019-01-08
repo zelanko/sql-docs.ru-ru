@@ -1,5 +1,5 @@
 ---
-title: Использование свойств элементов (многомерные Выражения) | Документы Microsoft
+title: Использование свойств элементов (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: efd173ed9cb719fb3e7c8462d620bb1cfc4bc9a4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7876031fddb74115fd1fe412f4c8a9d9aacdb054
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023931"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216043"
 ---
-# <a name="mdx-member-properties"></a>Свойства элементов многомерных Выражений
+# <a name="mdx-member-properties"></a>Свойства элементов многомерных выражений
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Свойства элементов включают основные сведения о каждом элементе каждого кортежа. К таким основным сведениям относятся имя элемента, родительский уровень, число потомков и т. д. Свойства элемента доступны всем элементам данного уровня. С точки зрения организации свойства элемента рассматриваются как организованные по измерениям данные, хранимые в одном измерении.  
   
-> [!NOTE]  
->  В [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], свойства элемента рассматриваются как связь атрибутов. Дополнительные сведения см. в разделе [Связи атрибутов](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
+> [!NOTE]
+>  В [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]свойства элемента рассматриваются как связь атрибутов. Дополнительные сведения см. в разделе [Связи атрибутов](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
  Существуют *внутренние* и *пользовательские*свойства:  
   
@@ -69,6 +69,6 @@ SELECT [<axis_specification>
 -   Заданным пользователем внутренним свойствам элемента должно предшествовать имя уровня, на котором они располагаются. Дополнительные сведения об использовании ключевого слова **PROPERTIES** с пользовательскими свойствами элементов см. в разделе [Пользовательские свойства элементов (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание и использование значений свойств & #40; Многомерные Выражения & #41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)  
+ [Создание и использование значений свойств (многомерные выражения)](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)  
   
   

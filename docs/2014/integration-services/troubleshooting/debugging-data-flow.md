@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdbf8626ec1eb50218d01b0eefd96cea2cba9dea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00ada7a047d323f143403b56632b8863d75e6ac2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108454"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792126"
 ---
 # <a name="debugging-data-flow"></a>Отладка потока данных
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] содержат функции и средства, используемые для исправления ошибок в потоках данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -40,7 +39,7 @@ ms.locfileid: "48108454"
   
  В средстве просмотра данные могут отображаться в сетке. Для использования сетки необходимо выбрать отображаемые столбцы. Значения выбранных столбцов отображаются в табличном формате.  
   
- К одному пути можно подключить несколько средств просмотра данных. Одни и те же данные можно просматривать в различных форматах — например, можно создать представление данных в виде диаграммы и сетки или создать различные средства просмотра данных для различных столбцов.  
+ К одному пути можно подключить несколько средств просмотра данных. Одни и те же данные можно просматривать в различных форматах. Например, можно создать представление данных в виде диаграммы и сетки или создать различные средства просмотра данных для различных столбцов.  
   
  При добавлении средства просмотра данных к пути конструктор [!INCLUDE[ssIS](../../includes/ssis-md.md)] добавляет значок средства просмотра данных в область конструктора вкладки **Поток данных** рядом с местоположением. Преобразования с несколькими выходами (например, преобразование «Условное разбиение») могут иметь средство просмотра данных для каждого из путей.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48108454"
   
 #### <a name="to-add-a-data-viewer"></a>Добавление средства просмотра данных  
   
--   [Добавление средства просмотра данных в поток данных](../add-a-data-viewer-to-a-data-flow.md)  
+-   [Добавление средства просмотра данных к потоку данных](../add-a-data-viewer-to-a-data-flow.md)  
   
 ## <a name="row-counts"></a>Счетчики строк  
  Число строк, переданных по данному пути, отображается в области конструктора вкладки **Поток данных** в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] сразу после пути. Количество периодически обновляется по мере перемещения данных по пути.  

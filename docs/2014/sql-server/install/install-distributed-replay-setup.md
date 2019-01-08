@@ -11,12 +11,12 @@ ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9d81920e9e14dc745813795bcf98eb1d9ebdf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f83e13aa6ed85293bf20b006ad6c5c8e9a9a62f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051407"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545382"
 ---
 # <a name="install-distributed-replay-setup"></a>Установка распределенного воспроизведения (программа установки)
   Установите компоненты распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . При планировании расположения установленных компонентов примите во внимание следующее.  
@@ -87,7 +87,7 @@ ms.locfileid: "48051407"
   
     -   Чтобы установить службу клиента, выберите **Клиент распределенного воспроизведения**.  
   
-     **Важно**! При настройке контроллера распределенного воспроизведения можно указать одну или несколько учетных записей, которые будут использоваться для запуска служб клиента распределенного воспроизведения. Далее представлен список поддерживаемых учетных записей.  
+     **Важные**: При настройке контроллера распределенного воспроизведения можно указать одну или несколько учетных записей, которые будут использоваться для запуска служб клиента распределенного воспроизведения. Далее представлен список поддерживаемых учетных записей.  
   
     -   Доменная учетная запись пользователя  
   
@@ -134,7 +134,7 @@ ms.locfileid: "48051407"
 ## <a name="see-also"></a>См. также  
  [Функции, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Требования распределенного воспроизведения](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
  [Параметры командной строки средства администрирования (программа распределенного воспроизведения)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Настройка распределенного воспроизведения](../../tools/distributed-replay/configure-distributed-replay.md)  
   

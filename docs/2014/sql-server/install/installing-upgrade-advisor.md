@@ -15,12 +15,12 @@ ms.assetid: 1b7d6eca-1df1-47df-bbba-0fc485706a95
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95bcdfca34b618043515c27030bc74104e4da590
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82db1c6f36d8b03d2a603c0a616090ec9d3544af
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078074"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353990"
 ---
 # <a name="installing-upgrade-advisor"></a>Установка помощника по обновлению
   Место установки помощника по обновлению SQL Server 2014 определяется областью анализа. Помощник по обновлению поддерживает удаленный анализ всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , кроме служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если просмотр экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]не производится, помощник по обновлению может быть установлен на любой компьютер, который способен установить соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и соответствует [Upgrade Advisor Prerequisites](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md). Для просмотра экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]следует установить помощник по обновлению на сервер отчетов.  
@@ -31,7 +31,7 @@ ms.locfileid: "48078074"
   
 -   Из папки **redist** установочного носителя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Как часть [загрузки пакета дополнительных компонентов SQL 2014](http://www.microsoft.com/download/details.aspx?id=42295).  
+-   Как часть [загрузки пакета дополнительных компонентов SQL 2014](https://www.microsoft.com/download/details.aspx?id=42295).  
   
 ## <a name="uninstalling-upgrade-advisor"></a>Удаление помощника по обновлению  
  Помощник по обновлению может быть удален через средство **Установка и удаление программ**. Синтаксис командной строки также поддерживает удаление.  

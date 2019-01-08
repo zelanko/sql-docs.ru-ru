@@ -21,12 +21,12 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13352451c31822acdc9fea70965b22c6269577f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152035"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375946"
 ---
 # <a name="working-with-query-notifications"></a>Работа с уведомлениями запросов
   Уведомления о запросах появились в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. С помощью уведомлений о запросах, построенных на основе инфраструктуры компонента Service Broker, представленной в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], приложения могут получать извещения об изменениях данных. Эта функция особенно полезна для приложений, которые предоставляют кэш данных из базы данных (например, для веб-приложений), и которым требуются уведомления об изменении исходных данных.  
@@ -58,11 +58,11 @@ ms.locfileid: "48152035"
 CREATE QUEUE myQueue  
 CREATE SERVICE myService ON QUEUE myQueue   
   
-([http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
+([https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
 ```  
   
 > [!NOTE]  
->  Служба должна использовать стандартный контракт `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`, показанный выше.  
+>  Служба должна использовать стандартный контракт `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`, показанный выше.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента поддерживает уведомление потребителей об изменении набора строк. Потребитель получает уведомление на каждой стадии изменения набора строк, а также при каждой попытке внести изменение.  
@@ -113,7 +113,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Если значение свойств SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT и SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS не равно NULL, то при каждом выполнении этой команды на сервер отправляется заголовок потока табличных данных уведомлений о запросах, содержащий три атрибута, указанных выше. Если значение любого из них равно NULL, заголовок не отправляется и возвращается SQL_SUCCESS_WITH_INFO. Выполняется проверка [функция SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, и **SqlExecute**, что все они завершаются неуспешно, если атрибуты не допускаются. Точно так же, когда эти атрибуты уведомлений о запросах отправляются для версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] младше [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], выполнение завершается неудачей с SQL_SUCCESS_WITH_INFO.  
+ Если значение свойств SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT и SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS не равно NULL, то при каждом выполнении этой команды на сервер отправляется заголовок потока табличных данных уведомлений о запросах, содержащий три атрибута, указанных выше. Если значение любого из них равно NULL, заголовок не отправляется и возвращается SQL_SUCCESS_WITH_INFO. Выполняется проверка [функция SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, и **SqlExecute**, что все они завершаются неуспешно, если атрибуты не допускаются. Точно так же, когда эти атрибуты уведомлений о запросах отправляются для версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] младше [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], выполнение завершается неудачей с SQL_SUCCESS_WITH_INFO.  
   
 > [!NOTE]  
 >  Подготовка инструкций никогда не вызывает запуска подписки; подписка может быть запущена выполнением инструкции.  

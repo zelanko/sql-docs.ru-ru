@@ -17,12 +17,12 @@ ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb182247c06b4600a7c029e96dfb4066ee7c2a04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44a9bd204b352ee0ab891dceb65922cc877704c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167634"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366686"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Доступ к веб-службе сервера отчетов на языке Visual Basic или Visual C# (учебник по службам SSAS)
   Следующие руководства показано, как для доступа к серверу веб-службы отчетов из приложения, созданного с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] или [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
@@ -47,20 +47,20 @@ ms.locfileid: "48167634"
   
 -   Необходимые разрешения для доступа к веб-службе сервера отчетов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на компьютере, на котором размещен сервер отчетов.  
   
--   Отчет, установленный на сервере отчетов. Этот учебник основывается на образце отчета Company Sales. Дополнительные сведения об образцах отчетов см. в разделе [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+-   Отчет, установленный на сервере отчетов. Этот учебник основывается на образце отчета Company Sales. Дополнительные сведения об образцах отчетов см. в разделе [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 > [!NOTE]  
->  Образцы не устанавливаются автоматически в процессе установки, но их можно установить в любое время. Сведения об образцах см. в разделе [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
+>  Образцы не устанавливаются автоматически в процессе установки, но их можно установить в любое время. Сведения об образцах см. в разделе [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Предполагаемое время для работы с учебником:** 60 минут  
+ **Предполагаемое время для выполнения заданий учебника:** 60 минут  
   
 ## <a name="tasks"></a>Задания  
- [Урок 1. Создание клиентского проекта веб-службы](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
+ [Занятие 1. Создание проекта клиента веб-службы](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
- [Урок 2. Добавление веб-ссылки](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
+ [Занятие 2. Добавление веб-ссылки](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
- [Урок 3. Доступ к веб-службе](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
+ [Занятие 3. Доступ к веб-службы](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   
- [Занятие 4: Запуск приложения &#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
+ [Занятие 4. Запуск приложения &#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
   
   

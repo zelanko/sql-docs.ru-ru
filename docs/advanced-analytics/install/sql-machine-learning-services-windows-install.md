@@ -1,6 +1,6 @@
 ---
-title: Установка SQL Server службы машинного обучения (в базе данных) в Windows | Документация Майкрософт
-description: R в SQL Server или Python в SQL Server доступна при установке службы машинного обучения SQL Server 2017 на Windows.
+title: Установка SQL Server служб машинного обучения (в базе данных) на Windows — SQL Server машинное обучение
+description: R в SQL Server или Python на действия по установке SQL Server для служб SQL Server 2017 машинного обучения на Windows.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7f96c2acbca436ff18ccb6a12421d84bda965e4d
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 9118edd1ab25cf13cbb6d10212b50f7e7428fe9f
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878097"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645353"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Установка SQL Server службы машинного обучения на Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Начиная с SQL Server 2017, R и Python предусмотрена поддержка для аналитики в базе данных в SQL Server служб машинного обучения, пришедшее на смену [служб R SQL Server](../r/sql-server-r-services.md) появился в SQL Server 2016. Библиотеки функций в R и Python и запуск от имени внешних скриптов на экземпляр ядра СУБД. 
+Начиная с SQL Server 2017, R и Python предусмотрена поддержка для аналитики в базе данных в **службы машинного обучения SQL Server**, пришедшее на смену [служб R SQL Server](../r/sql-server-r-services.md) появился в SQL Server 2016. Библиотеки функций в R и Python и запуск от имени внешних скриптов на экземпляр ядра СУБД. 
 
 В этой статье объясняется, как установить компонент машины обучения, выполнив [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер установки и следующие инструкциям на экране.
 
@@ -54,7 +54,7 @@ ms.locfileid: "48878097"
   
 2. На **установки** выберите **автономная установка нового SQL Server или добавление компонентов к существующей установке**.
 
-   ![Установка служб в базе данных в машинном обучении](media/2017setup-installation-page-mlsvcs.PNG)
+   ![Новая установка автономного SQL Server](media/2017setup-installation-page-mlsvcs.PNG)
    
 3. На странице **Выбор компонентов** выберите следующие компоненты:
   
@@ -94,27 +94,40 @@ ms.locfileid: "48878097"
 6. На **все готово для установки** странице, убедитесь, что эти параметры включены и выберите **установить**.
   
     + Службы ядра СУБД
-    + Службы машинного обучения (в базе данных)
+    + Служба машинного обучения (в базе данных)
     + R или Python или оба
 
     Запишите расположение папки по пути `..\Setup Bootstrap\Log` где хранятся файлы конфигурации. По завершении установки можно просмотреть в файле сводки установленных компонентов.
 
 7. После установки, если будет предложено перезагрузить компьютер, сделайте это сейчас. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
+## <a name="set-environment-variables"></a>Настройка переменных среды
+
+Для R интеграции функций только, следует задать **MKL_CBWR** переменную среды, чтобы [гарантировать согласованный результат](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) из вычислений Intel Math Kernel Library (MKL).
+
+1. На панели управления выберите **система и безопасность** > **системы** > **Дополнительные параметры системы**  >   **Переменные среды**.
+
+2. Создайте новую переменную пользователем или системой. 
+
+  + Набор имя переменной `MKL_CBWR`
+  + Задать значения переменной `AUTO`
+
+Этот шаг требует перезапуска сервера. Если вы собираетесь включить выполнение сценариев, вы можете воздержаться от перезапуска до завершения всей работы конфигурации.
+
 <a name="bkmk_enableFeature"></a>
 
 ## <a name="enable-script-execution"></a>Включение сценариев
 
-1. Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
+1. Откройте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
     > [!TIP]
-    > Можно загрузить и установить соответствующую версию на этой странице: [скачать SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > Можно загрузить и установить соответствующую версию на этой странице: [Скачайте SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
     > Можно также попробовать предварительную версию [Azure Data Studio](../../azure-data-studio/what-is.md), который поддерживает административных задач и запросов к SQL Server.
   
 2. Подключитесь к экземпляру, где установлены службы машинного обучения, щелкните **новый запрос** откройте окно запроса и выполните следующую команду:
 
-   ```SQL
+   ```sql
    sp_configure
    ```
 
@@ -122,7 +135,7 @@ ms.locfileid: "48878097"
     
 3.  Чтобы включить внешние средства написания сценариев, выполните следующую инструкцию:
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
@@ -145,7 +158,7 @@ ms.locfileid: "48878097"
 
 1. В SQL Server Management Studio откройте новое окно запроса и выполните следующую команду:
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled'
     ```
 
@@ -159,7 +172,7 @@ ms.locfileid: "48878097"
     
     + Для R
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
     OutputDataSet <- InputDataSet;
@@ -171,7 +184,7 @@ ms.locfileid: "48878097"
 
     + Для Python
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'Python',
     @script=N'
     OutputDataSet = InputDataSet;
@@ -205,15 +218,15 @@ ms.locfileid: "48878097"
 
 На серверах с отключенной дополнительные действия не требуются. Дополнительные сведения см. в разделе [установить на компьютерах без доступа к Интернету > Применить накопительные обновления](sql-ml-component-install-without-internet-access.md#apply-cu).
 
-1. Начать с экземпляром базовых показателей уже установлен: первоначальный выпуск SQL Server 2017
+1. Начать с экземпляром базовых показателей уже установлен: Первоначальный выпуск SQL Server 2017
 
-2. Перейдите к списку накопительного пакета обновления: [обновляет SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
+2. Перейти к списку накопительного пакета обновления: [Обновления SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
 
 3. Выберите последний накопительный пакет обновления. Исполняемый файл загружается и извлекаются автоматически.
 
 4. Запустите программу установки. Примите условия лицензионного соглашения и на странице выбора компонентов, просмотрите список компонентов, для которых применяются накопительные пакеты обновления. Вы должны увидеть все возможности, которые установлены для текущего экземпляра, включая функции машинного обучения. Программа установки скачивает CAB-файлы, необходимые для обновления всех компонентов.
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![Перечень установленных компонентов](media/cumulative-update-feature-selection.png)
 
 5. Следуйте указаниям мастера, приняв условия лицензионного соглашения о дистрибутивах R и Python. 
 
@@ -275,12 +288,12 @@ ms.locfileid: "48878097"
 
 Разработчики R можно приступить к работе с простыми примерами и ознакомиться с основами как R работает с SQL Server. Следующий шаг см. следующие ссылки:
 
-+ [Руководство: Запуск R в T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Учебник: Анализ в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Учебник. Запуск R в T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Учебник. Аналитика в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Разработчики Python рассказывается, как использовать Python с SQL Server с помощью этих учебных материалов:
 
-+ [Руководство: Запуск Python в T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Учебник: Анализ в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Учебник. Запустите Python в T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Учебник. Аналитика в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 Чтобы просмотреть примеры машинного обучения, которые основаны на реальных сценариев, см. в разделе [машинного обучения учебники](../tutorials/machine-learning-services-tutorials.md).

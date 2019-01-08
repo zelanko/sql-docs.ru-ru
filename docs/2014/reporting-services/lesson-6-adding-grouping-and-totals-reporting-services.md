@@ -1,5 +1,5 @@
 ---
-title: Занятие 6. Добавление группирования и итогов (службы Reporting Services) | Документы Майкрософт
+title: Урок 6. Добавление группирования и итогов (службы Reporting Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5a372f230cfc2fc63e59787b8f9b674928f72368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7565cf64d64197a261c36fb755e3f20a65f1fa27
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095303"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356466"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Урок 6. Добавление группирования и итогов (службы Reporting Services)
   Добавление группирования и итогов к отчету предназначено для организации и суммирования данных.  
   
- Дополнительные сведения относительно добавления нарастающего итога в отчеты смотрите на curah.microsoft.com: [Добавление итогов в отчеты Reporting Services (SSRS)](http://go.microsoft.com/fwlink/p/?LinkId=403698).  
+ Информацию относительно добавления нарастающего итога в отчеты смотрите на curah.microsoft.com: [Добавление итогов в отчеты Reporting Services (SSRS)](https://go.microsoft.com/fwlink/p/?LinkId=403698).  
   
  **В этом разделе:**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48095303"
   
 6.  В меню **Формат** щелкните элемент **Цвет фона**, а затем щелкните элемент **Светло-серый**и нажмите кнопку **ОК**.  
   
-     ![Режим конструктора: базовая таблица с итоговой суммой заказов](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Режим конструктора: базовая таблица с итоговой суммой заказов")  
+     ![Режим конструктора: Базовая таблица с итоговой суммой заказов](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "режим конструктора: Базовая таблица с итоговой суммой заказов")  
   
 ##  <a name="bkmk_adddailytotal"></a> Добавление ежедневного итога к отчету  
   
@@ -107,13 +107,13 @@ ms.locfileid: "48095303"
   
 4.  В меню **Формат** щелкните элемент **Цвет фона**, а затем щелкните элемент **Светло-синий**и нажмите кнопку **ОК**.  
   
-     ![Режим конструктора: итоговое значение в базовой таблице](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Режим конструктора: итоговое значение в базовой таблице")  
+     ![Режим конструктора: Общий итог в базовой таблице](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "режим конструктора: Общий итог в базовой таблице")  
   
 5.  Нажмите кнопку «Предварительный просмотр».  
   
      Последняя страница должна выглядеть примерно так:  
   
-     ![Предварительный просмотр: базовая таблица с итоговым значением](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Предварительный просмотр: базовая таблица с итоговым значением")  
+     ![Предварительный просмотр: Базовая таблица с итоговым](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "предварительной версии: Базовая таблица с общий итог")  
   
 ##  <a name="bkmk_publishreport"></a> Публикация отчета на сервере отчетов (необязательно)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48095303"
   
      Если в окне вывода появится сообщение примерно следующего содержания, это означает, что развертывание прошло успешно.  
   
-    > ------ Build started: Project: tutorial, Configuration: Debug ------Skipping 'Sales Orders.rdl'. Элемент в актуальном состоянии. Построение завершено — 0 ошибок, 0 предупреждений---развертывание запущена: проект: учебник, конфигурация: отладки---развертывание http://\<имя сервера > / reportserverDeploying отчетов «/ tutorial/Sales Orders». Развертывание завершено--0 ошибок, 0 предупреждений ==== сборки: не удалось 1 успешно или обновлен, 0, 0 пропущено ==== развертывание: 1 — успешно, 0 сбоев, 0 пропущено ====  
+    > ------ Build started: Проект: учебник, конфигурация: Debug ------Skipping 'Sales Orders.rdl'. Item is up to date.Build complete -- 0 errors, 0 warnings------ Deploy started: Проект: учебник, конфигурация: Отладка---развертывание http://\<имя сервера > / reportserverDeploying отчетов «/ tutorial/Sales Orders». Развертывание завершено--0 ошибок, 0 предупреждений ==== сборки: 1 succeeded or up-to-date, 0 failed, 0 skipped ==================== Deploy: 1 succeeded, 0 failed, 0 skipped ==========  
   
      Если же откроется сообщение об ошибке примерно следующего содержания, удостоверьтесь в наличии разрешений на сервер отчетов, а также запустите среду [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] с правами администратора.  
   
@@ -139,12 +139,12 @@ ms.locfileid: "48095303"
   
      Перейдите по URL-адресу диспетчера отчетов, например: `http://<server name>/reports`.  
   
-7.  Перейдите в папку, содержащую отчет и щелкните имя отчета `Sales Orders` чтобы отобразить этот отчет в браузере.  
+7.  Перейдите в папку с отчетом и щелкните имя отчета `Sales Orders`, чтобы отобразить этот отчет в браузере.  
   
 ## <a name="next-steps"></a>Следующие шаги  
  Учебник по созданию базового табличного отчета успешно освоен.  
   
 ## <a name="see-also"></a>См. также  
- [Фильтрация, группирование и сортировка данных &#40;построитель отчетов и службы SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

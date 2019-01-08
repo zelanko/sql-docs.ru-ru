@@ -1,5 +1,5 @@
 ---
-title: Конвертация валюты (службы Analysis Services) | Документы Microsoft
+title: Конвертация валюты (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ebcce8d042b7a87771f99bac53b78bb59af6f7e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3e9934345856e3af3c10be5bf2cea38b259ec09d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207213"
 ---
-# <a name="currency-conversions-analysis-services"></a>Конвертация валюты (Analysis Services)
+# <a name="currency-conversions-analysis-services"></a>Преобразования валюты (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
   [!INCLUDE[applies](../includes/applies-md.md)] Только многомерные  
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="defining-currency-conversions"></a>Определение конвертаций валют  
  Можно использовать мастер бизнес-аналитики, чтобы определить функционал конвертации валют для куба, также можно вручную определить конвертации валют, используя скрипты многомерных выражений.  
   
-### <a name="prerequisites"></a>Предварительные требования  
+### <a name="prerequisites"></a>предварительные требования  
  Перед тем как определять конвертацию валюты в кубе, используя мастер бизнес-аналитики, вначале необходимо определить хотя бы одно измерение валют, одно измерение времени и одну группу мер курсов. Из этих объектов мастер бизнес-аналитики может получать данные и метаданные, используемые для построения измерения валют отчета и скрипта многомерных выражений, необходимых для обеспечения функционала конвертации валют.  
   
 ### <a name="decisions"></a>Решения  

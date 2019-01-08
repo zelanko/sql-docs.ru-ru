@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00e7ed45939bedad31aabce87eb5fcbd85eece20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060244"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766786"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings, класс событий
   События класса событий Execution Warnings сообщают о предупреждениях, связанных с выделением памяти при выполнении инструкции или хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . События этого класса можно отслеживать, чтобы определить, сколько времени запрос ожидал выделения памяти и завершилась ли неудачей попытка выделения памяти. Сведения о задержках могут помочь в обнаружении конфликтов, связанных с попытками одновременной передачи данных, которые могут повлиять на производительность.  

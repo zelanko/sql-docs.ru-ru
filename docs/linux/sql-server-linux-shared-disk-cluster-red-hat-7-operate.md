@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 4b41e3adeaab22a958e94e373762c57a6d613f6d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661275"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393578"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Работать кластер общих дисков Red Hat Enterprise Linux для SQL Server
 
@@ -142,10 +142,10 @@ sudo crm_mon
    ```
 
    > [!NOTE]
-   > Если вы используете другой брандмауэр, который не имеет встроенной конфигурации высокого уровня доступности, откройте следующие порты, чтобы Pacemaker мог связываться с другими узлами в кластере.
+   > Если вы используете другой брандмауэр, который не имеет встроенной конфигурации высокого уровня доступности, следующие порты должны быть открыты для Pacemaker иметь возможность связываться с другими узлами в кластере
    >
-   > * Порты TCP: 2224, 3121, 21064.
-   > * Порт UDP: 5405.
+   > * TCP: Порты с кодом 2224, 3121, 21064.
+   > * UDP: Порт 5405.
 
 1. Установите пакеты Pacemaker на новом узле.
 

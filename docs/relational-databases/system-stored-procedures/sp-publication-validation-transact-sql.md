@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publication_validation
@@ -17,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f90e172030193cf3ae1209829aa58512cf56fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608682"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591408"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**@publication=**] **"*** публикации"*  
+ [**@publication=**] **"**_публикации"_  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -51,9 +50,9 @@ sp_publication_validation [ @publication = ] 'publication'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**0**|Рассчитать контрольную сумму в формате [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Примечание: Если статья отфильтрована горизонтально, выполняется операция подсчета строк вместо операцию вычисления контрольной суммы.|  
+|**0**|Рассчитать контрольную сумму в формате [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Примечание. Если статья отфильтрована горизонтально, вместо операции расчета контрольной суммы выполняется операция подсчета строк.|  
 |**1** (по умолчанию)|Выполнить проверку только количества строк.|  
-|**2**|Выполнить проверку количества строк и двоичной контрольной суммы.<br /><br /> Примечание: Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется подписчиков версии 7.0, только проверка количества строк.|  
+|**2**|Выполнить проверку количества строк и двоичной контрольной суммы.<br /><br /> Примечание. Для подписчиков версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 выполняется только проверка количества строк.|  
   
  [**@full_or_fast=**] *full_or_fast*  
  Метод, применяемый для подсчета числа строк. *full_or_fast* — **tinyint** и может принимать одно из следующих значений.  
@@ -67,8 +66,8 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  Указывает, требуется ли закрывать агент распространителя немедленно по окончании проверки. *shutdown_agent* — **бит**, значение по умолчанию **0**. Если **0**, агент репликации не завершает работу. Если **1**, агент репликации завершает работу после проверки последней статье.  
   
- [ **@publisher** =] **"***издателя***"**  
- Задает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *издатель* — **sysname**, значение по умолчанию NULL.  
+ [ **@publisher** =] **"**_издателя_**"**  
+ Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует использовать при запросе проверки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  

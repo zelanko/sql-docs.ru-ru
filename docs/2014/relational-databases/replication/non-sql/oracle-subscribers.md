@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,12 +16,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a11cdbd373a173fd2709b07ccb860484c0f59eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145154"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786374"
 ---
 # <a name="oracle-subscribers"></a>Подписчики Oracle
   Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает принудительные подписки Oracle через поставщик Oracle OLE DB, предоставляемый Oracle.  
@@ -86,7 +85,7 @@ ms.locfileid: "48145154"
   
     -   Убедиться в том, что пустые строки не вставляются в опубликованную таблицу в качестве значений столбцов.  
   
-    -   Использовать параметр **–SkipErrors** для агента распространителя, если желательно получать уведомления об ошибках в журнал агента распространителя и продолжать обработку. Задать код ошибки Oracle 1400 (**-SkipErrors1400**).  
+    -   Использовать параметр **-SkipErrors** для агента распространителя, если желательно получать уведомления об ошибках в журнал агента распространителя и продолжать обработку. Задать код ошибки Oracle 1400 (**-SkipErrors1400**).  
   
     -   Измените сформированный скрипт создания таблицы, удалив атрибут NOT NULL из любого символьного столбца, с которым могут быть связаны пустые строки, и предоставьте измененный скрипт в качестве пользовательского скрипта создания для статьи, используя параметр @creation_script хранимой процедуры [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
@@ -128,7 +127,7 @@ ms.locfileid: "48145154"
 |`smalldatetime`|DATE|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  
-|`sql_variant`|Недоступно|  
+|`sql_variant`|Н/Д|  
 |`sysname`|VARCHAR2(128)|  
 |`text`|CLOB|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -143,7 +142,7 @@ ms.locfileid: "48145154"
 |`varchar(max)`|CLOB|  
 |`xml`|NCLOB|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
  [Подписка на публикации](../subscribe-to-publications.md)  
   

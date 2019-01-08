@@ -13,12 +13,12 @@ ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f144e5e4f70fdef954dd91452df6bc9275409b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fddec2033997a1b76f34fa9a2fe006d385bc0132
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073514"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364086"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Использование файла форматирования для массового импорта данных (SQL Server)
   Эта тема посвящена использованию файла форматирования в операциях массового импорта. Файл форматирования сопоставляет поля файла данных столбцам таблицы.  При массовом импорте данных можно использовать как формат XML, так и формат, отличный от XML, если импорт выполняется с помощью команды **bcp** или инструкций BULK INSERT или INSERT... SELECT * FROM OPENROWSET(BULK...) языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -36,12 +36,12 @@ ms.locfileid: "48073514"
 |------------------------|-----------------------------------|  
 |BULK INSERT|FORMATFILE = '*путь_к_файлу_форматирования*'|  
 |Инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...).|FORMATFILE = '*путь_к_файлу_форматирования*'|  
-|**bcp** … **В поле**|**-f** *format_file*|  
+|**BCP** ... **в**|**-f** *format_file*|  
   
  Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (SQL Server)](/sql/t-sql/statements/bulk-insert-transact-sql) и [OPENROWSET (SQL Server)](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
->  Для массового экспорта или импорта данных SQLXML используйте один из следующих типов данных в файле форматирования: SQLCHAR или SQLVARYCHAR (данные отправляются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные отправляются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные отправляются без преобразования).  
+>  Для массового экспорта или импорта данных SQLXML используется один из следующих типов данных в файле форматирования. SQLCHAR или SQLVARYCHAR (данные посылаются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные посылаются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные посылаются без преобразования).  
   
 ## <a name="examples"></a>Примеры  
  В примерах этой статьи показано, как использовать файлы форматирования для массового импорта данных с помощью команды **bcp**, а также инструкций BULK INSERT и INSERT ... SELECT * FROM OPENROWSET(BULK...). Перед выполнением примеров массового импортирования необходимо создать учебную таблицу, файл данных и файл форматирования.  
@@ -100,7 +100,7 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -190,9 +190,9 @@ DROP TABLE myTestFormatFiles
   
  [Использование файла форматирования для пропуска поля данных (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
- [Использование файла форматирования для сопоставления столбцов таблицы полям файла данных (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+ [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   

@@ -1,7 +1,8 @@
 ---
-title: Резервное копирование и восстановление базы данных с помощью студии данных Azure | Документация Майкрософт
+title: Резервное копирование и восстановление базы данных
+titleSuffix: Azure Data Studio
 description: Узнайте, как резервное копирование и восстановление базы данных с помощью студии данных Azure
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2d9b4cbee5ab4da44961927809bf1fb4c771cc1
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0e6025c59206f48fe6cf5cd5bf5182ea73090bbf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355915"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207133"
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Резервное копирование и восстановление, используя [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Резервное копирование и восстановление баз данных с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 В этом руководстве вы узнаете, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для:
 > [!div class="checklist"]
@@ -33,10 +34,11 @@ ms.locfileid: "49355915"
 
 - [Подключение и запрос SQL Server с помощью [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
+Этого учебника требуется подключение к базе данных SQL Server. База данных SQL Azure автоматическое резервное копирование, чтобы Azure Data Studio не базы данных SQL Azure архивации и восстановления. Дополнительные сведения см. в разделе [изучение автоматическое резервное копирование базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="backup-a-database"></a>Резервное копирование базы данных
 
-1. Откройте панель мониторинга базы данных TutorialDB (откройте **СЕРВЕРЫ** боковой панели (**CTRL + G**), разверните **баз данных**, щелкните правой кнопкой мыши **TutorialDB**, и выберите **управление**). 
+1. Откройте панель мониторинга базы данных TutorialDB (откройте **СЕРВЕРЫ** боковой панели (**CTRL + G**), разверните **баз данных**, щелкните правой кнопкой мыши **TutorialDB**, и выберите **управление**).
 
 2. Откройте **Backup database** диалоговое окно (щелкните **резервного копирования** на **задачи** мини-приложение).
 

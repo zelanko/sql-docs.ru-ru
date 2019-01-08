@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -29,12 +27,12 @@ ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78c7890449a68770d6c6a14a100af061b1394040
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b490a0f4876f911923ed0429f33d332b96768792
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054754"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796427"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Типы данных XPath (SQLXML 4.0)
   Набор типов данных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath и XML Schema (XSD) сильно отличается. Например, в XPath отсутствуют целочисленные типы данных и тип данных для обозначения даты, а в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и XSD таких типов множество. Типы данных XSD определяют время с точностью до наносекунды, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только до одной трехсотой доли секунды. Поэтому не всегда возможно сопоставить один тип другому. Дополнительные сведения о сопоставлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных с типами данных XSD, см. в разделе [приведение типов данных и заметка SQL: DataType &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
@@ -65,7 +63,7 @@ ms.locfileid: "48054754"
 |Ни один из них не представляет собой набор узлов.|Преобразует оба операнда к типу `number`, а затем сравнивает их.|Преобразует оба операнда к одному типу, а затем сравнивает их. Преобразует к типу `boolean`, если хотя бы один из операндов принадлежит к типу `boolean`, и к типу `number`, если хотя бы один из операндов принадлежит к типу `number`; в противном случае преобразует к типу `string`.|  
   
 > [!NOTE]  
->  Поскольку реляционные операторы XPath всегда преобразуют операнды к типу `number`, сравнение типов `string` невозможно. Чтобы включить Сравнение дат, SQL Server 2000 предлагает следующее изменение спецификации XPath: когда Реляционный оператор сравнивает `string` для `string`, node-set `string`, или строковое значение набор узлов строковыми значениями — набор узлов, `string` сравнения (не `number` сравнения) выполняется.  
+>  Поскольку реляционные операторы XPath всегда преобразуют операнды к типу `number`, сравнение типов `string` невозможно. Чтобы включить сравнение дат, SQL Server 2000 предлагает следующее изменение спецификации XPath. Когда реляционный оператор сравнивает тип `string` с типом `string`, набор узлов с типом `string` или набор узлов со строковыми значениями с другим таким же набором, проводится сравнение по типу `string`, а не по типу `number`.  
   
 ## <a name="node-set-conversions"></a>Преобразования наборов узлов  
  Преобразования наборов узлов не всегда интуитивно понятны. Чтобы преобразовать набор узлов в тип `string`, берется строковое значение только первого узла набора. Чтобы преобразовать набор узлов к типу `number`, он сначала преобразуется в тип `string`, а затем значение типа `string` преобразуется в тип `number`. Чтобы преобразовать набор узлов к типу `boolean`, производится его проверка на существование.  
@@ -89,7 +87,7 @@ ms.locfileid: "48054754"
   
 |Тип данных XDR|Эквивалентный<br /><br /> тип данных XPath|Использованное преобразование SQL Server|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|Недоступно|NoneEmployeeID|  
+|Nonebin.base64bin.hex|Н/Д|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|строка|CONVERT(nvarchar(4000), EmployeeID, 126)|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
@@ -19,12 +18,12 @@ ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b51404c994bd4a5029bc9e2d592db020747492fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057194"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787836"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Копирование баз данных путем создания и восстановления резервных копий
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]можно создать новую базу данных, восстановив резервную копию пользовательской базы данных, созданной в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии. Однако резервные копии баз данных **master**, **model** и **msdb** , созданных в более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , восстановить на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]невозможно. Кроме того, резервные копии, созданные в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , невозможно восстановить в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "48057194"
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] используется путь по умолчанию, отличный от пути, использованного в предыдущих версиях. Поэтому для восстановления резервной копии базы данных, созданной в месте расположения по умолчанию для ранних версий, необходимо использовать параметр MOVE. Сведения о новом пути по умолчанию см. в разделе [Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Дополнительные сведения о перемещении файлов баз данных см. в статье «Перемещение файлов баз данных» далее в этом подразделе.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Основные этапы копирования базы данных, используя функции резервного копирования и восстановления  
- При использовании резервного копирования и восстановления для копирования базы данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компьютер-источник и целевой компьютер могут быть любой платформой, на которой запускается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ При использовании резервного копирования и восстановления для копирования базы данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]компьютер-источник и целевой компьютер могут быть любой платформой, на которой запускается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Основные этапы.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48057194"
   
     -   Если существующий файл не может быть перезаписан, возникнет ошибка восстановления.  
   
- Чтобы избежать ошибок и непредвиденных последствий перед операцией восстановления, можно использовать [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) таблицы журнала, чтобы найти файлы базы данных и журнала в резервной копии, которые планируется восстановить.  
+ Во избежание ошибок и непредвиденных последствий, перед операцией восстановления можно использовать таблицы журнала [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) , чтобы найти в резервной копии файлы базы данных и журнала, которые планируется восстановить.  
   
 ## <a name="moving-the-database-files"></a>Перемещение файлов баз данных  
  Если файлы резервной копии базы данных нельзя восстановить на целевом компьютере по причинам, перечисленным выше, необходимо переместить файлы в новое место назначения, где они могут быть восстановлены. Пример:  
@@ -134,7 +133,7 @@ ms.locfileid: "48057194"
 ## <a name="see-also"></a>См. также  
  [Копирование баз данных на другие серверы](copy-databases-to-other-servers.md)   
  [Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [Инструкция RESTORE FILELISTONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
+ [RESTORE FILELISTONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

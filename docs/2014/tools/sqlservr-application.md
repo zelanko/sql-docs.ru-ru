@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], sqlservr
@@ -23,12 +22,12 @@ ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2616e1ad8aa794f5aff14857b68b146e35dc04f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174644"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591868"
 ---
 # <a name="sqlservr-application"></a>Приложение sqlservr
   Приложение **sqlservr** позволяет запускать, останавливать, приостанавливать и возобновлять работу экземпляра [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из командной строки.  
@@ -43,7 +42,7 @@ ms.locfileid: "48174644"
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **-s** *instance_name*  
+ **-s** _instance_name_  
  Указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для подключения. Если именованный экземпляр не указан, программа **sqlservr** запускает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию.  
   
 > [!IMPORTANT]  
@@ -55,16 +54,16 @@ ms.locfileid: "48174644"
 > [!NOTE]  
 >  При использовании этого параметра остановить [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью Service Manager [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или команды **net stop** будет невозможно. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] будет остановлен, если выйти из системы на данном компьютере.)  
   
- **-d** *master_path*  
+ **-d** _master_path_  
  Указывает полный путь к файлу базы данных **master** . Между параметрами **-d** и *master_path*нет пробелов. Если этот параметр не задан, используются параметры из реестра.  
   
  **-f**  
  Запускает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с минимальной конфигурацией. Эта функция полезна в случае, если установленные значения конфигурации (например, слишком большой объем выделяемой памяти) не позволяют выполнить запуск сервера.  
   
- **-e** *error_log_path*  
+ **-e** _error_log_path_  
  Указывает полный путь к файлу журнала ошибок. Если путь не указан, расположением по умолчанию является *\<диск>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog для экземпляра по умолчанию и *\<диск>*:\Program Files\Microsoft SQL Server\MSSQL$*имя_экземпляра*\Log\Errorlog — для именованного экземпляра. Между параметрами **-e** и *error_log_path*нет пробелов.  
   
- **-l** *master_log_path*  
+ **-l** _master_log_path_  
  Указывает полный путь к файлу журнала транзакций базы данных **master** . Между параметрами **-l** и *master_log_path*нет пробелов.  
   
  **-m**  
@@ -73,7 +72,7 @@ ms.locfileid: "48174644"
  **-n**  
  Позволяет запустить именованный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Если не указать параметр **-s** , будет выполнена попытка запуска экземпляра по умолчанию. Перед запуском программы **sqlservr.exe**в командной строке необходимо перейти в каталог BINN соответствующего экземпляра. Например, если экземпляр Instance1 должен использовать \mssql$Instance1 для своих двоичных файлов, для запуска **sqlservr.exe -s instance1**пользователь должен быть в каталоге \mssql$Instance1\binn. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запускается с параметром **-n** , целесообразно также использовать параметр **-e** , иначе события [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не будут регистрироваться.  
   
- **-T** *trace#*  
+ **-T** _trace#_  
  Указывает, что экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] фактически должен запускаться с установленным флагом трассировки (*trace#*). Флаги трассировки используются для запуска сервера в нестандартном режиме. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
@@ -85,16 +84,16 @@ ms.locfileid: "48174644"
  **-x**  
  Отключает ведение статистики по процессорному времени и коэффициенту попадания в кэш. Позволяет достичь максимальной производительности.  
   
- **-g** *memory_to_reserve*  
+ **-g** _memory_to_reserve_  
  Определяет целое число мегабайтов (МБ) памяти, которую [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] оставляет доступной для распределения памяти в пределах процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , но за пределами пула памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Память за пределами пула памяти является областью, используемой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для загрузки таких элементов, как `.dll` -файлы расширенных процедур, поставщики OLE DB, на которые ссылаются распределенные запросы, и объекты автоматизации, на которые имеется ссылка в инструкциях [!INCLUDE[tsql](../includes/tsql-md.md)] . По умолчанию установлено значение 256 МБ.  
   
  Использование данного параметра может помочь в настройке распределения памяти, но только в том случае, если объем физической памяти превышает предел, установленный операционной системой для виртуальной памяти, доступной для приложений. Использование данного параметра может быть полезным в конфигурациях с большим объемом памяти, где требования к использованию памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] являются нетипичными и виртуальное пространство процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] используется в полной мере. Неверное использование этого параметра может привести к появлению условий, при которых экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не будет запущен или может вызвать ошибки времени выполнения.  
   
  Используйте значение параметра **-g** по умолчанию, только если в файле журнала ошибок [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не присутствуют следующие предупреждения:  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>" (Ошибка виртуального выделения байтов: FAIL_VIRTUAL_RESERVE \<размер>).  
+-   «Ошибка виртуального выделения байтов: FAIL_VIRTUAL_RESERVE \<размер >»  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>" (Ошибка виртуального выделения байтов: FAIL_VIRTUAL_COMMIT \<размер>).  
+-   «Ошибка виртуального выделения байтов: FAIL_VIRTUAL_COMMIT \<размер >»  
   
  Эти сообщения могут свидетельствовать о попытках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] освободить часть пула памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , чтобы найти пространство для таких элементов, как dll-файлы расширенных хранимых процедур или объекты автоматизации. В этом случае рассмотрите возможность увеличения размера памяти, зарезервированной с помощью параметра **-g**``.  
   

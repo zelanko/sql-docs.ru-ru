@@ -14,12 +14,12 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a576a6d047148675fd50730bcb4a5e76a5684b14
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 0224f32fde76aa406d90c98fe7280237d09a04e5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018749"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369496"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Создание, проектирование и создание запросов к экземплярам типа данных geography
   Тип пространственных данных `geography` представляет данные в системе координат круглой земли. Этот тип реализован как тип данных среды CLR .NET в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` Тип данных хранит эллипсоидальные (сферические) данные, такие как координаты широты и долготы GPS.  
@@ -105,7 +105,7 @@ ms.locfileid: "51018749"
 ###  <a name="gml"></a> Построение экземпляра географического объекта на основе входных данных в формате GML Text  
  `geography` Тип данных предоставляет метод, создающий `geography` на основе GML, XML-представление `geography` экземпляра. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подмножество GML.  
   
- Дополнительные сведения о языке GML см. в спецификации OGC: [Спецификации OGC, географический язык разметки.](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ Дополнительные сведения о языке GML см. в спецификации OGC: [Спецификации OGC, географический язык разметки.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
  **Создание экземпляра географического объекта любого типа на основе входных данных в формате GML**  
  [GeomFromGML (тип данных geography)](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  
@@ -266,7 +266,7 @@ ms.locfileid: "51018749"
     SELECT @result.STAsText();  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пространственные данные (SQL Server)](spatial-data-sql-server.md)  
   
   

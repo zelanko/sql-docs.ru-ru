@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df3e932427665e7225c83043fb48e933cb503028
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909724"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417565"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Мониторинг с помощью System Center Operations Manager — система Analytics Platform System
 Используйте System Center Operations Manager (SCOM) для мониторинга Analytics Platform System (APS) устройство.
@@ -39,9 +39,9 @@ ms.locfileid: "37909724"
    
   
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>Для мониторинга SQL Server PDW с SCOM  
-После настройки пакетов управления SCOM, щелкните на панели мониторинга из SCOM и детализировать **SQL Server Appliance** и затем **Microsoft SQL Server Parallel Data Warehouse**. Под Microsoft SQL Server Parallel Data Warehouse, имеется четыре варианта: оповещения, устройства, устройство схеме и узлов.  
+После настройки пакетов управления SCOM, щелкните на панели мониторинга из SCOM и детализировать **SQL Server Appliance** и затем **Microsoft SQL Server Parallel Data Warehouse**. Под Microsoft SQL Server Parallel Data Warehouse имеется четыре варианта: Оповещения, устройства, устройство схемы и узлов.  
   
-### <a name="alerts"></a>видны узлы  
+### <a name="alerts"></a>Предупреждения  
 Оповещения создаются, где можно найти текущие оповещения для управления.  
   
 ![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  

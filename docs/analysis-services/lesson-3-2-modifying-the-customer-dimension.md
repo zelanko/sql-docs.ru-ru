@@ -1,5 +1,5 @@
 ---
-title: Изменение измерения «Заказчик» | Документы Microsoft
+title: Изменение измерения «Заказчик» | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9f922dfcc073ce72834515b42691bef2e3c90d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d777d39bed047ac1807ebb2413eec3539d70428
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019051"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514711"
 ---
-# <a name="lesson-3-2---modifying-the-customer-dimension"></a>Занятие 3-2-изменение измерения «Заказчик»
+# <a name="lesson-3-2---modifying-the-customer-dimension"></a>Занятие 3 – 2-изменение измерения «Заказчик»
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Существует много способов повысить удобство использования и функциональность измерений куба. При выполнении задач этого раздела будет изменено измерение «Заказчик».  
@@ -32,11 +32,11 @@ ms.locfileid: "34019051"
   
 3.  Аналогичным образом измените имена следующих атрибутов.  
   
-    -   Имя атрибута**English Education** измените на **Education**.  
+    -   **English Education** атрибута — изменить на **для образовательных учреждений**  
   
-    -   Имя атрибута**English Occupation** измените на **Occupation**.  
+    -   **English Occupation** атрибута — измените **род занятий**  
   
-    -   Имя атрибута**State Province Name** измените на **State-Province**.  
+    -   **State Province Name** атрибута — изменить на **State-Province**  
   
 4.  В меню **Файл** выберите команду **Сохранить все**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34019051"
   
 4.  В поле свойства **Name** введите **Полное имя**.  
   
-5.  Щелкните поле свойства **NameColumn** внизу и нажмите кнопку обзора (**…**), чтобы открыть диалоговое окно **Столбец имени** .  
+5.  Щелкните в **NameColumn** свойство в нижней части, а затем нажмите кнопку обзора (**...** ) кнопку, чтобы открыть **столбец имени** диалоговое окно.  
   
 6.  Выберите пункт **FullName** внизу списка **Исходный столбец** и нажмите кнопку **OK**.  
   

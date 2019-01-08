@@ -5,8 +5,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.custom: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscription
@@ -17,12 +16,12 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30dbaa3bc31135931fdceecb34ab454a4a46e495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663532"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206393"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|none|Подписчик уже имеет схему и начальные данные для опубликованных таблиц.<br /><br /> Примечание: Этот параметр является устаревшим. Вместо этого используйте значение «replication support only».|  
+|none|Подписчик уже имеет схему и начальные данные для опубликованных таблиц.<br /><br /> Примечание. Этот аргумент является устаревшим. Вместо этого используйте значение «replication support only».|  
 |automatic (по умолчанию)|Схема и начальные данные для опубликованных таблиц вначале передаются подписчику.|  
 |replication support only|Предоставляет автоматическое создание на подписчике статьи хранимой процедуры и триггеров, которые поддерживают обновляемые подписки, если это подходит. Предполагает, что подписчик уже имеет схему и начальные данные для опубликованных таблиц. При настройке топологии одноранговой репликации транзакций убедитесь, что данные во всех узлах топологии идентичны. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Не поддерживается для подписок на публикации SQL Server.*|  
 |initialize with backup|Схема и начальные данные для опубликованных таблиц извлекаются из резервной копии базы данных публикации. Предполагает, что подписчик имеет доступ к резервной копии базы данных публикации. Расположение резервной копии и тип носителя для резервной копии задаются *backupdevicename* и *backupdevicetype*. При использовании этого аргумента топология одноранговой репликации транзакций должна быть зафиксирована во время настройки.<br /><br /> *Не поддерживается для подписок на публикации SQL Server.*|  
@@ -231,7 +230,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @publisher=] '*издателя*"  
- Указывает, отличный от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+ Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует указывать для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
@@ -269,7 +268,7 @@ sp_addsubscription [ @publication = ] 'publication'
  Задает регистрационный номер транзакции в журнале (LSN), начиная с которого подписка должна доставлять изменения на узел в одноранговой топологии репликации транзакций. Используется с @sync_type значение initialize из номера lsn, чтобы убедиться в том, что все необходимые транзакции будут реплицированы на новый узел. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  [ @subscriptionstreams=] *subscriptionstreams*  
- Число соединений на каждого агента распространителя для параллельного применения пакетов изменений на подписчике при сохранении многих характеристик транзакций, имеющихся для однопоточного выполнения. *SubscriptionStreams* — **tinyint**, со значением по умолчанию NULL. Поддерживаются значения в диапазоне от 1 до 64. Этот параметр не поддерживается для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], издателей Oracle или одноранговых подписок. При каждом использовании потоков подписки в таблицу msreplication_subscriptions добавляются дополнительные строки (по одной на поток) с параметром agent_id, установленным в значение NULL.  
+ Число соединений на каждого агента распространителя для параллельного применения пакетов изменений на подписчике при сохранении многих характеристик транзакций, имеющихся для однопоточного выполнения. *SubscriptionStreams* — **tinyint**, со значением по умолчанию NULL. Поддерживаются значения в диапазоне от 1 до 64. Этот параметр не поддерживается для отличных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, издателей Oracle или peer-to-peer подписок. При каждом использовании потоков подписки в таблицу msreplication_subscriptions добавляются дополнительные строки (по одной на поток) с параметром agent_id, установленным в значение NULL.  
   
 > [!NOTE]  
 >  Потоки подписки не работают для статей, настроенных для доставки [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для использования потоков подписки настройте в статьях доставку вызовов хранимых процедур.  

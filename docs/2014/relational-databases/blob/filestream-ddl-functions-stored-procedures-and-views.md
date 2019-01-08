@@ -10,12 +10,12 @@ ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ec7d554c8dedd2fb48d1af8a44dbee550e376ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b69cb7d47c70b6c34015c90252875c81c231d0a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189854"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356014"
 ---
 # <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM DDL, функции, хранимые процедуры и представления
   Содержит список инструкций Transact-SQL и объектов базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих FILESTREAM.  
@@ -52,7 +52,7 @@ ms.locfileid: "48189854"
   
 -   [sys.database_filestream_options (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)  
   
-##  <a name="dmv"></a> Системные представления — динамические административные представления  
+##  <a name="dmv"></a> Системные представления — динамические административные представления  
   
 -   [sys.dm_filestream_file_io_handles (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-handles-transact-sql)  
   
@@ -62,6 +62,6 @@ ms.locfileid: "48189854"
   
 -   [Доступ к данным FILESTREAM с OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)  
   
--   [Управляемый API — класс SqlFileStream](http://go.microsoft.com/fwlink/?LinkId=220875)  
+-   [Управляемый API — класс SqlFileStream](https://go.microsoft.com/fwlink/?LinkId=220875)  
   
   

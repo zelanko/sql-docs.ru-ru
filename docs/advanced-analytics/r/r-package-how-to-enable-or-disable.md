@@ -1,5 +1,5 @@
 ---
-title: Включение и отключение удаленного управления пакетами R для машинного обучения SQL Server | Документация Майкрософт
+title: Включение и отключение удаленного управления пакетами R - служб машинного обучения SQL Server
 description: Включение удаленного управления пакетами R на SQL Server 2016 R Services или служб SQL Server 2017 машинного обучения (в базе данных)
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a38bd844e56dca4c5096156bde3b544a44038d49
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 5528fc63dd7b7d7382eb9aa7931dcf5f8942da19
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753515"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645429"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Включение и отключение удаленного пакета управления для SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "50753515"
 
     Можно также выполнить запрос на sys.database_principals, например следующие:
 
-    ```SQL
+    ```sql
     SELECT pr.principal_id, pr.name, pr.type_desc,   
         pr.authentication_type_desc, pe.state_desc,   
         pe.permission_name, s.name + '.' + o.name AS ObjectName  

@@ -14,12 +14,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62512268f5c4ee98fc20a142d97bf870d74d9ce6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8f792d128d8d75bdf39a2b04b104b827d74c7b63
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018209"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376426"
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
   Существует два типа пространственных данных. Тип данных `geometry` поддерживает планарные или эвклидовы данные (система координат для плоской Земли). Тип данных `geometry` соответствует спецификации «Simple Features for SQL» консорциума OGC версии 1.1.0 и стандарту SQL MM (стандарт ISO).  
@@ -27,7 +27,7 @@ ms.locfileid: "51018209"
  Кроме того, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает тип данных `geography`, который используется для хранения эллиптических данных, таких как координаты GPS широты и долготы.  
   
 > [!IMPORTANT]  
->  Подробное описание и примеры использования функций обработки пространственных данных, реализованные в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в том числе улучшения пространственных типов данных, можно получить, загрузив технический документ [Новые функции обработки пространственных данных в SQL Server с рабочим названием "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Подробное описание и примеры использования функций обработки пространственных данных, реализованные в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в том числе улучшения пространственных типов данных, можно получить, загрузив технический документ [Новые функции обработки пространственных данных в SQL Server с рабочим названием "Denali"](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ##  <a name="objects"></a> Объекты пространственных данных  
  Типы данных `geometry` и `geography` поддерживают шестнадцать объектов пространственных данных или типов экземпляров. Однако только одиннадцать из этих типов экземпляров являются *материализуемыми*. Такие экземпляры можно создавать в базе данных и работать с ними. Эти экземпляры наследуют некоторые свойства от родительских типов данных, которые разделяют их на `Points`, **LineStrings, CircularStrings**, `CompoundCurves`, `Polygons`, `CurvePolygons` или как несколько `geometry`или `geography` экземпляров в `GeometryCollection`. Тип `Geography` имеет дополнительный тип экземпляра `FullGlobe`.  
@@ -99,9 +99,9 @@ ms.locfileid: "51018209"
   
  Дополнительные сведения о спецификациях OGC см. в одном из следующих источников:  
   
--   [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](http://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [Спецификации OGC, простой доступ к функциям, часть 1 — общая архитектура](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
   
 ##  <a name="circular"></a> Сегменты дуги  
@@ -149,7 +149,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
   
 ```  
 LS LengthCS Length  
-5.65685…6.28318…  
+5.65685...6.28318...  
 ```  
   
  На следующем рисунке показано, каким образом сохраняется каждый тип (красная линия обозначает `LineString``@g1`, а синяя линия `CircularString``@g2`):  

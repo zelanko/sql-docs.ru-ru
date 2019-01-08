@@ -1,11 +1,10 @@
 ---
-title: 'Класс событий TM: Commit Tran Completed | Документация Майкрософт'
+title: 'События класса TM: COMMIT Tran Completed, класс событий | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5969b6065f884d81a864f00eb52a5db8c74ef350
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 224bfd47c31c94e19935a97c6ed1cc726e233bb2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126484"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784706"
 ---
-# <a name="tm-commit-tran-completed-event-class"></a>Класс событий TM: Commit Tran Completed
-  Класс событий TM: Commit Tran Completed указывает на завершение запроса COMMIT TRANSACTION. Запрос был отправлен клиентом через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после фиксации текущей транзакции.  
+# <a name="tm-commit-tran-completed-event-class"></a>События класса TM: Класс события Commit Tran Completed
+  События класса TM: Класс событий Commit Tran Completed указывает на завершение запроса COMMIT TRANSACTION. Запрос был отправлен клиентом через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после фиксации текущей транзакции.  
   
-## <a name="tm-commit-tran-completed-event-class-data-columns"></a>Столбцы данных класса событий TM: Commit Tran Completed  
+## <a name="tm-commit-tran-completed-event-class-data-columns"></a>События класса TM: столбцы данных класса событий Commit Tran Completed  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Да|  
 |----------------------|---------------|-----------------|---------------|---------|  
@@ -49,7 +48,7 @@ ms.locfileid: "48126484"
 |SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
-|Успешно|`int`|1 = успешное завершение. 0 = неуспешное завершение (например, 1 означает, что проверка разрешений проходит, а 0 — что не проходит).|23|Да|  
+|Success|`int`|1 = успешное завершение. 0 = неуспешное завершение (например, 1 означает, что проверка разрешений проходит, а 0 — что не проходит).|23|Да|  
 |TextData|`ntext`|Текстовое значение, зависящее от класса событий, фиксируемых при трассировке.|1|Да|  
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  

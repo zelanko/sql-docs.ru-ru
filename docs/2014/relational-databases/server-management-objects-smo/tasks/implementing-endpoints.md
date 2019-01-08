@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,21 +14,21 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17e154743d221cfd4a2070c56634c6364a910afb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88f1d38f1769659842757d535309c6e42d70a289
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081643"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807716"
 ---
 # <a name="implementing-endpoints"></a>Реализация конечных точек
-  Конечная точка представляет собой службу, в функции которой входит прослушивание запросов. SMO поддерживаются разные типы конечных точек с помощью <xref:Microsoft.SqlServer.Management.Smo.Endpoint> объекта. Для обработки конкретного типа полезных данных можно создать службу конечной точки, которая будет использовать указанный протокол, создав экземпляр объекта <xref:Microsoft.SqlServer.Management.Smo.Endpoint> и настроив его свойства.  
+  Конечная точка представляет собой службу, в функции которой входит прослушивание запросов. В SMO поддерживаются разные типы конечных точек с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.Endpoint>. Для обработки конкретного типа полезных данных можно создать службу конечной точки, которая будет использовать указанный протокол, создав экземпляр объекта <xref:Microsoft.SqlServer.Management.Smo.Endpoint> и настроив его свойства.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> Свойство <xref:Microsoft.SqlServer.Management.Smo.Endpoint> объект может использоваться для указания следующих типов полезных данных:  
+ Свойство <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Endpoint> может использоваться для указания следующих типов полезных данных:  
   
 -   Зеркальное отображение базы данных  
   
--   SOAP (поддержка для конечных точек SOAP предусмотрена в версии [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] и в предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])  
+-   SOAP (поддержка для конечных точек SOAP предусмотрена в версии [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] и в предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )  
   
 -   Компонент Service Broker  
   
@@ -42,11 +40,11 @@ ms.locfileid: "48081643"
   
 -   протокол TCP.  
   
- Указан тип полезных данных, фактически применяемые полезные данные можно установить с помощью <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> свойство объекта. Свойство объекта <xref:Microsoft.SqlServer.Management.Smo.Payload> обеспечивает ссылку на объект полезных данных указанного типа, свойства которого можно изменить.  
+ После того как будет указан тип полезных данных, фактически применяемые полезные данные можно установить с помощью свойства <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> объекта. Свойство объекта <xref:Microsoft.SqlServer.Management.Smo.Payload> обеспечивает ссылку на объект полезных данных указанного типа, свойства которого можно изменить.  
   
- Для объекта <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload> необходимо указать роль для зеркального отображения и отметить, включать ли шифрование. <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> Объекта требуются сведения о перенаправлении сообщений, максимальное число разрешенных подключений и режим проверки подлинности. Для объекта <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> надо указать множество устанавливаемых свойств, включая свойство <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> объекта, которое указывает доступные клиентам методы полезных данных SOAP (хранимые процедуры и определяемые пользователем функции).  
+ Для объекта <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload> необходимо указать роль для зеркального отображения и отметить, включать ли шифрование. Объекту <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> требуются сведения о перенаправлении сообщений, максимальном количестве разрешенных соединений и режиме проверки подлинности. Для объекта <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> надо указать множество устанавливаемых свойств, включая свойство <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> объекта, которое указывает доступные клиентам методы полезных данных SOAP (хранимые процедуры и определяемые пользователем функции).  
   
- Аналогично этому фактически применяемый протокол можно установить с помощью свойства <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> объекта, которое ссылается на объект протокола типа, указанного в свойстве <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. Объекту <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> требуется список ограниченных IP-адресов, а также сведения о порте, веб-сайте и проверке подлинности. <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> Объекта также необходим список ограниченных IP-адресов и сведения о порте.  
+ Аналогично этому фактически применяемый протокол можно установить с помощью свойства <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> объекта, которое ссылается на объект протокола типа, указанного в свойстве <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. Объекту <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> требуется список ограниченных IP-адресов, а также сведения о порте, веб-сайте и проверке подлинности. Объекту <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> также необходим список ограниченных IP-адресов и сведения о порте.  
   
  После того как конечная точка будет создана и полностью определена, можно предоставлять, отменять и запрещать доступ к ней пользователям базы данных, группам, ролям и именам входа.  
   

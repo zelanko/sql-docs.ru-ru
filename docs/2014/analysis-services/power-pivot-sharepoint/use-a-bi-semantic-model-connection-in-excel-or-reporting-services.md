@@ -11,12 +11,12 @@ ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fae71e74f2c8498b537f1d93d951de76f5625094
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1356eeaabf8de5d406e7fbc11d86cbb043f64be2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123544"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366296"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services
   В этом разделе описывается использование соединений BISM, созданных по указаниям из других разделов. Если вы еще не создали семантической модели бизнес-Аналитики, см. в разделе [Создание соединения семантической модели с книгой PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) и [Создание соединения семантической модели в базу данных табличной модели](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -46,9 +46,9 @@ ms.locfileid: "48123544"
   
 5.  На последней странице можно указать понятное имя и описание. В диалоговом окне «Импорт данных» нажмите кнопку **Готово**, а затем кнопку **ОК** , чтобы импортировать данные.  
   
- Для успешного установления соединений на клиентском компьютере должен быть установлен Excel 2010 и файл MSOLAP.5.dll. Поставщик можно получить, установив версию PowerPivot для Excel, которая является текущей в этом выпуске можно также загрузить только поставщик OLE DB служб Analysis Services из [странице загрузки пакета дополнительных компонентов](http://go.microsoft.com/fwlink/?linkid=214066).  
+ Для успешного установления соединений на клиентском компьютере должен быть установлен Excel 2010 и файл MSOLAP.5.dll. Поставщик можно получить, установив версию PowerPivot для Excel, которая является текущей в этом выпуске можно также загрузить только поставщик OLE DB служб Analysis Services из [странице загрузки пакета дополнительных компонентов](https://go.microsoft.com/fwlink/?linkid=214066).  
   
- Чтобы убедиться, что поставщик MSOLAP.5.dll имеет текущую версию, проверьте `HKEY_CLASSES_ROOT\MSOLAP` в реестре. `CurVer` должен иметь значение MSOLAP.5.  
+ Чтобы убедиться, что поставщик MSOLAP.5.dll имеет текущую версию, проверьте раздел `HKEY_CLASSES_ROOT\MSOLAP` в реестре. Параметр `CurVer` должен иметь значение MSOLAP.5.  
   
  Также требуется наличие разрешения «Чтение» для файла BISM в SharePoint. Разрешения «Чтение» включают права на загрузку. Excel загружает сведения о соединении BISM из SharePoint и открывает прямое соединение с базой данных через `HTTP Get`. После сохранения сведений о соединении BISM на локальном компьютере запросы на соединение не проходят через SharePoint.  
   

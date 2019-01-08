@@ -1,5 +1,5 @@
 ---
-title: Урок 2 функций создания данных, с помощью функций T-SQL (R в службе машинного обучения SQL Server) | Документация Майкрософт
+title: Урок 2 функций создания данных, с помощью функции R и T-SQL - машинного обучения SQL Server
 description: Учебник, в котором показано, как добавить вычисления для хранимых процедур для использования в моделях R машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4986d7ae5e51eaf0e89b3ee986ac7597e4a5edb7
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 43086b8d3898e4d9096e82289ce6e6f196542997
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031501"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645403"
 ---
-# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Занятие 2: Создание функций данных с помощью R и T-SQL
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Занятие 2. Создание функций данных с помощью R и T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Эта статья входит руководства для разработчиков SQL по использованию R в SQL Server.
@@ -46,7 +46,7 @@ ms.locfileid: "51031501"
 
 2. Щелкните правой кнопкой мыши функцию _fnCalculateDistance_, а затем выберите команду **Изменить** , чтобы открыть скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] в новом окне запроса.
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
     -- User-defined function that calculates the direct distance between two geographical coordinates.  
     RETURNS float  
@@ -80,7 +80,7 @@ ms.locfileid: "51031501"
 
 1. Изучите код пользовательской функции T-SQL _fnEngineerFeatures_, которая должна была быть создана для вас в рамках подготовки к работе с этим пошаговым руководством.
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnEngineerFeatures] (  
     @passenger_count int = 0,  
     @trip_distance float = 0,  
@@ -110,7 +110,7 @@ ms.locfileid: "51031501"
 
 2.  Чтобы убедиться, что эта функция работает, используйте его для вычисления географическое Расстояние поездок где расстояние по счетчику было равно 0, но места посадки и высадки были разными, для.
   
-    ```SQL
+    ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
         trip_distance, pickup_datetime, dropoff_datetime,
         dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance
@@ -123,8 +123,8 @@ ms.locfileid: "51031501"
 
 ## <a name="next-lesson"></a>Следующее занятие
 
-[Занятие 3: Обучение и сохранение модели с помощью T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
+[Занятие 3. Обучение и сохранение модели с помощью T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
-[Занятие 1: Анализ и визуализация данных с помощью R и хранимых процедур](sqldev-explore-and-visualize-the-data.md)
+[Занятие 1. Анализ и визуализация данных с помощью R и хранимых процедур](sqldev-explore-and-visualize-the-data.md)

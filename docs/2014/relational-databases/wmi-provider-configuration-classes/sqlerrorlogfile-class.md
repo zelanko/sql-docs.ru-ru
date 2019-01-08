@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1cd24b1717bca086bf1419a2df3b44b57104d1f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226614"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370446"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile, класс
   Предоставляет свойства для просмотра информации о файле журнала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -42,11 +40,11 @@ class SQLErrorLogFile
   
 |||  
 |-|-|  
-|ArchiveNumber|Тип данных: `uint32`<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Номер архива для файла журнала.|  
-|InstanceName|Тип данных: `string`<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: Key<br /><br /> <br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором хранится файл журнала.|  
-|Дата изменения|Тип данных: `datetime`<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Дата последнего изменения файла журнала.|  
-|LogFileSize|Тип данных: `uint32`<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Размер файла журнала в байтах.|  
-|Имя|Тип данных: `string`<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: Key<br /><br /> <br /><br /> Имя файла журнала.|  
+|ArchiveNumber|Тип данных: `uint32`<br /><br /> Тип доступа: Только для чтения<br /><br /> <br /><br /> Номер архива для файла журнала.|  
+|InstanceName|Тип данных: `string`<br /><br /> Тип доступа: Только для чтения<br /><br /> Квалификаторы: Ключ<br /><br /> <br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором хранится файл журнала.|  
+|Дата изменения|Тип данных: `datetime`<br /><br /> Тип доступа: Только для чтения<br /><br /> <br /><br /> Дата последнего изменения файла журнала.|  
+|LogFileSize|Тип данных: `uint32`<br /><br /> Тип доступа: Только для чтения<br /><br /> <br /><br /> Размер файла журнала в байтах.|  
+|Имя|Тип данных: `string`<br /><br /> Тип доступа: Только для чтения<br /><br /> Квалификаторы: Ключ<br /><br /> <br /><br /> Имя файла журнала.|  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -95,7 +93,7 @@ Next
   
      **\<Диск >: \Program Files\Microsoft SQL Server\MSSQL11** **.\< Имя_экземпляра > \MSSQL\Log**  
   
- При соединении с использованием брандмауэра убедитесь, что в брандмауэре задано исключение для WMI на удаленных целевых компьютерах. Дополнительные сведения см. в разделе [подключение к WMI Remotely Starting with Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
+ При соединении с использованием брандмауэра убедитесь, что в брандмауэре задано исключение для WMI на удаленных целевых компьютерах. Дополнительные сведения см. в разделе [подключение к WMI Remotely Starting with Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>См. также  
  [SqlErrorLogEvent, класс](sqlerrorlogevent-class.md)   

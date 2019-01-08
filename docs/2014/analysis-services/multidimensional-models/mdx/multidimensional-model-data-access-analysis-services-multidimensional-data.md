@@ -21,12 +21,12 @@ ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 329942006f640c8ade2477ee2ae4af69df717b6c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ac889b67dec5c6ff014f18d18899109741a2eef9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148069"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359606"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)
   Сведения в этом разделе помогут ознакомиться со способами доступа к многомерным данным служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с помощью программных методов доступа, скриптов или клиентских приложений, включающих встроенную поддержку соединения с сервером служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в сети.  
@@ -45,13 +45,13 @@ ms.locfileid: "50148069"
  Следующие клиентские приложения Майкрософт поддерживают собственные соединения с многомерными данными.  
   
 ### <a name="excel"></a>Excel  
- Многомерные данные служб Analysis Services часто представляются с помощью сводных таблиц и элементов управления сводными таблицами в книгах Excel. Сводные таблицы подходят для работы с многомерными данными, потому что иерархии, статистические выражения и механизмы навигации модели хорошо сочетаются с функциями сводных данных в сводных таблицах. Поставщик данных OLE DB служб Analysis Services входит в состав установки Microsoft Excel, что упрощает настройку соединений с данными. Дополнительные сведения см. в разделе [Подключение к службам SQL Server Analysis Services или импорт данных из них](http://go.microsoft.com/fwlink/?linkID=215150).  
+ Многомерные данные служб Analysis Services часто представляются с помощью сводных таблиц и элементов управления сводными таблицами в книгах Excel. Сводные таблицы подходят для работы с многомерными данными, потому что иерархии, статистические выражения и механизмы навигации модели хорошо сочетаются с функциями сводных данных в сводных таблицах. Поставщик данных OLE DB служб Analysis Services входит в состав установки Microsoft Excel, что упрощает настройку соединений с данными. Дополнительные сведения см. в разделе [Подключение к службам SQL Server Analysis Services или импорт данных из них](https://go.microsoft.com/fwlink/?linkID=215150).  
   
 ### <a name="reporting-services-reports"></a>Reporting Services, отчеты служб  
  Для создания отчетов, использующих базы данных служб Analysis Services, которые содержат аналитические данные, можно использовать построитель отчетов или конструктор отчетов. И построитель отчетов, и конструктор отчетов содержат конструктор запросов многомерных выражений, который можно использовать для ввода или конструирования инструкций многомерных выражений, извлекающих данные из доступного источника данных. Дополнительные сведения см. в разделах [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md), [Тип соединения служб Analysis Services для многомерных выражений (службы SSRS)](../../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md).  
   
 ### <a name="performancepoint-dashboards"></a>Панели мониторинга PerformancePoint  
- Панели мониторинга PerformancePoint используются для создания в SharePoint оценочных листов, в которых показатели бизнеса сравниваются со стандартными величинами. PerformancePoint включает поддержку соединений с многими мерными данными служб Analysis Services. Дополнительные сведения см. в разделе [Создание подключений к данным служб Analysis Services (службы PerformancePoint)](http://go.microsoft.com/fwlink/?linkid=232471).  
+ Панели мониторинга PerformancePoint используются для создания в SharePoint оценочных листов, в которых показатели бизнеса сравниваются со стандартными величинами. PerformancePoint включает поддержку соединений с многими мерными данными служб Analysis Services. Дополнительные сведения см. в разделе [Создание подключений к данным служб Analysis Services (службы PerformancePoint)](https://go.microsoft.com/fwlink/?linkid=232471).  
   
 ### <a name="sql-server-data-tools"></a>SQL Server Data Tools (SSDT)  
  Конструкторы моделей и отчетов используют средства SQL Server Data Tools для построения решений, которые включают многомерные модели. При развертывании решения в экземпляре служб Analysis Services создается база данных, к которой в дальнейшем производятся подключения из Excel, служб Reporting Services и других клиентских приложений бизнес-аналитики.  

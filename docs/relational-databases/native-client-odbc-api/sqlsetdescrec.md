@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7f13ba1492c3edaeaf179e9bcda0e4df3923f80
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d6ee8de284043d3acf3c0d58eed51e6710ffe51f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669293"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536843"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51669293"
   
  В следующей таблице показано сопоставление между параметрами и полями дескриптора.  
   
-|Параметр|Связанные атрибуты для параметров, не возвращающих табличного значения, включая столбцы параметров с табличными значениями|Связанные атрибуты для возвращающих табличное значение параметров|  
+|Параметр|Связанные атрибуты для не табличное значение параметра, включая столбцы возвращающего табличное значение параметра|Связанные атрибуты для возвращающих табличное значение параметров|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*Тип*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*Подтип*|Не учитывается|Для записей типа SQL_DATETIME и SQL_INTERVAL этот атрибут должен иметь значение SQL_DESC_DATETIME_INTERVAL_CODE.|  

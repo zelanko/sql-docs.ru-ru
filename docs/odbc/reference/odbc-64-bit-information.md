@@ -11,12 +11,12 @@ ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62497d2249131db94d2169e6138a67ee48e73a34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 744a31b805fb46302f4f9ad34a1bc2576a180694
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677732"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321670"
 ---
 # <a name="odbc-64-bit-information"></a>Сведения о 64-разрядном интерфейсе ODBC
 Начиная с Windows Server 2003, поддерживаемые библиотеки ODBC 64-разрядных операционных систем Microsoft. ODBC заголовки и библиотеки, сначала в состав MDAC 2.7 SDK содержат изменения, позволяющий программистам легко написать код для нового 64-разрядных платформах. Убедившись, что код использует ODBC определенных типов, перечисленных ниже, можно скомпилировать одного исходного кода для 64-разрядных и 32-разрядных платформ на основе **_WIN64** или **WIN32** макросы.  
@@ -34,7 +34,7 @@ ms.locfileid: "47677732"
 ## <a name="function-declaration-changes"></a>Изменения объявления функции  
  Для 64-разрядное программирование были изменены следующие сигнатуры функции. Полужирным шрифтом выделены конкретные параметры, которые отличаются.  
   
-```  
+```c
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
    SQLSMALLINT TargetType, SQLPOINTER TargetValuePtr, SQLLEN BufferLength,   SQLLEN * StrLen_or_Ind);  
   
@@ -115,7 +115,7 @@ SQLSetStmtOption (SQLHSTMT StatementHandle, SQLUSMALLINT Option,
 ## <a name="changes-in-sql-data-types"></a>Изменения в типы данных SQL  
  Следующие четыре типа SQL по-прежнему поддерживаются в 32-разрядной. они не определены для 64-разрядных компиляторов. Эти типы больше не используются для любых параметров в MDAC 2.7; Использование этих типов приведет к ошибкам компилятора на 64-разрядных платформах.  
   
-```  
+```cpp
 #ifdef WIN32   
 typedef SQLULEN SQLROWCOUNT;   
 typedef SQLULEN SQLROWSETSIZE;   
@@ -126,7 +126,7 @@ typedef SQLLEN SQLROWOFFSET;
   
  Для 32-разрядных и 64-разрядных компиляторов изменилось определение SQLSETPOSIROW:  
   
-```  
+```c
 #ifdef _WIN64   
 typedef UINT64 SQLSETPOSIROW;   
 #else   
@@ -136,7 +136,7 @@ typedef UINT64 SQLSETPOSIROW;
   
  Для 64-разрядного компилятора были изменены определения SQLLEN и SQLULEN:  
   
-```  
+```c
 #ifdef _WIN64   
 typedef INT64 SQLLEN;   
 typedef UINT64 SQLULEN;   
@@ -148,7 +148,7 @@ typedef UINT64 SQLULEN;
   
  Это значение изменилось, несмотря на то, что SQL_C_BOOKMARK является устаревшей в ODBC 3.0 для 64-разрядные компиляторы на клиентах, в версии 2.0:  
   
-```  
+```c
 #ifdef _WIN64   
 #define SQL_C_BOOKMARK SQL_C_UBIGINT   
 #else   
@@ -158,7 +158,7 @@ typedef UINT64 SQLULEN;
   
  Тип ЗАКЛАДКИ определяется по-разному в более новые заголовки:  
   
-```  
+```c
 typedef SQLULEN BOOKMARK;  
 ```  
   

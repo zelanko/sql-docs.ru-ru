@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -18,12 +16,12 @@ ms.assetid: 209eb175-2514-4de1-bc32-b2e6a469d945
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33c0d43f3be1ca48904a7e4fa130f04ea0cc7445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0be31e67be0b80de13a9239b221ca73436a8d6e7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174984"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813926"
 ---
 # <a name="using-collections"></a>Использование коллекций
   Коллекция — это список объектов одного и того же класса с одним и тем же родительским объектом. Объект коллекции всегда содержит имя типа объекта с суффиксом Collection. Например, для доступа к столбцам заданной таблицы используется тип <xref:Microsoft.SqlServer.Management.Smo.ColumnCollection>. Он содержит все объекты <xref:Microsoft.SqlServer.Management.Smo.Column>, принадлежащие одному и тому же объекту <xref:Microsoft.SqlServer.Management.Smo.Table>.  
@@ -34,12 +32,12 @@ ms.locfileid: "48174984"
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-basic"></a>Ссылка на объект с помощью коллекции в языке Visual Basic  
- Данный пример кода демонстрируется задание свойства столбца с помощью <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, и <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> свойства. Эти свойства представляют собой коллекции, с помощью которых можно указать на конкретный объект при их использовании с именем объекта в качестве параметра. Имя и схема являются обязательными для <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> свойства объекта коллекции.  
+ В данном примере кода демонстрируется задание свойства столбца с помощью свойств <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> и <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>. Эти свойства представляют собой коллекции, с помощью которых можно указать на конкретный объект при их использовании с именем объекта в качестве параметра. Для свойства объекта коллекции <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> требуются имя и схема.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBCollections1](SMO How to#SMO_VBCollections1)]  -->  
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-c"></a>Ссылка на объект с помощью коллекции в языке Visual C#  
- Данный пример кода демонстрируется задание свойства столбца с помощью <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, и <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> свойства. Эти свойства представляют собой коллекции, с помощью которых можно указать на конкретный объект при их использовании с именем объекта в качестве параметра. Имя и схема являются обязательными для <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> свойства объекта коллекции.  
+ В данном примере кода демонстрируется задание свойства столбца с помощью свойств <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> и <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>. Эти свойства представляют собой коллекции, с помощью которых можно указать на конкретный объект при их использовании с именем объекта в качестве параметра. Для свойства объекта коллекции <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> требуются имя и схема.  
   
 ```  
 {   
@@ -54,12 +52,12 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("LastName
 ```  
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-basic"></a>Последовательный перебор элементов коллекции на языке Visual Basic  
- Этот пример кода проходит по <xref:Microsoft.AnalysisServices.Server.Databases%2A> свойство коллекции и отображает все подключения к экземпляру базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ В данном примере кода выполняется итерация по коллекции <xref:Microsoft.AnalysisServices.Server.Databases%2A> и отображаются все подключения базы данных к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBCollections2](SMO How to#SMO_VBCollections2)]  -->  
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-c"></a>Последовательный перебор элементов коллекции на языке Visual C#  
- Этот пример кода проходит по <xref:Microsoft.AnalysisServices.Server.Databases%2A> свойство коллекции и отображает все подключения к экземпляру базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ В данном примере кода выполняется итерация по коллекции <xref:Microsoft.AnalysisServices.Server.Databases%2A> и отображаются все подключения базы данных к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```  
 //Connect to the local, default instance of SQL Server.   

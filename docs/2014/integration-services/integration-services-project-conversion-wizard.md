@@ -13,12 +13,12 @@ ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c00c15a0f5e1c6bc45dbf1d19c216feb468e41fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 252d8c44921db82cc634e17e1628f72f18a066e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194914"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396368"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Мастером преобразования проекта служб Integration Services
   **Мастер преобразования проекта служб Integration Services** преобразует проект в модель развертывания проекта.  
@@ -88,7 +88,7 @@ ms.locfileid: "48194914"
  **Использовать проверку подлинности SQL Server**  
  При соединении пользователя с указанным именем и паролем из ненадежных соединений [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняет проверку подлинности подключения посредством проверки настройки учетной записи входа [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и проверки совпадения указанного пароля с ранее сохраненным. Если в службе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не задана учетная запись входа, проверка подлинности завершается ошибкой, о которой пользователь получит сообщение.  
   
- **Имя пользователя**  
+ **User name**  
  При использовании проверки подлинности SQL Server укажите имя пользователя.  
   
  **Пароль**  
@@ -220,9 +220,9 @@ ms.locfileid: "48194914"
  В диалоговом окне **Задание сведений о параметре** перечислены также типы данных значения параметра и его начальное значение.  
   
 ##  <a name="review"></a> Задание параметров на странице «Просмотр»  
- Подтвердить параметры, которые выбраны для преобразования проекта, можно на странице **Обзор** .  
+ Подтвердить параметры, которые выбраны для преобразования проекта, можно на странице **Обзор**.  
   
- **Previous**  
+ **Назад**  
  Нажмите эту кнопку для изменения параметра.  
   
  **Преобразовать**  
@@ -243,6 +243,6 @@ ms.locfileid: "48194914"
  Нажмите эту кнопку, чтобы сохранить сводку по преобразованию проекта в XML-файл.  
   
 ## <a name="see-also"></a>См. также  
- [Развертывание проектов на сервере служб Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
+ [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

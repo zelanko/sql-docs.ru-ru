@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - relationships staging table [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d9c1622a95adbe667db27ea975783483fe053051
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9db9d44ac174619a8cd0061d048fefe2dfdfa1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107596"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761836"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Промежуточная таблица связей (службы Master Data Services)
   Используйте промежуточную таблицу связей (stg.name_Relationship) в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для изменения расположения элементов в явной иерархии на основе связей между элементами.  
@@ -30,7 +29,7 @@ ms.locfileid: "48107596"
 |Имя столбца|Описание|  
 |-----------------|-----------------|  
 |**Идентификатор**|Автоматически назначенный идентификатор. Не вводите значение в этом поле. Если пакет не обработан, это поле пустое.|  
-|**RelationshipType**<br /><br /> Обязательно|Задаваемый тип связи. Возможны следующие значения:<br /><br /> **1**: Родительский элемент<br /><br /> **2**: одноуровневый элемент|  
+|**RelationshipType**<br /><br /> Обязательно|Задаваемый тип связи. Возможны следующие значения:<br /><br /> **1**: Родительский элемент<br /><br /> **2**: Одноуровневый элемент|  
 |**ImportStatus_ID**<br /><br /> Обязательно|Состояние процесса импорта. Возможны следующие значения:<br /><br /> **0**задается для указания готовности записи к промежуточному хранению;<br /><br /> **1**задается автоматически и указывает на успешное завершение промежуточного процесса записи;<br /><br /> **2**задается автоматически и указывает на ошибку промежуточного процесса записи.|  
 |**Batch_ID**<br /><br /> Требуется только для веб-службы|Автоматически назначаемый идентификатор, группирующий записи для промежуточного хранения. Всем элементам в пакете назначен этот идентификатор, который отображается в пользовательском интерфейсе [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] в столбце **ID** .<br /><br /> Если пакет не обработан, это поле пустое.|  
 |**BatchTag**<br /><br /> Требуется, за исключением веб-службы|Уникальное имя для данного пакета, до 50 символов.|  
@@ -38,12 +37,12 @@ ms.locfileid: "48107596"
 |**ParentCode**<br /><br /> Обязательно|Для связи родительский-дочерний элемент код объединенного элемента, который должен стать родительским для дочернего или объединенного элемента.<br /><br /> Для одноуровневых отношений код одного из одноуровневых элементов.|  
 |**ChildCode**<br /><br /> Обязательно|Для связи родительский-дочерний элемент код объединенного или конечного элемента, который должен стать дочерним элементом.<br /><br /> Для одноуровневых отношений код одного из одноуровневых элементов.|  
 |**Порядок сортировки**<br /><br /> Необязательно|Целое число, указывающее порядковый номер элемента относительно других элементов на уровнях ниже родителя. У всех дочерних элементов должен быть уникальный идентификатор.|  
-|**ErrorCode**|Отображает код ошибки. Для всех записей со значением **ImportStatus_ID** , равным **2**, см. раздел [Staging Process Errors &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md).|  
+|**ErrorCode**|Отображает код ошибки. Для всех записей со значением **ImportStatus_ID** , равным **2**, см. раздел [Ошибки промежуточного процесса (службы Master Data Services)](staging-process-errors-master-data-services.md).|  
   
 ## <a name="see-also"></a>См. также  
  [Перемещение элементов явной иерархии с помощью промежуточного процесса &#40;службы Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
  [Импорт данных &#40;службы Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [Просмотр ошибок, возникающих в ходе промежуточного процесса &#40;службы Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
- [Ошибки промежуточного процесса &#40;службы Master Data Services&#41;](staging-process-errors-master-data-services.md)  
+ [Ошибки промежуточного процесса (службы Master Data Services)](staging-process-errors-master-data-services.md)  
   
   

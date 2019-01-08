@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 42af33d78a13961b7a85ae408a3c693edf759e75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667993"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408871"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Настройка общего диска кластера SLES для SQL Server
 
@@ -102,7 +102,7 @@ ms.locfileid: "51667993"
 
 ### <a name="configure-an-nfs-server"></a>Настройка NFS-сервера
 
-Чтобы настроить NFS-сервер, см. в разделе инструкциям ниже, в документации по SUSE: [Настройка NFS-сервер](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
+Чтобы настроить NFS-сервер, см. следующие действия в документации по SUSE: [Настройка сервера NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
 
 ### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Настройки всех узлов кластера для подключения к хранилищу общих NFS
 
@@ -123,7 +123,7 @@ ms.locfileid: "51667993"
     - [Настройка клиентов](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > Мы рекомендуем следовать рекомендации и рекомендаций по использованию хранилища высокой доступных NFS SUSE: [высокодоступное хранилище NFS с DRBD и Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
+    > Мы рекомендуем следовать рекомендации и рекомендаций по использованию хранилища высокой доступных NFS SUSE: [Хранилище высокой доступности NFS с DRBD и Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
 
 2. Проверьте, что SQL Server успешно начинается новый путь к файлу. Для этого на каждом узле. На этом этапе только один узел должен запустить SQL Server за раз. Они оба невозможна, в то же время, так как они оба попытается получить доступ к файлам данных одновременно (Чтобы избежать случайного запуск SQL Server на обоих узлах, убедитесь, что ресурс не подключен дважды с различными узлами с помощью ресурса кластера файловой системы). Следующие команды запуска SQL Server, проверьте состояние и затем остановить SQL Server.
 
@@ -196,8 +196,8 @@ ms.locfileid: "51667993"
 
 Ниже объясняется, как настроить ресурс кластера для SQL Server. Существует два параметра, которые нужно настроить.
 
-- **Имя ресурса SQL Server**: имя кластеризованного ресурса SQL Server. 
-- **Значение времени ожидания**: значение времени ожидания — это количество времени, которое кластера ожидает, пока ресурс будет подключен к сети. Для SQL Server, это время, когда предполагается, что SQL Server, чтобы перевести `master` базы данных в сети. 
+- **Имя ресурса SQL Server**: Имя кластеризованного ресурса SQL Server. 
+- **Значение времени ожидания**: Значение времени ожидания — это количество времени, которое кластера ожидает, пока ресурс будет подключен к сети. Для SQL Server, это время, когда предполагается, что SQL Server, чтобы перевести `master` базы данных в сети. 
 
 Обновите значения из следующий сценарий для вашей среды. Запустите на одном узле, настройки и запуска кластерной службы.
 
@@ -248,7 +248,7 @@ Full list of resources:
 
 ## <a name="managing-cluster-resources"></a>Управление кластерными ресурсами
 
-Управление ресурсами кластера, см. в следующем разделе SUSE: [управление ресурсами кластера](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+Управление ресурсами кластера, см. в следующем разделе SUSE: [Управление кластерными ресурсами](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### <a name="manual-failover"></a>Отработка отказа вручную
 

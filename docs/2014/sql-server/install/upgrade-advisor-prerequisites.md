@@ -20,12 +20,12 @@ ms.assetid: d21a39e5-5f81-4096-a7dd-f244e4779992
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 130059c64357d36ddf6c5eea7e27b15b0e42778c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e3043eb9b2f4f45ef93b9c6aeacd3b2c713b3c2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148514"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357635"
 ---
 # <a name="upgrade-advisor-prerequisites"></a>Компоненты, необходимые для помощника по обновлению
   В этом разделе описываются программные требования помощника по обновлению.  
@@ -35,15 +35,15 @@ ms.locfileid: "48148514"
   
 -   [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] с пакетом обновления 1 (SP1), [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], начиная с версии с пакетом обновления 2 (SP2), Windows 7 или [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] R2.  
   
--   Установщик Windows 4.5. Вы можете установить установщик Windows из [веб-установщик Windows сайт](http://go.microsoft.com/fwlink/?LinkId=49112).  
+-   Установщик Windows 4.5. Вы можете установить установщик Windows из [веб-установщик Windows сайт](https://go.microsoft.com/fwlink/?LinkId=49112).  
   
--   Платформа [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], начиная с версии Microsoft .NET Framework 4. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Можно найти в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] носителе продукта и из [веб-сайте загрузки SDK, распространяемые и пакет обновления](http://go.microsoft.com/fwlink/?LinkId=48882).  
+-   Платформа [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], начиная с версии Microsoft .NET Framework 4. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Можно найти в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] носителе продукта и из [веб-сайте загрузки SDK, распространяемые и пакет обновления](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
     -   Чтобы установить платформу .NET Framework 4 с установочного диска [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], перейдите в корневой каталог диска. Откройте папку «\redist», а затем папку «DotNetFrameworks», после чего запустите файл dotNetFx40_Full_x86_x64.exe (для 32-разрядных и 64-разрядных версий операционных систем).  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom является необходимым условием для установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] помощника по обновлению и не устанавливается программой установки помощника по обновлению. Программа установки потребует загрузить и установить [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] пакета дополнительных компонентов.  
   
 ## <a name="see-also"></a>См. также  
- [Установка помощника по обновлению](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  
+ [Как Установить помощник по обновлению](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  
   
   

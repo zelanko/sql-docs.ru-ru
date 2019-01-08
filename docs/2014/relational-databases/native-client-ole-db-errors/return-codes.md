@@ -22,17 +22,17 @@ ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a84ad46068260524a2e6232ca668da445447529
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 625d56a38d88b3cccbea1c75ad88917af1a6f6dd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207424"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368096"
 ---
 # <a name="return-codes"></a>Коды возврата
   Для краткости можно сказать, что вызов функции-члена класса или структуры завершается успешно либо с ошибкой. Точнее сказать, вызов функции может оказаться успешным, но результат оказывается не таким, на какой рассчитывал разработчик приложения.  
   
- Дополнительные сведения о кодах возврата OLE DB см. в статье [Коды возврата (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631).  
+ Дополнительные сведения о кодах возврата OLE DB см. в статье [Коды возврата (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
   
  Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функция-член поставщика OLE DB для собственного клиента вернет результат S_OK, функции был успешным.  
   

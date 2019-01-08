@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
@@ -14,12 +13,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a03d530c5dc6ca964d35df5ee67a932ddea3a6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8f239afa5d26ee4a3d6d97a24f58a46f1e3334
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175385"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370206"
 ---
 # <a name="system-settings-master-data-services"></a>Системные параметры (службы Master Data Services)
   Для всех веб-приложений и веб-служб, связанных с базой данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , можно задавать системные настройки.  
@@ -79,7 +78,7 @@ ms.locfileid: "48175385"
   
 |Параметр диспетчера конфигурации|Системный параметр|Описание|  
 |-----------------------------------|--------------------|-----------------|  
-|**Количество элементов в иерархии, задаваемое по умолчанию**|**HierarchyChildNodeLimit**|В функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** определяет максимальное количество элементов, которые отображаются в каждом узле иерархии до появления ссылки **…еще…** (…). Ссылку **…еще…** можно щелкнуть для отображения следующей группы элементов. Значение по умолчанию — **50**.|  
+|**Количество элементов в иерархии, задаваемое по умолчанию**|**HierarchyChildNodeLimit**|В функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Обозреватель** отображается максимальное количество элементов, которые отображаются в каждом узле иерархии до появления ссылки **…еще…**. Ссылку **…еще…** можно щелкнуть для отображения следующей группы элементов. Значение по умолчанию — **50**.|  
 |**Отображать имена в иерархии по умолчанию**|**ShowNamesInHierarchy**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, determines the default setting that is selected when you view hierarchies.<br /><br /> Значение по умолчанию — **Да** или **1**, что задает отображение имени и кода каждого элемента. Измените значение на **Нет** или **2** , чтобы отображать только код.|  
 |**Количество атрибутов на основе домена в списке**|**DBAListRowLimit**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. Значение по умолчанию — **50**. Если имеется более 50 элементов, вместо этого отображается диалоговое окно с возможностью поиска.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|Определяет функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the level of similarity used when using the **Matches** filter criteria. Значение по умолчанию — **0,3**. При выборе значения ближе к **1** возвращаются элементы, более соответствующие указанным критериям. Задайте значение **1** для точного сопоставления.|  
@@ -107,8 +106,8 @@ ms.locfileid: "48175385"
 |**URL-адрес диспетчера основных данных для уведомлений**|**MDMRootURL**|URL-адрес для веб-приложения [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], используемый в ссылке в уведомлениях, передаваемых по электронной почте, например http://constoso/mds.|  
 |**Интервал передачи уведомлений по электронной почте**|**NotificationInterval**|Частота отправки уведомлений по электронной почте в секундах. Значение по умолчанию — **120** секунд (2 минуты).|  
 |**Число уведомлений в одном сообщении электронной почты**|**NotificationsPerEmail**|Максимальное число ошибок проверки, которые могут быть перечислены в одном уведомлении по электронной почте. Остальные ошибки, если они есть, не будут включены в сообщение электронной почты, но с ними можно ознакомиться в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
-|**Формат сообщений электронной почты по умолчанию**|**EmailFormat**|Формат для всех уведомлений по электронной почте. Значение по умолчанию — **HTML** или **1**. Значение **2** этого параметра базы данных означает **Текст**.<br /><br /> Примечание. Этот формат можно переопределить для отдельного пользователя в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], изменив и сохранив **Формат электронной почты** на вкладке **Общие** пользователя.|  
-|**Регулярное выражение для адреса электронной почты**|**EmailRegExPattern**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. Дополнительные сведения о регулярных выражениях см. в разделе [Элементы языка регулярных выражений](http://go.microsoft.com/fwlink/?LinkId=164401) библиотеки MSDN.|  
+|**Формат сообщений электронной почты по умолчанию**|**EmailFormat**|Формат для всех уведомлений по электронной почте. Значение по умолчанию — **HTML** или **1**. Значение **2** этого параметра базы данных означает **Текст**.<br /><br /> Примечание. Этот параметр можно переопределить для отдельного пользователя в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], изменив и сохранив **формат сообщения электронной почты** на пользователя **Общие** вкладки.|  
+|**Регулярное выражение для адреса электронной почты**|**EmailRegExPattern**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. Дополнительные сведения о регулярных выражениях см. в разделе [Элементы языка регулярных выражений](https://go.microsoft.com/fwlink/?LinkId=164401) библиотеки MSDN.|  
 |**Учетная запись компонента Database Mail**|**EmailProfilePrincipalAccount**|Отображает учетную запись компонента Database Mail, которая используется при отправке уведомлений по электронной почте. Профиль по умолчанию — **mds_email_user**.|  
 |**Профиль компонента Database Mail**|**DatabaseMailProfile**|Профиль компонента Database Mail, который используется при отправке уведомлений по электронной почте. Значение по умолчанию — пусто.|  
 ||**ValidationIssueHTML**|В формате HTML — текст сообщения электронной почты, которое получают пользователи при сбое проверки бизнес-правила.|  
@@ -145,7 +144,7 @@ ms.locfileid: "48175385"
   
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
-## <a name="see-also"></a>См. также  
- [Защита объектов базы данных &#40;службы Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Защита объектов базы данных (службы Master Data Services)](../../2014/master-data-services/database-object-security-master-data-services.md)  
   
   

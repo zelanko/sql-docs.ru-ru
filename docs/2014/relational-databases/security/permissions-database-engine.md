@@ -18,12 +18,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 21119211d750b8443d0f463e5b6dd3e407bd248b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141974"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355016"
 ---
 # <a name="permissions-database-engine"></a>Разрешения (ядро СУБД)
   С каждым защищаемым объектом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] связаны разрешения, которые могут быть предоставлены участнику. В данном подразделе содержатся следующие сведения.  
@@ -92,25 +92,25 @@ ms.locfileid: "48141974"
      Разрешение REFERENCES для объекта необходимо для создания FUNCTION или VIEW с предложением 2 `WITH SCHEMABINDING` , которое ссылается на этот объект.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Диаграмма разрешений SQL Server  
- Схему плакатного размера всех разрешений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в формате PDF см. по ссылке [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ Схему плакатного размера всех разрешений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в формате PDF см. по ссылке [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ##  <a name="_securables"></a> Разрешения, применяемые к конкретным защищаемым объектам  
  В следующей таблице перечислены главные классы разрешений и защищаемых объектов, к которым эти разрешения могут применяться.  
   
-|Разрешение|Область применения|  
+|Разрешение|Применение|  
 |----------------|----------------|  
 |SELECT|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Функции [!INCLUDE[tsql](../../includes/tsql-md.md)] с табличным значением и среды CLR, а также столбцы<br /><br /> Представления и столбцы|  
 |VIEW CHANGE TRACKING|Таблицы<br /><br /> Схемы|  
 |UPDATE|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Представления и столбцы<br /><br /> Объекты последовательности|  
-|REFERENCES|Скалярные и агрегатные функции ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Таблицы и столбцы<br /><br /> Функции, возвращающие табличные значения ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR) и столбцы<br /><br /> Типы<br /><br /> Представления и столбцы<br /><br /> Объекты последовательности|  
+|REFERENCES|Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Таблицы и столбцы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR) и столбцы<br /><br /> Типы<br /><br /> Представления и столбцы<br /><br /> Объекты последовательности|  
 |INSERT|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Представления и столбцы|  
 |DELETE|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Представления и столбцы|  
-|EXECUTE|Процедуры ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Скалярные и агрегатные функции ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Синонимы<br /><br /> Типы CLR|  
+|EXECUTE|Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Синонимы<br /><br /> Типы CLR|  
 |RECEIVE|Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
-|VIEW DEFINITION|Группы доступности<br /><br /> Процедуры ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Скалярные и агрегатные функции ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции, возвращающие табличные значения ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
-|ALTER|Группы доступности<br /><br /> Процедуры ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Скалярные и агрегатные функции ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Объекты последовательности<br /><br /> Имена входа, пользователи и роли<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Таблицы<br /><br /> Функции, возвращающие табличные значения ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Представления|  
-|TAKE OWNERSHIP|Группы доступности<br /><br /> роли<br /><br /> Процедуры ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Скалярные и агрегатные функции ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> роли сервера;<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции, возвращающие табличные значения ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
-|CONTROL|Группы доступности<br /><br /> Процедуры ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Скалярные и агрегатные функции ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции, возвращающие табличные значения ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
+|VIEW DEFINITION|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
+|ALTER|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Объекты последовательности<br /><br /> Имена входа, пользователи и роли<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления|  
+|TAKE OWNERSHIP|Группы доступности<br /><br /> Роли<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> роли сервера;<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
+|CONTROL|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
 |IMPERSONATE|Имена входа и пользователи|  
   
 > [!CAUTION]  
@@ -157,7 +157,7 @@ ms.locfileid: "48141974"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Примечание: Применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Примечание. Относится только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "48141974"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Примечание: Применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Примечание. Относится только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ ms.locfileid: "48141974"
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Примечание: Применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Использование ALTER ANY CONNECTION в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Примечание. Относится только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Использование ALTER ANY CONNECTION в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  

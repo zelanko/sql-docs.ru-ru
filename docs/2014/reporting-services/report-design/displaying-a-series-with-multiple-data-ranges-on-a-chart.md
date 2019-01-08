@@ -11,12 +11,12 @@ ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 153a7dfafea308c57dd933de633a016871e32e6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5397095cc8577b174925bea234cbe54c2c49456b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221134"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373916"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>Отображение на диаграмме ряда с несколькими диапазонами данных (построитель отчетов и службы SSRS)
   Диаграмма использует минимальное и максимальное значения ряда для вычисления масштаба оси диаграммы. Если ряд, выводимый на диаграмме, содержит несколько диапазонов данных, точки данных могут перекрываться, и на диаграмме будут отчетливо видны лишь некоторые из них. Допустим, в отчете содержатся данные о ежедневных продажах за 30 дней.  
@@ -46,7 +46,7 @@ ms.locfileid: "48221134"
   
  Если включена возможность разрыва шкалы, но разрыв шкалы не появляется, хотя между диапазонами достаточно большой зазор, следует установить для свойства CollapsibleSpaceThreshold значение меньше 25. Свойство CollapsibleSpaceThreshold указывает, какой процент пространства, которое можно сократить, должен разделять диапазоны данных. Дополнительные сведения см. в разделе [Добавление в диаграмму разрывов шкалы (построитель отчетов и службы SSRS)](add-scale-breaks-to-a-chart-report-builder-and-ssrs.md).  
   
- Поддерживается до пяти разрывов шкалы на диаграмму; однако диаграмма с несколькими разрывами шкалы становится нечитаемой. Если диапазонов больше двух, возможно, для вывода этих данных лучше подойдет другой метод. Дополнительные сведения см. в разделе [Несколько рядов на диаграмме (построитель отчетов и службы SSRS)](multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+ Поддерживается до пяти разрывов шкалы на диаграмму; однако диаграмма с несколькими разрывами шкалы становится нечитаемой. Если диапазонов больше двух, возможно, для вывода этих данных лучше подойдет другой метод. Дополнительные сведения см. в разделе [несколько рядов на диаграмме &#40;построитель отчетов и службы SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="unsupported-scale-break-scenarios"></a>Случаи, когда разрывы шкалы не поддерживаются  
  Разрывы шкалы не поддерживаются на диаграммах в следующих случаях.  
@@ -59,14 +59,14 @@ ms.locfileid: "48221134"
   
 -   Диаграмма относится к одному из следующих типов: полярная, круговая, воронкообразная, пирамидальная или любая диаграмма с накоплением.  
   
- Пример диаграммы с разрывами шкалы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Пример диаграммы с разрывами шкалы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 ## <a name="see-also"></a>См. также  
- [Несколько рядов на диаграмме &#40;построитель отчетов и службы SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [Несколько рядов на диаграмме (построитель отчетов и службы SSRS)](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [Объемные эффекты рельефа, объемные и другие эффекты в диаграмме &#40;построитель отчетов и службы SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [Эффекты рельефа, объемные и другие эффекты в диаграмме (построитель отчетов и службы SSRS)](chart-effects-3d-bevel-and-other-report-builder.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
- [Сбор мелких срезов на круговой диаграмме &#40;построитель отчетов и службы SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
+ [Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

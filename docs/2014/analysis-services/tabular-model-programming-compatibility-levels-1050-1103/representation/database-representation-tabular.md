@@ -12,12 +12,12 @@ ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02fd33d8adf1ccee042f09c8b102401d5ba94435
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4470dc85b33930e136a9c2c1bbf47b1597753be5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116286"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519884"
 ---
 # <a name="database-representationtabular"></a>Представление базы данных (табличное)
   В табличном режиме база данных является контейнером для всех объектов табличной модели.  
@@ -38,10 +38,10 @@ ms.locfileid: "48116286"
   
 ```csharp  
 using ADOMD = Microsoft.AnalysisServices.AdomdClient;  
-…  
+...  
    ADOMD.AdomdConnection currrentCnx = new ADOMD.AdomdConnection("Data Source=<<server\instance>>;Catalog=<<database>>");  
    currrentCnx.Open();  
-…  
+...  
   
 ```  
   
@@ -55,7 +55,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>База данных в объектах AMO  
  При использовании объектов AMO для управления объектом базы данных начните с объекта <xref:Microsoft.AnalysisServices.Server>. Затем найдите свою базу данных в коллекции баз данных или создайте новую базу данных, добавив ее в коллекцию.  
   
- В следующем фрагменте кода показаны действия по подключению к серверу и созданию пустой базы данных после того, как проверка показала, что она не существует.  
+ В следующем фрагменте кода показано, как подключиться к серверу и создать пустую базу данных, после проверки того, база данных не существует:  
   
 ```  
   
@@ -88,6 +88,6 @@ catch (Exception createDBxc)
   
 ```  
   
- Практические лучше понять, о том, как использовать объекты AMO для создания и обработки представлений базы данных, см. в статье исходный код в образце Tabular AMO 2012; частности, обратите внимание на следующий файл: Database.cs. Образец кода приведен только для иллюстрации описываемых здесь логических концепций и не должен использоваться в рабочей среде.  
+ Чтобы получить практический опыт использования объектов AMO для создания представлений баз данных и управления ими, см. образец исходного кода Tabular AMO 2012. В частности, обратите внимание на следующий исходный код: Database.cs. Образец кода приведен только для иллюстрации описываемых здесь логических концепций и не должен использоваться в рабочей среде.  
   
   

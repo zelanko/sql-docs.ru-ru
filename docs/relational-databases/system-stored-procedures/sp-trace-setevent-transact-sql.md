@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739912"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266105"
 ---
 # <a name="sptracesetevent-transact-sql"></a>Хранимая процедура sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -208,18 +208,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|Возникает при создании, изменении и удалении участников [системы безопасности] на уровне сервера.|  
 |178|Audit Database Operation Event|Возникает при таких операциях базы данных, как уведомление запроса контрольной точки или подписки.|  
 |180|Audit Database Object Access Event|Возникает при доступе к таким объектам базы данных, как схема.|  
-|181|TM: Begin Tran starting|Возникает при запуске запроса BEGIN TRANSACTION.|  
-|182|TM: Begin Tran завершена|Возникает при завершении запроса BEGIN TRANSACTION.|  
-|183|TM: Promote Tran starting|Возникает при запуске запроса PROMOTE TRANSACTION.|  
-|184|TM: Promote Tran завершена|Возникает при завершении запроса PROMOTE TRANSACTION.|  
-|185|TM: Commit Tran starting|Возникает при запуске запроса COMMIT TRANSACTION.|  
-|186|TM: Commit Tran завершена|Возникает при завершении запроса COMMIT TRANSACTION.|  
-|187|TM: Rollback Tran starting|Возникает при запуске запроса ROLLBACK TRANSACTION.|  
-|188|TM: Rollback Tran завершена|Возникает при завершении запроса ROLLBACK TRANSACTION.|  
+|181|События класса TM: Begin Tran starting|Возникает при запуске запроса BEGIN TRANSACTION.|  
+|182|События класса TM: Begin Tran completed|Возникает при завершении запроса BEGIN TRANSACTION.|  
+|183|События класса TM: Promote Tran starting|Возникает при запуске запроса PROMOTE TRANSACTION.|  
+|184|События класса TM: Promote Tran completed|Возникает при завершении запроса PROMOTE TRANSACTION.|  
+|185|События класса TM: Commit Tran starting|Возникает при запуске запроса COMMIT TRANSACTION.|  
+|186|События класса TM: Commit Tran completed|Возникает при завершении запроса COMMIT TRANSACTION.|  
+|187|События класса TM: Rollback Tran starting|Возникает при запуске запроса ROLLBACK TRANSACTION.|  
+|188|События класса TM: Rollback Tran completed|Возникает при завершении запроса ROLLBACK TRANSACTION.|  
 |189|Lock: Timeout (timeout > 0)|Возникает при истечении времени ожидания запроса на блокировку ресурса, например страницы.|  
-|190|Progress Report: Операции с индексами|Сообщает о ходе выполнения операции построения в сети индекса при работающем процессе построения.|  
-|191|TM: Save Tran starting|Возникает при запуске запроса SAVE TRANSACTION.|  
-|192|TM: Save Tran завершена|Возникает при завершении запроса SAVE TRANSACTION.|  
+|190|Класс событий Progress Report: Online Index Operation|Сообщает о ходе выполнения операции построения в сети индекса при работающем процессе построения.|  
+|191|События класса TM: Save Tran starting|Возникает при запуске запроса SAVE TRANSACTION.|  
+|192|События класса TM: Save Tran completed|Возникает при завершении запроса SAVE TRANSACTION.|  
 |193|Background Job Error|Возникает при аварийном завершении фонового задания.|  
 |194|OLEDB Provider Information|Возникает, если запускается распределенный запрос, который собирает сведения, относящиеся к соединению поставщика.|  
 |195|Mount Tape|Возникает при получении запроса на монтирование ленты.|  
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|Bitmap Warning|Указывает, что в запросе отключена фильтрация по битовым картам.|  
 |213|Database Suspect Data Page|Указывает, при добавлении страницы **suspect_pages** в таблицу **msdb**.|  
 |214|CPU Threshold Exceeded|Указывает, что регулятор ресурсов обнаружил запрос, превышающий пороговое значение загрузки ЦП (заданное в параметре REQUEST_MAX_CPU_TIME_SEC).|  
-|215|Указывает на запуск триггера LOGON или функции-классификатора регулятора ресурсов.|Указывает на запуск триггера LOGON или функции-классификатора регулятора ресурсов.|  
+|215|PreConnect:Starting|Указывает на запуск триггера LOGON или функции-классификатора регулятора ресурсов.|  
 |216|PreConnect:Completed|Указывает на завершение работы триггера LOGON или функции-классификатора регулятора ресурсов.|  
 |217|Plan Guide Successful|Указывает, что в SQL Server успешно создан план выполнения для запроса или пакета, в котором содержится структура плана.|  
 |218|Plan Guide Unsuccessful|Указывает, что SQL Server не удалось создать план выполнения для запроса или пакета, в котором содержится структура плана. SQL Server выполнил попытку создать план выполнения для этого запроса или пакета без применения структуры плана. Эту проблему могла вызвать недопустимая структура плана. Структуры планов можно проверить при помощи системной функции sys.fn_validate_plan_guide.|  

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHsyscolumns
@@ -19,12 +18,12 @@ ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0e9e69891e759468ab0ae62a59c2fc61a19a9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74116af7883c4b9a3f27c2afed88d16c993198ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668882"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747893"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47668882"
 |**xtype**|**tinyint**|Тип физического хранилища из [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|Идентификатор расширенного определяемого пользователем типа данных.|  
-|**Длина**|**bigint**|Максимальная длина физического хранилища из [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**length**|**bigint**|Максимальная длина физического хранилища из [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**XScale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**идентификатора столбца**|**int**|Идентификатор столбца или параметра.|  
@@ -48,7 +47,7 @@ ms.locfileid: "47668882"
 |**colstat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|Идентификатор значения по умолчанию для этого столбца.|  
 |**Домен**|**int**|Идентификатор правила или ограничения CHECK для этого столбца.|  
-|**номер**|**int**|Номер подпроцедуры, если процедура сгруппирована (**0** для непроцедурных записей).|  
+|**number**|**int**|Номер подпроцедуры, если процедура сгруппирована (**0** для непроцедурных записей).|  
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|Сдвиг в строке, в которой встречается этот столбец.|  
@@ -59,7 +58,7 @@ ms.locfileid: "47668882"
 |**usertype**|**tinyint**|Идентификатор типа пользовательских данных из [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|Степень точности для данного столбца.|  
-|**Масштаб**|**int**|Шкала для данного столбца.|  
+|**масштаб**|**int**|Шкала для данного столбца.|  
 |**iscomputed**|**int**|Признак, по которому определяется, является ли столбец вычисляемым:<br /><br /> **0** = невычисляемого.<br /><br /> **1** = вычисляемый.|  
 |**isoutparam**|**int**|Указывает, относится ли параметр процедуры к выходным параметрам:<br /><br /> **1** = true.<br /><br /> **0** = false.|  
 |**IsNullable**|**int**|Указывает, допускает ли столбец значения NULL:<br /><br /> **1** = true.<br /><br /> **0** = false.|  

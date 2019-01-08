@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5b4eb865c8c0498e72943c128ff0106638005166
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018339"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980050"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,22 +117,22 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Определенный пользователем идентификатор события передается в качестве аргумента для **sp_audit_write**. **NULL** для системных событий (по умолчанию) и ненулевой идентификатор для определяемого пользователем события. Дополнительные сведения см. в разделе [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Используется для записи любой дополнительной информации, которую пользователю необходимо записать в |журнал аудита с помощью **sp_audit_write** хранимой процедуры.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | **Применяется к**: только SQL Server (начиная с 2016) |  
-|transaction_id |**bigint** | **Применяется к**: только SQL Server (начиная с 2016) |  
-|client_ip |**nvarchar(128)** | **Применяется к**: база данных SQL Azure и экземпляр SQL Server (начиная с 2017) |  
-|application_name |**nvarchar(128)** | **Применяется к**: база данных SQL Azure и экземпляр SQL Server (начиная с 2017) |  
-|duration_milliseconds |**bigint** | **Применяется к**: только база данных Azure SQL |  
-|response_rows |**bigint** | **Применяется к**: только база данных Azure SQL |  
-|affected_rows |**bigint** | **Применяется к**: только база данных Azure SQL |  
-|connection_id |GUID | **Применяется к**: только база данных Azure SQL |
-|data_sensitivity_information |nvarchar(4000) | **Применяется к**: только база данных Azure SQL |
+|sequence_group_id |**varbinary** | **Область применения**: Только SQL Server (начиная с 2016) |  
+|transaction_id |**bigint** | **Область применения**: Только SQL Server (начиная с 2016) |  
+|client_ip |**nvarchar(128)** | **Область применения**: Azure SQL DB и экземпляр SQL Server (начиная с 2017) |  
+|application_name |**nvarchar(128)** | **Область применения**: Azure SQL DB и экземпляр SQL Server (начиная с 2017) |  
+|duration_milliseconds |**bigint** | **Область применения**: Только база данных Azure SQL |  
+|response_rows |**bigint** | **Область применения**: Только база данных Azure SQL |  
+|affected_rows |**bigint** | **Область применения**: Только база данных Azure SQL |  
+|connection_id |GUID | **Область применения**: Только база данных Azure SQL |
+|data_sensitivity_information |nvarchar(4000) | **Область применения**: Только база данных Azure SQL |
   
 ## <a name="remarks"></a>Примечания  
  Если *file_pattern* аргумент, передаваемый **fn_get_audit_file** ссылается на путь или файл, который не существует, или если файл не является файлом аудита, **MSG_INVALID_AUDIT_FILE**возвращается сообщение об ошибке.  
   
 ## <a name="permissions"></a>Разрешения  
- - **SQL Server**: требуется **CONTROL SERVER** разрешение.  
- - **База данных SQL Azure**: требуется **базы данных системы УПРАВЛЕНИЯ** разрешение.     
+ - **SQL Server**: Требуется разрешение **CONTROL SERVER** .  
+ - **База данных Azure SQL**: Требуется **базы данных системы УПРАВЛЕНИЯ** разрешение.     
     - Администраторы серверов могут обращаться к журналам аудита всех баз данных на сервере.
     - Администраторы серверов не имеет доступ только к журналам аудита из текущей базы данных.
     - Большие двоичные объекты, которые не соответствуют приведенным выше критериям будут пропущены (список пропущенных больших двоичных объектов отображается в выходном сообщении запроса), и функция возвратит журналы только из больших двоичных объектов, для которых разрешен доступ.  
@@ -141,10 +141,10 @@ fn_get_audit_file ( file_pattern,
 
 - **SQL Server**
 
-  В следующем примере выполняется чтение из файла, который имеет имя `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
+  В следующем примере выполняется чтение из файла, который имеет имя `\\serverName\Audit\HIPAA_AUDIT.sqlaudit`.  
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
@@ -14,12 +13,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 620ef0344e155f7bc5ad423d66d5982959176706
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efab3218e3b4ee94af22c5fe52c9c4183666c54d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185584"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794996"
 ---
 # <a name="create-a-model-master-data-services"></a>Создание модели (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]модель создается для того, чтобы содержать объекты.  
@@ -49,11 +48,11 @@ ms.locfileid: "48185584"
   
 ## <a name="next-steps"></a>Следующие шаги  
   
--   [Создать сущность &#40;службы Master Data Services&#41;](create-an-entity-master-data-services.md)  
+-   [Создание сущности (службы Master Data Services)](create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
- [Модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
- [Сущности &#40;службы Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
+## <a name="see-also"></a>См. также:  
+ [Модели (службы Master Data Services)](../../2014/master-data-services/models-master-data-services.md)   
+ [Сущности (службы Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)   
  [Удаление модели (службы Master Data Services)](../../2014/master-data-services/delete-a-model-master-data-services.md)   
  [Изменение имени модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)  
   

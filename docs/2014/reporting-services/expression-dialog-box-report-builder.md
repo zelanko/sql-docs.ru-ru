@@ -15,12 +15,12 @@ ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6df6a544e02eeef685234fad0ca11d0bc898e617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44c99dd44a39aa2008f5e276cde79bb51b6d4d51
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220904"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590618"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Диалоговое окно «Выражение» (построитель отчетов)
   Используйте **выражение** диалоговое окно, чтобы написать [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] свойств элемента выражения для отчетов. Выражения можно использовать для задания многих свойств, в том числе цвета, шрифта, границ. Во время выполнения обработчик отчета вычисляет выражения и заменяет их результатами значения свойств.  
@@ -30,11 +30,11 @@ ms.locfileid: "48220904"
 ## <a name="expression-constructs"></a>Конструкции выражения  
  Выражения начинаются со знака равенства (=) и могут содержать константы, литералы, операторы и ссылки на встроенные поля, встроенные коллекции, встроенные функции, функции библиотеки времени выполнения [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], классы среды CLR платформы [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] и пользовательские функции. В следующем списке перечислены категории и значения, которые можно добавить в выражение.  
   
- **Задать выражение для:***\<Имя_свойства >*   
+ **Задать выражение для:**  _\<Имя_свойства >_  
  Имя свойства, для которого задается выражение. Кроме того, это свойство можно установить в панели свойств по его имени.  
   
  **Константы**  
- Предоставляет список стандартных значений, допустимых для свойств, основанных на константах. Например, свойство, основанное на цвете, отображает допустимые имена цветов. Для свойства, которое является типом данных Boolean, значениями являются `True` и `False`.  
+ Предоставляет список стандартных значений, допустимых для свойств, основанных на константах. Например, свойство, основанное на цвете, отображает допустимые имена цветов. Для свойства логического типа значения равны `True` и `False`.  
   
  Не всем элементам, поддерживающим выражения, можно присвоить значение константы. Если свойству нельзя присвоить значение константы, это указывается в панели описания.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48220904"
  **Параметры**  
  Содержит список параметров отчета.  
   
- **Поля (**  *\<выбранный набор данных >* **)**  
+ **Поля (**  _\<выбранный набор данных >_ **)**  
  Отображает список полей для набора данных, выбранного в категории «Наборы данных». Дважды щелкните поле, чтобы скопировать его в окно **Выражение** .  
   
  **Наборы данных**  
@@ -83,12 +83,12 @@ ms.locfileid: "48220904"
 ## <a name="see-also"></a>См. также  
  [Выражения (построитель отчетов и службы SSRS)](report-design/expressions-report-builder-and-ssrs.md)   
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Форматирование чисел и дат &#40;построитель отчетов и службы SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Форматирование чисел и дат (построитель отчетов и службы SSRS)](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Ссылки на коллекцию параметров (построитель отчетов и службы SSRS)](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Примеры уравнений фильтра &#40;построитель отчетов и службы SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Ссылки на коллекцию полей набора данных &#40;построитель отчетов и службы SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
- [Справочник по агрегатным функциям &#40;построитель отчетов и службы SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Цвет-диалоговое окно выбора &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
   

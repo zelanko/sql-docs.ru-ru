@@ -1,20 +1,21 @@
 ---
-title: Как выполнить запрос Oracle из больших данных кластера SQL Server | Документация Майкрософт
+title: Запрос внешних данных Oracle
+titleSuffix: SQL Server 2019 big data clusters
 description: Этом руководстве показано, как запрашивать данные Oracle из кластера SQL Server 2019 больших данных (Предварительная версия). Создайте внешнюю таблицу данных в Oracle и выполняют запрос.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/12/2018
+ms.date: 12/12/2018
 ms.topic: tutorial
-ms.prod: sql
-ms.openlocfilehash: 7f5383a6faf13f0454439a42efb7524eaeda7c76
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: f7a367a41814a7cb590276b10fcfb7c4c8697011
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644250"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432157"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Руководство: Выполнение запросов Oracle из больших данных кластера SQL Server
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Учебник. Запрос Oracle из больших данных кластера SQL Server
 
 Этом руководстве показано, как запрашивать данные Oracle из кластера SQL Server 2019 больших данных. Для использования этого учебника, необходимо иметь доступ к серверу Oracle. Если у вас нет доступа, этот учебник поможет вам понять, как работает виртуализация данных для внешних источников данных в кластере SQL Server больших данных.
 
@@ -29,11 +30,11 @@ ms.locfileid: "49644250"
 
 ## <a id="prereqs"></a> Предварительные требования
 
-* [Развертывание кластера больших данных в Kubernetes](deployment-guidance.md).
-* [Установка Studio данных Azure и расширение SQL Server 2019](deploy-big-data-tools.md).
-* [Загрузка образца данных в кластере](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Средства работы с большими данными](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **Расширение SQL Server 2019**
+- [Загрузка образца данных в кластере больших данных](tutorial-load-sample-data.md)
 
 ## <a name="create-an-oracle-table"></a>Создайте таблицу Oracle
 
@@ -61,7 +62,7 @@ ms.locfileid: "49644250"
 
 Первым шагом является создание внешнего источника данных с доступом к серверу Oracle.
 
-1. В Azure Data Studio подключитесь к основной экземпляр SQL Server кластера больших данных. Дополнительные сведения см. в разделе [подключение к экземпляру SQL Server master](deploy-big-data-tools.md#master).
+1. В Azure Data Studio подключитесь к основной экземпляр SQL Server кластера больших данных. Дополнительные сведения см. в разделе [подключение к экземпляру SQL Server master](connect-to-big-data-cluster.md#master).
 
 1. Дважды щелкните подключение в **серверы** окно для отображения панели мониторинга сервера для главного экземпляра SQL Server. Выберите **новый запрос**.
 

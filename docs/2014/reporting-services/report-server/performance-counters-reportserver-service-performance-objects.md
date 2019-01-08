@@ -13,15 +13,15 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d7acb87440377516e287e8ba077242953f13adc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d13cec7bac124a8fb1289de6086ec0326789501e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141714"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366706"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Счетчики производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service
-  В данном разделе описаны счетчики производительности для следующих объектов производительности [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]:  
+  В данном разделе описаны счетчики производительности для следующих объектов производительности [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  
   
 -   `ReportServer:Service`  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48141714"
 > [!NOTE]  
 >  Эти объекты производительности служат для наблюдения за событиями на локальном сервере отчетов. При запуске сервера отчетов в масштабном развертывании счетчики относятся к текущему серверу, а не к масштабному развертыванию в целом.  
   
- Объекты производительности доступны в системном мониторе Windows (**Perfmon.exe**). Дополнительные сведения см. в документации по Windows. [Профилирование среды выполнения](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Объекты производительности доступны в системном мониторе Windows (**Perfmon.exe**). Дополнительные сведения см. в документации по Windows. [Профилирование среды выполнения](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  В этом разделе:  
   
@@ -43,11 +43,11 @@ ms.locfileid: "48141714"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint | В собственном режиме.  
   
 ##  <a name="bkmk_ReportServer"></a> Счетчики производительности ReportServer:Service (сервер отчетов в собственном режиме)  
- Объект производительности `ReportServer:Service` включает коллекцию счетчиков для отслеживания связанных с HTTP и памятью событий для экземпляра сервера отчетов. Этот объект производительности отображается однократно для каждого [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] экземпляра на компьютере, а также можно добавлять или удалять счетчики объекта производительности для каждого экземпляра. Счетчики для экземпляра по умолчанию отображаются в формате `ReportServer:Service`. Счетчики для именованных экземпляров отображаются в формате `ReportServer$<` *имя_экземпляра*`>:Service`.  
+ Объект производительности `ReportServer:Service` включает коллекцию счетчиков для отслеживания связанных с HTTP и памятью событий для экземпляра сервера отчетов. Этот объект производительности отображается однократно для каждого экземпляра служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] на компьютере; счетчики объекта производительности можно добавлять или удалять для каждого экземпляра. Счетчики для экземпляра по умолчанию отображаются в формате `ReportServer:Service`. Счетчики для именованных экземпляров отображаются в формате `ReportServer$<` *имя_экземпляра*`>:Service`.  
   
  `ReportServer:Service` Объект появился в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], и он предоставляет часть счетчиков, которые были включены с помощью Internet Information Services (IIS) и [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] в предыдущих версиях [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Эти новые счетчики являются уникальными для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Они отслеживают связанные с HTTP события для сервера отчетов, такие как запросы, соединения и попытки входа. Кроме того, этот объект производительности включает счетчики для отслеживания событий управления памятью.  
   
- В следующей таблице перечислены счетчики, включенные в `ReportServer:Service` объект производительности.  
+ В следующей таблице перечислены счетчики, включенные в объект производительности `ReportServer:Service`.  
   
  ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий скрипт Windows PowerShell вернет список счетчиков производительности для CounterSetName  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48141714"
 |`Logon Attempts/sec`|Число попыток входа.|  
 |`Logon Successes Total`|Число успешных входов для типов проверки подлинности RSWindows. Типы проверок подлинности RSWindows включают RSWindowsNegotiate, RSWindowsNTLM, RSWindowsKerberos и RSWindowsBasic. Нулевое значение (0) отвечает за нестандартную проверку подлинности.|  
 |`Logon Successes/sec`|Число успешных входов.|  
-|`Memory Pressure State`|Одно из следующих чисел от 1 до 5, указывающее текущее состояние памяти на сервере.<br /><br /> 1: нет нагрузки<br /><br /> 2: низкая нагрузка<br /><br /> 3: средняя нагрузка<br /><br /> 4: высокая нагрузка<br /><br /> 5: чрезмерная нагрузка|  
+|`Memory Pressure State`|Одно из следующих чисел от 1 до 5, указывающее текущее состояние памяти на сервере.<br /><br /> 1. Нет нагрузки.<br /><br /> 2. Низкая нагрузка.<br /><br /> 3. Средняя нагрузка.<br /><br /> 4. Высокая нагрузка.<br /><br /> 5. Чрезмерная нагрузка.|  
 |`Memory Shrink Amount`|Число байтов, запрошенных сервером для сжатия используемой памяти.|  
 |`Memory Shrink Notifications/sec`|Число уведомлений, сформированных сервером в последнюю секунду для сжатия используемой памяти. Это число указывает, как часто сервер испытывает недостаток памяти.|  
 |`Requests Disconnected`|Число отсоединений запросов, возникших из-за сбоя в канале связи.|  
@@ -101,7 +101,7 @@ ms.locfileid: "48141714"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за производительностью сервера отчетов](monitoring-report-server-performance.md)   
  [Счетчики производительности для MSRS 2014 Web Service и объекты производительности компонента MSRS 2014 Windows Service &#40;собственный режим&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Счетчики производительности для MSRS 2014 Web Service SharePoint Mode и MSRS 2014 Windows Service SharePoint режим, объекты производительности &#40;режиме интеграции с SharePoint&#41;]... / performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  

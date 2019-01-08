@@ -11,25 +11,25 @@ ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 699c6c2dad976cc070609b3c652b5abcfe2d7577
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aee74a2b0bd632e2efcb780a52f1b05f1949669
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094146"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210943"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Развертывание и выполнение пакетов служб SSIS с помощью хранимых процедур
   После настройки проекта [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для использования модели развертывания проекта можно вызывать хранимые процедуры в каталоге служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , чтобы развернуть проект и выполнить пакеты. Дополнительные сведения о модели развертывания проектов см. в разделе [Развертывание проектов и пакетов](packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Для развертывания и выполнения пакетов также можно использовать среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения см. в разделе **См. также** .  
   
-> [!TIP]  
+> [!TIP]
 >  Не составит труда создать инструкции Transact-SQL для хранимых процедур, перечисленных в следующей процедуре, за исключением catalog.deploy_project, выполнив следующие действия.  
->   
+> 
 >  1.  В [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]разверните узел **Каталоги служб Integration Services** в обозревателе объектов и перейдите к пакету, который нужно выполнить.  
 > 2.  Щелкните правой кнопкой мыши пакет и выберите команду **Выполнить**.  
 > 3.  При необходимости задайте значения параметров, свойства диспетчера соединений и параметры на вкладке **Дополнительно** , например уровень ведения журнала.  
->   
+> 
 >      Дополнительные сведения об уровнях ведения журнала см. в разделе [Включение ведения журналов при выполнении пакета на сервере служб SSIS](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md).  
 > 4.  Перед нажатием кнопки **ОК** для выполнения пакета выберите пункт **Скрипт**. Код Transact-SQL откроется в окне редактора запросов среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
@@ -37,9 +37,9 @@ ms.locfileid: "48094146"
   
 1.  Вызовите [catalog.deploy_project (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database), чтобы развернуть проект [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], который содержит пакет, на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Для получения двоичного содержимого [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] файла развертывания проекта для *@project_stream* параметр, с помощью инструкции SELECT с функцией OPENROWSET и поставщик МАССОВОГО набора строк. Поставщик больших наборов строк позволяет считывать данные из файла. Аргумент SINGLE_BLOB для поставщика больших наборов строк возвращает содержимое файла данных в виде набора строк с одной строкой и одним столбцом типа varbinary(max). Дополнительные сведения см. в разделе [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql).  
+     Можно использовать инструкцию SELECT с функцией OPENROWSET и поставщиком больших наборов строк (BULK) для получения двоичного содержимого файла развертывания проекта [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для параметра *@project_stream* . Поставщик больших наборов строк позволяет считывать данные из файла. Аргумент SINGLE_BLOB для поставщика больших наборов строк возвращает содержимое файла данных в виде набора строк с одной строкой и одним столбцом типа varbinary(max). Дополнительные сведения см. в разделе [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql).  
   
-     В следующем примере проект SSISPackages_ProjectDeployment будет развернут в папке SSIS Packages на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Двоичные данные считываются из файла проекта (SSISPackage_ProjectDeployment.ispac) и сохраняются в параметре *@ProjectBinary* с типом varbinary(max). Значение параметра *@ProjectBinary* присваивается параметру *@project_stream* .  
+     В следующем примере проект SSISPackages_ProjectDeployment будет развернут в папке SSIS Packages на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Двоичные данные считываются из файла проекта (SSISPackage_ProjectDeployment.ispac) и сохраняются в параметре *@ProjectBinary* с типом varbinary(max). Значение параметра *@ProjectBinary* присваивается параметру *@project_stream* .  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  
@@ -125,7 +125,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 ## <a name="see-also"></a>См. также  
  [Развертывание проектов на сервере служб Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
- [Запустить пакет в SQL Server Data Tools](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
+ [Запуск пакета с помощью SQL Server Data Tools](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
  [Выполнение пакета на сервере служб SSIS с использованием среды SQL Server Management Studio](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
   

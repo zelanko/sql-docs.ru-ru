@@ -11,12 +11,12 @@ ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e43bbb27fc94d9fc7a32fb95b90e0b4e2cd53bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2aa21825563ae94a46a7d9fcda6e52e966f12a9a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189324"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360256"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>Устранение неполадок в элементах отчета (построитель отчетов и службы SSRS)
   Эти советы могут помочь при работе с элементами отчета.  
@@ -27,7 +27,7 @@ ms.locfileid: "48189324"
  Чтобы получить сведения о разрешениях пользователей, свяжитесь с администратором сервера отчетов.  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>Не находится элемент отчета, переданный на сервер SharePoint. Причины.  
- Элементы отчета, переданные вручную в библиотеку документов SharePoint, но не опубликованные с помощью построителя отчетов, могут не появиться в галерее элементов отчета. Сервер отчетов, используемый для поиска в галерее, может требовать синхронизации с содержимым библиотеки документов SharePoint. Дополнительные сведения см. в разделе [активировать функции синхронизации файлов сервера отчетов в центре администрирования SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [документации](http://go.microsoft.com/fwlink/?LinkId=154888) на сайте msdn.microsoft.com.  
+ Элементы отчета, переданные вручную в библиотеку документов SharePoint, но не опубликованные с помощью построителя отчетов, могут не появиться в галерее элементов отчета. Сервер отчетов, используемый для поиска в галерее, может требовать синхронизации с содержимым библиотеки документов SharePoint. Дополнительные сведения см. в разделе [активировать функции синхронизации файлов сервера отчетов в центре администрирования SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [документации](https://go.microsoft.com/fwlink/?LinkId=154888) на сайте msdn.microsoft.com.  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>Почему остальные не могут увидеть это изображение в своем отчете?  
  При публикации элемента отчета, ссылающегося на изображение, элемент отчета является просто ссылкой. Если для других пользователей изображение не отображается при добавлении элемента отчета к отчетам, возможно, у них отсутствуют разрешения для изображения, на которое создана ссылка.  
@@ -44,6 +44,6 @@ ms.locfileid: "48189324"
  Если в элементах отчета есть циклическая ссылка, их нельзя публиковать как части отчета. Например, элемент отчета указывает на набор данных, который в свою очередь указывает на параметр. Параметр в свою очередь указывает на набор данных. В этом случае необходимо удалить одну из ссылок до публикации элемента отчета.  
   
 ## <a name="see-also"></a>См. также  
- [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Элементы отчета (построитель отчетов и службы SSRS)](report-parts-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Определение измерений базы данных | Документы Microsoft
+title: Определение измерений базы данных | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3f9d827bbbcb50dc352ba8987cf04704a18e4ef0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94fa4e719e99928a56694b748e11fff1ad16db9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025861"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534711"
 ---
 # <a name="define-database-dimensions"></a>Определение измерений базы данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "34025861"
   
  В конструкторе измерений есть три различные вкладки, каждая из которых описывается в следующей таблице.  
   
-|Вкладка|Description|  
+|Вкладка|Описание|  
 |---------|-----------------|  
-|**Структура измерения**|Эта вкладка предназначена для работы со структурой измерения: изучения или создания схемы представления источников данных, работы с атрибутами, а также для организации атрибутов в пользовательских иерархиях.|  
+|**Структура измерения**|Используйте эту вкладку для работы со структурой измерения для изучения или создания схемы представления источника данных, для работы с атрибутами и для организации атрибутов в пользовательские иерархии.|  
 |**Связи атрибутов**|Эта вкладка используется для создания, изменения и удаления связей атрибутов в измерении.|  
 |**Переводы**|Эта вкладка предназначена для добавления переводов метаданных измерений на разных языках и их изменения.|  
 |**Браузер**|Эта вкладка предназначена для изучения элементов обработанного измерения и просмотра переводов метаданных измерений.|  
@@ -50,7 +50,7 @@ ms.locfileid: "34025861"
  [Справочник по свойствам атрибута измерения](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  Описывает настройку и определение атрибутов измерения.  
   
- [Создание определяемых пользователем иерархий](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
+ [Создание пользовательских иерархий](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  Описывает определение и настройку пользовательской иерархии.  
   
  [Определение связей атрибутов](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  

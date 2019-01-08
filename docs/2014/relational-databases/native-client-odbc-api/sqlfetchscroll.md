@@ -14,15 +14,15 @@ ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ee2297f01ef2cc0a4dc94beca66939bf6ae9030
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c9614a71c0015d17178a57d33c5fd0d9b62433c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145654"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358856"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
-  Функция**SQLFetchScroll** возвращает приложению один набор строк данных. Размер набора строк задается с помощью [SQLSetStmtAttr](sqlsetstmtattr.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC для собственного клиента поддерживает все определенные инструкции выборки (например, SQL_FETCH_RELATIVE) со следующими ограничениями:  
+  Функция**SQLFetchScroll** возвращает приложению один набор строк данных. Размер набора строк задается с помощью функции [SQLSetStmtAttr](sqlsetstmtattr.md). Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает все определенные инструкции выборки (например, SQL_FETCH_RELATIVE) со следующими ограничениями.  
   
 -   Если для инструкции определен однопроходный курсор, необходимо использовать инструкцию SQL_FETCH_NEXT, а попытки произвести выборку любым другим способом приведут к ошибке.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48145654"
  Функция**SQLFetchScroll** поддерживает большие определяемые пользователем типы данных CLR. Дополнительные сведения см. в разделе [Large CLR User-Defined типы &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLFetchScroll](http://go.microsoft.com/fwlink/?LinkId=59343)   
+ [Функция SQLFetchScroll](https://go.microsoft.com/fwlink/?LinkId=59343)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

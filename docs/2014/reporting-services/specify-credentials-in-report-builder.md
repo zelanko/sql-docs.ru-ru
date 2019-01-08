@@ -11,12 +11,12 @@ ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4a6c4af1938057652aa21ce8feef8671b2535f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f800d28a8c7e1440308761abc3d05c4d41995f00
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154104"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372126"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Указание учетных данных в построителе отчетов
   Учетные данные удостоверяют подлинность пользователя, который пытается получить данные из источника данных. Владелец источника данных определяет тип учетных данных, которые необходимо использовать. Например, администратор базы данных может указать, что пользователь должен предоставить имя и пароль пользователя Windows.  
@@ -49,7 +49,7 @@ ms.locfileid: "48154104"
  Дополнительные сведения см. в разделе [Диалоговое окно "Свойства источника данных" — "Общие" (построитель отчетов)](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md) и [Предварительный просмотр отчетов в построителе отчетов](report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="types-of-credentials"></a>Типы учетных данных  
- Тип учетных данных, поддерживаемый источником данных, указывается владельцем источника данных. Например, для доступа к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базы данных, может потребоваться указать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] имя пользователя для входа и пароль. Для доступа к другому источнику данных может потребоваться ввести имя и пароль пользователя Windows. Некоторые источники данных могут не требовать учетных данных.  
+ Тип учетных данных, поддерживаемый источником данных, указывается владельцем источника данных. Например, для доступа к базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может потребоваться предоставить имя входа и пароль пользователя [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для доступа к другому источнику данных может потребоваться ввести имя и пароль пользователя Windows. Некоторые источники данных могут не требовать учетных данных.  
   
 ### <a name="options-for-specifying-credentials"></a>Параметры для указания учетных данных  
  Доступны следующие параметры для указания учетных данных для источника данных.  
@@ -72,11 +72,11 @@ ms.locfileid: "48154104"
  Если указан запрос учетных данных, каждый пользователь, обращающийся к отчету, должен ввести имя пользователя и пароль для получения данных. Этот режим рекомендуется для отчетов, содержащих конфиденциальные данные. Запрашиваемые учетные данные могут быть учетной записью Windows или именем входа базы данных. Если сервер базы данных не распознает предоставленные учетные данные или если указанному пользователю не было предоставлено разрешение для получения данных, соединение завершается ошибкой.  
   
 ### <a name="no-credentials"></a>Без учетных данных  
- Для этого источника данных учетные данные не требуются. Чтобы запустить этот отчет на сервере отчетов, необходимо настроить учетную запись автоматического выполнения. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] документации в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [документации](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Для этого источника данных учетные данные не требуются. Чтобы запустить этот отчет на сервере отчетов, необходимо настроить учетную запись автоматического выполнения. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] документации в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [документации](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## <a name="see-also"></a>См. также  
  [Установка, удаление и поддержка построителя отчетов](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [Внедренные и общие подключения к данным или источники данных &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Построитель отчетов параметры в диалоговом окне Параметры &#40;построитель отчетов&#41;](report-builder/set-default-options-for-report-builder.md)   
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)   

@@ -1,22 +1,21 @@
 ---
-title: Занятие 2. Подключение к другому компьютеру | Документация Майкрософт
+title: Занятие 2. Соединение с другого компьютера | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bb12113055da47358baf4c14403c4b95b433cf86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183214"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367198"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Занятие 2. Соединение с другого компьютера
   В целях повышения безопасности к компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)] выпусков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition и Evaluation Edition нельзя получить доступ с другого компьютера при первоначальной установке. В этом занятии показано, как включить протоколы, настроить порты и брандмауэр Windows для соединения, используя другие компьютеры.  
@@ -58,7 +57,7 @@ ms.locfileid: "48183214"
  В целях повышения безопасности в таких системах, как Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]и Windows 7, включен брандмауэр Windows. При подключении к этому экземпляру из другого компьютера необходимо открыть порт соединения в брандмауэре. Экземпляр компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , запускаемый по умолчанию, прослушивает порт 1433, поэтому нет необходимости настраивать фиксированный порт. Однако именованные экземпляры, включая [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , принимают соединения через динамически назначаемые порты. Прежде чем появится возможность открыть порт в брандмауэре, необходимо предварительно настроить компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] для прослушивания конкретного порта, известного как постоянный порт или статический порт; в противном случае компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] может прослушивать другой порт после каждого запуска. Дополнительные сведения о брандмауэрах, настройках брандмауэра Windows по умолчанию и описание портов TCP, влияющих на ядро СУБД, службы Analysis Services, службы Reporting Services и службы Integration Services, см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
->  Присваиванием номеров портов управляет администрация адресного пространства Интернет (IANA), а списки этих номеров находятся по адресу [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844). Портам должны назначаться номера от 49152 до 65535.  
+>  Присваиванием номеров портов управляет администрация адресного пространства Интернет (IANA), а списки этих номеров находятся по адресу [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844). Портам должны назначаться номера от 49152 до 65535.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Настройка SQL Server для подключения через определенный порт  
   
@@ -128,6 +127,6 @@ ms.locfileid: "48183214"
  На этом краткий учебник по базовым возможностям подключения связи заканчивается.  
   
 ## <a name="return-to-tutorials-portal"></a>Возвращение к порталу учебников  
- [Учебник. Приступая к работе с компонентом Database Engine](tutorial-getting-started-with-the-database-engine.md)  
+ [Учебник. Начало работы с ядром СУБД](tutorial-getting-started-with-the-database-engine.md)  
   
   

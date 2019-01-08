@@ -1,22 +1,21 @@
 ---
-title: Занятие 1. Подключение к ядру СУБД | Документация Майкрософт
+title: Урок 1. Подключение к компоненту Database Engine | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 145adf31e3b59e846eb17369a897e4012f0177ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132400"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375306"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
   Набор средств, устанавливаемых с компонентом [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], зависит от выпуска и от параметров, заданных при установке. На этом уроке рассматриваются важнейшие средства, а также показываются способы подключения и выполнения одной из базовых функций (разрешение входа дополнительным пользователям).  
@@ -28,7 +27,7 @@ ms.locfileid: "48132400"
   
 ### <a name="basic-tools"></a>Основные средства  
   
--   Среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] является основным средством администрирования компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] и написания исходного кода на языке [!INCLUDE[tsql](../includes/tsql-md.md)]. Она расположена в оболочке [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Он не включен в [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , но доступен как отдельный загружаемый из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=144346).  
+-   Среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] является основным средством администрирования компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] и написания исходного кода на языке [!INCLUDE[tsql](../includes/tsql-md.md)]. Она расположена в оболочке [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Она не входит в [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , но ее можно загрузить отдельно из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Диспетчер конфигурации устанавливается с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и с клиентскими средствами. Он позволяет включать серверные протоколы, настраивать параметры протокола, например порты TCP, настраивать автоматический запуск служб сервера и настраивать соединение клиентских компьютеров. Это средство может настроить дополнительные параметры соединения, но не активирует возможности.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "48132400"
   
 ##### <a name="to-start-sql-server-management-studio"></a>Начало работы в среде SQL Server Management Studio  
   
--   На **запустить** последовательно выберите пункты **все программы**, пункты [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], а затем нажмите кнопку **SQL Server Management Studio**.  
+-   В меню **Пуск** укажите пункт **Все программы**, укажите пункт [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]и выберите команду **Среда SQL Server Management Studio**.  
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>Запуск диспетчера конфигурации SQL Server  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48132400"
 1.  Войдите в Windows как член группы «Администраторы» и откройте среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
     > [!IMPORTANT]  
-    >  Если вы подключаетесь к [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] на [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] или [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (или более поздних версий), щелкните правой кнопкой мыши может потребоваться [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] и нажмите кнопку **Запуск от имени администратора** для подключения с помощью к администратору учетные данные. Начиная с версии [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], при установке выбранные имена входа добавляются к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], так что учетные данные администратора не требуются.  
+    >  При соединении с  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] по [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] или [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)] (или более поздних версий) для соединения с учетными данными администратора, возможно, потребуется щелкнуть правой кнопкой мыши [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , затем выбрать **Запуск от имени администратора** . Начиная с версии [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], при установке выбранные имена входа добавляются к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], так что учетные данные администратора не требуются.  
   
 2.  В диалоговом окне **Соединения с сервером** нажмите кнопку **Отмена**.  
   

@@ -13,12 +13,12 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 184e6a3354069ae5a1ed0d6b7557f4b0ac3fa716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65103e99a6cba7d21daca85f3295135a43f435a5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222654"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776386"
 ---
 # <a name="use-the-eventdata-function"></a>Использование функции EVENTDATA
   Функция EVENTDATA позволяет получить сведения о событии, которое привело к срабатыванию триггера DDL. Эта функция возвращает значение типа `xml`. XML-схема содержит следующие сведения:  
@@ -95,7 +95,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] , вызвавшая данное событие.  
   
- Опять же, двух последних элементах регистрируются путем выполнения запроса XQuery к `xml` , порожденным функцией EVENTDATA.  
+ Сведения о двух последних элементах регистрируются путем выполнения запроса XQuery для `xml`-данных, сформированных функцией EVENTDATA.  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,7 +125,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Для получения сведения о событиях в запросе XQuery вместо метода `value()` рекомендуется использовать метод `query()`. `query()` Метод возвращает XML и экранируются символы возврата каретки и перевода строки (CRLF) экземпляров в выходных данных, хотя `value()` метод отображает эти СИМВОЛЫ в выходных данных.  
+>  Для получения сведения о событиях в запросе XQuery вместо метода `value()` рекомендуется использовать метод `query()`. Метод `query()` возвращает XML-данные и символы возврата каретки и переноса строки, заэкранированные амперсандом, тогда как в выводе метода `value()` эти символы не экранируются.  
   
  Аналогичный пример триггера DDL предоставляется вместе с образцом базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Для его получения перейдите в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в папку с триггерами базы данных, Эта папка находится в папке **Programmability** базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Щелкните правой кнопкой мыши элемент **ddlDatabseTriggerLog** и выберите команду **Создать скрипт для триггера базы данных**. По умолчанию DDL-триггер **ddlDatabseTriggerLog** заблокирован.  
   

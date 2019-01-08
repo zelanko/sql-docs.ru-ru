@@ -1,6 +1,6 @@
 ---
-title: Установка новых пакетов R на службы машинного обучения SQL Server | Документация Майкрософт
-description: Добавление новых пакетов R в SQL Server 2016 R Services или служб SQL Server 2017 машинного обучения (в базе данных)
+title: Использовать диспетчеры пакетов R - служб машинного обучения SQL Server
+description: Используйте стандартные команды R, например install.packages Добавление новых пакетов R в SQL Server 2016 R Services или служб SQL Server 2017 машинного обучения (в базе данных).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5eb14dde38f9ef7804c62adeaa3cdc1df0f5552b
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: a7ef1d63394da8bf084fabb93382ee565208e137
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864352"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432887"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Использование R диспетчеров пакетов для установки пакетов R на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47864352"
 
 1. Щелкните правой кнопкой мыши RGui.exe и выберите **Запуск от имени администратора**. Если у вас нет необходимых разрешений, обратитесь к администратору базы данных и укажите список необходимых пакетов.
 
-1. Из командной строки, если известно имя пакета, можно ввести: `install.packages("the_package-name")` двойные кавычки необходимы для имени пакета.
+1. Из командной строки Если известно имя пакета, можно ввести: `install.packages("the_package-name")` Двойные кавычки необходимы для имени пакета.
 
 1. При запросе зеркальный сайт, выберите любой сайт, удобный для вашего расположения.
 

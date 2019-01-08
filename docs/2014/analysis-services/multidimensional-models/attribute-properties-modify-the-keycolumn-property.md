@@ -15,12 +15,12 @@ ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b833e41e4fbce47b892bba5d2b3792eeb2771b14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92624d18c0e8aae6a549f0769277e5fd4fdd0c34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068764"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524362"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Изменение свойства KeyColumn атрибута
   Свойство **KeyColumns** атрибута можно изменить. Например, в качестве ключа атрибута может потребоваться не одиночный ключ, а составной.  
@@ -33,7 +33,7 @@ ms.locfileid: "48068764"
   
     -   В **обозревателе решений**правой кнопкой мыши щелкните папку **Измерения** , а затем выберите либо **Открыть** , либо **Конструктор представлений**.  
   
-         —или—  
+         -или-  
   
     -   В конструкторе кубов на **Структура куба** вкладке, разверните измерение куба в **измерения** область и выберите команду **изменить \<измерения >**.  
   

@@ -1,6 +1,6 @@
 ---
-title: Предоставление пользователям разрешения на службы машинного обучения SQL Server | Документация Майкрософт
-description: Как предоставить пользователям разрешения на службы машинного обучения SQL Server.
+title: Предоставление разрешений базы данных для R и Python выполнения сценариев - службы машинного обучения SQL Server
+description: Как предоставить разрешения пользователя базы данных для выполнения сценариев R и Python на службы машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 07268386ad66350eed7f1382348fa4d698863600
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: e281f1712163aeee1846565458c2b037077c8588
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419069"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644843"
 ---
 # <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Предоставление пользователям разрешения на службы машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "49419069"
 
 Большинство пользователей, тем не менее, не имеют таких повышенных прав. Например пользователям в организации, использующим имена входа SQL для доступа к базе данных, как правило, нет повышенным уровнем разрешений. Таким образом для каждого пользователя, используя R или Python, необходимо предоставить пользователям служб машинного обучения разрешение для выполнения внешних скриптов в каждой базе данных, в которых используется язык. Вот как:
 
-```SQL
+```sql
 USE <database_name>
 GO
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
@@ -49,7 +49,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 
 Например, следующая [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция предоставляет имя входа SQL *MySQLLogin* права на запуск запросов T-SQL *ML_Samples* базы данных. Для выполнения этой инструкции имя входа SQL уже должно существовать в контексте безопасности сервера.
 
-```SQL
+```sql
 USE ML_Samples
 GO
 EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'

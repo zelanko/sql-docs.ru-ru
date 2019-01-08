@@ -11,15 +11,15 @@ ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7099282f8fef9d8d029249ba5637eba6fa6bf1f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6196466246529521f356c193c3e8cc0ee688c197
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188354"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354706"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Настройка и просмотр файлов журнала SharePoint и журнала диагностики (PowerPivot для SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] операции сервера, события и сообщения записываются в файлы журнала SharePoint. Сведения, приведенные в этом разделе, помогут настроить уровни ведения журнала и просмотреть данные файла журнала. Можно выбирать, какие события сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] заносятся в файл журнала. а также определять степень серьезности регистрируемых сообщений. Дополнительные сведения см. в разделе [Настройка сбора данных об использовании &#40;PowerPivot для SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] регистрируются в файлах журнала SharePoint. Сведения, приведенные в этом разделе, помогут настроить уровни ведения журнала и просмотреть данные файла журнала. Можно выбирать, какие события сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] заносятся в файл журнала. а также определять степень серьезности регистрируемых сообщений. Дополнительные сведения см. в разделе [Настройка сбора данных об использовании &#40;PowerPivot для SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  В этом разделе:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48188354"
   
 4.  Разверните категорию и выберите отдельные категории.  
   
-     **Запрос страницы приложения** содержит события, вызываемые приложением службы при поиске [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] для загрузки источника данных PowerPivot и обмена данными с другими серверами в ферме.  
+     Раздел**Запрос страницы приложения** содержит события, вызываемые приложением службы при поиске расположения [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] для загрузки источника данных PowerPivot и обмена данными с другими серверами фермы.  
   
      Раздел**Обработка запросов** содержит события, возникающие при выполнении запросов к базе данных PowerPivot, загруженной на сервер фермы.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48188354"
   
 -   В случае ошибок, для которых указан идентификатор корреляции, скопируйте этот идентификатор и используйте его в качестве условия поиска в файле журнала.  
   
--   Ищите состояние ошибки «Высокая» или «Исключение». Поиск службы PowerPivot  
+-   Ищите состояние ошибки «Высокая» или «Исключение». Выполните поиск «Служба PowerPivot».  
   
 -   Если неизвестно, когда произошла ошибка, используйте данные о дате и времени, чтобы ограничить область записей для прокрутки.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48188354"
   
  В следующих инструкциях содержатся ссылки на популярные журналы «Stefan Gordon's SharePoint ULS Log Viewer», которые можно скачать с Codeplex.  
   
-1.  Перейдите по ссылке [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) или [SharePoint ULS Log Viewer](http://go.microsoft.com/fwlink/?LinkId=150052) на сайт Codeplex.  
+1.  Перейдите по ссылке [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) или [SharePoint ULS Log Viewer](https://go.microsoft.com/fwlink/?LinkId=150052) на сайт Codeplex.  
   
 2.  Перейдите на вкладку **Downloads** .  
   

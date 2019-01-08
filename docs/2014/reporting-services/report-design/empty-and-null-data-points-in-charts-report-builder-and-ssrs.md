@@ -11,12 +11,12 @@ ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6f6611271a6f8bc637e1fa0032d868a1347b5ef5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27b5e569ff69261be616f28b38bcdb9bde429363
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082084"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377921"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)
   При отображении полей с пустыми значениями или значением NULL на диаграмме оно может выглядеть неправильно. В зависимости от типа диаграммы пустые значения могут обрабатываться по-разному.  
@@ -29,13 +29,13 @@ ms.locfileid: "48082084"
   
 -   В фигурных диаграммах значения NULL опускаются.  
   
- Пример диаграммы с пустыми точками данных доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Пример диаграммы с пустыми точками данных доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="removing-empty-or-null-values"></a>Удаление пустых значений и значений NULL  
- Чтобы не скрыть важные данные, подумайте об удалении пустых значений из набора данных. Чтобы отфильтровать значения NULL, используйте в запросе предложение NOT IS NULL. Или же добавьте критерий фильтра, который задает отображение значений, не равных нулю. Дополнительные сведения см. в разделе [Добавление фильтров набора данных, фильтров области данных и групповых фильтров &#40;построитель отчетов и службы SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
+ Чтобы не скрыть важные данные, подумайте об удалении пустых значений из набора данных. Чтобы отфильтровать значения NULL, используйте в запросе предложение NOT IS NULL. Или же добавьте критерий фильтра, который задает отображение значений, не равных нулю. Дополнительные сведения см. в разделе [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
 ## <a name="fields-with-no-values-in-a-chart"></a>Поля без значений в диаграмме  
  Если в возвращаемом наборе данных поле не содержит значений, диаграмма будет пустой, без точек данных, но имя ряда (обычно имя поля) добавляется в качестве условных обозначений.  
@@ -45,7 +45,7 @@ ms.locfileid: "48082084"
 ## <a name="see-also"></a>См. также  
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [Добавление диаграммы в отчет &#40;построитель отчетов и службы SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
- [Устранение неполадок с диаграммами &#40;построитель отчетов и службы SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Добавление диаграммы в отчет (построитель отчетов и службы SSRS)](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
+ [Устранение неполадок с диаграммами (построитель отчетов и службы SSRS)](troubleshoot-charts-report-builder-and-ssrs.md)  
   
   

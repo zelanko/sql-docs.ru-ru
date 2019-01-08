@@ -14,12 +14,12 @@ ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afd5a20d99692c1a623b13b53218f62c00cb218a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a4ac67e1a593cdfd7e67d789289bd1a5ece1467
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845922"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515320"
 ---
 # <a name="oracle-software-patches"></a>Исправления программного обеспечения Oracle
 > [!IMPORTANT]  
@@ -36,7 +36,7 @@ ms.locfileid: "47845922"
   
 2.  Перейдите к следующему каталогу: /server/wgt_tech/server/windowsNT.  
   
-3.  Чтобы загрузить наиболее важные исправления для Windows 95, Windows 98 и Windows NT и Windows 2000, перейдите к подкаталогу для вашей версии Oracle — 7.3 или 8.0. Две подпапки, /73patchsets и /80patchsets.  
+3.  Чтобы загрузить наиболее важные исправления для Windows 95, Windows 98 и Windows NT и Windows 2000, перейдите к подкаталогу для вашей версии Oracle - 7.3 или 8.0. Две подпапки, /73patchsets и /80patchsets.  
   
 4.  Для скачивания исправлений для технологии Oracle в сети, либо SQL * Net или Net8, перейдите к следующему каталогу: / сети.  
   

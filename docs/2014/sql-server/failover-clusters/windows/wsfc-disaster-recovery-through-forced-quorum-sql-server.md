@@ -14,17 +14,17 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c93f9327adf0801898c45a541d935a4d3b34758c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161886"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365377"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Аварийное восстановление WSFC через принудительный кворум (SQL Server)
   Обычно сбой кворума бывает вызван системной аварией, постоянным сбоем связи или ошибкой конфигурации, затрагивающей несколько узлов в кластере WSFC.  Для восстановления после сбоя кворума требуется участие пользователя.  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **Перед началом работы:**  [Предварительные требования](#Prerequisites), [безопасности](#Security)  
   
 -   **Аварийное восстановление WSFC с помощью процедуры принудительного кворума** [Аварийное восстановление WSFC с помощью процедуры принудительного кворума](#Main)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48161886"
 > [!WARNING]  
 >  Пользователь должен хорошо представлять основные понятия и принципы взаимодействия кластера WSFC, моделей кворума WSFC, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]и конфигурации развертывания, зависящей от среды.  
 >   
->  Дополнительные сведения см. в следующих статьях:  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Режим кворума и участвующая в голосовании конфигурация WSFC (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  Дополнительные сведения см. в разделе:  [Отказоустойчивая кластеризация (WSFC) с SQL Server Windows Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [режимы кворума WSFC и участвующая в голосовании конфигурация (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> безопасность  
  Пользователь должен входить в учетную запись домена, которая является членом локальной группы администраторов, на каждом узле кластера WSFC.  
@@ -65,7 +65,7 @@ ms.locfileid: "48161886"
   
      На этом узле вручную запустите работу кластера с помощью процедуры принудительного кворума кластера.  Чтобы свести к минимуму потенциальную потерю данных, выберите последний узел, на котором размещалась группа доступности первичной реплики.  
   
-     Дополнительные сведения см. в статье  [Принудительный запуск кластера WSFC без кворума](http://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     Дополнительные сведения см. в разделе:  [Принудительный запуск кластера WSFC без кворума](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  Принудительная настройка кворума действует в пределах всего кластера, блокируя проверки кворума до тех пор, пока логический кластер WSFC не получит большинство голосов и автоматически не перейдет в регулярный режим работы кворума.  
@@ -109,7 +109,7 @@ ms.locfileid: "48161886"
   
 -   [Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [Просмотр параметров NodeWeight для кворума кластера](view-cluster-quorum-nodeweight-settings.md)  
+-   [Просмотр параметров NodeWeight кворума кластера](view-cluster-quorum-nodeweight-settings.md)  
   
 -   [Настройка параметров NodeWeight кворума кластера](configure-cluster-quorum-nodeweight-settings.md)  
   
@@ -117,9 +117,9 @@ ms.locfileid: "48161886"
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Просмотр событий и журналов для отказоустойчивого кластера](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Просмотр событий и журналов для отказоустойчивого кластера](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Командлет Get-ClusterLog отказоустойчивого кластера](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Командлет Get-ClusterLog отказоустойчивого кластера](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  

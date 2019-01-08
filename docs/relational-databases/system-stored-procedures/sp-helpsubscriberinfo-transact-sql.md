@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscriberinfo
@@ -17,12 +16,12 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2836ff3e649d48db12ad6ed0b644a6ba73eedf23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14ab67bb9d69272960bbce3e1a7cfa059c609e3f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763282"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589808"
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@subscriber =** ] **"***подписчика***"**  
+ [  **@subscriber =** ] **"**_подписчика_**"**  
  Имя подписчика. *подписчик* — **sysname**, значение по умолчанию **%**, при котором возвращаются сведения.  
   
- [  **@publisher =** ] **"***издателя***"**  
+ [  **@publisher =** ] **"**_издателя_**"**  
  Имя издателя. *издатель* — **sysname**и значение по умолчанию — имя текущего сервера.  
   
 > [!NOTE]  

@@ -11,12 +11,12 @@ ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f34ff1942ff742a5040d7fa16fedf31f6d806768
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d13d7b7f65ca1f121145815555afa055926c81fe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126854"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374276"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
   Имя участника-службы (SPN) однозначно идентифицирует экземпляр службы в домене Active Directory, если протокол Kerberos используется для взаимной проверки подлинности идентификаторов клиента и службы. Имя участника-службы сопоставляется с учетной записью входа, от имени которой выполняется экземпляр службы.  
@@ -30,10 +30,10 @@ ms.locfileid: "48126854"
  Регистрация имени участника-службы не требуется, если служба запускается от имени предопределенной учетной записи управляемой службы, созданной администратором домена. Обратите внимание, что в зависимости от функционального уровня домена для регистрации имени участника-службы может потребоваться разрешение администратора домена.  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер конфигурации Kerberos для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — это диагностическое средство, которое помогает расследовать проблемы Kerberos со связью при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер конфигурации Kerberos для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — это диагностическое средство, которое помогает расследовать проблемы Kerberos со связью при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер конфигурации Kerberos для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — это диагностическое средство, которое помогает расследовать проблемы Kerberos со связью при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер конфигурации Kerberos для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — это диагностическое средство, которое помогает расследовать проблемы Kerberos со связью при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48126854"
  [Регистрация имени участника-службы для экземпляров службы SSAS, слушающих фиксированные порты](#bkmk_spnFixedPorts)  
   
 ##  <a name="bkmk_scnearios"></a> Когда требуется регистрация имени участника-службы  
- Любое клиентское подключение, где в строке подключения указано "SSPI=Kerberos", образует требования для регистрации SPN для экземпляра Analysis Services.  
+ Любое клиентское подключение, указывающее «SSPI = Kerberos» для соединения строки будут представлены требования к регистрации SPN для экземпляра служб Analysis Services.  
   
  Регистрация имени участника-службы требуется в следующих ситуациях. Более подробные сведения см. в разделе [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md).  
   
@@ -67,14 +67,14 @@ ms.locfileid: "48126854"
 -   Службы Analysis Services делегируют удостоверение пользователя при получении данных из реляционной базы данных SQL Server для табличных баз данных в режиме DirectQuery. Это единственный случай, когда службы Analysis Services будут делегировать удостоверение пользователя в другую службу.  
   
 ##  <a name="bkmk_SPNSyntax"></a> Формат имени участника-службы для Analysis Services  
- Для регистрации имени участника-службы используйте команду **setspn** . На современных операционных системах программа **setspn** устанавливается как системная. Дополнительные сведения см. в разделе [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx).  
+ Для регистрации имени участника-службы используйте команду **setspn** . На современных операционных системах программа **setspn** устанавливается как системная. Дополнительные сведения см. в разделе [SetSPN](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx).  
   
  В следующей таблице описываются все части имени участника-службы для служб Analysis Services.  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
 |Класс службы|MSOLAPSvc.3 определяет службу как экземпляр служб Analysis Services. «.3» — это версия протокола XMLA-over-TCP/IP, используемого в передачах служб Analysis Services. Он не связан с версией продукта. Таким образом, MSOLAPSvc.3 — это правильный класс службы для SQL Server 2005, 2008, 2008, 2012 R2 и любых последующих выпусков служб Analysis Services до тех пор, пока не будет обновлен сам протокол.|  
-|Имя узла|Идентифицирует компьютер, на котором выполняется служба. Это может быть полное доменное имя или имя NetBIOS. Регистрация имени участника-службы необходима в обоих случаях.<br /><br /> При регистрации имени участника-службы для имени NetBIOS сервера обязательно используйте команду `SetupSPN –S` для проверки повторяющихся регистраций. Обратите внимание, что в пределах леса не гарантируется уникальность имен NetBIOS, а наличие дублированных регистраций имени участника-службы приведет к сбою подключения.<br /><br /> Для сбалансированных по нагрузке кластеров служб Analysis Services имя узла должно быть виртуальным именем, назначенным кластеру.<br /><br /> Никогда не создавайте имя участника-службы (SPN) с помощью IP-адреса. Протокол Kerberos использует возможности домена по разрешению DNS. Задание IP-адреса приводит к неиспользованию этих возможностей.|  
+|Имя узла|Идентифицирует компьютер, на котором выполняется служба. Это может быть полное доменное имя или имя NetBIOS. Регистрация имени участника-службы необходима в обоих случаях.<br /><br /> При регистрации имени участника-службы для имени NetBIOS сервера обязательно используйте команду `SetupSPN -S` для проверки повторяющихся регистраций. Обратите внимание, что в пределах леса не гарантируется уникальность имен NetBIOS, а наличие дублированных регистраций имени участника-службы приведет к сбою подключения.<br /><br /> Для сбалансированных по нагрузке кластеров служб Analysis Services имя узла должно быть виртуальным именем, назначенным кластеру.<br /><br /> Никогда не создавайте имя участника-службы (SPN) с помощью IP-адреса. Протокол Kerberos использует возможности домена по разрешению DNS. Задание IP-адреса приводит к неиспользованию этих возможностей.|  
 |Номер порта|Хотя номер порта и является частью синтаксиса имени участника-службы, не указывайте номер порта при регистрации имени участника-службы Analysis Services. Символ двоеточия ( : ), который, как правило, в стандартном синтаксисе имени участника-службы используется для указания номера порта, в службах Analysis Services применяется для указания имени экземпляра. Для экземпляров служб Analysis Services применяется порт по умолчанию (порт TCP 2383) или порт, назначенный службой обозревателя SQL Server (порт TCP 2382).|  
 |Имя экземпляра|Analysis Services — службы, которые можно установить несколько раз на одном и том же компьютере. Каждый экземпляр определяется посредством его имени.<br /><br /> Перед именем экземпляра добавляется символ двоеточия ( : ). Например, если есть главный компьютер с именем SRV01 и именованный экземпляр SSAS-Tabular, то имя участника-службы выглядит как SRV01:SSAS-Tabular.<br /><br /> Обратите внимание, что синтаксис для указания именованного экземпляра служб Analysis Services отличается от того, что используется другими экземплярами SQL Server. Другие службы используют обратную косую черту (\) для добавления имени экземпляра в имя участника-службы.|  
 |Service-account|Это стартовая учетная запись службы Windows **MSSQLServerOLAPService** . Это может быть учетная запись пользователя домена Windows, виртуальная учетная запись, управляемая учетная запись службы (MSA) или встроенная учетная запись, например идентификатор безопасности службы, NetworkService или LocalSystem. Учетную запись пользователя домена Windows может быть представлен в виде "домен\пользователь" или user@domain.|  
@@ -113,7 +113,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02
  Этот пример демонстрирует синтаксис **setspn** для стандартного экземпляра служб Analysis Services, запущенного от имени учетной записи пользователя домена **SSAS-Service**в домене AdventureWorks.  
   
 ```  
-Setspn –s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
+Setspn -s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
 ```  
   
 > [!TIP]  
@@ -131,7 +131,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
 ```  
   
 ##  <a name="bkmk_spnNamed"></a> Регистрация имени участника-службы для именованного экземпляра  
- Именованные экземпляры служб Analysis Services используют динамическое назначение портов, которые определяются службой обозревателя SQL Server. Если используется именованный экземпляр, зарегистрируйте имя участника-службы для службы обозревателя SQL Server и именованного экземпляра служб Analysis Services. Дополнительные сведения см. в документе [Имя участника-службы для обозревателя SQL Server требуется, когда устанавливается соединение с именованным экземпляром служб SQL Server Analysis Services или SQL Server](http://support.microsoft.com/kb/950599).  
+ Именованные экземпляры служб Analysis Services используют динамическое назначение портов, которые определяются службой обозревателя SQL Server. Если используется именованный экземпляр, зарегистрируйте имя участника-службы для службы обозревателя SQL Server и именованного экземпляра служб Analysis Services. Дополнительные сведения см. в документе [Имя участника-службы для обозревателя SQL Server требуется, когда устанавливается соединение с именованным экземпляром служб SQL Server Analysis Services или SQL Server](https://support.microsoft.com/kb/950599).  
   
  **Пример синтаксиса имени участника-службы для службы обозревателя SQL, запущенной как LocalService.**  
   
@@ -147,13 +147,13 @@ Setspn -S MSOLAPDisco.3/AW-SRV01.AdventureWorks.com AW-SRV01
  **Синтаксис имени участника-службы для кластера служб Analysis Services**  
   
 ```  
-Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>  
+Setspn -s msolapsvc.3/<virtualname.FQDN > <domain user account>  
 ```  
   
- Помните, что узлы в кластере служб Analysis Services должны использовать порт (TCP 2383) по умолчанию и выполняться под той же учетной записью пользователя домена, чтобы каждый узел имел один и тот же идентификатор безопасности. Дополнительные сведения см. в разделе [Кластеризация служб Analysis Services SQL Server](http://msdn.microsoft.com/library/dn736073.aspx) .  
+ Помните, что узлы в кластере служб Analysis Services должны использовать порт (TCP 2383) по умолчанию и выполняться под той же учетной записью пользователя домена, чтобы каждый узел имел один и тот же идентификатор безопасности. Дополнительные сведения см. в разделе [Кластеризация служб Analysis Services SQL Server](https://msdn.microsoft.com/library/dn736073.aspx) .  
   
 ##  <a name="bkmk_spnHTTP"></a> Регистрация имени участника-службы для экземпляров службы SSAS, настроенных на доступ по протоколу HTTP  
- В зависимости от требований к решению можно настроить службы Analysis Services для доступа по протоколу HTTP. Если решение содержит IIS как компонент среднего уровня и требуется проверять подлинность с помощью Kerberos, для сервера IIS может потребоваться ручная регистрация имени участника-службы. Дополнительные сведения см. в подразделе «Настройка параметров сервера IIS» раздела [Настройка служб SQL Server 2008 Analysis Services и SQL Server 2005 Analysis Services на использование проверки подлинности Kerberos](http://support.microsoft.com/kb/917409).  
+ В зависимости от требований к решению можно настроить службы Analysis Services для доступа по протоколу HTTP. Если решение содержит IIS как компонент среднего уровня и требуется проверять подлинность с помощью Kerberos, для сервера IIS может потребоваться ручная регистрация имени участника-службы. Дополнительные сведения см. в разделе «Настройка параметров на компьютере, на котором запущены службы IIS» в [Настройка SQL Server 2008 Analysis Services и SQL Server 2005 Analysis Services на использование проверки подлинности Kerberos](https://support.microsoft.com/kb/917409).  
   
  С точки зрения регистрации имени участника-службы для экземпляра служб Analysis Services нет разницы между экземплярами, настроенными на использование протокола TCP или HTTP. Подключение к службам Analysis Services из IIS с помощью расширения MSMDPUMP ISAPI всегда производится через TCP-протокол.  
   
@@ -167,16 +167,16 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  Экземпляр служб Analysis Services может прослушивать только один порт. Использование нескольких портов не поддерживается. Дополнительные сведения о настройке порта см. в разделе [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ## <a name="see-also"></a>См. также  
- [Проверка подлинности для бизнес-аналитики Майкрософт и делегирование удостоверений](http://go.microsoft.com/fwlink/?LinkID=286576)   
- [Взаимная проверка подлинности с помощью Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Настройка SQL Server 2008 Analysis Services и SQL Server 2005 Analysis Services на использование проверки подлинности Kerberos](http://support.microsoft.com/kb/917409)   
- [Синтаксис (SPN) SetSPN (Setspn.exe) имен субъектов](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [Какие имя участника-службы использовать и как поставить его место?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
- [Пошаговое руководство по учетные записи служб](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
+ [Проверка подлинности для бизнес-аналитики Майкрософт и делегирование удостоверений](https://go.microsoft.com/fwlink/?LinkID=286576)   
+ [Взаимная проверка подлинности с помощью Kerberos](https://go.microsoft.com/fwlink/?LinkId=299283)   
+ [Настройка служб SQL Server 2008 Analysis Services и SQL Server 2005 Analysis Services на использование проверки подлинности Kerberos](https://support.microsoft.com/kb/917409)   
+ [Синтаксис имен субъектов-служб (SPN) SetSPN (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Какое имя субъекта-службы требуется использовать и как поставить его на место?](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [SetSPN](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
+ [Пошаговое руководство по учетным записям служб](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Как использовать имена участников-служб при настройке веб-приложений, размещенных в службах IIS](http://support.microsoft.com/kb/929650)   
- [новые возможности учетных записей служб](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
- [Настройка проверки подлинности Kerberos для продуктов SharePoint 2010 (технический документ)](http://technet.microsoft.com/library/ff829837.aspx)  
+ [Использование имен субъектов-служб при настройке веб-приложений, размещенных в службах IIS](https://support.microsoft.com/kb/929650)   
+ [новые возможности учетных записей служб](https://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
+ [Настройка проверки подлинности Kerberos для продуктов SharePoint 2010 (технический документ)](https://technet.microsoft.com/library/ff829837.aspx)  
   
   

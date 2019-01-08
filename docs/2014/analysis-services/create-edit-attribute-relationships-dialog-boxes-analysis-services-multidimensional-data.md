@@ -13,12 +13,12 @@ ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f13c975be4fb8e993cb682da20c6bdf725f25ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 936862a702d7ca6f82dab5104c5354105443c3be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141594"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528745"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Диалоговые окна «Создание связи атрибутов» и «Изменение связи атрибутов» (вкладка «Конструктор связей», конструктор измерений) (службы Analysis Services — многомерные данные)
   Диалоговое окно **Создание связи атрибутов** используется, чтобы определить новые связи атрибутов, а диалоговое окно **Изменение связи атрибутов** — чтобы изменить связь атрибутов. Дополнительные сведения см. в разделе [Определение связей атрибутов](multidimensional-models/attribute-relationships-define.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "48141594"
   
 2.  Щелкните значок «Создать связь атрибутов» на панели инструментов.  
   
-     —или—  
+     -или-  
   
      На диаграмме связей атрибутов или списке **Атрибуты** щелкните атрибут правой кнопкой мыши, а затем выберите пункт **Создать связь атрибутов**.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48141594"
 2.  На диаграмме связей атрибутов или списке **Связи атрибутов** щелкните атрибут правой кнопкой мыши, а затем выберите пункт **Изменить связь атрибутов**.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  В группе **Исходный атрибут** указывается имя атрибута, от которого исходит связь.  
   
  В группе **Связанный атрибут** указывается имя атрибута, на который направлена связь.  

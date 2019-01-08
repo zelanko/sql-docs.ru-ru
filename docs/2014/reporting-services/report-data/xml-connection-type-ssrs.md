@@ -11,12 +11,12 @@ ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e47b2cc13c05438ce38d1b6f63bcbcb357c60d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24804b6233e701ef0c27f113a294987156b6174c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211954"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363376"
 ---
 # <a name="xml-connection-type-ssrs"></a>Тип соединения XML (службы SSRS)
   Чтобы включить данные из источника XML-данных в отчет, необходим набор данных, основанный на источнике данных отчета типа XML. Этот встроенный тип источника данных основан на модуле обработки данных XML. Используйте этот тип источника данных для подключения и получения данных из внедренных в запрос XML-документов, веб-служб и данных XML.  
@@ -47,7 +47,7 @@ ms.locfileid: "48211954"
   
 -   Текущий пользователь Windows (встроенная безопасность).  
   
--   Учетные данные не требуются. Если учетные данные не заданы, будет применяться анонимный доступ. Убедитесь, что для соединения сервера отчетов с внешним источником данных определена учетная запись автоматического выполнения. Модуль обработки XML-данных не передает учетные данные целевому URL-адресу или веб-службе. Если не определена учетная запись автоматического выполнения, соединение закончится ошибкой. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) по службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+-   Учетные данные не требуются. Если учетные данные не заданы, будет применяться анонимный доступ. Убедитесь, что для соединения сервера отчетов с внешним источником данных определена учетная запись автоматического выполнения. Модуль обработки XML-данных не передает учетные данные целевому URL-адресу или веб-службе. Если не определена учетная запись автоматического выполнения, соединение закончится ошибкой. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
   
  Сохраненные и запрашиваемые учетные данные не поддерживаются. Помните, что если отключить встроенную безопасность Windows, получить данные будет невозможно. Если заданы хранимые учетные данные, или их предлагается ввести, во время выполнения возникнет ошибка.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "48211954"
   
  Возможные значения запроса набора данных к источнику данных с типом XML представлены ниже.  
   
--   *Пустой*: пустой запрос используется для создания результирующего набора по умолчанию. Запрос по умолчанию создается путем считывания источника данных и поиска в иерархии узлов XML первой коллекции концевых узлов. Результирующий набор включает все узлы с текстовыми значениями и все атрибуты узлов по этому пути. Столбцы в результирующем наборе соответствуют полям набора данных.  
+-   *Пустой*: Пустой запрос используется для создания результирующего набора по умолчанию. Запрос по умолчанию создается путем считывания источника данных и поиска в иерархии узлов XML первой коллекции концевых узлов. Результирующий набор включает все узлы с текстовыми значениями и все атрибуты узлов по этому пути. Столбцы в результирующем наборе соответствуют полям набора данных.  
   
--   Путь к элементу: определяет последовательность узлов, которые следует использовать при получении XML-данных из источника данных.  
+-   Путь к элементу: Задает последовательность узлов источника данных, используемых для получения XML-данных.  
   
--   Элемент XML-запроса: спецификация запроса XML со следующим необязательными элементами:  
+-   Элемент XML-запроса: Спецификация XML-запроса со следующим необязательными элементами:  
   
     -   **Для веб-службы:**  
   
@@ -108,9 +108,9 @@ ms.locfileid: "48211954"
   
          `<ElementPath IgnoreNamespaces="true">`  *путь к элементу*  `</ElementPath>`  
   
- Дополнительные сведения о синтаксисе запроса см. в разделе [Синтаксис запроса XML для XML-данных отчета (службы SSRS)](report-data-ssrs.md) документации к службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+ Дополнительные сведения о синтаксисе запроса см. в разделе [Синтаксис запроса XML для XML-данных отчета (службы SSRS)](report-data-ssrs.md) документации к службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
   
- Примеры см. в техническом документе [Reporting Services: Using XML and Web Service Data Sources](http://go.microsoft.com/fwlink/?LinkId=81654)(Службы Reporting Services: использование источников XML-данных и источников данных веб-служб).  
+ Примеры, см. в разделе [служб Reporting Services: С помощью XML и источников данных веб-служб](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Требования для получения XML-данных веб-службы  
  Модуль обработки XML-данных не обнаруживает схему самостоятельно. Поэтому необходимо определить, какой метод SOAP будет получать нужные данные. Необходимо также представлять себе схему адресации или пространство имен, которые веб-служба использует для своих данных.  
@@ -124,7 +124,7 @@ ms.locfileid: "48211954"
   
  Путь к элементу можно указать с помощью синтаксиса XML, схожего с XQuery.  
   
- Дополнительные сведения см. в разделе [Синтаксис пути к элементу для XML-данных отчета (службы SSRS)](element-path-syntax-for-xml-report-data-ssrs.md) документации к службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+ Дополнительные сведения см. в разделе [Синтаксис пути к элементу для XML-данных отчета (службы SSRS)](element-path-syntax-for-xml-report-data-ssrs.md) документации к службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
   
 ##  <a name="Parameters"></a> Параметры  
  Запрос не анализируется для определения параметров.  
@@ -160,7 +160,7 @@ ms.locfileid: "48211954"
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)  
  Предоставляет сведения о коллекции полей набора данных, создаваемой запросом.  
   
- [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md), см. в документации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md), см. в документации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
   
 ## <a name="see-also"></a>См. также  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -18,12 +17,12 @@ ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11726b01926ef5a7dff7157c901c7cbd73607564
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214766"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803756"
 ---
 # <a name="objecttype-trace-event-column"></a>Столбец события ObjectType Trace
   Столбец события трассировки Object Type используется в различных событиях трассировки. В этом подразделе приведены возможные значения этого столбца и связанные с ними определения.  
@@ -47,7 +46,7 @@ ms.locfileid: "48214766"
 |16975|Объект|  
 |17222|Полнотекстовый каталог|  
 |17232|Хранимая процедура CLR|  
-|17235|Схема|  
+|17235|схема|  
 |17475|Учетные данные|  
 |17491|Событие DDL|  
 |17741|Событие управления|  
@@ -89,7 +88,7 @@ ms.locfileid: "48214766"
 |21318|Скалярная функция CLR|  
 |21321|Встроенная скалярная функция CLR|  
 |21328|Схема секционирования|  
-|21333|Пользователь|  
+|21333|Пользовательская|  
 |21571|Контракт службы компонента Service Broker|  
 |21572|Триггер базы данных|  
 |21574|Функция CLR с табличным значением|  
@@ -97,7 +96,7 @@ ms.locfileid: "48214766"
 |21581|Тип сообщения компонента Service Broker|  
 |21586|Маршрут компонента Service Broker|  
 |21587|Статистика|  
-|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|Пользователь|  
+|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|Пользовательская|  
 |22099|Служба компонента Service Broker|  
 |22601|Индекс |  
 |22604|Имя входа сертификата|  

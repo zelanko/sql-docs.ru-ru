@@ -16,15 +16,15 @@ ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3eb6bbc5a3c08ca8668219dd3a11354c2fed2ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0899922eb2cdec88e73901f14ebeb6dfe953622
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056514"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367217"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Параметры и коды возврата в задаче «Выполнение SQL»
-  Инструкции SQL и хранимых процедурах часто используются `input` параметров, `output` параметров и кодов возврата. В службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] задача «Выполнение SQL» поддерживает типы параметров `Input`, `Output` и `ReturnValue`. Использовании `Input` тип для входных параметров `Output` для выходных параметров и `ReturnValue` кодах возврата.  
+  В инструкциях SQL и хранимых процедурах часто используются входные параметры `input`, выходные параметры `output` и коды возврата. В службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] задача «Выполнение SQL» поддерживает типы параметров `Input`, `Output` и `ReturnValue`. Используйте тип `Input` для входных параметров, `Output` — для выходных и `ReturnValue` — для кодов возврата.  
   
 > [!NOTE]  
 >  В задаче «Выполнение SQL» параметры могут использоваться, только если их поддерживает поставщик данных.  
@@ -56,13 +56,13 @@ ms.locfileid: "48056514"
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<имя параметра>|\@\<имя параметра>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|интерфейс ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL и OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|интерфейс ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL и OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 ### <a name="using-parameters-with-adonet-and-ado-connection-managers"></a>Использование параметров с ADO.NET и диспетчерами соединений ADO  
  Диспетчеры подключений [!INCLUDE[vstecado](../includes/vstecado-md.md)] и ADO предъявляют особые требования к командам SQL, использующим параметры:  
   
--   Диспетчеры подключений [!INCLUDE[vstecado](../includes/vstecado-md.md)] требуют, чтобы команда SQL использовала имена параметров в качестве маркеров параметров. Это означает, что переменные могут быть прямо сопоставлены с параметрами. Например, переменная `@varName` сопоставляется с параметром по имени `@parName` и предоставляет значение параметру `@parName`.  
+-   Диспетчер соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] требует, чтобы команда SQL использовала имена параметров в качестве маркеров параметров. Это означает, что переменные могут быть прямо сопоставлены с параметрами. Например, переменная `@varName` сопоставляется с параметром по имени `@parName` и предоставляет значение параметру `@parName`.  
   
 -   Диспетчеры соединений ADO требуют, чтобы в команде SQL в качестве маркеров параметров использовались вопросительные знаки (?). Однако в качестве имен параметров можно использовать любые имена, за исключением целых чисел.  
   
@@ -76,29 +76,29 @@ ms.locfileid: "48056514"
  В зависимости от поставщика, который используют диспетчеры соединений, некоторые типы данных OLE DB могут не поддерживаться. Например, драйвер Excel распознает только ограниченный набор типов данных. Дополнительные сведения о поведении поставщика Jet с драйвером Excel см. в разделе [Excel Source](data-flow/excel-source.md).  
   
 #### <a name="using-parameters-with-ole-db-connection-managers"></a>Использование параметров с диспетчерами соединений OLE DB  
- Если в задаче "Выполнение SQL" используется диспетчер соединений OLE DB, становится доступным свойство BypassPrepare задачи. Необходимо присвоить этому свойству `true` Если задача «Выполнение SQL» использует инструкции SQL с параметрами.  
+ Если в задаче "Выполнение SQL" используется диспетчер соединений OLE DB, становится доступным свойство BypassPrepare задачи. Этому свойству необходимо присвоить значение `true`, если задача «Выполнение SQL» использует инструкции SQL с параметрами.  
   
  При использовании диспетчера соединений OLE DB нельзя применять параметризованные вложенные запросы, поскольку в задаче «Выполнение SQL» нельзя получить путем анализа информацию о параметрах через поставщик OLE DB. Однако можно использовать выражение, чтобы объединить значения параметров в строку запроса и задать свойство SqlStatementSource этой задачи.  
   
 ##  <a name="Date_and_time_data_types"></a> Использование параметров с типами даты и времени данных  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Использование параметров даты и времени с ADO.NET и диспетчерами соединений ADO  
- При считывании данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] типов, `time` и `datetimeoffset`, задачу «Выполнение SQL», использующее аргумент [!INCLUDE[vstecado](../includes/vstecado-md.md)] или диспетчер соединений ADO, имеет следующие дополнительные требования:  
+ При считывании данных типов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `time` и `datetimeoffset` задача «Выполнение SQL», которая использует диспетчер соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] или ADO, имеет следующие дополнительные требования.  
   
 -   Для `time` данных, [!INCLUDE[vstecado](../includes/vstecado-md.md)] диспетчер соединений требует, чтобы хранились в параметре типа `Input` или `Output`, и типом данных `string`.  
   
--   Для `datetimeoffset` данных, [!INCLUDE[vstecado](../includes/vstecado-md.md)] диспетчер соединений требует, чтобы они хранились в одном из следующих параметров:  
+-   Для данных типа `datetimeoffset` диспетчер соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] требует, чтобы они хранились в одном из следующих параметров.  
   
     -   Параметр типа `Input` имеет тип данных `string`.  
   
-    -   Параметр типа `Output` или `ReturnValue`, и типом данных `datetimeoffset`, `string`, или `datetime2`. Если выбран параметр с типом данных `string` или `datetime2`, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] преобразует данные в тип string или datetime2.  
+    -   Параметр типа `Output` или `ReturnValue` имеет тип данных `datetimeoffset`, `string` или `datetime2`. Если выбран параметр с типом данных `string` или `datetime2`, то службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] преобразуют данные в тип string или datetime2.  
   
 -   Диспетчер соединений ADO требует, чтобы данные `time` или `datetimeoffset` хранились в параметре типа `Input` или `Output`, имеющем тип данных `adVarWchar`.  
   
  Дополнительные сведения о типах данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и их сопоставлении с типами данных [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] см. в разделе [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql) и [Типы данных службы Integration Services](data-flow/integration-services-data-types.md).  
   
 ### <a name="using-date-and-time-parameters-with-ole-db-connection-managers"></a>Использование параметров даты и времени с диспетчерами соединений OLE DB  
- При использовании диспетчера соединений OLE DB, задачу «Выполнение SQL» имеет особые требования хранению данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] типы данных, `date`, `time`, `datetime`, `datetime2`, и `datetimeoffset`. Эти данные необходимо хранить в параметре одного из следующих типов.  
+ При использовании диспетчера соединений OLE DB задача «Выполнение SQL» имеет особые требования по хранению данных типа данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: `date`, `time`, `datetime`, `datetime2` и `datetimeoffset`. Эти данные необходимо хранить в параметре одного из следующих типов.  
   
 -   Входной параметр типа данных NVARCHAR.  
   
@@ -114,11 +114,11 @@ ms.locfileid: "48056514"
  Если данные не хранятся в соответствующем входном или выходном параметре, выполнение пакета завершается с ошибкой.  
   
 ### <a name="using-date-and-time-parameters-with-odbc-connection-managers"></a>Использование параметров даты и времени с диспетчерами соединений ODBC  
- При использовании диспетчера соединений ODBC, задачу «Выполнение SQL» имеет особые требования хранению данных с одним из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] типы данных, `date`, `time`, `datetime`, `datetime2`, или `datetimeoffset`. Эти данные необходимо хранить в параметре одного из следующих типов.  
+ При использовании диспетчера соединений ODBC задача «Выполнение SQL» имеет особые требования по хранению данных одного из следующих типов данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: `date`, `time`, `datetime`, `datetime2` и `datetimeoffset`. Эти данные необходимо хранить в параметре одного из следующих типов.  
   
 -   Входной параметр `input` типа данных SQL_WVARCHAR.  
   
--   `output` Параметр соответствующего типа данных, как показано в следующей таблице.  
+-   Выходной параметр `output` соответствующего типа данных, как показано в следующей таблице.  
   
     |Тип параметра `Output`|Тип данных «date»|  
     |-------------------------------|--------------------|  
@@ -158,7 +158,7 @@ ms.locfileid: "48056514"
 |Тип соединений|Синтаксис EXEC|  
 |---------------------|-----------------|  
 |EXCEL и OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|интерфейс ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](http://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
+|интерфейс ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](https://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
 |ADO|Если для параметра IsQueryStoredProcedure задано значение `False`, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Если для параметра IsQueryStoredProcedure задано значение `True`, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Если для параметра IsQueryStoredProcedure задано значение `False`, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Если для параметра IsQueryStoredProcedure задано значение `True`, `uspGetBillOfMaterials`|  
   
@@ -167,16 +167,16 @@ ms.locfileid: "48056514"
  Дополнительные сведения об использовании входных и выходных параметров с хранимыми процедурами Transact-SQL см. в разделе [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql).  
   
 ##  <a name="Return_codes"></a> Возвращение значений кодов возврата  
- Хранимая процедура может возвращать целочисленное значение, называемое кодом возврата, чтобы указать состояние выполнения процедуры. Чтобы реализовать коды возврата в задаче «Выполнение SQL», используйте параметры типа `ReturnValue` типа.  
+ Хранимая процедура может возвращать целочисленное значение, называемое кодом возврата, чтобы указать состояние выполнения процедуры. Чтобы реализовать коды возврата в задаче «Выполнение SQL», используйте параметры типа `ReturnValue`.  
   
- В следующей таблице приведен список типов соединений с примерами команды EXEC, которая реализует коды возврата. Все примеры используют входной параметр `input`. Правила использования маркеров параметров и имен параметров одинаковы для всех типов параметров —`Input`, `Output`, и `ReturnValue`.  
+ В следующей таблице приведен список типов соединений с примерами команды EXEC, которая реализует коды возврата. Все примеры используют входной параметр `input`. Правила использования маркеров параметров и имен параметров одинаковы для всех типов параметров -`Input`, `Output`, и `ReturnValue`.  
   
  Некоторые типы синтаксиса не поддерживают литералы параметров. В этом случае необходимо предоставить значение параметра с помощью переменной.  
   
 |Тип соединений|Синтаксис EXEC|  
 |---------------------|-----------------|  
 |EXCEL и OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|интерфейс ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](http://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
+|интерфейс ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](https://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
 |ADO|Если для параметра IsQueryStoreProcedure задано значение `False`, `EXEC ? = myStoredProcedure 1`<br /><br /> Если для параметра IsQueryStoreProcedure задано значение `True`, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Для параметра IsQueryStoreProcedure задано значение `True`.<br /><br /> `myStoredProcedure`|  
   
@@ -198,9 +198,9 @@ ms.locfileid: "48056514"
   
 ## <a name="related-content"></a>См. также  
   
--   Запись в блоге, [Хранимые процедуры с выходными параметрами](http://go.microsoft.com/fwlink/?LinkId=157786), на сайте blogs.msdn.com  
+-   Запись в блоге, [Хранимые процедуры с выходными параметрами](https://go.microsoft.com/fwlink/?LinkId=157786), на сайте blogs.msdn.com  
   
--   Образец CodePlex, [Параметры задачи «Выполнение SQL» и результирующие наборы](http://go.microsoft.com/fwlink/?LinkId=157863), на сайте msftisprodsamples.codeplex.com  
+-   Образец CodePlex, [Параметры задачи «Выполнение SQL» и результирующие наборы](https://go.microsoft.com/fwlink/?LinkId=157863), на сайте msftisprodsamples.codeplex.com  
   
 ## <a name="see-also"></a>См. также  
  [Задача "Выполнение SQL"](control-flow/execute-sql-task.md)   

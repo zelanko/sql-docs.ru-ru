@@ -1,6 +1,6 @@
 ---
-title: Настройка брандмауэра для службы машинного обучения SQL Server | Документация Майкрософт
-description: Сведения о настройке брандмауэра для службы машинного обучения SQL Server.
+title: Конфигурация брандмауэра - службы машинного обучения SQL Server
+description: Сведения о настройке брандмауэра для исходящих подключений из службы машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: d2bf36ea9a7c7a0b193dc4613f6a36f58e66014a
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: fc89855364e8bfdb2c1e5de1f58d87ae57886db9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419059"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431947"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>Настройка брандмауэра для службы машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

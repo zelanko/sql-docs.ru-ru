@@ -19,12 +19,12 @@ ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52c03994288a54db9057fcac7c121b08b806d8db
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bb3ed3080d27a5db2cadcc9ab2b47e9a66d95a62
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145569"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374476"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Разработка с использованием XMLA в службах Analysis Services
   XML для аналитики (XMLA) — это XML-протокол, основанный на протоколе SOAP и специально предназначенный для обеспечения унифицированного доступа к данным в любом стандартном многомерном источнике данных, доступном через HTTP-соединение. В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA является единственным протоколом для связи с клиентскими приложениями. Все клиентские библиотеки, поддерживаемые службами Analysis Services, в конечном итоге формируют запросы и ответы по протоколу XMLA.  
@@ -62,12 +62,12 @@ ms.locfileid: "50145569"
 ## <a name="namespace-and-schema"></a>Пространство имен и схема  
   
 ### <a name="namespace"></a>Пространство имен  
- Схемы, определенной в данной спецификации использует пространство имен XML http://schemas.microsoft.com/AnalysisServices/2003/Engine и стандартное сокращение «DDL».  
+ Схемы, определенной в данной спецификации использует пространство имен XML https://schemas.microsoft.com/AnalysisServices/2003/Engine и стандартное сокращение «DDL».  
   
-### <a name="schema"></a>Схема  
+### <a name="schema"></a>схема  
  В основе определения схемы XSD для языка определения объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] лежат определение элементов схемы и иерархии, приведенное в этом разделе.  
   
-## <a name="extensibility"></a>Расширяемость  
+## <a name="extensibility"></a>Расширение среды  
  Расширяемость схемы языка определения объектов обеспечивается за счет элемента `Annotation`, который включается во все объекты. Этот элемент может содержать любой допустимый код XML из любого пространства имен XML (отличного от целевого пространства имен, определяющего DDL) с соблюдением следующих правил.  
   
 -   В XML-коде могут содержаться только элементы.  

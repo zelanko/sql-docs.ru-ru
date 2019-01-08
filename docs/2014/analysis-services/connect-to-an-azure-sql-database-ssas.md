@@ -13,12 +13,12 @@ ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b81207d2cb045b330560c652e98b2488aad421b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149214"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372896"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Подключение к базе данных SQL Azure (SSAS)
   Эта страница **мастера импорта таблиц** позволяет установить соединение с [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  
@@ -26,7 +26,7 @@ ms.locfileid: "48149214"
 > [!NOTE]  
 >  При подключении к набору данных Azure DataMarket см. раздел [Соединение с отчетом или веб-каналом данных (SSAS)](connect-to-a-report-or-data-feed-ssas.md).  
   
- [!INCLUDE[ssSDS](../includes/sssds-md.md)] — это размещаемая реляционная база данных, соединение с которой устанавливается с проверкой подлинности SQL Server. Дополнительные сведения о [!INCLUDE[ssSDS](../includes/sssds-md.md)]см. на веб-сайте [SQL Database](http://go.microsoft.com/fwlink/?LinkID=157856). Для соединения с источником данных на компьютере должен быть установлен соответствующий поставщик.  
+ [!INCLUDE[ssSDS](../includes/sssds-md.md)] — это размещаемая реляционная база данных, соединение с которой устанавливается с проверкой подлинности SQL Server. Дополнительные сведения о [!INCLUDE[ssSDS](../includes/sssds-md.md)]см. на веб-сайте [SQL Database](https://go.microsoft.com/fwlink/?LinkID=157856). Для соединения с источником данных на компьютере должен быть установлен соответствующий поставщик.  
   
 > [!NOTE]  
 >  При выборе базы данных на этой странице используются учетные данные текущего пользователя. Тем не менее импорт не будет успешным, если пользователь, указанный на странице сведений об олицетворении, не имеет достаточных прав для чтения из выбранной базы данных.  

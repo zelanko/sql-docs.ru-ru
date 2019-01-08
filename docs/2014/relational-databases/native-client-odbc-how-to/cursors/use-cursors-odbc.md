@@ -12,12 +12,12 @@ ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 222cb3cd5511d4c663e86ba847090cc35d84e2cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143094"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360096"
 ---
 # <a name="use-cursors-odbc"></a>Использование курсоров (ODBC)
     
@@ -33,11 +33,11 @@ ms.locfileid: "48143094"
   
 2.  Вызовите метод [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) для установки размера набора строк с помощью атрибута SQL_ATTR_ROW_ARRAY_SIZE.  
   
-3.  По желанию можно вызвать функцию [SQLSetCursorName](http://go.microsoft.com/fwlink/?LinkId=58406) для задания имени курсора, если позиционированные обновления предполагается проводить с помощью предложения WHERE CURRENT OF.  
+3.  По желанию можно вызвать функцию [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) для задания имени курсора, если позиционированные обновления предполагается проводить с помощью предложения WHERE CURRENT OF.  
   
 4.  Выполните инструкцию SQL.  
   
-5.  По желанию можно вызвать функцию [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) для получения имени курсора, если позиционированные обновления предполагается проводить с помощью предложения WHERE CURRENT OF, а имя курсора не было задано с помощью функции [SQLSetCursorName](http://go.microsoft.com/fwlink/?LinkId=58406) на шаге 3.  
+5.  По желанию можно вызвать функцию [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md) для получения имени курсора, если позиционированные обновления предполагается проводить с помощью предложения WHERE CURRENT OF, а имя курсора не было задано с помощью функции [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) на шаге 3.  
   
 6.  Вызовите функцию [SQLNumResultCols](../../native-client-odbc-api/sqlnumresultcols.md) для получения числа столбцов (C) в наборе строк.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "48143094"
   
     -   Если вернулось значение SQL_NO_DATA, то больше нет результирующих наборов.  
   
-    -   Если вернулось значение SQL_SUCCESS_WITH_INFO или SQL_ERROR, вызовом функции [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) определите, есть ли выходные данные от инструкции PRINT или RAISERROR.  
+    -   Если вернулось значение SQL_SUCCESS_WITH_INFO или SQL_ERROR, вызовом функции [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) определите, есть ли выходные данные от инструкции PRINT или RAISERROR.  
   
      Если в качестве выходных параметров используются привязанные параметры инструкции или возвращаемое значение хранимой процедуры, используйте данные, имеющиеся в буферах привязанного параметра.  
   
-     При использовании привязки параметров каждый вызов метода [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) или [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) выполнит инструкцию SQL S раз, где S — число элементов в массиве привязанных параметров. Это значит, что придется обработать S наборов результатов, каждый из которых содержит все результирующие наборы, выходные параметры и коды возврата, обычно возвращаемые при исполнении отдельной инструкции SQL.  
+     При использовании привязки параметров каждый вызов метода [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) или [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) выполнит инструкцию SQL S раз, где S — число элементов в массиве привязанных параметров. Это значит, что придется обработать S наборов результатов, каждый из которых содержит все результирующие наборы, выходные параметры и коды возврата, обычно возвращаемые при исполнении отдельной инструкции SQL.  
   
      Следует заметить, что, когда результирующий набор содержит вычисляемые строки, каждая вычисляемая строка представляется как отдельный результирующий набор. Эти вычисляемые результирующие наборы находятся среди обычных строк, разбивая их на несколько результирующих наборов.  
   

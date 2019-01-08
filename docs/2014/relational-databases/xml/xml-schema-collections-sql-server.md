@@ -21,12 +21,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8a2b5668ba75c2825ab62b2a86aafb84f1f1488
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a86a39aa3473495b5eed6bc2eff92376a5a68cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054741"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362787"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Коллекции XML-схем (SQL Server)
   Как описано в разделе [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server предоставляет собственное хранилище XML-данных через `xml` тип данных. XSD-схем можно связать с переменной или столбцом типа `xml` тип с помощью коллекции XML-схем. Коллекция XML-схем хранит импортированные XML-схемы и используется для решения следующих задач:  
@@ -48,7 +48,7 @@ ms.locfileid: "48054741"
  Кроме того, можно использовать коллекцию схем XML для типизации переменных, параметров и столбцов типа XML.  
   
 ##  <a name="ddl"></a> DDL для управления коллекциями схем  
- Можно создавать коллекции схем XML в базе данных и связывать их с переменными и столбцами типа `xml` типа. Для управления коллекциями схем в базе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены следующие инструкции DDL:  
+ В базе данных можно создавать коллекции схем XML и связывать их с переменными и столбцами типа `xml`. Для управления коллекциями схем в базе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены следующие инструкции DDL:  
   
 -   [CREATE XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/create-xml-schema-collection-transact-sql) импортирует компоненты схемы в базу данных.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48054741"
   
 -   [DROP XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) полностью удаляет коллекцию схем XML и все ее компоненты.  
   
- Чтобы использовать коллекцию XML-схем и содержащиеся в ней схемы, следует сначала создать коллекцию и схемы с помощью инструкции CREATE XML SCHEMA COLLECTION. После создания коллекции схемы затем можно создать переменные и столбцы типа `xml` и связать с ними коллекцию схем. Обратите внимание, что после создания коллекции различные компоненты схем будут храниться в метаданных. Кроме того, добавлять большие компоненты в существующие схемы или новые схемы в существующую коллекцию можно с помощью инструкции ALTER XML SCHEMA COLLECTION.  
+ Чтобы использовать коллекцию XML-схем и содержащиеся в ней схемы, следует сначала создать коллекцию и схемы с помощью инструкции CREATE XML SCHEMA COLLECTION. После создания коллекции схемы можно создавать переменные и столбцы типа `xml` и связать с ними коллекцию схем. Обратите внимание, что после создания коллекции различные компоненты схем будут храниться в метаданных. Кроме того, добавлять большие компоненты в существующие схемы или новые схемы в существующую коллекцию можно с помощью инструкции ALTER XML SCHEMA COLLECTION.  
   
  Удалить коллекцию схем можно с помощью инструкции DROP XML SCHEMA COLLECTION. При этом удаляются все схемы в коллекции и сам объект коллекции. Обратите внимание, что для удаления коллекции схем должны выполняться условия, описанные в разделе [DROP XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql).  
   
@@ -171,7 +171,7 @@ ms.locfileid: "48054741"
   
  Все это поясняют следующие примеры.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Пример: перечисление пространств имен XML, входящих в коллекцию схем XML  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Пример Перечисление пространств имен XML, входящих в коллекцию XML-схем  
  Выполните следующий запрос для коллекции XML-схем «myCollection»:  
   
 ```  
@@ -181,7 +181,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Пример: перечисление содержимого коллекции схем XML  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Пример Перечисление содержимого коллекции XML-схем  
  Следующая инструкция перебирает содержимое коллекции XML-схем «myCollection» реляционной схемы dbo.  
   
 ```  
@@ -190,12 +190,12 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Отдельные XML-схемы в коллекции можно получить как `xml` экземпляры типа данных, указав целевое пространство имен в качестве третьего аргумента **XML_SCHEMA_NAMESPACE()**. Это показано в следующем примере.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Пример: вывод конкретной схемы из коллекции схем XML  
- Следующая инструкция выводит XML-схему с целевым пространством имен "http://www.microsoft.com/books" из коллекции XML-схем "myCollection" реляционной схемы dbo.  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Пример Вывод конкретной схемы из коллекции XML-схем  
+ Следующая инструкция выводит XML-схему с целевым пространством имен "<https://www.microsoft.com/books>" из коллекции XML-схем "myCollection" реляционной схемы dbo.  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'http://www.microsoft.com/books')  
+N'https://www.microsoft.com/books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>Запросы XML-схем  
@@ -203,7 +203,7 @@ N'http://www.microsoft.com/books')
   
 -   Написать адресованные представлениям каталога запросы Transact-SQL о получении пространств имен XML-схем.  
   
--   Создать таблицу со столбцом данных типа `xml` для хранения XML-схем и их загрузки в систему типов XML. XML-столбца можно запросить с помощью `xml` методов типа данных. Кроме того, можно создать для этого столбца XML-индекс. Однако при этом подходе в приложении нужно поддерживать согласованность между XML-схемами, хранимыми в XML-столбце, и системой типов XML. Например, при удалении пространства имен XML-схемы из системы типов XML для сохранения согласованности необходимо будет удалить его и из таблицы.  
+-   Создать таблицу со столбцом данных типа `xml` для хранения XML-схем и их загрузки в систему типов XML. Данные из XML-столбца можно запросить при помощи методов типа данных `xml`. Кроме того, можно создать для этого столбца XML-индекс. Однако при этом подходе в приложении нужно поддерживать согласованность между XML-схемами, хранимыми в XML-столбце, и системой типов XML. Например, при удалении пространства имен XML-схемы из системы типов XML для сохранения согласованности необходимо будет удалить его и из таблицы.  
   
 ## <a name="see-also"></a>См. также  
  [Просмотр хранимой коллекции схем XML](../xml/view-a-stored-xml-schema-collection.md)   

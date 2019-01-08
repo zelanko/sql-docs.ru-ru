@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldest.f1
@@ -16,12 +15,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 62d9e4fa02be43f28db09228b8c9a70cccc54396
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905248"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375606"
 ---
 # <a name="excel-destination"></a>Назначение Excel
   Назначение «Excel» загружает данные в листы или диапазоны в книгах [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -41,13 +40,13 @@ ms.locfileid: "48905248"
 ## <a name="usage-considerations"></a>Особенности использования  
  Диспетчер соединений Excel использует поставщик [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для Jet 4.0, который поддерживает драйвер Excel ISAM (индексированный последовательный метод доступа) для подключения, а также чтения и записи данных в источники данных Excel.  
   
- Во многих имеющихся статьях базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] описывается поведение этого поставщика и драйвера, и хотя эти статьи не относятся к [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и их предшественникам, службам преобразования данных, вам может быть интересно изучить поведение, которое может привести к неожиданным результатам. Общие сведения об использовании и поведении драйвера Excel см. в разделе [Как использовать ADO с данными Excel из Visual Basic или VBA](http://support.microsoft.com/kb/257819).  
+ Во многих имеющихся статьях базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] описывается поведение этого поставщика и драйвера, и хотя эти статьи не относятся к [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и их предшественникам, службам преобразования данных, вам может быть интересно изучить поведение, которое может привести к неожиданным результатам. Общие сведения об использовании и поведении драйвера Excel см. в разделе [HOWTO: Использование ADO с данными Excel из Visual Basic или VBA](https://support.microsoft.com/kb/257819).  
   
  При сохранении данных в назначение «Excel» следующее поведение поставщика Jet в сочетании с драйвером Excel может привести к непредвиденным результатам.  
   
 -   **Сохранение текстовых данных**. При сохранении значений текстовых данных в назначение «Excel» драйвер Excel предваряет текст в каждой ячейке символом одинарной кавычки ('); это гарантирует, что сохраненные значения будут интерпретироваться как текстовые. При разработке других приложений, которые считывают или обрабатывают сохраненные данные, следует выполнять специальную обработку для символа одинарной кавычки ('), за которым следуют текстовые значения.  
   
-     Сведения о том, как избежать включения символа одинарной кавычки, см. в записи блога [Single quote is appended to all strings when data is transformed to excel when using Excel destination data flow component in SSIS package](http://go.microsoft.com/fwlink/?LinkId=400876)на веб-сайте msdn.com.  
+     Сведения о том, как избежать включения символа одинарной кавычки, см. в записи блога [Single quote is appended to all strings when data is transformed to excel when using Excel destination data flow component in SSIS package](https://go.microsoft.com/fwlink/?LinkId=400876)на веб-сайте msdn.com.  
   
 -   **Сохранение данных типа memo (ntext)**. Чтобы успешно сохранять в столбцы Excel строки, имеющие длину более 255 символов, драйвер должен распознать тип данных целевого столбца как **memo** , а не как **string**. Если в целевой таблице уже содержатся строки данных, то в столбце типа memo в первых нескольких строках, которые проверит драйвер, должен содержаться, по крайней мере, один экземпляр значения, имеющего длину более 255 символов. Если целевая таблица создается во время проектирования пакета или во время выполнения, инструкции CREATE TABLE необходимо использовать LONGTEXT (или один из его синонимов) как тип данных столбца типа memo.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48905248"
   
  Диалоговое окно **Расширенный редактор** содержит все свойства, которые могут устанавливаться программными средствами. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](../common-properties.md)  
+-   [Общие свойства](../common-properties.md)  
   
 -   [Пользовательские свойства Excel](excel-custom-properties.md)  
   
@@ -106,11 +105,11 @@ ms.locfileid: "48905248"
   
 ## <a name="related-content"></a>См. также  
   
--   Запись в блоге [Excel в службах Integration Services, часть 1 из 3. Соединения и компоненты](http://go.microsoft.com/fwlink/?LinkId=217674)на сайте dougbert.com  
+-   Запись в блоге [Excel в службах Integration Services, часть 1 из 3: Соединения и компоненты](https://go.microsoft.com/fwlink/?LinkId=217674), на сайте dougbert.com  
   
--   Запись в блоге [Excel в службах Integration Services, часть 2 из 3. Таблицы и типы данных](http://go.microsoft.com/fwlink/?LinkId=217675)на сайте dougbert.com  
+-   Запись в блоге [Excel в службах Integration Services, часть 2 из 3: Таблицы и типы данных](https://go.microsoft.com/fwlink/?LinkId=217675), на сайте dougbert.com.  
   
--   Запись в блоге [Excel в службах Integration Services, часть 3 из 3. Проблемы и альтернативы](http://go.microsoft.com/fwlink/?LinkId=217676)на сайте dougbert.com  
+-   Запись в блоге [Excel в службах Integration Services, часть 3 из 3: Проблемы и альтернативы](https://go.microsoft.com/fwlink/?LinkId=217676), на сайте dougbert.com.  
   
 ## <a name="see-also"></a>См. также  
  [Источник Excel](excel-source.md)   

@@ -11,12 +11,12 @@ ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88f72c98977fae3e99f917de8a1b82198779b1ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083284"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373686"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Табличное моделирование (учебник по Adventure Works)
   В этом учебнике содержатся уроки по созданию табличной модели служб [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services с помощью среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "48083284"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   Образец базы данных AdventureWorksDW. Этот образец базы данных включает данные, необходимые для выполнения заданий учебника. Чтобы загрузить образец базы данных, см. в разделе [ http://go.microsoft.com/fwlink/?LinkID=335807 ](http://go.microsoft.com/fwlink/?LinkID=335807).  
+-   Образец базы данных AdventureWorksDW. Этот образец базы данных включает данные, необходимые для выполнения заданий учебника. Чтобы загрузить образец базы данных, см. в разделе [ https://go.microsoft.com/fwlink/?LinkID=335807 ](https://go.microsoft.com/fwlink/?LinkID=335807).  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 или более поздняя версия (для использования с функцией анализа в Excel в занятии 11)  
   
@@ -68,20 +68,20 @@ ms.locfileid: "48083284"
   
 |Занятие|Предположительное время выполнения|  
 |------------|--------------------------------|  
-|[Урок 1. Создание проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md)|10 минут.|  
-|[Урок 2. Добавление данных](lesson-2-add-data.md)|20 минут|  
-|[Урок 3. Переименование столбцов](rename-columns.md)|20 минут|  
-|[Урок 4. Отметка в качестве таблицы дат](lesson-3-mark-as-date-table.md)|3 минуты|  
-|[Урок 5. Создание связей](lesson-4-create-relationships.md)|10 минут.|  
-|[Урок 6. Создание вычисляемых столбцов](lesson-5-create-calculated-columns.md)|15 минут|  
-|[Урок 7. Создание мер](lesson-6-create-measures.md)|30 минут|  
-|[Урок 8. Создание ключевых показателей эффективности](lesson-7-create-key-performance-indicators.md)|15 минут|  
-|[Урок 9. Создание перспектив](lesson-8-create-perspectives.md)|5 минут|  
-|[Урок 10. Создание иерархий](lesson-9-create-hierarchies.md)|20 минут|  
-|[Урок 11. Создание разделов](lesson-10-create-partitions.md)|15 минут|  
-|[Урок 12. Создание ролей](lesson-11-create-roles.md)|15 минут|  
-|[Урок 13. Анализ в Excel](lesson-12-analyze-in-excel.md)|20 минут|  
-|[Урок 14. Развертывание](lesson-13-deploy.md)|5 минут|  
+|[Занятие 1. Создание нового проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md)|10 минут.|  
+|[Занятие 2. Добавление данных](lesson-2-add-data.md)|20 минут|  
+|[Занятие 3. Переименование столбцов](rename-columns.md)|20 минут|  
+|[Занятие 4. Пометить как таблицу дат](lesson-3-mark-as-date-table.md)|3 минуты|  
+|[Занятие 5. Создание связей](lesson-4-create-relationships.md)|10 минут.|  
+|[Занятие 6. Создание вычисляемых столбцов](lesson-5-create-calculated-columns.md)|15 минут|  
+|[Занятие 7. Создание мер](lesson-6-create-measures.md)|30 минут|  
+|[Занятие 8. Создание ключевых показателей эффективности](lesson-7-create-key-performance-indicators.md)|15 минут|  
+|[Занятие 9. Создание перспектив](lesson-8-create-perspectives.md)|5 минут|  
+|[Занятие 10. Создание иерархий](lesson-9-create-hierarchies.md)|20 минут|  
+|[Занятие 11. Создание секций](lesson-10-create-partitions.md)|15 минут|  
+|[Занятие 12. Создание ролей](lesson-11-create-roles.md)|15 минут|  
+|[Занятие 13. Анализ в Excel](lesson-12-analyze-in-excel.md)|20 минут|  
+|[Занятие 14. Развертывание](lesson-13-deploy.md)|5 минут|  
   
 ## <a name="supplemental-lessons"></a>Дополнительные занятия  
  Этот учебник также включает в себя [дополнительные занятия](../tutorials/supplemental-lessons.md). Ознакомление с содержащимися здесь разделами не требуется для прохождения этого учебника, но может оказаться полезным для лучшего освоения функций для работы с расширенной табличной моделью.  
@@ -94,6 +94,6 @@ ms.locfileid: "48083284"
 |[Настройка свойств отчетов для отчетов Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)Настройка свойств отчетов для отчетов Power View|30 минут|  
   
 ## <a name="next-step"></a>Следующий шаг  
- Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Создание нового проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md).  
+ Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Создание нового проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md).  
   
   

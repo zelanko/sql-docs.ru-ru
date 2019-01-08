@@ -11,12 +11,12 @@ ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad1970ad7112910b190ee75974248405e0269646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9ee14c39f7fee577065de934f839f9d6c88e630
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119414"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413774"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Предупреждение об использовании GEOMETRY, GEOGRAPHY и HIERARCHYID на стороне клиента
   Сборка **Microsoft.SqlServer.Types.dll**, который содержит Пространственные типы данных, была обновлена с версии 10.0 до версии 11.0. Пользовательские приложения, ссылающиеся на эту сборку, могут завершаться с ошибками, если выполняются определенные условия.  
@@ -27,9 +27,9 @@ ms.locfileid: "48119414"
 ## <a name="description"></a>Описание  
  Сборка **Microsoft.SqlServer.Types.dll**, который содержит Пространственные типы данных, была обновлена с версии 10.0 до версии 11.0. Пользовательские приложения, ссылающиеся на эту сборку, могут завершаться с ошибками, если выполняются следующие условия.  
   
--   При перемещении пользовательского приложения с компьютера, на котором [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] была установлена на компьютере, на котором только [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] — установлен, приложение завершится ошибкой, поскольку указанная в ссылке версия 10.0 из **SqlTypes** сборки не существует. Может отображаться следующее сообщение об ошибке: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
+-   При перемещении пользовательского приложения с компьютера, на котором [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] была установлена на компьютере, на котором только [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] — установлен, приложение завершится ошибкой, поскольку указанная в ссылке версия 10.0 из **SqlTypes** сборки не существует. Может быть выдано следующее сообщение об ошибке: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
--   При ссылке **SqlTypes** сборки версии 11.0 и наличии также установленной версии 10.0, может появиться это сообщение об ошибке: `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
+-   При ссылке **SqlTypes** сборки версии 11.0 и наличии также установленной версии 10.0, может появиться это сообщение об ошибке: `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
 -   При ссылке **SqlTypes** сборки версии 11.0 из пользовательского приложения, которая предназначена для .NET 3.5, 4 или 4.5, приложение завершится ошибкой, поскольку SqlClient изначально загружает версию сборки 10.0. Эта ошибка возникает, когда приложение вызывает один из следующих методов:  
   

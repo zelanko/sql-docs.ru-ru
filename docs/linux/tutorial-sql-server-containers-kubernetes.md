@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674204"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626324"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Развертывание контейнера SQL Server в Kubernetes с помощью службы Azure Kubernetes (AKS)
 
@@ -41,11 +41,11 @@ Kubernetes 1.6 и более поздних версий имеется подд
 
 На следующей схеме `mssql-server` сбой контейнер. Как orchestrator Kubernetes гарантирует правильное количество работоспособных экземпляров в реплике задать и запускает контейнер в соответствии с конфигурацией. Оркестратор начинает новый pod на одном узле, и `mssql-server` повторно подключается к тем же постоянное хранилище. Служба подключается к создан повторно `mssql-server`.
 
-![Схема кластера Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Схема кластера Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 На следующей схеме для узла, на котором размещается `mssql-server` сбой контейнер. Оркестратор начинает новый pod на другом узле, и `mssql-server` повторно подключается к тем же постоянное хранилище. Служба подключается к создан повторно `mssql-server`.
 
-![Схема кластера Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Схема кластера Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -174,13 +174,15 @@ Kubernetes 1.6 и более поздних версий имеется подд
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server:2017-latest
            ports:
            - containerPort: 1433
            env:
+           - name: MSSQL_PID
+             value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: SA_PASSWORD
+           - name: MSSQL_SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
@@ -209,14 +211,14 @@ Kubernetes 1.6 и более поздних версий имеется подд
 
    Скопируйте приведенный выше код в новый файл с именем `sqldeployment.yaml`. Обновите следующие значения: 
 
-   * `value: "Developer"`: Задает контейнер для запуска SQL Server Developer edition. Выпуск Developer edition не лицензирован для производственных данных. Если для использования в рабочей среде развертывания, задайте соответствующий выпуск (`Enterprise`, `Standard`, или `Express`). 
+   * MSSQL_PID `value: "Developer"`: Задает контейнер для запуска SQL Server Developer edition. Выпуск Developer edition не лицензирован для производственных данных. Если для использования в рабочей среде развертывания, задайте соответствующий выпуск (`Enterprise`, `Standard`, или `Express`). 
 
       >[!NOTE]
       >Дополнительные сведения см. в разделе [как лицензии SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
-   * `persistentVolumeClaim`— Это значение требуется запись для `claimName:` , сопоставляется с именем, используется для утверждения постоянного тома. В этом руководстве используется `mssql-data`. 
+   * `persistentVolumeClaim`. Это значение требуется запись для `claimName:` , сопоставляется с именем, используется для утверждения постоянного тома. В этом руководстве используется `mssql-data`. 
 
-   * `name: SA_PASSWORD`: Настраивает образ контейнера, чтобы задать пароль системного Администратора, как определено в этом разделе.
+   * `name: SA_PASSWORD`. Настраивает образ контейнера, чтобы задать пароль системного Администратора, как определено в этом разделе.
 
      ```yaml
      valueFrom:

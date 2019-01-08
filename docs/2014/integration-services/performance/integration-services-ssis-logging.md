@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
@@ -25,12 +24,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f3254d3356caefcd7f9e15709702970a9b064e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 244efd95d67f36ae77efb15a6fa62684606db746
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050184"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369776"
 ---
 # <a name="integration-services-ssis-logging"></a>Ведение журналов в службах Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат регистраторы, которые могут использоваться для реализации ведения журналов в пакетах, контейнерах и задачах. При ведении журнала можно записать текущие сведения о пакете, что поможет при каждом выполнении пакета проводить его аудит и устранять неисправности. Например, журнал может записать имя оператора, запускающего пакет, и время, в которое пакет был начат или завершен.  
@@ -148,7 +147,7 @@ ms.locfileid: "48050184"
   
 1.  Включите журналирование пакета и его задач. Журналирование может происходить на уровне пакета, контейнера или задачи. Можно указать различные журналы для пакетов, контейнеров и задач.  
   
-2.  Выберите регистратора и добавьте журнал пакета. Журналы могут быть созданы только на уровне пакета, а задача или контейнер должны использовать один из журналов, созданных для пакета. Каждый журнал связан с одним из следующих регистраторов: текстовый файл, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], журнал событий Windows или XML-файл. Дополнительные сведения см. в разделе [Включение средств ведения журналов в SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
+2.  Выберите регистратора и добавьте журнал пакета. Журналы могут быть созданы только на уровне пакета, а задача или контейнер должны использовать один из журналов, созданных для пакета. Каждый из журналов ассоциирован с одним из следующих регистраторов: текстовый файл, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], журнал событий Windows или XML-файл. Дополнительные сведения см. в разделе [Включение средств ведения журналов в SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
   
 3.  Выберите события и схему данных журнала для этих событий, запись о которых должна содержаться в журнале. Дополнительные сведения см. в разделе [Настройка ведения журналов с помощью сохраненного файла конфигурации](../configure-logging-by-using-a-saved-configuration-file.md).  
   
@@ -199,21 +198,21 @@ ms.locfileid: "48050184"
   
 -   Преобразование «Производный столбец» с именем «Вычисление LineItemTotalCost» затратило 356 мс на выполнение вычислений с входящими строками.  
   
--   Преобразование «Статистическая обработка» с именем «Сложение Quantity и LineItemTotalCost» затратило в общей сложности 220 мс (141 на шаге PrimeOutput и 79 на шаге ProcessInput) на вычисление и передачу данных следующему преобразованию.  
+-   Преобразование "Статистическая обработка" с именем "Сложение Quantity и LineItemTotalCost" затратило в общей сложности 220 мс (141 на шаге PrimeOutput и 79 на шаге ProcessInput) на вычисление и передачу данных следующему преобразованию.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  В следующем списке приведены ссылки на разделы, в которых описывается выполнение задач, связанных с функцией ведения журналов.  
   
--   [Диалоговое окно "Настройка журналов служб SSIS"](../configure-ssis-logs-dialog-box.md)  
+-   [Диалоговое окно «Настройка журналов служб SSIS»](../configure-ssis-logs-dialog-box.md)  
   
 -   [Включение средств ведения журналов в SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md)  
   
--   [Включение ведения журналов при выполнении пакета на сервере служб SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md)  
+-   [Enable Logging for Package Execution on the SSIS Server](../enable-logging-for-package-execution-on-the-ssis-server.md)  
   
--   [Просмотр записей журнала в окне "Регистрация событий"](../view-log-entries-in-the-log-events-window.md)  
+-   [Просмотр записей журнала в окне «Регистрация событий»](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>См. также  
- [Инструмент DTLoggedExec для полного и подробного ведения журнала (проект CodePlex)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [Инструмент DTLoggedExec для полного и подробного ведения журнала (проект CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>См. также  
  [Просмотр записей журнала в окне "Регистрация событий"](../view-log-entries-in-the-log-events-window.md)  

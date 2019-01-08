@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29998bdd95a24b66ff2aebf304cd6b36b7701d02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1eff0a59ad719f2f609bd96a7a11147204c7b8a3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102314"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367516"
 ---
 # <a name="sap-bw-destination"></a>Назначение SAP BW
   Назначение SAP BW — компонент назначения [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW. Таким образом, назначение SAP BW загружает данные из потока данных в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в систему SAP Netweaver BW версии 7.  
@@ -84,18 +83,18 @@ ms.locfileid: "48102314"
   
  Если вы не знаете все значения, необходимые для настройки назначения, может потребоваться связаться с администратором SAP.  
   
- Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW, см. в техническом документе [Использование служб SQL Server 2008 Integration Services с SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
+ Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW, см. в техническом документе [Использование служб SQL Server 2008 Integration Services с SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>Использование конструктора служб SSIS для настройки целевого объекта  
  Дополнительные сведения о свойствах целевого объекта SAP BW, который можно задать в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в одном из следующих разделов.  
   
--   [Редактор назначений SAP BW &#40;страницы диспетчера соединений&#41;](sap-bw-destination-editor-connection-manager-page.md)  
+-   [Редактор назначений SAP BW (страница "Диспетчер подключений")](sap-bw-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначений SAP BW &#40;страница «сопоставления»&#41;](sap-bw-destination-editor-mappings-page.md)  
+-   [Редактор назначений SAP BW (страница "Сопоставления")](sap-bw-destination-editor-mappings-page.md)  
   
--   [Редактор назначений SAP BW &#40;странице вывода ошибок&#41;](sap-bw-destination-editor-error-output-page.md)  
+-   [Редактор назначений SAP BW (страница "Вывод ошибок")](sap-bw-destination-editor-error-output-page.md)  
   
--   [Редактор назначений SAP BW &#40;страница "Дополнительно"&#41;](sap-bw-destination-editor-advanced-page.md)  
+-   [Редактор назначений SAP BW (страница "Дополнительно")](sap-bw-destination-editor-advanced-page.md)  
   
  При настройке целевого объекта SAP BW можно также использовать другие диалоговые окна для уточняющих запросов или создать объекты SAP Netweaver BW. Дополнительные сведения об этих диалоговых окнах см. в следующих разделах.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48102314"
   
 -   [Создание InfoSource для основных данных](create-infosource-for-master-data.md)  
   
--   [Создание InfoPackage](create-infopackage.md)  
+-   [Создать InfoPackage](create-infopackage.md)  
   
 ## <a name="see-also"></a>См. также  
  [Компоненты Microsoft Connector 1.1 для SAP BW](../microsoft-connector-for-sap-bw-components.md)  

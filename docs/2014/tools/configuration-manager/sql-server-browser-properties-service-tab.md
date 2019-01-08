@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c2ab03b8a04410ee02f177f6049f70c2d9f2913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6421b0a7d6703e2a5d126aa83b227166492558a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175644"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757556"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>Свойства браузер SQL Server (вкладка «Службы»)
   Программа браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в качестве службы на сервере. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает входящие запросы к ресурсам [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и предоставляет сведения об экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленных на компьютере.  
@@ -36,7 +35,7 @@ ms.locfileid: "48175644"
  **Host Name**  
  Отображает имя компьютера или кластера, где запущена служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Название**  
+ **Name**  
  Указывает отображаемое имя службы.  
   
  **Идентификатор процесса**  
@@ -52,10 +51,10 @@ ms.locfileid: "48175644"
   
 -   Автоматически. Эта служба пытается запуститься при запуске компьютера.  
   
--   Отключено. Служба не может быть запущена.  
+-   Отключено: Служба не может быть запущена.  
   
  **Состояние**  
- Указывает, была ли служба запущена, остановлена или отключена. «**…**» указывает, что ожидается изменение состояния.  
+ Указывает, была ли служба запущена, остановлена или отключена. **…** указывает, что ожидается изменение состояния.  
   
 ## <a name="see-also"></a>См. также  
  [Служба обозревателя SQL Server](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  

@@ -18,12 +18,12 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 035e206b68242316ed8a9299842920feb18dacd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86de9f970713d84fec0722a4cc3c29b0b307098f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670472"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589954"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,37 +56,37 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [ **@account_id** =] *account_id*  
  Идентификатор обновляемой учетной записи. *account_id* — **int**, значение по умолчанию NULL. Хотя бы один из *account_id* или *account_name* должен быть указан. Если указаны оба аргумента, процедура изменяет имя учетной записи.  
   
- [ **@account_name** =] **"***account_name***"**  
+ [ **@account_name** =] **"**_account_name_**"**  
  Имя обновляемой учетной записи. *account_name* — **sysname**, значение по умолчанию NULL. Хотя бы один из *account_id* или *account_name* должен быть указан. Если указаны оба аргумента, процедура изменяет имя учетной записи.  
   
- [ **@email_address** =] **"***email_address***"**  
+ [ **@email_address** =] **"**_email_address_**"**  
  Новый адрес электронной почты для отправки сообщений. Этот адрес должен быть адресом электронной почты Интернета. Имя сервера в адресе принадлежит серверу, который используется компонентом Database Mail для отправки почты от имени этой учетной записи. *email_address* — **nvarchar(128)**, значение по умолчанию NULL.  
   
- [ **@display_name** =] **"***display_name***"**  
+ [ **@display_name** =] **"**_display_name_**"**  
  Новое отображаемое имя, используемое для сообщений электронной почты, отправляемых от имени этой учетной записи. *display_name* — **nvarchar(128)**, не имеет значения по умолчанию.  
   
- [ **@replyto_address** =] **"***replyto_address***"**  
+ [ **@replyto_address** =] **"**_replyto_address_**"**  
  Новый адрес для использования в заголовке «Обратный адрес» сообщений электронной почты, отправляемых от имени этой учетной записи. *replyto_address* — **nvarchar(128)**, не имеет значения по умолчанию.  
   
- [ **@description** =] **"***описание***"**  
+ [ **@description** =] **"**_описание_**"**  
  Новое описание для учетной записи. *Описание* — **nvarchar(256)**, значение по умолчанию NULL.  
   
- [ **@mailserver_name** = ] **'***server_name***'**  
+ [ **@mailserver_name** =] **"**_имя_сервера_**"**  
  Новое имя почтового SMTP-сервера, используемого для этой учетной записи. На компьютере под управлением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть способен Разрешить *имя_сервера* IP-адресу. *имя_сервера* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@mailserver_type** = ] **'***server_type***'**  
+ [ **@mailserver_type** =] **"**_server_type_**"**  
  Новый тип почтового сервера. *server_type* — **sysname**, не имеет значения по умолчанию. Только значение **'SMTP'** поддерживается.  
   
  [ **@port** =] *номер_порта*  
  Новый номер порта почтового сервера. *номер_порта* — **int**, не имеет значения по умолчанию.  
   
- [ **@timeout** =] **"***время ожидания***"**  
+ [ **@timeout** =] **"**_время ожидания_**"**  
  Параметр времени ожидания для SmtpClient.Send при отправке единственного сообщения электронной почты. *Время ожидания* — **int** в секундах, по умолчанию.  
   
- [ **@username** =] **"***username***"**  
+ [ **@username** =] **"**_username_**"**  
  Новое имя пользователя для входа на почтовый сервер. *Имя пользователя* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@password** =] **"***пароль***"**  
+ [ **@password** =] **"**_пароль_**"**  
  Новый пароль для входа на почтовый сервер. *пароль* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@use_default_credentials** =] use_default_credentials  

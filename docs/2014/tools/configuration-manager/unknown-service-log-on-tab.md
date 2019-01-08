@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d72dbd993c3944131e80ad4ba6215cee3d3cf2e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 686eb039660efb6e3596b9dac88fc0d24deacaee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147484"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771836"
 ---
 # <a name="unknown-service-log-on-tab"></a>Неизвестная служба (вкладка «Вход в систему»)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удается идентифицировать эту службу.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получает служебные данные от поставщика инструментария WMI на компьютере, где запущена служба. Произошла ошибка при считывании свойств службы или свойства службы являются неполными. Чтобы разрешить проблему, попытайтесь закрыть и заново открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или проверьте поставщика инструментария WMI на компьютере, где запущена служба.  
   
- Поставщик WMI является компонентом Windows. Сведения о том, как проверить разрешения на поставщика WMI, см. в статье "Инструкции. Настройка инструментария WMI для отображения состояния сервера в средствах SQL Server" в электронной документации по SQL Server.  
+ Поставщик WMI является компонентом Windows. Сведения о том, как проверить разрешения на поставщика WMI, см. в разделе «Как настроить инструментарий WMI для отображения состояния сервера в инструментальных средствах SQL Server» электронной документации по SQL Server.  
   
  Если вы уверены, что просматриваете правильную службу, то для указания учетной записи, используемой службой, а также для запуска и остановки службы используйте вкладку **Вход** в диалоговом окне **Свойства неизвестной службы** .  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -16,12 +15,12 @@ ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f7e1927d1b35c1f4a8e7b7aef8d8c3cbfaa0b33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128814"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362627"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>переименовать экземпляр отказоустойчивого кластера SQL Server
   Если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] является частью отказоустойчивого кластера, процесс переименования виртуального сервера отличается от процесса переименования изолированного экземпляра. Дополнительные сведения см. в статье [Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
@@ -45,7 +44,7 @@ ms.locfileid: "48128814"
 ## <a name="verify-the-renaming-operation"></a>Проверка операции переименования  
  После того как виртуальный сервер переименован, любые соединения, использовавшие старое имя, должны осуществляться с использованием нового имени.  
   
- Чтобы убедиться в том, что операция переименования завершена, выберите сведения из `@@servername` или `sys.servers`. Функция `@@servername` возвращает новое имя виртуального сервера, а в таблице `sys.servers` отображается новое имя виртуального сервера. Чтобы проверить правильность отработки отказа с новым именем, попытайтесь создать сбойную ситуацию на ресурсе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] через другие узлы.  
+ Чтобы убедиться в том, что операция переименования завершена, выберите необходимые данные из `@@servername` или `sys.servers`. Функция `@@servername` возвращает новое имя виртуального сервера, а в таблице `sys.servers` отображается новое имя виртуального сервера. Чтобы проверить правильность отработки отказа с новым именем, попытайтесь создать сбойную ситуацию на ресурсе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] через другие узлы.  
   
  Для установления соединения с любого узла, расположенного в том же кластере, новое имя можно использовать немедленно. Однако для соединений с другого компьютера, использующих новое имя, новое имя не может быть использовано для подключения к серверу до тех пор, пока оно не будет видимо с этого клиентского компьютера. До того момента, как новое имя будет распространено по всей сети, может пройти от нескольких секунд до 3-5 минут (в зависимости от конфигурации сети). Кроме того, может потребоваться дополнительное время на то, чтобы старое имя виртуального сервера перестало быть видимо в сети.  
   
@@ -58,15 +57,15 @@ ms.locfileid: "48128814"
     ```  
     ipconfig /flushdns  
     ipconfig /registerdns  
-    nbtstat –RR  
+    nbtstat -RR  
     ```  
   
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Дополнительные меры после операции переименования  
  После изменения сетевого имени кластера отработки отказа необходимо выполнить проверку и следующие инструкции для включения всех сценариев в агенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].** При изменении сетевого имени экземпляра отказоустойчивого кластера [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] с помощью средства Windows "Администратор кластера" последующая операция обновления или удаления может завершиться ошибкой. Для решения данной проблемы обновите **ClusterName** реестр запись, следуя указаниям в разделе решения [это](http://go.microsoft.com/fwlink/?LinkId=244002) (http://go.microsoft.com/fwlink/?LinkId=244002).  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** После изменения сетевого имени [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] отказоустойчивого кластера с помощью средства "Администратор кластера Windows" в будущем обновления экземпляра или операции удаления может завершиться ошибкой. Для решения данной проблемы обновите **ClusterName** реестр запись, следуя указаниям в разделе решения [это](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002).  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .** Проверьте и выполните следующие дополнительные действия для службы агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Служба агента:** Проверьте и выполните дополнительные действия для службы агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Исправьте параметры в реестре, если агент SQL Server настроен на пересылку событий. Дополнительные сведения см. в статье [Назначение сервера пересылки событий (среда SQL Server Management Studio)](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   

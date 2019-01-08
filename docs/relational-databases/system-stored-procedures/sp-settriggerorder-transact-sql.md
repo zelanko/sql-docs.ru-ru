@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e418dc2ba40965b3eb25382c0f9438edc2e6b0bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acbdb4b406d3ec0c2820e2be7988c32af249379c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846442"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590318"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@triggername=** ] **"**[ *triggerschema ***.**] *triggername *** "**  
- Имя триггера, порядок срабатывания которого нужно установить или изменить, и схема, которой он принадлежит, если таковая имеется. [*triggerschema ***.**]* triggername * — **sysname**. Если имя не соответствует триггеру или соответствует триггеру INSTEAD OF, процедура возвращает ошибку. *triggerschema* нельзя указывать для триггеров DDL или входа.  
+ [  **@triggername=** ] **"**[ _triggerschema_**.**] _triggername_**"**  
+ Имя триггера, порядок срабатывания которого нужно установить или изменить, и схема, которой он принадлежит, если таковая имеется. [_triggerschema_**.**] *triggername* — **sysname**. Если имя не соответствует триггеру или соответствует триггеру INSTEAD OF, процедура возвращает ошибку. *triggerschema* нельзя указывать для триггеров DDL или входа.  
   
- [ **@order=** ] **'***value***'**  
+ [ **@order=** ] **"**_значение_**"**  
  Новый порядок срабатывания для триггера. *значение* — **varchar(10)** и он может принимать одно из следующих значений.  
   
 > [!IMPORTANT]  
@@ -59,7 +59,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |**Последняя**|Триггер срабатывает последним.|  
 |**None**|Порядок срабатывания триггера не определен.|  
   
- [  **@stmttype=** ] **"***statement_type***"**  
+ [  **@stmttype=** ] **"**_statement_type_**"**  
  Указывает инструкцию DDL, которая активирует триггер. *statement_type* — **varchar(50)** и может быть INSERT, UPDATE, DELETE, LOGON или любой [!INCLUDE[tsql](../../includes/tsql-md.md)] события инструкции, перечисленные в [DDL-события](../../relational-databases/triggers/ddl-events.md). Группы событий задавать нельзя.  
   
  Триггер может быть назначен в качестве **первый** или **последнего** триггер для типа инструкции только после этого триггера был определен как триггер для данного типа инструкций. Например, триггер **TR1** может быть назначен **первый** для инструкции INSERT в таблице **T1** Если **TR1** определен как триггер INSERT. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Возвращает сообщение об ошибке, если **TR1**, определенный только как триггер INSERT задан в качестве **первый**, или **последнего**, триггер для инструкции UPDATE. Дополнительные сведения см. в разделе «Примечания».  

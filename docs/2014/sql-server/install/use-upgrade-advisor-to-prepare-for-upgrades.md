@@ -17,12 +17,12 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8ade9c0d0d877ca1c12c1361e0e0ba45c2e7ecb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209294"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368076"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Использование помощника по обновлению для подготовки к обновлениям
   Помощник по обновлению [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помогает произвести подготовку к обновлениям [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Помощник по обновлению анализирует установленные компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и создает отчет, содержащий список проблем, которые должны быть решены перед началом обновления.  
@@ -65,9 +65,9 @@ ms.locfileid: "48209294"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2), Windows 7 с пакетом обновления 1 (SP1) и [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1).  
   
--   Установщик Windows Installer, начиная с версии 4.5. Вы можете установить установщик Windows из [веб-установщик Windows сайт](http://go.microsoft.com/fwlink/?LinkId=49112).  
+-   Установщик Windows Installer, начиная с версии 4.5. Вы можете установить установщик Windows из [веб-установщик Windows сайт](https://go.microsoft.com/fwlink/?LinkId=49112).  
   
--   Microsoft .NET Framework 4. .NET framework 4 доступна на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] носителе продукта и из [странице загрузки .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET framework 4 доступна на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] носителе продукта и из [странице загрузки .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Чтобы установить платформу .NET Framework 4 с установочного диска [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], перейдите в корневой каталог диска. Откройте папку «\redist», а затем папку «DotNetFrameworks», после чего запустите файл dotNetFx40_Full_x86_x64.exe (для 32- и 64-разрядных версий операционных систем).  
   

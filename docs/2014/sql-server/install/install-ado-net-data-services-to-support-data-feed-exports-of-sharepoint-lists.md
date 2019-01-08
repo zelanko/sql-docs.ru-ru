@@ -11,23 +11,23 @@ ms.assetid: f32527ae-f623-4e08-adfb-6d3262f5c2ac
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f49b472422e520ac6adba75a5f5c66bee1646638
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 050bf73a1669ad7f0232a081e1cc3d888d5a4f14
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212154"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366586"
 ---
 # <a name="install-adonet-data-services-to-support-data-feed-exports-of-sharepoint-lists"></a>Для поддержки экспорта списков SharePoint в виде веб-каналов данных установите службы ADO.NET Data Services
   Для обеспечения возможности экспорта списков SharePoint в виде веб-каналов данных требуется служба ADO.NET Data Services. SharePoint 2010 не включает этот компонент в установщик компонентов, необходимых для SharePoint 2010, поэтому его необходимо устанавливать вручную.  
   
- Без этих предварительных условий, вы получите следующую ошибку при попытке использования списка SharePoint, который был экспортирован в виде канала данных: «по соображениям безопасности DTD запрещен в этом документе XML. Для разрешения обработки DTD присвойте свойству ProhibitDtd в XmlReaderSettings значение false и передайте параметры в метод XmlReader.Create».  
+ Без этих предварительных условий при попытке использования списка SharePoint, который был экспортирован как веб-канал данных, будет возвращена следующая ошибка: «Из соображений безопасности определение DTD в этом XML-документе запрещено. Для разрешения обработки DTD присвойте свойству ProhibitDtd в XmlReaderSettings значение false и передайте параметры в метод XmlReader.Create».  
   
  Используйте следующие инструкции для установки служб ADO.NET Data Services на каждом сервере SharePoint, для которого нужно разрешить экспорт списков как веб-каналов данных.  
   
 ### <a name="download-and-install-adonet-data-services"></a>Загрузка и установка служб ADO.NET Data Services  
   
-1.  Перейдите к документации требования к оборудованию и программному обеспечению для SharePoint 2010, [оборудованию и программному обеспечению (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
+1.  Перейдите к документации требования к оборудованию и программному обеспечению для SharePoint 2010, [оборудованию и программному обеспечению (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734)  
   
 2.  В **доступ к применимым программам**, найти ссылку на службы ADO.NET Data Services 3.5, соответствующую операционной системе, используемой (Windows Server 2008 SP2 или Windows Server 2008 R2).  
   

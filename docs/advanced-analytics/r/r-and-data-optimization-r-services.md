@@ -1,5 +1,5 @@
 ---
-title: Производительность для служб R SQL Server - оптимизация данных | Документация Майкрософт
+title: Настройка производительности для оптимизации данных - службы машинного обучения SQL Server
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fda560aedb7a0e1119a0524ffefe42a476c4aed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6e25ec0c7bc1ce332514910cdaf5cdf9fdb9e07
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699512"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432407"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Производительность службы R — оптимизация данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51699512"
 
 ## <a name="factors"></a>Факторы
 
-Язык R использует концепцию *факторов*, которые являются специальная переменная для категориальных данных. Специалисты по анализу данных часто используют переменные коэффициентов в формулах, так как обработка категориальные переменные как коэффициенты гарантирует, что данные правильно обрабатывается функций машинного обучения. Дополнительные сведения см. в разделе [R для «чайников»: Факторные переменные](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+Язык R использует концепцию *факторов*, которые являются специальная переменная для категориальных данных. Специалисты по анализу данных часто используют переменные коэффициентов в формулах, так как обработка категориальные переменные как коэффициенты гарантирует, что данные правильно обрабатывается функций машинного обучения. Дополнительные сведения см. в разделе [R для «чайников»: Переменными](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
 По своей структуре факторные переменные может быть преобразован из строки в целые числа и обратно, для хранения или обработки. R `data.frame` функция обрабатывает все строки как переменные идентификации, если аргумент *stringsasfactors значения* присваивается **False**. Это значит, что строки являются автоматически преобразуется в целое число для обработки и затем сопоставляется в исходную строку.
 
@@ -149,13 +149,13 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 Дополнительные рекомендации по оптимизации RevoScaleR см. в статьях:
 
-+ Статья службы поддержки: [настройки параметров для rxDForest и rxDTree производительности](https://support.microsoft.com/kb/3104235)
++ Статья службы поддержки: [Настройка параметров для rxDForest и rxDTree производительности](https://support.microsoft.com/kb/3104235)
 
-+ Методы управления модели помещаются в модель повышенного дерева: [оценка моделей с помощью вероятностный градиентный Бустинг](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ Методы управления помещаются в модель повышенного дерева модели: [Оценка моделей с помощью вероятностного градиентного Бустинга](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
 
-+ Общие сведения о том, как RevoScaleR перемещает и обрабатывает данные: [написать пользовательские алгоритмы фрагментации в ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ Общие сведения о том, как RevoScaleR перемещает и обрабатывает данные: [Написать пользовательские алгоритмы фрагментации в ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ Модель программирования для RevoScaleR: [управляет потоками в RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
++ Модель программирования для RevoScaleR. [Управление потоками в RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
 
 + Справочник по функциям [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
@@ -173,9 +173,9 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 Если вам необходимо быстрое прогнозирование с помощью хранимой модели или интеграции машинного обучения в приложения, можно использовать [ввода в эксплуатацию](https://docs.microsoft.com/r-server/what-is-operationalization) возможностях Microsoft R Server (ранее известные как DeployR).
 
-+ Как **специалист по обработке данных**, использовать [пакет mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) для совместного использования кода R с другими компьютерами и интеграции функций аналитики R внутри рабочего стола, мобильных, панели мониторинга и веб-приложений: [публикация и управление веб-службами R в R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ Как **специалист по обработке данных**, использовать [пакет mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) для совместного использования кода R с другими компьютерами и интеграции функций аналитики R внутри рабочего стола, мобильных, панели мониторинга и веб-приложений: [Как опубликовать и управление веб-службами R в R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ Как **администратора**, узнайте, как управлять пакетами, отслеживать веб-узлов и вычислительных узлов и управлять безопасностью заданий R: [взаимодействовать и использовать веб-службы в R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ Как **администратора**, узнайте, как управлять пакетами, отслеживать веб-узлов и вычислительных узлов и управлять безопасностью заданий R: [Как взаимодействовать с и использовать веб-службы в R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>Статьях этой серии
 

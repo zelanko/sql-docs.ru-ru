@@ -14,12 +14,12 @@ ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5e90c0ceb79af8834bb2df17ab84943099276bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 715bcfdda978801bac28e59246aeddc9ab76851e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129884"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418655"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   Используйте диалоговое окно **Выполнение пакета** , чтобы запустить пакет, хранящийся на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -44,7 +44,7 @@ ms.locfileid: "48129884"
   
 1.  В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]установите соединение с сервером служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-     Устанавливается соединение с экземпляром компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] , в котором размещена база данных SSISDB.  
+     Устанавливается соединение с экземпляром [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], в котором размещена база данных SSISDB.  
   
 2.  В обозревателе объектов разверните дерево для отображения узла **Каталоги служб Integration Services** .  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48129884"
  Выберите уровень ведения журнала для выполнения пакета. Дополнительные сведения см. в разделе [catalog.set_execution_parameter_value (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database).  
   
  **Дамп при ошибках**  
- Укажите, будет ли при возникновении ошибок создаваться файл дампа во время выполнения пакета. Дополнительные сведения см. в статье [Создание файлов дампа для выполнения пакетов](troubleshooting/generating-dump-files-for-package-execution.md).  
+ Укажите, будет ли при возникновении ошибок создаваться файл дампа во время выполнения пакета. Дополнительные сведения см. в статье [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md).  
   
  **32-разрядная среда выполнения**  
  Укажите, что пакет будет выполняться в 32-разрядной системе.  

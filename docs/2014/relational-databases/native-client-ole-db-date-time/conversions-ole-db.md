@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB]
@@ -14,12 +14,12 @@ ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ea4eb3954af5f1095331d05912c1faa0ff9525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144904"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763162"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Привязки и преобразования (OLE DB)
   В этом разделе описано преобразование между типами `datetime` и `datetimeoffset`. Преобразования, описанные в этом разделе, либо уже предоставлены OLE DB, либо являются согласованным расширением OLE DB.  
@@ -28,7 +28,7 @@ ms.locfileid: "48144904"
   
 -   Формат строк `datetime` и `datetimeoffset`:  
   
-     *гггг*-*мм*-*дд*[ *hh*:*мм*:*ss*[. *9999999*] [± *hh*:*мм*]]  
+     *гггг*-*мм*-*дд*[ *hh*:*мм*:*ss*[. *9999999*] [?? *hh*:*мм*]]  
   
 -   Формат строк `time`:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48144904"
 > [!NOTE]  
 >  Предыдущие версии собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и SQLOLEDB реализовали преобразования OLE в случаях, когда стандартные преобразования возвращали ошибку. В результате некоторые преобразования, проводимые собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 10.0 и более поздних версий, отличаются от спецификации OLE DB.  
   
- Преобразования из строк обеспечивают гибкость в отношении пробелов и ширины полей. Дополнительные сведения см. в разделе «Данные форматы: строки и литералы» в [поддержки типов данных даты OLE DB и ускорение](data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Преобразования из строк обеспечивают гибкость в отношении пробелов и ширины полей. Дополнительные сведения см. в разделе «Форматы данных: Строки и литералы» раздела [поддержки типов данных даты OLE DB и ускорение](data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Далее приведены общие правила преобразования.  
   
