@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6aa758ccf6734f78dada6887d07e30f962728929
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c69c9ea5e3274b22748839e0eda4af60289fabc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853112"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416121"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -123,13 +123,13 @@ ms.locfileid: "47853112"
 |Привязка типов данных|Определяемый пользователем тип к серверному типу|Тип, не определяемый пользователем, к серверному типу|Серверный тип к определяемому пользователем типу|Серверный тип к типу, не определяемому пользователем|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Поддерживается (5)|Ошибка (1)|Поддерживается (5)|Ошибка (4)|  
-|DBTYPE_BYTES|Поддерживается (5)|Недоступно|Поддерживается (5)|Недоступно|  
-|DBTYPE_WSTR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5), (6)|Недоступно|  
-|DBTYPE_BSTR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
-|DBTYPE_STR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
-|DBTYPE_IUNKNOWN|Поддерживается (6)|Недоступно|Поддерживается (6)|Недоступно|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
-|DBTYPE_VARIANT (VT_BSTR)|Поддерживается (2), (5)|Недоступно|Недоступно|Недоступно|  
+|DBTYPE_BYTES|Поддерживается (5)|Н/Д|Поддерживается (5)|Н/Д|  
+|DBTYPE_WSTR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5), (6)|Н/Д|  
+|DBTYPE_BSTR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
+|DBTYPE_STR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
+|DBTYPE_IUNKNOWN|Поддерживается (6)|Н/Д|Поддерживается (6)|Н/Д|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
+|DBTYPE_VARIANT (VT_BSTR)|Поддерживается (2), (5)|Н/Д|Недоступно|Н/Д|  
   
 ### <a name="key-to-symbols"></a>Расшифровка символов  
   

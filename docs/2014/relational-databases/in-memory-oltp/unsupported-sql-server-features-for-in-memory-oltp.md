@@ -10,17 +10,17 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76fbfdf3ae8752d4187c43c35d12278b0dbcb792
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216675"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375036"
 ---
 # <a name="supported-sql-server-features"></a>Поддерживаемые возможности SQL Server
   В этом разделе описаны возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые поддерживаются и не поддерживаются для использования с оптимизированными для памяти объектами.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Функции, поддерживаемые для OLTP в памяти  
+## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>Возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемые для OLTP в памяти  
  Следующие возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются для баз данных, которые содержат оптимизированные для памяти объекты, в том числе файловую группу, оптимизированную для памяти.  
   
  Сведения о поддерживаемых типах данных см. в разделе [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "48216675"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Поддержка среды SQL Server Management Studio для In-Memory OLTP](sql-server-management-studio-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Обзор SQL Server PowerShell](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Обзор SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   
 -   Массовый импорт и экспорт данных с использованием программы bcp. Дополнительные сведения см. в разделе [Массовый импорт и экспорт данных с использованием программы bcp (SQL Server)](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48216675"
   
 -   Несколько контейнеров в оптимизированной для памяти файловой группе для хранения объектов OLTP в памяти и сокращения целевого времени восстановления (RTO).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] блоки журнала транзакций вычисляют контрольную сумму и выполняют проверку.  
+-   Блоки журнала транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вычисляют контрольную сумму и выполняют проверку.  
   
 -   Новая табличная подсказка SNAPSHOT. Дополнительные сведения см. в разделе [Табличные указания (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table).  
   
@@ -59,15 +59,15 @@ ms.locfileid: "48216675"
   
 -   Компонент Service Broker с ограничениями. Нет доступа к очереди из скомпилированной в собственном коде хранимой процедуры. Нет доступа к очереди в удаленной базе данных в транзакции, получающей доступ к оптимизированным для памяти таблицам.  
   
--   Отказоустойчивая кластеризация. В рамках предложения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn экземпляры отказоустойчивой кластеризации AlwaysOn используют функциональные возможности отказоустойчивой кластеризации Windows Server (WSFC) для обеспечения высокого уровня доступности локальных ресурсов за счет избыточности на уровне экземпляра сервера — экземпляра отказоустойчивого кластера (FCI). Дополнительные сведения см. в статье [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   Кластеризация отработки отказа. Как часть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn экземпляры отказоустойчивой кластеризации AlwaysOn эффективно используют функциональные возможности сервера отказоустойчивой кластеризации Windows (WSFC) для обеспечения высокого уровня доступности локальных ресурсов за счет избыточности на уровне a отказоустойчивого кластера экземпляра сервера экземпляр Отказоустойчивого кластера. Дополнительные сведения см. в статье [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Интеграция с AlwaysOn. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет несколько вариантов обеспечения высокого уровня доступности сервера или базы данных, включая AlwaysOn. Дополнительные сведения см. в разделе [Решения высокого уровня доступности (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).  
   
--   Доставка журналов. Доставка журналов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет автоматически отправлять резервные копии журналов транзакций из базы данных — источника экземпляра сервера-источника в одну базу данных — получателя других экземпляров сервера-получателя или более. Дополнительные сведения см. в разделе [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
+-   Доставка журналов. Доставка журналов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет автоматически отправлять резервные копии журналов транзакций из базы данных-источника экземпляра сервера-источника в одну или более баз данных-получателей других экземпляров сервера-получателя. Дополнительные сведения см. в разделе [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 -   Репликация транзакций в оптимизированные для памяти таблицы на подписчиках поддерживается с некоторыми ограничениями. Дополнительные сведения см. в разделе [Репликация на подписчиков оптимизированных для памяти таблиц](../replication/replication-to-memory-optimized-table-subscribers.md).  
   
--   Регулятор ресурсов. Регулятор ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это компонент, предназначенный для управления рабочей нагрузкой и использованием системных ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений. Дополнительные сведения см. в разделах [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) и [Resource Governor](../resource-governor/resource-governor.md).  
+-   Регулятор ресурсов. Регулятор ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это компонент, предназначенный для управления рабочей нагрузкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и использованием системных ресурсов. Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений. Дополнительные сведения см. в разделах [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) и [Resource Governor](../resource-governor/resource-governor.md).  
   
 -   OLTP в памяти имеет ограничения на поддерживаемые кодовые страницы для столбцов (var)char в оптимизированных для памяти таблицах и на параметры сортировки, используемые в индексах и скомпилированные в собственном коде в хранимых процедурах. Дополнительные сведения см. в разделе [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48216675"
 |Сжатие данных для оптимизированных для памяти таблиц.|Функцию сжатия данных можно использовать для сжатия данных внутри базы данных, а также уменьшения размера базы данных. Дополнительные сведения см. в разделе [Data Compression](../data-compression/data-compression.md).|  
 |Секционирование оптимизированных для памяти таблиц и индексов HASH.|Данные секционированных таблиц и индексов подразделяются на блоки, которые могут быть распределены по нескольким файловым группам в базе данных. Дополнительные сведения см. в разделе [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).|  
 |Прозрачное шифрование данных (TDE) для оптимизированной для памяти файловой группы базы данных.|Функция прозрачного шифрования данных (TDE) выполняет в реальном времени шифрование и дешифрование файлов данных и журналов в операциях ввода-вывода. Дополнительные сведения см. в статье [Прозрачное шифрование данных (TDE)](../security/encryption/transparent-data-encryption.md).<br /><br /> Прозрачное шифрование данных можно включить в базе данных, которая содержит объекты OLTP в памяти. Записи журнала OLTP в памяти шифруются, если TDE включено. Файлы контрольных точек для долговечных таблиц не шифруются, даже если TDE включено для базы данных.|  
-|Репликация|Конфигурации репликации, за исключением репликации транзакций, в оптимизированные для памяти таблицы на подписчиках несовместимы с таблицами или представлениями, которые ссылаются на оптимизированные для памяти таблицы. Репликация с использованием sync_mode='database snapshot' не поддерживается при наличии файловой группы, оптимизированной для памяти. Дополнительные сведения см. в разделе [Replication to Memory-Optimized Table Subscribers](../replication/replication-to-memory-optimized-table-subscribers.md).|  
+|Репликация|Конфигурации репликации, за исключением репликации транзакций, в оптимизированные для памяти таблицы на подписчиках несовместимы с таблицами или представлениями, которые ссылаются на оптимизированные для памяти таблицы. Репликация с использованием sync_mode = 'database snapshot' не поддерживается при наличии файловой группы оптимизированных для памяти. Дополнительные сведения см. в разделе [Репликация на подписчиков оптимизированных для памяти таблиц](../replication/replication-to-memory-optimized-table-subscribers.md).|  
 |Режим MARS|Режим MARS не поддерживается для оптимизированных для памяти таблиц. Эта ошибка может также указывать на использование связанного сервера. Связанный сервер может использовать режим MARS. Связанные серверы не поддерживаются для оптимизированных для памяти таблиц. Вместо этого непосредственное подключайтесь к серверу и базе данных, где размещаются оптимизированные для памяти таблицы.|  
 |Зеркальное отображение|Зеркальное отображение базы данных — это решение, нацеленное на повышение доступности базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Повторная сборка журнала|Повторная сборка журнала с помощью прикрепления или ALTER DATABASE не поддерживается базами данных с файловой группой MEMORY_OPTIMIZED_DATA.|  

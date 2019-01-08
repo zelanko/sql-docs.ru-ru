@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.tabledesigner
@@ -13,12 +13,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33e75ea1383a597f3e896ad2d7d24f05a7021ac2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065384"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812856"
 ---
 # <a name="table-properties-visual-database-tools"></a>Свойства таблицы (визуальные инструменты для баз данных)
   Эти свойства отображаются в окне «Свойства», при щелчке правой кнопкой мыши в конструкторе таблиц и выборе пункта «Свойства». Если иное не указано, можно редактировать эти свойства в окне «Свойства», выбрав соответствующую таблицу.  

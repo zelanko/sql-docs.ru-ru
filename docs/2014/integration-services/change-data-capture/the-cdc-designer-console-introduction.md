@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a46478b31feb3a15a260ae2cd1598ae18f605c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8df088a088a68d91668978bef5761cc2b5b543f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107754"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779896"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Общие сведения о консоли конструктора CDC
   В этом разделе описаны процедуры установки конструктора отслеживания измененных данных для Oracle от Attunity.  
@@ -40,11 +39,11 @@ ms.locfileid: "48107754"
   
  **База данных Oracle**  
   
--   База данных Oracle 10g, выпуск 2: 10.2.0.1-10.2.0.5 (пакет обновлений за апрель 2010 г.)  
+-   Oracle Database 10g, выпуск 2: 10.2.0.1-10.2.0.5 (набор исправлений от апреля 2010 года)  
   
--   База данных Oracle 11g, выпуск 1: 11.1.0.6-11.1.0.7 (пакет обновлений за сентябрь 2008 г.)  
+-   Oracle Database 11g, выпуск 1: 11.1.0.6-11.1.0.7 (набор исправлений от сентября 2008 года)  
   
--   База данных Oracle 11g, выпуск 2: 11.2.0.1-11.2.0.3 (пакет обновлений за сентябрь 2011 г.)  
+-   Oracle Database 11g Release 2: 11.2.0.1-11.2.0.3 (набор исправлений от сентября 2011 года)  
   
  **База данных SQL Server**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48107754"
   
 -   Клиент Oracle 11.x  
   
- **Примечание**: необходимо использовать 32-разрядной или 64-разрядную версию этого программного обеспечения, версия установлена консоль конструктора Oracle CDC.  
+ **Примечание**: Должна использоваться 32-разрядная или 64-разрядная версия этого программного обеспечения, соответствующая устанавливаемой версии консоли конструктора CDC Oracle.  
   
  Консоль конструктора CDC Oracle выполняет обмен данными с исходной базой данных Oracle через поставщик ODBC Oracle.  
   

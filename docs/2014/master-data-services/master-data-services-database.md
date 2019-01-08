@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], about the database
@@ -14,12 +13,12 @@ ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a6d7b54e6df133c4362ba5d9cb998a61fea3202f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40fcb993ddc3894ec44a60c79db463611f4ab1f9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115111"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785806"
 ---
 # <a name="master-data-services-database"></a>База данных служб Master Data Services
   База данных содержит все сведения, необходимые для системы [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Она является основой для развертывания [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . База данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -36,13 +35,13 @@ ms.locfileid: "48115111"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Промежуточная таблица конечных элементов &#40;службы Master Data Services&#41;](leaf-member-staging-table-master-data-services.md)  
+-   [Конечный элемент таблицы элементов (службы Master Data Services)](leaf-member-staging-table-master-data-services.md)  
   
--   [Промежуточная таблица консолидированных элементов &#40;службы Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Промежуточная таблица консолидированных элементов (службы Master Data Services)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [Промежуточная таблица связей &#40;службы Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [Промежуточная таблица связей (службы Master Data Services)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
--   [Ошибки промежуточного процесса &#40;службы Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
+-   [Ошибки промежуточного процесса (службы Master Data Services)](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
  [Создание базы данных служб Master Data Services](install-windows/create-a-master-data-services-database.md)   

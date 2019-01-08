@@ -14,12 +14,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8029a3a2fb059ebfc764c8e29d9f893d1434b2dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204924"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361276"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   Можно использовать `SQLColAttribute` для получения атрибута столбца результирующего набора для подготовленных или выполненных инструкций ODBC. Вызов `SQLColAttribute` в подготовленной инструкции приводит к обращению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента получает данные столбца результирующего набора в процессе выполнения инструкции, поэтому вызов `SQLColAttribute` после завершения **SQLExecute** или **SQLExecDirect** does не включать обращения к серверу.  
@@ -107,7 +107,7 @@ ms.locfileid: "48204924"
  Дополнительные сведения см. в разделе [Поддержка разреженных столбцов &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLColAttribute](http://go.microsoft.com/fwlink/?LinkId=59334)   
+ [Функция SQLColAttribute](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [Сведения о реализации API ODBC](odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](sqlsetstmtattr.md)  
   

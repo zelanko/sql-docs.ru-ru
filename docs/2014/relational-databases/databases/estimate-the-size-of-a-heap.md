@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
@@ -17,12 +16,12 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0464304a23e53762b3e2eb887383b111764379fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192064"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778433"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Оценка размера кучи
   Для оценки размера пространства, требуемого для хранения данных в куче, можно использовать следующую процедуру.  
@@ -58,7 +57,7 @@ ms.locfileid: "48192064"
      Добавленные к значению ***Max_Var_Size*** байты необходимы для отслеживания каждого столбца переменной длины. Эта формула исходит из предположения, что все столбцы переменной длины заполнены на 100 %. Если предполагается, что будет использовано меньше места для хранения столбца изменяемой длины, можно изменить значение ***Max_Var_Size*** в процентах от общей изменяемой длины для более точного подсчета общего размера таблицы.  
   
     > [!NOTE]  
-    >  Вы можете объединить `varchar`, `nvarchar`, `varbinary`, или `sql_variant` , вызывающие общая определенная ширина таблицы может превышать 8 060 байт. Длина каждого из этих столбцов должна быть в пределах 8 000 байт для `varchar`, `nvarchar,``varbinary`, или `sql_variant` столбца. Тем не менее их общая ширина в таблице может превышать предел в 8 060 байт.  
+    >  Можно сочетать столбцы `varchar`, `nvarchar`, `varbinary` или `sql_variant`, в результате чего общая ширина определенной таблицы превысит 8060 байт. Длина каждого из этих столбцов должна быть в пределах 8 000 байт для `varchar`, `nvarchar,``varbinary`, или `sql_variant` столбца. Тем не менее их общая ширина в таблице может превышать предел в 8 060 байт.  
   
      Если в таблице нет столбцов переменной ширины, присвойте параметру ***Variable_Data_Size*** значение 0.  
   

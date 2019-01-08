@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.openwith
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7ea982dcc8a3f1d0cc16857e657003c63c60f94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065807"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328364"
 ---
 # <a name="open-with-new-file"></a>Открыть с помощью (создать файл)
   Можно открыть документ в одном или нескольких редакторах, щелкнув **Открыть** в меню **Файл**, а затем выбрав **Файл**. В диалоговом окне **Открытие файла** выберите файл, щелкните стрелку **Открыть** , затем щелкните **Открыть с помощью**. В диалоговом окне **Открыть с помощью** в списке **Выберите программу для открытия** выберите нужную программу и нажмите **Открыть**.  
@@ -45,5 +43,3 @@ ms.locfileid: "48065807"
   
 ## <a name="see-also"></a>См. также  
  [Связывание расширения файла с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
-  
-  

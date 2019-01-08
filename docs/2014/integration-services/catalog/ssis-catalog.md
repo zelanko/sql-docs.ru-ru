@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9eb4de07ad7bd564578462b053637bb472b22f6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201344"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353985"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
   `SSISDB` Каталога служит центральным пунктом для работы с [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проектов (SSIS), которые вы развернули в [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервера. Например, можно задавать параметры проектов и пакетов, настраивать среды для указания значений времени выполнения для пакетов, выполнять пакеты и проводить устранение неполадок, а также управлять операциями на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -27,7 +26,7 @@ ms.locfileid: "48201344"
   
  Чтобы обеспечить поддержку базы данных `SSISDB`, рекомендуется применять предопределенные политики предприятия для управления пользовательскими базами данных. Дополнительные сведения о создании планов обслуживания см. в разделе [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- `SSISDB` Каталога и `SSISDB` базы данных поддерживают Windows PowerShell. Дополнительные сведения об использовании SQL Server с Windows PowerShell см. в разделе [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Примеры использования Windows PowerShell для выполнения задач, например таких как развертывание проекта, см. в записи блога [SSIS и Powershell в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
+ `SSISDB` Каталога и `SSISDB` базы данных поддерживают Windows PowerShell. Дополнительные сведения об использовании SQL Server с Windows PowerShell см. в разделе [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Примеры использования Windows PowerShell для выполнения задач, например таких как развертывание проекта, см. в записи блога [SSIS и Powershell в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
   
  Дополнительные сведения о просмотре данных операций, см. в разделе [наблюдения за выполнением пакетов и других операций](../performance/monitor-running-packages-and-other-operations.md).  
   
@@ -39,7 +38,7 @@ ms.locfileid: "48201344"
 > [!NOTE]  
 >  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр, на котором `SSISDB` база данных присоединяется к, останавливает или не отвечает, ISServerExec.exe процесс завершается. Сообщение записывается в журнал событий Windows.  
 >   
->  Если ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переходят на другой ресурс в процессе отработки отказа кластера, выполняемые пакеты не перезапускаются. Перезапуск пакетов вы можете выполнять с помощью контрольных точек. Дополнительные сведения см. в разделе [Перезапуск пакетов с помощью контрольных точек](../packages/restart-packages-by-using-checkpoints.md).  
+>  Если ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переходят на другой ресурс в процессе отработки отказа кластера, выполняемые пакеты не перезапускаются. Перезапуск пакетов вы можете выполнять с помощью контрольных точек. Дополнительные сведения см. в статье [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catalog-object-identifiers"></a>Идентификаторы объектов каталога  
  При создании нового объекта в каталоге необходимо назначить имя объекта. Идентификатором объекта является его имя. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет правила, указывающие, какие символы могут использоваться в идентификаторе. Имена следующих объектов должны соответствовать правилам для идентификаторов.  
@@ -98,7 +97,7 @@ ms.locfileid: "48201344"
  Следующие `SSISDB` свойства каталога определяют способ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ведет себя задание агента. Просмотреть и изменить свойства вы можете в диалоговом окне **Свойства каталога** или с помощью процедур [catalog.catalog_properties (база данных SSISDB)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) и [catalog.configure_catalog (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  **Периодическая очистка журналов**  
- Шаг задания для очистки операций запускается, если это свойство имеет значение `True`.  
+ Шаг задания для очистки операций запускается в том случае, если это свойство имеет значение `True`.  
   
  **Срок хранения (в днях)**  
  Определяет максимальный срок хранения данных о допустимых операциях (в днях). Более старые данные удаляются.  
@@ -106,7 +105,7 @@ ms.locfileid: "48201344"
  Минимальное значение срока хранения — 1 день. Максимальное значение ограничено только максимальное значение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` данных. Сведения об этом типе данных см. в разделе [int, bigint, smallint, and tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
   
  **Периодическое удаление старых версий**  
- Шаг задания для очистки версий проекта запускается, если это свойство имеет значение `True`.  
+ Шаг задания для очистки версий проекта запускается в том случае, если это свойство имеет значение `True`.  
   
  **Максимальное количество версий в проекте**  
  Определяет, сколько версий проекта будет храниться в каталоге. Более старые версии проектов удаляются.  
@@ -128,11 +127,11 @@ ms.locfileid: "48201344"
   
 -   DES  
   
- При развертывании проекта [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]каталог автоматически шифрует данные пакета и конфиденциальные значения. Каталог также автоматически расшифровывает данные после их получения. Каталог SSISDB использует `ServerStorage` уровень защиты. Дополнительные сведения см. в разделе [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
+ При развертывании проекта [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]каталог автоматически шифрует данные пакета и конфиденциальные значения. Каталог также автоматически расшифровывает данные после их получения. Каталог SSISDB использует уровень защиты `ServerStorage`. Дополнительные сведения см. в разделе [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
   
  Изменение алгоритма шифрования занимает длительное время. Сначала сервер использует указанный ранее алгоритм для расшифровки всех значений конфигурации. Затем сервер использует новый алгоритм для повторного шифрования значений. При выполнении этого процесса на сервере не могут выполняться другие операции служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Таким образом, чтобы обеспечить непрерывное выполнение операций служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , для алгоритма шифрования задается значение только для чтения в диалоговом окне в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Чтобы изменить **алгоритм шифрования** свойство, переведите `SSISDB` базы данных в однопользовательский режим и вызовите хранимую процедуру catalog.configure_catalog. Используйте ENCRYPTION_ALGORITHM для аргумента *property_name* . Список поддерживаемых значений свойств см. в разделе [catalog.catalog_properties (база данных SSISDB)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Дополнительные сведения о хранимой процедуре см. в разделе [catalog.configure_catalog (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Чтобы изменить **алгоритм шифрования** свойство, переведите `SSISDB` базы данных в однопользовательский режим и вызовите хранимую процедуру catalog.configure_catalog. Используйте ENCRYPTION_ALGORITHM для аргумента *property_name*. Список поддерживаемых значений свойств см. в разделе [catalog.catalog_properties (база данных SSISDB)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Дополнительные сведения о хранимой процедуре см. в разделе [catalog.configure_catalog (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Дополнительные сведения об однопользовательском режиме см. в разделе [Установка однопользовательского режима базы данных](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Дополнительные сведения о шифровании и алгоритмах шифрования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в подразделах раздела [Шифрование SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -284,10 +283,10 @@ ms.locfileid: "48201344"
   
 ## <a name="related-content"></a>См. также  
   
--   Запись в блоге [Службы SSIS и Powershell в SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
+-   Запись в блоге [Службы SSIS и Powershell в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
   
--   Запись в блоге [Советы по управлению доступом к каталогу служб SSIS](http://go.microsoft.com/fwlink/?LinkId=246669)на сайте blogs.msdn.com.  
+-   Запись в блоге [Советы по управлению доступом к каталогу служб SSIS](https://go.microsoft.com/fwlink/?LinkId=246669)на сайте blogs.msdn.com.  
   
--   Запись [Обзор модели управляемых объектов каталога служб SSIS](http://go.microsoft.com/fwlink/?LinkId=254267)в блоге blogs.msdn.com.  
+-   Запись [Обзор модели управляемых объектов каталога служб SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)в блоге blogs.msdn.com.  
   
   

@@ -1,7 +1,8 @@
 ---
-title: Скачайте и установите Studio данных Azure | Документация Майкрософт
+title: Загрузите и установите
+titleSuffix: Azure Data Studio
 description: Загрузка и установка Azure данных Studio для Windows, macOS или Linux
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f177b7756a1afc7d28f4f3bd85ac46c1f7563cbe
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 7ab531acaf5b8246da6603807760d716ab7ffb74
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217812"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030658"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачайте и установите Studio данных Azure
 
@@ -160,7 +161,7 @@ ms.locfileid: "51217812"
 
 ## <a name="supported-sql-offerings"></a>Поддерживаемые предложения SQL
 
-* Эта версия Azure Data Studio работает со всеми [поддерживаемых версиях SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) и обеспечивает поддержку для работы с новейшими облачными функциями в базе данных SQL Azure и хранилище данных SQL Azure. Azure Data Studio также предоставляет поддержку предварительной версии управляемого экземпляра SQL Azure.
+* Эта версия Azure Data Studio работает со всеми [поддерживаемых версиях SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ](https://support.microsoft.com/lifecycle?C2=1044) и обеспечивает поддержку для работы с новейшими облачными функциями в базе данных SQL Azure и хранилище данных SQL Azure. Azure Data Studio также предоставляет поддержку предварительной версии управляемого экземпляра SQL Azure.
 
 ## <a name="move-user-settings"></a>Перемещение параметров пользователя
 

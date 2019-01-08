@@ -13,12 +13,12 @@ ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbbf4bc264e9dbff37c6dd06ceb1c6f4063e6c2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e40202ef0230fbbdddd1c596e5dc41b4d44a0fe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176384"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373996"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Учебники по информационному менеджменту предприятия
   В этом разделе содержатся учебники по управлению данными на предприятии с помощью технологий управления данными на предприятии (EIM), включенных в службы [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Технологии управления данными на предприятии (EIM) предоставляют портфель корпоративных решений, которые позволяют организациям обеспечивать надежность и согласованность своих данных, для принятия на их основе важных бизнес-решений. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] содержит следующие технологии, помогающие в реализации решений EIM на предприятии.  
@@ -33,6 +33,6 @@ ms.locfileid: "48176384"
  В этом учебнике вы научитесь совместно использовать службы SSIS, MDS и DQS для внедрения примера решения по управлению данными предприятия (EIM). Сначала службы DQS будут использованы для создания базы знаний с набором знаний о данных поставщика (метаданные), очистки данных в файле Excel путем их сравнения с базой знаний и сопоставления данных для обнаружения и удаления повторений в данных. Затем надстройка MDS для Excel будет использована для передачи очищенных и сопоставленных данных в MDS. Затем весь процесс будет автоматизирован с помощью решения служб SSIS.  
   
 ## <a name="see-also"></a>См. также  
- [Управление информацией на предприятии — Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=270871)  
+ [Управление информацией на предприятии — Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=270871)  
   
   

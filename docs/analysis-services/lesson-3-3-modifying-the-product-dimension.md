@@ -1,5 +1,5 @@
 ---
-title: Изменение измерения «продукт» | Документы Microsoft
+title: Изменение измерения Product | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b35f1712af9d501ff35a92cecb0eeea068d9aac0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fd0617d5c3d79ae0cf2eb7021f730a8062bd969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019571"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525844"
 ---
-# <a name="lesson-3-3---modifying-the-product-dimension"></a>Занятие 3 — 3 — изменение измерения «продукт»
+# <a name="lesson-3-3---modifying-the-product-dimension"></a>Занятие 3 – 3-изменение измерения Product
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 При выполнении задач этого раздела будут использованы именованные вычисления, чтобы предоставить понятные имена для линий товаров, определена иерархия в измерении «Продукт» и указано имя элемента «(Все)» для иерархии. Также атрибуты будут сгруппированы в папки отображения.  
@@ -58,7 +58,7 @@ ms.locfileid: "34019571"
   
 2.  На панели **Атрибуты** вкладки **Структура измерения** выберите **Product Line**.  
   
-3.  В окне свойств с правой стороны экрана щелкните поле свойства **NameColumn** в нижней части окна, а затем нажмите кнопку обзора (**…**), чтобы открыть диалоговое окно **Столбец имени** . Возможно, потребуется перейти на вкладку **Свойства** в правой части окна, чтобы открыть окно "Свойства".  
+3.  В окне свойств в правой части экрана щелкните **NameColumn** свойство поле в нижней части окна, а затем нажмите кнопку обзора (**...** ) кнопку, чтобы открыть **столбец имени** диалоговое окно. Возможно, потребуется перейти на вкладку **Свойства** в правой части окна, чтобы открыть окно "Свойства".  
   
 4.  Выберите пункт **ProductLineName** внизу списка **Исходный столбец** и нажмите кнопку **OK**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34019571"
   
 5.  На панели **Атрибуты** вкладки **Структура измерения** выберите **Product Key**.  
   
-6.  В окне свойств щелкните поле свойства **NameColumn** и нажмите кнопку обзора (**…**), чтобы открыть диалоговое окно **Столбец имени** .  
+6.  В окне «Свойства» щелкните **NameColumn** свойство поле, а затем нажмите кнопку обзора (**...** ) кнопку, чтобы открыть **столбец имени** диалоговое окно.  
   
 7.  Выберите в списке **Исходный столбец** значение **EnglishProductName** и нажмите кнопку **ОК**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "34019571"
   
     -   **Size Range**  
   
-    -   **Style**  
+    -   **Стиль**  
   
     -   **Weight**  
   
@@ -183,7 +183,7 @@ ms.locfileid: "34019571"
 [Изменение измерения Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>См. также  
-[Определение именованных вычислений в представлении источника данных & #40; Службы Analysis Services & #41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[Определение именованных вычислений в представлении источника данных (службы Analysis Services)](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [Создание пользовательских иерархий](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [Настройка уровня (Все) для иерархий атрибутов](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

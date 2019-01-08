@@ -13,16 +13,16 @@ ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1014e545e237c80f71660a1e6bd24dce56ca78b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88af314c1cca5ef2d7cdbdb2b5e555b81d02be01
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650472"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404839"
 ---
 # <a name="sqlsetconnectinfo-function"></a>Функция SQLSetConnectInfo
 **Соответствие стандартам**  
- Версия была введена: ODBC 3,81 соответствие стандартам: ODBC  
+ Представленные версии: Соответствие стандартам 3,81 ODBC: интерфейс ODBC  
   
  **Сводка**  
  **SQLSetConnectInfo** используется для задания источника данных, идентификатор пользователя и пароль в info маркер подключения для приложения [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) вызова.  
@@ -56,7 +56,7 @@ SQLRETURN  SQLSetConnectInfo(
  *NameLength2*  
  [Вход] Длина **UserName* в символах.  
   
- *Проверка подлинности*  
+ *Authentication*  
  [Вход] Строка для проверки подлинности (обычно пароль).  
   
  *NameLength3*  

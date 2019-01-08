@@ -14,23 +14,23 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfd74525cda5946fb7c86f21638437ee91c3ac7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211203"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359927"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента расширяет SQLGetStmtAttr для предоставления атрибутов инструкции, относящиеся к драйверу.  
   
- [SQLSetStmtAttr](sqlsetstmtattr.md) Перечисляет атрибуты инструкции, которые оба равны чтения и записи. В данном разделе приводятся атрибуты инструкции только для чтения.  
+ Функция[SQLSetStmtAttr](sqlsetstmtattr.md) перечисляет атрибуты инструкции, которые можно как считывать, так и изменять. В данном разделе приводятся атрибуты инструкции только для чтения.  
   
 ## <a name="sqlsoptsscurrentcommand"></a>SQL_SOPT_SS_CURRENT_COMMAND  
  Атрибут SQL_SOPT_SS_CURRENT_COMMAND предоставляет текущую команду пакета команд. Возвращение является целым числом, указывающим расположение команды в пакете. Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
 ## <a name="sqlsoptssnocountstatus"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
- Атрибут SQL_SOPT_SS_NOCOUNT_STATUS указывает текущее значение параметра NOCOUNT параметра, какие элементы управления ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] фиксирует номера строк, затронутых инструкцией при [SQLRowCount](sqlrowcount.md) вызывается. Значение аргумента *ValuePtr* имеет тип SQLLEN.  
+ Атрибут SQL_SOPT_SS_NOCOUNT_STATUS указывает текущее значение параметра NOCOUNT, управляющего формированием отчета [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] о числе строк, затронутых инструкцией при вызове метода [SQLRowCount](sqlrowcount.md) . Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "48211203"
  Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLSetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59370)   
+ [Функция SQLSetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59370)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 887f881ad6a4cefec80620ebedb2ac210692ce5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cdb70467f5844c2d2dba623c340209f495002cdd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090104"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357266"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Редактор назначения «ADO.NET» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор назначения «ADO.NET»** , чтобы выбрать соединение [!INCLUDE[vstecado](../includes/vstecado-md.md)] для назначения. На этой странице также можно выбрать таблицу или представление базы данных.  
@@ -57,21 +57,21 @@ ms.locfileid: "48090104"
   
  Только поставщики ADO.NET, возвращающие объект <xref:System.Data.SqlClient.SqlConnection> , поддерживают использование интерфейса <xref:System.Data.SqlClient.SqlBulkCopy> . Поставщик данных .NET для SQL Server (SqlClient) возвращает объект <xref:System.Data.SqlClient.SqlConnection> , а настраиваемый поставщик может возвращать объект <xref:System.Data.SqlClient.SqlConnection> .  
   
- Можно использовать поставщик данных .NET для SQL Server (SqlClient) для подключения к [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
+ Вы можете использовать поставщик данных .NET для SQL Server (SqlClient) для подключения к [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
   
  Если был выбран параметр **По возможности использовать массовую вставку**, а для параметра **Ошибка** задано значение **Перенаправить строку**, то в пакет данных, перенаправляемый объектом назначения в вывод ошибок, могут попасть и строки, не содержащие ошибок. Дополнительные сведения об обработке ошибок в массовых операциях см. в разделе [Обработка ошибок в данных](data-flow/error-handling-in-data.md). Дополнительные сведения о параметре **Ошибка** см. в разделе [ADO NET Destination Editor &#40;Ошибка Output Page&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  Если исходная таблица [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или Sybase включает столбец идентификаторов, то необходимо использовать задачи «Выполнение SQL» для выполнения инструкции SET IDENTITY_INSERT до и после доступа к назначению «ADO.NET». Это свойство столбца идентификаторов указывает значение приращения для столбца. Инструкция SET IDENTITY_INSERT разрешает вставлять в столбец идентификаторов явно заданные значения. Чтобы выполнить инструкции CREATE TABLE и SET IDENTITY в одно и то же подключение базы данных, задайте `RetainSameConnection` свойство [!INCLUDE[vstecado](../includes/vstecado-md.md)] диспетчер соединений для `True`. Кроме того, используйте один и тот же диспетчер соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] для задач «Выполнение SQL» и назначения «ADO NET».  
+>  Если исходная таблица [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или Sybase включает столбец идентификаторов, то необходимо использовать задачи «Выполнение SQL» для выполнения инструкции SET IDENTITY_INSERT до и после доступа к назначению «ADO.NET». Это свойство столбца идентификаторов указывает значение приращения для столбца. Инструкция SET IDENTITY_INSERT разрешает вставлять в столбец идентификаторов явно заданные значения. Чтобы выполнить инструкции CREATE TABLE и SET IDENTITY в одном и том же подключении к базе данных, задайте свойство `RetainSameConnection` диспетчера соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] равным `True`. Кроме того, используйте один и тот же диспетчер соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] для задач «Выполнение SQL» и назначения «ADO NET».  
 >   
 >  Дополнительные сведения см. в разделе [SET IDENTITY_INSERT (Transact-SQL)](/sql/t-sql/statements/set-identity-insert-transact-sql) и [IDENTITY (свойство) (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Техническая статья [Быстрый способ загрузки данных в базу данных SQL Windows Azure](http://go.microsoft.com/fwlink/?LinkId=244333)на сайте sqlcat.com  
+ Техническая статья [Быстрый способ загрузки данных в базу данных SQL Windows Azure](https://go.microsoft.com/fwlink/?LinkId=244333)на сайте sqlcat.com  
   
 ## <a name="see-also"></a>См. также  
- [Редактор назначения «ado.net» &#40;страница «сопоставления»&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
- [Редактор назначения «ado.net» &#40;странице вывода ошибок&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
+ [Редактор назначения ADO.NET (страница "Сопоставления")](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
+ [Редактор назначения ADO.NET (страница "Вывод ошибок")](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md)   
  [Задача «Выполнение SQL»](control-flow/execute-sql-task.md)  
   

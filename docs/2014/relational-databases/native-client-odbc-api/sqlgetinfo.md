@@ -14,12 +14,12 @@ ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70877cb9fd10a02f0d8f7f3bd954a8334a3d028b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112203"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354875"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   В таблице показаны значения, возвращаемые методом **SQLGetInfo**. Эти значения могут меняться в зависимости от номера версии сервера, с которым установлено соединение.  
@@ -208,7 +208,7 @@ ms.locfileid: "48112203"
 |SQL_USER_NAME|Текущее имя пользователя.|  
   
 ## <a name="see-also"></a>См. также  
- [SQLGetInfo, функция](http://go.microsoft.com/fwlink/?LinkId=59354)   
+ [SQLGetInfo, функция](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

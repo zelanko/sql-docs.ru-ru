@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e6bf10248bb3d8f280a24191634392df3b4ff5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bef22daeb42b0c08e7668dec533e663057f1a8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084834"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805036"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Редактор задачи «Профилирование данных» (страница «Общие»)
   На странице **Общие** окна **Редактор задачи «Профилирование данных»** можно настроить следующие параметры:  
@@ -53,8 +52,8 @@ ms.locfileid: "48084834"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**FileConnection**|Сохранение выходных данных профиля в файле, расположение которого указано в диспетчере соединения файлов.<br /><br /> Примечание. С помощью параметра **Назначение** можно указать, какой диспетчер подключений файлов следует использовать.|  
-|**Переменная**|Сохранение выходных данных профиля в переменной пакета.<br /><br /> Примечание. С помощью параметра **Назначение** можно указать, какую переменную пакета следует использовать.|  
+|**FileConnection**|Сохранение выходных данных профиля в файле, расположение которого указано в диспетчере соединения файлов.<br /><br /> Примечание. Указать, какой диспетчер соединения файлов для использования в **назначения** параметр.|  
+|**Переменная**|Сохранение выходных данных профиля в переменной пакета.<br /><br /> Примечание. Указать, какую переменную пакета следует использовать в **назначения** параметр.|  
   
  **Назначение**  
  Указывает, какой диспетчер соединения файлов или какая переменная пакета содержит выходные данные профиля данных.  
@@ -80,7 +79,7 @@ ms.locfileid: "48084834"
 >  Вы можете также открыть средство просмотра профиля данных путем запуска DataProfileViewer.exe в папке: *\<диск>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn.  
   
 ## <a name="see-also"></a>См. также  
- [Форма быстрого профиля одной таблицы &#40;задачи "профилирование данных"&#41;](single-table-quick-profile-form-data-profiling-task.md)   
+ [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](single-table-quick-profile-form-data-profiling-task.md)   
  [Редактор задачи "Профилирование данных" (страница "Запросы профиля")](data-profiling-task-editor-profile-requests-page.md)  
   
   

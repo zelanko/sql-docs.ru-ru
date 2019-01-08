@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4dc9070625ab85b80ebe7117adc9d010c291365
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d449e6245b779fd281fc9c8f047a9eb352d56846
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100655"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822768"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (выражение служб SSIS)
   Возвращает несколько токенов в строке, в которой они разделены указанными символами.  
@@ -32,12 +31,12 @@ TOKENCOUNT(character_expression, delimiter_string)
  Строка, содержащая токены, разделенные соответствующими символами.  
   
  *delimiter_string*  
- Строка, содержащая символы разделения. Например, строка «; ,» содержит три символа разделения: точку с запятой, пробел и запятую.  
+ Строка, содержащая символы разделения. Например, строка "; ," содержит три символа разделения: точку с запятой, пробел и запятую.  
   
 ## <a name="result-types"></a>Типы результата  
  DT_I4  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Следующие примечания относятся к функции TOKEN.  
   
 -   Строка разделения может содержать один или несколько символов разделения.  
@@ -51,13 +50,13 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   Переменные и столбцы могут использоваться в качестве аргументов для этого выражения.  
   
 ## <a name="expression-examples"></a>Примеры выражений  
- В следующем примере функция TOKENCOUNT возвращает значение 3, потому что строка содержит 3 маркера: "01", "12", "2011".  
+ В следующем примере функция TOKENCOUNT возвращает 3, потому что строка содержит 3 токена. «01», «12», «2011».  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  
 ```  
   
- В следующем примере функция TOKENCOUNT возвращает 4 потому, что в строке 4 токена («a», «little», «white», «dog»).  
+ В следующем примере функция TOKENCOUNT возвращает 4, потому что в строке четыре токена ("a", "little", "white", "dog").  
   
 ```  
 TOKENCOUNT("a little white dog"," ")  
@@ -69,7 +68,7 @@ TOKENCOUNT("a little white dog"," ")
 TOKENCOUNT("a little white dog","|")  
 ```  
   
- В следующем примере функция TOKENCOUNT возвращает значение 4. Строка разделителя в этом примере содержит 5 разделителей. Входная строка содержит 4 маркера: "a", "little", "white", "dog".  
+ В следующем примере функция TOKENCOUNT возвращает значение 4. Строка разделителя в этом примере содержит 5 разделителей. Входная строка содержит 4 токена: "a", "little", "white", "dog".  
   
 ```  
 TOKENCOUNT("a:little|white dog","| ,.:")  
@@ -81,7 +80,7 @@ TOKENCOUNT("a:little|white dog","| ,.:")
 TOKENCOUNT("        a little white dog", " ")  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   
   

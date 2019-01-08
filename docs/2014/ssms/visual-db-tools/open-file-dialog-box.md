@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.openfile
-- vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f197c90dc20c3c3cff031e58af2e1cac19bcb706
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070863"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328604"
 ---
 # <a name="open-file-dialog-box"></a>Диалоговое окно «Открытие файла»
   Используйте диалоговое окно **Открытие файла** для открытия существующего файла. Это диалоговое окно можно также использовать для повторного открытия уже открытого файла с другими параметрами языковой кодировки.  
@@ -97,5 +96,3 @@ ms.locfileid: "48070863"
   
  **Подключить сетевой диск**  
  Открывает диалоговое окно **Подключить сетевой диск** .  
-  
-  

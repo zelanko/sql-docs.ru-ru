@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720956a936127cf3fec82fabc4e140782fe2e0da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f76729b419fccf3d17e66ddd8ab00e8b54b1b264
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144839"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398077"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Общие сведения об инструкции расширения интеллектуального анализа данных SELECT
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "50144839"
   
      В этом случае необходимо выполнить детализацию структуру интеллектуального анализа данных, которая и является доменом данных, и посмотреть на отдельные строки в таких столбцах как Gender, Bike Buyer и так далее.  
   
- **Важно:** все, что содержимое списка выражений или **ГДЕ** предложение должно происходить из домена данных, которое определяется **FROM** предложение. Смешивать домены данных нельзя.  
+ **ВАЖНО:** Все, что содержимое списка выражений или **ГДЕ** предложение должно происходить из домена данных, которое определяется **FROM** предложение. Смешивать домены данных нельзя.  
   
 ##  <a name="Select_Types"></a> ВЫБЕРИТЕ типы  
  Синтаксис **ВЫБЕРИТЕ** инструкция поддерживает множество различных задач. Для этого используются следующие шаблоны:  

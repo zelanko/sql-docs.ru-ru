@@ -1,5 +1,5 @@
 ---
-title: В базе данных аналитики Python для разработчиков SQL | Документация Майкрософт
+title: Руководство для аналитики Python в базе данных для разработчиков SQL - машинного обучения SQL Server
 description: Узнайте, как внедрять код Python в хранимые процедуры SQL Server и функций T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560387"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596685"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Учебник: Анализ Python в базе данных для разработчиков SQL
+# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Учебник. Python в базе данных аналитики для разработчиков SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом руководстве для программистов SQL, Дополнительные сведения о Python интеграции путем создания и развертывания на базе Python машинного обучения с помощью решения [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) базы данных на сервере SQL Server. 
@@ -38,13 +38,13 @@ ms.locfileid: "51560387"
 
 Являетесь ли вы программист на SQL, которые работали с Python или разработчика Python, знакомы с SQL, этого руководства в нескольких частях представляет типичный рабочий процесс для проведения анализа в базе данных с Python и SQL Server. 
 
-+ [Занятие 1: Анализ и визуализация данных с помощью Python](sqldev-py3-explore-and-visualize-the-data.md)
++ [Занятие 1. Анализ и визуализация данных с помощью Python](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [Занятие 2: Создание функций данных с помощью пользовательских функций SQL](sqldev-py4-create-data-features-using-t-sql.md)
++ [Занятие 2. Создание функций данных с помощью пользовательских функций SQL](sqldev-py4-create-data-features-using-t-sql.md)
 
-+ [Занятие 3: Обучение и сохранение модели Python с помощью T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
++ [Занятие 3. Обучение и сохранение модели Python с помощью T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-+ [Занятие 4: Прогнозирование возможных результатов, с помощью модели Python в хранимой процедуре](sqldev-py6-operationalize-the-model.md)
++ [Занятие 4. Предсказания возможных результатов, с помощью модели Python в хранимой процедуре](sqldev-py6-operationalize-the-model.md)
 
 После сохранения модели в базу данных, можно вызвать модели для создания прогнозов из [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью хранимых процедур.
 

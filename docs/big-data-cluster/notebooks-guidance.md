@@ -1,30 +1,34 @@
 ---
-title: Как использовать записные книжки в предварительной версии SQL Server 2019 | Документация Майкрософт
-description: ''
+title: Запуск записных книжек в Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: В этой статье объясняется, как запустить записные книжки Jupyter в Azure Data Studio conneected в кластер SQL Server 2019 больших данных.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f9db16431cd6c3befbb32383725ec008f5a9081
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: af1393b38b297e451903d5a39942a3e878c88ee6
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221640"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246613"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Как использовать записные книжки в предварительной версии SQL Server 2019
 
-В этой статье описывается, как запустить записные книжки Jupyter в кластере и разработке собственных записных книжек. Также показано, как отправлять задания, к кластеру.
+В этой статье описывается, как запускать записные книжки Jupyter в кластере большие данные и как начать создание собственных записных книжек. Также показано, как отправлять задания, к кластеру.
 
 ## <a name="prerequisites"></a>предварительные требования
 
 Использовать записные книжки, необходимо установить следующие компоненты:
 
 - [Кластер SQL Server 2019 больших данных](deployment-guidance.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
-- [Расширение SQL Server 2019 (Предварительная версия)](../azure-data-studio/sql-server-2019-extension.md).
+- [Средства SQL Server 2019 больших данных](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Расширение SQL Server 2019**
+   - **kubectl**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -80,7 +84,7 @@ ms.locfileid: "51221640"
 |Ядро Spark|Для написания кода Scala, с помощью Spark вычислений из кластера.
 |Ядро Python|Для написания кода Python для локальной разработки.
 
-`Attach to` Предоставляет контекст для ядра для присоединения. Когда вы подключены и заканчивая шлюза HDFS или Spark (Knox) выберите значение по умолчанию `Attach to` является конечной точки кластера.
+`Attach to` Предоставляет контекст для ядра для присоединения. При подключении шлюза (Knox) в HDFS или Spark конец точке по умолчанию `Attach to` является конечной точки кластера.
 
 ![image8](media/notebooks-guidance/image8.png)
 
@@ -105,15 +109,15 @@ ms.locfileid: "51221640"
 
 ![Image12](media/notebooks-guidance/image12.png)
 
-Вы также можете просмотреть «Параметры ячейки», при нажатии на значок "Параметры" ниже.
+Вы также можете просмотреть «Параметры ячейки», если щелкнуть значок "Параметры" ниже-
 
 ![Image13](media/notebooks-guidance/image13.png)
 
-Ниже приведены параметры для каждой клетки.
+Ниже приведены параметры для каждой клетки-
 
 ![Image14](media/notebooks-guidance/image14.png)-
 
-Теперь выберите ядро Spark, в раскрывающемся списке для ядра, а также в ячейке введите или вставьте в —
+Теперь выберите ядро Spark, в раскрывающемся списке для ядра, а также в ячейке введите или вставьте в-
 
 ![Image15](media/notebooks-guidance/image15.png)
 

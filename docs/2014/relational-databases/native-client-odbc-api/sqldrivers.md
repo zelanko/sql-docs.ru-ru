@@ -14,18 +14,18 @@ ms.assetid: 775bbbef-3d34-4b1c-b494-73ddad83206f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d31a8cab7ae65a4faa677219af9e5dcba1b01c19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87b7f550bf63c9cf14f16c829932398470848e6f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073534"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364166"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
-  Диспетчер драйверов ODBC возвращает все спецификации атрибутов **SQLDrivers** . Дополнительные сведения о строках атрибутов и определении значений см. в [Data Access and Storage Developer Center (центре разработчиков средств доступа к данным и их хранения)](http://go.microsoft.com/fwlink/?LinkId=4173)или [справочник по программированию ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) в сети.  
+  Диспетчер драйверов ODBC возвращает все спецификации атрибутов **SQLDrivers** . Дополнительные сведения о строках атрибутов и определении значений см. в [Data Access and Storage Developer Center (центре разработчиков средств доступа к данным и их хранения)](https://go.microsoft.com/fwlink/?LinkId=4173)или [справочник по программированию ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) в сети.  
   
 ## <a name="see-also"></a>См. также  
- [SQLDrivers](http://go.microsoft.com/fwlink/?LinkId=59341)   
+ [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfa47e9df9d3d795df365249273732918878a1b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184484"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353756"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>Группа доступности не готова для автоматического перехода на другой ресурс
     
@@ -38,7 +38,7 @@ ms.locfileid: "48184484"
  Политика находится в рабочем состоянии, если по крайней мере одна вторичная реплика готова к автоматическому переходу на другой ресурс.  
   
 > [!NOTE]  
->  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблем и решениях доступны в разделе [Группа доступности не готова для автоматического перехода на другой ресурс](http://go.microsoft.com/fwlink/p/?LinkId=220851) в TechNet Wiki.  
+>  Для этого выпуска [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]сведения о возможных причинах проблем и решениях доступны в разделе [Группа доступности не готова для автоматического перехода на другой ресурс](https://go.microsoft.com/fwlink/p/?LinkId=220851) в TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Возможные причины  
  Группа доступности не готова к автоматическому переходу на другой ресурс. Для первичной реплики настроен автоматический переход на другой ресурс. Однако вторичная реплика не готова к автоматическому переходу на другой ресурс. Вторичная реплика, настроенная для автоматического перехода на другой ресурс, может быть недоступна, или ее состояние синхронизации данных в настоящий момент отлично от SYNCHRONIZED.  

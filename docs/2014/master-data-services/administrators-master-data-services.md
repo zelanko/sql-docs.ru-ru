@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
@@ -15,12 +14,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 676af20a08829dcc1bd4fda019c4f42b5d51eb51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c47d1905602f5cd96b58265963072cdd2dc01939
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083534"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778246"
 ---
 # <a name="administrators-master-data-services"></a>Администраторы (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] существует два типа администраторов: администраторы модели и системные администраторы служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "48083534"
   
  Каждая модель может иметь несколько администраторов. Каждый пользователь может быть администратором одной, нескольких или всех моделей в развертывании [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
- Сделать пользователя администратором модели можно в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] либо с помощью программных средств. Дополнительные сведения см. в разделе [Create a Model Administrator &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md).  
+ Сделать пользователя администратором модели можно в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] либо с помощью программных средств. Дополнительные сведения см. в разделе [Создание администратора модели (службы Master Data Services)](create-a-model-administrator-master-data-services.md).  
   
 ## <a name="master-data-services-system-administrator"></a>Системный администратор служб Master Data Services  
  Может быть только один системный администратор служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Системный администратор — это пользователь, указанный для **учетной записи администратора** при создании [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базы данных.  
@@ -51,13 +50,13 @@ ms.locfileid: "48083534"
   
 |Тип администратора|Описание|  
 |------------------------|-----------------|  
-|Системный администратор служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Разрешения, назначенные в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , не влияют на доступ администратора.<br /><br /> Автоматически имеет **обновления** разрешение для всех моделей.<br /><br /> Автоматически имеет доступ ко всем функциональным областям.<br /><br /> В таблице mdm.tblUser, значение в **идентификатор** столбец **1**.|  
+|Системный администратор служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Разрешения, назначенные в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], не влияют на доступ администратора.<br /><br /> Автоматически имеет **обновления** разрешение для всех моделей.<br /><br /> Автоматически имеет доступ ко всем функциональным областям.<br /><br /> В таблице mdm.tblUser, значение в **идентификатор** столбец **1**.|  
 |Администратор модели|Разрешения, заданные в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], определяют, является ли пользователь администратором модели.<br /><br /> Может быть администратором модели на основе разрешений, назначенных ему явно, либо на основе разрешений, полученных в результате членства в некоторой группе.<br /><br /> Не является администратором только для моделей, имеющих **обновления** разрешение, назначенное объекту модели верхнего уровня и не имеет других разрешений.<br /><br /> Имеет доступ только к тем функциональным областям, к которым разрешен доступ.<br /><br /> В таблице mdm.tblUser, значение в **идентификатор** столбец не является **1**.|  
   
 ## <a name="see-also"></a>См. также  
- [Создание администратора модели &#40;службы Master Data Services&#41;](create-a-model-administrator-master-data-services.md)   
+ [Создание администратора модели (службы Master Data Services)](create-a-model-administrator-master-data-services.md)   
  [Изменить учетную запись системного администратора &#40;службы Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)   
  [Создание базы данных служб Master Data Services](install-windows/create-a-master-data-services-database.md)   
- [Уведомления &#40;службы Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+ [Уведомления (службы Master Data Services)](../../2014/master-data-services/notifications-master-data-services.md)  
   
   

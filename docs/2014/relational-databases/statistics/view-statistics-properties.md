@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92641d34920b0ef7ea7a9e7ad929e6976d644ffe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064200"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415641"
 ---
 # <a name="view-statistics-properties"></a>Просмотр свойств статистики
   Статистику оптимизации текущего запроса для таблицы или индексированного представления можно просмотреть в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Объекты статистики включают заголовок, содержащий метаданные о статистике, гистограмму, содержащую распределение значений в первом ключевом столбце объекта статистики, и вектор плотностей для измерения корреляции с охватом нескольких столбцов. Дополнительные сведения о гистограммах и векторах плотностей см. в статье [DBCC SHOW_STATISTICS (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)  
@@ -52,7 +52,7 @@ ms.locfileid: "48064200"
   
 2.  Чтобы развернуть папку **Таблицы** , щелкните значок «плюс».  
   
-3.  Щелкните значок «плюс», чтобы развернуть таблицу, в которой нужно просмотреть свойства статистики.  
+3.  Щелкните значок плюса, чтобы развернуть таблицу, в которой нужно просмотреть свойства статистики.  
   
 4.  Щелкните значок «плюс», чтобы развернуть папку **Статистика** .  
   
@@ -137,7 +137,7 @@ ms.locfileid: "48064200"
   
 #### <a name="to-view-statistics-properties"></a>Просмотр свойств статистики  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "48064200"
   
 #### <a name="to-find-all-of-the-statistics-on-a-table-or-view"></a>Поиск всех статистических данных по таблице или представлению  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

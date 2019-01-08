@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], assigning
@@ -17,12 +17,12 @@ ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 645953aa9864eb867617dc8aacd71735d978d4c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177204"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786296"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Назначение задания в категорию заданий
   В этом разделе описано, как назначать категории заданиям агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющих объектов SQL Server.  
@@ -33,7 +33,7 @@ ms.locfileid: "48177204"
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Security"></a> безопасность  
- Дополнительные сведения см. в разделе [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
   
   
@@ -49,7 +49,7 @@ ms.locfileid: "48177204"
   
 4.  Щелкните правой кнопкой мыши задание, которое необходимо изменить, и выберите **Свойства**.  
   
-5.  В диалоговом окне **Свойства задания —***имя_задания* в списке **Категория** выберите категорию задания, которую нужно назначить заданию.  
+5.  В диалоговом окне **Свойства задания —**_имя_задания_ в списке **Категория** выберите категорию задания, которую нужно назначить заданию.  
   
 6.  Нажмите кнопку **ОК**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48177204"
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Назначение задания в категорию заданий  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48177204"
 ##  <a name="SMO"></a> Использование управляющих объектов SQL Server  
  **Назначение задания в категорию заданий**  
   
- Используйте `JobCategory` , используя язык программирования, таком как Visual Basic, Visual C# или PowerShell.  
+ Воспользуйтесь классом `JobCategory` в любом языке программирования (Visual Basic, Visual C# или PowerShell).  
   
   
   

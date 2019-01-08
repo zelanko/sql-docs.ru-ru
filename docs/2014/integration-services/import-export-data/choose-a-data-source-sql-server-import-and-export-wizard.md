@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
@@ -13,23 +12,23 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff54dc41b8a39107c191f8976d22005c80d5f65c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cff58f58543ae5876840bb7640f9cc11abf793d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216344"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370276"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Выбор источника данных (мастер импорта и экспорта SQL Server)
   Используйте страницу **Выбор источника данных** , чтобы указать источник данных, который нужно копировать.  
   
- Дополнительные сведения о работе этого мастера см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о параметрах запуска этого мастера и о разрешениях, необходимых для успешного запуска мастера, см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Дополнительные сведения о работе этого мастера см. в разделе [Мастер импорта и экспорта SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о параметрах запуска этого мастера и о разрешениях, необходимых для успешного запуска мастера, см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
- Цель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта заключается в копировании данных из источника в место назначения. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ Мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначен для копирования данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Параметры  
  **Источник данных**  
- Выберите поставщик данных, который соответствует формату хранения данных источника. Для источника данных может существовать несколько поставщиков. Например, с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, поставщик данных .NET Framework для SQL Server или поставщик Microsoft OLE DB для SQL Server.  
+ Выберите поставщик данных, который соответствует формату хранения данных источника. Для источника данных может существовать несколько поставщиков. Например, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использоваться собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поставщик данных платформы .NET Framework для SQL Server или поставщик OLE DB для SQL Server (Майкрософт).  
   
  Свойство **Источник данных** может иметь разное число параметров в зависимости от того, какие поставщики данных установлены на компьютере. В следующих страницах перечислены параметры некоторых часто используемых назначений. В случае использования других поставщиков обращайтесь к поставляемой с ними документации.  
   
@@ -44,10 +43,10 @@ ms.locfileid: "48216344"
  Укажите, должен ли пакет использовать проверку подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для доступа к базе данных. Для лучшей защиты рекомендуется использовать проверку подлинности Windows.  
   
  **Использовать проверку подлинности SQL Server**  
- Укажите, должен ли пакет использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности для входа в базе данных. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
+ Укажите, должен ли пакет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для доступа к базе данных. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
   
  **Имя пользователя**  
- Укажите имя пользователя для подключения к базе данных, при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.  
+ Укажите имя пользователя для подключения к базе данных, если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Пароль**  
  Укажите пароль для подключения к базе данных, если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,15 +67,15 @@ ms.locfileid: "48216344"
  Введите имя базы данных-источника.  
   
  **Встроенные функции безопасности**  
- Укажите `True` для подключения, встроенную проверку подлинности Windows, который рекомендуется, или `False` подключиться с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. При выборе `False` необходимо ввести идентификатор пользователя и пароль. Значение по умолчанию — `False`.  
+ Выберите `True`, чтобы использовать встроенную проверку подлинности Windows (рекомендуется), или `False` для соединения с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При выборе `False` необходимо ввести идентификатор пользователя и пароль. Значение по умолчанию — `False`.  
   
  **Идентификатор пользователя**  
- Укажите имя пользователя для подключения к базе данных, при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.  
+ Укажите имя пользователя для подключения к базе данных, если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Пароль**  
  Укажите пароль для подключения к базе данных, если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Другие перечисленные ниже параметры при выборе этого поставщика необязательно указывать для успешного подключения к базе данных-источнику [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Описание этих дополнительных параметров, см. в документации по [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] поставщик данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] пакета средств разработки программного обеспечения.  
+ Другие перечисленные ниже параметры при выборе этого поставщика необязательно указывать для успешного подключения к базе данных-источнику [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Описание этих дополнительных параметров см. в документации по поставщику данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в пакете средств разработки программного обеспечения [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
 ### <a name="data-source--microsoft-excel"></a>Источник данных = Microsoft Excel  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48216344"
  Выберите версию Excel, в формате которой хранятся исходные данные.  
   
 > [!NOTE]  
->  Если данные импортируются из источника [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], мастер использует компонент служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] «Источник Excel». Сведения о рекомендуемом использовании и известных проблемах см. в разделе [Excel Source](../data-flow/excel-source.md).  
+>  Если данные импортируются из источника [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , мастер использует компонент служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] «Источник Excel». Сведения о рекомендуемом использовании и известных проблемах см. в разделе [Excel Source](../data-flow/excel-source.md).  
   
 ### <a name="data-source--microsoft-access"></a>Источник данных = Microsoft Access  
   
@@ -113,17 +112,17 @@ ms.locfileid: "48216344"
  Если информационный файл рабочей группы связан с базой данных, укажите пароль пользователя для подключения к базе данных. Однако если база данных защищена одним и тем же паролем для всех пользователей, его значение необходимо указать в диалоговом окне **Свойства связи данных** , открывающемся при нажатии кнопки **Дополнительно**.  
   
  **Дополнительно**  
- Дополнительные параметры, например пароль базы данных или нестандартный информационный файл рабочей группы, можно указать в диалоговом окне **Свойства связи данных** . Дополнительные сведения о свойствах поставщика OLE DB см. в разделе «Доступ к данным» (Data Access) [библиотеки MSDN по адресу](http://go.microsoft.com/fwlink/?linkid=62553).  
+ Дополнительные параметры, например пароль базы данных или нестандартный информационный файл рабочей группы, можно указать в диалоговом окне **Свойства связи данных** . Дополнительные сведения о свойствах поставщика OLE DB см. в разделе «Доступ к данным» (Data Access) [библиотеки MSDN по адресу](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 ### <a name="data-source--flat-file-source"></a>Источник данных = «Неструктурированный файл»  
  См. следующие разделы для получения сведений о параметрах исходного неструктурированного файла.  
   
- [Редактор диспетчера подключений к неструктурированным файлам (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
+ [Редактор диспетчера соединений с неструктурированными файлами (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
   
  [Редактор диспетчера подключений к неструктурированным файлам (страница "Столбцы")](../flat-file-connection-manager-editor-columns-page.md)  
   
  [Редактор диспетчера подключений к неструктурированным файлам (страница "Дополнительно")](../flat-file-connection-manager-editor-advanced-page.md)  
   
- [Редактор диспетчера подключений к неструктурированным файлам (страница "Предварительный просмотр")](../flat-file-connection-manager-editor-preview-page.md)  
+ [Редактор диспетчера подключений с неструктурированными файлами (страница "Предварительный просмотр")](../flat-file-connection-manager-editor-preview-page.md)  
   
   

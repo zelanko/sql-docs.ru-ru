@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
@@ -15,12 +14,12 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac0637b19437c2570cbb87fb56b84641274d9d3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a4175429222306ac006122a3d36ee5ae97453ad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174194"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793504"
 ---
 # <a name="configure-dialog-box"></a>Диалоговое окно «Настройка»
   Диалоговое окно **Настройка** используется для настройки параметров, диспетчеров соединений и ссылок на среды для пакетов и проектов.  
@@ -37,7 +36,7 @@ ms.locfileid: "48174194"
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]установите соединение с сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-     Устанавливается соединение с экземпляром компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , в котором размещена база данных SSISDB.  
+     Устанавливается соединение с экземпляром [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], в котором размещена база данных SSISDB.  
   
 2.  В обозревателе объектов разверните дерево для отображения узла **Каталоги служб Integration Services** .  
   
@@ -80,7 +79,7 @@ ms.locfileid: "48174194"
 ##  <a name="references"></a> Задание параметров на странице «Ссылки»  
  Используйте страницу **Ссылки** , чтобы добавлять и удалять ссылки на среды, а также для доступа к свойствам среды.  
   
- Среда указывает значения времени выполнения для пакетов, содержащихся в проекте, который развернут на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ Среда указывает значения времени выполнения для пакетов, содержащихся в проектах, которые развернуты на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  **Среда**  
  Перечисляет среду.  
@@ -88,7 +87,7 @@ ms.locfileid: "48174194"
  **Папка среды**  
  Выводит имя папки, которая содержит среду.  
   
- **Открытие**  
+ **Открыть**  
  Нажмите, чтобы открыть диалоговое окно **Свойства среды** .  
   
  **Добавить**  

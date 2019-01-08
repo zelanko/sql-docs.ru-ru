@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.makemanaged.agentaccount.F1
@@ -20,12 +20,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 382b2212ef32e47b0045285ad497f2d476099c79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152734"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762486"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Регистрация экземпляра SQL Server (служебная программа SQL Server)
   Зарегистрируйте экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующей программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для наблюдения за его производительностью и конфигурацией как управляемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точка управления служебной программой (UCP) выполняет сбор данных о конфигурации и производительности от управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каждые 15 минут. Эти сведения хранятся в хранилище данных управления для программы (UMDW) в UCP, имя файла UMDW — sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сравниваются с политиками с целью определения того, в каких местах отмечается нехватка ресурсов, а также возможностей консолидации.  
@@ -87,12 +87,12 @@ ms.locfileid: "48152734"
 -   [Регистрация экземпляра SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Введение в мастер регистрации экземпляров  
- Чтобы запустить мастер, раскройте дерево обозревателя программ в пункте управления программой, щелкните правой кнопкой мыши узел **Управляемые экземпляры**и выберите команду **Добавить экземпляр…**  
+ Чтобы запустить мастер, раскройте дерево обозревателя программ в пункте управления программой, щелкните правой кнопкой мыши узел **Управляемые экземпляры** и выберите команду **Добавить экземпляр...**  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
 ##  <a name="Instance_name"></a> Укажите экземпляр SQL Server  
- Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из диалогового окна соединения, нажмите кнопку **Подключить…**. Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра". Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в диалоговом окне соединения, нажмите кнопку **Подключить...**. Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра". Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
@@ -145,9 +145,9 @@ ms.locfileid: "48152734"
   
  Параметры управляемого экземпляра:  
   
--   Имя экземпляра SQL Server: имя_компьютера\имя_экземпляра  
+-   Имя экземпляра SQL Server: Имя_компьютера\Имя_экземпляра  
   
--   Набор элементов сбора служебной программы: имя_домена\имя_пользователя  
+-   Учетная запись набора элементов сбора служебной программы: Имя_домена\Имя_пользователя  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
@@ -169,12 +169,12 @@ ms.locfileid: "48152734"
 >   
 >  Возникло исключение при выполнении пакета или инструкции Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Дополнительные сведения. Не удалось получить сведения о пользователе или группе Windows NT "\<имя_домена\имя_учетной_записи>", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
+>  Дополнительные сведения:  Не удалось получить сведения о пользователе/группе Windows NT "\<Имя_домена\имя_учетной_записи >", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
 >   
 >  Дополнительные сведения об устранении этой неполадки см. в статье [Устранение неполадок служебной программы SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   
 > [!IMPORTANT]  
->  Не меняйте свойства набора элементов сбора «Сведения о программе» на управляемом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не включайте и не выключайте сбор данных вручную, так как сбор данных происходит под управлением задания агента программы.  
+>  Не меняйте свойства набора элементов сбора "Сведения о программе" на управляемом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не включайте и не выключайте сбор данных вручную, так как сбор данных происходит под управлением задания агента программы.  
   
  Завершив работу мастера регистрации экземпляра, щелкните узел **Управляемые экземпляры** на панели **Навигация проводника служебной программы** в среде SSMS. Зарегистрированные экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображаются в списке на панели **Содержимое обозревателя служебных программ** .  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48152734"
 > $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции и задачи служебной программы SQL Server](sql-server-utility-features-and-tasks.md)   
  [Наблюдение за экземплярами SQL Server в служебной программе SQL Server](monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Устранение неполадок служебной программы SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  

@@ -13,19 +13,19 @@ ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2119013c1c735c9b35a3790fedbf1ac114e9964a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 156bd83662b9b6fa42eb99e8e5810bb4fc71d51a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196864"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414853"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Вкладка «Характеристики кластера кластеризации последовательностей» (средство просмотра моделей интеллектуального анализа данных)
   На вкладке **Характеристики кластера** в **средстве просмотра кластеризации последовательностей (Майкрософт)** приводится подробный список характеристик, определяющих кластер последовательностей. Эти характеристики могут включать простые пары «атрибут-значение», а также переходы между состояниями.  
   
  Используйте представление модели кластеризации последовательностей для детализации содержимого кластера и просмотра типичных последовательностей кластера.  
   
- **Дополнительные сведения:** [Алгоритм кластеризации последовательностей (Майкрософт)](data-mining/microsoft-sequence-clustering-algorithm.md), [Просмотр модели с помощью средства просмотра кластеризации последовательностей (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Дополнительные сведения:** [Алгоритм кластеризации последовательностей (Майкрософт)](data-mining/microsoft-sequence-clustering-algorithm.md), [просмотр модели с помощью средства просмотра кластеризации последовательностей Майкрософт](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Параметры  
  **Обновить содержимое средства просмотра**  
@@ -52,8 +52,8 @@ ms.locfileid: "48196864"
 |**Вероятность**|Этот столбец отображает линию, указывающую относительную вероятность того, что данная характеристика (простая пара «атрибут-значение» или некоторое сочетание состояний) является элементом текущего кластера.<br /><br /> Можно навести указатель мыши на линейку, чтобы увидеть значение частоты характеристики.|  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](mining-model-viewers-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining/data-mining-model-viewers.md)  
   
   

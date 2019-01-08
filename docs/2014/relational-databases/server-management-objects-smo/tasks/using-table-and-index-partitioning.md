@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - partitions [SMO]
@@ -17,20 +15,20 @@ ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f98d4337dbd5a43adf1e83d80b24b8286193e19d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73a106a4e17ea770517c7662dfecd98fe58e36b8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166114"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787166"
 ---
 # <a name="using-table-and-index-partitioning"></a>Использование секционирования таблиц и индексов
-  Данные могут храниться с помощью алгоритмов хранения, предоставляемые [секционированных таблиц и индексов](../../partitions/partitioned-tables-and-indexes.md). Секционирование может улучшить управляемость и масштабируемость больших таблиц и индексов.  
+  Хранение данных может осуществляться с помощью алгоритмов хранения, указанных в разделе [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). Секционирование может улучшить управляемость и масштабируемость больших таблиц и индексов.  
   
 ## <a name="index-and-table-partitioning"></a>Секционирование таблиц и индексов  
  Эта функция позволяет распространять данные индексов и таблиц по нескольким файловым группам в секциях. Функция секционирования на основе значений некоторых столбцов, называемых столбцами секционирования, определяет, каким образом строки таблицы или индекса сопоставляются секциям. Схема секционирования сопоставляет каждую из секций, определенных функцией секционирования, с файловой группой. Это дает возможность разрабатывать стратегии архивирования, позволяющие масштабировать таблицы по файловым группам и, следовательно, по физическим устройствам.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> Объект содержит коллекцию <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> объектов, представляющих реализованные функции секционирования и коллекция <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> объектов, описывающих способ сопоставления данных группам файлов.  
+ Объект <xref:Microsoft.SqlServer.Management.Smo.Database> содержит коллекцию объектов <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction>, представляющих реализованные функции секционирования, и коллекцию объектов <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>, описывающих способ сопоставления данных группам файлов.  
   
  Каждый из объектов <xref:Microsoft.SqlServer.Management.Smo.Table> и <xref:Microsoft.SqlServer.Management.Smo.Index> указывает в свойстве <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>, какую схему секционирования он использует, а в свойстве <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> ─ столбцы.  
   
@@ -38,12 +36,12 @@ ms.locfileid: "48166114"
  В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-basic"></a>Настройка схемы секционирования для таблицы на языке Visual Basic  
- В примере кода показано, как создать функцию секционирования и схему секционирования для `TransactionHistory` в таблицу [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] образца базы данных. Секции разделяются по дате, чтобы отделить старые записи в таблицу `TransactionHistoryArchive` .  
+ В примере кода показано, как создать функцию секционирования и схему секционирования для таблицы `TransactionHistory` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Секции разделяются по дате, чтобы отделить старые записи в таблицу `TransactionHistoryArchive` .  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBPartition1](SMO How to#SMO_VBPartition1)]  -->  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Настройка схемы секционирования для таблицы на языке Visual C#  
- В примере кода показано, как создать функцию секционирования и схему секционирования для `TransactionHistory` в таблицу [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] образца базы данных. Секции разделяются по дате, чтобы отделить старые записи в таблицу `TransactionHistoryArchive` .  
+ В примере кода показано, как создать функцию секционирования и схему секционирования для таблицы `TransactionHistory` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Секции разделяются по дате, чтобы отделить старые записи в таблицу `TransactionHistoryArchive` .  
   
 ```  
 {   
@@ -91,7 +89,7 @@ ps.Create();
 ```  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-powershell"></a>Настройка схемы секционирования для таблицы в PowerShell  
- В примере кода показано, как создать функцию секционирования и схему секционирования для `TransactionHistory` в таблицу [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] образца базы данных. Секции разделяются по дате, чтобы отделить старые записи в таблицу `TransactionHistoryArchive` .  
+ В примере кода показано, как создать функцию секционирования и схему секционирования для таблицы `TransactionHistory` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Секции разделяются по дате, чтобы отделить старые записи в таблицу `TransactionHistoryArchive` .  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

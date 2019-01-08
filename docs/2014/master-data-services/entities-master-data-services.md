@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], about entities
@@ -14,12 +13,12 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 97a3fe9e9552170332e6be0d5cf5a3cb8541fe9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb54250b1be15916055dd59a3f2e6d37330d5d93
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072914"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800916"
 ---
 # <a name="entities-master-data-services"></a>Сущности (службы основных данных)
   Сущности — это объекты, которые содержатся в моделях [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Каждая сущность содержит элементы, которые являются строками основных данных, которыми можно управлять.  
@@ -65,18 +64,18 @@ ms.locfileid: "48072914"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание новой сущности.|[Создать сущность &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
+|Создание новой сущности.|[Создание сущности (службы Master Data Services)](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
 |Указание того, что сущность может содержать явные иерархии и коллекции.|[Активация сущности для явных иерархий и коллекций &#40;службы Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |Изменение имени существующей сущности.|[Изменение имени сущности &#40;службы Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
-|Удаление существующей сущности.|[Удаление сущности &#40;службы Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
-|Назначение разрешения сущностям.|[Назначение разрешений объекта модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|Удаление существующей сущности.|[Удаление сущности (службы Master Data Services)](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
+|Назначение разрешения сущностям.|[Назначение разрешения для объекта модели (службы Master Data Services)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
 -   [Модели (службы Master Data Services)](../../2014/master-data-services/models-master-data-services.md)  
   
--   [Члены &#40;службы Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [Элементы (службы Master Data Services)](../../2014/master-data-services/members-master-data-services.md)  
   
--   [Атрибуты &#40;службы Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [Атрибуты (службы Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

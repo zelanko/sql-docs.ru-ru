@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60bc8c4cbd2166a302a0f61176fa198787575f88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107073"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356754"
 ---
 # <a name="recommendation-element-dta"></a>Элемент Recommendation (DTA)
   Содержит данные о гипотетических индексах, являющихся частью пользовательской конфигурации.  
@@ -44,17 +43,17 @@ ms.locfileid: "48107073"
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого `Table` элемент.|  
+|**Наличие**|Необязательный. Может использоваться один раз для каждого элемента `Table`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент таблицы для схемы &#40;DTA&#41;](table-element-for-schema-dta.md)|  
-|**Дочерние элементы**|[Создать элемент &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` элемент. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](http://go.microsoft.com/fwlink/?linkid=43100).|  
+|**Родительский элемент**|[Элемент Table описания схемы (DTA)](table-element-for-schema-dta.md)|  
+|**Дочерние элементы**|[Элемент Create (DTA)](create-element-dta.md)<br /><br /> Элемент `Drop`. Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Примечания  
- Этот элемент с именем **RecommendationTypecomplexType** определен в схеме XML помощника по настройке ядра СУБД. Он используется для задания индексов в гипотетической конфигурации. Не путайте этот `Recommendation` элемента с другими типами, которые могут использоваться для задания секционирования (`RecommendationPType`) или представлений (`RecommendationViewType`). Сведения об этих и других `Recommendation` типы элементов, см. в разделе [схемы XML помощника по настройке ядра СУБД](http://go.microsoft.com/fwlink/?linkid=43100).  
+ Этот элемент с именем **RecommendationTypecomplexType** определен в схеме XML помощника по настройке ядра СУБД. Он используется для задания индексов в гипотетической конфигурации. Не путайте этот элемент `Recommendation` с другими типами, используемыми для задания секционирования (`RecommendationPType`) или представлений (`RecommendationViewType`). Сведения об этих и других `Recommendation` типы элементов, см. в разделе [схемы XML помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100).  
   
 ## <a name="example"></a>Пример  
  Пример использования этого элемента см. в разделе [Образец входного XML-файла с пользовательской конфигурацией (DTA)](xml-input-file-sample-with-user-specified-configuration-dta.md).  

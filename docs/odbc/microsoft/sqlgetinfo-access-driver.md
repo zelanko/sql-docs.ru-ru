@@ -14,12 +14,12 @@ ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e559bcf9f66980c6c4ecd7a753e49e21819da54d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 626ee1de57fdcecdf53d20263b1717df25480c40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696282"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532516"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (драйвер для Access)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47696282"
   
  **SQLGetInfo** поддерживает тип SQL_FILE_USAGE сведения. Возвращаемое значение равно 16-разрядное целое число, которое указывает, как драйвер напрямую обрабатывает файлы в источнике данных:  
   
--   SQL_FILE_NOT_SUPPORTED — Драйвер не драйвер среднего уровня.  
+-   SQL_FILE_NOT_SUPPORTED - драйвер не драйвер среднего уровня.  
   
--   SQL_FILE_TABLE — Драйвер одноуровневых считает файлы в источнике данных таблицы.  
+-   SQL_FILE_TABLE - драйвер одноуровневых считает файлы в источнике данных таблицы.  
   
--   SQL_FILE_QUALIFIER — Драйвер среднего уровня обрабатывает файлы в источнике данных как квалификатор.  
+-   SQL_FILE_QUALIFIER - драйвер среднего уровня обрабатывает файлы в источнике данных как квалификатор.  
   
  Драйвер ODBC возвращает SQL_FILE_QUALIFIER, поскольку каждый файл занимает всей базы данных.  
   

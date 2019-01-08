@@ -15,18 +15,18 @@ ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a814b15255a485bf6fbc28ad31d4e789f8482447
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 655c3c76794b170b113442b14ae75cf977ac024c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662122"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391707"
 ---
 # <a name="sqlcancelhandle-function"></a>Функция SQLCancelHandle
 **Соответствие стандартам**  
- Версия была введена: ODBC 3.8  
+ Представленные версии: ODBC 3.8  
   
- Соответствие стандартам: нет  
+ Соответствие стандартам: None  
   
  Предполагается, что большинство драйверов 3,8 (и более поздние версии) будет реализовать эту функцию. Если драйвер не так, вызов **SQLCancelHandle** с подключением, обрабатывать в *обрабатывать* параметр вернет значение SQL_ERROR с SQLSTATE из IM001 и сообщением "драйвер не поддерживает эту функцию '' вызов для **SQLCancelHandle** с инструкцией обрабатывать как *обрабатывать* параметра будут сопоставлены с вызова **SQLCancel** диспетчером драйверов и могут обрабатываться, если в драйвере реализованы **SQLCancel**. Приложение может использовать **SQLGetFunctions** чтобы определить, поддерживает ли драйвер **SQLCancelHandle**.  
   

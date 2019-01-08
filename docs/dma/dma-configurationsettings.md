@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ceca358e47a2cabbe01e64498d61603717a0d370
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643822"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419255"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Настройка параметров для помощника по миграции данных
 
@@ -40,7 +40,7 @@ ms.locfileid: "49643822"
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Количество баз данных для оценки в параллельном режиме
 
-Помощник по миграции данных получает доступ к нескольким базам данных в параллельном режиме. Во время оценки Data Migration Assistant извлечение приложения уровня данных (dacpac), чтобы разобраться со схемой базы данных. Эта операция может истечь время ожидания, если несколько баз данных на одном сервере оцениваются в параллельном режиме. 
+Помощник по миграции данных получает доступ к нескольким базам данных в параллельном режиме. Во время оценки Data Migration Assistant извлечение приложения уровня данных (dacpac), чтобы разобраться со схемой базы данных. Эта операция может истечь время ожидания, если несколько баз данных на одном сервере оцениваются в параллельном режиме. 
 
 Начиная с версии 2.0 Data Migration Assistant, вы можете управлять это путем задания параметра конфигурации parallelDatabases. Значение по умолчанию — 8.
 
@@ -70,7 +70,7 @@ ms.locfileid: "49643822"
 
 <workflowSettings>
 
-<migration parallelDatabases=”8″ />
+<migration parallelDatabases="8″ />
 
 </workflowSettings>
 
@@ -87,22 +87,22 @@ ms.locfileid: "49643822"
 
 - commandTimeout
 
-   Этот параметр задает свойство IDbCommand.CommandTimeout в *секунд*. (По умолчанию = 60)
+   Этот параметр задает свойство IDbCommand.CommandTimeout в *секунд*. (По умолчанию = 60)
 
 - databaseLockTimeout
 
-   Этот параметр аналогичен [ЗАДАТЬ БЛОКИРОВКУ\_времени ожидания TIMEOUT\_период](../t-sql/statements/set-lock-timeout-transact-sql.md) в *миллисекунд*. (По умолчанию = 5000)
+   Этот параметр аналогичен [ЗАДАТЬ БЛОКИРОВКУ\_времени ожидания TIMEOUT\_период](../t-sql/statements/set-lock-timeout-transact-sql.md) в *миллисекунд*. (По умолчанию = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Этот параметр задает число подключений пула подключений SQL для использования. (По умолчанию = 8)
+  Этот параметр задает число подключений пула подключений SQL для использования. (По умолчанию = 8)
 
 ```
 <advisorGroup>
 
 <advisorSettings>
 
-<dacFx  commandTimeout="60" databaseLockTimeout="5000"
+<dacFx  commandTimeout="60" databaseLockTimeout="5000"
 maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorSettings>
@@ -110,7 +110,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Пороговое значение рекомендация
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Пороговое значение рекомендации
 
 С помощью [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), динамически, можно растянуть "горячего" резервирования и "холодные" данные транзакций из Microsoft SQL Server 2016 в Azure. Stretch Database целевых объектов транзакционных баз данных с большим количеством "холодных" данных. Рекомендация Stretch Database, в разделе рекомендация по функции хранилища, сначала определяет таблицы, которому она предположительно будет преимущества этой функции, а затем он определяет изменения, которые должны быть выполнены, чтобы разрешить использование таблицы для этой функции.
 
@@ -121,7 +121,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 <advisorSettings>
 
-<stretchDBAdvisor  recommendedNumberOfRows="100000" />
+<stretchDBAdvisor  recommendedNumberOfRows="100000" />
 
 </advisorSettings>
 
@@ -136,7 +136,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 ```
 <appSettings>
 
-<add key="ConnectionTimeout" value="15" />
+<add key="ConnectionTimeout" value="15" />
 
 </appSettings>
 ```

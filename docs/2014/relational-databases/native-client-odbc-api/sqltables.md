@@ -14,12 +14,12 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90ae76e10c4f9ceab4f7185de6448f6add944b5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8209bf586e5a0b288b4975869ee8903a73a27f06
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111495"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357402"
 ---
 # <a name="sqltables"></a>SQLTables
   SQLTables могут быть выполнены для статического серверного курсора. При попытке выполнить SQLTables для обновляемого (динамического или набора ключей) курсора возвращает SQL_SUCCESS_WITH_INFO, определяющий, что тип курсора был изменен.  
@@ -28,7 +28,7 @@ ms.locfileid: "48111495"
   
  Чтобы сообщить о доступных каталогов, схемы и табличные типы, SQLTables делает специальное использование пустых строк (указатели байтов нулевой длины). Пустые строки не являются значениями по умолчанию (указатели NULL).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента поддерживает выдачу сведений о таблицах на связанных серверах, принимая двухкомпонентное имя для *CatalogName* параметр: *имя_связанного_сервера.имя_каталога*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента поддерживает выдачу сведений о таблицах на связанных серверах, принимая двухкомпонентное имя для *CatalogName* параметр: *Имя_связанного_сервера.имя_каталога*.  
   
  SQLTables возвращает сведения обо всех таблицах, имена которых соответствуют параметру *TableName* и которые принадлежат текущему пользователю.  
   
@@ -54,7 +54,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Функция SQLTables](http://go.microsoft.com/fwlink/?LinkId=59374)   
+ [Функция SQLTables](https://go.microsoft.com/fwlink/?LinkId=59374)   
  [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
   
   

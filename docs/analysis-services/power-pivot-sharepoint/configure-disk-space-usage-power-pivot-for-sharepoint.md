@@ -1,5 +1,5 @@
 ---
-title: Настройка использования места на диске (PowerPivot для SharePoint) | Документы Microsoft
+title: Настройка использования места на диске (PowerPivot для SharePoint) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24d96feb0e57bf0b1c62532cca63ddf07f96f21c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fa6090a675326db06491d54b82a6844363ee3e9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024751"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409201"
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Настройка использования места на диске (PowerPivot для SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34024751"
   
  В папке Backup находится общее хранилище кэша для любой базы данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , загруженной в память на локальном компьютере. Если на ферме определено несколько приложений службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , любое из них может использовать локальный сервер для загрузки и последующего кэширования данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Как загрузка данных, так и их кэширование являются серверными операциями служб Analysis Services. В силу этого использование дискового пространства управляется на уровне экземпляра служб Analysis Services с учетом папки Backup. Параметры конфигурации, ограничивающие использование дискового пространства, таким образом, задаются на одном экземпляре служб Analysis Services SQL Server, который запущен на сервере приложений SharePoint.  
   
- В кэше содержатся только базы данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] базы данных хранятся в нескольких файлах в одной родительской папке с именем Backup. Так как базы данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] предназначены для использования в книге Excel в качестве внутренних данных, они имеют имена на основе идентификаторов GUID, а не описательные имена. Папка GUID в папке  **\<serviceApplicationName >** является родительская папка [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] базы данных. По мере загрузки баз данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сервер для каждой из них создаются дополнительные папки.  
+ В кэше содержатся только базы данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] базы данных хранятся в нескольких файлах в одной родительской папке с именем Backup. Так как базы данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] предназначены для использования в книге Excel в качестве внутренних данных, они имеют имена на основе идентификаторов GUID, а не описательные имена. Папка GUID в папке  **\<serviceApplicationName >** является родительской папкой [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] базы данных. По мере загрузки баз данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сервер для каждой из них создаются дополнительные папки.  
   
  Поскольку данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] могут быть загружены в любой экземпляр служб Analysis Services в ферме, одни и те же данные могут одновременно кэшироваться на нескольких компьютерах в ферме. Такой подход позволяет повысить производительность за счет использования места на диске, в результате пользователи получают более быстрый доступ к данным, уже имеющимся на диске.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34024751"
   
 -   [Пошаговое руководство диспетчера ресурсов файлового сервера для Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Настройка оповещений объем свободного пространства в Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Настройка оповещений мало свободного пространства в Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>Ограничение объема места на диске, используемого для хранения кэшированных файлов  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34024751"
   
 3.  В разделе "Использование диска" задайте значение (в гигабайтах) для параметра **Общее дисковое пространство** , чтобы указать верхний предел объема дискового пространства, используемого для кэширования. 0 — значение по умолчанию, которое позволяет службам Analysis Services использовать все свободное место на диске.  
   
-4.  В разделе "Использование диска" для параметра **Удалить кэшированные базы данных за последнее n-ное количество часов** задайте критерий очистки кэша при достижении максимального значения дискового пространства.  
+4.  В использовании диска в **удалить кэшированные базы данных в последней "n" часов** задайте критерий последнего использования для очистки кэша при — место на диске с максимальным количеством.  
   
      Значение по умолчанию — 4 часа, т. е. все базы данных, которые были неактивными в течение последних 4 часов и более, удаляются из файловой системы. Базы данных, которые являются неактивными, но все еще находятся в памяти, выгружаются, а затем удаляются из файловой системы.  
   

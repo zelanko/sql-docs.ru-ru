@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.olapconnection.f1
@@ -15,12 +14,12 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5157d67fe96939c8942ff3dc0351cc09deb030f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c91547692c9a703b1d989015a0b56525e3e7c40f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063256"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779076"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Добавление диалогового окна  «Диспетчер соединений со службами Analysis Services" в справочник по пользовательскому интерфейсу
   Диалоговое окно **Добавление диспетчера соединений служб Analysis Services** используется для создания соединения с сервером, на котором выполняются службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], и для редактирования свойств соединения.  
@@ -44,7 +43,7 @@ ms.locfileid: "48063256"
  Выберите проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из списка.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../integration-services-error-and-message-reference.md)   
- [Службы Integration Services &#40;SSIS&#41; подключений](integration-services-ssis-connections.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../integration-services-error-and-message-reference.md)   
+ [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   
   

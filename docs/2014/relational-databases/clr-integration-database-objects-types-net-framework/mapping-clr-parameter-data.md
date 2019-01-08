@@ -26,12 +26,12 @@ ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ba043e2c19a1fd835f04c5426c0518dec2831b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51e94f1cf42b8c40b4f0023371bc7a538bdba76f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148124"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357087"
 ---
 # <a name="mapping-clr-parameter-data"></a>Сопоставление данных о параметрах CLR
   В следующей таблице перечислены [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных, их эквиваленты в системе common language runtime (CLR) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в `System.Data.SqlTypes` пространства имен и их собственные эквиваленты CLR в [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
@@ -50,9 +50,9 @@ ms.locfileid: "48148124"
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset, допускающие значения NULL\<DateTimeOffset >**|  
 |`decimal`|`SqlDecimal`|**Decimal, допускающий значение NULL\<десятичное >**|  
 |`float`|`SqlDouble`|**Double, допускающее значение NULL\<Double >**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` определяется в библиотеке Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакет дополнительных компонентов](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` определяется в библиотеке Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакет дополнительных компонентов](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` определяется в библиотеке Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакет дополнительных компонентов](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` определяется в библиотеке Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакет дополнительных компонентов](https://go.microsoft.com/fwlink/?LinkId=131220).|None|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` определяется в библиотеке Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакет дополнительных компонентов](https://go.microsoft.com/fwlink/?LinkId=131220).|None|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` определяется в библиотеке Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакет дополнительных компонентов](https://go.microsoft.com/fwlink/?LinkId=131220).|None|  
 |`image`|None|None|  
 |`int`|`SqlInt32`|**Int32, допускающий значение NULL\<Int32 >**|  
 |`money`|`SqlMoney`|**Decimal, допускающий значение NULL\<десятичное >**|  
@@ -86,13 +86,13 @@ ms.locfileid: "48148124"
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
 public static void PriceSum(out SqlInt32 value)  
-{ … }  
+{ ... }  
 ```  
   
 ```vb  
 <Microsoft.SqlServer.Server.SqlProcedure> _  
 Public Shared Sub PriceSum( <Out()> ByRef value As SqlInt32)  
-…  
+...  
 End Sub  
 ```  
   

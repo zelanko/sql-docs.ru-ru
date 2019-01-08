@@ -11,12 +11,12 @@ ms.assetid: 0420c555-7a3b-42b9-8651-0b4f5bcb0008
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c91331f93347a860946741229f9b6a287796e03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2d849a4ce57397e2031b9d347c3e9f7577035fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105614"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539074"
 ---
 # <a name="installation-type"></a>Тип установки
   На странице «Тип установки» мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] укажите, следует ли установить новый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или добавить компоненты в существующий.  
@@ -30,7 +30,7 @@ ms.locfileid: "48105614"
   
      При выборе параметра добавления компонентов в существующий экземпляр, в раскрывающемся списке выберите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления.  
   
- К подготовленному образу[!INCLUDE[ssDE](../../includes/ssde-md.md)] можно добавить функции, поддерживаемые [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SysPrep (компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и службы ). Другие функции, не поддерживаемые SysPrep, могут быть добавлены только после завершения подготовленного экземпляра.  
+ Можно добавлять только функции SysPrep поддерживается -[!INCLUDE[ssDE](../../includes/ssde-md.md)] и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-к подготовленному образу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Другие функции, не поддерживаемые SysPrep, могут быть добавлены только после завершения подготовленного экземпляра.  
   
  **Примечание.** После установки экземпляра отказоустойчивого кластера добавить в него компоненты невозможно. Чтобы добавить компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующий отказоустойчивый кластер, необходимо установить отдельный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

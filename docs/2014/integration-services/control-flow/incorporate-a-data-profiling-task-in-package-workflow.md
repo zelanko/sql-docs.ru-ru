@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
@@ -13,12 +12,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74e2ca64c47aaf1b0388fa0d58a3e76f2ec9d20e
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 54b106ab3f6609ab40acd8fd054d5f3369711665
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085520"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368696"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Включение задачи «Профилирование данных» в рабочий процесс пакета
   Профилирование и очистка данных на ранних стадиях не подходят для автоматизации. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выходные данные задачи профилирования данных обычно требуют визуального анализа и вмешательства человека, чтобы определить, являются ли зафиксированные нарушения реальными. Для очистки данных, даже после обнаружения проблем с их качеством, нужен хорошо продуманный план.  
@@ -161,7 +160,7 @@ ms.locfileid: "49085520"
     Public Class ScriptMain  
   
       Private FILENAME As String = "C:\ TEMP\DataProfile1.xml"  
-      Private PROFILE_NAMESPACE_URI As String = "http://schemas.microsoft.com/DataDebugger/"  
+      Private PROFILE_NAMESPACE_URI As String = "https://schemas.microsoft.com/DataDebugger/"  
       Private NULLCOUNT_XPATH As String = _  
         "/default:DataProfile/default:DataProfileOutput/default:Profiles" & _  
         "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:NullCount/text()"  
@@ -216,7 +215,7 @@ ms.locfileid: "49085520"
     {  
   
       private string FILENAME = "C:\\ TEMP\\DataProfile1.xml";  
-      private string PROFILE_NAMESPACE_URI = "http://schemas.microsoft.com/DataDebugger/";  
+      private string PROFILE_NAMESPACE_URI = "https://schemas.microsoft.com/DataDebugger/";  
       private string NULLCOUNT_XPATH = "/default:DataProfile/default:DataProfileOutput/default:Profiles" + "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:NullCount/text()";  
       private string TABLE_XPATH = "/default:DataProfile/default:DataProfileOutput/default:Profiles" + "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:Table";  
   
@@ -264,8 +263,8 @@ ms.locfileid: "49085520"
   
 8.  Закройте среду разработки скриптов и редактор задачи «Скрипт».  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Альтернативный образец программного кода — чтение выхода задачи профилирования из переменной  
- Приведенного выше показано, как загрузить выходные данные задачи «профилирование данных» из файла. Другой вариант — загрузить эти выходные данные из переменной пакета. Чтобы загрузить эти выходные данные из переменной пакета, нужно внести в образец кода следующие изменения.  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>Альтернативный образец программного кода — чтение выхода задачи профилирования из переменной  
+ В предыдущей процедуре описана загрузка выходных данных задачи "Профилирование данных" из файла. Другой вариант — загрузить эти выходные данные из переменной пакета. Чтобы загрузить эти выходные данные из переменной пакета, нужно внести в образец кода следующие изменения.  
   
 -   Вызовите метод `LoadXml` класса `XmlDocument` вместо метода `Load`.  
   
@@ -328,7 +327,7 @@ ms.locfileid: "49085520"
   
 7.  В объектах управления очередностью, соединяющих задачу «Скрипт» с нисходящими компонентами в рабочем процессе, напишите выражения направления рабочего процесса, использующие значения переменных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка задачи «Профилирование данных»](data-profiling-task.md)   
  [Средство просмотра профиля данных](data-profile-viewer.md)  
   

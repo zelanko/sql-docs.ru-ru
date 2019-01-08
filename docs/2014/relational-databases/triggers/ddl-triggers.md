@@ -12,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 25559152ebb3b748cee44a3a04dec2c23b7432b8
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072038"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772346"
 ---
 # <a name="ddl-triggers"></a>Триггеры DDL
   Триггеры DDL активируются в ответ на различные события языка DDL. Эти события в основном соответствуют инструкциям [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые начинаются с ключевых слов CREATE, ALTER, DROP, GRANT, DENY, REVOKE или UPDATE STATISTICS. Системные хранимые процедуры, выполняющие операции, подобные операциям DDL, также могут запускать триггеры DDL.  
@@ -35,7 +35,7 @@ ms.locfileid: "49072038"
   
 ## <a name="types-of-ddl-triggers"></a>Типы триггеров DDL  
  Триггер DDL языка Transact-SQL  
- Это особая разновидность [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимую процедуру, которая выполняет одну или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций в ответ на события уровня сервера и уровня базы данных. Например, триггер DDL может активироваться, если выполняется такая инструкция, как ALTER SERVER CONFIGURATION, или если происходит удаление таблицы с использованием команды DROP TABLE.  
+ Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)] особого типа, которая выполняет одну или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в ответ на событие из области действия сервера или базы данных. Например, триггер DDL может активироваться, если выполняется такая инструкция, как ALTER SERVER CONFIGURATION, или если происходит удаление таблицы с использованием команды DROP TABLE.  
   
  Триггер DDL среды CLR  
  Вместо вызова хранимой процедуры на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] триггер CLR вызывает один или несколько методов управляемого кода, являющихся членами сборки, созданной с помощью среды .NET Framework и загружены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

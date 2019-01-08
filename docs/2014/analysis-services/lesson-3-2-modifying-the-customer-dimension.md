@@ -11,12 +11,12 @@ ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb2d3f6ead3482a9f36807883f685eaed4225f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55bf692e1b24bb0184f9b126a0bde5c0ee7e0657
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178124"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513270"
 ---
 # <a name="modifying-the-customer-dimension"></a>Изменение измерения «Заказчик»
   Существует много способов повысить удобство использования и функциональность измерений куба. При выполнении задач этого раздела будет изменено измерение «Заказчик».  
@@ -32,11 +32,11 @@ ms.locfileid: "48178124"
   
 3.  Аналогичным образом измените имена следующих атрибутов.  
   
-    -   **English Education** атрибут — изменить на `Education`  
+    -   **English Education** атрибута — изменить на `Education`  
   
-    -   **English Occupation** атрибут — изменить на `Occupation`  
+    -   **English Occupation** атрибута — изменить на `Occupation`  
   
-    -   **State Province Name** атрибут — изменить на `State-Province`  
+    -   **State Province Name** атрибута — изменить на `State-Province`  
   
 4.  В меню **Файл** выберите команду **Сохранить все**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48178124"
   
 4.  В **имя** поле свойства, тип `Full Name`.  
   
-5.  Щелкните поле свойства **NameColumn** внизу и нажмите кнопку обзора (**…**), чтобы открыть диалоговое окно **Столбец имени** .  
+5.  Щелкните в **NameColumn** свойство в нижней части, а затем нажмите кнопку обзора (**...** ) кнопку, чтобы открыть **столбец имени** диалоговое окно.  
   
 6.  Выберите `FullName` в нижней части **исходный столбец** , а затем нажмите **ОК**.  
   
@@ -269,6 +269,6 @@ ms.locfileid: "48178124"
  [Справочник по свойствам атрибута измерения](multidimensional-models/dimension-attribute-properties-reference.md)   
  [Удаление атрибута из измерения](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
  [Переименовать атрибут](multidimensional-models/attribute-properties-rename-an-attribute.md)   
- [Определение именованных вычислений в представлении источника данных &#40;служб Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Определение именованных вычислений в представлении источника данных (службы Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

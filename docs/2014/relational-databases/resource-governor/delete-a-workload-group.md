@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
@@ -14,24 +13,24 @@ ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 28de150be95c10e8c1c1ef9f4c5280d185c5bc18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174334"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764026"
 ---
 # <a name="delete-a-workload-group"></a>Удаление группы рабочей нагрузки
   Группу рабочей нагрузки или пул ресурсов можно удалить в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] либо с помощью Transact-SQL.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Перед началом работы**  [Ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
--   **To delete a workload group, using:**  [Object Explorer](#DelWGObjEx), [Resource Governor Properties](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **Для удаления рабочей нагрузки группы, с использованием:**  [Обозреватель объектов](#DelWGObjEx), [свойства регулятора ресурсов](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Группу рабочей нагрузки нельзя удалить, если она содержит активные сеансы.  
   
-###  <a name="LimitationsRestrictions"></a> ограничения  
+###  <a name="LimitationsRestrictions"></a> Ограничения  
  Если группа рабочей нагрузки содержит активные сеансы, то удалить или переместить ее в другой пул ресурсов путем вызова инструкции ALTER RESOURCE GOVERNOR RECONFIGURE для применения изменений не удастся. Во избежание этой проблемы можно предпринять одно из следующих действий.  
   
 -   Подождать, пока все сеансы затронутых групп завершатся, и заново выполнить инструкцию ALTER RESOURCE GOVERNOR RECONFIGURE.  
@@ -68,9 +67,9 @@ ms.locfileid: "48174334"
 ##  <a name="DelWGTSQL"></a> Удаление группы рабочей нагрузки с помощью Transact-SQL  
  **Удаление группы рабочей нагрузки с помощью Transact-SQL**  
   
-1.  Запустите `DROP WORKLOAD GROUP` инструкцию, указав имя удаляемой группы рабочей нагрузки.  
+1.  Выполните инструкцию `DROP WORKLOAD GROUP`, указав имя группы рабочей нагрузки, подлежащей удалению.  
   
-2.  Перед выполнением инструкции `ALTER RESOURCE GOVERNOR RECONFIGURE` убедитесь, что в удаляемой группе рабочей нагрузки нет активных запросов. Если активные запросы есть `ALTER RESOURCE GOVERNOR` завершится ошибкой. Во избежание этой ошибки можно предпринять одно из следующих действий:  
+2.  Перед выполнением инструкции `ALTER RESOURCE GOVERNOR RECONFIGURE` убедитесь, что в удаляемой группе рабочей нагрузки нет активных запросов. Если активные запросы есть, то инструкция `ALTER RESOURCE GOVERNOR` не будет выполнена успешно. Во избежание этой ошибки можно предпринять одно из следующих действий:  
   
     -   Дождитесь отсоединения всех сеансов от группы рабочей нагрузки.  
   
@@ -93,7 +92,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Регулятор ресурсов](resource-governor.md)   
+ [регулятор ресурсов](resource-governor.md)   
  [Создание пула ресурсов](create-a-resource-pool.md)   
  [Создание группы рабочей нагрузки](create-a-workload-group.md)   
  [Удаление пула ресурсов](delete-a-resource-pool.md)   

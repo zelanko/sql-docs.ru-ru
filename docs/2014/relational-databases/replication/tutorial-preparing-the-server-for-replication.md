@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e68be637511fb00774d35b564b0e5ec5979b60d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e82c71834a2d41a7620f549bc6335fa15df84bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228244"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813996"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Учебник. Подготовка сервера к репликации
   Перед тем, как настраивать топологию репликации, важно предусмотреть средства безопасности. В этом учебнике описывается, как лучше обезопасить топологию репликации и как настроить распространение, которое является первым шагом в репликации данных. В первую очередь необходимо пройти именно этот учебник.  
@@ -40,11 +39,11 @@ ms.locfileid: "48228244"
   
 ## <a name="lessons-in-this-tutorial"></a>Занятия этого учебника  
   
--   [Занятие 1. Создание учетных записей Windows для репликации](lesson-1-creating-windows-accounts-for-replication.md)  
+-   [Занятие 1. Создание Windows учетных записей для репликации](lesson-1-creating-windows-accounts-for-replication.md)  
   
 -   [Занятие 2. Подготовка папки моментальных снимков](lesson-2-preparing-the-snapshot-folder.md)  
   
--   [Урок 3. Настройка распространения](lesson-3-configuring-distribution.md)  
+-   [Занятие 3. Настройка распространения](lesson-3-configuring-distribution.md)  
   
  [Приступить к изучению](lesson-1-creating-windows-accounts-for-replication.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37bc819ab06a960887963b48be70c18e2ce8f656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131944"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362846"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
     
@@ -30,7 +30,7 @@ ms.locfileid: "48131944"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC3_CHECK_CATALOG|  
-|Текст сообщения|Check Catalog Msg ERROR Level LEVEL State STATE: MESSAGE.|  
+|Текст сообщения|Проверьте сообщение каталога ERROR, уровень LEVEL, состояние STATE: MESSAGE.|  
   
 ## <a name="explanation"></a>Объяснение  
  Инструкции DBCC CHECKCATALOG или DBCC CHECKDB обнаружили несогласованность в системных таблицах метаданных для указанного объекта. То есть существует несогласованность между записанным идентификатором объекта и объектом, указанным в сообщении об ошибке.  
@@ -75,6 +75,6 @@ ms.locfileid: "48131944"
  Не вносите изменения в системные таблицы вручную. SQL Server не поддерживает внесенных вручную каких-либо изменений в системные базы данных. В случае обновления системной таблицы в базе данных SQL Server в журнале регистрируются два события (идентификаторы событий 17659 и 3859). Дополнительные сведения см. в статье базы знаний 2688307 «При обновлении системных таблиц в базе данных SQL Server регистрируются события с идентификаторами 17659 и 3859».  
   
 ## <a name="see-also"></a>См. также  
- [При обновлении системных таблиц в базе данных SQL Server в журнале регистрируются события с идентификаторами 17659 и 3859](http://support.microsoft.com/kb/2688307/EN-US).  
+ [При обновлении системных таблиц в базе данных SQL Server в журнале регистрируются события с идентификаторами 17659 и 3859](https://support.microsoft.com/kb/2688307/EN-US).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Задача 9: Настройка службы ссылочных данных | Документация Майкрософт'
+title: Задача 9. Настройка службы ссылочных данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23832b226bb9408ab4e5b2fbb50718e1ead710b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f40aebd3d6f1b6b9b6c7580845f6d80da9eedbc6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217294"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373826"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>Задача 9. Настройка службы ссылочных данных
-  В этой задаче вы настроите службы DQS для использования службы ссылочных данных в Windows Azure Marketplace. В следующей задаче вы настроите **проверка адреса** домена для использования этой службы. Во время выполнения при проведении очистки данных службы DQS передают значения доменов в **проверка адреса** домена со службой для очистки. См. в разделе [Configure DQS to Use Reference Data](http://msdn.microsoft.com/library/hh213070.aspx) для получения дополнительных сведений.  
+  В этой задаче вы настроите службы DQS для использования службы ссылочных данных в Windows Azure Marketplace. В следующей задаче вы настроите **проверка адреса** домена для использования этой службы. Во время выполнения при проведении очистки данных службы DQS передают значения доменов в **проверка адреса** домена со службой для очистки. См. в разделе [Configure DQS to Use Reference Data](https://msdn.microsoft.com/library/hh213070.aspx) для получения дополнительных сведений.  
   
 1.  На главной странице **клиента DQS**в **администрирования** панели щелкните **конфигурации**.  
   

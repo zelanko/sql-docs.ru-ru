@@ -14,15 +14,15 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c578e5e56d575f3d324d8585f73a9891b2ad00ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3204e8f3f47dc77f38e9690bf34c0e6b69c79fdc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091684"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353152"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Производительность, моментальные снимки, кэширование (службы Reporting Services)
-  Производительность сервера отчетов зависит от сочетания факторов, которые включают оборудование, количество пользователей, одновременно обращающихся к отчетам, объем данных в отчетах и формат вывода. Чтобы понять, какие факторы производительности характерны для конкретной установки, и какие меры позволят достичь требуемых результатов, необходимо получить базовые данные и выполнить тесты. Дополнительные сведения о средствах и рекомендациях см. в следующих публикациях MSDN: [Reporting Services Performance Optimization](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) (Оптимизация производительности служб Reporting Services) и [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](http://go.microsoft.com/fwlink/?LinkID=77519)(Нагрузочное тестирование сервера отчетов служб Reporting Services SQL Server 2005 в среде Visual Studio 2005).  
+  Производительность сервера отчетов зависит от сочетания факторов, которые включают оборудование, количество пользователей, одновременно обращающихся к отчетам, объем данных в отчетах и формат вывода. Чтобы понять, какие факторы производительности характерны для конкретной установки, и какие меры позволят достичь требуемых результатов, необходимо получить базовые данные и выполнить тесты. Дополнительные сведения о средствах и рекомендациях см. в следующих публикациях MSDN: [Оптимизация производительности служб Reporting Services](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) и [с помощью Visual Studio 2005 для выполнения нагрузочного тестирования сервера SQL Server 2005 Reporting Services отчета](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
  Общие принципы, которыми необходимо руководствоваться, включают следующее.  
   
@@ -38,28 +38,28 @@ ms.locfileid: "48091684"
   
 -   Чтобы узнать, сколько времени занимает обработка отчета, и ознакомиться с другими показателями производительности, просмотрите журнал выполнения сервера отчетов. Дополнительные сведения см. в разделе [журнал выполнения сервера отчетов и представление ExecutionLog3](report-server-executionlog-and-the-executionlog3-view.md).  
   
--   Дополнительные сведения о снижении остроты проблем производительности путем настройки конфигурации управления памятью, см. в разделе [Настройка доступной памяти для приложений сервера отчетов](../report-server/configure-available-memory-for-report-server-applications.md).  
+-   Дополнительные сведения о снижении остроты проблем производительности путем настройки конфигурации управления памятью см. в разделе [Настройка доступной памяти для приложений сервера отчетов](../report-server/configure-available-memory-for-report-server-applications.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Мониторинг производительности сервера отчетов](monitoring-report-server-performance.md)  
+ [Наблюдение за производительностью сервера отчетов](monitoring-report-server-performance.md)  
  Описывает объекты производительности, которые можно использовать для слежения за рабочей нагрузкой сервера.  
   
- [Определение свойств обработки отчетов](set-report-processing-properties.md)  
+ [Установка свойств обработки отчетов](set-report-processing-properties.md)  
  Описывает способы настройки отчета для запуска по запросу, из кэша или по расписанию в качестве моментального снимка отчета.  
   
  [Настройка доступной памяти для приложений сервера отчетов](../report-server/configure-available-memory-for-report-server-applications.md)  
  Рассматривается переопределение поведения управления памятью по умолчанию.  
   
- [Кэширование отчетов &#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [Кэширование отчетов (службы SSRS)](caching-reports-ssrs.md)  
  Описывает поведение кэширования отчета на сервере отчетов.  
   
- [Кэширование общих наборов данных &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)  
+ [Общие наборы данных в кэше (службы SSRS)](cache-shared-datasets-ssrs.md)  
  Описывает работу кэширования общего набора данных на сервере отчетов.  
   
  [Обработка больших отчетов](process-large-reports.md)  
  Содержит рекомендации о настройке и распределении большого отчета.  
   
- [Задание значений времени ожидания для обработки общего набора данных отчета и &#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS)](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  Объясняет, как устанавливаются истечения времени ожидания при обработке запросов и отчетов.  
   
 ## <a name="see-also"></a>См. также  

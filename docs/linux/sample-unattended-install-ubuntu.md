@@ -1,5 +1,6 @@
 ---
-title: Автоматическая установка для SQL Server в Ubuntu | Документация Майкрософт
+title: Автоматическая установка для SQL Server в Ubuntu
+titleSuffix: SQL Server
 description: Пример сценария SQL Server — автоматическая установка в Ubuntu
 author: rothja
 ms.author: jroth
@@ -7,16 +8,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: dc6d12a52c20bf3269f52fcc8d2ef87c4366061f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab93dde353b8576f682a2e032888da36a5743012
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626553"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160502"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Пример: Сценарий установки автоматической установки SQL Server для Ubuntu
+# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Образец. Установка сценария автоматической установки SQL Server для Ubuntu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

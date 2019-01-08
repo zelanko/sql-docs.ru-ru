@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
@@ -16,12 +15,12 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9b4ee585d23cceaf15acc6c904ce783f21e9f08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087534"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788688"
 ---
 # <a name="specify-synchronization-schedules"></a>Указание расписаний синхронизации
   В данном разделе описывается процесс задания расписаний синхронизации в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. При создании подписки можно определить расписание синхронизации, управляющее запуском агента репликации для подписки. Если не указать параметры расписания, подписка использует расписание по умолчанию.  
@@ -65,9 +64,9 @@ ms.locfileid: "48087534"
   
     -   **Запуск только по запросу**  
   
-    -   **\<Задать расписание…>**  
+    -   **\<Задать расписание...>**  
   
-2.  При выборе **\<Задать расписание…>** укажите расписание в диалоговом окне **Свойства расписания задания**, а затем нажмите кнопку **ОК**.  
+2.  При выборе **\<Задать расписание...>** укажите расписание в диалоговом окне **Свойства расписания задания**, а затем нажмите кнопку **ОК**.  
   
 3.  Завершите работу мастера.  
   
@@ -325,7 +324,7 @@ ms.locfileid: "48087534"
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
  [Синхронизация принудительной подписки](synchronize-a-push-subscription.md)   

@@ -1,30 +1,31 @@
 ---
-title: Начало работы с SQL Server в облаке | Документация Майкрософт
+title: Начало работы с SQL Server (на платформе Linux) в облаке
+titleSuffix: SQL Server
 description: В этом кратком руководстве показано, как SQL Server под управлением Linux в облаке по своему усмотрению.
-author: annashres
-ms.author: annashres
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 8c7131f8b4fb9f9b326e2596d53332b9e6bf9248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c64c2ab3927c111b29f0bafa6745fbab2f7fd13
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682982"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160542"
 ---
-# <a name="quickstart-run-the-sql-server-in-the-cloud"></a>Краткое руководство: Запуск SQL Server в облаке
+# <a name="quickstart-run-sql-server-in-the-cloud"></a>Краткое руководство. Запуск SQL Server в облаке
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этом кратком руководстве вы установите SQL Server на Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) или Ubuntu в облаке по своему усмотрению. Запуск SQL Server на Linux в Azure описан здесь: [Подготовка виртуальной машины SQL Server на базе Linux на портале Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json).
 
-    > [!NOTE]
-    > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
+> [!NOTE]
+> Если вы решили запустить платный выпуск SQL Server, необходимо использовать собственную лицензию (BYOL).
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  Создание Linux AMI с помощью по крайней мере 2 ГБ памяти, из marketplace 

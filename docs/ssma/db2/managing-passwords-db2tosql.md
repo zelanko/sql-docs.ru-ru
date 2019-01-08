@@ -10,12 +10,12 @@ ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2a2ba7cfb16c4df96fa40edb23d9bccea3599005
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 92cff6191f9b606a5394edaac36706328ab52bc3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675663"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510165"
 ---
 # <a name="managing-passwords-db2tosql"></a>Управление паролями (DB2ToSQL)
 Этот раздел посвящен защита пароли к базам данных и процедуру для импорта или экспорта их на серверах:  
@@ -31,15 +31,15 @@ SSMA позволяет защищать пароль базы данных.
   
 Укажите допустимый пароль с помощью одного из следующих трех методов:  
   
-1.  **Открытого текста:** введите пароль базы данных в атрибуте значение узла «пароль». Его можно найти в разделе Определение узел сервера в разделе сервера из файла сценария или файла соединения сервера.  
+1.  **Открытый текст:** Введите пароль базы данных в атрибуте значение узла «пароль». Его можно найти в разделе Определение узел сервера в разделе сервера из файла сценария или файла соединения сервера.  
   
-    Пароли в виде открытого текста не являются безопасными. Таким образом, возникнет следующее предупреждающее сообщение в выходных данных консоли: *«Server &lt;идентификатор сервера&gt; пароль предоставляется в виде открытого текста, небезопасный, SSMA консольное приложение предоставляет возможность защиты пароль с помощью шифрования, см. параметр – securepassword в SSMA файл справки для Дополнительные сведения.»*  
+    Пароли в виде открытого текста не являются безопасными. Таким образом возникнет следующее предупреждающее сообщение в выходных данных консоли: *«Server &lt;идентификатор сервера&gt; пароль предоставляется в виде открытого текста, небезопасный, SSMA консольное приложение предоставляет возможность защитить пароль с помощью шифрования, см. параметр - securepassword в файле справки SSMA для получения дополнительных сведений информация».*  
   
-    **Зашифрованные пароли:** указанный пароль, таким образом, хранится в зашифрованном виде на локальном компьютере в ProtectedStorage.ssma.  
+    **Зашифрованные пароли:** В этом случае указанный пароль хранится в зашифрованном виде на локальном компьютере в ProtectedStorage.ssma.  
   
     -   **Защита паролей**  
   
-        -   Выполнение `SSMAforDB2Console.exe` с `–securepassword` и добавьте параметр командной строки, передав сервера соединение или скрипт файл, содержащий узел пароля в разделе "Определение" server.  
+        -   Выполнение `SSMAforDB2Console.exe` с `-securepassword` и добавьте параметр командной строки, передав сервера соединение или скрипт файл, содержащий узел пароля в разделе "Определение" server.  
   
         -   В командной строке пользователю предлагается ввести пароль и подтвердите его.  
   
@@ -48,7 +48,7 @@ SSMA позволяет защищать пароль базы данных.
             Пример 1.
             
                 Specify password
-                C:\SSMA\SSMAforDB2Console.EXE –securepassword –add all –s "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\AssessmentReportGenerationSample.xml" –v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml"
+                C:\SSMA\SSMAforDB2Console.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml"
                 
                 Enter password for server_id 'XXX_1': xxxxxxx
                 
@@ -56,7 +56,7 @@ SSMA позволяет защищать пароль базы данных.
             
             Пример 2.
             
-                C:\SSMA\SSMAforDB2Console.EXE –securepassword –add "source_1,target_1" –c "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ServersConnectionFileSample.xml" – v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml" -o
+                C:\SSMA\SSMAforDB2Console.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 
                 Enter password for server_id 'source_1': xxxxxxx
                 
@@ -68,20 +68,20 @@ SSMA позволяет защищать пароль базы данных.
     
     -   **Удаление зашифрованных паролей**  
   
-        Выполнение `SSMAforDB2Console.exe` с`–securepassword` и `–remove` переключиться в командной строке, передав идентификаторов серверов, чтобы удалить зашифрованные пароли из защищенного хранилища файле присутствует на локальном компьютере.  
+        Выполнение `SSMAforDB2Console.exe` с`-securepassword` и `-remove` переключиться в командной строке, передав идентификаторов серверов, чтобы удалить зашифрованные пароли из защищенного хранилища файле присутствует на локальном компьютере.  
   
         Пример  
         
-            C:\SSMA\SSMAforDB2Console.EXE –securepassword –remove all
-            C:\SSMA\SSMAforDB2Console.EXE –securepassword –remove "source_1,target_1"  
+            C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
+            C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove "source_1,target_1"  
   
     -   **Список идентификаторов серверов, чьи пароли шифруются**  
   
-        Выполнение `SSMAforDB2Console.exe` с `–securepassword` и `–list` переключиться в командной строке, чтобы получить список идентификаторов серверов, чьи пароли были зашифрованы.  
+        Выполнение `SSMAforDB2Console.exe` с `-securepassword` и `-list` переключиться в командной строке, чтобы получить список идентификаторов серверов, чьи пароли были зашифрованы.  
   
         Пример  
         
-            C:\SSMA\SSMAforDB2Console.EXE –securepassword –list  
+            C:\SSMA\SSMAforDB2Console.EXE -securepassword -list  
 
   
     > [!NOTE]  
@@ -97,13 +97,13 @@ SSMA консольного приложения позволяет экспор
     
     Enter password for protecting the exported file
     
-    C:\SSMA\SSMAforDB2Console.EXE –securepassword –export all "machine1passwords.file"
+    C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforDB2Console.EXE –p –e "DB2DB_1_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
@@ -115,13 +115,13 @@ SSMA консольного приложения позволяет экспор
     
     Enter password for protecting the imported file
     
-    C:\SSMA\SSMAforDB2Console.EXE –securepassword –import all "machine1passwords.file"
+    C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforDB2Console.EXE –p –i "DB2DB_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     

@@ -42,12 +42,12 @@ ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 416540095fe08c5777b453db5875212fbea80989
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064886"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355117"
 ---
 # <a name="getting-sql-server-assistance"></a>Получение помощи по SQL Server
   Существует три основных источника сведений из [!INCLUDE[msCoName](../includes/msconame-md.md)] о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -80,19 +80,19 @@ ms.locfileid: "48064886"
   
 |Ресурс|Аудитория|  
 |--------------|--------------|  
-|[Центр разработчиков SQL Server](http://msdn.microsoft.com/sqlserver/)|Разработчики, которые создают базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], систему отчетов, решения бизнес-аналитики, а также разрешают приложениям и веб-сайтам использовать эти системы.|  
-|[Центр разработчиков XML](http://go.microsoft.com/fwlink/?LinkId=42458)|Создатели веб-сайтов и разработчики приложений, чьи веб-сайты и приложения используют XML для хранения данных и работы с ними.|  
-|[Сайт SQL Server TechNet](http://technet.microsoft.com/sqlserver/dn135309)|Администраторы и операторы, которые занимаются планированием, развертыванием, администрированием и поддержкой систем, в которых используется [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|[Центр разработчиков SQL Server](https://msdn.microsoft.com/sqlserver/)|Разработчики, которые создают базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], систему отчетов, решения бизнес-аналитики, а также разрешают приложениям и веб-сайтам использовать эти системы.|  
+|[Центр разработчиков XML](https://go.microsoft.com/fwlink/?LinkId=42458)|Создатели веб-сайтов и разработчики приложений, чьи веб-сайты и приложения используют XML для хранения данных и работы с ними.|  
+|[Сайт SQL Server TechNet](https://technet.microsoft.com/sqlserver/dn135309)|Администраторы и операторы, которые занимаются планированием, развертыванием, администрированием и поддержкой систем, в которых используется [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
 ## <a name="additional-online-information"></a>Дополнительные источники сведений в Интернете  
  Дополнительные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] информация доступна на основе этих [!INCLUDE[msCoName](../includes/msconame-md.md)] веб-сайтов.  
   
 |Ресурс|Описание|  
 |--------------|-----------------|  
-|[Microsoft SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)|Предпродажные сведения об оценке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] как средства для хранения данных и бизнес-аналитики.|  
-|[Базы знаний Майкрософт](http://go.microsoft.com/fwlink/?LinkId=42461)|Предоставляет с возможностью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] статей, написанных [!INCLUDE[msCoName](../includes/msconame-md.md)] поддержки.|    
+|[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Предпродажные сведения об оценке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] как средства для хранения данных и бизнес-аналитики.|  
+|[Базы знаний Майкрософт](https://go.microsoft.com/fwlink/?LinkId=42461)|Предоставляет с возможностью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] статей, написанных [!INCLUDE[msCoName](../includes/msconame-md.md)] поддержки.|    
   
- Продукты [!INCLUDE[msCoName](../includes/msconame-md.md)] имеют сроки поддержки, которые определяют, как долго для каждой версии будет доступна поддержка. Служба поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] ведет страницу, в которой описываются сроки поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)]. Страница содержит ссылки на другие страницы, отображающие доступность поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] продуктов. Дополнительные сведения см. в разделе [жизненный цикл поддержки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=98306).  
+ Продукты [!INCLUDE[msCoName](../includes/msconame-md.md)] имеют сроки поддержки, которые определяют, как долго для каждой версии будет доступна поддержка. Служба поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] ведет страницу, в которой описываются сроки поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)]. Страница содержит ссылки на другие страницы, отображающие доступность поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] продуктов. Дополнительные сведения см. в разделе [жизненный цикл поддержки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
 ## <a name="see-also"></a>См. также  
  [Использование документации по продукту SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  

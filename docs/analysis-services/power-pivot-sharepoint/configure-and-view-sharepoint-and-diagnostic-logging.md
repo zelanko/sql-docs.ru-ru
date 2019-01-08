@@ -1,5 +1,5 @@
 ---
-title: Настройка и просмотр SharePoint и ведения журнала диагностики | Документы Microsoft
+title: Настройка и просмотр SharePoint и ведение журналов диагностики | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9d36c65115f1ad786340ec8a4058bd20c52cb6a1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027221"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410421"
 ---
-# <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Настройка и просмотр SharePoint и ведения журнала диагностики
+# <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Настройка и просмотр SharePoint и ведение журналов диагностики
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] регистрируются в файлах журнала SharePoint. Сведения, приведенные в этом разделе, помогут настроить уровни ведения журнала и просмотреть данные файла журнала. Можно выбирать, какие события сервера [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] заносятся в файл журнала. а также определять степень серьезности регистрируемых сообщений. Дополнительные сведения см. в разделе [Настройка сбора данных об использовании с PowerPivot для SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34027221"
   
 -   В случае ошибок, для которых указан идентификатор корреляции, скопируйте этот идентификатор и используйте его в качестве условия поиска в файле журнала.  
   
--   Ищите состояние ошибки «Высокая» или «Исключение». Выполните поиск по запросу "Служба[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ".  
+-   Ищите состояние ошибки «Высокая» или «Исключение». Поиск "[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] службы».  
   
 -   Если неизвестно, когда произошла ошибка, используйте данные о дате и времени, чтобы ограничить область записей для прокрутки.  
   

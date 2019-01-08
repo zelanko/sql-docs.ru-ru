@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlimail.manageexistingaccount.f1
@@ -33,15 +32,15 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a42886a0477c6844b2e59d439cd9748adcaa4b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089674"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772646"
 ---
 # <a name="database-mail-configuration-objects"></a>Объекты конфигурации компонента Database Mail
-  Компонент Database Mail имеет два объекта конфигурации: объекты конфигурации баз данных позволяют настраивать параметры компонента Database Mail, используемые при отправке писем приложением базы данных или агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Компонент Database Mail имеет два объекта конфигурации. Объекты конфигурации баз данных предоставляют способ изменения настроек компонента Database mail, используемых при отправке писем приложениями базы данных или агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Учетные записи компонента Database Mail  
   
@@ -59,11 +58,11 @@ ms.locfileid: "48089674"
   
  Компонент Database Mail поддерживает три метода проверки подлинности для связи с SMTP-сервером:  
   
--   Проверка подлинности Windows: компонент Database Mail использует для проверки подлинности на SMTP-сервере учетные данные учетной записи службы [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] Windows.  
+-   Проверка подлинности Windows: Компонент Database Mail использует для проверки подлинности на SMTP-сервере учетные данные учетной записи службы [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] Windows.  
   
--   Обычная проверка подлинности: компонент Database Mail использует указанные имя пользователя и пароль, чтобы проверить подлинность на SMTP-сервере.  
+-   Обычная проверка подлинности.  Компонент Database Mail использует указанные имя пользователя и пароль, чтобы проверить подлинность на SMTP-сервере.  
   
--   Анонимный доступ: SMTP-серверу не требуется проверка подлинности.  Компонент Database Mail не будет использовать никаких учетных данных для проверки подлинности на SMTP-сервере.  
+-   Анонимная проверка подлинности.  SMTP-серверу не требуется проверка подлинности.  Компонент Database Mail не будет использовать никаких учетных данных для проверки подлинности на SMTP-сервере.  
   
  Сведения об учетных записях хранятся в базе данных **msdb** . Каждая учетная запись содержит следующие сведения:  
   

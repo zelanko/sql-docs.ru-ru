@@ -4,29 +4,28 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 662bec342ded12494d0d8876b6e12274f34e16d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dab5e88df4808a31218270938766660da27bc2c7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069474"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787156"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Автоматическое формирование значений атрибута отличного от Code (службы Master Data Services)
-  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]значения для атрибутов сущности можно формировать автоматически, если каждый раз при применении бизнес-правил необходимо автоматически задавать целое число в качестве значения.  
+  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] значения для атрибутов сущности можно формировать автоматически, если каждый раз при применении бизнес-правил необходимо автоматически задавать целое число в качестве значения.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
   
 -   Должен существовать числовой атрибут. Дополнительные сведения см. в разделе [Создание числового атрибута (службы Master Data Services)](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md).  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48069474"
   
 9. На панели **Компоненты** разверните узел **Действия** .  
   
-10. В узле «Значение по умолчанию» щелкните **По умолчанию имеет сформированное значение** и перетащите его на значок **Действия** панели **ТО** .  
+10. В узле "Значение по умолчанию" щелкните **По умолчанию имеет сформированное значение** и перетащите его на значок **Действия** панели **ТО**.  
   
 11. На панели **Атрибуты** щелкните атрибут со значением, которое необходимо сформировать, и перетащите его на значок **Выбор атрибута** панели **Изменение действия** .  
   
@@ -66,15 +65,15 @@ ms.locfileid: "48069474"
   
 17. В диалоговом окне подтверждения нажмите кнопку **ОК**. Состояние правила изменится на **Активно**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
--   [Проверка конкретных членов, соответствие бизнес-правилам &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+-   [Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
--   [Проверка версии на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
- [Автоматическое создание кодов &#40;службы Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md)   
- [Бизнес-правила &#40;службы Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
- [Проверка &#40;службы Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Автоматическое создание кодов (службы Master Data Services)](../../2014/master-data-services/automatic-code-creation-master-data-services.md)   
+ [Бизнес-правила (службы Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)   
+ [Проверка (службы Master Data Services)](../../2014/master-data-services/validation-master-data-services.md)  
   
   

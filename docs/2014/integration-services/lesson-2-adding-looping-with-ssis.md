@@ -1,25 +1,24 @@
 ---
-title: 'Занятие 2: Добавление циклов | Документация Майкрософт'
+title: Занятие 2. Добавление циклов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c94cba40d4a78e33e2c272aa0534eeeac87937a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bb292712111a478260edc31a562ed7db4c0ac95
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203874"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361766"
 ---
 # <a name="lesson-2-adding-looping"></a>Занятие 2. Добавление циклов
-  В [занятии 1: Создание проекта и основного пакета](lesson-1-create-a-project-and-basic-package-with-ssis.md), был создан пакет, данные извлекались из отдельного источника неструктурированного файла, преобразовывались с помощью «Уточняющий запрос» и затем загружались  **FactCurrency** таблицу фактов **AdventureWorksDW2012** образца базы данных.  
+  В [Урок 1: Создание проекта и основного пакета](lesson-1-create-a-project-and-basic-package-with-ssis.md), был создан пакет, данные извлекались из отдельного источника неструктурированного файла, преобразовывались с помощью «Уточняющий запрос» и затем загружались **FactCurrency** таблицы фактов **AdventureWorksDW2012** образца базы данных.  
   
  Однако в процессе извлечения, преобразования и загрузки (ETL) редко используется отдельный неструктурированный файл. Как правило, в процессе ETL данные извлекаются из нескольких источников неструктурированного файла. Извлечение данных из нескольких источников требует итеративного потока управления. Одной из самых ожидаемых возможностей служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] является способность легко добавлять повторения или циклы в пакеты.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48203874"
  На этом занятии будет изменяться только поток управления, поток данных не рассматривается.  
   
 > [!IMPORTANT]  
->  Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании **AdventureWorksDW2012**см. в разделе [Проект образцов продуктов службы Reporting Services на сайте CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+>  Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании **AdventureWorksDW2012**см. в разделе [Проект образцов продуктов службы Reporting Services на сайте CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## <a name="lesson-tasks"></a>Задачи занятия  
  Это занятие содержит следующие задачи.  
@@ -57,9 +56,9 @@ ms.locfileid: "48203874"
   
 -   [Шаг 2. Добавление и настройка контейнера "цикл по каждому элементу"](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [Шаг 3. Изменение диспетчера подключений неструктурированных файлов](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [Шаг 3. Изменение диспетчера соединений с неструктурированными файлами](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [Шаг 4. Проверка учебного пакета, созданного на занятии 2](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [Шаг 4. Проверка учебного пакета занятия 2](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Начало занятия  
  [Шаг 1. Копирование пакета занятия 1](lesson-2-1-copying-the-lesson-1-package.md)  

@@ -11,12 +11,12 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60825f051b0e80cbd55ec36c5b3e49cf9838e77b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51f5315633939431bb6e8287773453e08de188a7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204884"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412031"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>Область выражения для итогов, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)
   Термин *область* используется в нескольких контекстах, что становится понятно при написании выражений. Область может указывать на данные, используемые для вычисления выражений, набор текстовых полей на подготавливаемой странице, набор элементов отчета, которые могут отображаться или быть скрытыми. Термин *область* используется в разделах о вычислении выражений, синтаксисе агрегатных функций, условной видимости и в сообщениях об ошибках, связанных с этими темами. Ниже приводится описание различий в употреблении термина *область* .  
@@ -71,7 +71,7 @@ ms.locfileid: "48204884"
      Следующее выражение создает годы интервала между SellStartDate и LastReceiptDate. Эти поля находятся в разных наборах данных — DataSet1 и DataSet2. [Функция First (построитель отчетов и службы SSRS)](report-builder-functions-first-function.md), являющаяся агрегатной функцией, возвращает первое значение SellStartDate в DataSet1 и первое значение LastReceiptDate в DataSet2.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **Доменная область** . Область синхронизации. Тип области данных, применяемой к вычислению выражения для вложенных областей данных. Доменная область используется для указания агрегатов среди всех экземпляров группы, что позволяет легко выравнивать и сравнивать вложенные экземпляры. Например, можно выровнять диапазон и высоту для sparkline-графиков в таблице так, что значения будут идти параллельно.  
@@ -163,15 +163,15 @@ ms.locfileid: "48204884"
   
   
 ##  <a name="Nulls"></a> Подавление значения NULL или нулевых значений в ячейках  
- Во многих отчетах вычисления, выполняемые в областях групп, могут создавать множество ячеек с нулевыми значениями или значениями NULL. Чтобы уменьшить помехи в отчете, добавьте выражение, возвращающее пробелы при нулевых статистических значениях. Дополнительные сведения см. в разделе "Примеры запрета значений NULL и нулевых значений" в статье [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
+ Во многих отчетах вычисления, выполняемые в областях групп, могут создавать множество ячеек с нулевыми значениями или значениями NULL. Чтобы уменьшить помехи в отчете, добавьте выражение, возвращающее пробелы при нулевых статистических значениях. Дополнительные сведения см. в разделе "Примеры запрета значений NULL и нулевых значений" в статье [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md).  
   
   
   
 ## <a name="see-also"></a>См. также  
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)   
- [Создание групп рекурсивной иерархии &#40;построитель отчетов и службы SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Списки &#40;построитель отчетов и службы SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Форматирование текста и заполнителей &#40;построитель отчетов и службы SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

@@ -14,17 +14,17 @@ ms.assetid: 1b5a9bbc-beb8-44fd-ab03-4c14908c604c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99a9efee9d104c2f45eea728dc7b0ae30913e3ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066224"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544602"
 ---
 # <a name="full-text-search-backward-compatibility"></a>Обратная совместимость компонента Full-Text Search
   В подразделах раздела, посвященного обратной совместимости, описаны изменения в поведении полнотекстового поиска в прежних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-|См...|Разделы о...|  
+|См. в подразделе...|Разделы о...|  
 |----------|-----------------------|  
 |[Нерекомендуемые функции полнотекстового поиска в SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)|Устаревшие функции полнотекстового поиска в этой версии.|  
 |[Неподдерживаемые функции полнотекстового поиска в SQL Server 2014](../../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)|Неподдерживаемые функции полнотекстового поиска в этой версии.|  

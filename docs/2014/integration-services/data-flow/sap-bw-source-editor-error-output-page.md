@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d81103febe20dd10e0ca6949b3ae77f558f90b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc7f5fb5abe290a24268d6cb813a3b6e365a57da
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197064"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791056"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>Редактор источников SAP BW (страница «Вывод ошибок»)
   Используйте страницу **Вывод ошибок** **Редактора источников SAP BW** для выбора параметров обработки ошибок и задания свойств выходных столбцов ошибок.  
@@ -46,7 +45,7 @@ ms.locfileid: "48197064"
  Просмотр имени источника данных.  
   
  **Столбец**  
- Просмотрите внешние (исходные) столбцы, выбранные на странице **Столбцы** диалогового окна **Редактор источников SAP BW** . Дополнительные сведения об этом диалоговом окне см. в разделе [SAP BW Source Editor &#40;Columns Page&#41;](sap-bw-source-editor-columns-page.md).  
+ Просмотрите внешние (исходные) столбцы, выбранные на странице **Столбцы** диалогового окна **Редактор источников SAP BW** . Дополнительные сведения об этом диалоговом окне см. в разделе [Редактор источника SAP BW (страница "Столбцы")](sap-bw-source-editor-columns-page.md).  
   
  **Ошибка**  
  Укажите действия компонента источника SAP BW при возникновении ошибки: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
@@ -64,8 +63,8 @@ ms.locfileid: "48197064"
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор источника SAP BW &#40;страницы диспетчера соединений&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [Редактор источника SAP BW &#40;страница "столбцы"&#41;](sap-bw-source-editor-columns-page.md)   
+ [Редактор источника SAP BW (страница "Диспетчер подключений")](sap-bw-source-editor-connection-manager-page.md)   
+ [Редактор источника SAP BW (страница "Столбцы")](sap-bw-source-editor-columns-page.md)   
  [Редактор источника SAP BW (страница "Дополнительно")](sap-bw-source-editor-advanced-page.md)   
  [Справка F1 по Microsoft Connector 1.1 для SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   

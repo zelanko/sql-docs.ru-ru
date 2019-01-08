@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 481d5b13-657e-4b51-8783-ccac3595bd45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 661d6bbd8630865c5c2c3a285431d27b5d5bb83b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2562f3931f98c040bb3dc475e3863bb6396dbbf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122344"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752876"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие **Broker:Activation** , если монитор очереди запускает хранимую процедуру активации, отправляет уведомление QUEUE_ACTIVATION или если существует хранимая процедура активации, запущенная монитором очереди.  
@@ -33,7 +32,7 @@ ms.locfileid: "48122344"
 |**DatabaseID**|`int`|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database*не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**EventClass**|`int`|Тип захваченного класса событий. Всегда **163** для **Broker:Activation**.|27|Нет|  
 |**EventSequence**|`int`|Порядковый номер этого события.|51|Нет|  
-|**EventSubClass**|`nvarchar`|Конкретное действие, о котором сообщает это событие. Одно из следующих значений:<br /><br /> **Запуск**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запустил хранимую процедуру активации.<br /><br /> **завершено**: Активация хранимой процедуры, завершила работу нормально.<br /><br /> **прервано**: Активация хранимой процедуры, завершился с ошибкой.|21|Нет|  
+|**EventSubClass**|`nvarchar`|Конкретное действие, о котором сообщает это событие. Одно из следующих значений:<br /><br /> **Запуск**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запустил хранимую процедуру активации.<br /><br /> **Завершено**: Хранимая процедура активации завершила работу нормально.<br /><br /> **прервано**: Хранимая процедура активации завершила работу с ошибкой.|21|Нет|  
 |**HostName**|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IntegerData**|`int`|Число активных задач в этой очереди.|25|Нет|  
 |**IsSystem**|`int`|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Нет|  

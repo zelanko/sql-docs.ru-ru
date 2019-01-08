@@ -11,12 +11,12 @@ ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e9c5505aaed0fba7ff5097c059f11cd0af8f50f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e1fe559e8bbb4c9c484671737223766c4a0554
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117494"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358156"
 ---
 # <a name="report-builder-ssrs"></a>Построитель отчетов (SSRS)
   Построитель отчетов — это среда создания отчетов для бизнес-пользователей, предпочитающих работать в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office. При создании отчета задается, откуда брать данные, какие данные брать и как их отображать. При запуске отчета обработчик получает все указанные сведения, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет.  
@@ -42,10 +42,10 @@ ms.locfileid: "48117494"
   
 -   Сохранять отчеты и связанные с ними элементы в библиотеке SharePoint, на сервере отчетов или на локальном компьютере.  
   
- У построителя отчетов и конструктора отчетов много общего. Дополнительные сведения о построителе отчетов см. в документации по [построителю отчетов](http://go.microsoft.com/fwlink/?LinkId=154494) на сайте msdn.microsoft.com.  
+ У построителя отчетов и конструктора отчетов много общего. Дополнительные сведения о построителе отчетов см. в документации по [построителю отчетов](https://go.microsoft.com/fwlink/?LinkId=154494) на сайте msdn.microsoft.com.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка доступа к построителю отчетов](../report-server/configure-report-builder-access.md)   
+ [настроить доступ к построителю отчетов](../report-server/configure-report-builder-access.md)   
  [Инструментальные средства служб Reporting Services](reporting-services-tools.md)   
  [Разработка отчетов с использованием конструктора отчетов (SSRS)](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

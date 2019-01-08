@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,12 +18,12 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: acc639a9e6df068d4f3ed446a66dc05b7d5e0b59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e18e1d1e2219dd33fe6eea241d50ff6b077fe62
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108554"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361406"
 ---
 # <a name="developer39s-guide-integration-services"></a>Разработчик&#39;руководство (службы Integration Services)
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включают полностью переписанную модель объектов, которая была улучшена многими функциями, позволяющими упростить расширение и программирование пакетов и сделать их более гибкими и более мощными. Разработчики могут расширять и программировать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] почти в любом аспекте.  
@@ -74,7 +72,7 @@ ms.locfileid: "48108554"
  [Выполнение пакетов и управление пакетами программным образом](run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Показывает, как перечислять, запускать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и управлять ими программным путем.  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Ссылка  
  [Справочник по сообщениям об ошибках служб Integration Services](integration-services-error-and-message-reference.md)  
  Содержит список стандартных кодов ошибок служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с символическими именами и описаниями.  
   
@@ -84,9 +82,9 @@ ms.locfileid: "48108554"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Образцы CodePlex, [Образцы продуктов служб Integration Services](http://go.microsoft.com/fwlink/?LinkID=131204)на сайте www.codeplex.com/MSFTISProdSamples  
+-   Образцы CodePlex, [Образцы продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkID=131204)на сайте www.codeplex.com/MSFTISProdSamples  
   
 ## <a name="see-also"></a>См. также  
- [SQL Server Integration Services](sql-server-integration-services.md)  
+ [службы SQL Server Integration Services](sql-server-integration-services.md)  
   
   

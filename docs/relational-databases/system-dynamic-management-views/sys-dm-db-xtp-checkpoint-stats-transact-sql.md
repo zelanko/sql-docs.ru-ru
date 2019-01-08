@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 216b04e58d741d3c44cd187ba94eaac7ee791762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdb255570febc6d37bef824958c15422b6fae733
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837802"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503195"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] существенно отличается от более поздние версии и обсуждается ниже в разделе в [SQL Server 2014](#bkmk_2014).**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздние версии  
+## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий  
  В следующей таблице описаны столбцы в `sys.dm_db_xtp_checkpoint_stats`, начиная с версии **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
   
 |Имя столбца|Тип|Описание|  
@@ -67,7 +67,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |last_closed_checkpoint_ts|**bigint**|Отметка времени последней контрольной точки, закрыт.|  
 |hardened_recovery_lsn|**numeric(38)**|Номер LSN начнется восстановление.|  
 |hardened_root_file_guid|**uniqueidentifier**|Идентификатор GUID корневым файлом, записаны на диск в результате последней завершенной контрольной точки.|  
-|hardened_root_file_watermark|**bigint**|**Внутренняя только**. Насколько он допустим для чтения до корневого файла (это только — внутри соответствующего типа вызывается BSN).|  
+|hardened_root_file_watermark|**bigint**|**Внутренняя только**. Насколько он допустим для чтения до корневого файла (это только - внутри соответствующего типа вызывается BSN).|  
 |hardened_truncation_lsn|**numeric(38)**|Номер LSN точки усечения.|  
 |log_bytes_since_last_close|**bigint**|Байт с последнего Закройте текущий конец журнала.|  
 |time_since_last_close_in_ms|**bigint**|Время с момента последнего закрытия контрольной точки.|  

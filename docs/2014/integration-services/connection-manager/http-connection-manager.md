@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP connection manager
@@ -17,19 +16,19 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b0552d4678df69620d4e97f6f4e1a942dd12330
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d41fab7e891fd8393600224902ee36e2f6dad20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113094"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764066"
 ---
 # <a name="http-connection-manager"></a>диспетчер HTTP-соединений
   HTTP-соединение позволяет пакету получить доступ к веб-серверу через протокол HTTP, чтобы передавать или принимать файлы. Задача «Веб-служба» из состава служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] использует этот диспетчер соединений.  
   
  При добавлении к пакету диспетчера HTTP-соединений [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает диспетчер соединений, который будет решать задачи HTTP-соединений во время работы, устанавливают свойства диспетчера соединений и добавляют его к коллекции пакета `Connections`.  
   
- `ConnectionManagerType` Имеет значение свойства диспетчера соединений `HTTP.`  
+ Свойство диспетчера соединений `ConnectionManagerType` имеет значение `HTTP.`  
   
  Произвести настройку диспетчера HTTP-соединений можно следующими способами:  
   
@@ -49,14 +48,14 @@ ms.locfileid: "48113094"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор диспетчера HTTP-соединений &#40;страница сервера&#41;](../http-connection-manager-editor-server-page.md)  
+-   [Редактор диспетчера HTTP-сеансов (страница "Сервер")](../http-connection-manager-editor-server-page.md)  
   
--   [Редактор диспетчера HTTP-соединений &#40;страницы прокси-сервера&#41;](../http-connection-manager-editor-proxy-page.md)  
+-   [Редактор диспетчера HTTP-сеансов (страница "Прокси-сервер")](../http-connection-manager-editor-proxy-page.md)  
   
  Дополнительные сведения о программной настройке диспетчера соединений см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.  
   
 ## <a name="see-also"></a>См. также  
- [Задача веб-службы](../control-flow/web-service-task.md)   
- [Службы Integration Services &#40;SSIS&#41; подключений](integration-services-ssis-connections.md)  
+ [Задача «Веб-служба»](../control-flow/web-service-task.md)   
+ [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   
   

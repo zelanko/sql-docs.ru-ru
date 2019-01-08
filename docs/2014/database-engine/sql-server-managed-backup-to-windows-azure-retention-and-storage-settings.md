@@ -10,12 +10,12 @@ ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b1087efba30ef65a3b4f7e00ed82031e7318b6d
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100385"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534486"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Управляемое резервное копирование SQL Server в Windows Azure — настройки периода хранения и хранилища
   В этом разделе описаны базовые шаги настройки [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] для базы данных, а также настройки параметров экземпляра по умолчанию. Здесь также описываются действия, необходимые для приостановки и возобновления служб [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] для экземпляра.  
@@ -28,7 +28,7 @@ ms.locfileid: "50100385"
   
 ###  <a name="Restrictions"></a> Ограничения  
   
--   Не включайте [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] в базах данных, где используются планы обслуживания или доставка журналов. Дополнительные сведения о взаимодействие и совместная работа с другими компонентами SQL Server, см. в разделе [SQL Server Managed Backup to Windows Azure: взаимодействие и совместная работа](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+-   Не включайте [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] в базах данных, где используются планы обслуживания или доставка журналов. Дополнительные сведения о взаимодействие и совместная работа с другими компонентами SQL Server, см. в разделе [SQL Server Managed Backup to Windows Azure: Взаимодействие и совместная работа](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
   
@@ -37,10 +37,10 @@ ms.locfileid: "50100385"
     > [!WARNING]  
     >  Если агент SQL Server останавливаются на какой-то срок, а затем перезапускается, то можно видеть увеличение числа операций резервного копирования в зависимости от длительности промежутка времени между остановкой и запуском SQL Server Agent, а также может возникнуть очередь ожидающих выполнения операций резервного копирования журнала. Рекомендуется настроить автоматический запуск SQL Server Agent при включении системы.  
   
--   Учетная запись хранения Windows Azure и учетные данные SQL, которые сохраняют данные для проверки подлинности в учетной записи хранения, необходимо создать перед настройкой [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Дополнительные сведения см. в разделе [Introduction to Key Components and Concepts](../relational-databases/backup-restore/sql-server-backup-to-url.md#intorkeyconcepts) статьи **Резервное копирование SQL Server в URL** и [Lesson 2: Create a SQL Server Credential](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
+-   Учетная запись хранения Windows Azure и учетные данные SQL, которые сохраняют данные для проверки подлинности в учетной записи хранения, необходимо создать перед настройкой [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Дополнительные сведения см. в разделе [введение в основные компоненты и основные понятия](../relational-databases/backup-restore/sql-server-backup-to-url.md#intorkeyconcepts) раздел **SQL Server Backup to URL-адрес** разделе, и [занятии 2: Создание учетных данных SQL Server](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] создает необходимые контейнеры для хранения резервных копий. Имя контейнера формируется в формате «имя компьютера-имя экземпляра». Для групп доступности AlwaysOn имя контейнера формируется с использованием GUID группы доступности.  
+    >  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] создает необходимые контейнеры для хранения резервных копий. Имя контейнера создается с использованием формата «имя экземпляра имя компьютера». Для групп доступности AlwaysOn имя контейнера формируется с использованием GUID группы доступности.  
   
 ###  <a name="Security"></a> безопасность  
   
@@ -55,7 +55,7 @@ ms.locfileid: "50100385"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-database-level"></a>Включение [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] на уровне базы данных  
  Если в базе данных применяются определенные требования для резервного копирования и срока хранения (соглашение об уровне обслуживания для восстановления), отличные от других баз данных в экземпляре, настройте для нее [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] на уровне базы данных. Настройки на уровне базы данных переопределяют настройки на уровне экземпляра. Однако оба этих параметра можно использовать совместно в одном и том же экземпляре. Далее представлен список преимуществ и рекомендаций, связанных с включением [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] на уровне базы данных.  
   
--   Повышенная точность: раздельные параметры конфигурации для каждой базы данных. Возможность поддержки различных сроков хранения для отдельных баз данных.  
+-   Большая гранулярность: Раздельные параметры конфигурации для каждой базы данных. Возможность поддержки различных сроков хранения для отдельных баз данных.  
   
 -   Переопределяет параметры уровня экземпляра для базы данных.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "50100385"
   
     2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-    3.  Скопируйте и вставьте следующий пример в окно запроса и нажмите кнопку `Execute`. В данном примере функция [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] включается для базы данных TestDB. Срок хранения — 30 дней. Этот пример использует параметр шифрования с указанием алгоритма шифрования и сведений о шифраторе.  
+    3.  Скопируйте и вставьте следующий пример в окно запроса и нажмите кнопку `Execute`. В этом примере включается [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] для базы данных «TestDB». Срок хранения — 30 дней. Этот пример использует параметр шифрования с указанием алгоритма шифрования и сведений о шифраторе.  
   
     ```  
     Use msdb;  
@@ -133,7 +133,7 @@ ms.locfileid: "50100385"
     ```  
   
 ##  <a name="InstanceConfigure"></a> Включение и настройка по умолчанию [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] параметров для экземпляра  
- Можно включить и настроить по умолчанию [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] параметры на уровне экземпляра, двумя способами: С помощью системной хранимой процедуры `smart_backup.set_instance_backup` или **SQL Server Management Studio**. Далее описаны два этих способа.  
+ Включить и настроить параметры по умолчанию на уровне экземпляра [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] можно двумя путями.  С помощью системной хранимой процедуры `smart_backup.set_instance_backup` или **SQL Server Management Studio**. Далее описаны два этих способа.  
   
  **smart_backup.set_instance_backup:**. Путем указания значения **1** для *@enable_backup* параметр, можно включить резервное копирование и задать настройки по умолчанию. После применения параметров по умолчанию на уровне экземпляра они применяются к новой базе данных, добавляемой к этому экземпляру.  При первом включении компонента [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] необходимо, помимо включения [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] в экземпляре, указать следующие сведения:  
   
@@ -148,7 +148,7 @@ ms.locfileid: "50100385"
 > [!IMPORTANT]  
 >  Перед настройкой функции [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] для экземпляра может быть полезно проверить наличие существующей конфигурации, если таковая имеется. Анализ параметров конфигурации для базы данных описывается далее в этом разделе.  
   
- **SQL Server Management Studio:** для выполнения этой задачи в среде SQL Server Management Studio перейдите в обозреватель объектов, разверните узел **Управление** и нажмите правой кнопкой мыши **Управляемое резервное копирование**. Выберите **Настройка**. Откроется диалоговое окно **Управляемое резервное копирование** . В этом диалоговом окне укажите срок хранения, учетные данные SQL, URL-адрес хранилища и параметры шифрования. Справку по этому диалоговому окну см. в разделе [Настройка управляемого резервного копирования &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md).  
+ **SQL Server Management Studio:** Для выполнения этой задачи в среде SQL Server Management Studio, перейдите в обозреватель объектов, разверните **управления** узел и щелкните правой кнопкой мыши **управляемое резервное копирование**. Выберите **Настройка**. Откроется диалоговое окно **Управляемое резервное копирование** . В этом диалоговом окне укажите срок хранения, учетные данные SQL, URL-адрес хранилища и параметры шифрования. Справку по этому диалоговому окну см. в разделе [Настройка управляемого резервного копирования &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md).  
   
 #### <a name="using-transact-sql"></a>Использование Transact-SQL  
   
@@ -195,7 +195,7 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
     $encryptionOption = New-SqlBackupEncryptionOption -EncryptionAlgorithm Aes128 -EncryptorType ServerCertificate -EncryptorName "MyBackupCert"  
-    Get-SqlSmartAdmin | Set-SqlSmartAdmin –BackupEnabled $True –BackupRetentionPeriodInDays 10 -EncryptionOption $encryptionOption  
+    Get-SqlSmartAdmin | Set-SqlSmartAdmin -BackupEnabled $True -BackupRetentionPeriodInDays 10 -EncryptionOption $encryptionOption  
     ```  
   
 > [!IMPORTANT]  
@@ -318,7 +318,7 @@ GO
   
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
-    Set-SqlSmartAdmin –BackupEnabled $False  
+    Set-SqlSmartAdmin -BackupEnabled $False  
     ```  
   
 ##  <a name="InstancePause"></a> Приостановка [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] на уровне экземпляра  
@@ -348,7 +348,7 @@ Go
   
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
-    Get-SqlSmartAdmin | Set-SqlSmartAdmin –MasterSwitch $False  
+    Get-SqlSmartAdmin | Set-SqlSmartAdmin -MasterSwitch $False  
     ```  
   
 #### <a name="to-resume-includesssmartbackupincludesss-smartbackup-mdmd-using-transact-sql"></a>Как возобновить [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] с помощью Transact-SQL  
@@ -375,7 +375,7 @@ GO
   
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
-    Get-SqlSmartAdmin | Set-SqlSmartAdmin –MasterSwitch $True  
+    Get-SqlSmartAdmin | Set-SqlSmartAdmin -MasterSwitch $True  
     ```  
   
   

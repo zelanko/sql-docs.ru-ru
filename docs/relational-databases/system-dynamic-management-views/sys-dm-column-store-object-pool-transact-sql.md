@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f70f0a6f6c4dc8ba4e72b30918c882c103c9410f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9d88d2084533904dcbb47aad0d629b1aa8171e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669112"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544243"
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>sys.dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47669112"
 |`column_id`|`int`|Идентификатор столбца columnstore. Имеет значение NULL для DELETE_BITMAP.| 
 |`row_group_id`|`int`|Идентификатор группы строк.|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT — сегмент столбца. `object_id` Идентификатор сегмента. Сегмент сохраняет все значения для одного столбца в одну группу строк. Например если таблица содержит 10 столбцов, существуют 10 сегментов столбцов в каждой группе строк. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY — глобальный словарь, содержащий таблицы подстановок для всех сегментов столбцов в таблице.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - локальный словарь, связанный с одним столбцом.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY — другое представление глобальный словарь. Это обеспечивает обратный поиск значения к dictionary_id. Используется для создания сжатые сегменты в процессе переноса кортежей или массовой загрузки.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP — удаляет точечный рисунок, который отслеживает сегмента. Нет одного точечного рисунка delete на секцию.|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT - сегмента столбца. `object_id` Идентификатор сегмента. Сегмент сохраняет все значения для одного столбца в одну группу строк. Например если таблица содержит 10 столбцов, существуют 10 сегментов столбцов в каждой группе строк. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY - глобальный словарь, содержащий таблицы подстановок для всех сегментов столбцов в таблице.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - локальный словарь, связанный с одним столбцом.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY - другое представление глобальный словарь. Это обеспечивает обратный поиск значения к dictionary_id. Используется для создания сжатые сегменты в процессе переноса кортежей или массовой загрузки.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP - удаляет точечный рисунок, который отслеживает сегмента. Нет одного точечного рисунка delete на секцию.|  
 |`access_count`|`int`|Количество чтения или записи обращается к этому объекту.|  
 |`memory_used_in_bytes`|`bigint`|Объем памяти, используемый этим объектом в пул объекта.|  
 |`object_load_time`|`datetime`|Часы и время при object_id была внесена в пул объекта.|  

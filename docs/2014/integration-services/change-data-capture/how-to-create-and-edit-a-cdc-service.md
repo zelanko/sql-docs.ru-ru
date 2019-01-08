@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fdd0df76d4b61896abd3c0478472f20384b05c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64204c8eb91d17a266e10f0a2b7fb938a0148397
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153421"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779916"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Создание и изменение службы CDC
   В этих процедурах описываются способы создания и изменения службы Oracle CDC Service при помощи консоли конфигурации службы CDC.  
@@ -62,7 +61,7 @@ ms.locfileid: "48153421"
 5.  Нажмите кнопку **ОК** в диалоговом окне «Подключение к Oracle». Оба диалоговых окна закроются. Служба будет обновлена и зарегистрирована.  
   
 ## <a name="see-also"></a>См. также  
- [Конструктор системы отслеживания измененных данных для Oracle компании attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
- [Создание и изменение службы CDC Oracle](create-and-edit-an-oracle-cdc-service.md)  
+ [Конструктор системы отслеживания измененных данных для Oracle компании Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Create and Edit an Oracle CDC Service](create-and-edit-an-oracle-cdc-service.md)  
   
   

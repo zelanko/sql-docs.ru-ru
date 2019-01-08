@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], MONTH
@@ -14,12 +13,12 @@ ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4106fed90fd370ee30a6bb3a5ad2be5324caddf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83175d463c8b6fa54e88d17945def36a76b6fcfe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102484"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800036"
 ---
 # <a name="month-ssis-expression"></a>MONTH (выражение служб SSIS)
   Возвращает целое число, представляющее месяц указанной даты.  
@@ -41,7 +40,7 @@ MONTH(date)
 ## <a name="remarks"></a>Примечания  
  Функция MONTH возвращает значение NULL, если значение аргумента NULL.  
   
- Литерал даты должен быть явно приведен к одному из типов данных даты. Дополнительные сведения см. в статье [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Литерал даты должен быть явно приведен к одному из типов данных даты. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
 >  Проверка выражения завершается ошибкой при явном приведении литерала даты к одному из следующих типов данных: DT_DBTIMESTAMPOFFSET и DT_DBTIMESTAMP2.  
@@ -68,11 +67,11 @@ MONTH(GETDATE())
 ```  
   
 ## <a name="see-also"></a>См. также  
- [DATEADD &#40;выражение служб SSIS&#41;](dateadd-ssis-expression.md)   
- [DATEDIFF &#40;выражение служб SSIS&#41;](datediff-ssis-expression.md)   
+ [DATEADD (выражение служб SSIS)](dateadd-ssis-expression.md)   
+ [DATEDIFF (выражение служб SSIS)](datediff-ssis-expression.md)   
  [DATEPART (выражение служб SSIS)](datepart-ssis-expression.md)   
  [DAY (выражение служб SSIS)](day-ssis-expression.md)   
  [YEAR (выражение служб SSIS)](year-ssis-expression.md)   
- [Функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md)  
+ [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   
   

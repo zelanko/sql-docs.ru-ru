@@ -26,19 +26,19 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ab537a266924c352466d3b6d2b8364c3498b2b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd0a84928e1d5b531119a0a37dbb60d2b9eb3db9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112814"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531413"
 ---
 # <a name="assl-xml-conventions"></a>Обозначения в XML языка ASSL
   Язык ASSL представляет иерархию объектов в виде набора типов элементов, каждый из которых определяет дочерние элементы, которые они могут содержать.  
   
  Чтобы можно было представлять иерархию объектов в языке ASSL, используются следующие обозначения XML.  
   
--   Все объекты и свойства, за исключением стандартных XML-атрибутов, например «xml:lang», представлены как элементы.  
+-   Все объекты и свойства представлены как элементы, за исключением стандартных XML-атрибутов, таких как «XML: lang».  
   
 -   Имена элементов и значений перечисления соглашению об именовании Microsoft .NET Framework па без символов подчеркивания.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48112814"
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48112814"
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48112814"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -123,10 +123,10 @@ ms.locfileid: "48112814"
  В службах Analysis Services используются следующие типы данных языка XSD стандартной схемы XML.  
   
  `Int`  
- Целое число в диапазоне от -231 до 231 — 1.  
+ Целочисленное значение в диапазоне от-231 до 231-1.  
   
  `Long`  
- Целое число в диапазоне от -263 до 263 — 1.  
+ Целочисленное значение в диапазоне от -263 до 263-1.  
   
  `String`  
  Строковое значение, соответствующее следующим глобальным правилам.  
@@ -152,7 +152,7 @@ ms.locfileid: "48112814"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|"" (пустая строка)|  
-|`Integer` или `Long`|0 (ноль)|  
+|`Integer` либо `Long`|0 (ноль)|  
 |`Timestamp`|12:00:00 AM, 1/1/0001 (соответствует .NET Frameworks `System.DateTime` с 0 тактов)|  
   
  Элемент, который имеется в наличии, но является пустым, интерпретируется как имеющий значение пустой строки, а не значение по умолчанию.  

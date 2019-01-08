@@ -20,16 +20,16 @@ ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72447e0aa7f913818b182c8996e3a269d034d43b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7df49e572b910bee5627b8cb2d14f067c314a3f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770304"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205303"
 ---
 # <a name="sqlnumparams-function"></a>SQLNumParams, функция
 **Соответствие стандартам**  
- Версия была введена: ODBC 1.0 соответствует стандартам: ISO-92  
+ Представленные версии: Соответствие стандартам 1.0 ODBC: ISO-92  
   
  **Сводка**  
  **SQLNumParams** возвращает число параметров в инструкции SQL.  

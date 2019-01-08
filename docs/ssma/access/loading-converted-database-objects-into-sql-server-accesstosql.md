@@ -30,12 +30,12 @@ ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 64473c9163e63c6add18897edb87d48cef3922c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ab56815fa36f23a15bc646c69094c3ca2f5fa3e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816312"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204383"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Загрузка преобразованных объектов базы данных, в SQL Server (AccessToSQL)
 После преобразования объектов базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно иметь SSMA создания объектов, или можно внести в скрипт объекты и запускать сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные с фактическое содержимое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure.  
@@ -130,9 +130,9 @@ ms.locfileid: "47816312"
   
 4.  Чтобы выполнить набор инструкций, инструкции select в окно редактора запросов и нажмите клавишу **F5** ключ.  
   
-Дополнительные сведения о том, как использовать редактор запросов для выполнения скриптов см. в разделе "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] запроса» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+Дополнительные сведения о том, как использовать редактор запросов для выполнения скриптов см. в разделе " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] запроса» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
-Можно также выполнять сценарии из командной строки с использованием **sqlcmd** служебной программы и из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента. Дополнительные сведения о **sqlcmd**, см. в разделе «программы sqlcmd» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента, см. в разделе «Автоматизация административных задач ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента)» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+Можно также выполнять сценарии из командной строки с использованием **sqlcmd** служебной программы и из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента. Дополнительные сведения о **sqlcmd**, см. в разделе «программы sqlcmd» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента, см. в разделе «Автоматизация административных задач ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента)» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## <a name="securing-objects-in-sql-server"></a>Защита объектов в SQL Server  
 После загрузки объекты преобразованный базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно предоставлять и запрещать разрешения для этих объектов. Рекомендуется сделать это перед миграцией данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о способах обеспечения безопасности объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе «Безопасность вопросы для баз данных и базы данных приложений» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  

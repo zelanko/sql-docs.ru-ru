@@ -33,15 +33,15 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bb1fc2c37d56750a9ed66442e56dd7f9a22b8cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09aaf68c28e9f647f2f682de09e3f681bc3d739f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106964"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368126"
 ---
 # <a name="xml-indexes-sql-server"></a>XML-индексы (SQL Server)
-  XML-индексы могут создаваться на `xml` столбцы с типом данных. При этом индексируются все теги, значения и пути хранимых в столбце экземпляров XML и повышается эффективность обработки запросов. Применение XML-индекса может дать преимущества в следующих ситуациях.  
+  Для столбцов типа `xml` можно создавать XML-индексы. При этом индексируются все теги, значения и пути хранимых в столбце экземпляров XML и повышается эффективность обработки запросов. Применение XML-индекса может дать преимущества в следующих ситуациях.  
   
 -   Часто выполняются запросы XML-столбцов. При этом нужно учитывать расходы на сопровождение XML-индекса во время модификации данных.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48106964"
  Экземпляры XML хранятся в столбцах типа данных `xml` в виде больших двоичных объектов (BLOB). Размер экземпляров типа `xml` бывает достаточно велик и в двоичном представлении может достигать 2 ГБ. При отсутствии индекса эти большие двоичные объекты разбираются на этапе выполнения запроса, что может занять некоторое время. Например, рассмотрим следующий запрос:  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -72,12 +72,12 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  Чтобы выбрать экземпляры XML, удовлетворяющие условию предложения `WHERE` , большой двоичный объект типа данных XML (объект BLOB) в каждой строке таблицы `Production.ProductModel` разбирается во время выполнения запроса. Затем вычисляется выражение `(/PD:ProductDescription/@ProductModelID[.="19"]`) в методе `exist()` . В зависимости от размера и количества экземпляров, содержащихся в столбце, такой разбор на этапе выполнения запроса может потребовать значительных затрат.  
   
- Если запрос большим двоичным объектам XML (BLOB) часто среды приложения, он позволяет индекс `xml` столбцы с типом. Однако поддержка индекса при изменении данных также связана с дополнительными затратами.  
+ Если приложение часто обращается к большим двоичным объектам XML (BLOB), индексирование столбцов типа `xml` поможет оптимизировать такие запросы. Однако поддержка индекса при изменении данных также связана с дополнительными затратами.  
   
 ## <a name="primary-xml-index"></a>Первичный XML-индекс  
  При создании первичного XML-индекса индексируются все теги, значения и пути в экземплярах XML, хранимых в XML-столбце. Чтобы создать первичный XML-индекс, таблица, содержащая соответствующий XML-столбец, должна иметь кластеризованный индекс первичного ключа таблицы. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] строки первичного XML-индекса сопоставляются строкам таблицы, в которой содержится XML-столбец.  
   
- Первичный XML-индекс — это разобранное и сохраненное представление больших двоичных объектов XML в `xml` столбце с типом данных. Для каждого большого двоичного объекта (BLOB) столбца типа данных xml в индексе создается несколько строк данных, и их количество приблизительно равно числу узлов в большом двоичном объекте XML. Когда запрос получает полный экземпляр XML, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет экземпляр из XML-столбца. При обработке запросов в области экземпляров XML применяется первичный XML-индекс, и для возврата скалярных значений или поддеревьев XML может быть использован сам индекс.  
+ Первичный XML-индекс — это разобранное и сохраненное представление XML-объектов BLOB, содержащихся в столбце типа данных `xml`. Для каждого большого двоичного объекта (BLOB) столбца типа данных xml в индексе создается несколько строк данных, и их количество приблизительно равно числу узлов в большом двоичном объекте XML. Когда запрос получает полный экземпляр XML, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет экземпляр из XML-столбца. При обработке запросов в области экземпляров XML применяется первичный XML-индекс, и для возврата скалярных значений или поддеревьев XML может быть использован сам индекс.  
   
  В каждой строке для узла хранятся следующие сведения:  
   
@@ -106,7 +106,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
  Например, следующий запрос возвращает сводные данные, содержащиеся в `CatalogDescription``xml` type column в `ProductModel` таблицы. Запрос возвращает данные <`Summary`> только для тех изделий, описания каталога которых содержат также описание <`Features`>.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
  При использовании первичного XML-индекса вместо того, чтобы разбирать каждый экземпляр большого двоичного объекта типа данных XML в базовой таблице, методом `exist()` производится последовательный поиск заданного выражения в строках индекса, соответствующих данному объекту типа данных XML. Если в столбце Path индекса путь найден, элемент <`Summary`> вместе со своими поддеревьями извлекается из первичного XML-индекса и преобразуется в большой двоичный объект типа данных XML, возвращаясь в качестве результата метода `query()`.  
@@ -148,7 +148,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
  Следующий запрос демонстрирует, при каких условиях может быть полезен индекс PATH:  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -172,8 +172,8 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
   
 SELECT ContactID   
 FROM   Person.Contact  
@@ -190,7 +190,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  Например, для модели продукта `19`следующий запрос извлекает значения атрибутов `ProductModelID` и `ProductModelName` при помощи метода `value()` . Если вместо первичного или вторичных XML-индексов использовать индекс PROPERTY, это может повысить скорость выполнения запросов.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.value('(/PD:ProductDescription/@ProductModelID)[1]', 'int') as ModelID,  
        CatalogDescription.value('(/PD:ProductDescription/@ProductModelName)[1]', 'varchar(30)') as ModelName          

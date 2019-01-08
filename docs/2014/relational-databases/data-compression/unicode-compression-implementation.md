@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode data compression
@@ -13,12 +13,12 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 498bf394cb896f12a4b246edf42b9b741a0a99b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084716"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756026"
 ---
 # <a name="unicode-compression-implementation"></a>Реализация сжатия Юникода
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует алгоритм стандартной схемы сжатия Юникода (SCSU), при этом сохраняются данные в сжатых объектах строк или страниц. Для этих объектов сжатие Юникода для столбцов типов `nchar(n)` и `nvarchar(n)` выполняется автоматически. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] хранит данные Юникода как 2 байта, независимо от локали. Такая кодировка называется UCS-2. Для некоторых локалей реализация сжатия по алгоритму SCSU в SQL Server может сэкономить до 50 % места в хранилище.  
@@ -27,10 +27,10 @@ ms.locfileid: "48084716"
  Сжатие Юникода поддерживает типы данных фиксированной длины `nchar(n)` и `nvarchar(n)`. Внестрочные значения данных и значения, хранящиеся в столбцах `nvarchar(max)`, не сжимаются.  
   
 > [!NOTE]  
->  Сжатие Юникода не поддерживается для `nvarchar(max)` даже в том случае, если они хранятся в строке данных. Однако сжатие страниц может быть полезно для этого типа данных.  
+>  Сжатие Юникода не поддерживается для данных типа `nvarchar(max)`, даже если они хранятся в строке. Однако сжатие страниц может быть полезно для этого типа данных.  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>Обновление с предыдущих версий SQL Server  
- При обновлении базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]все изменения, связанные со сжатием Юникода, не оказывают влияния на объекты базы данных, сжатые или распакованные. После обновления базы данных ситуация с объектами выглядит следующим образом.  
+ При обновлении базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] все изменения, связанные со сжатием Юникода, не оказывают влияния на объекты базы данных, сжатые или распакованные. После обновления базы данных ситуация с объектами выглядит следующим образом.  
   
 -   Если объект не сжат, то никаких изменений не происходит и объект продолжает работать как раньше.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48084716"
 |Вьетнамский|39 %|  
 |Японский|15 %|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сжатие данных](data-compression.md)   
  [sp_estimate_data_compression_savings (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql)   
  [Реализация сжатия страниц](page-compression-implementation.md)   

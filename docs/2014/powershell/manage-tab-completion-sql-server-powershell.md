@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1815b3e4e45fb08430af1c22a39a125cd8d81595
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155514"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766706"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Управление завершением по нажатию клавиши Tab (SQL Server PowerShell)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Оснастки PowerShell предоставляют три переменные (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems`, и `$SqlServerIncludeSystemObjects`) к элементу управления Windows PowerShell нажатием клавиши TAB. Функция завершения по клавише TAB позволяет сократить объем вводимого текста, поскольку возвращает таблицы элементов, имена которых начинаются с набранной строки.  
+  В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell введены три системные переменные (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems` и `$SqlServerIncludeSystemObjects`) для управления функцией завершения Windows PowerShell по клавише TAB. Функция завершения по клавише TAB позволяет сократить объем вводимого текста, поскольку возвращает таблицы элементов, имена которых начинаются с набранной строки.  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Функция завершения по клавише TAB среды Windows PowerShell дает возможность после ввода части имени пути или командлета нажать клавишу TAB, чтобы получить список элементов, имена которых согласуются с уже набранным текстом. Затем можно выбрать нужный элемент из списка, не набирая остальную часть его имени.  

@@ -12,12 +12,12 @@ ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1e24250bfd313004b81a3d512a163963c070c08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17282ecfc0c6adbb1e4d1fc97f470371f90bd3f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126361"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520800"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Предоставление разрешения для участника
   В данном разделе содержатся инструкции по предоставлению разрешения участнику [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -65,7 +65,7 @@ ms.locfileid: "48126361"
   
 4.  Щелкните правой кнопкой мыши хранимую процедуру и выберите **Свойства**.  
   
-5.  В разделе выбора страницы диалогового окна **Свойства хранимой процедуры —***stored_procedure_name* щелкните **Разрешения**. Данная страница используется для добавления пользователей или ролей к хранимым процедурам и для назначения разрешений этим пользователям и ролям.  
+5.  В **свойства хранимой процедуры-*** имя_хранимой_процедуры* диалоговое окно, в разделе выбора страницы выберите **разрешения**. Данная страница используется для добавления пользователей или ролей к хранимым процедурам и для назначения разрешений этим пользователям и ролям.  
   
 6.  После завершения нажмите кнопку **ОК**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48126361"
   
 #### <a name="to-grant-permission-to-a-principal"></a>Предоставление разрешения участнику  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48126361"
   
  Дополнительные сведения см. в статьях [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql) и [Разрешения объекта GRANT (Transact-SQL)](/sql/t-sql/statements/grant-object-permissions-transact-sql).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Участники (компонент Database Engine)](principals-database-engine.md)  
   
   

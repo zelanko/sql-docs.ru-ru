@@ -13,12 +13,12 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 18eef13d999826bb54f9900feed52f41ce614ea9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675693"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617484"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Справочник по пользовательскому интерфейсу (AccessToSQL)
 В этом разделе содержатся разделы справки по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) для доступа.  
@@ -48,7 +48,7 @@ ms.locfileid: "51675693"
 |[Параметры проекта (миграция)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Используйте страницу миграции **параметры проекта** диалоговое окно, чтобы указать размер пакета миграции, блокировка таблицы, ограничения проверки, вставки выполнения триггеров, идентификации и обработки, значение null и как обрабатывать даты из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] диапазона.|  
 |[Параметры проекта (сопоставление типов)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|Страница сопоставления типов **параметры проекта** диалоговое окно, чтобы указать сопоставления типов по умолчанию для всех баз данных и объектов базы данных в проекте SSMA.|  
 |[Параметры проекта (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Страница SQL Azure **параметры проекта** диалоговое окно, чтобы указать суффикс базы данных, а также интервал времени ожидания подтверждения.|  
-|[Сохранение метаданных &#40;AcessToSQL&#41;](../../ssma/access/save-metadata-acesstosql.md)|**Сохранить метаданные** диалоговое окно отображается при сохранении проекта, в которой отсутствуют метаданные.|  
+|[Сохранение метаданных &#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|**Сохранить метаданные** диалоговое окно отображается при сохранении проекта, в которой отсутствуют метаданные.|  
   
 ## <a name="see-also"></a>См. также  
 [Приступая к работе с SQL Server Migration Assistant для Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  

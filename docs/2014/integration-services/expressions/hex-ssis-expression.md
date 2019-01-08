@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hexadecimal data
@@ -14,12 +13,12 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6892dd643958aed567893dbe873617a0b4128112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f0db458cb94993d36f0d565a7fae64f18f7876e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198824"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805166"
 ---
 # <a name="hex-ssis-expression"></a>HEX (выражение служб SSIS)
   Возвращает строку, представляющую собой шестнадцатеричное значение целого числа.  
@@ -38,14 +37,14 @@ HEX(integer_expression)
 ## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  HEX возвращает значение null, если *integer_expression* имеет значение NULL.  
   
- Аргумент *integer_expression* должен выдавать целое число. Дополнительные сведения см. в статье [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Аргумент *integer_expression* должен выдавать целое число. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  Возвращаемый результат не включает квалификаторы, например префикс 0х. Для включения префикса используйте оператор + (сцепление). Дополнительные сведения см. в разделе [+ (Объединение) (выражение SSIS)](concatenate-ssis-expression.md).  
   
- Буквы A — F, используемые в шестнадцатеричной нотации, записываются в верхнем регистре.  
+ Буквы A–F, используемые в шестнадцатеричной нотации, записываются в верхнем регистре.  
   
  Длина возвращаемой строки для целых типов данных:  
   
@@ -76,7 +75,7 @@ HEX(ReorderPoint)
 HEX(@LocaleID)  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   
   

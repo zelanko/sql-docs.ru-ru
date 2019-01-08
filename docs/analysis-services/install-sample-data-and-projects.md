@@ -1,5 +1,5 @@
 ---
-title: Установка образцов данных и проектов | Документация Майкрософт
+title: Установка образцов данных служб Analysis Services и проектов | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0ec266a98e3a27dd277ccd9f790ae73d1793ec38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: df7311aad9c356376fffafc8a4882af8e29e746b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057972"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072731"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>Установка образцов данных и многомерные проекты 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
 Используйте указания и ссылки, приведенные в этой статье для установки файлов данных и проектов, используемых в учебники по службам Analysis Services. 
   
-## <a name="step-1-install-prerequisites"></a>Шаг 1: Установка предварительных требований 
+## <a name="step-1-install-prerequisites"></a>Шаг 1. Установка необходимых компонентов 
 В занятиях этого учебника предполагается, что установлено следующее программное обеспечение. Все функции можно установить на одном компьютере. Для установки этих компонентов запустите программу установки SQL Server и выберите их на странице «Выбор компонентов».  
   
 -   Компонент SQL Server Database Engine  
@@ -32,7 +32,7 @@ ms.locfileid: "38057972"
   
     По умолчанию служб Analysis Services 2016 и более поздние версии устанавливается как табличный экземпляр, который можно переопределить, выбрав многомерном режиме сервера на сервере конфигурации страницы мастера установки.
   
-## <a name="step-2-download-and-install-developer-and-management-tools"></a>Шаг 2: Скачивание и установка, разработки и средства управления
+## <a name="step-2-download-and-install-developer-and-management-tools"></a>Этап 2. Скачайте и установите средства разработки и управления
 SQL Server Data Tools (SSDT) для Visual Studio загружается и устанавливается отдельно от других компонентов SQL Server. Конструкторы и шаблоны проектов, используемый для создания моделей бизнес-Аналитики и отчетов, включенных в SSDT для Visual Studio 2015 или как [пакеты Nuget](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) для Visual Studio 2017.  
   
 [Скачайте SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=827542).   
@@ -45,7 +45,7 @@ SQL Server Management Studio (SSMS) загружается и устанавли
   
 Кроме того, данные можно просматривать с помощью конструктора запросов многомерных выражений, который встроен в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Конструктор запросов возвращает те же данные, только представленные в виде плоского набора строк.  
   
-## <a name="step-3-install-databases"></a>Шаг 3: Установка базы данных  
+## <a name="step-3-install-databases"></a>Шаг 3. Установка баз данных  
 В многомерной модели служб Analysis Services используются транзакционные данные, импортируемые из системы управления реляционными базами данных. Для целей данного учебника используется следующая реляционная база данных как источника данных.  
   
 -   **AdventureWorksDW2012 или более поздней версии** — это реляционное хранилище данных, выполняемое в экземпляре ядра СУБД. Он предоставляет исходные данные, используемые баз данных служб Analysis Services и проекты, которые создают и развернете в этом учебнике. В учебнике предполагается, вы используете AdventureWorksDW2012, тем не менее, работают ли более поздних версий.
@@ -62,7 +62,7 @@ SQL Server Management Studio (SSMS) загружается и устанавли
   
 4.  восстановить базу данных.  
   
-## <a name="step-4-grant-database-permissions"></a>Шаг 4: Предоставление разрешений базы данных  
+## <a name="step-4-grant-database-permissions"></a>Шаг 4. GRANT, предоставление разрешений базы данных  
 В образцах проектов используются параметры олицетворения источников данных, указывающие контекст безопасности, в котором импортируются и обрабатываются данные. По умолчанию в параметрах олицетворения для доступа к данных указана учетная запись службы Analysis Services. Чтобы использовать этот параметр по умолчанию, необходимо убедиться, что учетная запись службы, под которой выполняются службы Analysis Services имеются данных разрешения на чтение **AdventureWorksDW** базы данных.  
   
 > [!NOTE]  
@@ -80,7 +80,7 @@ SQL Server Management Studio (SSMS) загружается и устанавли
   
 6.  Установите флажок рядом с полем **AdventureWorksDW** базы данных. Членство в ролях должно автоматически включать роли **db_datareader** и **public**. Нажмите кнопку **ОК** , чтобы принять параметры по умолчанию.  
   
-## <a name="step-5-install-projects"></a>Шаг 5: Установка проектов  
+## <a name="step-5-install-projects"></a>Шаг 5. Установка проектов  
 
 Учебник включает образцы проектов, что позволяет сравнить полученные вами результаты с готовым проектом или сразу перейти к одному из следующих занятий.  
   
@@ -88,7 +88,7 @@ SQL Server Management Studio (SSMS) загружается и устанавли
   
     Образцы проектов работать для [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и более поздних версий.  
   
-2.  Переместите этот ZIP-файл в папку, расположенную в корне диска (например, C:\Tutorial). Это позволяет избежать ошибки «Слишком длинный путь», которая иногда возникает при попытке извлечь файлы из папки «Загрузки».  
+2.  Переместите этот ZIP-файл в папку, расположенную в корне диска (например, C:\Tutorial). Это позволяет избежать ошибки «Слишком длинный путь», которая иногда возникает при попытке распаковать файлы в папке «загрузки».  
   
 3.  Извлеките образцы проектов. Щелкните файл правой кнопкой мыши и выберите команду **Извлечь все**. После извлечения файлов, вы получите папки занятия 1, 2, 3, 5, 6, 7, 8, 9, 10 завершить и Lesson 4 Start. 
   
@@ -112,7 +112,7 @@ SQL Server Management Studio (SSMS) загружается и устанавли
 Теперь вы готовы к работе с учебником. Дополнительные сведения о том, как приступить к работе, см. в разделе [Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).  
   
 ## <a name="see-also"></a>См. также  
-[Настройка брандмауэра Windows для разрешения доступа к службам Analysis Services](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
+[Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 [Configure the Windows Firewall to Allow SQL Server Access](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

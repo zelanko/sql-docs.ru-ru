@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 1: Создание нового проекта табличной модели | Документация Майкрософт'
+title: Урок 1. Создание нового проекта табличной модели | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 61ac5b1a0bac9647e6163a13afd0bce6b251ac03
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040862"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410780"
 ---
-# <a name="lesson-1-create-a-new-tabular-model-project"></a>Занятие 1. Создание нового проекта табличной модели
+# <a name="lesson-1-create-a-new-tabular-model-project"></a>Урок 1. Создание нового проекта табличной модели
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 На этом занятии будет создан новый пустой проект табличной модели в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. После создания нового проекта можно начать добавлять данные с помощью мастера импорта таблиц. Кроме того, это занятие содержит краткое введение в среду в SSDT для создания табличных моделей.  
   
-Предполагаемое время выполнения данного занятия: **10 минут.**  
+Предполагаемое время выполнения данного занятия: **10 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 Этот раздел — первое занятие учебника по созданию табличных моделей. Для этого занятия необходимо иметь образца базы данных AdventureWorksDW, установленные на экземпляре SQL Server. Дополнительные сведения см. в разделе [табличное моделирование &#40;учебник по Adventure Works&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "38040862"
       
     Если вы не видите SQL Server 2016 RTM (1200) в списке уровней совместимости, вы не используете последнюю версию SQL Server Data Tools. Инструкции по получению последней версии см. в разделе [Установка SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
 
-    Если вы используете последнюю версию SSDT, вы также можете SQL Server 2017 (1400). Тем не менее, для завершения — занятие 13: развертывание, вам потребуется сервер SQL Server 2017 или Azure для развертывания.
+    Если вы используете последнюю версию SSDT, вы также можете SQL Server 2017 (1400). Тем не менее для завершения — занятие 13. Развертывание, вам понадобится SQL Server 2017 или сервер Azure для развертывания.
       
     Выбор более ранний уровень совместимости рекомендуется, только если вы планируете развернуть готовую табличную модель в другой экземпляр служб Analysis Services, с более ранней версии SQL Server. Интегрированная рабочая область не поддерживается для более низких уровнях совместимости. Дополнительные сведения см. в разделе [Уровень совместимости](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).   
   
@@ -87,7 +87,7 @@ ms.locfileid: "38040862"
   
 
 ## <a name="whats-next"></a>Дальнейшие действия
-Перейдите к следующему занятию: [занятии 2: Добавление данных](../analysis-services/lesson-2-add-data.md).
+Перейдите к следующему занятию: [Занятие 2. Добавление данных](../analysis-services/lesson-2-add-data.md).
 
   
   

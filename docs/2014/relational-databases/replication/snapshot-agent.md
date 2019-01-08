@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.snapshotagent.f1
@@ -15,12 +14,12 @@ ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed47e42e4aeb3fbca4c659047ab9f57e62d548cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a5f9f869c076365a4c1f10a9ffacbf4a3cbae009
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108594"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777556"
 ---
 # <a name="snapshot-agent"></a>агент моментальных снимков
   В диалоговом окне **Агент моментальных снимков** отображаются подробные сведения об агенте моментальных снимков, в том числе состояние, журнал, информационные сообщения и сообщения об ошибках.  
@@ -40,7 +39,7 @@ ms.locfileid: "48108594"
   
 -   Не выполняется  
   
--   Завершен  
+-   Завершено  
   
  **Start Time**  
  Время начала сеанса.  
@@ -67,6 +66,6 @@ ms.locfileid: "48108594"
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Наблюдение за репликацией](monitoring-replication.md)   
- [Обзор агентов репликации](agents/replication-agents-overview.md)  
+ [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

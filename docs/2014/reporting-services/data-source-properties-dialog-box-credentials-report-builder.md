@@ -13,12 +13,12 @@ ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18c950015de84ac6b4204e657dfd52f894b6bced
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21fad41528bfc47ae2b117db68e73320109c98be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207434"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374753"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Диалоговое окно «Свойства источника данных» — «Учетные данные» (построитель отчетов)
   Вкладка **Учетные данные** в диалоговом окне **Свойства источника данных** позволяет просмотреть и изменить учетные данные, используемые для подключения к источнику данных, внедренному в отчет. Указанные учетные данные используются для доступа к источнику данных во время просмотра отчетов. Дополнительные сведения об учетных данных см. в разделе [Указание учетных данных в построителе отчетов](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "48207434"
  Выберите этот параметр, чтобы использовать проверку подлинности Windows.  
   
  **Использовать имя пользователя и пароль**  
- Выберите этот параметр, чтобы использовать определенное имя пользователя и пароль. Для встроенных источников данных: при публикации проекта сервера отчетов на целевом сервере имя пользователя и пароль сохраняются как хранимые учетные данные для базы данных. Если необходимо использовать имя пользователя и пароль как учетные данные Windows, можно изменить свойства опубликованного общего источника данных на целевом сервере. Дополнительные сведения см. в разделе [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) документации к [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Выберите этот параметр, чтобы использовать определенное имя пользователя и пароль. Для встроенных источников данных: при публикации проекта сервера отчетов на целевом сервере имя пользователя и пароль сохраняются как хранимые учетные данные для базы данных. Если необходимо использовать имя пользователя и пароль как учетные данные Windows, можно изменить свойства опубликованного общего источника данных на целевом сервере. Дополнительные сведения см. в разделе [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) документации к [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Имя пользователя**  
  Введите имя пользователя для получения доступа к источнику данных.  
@@ -47,7 +47,7 @@ ms.locfileid: "48207434"
   
  Для некоторых модулей обработки данных необходимо настроить на сервере отчетов учетную запись автоматического выполнения.  
   
- Дополнительные сведения см. в разделе по соответствующему типу источника данных: [Добавление данных из внешних источников данных (службы SSRS)](report-data/add-data-from-external-data-sources-ssrs.md) и [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в документации к [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Дополнительные сведения см. в разделе по соответствующему типу источника данных: [Добавление данных из внешних источников данных (службы SSRS)](report-data/add-data-from-external-data-sources-ssrs.md) и [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в документации к [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также  
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   

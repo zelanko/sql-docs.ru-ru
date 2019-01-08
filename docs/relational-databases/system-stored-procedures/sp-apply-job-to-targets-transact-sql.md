@@ -18,12 +18,12 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 192747d920f92681617d0dc19cc562e52e9c310e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1583f6de4938451b03eabfb7c9425120fa37f2fc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641728"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537832"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [  **@job_id =**] *job_id*  
  Идентификационный номер задания, которое следует применить к указанным целевым серверам и группам целевых серверов. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name =**] **"***имя_задания***"**  
+ [  **@job_name =**] **"**_имя_задания_**"**  
  Имя указания, которое следует применить к связанным целевым серверам и группам целевых серверов. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
- [  **@target_server_groups =**] **"***target_server_groups***"**  
+ [  **@target_server_groups =**] **"**_target_server_groups_**"**  
  Список групп целевых серверов с разделителями-запятыми, к которым следует применить указанное задание. *target_server_groups* — **nvarchar(2048)**, значение по умолчанию NULL.  
   
- [ **@target_servers=** ] **'***target_servers***'**  
+ [  **@target_servers=** ] **"**_target_servers_**"**  
  Список целевых серверов с разделителями-запятыми, к которым следует применить указанное задание. *target_servers*— **nvarchar(2048)**, значение по умолчанию NULL.  
   
- [  **@operation=** ] **"***операции***"**  
+ [  **@operation=** ] **"**_операции_**"**  
  Определяет, должно ли указанное задание быть применено или удалено с указанных целевых серверов или групп целевых серверов. *Операция*— **varchar(7)**, значение по умолчанию APPLY. Допустимы следующие операции: **применить** и **удалить**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASESTATES.F1
@@ -27,12 +26,12 @@ ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b96d575384a7d2be546193c8ce829723f57a3dbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141164"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788796"
 ---
 # <a name="database-states"></a>Состояния базы данных
   База данных всегда находится в определенном состоянии. Например, к этим состояниям относятся состояния ONLINE, OFFLINE или SUSPECT. Чтобы проверить текущее состояние базы данных, выберите столбец **state_desc** в представлении каталога [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) или свойство **Status** в функции [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) .  
@@ -40,7 +39,7 @@ ms.locfileid: "48141164"
 ## <a name="database-state-definitions"></a>Определения состояний базы данных  
  Состояния базы данных определяются в следующей таблице.  
   
-|Состояние|Определение|  
+|Штат|Определение|  
 |-----------|----------------|  
 |ONLINE|База данных доступна. Первичная файловая группа находится в режиме в сети, хотя возможно не завершена стадия отката восстановления.|  
 |OFFLINE|База данных недоступна. База данных переходит в режим вне сети с помощью явного указания пользователя и остается в режиме вне сети до тех пор, пока пользователем не будет предпринято дополнительное действие. Например, база данных может быть переведена в режим вне сети, чтобы переместить файл на другой диск. После завершения перемещения файла база данных снова переводится в режим в сети.|  

@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 1: Создание учетной записи хранения Azure для Windows и контейнер | Документация Майкрософт'
+title: Урок 1. Создайте учетную запись хранения Azure и контейнер | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 43489355aabc9c03407dd6b5779996ceef8967b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edeefac46805ba74b011d7c86202c7d5dbcdec14
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143653"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367156"
 ---
-# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Урок 1. Создание учетной записи хранения и контейнера Microsoft Azure
+# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Урок 1. Создание учетной записи хранения и контейнера Windows Azure
   Чтобы иметь возможность начать сохранение файлов данных SQL Server в службе хранилища Windows Azure, необходимо создать учетную запись хранения Windows Azure, контейнер больших двоичных объектов и подписанный URL-адрес. На занятии 1 рассматриваются вход на портал управления платформой Windows Azure, создание учетной записи хранилища, контейнера больших двоичных объектов и подписанного URL-адреса.  
   
  По умолчанию только владелец учетной записи хранения имеет доступ к большим двоичным объектам, таблицам и очередям в данной учетной записи. Чтобы получить доступ к этим ресурсам с помощью новой улучшенной функции SQL Server без предоставления ключа доступа учетной записи хранения, необходимо выполнить следующие действия.  
@@ -29,7 +29,7 @@ ms.locfileid: "48143653"
   
 -   Для управления подписанными URL-адресами к контейнеру или находящимся в нем большим двоичным объектам используйте сохраненную политику доступа. Сохраненная политика доступа является еще одним способом управления подписанными URL-адресами, а также удобным средством для их отмены.  
   
- Дополнительные сведения см. в разделе [управление доступом к ресурсам хранилища Windows Azure](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
+ Дополнительные сведения см. в разделе [управление доступом к ресурсам хранилища Windows Azure](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
   
 ## <a name="create-storage-account"></a>Создание учетной записи хранения  
  Чтобы создать учетную запись хранения на портале управления платформой Windows Azure, выполните следующие действия.  
@@ -58,7 +58,7 @@ ms.locfileid: "48143653"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  Чтобы создать контейнер программными средствами, можно использовать API-интерфейсы REST. Дополнительные сведения см. в разделе [создать контейнер](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx) , а также [Справочник API REST служб хранилища Windows Azure](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
+>  Чтобы создать контейнер программными средствами, можно использовать API-интерфейсы REST. Дополнительные сведения см. в разделе [создать контейнер](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx) , а также [Справочник API REST служб хранилища Windows Azure](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
   
  **Следующее занятие:**  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -24,12 +23,12 @@ ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbf8009d078058e825360190b268c3cbb124bcdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33b7d8f60bfef89aef49733cf193f8aad2678ee7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123710"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808876"
 ---
 # <a name="osql-utility"></a>Программа osql
   Программа **osql** позволяет вводить инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] , системные процедуры и файлы скриптов. Для связи с сервером эта программа использует ODBC.  
@@ -46,7 +45,7 @@ ms.locfileid: "48123710"
 [-L] |  
 [  
   {  
-     {-Ulogin_id [-Ppassword]} | –E }  
+     {-Ulogin_id [-Ppassword]} | -E }  
      [-Sserver_name[\instance_name]] [-Hwksta_name] [-ddb_name]  
      [-ltime_out] [-ttime_out] [-hheaders]  
      [-scol_separator] [-wcolumn_width] [-apacket_size]  
@@ -263,7 +262,7 @@ osql -E -i titles.qry -o titles.res
  В инструкцию Transact-SQL, отправляемую программой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **в**, можно включать комментарии. Допускаются два типа стиля комментариев: -- и /*…\*/.  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>Использование инструкции EXIT для возвращения результатов программы osql  
- Результат выполнения инструкции SELECT можно использовать в качестве возвращаемого программой **osql**значения. Если тип числовой, то последний столбец последней строки результатов преобразуется в 4-байтовое целое число (long). В MS-DOS младший байт передается родительскому процессу или уровню ошибки операционной системы. Windows передает все 4-байтовое целое число. Синтаксис:  
+ Результат выполнения инструкции SELECT можно использовать в качестве возвращаемого программой **osql**значения. Если тип числовой, то последний столбец последней строки результатов преобразуется в 4-байтовое целое число (long). В MS-DOS младший байт передается родительскому процессу или уровню ошибки операционной системы. Windows передает все 4-байтовое целое число. Синтаксис выглядит следующим образом.  
   
 ```  
 EXIT ( < query > )  
@@ -336,7 +335,7 @@ GO
  Эта инструкция вернет `10.3496`— это означает, что значение хранится без сокращения количества десятичных разрядов.  
   
 ## <a name="see-also"></a>См. также  
- [Комментарий &#40;многомерных Выражений&#41;](/sql/mdx/comment-mdx)   
+ [Комментарий (MDX)](/sql/mdx/comment-mdx)   
  [-- (Комментарий) (MDX)](/sql/mdx/comment-mdx)   
  [Функции CAST и CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)   
  [RAISERROR (Transact-SQL)](/sql/t-sql/language-elements/raiserror-transact-sql)  

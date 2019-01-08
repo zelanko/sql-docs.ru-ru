@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - replacing string expression
@@ -14,12 +13,12 @@ ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dabde936354e052a7a670b0235b994edf26093f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee88a12261d44c5090ae8d8f6ecac9f4b4ee216b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178294"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754416"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (выражение служб SSIS)
   Возвращает символьное выражение после замены символьной строки в выражении другой символьной строкой или пустой строкой.  
@@ -78,7 +77,7 @@ REPLACE((DT_WSTR,8)DaysToManufacture,"6","5")
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Подстрока &#40;выражение служб SSIS&#41;](substring-ssis-expression.md)   
- [Функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md)  
+ [SUBSTRING (выражение служб SSIS)](substring-ssis-expression.md)   
+ [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   
   

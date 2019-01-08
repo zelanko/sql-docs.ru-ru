@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
@@ -13,12 +12,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a62e70239db5688fc37b34f3b11752f43178d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce643cbaa6cfade08b84894bdd1af9b24533392b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151032"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750117"
 ---
 # <a name="general-page"></a>Страница «Общие»
   Страница **Общие** страницы **Конструкторы служб Integration Services** диалогового окна **Параметры** позволяет указать параметры загрузки, отображения и обновления пакетов.  
@@ -37,7 +36,7 @@ ms.locfileid: "48151032"
  Выберите этот параметр, чтобы отображать предупреждение при загрузке неподписанного пакета.  
   
  **Отобразить метки элементов управления очередностью**  
- Выберите метку «Успешно», «Ошибка» или «Завершение» для отображения объектов управления очередностью при просмотре пакетов в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+ Выберите метку "Успешно", "Ошибка" или "Завершение" для отображения объектов управления очередностью при просмотре пакетов в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  **Язык сценария**  
  Выберите значение по умолчанию для языка скрипта новых задач «Скрипт» и компонентов скрипта.  
@@ -54,8 +53,8 @@ ms.locfileid: "48151032"
  **Создать новый идентификатор пакета**  
  При обновлении пакетов служб [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] создает новые идентификаторы пакетов для обновленных версий пакетов.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о безопасности &#40;служб Integration Services&#41;](security/security-overview-integration-services.md)   
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о безопасности (службы Integration Services)](security/security-overview-integration-services.md)   
  [Расширение пакетов с помощью сценариев](extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

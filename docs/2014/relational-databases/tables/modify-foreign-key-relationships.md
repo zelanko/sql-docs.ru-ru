@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65538
@@ -17,12 +16,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a07b83aa6c7556cc8404dab6ff5e26e75800e340
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6886e9ef69842432a0759095f11335cfbb494
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130634"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797666"
 ---
 # <a name="modify-foreign-key-relationships"></a>Изменение связей по внешнему ключу
   Изменить сторону внешнего ключа связи в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. При изменении внешнего ключа таблицы изменяются столбцы, связанные со столбцами таблицы первичного ключа.  
@@ -83,7 +82,7 @@ ms.locfileid: "48130634"
      Проверяет все существующие данные в таблице перед созданием или возобновлением ограничения относительно этого ограничения.  
   
      **Категория спецификации таблиц и столбцов**  
-     Разверните, чтобы увидеть, какие столбцы, из каких таблиц действуют как внешний и первичный (или уникальный) ключ в данной связи. Для изменения или задания этих значений нажмите кнопку с многоточием (**…**) справа от поля свойства.  
+     Разверните, чтобы увидеть, какие столбцы, из каких таблиц действуют как внешний и первичный (или уникальный) ключ в данной связи. Для изменения или задания этих значений нажмите кнопку с многоточием (**...**) справа от поля свойства.  
   
      **Базовая таблица внешнего ключа**  
      Показывает, какая таблица содержит столбец, действующий как внешний ключ в выбранной связи.  

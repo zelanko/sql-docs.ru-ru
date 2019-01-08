@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.expressionbuilder.f1
@@ -15,12 +14,12 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0560d4cc4b5aeaa0b96269e5ee1bbfe9c61e83c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c3daace92f033cb96428226b51294f5a372b7c2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118464"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764076"
 ---
 # <a name="expression-builder"></a>Построитель выражений
   Диалоговое окно **Построитель выражений** используется для создания и редактирования выражения свойства или написания выражения, определяющего значение переменной, с помощью графического интерфейса, содержащего список переменных и встроенные ссылки на функции, приведения типов и операторы, включенные в язык выражений служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -48,9 +47,9 @@ ms.locfileid: "48118464"
 |**Вычислить значение выражения**|Чтобы просмотреть результаты вычислений выражения, выберите параметр **Вычислить значение выражения** .|  
   
 ## <a name="see-also"></a>См. также  
- [Страница «выражения»](expressions-page.md)   
+ [Страница «Выражения»](expressions-page.md)   
  [Редактор выражений свойств](property-expressions-editor.md)   
- [Службы Integration Services &#40;SSIS&#41; переменных](../integration-services-ssis-variables.md)   
+ [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md)   
  [Системные переменные](../system-variables.md)  
   
   

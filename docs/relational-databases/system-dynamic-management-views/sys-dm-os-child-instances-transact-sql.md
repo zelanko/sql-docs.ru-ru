@@ -21,12 +21,12 @@ ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bf6602e8ff631831e07d17cf9fc22515f610191
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a57719becab0c7dda9d684e4de3218e29418b6a3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673723"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203455"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "51673723"
   
  Сведения, полученные из **sys.dm_os_child_instances** может использоваться для определения состояния каждого пользовательского экземпляра (heart_beat) и получить имя канала (связи instance_pipe_name), который может использоваться для создания подключения для пользователя С помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или SQLCmd. Подключиться к пользовательскому экземпляру можно сразу после того, как он был запущен внешним процессом, таким как клиентское приложение. Инструменты управления SQL не могут запустить пользовательский экземпляр.  
   
-> **Примечание:** пользовательские экземпляры являются возможностью [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] только.  
-  
+> **ПРИМЕЧАНИЕ.** Пользовательские экземпляры используются только в [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)].  
+> 
 > **Примечание** вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_child_instances**.  
   
 |Столбец|Data type|Описание|  
