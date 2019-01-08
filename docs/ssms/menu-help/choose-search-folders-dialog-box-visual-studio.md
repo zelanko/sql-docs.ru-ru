@@ -7,18 +7,16 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e8d7fac329ef0c12566c2479459749dd74a5934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a799ff3a36ebf3c2381bdaf17c697f190ebf2fe
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835662"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328637"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Диалоговое окно «Выбор папок поиска» (Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,4 +56,3 @@ ms.locfileid: "47835662"
   
 **Применить**  
 Сохраните набор папок поиска, приведенный в списке **Выбранные папки** , в виде именованного набора папок. Затем этот набор папок можно выбирать в поле **Папка** на всех вкладках окна **Найти и заменить** . Диалоговое окно «Выбор папок поиска» закрывается.  
-  
