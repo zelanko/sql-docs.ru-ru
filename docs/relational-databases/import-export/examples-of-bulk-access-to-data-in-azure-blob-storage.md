@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bbc70dbfec864052c4c877794561c8692cdfcfb
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 190a9a07ad293253ee9a2005a6b5981db129465f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560411"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214103"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Примеры массового доступа к данным в хранилище BLOB-объектов Azure
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -31,16 +31,16 @@ ms.locfileid: "51560411"
 
 Для массового доступа к хранилищу BLOB-объектов из SQL Server требуется по крайней мере [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP версии 1.1.
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 >  Все пути к контейнеру и к файлам в большом двоичном объекте являются `CASE SENSITIVE`. Если они не верны, может быть возвращена такая ошибка: "Массовая загрузка невозможна. Файл "file.csv" не существует или у вас нет прав на доступ к нему".
-"
+> "
 
 
 ## <a name="create-the-credential"></a>Создание учетных данных   
    
 Для всех приведенных ниже примеров требуются учетные данные области базы данных, ссылающиеся на подписанный URL-адрес.   
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 >  Внешний источник данных нужно создать с учетными данными области базы данных, использующими удостоверение `SHARED ACCESS SIGNATURE`. Для создания подписанного URL-адреса для учетной записи смотрите свойство **Подписанный URL-адрес** на странице свойств учетной записи хранения на портале Azure. Дополнительные сведения о подписанных URL-адресах см. в [этой статье](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Дополнительные сведения см. в статье [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
  
 Создайте учетные данные области базы данных, используя параметр `IDENTITY` со значением `SHARED ACCESS SIGNATURE`. Используйте секрет с вашего портала Azure. Пример:  

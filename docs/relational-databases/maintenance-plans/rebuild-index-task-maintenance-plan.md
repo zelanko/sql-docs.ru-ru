@@ -16,12 +16,12 @@ ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e91c0f383b1cee06209fde757562755f9e63e643
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: e3bda26c21dcb38475373635ff4ead6d92f1b634
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217322"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205593"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Задача «Перестроение индекса» (план обслуживания)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "51217322"
  **Сохранять индекс в режиме "в сети"**  
  Параметр `ONLINE` дает пользователям возможность получать доступ к базовой таблице или данным кластеризованного индекса, а также к любым связанным с ними некластеризованным индексам при операциях с индексами.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Операции с индексами в режиме "в сети" доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  **Не перестраивать индексы | Перестроить индексы в режиме "вне сети"**  
