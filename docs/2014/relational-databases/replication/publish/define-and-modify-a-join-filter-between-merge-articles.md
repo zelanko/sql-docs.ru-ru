@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], join
@@ -16,12 +15,12 @@ ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11ca727e669457ca03d6a11244c22617c40ba464
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf8b3b4f00ad2e8a3b9236292ee20948c852b6ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177404"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752347"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Определение и изменение фильтра соединения между статьями публикации слиянием
   В этом разделе описывается определение и изменение фильтра соединения между статьями публикации слиянием в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Репликация слиянием поддерживает фильтры соединения, которые обычно используются совместно с параметризованными фильтрами для распространения секционирования таблиц на все связанные статьи таблиц.  
@@ -127,7 +126,7 @@ ms.locfileid: "48177404"
     >  Если на столбец, по которому производится соединение, в базовой таблице для родительской статьи наложено ограничение, гарантирующее уникальность, укажите в параметре **@join_unique_key** значение **1** . Если параметру **@join_unique_key** по ошибке будет присвоено значение **1** , то может произойти потеря конвергенции данных.  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
- В следующем примере производится определение статьи для публикации слиянием, где статья таблицы `SalesOrderDetail` фильтруется по таблице `SalesOrderHeader` , для фильтрации которой, в свою очередь, используется статический строковый фильтр. Дополнительные сведения см. в статье [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+ В следующем примере производится определение статьи для публикации слиянием, где статья таблицы `SalesOrderDetail` фильтруется по таблице `SalesOrderHeader` , для фильтрации которой, в свою очередь, используется статический строковый фильтр. Дополнительные сведения см. в разделе [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   

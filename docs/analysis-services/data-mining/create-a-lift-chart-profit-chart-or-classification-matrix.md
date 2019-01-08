@@ -1,5 +1,5 @@
 ---
-title: Создать диаграмму точности прогнозов, диаграммы роста прибыли или матрицу классификации | Документы Microsoft
+title: Создание диаграммы точности прогнозов, Диаграмма роста прибыли или матрицы классификации | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57d8dac4999f5b788b1114e6e7aa4156b6cd6419
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 01d143bf8cdfd22a33ef065805930f93d00e7546
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519117"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Создать диаграмму точности прогнозов, диаграмму роста прибыли или матрицу классификации
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/10/2018
   
     -   Выберите вариант **Использовать проверочные варианты структуры интеллектуального анализа данных**для использования полного набора проверочных вариантов, которые были определены в составе набора контрольных данных структур интеллектуального анализа данных.  
   
-    -   Выберите параметр **Задать другой набор данных**, если нужно использовать внешние данные.  Набор данных должен быть доступен в форме представления источников данных.   Нажмите кнопку обзора (**…**), чтобы выбрать таблицы данных для использования в диаграмме точности. Дополнительные сведения см. в статье [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md).  
+    -   Выберите параметр **Задать другой набор данных**, если нужно использовать внешние данные.  Набор данных должен быть доступен в форме представления источников данных.   Нажмите кнопку обзора (**...** ) кнопку, чтобы выбрать таблицы данных для использования в диаграмме точности. Дополнительные сведения см. в статье [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md).  
   
          При использовании внешнего набора данных можно, по желанию, фильтровать набор входных данных. Дополнительные сведения см. в статье [Применение фильтров к данным проверки модели](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md).  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 05/10/2018
      Сумма прибыли, связанная с каждой успешной продажей.  
   
 ## <a name="see-also"></a>См. также  
- [Диаграмма точности прогнозов & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
- [Матрица классификации & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+ [Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

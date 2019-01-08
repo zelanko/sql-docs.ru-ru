@@ -1,5 +1,5 @@
 ---
-title: Создать копию модели интеллектуального анализа данных | Документы Microsoft
+title: Создать копию модели интеллектуального анализа данных | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23770ec59e31a51b7aca7badf5b827baa6181155
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7c5479a43a07a6398ff45635828a2a9c88b7cb11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502161"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>создать копию модели интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/10/2018
   
 3.  Выберите модель и щелкните правой кнопкой мыши, чтобы открыть контекстное меню.  
   
-     –или–  
+     -или-  
   
      Выберите модель. В меню **Модель интеллектуального анализа данных** выберите пункт **Новая модель интеллектуального анализа данных**.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  Выберите модель интеллектуального анализа данных.  
   
-2.  В окне **Свойства** щелкните текстовое поле, относящееся к свойству **Фильтр** , а затем нажмите кнопку сборки **(...)** .  
+2.  В **свойства** окно, щелкните текстовое поле для **фильтра** свойство и нажмите кнопку построения **(...)**  кнопки.  
   
 3.  Измените условия фильтра.  
   
@@ -52,8 +53,8 @@ ms.lasthandoff: 05/10/2018
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Фильтры для моделей интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Задачи модели интеллектуального анализа данных и инструкции](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Удалить фильтр из модели интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
+ [Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [удалить фильтр из модели интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   

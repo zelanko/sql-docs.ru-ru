@@ -14,24 +14,24 @@ ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be4bab2d37570dab0bc3e6048b999330ddebb7f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61871299c35df0495932f1b149fe99ab858edaa5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142804"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524872"
 ---
 # <a name="integration-services-features-and-tasks"></a>Функции и задачи служб Integration Services
-  Найдите сведения, — конструктор, разработчиков, аналитиков или администратора — требуется для создания и разработки [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] пакетов. Также объясняется, как включать эти пакеты в приложения и веб-сайты.  
+  Найти сведения, любой пользователь конструктор, разработчик, аналитик или администратор — требуется для создания и разработки [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] пакетов. Также объясняется, как включать эти пакеты в приложения и веб-сайты.  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Службы Integration Services &#40;SSIS&#41; и среды Studio](integration-services-ssis-development-and-management-tools.md)  
   
  [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md)  
   
- [Службы Integration Services &#40;SSIS&#41; подключений](connection-manager/integration-services-ssis-connections.md)  
+ [Соединения в службах Integration Services (SSIS)](connection-manager/integration-services-ssis-connections.md)  
   
- [Службы Integration Services &#40;SSIS&#41; проектов](integration-services-ssis-projects-and-solutions.md)  
+ [Проекты служб Integration Services (SSIS)](integration-services-ssis-projects-and-solutions.md)  
   
  [Службы Integration Services &#40;SSIS&#41; параметров](integration-services-ssis-package-and-project-parameters.md)  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48142804"
   
  [Выражения служб Integration Services (SSIS)](expressions/integration-services-ssis-expressions.md)  
   
- [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md)  
+ [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)  
   
- [Службы Integration Services &#40;SSIS&#41; обработчики событий](integration-services-ssis-event-handlers.md)  
+ [Обработчики событий в службах Integration Services (SSIS)](integration-services-ssis-event-handlers.md)  
   
  [Службы Integration Services (службы SSIS)](service/integration-services-service-ssis-service.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48142804"
   
  [Наблюдение за выполнением пакетов и других операций](performance/monitor-running-packages-and-other-operations.md)  
   
- [Общие сведения о безопасности &#40;служб Integration Services&#41;](security/security-overview-integration-services.md)  
+ [Общие сведения о безопасности (службы Integration Services)](security/security-overview-integration-services.md)  
   
  [Пакет дополнительных компонентов Azure](azure-feature-pack-for-integration-services-ssis.md)  
   
