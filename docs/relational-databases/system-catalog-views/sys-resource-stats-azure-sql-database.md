@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 83ba28d09e32f043c58bdc1c63837f5b465312f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72945aca048d322ee03c8a1d88b76650ddd1db16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723492"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392697"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47723492"
 |max_worker_percent|**Decimal(5,2)**|Максимальное количество одновременных рабочих ролей (запросов) в процентах от предела для уровня службы базы данных.<br /><br /> Максимум в настоящее время вычисляется для интервала до пяти минут, на основании выборки 15 секунд количества параллельных рабочих.|  
 |max_session_percent|**Decimal(5,2)**|Максимальное число одновременных сеансов в процентах от предела для уровня службы базы данных.<br /><br /> В настоящее время максимальное вычисляется для интервала до пяти минут, основанного на 15 секунд примеры количество одновременных сеансов.|  
 |dtu_limit|**int**|Max настройки текущей базы данных DTU для этой базы данных во время этого интервала. |  
-|allocated_storage_in_megabytes|**float**|Объем в формате файла пространство в Мегабайтах, становятся доступными для хранения базы данных. Форматированный файл пространства также называется данных выделено.  Дополнительные сведения см. в разделе: [пространства управление файлами в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|Объем в формате файла пространство в Мегабайтах, становятся доступными для хранения базы данных. Форматированный файл пространства также называется данных выделено.  Дополнительные сведения см. в разделе: [Управление файлами места в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  Дополнительные сведения об этих ограничениях и уровней обслуживания см. в разделах [уровней обслуживания](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  

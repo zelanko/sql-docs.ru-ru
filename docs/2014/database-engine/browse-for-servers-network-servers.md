@@ -12,12 +12,12 @@ ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a9efc4b78f1f1b15fbbba54a1b59e3a8995051c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208684"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508189"
 ---
 # <a name="browse-for-servers-network-servers"></a>Обзор серверов (сетевые серверы)
   Если при подключении к компоненту [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] неизвестно точное имя экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], в поле **Имя сервера** нажмите кнопку **Продолжить обзор**, чтобы открыть диалоговое окно **Выбор серверов**.  
@@ -34,6 +34,6 @@ ms.locfileid: "48208684"
   
 ## <a name="options"></a>Параметры  
  **Выберите экземпляр SQL Server в сети для соединения**  
- Укажите сервер, с которым нужно соединиться, выбрав экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , показанный в дереве. Можно показывать или скрывать участки дерева, щелкнув узел, помеченный знаком **+** или **–** .  
+ Укажите сервер, с которым нужно соединиться, выбрав экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , показанный в дереве. Можно показывать или скрывать участки дерева, щелкнув узел, помеченный знаком **+** или **-** символов.  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -14,12 +13,12 @@ ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c18872dee35e55da6af067f9459e15f99f9402bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae9c89b3fa3d9392e27cce9199f7c1b1b8f31dee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165444"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771426"
 ---
 # <a name="monitoring-replication"></a>Наблюдение за репликацией
   Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представляет собой графический инструмент для наблюдения за исправностью топологии репликации. Монитор репликации предоставляет детальные сведения о состоянии и производительности публикаций и подписок, позволяющие получать ответы на следующие общие вопросы:  

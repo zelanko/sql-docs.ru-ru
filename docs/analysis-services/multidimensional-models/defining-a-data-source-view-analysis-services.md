@@ -1,5 +1,5 @@
 ---
-title: Определение данных источника (службы Analysis Services) | Документы Microsoft
+title: Определение данных источника (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6966a0763146c9fd787be39d5be011704c048f66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 545204349cf895dd0592f1a2dcba66de4cb054ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025851"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523104"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Определение представления источников данных (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  В представлении источников данных содержится логическая модель схемы, используемой объектами многомерной базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а именно кубы, измерения и структуры интеллектуального анализа данных. Представление источника данных — это определение метаданных, хранящееся в формате XML, для элементов схемы, используемых в унифицированной многомерной модели (UDM) и структурах интеллектуального анализа данных. Представление источника данных:  
+  Представление источника данных содержится логическая модель схемы, используется [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов, а именно: кубы многомерной базы данных, измерений и структур интеллектуального анализа данных. Представление источника данных — это определение метаданных, хранящееся в формате XML, для элементов схемы, используемых в унифицированной многомерной модели (UDM) и структурах интеллектуального анализа данных. Представление источника данных:  
   
 -   Содержит метаданные, представляющие выбранные объекты из одного или нескольких базовых источников данных, или метаданные, которые будут использоваться для формирования базового реляционного хранилища данных, если при формировании схемы используется нисходящий подход.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34025851"
   
 4.  **Фильтрация доступных объектов**  
   
-     Если список доступных объектов содержит слишком много объектов, то их число можно уменьшить путем применения простого фильтра со строкой в качестве критерия выбора. Например, если ввести **dbo** и нажать кнопку **Фильтр** , в списке **Доступные объекты** останутся только элементы, начинающиеся с «dbo». Фильтр может быть частичной строкой (например, при выборе «про» будут возвращены данные по «продавцам» и «продажам»), но он не может включать несколько строк или операторов.  
+     Если список доступных объектов содержит слишком много объектов, то их число можно уменьшить путем применения простого фильтра со строкой в качестве критерия выбора. Например, если ввести **dbo** и нажать кнопку **Фильтр** , в списке **Доступные объекты** останутся только элементы, начинающиеся с «dbo». Фильтр может быть неполной строкой (например, «продавцам» возвращает и «продажам»), но он не может содержать несколько строк или операторов.  
   
 5.  Для реляционных источников данных, которые не имеют определенных связей между таблицами, появится страница **Совпадение имен** , на которой можно выбрать подходящий метод согласования имен. Дополнительные сведения см. в подразделе [Задание критериев совпадения имен для связей](#bkmk_NameMatch) этой статьи.  
   
@@ -127,13 +127,13 @@ ms.locfileid: "34025851"
   
 ## <a name="see-also"></a>См. также  
  [Добавление или удаление таблиц или представлений в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [Определение логических первичных ключей в представлении источника данных &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [Определение именованных вычислений в представлении источника данных &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [Определение именованных запросов в представлении источника данных &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
- [Замена таблицы или именованного запроса в представлении источника данных &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [Работа с диаграммами в конструкторе представлений источников данных & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [Просмотр данных в представлении источника данных &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
- [Удаление представления источника данных &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
+ [Определение логических первичных ключей в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [Определение именованных вычислений в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [Определение именованных запросов в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [Замена таблицы или именованного запроса в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [Работа с диаграммами в конструкторе представлений источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Просмотр данных в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
+ [Удаление представления источников данных (службы Analysis Services)](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
  [Обновление схемы в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

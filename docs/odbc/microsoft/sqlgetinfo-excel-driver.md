@@ -14,12 +14,12 @@ ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee95aa0b47e18ac1409858da03d5972baa7ec951
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2524c51f1b4b9297b6e3483a27fd78e6c1836e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802362"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541836"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (драйвер для Excel)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47802362"
   
  **SQLGetInfo** поддерживает тип SQL_FILE_USAGE сведения. Возвращаемое значение равно 16-разрядное целое число, которое указывает, как драйвер напрямую обрабатывает файлы в источнике данных:  
   
--   SQL_FILE_NOT_SUPPORTED — Драйвер не драйвер среднего уровня.  
+-   SQL_FILE_NOT_SUPPORTED - драйвер не драйвер среднего уровня.  
   
--   SQL_FILE_TABLE — Драйвер одноуровневых считает файлы в источнике данных таблицы.  
+-   SQL_FILE_TABLE - драйвер одноуровневых считает файлы в источнике данных таблицы.  
   
--   SQL_FILE_QUALIFIER — Драйвер среднего уровня обрабатывает файлы в источнике данных как квалификатор.  
+-   SQL_FILE_QUALIFIER - драйвер среднего уровня обрабатывает файлы в источнике данных как квалификатор.  
   
  Поскольку каждый файл представляет собой таблицу, драйвер ODBC для того Exceldriver возвращает SQL_FILE_TABLE.  
   

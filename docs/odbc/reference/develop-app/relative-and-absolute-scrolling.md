@@ -16,12 +16,12 @@ ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a6b77f61c8eadd8ef58d9eb475aaeb3faf88c57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ba05cb9079514750cf087149bae476efe0d8d41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661862"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510762"
 ---
 # <a name="relative-and-absolute-scrolling"></a>Относительная и абсолютная прокрутка
 Почти все действия, параметры прокрутки в **SQLFetchScroll** позиционирования курсора относительно текущей позиции или абсолютное позиционирование. **SQLFetchScroll** поддерживает выборку следующего, предыдущего, первого и последнего наборов строк, как хорошо как относительной (набора строк, *n* строк с начала текущего набора строк) и абсолютной (fetch начальный набор строк в строке *n*). Если *n* имеет отрицательное значение в абсолютная выборка, строки отсчитываются с конца результирующего набора. Таким образом абсолютная выборка строки -1 означает, что для выборки строк, который начинается с последней строки в результирующем наборе.  
@@ -34,7 +34,7 @@ ms.locfileid: "47661862"
 |--------------------------|-------------------------------------|  
 |На страницу вверх|SQL_FETCH_PRIOR|  
 |На страницу вниз|SQL_FETCH_NEXT|  
-|На строку вверх|SQL_FETCH_RELATIVE с *FetchOffset* равным – 1|  
+|На строку вверх|SQL_FETCH_RELATIVE с *FetchOffset* равно-1|  
 |На строку вниз|SQL_FETCH_RELATIVE с *FetchOffset* равно 1|  
 |Ползунок полосы прокрутки в верхней части|SQL_FETCH_FIRST|  
 |Ползунок полосы прокрутки внизу|SQL_FETCH_LAST|  

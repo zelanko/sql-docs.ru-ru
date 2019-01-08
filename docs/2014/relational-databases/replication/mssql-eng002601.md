@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG002601 error
@@ -13,12 +12,12 @@ ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55a175f7ac4d7d00b84ea44cf04f34d81fcb35ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176110"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760247"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
     
@@ -30,7 +29,7 @@ ms.locfileid: "48176110"
 |Идентификатор события|2601|  
 |Источник события|MSSQLSERVER|  
 |Компонент|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|Символическое имя|Недоступно|  
+|Символическое имя|Н/Д|  
 |Текст сообщения|Не удается вставить повторяющуюся строку ключа в объект '%.*ls' с уникальным индексом '%.\*ls'.|  
   
 ## <a name="explanation"></a>Объяснение  
@@ -42,7 +41,7 @@ ms.locfileid: "48176110"
   
 -   Используется таблица со столбцом идентификаторов, однако управление столбцом осуществляется неверно.  
   
--   В публикации слиянием эта ошибка также может возникнуть во время вставки в системную таблицу **MSmerge_contents**. Возникающая ошибка подобна следующей: Не удается вставить повторяющуюся строку ключа в объект MSmerge_contents с уникальным индексом ucl1SycContents.  
+-   В репликации слиянием Эта ошибка также может возникнуть во время вставки в системную таблицу **MSmerge_contents**; возникающая ошибка аналогична: Невозможно вставить повторяющуюся строку ключей в объект 'MSmerge_contents' с уникальным индексом 'ucl1SycContents'.  
   
 ## <a name="user-action"></a>Действие пользователя  
  Действие по устранению проблемы зависит от причины, по которой она возникла:  

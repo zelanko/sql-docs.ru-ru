@@ -15,12 +15,12 @@ ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adc1283b3917bd82478ee4ed2e537926e73aa7e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eec6368855b52088d5ed5ff253ec6020286aadf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056694"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515149"
 ---
 # <a name="web-service-task-editor-input-page"></a>Редактор задачи «Веб-служба» (страница «Вход»)
   Используйте страницу **Вход** в диалоговом окне **Редактор задачи «Веб-служба»** , чтобы указать веб-службу, веб-метод и значения, предоставляемые в качестве входных данных веб-метода. Значения можно предоставить, либо непосредственно введя строки в столбце «Значение», либо выбрав переменные в столбце «Значение».  
@@ -35,7 +35,7 @@ ms.locfileid: "48056694"
  Чтобы выполнить задачу, выберите веб-метод из списка.  
   
  **WebMethodDocumentation**  
- Введите описание веб-метода или нажмите кнопку обзора **(…)** , а затем введите описание в диалоговом окне **Документация веб-метода** .  
+ Введите описание веб-метода или нажмите кнопку обзора **(...)**, а затем введите описание в диалоговом окне **Документация веб-метода**.  
   
  **Название**  
  Перечисляет имена входных данных веб-метода.  
@@ -53,9 +53,9 @@ ms.locfileid: "48056694"
  Если установлены флажки «Переменная», выберите переменные из списка для входных данных; в противном случае введите значения входных данных вручную.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задач веб-служба &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
- [Редактор задач веб-служба &#40;вывода страницы&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
- [Страница "Выражения"](expressions/expressions-page.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Веб-служба" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "Веб-служба" (страница "Вывод")](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)  
   
   

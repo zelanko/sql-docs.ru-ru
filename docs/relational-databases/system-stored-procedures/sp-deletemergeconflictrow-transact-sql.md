@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_deletemergeconflictrow
@@ -17,12 +16,12 @@ ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc1152ee4893991a207936c1a08dccc988fbde5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b11096a9f1ac9f8c5f5c04f3afc36f2776e988e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670651"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782956"
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +42,19 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@conflict_table=**] **"***conflict_table***"**  
+ [  **@conflict_table=**] **"**_conflict_table_**"**  
  Имя таблицы конфликтов. *conflict_table* — **sysname**, значение по умолчанию **%**. Если *conflict_table* указан как NULL или **%**, конфликт считается конфликтом удаления и строка, совпадающая *rowguid* и *origin_datasource* и *source_object* удаляется из [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) таблицы.  
   
- [  **@source_object=**] **"***source_object***"**  
+ [  **@source_object=**] **"**_source_object_**"**  
  Имя исходной таблицы. *source_object* — **nvarchar(386)**, значение по умолчанию NULL.  
   
- [  **@rowguid =**] **"***rowguid***"**  
+ [  **@rowguid =**] **"**_rowguid_**"**  
  Идентификатор строки для конфликта удаления. *ROWGUID* — **uniqueidentifier**, не имеет значения по умолчанию.  
   
- [  **@origin_datasource=**] **"***origin_datasource***"**  
+ [  **@origin_datasource=**] **"**_origin_datasource_**"**  
  Источник конфликта. *origin_datasource* — **varchar(255)**, не имеет значения по умолчанию.  
   
- [  **@drop_table_if_empty=**] **"***drop_table_if_empty***"**  
+ [  **@drop_table_if_empty=**] **"**_drop_table_if_empty_**"**  
  Флаг, указывающий, что *conflict_table* , удалена, если пусто. *drop_table_if_empty* — **varchar(10)**, значение по умолчанию FALSE.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

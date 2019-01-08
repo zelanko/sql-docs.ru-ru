@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d5cbfb6d0ec7cf057d4bf3c7edbc6d1735dbc47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b249aff99abbe692e1515397c493109c54c86713
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203614"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772616"
 ---
 # <a name="ftcrawl-started-event-class"></a>Класс событий FT:Crawl Started
   Класс событий **FT:Crawl Started** показывает, что запущен процесс полнотекстового сканирования (или заполнения). Данный класс событий используется для определения наличия среди выполняемых задач запроса на сканирование.  
   
-## <a name="ft-crawl-started-event-class-data-columns"></a>Столбцы с данными класса событий FT:Crawl Started  
+## <a name="ft-crawl-started-event-class-data-columns"></a>Столбцы данных  класса событий FT:Crawl Started  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  

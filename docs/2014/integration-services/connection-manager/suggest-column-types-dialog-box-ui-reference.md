@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.suggestdatatypes.f1
@@ -13,12 +12,12 @@ ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2a1706a252ae9e70d214b4231442a201dfac88c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05ae90b30fb94615c4be8f16efaf5c837fe1856c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058374"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756687"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>Предложение типов столбцов диалогового окна справочника по пользовательскому интерфейсу
   Диалоговое окно **Предлагаемые типы столбцов** используется для идентификации типа данных и длины столбцов в диспетчере соединений с неструктурированными файлами на основе содержимого файла.  
@@ -45,7 +44,7 @@ ms.locfileid: "48058374"
  Введите или выберите процент от длины столбцов, добавляемый к длине столбцов символьных типов данных. Процент должен представлять собой целое число.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../integration-services-error-and-message-reference.md)   
- [Диспетчер подключений неструктурированных файлов](file-connection-manager.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../integration-services-error-and-message-reference.md)   
+ [Диспетчер соединений с неструктурированными файлами](file-connection-manager.md)  
   
   

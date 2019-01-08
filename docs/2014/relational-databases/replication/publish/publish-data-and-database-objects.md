@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
@@ -42,12 +41,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e50f1c65133a0e33c142962af8e768d1daa5bef8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227114"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777136"
 ---
 # <a name="publish-data-and-database-objects"></a>Публикация данных и объектов базы данных
   При создании публикации можно выбрать таблицы и другие объекты базы данных, которые необходимо опубликовать. Используя репликацию, можно опубликовать следующие объекты базы данных.  
@@ -248,9 +247,9 @@ ms.locfileid: "48227114"
   
      Дополнительные сведения об этих параметрах см. в статье об [sp_addmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) и [sp_addmergefilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql).  
   
--   Репликация транзакций и нефильтрованная репликация слиянием поддерживают публикацию таблицы в нескольких публикациях с последующей подпиской в пределах одной таблицы в базе данных подписки (такой сценарий, как правило, называется сценарием сведения). Сведение часто используется для объединения подмножеств данных из нескольких мест в одной таблице на центральном подписчике. Фильтрованные публикации слиянием не поддерживают сценарий центрального подписчика. Для репликации слиянием сведение обычно реализуется в одной публикации с помощью параметризованных фильтров строк. Дополнительные сведения см. в статье [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   Репликация транзакций и нефильтрованная репликация слиянием поддерживают публикацию таблицы в нескольких публикациях с последующей подпиской в пределах одной таблицы в базе данных подписки (такой сценарий, как правило, называется сценарием сведения). Сведение часто используется для объединения подмножеств данных из нескольких мест в одной таблице на центральном подписчике. Фильтрованные публикации слиянием не поддерживают сценарий центрального подписчика. Для репликации слиянием сведение обычно реализуется в одной публикации с помощью параметризованных фильтров строк. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление и удаление статей в существующих публикациях](add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Настройка распространения](../configure-distribution.md)   
  [Инициализация подписки](../initialize-a-subscription.md)   

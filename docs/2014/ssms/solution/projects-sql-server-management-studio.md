@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29bb70b8f1acabc94798a4a86b52e9e0b149cd97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102709"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759196"
 ---
 # <a name="projects-sql-server-management-studio"></a>Проекты (среда SQL Server Management Studio)
   Проект [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] представляет собой коллекцию логически связанных скриптов и файлов, которые можно хранить вместе для администрирования и разработки базы данных.  
@@ -48,7 +48,7 @@ ms.locfileid: "48102709"
 |----------------------|-----------|  
 |Описано создание нового проекта в решении.|[Создание проекта](create-a-project.md)|  
 |Описано добавление существующего проекта к решению.|[Добавление к решению существующий проект](add-an-existing-project-to-a-solution.md)|  
-|Описано изменение места сохранения файлов проекта по умолчанию.|[Изменение расположения проектов по умолчанию](change-the-default-location-for-projects.md)|  
+|Описано изменение места сохранения файлов проекта по умолчанию.|[Изменение местоположения проектов по умолчанию](change-the-default-location-for-projects.md)|  
 |Описан просмотр текущих свойств проекта.|[Просмотр свойств проекта](view-project-properties.md)|  
 |Описано добавление новых элементов в проект (соединений, файлов скриптов и т. д).|[Добавление новых элементов в проект](add-new-items-to-a-project.md)|  
 |Описано создание сведений о подключении для запроса.|[Связь запроса с соединением в проекте](associate-a-query-with-a-connection-in-a-project.md)|  

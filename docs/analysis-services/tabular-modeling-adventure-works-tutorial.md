@@ -1,5 +1,5 @@
 ---
-title: Табличное моделирование (с уровнем совместимости 1200) | Документация Майкрософт
+title: Табличное моделирование (с уровнем совместимости 1200) служб Analysis Services | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0b8d60c6c365d48f8eccc46cbc9a3b0f5222ff5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 43ef5c290e1234af4482f09f2ec7f01e2edbca99
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054691"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072181"
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Табличное моделирование (с уровнем совместимости 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -77,17 +77,17 @@ ms.locfileid: "38054691"
 |----------|------------------------------|  
 |[Занятие 1. Создание нового проекта табличной модели](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 минут.|  
 |[Занятие 2. Добавление данных](../analysis-services/lesson-2-add-data.md)|20 минут|  
-|[Урок 3. Отметка в качестве таблицы дат](../analysis-services/lesson-3-mark-as-date-table.md)|3 минуты|  
-|[Занятие 4: Создание связей](../analysis-services/lesson-4-create-relationships.md)|10 минут.|  
-|[Занятие 5: Создание вычисляемых столбцов](../analysis-services/lesson-5-create-calculated-columns.md)|15 минут|
-|[Занятие 6: Создание мер](../analysis-services/lesson-6-create-measures.md)|30 минут|  
-|[Урок 7. Создание ключевых показателей эффективности](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 минут|  
-|[Занятие 8: Создание перспектив](../analysis-services/lesson-8-create-perspectives.md)|5 минут|  
-|[Занятие 9: Создание иерархий](../analysis-services/lesson-9-create-hierarchies.md)|20 минут|  
-|[Занятие 10: Создание секций](../analysis-services/lesson-10-create-partitions.md)|15 минут|  
-|[Занятие 11: Создание ролей](../analysis-services/lesson-11-create-roles.md)|15 минут|  
-|[Урок 12. Анализ в Excel](../analysis-services/lesson-12-analyze-in-excel.md)|20 минут| 
-|[Урок 13. Развертывание](../analysis-services/lesson-13-deploy.md)|5 минут|  
+|[Занятие 3. Пометить как таблицу дат](../analysis-services/lesson-3-mark-as-date-table.md)|3 минуты|  
+|[Занятие 4. Создание связей](../analysis-services/lesson-4-create-relationships.md)|10 минут.|  
+|[Занятие 5. Создание вычисляемых столбцов](../analysis-services/lesson-5-create-calculated-columns.md)|15 минут|
+|[Занятие 6. Создание мер](../analysis-services/lesson-6-create-measures.md)|30 минут|  
+|[Занятие 7. Создание ключевых показателей эффективности](../analysis-services/lesson-7-create-key-performance-indicators.md)|15 минут|  
+|[Занятие 8. Создание перспектив](../analysis-services/lesson-8-create-perspectives.md)|5 минут|  
+|[Занятие 9. Создание иерархий](../analysis-services/lesson-9-create-hierarchies.md)|20 минут|  
+|[Занятие 10. Создание секций](../analysis-services/lesson-10-create-partitions.md)|15 минут|  
+|[Занятие 11. Создание ролей](../analysis-services/lesson-11-create-roles.md)|15 минут|  
+|[Занятие 12. Анализ в Excel](../analysis-services/lesson-12-analyze-in-excel.md)|20 минут| 
+|[Занятие 13. Развертывание](../analysis-services/lesson-13-deploy.md)|5 минут|  
   
 ## <a name="supplemental-lessons"></a>Дополнительные занятия  
 Этот учебник также включает в себя [дополнительные занятия](http://msdn.microsoft.com/library/2018456f-b4a6-496c-89fb-043c62d8b82e). Ознакомление с содержащимися здесь разделами не требуется для прохождения этого учебника, но может оказаться полезным для лучшего освоения функций для работы с расширенной табличной моделью.  

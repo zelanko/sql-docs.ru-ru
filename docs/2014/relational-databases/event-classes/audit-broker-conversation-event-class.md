@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41a52cbbcfd898b60255779b91e4dd68fb326749
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e92b8dacf3f1d4c9bf4992739acc7592f2135386
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067124"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795195"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие **Audit Broker Conversation** для выдачи сообщений аудита, относящихся к безопасности диалога компонента Service Broker.  
@@ -53,7 +52,7 @@ ms.locfileid: "48067124"
   
  Следующая таблица содержит список значений подклассов события для этого класса событий.  
   
-|Идентификатор|Подкласс|Описание|  
+|ID|Подкласс|Описание|  
 |--------|--------------|-----------------|  
 |1|Отсутствует заголовок безопасности|Во время защищенного диалога компонента Service Broker получил сообщение, которое не содержит ключа сеанса. Протокол требует, чтобы после установления защищенного диалога каждое сообщение содержало ключ сеанса.|  
 |2|Отсутствует сертификат|Компонент Service Broker не смог найти подходящего сертификата для одного из участников диалога. Для защиты диалога база данных должна содержать сертификаты как отправителя, так и получателя.|  

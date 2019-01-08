@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
@@ -19,12 +18,12 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d9549d988da0892324ceafbbd471e7e201557e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6ded31664a8eaf6b11bc630754752677d46d7ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204804"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750336"
 ---
 # <a name="install-integration-services"></a>Установка служб Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет единую программу установки для всех компонентов, включая службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Она позволяет на одном компьютере устанавливать службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] как вместе с другими компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и отдельно от них.  
@@ -125,6 +124,6 @@ ms.locfileid: "48204804"
  64-разрядные функции устанавливаются в каталог **Program Files** , а 32-разрядные — отдельно в каталог **Program Files (x86)** . (Это одинаково для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 > [!IMPORTANT]  
->  Среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 32-разрядная среда разработки для пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], не поддерживается на 64-разрядных платформах [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] и не устанавливается на серверы на базе процессоров [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 32-разрядная среда разработки для пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , не поддерживается на 64-разрядных платформах [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] и не устанавливается на серверы на базе процессоров [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] .  
   
   

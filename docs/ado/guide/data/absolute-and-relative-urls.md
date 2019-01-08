@@ -15,12 +15,12 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c00420d6bed0b49c6e136c82f03460dcaaea8a85
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604884"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541932"
 ---
 # <a name="absolute-and-relative-urls"></a>Абсолютные и относительные URL-адреса
 URL-адрес указывает расположение целевого объекта, хранящиеся на локальном или сетевом компьютере. Целевой объект может быть файл, каталог, HTML-страницы, изображения, программы и т. д.*.*  
@@ -58,7 +58,7 @@ URL-адрес указывает расположение целевого об
  Контекст можно также определить, открыв **записи** или **записей** объект, который представляет каталог, так как эти объекты уже имеется неявно или явно объявленных **подключения**  , указывающий контекст.  
   
 ## <a name="scoped-operations"></a>Области операций  
- Контекст также определяет область, то есть каталог и его подкаталогах, которые могут участвовать в последующих операциях. **Записи** объект имеет несколько ограниченных методов, которые работают в каталоге и всех его подкаталогах. Эти методы включают в себя [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), и [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
+ Контекст также определяет область — то есть каталог и его подкаталогах, которые могут участвовать в последующих операциях. **Записи** объект имеет несколько ограниченных методов, которые работают в каталоге и всех его подкаталогах. Эти методы включают в себя [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), и [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
   
 ## <a name="relative-urls-as-command-text"></a>Относительный URL-адреса как текст команды  
  Можно указать команды, которые будут выполнены в источнике данных, введя строку в *CommandText* параметр **подключения** объекта [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) метод и в  *Источник* параметр **записей** объекта [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод.  

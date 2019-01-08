@@ -11,12 +11,12 @@ ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3c0e257a3fe1b4aff1f1c9336f4cb11e8a12e613
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5982bd49a5b7847cb8c09a7e46ca077bbe0e2d2b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088734"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521621"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Определение свойств Unknown Member и Null Processing
   В процессе обработки измерения службами [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] его атрибуты заполняются всеми уникальными значениями, полученными из базовых столбцов представлений и таблиц в представлении источника данных. Если при обработке службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] обнаруживают значение NULL, по умолчанию оно преобразуется в нулевое значение для числовых столбцов или в пустую строку — для строковых. Можно изменить значения по умолчанию или преобразовывать значения NULL в процессе извлечения, преобразования или загрузки данных (если они выполняются) из базового реляционного хранилища данных. Кроме того, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно настроить для преобразования значения NULL в указанное значение настройкой трех свойств: **UnknownMember** и **UnknownMemberName** для измерения и **NullProcessing** для ключевого атрибута измерения.  
@@ -90,7 +90,7 @@ ms.locfileid: "48088734"
   
 9. В **атрибуты** область, измените имя этого нового атрибута на `Category`.  
   
-10. В окне свойств щелкните поле свойства **NameColumn** , а затем нажмите кнопку обзора (**…**), чтобы открыть диалоговое окно **Столбец имени** .  
+10. В окне «Свойства» щелкните **NameColumn** свойство и нажмите кнопку обзора (**...** ) кнопку, чтобы открыть **столбец имени** диалоговое окно.  
   
 11. В списке **Исходный столбец** выберите **EnglishProductCategoryName** и нажмите кнопку **ОК**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48088734"
   
 13. В **атрибуты** область, измените имя этого нового атрибута на `Subcategory`.  
   
-14. В окне свойств щелкните поле свойства **NameColumn** , а затем нажмите кнопку обзора ( **…** ), чтобы открыть диалоговое окно **Столбец имени** .  
+14. В окне «Свойства» щелкните **NameColumn** свойство и нажмите кнопку обзора **(...)**  кнопку, чтобы открыть **столбец имени** диалоговое окно.  
   
 15. В списке **Исходный столбец** выберите **EnglishProductSubcategoryName** и нажмите кнопку **ОК**.  
   
@@ -179,6 +179,6 @@ ms.locfileid: "48088734"
      ![Уровень имя продукта, с компонентами сборки](../../2014/tutorials/media/l4-assemblycomponents-1.gif "уровень название продукта, с компонентами сборки")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 5. Определение связей между измерениями и группами мер](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Занятие 5. Определение связей между измерениями и группами мер](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   

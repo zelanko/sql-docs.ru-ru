@@ -17,12 +17,12 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9553eb4a9993186e3864a9ae0014ce702b7a8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136194"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414601"
 ---
 # <a name="using-large-value-types"></a>Использование типов больших значений
   До выхода [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] работа с типами данных больших значений требовала особой обработки. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] представленные **max** описатель для **varchar**, **nvarchar** и **varbinary** типы данных, чтобы разрешить хранение значений размером до 2 ^ 31 -1 байты. Столбцы таблицы и [!INCLUDE[tsql](../../../includes/tsql-md.md)] указать переменные **varchar(max)**, **nvarchar(max)** или **varbinary(max)** типов данных.  

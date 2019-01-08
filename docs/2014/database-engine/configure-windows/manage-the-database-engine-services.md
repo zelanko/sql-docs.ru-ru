@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, accessing
@@ -25,12 +24,12 @@ ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d99ea23504c3777bd3e4f1d9213e590d1cb0f282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e747a85c816c8e57757be9acb61b14204266ff35
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169744"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639240"
 ---
 # <a name="manage-the-database-engine-services"></a>Управление службами компонента Database Engine
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается в операционной системе в качестве службы. Служба — это особый вид приложения, которое выполняется в системе в фоновом режиме. Службы обычно обеспечивают базовые функции операционной системы, например: ведение журнала событий, доступ к файлам или веб-страницам. Службы могут выполняться без отображения своего пользовательского интерфейса на рабочем столе компьютера. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и некоторые другие компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как службы и обычно запускаются при запуске операционной системы. Некоторые службы по умолчанию не запускаются, это зависит от указанных при установке параметров. В этом разделе описывается управление различными службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Прежде чем входить в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо уметь запускать, останавливать, приостанавливать и возобновлять, а также перезапускать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После входа можно выполнять различные задачи: администрировать сервер или выполнять запросы к базе данных.  
@@ -63,7 +62,7 @@ ms.locfileid: "48169744"
 |[Запуск SQL Server при наличии и отсутствии сети](run-sql-server-with-or-without-a-network.md)|[Настройка параметров запуска сервера (диспетчер конфигурации SQL Server)](scm-services-configure-server-startup-options.md)|  
 |[Служба обозревателя SQL Server (компонент Database Engine и SSAS)](sql-server-browser-service-database-engine-and-ssas.md)|[Изменение пароля учетных записей, используемых SQL Server (диспетчер конфигурации SQL Server)](scm-services-change-the-password-of-the-accounts-used.md)|  
 |[Параметры запуска службы Database Engine](database-engine-service-startup-options.md)|[Настройка журналов ошибок SQL Server](scm-services-configure-sql-server-error-logs.md)|  
-|[Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](start-stop-pause-resume-restart-sql-server-services.md)|[Изменение режима проверки подлинности сервера](change-server-authentication-mode.md)|  
+|[Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](start-stop-pause-resume-restart-sql-server-services.md)|[Изменение режима проверки подлинности сервера](change-server-authentication-mode.md)|  
 |[Запуск SQL Server в однопользовательском режиме](start-sql-server-in-single-user-mode.md)|[cлужба «Модуль записи SQL»](sql-writer-service.md)|  
 |[Запустите SQL Server с минимальной конфигурацией](start-sql-server-with-minimal-configuration.md)|[Рассылка сообщения о завершении работы (командная строка)](broadcast-a-shutdown-message-command-prompt.md)|  
 |[Подключение к другому компьютеру (диспетчер конфигурации SQL Server)](scm-services-connect-to-another-computer.md)|[Вход в экземпляр SQL Server (командная строка)](log-in-to-an-instance-of-sql-server-command-prompt.md)|  

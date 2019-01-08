@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87a5be3dc726b86b1710dd45416404cf3899f4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595702"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507644"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,8 +79,8 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|Идентификатор строки в результирующем наборе.|  
 |**parameter_name**|**sysname**|Имя одного из параметров, указанных в  *\@params* аргумент.|  
-|**column_encryption_algorithm**|**tinyint**|Код, указывающий на алгоритм шифрования, настроенным для столбца, параметра соответствует. В настоящее время поддерживаются значения: 2 для **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
-|**column_encryption_type**|**tinyint**|Код, указывающий тип шифрования, настроенным для столбца, параметра соответствует. Поддерживаемыми значениями являются:<br /><br /> 0 — в виде обычного текста (столбец не зашифрован)<br /><br /> 1 — случайное шифрование<br /><br /> 2 — детерминированного шифрования.|  
+|**column_encryption_algorithm**|**tinyint**|Код, указывающий на алгоритм шифрования, настроенным для столбца, параметра соответствует. В настоящее время поддерживаются значения: 2 — **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
+|**column_encryption_type**|**tinyint**|Код, указывающий тип шифрования, настроенным для столбца, параметра соответствует. Поддерживаемыми значениями являются:<br /><br /> 0 — в виде обычного текста (столбец не зашифрован)<br /><br /> 1 — случайное шифрование<br /><br /> 2 - детерминированного шифрования.|  
 |**column_encryption_key_ordinal**|**int**|Задать код строки в первый результат. Соответствующей строки описывает ключ шифрования столбца, настроенным для столбца, соответствующий параметр.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Номер версии алгоритма тип нормализации.|  
   
@@ -165,7 +165,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |1|1|  
   
 ## <a name="see-also"></a>См. также  
- [Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Постоянное шифрование (компонент Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Постоянное шифрование (разработка клиентских приложений)](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

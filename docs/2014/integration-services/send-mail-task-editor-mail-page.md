@@ -15,12 +15,12 @@ ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f8c4992477fa5bdbf533f3a1933c4092f1d162c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5608877b30f453502bd9c6f0da74a8c5a68c71a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089510"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510200"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Редактор задачи «Отправка почты» (страница «Почта»)
   Страница **Почта** диалогового окна **Редактор задачи «Отправка почты»** служит для определения получателей, типа и приоритета сообщения. К сообщению можно также прикрепить файлы. Текстом сообщения может быть введенная строка, соединение с файлом, содержащим текст, или имя переменной, содержащей текст.  
@@ -73,23 +73,23 @@ ms.locfileid: "48089510"
   
 ### <a name="messagesourcetype--direct-input"></a>MessageSourceType = Прямой ввод  
  **MessageSource**  
- Введите текст сообщения или нажмите кнопку обзора (…), а затем введите сообщение в диалоговом окне **Источник сообщения** .  
+ Введите текст сообщения или нажмите кнопку обзора (...), а затем введите сообщение в диалоговом окне **Источник сообщения**.  
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Соединение с файлом  
  **MessageSource**  
- Выберите диспетчер подключений файлов из списка или щелкните \<**Создать соединение…**>, чтобы создать его.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = Переменная  
  **MessageSource**  
- Выберите переменную из списка или нажмите кнопку \<**Создать переменную…**>, чтобы создать переменную.  
+ Выберите переменную в списке или щелкните \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md)  
+ **См. также:** [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [добавить переменную](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор Отправка почты задач &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
- [Страница "Выражения"](expressions/expressions-page.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Отправка почты" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Web synchronization, topologies
@@ -14,12 +13,12 @@ ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3607a2d85005827421353be5f9871c58de9f5a41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191814"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815556"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
   Существует несколько топологий репликации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для веб-синхронизации. Наиболее часто используемые способы настройки веб-синхронизации включают в себя следующие.  
@@ -59,6 +58,6 @@ ms.locfileid: "48191814"
   
 ## <a name="see-also"></a>См. также  
  [Настройка веб-синхронизации](configure-web-synchronization.md)   
- [Веб-синхронизация для репликации слиянием](web-synchronization-for-merge-replication.md)  
+ [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
   
   

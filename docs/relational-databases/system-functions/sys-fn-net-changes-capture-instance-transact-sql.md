@@ -21,12 +21,12 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eff2dd82db75bf1dc0114477152cb18b9d715d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681752"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416325"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  Битовые флаги, затем добавляются в результирующий набор для каждого столбца, указанного в параметре @update_flag_list. Для **net изменения** оболочки, значение флагов всегда иметь значение NULL, если @row_filter_option то есть в вызов функции-оболочки используется 'all' или «all with merge». Если @row_filter_option имеет значение «all with замаскированы», а также __CDC_OPERATION равно d ' или 'I', значение флага также будет иметь значение NULL. Если \__CDC_OPERATION имеет значение 'UN', флаг будет указано значение 1 или 0 в зависимости от того, следует ли **net** изменен столбец операция обновления.  
   
- Шаблон конфигурации «Instantiate CDC Wrapper TVFs for Schema» для системы отслеживания измененных данных показывает, как использовать хранимую процедуру sp_cdc_generate_wrapper_function, чтобы получить скрипты CREATE для всех функций-оболочек для функций запросов, определенных в схеме. Затем шаблон создает эти скрипты. Дополнительные сведения о шаблонах см. в разделе [обозреватель шаблонов](../../ssms/template/template-explorer.md).  
+ Шаблон конфигурации системы отслеживания измененных данных изменений «Создать экземпляр CDC Wrapper TVFs for Schema» показано, как использовать хранимую процедуру sp_cdc_generate_wrapper_function, чтобы получить скрипты CREATE для всех функций-оболочек для функций запросов, определенных в схеме. Затем шаблон создает эти скрипты. Дополнительные сведения о шаблонах см. в разделе [обозреватель шаблонов](../../ssms/template/template-explorer.md).  
   
 ## <a name="see-also"></a>См. также  
  [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

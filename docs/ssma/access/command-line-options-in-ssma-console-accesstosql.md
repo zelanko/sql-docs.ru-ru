@@ -10,12 +10,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 6c1e8480308f0ffb8b4966bf61b395072ae2390b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8065bcfda3066fae31be982e25f054c07bca3a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807442"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532011"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Параметры командной строки в консоли SSMA (AccessToSQL)
 Майкрософт предоставляет широкий набор параметров командной строки для выполнения и SSMA действия управления. Последующих разделах приведены дополнительные сведения.  
@@ -35,20 +35,20 @@ ms.locfileid: "47807442"
   
 `C:\> SSMAforAccessConsole.EXE -s scriptfile`  
   
-`C:\> SSMAforAccessConsole.EXE -s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml” –v “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\VariableValueFileSample.xml” –c “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml”`  
+`C:\> SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\VariableValueFileSample.xml" -c "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml"`  
   
 Имена файла или папки, содержащие пробелы должны указываться в двойные кавычки.  
   
 Выходные данные командной строки операции и сообщения об ошибках хранится в STDOUT, или в указанном файле.  
   
-### <a name="script-file-option-sscript"></a>Параметр файла скрипта: – s или сценарий  
+### <a name="script-file-option--sscript"></a>Параметр файла скрипта: -s или сценарий  
 Обязательный параметр, путь и имя файла скрипта указывает сценарий из последовательностей команд, который будет выполнен задачей SSMA.  
   
 **Примеры синтаксиса.**  
   
-`C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”`  
+`C:\>SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"`  
   
-### <a name="variable-value-file-option-vvariable"></a>Параметр file значение переменной: – v/переменная  
+### <a name="variable-value-file-option--vvariable"></a>Параметр file значение переменной: - v или переменная  
 Значение переменной файл состоит из переменных, используемых в файле скрипта. Параметр является необязательным. Если переменные не объявляются в файле переменных и использовать в файле скрипта, приложение выдает ошибку и прекращает выполнение консоли.  
   
 **Примеры синтаксиса.**  
@@ -57,11 +57,11 @@ ms.locfileid: "47807442"
   
     `C:\>SSMAforAccessConsole.EXE -s`  
   
-    `“C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml” –v c:\migration`  
+    `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml" -v c:\migration`  
   
-    `projects\global_variablevaluefile.xml –v “c:\migrationprojects\instance_variablevaluefile.xml”`  
+    `projects\global_variablevaluefile.xml -v "c:\migrationprojects\instance_variablevaluefile.xml"`  
   
-### <a name="server-connection-file-option-cserverconnection"></a>Параметр файла подключения сервера: – c/serverconnection  
+### <a name="server-connection-file-option--cserverconnection"></a>Параметр файла подключения сервера: - c/serverconnection  
 Этот файл содержит сведения о подключении сервера для каждого сервера. Определение каждого сервера идентифицируемый уникальный идентификатор сервера. Идентификаторы Server указываются в файле скрипта для команды, относящиеся к соединению.  
   
 Определение сервера может быть частью файла подключения сервера и/или файл скрипта. Идентификатор сервера в файле сценария имеет приоритет над файле подключения сервера, в случае дублирования идентификатор сервера.  
@@ -70,15 +70,15 @@ ms.locfileid: "47807442"
   
 -   Server идентификаторы используются в файле скрипта. Они определяются в файле подключения отдельный сервер. Этот файл использует переменные, определенные в файле значение переменной:  
   
-    `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –v`  
+    `C:\>SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -v`  
   
-    `c:\SsmaProjects\myvaluefile1.xml –c`  
+    `c:\SsmaProjects\myvaluefile1.xml -c`  
   
     `c:\SsmaProjects\myserverconnectionsfile1.xml`  
   
 -   Определение сервера внедряется в файле сценария:  
   
-    `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”`  
+    `C:\>SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"`  
   
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>Формат вывода XML: - x / xmloutput [xmloutputfile]  
 Эта команда используется для вывода команды исходящие сообщения в формате xml на консоль или в XML-файл.  
@@ -89,44 +89,44 @@ ms.locfileid: "47807442"
   
     **Пример синтаксиса:**  
   
-    `C:\>SSMAforAccessConsole.EXE –s`  
+    `C:\>SSMAforAccessConsole.EXE -s`  
   
-    `“C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –x d:\xmloutput\project1output.xml`  
+    `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -x d:\xmloutput\project1output.xml`  
   
 -   Если после параметра xmloutput не filepath, xmlout отображается на самой консоли.  
   
     **Пример синтаксиса:**  
   
-    `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –xmloutput`  
+    `C:\>SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -xmloutput`  
   
-### <a name="log-file-option-llog"></a>Параметр файла журнала: – l/log  
+### <a name="log-file-option--llog"></a>Параметр файла журнала: -l/log  
 В файл журнала записываются все операции SSMA в консольном приложении, и параметр является необязательным. Если файл журнала и пути указаны в командной строке, журнала создается в указанном расположении. В противном случае он возвращает создан в расположении по умолчанию.  
   
 **Пример синтаксиса:**  
   
 `C:\>SSMAforAccessConsole.EXE`  
   
-`“C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –l c:\SsmaProjects\migration1.log`  
+`"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -l c:\SsmaProjects\migration1.log`  
   
-### <a name="project-environment-folder-option-eprojectenvironment"></a>Проект среды папку параметр: – e/projectenvironment  
+### <a name="project-environment-folder-option--eprojectenvironment"></a>Параметр среды папку проекта: -e/projectenvironment  
 Этот необязательный параметр обозначает папке проекта среда параметры для текущего проекта SSMA.  
   
 **Пример синтаксиса:**  
   
-`C:\>SSMAforAccessConsole.EXE –s`  
+`C:\>SSMAforAccessConsole.EXE -s`  
   
-`“C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –e c:\SsmaProjects\CommonEnvironment`  
+`"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
 ||  
 |-|  
 ||  
   
-### <a name="secure-password-option-psecurepassword"></a>Защита параметр password: – p/securepassword  
+### <a name="secure-password-option--psecurepassword"></a>Защита параметр password: -p/securepassword  
 Этот параметр указывает зашифрованный пароль для соединения с сервером. Он отличается от других параметров, в том, что он не выполнить любой скрипт или справки в любых действиях, связанные с миграцией, но помогает управлять шифрование пароля для соединения сервера, используемые в проекте миграции.  
   
 Невозможно ввести любой параметр или пароль в качестве параметра командной строки. В противном случае он приводит к ошибке. Дополнительные сведения см. в разделе [управление паролями](managing-passwords-accesstosql.md) раздел.  
   
-Поддерживаются следующие подпараметров `–p/securepassword`:  
+Поддерживаются следующие подпараметров `-p/securepassword`:  
   
 -   Чтобы добавить пароль, или обновить существующий пароль, к защищенному хранилищу для указанного ИД сервера или для всех идентификаторов серверов, определенные в файле подключения сервера:  
   
@@ -136,30 +136,30 @@ ms.locfileid: "47807442"
   
 -   Чтобы удалить зашифрованный пароль из защищенного хранилища указанного идентификатора сервера, или для всех идентификаторов серверов:  
   
-    `–p/securepassword –r/remove {<server_id> [, …n] | all}`  
+    `-p/securepassword -r/remove {<server_id> [, ...n] | all}`  
   
 -   Чтобы отобразить список идентификаторов серверов, для которого шифруется пароль:  
   
-    `–p/securepassword –l/list`  
+    `-p/securepassword -l/list`  
   
 -   Чтобы экспортировать паролей, хранящихся в защищенном хранилище для зашифрованного файла. Этот файл шифруется с помощью пользовательской парольную фразу.  
   
-    `–p/securepassword –e/export {<server-id> [, …n] | all} <encrypted-password -file>`  
+    `-p/securepassword -e/export {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
 -   Шифрование файл, экспортированный ранее импортируется в локальное хранилище защищенных, с помощью пользовательской парольную фразу. После расшифровки файл сохраняется в новом файле, который, в свою очередь, зашифрован на локальном компьютере.  
   
-    `–p/securepassword –i/import {<server-id> [, …n] | all} <encrypted-password -file>`  
+    `-p/securepassword -i/import {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
     Можно указать несколько идентификаторов серверов при помощи запятые разделители.  
   
-### <a name="help-option-help"></a>Help-параметр: –? / Help  
+### <a name="help-option--help"></a>Help-параметр:-? / Help  
 Отображает сводку синтаксиса параметров консоли SSMA:  
   
 `C:\>SSMAforAccessConsole.EXE -?`  
   
 Табличного отображения команд консоли SSMA параметров командной строки, см. в разделе [приложение 1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md).  
   
-### <a name="securepassword-help-option-securepassword--help"></a>Параметр справки SecurePassword: — securepassword-? / Help  
+### <a name="securepassword-help-option--securepassword--help"></a>Параметр справки SecurePassword: - securepassword-? / Help  
 Отображает сводку синтаксиса параметров консоли SSMA:  
   
 `C:\>SSMAforAccessConsole.EXE -securepassword -?`  

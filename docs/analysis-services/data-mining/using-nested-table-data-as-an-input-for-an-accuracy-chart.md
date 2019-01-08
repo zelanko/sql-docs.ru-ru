@@ -1,5 +1,5 @@
 ---
-title: Использования данных вложенной таблицы в качестве входных данных для диаграммы точности | Документы Microsoft
+title: С помощью данных вложенной таблицы в качестве входных данных для диаграммы точности | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 68ab3e189bcf0637003f4ddae41e5f0209988241
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d4217962e6bb899cbf2a838c5214eb35bb576be0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015682"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505313"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Использование данных вложенной таблицы в качестве входных для диаграммы точности
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34015682"
   
 3.  Выберите параметр **Задать другой набор данных**в области **Выбор набора данных для диаграммы точности**.  
   
-4.  Нажмите кнопку обзора **(…)** , чтобы выбрать из списка представлений источников данных внешний набор данных на текущем сервере.  
+4.  Нажмите кнопку обзора **(...)**  выбрать внешний набор данных из списка представлений источников данных на текущем сервере.  
   
 5.  Щелкните **Выбор таблицы вариантов**. В диалоговом окне **Выбор таблицы** выберите из представления источников данных таблицу, содержащую данные варианта, и нажмите кнопку **ОК**.  
   

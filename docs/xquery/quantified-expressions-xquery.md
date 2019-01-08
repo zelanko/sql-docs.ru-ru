@@ -23,12 +23,12 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 761e0c000666fc413c060bf4f01ea24b307d3fbd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 413a9519cbfcb036c5e7242889c4eaf4ec89d413
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665403"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515387"
 ---
 # <a name="quantified-expressions-xquery"></a>Выражения с квантором (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51665403"
  XQuery поддерживает выражения с квантором в следующем виде:  
   
 ```  
-( some | every ) <variable> in <Expression> (,…) satisfies <Expression>  
+( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
  Можно использовать эти выражения в запросе для явного применения квантификации существования или всеобщности к выражению в отношении одной или нескольких последовательностей. В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выражение в предложении `satisfies` должно привести к одному из следующих результатов: узловая последовательность, пустая последовательность или логическое значение. Действительное логическое значение результата этого выражения будет использовано в квантификации. Уже существует, использующая выражение **некоторые** возвращает значение True, если хотя бы одно из значений, связанных квантором, имеет результат True в выражении satisfy. Всеобщности, использующая **каждые** должен иметь значение True для всех значений, связанных квантором.  

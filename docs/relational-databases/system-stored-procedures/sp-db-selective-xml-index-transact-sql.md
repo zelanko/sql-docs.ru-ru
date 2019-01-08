@@ -18,12 +18,12 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07145e608c850a877a984c7467da6b8974f0d151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8978c40141d0cd6031b9569ab0daa945666e7e85
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744602"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415161"
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47744602"
  Имя базы данных, где включается или отключается селективный XML-индекс. Если *db_name* имеет значение NULL, предполагается текущая база данных.  
   
  [  **@action =** ] **"***действие***"**  
- Определяет, следует включить или отключить индекс. Если передается значение, отличное от «on», «off», «true» или «false», то возникает ошибка.  
+ Определяет, следует включить или отключить индекс. Если значение, отличное «on», «true», «off» или «ЛОЖЬ» передается, возникает ошибка.  
   
 ```  
   

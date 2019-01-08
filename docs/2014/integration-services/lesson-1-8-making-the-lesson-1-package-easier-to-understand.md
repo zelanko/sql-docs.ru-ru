@@ -1,27 +1,26 @@
 ---
-title: Шаг 8. Облегчение чтения пакета, созданного на занятии 1 | Документы Майкрософт
+title: Шаг 8. Облегчение пакета занятия 1 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e549018c7f0654ba40ddd486149059b37ddd46e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04614b8d54815e4286a55b7501187e8ed218db0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072534"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750624"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Шаг 8. Облегчение чтения пакета, созданного на занятии 1
   После завершения настройки пакета, созданного на занятии 1, можно приступить к приведению его макета в порядок. Если фигуры в макетах элементов управления и потока данных имеют случайные размеры или если эти элементы не упорядочены или не сгруппированы, то функциональность пакета трудно понять.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools предоставляет средства, которые облегчают и ускоряют форматирование макета пакета. К функциям форматирования относится возможность создавать элементы одного размера, выравнивать их, а также управлять горизонтальным и вертикальным пространством между элементами.   
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools предоставляет средства, которые облегчают и ускоряют форматирование макета пакета. К функциям форматирования относится возможность создавать элементы одного размера, выравнивать их, а также управлять горизонтальным и вертикальным пространством между элементами.  
   
  Другим способом добиться лучшего понимания функциональности пакета является добавление заметок, описывающих функциональность пакета.  
   
@@ -52,6 +51,6 @@ ms.locfileid: "48072534"
      Если в окне заметки не введен никакой текст, то окно закрывается при щелчке за его пределами.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- [Шаг 9. Проверка учебного пакета, созданного на занятии 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [Шаг 9. Проверка учебного пакета занятия 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

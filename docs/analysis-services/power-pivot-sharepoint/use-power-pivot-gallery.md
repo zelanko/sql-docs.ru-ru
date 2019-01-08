@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2eb7bfae0c4fcbc82995c120ef588fdfd4710af
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 03752c2f1d7259f29f634473efdfe570c55b89ee
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980587"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405399"
 ---
 # <a name="use-power-pivot-gallery"></a>Использование коллекции PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "38980587"
 >  Для коллекции Power Pivot требуется Microsoft Silverlight.  Браузер Microsoft Edge не поддерживает Silverlight.   
 > Чтобы просмотреть содержание библиотеки в Microsoft Edge, щелкните вкладку **Библиотека** в коллекции Power Pivot, а затем измените представление библиотеки документов на **Все документы**.    
 > Чтобы изменить представление по умолчанию, щелкните вкладку **Библиотека** и щелкните "Изменить представление". Щелкните "Сделать представлением по умолчанию", а затем "ОК", чтобы сохранить представление по умолчанию.  
->  Дополнительную информацию о том, что поддерживается в Microsoft Edge, см. в статье блога Windows [Побег из прошлого, часть 2: прощание с ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Дополнительные сведения о том, что поддерживается Edge, см. в статье в блоге Windows [побег из прошлого, часть 2: Прощание с ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Полный список предварительных требований см. в статье [Create and Customize Power Pivot Gallery](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md).  
   
@@ -68,13 +68,13 @@ ms.locfileid: "38980587"
   
 1.  Сохраните файл.  
   
-2.  1.  **Excel 2010**: в меню "Файл" выберите **Сохранить и отправить**.  
+2.  1.  **Excel 2010:** В меню «Файл» выберите **сохранить и отправить**.  
   
     2.  Выберите операцию **Сохранить в SharePoint**.  
   
     3.  Если для выбора отдельных публикуемых листов или параметров требуется использовать параметры служб Excel, выберите **Параметры публикации** . Например, вкладка «Параметры» в параметрах служб Excel позволяет выбрать, какие срезы будут выводиться в опубликованной книге.  
   
-    1.  **Excel 2013**  : в меню "Файл" выберите **Сохранить**.  
+    1.  **Excel 2013:**  В меню «Файл» выберите **Сохранить**.  
   
     2.  Для выбора отдельных публикуемых листов или параметров требуется использовать параметры служб Excel, выберите **Параметры представления браузера** . Например, вкладка «Параметры» в параметрах служб Excel позволяет выбрать, какие срезы будут выводиться в опубликованной книге.  
   
@@ -153,16 +153,16 @@ ms.locfileid: "38980587"
 ### <a name="document-type-is-not-supported"></a>Тип документа не поддерживается  
  Тип содержимого **Документ коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** не поддерживается. Если включить тип содержимого **Документ коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** для библиотеки документов и попытаться создать новый документ этого типа, появится сообщение об ошибке, похожее на следующее:  
   
--   «Создать документ» требует приложение, совместимое с Microsoft Sharepoint Foundation, и веб-браузер. Чтобы добавить документ в эту библиотеку документов, нажмите кнопку «Передача документа».  
+-   «Создать документ» требует совместимыми с Microsoft Sharepoint Foundation приложения и веб-браузера. Чтобы добавить документ в эту библиотеку документов, нажмите кнопку «Передача документа».  
   
--   «Адрес в Интернете http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx недействителен». «Microsoft Excel не может получить доступ к файлу http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx». Существует несколько возможных причин.  
+-   "Адрес" http://[server name] / testSite/PowerPivot Gallery/reportgallery/Forms/Template.xlsx» "является недопустимым.»» Microsoft Excel не может получить доступ к файлу "http://[server name] / testSite/PowerPivot Gallery/reportgallery/Forms/Template.xlsx»". Существует несколько возможных причин.  
   
  Тип содержимого **Документ коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** не добавляется автоматически в библиотеки документов. Вы не столкнетесь с этой проблемой, если вручную не включите неподдерживаемый тип содержимого.  
   
 ## <a name="see-also"></a>См. также  
  [Создание надежного расположения для сайтов PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Удаление коллекции Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
- [Создание и настройка коллекции Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [Планирование обновления данных (Power Pivot для SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
+ [Create and Customize Power Pivot Gallery](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Планирование обновления данных (PowerPivot для SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   

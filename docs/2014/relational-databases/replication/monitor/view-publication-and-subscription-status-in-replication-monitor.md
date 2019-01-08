@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, monitoring
@@ -22,12 +21,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d408644f56f097e3389dab51d8b8d10ccc8954cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95fbb61460c23ca0fedf0baec71aa21acaa50398
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218244"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786746"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Просмотр состояний публикаций и подписок в мониторе репликации
   Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отображает сведения о состоянии публикаций и подписок:  
@@ -54,11 +53,11 @@ ms.locfileid: "48218244"
   
  **Просмотр состояния публикации и подписки**  
   
--   Монитор репликации: [Просмотр сведений и выполнение задач для публикации (монитор репликации)](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) и [Просмотр сведений и выполнение задач для подписки (монитор репликации)](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
+-   Монитор репликации: [Просмотр сведений и выполнение задач для публикации &#40;монитора репликации&#41; ](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) и [Просмотр сведений и выполнение задач для подписки &#40;монитора репликации&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
   
  **Просмотр подробных сведений об агентах**  
   
--   Монитор репликации: [Просмотр сведений и выполнение задач для агентов, ассоциированных с публикацией (монитор репликации)](view-information-and-perform-tasks-for-publication-agents.md) и [Просмотр сведений и выполнение задач для агентов, ассоциированных с подпиской (монитор репликации)](view-information-and-perform-tasks-for-subscription-agents.md).  
+-   Монитор репликации: [Просмотр сведений и выполнение задач для агентов, связанных с публикацией &#40;монитора репликации&#41; ](view-information-and-perform-tasks-for-publication-agents.md) и [Просмотр сведений и выполнение задач для агентов, связанных с подпиской &#40;репликации Монитор&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="publication-status-values"></a>Значения состояния публикации  
  В следующей таблице содержатся значения состояния публикации и соответствующие им значки в порядке приоритета.  

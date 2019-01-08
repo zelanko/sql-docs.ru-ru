@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -22,12 +21,12 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41762bb046e5b118d7802555c2b676378e81df7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d7ea5c6424283bd7b8aaa44f8a026ea18a9db30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122844"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751126"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Обработчики событий в службах Integration Services (SSIS)
   Во время выполнения исполняемых объектов (пакетов, контейнеров «цикл по каждому элементу», «цикл по элементам», последовательности и узлы задач) возникают события. Например, в случае ошибки возникает событие OnError. Можно создать пользовательские обработчики событий для этих событий, чтобы расширить функциональность пакетов и упростить управление пакетами во время их выполнения. Обработчики событий могут выполнять следующие задачи:  
@@ -46,7 +45,7 @@ ms.locfileid: "48122844"
   
  ![Пакет, контейнер "Цикл по элементам", сервер задач, задача "Выполнение SQL"](media/mw-dts-eventhandlerpkg.gif "Пакет, контейнер \"Цикл по элементам\", сервер задач, задача \"Выполнение SQL\"")  
   
- Только у пакета имеется обработчик для события `OnError`. Если произошла ошибка при выполнении задачи «Выполнение SQL», `OnError` запускает обработчик событий для пакета. На следующей схеме показана последовательность вызовов, вследствие `OnError` обработчик событий для выполнения пакета.  
+ Только у пакета имеется обработчик для события `OnError`. Когда ошибка происходит во время выполнения задачи «Выполнение SQL», то запускается обработчик события `OnError` данного пакета. Следующая диаграмма показывает последовательность вызовов, вследствие которой выполняется обработчик события `OnError` данного пакета.  
   
  ![Поток обработчиков событий](media/mw-dts-eventhandlers.gif "Поток обработчиков событий")  
   
@@ -84,13 +83,13 @@ ms.locfileid: "48122844"
 |**OnProgress**|Обработчик события **OnProgress** . Событие вызывается исполняемым объектом в процессе выполнения.|  
 |**OnQueryCancel**|Обработчик события **OnQueryCancel** . Событие вызывается исполняемым объектом, чтобы установить, следует ли ему прекратить выполнение.|  
 |**OnTaskFailed**|Обработчик события **OnTaskFailed** . Событие вызывается неудачно завершившейся задачей.|  
-|**OnVariableValueChanged**|Обработчик события **OnVariableValueChanged** . Событие вызывается исполняемым объектом при изменении значения переменной. Событие вызывается исполняемым объектом, в котором определена переменная. Это событие не происходит, если **RaiseChangeEvent** свойства переменной для `False`. Дополнительные сведения см. в разделе [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|Обработчик события **OnVariableValueChanged** . Событие вызывается исполняемым объектом при изменении значения переменной. Событие вызывается исполняемым объектом, в котором определена переменная. Это событие не происходит, если **RaiseChangeEvent** свойства переменной для `False`. Дополнительные сведения см. в разделе [Переменные служб Integration Services (SSIS)](integration-services-ssis-variables.md).|  
 |**OnWarning**|Обработчик события **OnWarning** . Событие вызывается исполняемым объектом при возникновении предупреждения.|  
   
 ## <a name="configuration-of-an-event-handler"></a>Настройка обработчика событий  
  Задать свойства можно в окне **Свойства** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] или программными средствами.  
   
- Дополнительные сведения о настройке свойств этих свойств в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] см. в разделе [Задание свойств задач или контейнеров](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  
+ Дополнительные сведения о настройке свойств этих свойств в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]см. в разделе [Задание свойств задач или контейнеров](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  
   
  Дополнительные сведения о настройке этих свойств программными средствами см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - restoring file state [SQL Server]
@@ -29,12 +28,12 @@ ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3acbe6dffaec03e876f4d9cfc1092c7d6367c364
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc37fbade038b39d6d05cb5b51ecc3e8ba405e2a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071804"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816306"
 ---
 # <a name="file-states"></a>Состояния файла
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]состояние файла базы данных поддерживается независимо от состояния базы данных. Файл всегда находится в одном определенном состоянии, таком как ONLINE или OFFLINE. Чтобы просмотреть текущее состояние файла, используйте представление каталога [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) или [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) . Если база данных находится в состоянии вне сети, то состояние файлов можно просмотреть в представлении каталога [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) .  
@@ -44,7 +43,7 @@ ms.locfileid: "48071804"
 ## <a name="file-state-definitions"></a>Определения состояний файлов  
  Состояния файлов определяются в следующей таблице.  
   
-|Состояние|Определение|  
+|Штат|Определение|  
 |-----------|----------------|  
 |ONLINE|Файл доступен для всех операций. Если база данных находится в режиме в сети, то файлы первичной файловой группы всегда находятся в режиме в сети. Если файл первичной файловой группы не находится в режиме в сети, то база данных тоже не находится в режиме в сети, и состояния файлов во вторичной файловой группе не определены.|  
 |OFFLINE|Файл недоступен и, возможно, отсутствует на диске. Файлы переходят в режим вне сети с помощью явного указания пользователя и остаются в режиме вне  сети до тех пор, пока пользователем не будет предпринято дополнительное действие.<br /><br /> **\*\* Внимание! \*\*** Файл следует устанавливать в режим "вне сети" только в том случае, если он поврежден, но может быть восстановлен. Файл, который установлен в режим вне сети, может быть установлен в режим в сети только путем восстановления файла из резервной копии. Дополнительные сведения о восстановлении одного файла см. в разделе [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql).|  

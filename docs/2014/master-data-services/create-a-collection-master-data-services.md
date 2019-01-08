@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating collections [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 386da4804e3153361e055fc11cff6dfc2352a473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c0e899ebc7180fdfbe234c893cb364d3f9d01ee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208844"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782356"
 ---
 # <a name="create-a-collection-master-data-services"></a>Создание коллекции (службы Master Data Services)
   Если нужно создать плоские списки конечных и консолидированных элементов, создайте коллекцию в среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Коллекции необязательно должны включать все элементы из сущности.  
@@ -55,11 +54,11 @@ ms.locfileid: "48208844"
   
 ## <a name="next-steps"></a>Следующие шаги  
   
--   [Добавление элементов в коллекцию &#40;службы Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
+-   [Добавление элементов в коллекцию (службы Master Data Services)](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
- [Коллекции &#40;службы Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)   
- [Удаление элемента или коллекции &#40;службы Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [Создание явной иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
+ [Коллекции (службы Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)   
+ [Удаление элемента или коллекции (службы Master Data Services)](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [Создание явной иерархии (службы Master Data Services)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
   

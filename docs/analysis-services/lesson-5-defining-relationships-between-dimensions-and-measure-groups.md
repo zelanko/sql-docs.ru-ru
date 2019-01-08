@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 5: Определение связей между измерениями и группами мер | Документы Microsoft'
+title: Занятие 5. Определение связей между измерениями и группами мер | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 551959168ab52b0806876ce1a6b6a1fbdd11bfaa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f9aa0ca58517dd8eb069024fb6a9acf9080481b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016111"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524795"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Занятие 5. Определение связей между измерениями и группами мер
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,24 +29,24 @@ ms.locfileid: "34016111"
 Это занятие содержит следующие задачи.  
   
 [Определение ссылочной связи](../analysis-services/lesson-5-1-defining-a-referenced-relationship.md)  
-В этой задаче будет изучено, как можно косвенно связать измерение с таблицей фактов через измерение, имеющее прямую связь, с помощью связи «первичный ключ — внешний ключ».  
+В этой задаче вы узнаете, как связать измерение с таблицей фактов, косвенно через измерение, связана напрямую с помощью первичного ключа-внешнего ключа.  
   
 [Определение связи фактов](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
 В этой задаче будет изучено, как создать измерение, основанное на данных таблицы фактов, а также как определить связь измерений как связь фактов.  
   
-[Определение связи «многие ко многим»](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
+[Определение связи "многие ко многим"](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
 В этой задаче будет изучено, как связать факт с несколькими элементам измерения путем создания связи «многие ко многим» между таблицами измерений и таблицами фактов.  
   
 [Определение степени гранулярности измерения в группе мер](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
 В этой задаче будет изучено, как изменить степень гранулярности измерения для конкретной группы показателей.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Урок 6: Создание вычислений коэффициента](../analysis-services/lesson-6-defining-calculations.md)  
+[Занятие 6. Определение вычислений](../analysis-services/lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>См. также  
 [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Многомерное моделирование & #40; Учебник по Adventure Works & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[Связей измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+[Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Связи измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], assigning functional area permissions
@@ -14,12 +13,12 @@ ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6a485c3c3293316502a4d5038d39070fb1f43185
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1649b95e751a3ea3a93285f480b0ec9b2b04075
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096994"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814296"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Назначение разрешений для функциональной области (службы Master Data Services)
   Разрешения для функциональной области назначаются, чтобы предоставить пользователям или группам доступ к функциональным областям [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -47,10 +46,10 @@ ms.locfileid: "48096994"
   
 ## <a name="next-steps"></a>Следующие шаги  
   
--   [Назначение разрешений объекта модели &#40;службы Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
+-   [Назначение разрешения для объекта модели (службы Master Data Services)](assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также  
- [Создание администратора модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   
+ [Создание администратора модели (службы Master Data Services)](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   
  [Безопасность (службы Master Data Services)](../../2014/master-data-services/security-master-data-services.md)  
   
   

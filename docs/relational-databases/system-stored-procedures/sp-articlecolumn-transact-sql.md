@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_articlecolumn
@@ -17,12 +16,12 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d9238e5b0f8ad5480e05ded3a0154eb5510904
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 636a0a23c70170ce625b9e462e2715c1c884bda7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640722"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210123"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
+ [  **@publication=**] **"**_публикации_**"**  
  Имя публикации, которая содержит эту статью. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article=**] **"***статье***"**  
+ [  **@article=**] **"**_статье_**"**  
  Имя статьи. *статья* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@column=**] **"***столбец***"**  
+ [  **@column=**] **"**_столбец_**"**  
  Имя столбца, который требуется добавить или удалить. *столбец* — **sysname**, значение по умолчанию NULL. Если значение равно NULL, публикуются все столбцы.  
   
- [  **@operation=**] **"***операции***"**  
+ [  **@operation=**] **"**_операции_**"**  
  Указывает, следует ли добавлять или удалять столбцы из статьи. *Операция* — **nvarchar(5)**, значение по умолчанию add. **Добавление** столбец для репликации. **DROP** — снять отметку столбца.  
   
  [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
@@ -82,13 +81,13 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **0** указывает, что изменения статьи не вызывают повторной инициализации подписки. Если хранимая процедура определяет, что изменение потребует повторной инициализации подписки, то выдается сообщение об ошибке, и изменения не производится. **1** указывает, что изменения статьи вызывают повторной инициализации текущих подписок и дает разрешение произвести повторную инициализацию подписки.  
   
- [  **@publisher=** ] **"***издателя***"**  
- Указывает, отличный от[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+ [  **@publisher=** ] **"**_издателя_**"**  
+ Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не должны использоваться с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
   
- [  **@internal=** ] **"***внутренней***"**  
+ [  **@internal=** ] **"**_внутренней_**"**  
  Только для внутреннего применения.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

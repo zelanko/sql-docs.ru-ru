@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5c4a4cfd4919218233d1c8ce2f41f4569c7f7302
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9879f2b4ce405ac59568876cd22e381c0dfad2bd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602794"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528480"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -93,8 +93,8 @@ NATURAL PREDICTION JOIN
   
 |Модель|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Держатель фляги для шоссейного велосипеда|1195|0.08…|0.07…|  
-|Держатель фляги для велосипеда Mountain|1367|0.09…|0.08…|  
+|Держатель фляги для шоссейного велосипеда|1195|0,08...|0,07...|  
+|Держатель фляги для велосипеда Mountain|1367|0,09...|0,08...|  
   
  **Примечание** этот пример приведен только для иллюстрации использования BottomSum. В зависимости от размера набора данных выполнение данного запроса может занять значительное время.  
   

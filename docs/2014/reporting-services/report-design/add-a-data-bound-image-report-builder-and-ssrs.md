@@ -11,12 +11,12 @@ ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a82bf63ca0c70543d816cbd191b1ff9a36ced317
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9883e7e21e58424fbc6280ad99ac323becd9b00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211474"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526345"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Добавление привязанного к данным изображения (построитель отчетов и службы SSRS)
   Отчет может включать ссылку на изображение, хранящееся в базе данных. Такое изображение называется *изображением, привязанным к данным*. Примерами изображений, привязанных к данным, служат картинки, выводящиеся вместе с наименованиями товаров в списке товаров.  
@@ -42,16 +42,16 @@ ms.locfileid: "48211474"
   
 7.  В списке **Использовать это поле**выберите поле, содержащее изображения в отчете.  
   
-8.  В списке **Использовать этот тип MIME**выберите тип MIME или формат файла, соответствующий изображению, например BMP.  
+8.  В списке **Использовать этот тип MIME** выберите тип MIME или формат файла, соответствующий изображению, например BMP.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      В области конструктора отчета появится заполнитель изображения.  
   
-## <a name="see-also"></a>См. также  
- [Образы &#40;построитель отчетов и службы SSRS&#41;](images-report-builder-and-ssrs.md)   
- [Внедрение изображения в отчете &#40;построитель отчетов и службы SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Добавление внешнего изображения &#40;построитель отчетов и службы SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Изображения (построитель отчетов и службы SSRS)](images-report-builder-and-ssrs.md)   
+ [Внедрение изображения в отчет (построитель отчетов и службы SSRS)](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Добавление внешнего изображения (построитель отчетов и службы SSRS)](add-an-external-image-report-builder-and-ssrs.md)   
  [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и службы SSRS)](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

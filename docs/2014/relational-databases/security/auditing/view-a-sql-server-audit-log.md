@@ -14,12 +14,12 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 75de66ef1759cc9e20b98f1f38c9ffa6361d31a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8e32b949e6c2868f5478215154df70cdd0e53e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229706"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519189"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Просмотр журнала подсистемы аудита SQL Server
   В этом разделе описано, как просмотреть журнал аудита SQL Server в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "48229706"
   
 2.  Разверните папку **Аудит** .  
   
-3.  Щелкните правой кнопкой мыши журнал аудита, который необходимо просмотреть, и выберите пункт **Просмотр журналов аудита**. Открывается диалоговое окно **Просмотр файла журнала —***имя_сервера*. Дополнительные сведения см. в статье [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
+3.  Щелкните правой кнопкой мыши журнал аудита, который необходимо просмотреть, и выберите пункт **Просмотр журналов аудита**. Откроется **средство просмотра журнала-*** имя_сервера* диалоговое окно. Дополнительные сведения см. в статье [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
   
 4.  После завершения нажмите кнопку **Закрыть**.  
   
@@ -57,6 +57,6 @@ ms.locfileid: "48229706"
   
 ## <a name="see-also"></a>См. также  
  [Подсистема аудита SQL Server (компонент Database Engine)](sql-server-audit-database-engine.md)   
- [Запись событий подсистемы аудита SQL Server в журнал безопасности](write-sql-server-audit-events-to-the-security-log.md)  
+ [Запись событий подсистемы аудита SQL Server в журнал безопасности](write-sql-server-audit-events-to-the-security-log.md)  
   
   

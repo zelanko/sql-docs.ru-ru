@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0709c9f2bbdc1f55608378c5a487404954b4ed99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b67b474a9038d4d94b7e209ff6ef36bb75488361
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747022"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518318"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>Функция ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ HRESULT GetStatus(
  *eOperation*[in]  
  Операция, для которой запрашивается асинхронное состояние. Это должно быть следующее значение.  
   
- DBASYNCHOP_OPEN — пользователь запрашивает сведения об асинхронном открытии или заполнении набора строк или асинхронной инициализации объекта источника данных. Если поставщик совместим с OLE DB 2.5 и поддерживает прямую привязку URL-адресов, то потребитель запрашивает сведения об асинхронной инициализации или заполнении объекта источника данных, набора строк, строки или потока.  
+ DBASYNCHOP_OPEN — пользователь запрашивает сведения об асинхронном открытии или заполнении набора строк, или асинхронной инициализации объекта источника данных. Если поставщик соответствует OLE DB 2.5 и поддерживает прямую привязку URL-адресов, то потребитель запрашивает сведения об асинхронной инициализации или заполнении объекта источника данных, набора строк, строки или потока.  
   
  *pulProgress*[out]  
  Указатель на буфер, в который будет возвращаться текущий ход выполнения асинхронной операции относительно ожидаемого максимума, указанного в параметре *pulProgressMax* . Дополнительные сведения о значении параметра *pulProgress*см. в описании параметра *peAsynchPhase*.  

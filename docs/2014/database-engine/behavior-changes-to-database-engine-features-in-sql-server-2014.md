@@ -15,12 +15,12 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84c24494797a96670fc6abd5e8fd6fd409b0a705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a951590c1284f39cb2dfea1f9e97c05a04a3e7ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226274"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520368"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Изменения в работе функций компонента Database Engine в SQL Server 2014
   В этом разделе описаны изменения в компоненте [!INCLUDE[ssDE](../includes/ssde-md.md)]. Изменения в работе оказывают влияние на способ выполнения функций или взаимодействие между ними в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -85,7 +85,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
   
 |Исходный тип данных XS|Целевой тип данных SQL Server|  
 |-------------------------|--------------------------------------|  
-|byte<br /><br /> short<br /><br /> ssNoversion<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|TINYINT<br /><br /> SMALLINT<br /><br /> ssNoversion<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> NUMERIC|  
+|byte<br /><br /> short<br /><br /> ssNoversion<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|TINYINT<br /><br /> smallint<br /><br /> ssNoversion<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> NUMERIC|  
 |Decimal|Decimal<br /><br /> NUMERIC|  
 |FLOAT|REAL|  
 |double|FLOAT|  
@@ -99,7 +99,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>Изменение в работе программы sqlcmd.exe в режиме XML  
- Изменилась работа программы sqlcmd.exe в режиме XML (команда :XML ON) при выполнении инструкций SELECT * from T FOR XML…  
+ Существуют изменения в поведении при использовании sqlcmd.exe в режиме XML (: команда XML ON) при выполнении инструкции SELECT * from T FOR XML...  
   
 ### <a name="dbcc-checkident-revised-message"></a>Измененное сообщение DBCC CHECKIDENT  
  В [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], сообщение, возвращаемое командой DBCC CHECKIDENT изменилось только при использовании вместе с RESEED *new_reseed_value* для изменения текущего значения идентификатора. Новое сообщение выглядит «Проверка идентификационных данных: текущее значение идентификатора "\<текущее значение идентификатора >". Выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».  
@@ -107,7 +107,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  В более ранних версиях — сообщение «Проверка идентификационных данных: текущее значение идентификатора "\<текущее значение идентификатора >", текущее значение столбца "\<текущее значение столбца >". Выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору». Это сообщение не меняется, если команда DBCC CHECKIDENT указана вместе с NORESEED, без второго параметра или без значения для повторного заполнения. Дополнительные сведения см. в разделе [DBCC CHECKIDENT (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>Изменилась работа функции exist() типа данных XML  
- Поведение **exist()** функции был изменен при сравнении типа данных XML со значением null, 0 (ноль). Рассмотрим следующий пример:  
+ Поведение **exist()** функции был изменен при сравнении типа данных XML со значением null, 0 (ноль). Рассмотрим следующий пример.  
   
 ```xml  
 DECLARE @test XML;  

@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ff3f6c31389622dc424c42e06bfa78477c70cde2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b2a17f1fd57b70dbee056e66a76c0416b0a25c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769372"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533573"
 ---
 # <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47769372"
 |Тип|**nvarchar(32)**|Тип узла.|«ВЫЧИСЛЕНИЯ», «УПРАВЛЕНИЕ», «УПРАВЛЕНИЕ»|  
 |name|**nvarchar(32)**|Логическое имя узла.|Любая строка соответствующей длины.|  
 |address|**nvarchar(32)**|IP-адрес этого узла.|В формате [0-255]. [0-255]. [0-255]. [0-255].|  
-|is_passive|**int**|Указывает, выполняется на сервере, назначенных виртуальной машины, работающей на узел или была переключена на запасной сервер.|0 — на исходном сервере работает узел виртуальной Машины.<br /><br /> 1 — узел виртуальной Машины выполняется на запасной сервер.|  
+|is_passive|**int**|Указывает, выполняется на сервере, назначенных виртуальной машины, работающей на узел или была переключена на запасной сервер.|0 — на исходном сервере работает узел виртуальной Машины.<br /><br /> 1 - узел виртуальной Машины выполняется на запасной сервер.|  
 |область|**nvarchar(32)**|Регион, где на узле выполняется.|«PDW», «HDINSIGHT»|  
   
 ## <a name="see-also"></a>См. также  

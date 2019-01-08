@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: febb9b2d80911c1d2fcdc386a527323af0de6f68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3145385db6239df128ead6070ebede48bc96e64
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174754"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780816"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted, класс событий
   Класс событий Object:Deleted указывает на удаление объекта (например, инструкцией DROP INDEX или DROP TABLE). Он предназначен для отслеживания факта удаления объекта, например приложениями ODBC, которые часто создают временные хранимые процедуры.  
@@ -50,7 +49,7 @@ ms.locfileid: "48174754"
 |ObjectID|`int`|Идентификатор объекта, назначенный системой.|22|Да|  
 |ObjectID2|`bigint`|Идентификатор связанного объекта или сущности.|56|Да|  
 |ObjectName|`nvarchar`|Имя объекта, на который указывает ссылка.|34|Да|  
-|ObjectType|`int`|Значение, представляющее тип объекта, связанного с событием. Это значение соответствует столбцу type в таблице sys.objects. Значения см. в статье [Столбец события ObjectType Trace](objecttype-trace-event-column.md).|28|Да|  
+|ObjectType|`int`|Значение, представляющее тип объекта, связанного с событием. Это значение соответствует столбцу type в таблице sys.objects. Значения см. в разделе [Столбец события ObjectType Trace](objecttype-trace-event-column.md).|28|Да|  
 |RequestID|`int`|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |ServerName|`nvarchar`|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
 |SessionLoginName|`nvarchar`|Имя входа пользователя, который инициировал сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  

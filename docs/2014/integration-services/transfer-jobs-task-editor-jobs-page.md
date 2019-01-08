@@ -15,12 +15,12 @@ ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b9a41fb224d5042c1cc826785ead32376727444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2e926047d5423d31307dc344bca5717ca7a77dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105584"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535531"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Редактор задачи «Передача заданий» (страница «Задания»)
   Используйте страницу **Задания** диалогового окна **Редактор задачи «Передача заданий»** для определения свойств копирования одного или более заданий агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из одного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в другой. Дополнительные сведения о задаче «Передача заданий» см. в разделе [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "48105584"
 |**False**|Копировать только выбранные задания.|  
   
  **JobsList**  
- Нажмите кнопку обзора **(…)** , чтобы выбрать задания для копирования. Необходимо выбрать хотя бы одно задание.  
+ Нажмите кнопку обзора **(…)**, чтобы выбрать задания для копирования. Необходимо выбрать хотя бы одно задание.  
   
 > [!NOTE]  
 >  Прежде чем выбирать задания для копирования, укажите свойство **SourceConnection** .  
@@ -75,10 +75,10 @@ ms.locfileid: "48105584"
 |**False**|Отключить задания на целевом сервере.|  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи служб Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "Передача заданий" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
- [Страница «выражения»](expressions/expressions-page.md)   
- [Диспетчер подключений управляющих объектов SQL Server](connection-manager/smo-connection-manager.md)  
+ [Страница «Выражения»](expressions/expressions-page.md)   
+ [Диспетчер соединений SMO](connection-manager/smo-connection-manager.md)  
   
   

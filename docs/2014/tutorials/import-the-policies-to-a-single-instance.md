@@ -11,17 +11,17 @@ ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 04c0170d33b07ea39b8c08ee194eb0cd63b4e64e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 276d37b97cfe0a2a4194aa8aed713834a20c8674
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128314"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522853"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>Импорт политик в один экземпляр
   При выполнении этой задачи будет осуществляться импорт рекомендованных политик в состав средств управления на основе политик на одном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Эту процедуру необходимо выполнять на сервере, на котором запущен [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] или более поздняя версия.  
   
 ### <a name="import-the-best-practices-policies-for-the-database-engine"></a>Импорт рекомендованных политик для компонента Database Engine  
@@ -32,7 +32,7 @@ ms.locfileid: "48128314"
   
 3.  Щелкните правой кнопкой мыши **Политики**и выберите пункт **Импортировать политику**.  
   
-4.  В диалоговом окне **Импорт** рядом с полем **Файлы, подлежащие импорту** нажмите кнопку с многоточием (**…**).  
+4.  В **импорта** диалоговом окне рядом с полем **файлы, подлежащие импорту** щелкните кнопку с многоточием (**...** ) кнопку.  
   
 5.  В списке **Искать в** перейдите к следующей папке, которая содержит политики рекомендаций:  
   

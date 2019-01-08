@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.memory.f1
@@ -13,12 +12,12 @@ ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e9d0a6b6322c0a8a02c02ba53748e769bf9f656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069844"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639342"
 ---
 # <a name="server-properties-memory-page"></a>Свойства сервера (страница «Память»)
   Используйте данную страницу для просмотра или изменения параметров памяти сервера. Если параметр **Минимальный размер памяти сервера** равен 0, а параметр **Максимальный размер памяти сервера** равен 2 147 483 647 МБ, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда может использовать оптимальный объем памяти, в зависимости от того, сколько памяти в текущий момент использует операционная система и другие приложения. При изменении загрузки компьютера и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] меняется объем выделенной памяти. Ограничить объем динамически выделяемой памяти можно с помощью задания минимального и максимального значений.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], Queue Reader Agent
@@ -16,12 +15,12 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f63676830d79bc8ec9c3ffd462e9d836364df159
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9f8db8ba77e913d1ae07b4dc0008650afe311565
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236971"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762596"
 ---
 # <a name="replication-queue-reader-agent"></a>Агент чтения очереди репликации
   Агент чтения очереди репликации — это исполняемый файл, который считывает сообщения, хранящиеся в очереди [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или очереди сообщений [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , а затем применяет их к издателю. Агент чтения очереди используется совместно с публикациями транзакций и публикациями моментальных снимков, которые допускают обновление посредством очередей.  
@@ -126,10 +125,10 @@ ms.locfileid: "50236971"
  **-ResolverState** [ **1**| **2**| **3**]  
  Определяет, каким образом разрешаются конфликты обновления посредством очередей. Значение **1** указывает, что конфликт разрешается в пользу издателя, то есть на издателе и на подписчике будет произведен откат участвующей в конфликте текущей транзакции из очереди, а обработка последующих транзакций из очереди будет продолжена. Значение **2** указывает, что конфликт разрешается в пользу подписчика, то есть транзакция, находящаяся в очереди, переопределяет значения на издателе. Значение **3** указывает, что результатом любого конфликта будет повторная инициализация подписчика, то есть конфликт разрешается в пользу издателя и обработка последующих транзакций из очереди будет прекращена с повторной инициализации подписки. Для публикаций транзакций значение по умолчанию равно **1** , а для публикаций моментальных снимков — **3** .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Для запуска агента чтения очереди выполните из командной строки файл **qrdrsvc.exe** . Дополнительные сведения см. в разделе [Исполняемые объекты агента репликации](../concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование агента репликации](replication-agent-administration.md)  
   
   

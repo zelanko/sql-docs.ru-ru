@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2d8eb879d23a344e5de6bad3c9fb6042fdadb3e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad3d0d06016fe8684cacaf73286b229a423aa7c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985400"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533664"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,15 +37,15 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="remarks"></a>Примечания  
  **ClusterDistance** функция возвращает расстояние между входным вариантом и кластером с наибольшей вероятностью для данного входного варианта.  
   
- В случае кластеризации методом К-средних любой вариант может принадлежать только к одному кластеру с весом членства, равным 1,0, и расстоянием от кластера, всегда равным 0. Однако при использовании метода К-средних предполагается, что каждый кластер имеет центроид. Значение центроида можно получить, выполнив запрос или просмотрев вложенную таблицу NODE_DISTRIBUTION в содержимом модели интеллектуального анализа данных. Дополнительные сведения см. в разделе [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
+ В случае кластеризации методом К-средних любой вариант может принадлежать только к одному кластеру с весом членства, равным 1,0, и расстоянием от кластера, всегда равным 0. Однако при использовании метода К-средних предполагается, что каждый кластер имеет центроид. Значение центроида можно получить, выполнив запрос или просмотрев вложенную таблицу NODE_DISTRIBUTION в содержимом модели интеллектуального анализа данных. Дополнительные сведения см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
  Но если используется применяемый по умолчанию метод кластеризации, называемый методом максимизации ожидания (EM), все точки внутри кластера рассматриваются как равновероятные, так что центроид в кластере отсутствует. Значение **ClusterDistance** между конкретным вариантом и определенному кластеру *N* вычисляется следующим образом:  
   
- ClusterDistance(N) =1–(membershipWeight(N))  
+ ClusterDistance(N) =1-(membershipWeight(N))  
   
  или:  
   
- ClusterDistance(N) = 1 — ClusterProbability (N))  
+ ClusterDistance(N) = 1-ClusterProbability (N))  
   
 ## <a name="related-prediction-functions"></a>Связанные прогнозирующие функции  
  Службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] имеют следующие дополнительные функции для запросов к моделям кластеризации.  
@@ -58,7 +58,7 @@ ClusterDistance([<ClusterID expression>])
   
 -   Используйте [PredictCaseLikelihood &#40;расширений интеллектуального анализа данных&#41; ](../dmx/predictcaselikelihood-dmx.md) функция, возвращающая мера от 0 до 1, указывающей вероятность входной вариант — существует, учитывая модель, обученную этим алгоритмом.  
   
-## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Пример 1: Вычисление расстояния до наиболее вероятного кластера  
+## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Пример 1. Вычисление расстояния до наиболее вероятного кластера  
  В следующем примере возвращается расстояние от указанного варианта до кластера, к которому вариант принадлежит с наибольшей вероятностью.  
   
 ```  
@@ -88,7 +88,7 @@ NATURAL PREDICTION JOIN
 |--------------|  
 |Кластер 6|  
   
-## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Example2: Получение расстояния до указанного кластера  
+## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Пример 2. Получение расстояния до указанного кластера  
  Следующий синтаксис использует набор строк схемы содержимого модели интеллектуального анализа данных для возврата списка идентификаторов узла и заголовков узла для кластеров в модели интеллектуального анализа. Затем можно использовать заголовок узла в качестве аргумента идентификатора кластера в **ClusterDistance** функции.  
   
 ```  
@@ -129,6 +129,6 @@ NATURAL PREDICTION JOIN
  [Кластер &#40;расширений интеллектуального анализа данных&#41;](../dmx/cluster-dmx.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
- [Содержимое модели интеллектуального анализа данных для моделей кластеризации &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

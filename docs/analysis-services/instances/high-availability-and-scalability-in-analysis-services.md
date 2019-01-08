@@ -1,5 +1,5 @@
 ---
-title: Высокий уровень доступности и масштабируемость в службах Analysis Services | Документы Microsoft
+title: Высокая доступность и масштабируемость в службах Analysis Services | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700905"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439506"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Высокий уровень доступности и масштабируемость в службах Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -96,13 +96,13 @@ ms.locfileid: "35700905"
 
 - Режим "активный/активный" в данный момент не поддерживается. Режим "активный/пассивный (отказоустойчивый)" — единственная поддерживаемая конфигурация WSFC для служб Analysis Services.
 - При кластеризации служб Analysis Services убедитесь, что все узлы в кластере работают на одинаковом или схожем оборудовании и имеют одинаковый операционный контекст — версию и пакеты обновления операционной системы, версию и пакеты обновления (или накопительные обновления) служб Analysis Services и режим сервера.
-- Старайтесь не использовать пассивный узел как еще один активный узел для рабочей нагрузки. Если в экстренной ситуации узел не справится с обоими потоками рабочей нагрузки, достигнутое повышение производительности компьютера потеряет смысл.
+- Старайтесь не использовать пассивный узел как активный узел с другой рабочей нагрузки. Если в экстренной ситуации узел не справится с обоими потоками рабочей нагрузки, достигнутое повышение производительности компьютера потеряет смысл.
  
- Подробные инструкции и справочные сведения по развертыванию служб Analysis Services в отказоустойчивом кластере см. в следующем документе [Кластеризация служб SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx). Это руководство написано для SQL Server 2012, однако применяется и к более новым версиям служб Analysis Services.  
+ В этом техническом документе предоставлены подробные инструкции и справочные сведения по развертыванию служб Analysis Services в отказоустойчивом кластере: [Кластеризация SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx). Это руководство написано для SQL Server 2012, однако применяется и к более новым версиям служб Analysis Services.  
   
 ## <a name="see-also"></a>См. также  
  [Синхронизация баз данных служб Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
  [Принудительное установление связь NUMA для табличных баз данных служб Analysis Services](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
- [Analysis Services практический пример: Использование табличных моделей в крупномасштабных коммерческих решениях](https://msdn.microsoft.com/library/dn751533.aspx)  
+ [Для служб Analysis Services практический пример: Использование табличных моделей в крупномасштабных коммерческих решениях](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

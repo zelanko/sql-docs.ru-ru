@@ -18,12 +18,12 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e20a7ebdffc8972a1c3d1449fd65d2560a1d71b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145244"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753086"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   Изменяет значения по умолчанию различных параметров управления для массового копирования между файлом и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,7 +68,7 @@ iValue
  BCPFILECP  
  *iValue* содержит номер кодовой страницы для файла данных. Можно указать номер кодовой страницы, например 1252 или 850, либо одно из следующих значений.  
   
- BCPFILE_ACP: данные в файле хранятся в кодовой странице Microsoft Windows® клиента.  
+ BCPFILE_ACP: данные в файле, находятся в Microsoft Windows?? кодовая страница клиента.  
   
  BCPFILE_OEMCP: данные в файле хранятся в кодовой странице изготовителя оборудования (OEM) клиента (по умолчанию).  
   
@@ -102,7 +102,7 @@ iValue
  Когда *iValue* имеет значение TRUE, указывает, что функции массового копирования вставляют значения данных, предоставленные для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбцов, определенных с ограничением identity. Входной файл должен содержать значения для столбцов идентификаторов. Если эти значения не заданы, то для вставляемых строк создаются новые значения идентификаторов. Данные в файле, предназначенные для столбцов идентификаторов, не учитываются.  
   
  BCPKEEPNULLS  
- Указывает, будут ли пустые значения данных в файле преобразовываться в значения NULL в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда *iValue* имеет значение TRUE, пустые значения будут преобразовываться в значение NULL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы. По умолчанию пустые значения преобразовываются в значения по умолчанию для столбца в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если значение по умолчанию существует.  
+ Указывает, будут ли пустые значения данных в файле преобразовываться в значения NULL в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Когда *iValue* имеет значение TRUE, пустые значения будут преобразовываться в значение NULL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы. По умолчанию пустые значения преобразовываются в значения по умолчанию для столбца в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если значение по умолчанию существует.  
   
  BCPLAST  
  Последняя строка для копирования. По умолчанию установлено копирование всех строк; если задать для этого параметра значение меньше 1, то ему будет установлено значение по умолчанию.  

@@ -10,15 +10,15 @@ ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de1f3e5e63784585ce82805bc392ec0d5f6b7e15
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 4886ebb992c00d587ac03e5424255bd6d86cd63e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032531"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531639"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Функции и задачи служб Data Quality Services
-  Найдите сведения, которые потребуются всем — администратору данных, администратору служб Data Quality Services или администратору SQL Server — для подготовки и выполнения проекта служб DQS.  
+  Найдите сведения, которые потребуются всем — администратору данных, администратору служб Data Quality Services или администратору SQL Server — для подготовки и выполнения проекта служб DQS.  
   
  ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки с файлами") **Разработка и реализация решения Data Quality Services**  
  [Клиентское приложение DQS](../../2014/data-quality-services/data-quality-client-application.md)  

@@ -21,20 +21,20 @@ ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b83edd4ce5bfafcd8413683abad50918cc47d3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d82fde382bf3ed92f400dbbe234790ccd510cc93
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782682"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512460"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>Функции ODBC и драйвер ODBC для Visual FoxPro
-В подразделах этого раздела предоставляют краткое описание функций ODBC API и все сведения о специальных Visual FoxPro.  
+В подразделах этого раздела предоставляют краткое описание функций ODBC API и все сведения о конкретных Visual FoxPro.  
   
 > [!NOTE]  
 >  Общие сведения о функции ODBC, см. в разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md) в «Руководство по программированию ODBC».  
   
- Функции ODBC API были разделены на три основные категории здесь: функции API уровня ядра, функции API уровня 1 и функции API уровня 2.  
+ Функции ODBC API были разделены на три основные категории здесь: Основные функции API уровня функции API уровня 1 и функции API уровня 2.  
   
 > [!NOTE]  
 >  Несколько функций, будут вести себя по-разному в зависимости от ли источник данных определен как подключение к каталогу [свободных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md) (файлы с расширением DBF) или для Visual FoxPro [базы данных](../../odbc/microsoft/visual-foxpro-terminology.md) (.dbc файл). Некоторые операции поддерживаются только для подключения к базе данных.  

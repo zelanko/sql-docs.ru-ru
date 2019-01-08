@@ -5,8 +5,7 @@ ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistributiondb_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2ba920af692d85cbe8df1df69169fcde01a5c78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c55e0f8d7c2e102b18f7c17fb263c8f76658ede
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610122"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765806"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**] *базы данных "*  
  Имя создаваемой базы данных распространителя. *База данных* — **sysname**, не имеет значения по умолчанию. Если указанная база данных существует и не помечена как база данных распространителя, то устанавливаются объекты, необходимые для включения распространения, и база данных помечается как база данных распространителя. Если указанная база данных уже включена как база данных распространителя, то возвращается сообщение об ошибке.  
   
- [  **@data_folder=**] **"*** data_folder"*  
+ [  **@data_folder=**] **"**_data_folder"_  
  Имя каталога для хранения файла данных в базе данных распространителя. *data_folder* — **nvarchar(255)**, значение по умолчанию NULL. Если аргумент имеет значение NULL, то используется каталог данных для текущего экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, «`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`»).  
   
- [  **@data_file=**] **"***data_file***"**  
+ [  **@data_file=**] **"**_data_file_**"**  
  Имя файла базы данных. *data_file* — **nvarchar(255)**, значение по умолчанию **базы данных**. Если аргумент имеет значение NULL, то хранимая процедура создает имя файла на основе имени базы данных.  
   
  [  **@data_file_size=**] *data_file_size*  
  Первоначальный размер файла данных в мегабайтах (МБ). *data_file_size я*s **int**, значение по умолчанию 5 МБ.  
   
- [  **@log_folder=**] **"***log_folder***"**  
+ [  **@log_folder=**] **"**_log_folder_**"**  
  Имя каталога для файла журнала базы данных. *log_folder* — **nvarchar(255)**, значение по умолчанию NULL. Если аргумент имеет значение NULL, то используется каталог данных для текущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например: «`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`».  
   
- [  **@log_file=**] **"***файл_журнала***"**  
+ [  **@log_file=**] **"**_файл_журнала_**"**  
  Имя файла журнала. *файл_журнала* — **nvarchar(255)**, значение по умолчанию NULL. Если аргумент имеет значение NULL, то хранимая процедура создает имя файла на основе имени базы данных.  
   
  [  **@log_file_size=**] *log_file_size*  
@@ -88,10 +87,10 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@security_mode=**] *security_mode*  
  Режим безопасности, используемый для подключения к распространителю. *security_mode* — **int**, значение по умолчанию 1. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности; **1** задает встроенную проверку подлинности Windows.  
   
- [  **@login=**] **"***входа***"**  
+ [  **@login=**] **"**_входа_**"**  
  Имя входа, которое используется при подключении к распространителю для создания базы данных распространителя. Это необходимо, если *security_mode* присваивается **0**. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
   
- [  **@password=**] **"***пароль***"**  
+ [  **@password=**] **"**_пароль_**"**  
  Пароль, используемый при подключении к распространителю. Это необходимо, если *security_mode* присваивается **0**. *пароль* — **sysname**, значение по умолчанию NULL.  
   
  [  **@createmode=**] *createmode*  

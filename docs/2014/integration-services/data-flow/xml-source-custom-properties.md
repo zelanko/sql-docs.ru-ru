@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6843e2f2d818789a791ba12c78e5aa42a086a15d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 847de27624db305e8fc47c81de69a8e77dbf84cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224784"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754766"
 ---
 # <a name="xml-source-custom-properties"></a>Пользовательские свойства источника «XML»
   Источник «XML» обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  
@@ -26,7 +25,7 @@ ms.locfileid: "48224784"
 |Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Целочисленный|Режим, используемый для доступа к XML-данным.|  
-|UseInlineSchema|Логическое значение|Указывает, следует ли использовать в источнике «XML» определение встроенной схемы. Значение по умолчанию этого свойства — `False`.|  
+|UseInlineSchema|Логическое значение|Указывает, следует ли использовать в источнике «XML» определение встроенной схемы. Значение по умолчанию этого свойства равно `False`.|  
 |XMLData|String|Файл или переменные, из которых следует получить XML-данные.<br /><br /> Значение этого свойства можно задать с помощью выражения свойства.|  
 |XMLSchemaDefinition|String|Полный путь и имя файла определения схемы (XSD).<br /><br /> Значение этого свойства можно задать с помощью выражения свойства.|  
   

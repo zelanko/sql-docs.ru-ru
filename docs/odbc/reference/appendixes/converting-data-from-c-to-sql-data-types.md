@@ -21,12 +21,12 @@ ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f68b53dd77305163aa2595c60a1994a13bb9964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793812"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509400"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Преобразование данных из C в типы данных SQL
 Если приложение вызывает **SQLExecute** или **SQLExecDirect**, драйвер получает данные для параметров, привязанного с **SQLBindParameter** из места хранения в приложение. Если приложение вызывает **SQLSetPos**, драйвер получает данные для обновления или операции добавления столбцов, привязанных с **SQLBindCol**. Для параметров данных времени выполнения, приложение отправляет данные с помощью параметра **SQLPutData**. Если необходимо, драйвер преобразует данные из типа данных, указанного *ValueType* аргумента в **SQLBindParameter** тип данных, указанный в *ParameterType*аргумента в **SQLBindParameter**, а затем отправляет данные в источник данных.  
@@ -45,37 +45,37 @@ ms.locfileid: "47793812"
   
  В таблицах используются следующие термины:  
   
--   **Байтовая длина данных** — число байтов данных SQL может отправлять к источнику данных, независимо от того, имеется ли данные будут усечены, перед их отправкой к источнику данных. Для строковых данных это не включает место для символа завершения null.  
+-   **Байтовая длина данных** — число байтов данных SQL может отправлять к источнику данных, ли данные будут усечены перед их отправкой к источнику данных. Для строковых данных это не включает место для символа завершения null.  
   
--   **Длина столбца байтов** — число байтов, необходимое для хранения данных в источнике данных.  
+-   **Длина столбца байтов** -число байтов, необходимое для хранения данных в источнике данных.  
   
 -   **Длина байтов символьной** — максимальное число байтов, чтобы отобразить данные в виде символа. Это, как определено для каждого типа данных SQL в [отображения размер](../../../odbc/reference/appendixes/display-size.md), за исключением, что символ байт находится в байтах, а размер экрана в символы.  
   
--   **Число цифр или символов** — количество символов, используемых для представления числа, включая знак минуса, десятичная запятая и показатель степени (при необходимости).  
+-   **Число цифр или символов** — число символов, используемых для представления числа, включая знак минуса, десятичной запятой и показатель степени (при необходимости).  
   
 -   **Слова в**   
-     ***Курсив*** — элементы грамматики SQL. Синтаксис элементов грамматики, см. в разделе [грамматике SQL в C: приложение](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     ***Курсив*** -элементы грамматики SQL. Синтаксис элементов грамматики, см. в разделе [приложение в: Грамматика SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Этот раздел содержит следующие подразделы.  
   
--   [Преобразование из C в SQL: символы](../../../odbc/reference/appendixes/c-to-sql-character.md)  
+-   [Преобразование из C в SQL: Символ](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
--   [Преобразование из C в SQL: числовые данные](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
+-   [Преобразование из C в SQL: Numeric](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
--   [Преобразование из C в SQL: битовые данные](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
+-   [Преобразование из C в SQL: Бит](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
--   [Преобразование из C в SQL: двоичные данные](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
+-   [Преобразование из C в SQL: Двоичный](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   
--   [Преобразование из C в SQL: даты](../../../odbc/reference/appendixes/c-to-sql-date.md)  
+-   [Преобразование из C в SQL: Дата](../../../odbc/reference/appendixes/c-to-sql-date.md)  
   
--   [Преобразование из C в SQL: GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
+-   [Преобразование из C в SQL: ИДЕНТИФИКАТОР GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
   
--   [Преобразование из C в SQL: время](../../../odbc/reference/appendixes/c-to-sql-time.md)  
+-   [Преобразование из C в SQL: время](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
--   [Преобразование из C в SQL: отметки времени](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
+-   [Преобразование из C в SQL: Метка времени](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
--   [Преобразование из C в SQL: интервалы месяцев года](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
+-   [Преобразование из C в SQL: Интервалы месяцев года](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   
--   [Преобразование из C в SQL: интервалы времени дня](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
+-   [Преобразование из C в SQL: Интервалы времени дня](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
 -   [Примеры преобразования данных из C в SQL](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,18 +14,18 @@ ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 506a577aaec5eb3713a646fa152530e255b79867
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176298"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761846"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics, класс событий
   Класс событий Performance Statistics можно использовать для наблюдения за производительностью выполняемых запросов, хранимых процедур и триггеров. Каждый из шести подклассов событий обозначает событие, относящееся ко времени существования запросов, хранимых процедур и триггеров в системе. Сочетая эти подклассы событий и связанные с ними динамические административные представления sys.dm_exec_query_stats, sys.dm_exec_procedure_stats и sys.dm_exec_trigger_stats, можно восстановить историю производительности любого заданного запроса, хранимой процедуры или триггера.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Столбцы данных класса событий Performance Statistics  
- Следующие таблицы описывают столбцы данных класса событий, связанные с каждым из следующих подклассов событий: EventSubClass 0, EventSubClass 1,EventSubClass 2,EventSubClass 3, EventSubClass 4 и EventSubClass 5.  
+ Следующие таблицы описывают столбцы данных класса событий, связанные с каждым из следующих подклассов событий: EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 и EventSubClass 5.  
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48176298"
 |SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |EventSubClass|`int`|Тип подкласса события.<br /><br /> 2 = Скомпилированы запросы в нерегламентированной инструкции SQL.<br /><br /> Следующие типы EventSubClass создаются в трассировке для нерегламентированных пакетов.<br /><br /> Для нерегламентированных пакетов, состоящих из *n* запросов.<br /><br /> *n* типа 2|21|Да|  
 |IntegerData2|`int`|Конечное смещение инструкции в пакете:<br /><br /> -1 для конечного смещения пакета.|55|Да|  
-|ObjectID|`int`|Недоступно|22|Да|  
+|ObjectID|`int`|Н/Д|22|Да|  
 |Offset|`int`|Начальное смещение инструкции в пределах пакета.<br /><br /> 0 для начального смещения пакета.|61|Да|  
 |SPID|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |SqlHandle|`image`|Дескриптор SQL. Может быть использован для получения текста SQL пакета с помощью динамического административного представления dm_exec_sql_text.|63|Да|  

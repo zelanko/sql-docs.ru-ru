@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
@@ -16,12 +15,12 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b1d37bba3216a22d732c5562108db51925d37bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b428117cd445cf4cc8f06e588d344924394dcf02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120581"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357606"
 ---
 # <a name="ole-db-source"></a>Источник OLE DB
   Источник OLE DB извлекает сведения из множества поддерживающих технологию OLE DB реляционных баз данных с помощью таблицы базы данных, представления или команды SQL. Например, источник OLE DB может извлекать данные из таблиц [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -91,21 +90,21 @@ ms.locfileid: "48120581"
   
  Дополнительные сведения о свойствах, которые можно задавать в диалоговом окне **Редактор источника OLE DB** , см. в следующих разделах:  
   
--   [Редактор источника OLE DB &#40;страницы диспетчера соединений&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [Редактор источника OLE DB (страница "Диспетчер соединений")](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Редактор источника OLE DB &#40;страница "столбцы"&#41;](../ole-db-source-editor-columns-page.md)  
+-   [Редактор источника OLE DB (страница "Столбцы")](../ole-db-source-editor-columns-page.md)  
   
--   [Редактор источника OLE DB &#40;странице вывода ошибок&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [Редактор источника OLE DB (страница "Вывод ошибок")](../ole-db-source-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
 -   [Common Properties](../common-properties.md)  
   
--   [Пользовательские свойства OLE DB](ole-db-custom-properties.md)  
+-   [Пользовательские свойства OLE DB](ole-db-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
--   [Извлечение данных с помощью источника «OLE DB»](ole-db-source.md)  
+-   [Извлечение данных с помощью источника OLE DB](ole-db-source.md)  
   
 -   [Сопоставления параметров запросов с переменными в компонентах потока данных](map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -114,11 +113,11 @@ ms.locfileid: "48120581"
 -   [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>См. также  
- Статья Wiki [Соединители служб SSIS с Oracle](http://go.microsoft.com/fwlink/?LinkId=220670)на сайте social.technet.microsoft.com.  
+ Статья Wiki [Соединители служб SSIS с Oracle](https://go.microsoft.com/fwlink/?LinkId=220670)на сайте social.technet.microsoft.com.  
   
 ## <a name="see-also"></a>См. также  
- [Назначение OLE DB](ole-db-destination.md)   
- [Службы Integration Services &#40;SSIS&#41; переменных](../integration-services-ssis-variables.md)   
+ [Назначение «OLE DB»](ole-db-destination.md)   
+ [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md)   
  [Поток данных](data-flow.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 127e0dbeef729c21c7155d7d3d7edf6f21a444c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85d4c4d79dbddd59c3208c28b3fea50c0aa857b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182425"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514056"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>выполнить политику по запросу с помощью зарегистрированных серверов
   Можно выполнить оценку по требованию рекомендуемых политик по отношению к одному или нескольким экземплярам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] через окно «Зарегистрированные серверы». Можно использовать локальную группу серверов или центральный сервер управления.  
@@ -76,7 +76,7 @@ ms.locfileid: "48182425"
 8.  Чтобы просмотреть подробные результаты для политики, щелкните политику в **результаты** таблицы. **Данные целевого объекта** таблице показан код для каждого экземпляра.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 2. Выполнение политик рекомендаций по расписанию](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Занятие 2. Выполнение политик рекомендаций по расписанию](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>См. также  
  [Мониторинг и принудительное применение рекомендаций с помощью управления на основе политик](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

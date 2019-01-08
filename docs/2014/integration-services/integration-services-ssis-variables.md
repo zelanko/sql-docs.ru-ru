@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -19,12 +18,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b30ae5c49ec66b5612e1472c896084ebb92991d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6df40fef89955b792e31e0a7539a4adf9409d70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069744"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772576"
 ---
 # <a name="integration-services-ssis-variables"></a>Переменные в службах Integration Services (SSIS)
   Переменные хранят значения, которые могут использоваться пакетом служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а также его контейнерами, задачами и обработчиками событий во время выполнения. Скрипты в задаче «Скрипт» и компоненте скрипта также могут использовать переменные. Управления очередностью, которые упорядочивают задачи и контейнеры в рабочий процесс, могут использовать переменные, если связанные с ними определения ограничений включают в себя выражения.  
@@ -46,7 +45,7 @@ ms.locfileid: "48069744"
 ## <a name="system-and-user-defined-variables"></a>Пользовательские и системные переменные  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] поддерживают два типа переменных: пользовательские и системные переменные. Пользовательские переменные определяются разработчиками пакетов, а системные переменные определяются службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Допустимо создание в пакете любого необходимого количества пользовательских переменных, однако дополнительные системные переменные не могут быть созданы.  
   
- Все переменные — как системные, так и определенные пользователем — могут быть использованы в связывании параметров, которые использует задача «Выполнение SQL» для сопоставления переменных параметрам в инструкциях SQL. Дополнительные сведения см. в разделах [Задача "Выполнение SQL"](control-flow/execute-sql-task.md) и [Параметры и коды возврата в задаче "Выполнение SQL"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+ Все переменные — как системные, так и определенные пользователем — могут быть использованы в связывании параметров, которые использует задача "Выполнение SQL" для сопоставления переменных параметрам в инструкциях SQL. Дополнительные сведения см. в разделах [Задача "Выполнение SQL"](control-flow/execute-sql-task.md) и [Параметры и коды возврата в задаче "Выполнение SQL"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 > [!NOTE]  
 >  В именах пользовательских и системных переменных учитывается регистр.  
@@ -141,9 +140,9 @@ ms.locfileid: "48069744"
 ## <a name="configuring-variables"></a>Настройка переменных  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)], см. в статье [Окно "Переменные"](../../2014/integration-services/variables-window.md).  
+ Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , см. в статье [Окно "Переменные"](../../2014/integration-services/variables-window.md).  
   
- Чтобы узнать больше о свойствах переменных и получить дополнительные сведения о задании этих свойств программными средствами, см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
+ Чтобы узнать больше о свойствах переменных и получить дополнительные сведения об их программной настройке, см. раздел <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Добавление, удаление и изменение области определяемой пользователем переменной в пакете](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

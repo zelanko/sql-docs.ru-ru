@@ -1,5 +1,5 @@
 ---
-title: Модели, синтаксис и примеры фильтра (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: Модели, синтаксис и примеры фильтров (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 467d3efbe979bf2ea58c700409913ef0767457ab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ae34f06997d1647f6345c0cf77494aa8688a8616
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018681"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393550"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Синтаксис и примеры фильтра модели (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "34018681"
  *avPredicate*  
  Критерий фильтра, применимый только к скалярному столбцу структуры интеллектуального анализа данных. Критерий *avPredicate* может быть использован и в фильтрах моделей, и в фильтрах вложенных таблиц.  
   
- Критерий, в котором используется любой из перечисленных ниже операторов, может быть применен только к непрерывному столбцу. .  
+ Критерий, в котором используется любой из перечисленных ниже операторов, может быть применен только к непрерывному столбцу. , перечислены ниже.  
   
 -   **\<** (меньше чем)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "34018681"
   
  Если критерий *avPredicate*применяется к дискретизированному столбцу, то в фильтре может использоваться любое значение из конкретного сегмента.  
   
- Иными словами, условие не определяется как `AgeDisc = ’25-35’`. Вместо этого вычисляется, а затем используется значение из этого интервала.  
+ Иными словами, условие не определяется как `AgeDisc = '25-35'`. Вместо этого вычисляется, а затем используется значение из этого интервала.  
   
  Пример:  `AgeDisc = 27`  означает любое значение в том же интервале, что и 27. В данном случае этот интервал 25–35.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "34018681"
 ## <a name="examples-of-filters"></a>Примеры фильтров  
  В следующих примерах демонстрируется применение фильтров к модели интеллектуального анализа данных. Если критерий фильтра создается в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], в окне **Свойство** , на панели **Выражение** диалогового окна "Фильтр", то будет видна только строка, которая появляется за ключевыми словами WITH FILTER. Определение структуры интеллектуального анализа данных было включено, чтобы легче понять типы столбцов и методы их использования.  
   
-###  <a name="bkmk_Ex1"></a> Пример 1. Обычная фильтрация на уровне вариантов  
+###  <a name="bkmk_Ex1"></a> Пример 1. Обычное фильтрование на уровне вариантов  
  В этом примере показан простой фильтр, который ограничивает варианты, используемые в модели, пользователями, имеющими профессию архитектора и возраст старше 30 лет.  
   
 ```  
@@ -133,7 +133,7 @@ Age,
 Occupation,  
 MaritalStatus PREDICT  
 )  
-WITH FILTER (Age > 30 AND Occupation=’Architect’)  
+WITH FILTER (Age > 30 AND Occupation='Architect')  
 ```  
   
   
@@ -151,7 +151,7 @@ Occupation,
 MaritalStatus PREDICT  
 )  
 WITH DRILLTHROUGH,   
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’)  
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')  
 )  
 ```  
   
@@ -161,7 +161,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’
   
  Первое условие фильтра, `Age > 30`, применяется к столбцу в таблице вариантов. Остальные условия применяются к вложенной таблице.  
   
- Второе условие, `EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’`, проверяет наличие во вложенной таблице по крайней мере одной покупки, включающей молоко. Третье условие, `Quantity>=2`, обозначает, что заказчик должен был купить по крайней мере две упаковки молока за одну транзакцию.  
+ Второе условие, `EXISTS (SELECT * FROM Products WHERE ProductName='Milk'`, проверяет наличие во вложенной таблице по крайней мере одной покупки, включающей молоко. Третье условие, `Quantity>=2`, обозначает, что заказчик должен был купить по крайней мере две упаковки молока за одну транзакцию.  
   
 ```  
 ALTER MINING STRUCTURE MyStructure  ADD MINING MODEL MyModel_3  
@@ -176,7 +176,7 @@ ProductName KEY,
 Quantity        
 )  
 )  
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity >= 2)   
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity >= 2)   
 )  
 ```  
   
@@ -196,7 +196,7 @@ Products PREDICT
 ProductName  
 )  
 )  
-FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’) )  
+FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk') )  
 ```  
   
   
@@ -216,7 +216,7 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 WITH DRILLTHROUGH  
 ```  
@@ -236,7 +236,7 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 FILTER (EXISTS (Products))  
 ```  
@@ -307,7 +307,7 @@ FILTER (EXISTS (Products))
   
   
 ## <a name="see-also"></a>См. также  
- [Фильтры для моделей интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Тестирование и проверка & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

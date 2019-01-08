@@ -18,12 +18,12 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a3ea4ac63a0ace769af174bbdbf433ad63b433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29fbce7f3e8fee200384f6162b28576d96593b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700532"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502980"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>Хранимая процедура sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +58,19 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Удаляет структуру плана, заданную аргументом *plan_guide_name*. После удаления структуры плана будущее выполнение запроса, ранее соответствовавшего этой структуре плана, не затрагивается.  
   
  DROP ALL  
- Удаляет все структуры планов из текущей базы данных. **N'*** plan_guide_name* не может быть указан, если задан DROP ALL.  
+ Удаляет все структуры планов из текущей базы данных. **N'**_plan_guide_name_ не может быть указан, если задан DROP ALL.  
   
  DISABLE  
  Отключает структуру плана, заданную аргументом *plan_guide_name*. После отключения структуры плана будущее выполнение запроса, ранее соответствовавшего этой структуре плана, не затрагивается.  
   
  DISABLE ALL  
- Отключает все структуры планов в текущей базе данных. **N'*** plan_guide_name* нельзя указать, когда DISABLE ALL задан.  
+ Отключает все структуры планов в текущей базе данных. **N'**_plan_guide_name_ нельзя указать, когда DISABLE ALL задан.  
   
  ENABLE  
  Включает структуру плана, заданную аргументом *plan_guide_name*. После включения структуры плана с ней может быть сопоставлен совпадающий запрос. По умолчанию структура плана включается во время создания.  
   
  ENABLE ALL  
- Включает все структуры планов в текущей базе данных. **N'***plan_guide_name***"** не может быть указан, если ВКЛЮЧИТЬ все указан.  
+ Включает все структуры планов в текущей базе данных. **N'**_plan_guide_name_**"** не может быть указан, если ВКЛЮЧИТЬ все указан.  
   
 ## <a name="remarks"></a>Примечания  
  Попытка удаления или изменения функции, хранимой процедуры или триггера DML, на которые имеется ссылка в структуре плана (как включенных, так и отключенных), приводит к ошибке.  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906404"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984105"
 ---
 # <a name="dynamic-management-views-dmvs"></a>Динамические административные представления 
 
@@ -93,15 +93,15 @@ WHERE TABLE_TYPE = 'SCHEMA'
 ORDER BY TABLE_NAME ASC  
 ```  
   
-Если динамическое административное Представление недоступно для определенного набора строк, сервер возвращает ошибку: `The <schemarowset> request type was not recognized by the server.` все остальные ошибки указывают на проблемы с синтаксисом.  
+Если динамическое административное Представление недоступно для определенного набора строк, сервер возвращает ошибку: `The <schemarowset> request type was not recognized by the server.` Все остальные ошибки указывают на проблемы с синтаксисом.  
 
 Наборы строк схемы, описанные в двух протоколов SQL Server Analysis Services:   
 
 [[MS-SSAS-T]: SQL Server Analysis Services табличному протоколу](https://msdn.microsoft.com/library/mt719260) -описывает наборы строк схемы для табличных моделей на уровне совместимости 1200 и выше.
 
-[[MS-SSAS]: протокол служб SQL Server Analysis](https://msdn.microsoft.com/library/ee320606) -описывает наборы строк схемы для многомерных и табличных моделей на уровни совместимости 1100 и 1103.
+[[MS-SSAS]: SQL Server Analysis Services протокола](https://msdn.microsoft.com/library/ee320606) -описывает наборы строк схемы для многомерных и табличных моделей на уровни совместимости 1100 и 1103.
 
-### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>Наборы строк, описано в [MS-SSAS-T]: SQL Server Analysis Services табличному протоколу
+### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>Наборы строк, описано в [MS-SSAS-T]: SQL Server Analysis Services табличной протокола
 
 |Набор строк  |Описание  |
 |---------|---------|
@@ -134,7 +134,7 @@ ORDER BY TABLE_NAME ASC
 |[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   Сведения об объектах таблицы в модели.      |
 |[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|Сведения об объектах вариантов в каждом столбце.|
 
-### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>Наборы строк, описано в [MS-SSAS]: протокол служб анализа SQL Server
+### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>Наборы строк, описано в [MS-SSAS]: Протокол служб анализа SQL Server
 
 |Набор строк|Описание|  
 |------------|-----------------|  
@@ -172,7 +172,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://msdn.microsoft.com/library/ee320710)|Возвращает сведения о столбце сегментов, используемых для хранения данных для таблиц в памяти.|  
 |[DISCOVER_STORAGE_TABLE_COLUMNS](https://msdn.microsoft.com/library/ee302101)|Содержит сведения о столбцах, используемый для представления столбцов таблицы в памяти.|  
 |[DISCOVER_STORAGE_TABLES](https://msdn.microsoft.com/library/ee302014)|Возвращает статистические данные о доступных таблиц в памяти на сервер.|  
-|[DISCOVER_TRACE_COLUMNS]()||  
+|[DISCOVER_TRACE_COLUMNS](https://msdn.microsoft.com/library/ee301342)||  
 |[DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://msdn.microsoft.com/library/ee301342)|Содержит набор строк схемы DISCOVER_TRACE_COLUMNS.|  
 |[DISCOVER_TRACE_EVENT_CATEGORIES](https://msdn.microsoft.com/library/ee320442)|Содержит набор строк схемы DISCOVER_TRACE_EVENT_CATEGORIES.|  
 |[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|Содержит набор строк схемы DISCOVER_TRACES.|  

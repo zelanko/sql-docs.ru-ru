@@ -14,12 +14,12 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d5eadf38bcdb7573cf19941535182e2cc8f87f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fc706cd372f4bee0c9449b15de6d070240141bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111504"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414791"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
   Стандартная подписка — это подписка, созданная конкретным пользователем, который хочет получать отчет по электронной почте или в общую папку. Стандартная подписка всегда определяется через отчет, на котором она основана.  
@@ -27,7 +27,7 @@ ms.locfileid: "48111504"
  Пользователь, создавший подписку, становится ее владельцем. Любой пользователь может изменять и удалять свои собственные подписки.  
   
 > [!NOTE]  
->  Начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можете передавать владение подписки программным путем. Пользовательского интерфейса, который можно использовать для передачи владения подписками, не существует. Дополнительные сведения см. в разделе <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  Начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], вы можете передавать владение подписки программным путем. Пользовательского интерфейса, который можно использовать для передачи владения подписками, не существует. Дополнительные сведения см. в разделе <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>.  
   
  В зависимости от **RSReportServer.config** параметры файла конфигурации, пользователи могут иметь возможность добавлять других пользователей в подписку (например, руководитель может добавить адреса электронной почты своих или прямых подчиненных, таким образом, каждый из них получать копию отчет). Если эта возможность поддерживается, поле «Кому:» отображается при определении конкретных подписок. Дополнительные сведения см. в разделе [Настройка сервера отчетов для доставки электронной почты &#40;диспетчер конфигурации служб SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
@@ -58,13 +58,13 @@ ms.locfileid: "48111504"
   
 -   Для использования доставки в общую папку папка назначения уже должна быть определена. Дополнительные сведения см. в разделе [Настройка сервера отчетов для доставки электронной почты &#40;диспетчер конфигурации служб SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Чтобы можно было подписаться на отчет, источник данных отчета должен быть настроен на использование сохраненных учетных данных или на работу без учетных данных. Дополнительные сведения см. в разделе [Store учетные данные в источнике данных Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Если это не так, то кнопка **Создать подписку** будет недоступна.  
+ Чтобы можно было подписаться на отчет, источник данных отчета должен быть настроен на использование сохраненных учетных данных или на работу без учетных данных. Дополнительные сведения см. в разделе [Сохраненные учетные данные в источнике данных Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Если это не так, то кнопка **Создать подписку** будет недоступна.  
   
  В этом разделе не описывается создание управляемой данными подписки. Инструкции по созданию управляемой данными подписки см. в разделе [Создание управляемой данными подписки (учебник по службам SSRS)](../create-a-data-driven-subscription-ssrs-tutorial.md) или в справке в Интернете для страницы диспетчера отчетов "Создание управляемой данными подписки".  
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> Создание подписки на доставку в общую папку  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md).  
   
 2.  В диспетчере отчетов на странице **Содержимое** укажите отчет, на который необходимо подписаться. Щелкните отчет, чтобы открыть его.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "48111504"
 ##  <a name="bkmk_delete_subscription"></a> Удаление подписки  
  Удаление подписки  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md).  
   
 2.  В диспетчере отчетов нажмите кнопку **Мои подписки** на главной панели инструментов и найдите подписку, которую необходимо изменить или удалить.  
   
@@ -173,11 +173,11 @@ ms.locfileid: "48111504"
   
 ## <a name="see-also"></a>См. также  
  [Задачи и разрешения](../security/tasks-and-permissions.md)   
- [Создание и администрирование подписок для серверов отчетов в режиме интеграции с SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Создание и администрирование подписок для серверов отчетов в собственном режиме](../create-manage-subscriptions-native-mode-report-servers.md)   
- [Управляемые данными подписки](data-driven-subscriptions.md)   
- [Подписки и доставка &#40;службы Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
+ [Подписки и доставка (службы Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)   
  [Использование страницы "Мои подписки"](use-my-subscriptions-native-mode-report-server.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1e8c6381aaf8afd848831c8599c4534a77b179e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fc33585e165b8cdac2f7d46c322741b3eb1756c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084794"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503730"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Задание свойств задач или контейнеров
   Большинство свойств задач и контейнеров можно задать с помощью окна **Свойства** . Исключение составляют свойства коллекций задач и свойства, задание которых в окне **Свойства** было бы слишком сложным. Например, нельзя настроить перечислитель, который контейнер «цикл по каждому элементу» использует в окне **Свойства** . Для задания таких сложных свойств следует использовать редактор задачи или контейнера. У большинства редакторов задач и контейнеров имеется несколько узлов, содержащих связанные свойства. Имя узла указывает на субъект свойств, содержащихся в узле.  
@@ -69,7 +69,7 @@ ms.locfileid: "48084794"
   
 8.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](control-flow/integration-services-tasks.md)   
  [Контейнеры служб Integration Services](control-flow/integration-services-containers.md)  
   

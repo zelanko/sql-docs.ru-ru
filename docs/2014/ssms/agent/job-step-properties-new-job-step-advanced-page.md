@@ -1,10 +1,10 @@
 ---
-title: 'Свойства шага задания: (Страница «Дополнительно») Создание шага задания | Документация Майкрософт'
+title: 'Свойства шага задания: Создание шага задания (страница "Дополнительно") | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.stepadvanced.f1
@@ -12,14 +12,14 @@ ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1197d23dda2ecd96adaa6cc49625db25851410c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176544"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767216"
 ---
-# <a name="job-step-properties-new-job-step-advanced-page"></a>Свойства шага задания: создание шага задания (страница "Дополнительно")
+# <a name="job-step-properties-new-job-step-advanced-page"></a>Свойства шага задания: Создание шага задания (страница «Дополнительно»)
   Используйте эту страницу для просмотра и изменения свойств шага задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Параметры  
