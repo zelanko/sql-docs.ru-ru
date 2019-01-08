@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
@@ -14,12 +13,12 @@ ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 627823a32f630d0d243a6a2babb5e6e2a98d40be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a940035172195b86499262bef52ca319ebefd137
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834232"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747446"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Способ определения разрешений (службы Master Data Services)
 
@@ -55,7 +54,7 @@ ms.locfileid: "47834232"
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Шаг 2. Если назначены разрешения для элементов иерархии, определяются действующие разрешения для элементов.  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Этап 2. Если назначены разрешения для элементов иерархии, определяются действующие разрешения для элементов.  
  Следующий список показывает, как определяются действующие разрешения для элементов иерархии.  
   
 -   Разрешения, назначенные для узлов иерархии, определяют, к каким элементам имеет доступ пользователь.  
@@ -82,6 +81,6 @@ ms.locfileid: "47834232"
   
 ## <a name="see-also"></a>См. также:  
  [Перекрытие разрешений пользователей и групп (службы основных данных)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
- [Перекрытие разрешений моделей и элементов (службы Master Data Services)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [Перекрытие разрешений моделей и элементов (службы основных данных)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   
