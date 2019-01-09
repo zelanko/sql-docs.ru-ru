@@ -1,27 +1,25 @@
 ---
-title: Распространенные проблемы со службой панели запуска и выполнения внешних скриптов в SQL Server | Документация Майкрософт
+title: Распространенные проблемы со службой панели запуска и выполнения внешнего скрипта - службы машинного обучения SQL Server
 ms.prod: sql
-ms.technology: mlserver
+ms.technology: ''
 ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5f770ce536dcbc29245d1b6e853a2548ab1ec744
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a3437e5f7081aa47cb33e33546a79aca0b100309
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701452"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644924"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Распространенные проблемы со службой панели запуска и выполнения внешних скриптов в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- Служба запуска доверенного SQL Server поддерживает выполнение внешнего скрипта R и Python. В SQL Server 2016 R Services с пакетом обновления 1 предоставляет службу. SQL Server 2017 включает в себя выдаются панели запуска в процессе установки начальные.
+ Служба запуска доверенного SQL Server поддерживает выполнение внешнего скрипта R и Python. В SQL Server 2016 R Services с пакетом обновления 1 предоставляет службу. SQL Server 2017 включает в себя службу панели запуска в процессе начальной установки.
 
 Несколько проблемы могут препятствовать панели запуска с начала, включая проблемы с конфигурацией или изменения или отсутствуют сетевые протоколы. В этой статье содержатся рекомендации по устранению неполадок для многих проблем. Для любого мы пропустили, вы можете публиковать вопросы для [Machine Learning Server форум](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR).
-
-**Применяется к:** служб R SQL Server 2016, SQL Server 2017 службы машинного обучения
 
 ## <a name="determine-whether-launchpad-is-running"></a>Определить, выполняется ли панель запуска
 
@@ -69,7 +67,7 @@ ms.locfileid: "51701452"
 
 Чтобы решить эту проблему, в SQL Server Management Studio, администратор безопасности можно изменить имя входа SQL или учетная запись пользователя Windows, выполнив следующий сценарий:
 
-```SQL
+```sql
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
 
@@ -129,11 +127,11 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. Перезапуск службы обычно решает проблему, чтобы обеспечить возможность выполнения сценариев. Если перезапуск не устранит проблему, обратите внимание, путь и аргументы в **путь к двоичным файлам** свойства и выполните следующее:
 
-    A. Просмотрите средство запуска config-файл и проверьте правильность рабочего каталога.
+    1. Просмотрите средство запуска config-файл и проверьте правильность рабочего каталога.
 
-    Б. Убедитесь, что группа Windows, которая используется панелью запуска может подключиться к экземпляру SQL Server, как описано в [выше](#bkmk_LaunchpadTS).
+    2. Убедитесь, что группа Windows, которая используется панелью запуска может подключиться к экземпляру SQL Server.
 
-    в. При изменении каких-либо свойств службы, перезапустите службу панели запуска.
+    В. При изменении каких-либо свойств службы, перезапустите службу панели запуска.
 
 ## <a name="fatal-error-creation-of-tmpfile-failed"></a>«Не удалось создать Неустранимая ошибка tmpFile»
 
@@ -171,7 +169,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 Чтобы определить расположение библиотеки пакетов R, который используется экземпляром, откройте SQL Server Management Studio (или другом средстве запросов базы данных), подключитесь к экземпляру и выполните следующую хранимую процедуру:
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R',  
 @script = N' print(normalizePath(R.home())); print(.libPaths());'; 
 ```
@@ -211,7 +209,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 > [!NOTE] 
 > В старых системах панели запуска может не запускаться, если потребность в нотации 8dot3. Это требование был удален в последующих выпусках. SQL Server 2016 R Services пользователи должны установить одно из следующих значений:
-> * SQL Server 2016 SP1 и CU1: [накопительного пакета обновления 1 для SQL Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
+> * SQL Server 2016 SP1 и CU1: [Накопительный пакет обновления 1 для SQL Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
 > * SQL Server 2016 RTM с накопительным обновлением 3 и это [исправление](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), которая доступна по запросу.
 
 Для совместимости с R, SQL Server 2016 R Services (в базе данных) требуется диск, где он установлен для поддержки создания коротких имен файлов с помощью *нотацию 8dot3*. Именем файла 8.3 также называется *короткое имя файла*, и он используется для совместимости с предыдущими версиями Microsoft Windows или в качестве альтернативы длинные имена файлов.

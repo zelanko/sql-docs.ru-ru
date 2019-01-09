@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- VS.ErrorList
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5078fec6dd0661f42e4e1104257671672efb6403
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0218602b8f46d15f4d2d809df95e0500b51180ab
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643580"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328294"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Отладчик Transact-SQL, окно списка ошибок
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **среды** отображает синтаксические и семантические ошибки, сформированные из кода технологии IntelliSense в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **среды** отображает синтаксические и семантические ошибки, сформированные из кода технологии IntelliSense в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="features-of-the-error-list"></a>Функции списка ошибок  
  **Список ошибок** обеспечивает следующую функциональность.  
@@ -91,5 +89,3 @@ ms.locfileid: "51643580"
   
  **Проект**  
  Отображает имя проекта, в который входит файл скрипта.  
-  
-  

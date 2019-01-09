@@ -1,5 +1,5 @@
 ---
-title: Свойства диспетчера блокировок | Документация Майкрософт
+title: Службы Analysis Services свойства диспетчера блокировок | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 146bfef500424b7a587c3fb28616a3727086f265
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a5383fe83963a9b388413b9b829b4fac7fc11788
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033332"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071593"
 ---
 # <a name="lock-manager-properties"></a>Свойства диспетчера блокировок
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера диспетчера блокировок, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Область применения:** многомерный и табличный режим сервера  
+ **Применимо к:** многомерный и табличный режим сервера  
   
 ## <a name="properties"></a>Свойства  
  **DefaultLockTimeoutMS**  

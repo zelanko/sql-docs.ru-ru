@@ -1,5 +1,5 @@
 ---
-title: Использование Python с помощью revoscalepy для создания модели в SQL Server | Документация Майкрософт
+title: Использование Python с помощью revoscalepy для создания модели - машинного обучения SQL Server
 description: Написать сценарий Python с помощью revoscalepy функции для создания моделей обработки и анализа данных, которые выполняются удаленно в SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f554badcba282bad7fb386daf8c4c0f4106804b4
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 18c5b801198946313e4f489902eb5f7c9ff0d7af
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100165"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596835"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Использование Python с помощью revoscalepy для создания модели, который выполняется удаленно на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "50100165"
 Все операции выполняются с помощью экземпляра SQL Server в качестве контекста вычисления.
 
 > [!NOTE]
-> Пример данного образца, запустив из командной строки, см. в этом видео: [SQL Server 2017 расширенной аналитики с помощью Python](https://www.youtube.com/watch?v=FcoY795jTcc)
+> Для демонстрации данного образца, запустив из командной строки см. в этом видео: [SQL Server 2017 расширенной аналитики с помощью Python](https://www.youtube.com/watch?v=FcoY795jTcc)
 
 ### <a name="sample-code"></a>Образец кода
 
@@ -130,7 +130,7 @@ def test_linmod_sql():
 
     Передавать эти переменные для [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) конструктор, чтобы реализовать **объекта источника данных** с именем `data_source`.
 
-+ Создании **объект контекста вычислений** с помощью [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata) конструктор. Полученный в результате **объект контекста вычислений** называется `sql_cc`.
++ Создании **объект контекста вычислений** с помощью [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) конструктор. Полученный в результате **объект контекста вычислений** называется `sql_cc`.
 
     В этом примере повторно использует ту же строку подключения, которая использовалась в источнике данных, предполагается, что данные находятся на тот же экземпляр SQL Server, который будет использоваться как контекст вычислений. 
     

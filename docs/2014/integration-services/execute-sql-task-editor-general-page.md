@@ -15,12 +15,12 @@ ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f983b412b6ef4a91293e07b66a8a0cab6d15a71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcf15af9fb5e351dd4c965d0eb6ef520b62b65b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079444"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531373"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Редактор задачи «Выполнение SQL» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Выполнение SQL»** для настройки задачи «Выполнение SQL» и формирования инструкции SQL, которую запускает задача.  
@@ -47,7 +47,7 @@ ms.locfileid: "48079444"
 >  Если задача «Выполнение SQL» использует диспетчер соединений ADO или ODBC, свойство **Кодовая страница** недоступно. Если решению необходимо использовать кодовую страницу, с задачей «Выполнение SQL» следует применять диспетчер соединений OLE DB или ADO.NET.  
   
  **TypeConversionMode**  
- Если задано это свойство `Allowed`, задача «Выполнение SQL» пытается преобразовать выходной параметр и результаты запроса данных тип переменной результаты назначаются. Это относится к типу результирующего набора **Одна строка** .  
+ Когда этому свойству задается значение `Allowed`, задача «Выполнение SQL» пытается преобразовать выходной параметр и результаты запроса в тип данных переменной, к которой относятся эти результаты. Это относится к типу результирующего набора **Одна строка** .  
   
  **ResultSet**  
  Укажите ожидаемый тип результата выполнения инструкции SQL. Выберите из **Одна строка**, **Полный результирующий набор**, **XML**или **Нет**.  
@@ -55,7 +55,7 @@ ms.locfileid: "48079444"
  **ConnectionType**  
  Выберите тип, используемый диспетчером соединений для соединения с источником данных. В качестве возможных типов соединения могут быть: **OLE DB**, **ODBC**, **ADO**, **ADO.NET** и **SQLMOBILE**.  
   
- **См. также:** [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md), [Диспетчер соединений ODBC](connection-manager/odbc-connection-manager.md), [Диспетчер соединений ADO](connection-manager/ado-connection-manager.md), [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md), [Диспетчер соединений SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **См. также:** [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md), [диспетчер соединений ODBC](connection-manager/odbc-connection-manager.md), [диспетчер соединений ADO](connection-manager/ado-connection-manager.md), [диспетчера соединений ADO.NET](connection-manager/ado-net-connection-manager.md), [SQL Server Диспетчер соединений Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Соединение**  
  Выберите соединение из списка определенных диспетчеров соединений. Для создания соединения выберите \<**Создать соединение...**>.  
@@ -65,7 +65,7 @@ ms.locfileid: "48079444"
   
  В зависимости от типа диспетчера соединений, используемого задачей «Выполнение SQL», в параметризованных инструкциях SQL необходимо использовать определенные маркеры параметров.  
   
- **См. также:** подраздел «Выполнение параметризованных команд SQL» в разделе [Execute SQL Task](control-flow/execute-sql-task.md)  
+ **См. также:** Выполнение параметризованных команд SQL в разделе [задаче "Выполнение SQL"](control-flow/execute-sql-task.md)  
   
  Это свойство имеет параметры, указанные в следующей таблице.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48079444"
   
 ### <a name="sqlsourcetype--direct-input"></a>WQLQuerySource = Прямой ввод  
  **SQLStatement**  
- Введите инструкцию SQL для выполнения в окне параметров или нажмите кнопку обзора (...) для ввода инструкции SQL в диалоговом окне **Ввод SQL-запроса** , либо нажмите кнопку **Создать запрос** для составления инструкции при помощи диалогового окна **Построитель запросов** .  
+ Введите инструкцию SQL для выполнения в окне параметров или нажмите кнопку обзора (...) для ввода инструкции SQL в диалоговом окне **Ввод SQL-запроса**, либо нажмите кнопку **Создать запрос** для составления инструкции при помощи диалогового окна **Построитель запросов**.  
   
  **См. также:** [Построитель запросов](../../2014/integration-services/query-builder.md)  
   
@@ -104,16 +104,16 @@ ms.locfileid: "48079444"
  **FileConnection**  
  Выберите существующий диспетчер подключений файлов или нажмите кнопку \<**Создать подключение...**>, чтобы создать новый диспетчер подключений.  
   
- **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Переменная  
  **SourceVariable**  
  Выберите существующую переменную или щелкните \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md)  
+ **См. также:** [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [добавить переменную](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задач SQL Выполнение &#40;странице «сопоставление параметров»&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
  [Редактор задач SQL Выполнение &#40;результирующий набор страниц&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   

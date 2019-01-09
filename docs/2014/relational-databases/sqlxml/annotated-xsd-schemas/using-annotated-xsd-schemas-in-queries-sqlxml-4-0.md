@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - queries [SQLXML]
@@ -23,17 +21,17 @@ ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15da4e4aba1162be479972de48c5ba4b0cf63107
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37c7f266fbfa09a4cd8fea463ba224e9ec2b4534
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220284"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800394"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Использование схем XSD с заметками в запросах (SQLXML 4.0)
   Для получения данных из базы данных путем указания запроса XPath в шаблоне к схеме XSD можно задавать запросы к аннотированным схемам.  
   
- **\<Sql:xpath-запрос >** элемент позволяет указать запрос XPath к представлениям XML, который определен в схеме с заметками. Схема с заметками, относительно которой запрос XPath должно быть выполнено определяется с помощью `mapping-schema` атрибут  **\<sql:xpath-запрос >** элемент.  
+  **\<Sql:xpath-запрос >** элемент позволяет указать запрос XPath к представлениям XML, который определен в схеме с заметками. Схема с заметками, относительно которой запрос XPath должно быть выполнено определяется с помощью `mapping-schema` атрибут  **\<sql:xpath-запрос >** элемент.  
   
  Шаблоны являются допустимыми XML-документами, которые содержат один или несколько запросов. Запросы FOR XML и XPath возвращают фрагмент документа. Шаблоны выполняют функцию контейнеров для фрагментов документов. Таким образом, они обеспечивают возможность указания единственного элемента верхнего уровня.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -23,12 +21,12 @@ ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d988713949f29671294f3897f62d2e0a2fb8677
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 744690e12569a46c184ec712eec48498e080e99b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189524"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807076"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Введение в схемы XSD с заметками (SQLXML 4.0)
   Можно создавать представления схем XML реляционных данных при помощи языка XSD. Затем можно выполнять запросы к этим представлениям при помощи языка XPath (XML Path). Это аналогично созданию представлений с помощью инструкции CREATE VIEW с последующим указанием запросов SQL к представлению.  
@@ -46,7 +44,7 @@ ms.locfileid: "48189524"
 </xsd:schema>  
 ```  
   
- **\<Xsd: schema >** элемент является производным от спецификации пространства имен схемы XML в http://www.w3.org/2001/XMLSchema.  
+  **\<Xsd: schema >** элемент является производным от спецификации пространства имен схемы XML в http://www.w3.org/2001/XMLSchema.  
   
 ## <a name="annotations-to-the-xsd-schema"></a>Заметки к схеме XSD  
  Можно использовать схему XSD с заметками, которые описывают сопоставление с базой данных, запрашивают базу данных, а затем возвращают результаты в форме XML-документа. Заметки служат для сопоставления схемы XSD с таблицами и столбцами базы данных. Можно указывать запросы XPath к представлениям XML, созданным на основе схемы XSD, для запроса базы данных и получения результатов в виде XML.  
@@ -69,7 +67,7 @@ ms.locfileid: "48189524"
  Префикс пространства имен может быть произвольным. В этой документации **sql** префикс используется для задания пространства имен заметок и для отличия заметок данного пространства имен от заметок других пространств имен.  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>Пример схемы XSD с заметками  
- В следующем примере схема XSD состоит из  **\<Person.Contact >** элемент. **\<Сотрудника >** элемент имеет **ContactID** атрибут и  **\<FirstName >** и  **\< LastName >** дочерние элементы:  
+ В следующем примере схема XSD состоит из  **\<Person.Contact >** элемент.  **\<Сотрудника >** элемент имеет **ContactID** атрибут и  **\<FirstName >** и  **\< LastName >** дочерние элементы:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -120,9 +118,9 @@ ms.locfileid: "48189524"
 ## <a name="other-resources"></a>Другие ресурсы  
  Дополнительные сведения о языке XSD, языке XPath и преобразованиях XSLT находятся на следующих веб-сайтах.  
   
--   XML Schema Part 0: Учебник для начинающих, W3C рекомендации (http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Учебник для начинающих, W3C (рекомендация http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Структуры, W3C рекомендация (http://www.w3.org/TR/xmlschema-1/)  
+-   Схема XML, часть 1: Структуры, W3C (рекомендация http://www.w3.org/TR/xmlschema-1/)  
   
 -   Схема XML, часть 2: типы данных, W3C рекомендация (http://www.w3.org/TR/xmlschema-2/)  
   

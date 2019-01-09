@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - nesting XML results
@@ -23,12 +21,12 @@ ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a28b15796ad82f5cd02e00f15176aa6c5ee87a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d1db0287c0876c80d5353657c525f4e0597c5f0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175364"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795646"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Идентификация ключевых столбцов с использованием sql:key-fields (SQLXML 4.0)
   При указании запроса XPath к схеме XSD в большинстве случаев необходимы ключевые сведения, чтобы правильно организовать вложенность в результатах. Указание заметки `sql:key-fields` представляет собой один из способов, который гарантирует формирование надлежащей иерархии.  
@@ -48,7 +46,7 @@ ms.locfileid: "48175364"
   
  Рассмотрим следующую схему. Схема задает иерархию между  **\<порядок >** и  **\<клиента >** элементов, в который  **\<порядок >** элемент является родительским и  **\<клиента >** элемент является дочерним.  
   
- **\<SQL: Relationship >** тег используется для указания «родитель потомок». Он идентифицирует столбец CustomerID в таблице Sales.SalesOrderHeader как родительский ключ, который ссылается на дочерний ключ CustomerID таблицы Sales.Customer. Сведения в  **\<SQL: Relationship >** не достаточно для уникальной идентификации строк в родительской таблице (Sales.SalesOrderHeader). Поэтому без заметки `sql:key-fields` формируемая иерархия является неточной.  
+  **\<SQL: Relationship >** тег используется для указания «родитель потомок». Он идентифицирует столбец CustomerID в таблице Sales.SalesOrderHeader как родительский ключ, который ссылается на дочерний ключ CustomerID таблицы Sales.Customer. Сведения в  **\<SQL: Relationship >** не достаточно для уникальной идентификации строк в родительской таблице (Sales.SalesOrderHeader). Поэтому без заметки `sql:key-fields` формируемая иерархия является неточной.  
   
  С помощью `sql:key-fields` указано на  **\<порядок >**, заметка однозначно определяет строки в родительской таблице (Sales.SalesOrderHeader) и его дочерние элементы выводятся под родительским.  
   
@@ -174,7 +172,7 @@ ms.locfileid: "48175364"
   
      Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Результат:  
+ Это результат:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

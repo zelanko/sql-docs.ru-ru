@@ -14,12 +14,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f9eddf5cb58b18651acd77afe44758a47b1fd8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602853"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537897"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 -   0 — none  
   
--   1 — пользователь  
+-   1 – Проверка  
   
--   2 — простой  
+-   2 — простая  
   
--   3 — принудительно  
+-   3 - принудительно  
   
 ## <a name="columns-returned"></a>Возвращаемые столбцы  
  В следующей таблице перечислены столбцы этого sys.fn_stmt_sql_handle_from_sql_stmt возвращает.  

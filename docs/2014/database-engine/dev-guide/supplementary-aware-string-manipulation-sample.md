@@ -12,12 +12,12 @@ ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96171211f08ae5348dfb183dc20abaaa66b3fb6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 820e418e9de194c038ca8b9fcd0dbed2db18bab7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182495"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364296"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Образец операций над строками с учетом дополнений
   В данном образце для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] демонстрируется обработка строк с учетом дополнительных символов. В данном образце показана реализация пяти строковых функций Transact-SQL с такими же возможностями работы со строками, как и во встроенных функциях, но с расширенной поддержкой дополнительных символов при обработке как строк в Юникоде, так и строк дополнительных символов. Пять функций: lens(), `lefts(), rights(), subs()` и `replace_s()` которые эквивалентны встроенным функциям `LEN(), LEFT(), RIGHT(), SUBSTRING()` и `REPLACE()` строковые функции.  
@@ -25,9 +25,9 @@ ms.locfileid: "48182495"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
--   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](http://go.microsoft.com/fwlink/?linkid=62796).  
+-   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   
 -   Пакет SDK 2.0 для платформы .NET Framework или более поздняя версия либо среда Microsoft Visual Studio 2005 или более поздняя версия. Пакет SDK для платформы .NET Framework можно получить бесплатно.  
   

@@ -17,17 +17,17 @@ ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d97b570ca00251e7beaf39b104d254bf3363e8ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba1efc734b49f62b1f7b3b3876a8ea0db2732da7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119336"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373356"
 ---
 # <a name="implementing-a-security-extension"></a>Реализация модуля безопасности
   Проверка подлинности [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows является основной системой защиты отчетов в службах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Однако в определенных случаях может понадобиться расширить систему безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], чтобы обеспечить соответствие требованиям системы безопасности предприятия. Для этого используется платформа разработки, предоставляемая API служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. В этом разделе представлены общие сведения о модулях безопасности в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- Полные сведения о реализации, развертывании и удалении модулей безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] см. на странице [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Полные сведения о реализации, развертывании и удалении модулей безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] см. на странице [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о модулях безопасности](security-extensions-overview.md)  

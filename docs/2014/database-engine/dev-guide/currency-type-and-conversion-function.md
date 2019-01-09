@@ -12,12 +12,12 @@ ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12e5afd378f09a0fa7d624c6842e907211bc4212
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0119d51332dde13ae77a67fb82f293495a4fefdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194734"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375146"
 ---
 # <a name="currency-type-and-conversion-function"></a>Тип денежной единицы и функция конвертации
   В этом примере определяется пользовательский тип данных Currency на языке C#. Определяемый пользователем тип данных включает в себя количество и культуру, что помогает выбрать правильный способ подготовки к показу суммы в виде значения валюты в представлении конкретной культурной среды. В этом примере также реализуется функция конвертации валюты, возвращающая экземпляр пользовательского типа данных Currency. Если база данных AdventureWorks содержит коэффициент перевода из долларов США в валюту, связанную с заданной культурой, функция перевода возвращает определяемый пользователем тип данных Currency с коэффициентом перевода и культурой, соответствующей запрошенной. В противном случае определяемый пользователем тип данных Currency возвращается с исходной суммой, которая должна быть выражена в долларах США, и культурой `en-us`. В этом примере также показано, как регистрировать и отменять регистрацию методов и сборок среды CLR при помощи Transact-SQL.  
@@ -28,9 +28,9 @@ ms.locfileid: "48194734"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
--   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](http://go.microsoft.com/fwlink/?linkid=62796).  
+-   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   
 -   Пакет SDK 2.0 для платформы .NET Framework или более поздняя версия либо среда Microsoft Visual Studio 2005 или более поздняя версия. Пакет SDK для платформы .NET Framework можно получить бесплатно.  
   

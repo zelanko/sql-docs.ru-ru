@@ -11,21 +11,21 @@ ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a80e3134fc734f962fa9b082374dc3f9c4a74ba2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 471bfe1a93e76630e6699a2ff07fcf5c6bddc913
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147254"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368606"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Устранение неполадок установки PowerPivot для SharePoint
   Если вместо ожидаемых страниц и компонентов выдаются ошибки, выполните следующие действия.  
   
 -   Откройте заметки о выпуске SharePoint и [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , чтобы выяснить, какие существуют способы решения известных проблем установки. Заметки о выпуске доступны на установочном носителе или на сайте Майкрософт, с которого было загружено программное обеспечение.  
   
-    -   [Заметки о выпуске SQL Server 2014](http://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
+    -   [Заметки о выпуске SQL Server 2014](https://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
   
--   См. раздел [Устранение неполадок установки PowerPivot (и других надстроек)](http://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx)портала TechNet Wiki.  
+-   См. раздел [Устранение неполадок установки PowerPivot (и других надстроек)](https://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx)портала TechNet Wiki.  
   
 ## <a name="issues"></a>Проблемы  
   
@@ -40,6 +40,6 @@ ms.locfileid: "48147254"
   
 4.  Убедитесь, что значение **Функции интеграции с PowerPivot для семейств веб-сайтов** равно **Активны**.  
   
- Дополнительные причин этой проблемы, см. в разделе [Галерея PowerPivot отображается красная x для значков](http://support.microsoft.com/kb/2361559) (http://support.microsoft.com/kb/2361559).  
+ Дополнительные причин этой проблемы, см. в разделе [Галерея PowerPivot отображается красная x для значков](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559).  
   
   

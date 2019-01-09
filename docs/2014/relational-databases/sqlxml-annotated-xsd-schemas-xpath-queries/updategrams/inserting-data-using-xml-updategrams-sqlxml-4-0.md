@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - xsi:nil attribute
@@ -35,12 +33,12 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 95989f956f01039cec5bbbc3ab61417981a094f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053304"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365856"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Вставка данных с помощью диаграмм обновления XML (SQLXML 4.0)
   Диаграмма обновления обозначает операцию вставки, когда экземпляр записи появляется в  **\<после >** блок, но отсутствует в соответствующем  **\<перед >** блока. В этом случае диаграмма обновления вставляет запись в  **\<после >** блок в базу данных.  
@@ -67,7 +65,7 @@ ms.locfileid: "48053304"
 ```  
   
 ## <a name="before-block"></a>\<Прежде чем > блока  
- **\<Перед >** можно опустить блок для операции вставки. Если необязательный `mapping-schema` атрибут не указан,  **\<ElementName >** , указанный в диаграмме обновления, соответствует таблице базы данных, а также дочерние элементы или атрибуты соответствуют столбцам в таблице.  
+  **\<Перед >** можно опустить блок для операции вставки. Если необязательный `mapping-schema` атрибут не указан,  **\<ElementName >** , указанный в диаграмме обновления, соответствует таблице базы данных, а также дочерние элементы или атрибуты соответствуют столбцам в таблице.  
   
 ## <a name="after-block"></a>\<После > блока  
  Можно указать одну или несколько записей в  **\<после >** блока.  
@@ -213,7 +211,7 @@ ms.locfileid: "48053304"
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имена таблиц могут содержать пробелы, как, например, таблица Order Details в базе данных Northwind. Тем не менее, не допускается в XML-символы, которые являются допустимыми [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] идентификаторов, однако не является допустимым идентификаторов XML можно закодировать с помощью "__xHHHH\_\_" как значение кодировки, где HHHH обозначает четырехразрядный шестнадцатеричный код UCS-2 для символа, в наиболее значимых порядке старшинства бит.  
   
 > [!NOTE]  
->  В данном примере используется образец базы данных Northwind. Базы данных Northwind можно установить с помощью скрипта SQL доступны для загрузки из этого [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkId=30196).  
+>  В данном примере используется образец базы данных Northwind. Базы данных Northwind можно установить с помощью скрипта SQL доступны для загрузки из этого [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkId=30196).  
   
  Кроме того имя элемента должны быть заключены в квадратные скобки ([]). Поскольку символы [и] недопустимы в XML, их необходимо кодировать как _x005B\_ и _x005D\_, соответственно. Если используется схема сопоставления, то можно предоставить имена элементов, не содержащие недопустимых символов, таких как пробелы. Схема сопоставления выполняет необходимое сопоставление, следовательно, необязательно кодировать эти символы.  
   
@@ -632,8 +630,8 @@ CustOrder(OrderID, EmployeeID, OrderType)
  <ProductModel>  
     <Name>Mountain-100</Name>  
     <Desc><?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>  
-        <p1:ProductDescription xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-              xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+        <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+              xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
               xmlns:wf="http://www.adventure-works.com/schemas/OtherFeatures"   
               xmlns:html="http://www.w3.org/1999/xhtml"   
               xmlns="">  
@@ -688,7 +686,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 <?xml version="1.0" encoding="utf-8" ?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
      <xsd:complexType>  
        <xsd:sequence>  

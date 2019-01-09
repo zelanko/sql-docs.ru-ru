@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -24,12 +22,12 @@ ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96afa13033fee6a2767fc1ad3f6b6761c4a8247f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50ec2b9a4c35fdf16b8d7f696b9d227eb63ff7cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222320"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793806"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Исключение элементов схемы из результирующего XML-документа с помощью sql:mapped (SQLXML 4.0)
   В результате сопоставления по умолчанию каждый элемент и атрибут в схеме XSD будет сопоставлен с таблицей и столбцом в базе данных. Если в схеме XSD нужно создать элемент, не сопоставленный никакой таблице, никакому представлению или столбцу базы данных и не фигурирующий в XML, нужно создать для него заметку `sql:mapped`.  
@@ -46,7 +44,7 @@ ms.locfileid: "48222320"
   
  При сопоставлении этой схемы XSD с таблицей Person.Contact в базе данных AdventureWorks, `sql:mapped` заметка указывается для **HomeAddress** атрибут, поскольку таблица Employees не хранятся домашние адреса сотрудников. В результате этот атрибут не сопоставлен с базой данных и не возвращается в результирующем XML-документе в ответ на запрос XPath к схеме сопоставления.  
   
- Для остальной части схемы используется сопоставление по умолчанию. **\<Person.Contact >** элемент сопоставляется с таблицей Person.Contact, а все атрибуты сопоставляются со столбцами с тем же именем в таблице Person.Contact.  
+ Для остальной части схемы используется сопоставление по умолчанию.  **\<Person.Contact >** элемент сопоставляется с таблицей Person.Contact, а все атрибуты сопоставляются со столбцами с тем же именем в таблице Person.Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

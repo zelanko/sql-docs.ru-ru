@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], examples
@@ -17,12 +15,12 @@ ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73b134d4b2bb59373551129d1af62231d3401a5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed354e6b72f66908c12e1254738df75008659f8d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220624"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804536"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>Примеры дельт (SQLXML 4.0)
   Примеры в данном разделе состоят из нескольких дельт (DiffGram), которые выполняют операции вставки, обновления и удаления в базе данных. При использовании этих примеров необходимо учитывать следующие моменты.  
@@ -101,7 +99,7 @@ ms.locfileid: "48220624"
 </ROOT>  
 ```  
   
- В  **\<перед >** block, имеется  **\<порядок >** элемент (**diffgr: ID = «Order1»**) и  **\< Customer >** элемент (**diffgr: ID = «Customer1»**). Данные элементы представляют существующие записи в базе данных. **\<DataInstance >** элемент не имеет соответствующих записей (с тем же **diffgr: ID**). Это указывает на операцию удаления.  
+ В  **\<перед >** block, имеется  **\<порядок >** элемент (**diffgr: ID = «Order1»**) и  **\< Customer >** элемент (**diffgr: ID = «Customer1»**). Данные элементы представляют существующие записи в базе данных.  **\<DataInstance >** элемент не имеет соответствующих записей (с тем же **diffgr: ID**). Это указывает на операцию удаления.  
   
 #### <a name="to-test-the-diffgram"></a>Проверка дельты  
   
@@ -128,7 +126,7 @@ ms.locfileid: "48220624"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  
@@ -195,7 +193,7 @@ ms.locfileid: "48220624"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  
@@ -240,7 +238,7 @@ ms.locfileid: "48220624"
 </ROOT>  
 ```  
   
- **\<Перед >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer1»**). **\<DataInstance >** блок содержит соответствующий  **\<клиента >** элемент с таким же **идентификатор**.  **\<Клиента >** элемент в  **\<NewDataSet >** также указывает **diffgr: HasChanges = «modified»**. Он означает операции обновления, а также запись о заказчике в **Cust** таблица обновляется соответствующим образом. Обратите внимание, что если **diffgr: HasChanges** атрибут не указан, то логика обработки дельты пропустит этот элемент и обновления не выполняются.  
+  **\<Перед >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer1»**).  **\<DataInstance >** блок содержит соответствующий  **\<клиента >** элемент с таким же **идентификатор**.  **\<Клиента >** элемент в  **\<NewDataSet >** также указывает **diffgr: HasChanges = «modified»**. Он означает операции обновления, а также запись о заказчике в **Cust** таблица обновляется соответствующим образом. Обратите внимание, что если **diffgr: HasChanges** атрибут не указан, то логика обработки дельты пропустит этот элемент и обновления не выполняются.  
   
 #### <a name="to-test-the-diffgram"></a>Проверка дельты  
   
@@ -267,7 +265,7 @@ ms.locfileid: "48220624"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  
@@ -343,13 +341,13 @@ ms.locfileid: "48220624"
   
 -   В соответствии с логикой обработки дельт все элементы верхнего уровня в  **\<перед >** block карте определенным таблицам, как описано в схеме сопоставления.  
   
--   **\<Перед >** блок содержит  **\<порядок >** элемент (**dffgr:id = «Order1»**) и  **\<клиента >** элемент (**diffgr: ID = «Customer1»**), для которого отсутствует соответствующий элемент в  **\<DataInstance >** блоке (с одинаковым Идентификатором). Это указывает на операцию удаления, во время которой записи удаляются из таблиц Cust и Ord.  
+-    **\<Перед >** блок содержит  **\<порядок >** элемент (**dffgr:id = «Order1»**) и  **\<клиента >** элемент (**diffgr: ID = «Customer1»**), для которого отсутствует соответствующий элемент в  **\<DataInstance >** блоке (с одинаковым Идентификатором). Это указывает на операцию удаления, во время которой записи удаляются из таблиц Cust и Ord.  
   
--   **\<Перед >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer2»**) для которого существует соответствующий  **\<Клиента >** элемент в  **\<DataInstance >** блоке (с одинаковым Идентификатором). Элемент в  **\<DataInstance >** указывает блок **diffgr: HasChanges = «modified»**. Это операция обновления, в которой для пользователя anatr, CompanyName и ContactName данные обновляются в таблице Cust, с помощью значений, указанных в  **\<DataInstance >** блока.  
+-    **\<Перед >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer2»**) для которого существует соответствующий  **\<Клиента >** элемент в  **\<DataInstance >** блоке (с одинаковым Идентификатором). Элемент в  **\<DataInstance >** указывает блок **diffgr: HasChanges = «modified»**. Это операция обновления, в которой для пользователя anatr, CompanyName и ContactName данные обновляются в таблице Cust, с помощью значений, указанных в  **\<DataInstance >** блока.  
   
--   **\<DataInstance >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer3»**) и  **\<Порядок >** элемент (**diffgr: ID = «Order3»**). Ни один из этих элементов укажите **diffgr: HasChanges** атрибута. Таким образом, логика обработки дельт не учитывает эти элементы.  
+-    **\<DataInstance >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer3»**) и  **\<Порядок >** элемент (**diffgr: ID = «Order3»**). Ни один из этих элементов укажите **diffgr: HasChanges** атрибута. Таким образом, логика обработки дельт не учитывает эти элементы.  
   
--   **\<DataInstance >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer4»**) и  **\<Порядок >** элемент (**diffgr: ID = «Order4»**) для которых существует соответствующий элемент в \<перед > блока. Эти элементы в  **\<DataInstance >** указать блок **diffgr: HasChanges = «inserted»**. Таким образом, в таблицы Cust и Ord добавляется новая запись.  
+-    **\<DataInstance >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer4»**) и  **\<Порядок >** элемент (**diffgr: ID = «Order4»**) для которых существует соответствующий элемент в \<перед > блока. Эти элементы в  **\<DataInstance >** указать блок **diffgr: HasChanges = «inserted»**. Таким образом, в таблицы Cust и Ord добавляется новая запись.  
   
 #### <a name="to-test-the-diffgram"></a>Проверка дельты  
   
@@ -376,7 +374,7 @@ ms.locfileid: "48220624"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  

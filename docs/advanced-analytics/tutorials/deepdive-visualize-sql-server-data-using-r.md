@@ -1,27 +1,85 @@
 ---
-title: Визуализация данных SQL Server, с помощью языка R (SQL и R глубокое погружение в обработку) | Документация Майкрософт
+title: Визуализация данных SQL Server, с помощью RevoScaleR rxHistogram - машинного обучения SQL Server
+description: Руководство о том, как визуализировать данные с помощью языка R в SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0d34ece68c421dbb7aabd845e117c9f07e00d013
-ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
+ms.openlocfilehash: 4f8ab37cefd55cd78556ac7bbf5af24cc01dca8e
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47217519"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596475"
 ---
-#  <a name="visualize-sql-server-data-using-r-sql-and-r-deep-dive"></a>Визуализация данных SQL Server, с помощью языка R (SQL и R глубокое погружение в обработку)
+#  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Визуализация данных SQL Server, с помощью языка R (руководство по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Эта статья входит углубленное рассмотрение обработки и анализа данных руководства по использованию [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
+Это занятие является частью [руководстве RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
 
-Расширенные пакеты в [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] включают несколько функций, которые оптимизированы для масштабируемости и параллельной обработки. Обычно эти функции начинаются с префикса **rx** или **Rx**.
+На этом занятии использовать функции R, чтобы просмотреть распределение значений в *creditLine* столбца по полу.
 
-В этом пошаговом руководстве используется **rxHistogram** функцию, чтобы просмотреть распределение значений в _creditLine_ столбца по полу.
+> [!div class="checklist"]
+> * Создание минимальных и максимальных переменные для входных данных гистограммы
+> * Визуализация данных в гистограмму с помощью **rxHistogram** из **RevoScaleR**
+> * Визуализация с помощью точечных диаграмм с помощью **levelplot** из **lattice** включенные в базовое распределение R
+
+Как на этом занятии рассматривается, открытым исходным кодом и характерные для Майкрософт функции, в том же сценарии можно объединять.
+
+## <a name="add-maximum-and-minimum-values"></a>Добавить максимальное и минимальное значения
+
+Исходя из вычисляемые сводные статистические данные на предыдущем занятии, вы ознакомились с некоторые полезные сведения о данных, которые можно вставить в источник данных для дальнейшего вычисления. Например минимальное и максимальное значения можно использовать для построения гистограмм. В этом упражнении добавить верхние и нижние значения **RxSqlServerData** источника данных.
+
+1. Сначала создайте ряд временных переменных.
+  
+    ```R
+    sumDF <- sumOut$sDataFrame
+    var <- sumDF$Name
+    ```
+  
+2. Используйте эту переменную *ccColInfo* , созданного на предыдущем занятии, для определения столбцов в источнике данных.
+  
+   Добавление новых вычисляемых столбцов (*numTrans*, *numIntlTrans*, и *creditLine*) в коллекцию столбцов, которая переопределяет исходное определение. Приведенный ниже сценарий добавляет факторы, на основе минимального и максимального значений, полученный из sumOut, которая сохраняет выходные данные в памяти **rxSummary**. 
+  
+    ```R 
+    ccColInfo <- list(
+        gender = list(type = "factor",
+          levels = c("1", "2"), 
+          newLevels = c("Male", "Female")),
+        cardholder = list(type = "factor",
+          levels = c("1", "2"), 
+          newLevels = c("Principal", "Secondary")), 
+        state = list(type = "factor", 
+          levels = as.character(1:51), 
+          newLevels = stateAbb), 
+        balance  = list(type = "numeric"),
+        numTrans = list(type = "factor", 
+          levels = as.character(sumDF[var == "numTrans", "Min"]:sumDF[var == "numTrans", "Max"])),
+        numIntlTrans = list(type = "factor",  
+            levels = as.character(sumDF[var == "numIntlTrans", "Min"]:sumDF[var =="numIntlTrans", "Max"])),
+        creditLine = list(type = "numeric")
+            )
+    ```
+  
+3. Обновив коллекцию столбцов, применить следующую инструкцию, чтобы создать обновленную версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника данных, который вы задали ранее.
+  
+    ```R
+    sqlFraudDS <- RxSqlServerData(
+        connectionString = sqlConnString,
+        table = sqlFraudTable,
+        colInfo = ccColInfo,
+        rowsPerRead = sqlRowsPerRead)
+    ```
+  
+    Источник данных sqlFraudDS теперь содержит новые столбцы, добавленные с помощью *ccColInfo*.
+  
+На этом этапе изменения касаются только объекта источника данных в R; новые данные не будет записана в таблицу базы данных еще. Тем не менее данные, записанные в переменную sumOut можно использовать для создания визуализаций и сводок. 
+
+> [!TIP]
+> Если вы забудете, какой контекст вычисления, вы используете, выполните **rxGetComputeContext()**. Возвращаемое значение, равное «Контекст вычислений RxLocalSeq» указывает, что вы работаете в локальном контексте вычисления.
 
 ## <a name="visualize-data-using-rxhistogram"></a>Визуализация данных с помощью rxHistogram
 
@@ -37,13 +95,19 @@ ms.locfileid: "47217519"
   
     ```R
     rxSetComputeContext(sqlCompute)
+    rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-3. Результаты будут такими же, поскольку вы используете тот же источник данных; однако вычисления выполняются на компьютере с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Затем результаты возвращаются на локальную рабочую станцию для построения графика.
+3. Результаты одинаковы, так как вы используете тот же источник данных, но на втором шаге, вычисления выполняются на удаленном сервере. Затем результаты возвращаются на локальную рабочую станцию для построения графика.
    
-![Результаты в виде гистограммы](media/rsql-sue-histogramresults.jpg "Результаты в виде гистограммы")
+  ![Результаты в виде гистограммы](media/rsql-sue-histogramresults.jpg "Результаты в виде гистограммы")
 
-4. Можно также вызвать **rxCube** функции и передать результаты построения диаграмм функция R.  Например, в следующем примере функция **rxCube** используется для вычисления среднего значения *fraudRisk* для каждого сочетания значений *numTrans* и *numIntlTrans*:
+
+## <a name="visualize-with-scatter-plots"></a>Визуализация с помощью точечных диаграмм
+
+Точечных диаграмм часто используются во время просмотра данных для сравнения отношения между двумя переменными. Для этой цели можно использовать встроенные пакеты R с входными данными, предоставляемые **RevoScaleR** функции.
+
+1. Вызовите [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) функции для вычисления среднего значения *fraudRisk* для каждой комбинации *numTrans* и *numIntlTrans*:
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
@@ -51,9 +115,9 @@ ms.locfileid: "47217519"
   
     Чтобы указать группы, используемые для вычисления средних значений по группам, используйте нотацию `F()` . В этом примере `F(numTrans):F(numIntlTrans)` указывает, что целочисленные значения переменных `numTrans` и `numIntlTrans` следует рассматривать как категориальные переменные с уровнем каждое целочисленное значение.
   
-    Так как нижний и верхний уровни уже были добавлены к источнику данных `sqlFraudDS` (с помощью `colInfo` параметр), уровни автоматически используются в гистограмме.
+    Возвращаемое значение по умолчанию **rxCube** — *rxCube объекта*, который представляет перекрестное табулирование. 
   
-5. Возвращаемое значение по умолчанию **rxCube** — *rxCube объекта*, который представляет перекрестное табулирование. Однако при помощи функции [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) можно преобразовать результаты в кадр данных, который можно легко использовать в одной из стандартных функций формирования диаграмм языка R.
+2. Вызовите [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) функция для преобразования результатов в кадр данных, который можно легко использовать в одном из стандартных функций построения диаграмм.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -63,9 +127,9 @@ ms.locfileid: "47217519"
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        
-    Однако выходные данные функции **rxResultsDF** более понятны, и в них сохраняются имена исходных столбцов.
+    Тем не менее выходные данные **rxResultsDF** чище и понятнее и в них сохраняются имена исходных столбцов. Можно запустить `head(cube1)` следуют `head(cubePlot)` сравнение вывода.
   
-6. Наконец, выполните следующий код, чтобы создать тепловую карту с помощью `levelplot` функции из **lattice** пакет, который входит в состав всех дистрибутивов r.
+3. Создать тепловую карту с помощью **levelplot** функции из **lattice** пакета, в состав всех дистрибутивов r.
   
     ```R
     levelplot(fraudRisk~numTrans*numIntlTrans, data = cubePlot)
@@ -75,14 +139,11 @@ ms.locfileid: "47217519"
   
     ![Результаты в виде точечной диаграммы](media/rsql-sue-scatterplotresults.jpg "Результаты в виде точечной диаграммы")
   
-Даже выполнив такой быстрый анализ, можно заметить, что риск мошенничества растет с увеличением как числа обычных транзакций, так и числа международных транзакций.
+Из такой быстрый анализ вы увидите, что риск мошенничества возрастает количество транзакций и числа международных транзакций.
 
 Дополнительные сведения о **rxCube** функции и перекрестных таблицах в целом, см. в разделе [сводки данных, с помощью RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
 
-## <a name="next-step"></a>Следующий шаг
+## <a name="next-steps"></a>Следующие шаги
 
-[Создание моделей R, используя данные SQL Server](../../advanced-analytics/tutorials/deepdive-create-models.md)
-
-## <a name="previous-step"></a>Предыдущий шаг
-
-[Создание и выполнение скриптов R](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
+> [!div class="nextstepaction"]
+> [Создание моделей R, используя данные SQL Server](../../advanced-analytics/tutorials/deepdive-create-models.md)

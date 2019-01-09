@@ -12,12 +12,12 @@ ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0ad2e58c7c261d191adf7d48b157e42f13d8d37
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: f91f65dbe060eb11c3eeb049d069c665949dd350
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743169"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351036"
 ---
 # <a name="unused-assembly-cleanup"></a>Очистка неиспользуемой сборки
   Образец `AssemblyCleanup` содержит хранимую процедуру .NET, которая удаляет неиспользуемые сборки из текущей базы данных, выполняя запрос к каталогам метаданных. Единственный параметр этой хранимой процедуры `visible_assemblies` указывает, должны ли быть удалены неиспользуемые видимые сборки. Значение 'false' по умолчанию указывает на то, что должны быть удалены только неиспользуемые невидимые сборки. Если указано другое значение, то производится удаление всех неиспользуемых сборок. К неиспользуемым сборкам относятся те, для которых не определено ни одной точки входа (процедуры, тип и статистическая функция), а также ни одной сборки, которая ссылается на них прямо или косвенно.  
@@ -25,9 +25,9 @@ ms.locfileid: "50743169"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
--   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](http://go.microsoft.com/fwlink/?linkid=62796).  
+-   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   
 -   Пакет SDK 2.0 для платформы .NET Framework или более поздняя версия либо среда Microsoft Visual Studio 2005 или более поздняя версия. Пакет SDK для платформы .NET Framework можно получить бесплатно.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "50743169"
   
     #### <a name="enabling-clr-integration"></a>Включение интеграции со средой CLR  
   
-    -   Выполните следующие команды [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+    -   Выполните следующие команды [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
      `sp_configure 'clr enabled', 1`  
   

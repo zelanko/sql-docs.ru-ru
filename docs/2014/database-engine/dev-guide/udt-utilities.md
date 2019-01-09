@@ -12,12 +12,12 @@ ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: adcea3ce2134ddfe33a9a11ba06cce028c8fad51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84fcd5451bae28f1817d7cf9b874938436f3d2f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210184"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372396"
 ---
 # <a name="udt-utilities"></a>Программы определяемых пользователем типов
   Образец программ определяемых пользователем типов содержит набор служебных функций. В их число входят функции для предоставления метаданных сборки в Transact-SQL, образцы потоковых функций, возвращающих типы в сборке в виде таблицы, и функции, возвращающие поля, методы и свойства в определяемом пользователем типе данных. При этом, в частности, демонстрируются возвращающие потоковые функции с табличным значением, отражение API-интерфейсов .NET Framework и вызов из Transact-SQL возвращающих табличные значения функций.  
@@ -25,9 +25,9 @@ ms.locfileid: "48210184"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
--   База данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , доступная на [веб-сайте Codeplex](http://go.microsoft.com/fwlink/?linkid=62796).  
+-   База данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , доступная на [веб-сайте Codeplex](https://go.microsoft.com/fwlink/?linkid=62796).  
   
 -   Пакет SDK 2.0 для платформы .NET Framework или более поздняя версия либо среда Microsoft Visual Studio 2005 или более поздняя версия. Пакет SDK для платформы .NET Framework можно получить бесплатно.  
   

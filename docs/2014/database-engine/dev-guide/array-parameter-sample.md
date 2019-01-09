@@ -12,12 +12,12 @@ ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed705d084bc1c6e5b8d06e4a68e4dbe77f67a2b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4eead93b1c2254ee9634ef5a05b1cd5d60ce079f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115654"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375386"
 ---
 # <a name="array-parameter-sample"></a>Образец параметра массива
   Иногда бывает необходимо создавать, обновлять или удалять набор строк в базе данных. Существует несколько подходов, которые можно использовать для достижения этой цели. Один из них — передавать массив данных от клиента в хранимую процедуру среды CLR на сервере через определяемый пользователем тип данных интеграции со средой CLR. Природа таких пользовательских типов данных ограничивает данные, передаваемые серверу, размером 8 000 байт. По этой причине такое решение не подходит для больших или сложных данных. Если обрабатываемые данные имеют простую структуру и небольшой объем, этот подход может оказаться более эффективным, чем вызов хранимой процедуры для каждой строки. При передаче массива порядок данных сохраняется для тех приложений, в которых этот порядок является важным. Этот образец содержит следующее.  
@@ -31,9 +31,9 @@ ms.locfileid: "48115654"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
--   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](http://go.microsoft.com/fwlink/?linkid=62796).  
+-   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   
 -   Пакет SDK 2.0 для платформы .NET Framework или более поздняя версия либо среда Microsoft Visual Studio 2005 или более поздняя версия. Пакет SDK для платформы .NET Framework можно получить бесплатно.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48115654"
   
 5.  В каталоге c:\MySample создайте файл `Program.vb` (для образца на языке Visual Basic) или `Program.cs` (для образца на языке C#) и скопируйте в него соответствующий образец кода на языке Visual Basic или C#, приведенный ниже.  
   
-6.  Найдите соответствующую строку в файле Program (около строки 24) и замените `XXX` с именем экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+6.  В файле Program найдите соответствующую строку (около строки 24) и замените `XXX` именем экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   `Dim connection As New SqlConnection("data source=XXX;initial catalog=AdventureWorks;Integrated Security=SSPI")`  
   

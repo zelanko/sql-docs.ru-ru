@@ -1,7 +1,8 @@
 ---
-title: 'Краткое руководство: Подключение и запрос SQL Server с помощью студии данных Azure | Документация Майкрософт'
+title: Краткое руководство. Подключение и запрос SQL Server
+titleSuffix: Azure Data Studio
 description: В этом кратком руководстве показано, как использовать Studio данных Azure для подключения к SQL Server и выполнить запрос
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 6ad52b466c15ad81515e954cf8fa3fa5a727100f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 2b7e251440fd8b0184e36e0e41c47d2ab0dcaf18
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356095"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030288"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство: Подключение и запрос с помощью SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство. Подключение и запрос SQL Server с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 В этом кратком руководстве показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к SQL Server, а затем с помощью инструкций Transact-SQL (T-SQL) для создания *TutorialDB* используется в [!INCLUDE[name-sos](../includes/name-sos-short.md)] учебники.
 
 ## <a name="prerequisites"></a>предварительные требования
@@ -43,11 +44,11 @@ ms.locfileid: "49356095"
 1. В этой статье используется *имя входа SQL*, но *проверки подлинности Windows* поддерживается. Заполните поля следующим образом:
  
     - **Имя сервера:** localhost
-    - **Тип проверки подлинности:** имя входа SQL  
-    - **Имя пользователя:** имя пользователя для SQL Server  
-    - **Пароль:** пароль для SQL Server  
+    - **Тип проверки подлинности:** Имя входа SQL  
+    - **Имя пользователя:** Имя пользователя для SQL Server  
+    - **Пароль:** Пароль для SQL Server  
     - **Имя базы данных:** оставьте это поле пустым 
-    - **Группа сервера:** \<по умолчанию\>  
+    - **Группа сервера:** \<Default\>  
 
    ![Новый экран подключения](media/quickstart-sql-server/new-connection-screen.png)
 

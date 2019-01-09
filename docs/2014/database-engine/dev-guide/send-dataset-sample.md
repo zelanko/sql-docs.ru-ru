@@ -12,12 +12,12 @@ ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c736cbf5a5c6fd98f3635224c21c785468ce932d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7f617c7a69925f4ddb4bf6a2c0ef34c2e43f03a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105704"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372796"
 ---
 # <a name="send-dataset-sample"></a>Образец отправки DataSet
   Образец Send `DataSet` показывает, как с помощью серверной хранимой процедуры, основанной на среде CLR, возвратить клиенту в виде результирующего набора элемент `DataSet` на основе ADO.NET. Данный способ используется, например, когда хранимая процедура заполняет элемент `DataSet` результатами запроса, а затем манипулирует данными, содержащимися в `DataSet`. Также подобный подход используется при создании и заполнении объекта `DataSet` при помощи хранимых процедур. Образец состоит из двух классов: `DataSetUtilities` и `TestSendDataSet`. Метод `SendDataSet`, принадлежащий к классу `DataSetUtilities`, представляет собой наиболее общий способ передачи содержимого экземпляра `DataSet` клиенту. Метод `DoTest` , определенный в классе `TestSendDataSet` , проверяет работу метода `SendDataSet` . Для этого создается экземпляр `DataSet` , который заполняется данными, поступающими из хранимой процедуры `uspGetTwoBOMTestData` Transact-SQL. Процедура `uspGetTwoBOMTestData` дважды запускает процедуру Transact-SQL `uspGetBillOfMaterials` , чтобы выполнить рекурсивный запрос счетов за материалы по двум видам продуктов, указанным в качестве параметров хранимой процедуры `usp_GetTwoBOMTestData` . Обычно после заполнения набора данных данные изменяются до вызова метода `SendDataSet` для доставки их клиенту в виде результирующего набора. В этом образце для простоты данные передаются без обработки.  
@@ -25,9 +25,9 @@ ms.locfileid: "48105704"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](http://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
--   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](http://go.microsoft.com/fwlink/?linkid=62796).  
+-   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   
 -   Пакет SDK 2.0 для платформы .NET Framework или более поздняя версия либо среда Microsoft Visual Studio 2005 или более поздняя версия. Пакет SDK для платформы .NET Framework можно получить бесплатно.  
   

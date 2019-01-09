@@ -12,12 +12,12 @@ ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 374ba32b5cc79a503333b691b4708921f507004a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fa2edb4437b2d97a5a78da609838c6fcaaadda3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182774"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353583"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Свойства полнотекстового каталога (страница «Общие»)
   В этом разделе показаны параметры и функции, доступные на странице **Общие** диалогового окна **Свойства полнотекстового каталога** .  
@@ -50,7 +50,7 @@ ms.locfileid: "48182774"
   
 -   **Построение индекса**  
   
--   **Диск заполнен — приостановлено**  
+-   **Диск приостановлен full**  
   
 -   **Change tracking**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48182774"
  **Размер каталога**  
  Отображается размер полнотекстового каталога в мегабайтах.  
   
- **Название**  
+ **Name**  
  Имя полнотекстового каталога.  
   
  **С учетом диакритических знаков**  
@@ -70,7 +70,7 @@ ms.locfileid: "48182774"
   
 -   **Да**  
   
--   Сведения о диакритических знаках см. в разделе [Диакритический знак](http://go.microsoft.com/fwlink/?LinkId=154091) в энциклопедии MSN Encarta.  
+-   Сведения о диакритических знаках см. в разделе [Диакритический знак](https://go.microsoft.com/fwlink/?LinkId=154091) в энциклопедии MSN Encarta.  
   
  **Дата последнего заполнения**  
  Отображается дата последнего заполнения каталога.  
