@@ -17,19 +17,19 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35fad6632f6c03cbbcc913868da15a60d4b87453
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcf2d5924e160f38c9b00b564a8ae94b6f8705c3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095900"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358006"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Возможности, поддерживаемые различными выпусками SQL Server 2014
   В этом разделе подробно описаны функции, поддерживаемые различными выпусками [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-> **Примечание:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступен в ознакомительной версии в течение 180-дневного пробного периода. Дополнительные сведения см. в разделе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [пробной версии программного обеспечения веб-сайт](http://go.microsoft.com/fwlink/?LinkId=190955).  
-  
-> **Примечание:** функции, поддерживаемые выпусками Evaluation и Developer см. в разделе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] набор функций для предприятия.  
+> **Примечание:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступен в ознакомительной версии в течение 180-дневного пробного периода. Дополнительные сведения см. на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [](https://go.microsoft.com/fwlink/?LinkId=190955).  
+> 
+> **ПРИМЕЧАНИЕ.** Компоненты, поддерживаемые выпуском SQL Server Developer Edition и ознакомительной версией, описаны в наборе компонентов для выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition.  
   
  Чтобы перейти к таблице, относящейся к технологии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , щелкните ссылку на нее:  
   
@@ -61,11 +61,11 @@ ms.locfileid: "48095900"
   
  [Хранилище данных](#Data_warehouse)  
   
- [службы Analysis Services](#SSAS)  
+ [Службы Analysis Services](#SSAS)  
   
  [Семантическая модель (многомерные данные)](#BISemModel_multi)  
   
- [Семантическая модель (табличное)](#BISemModel_tabular)  
+ [Семантическая модель бизнес-аналитики (табличная)](#BISemModel_tabular)  
   
  [PowerPivot для SharePoint](#PowerPivot)  
   
@@ -83,27 +83,27 @@ ms.locfileid: "48095900"
   
 ##  <a name="CrossBoxScale"></a> Пределы масштабирования разных выпусков  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Максимальная вычислительная мощность, используемая одним экземпляром ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] компонент Database Engine)<sup>1</sup>|Максимальное значение, поддерживаемое операционной системой|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
 |Максимальная вычислительная мощность, используемая одного экземпляра (службы Analysis Services, Reporting Services) <sup>1</sup>|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 4 процессоров и 16 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|Ограничение: меньшее из 1 процессора и 4 ядер|  
 |Максимальный объем используемой памяти (для каждого экземпляра компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine)|Максимальное значение, поддерживаемое операционной системой|128 ГБ|128 ГБ|64 ГБ|1 ГБ|1 ГБ|1 ГБ|  
-|Максимальный объем используемой памяти (на экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|64 ГБ|Недоступно|Недоступно|Недоступно|Недоступно|  
-|Максимальный объем используемой памяти (на экземпляр [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|64 ГБ|64 ГБ|4 ГБ|Недоступно|Недоступно|  
+|Максимальный объем используемой памяти (на экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|64 ГБ|Н/Д|Недоступно|Недоступно|Н/Д|  
+|Максимальный объем используемой памяти (на экземпляр [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Максимальное значение, поддерживаемое операционной системой|Максимальное значение, поддерживаемое операционной системой|64 ГБ|64 ГБ|4 ГБ|Н/Д|Н/Д|  
 |Максимальный размер реляционной базы данных|524 ПБ|524 ПБ|524 ПБ|524 ПБ|10 ГБ|10 ГБ|10 ГБ|  
   
  <sup>1</sup> Enterprise Edition с сервера и клиентскую лицензию (CAL) на основе лицензирования (недоступно для новых соглашений) ограничено максимум 20 ядрами в расчете на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляра. В модели лицензирования по числу ядер никаких ограничений нет. Дополнительные сведения см. в разделе [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ##  <a name="High_availability"></a> Высокий уровень доступности  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Поддержка основных серверных компонентов<sup>1</sup>|Да|Да|Да|Да|Да|Да|Да|  
 |Доставка журналов|Да|Да|Да|Да||||  
 |Зеркальное отображение базы данных|Да|Да (только в режиме полной безопасности)|Да (только в режиме полной безопасности)|Только следящий сервер|Только следящий сервер|Только следящий сервер|Только следящий сервер|  
 |Сжатие резервных копий|Да|Да|Да|||||  
 |Моментальный снимок базы данных|Да|||||||  
-|Экземпляры отказоустойчивого кластера Alwayson|Да (поддержка узлов: максимум операционной системы)|Да (поддержка узлов: 2)|Да (поддержка узлов: 2)|||||  
+|Экземпляры отказоустойчивого кластера Alwayson|Да (поддержка узлов: Максимальное значение, поддерживаемое операционной системой|Да (поддержка узлов: 2)|Да (поддержка узлов: 2)|||||  
 |Группы доступности AlwaysOn|Да (до 8 вторичных реплик, включая 2 синхронные вторичные реплики)|||||||  
 |директор соединений|Да|||||||  
 |Восстановление страниц и файлов в режиме «в сети»|Да|||||||  
@@ -122,7 +122,7 @@ ms.locfileid: "48095900"
   
 ##  <a name="Scalability"></a> Масштабируемость и производительность  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Поддержка нескольких экземпляров|50|50|50|50|50|50|50|  
 |Секционирование таблиц и индексов|Да|||||||  
@@ -140,7 +140,7 @@ ms.locfileid: "48095900"
   
 ##  <a name="Enterprise_security"></a> безопасность  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Основные возможности аудита|Да|Да|Да|Да|Да|Да|Да|  
 |Точный аудит|Да|||||||  
@@ -152,9 +152,9 @@ ms.locfileid: "48095900"
   
 ##  <a name="Replication"></a> Replication  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Отслеживание изменений|Да|Да|Да|Да|Да|Да|Да|  
+|Отслеживание изменений [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Да|Да|Да|Да|Да|Да|Да|  
 |Репликация слиянием|Да|Да|Да|Да (только подписчик)|Да (только подписчик)|Да (только подписчик)|Да (только подписчик)|  
 |Репликация транзакций|Да|Да|Да|Да (только подписчик)|Да (только подписчик)|Да (только подписчик)|Да (только подписчик)|  
 |репликация моментальных снимков;|Да|Да|Да|Да (только подписчик)|Да (только подписчик)|Да (только подписчик)|Да (только подписчик)|  
@@ -164,13 +164,13 @@ ms.locfileid: "48095900"
   
 ##  <a name="Mgmt_Tools"></a> Management Tools  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Объекты SMO|Да|Да|Да|Да|Да|Да|Да|  
 |Диспетчер конфигурации SQL Server|Да|Да|Да|Да|Да|Да|Да|  
 |SQL CMD (программа командной строки)|Да|Да|Да|Да|Да|Да|Да|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|Да|Да|Да|Да|Да|Да||  
-|Распределенное воспроизведение — средство администрирования|Да|Да|Да|Да|Да|Да||  
+|Распределенное воспроизведение — средство администрирования|Да|Да|Да|Да|Да|Да||  
 |Распределенное воспроизведение — клиент|Да|Нет|Да|Да||||  
 |Распределенное воспроизведение — контроллер|Да (выпуск Enterprise Edition поддерживает до 16 клиентов, выпуск Developer Edition поддерживает только 1 клиента)|Нет|Да (поддерживается только 1 клиент)|Да (поддерживается только 1 клиент)||||  
 |SQL Profiler|Да|Да|Да|Не<sup>2</sup>|Не<sup>2</sup>|Не<sup>2</sup>|Не<sup>2</sup>|  
@@ -186,14 +186,14 @@ ms.locfileid: "48095900"
   
 ##  <a name="RDBMS_mgmt"></a> RDBMS Manageability  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Пользовательские экземпляры|||||Да|Да|Да|  
 |LocalDB|||||Да|Да||  
 |Выделенное административное соединение|Да|Да|Да|Да|Да (под флагом трассировки)|Да (под флагом трассировки)|Да (под флагом трассировки)|  
 |Поддержка скриптов PowerShell|Да|Да|Да|Да|Да|Да|Да|  
 |Поддержка SysPrep<sup>1</sup>|Да|Да|Да|Да|Да|Да|Да|  
-|Поддержка операций с компонентами приложения уровня данных — извлечение, развертывание, обновление, удаление|Да|Да|Да|Да|Да|Да|Да|  
+|Поддержка для операций с компонентами приложения уровня данных — извлечение, развертывание, обновление, удаление|Да|Да|Да|Да|Да|Да|Да|  
 |Автоматизация политики (проверка по расписанию и изменение)|Да|Да|Да|Да||||  
 |Сборщик данных производительности|Да|Да|Да|Да||||  
 |Возможность регистрации в качестве управляемого экземпляра в среде управления несколькими экземплярами.|Да|Да|Да|Да||||  
@@ -205,7 +205,7 @@ ms.locfileid: "48095900"
 |Параллельные операции с индексами|Да|||||||  
 |Автоматическое использование индексированного представления оптимизатором запросов|Да|||||||  
 |Проверка согласованности параллелизма|Да|||||||  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Точка управления служебной программой|Да|||||||  
+|Точка управления служебной программой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Да|||||||  
 |Автономные базы данных|Да|Да|Да|Да|Да|Да|Да|  
 |Расширение буферного пула<sup>2</sup>|Да|Да|Да|||||  
   
@@ -215,10 +215,10 @@ ms.locfileid: "48095900"
   
 ##  <a name="Dev_tools"></a> Development Tools  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Интеграция со средой [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio|Да|Да|Да|Да|Да|Да|Да|  
-|IntelliSense ([!INCLUDE[tsql](../includes/tsql-md.md)] и многомерные Выражения)|Да|Да|Да|Да|Да|Да|Да|  
+|Intellisense ([!INCLUDE[tsql](../includes/tsql-md.md)] и многомерные выражения)|Да|Да|Да|Да|Да|Да|Да|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Да|Да|Да|Да|Да|||  
 |Средства изменения и проектирования SQL-запросов<sup>1</sup>|Да|Да|Да|||||  
 |Поддержка управления версиями<sup>1</sup>|Да|Да|Да|||||  
@@ -228,7 +228,7 @@ ms.locfileid: "48095900"
   
 ##  <a name="Programmability"></a> Programmability  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Интеграция со средой CLR|Да|Да|Да|Да|Да|Да|Да|  
 |Собственная поддержка XML|Да|Да|Да|Да|Да|Да|Да|  
@@ -245,7 +245,7 @@ ms.locfileid: "48095900"
   
 ##  <a name="SSIS"></a> Службы Integration Services  
   
-|Компонент|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Компонент|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Мастер импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Да|Да|Да|Да|Да|Да|Да|  
 |Встроенные соединители источника данных|Да|Да|Да|Да|Да|Да|Да|  
@@ -257,7 +257,7 @@ ms.locfileid: "48095900"
   
 ###  <a name="SSIS_AA"></a> Службы Integration Services — дополнительные адаптеры  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Высокопроизводительное назначение Oracle|Да|||||||  
 |Высокопроизводительное назначение Teradata|Да|||||||  
@@ -270,7 +270,7 @@ ms.locfileid: "48095900"
   
 ###  <a name="SSIS_AT"></a> Службы Integration Services — дополнительные преобразования  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Сохраняемые (высокопроизводительные) уточняющие запросы|Да|||||||  
 |Преобразование «Запрос интеллектуального анализа данных»|Да|||||||  
@@ -280,16 +280,16 @@ ms.locfileid: "48095900"
 ##  <a name="MDS"></a> Master Data Services  
   
 > [!NOTE]  
->  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] доступна 64-разрядных только в выпусках Business Intelligence и Enterprise.  
+>  -   Службы [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] доступны только в 64-разрядных выпусках Business Intelligence и Enterprise.  
   
-|Компонент|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Компонент|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |База данных службы [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Да|Да||||||  
 |Веб-приложение службы [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]|Да|Да||||||  
   
 ##  <a name="Data_warehouse"></a> Data Warehouse  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Создание кубов без базы данных|Да|Да|Да|||||  
 |Автоматическое создание промежуточных схем и схем хранилища данных|Да|Да|Да|||||  
@@ -302,7 +302,7 @@ ms.locfileid: "48095900"
   
 ##  <a name="SSAS"></a> Analysis Services  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Масштабируемые общие базы данных (присоединение или отсоединение, базы данных только для чтения)|Да|Да||||||  
 |Резервное копирование и восстановление, присоединение и отсоединение баз данных|Да|Да|Да|||||  
@@ -312,7 +312,7 @@ ms.locfileid: "48095900"
   
 ###  <a name="BISemModel_multi"></a> Семантическая модель (многомерные данные)  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Полуаддитивные меры|Да|Да|Не<sup>1</sup>|||||  
 |Иерархии|Да|Да|Да|||||  
@@ -349,7 +349,7 @@ ms.locfileid: "48095900"
   
 ###  <a name="BISemModel_tabular"></a> BI Semantic Model (Tabular)  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Иерархии|Да|Да||||||  
 |Ключевые показатели эффективности|Да|Да||||||  
@@ -362,7 +362,7 @@ ms.locfileid: "48095900"
   
 ###  <a name="PowerPivot"></a> PowerPivot для SharePoint  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Интеграция с фермой SharePoint на основе архитектуры общих служб|Да|Да||||||  
 |Отчеты об использовании|Да|Да||||||  
@@ -371,9 +371,9 @@ ms.locfileid: "48095900"
 |Обновление данных PowerPivot|Да|Да||||||  
 |Веб-каналы данных PowerPivot|Да|Да||||||  
   
-###  <a name="DataMining"></a> Data Mining  
+###  <a name="DataMining"></a> Интеллектуальный анализ данных  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Стандартные алгоритмы|Да|Да|Да|||||  
 |Средства интеллектуального анализа данных (мастера, редакторы, построители запросов)|Да|Да|Да|||||  
@@ -394,7 +394,7 @@ ms.locfileid: "48095900"
   
 ###  <a name="Reporting_features"></a> Функции служб Reporting Services  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Поддерживаемый выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для базы данных каталога|Standard Edition или более многофункциональный|Standard Edition или более многофункциональный|Standard Edition или более многофункциональный|Web Edition|Express|||  
 |Поддерживаемый выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для источников данных|Все выпуски   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Все выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Все выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Web Edition|Express|||  
@@ -439,22 +439,22 @@ ms.locfileid: "48095900"
 |Ознакомительная версия|Ознакомительная версия|  
   
 ##  <a name="BIClients"></a> Клиенты бизнес-аналитики  
- Следующие клиентские приложения доступны в центре загрузки Майкрософт и предоставляются для упрощения создания документов бизнес-аналитики, которые выполняются на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляра. При размещении этих документов в среде сервера используйте выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживается для этого типа документов. В следующей таблице показано, какой выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит компоненты сервера, необходимые для размещения документов, созданных в этих клиентских приложениях.  
+ Следующие клиентские приложения доступны в центре загрузки Майкрософт и предоставляются для упрощения создания документов бизнес-аналитики, запускаемых на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . При размещении этих документов в среде сервера используйте выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживаемый для этого типа документов. В следующей таблице показано, какой выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит компоненты сервера, необходимые для размещения документов, созданных в этих клиентских приложениях.  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|Да|Да|Да|||||  
 |Надстройки интеллектуального анализа данных для Excel и Visio 2010|Да|Да|Да|||||  
 |[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Да|Да||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Да|Да||||||  
   
-> [!NOTE]  
+> [!NOTE]
 >  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] является надстройкой Excel и не зависит от [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Однако [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] требуется для обмена данными и совместной работы с книгами [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] в среде SharePoint, и эта возможность доступна в выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition и Business Intelligence.  
-> 2.  В таблице выше указаны [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выпусков, которые необходимы для включения этих клиентских средств; Однако эти компоненты могут обращаться к данным, размещенным в любом выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+> 2.  В таблице выше указаны выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , необходимые для включения этих клиентских средств, но сами компоненты могут обращаться к данным, размещенным в любом выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Пространственные индексы|Да|Да|Да|Да|Да|Да|Да|  
 |Плоский и геодезический типы данных|Да|Да|Да|Да|Да|Да|Да|  
@@ -463,14 +463,14 @@ ms.locfileid: "48095900"
   
 ##  <a name="Add_DBServices"></a> Additional Database Services  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Помощник по миграции|Да|Да|Да|Да|Да|Да|Да|  
 |Компонент Database Mail|Да|Да|Да|Да||||  
   
 ##  <a name="Other_Components"></a> Другие компоненты  
   
-|Имя функции|Enterprise|Business Intelligence|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
+|Имя функции|Enterprise|Business Intelligence|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Службы Data Quality Services|Да|Да||||||  
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|StreamInsight Standard Edition||||  

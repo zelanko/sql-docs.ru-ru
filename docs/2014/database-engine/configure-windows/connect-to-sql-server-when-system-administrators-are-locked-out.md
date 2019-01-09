@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - sa account
@@ -15,12 +14,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119791"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641565"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Подключение к SQL Server в случае, если доступ системных администраторов заблокирован
   В этом разделе описывается, как восстановить доступ к компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в качестве системного администратора. Системный администратор может утратить доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по одной из следующих причин:  
@@ -66,7 +65,7 @@ ms.locfileid: "49119791"
   
 6.  Нажмите кнопку `OK`, а после сообщения о перезагрузке, щелкните правой кнопкой мыши имя сервера и нажмите кнопку **перезапустите**.  
   
-7.  После перезагрузки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ваш сервер находится в однопользовательском режиме. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент не запущен. Если он был запущен, то он займет ваше единственное соединение.  
+7.  После перезагрузки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ваш сервер находится в однопользовательском режиме. Убедитесь, что агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выполняется. Если он был запущен, то он займет ваше единственное соединение.  
   
 8.  На стартовом экране Windows 8 щелкните правой кнопкой мыши пиктограмму для [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. В нижней части экрана выберите **Запуск от имени администратора**. (Это передаст учетные данные администратора в SSMS.)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
@@ -14,12 +13,12 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32b0b350d7b23b41573a147f095705546b0d8b04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214744"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818291"
 ---
 # <a name="view-offline-log-files"></a>просматривать файлы журнала в режиме «вне сети»
   Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], появилась возможность просматривать файлы журнала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на локальных и удаленных экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые находятся вне сети или не могут запуститься.  
@@ -46,7 +45,7 @@ ms.locfileid: "48214744"
   
 -   [SqlErrorLogFile, класс](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (В этом разделе рассматривается извлечение данных из всех файлов журнала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
-##  <a name="BeforeYouBegin"></a> Разрешения  
+##  <a name="BeforeYouBegin"></a> Permissions  
  Для подключения к файлу журнала вне сети необходимы следующие разрешения на локальном и на удаленном компьютерах.  
   
 -   Доступ для чтения к пространству имен WMI **Root\Microsoft\SqlServer\ComputerManagement12** . По умолчанию доступ для чтения задается для всех с помощью разрешения «Включить учетную запись». Дополнительные сведения см. в описании процедуры «Проверка разрешений WMI» этого раздела.  

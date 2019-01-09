@@ -1,5 +1,5 @@
 ---
-title: Урок 1. Основы работы с помощником по настройке ядра СУБД | Документы Майкрософт
+title: Урок 1. Основы перемещения в помощнике по настройке ядра СУБД | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee0b1c221c3bdb18ec9b79339e9dd55cb4eed93e
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: d41c8a3dcc995849fa62ea9a06703d915298eeac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071808"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201783"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Урок 1. Основы перемещения в помощнике по настройке ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "49071808"
 - Скачайте [пример базы данных AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017).
 
 
-См. инструкции по [восстановлению резервной копии базы данных с помощью SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
+Ниже приведены инструкции по восстановлению баз данных в SSMS. Восстановление базы данных
 
   >[!NOTE]
   > Этот учебник предназначен для пользователей, знакомых с использованием SQL Server Management Studio и основные задачи администрирования. 
@@ -62,7 +62,7 @@ ms.locfileid: "49071808"
   
 -   Правая панель содержит вкладки **Общие** и **Параметры настройки** . Здесь можно определить сеанс настройки ядра СУБД. На вкладке **Общие** введите имя сеанса, определите используемый файл рабочей нагрузки или таблицу и выберите базу данных и таблицы, которые требуется настроить в данном сеансе. Рабочая нагрузка представляет собой набор инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемый в одной или нескольких базах данных, которые необходимо настроить. В помощнике по настройке ядра СУБД в качестве входной рабочей нагрузки при настройке базы данных используются файлы и таблицы трассировки, скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] и XML-файлы. На вкладке **Параметры настройки** можно выбрать структуры физической структуры базы данных (индексы или индексированные представления) и стратегию разделения на секции, которую должен проанализировать помощник по настройке ядра СУБД. На этой вкладке также указывается максимальное время, которое помощник по настройке ядра СУБД может затратить на настройку рабочей нагрузки. По умолчанию помощник по настройке ядра СУБД будет настраивать рабочую нагрузку в течение 1 часа.  
   
-> [!NOTE]  
+> [!NOTE]
 > Помощник по настройке ядра СУБД может принимать на входе XML-файлы, если скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] импортируется из редактора запросов среды [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Дополнительные сведения см. в разделе [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Запуск и использование помощника по настройке ядра СУБД [, в котором рассматривается запуск помощника по настройке ядра СУБД из редактора запросов среды](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ## <a name="configure-tool-options-and-layout"></a>Настройка параметров и вида средств 
@@ -86,7 +86,7 @@ ms.locfileid: "49071808"
     -   По умолчанию установлен флажок **Запрашивать подтверждение перед остановкой анализа сеанса** , что позволяет избежать случайной остановки сеанса настройки до завершения анализа рабочей нагрузки в помощнике по настройке ядра СУБД.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Урок 2. Использование помощника по настройке ядра СУБД](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Занятие 2. Использование помощника по настройке ядра СУБД](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   
