@@ -1,5 +1,5 @@
 ---
-title: Документация по программным модулям и службе машинного обучения SQL Server | Документация Майкрософт
+title: Документация по расширениям машинного обучения и программирования на R и Python — Машинное обучение SQL Server
 description: R и Python в SQL Server со встроенными моделями обработки и анализа данных и алгоритмами машинного обучения, используемыми для масштабного анализа корпоративных данных.
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4c56d49e4cf168c7d1b6b1830caa6c79e237f46c
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 498a73df26b516856fefe411f5d29bdac8076139
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712386"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596545"
 ---
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 # <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>Документация по программным модулям и службе машинного обучения SQL Server
@@ -68,6 +68,6 @@ ms.locfileid: "46712386"
 | [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | Чтение | Распределенная и параллельная обработка для задач R: преобразование данных, исследование, визуализация, статистическая и прогнозная аналитика. |
 | [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | Чтение | Функции, основанные на алгоритмах ИИ Майкрософт, адаптированные для R. |
 | [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | Чтение | Импорт данных из куба OLAP. |
-| [sqlRUtils]() | Чтение | Вспомогательные функции для инкапсуляции R и T-SQL. |
+| [sqlRUtils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | Чтение | Вспомогательные функции для инкапсуляции R и T-SQL. |
 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Python | Распределенная и параллельная обработка задач Python: преобразование данных, исследование, визуализация, статистическая и прогнозная аналитика.  | 
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Python | Функции, основанные на алгоритмах ИИ Майкрософт, адаптированные для Python.  |

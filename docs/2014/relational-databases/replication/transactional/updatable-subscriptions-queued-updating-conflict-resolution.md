@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
@@ -17,12 +16,12 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46d54056a60b2059bed038ddb8de3c83941ff38c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 1c07d35024358961b1d438d6a0b53cc764bbc479
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085645"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781236"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   Поскольку подписки, обновляемые посредством очередей, допускают изменения одних и тех же данных в различных местоположениях, при синхронизации данных у издателя могут возникать конфликты. Системой репликации обнаруживаются любые конфликты, возникающие при синхронизации изменений с издателем, которые затем разрешаются с помощью политики разрешения конфликтов, выбранной при создании публикации. Могут возникнуть следующие конфликты.  
@@ -55,13 +54,13 @@ ms.locfileid: "48085645"
   
  **Установка политики устранения конфликтов обновления посредством очередей**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Настройка параметров разрешения конфликтов для обновления посредством очередей (среда SQL Server Management Studio)](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Настройка параметров разрешения конфликтов для обновления посредством очередей (среда SQL Server Management Studio)](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
--   Программирование репликации на Transact-SQL: [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Программирование репликации на Transact-SQL: [Включение обновляемых подписок для публикации транзакций](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Просмотр конфликтов данных**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>Побеждает издатель  
  Когда параметр устранения конфликтов имеет значение «Побеждает издатель», согласованность транзакций поддерживается на основании данных издателя. Происходит откат конфликтной транзакции у инициировавшего ее подписчика.  

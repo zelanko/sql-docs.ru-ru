@@ -52,22 +52,32 @@ items:
   items:
   - name: Чтение
     items:
+    - name: Проверка наличия R в SQL Server
+      href: tutorials/quickstart-r-verify.md
     - name: Hello World в R и SQL
-      href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
+      href: tutorials/quickstart-r-run-using-tsql.md
     - name: Работа с входными и выходными данными
-      href: tutorials/rtsql-working-with-inputs-and-outputs.md
+      href: tutorials/quickstart-r-inputs-and-outputs.md
     - name: Работа с типами данных и объектами
-      href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+      href: tutorials/quickstart-r-data-types-and-objects.md
     - name: Использование функций R
-      href: tutorials/rtsql-using-r-functions-with-sql-server-data.md
+      href: tutorials/quickstart-r-functions.md
     - name: Создание модели прогнозирования
-      href: tutorials/rtsql-create-a-predictive-model-r.md
-    - name: Получение прогнозов с помощью модели и построение графика с результатами
-      href: tutorials/rtsql-predict-and-plot-from-model.md
+      href: tutorials/quickstart-r-create-predictive-model.md
+    - name: Прогнозирование по модели
+      href: tutorials/quickstart-r-predict-from-model.md
   - name: Python
     items:
-    - name: Запуск Python с помощью T-SQL
-      href: tutorials/run-python-using-t-sql.md
+    - name: Проверка наличия Python в SQL Server
+      href: tutorials/quickstart-python-verify.md
+    - name: Hello World на Python и SQL
+      href: tutorials/quickstart-python-run-using-t-sql.md
+    - name: Работа с входными и выходными данными
+      href: tutorials/quickstart-python-inputs-and-outputs.md
+    - name: Структуры данных Python и SQL
+      href: tutorials/quickstart-python-data-structures.md
+    - name: Обучение и использование первой модели
+      href: tutorials/quickstart-python-train-score-in-tsql.md
 - name: Учебники
   href: tutorials/machine-learning-services-tutorials.md
   items:
@@ -79,24 +89,6 @@ items:
       href: tutorials/demo-data-iris-in-sql.md
     - name: Набор данных о работе такси в Нью-Йорке
       href: tutorials/demo-data-nyctaxi-in-sql.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: Обучение и использование первой модели
-      href: tutorials/train-score-using-python-in-tsql.md
-    - name: Создание модели Python с помощью revoscalepy
-      href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: Изучение аналитики в базе данных
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: 1. Исследование данных
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 2. Проектирование функций
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 3. Обучение и развертывание
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 4. Прогнозы
-        href: tutorials/sqldev-py6-operationalize-the-model.md
   - name: Чтение
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -157,6 +149,22 @@ items:
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: Отправка пользовательского кода R с помощью rxExec
         href: tutorials/r-tutorial-custom-r-functions.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: Создание модели Python с помощью revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md
+    - name: Изучение аналитики в базе данных
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: 1. Исследование данных
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: 2. Проектирование функций
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: 3. Обучение и развертывание
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: 4. Прогнозы
+        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: Примеры
   href: https://github.com/Microsoft/sql-server-samples
 - name: Решения
@@ -180,8 +188,6 @@ items:
       href: r/installing-and-managing-r-packages.md
     - name: Получение сведений о пакете
       href: r/determine-which-packages-are-installed-on-sql-server.md
-    - name: Установка новых пакетов Python
-      href: python/install-additional-python-packages-on-sql-server.md
     - name: Установка новых пакетов R
       href: r/install-additional-r-packages-on-sql-server.md
       items:
@@ -200,22 +206,28 @@ items:
         href: r/create-a-local-package-repository-using-minicran.md
       - name: Советы по использованию пакетов R
         href: r/packages-installed-in-user-libraries.md
+    - name: Установка новых пакетов Python
+      href: python/install-additional-python-packages-on-sql-server.md
   - name: Изучение данных и моделирование
     items:
-    - name: Библиотеки и типы данных R
+    - name: Преобразование типов данных R в SQL
       href: r/r-libraries-and-data-types.md
-    - name: Библиотеки и типы данных Python
+    - name: Преобразование типов данных Python в SQL
       href: python/python-libraries-and-data-types.md
-    - name: Прогнозирующее моделирование с помощью R
-      href: r/data-exploration-and-predictive-modeling-with-r.md
     - name: Загрузка объектов R с помощью ODBC
       href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
-    - name: Преобразование кода на языке R для использования в Службах машинного обучения
-      href: r/converting-r-code-for-use-in-sql-server.md
-    - name: Создание нескольких моделей с помощью rxExecBy
-      href: r/creating-multiple-models-using-rxexecby.md
     - name: Использование данных из кубов OLAP в R
       href: r/using-data-from-olap-cubes-in-r.md
+    - name: Создание запросов многомерных выражений с помощью olapR
+      href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: Прогнозирующее моделирование с помощью R
+      href: r/data-exploration-and-predictive-modeling-with-r.md
+    - name: Создание множества моделей с помощью rxExecBy
+      href: r/creating-multiple-models-using-rxexecby.md
+  - name: Развертывание
+    items:
+    - name: Преобразование кода R для SQL Server
+      href: r/converting-r-code-for-use-in-sql-server.md
     - name: Создание хранимой процедуры с помощью sqlrutils
       href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
   - name: Прогнозы
@@ -269,25 +281,23 @@ items:
     - name: Функции профилирования кода R
       href: r/using-r-code-profiling-functions.md
 - name: Справочник
-  href: r/machine-learning-services-r-reference.md
   items:
   - name: Пакеты R
-    href: r/machine-learning-services-r-reference.md
     items:
-    - name: Пакет olapR в SQL
-      href: r/how-to-create-mdx-queries-using-olapr.md
-    - name: MicrosoftML в SQL
-      href: using-the-microsoftml-package.md
-    - name: RevoScaleR в SQL
-      href: r/revoscaler-overview.md
-    - name: Список функций RevoScaleR для данных SQL Server
-      href: r/scaler-functions-for-working-with-sql-server-data.md
-    - name: Пакет sqlrutils в SQL
-      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+    - name: RevoScaleR
+      href: r/ref-r-revoscaler.md
+    - name: MicrosoftML
+      href: r/ref-r-microsoftml.md
+    - name: olapR
+      href: r/ref-r-olapr.md
+    - name: sqlrutils
+      href: r/ref-r-sqlrutils.md
   - name: Пакеты Python
     items:
-    - name: Пакет revoscalepy в SQL
-      href: python/what-is-revoscalepy.md
+    - name: revoscalepy
+      href: python/ref-py-revoscalepy.md
+    - name: microsoftml
+      href: python/ref-py-microsoftml.md
 - name: Ресурсы
   items:
   - name: Заметки о выпуске
@@ -319,9 +329,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: e400aa9026b3a2684ffc5f436e4fe43cba3c52d4
-ms.sourcegitcommit: 0395ffeb6e51b5d653fa23673e564c4c0cfe4f57
+ms.openlocfilehash: 9e76e68b7b970c64050136b3ae9cb9c486c297c2
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52717197"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046604"

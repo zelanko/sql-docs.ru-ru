@@ -1,7 +1,7 @@
 ---
 title: Установка Microsoft ODBC Driver for SQL Server на Linux и macOS | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 12/04/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 4293880c6301712876d3a76a88ad9090925296b9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5f9392d0ba5b07a489caffdd2e496051e842b1c8
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600804"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984065"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Установка Microsoft ODBC Driver for SQL Server на Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -138,7 +138,8 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
-> Драйвер версии 17.2 или более поздней версии необходим для поддержки Ubuntu 18.04.
+> - Драйвер версии 17.2 или более поздней версии необходим для поддержки Ubuntu 18.04.
+> - Пакет разработки unixodbc 2.3.1 недоступен в Ubuntu 14.04.   
 
 ### <a name="os-x-1011-el-capitan-macos-1012-sierra-and-macos-1013-high-sierra"></a>OS X 10.11 (El Capitan), macOS 10.12 (Sierra) и macOS 10.13 (High Sierra)
 
@@ -369,7 +370,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Каждый из этих пакетов в свою очередь имеет свои собственные зависимости, которые могут или не присутствовать в системе. Общее решение этой проблемы, см. в документации по вашему дистрибутиву пакета диспетчера: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), и [SUSE](https://en.opensuse.org/Portal:Zypper)
+Каждый из этих пакетов в свою очередь имеет свои собственные зависимости, которые могут или не присутствовать в системе. Общее решение этой проблемы см. в документации по вашему дистрибутиву пакета диспетчера: [RedHat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), и [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 Также часто бывает вручную загрузить все зависимые пакеты и помещать их на компьютере, а затем вручную установить каждый пакет, в свою очередь, окончания работы [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 пакета.
 
@@ -424,7 +425,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 4.  Чтобы просмотреть список доступных параметров установки, выполните следующую команду: **./install.sh**.  
   
-5.  Создайте резервную копию **odbcinst.ini**. Установка драйвера обновляет **odbcinst.ini**. Файл odbcinst.ini содержит список драйверов, которые зарегистрированы с помощью диспетчера драйверов unixODBC. Чтобы найти расположение файла odbcinst.ini на компьютере, выполните следующую команду: ```odbc_config --odbcinstini```.  
+5.  Создайте резервную копию **odbcinst.ini**. Установка драйвера обновляет **odbcinst.ini**. Файл odbcinst.ini содержит список драйверов, которые зарегистрированы с помощью диспетчера драйверов unixODBC. Чтобы определить на компьютере расположение файла odbcinst.ini, выполните следующую команду: ```odbc_config --odbcinstini```.  
   
 6.  Перед установкой драйвера выполните следующую команду: `./install.sh verify`. Выходные данные команды `./install.sh verify` показывают, есть ли на компьютере ПО, необходимое для поддержки драйвера ODBC на Linux.  
   
@@ -508,8 +509,8 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 |Компонент|Описание|  
 |---------------|-----------------|  
 |libmsodbcsql-17. X.so.X.X или libmsodbcsql-13. X.so.X.X|Общий объект (`so`) файла динамической библиотеки, содержащий все функциональные возможности драйвера. Этот файл устанавливается в `/opt/microsoft/msodbcsql17/lib64/` Driver 17 и в `/opt/microsoft/msodbcsql/lib64/` для Driver 13.|  
-|`msodbcsqlr17.rll` или `msodbcsqlr13.rll`|Сопутствующий файл ресурса для библиотеки драйвера. Этот файл устанавливается в `[driver .so directory]../share/resources/en_US/`| 
-|msodbcsql.h|Файл заголовка, содержащий все новые определения, необходимые для использования драйвера.<br /><br /> **Примечание**  . Нельзя сослаться на msodbcsql.h и odbcss.h в одной программе.<br /><br /> msodbcsql.h устанавливается в `/opt/microsoft/msodbcsql17/include/` Driver 17 и в `/opt/microsoft/msodbcsql/include/` для Driver 13. |
+|`msodbcsqlr17.rll` либо `msodbcsqlr13.rll`|Сопутствующий файл ресурса для библиотеки драйвера. Этот файл устанавливается в `[driver .so directory]../share/resources/en_US/`| 
+|msodbcsql.h|Файл заголовка, содержащий все новые определения, необходимые для использования драйвера.<br /><br /> **Примечание.**  Нельзя сослаться на msodbcsql.h и odbcss.h в одной программе.<br /><br /> msodbcsql.h устанавливается в `/opt/microsoft/msodbcsql17/include/` Driver 17 и в `/opt/microsoft/msodbcsql/include/` для Driver 13. |
 |LICENSE.txt|Текстовый файл, содержащий условия лицензионного соглашения. Этот файл будет помещен в `/usr/share/doc/msodbcsql17/` Driver 17 и в `/usr/share/doc/msodbcsql/` для Driver 13.|
 |RELEASE_NOTES|Текстовый файл, содержащий заметки о выпуске. Этот файл будет помещен в `/usr/share/doc/msodbcsql17/` Driver 17 и в `/usr/share/doc/msodbcsql/` для Driver 13.|
 
@@ -519,8 +520,8 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 |Компонент|Описание|  
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib или libmsodbcsql.13.dylib|Файл динамической библиотеки (`dylib`), содержащий все функциональные возможности драйвера. Этот файл устанавливается в `/usr/local/lib/`.|  
-|`msodbcsqlr17.rll` или `msodbcsqlr13.rll`|Сопутствующий файл ресурса для библиотеки драйвера. Этот файл устанавливается в `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` Driver 17 и в `[driver .dylib directory]../share/msodbcsql/resources/en_US/` для Driver 13. | 
-|msodbcsql.h|Файл заголовка, содержащий все новые определения, необходимые для использования драйвера.<br /><br /> **Примечание**  . Нельзя сослаться на msodbcsql.h и odbcss.h в одной программе.<br /><br /> msodbcsql.h устанавливается в `/usr/local/include/msodbcsql17/` Driver 17 и в `/usr/local/include/msodbcsql/` для Driver 13. |
+|`msodbcsqlr17.rll` либо `msodbcsqlr13.rll`|Сопутствующий файл ресурса для библиотеки драйвера. Этот файл устанавливается в `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` Driver 17 и в `[driver .dylib directory]../share/msodbcsql/resources/en_US/` для Driver 13. | 
+|msodbcsql.h|Файл заголовка, содержащий все новые определения, необходимые для использования драйвера.<br /><br /> **Примечание.**  Нельзя сослаться на msodbcsql.h и odbcss.h в одной программе.<br /><br /> msodbcsql.h устанавливается в `/usr/local/include/msodbcsql17/` Driver 17 и в `/usr/local/include/msodbcsql/` для Driver 13. |
 |LICENSE.txt|Текстовый файл, содержащий условия лицензионного соглашения. Этот файл будет помещен в `/usr/local/share/doc/msodbcsql17/` Driver 17 и в `/usr/local/share/doc/msodbcsql/` для Driver 13. |
 |RELEASE_NOTES|Текстовый файл, содержащий заметки о выпуске. Этот файл будет помещен в `/usr/local/share/doc/msodbcsql17/` Driver 17 и в `/usr/local/share/doc/msodbcsql/` для Driver 13. |
 

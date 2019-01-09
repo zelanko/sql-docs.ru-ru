@@ -11,15 +11,17 @@ items:
     href: quickstart-big-data-cluster-deploy.md
 - name: Учебники
   items:
-  - name: 1. Запрашивание данных HDFS
+  - name: 1_Загрузка примера данных
+    href: tutorial-load-sample-data.md
+  - name: 2_Запрос данных HDFS
     href: tutorial-query-hdfs-storage-pool.md
-  - name: 2. Запрашивание данных Oracle
+  - name: 3_Запрос данных Oracle
     href: tutorial-query-oracle.md
-  - name: 3. Загрузка пула данных с помощью SQL
+  - name: 4_Загрузка пула данных в SQL
     href: tutorial-data-pool-ingest-sql.md
-  - name: 4. Загрузка пула данных с помощью Spark
+  - name: 5_Загрузка пула данных в Spark
     href: tutorial-data-pool-ingest-spark.md
-  - name: 5. Запуск записной книжки Spark
+  - name: 6_Запуск записной книжки Spark
     href: tutorial-notebook-spark.md
 - name: Основные понятия
   items:
@@ -41,20 +43,28 @@ items:
   items:
   - name: Установить
     items:
-    - name: Руководства по развертыванию
-      href: deployment-guidance.md
-    - name: Развертывание в Minikube
-      href: deploy-on-minikube.md
-    - name: Развертывание в AKS
-      href: deploy-on-aks.md
-    - name: Развертывание с помощью Kubeadm
-      href: deploy-with-kubeadm.md
-    - name: Подключение к Azure Data Studio
-      href: deploy-big-data-tools.md
+    - name: Развертывание кластеров больших данных
+      items:
+      - name: Руководства по развертыванию
+        href: deployment-guidance.md
+      - name: Развертывание в Minikube
+        href: deploy-on-minikube.md
+      - name: Развертывание в AKS
+        href: deploy-on-aks.md
+      - name: Развертывание с помощью Kubeadm
+        href: deploy-with-kubeadm.md
+    - name: Установка инструментов
+      items:
+      - name: Установка инструментов для больших данных
+        href: deploy-big-data-tools.md
+      - name: Установка mssqlctl
+        href: deploy-install-mssqlctl.md
   - name: Виртуализация данных
     items:
-    - name: Виртуализация внешних данных
+    - name: Виртуализация реляционных данных
       href: ../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+    - name: Виртуализация данных в формате CSV
+      href: ../relational-databases/polybase/data-virtualization-csv.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
   - name: Прием данных
     items:
     - name: Загрузка данных с помощью cURL
@@ -73,6 +83,8 @@ items:
       href: export-model-with-spark-mleap.md
   - name: Управление кластером больших данных SQL Server
     items:
+    - name: Подключение к кластеру больших данных
+      href: connect-to-big-data-cluster.md
     - name: Портал администрирования кластера
       href: cluster-admin-portal.md
     - name: Устранение неполадок с Kubernetes
@@ -97,9 +109,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: Запрос доступа к кластерам больших данных
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: fa4a5b29c4a4ebb3cb879de4a390effb76002ae9
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 3580372dfac82485e6c64bbb3d5b517ee34ede4a
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221620"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53595805"

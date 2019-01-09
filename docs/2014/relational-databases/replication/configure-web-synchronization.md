@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
@@ -24,12 +23,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49f3c4a66c38b339c87b79a30d42bf643f03d730
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112754"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782846"
 ---
 # <a name="configure-web-synchronization"></a>Настроить веб-синхронизацию
   Поддержка веб-синхронизации для репликации слиянием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет производить репликацию данных по протоколу HTTPS через Интернет. Чтобы использовать веб-синхронизацию, сначала необходимо выполнить следующие действия.  
@@ -76,9 +75,9 @@ ms.locfileid: "48112754"
   
  **Настройка служб IIS для веб-синхронизации**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Настройка сервера IIS для веб-синхронизации](configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Настройка сервера IIS для веб-синхронизации](configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Настройка сервера IIS 7 для веб-синхронизации](configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Настройка сервера IIS 7 для веб-синхронизации](configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>Создание веб-сада  
  Средство прослушивания репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает две параллельные операции синхронизации в каждом потоке. При превышении этого ограничения средство прослушивания репликации может перестать отвечать на запросы. Количество потоков, выделенных replisapi.dll, определяется свойством пула приложения «Максимальное число рабочих процессов». Значением этого свойства по умолчанию является 1.  
@@ -125,7 +124,7 @@ ms.locfileid: "48112754"
   
 -   в случае репликации больших объемов данных может возникнуть необходимость в корректировке размера пакета агента слияния.  
   
- Размер пакета для репликации слиянием измеряется в *поколениях*, которые представляют собой коллекции изменений для статьи. Число поколений в пакете указывается с помощью –`DownloadGenerationsPerBatch` и –`UploadGenerationsPerBatch` параметров агента слияния. Дополнительные сведения см. в статье [Replication Merge Agent](agents/replication-merge-agent.md).  
+ Размер пакета для репликации слиянием измеряется в *поколениях*, которые представляют собой коллекции изменений для статьи. Число поколений в пакете указывается с помощью -`DownloadGenerationsPerBatch` и -`UploadGenerationsPerBatch` параметров агента слияния. Дополнительные сведения см. в статье [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  При работе с большими объемами данных рекомендуется указывать небольшие значения для этих параметров пакетов. Рекомендуем начинать со значения, равного 10, и затем корректировать его с учетом потребностей приложений, а также производительности. Обычно эти параметры задаются в профиле агента. Дополнительные сведения о профилях см. в разделе [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -164,7 +163,7 @@ ms.locfileid: "48112754"
 > [!IMPORTANT]  
 >  Открытие портов на брандмауэре может привести к незащищенности сервера от вредоносных атак. Перед открытием портов убедитесь в том, что знаете принципы работы брандмауэров. Дополнительные сведения см. в разделе [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Веб-синхронизация для репликации слиянием](web-synchronization-for-merge-replication.md)  
   
   
