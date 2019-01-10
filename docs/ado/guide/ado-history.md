@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00a1ff652e3f1463d37e2cd5457965968b4ba4c
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47709562"
@@ -32,10 +32,10 @@ ms.locfileid: "47709562"
  *За пределами зоны надежных узлов не разрешен доступ на жестком диске.*
 В В междоменной работе со скриптами с ненадежных сайтов отключены следующие операции: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, и **Recordset.Open**. Они используются в сочетании с флагом **adCmdFile** или с поставщиком сохраняемости Microsoft OLE DB (MSPersist).
 
- **Recordset.Open** *,*  **Recordset.Save** *,*   **Stream.SaveToFile** *, и*  **Stream.LoadFromFile**  *оперируют только физические файлы.*
+ **Recordset.Open** *,* **Recordset.Save** *,* **Stream.SaveToFile** *, и* **Stream.LoadFromFile** *оперируют только физические файлы.*
 Эти методы теперь проверяют, что дескрипторы файлов указывают только на физические файлы.
 
- **Recordset.ActiveCommand**  *возвращает сообщение об ошибке при вызове с HTML/ASP-страницы.*
+ **Recordset.ActiveCommand** *возвращает сообщение об ошибке при вызове с HTML/ASP-страницы.*
 Это предотвращает неправильное использование объекта **Command**.
 
  *Число*  **наборы записей**  *возвращаемые вложенный*  **фигуры**  *команда имеет верхнюю границу.*

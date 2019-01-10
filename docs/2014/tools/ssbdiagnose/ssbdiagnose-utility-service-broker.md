@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -26,12 +25,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c9d0d1885413e5931f495c6eb5cd711bc0a9106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111174"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823688"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Программа ssbdiagnose (компонент Service Broker)
   Программа **ssbdiagnose** сообщает о проблемах в диалогах [!INCLUDE[ssSB](../../includes/sssb-md.md)] или в конфигурации службы [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Проверка конфигурации может быть выполнена для одной или для двух служб. Сведения о неполадках могут выводиться в окне командной строки в виде удобочитаемого текста или в формате XML, который может быть перенаправлен в файл или в другую программу.  
@@ -92,7 +91,7 @@ ms.locfileid: "48111174"
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -Ulogin_id [ -Ppassword ] } ]  
+    [ -E | { -Ulogin_id [ -Ppassword ] } ]  
   [ -Sserver_name[\instance_name] ]  
   [ -ddatabase_name ]  
   [ -llogin_timeout ]  
@@ -159,9 +158,9 @@ WHERE database_id = DB_ID();
   
  **ON**: параметр по умолчанию. Настраивается полная защита диалога. На обеих сторонах диалога производится развертывание сертификатов, присутствует привязка удаленной службы, а в инструкции GRANT SEND для целевой службы указывается вызывающий пользователь.  
   
- **OFF**: защита диалога не настраивается. Развертывание сертификатов не выполняется, привязка удаленной службы не была создана, и в инструкции GRANT SEND для службы инициатора была указана роль **public** .  
+ **ОТКЛЮЧЕНИЕ**: защита диалога не настраивается. Развертывание сертификатов не выполняется, привязка удаленной службы не была создана, и в инструкции GRANT SEND для службы инициатора была указана роль **public** .  
   
- **ANONYMOUS**: настраивается защита диалога для анонимной работы. Один сертификат развернут, привязка удаленной службы указала анонимное предложение, а в инструкции GRANT SEND для целевой службы была указана роль **public** .  
+ **АНОНИМНЫЕ**: настраивается защита диалога для анонимной работы. Один сертификат развернут, привязка удаленной службы указала анонимное предложение, а в инструкции GRANT SEND для целевой службы была указана роль **public** .  
   
  **RUNTIME**  
  Запрашивает отчет о проблемах, вызывающих ошибки времени выполнения в диалоге компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Если не указан ни параметр **-NEW** , ни параметр **-ID** , то программа **ssbdiagnose** наблюдает за всеми диалогами во всех базах данных, указанных в параметрах соединения. Если указан параметр **-NEW** или **-ID** , то программа **ssbdiagnose** создает список идентификаторов, указанных в параметрах.  
@@ -201,12 +200,12 @@ WHERE database_id = DB_ID();
  Идентификаторы диалогов отображаются в `conversation_id` столбец **sys.conversation_endpoints** представления каталога.  
   
  **-TIMEOUT** *timeout_interval*  
- Задает время выполнения отчета **RUNTIME** в секундах. Если параметр **-TIMEOUT** не задан, то отчет может выполняться бесконечно долго. Параметр **-TIMEOUT** используется только для отчетов **RUNTIME**, а не для отчетов **CONFIGURATION**. Работу программы **ssbdiagnose** можно завершить нажатием клавиш CTRL+C, если параметр **-TIMEOUT** не указан, а также если нужно завершить отчет до истечения времени ожидания. Параметр*timeout_interval* должен быть числом от 1 до 2 147 483 647.  
+ Задает время выполнения отчета **RUNTIME** в секундах. Если параметр **-TIMEOUT** не задан, то отчет может выполняться бесконечно долго. Параметр **-TIMEOUT** используется только для отчетов **RUNTIME**, а не для отчетов **CONFIGURATION**. Работу программы **ssbdiagnose** можно завершить нажатием клавиш CTRL+C, если параметр **-TIMEOUT** не указан, а также если нужно завершить отчет до истечения времени**-** ожидания. Параметр*timeout_interval* должен быть числом от 1 до 2 147 483 647.  
   
  **\<runtimeconnectionoptions >**  
  Задает сведения для соединения с базой данных, где содержатся службы, связанные с отслеживаемыми элементами диалога. Если все службы расположены в одной базе данных, нужно указать только одно предложение **CONNECT TO** . Если службы находятся в разных базах данных, то предложение **CONNECT TO** необходимо указать для каждой базы данных. Если параметры **runtimeconnectionoptions** не указаны, то **ssbdiagnose** использует сведения о подключении из **baseconnectionoptions**.  
   
- **–E**  
+ **-E**  
  Откройте соединение с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , использующее проверку подлинности Windows, указав текущую учетную запись Windows в качестве идентификатора входа. Имя входа должно быть членом предопределенной роли сервера **sysadmin** .  
   
  Параметр -E не учитывает имя пользователя и пароль, заданные в переменных среды SQLCMDUSER и SQLCMDPASSWORD.  
@@ -231,7 +230,7 @@ WHERE database_id = DB_ID();
  Если параметр **-P** задан, а пароль не указан, то программа **ssbdiagnose** использует пароль по умолчанию (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Дополнительные сведения см. в разделе [Надежные пароли](../../relational-databases/security/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Дополнительные сведения см. в разделе [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
  Запрос на ввод пароля выводится на консоль следующим образом: `Password:`  
   
@@ -462,6 +461,6 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [RECEIVE (Transact-SQL)](/sql/t-sql/statements/receive-transact-sql)   
  [sys.transmission_queue (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-transmission-queue-transact-sql)   
  [sys.conversation_endpoints (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql)   
- [sys.conversation_groups (Transact-SQ)](/sql/relational-databases/system-catalog-views/sys-conversation-groups-transact-sql)  
+ [sys.conversation_groups (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-conversation-groups-transact-sql)  
   
   
