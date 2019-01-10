@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_parammaxlen
@@ -22,12 +20,12 @@ ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d1ebf8be54abfd0b7a12239cb84df103a8106d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fadcfbc6249ca15ecd9581cc50d58d0e3a09a5d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156396"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360836"
 ---
 # <a name="srvparammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (API-интерфейс расширенных хранимых процедур)
     
@@ -64,13 +62,13 @@ n
   
 |Новые типы данных|Длина входных данных|  
 |--------------------|-----------------------|  
-|`BITN`|**NULL:** 1<br /><br /> **ZERO:** 1<br /><br /> **>=255:** недоступно<br /><br /> **<255:** недоступно|  
-|`BIGVARCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`BIGCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`BIGBINARY`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`BIGVARBINARY`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`NCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`NVARCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|`BITN`|**NULL:** 1<br /><br /> **НУЛЬ:** 1<br /><br /> **> = 255:** Н/Д<br /><br /> **< 255:** Н/Д|  
+|`BIGVARCHAR`|**NULL:** 255<br /><br /> **НУЛЬ:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`BIGCHAR`|**NULL:** 255<br /><br /> **НУЛЬ:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`BIGBINARY`|**NULL:** 255<br /><br /> **НУЛЬ:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`BIGVARBINARY`|**NULL:** 255<br /><br /> **НУЛЬ:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`NCHAR`|**NULL:** 255<br /><br /> **НУЛЬ:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`NVARCHAR`|**NULL:** 255<br /><br /> **НУЛЬ:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
 |`NTEXT`|**NULL:** –1<br /><br /> **ZERO:** –1<br /><br /> **>=255:** –1<br /><br /> **\<255:** –1|  
   
 ## <a name="remarks"></a>Примечания  
@@ -79,7 +77,7 @@ n
  Когда удаленная хранимая процедура вызывается с параметрами, эти параметры могут быть переданы либо по имени, либо по позиции — без указания имени. Если при вызове удаленной хранимой процедуры часть параметров передается по имени, а часть — по позиции, возникает ошибка. Обработчик SRV_RPC по-прежнему вызывается, однако он отображается так, как если бы не имел параметров, а функция **srv_rpcparams** возвращает 0.  
   
 > [!IMPORTANT]  
->  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+>  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>См. также  
  [srv_paraminfo (интерфейс API расширенных хранимых процедур)](srv-paraminfo-extended-stored-procedure-api.md)   

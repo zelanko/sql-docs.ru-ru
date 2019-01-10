@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - conditional delete tracking [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f166cef67ffd07a02e7414ecfa1863e583e8971
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: ec91a27daf01a77cc9c1916db36d80de4864964f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186334"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752706"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления
     
@@ -47,7 +46,7 @@ ms.locfileid: "48186334"
   
  **Указание того, что удаления не должны отслеживаться**  
   
--   Программирование репликации в [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Отключение отслеживания операций удаления для статей публикации слиянием (программирование репликации на языке Transact-SQL)](../publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
+-   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]. [Specify That Deletes Should Not Be Tracked For Merge Articles](../publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md) (Отключение отслеживания операций удаления для статей публикации слиянием)  
   
 ## <a name="see-also"></a>См. также  
  [Параметры статьи для репликации слиянием](article-options-for-merge-replication.md)   
