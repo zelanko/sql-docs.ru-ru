@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.conc.subtopubs.f1
@@ -25,12 +24,12 @@ ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 573346dcd34691f9270e61592a25d8625d2af367
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207834"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767898"
 ---
 # <a name="subscribe-to-publications"></a>Subscribe to Publications
   Подписка представляет собой запрос на копию данных и объектов из базы данных в публикации. Подписка определяет получаемую публикацию, а также место и время ее получения. При планировании подписок необходимо определить место обработки агентом. Выбранный тип подписки определяет место запуска агента. В случае принудительной подписки агент слияния или агент распространителя запускается у распространителя, а в случае подписки по запросу агент запускается у подписчиков. После того, как подписка создана, ее тип нельзя изменить.  
@@ -44,7 +43,7 @@ ms.locfileid: "48207834"
  Все типы репликации поддерживают принудительные подписки и подписки по запросу. Для репликации слиянием используются два дополнительных термина с целью различения подписок: клиентские подписки и серверные подписки. Подписки как клиентского, так и серверного типов могут использоваться для принудительных подписок и подписок по запросу. Клиентские подписки подходят для большинства подписчиков, в то время как серверные подписки обычно используются для подписчиков, которые повторно публикуют данные для других подписчиков. Выбор подписки влияет на разрешение конфликтов.  
   
 ## <a name="non-sql-server-subscribers"></a>Подписчики, отличные от подписчиков SQL Server  
- Клиенты Oracle и IBM DB2 могут подписываться на публикации моментальных снимков и публикации транзакций с использованием принудительных подписок. Дополнительные сведения см. в разделе [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
+ Клиенты Oracle и IBM DB2 могут подписываться на публикации моментальных снимков и публикации транзакций с использованием принудительных подписок. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 ## <a name="creating-subscriptions"></a>Создание подписок  
  Чтобы создать подписку, нужно ввести следующую информацию:  
@@ -73,14 +72,14 @@ ms.locfileid: "48207834"
   
  **Удаление принудительной подписки**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Удаление принудительной подписки](delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Удаление принудительной подписки](delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  Удаление подписки не приводит к удалению опубликованных объектов у подписчика.  
   
  **Создание подписки по запросу**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Создание подписки по запросу](create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Создание подписки по запросу](create-a-pull-subscription.md)  
   
  **Просмотр или изменение свойств подписки по запросу**  
   
